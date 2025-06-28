@@ -10,7 +10,7 @@ from typing import List, Dict, Set
 from dataclasses import dataclass
 from nltk.stem import PorterStemmer
 
-from .taxonomy_pipeline_stage import TaxonomyDTO
+from core.llm_taxonomy_pipeline.pipeline_stage import TaxonomyDTO
 
 # Constants for deduplication
 STEMMER_LANGUAGE = 'english'

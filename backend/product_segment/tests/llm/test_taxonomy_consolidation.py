@@ -54,13 +54,13 @@ from typing import Dict
 from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
-from product_segment.llm.taxonomy_consolidation import (
+from product_segment.llm.consolidation_stage import (
     ConsolidationStage,
-    ConsolidationStageResult,
     ConsolidationStageContext,
+    ConsolidationStageResult,
     ConsolidatedTaxonomyDTO,
 )
-from product_segment.llm.taxonomy_pipeline_stage import StageContext, TaxonomyDTO
+from core.llm_taxonomy_pipeline.pipeline_stage import StageContext, TaxonomyDTO
 from product_segment.llm.taxonomy_dedup_uitl import (
     deduplicate_taxonomies,
     deduplicate_taxonomy_batches,

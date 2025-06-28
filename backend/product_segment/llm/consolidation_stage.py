@@ -42,11 +42,12 @@ from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
-from product_segment.llm.taxonomy_pipeline_stage import (
-    BaseStage,
-    StageContext,
-    StageResultBase,
-    TaxonomyDTO,
+from core.llm_taxonomy_pipeline.pipeline_stage import BaseStage, StageContext, StageResultBase, TaxonomyDTO
+from core.llm_taxonomy_pipeline.consolidation_base import (
+    ConsolidatedTaxonomyDTO,
+    ConsolidationStage as BaseConsolidationStage,
+    ConsolidationStageContext,
+    ConsolidationStageResult,
 )
 
 __all__ = [
@@ -60,28 +61,8 @@ __all__ = [
 # Data-transfer objects
 # ---------------------------------------------------------------------------
 
-
-@dataclass(slots=True, frozen=True)
-class ConsolidatedTaxonomyDTO:  # noqa: D401 – simple DTO
-    """Lightweight consolidated taxonomy representation returned by the consolidation stage."""
-
-    taxonomy: TaxonomyDTO
-    original_taxonomies: list[TaxonomyDTO]
-
-
-@dataclass(slots=True, frozen=True)
-class ConsolidationStageContext(StageContext):
-    """Context for taxonomy consolidation stage containing two lists of taxonomies to consolidate."""
-    
-    taxonomy_a: list[TaxonomyDTO]  # Current consolidated taxonomies
-    taxonomy_b: list[TaxonomyDTO]  # New batch to consolidate
-
-
-@dataclass(slots=True, frozen=True)
-class ConsolidationStageResult(StageResultBase):
-    """Result returned by the consolidation stage."""
-    
-    taxonomies_consolidated: list[ConsolidatedTaxonomyDTO]
+# Core base already defines ConsolidatedTaxonomyDTO, ConsolidationStageContext, 
+# ConsolidationStageResult – duplicates removed.
 
 # ---------------------------------------------------------------------------
 # Fixed prompt templates
@@ -93,7 +74,9 @@ class ConsolidationStageResult(StageResultBase):
 # Path to prompt template files
 _PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 _CONSOLIDATE_PROMPT_PATH = _PROMPTS_DIR / "taxonomy_consolidation_prompt_v0.txt"
-_RETRY_PROMPT_PATH = _PROMPTS_DIR / "shared_retry_prompt_v0.txt"
+_RETRY_PROMPT_PATH = (
+    Path(__file__).resolve().parents[2] / "core" / "prompts" / "shared_retry_prompt_v0.txt"
+)
 
 # Load prompt templates at module level
 try:
@@ -114,7 +97,7 @@ except FileNotFoundError:
 # ---------------------------------------------------------------------------
 
 
-class ConsolidationStage(BaseStage):
+class ConsolidationStage(BaseConsolidationStage):
     """Concrete taxonomy-consolidation stage built on :class:`BaseStage`."""
 
     # --------------------- BaseStage abstract hooks -------------------------

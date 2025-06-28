@@ -7,6 +7,20 @@ from .extraction_stage import (
     ExtractionStage,
 )
 
+from .consolidation_stage import (
+    ConsolidatedTaxonomyDTO,
+    ConsolidationStageContext,
+    ConsolidationStageResult,
+    ConsolidationStage,
+)
+
+from .taxonomy_dedup_uitl import (
+    deduplicate_taxonomies,
+    deduplicate_taxonomy_batches,
+    print_deduplication_summary,
+    DeduplicationResult,
+)
+
 
 __all__ = [
     # Extraction stage
@@ -14,4 +28,14 @@ __all__ = [
     "ExtractionStageResult", 
     "ExtractionStageContext",
     "ExtractionStage",
+    # Consolidation stage
+    "ConsolidatedTaxonomyDTO",
+    "ConsolidationStageResult",
+    "ConsolidationStageContext",
+    "ConsolidationStage",
+    # Deduplication utilities
+    "deduplicate_taxonomies",
+    "deduplicate_taxonomy_batches",
+    "print_deduplication_summary",
+    "DeduplicationResult",
 ] 
