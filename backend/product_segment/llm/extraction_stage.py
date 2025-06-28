@@ -44,11 +44,11 @@ from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
-from product_segment.llm.taxonomy_pipeline_stage import (
-    BaseStage,
-    StageContext,
-    StageResultBase,
-    TaxonomyDTO,
+from core.llm_taxonomy_pipeline.pipeline_stage import BaseStage, StageContext, StageResultBase, TaxonomyDTO
+from core.llm_taxonomy_pipeline.extraction_base import (
+    ExtractionStage as BaseExtractionStage,
+    ExtractionStageContext,
+    ExtractionStageResult,
 )
 
 __all__ = [
@@ -62,23 +62,7 @@ __all__ = [
 # Data-transfer objects
 # ---------------------------------------------------------------------------
 
-
-
-
-
-@dataclass(slots=True, frozen=True)
-class ExtractionStageContext(StageContext):
-    """Context for taxonomy extraction stage containing input texts."""
-    
-    input_texts: list[str]
-
-
-@dataclass(slots=True, frozen=True)
-class ExtractionStageResult(StageResultBase):
-    """Result returned by the extraction stage."""
-    
-    taxonomies_extracted: list[TaxonomyDTO]
-    assignments_initial: dict[int, str]
+# Use generic context/result from core base
 
 # ---------------------------------------------------------------------------
 # Prompt helpers & retry-utilities
@@ -95,10 +79,15 @@ class ExtractionStageResult(StageResultBase):
 # consistency across all extraction operations.
 # ---------------------------------------------------------------------------
 
-# Path to prompt template files
+# Path to prompt template files: product_segment/llm/prompts
 _PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 _EXTRACT_PROMPT_PATH = _PROMPTS_DIR / "taxonomy_extraction_prompt_v0.txt"
-_RETRY_PROMPT_PATH = _PROMPTS_DIR / "shared_retry_prompt_v0.txt"
+
+# Shared retry template now lives under backend/core/prompts
+_RETRY_PROMPT_PATH = (
+    Path(__file__).resolve().parents[2]  # points to .../backend
+    / "core" / "prompts" / "shared_retry_prompt_v0.txt"
+)
 
 # Load prompt templates at module level
 try:
@@ -107,11 +96,11 @@ try:
 except FileNotFoundError:
     raise RuntimeError(f"Required prompt template not found: {_EXTRACT_PROMPT_PATH}")
 
-try:
-    with open(_RETRY_PROMPT_PATH, 'r', encoding='utf-8') as f:
-        _RETRY_PROMPT_TEMPLATE = f.read()
-except FileNotFoundError:
+if not _RETRY_PROMPT_PATH.exists():
     raise RuntimeError(f"Required retry template not found: {_RETRY_PROMPT_PATH}")
+
+with open(_RETRY_PROMPT_PATH, "r", encoding="utf-8") as f:
+    _RETRY_PROMPT_TEMPLATE = f.read()
 
 
 # ---------------------------------------------------------------------------
@@ -119,7 +108,7 @@ except FileNotFoundError:
 # ---------------------------------------------------------------------------
 
 
-class ExtractionStage(BaseStage):
+class ExtractionStage(BaseExtractionStage):
     """Concrete taxonomy-extraction stage built on :class:`BaseStage`."""
 
     # --------------------- BaseStage abstract hooks -------------------------

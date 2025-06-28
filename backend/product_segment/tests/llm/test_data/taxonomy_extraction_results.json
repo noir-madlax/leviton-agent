@@ -3,9 +3,9 @@
     "product_category": "light switch",
     "total_products": 160,
     "total_batches": 4,
-    "total_taxonomies": 32,
+    "total_taxonomies": 35,
     "batch_size": 40,
-    "extraction_timestamp": "2025-06-22T23:56:27.940140"
+    "extraction_timestamp": "2025-06-27T22:58:14.381326"
   },
   "product_titles": [
     "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
@@ -172,7 +172,7 @@
   "taxonomies": [
     {
       "name": "Smart Dimmer Switch",
-      "definition": "Wi-Fi or wireless protocol enabled dimmer switches that can be controlled remotely via apps or voice assistants, e.g. smart home dimmer switches, app-controlled dimmers, voice-activated dimmers"
+      "definition": "Wi-Fi or wireless enabled dimmer switches that can be controlled remotely via apps or voice assistants, e.g. smart home dimmer switches, app-controlled dimmers, voice-activated dimmers"
     },
     {
       "name": "Slide Dimmer Switch",
@@ -180,31 +180,31 @@
     },
     {
       "name": "Toggle Dimmer Switch",
-      "definition": "Dimmer switches with traditional toggle or flip switch design combined with dimming functionality, e.g. toggle style dimmers, flip switch dimmers, traditional toggle dimmers"
+      "definition": "Dimmer switches with traditional toggle or flip-style control mechanism, e.g. toggle-operated dimmers, flip switch dimmers, traditional toggle controls"
     },
     {
       "name": "Rotary Dimmer Switch",
-      "definition": "Dimmer switches controlled by rotating knob or dial mechanism, e.g. dial control dimmers, knob operated dimmers, circular control dimmers"
+      "definition": "Dimmer switches with rotating knob or dial control for light adjustment, e.g. rotary knob dimmers, dial control dimmers, twist control switches"
     },
     {
       "name": "Rocker Dimmer Switch",
-      "definition": "Dimmer switches with rocker-style actuator combined with dimming controls, e.g. paddle style dimmers, rocker button dimmers, decorator style dimmers"
+      "definition": "Dimmer switches with rocker-style control mechanism, e.g. paddle-style dimmers, rocker button controls, push-button rocker switches"
     },
     {
       "name": "Remote Control Dimmer Switch",
-      "definition": "Dimmer switches that include separate wireless remote control functionality, e.g. magnetic remote dimmers, handheld remote dimmers, wireless remote operated dimmers"
+      "definition": "Dimmer switches that include separate wireless remote control devices, e.g. magnetic remote dimmers, handheld remote controls, wireless remote operated switches"
     },
     {
       "name": "Multi Location Dimmer Switch",
-      "definition": "Dimmer switches specifically designed for multi-location or companion dimming setups, e.g. companion dimmers, multi-location controls, master-remote dimmer systems"
+      "definition": "Dimmer switches specifically designed for multi-location or companion use in complex wiring setups, e.g. companion dimmers, multi-location controls, add-on dimmer switches"
     },
     {
       "name": "Standard Dimmer Switch",
-      "definition": "Traditional wired dimmer switches without smart connectivity for controlling light brightness, e.g. wall-mounted dimmers, LED dimmers, incandescent dimmers"
+      "definition": "Traditional dimmer switches without smart connectivity that manually control light brightness, e.g. wall-mounted dimmers, rotary dimmers, slide dimmers"
     },
     {
       "name": "Smart On Off Switch",
-      "definition": "Wi-Fi or wireless protocol enabled on/off switches without dimming capability, e.g. smart home switches, app-controlled switches, voice-activated switches"
+      "definition": "Intelligent on/off switches with wireless connectivity and app control capabilities, e.g. WiFi switches, smart home compatible switches, voice controlled switches"
     },
     {
       "name": "Single Pole Switch",
@@ -212,91 +212,103 @@
     },
     {
       "name": "Multi Gang Switch",
-      "definition": "Switches with multiple controls in a single unit for operating multiple lights, e.g. double switches, triple switches, duplex switches"
+      "definition": "Switch assemblies with multiple individual switches in one unit, e.g. double switches, triple switches, duplex switches"
     },
     {
-      "name": "Multi Way Switch",
-      "definition": "Switches designed for controlling lights from multiple locations, e.g. three way switches, four way switches"
+      "name": "Three Way Switch",
+      "definition": "Switches designed for controlling lights from multiple locations, e.g. 3-way switches, 4-way switches, multi-location switches"
     },
     {
       "name": "Specialty Switch",
-      "definition": "Switches with unique features or specific applications, e.g. pilot light switches, locator light switches, push button switches"
+      "definition": "Switches with unique features or specific applications, e.g. pilot light switches, momentary switches, wireless remote switches"
     },
     {
       "name": "Specialty Dimmer Switch",
-      "definition": "Dimmer switches designed for specific applications or with unique features, e.g. fan control dimmers, dual dimmers, plug-in dimmers, outdoor dimmers"
+      "definition": "Dimmer switches designed for specific applications or unique mounting configurations, e.g. low voltage dimmers, DC dimmers, plug-in dimmers, fan and light combination dimmers"
+    },
+    {
+      "name": "Smart Standard Switch",
+      "definition": "Wi-Fi or wireless enabled on/off switches without dimming capability that can be controlled remotely, e.g. smart home switches, app-controlled switches, voice-activated switches"
     },
     {
       "name": "Standard Toggle Switch",
-      "definition": "Traditional toggle-style on/off switches with flip lever mechanism, e.g. wall toggle switches, single pole toggles, three way toggles"
+      "definition": "Traditional toggle-style switches with flip lever mechanism for basic on/off control, e.g. wall toggle switches, lever switches, flip switches"
     },
     {
       "name": "Standard Rocker Switch",
-      "definition": "Traditional paddle-style on/off switches with rocker mechanism, e.g. decorator switches, paddle switches, wall rocker switches"
+      "definition": "Traditional paddle-style switches with rocker mechanism for basic on/off control, e.g. decorator switches, paddle switches, rocker switches"
     },
     {
       "name": "Illuminated Switch",
-      "definition": "On/off switches with built-in LED indicators or night light features, e.g. lighted switches, LED indicator switches, night light switches"
+      "definition": "Switches with built-in LED indicators or night light functionality for visibility in dark conditions, e.g. LED indicator switches, night light switches, backlit switches"
     },
     {
       "name": "OUT_OF_SCOPE",
-      "definition": "Products that clearly don't belong to light switch, e.g. inline cord switches, appliance switches, lamp switches"
+      "definition": "Products that are not wall mounted light switches, e.g. inline cord switches, appliance switches, lamp switches"
     },
     {
       "name": "Single Pole Toggle",
-      "definition": "Single pole toggle switches for basic on/off control, e.g. standard toggle switches, illuminated toggle switches, heavy duty toggle switches"
-    },
-    {
-      "name": "Single Pole Rocker",
-      "definition": "Single pole rocker paddle switches for basic on/off control, e.g. decorator rocker switches, quiet rocker switches, illuminated rocker switches"
+      "definition": "Single pole toggle switches for basic on/off lighting control, e.g. standard toggle switches, illuminated toggle switches, heavy duty toggle switches"
     },
     {
       "name": "Three Way Toggle",
-      "definition": "Three way toggle switches for controlling lights from two locations, e.g. grounding three way toggles, illuminated three way toggles, residential grade three way switches"
-    },
-    {
-      "name": "Three Way Rocker",
-      "definition": "Three way rocker paddle switches for controlling lights from two locations, e.g. decorator three way rockers, commercial grade three way paddles, grounding three way switches"
+      "definition": "Three way toggle switches for controlling lights from multiple locations, e.g. illuminated three way toggles, grounding three way switches"
     },
     {
       "name": "Four Way Toggle",
-      "definition": "Four way toggle switches for controlling lights from three or more locations, e.g. framed four way toggles, commercial grade four way switches, grounding four way toggles"
+      "definition": "Four way toggle switches for multi-location light control in complex circuits, e.g. framed four way switches, commercial grade four way toggles"
+    },
+    {
+      "name": "Single Pole Rocker",
+      "definition": "Single pole rocker paddle switches for modern on/off lighting control, e.g. decorator rocker switches, quiet rocker switches, grounding rocker switches"
+    },
+    {
+      "name": "Three Way Rocker",
+      "definition": "Three way rocker paddle switches for controlling lights from multiple locations, e.g. decorator three way rockers, matte finish three way switches"
     },
     {
       "name": "Four Way Rocker",
-      "definition": "Four way rocker paddle switches for controlling lights from three or more locations, e.g. decorator four way rockers, commercial grade four way paddles, self grounding four way switches"
+      "definition": "Four way rocker paddle switches for multi-location light control, e.g. decorator four way switches, high voltage four way rockers"
     },
     {
-      "name": "Double Pole Toggle",
-      "definition": "Double pole toggle switches for controlling high voltage circuits, e.g. commercial grade double pole toggles, quiet double pole switches, grounding double pole toggles"
+      "name": "Double Pole",
+      "definition": "Double pole switches for controlling high voltage or dual circuit lighting, e.g. commercial grade double pole toggles, high amperage double pole switches"
     },
     {
       "name": "Combination Switch",
-      "definition": "Switches combined with outlets or other electrical devices, e.g. switch outlet combinations, duplex receptacle combinations, combo wall switches"
+      "definition": "Switches combined with other electrical devices in single unit, e.g. switch outlet combinations, switch receptacle combos"
     },
     {
-      "name": "Multiple Gang Switch",
-      "definition": "Switches with multiple gangs or controls in one unit, e.g. triple rocker switches, double switches, multi gang wall switches"
+      "name": "Multi Gang",
+      "definition": "Multiple switches mounted together in single housing, e.g. triple rocker switches, multi-switch assemblies"
     },
     {
-      "name": "Smart Switch",
-      "definition": "WiFi or wireless enabled switches with app or voice control, e.g. WiFi light switches, smart home switches, voice controlled switches"
+      "name": "LED Illuminated",
+      "definition": "Switches with built-in LED indicator lights for visibility, e.g. night light switches, pilot light switches, illuminated when off switches"
     },
     {
-      "name": "Wireless Remote Switch",
-      "definition": "Battery operated or RF controlled switches without hardwiring, e.g. remote control switches, wireless wall switches, no wiring switches"
+      "name": "Smart WiFi",
+      "definition": "WiFi connected switches for remote and voice control, e.g. app controlled switches, voice assistant compatible switches, smartphone controlled switches"
     },
     {
-      "name": "Sound Activated Switch",
-      "definition": "Switches activated by sound or clapping, e.g. clap on switches, sound detection switches, voice activated switches"
+      "name": "Smart Z-Wave",
+      "definition": "Z-Wave protocol switches requiring hub for smart home integration, e.g. hub required smart switches, Z-Wave plus switches, mesh network switches"
+    },
+    {
+      "name": "Wireless Remote",
+      "definition": "Battery operated switches with wireless remote control capability, e.g. RF remote switches, no wiring switches, portable remote controls"
+    },
+    {
+      "name": "Sound Activated",
+      "definition": "Switches that respond to audio signals for hands-free operation, e.g. clap detection switches, voice activated switches, sound sensor switches"
     },
     {
       "name": "Door Switch",
-      "definition": "Switches specifically designed for door lighting control, e.g. door light switches, automatic door switches, door activated switches"
+      "definition": "Specialized switches designed for automatic door lighting control, e.g. door activated switches, entry lighting switches"
     },
     {
       "name": "Add On Switch",
-      "definition": "Auxiliary switches used with smart switch systems, e.g. paddle add on switches, companion switches, auxiliary wall switches"
+      "definition": "Auxiliary switches designed to work with existing smart switch systems, e.g. companion switches, secondary control switches"
     }
   ],
   "assignments": {
@@ -362,6 +374,7 @@
     "63": "Smart On Off Switch",
     "67": "Smart On Off Switch",
     "74": "Smart On Off Switch",
+    "49": "Single Pole Switch",
     "50": "Single Pole Switch",
     "51": "Single Pole Switch",
     "52": "Single Pole Switch",
@@ -370,38 +383,37 @@
     "65": "Single Pole Switch",
     "68": "Single Pole Switch",
     "72": "Single Pole Switch",
-    "49": "Multi Gang Switch",
     "58": "Multi Gang Switch",
     "62": "Multi Gang Switch",
     "64": "Multi Gang Switch",
     "71": "Multi Gang Switch",
-    "66": "Multi Way Switch",
-    "70": "Multi Way Switch",
+    "66": "Three Way Switch",
+    "70": "Three Way Switch",
     "61": "Specialty Switch",
     "69": "Specialty Switch",
     "77": "Specialty Switch",
     "80": "Smart Dimmer Switch",
+    "81": "Smart Dimmer Switch",
     "82": "Smart Dimmer Switch",
     "84": "Smart Dimmer Switch",
     "85": "Smart Dimmer Switch",
+    "87": "Smart Dimmer Switch",
     "90": "Smart Dimmer Switch",
     "93": "Smart Dimmer Switch",
+    "94": "Smart Dimmer Switch",
     "95": "Smart Dimmer Switch",
     "114": "Smart Dimmer Switch",
     "116": "Smart Dimmer Switch",
-    "117": "Smart Dimmer Switch",
-    "81": "Standard Dimmer Switch",
-    "86": "Standard Dimmer Switch",
-    "87": "Standard Dimmer Switch",
     "91": "Standard Dimmer Switch",
-    "94": "Standard Dimmer Switch",
     "96": "Standard Dimmer Switch",
+    "86": "Specialty Dimmer Switch",
     "88": "Specialty Dimmer Switch",
     "92": "Specialty Dimmer Switch",
-    "97": "Smart On Off Switch",
-    "101": "Smart On Off Switch",
-    "109": "Smart On Off Switch",
-    "111": "Smart On Off Switch",
+    "97": "Smart Standard Switch",
+    "101": "Smart Standard Switch",
+    "109": "Smart Standard Switch",
+    "111": "Smart Standard Switch",
+    "117": "Smart Standard Switch",
     "98": "Standard Toggle Switch",
     "107": "Standard Toggle Switch",
     "108": "Standard Toggle Switch",
@@ -422,41 +434,41 @@
     "89": "OUT_OF_SCOPE",
     "121": "Single Pole Toggle",
     "122": "Single Pole Toggle",
-    "129": "Single Pole Toggle",
     "136": "Single Pole Toggle",
     "138": "Single Pole Toggle",
     "139": "Single Pole Toggle",
     "142": "Single Pole Toggle",
     "144": "Single Pole Toggle",
-    "158": "Single Pole Toggle",
+    "129": "Three Way Toggle",
+    "146": "Three Way Toggle",
+    "153": "Three Way Toggle",
+    "135": "Four Way Toggle",
+    "143": "Four Way Toggle",
     "120": "Single Pole Rocker",
     "123": "Single Pole Rocker",
     "125": "Single Pole Rocker",
     "128": "Single Pole Rocker",
     "131": "Single Pole Rocker",
-    "133": "Single Pole Rocker",
-    "146": "Three Way Toggle",
-    "153": "Three Way Toggle",
     "126": "Three Way Rocker",
-    "135": "Four Way Toggle",
-    "143": "Four Way Toggle",
     "124": "Four Way Rocker",
-    "132": "Double Pole Toggle",
+    "132": "Double Pole",
     "130": "Combination Switch",
     "140": "Combination Switch",
     "141": "Combination Switch",
-    "137": "Multiple Gang Switch",
-    "157": "Multiple Gang Switch",
-    "145": "Smart Switch",
-    "147": "Smart Switch",
-    "149": "Smart Switch",
-    "152": "Smart Switch",
-    "154": "Smart Switch",
-    "156": "Smart Switch",
-    "159": "Smart Switch",
-    "151": "Wireless Remote Switch",
-    "155": "Wireless Remote Switch",
-    "127": "Sound Activated Switch",
+    "137": "Multi Gang",
+    "133": "LED Illuminated",
+    "158": "LED Illuminated",
+    "147": "Smart WiFi",
+    "149": "Smart WiFi",
+    "152": "Smart WiFi",
+    "154": "Smart WiFi",
+    "157": "Smart WiFi",
+    "145": "Smart Z-Wave",
+    "156": "Smart Z-Wave",
+    "159": "Smart Z-Wave",
+    "151": "Wireless Remote",
+    "155": "Wireless Remote",
+    "127": "Sound Activated",
     "150": "Door Switch",
     "134": "Add On Switch",
     "148": "OUT_OF_SCOPE"
@@ -477,27 +489,27 @@
         },
         {
           "name": "Toggle Dimmer Switch",
-          "definition": "Dimmer switches with traditional toggle or flip switch design combined with dimming functionality, e.g. toggle style dimmers, flip switch dimmers, traditional toggle dimmers"
+          "definition": "Dimmer switches with traditional toggle or flip-style control mechanism, e.g. toggle-operated dimmers, flip switch dimmers, traditional toggle controls"
         },
         {
           "name": "Rotary Dimmer Switch",
-          "definition": "Dimmer switches controlled by rotating knob or dial mechanism, e.g. dial control dimmers, knob operated dimmers, circular control dimmers"
+          "definition": "Dimmer switches with rotating knob or dial control for light adjustment, e.g. rotary knob dimmers, dial control dimmers, twist control switches"
         },
         {
           "name": "Rocker Dimmer Switch",
-          "definition": "Dimmer switches with rocker-style actuator combined with dimming controls, e.g. paddle style dimmers, rocker button dimmers, decorator style dimmers"
+          "definition": "Dimmer switches with rocker-style control mechanism, e.g. paddle-style dimmers, rocker button controls, push-button rocker switches"
         },
         {
           "name": "Remote Control Dimmer Switch",
-          "definition": "Dimmer switches that include separate wireless remote control functionality, e.g. magnetic remote dimmers, handheld remote dimmers, wireless remote operated dimmers"
+          "definition": "Dimmer switches that include separate wireless remote control devices, e.g. magnetic remote dimmers, handheld remote controls, wireless remote operated switches"
         },
         {
           "name": "Multi Location Dimmer Switch",
-          "definition": "Dimmer switches specifically designed for multi-location or companion dimming setups, e.g. companion dimmers, multi-location controls, master-remote dimmer systems"
+          "definition": "Dimmer switches specifically designed for multi-location or companion use in complex wiring setups, e.g. companion dimmers, multi-location controls, add-on dimmer switches"
         },
         {
           "name": "Standard Dimmer Switch",
-          "definition": "Basic dimmer switches without specific control mechanism designation, e.g. universal dimmers, general purpose dimmers, standard lighting controls"
+          "definition": "Basic dimmer switches without smart features or specialized control mechanisms, e.g. simple electronic dimmers, basic light dimmers, standard wall dimmers"
         }
       ],
       "assignments": {
@@ -566,15 +578,15 @@
         },
         {
           "name": "Multi Gang Switch",
-          "definition": "Switches with multiple controls in a single unit for operating multiple lights, e.g. double switches, triple switches, duplex switches"
+          "definition": "Switch assemblies with multiple individual switches in one unit, e.g. double switches, triple switches, duplex switches"
         },
         {
-          "name": "Multi Way Switch",
-          "definition": "Switches designed for controlling lights from multiple locations, e.g. three way switches, four way switches"
+          "name": "Three Way Switch",
+          "definition": "Switches designed for controlling lights from multiple locations, e.g. 3-way switches, 4-way switches, multi-location switches"
         },
         {
           "name": "Specialty Switch",
-          "definition": "Switches with unique features or specific applications, e.g. pilot light switches, locator light switches, push button switches"
+          "definition": "Switches with unique features or specific applications, e.g. pilot light switches, momentary switches, wireless remote switches"
         }
       ],
       "assignments": {
@@ -600,6 +612,7 @@
         "23": "Smart On Off Switch",
         "27": "Smart On Off Switch",
         "34": "Smart On Off Switch",
+        "9": "Single Pole Switch",
         "10": "Single Pole Switch",
         "11": "Single Pole Switch",
         "12": "Single Pole Switch",
@@ -608,13 +621,12 @@
         "25": "Single Pole Switch",
         "28": "Single Pole Switch",
         "32": "Single Pole Switch",
-        "9": "Multi Gang Switch",
         "18": "Multi Gang Switch",
         "22": "Multi Gang Switch",
         "24": "Multi Gang Switch",
         "31": "Multi Gang Switch",
-        "26": "Multi Way Switch",
-        "30": "Multi Way Switch",
+        "26": "Three Way Switch",
+        "30": "Three Way Switch",
         "21": "Specialty Switch",
         "29": "Specialty Switch",
         "37": "Specialty Switch"
@@ -627,60 +639,60 @@
       "taxonomies": [
         {
           "name": "Smart Dimmer Switch",
-          "definition": "Wi-Fi or wireless protocol enabled dimmer switches that can be controlled remotely via apps or voice assistants, e.g. smart home dimmer switches, app-controlled dimmers, voice-activated dimmers"
+          "definition": "Wi-Fi or wireless enabled dimmer switches that can be controlled remotely via apps or voice assistants, e.g. smart home dimmer switches, app-controlled dimmers, voice-activated dimmers"
         },
         {
           "name": "Standard Dimmer Switch",
-          "definition": "Traditional wired dimmer switches without smart connectivity for controlling light brightness, e.g. wall-mounted dimmers, LED dimmers, incandescent dimmers"
+          "definition": "Traditional dimmer switches without smart connectivity that manually control light brightness, e.g. wall-mounted dimmers, rotary dimmers, slide dimmers"
         },
         {
           "name": "Specialty Dimmer Switch",
-          "definition": "Dimmer switches designed for specific applications or with unique features, e.g. fan control dimmers, dual dimmers, plug-in dimmers, outdoor dimmers"
+          "definition": "Dimmer switches designed for specific applications or unique mounting configurations, e.g. low voltage dimmers, DC dimmers, plug-in dimmers, fan and light combination dimmers"
         },
         {
-          "name": "Smart On Off Switch",
-          "definition": "Wi-Fi or wireless protocol enabled on/off switches without dimming capability, e.g. smart home switches, app-controlled switches, voice-activated switches"
+          "name": "Smart Standard Switch",
+          "definition": "Wi-Fi or wireless enabled on/off switches without dimming capability that can be controlled remotely, e.g. smart home switches, app-controlled switches, voice-activated switches"
         },
         {
           "name": "Standard Toggle Switch",
-          "definition": "Traditional toggle-style on/off switches with flip lever mechanism, e.g. wall toggle switches, single pole toggles, three way toggles"
+          "definition": "Traditional toggle-style switches with flip lever mechanism for basic on/off control, e.g. wall toggle switches, lever switches, flip switches"
         },
         {
           "name": "Standard Rocker Switch",
-          "definition": "Traditional paddle-style on/off switches with rocker mechanism, e.g. decorator switches, paddle switches, wall rocker switches"
+          "definition": "Traditional paddle-style switches with rocker mechanism for basic on/off control, e.g. decorator switches, paddle switches, rocker switches"
         },
         {
           "name": "Illuminated Switch",
-          "definition": "On/off switches with built-in LED indicators or night light features, e.g. lighted switches, LED indicator switches, night light switches"
+          "definition": "Switches with built-in LED indicators or night light functionality for visibility in dark conditions, e.g. LED indicator switches, night light switches, backlit switches"
         },
         {
           "name": "OUT_OF_SCOPE",
-          "definition": "Products that are accessories or components for switches but not standalone switches themselves, e.g. companion switches, accessory switches, remote controls"
+          "definition": "Products that are accessories or components for switches but not actual switches themselves, e.g. companion switches, accessory switches, switch add-ons"
         }
       ],
       "assignments": {
         "0": "Smart Dimmer Switch",
+        "1": "Smart Dimmer Switch",
         "2": "Smart Dimmer Switch",
         "4": "Smart Dimmer Switch",
         "5": "Smart Dimmer Switch",
+        "7": "Smart Dimmer Switch",
         "10": "Smart Dimmer Switch",
         "13": "Smart Dimmer Switch",
+        "14": "Smart Dimmer Switch",
         "15": "Smart Dimmer Switch",
         "34": "Smart Dimmer Switch",
         "36": "Smart Dimmer Switch",
-        "37": "Smart Dimmer Switch",
-        "1": "Standard Dimmer Switch",
-        "6": "Standard Dimmer Switch",
-        "7": "Standard Dimmer Switch",
         "11": "Standard Dimmer Switch",
-        "14": "Standard Dimmer Switch",
         "16": "Standard Dimmer Switch",
+        "6": "Specialty Dimmer Switch",
         "8": "Specialty Dimmer Switch",
         "12": "Specialty Dimmer Switch",
-        "17": "Smart On Off Switch",
-        "21": "Smart On Off Switch",
-        "29": "Smart On Off Switch",
-        "31": "Smart On Off Switch",
+        "17": "Smart Standard Switch",
+        "21": "Smart Standard Switch",
+        "29": "Smart Standard Switch",
+        "31": "Smart Standard Switch",
+        "37": "Smart Standard Switch",
         "18": "Standard Toggle Switch",
         "27": "Standard Toggle Switch",
         "28": "Standard Toggle Switch",
@@ -703,108 +715,116 @@
     },
     {
       "batch_idx": 3,
-      "taxonomies_count": 15,
+      "taxonomies_count": 17,
       "assignments_count": 40,
       "taxonomies": [
         {
           "name": "Single Pole Toggle",
-          "definition": "Single pole toggle switches for basic on/off control, e.g. standard toggle switches, illuminated toggle switches, heavy duty toggle switches"
-        },
-        {
-          "name": "Single Pole Rocker",
-          "definition": "Single pole rocker paddle switches for basic on/off control, e.g. decorator rocker switches, quiet rocker switches, illuminated rocker switches"
+          "definition": "Single pole toggle switches for basic on/off lighting control, e.g. standard toggle switches, illuminated toggle switches, heavy duty toggle switches"
         },
         {
           "name": "Three Way Toggle",
-          "definition": "Three way toggle switches for controlling lights from two locations, e.g. grounding three way toggles, illuminated three way toggles, residential grade three way switches"
-        },
-        {
-          "name": "Three Way Rocker",
-          "definition": "Three way rocker paddle switches for controlling lights from two locations, e.g. decorator three way rockers, commercial grade three way paddles, grounding three way switches"
+          "definition": "Three way toggle switches for controlling lights from multiple locations, e.g. illuminated three way toggles, grounding three way switches"
         },
         {
           "name": "Four Way Toggle",
-          "definition": "Four way toggle switches for controlling lights from three or more locations, e.g. framed four way toggles, commercial grade four way switches, grounding four way toggles"
+          "definition": "Four way toggle switches for multi-location light control in complex circuits, e.g. framed four way switches, commercial grade four way toggles"
+        },
+        {
+          "name": "Single Pole Rocker",
+          "definition": "Single pole rocker paddle switches for modern on/off lighting control, e.g. decorator rocker switches, quiet rocker switches, grounding rocker switches"
+        },
+        {
+          "name": "Three Way Rocker",
+          "definition": "Three way rocker paddle switches for controlling lights from multiple locations, e.g. decorator three way rockers, matte finish three way switches"
         },
         {
           "name": "Four Way Rocker",
-          "definition": "Four way rocker paddle switches for controlling lights from three or more locations, e.g. decorator four way rockers, commercial grade four way paddles, self grounding four way switches"
+          "definition": "Four way rocker paddle switches for multi-location light control, e.g. decorator four way switches, high voltage four way rockers"
         },
         {
-          "name": "Double Pole Toggle",
-          "definition": "Double pole toggle switches for controlling high voltage circuits, e.g. commercial grade double pole toggles, quiet double pole switches, grounding double pole toggles"
+          "name": "Double Pole",
+          "definition": "Double pole switches for controlling high voltage or dual circuit lighting, e.g. commercial grade double pole toggles, high amperage double pole switches"
         },
         {
           "name": "Combination Switch",
-          "definition": "Switches combined with outlets or other electrical devices, e.g. switch outlet combinations, duplex receptacle combinations, combo wall switches"
+          "definition": "Switches combined with other electrical devices in single unit, e.g. switch outlet combinations, switch receptacle combos"
         },
         {
-          "name": "Multiple Gang Switch",
-          "definition": "Switches with multiple gangs or controls in one unit, e.g. triple rocker switches, double switches, multi gang wall switches"
+          "name": "Multi Gang",
+          "definition": "Multiple switches mounted together in single housing, e.g. triple rocker switches, multi-switch assemblies"
         },
         {
-          "name": "Smart Switch",
-          "definition": "WiFi or wireless enabled switches with app or voice control, e.g. WiFi light switches, smart home switches, voice controlled switches"
+          "name": "LED Illuminated",
+          "definition": "Switches with built-in LED indicator lights for visibility, e.g. night light switches, pilot light switches, illuminated when off switches"
         },
         {
-          "name": "Wireless Remote Switch",
-          "definition": "Battery operated or RF controlled switches without hardwiring, e.g. remote control switches, wireless wall switches, no wiring switches"
+          "name": "Smart WiFi",
+          "definition": "WiFi connected switches for remote and voice control, e.g. app controlled switches, voice assistant compatible switches, smartphone controlled switches"
         },
         {
-          "name": "Sound Activated Switch",
-          "definition": "Switches activated by sound or clapping, e.g. clap on switches, sound detection switches, voice activated switches"
+          "name": "Smart Z-Wave",
+          "definition": "Z-Wave protocol switches requiring hub for smart home integration, e.g. hub required smart switches, Z-Wave plus switches, mesh network switches"
+        },
+        {
+          "name": "Wireless Remote",
+          "definition": "Battery operated switches with wireless remote control capability, e.g. RF remote switches, no wiring switches, portable remote controls"
+        },
+        {
+          "name": "Sound Activated",
+          "definition": "Switches that respond to audio signals for hands-free operation, e.g. clap detection switches, voice activated switches, sound sensor switches"
         },
         {
           "name": "Door Switch",
-          "definition": "Switches specifically designed for door lighting control, e.g. door light switches, automatic door switches, door activated switches"
+          "definition": "Specialized switches designed for automatic door lighting control, e.g. door activated switches, entry lighting switches"
         },
         {
           "name": "Add On Switch",
-          "definition": "Auxiliary switches used with smart switch systems, e.g. paddle add on switches, companion switches, auxiliary wall switches"
+          "definition": "Auxiliary switches designed to work with existing smart switch systems, e.g. companion switches, secondary control switches"
         },
         {
           "name": "OUT_OF_SCOPE",
-          "definition": "Products that clearly don't belong to light switch, e.g. inline cord switches, appliance switches, lamp switches"
+          "definition": "Products that are not wall mounted light switches, e.g. inline cord switches, appliance switches, lamp switches"
         }
       ],
       "assignments": {
         "1": "Single Pole Toggle",
         "2": "Single Pole Toggle",
-        "9": "Single Pole Toggle",
         "16": "Single Pole Toggle",
         "18": "Single Pole Toggle",
         "19": "Single Pole Toggle",
         "22": "Single Pole Toggle",
         "24": "Single Pole Toggle",
-        "38": "Single Pole Toggle",
+        "9": "Three Way Toggle",
+        "26": "Three Way Toggle",
+        "33": "Three Way Toggle",
+        "15": "Four Way Toggle",
+        "23": "Four Way Toggle",
         "0": "Single Pole Rocker",
         "3": "Single Pole Rocker",
         "5": "Single Pole Rocker",
         "8": "Single Pole Rocker",
         "11": "Single Pole Rocker",
-        "13": "Single Pole Rocker",
-        "26": "Three Way Toggle",
-        "33": "Three Way Toggle",
         "6": "Three Way Rocker",
-        "15": "Four Way Toggle",
-        "23": "Four Way Toggle",
         "4": "Four Way Rocker",
-        "12": "Double Pole Toggle",
+        "12": "Double Pole",
         "10": "Combination Switch",
         "20": "Combination Switch",
         "21": "Combination Switch",
-        "17": "Multiple Gang Switch",
-        "37": "Multiple Gang Switch",
-        "25": "Smart Switch",
-        "27": "Smart Switch",
-        "29": "Smart Switch",
-        "32": "Smart Switch",
-        "34": "Smart Switch",
-        "36": "Smart Switch",
-        "39": "Smart Switch",
-        "31": "Wireless Remote Switch",
-        "35": "Wireless Remote Switch",
-        "7": "Sound Activated Switch",
+        "17": "Multi Gang",
+        "13": "LED Illuminated",
+        "38": "LED Illuminated",
+        "27": "Smart WiFi",
+        "29": "Smart WiFi",
+        "32": "Smart WiFi",
+        "34": "Smart WiFi",
+        "37": "Smart WiFi",
+        "25": "Smart Z-Wave",
+        "36": "Smart Z-Wave",
+        "39": "Smart Z-Wave",
+        "31": "Wireless Remote",
+        "35": "Wireless Remote",
+        "7": "Sound Activated",
         "30": "Door Switch",
         "14": "Add On Switch",
         "28": "OUT_OF_SCOPE"

@@ -1,0 +1,56 @@
+You are an aspect category consolidation specialist.
+
+**YOUR TASK:** Consolidate two aspect category taxonomies for {aspect_type} aspects by identifying similar categories and grouping them together, while preserving the specificity and distinctiveness of each category type.
+
+**ASPECT CONTEXT:** You are working with {aspect_context} extracted from customer reviews and feedback.{product_context}
+
+**INPUT TAXONOMIES:**
+
+Taxonomy A (Current Consolidated):
+{taxonomy_a}
+
+Taxonomy B (New Batch):
+{taxonomy_b}
+
+**UNDERSTANDING THE INPUT:**
+- Taxonomy A is the existing consolidated taxonomy with categories A_0, A_1, A_2, etc.
+- Taxonomy B is a new batch taxonomy with categories B_0, B_1, B_2, etc.
+- Each category ID represents a specific aspect category with its own definition
+- Your goal is to consolidate these by grouping similar categories while maintaining their distinctiveness
+
+**CONSOLIDATION INSTRUCTIONS:**
+1. **Identify similar categories** - Group categories from both taxonomies that represent the same or very similar aspect types based on their definitions
+2. **Preserve specificity** - When consolidating, maintain the specific nature of each category type rather than creating broader, more generic categories
+3. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals
+4. **Include all category IDs** - Each consolidated category contains ALL the original category IDs that belong to the same concept
+5. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific aspect type, ending with "e.g." and specific examples
+6. **Ensure completeness** - Every A_* and B_* ID must appear exactly once in the result
+7. **Maintain consistent granularity** - All consolidated categories must be at the same level of specificity
+8. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries
+
+**CRITICAL RULES:**
+- **Completeness**: Every original category ID must be included exactly once in the "ids" arrays
+- **Format**: Return pure JSON only - no explanations or formatting
+- **Consolidation**: Group only categories that represent essentially the same aspect type - do not force unrelated categories together
+- **Specificity**: Maintain the specific nature of aspect categories - avoid creating overly broad or generic groupings
+- **Naming**: Use professional, descriptive category names with words separated by spaces; each category must represent ONE specific concept with clear boundaries; IMPROVE original names to be more distinguishing and specific when consolidating
+- **Granularity**: Maintain consistent level of specificity across all consolidated categories
+- **Exclusivity**: Ensure categories are mutually exclusive with no overlap
+- **Definitions**: Each consolidated category must have a "definition" field with precise description ending with "e.g." and specific examples
+
+**EXPECTED OUTPUT FORMAT:**
+{{
+  "Consolidated Category Name 1": {{
+    "definition": "..., e.g. ...",
+    "ids": ["A_0", "B_1"]
+  }},
+  "Consolidated Category Name 2": {{
+    "definition": "..., e.g. ...",
+    "ids": ["A_1"]
+  }},
+  "Consolidated Category Name 3": {{
+    "definition": "..., e.g. ...",
+    "ids": ["B_0"]
+  }},
+  ...
+}} 
