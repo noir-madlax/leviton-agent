@@ -1,0 +1,126 @@
+{
+  "metadata": {
+    "product_category": "Kids Arts & Crafts",
+    "asin": "B087N9N6HH",
+    "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
+    "categorization_timestamp": "2025-06-29T16:53:43.569507",
+    "source_file": "/Users/maoc/Desktop/3PO/leviton-agent/backend/review_analysis/tests/llm/test_data/real_amazon_extraction_results.json"
+  },
+  "categorization_results": {
+    "phy": {
+      "taxonomy_count": 11,
+      "taxonomies": [
+        {
+          "name": "Container Size Convenience",
+          "definition": "The appropriateness of container dimensions for storage, portability, and child handling, e.g. small containers for easy storage, mini-sized packaging for travel"
+        },
+        {
+          "name": "Product Quantity Adequacy",
+          "definition": "The sufficiency of material amount provided relative to customer expectations and usage needs, e.g. small portions of playdough, limited quantity per container"
+        },
+        {
+          "name": "Color Selection Range",
+          "definition": "The breadth of color options available in the product set for creative expression, e.g. multiple color choices, diverse color palette"
+        },
+        {
+          "name": "Color Intensity Quality",
+          "definition": "The vividness, brightness, and saturation level of colors that affect visual appeal, e.g. vibrant hues, bold pigmentation, rich color depth"
+        },
+        {
+          "name": "Packaging Durability",
+          "definition": "The structural integrity and protective quality of product containers and boxes, e.g. sturdy boxes, secure closures, damage-resistant packaging"
+        },
+        {
+          "name": "Safety Compliance",
+          "definition": "The adherence to child safety standards through material composition and formulation, e.g. non-toxic ingredients, allergen-free materials"
+        },
+        {
+          "name": "Writing Tip Performance",
+          "definition": "The functional quality of pencil or marker tips affecting drawing and writing experience, e.g. smooth application, consistent line quality, tip durability"
+        },
+        {
+          "name": "Tip Structural Integrity",
+          "definition": "The physical robustness of pencil or marker tips against breaking and wear, e.g. break-resistant tips, durable point construction"
+        },
+        {
+          "name": "Pencil Shape Quality",
+          "definition": "The straightness and proper form of pencil bodies affecting usability, e.g. straight pencils, properly formed barrels"
+        },
+        {
+          "name": "Grip Comfort",
+          "definition": "The ease and comfort of holding art supplies during extended use, e.g. ergonomic design, comfortable diameter, non-slip surface"
+        },
+        {
+          "name": "Material Texture Feel",
+          "definition": "The tactile quality and consistency of art materials during application, e.g. smooth playdough, even paint consistency"
+        }
+      ]
+    },
+    "perf": {
+      "taxonomy_count": 8,
+      "taxonomies": [
+        {
+          "name": "Durability Under Use",
+          "definition": "How well products withstand regular handling and usage without breaking or deteriorating, e.g. crayons that don't break when dropped, markers that don't crack with normal use"
+        },
+        {
+          "name": "Longevity",
+          "definition": "How long products continue to function effectively over extended periods of use, e.g. paint sets that provide many art sessions, colored pencils that last through multiple projects"
+        },
+        {
+          "name": "Quality Retention",
+          "definition": "How well products maintain their original performance characteristics over time, e.g. paints that keep their vibrant colors, glue that maintains stickiness"
+        },
+        {
+          "name": "Tool Maintenance",
+          "definition": "How well products respond to sharpening or other maintenance activities, e.g. colored pencils that sharpen to fine points without breaking, crayons that don't crumble when sharpened"
+        },
+        {
+          "name": "Child Usability",
+          "definition": "How easily children can handle and operate the products independently, e.g. scissors with comfortable grips for small hands, markers with easy-open caps"
+        },
+        {
+          "name": "Application Smoothness",
+          "definition": "How evenly and effortlessly products apply to surfaces during use, e.g. crayons that glide without scratching, markers that flow without skipping"
+        },
+        {
+          "name": "Color Blending",
+          "definition": "How well different colors mix and transition together during artistic creation, e.g. watercolors that create smooth gradients, pastels that blend seamlessly"
+        },
+        {
+          "name": "Moisture Management",
+          "definition": "How products handle drying and rehydration to maintain usability, e.g. paints that stay workable longer, markers that can be revived when dried out"
+        }
+      ]
+    },
+    "use": {
+      "taxonomy_count": 6,
+      "taxonomies": [
+        {
+          "name": "Party Entertainment",
+          "definition": "Arts and crafts products used to entertain children at parties and celebrations, e.g. party favors, goodie bags, easter baskets"
+        },
+        {
+          "name": "Educational Activities",
+          "definition": "Creative materials used in formal learning environments or homework assignments, e.g. classroom gifts, schoolwork"
+        },
+        {
+          "name": "Portable Entertainment",
+          "definition": "Compact arts and crafts supplies designed for entertainment during travel or on-the-go situations, e.g. travel entertainment"
+        },
+        {
+          "name": "Developmental Play",
+          "definition": "Creative materials that engage children's senses and support developmental learning through tactile exploration, e.g. sensory play"
+        },
+        {
+          "name": "Structured Art Projects",
+          "definition": "Organized creative activities with specific outcomes or guided processes, e.g. art activities, coloring books"
+        },
+        {
+          "name": "Freeform Artistic Expression",
+          "definition": "Open-ended creative work allowing children to express imagination without predetermined structure, e.g. creative drawing, sketching, detailed artwork"
+        }
+      ]
+    }
+  }
+}

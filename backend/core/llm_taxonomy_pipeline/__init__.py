@@ -14,6 +14,13 @@ from .pipeline_stage import (
     TaxonomyDTO,
 )
 
+# Categorisation base stage
+from .categorization_base import (
+    CategorizationStageContext,
+    CategorizationStageResult,
+    CategorizationStage,
+)
+
 __all__: list[str] = [
     "BaseStage",
     "StageContext",
@@ -31,4 +38,7 @@ __all__: list[str] = [
     "RefinementStageContext",
     "RefinementStageResult",
     "RefinementStage",
+    "CategorizationStageContext",
+    "CategorizationStageResult",
+    "CategorizationStage",
 ] 
