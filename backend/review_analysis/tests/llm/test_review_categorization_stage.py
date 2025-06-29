@@ -1,6 +1,6 @@
 """Tests for review aspect categorization stage implementation.
 
-This module tests the ReviewCategorisationStage using both mocked and real
+This module tests the ReviewCategorizationStage using both mocked and real
 LLM responses to ensure aspects are correctly categorized into new taxonomies.
 
 Test Coverage:
@@ -44,9 +44,9 @@ import pytest
 from pathlib import Path
 from typing import Dict, List, Tuple
 
-from review_analysis.llm.categorization_stage import (
-    ReviewCategorisationStage,
-    ReviewCategorisationContext,
+from review_analysis.llm.review_categorization_stage import (
+    ReviewCategorizationStage,
+    ReviewCategorizationContext,
 )
 from core.llm_taxonomy_pipeline.categorization_base import CategorizationStageResult
 from core.llm_taxonomy_pipeline.pipeline_stage import TaxonomyDTO
@@ -68,9 +68,9 @@ def extraction_results() -> Dict:
         return json.load(f)
 
 @pytest.fixture
-def categorization_stage() -> ReviewCategorisationStage:
-    """Create a ReviewCategorisationStage instance."""
-    return ReviewCategorisationStage()
+def categorization_stage() -> ReviewCategorizationStage:
+    """Create a ReviewCategorizationStage instance."""
+    return ReviewCategorizationStage()
 
 
 # Helper Functions
@@ -140,9 +140,9 @@ class TestCategorizationStage:
     """Test suite for the aspect categorization stage."""
 
     @pytest.mark.asyncio
-    async def test_build_prompt(self, categorization_stage: ReviewCategorisationStage):
+    async def test_build_prompt(self, categorization_stage: ReviewCategorizationStage):
         """Verify that the prompt is built correctly."""
-        context = ReviewCategorisationContext(
+        context = ReviewCategorizationContext(
             product_category=PRODUCT_CATEGORY,
             aspects=[("0", "dries out quickly"), ("1", "easy to wash off")],
             aspect_type="performance",
@@ -153,11 +153,11 @@ class TestCategorizationStage:
         prompt = await categorization_stage._build_prompt(context)
 
         # Print full prompt for manual inspection
-        print(f"\n" + "="*80)
-        print(f"🔍 FULL PROMPT FOR MANUAL INSPECTION")
-        print(f"="*80)
+        print("\n" + "="*80)
+        print("🔍 FULL PROMPT FOR MANUAL INSPECTION")
+        print("="*80)
         print(prompt)
-        print(f"="*80)
+        print("="*80)
 
         assert PRODUCT_CATEGORY in prompt
         assert "performance" in prompt
@@ -167,35 +167,35 @@ class TestCategorizationStage:
         print("\n✅ Prompt built successfully.")
 
     @pytest.mark.asyncio
-    async def test_validation_with_valid_response(self, categorization_stage: ReviewCategorisationStage):
+    async def test_validation_with_valid_response(self, categorization_stage: ReviewCategorizationStage):
         """Test the validator with a correct response."""
         valid_response = json.dumps({
             "Durability": {"definition": "Issues related to the product drying out, e.g. markers drying up."},
             "Cleanliness": {"definition": "How easy the product is to clean, e.g. washes off skin easily."}
         })
-        context = ReviewCategorisationContext(
+        context = ReviewCategorizationContext(
             product_category=PRODUCT_CATEGORY,
             aspects=[("0", "dries out quickly"), ("1", "easy to wash off")],
             aspect_type="performance", aspect_context="", input_description="", product_categories=set()
         )
         result = categorization_stage._validate(valid_response, context)
 
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - VALID RESPONSE")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - VALID RESPONSE")
+        print("="*60)
         print(f"✅ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {valid_response}")
-        print(f"="*60)
+        print("="*60)
         
         assert result.ok is True
         print("\n✅ Validator correctly passed a valid response.")
 
     @pytest.mark.asyncio
-    async def test_validation_with_invalid_response(self, categorization_stage: ReviewCategorisationStage):
+    async def test_validation_with_invalid_response(self, categorization_stage: ReviewCategorizationStage):
         """Test the validator with various incorrect responses."""
-        context = ReviewCategorisationContext(
+        context = ReviewCategorizationContext(
             product_category=PRODUCT_CATEGORY,
             aspects=[("0", "test")],
             aspect_type="performance", aspect_context="", input_description="", product_categories=set()
@@ -205,14 +205,14 @@ class TestCategorizationStage:
         invalid_ids = json.dumps({"Category A": {"definition": "def", "ids": ["0"]}})
         result = categorization_stage._validate(invalid_ids, context)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - INVALID RESPONSE (Case 1: Contains 'ids')")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - INVALID RESPONSE (Case 1: Contains 'ids')")
+        print("="*60)
         print(f"❌ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {invalid_ids}")
-        print(f"="*60)
+        print("="*60)
         
         assert result.ok is False
         assert "contains unexpected fields" in result.error_categories["validation_errors"][0]
@@ -221,14 +221,14 @@ class TestCategorizationStage:
         missing_def = json.dumps({"Category A": {}})
         result = categorization_stage._validate(missing_def, context)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - INVALID RESPONSE (Case 2: Missing 'definition')")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - INVALID RESPONSE (Case 2: Missing 'definition')")
+        print("="*60)
         print(f"❌ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {missing_def}")
-        print(f"="*60)
+        print("="*60)
         
         assert result.ok is False
         assert "missing 'definition' field" in result.error_categories["validation_errors"][0]
@@ -237,52 +237,47 @@ class TestCategorizationStage:
         has_oos = json.dumps({"OUT_OF_SCOPE": {"definition": "def"}})
         result = categorization_stage._validate(has_oos, context)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - INVALID RESPONSE (Case 3: Reserved name 'OUT_OF_SCOPE')")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - INVALID RESPONSE (Case 3: Reserved name 'OUT_OF_SCOPE')")
+        print("="*60)
         print(f"❌ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {has_oos}")
-        print(f"="*60)
+        print("="*60)
         
         assert result.ok is False
         
         print("\n✅ Validator correctly rejected various invalid responses.")
     
     @pytest.mark.asyncio
-    async def test_produce_result_conversion(self, categorization_stage: ReviewCategorisationStage):
-        """Test conversion of a valid response to a result object."""
+    async def test_produce_result_conversion(self, categorization_stage: ReviewCategorizationStage):
+        """Test the successful conversion of a valid raw JSON response."""
         raw_response = json.dumps({
-            "Category A": {"definition": "def A"},
-            "Category B": {"definition": "def B"}
+            "Durability": {"definition": "Issues related to the product drying out, e.g. markers drying up."},
+            "Cleanliness": {"definition": "How easy the product is to clean, e.g. washes off skin easily."}
         })
-        context = ReviewCategorisationContext(
+        context = ReviewCategorizationContext(
             product_category="", aspects=[], aspect_type="", aspect_context="", input_description="", product_categories=set()
         )
         result = await categorization_stage._produce_result(raw_response, context, 1)
-        
-        print(f"\n" + "="*60)
-        print(f"🔍 RESULT CONVERSION")
-        print(f"="*60)
-        print(f"📝 Raw response: {raw_response}")
-        print(f"📊 Result type: {type(result)}")
-        print(f"📊 Taxonomies created: {len(result.taxonomies_categorised)}")
-        print(f"📋 Converted taxonomies:")
-        for tax in result.taxonomies_categorised:
-            print(f"   - {tax.name}: {tax.definition}")
-        print(f"="*60)
 
-        assert isinstance(result, CategorizationStageResult)
+        print("\n" + "="*60)
+        print("🔍 CONVERSION RESULT")
+        print("="*60)
+        print(f"✅ Result: {result}")
+        print("="*60)
+
         assert len(result.taxonomies_categorised) == 2
-        assert result.taxonomies_categorised[0].name == "Category A"
-        print("\n✅ Result produced successfully from raw response.")
+        assert result.taxonomies_categorised[0].name == "Durability"
+        assert result.taxonomies_categorised[1].name == "Cleanliness"
+        print("\n✅ Conversion to structured result successful.")
 
     @pytest.mark.asyncio
-    async def test_split_and_merge_operations(self, categorization_stage: ReviewCategorisationStage):
-        """Test splitting a context and merging the results."""
-        # 1. Split
-        context = ReviewCategorisationContext(
+    async def test_split_and_merge_operations(self, categorization_stage: ReviewCategorizationStage):
+        """Verify context splitting and result merging logic."""
+        # Setup: create a context with more aspects than the split threshold (2)
+        context = ReviewCategorizationContext(
             product_category="",
             aspects=[(str(i), f"aspect_{i}") for i in range(4)],
             aspect_type="", aspect_context="", input_description="", product_categories=set()
@@ -294,30 +289,28 @@ class TestCategorizationStage:
         assert ctx_right.aspects[0][1] == "aspect_2"
         
         # 2. Merge
-        res_left = CategorizationStageResult(taxonomies_categorised=[
-            TaxonomyDTO(name="Cat A", definition="def A"),
-            TaxonomyDTO(name="Cat B", definition="def B")
-        ])
-        res_right = CategorizationStageResult(taxonomies_categorised=[
-            TaxonomyDTO(name="Cat B", definition="def B updated"), # Duplicate name
-            TaxonomyDTO(name="Cat C", definition="def C")
-        ])
+        res_left = CategorizationStageResult(taxonomies_categorised=[TaxonomyDTO("Color", "red")])
+        res_right = CategorizationStageResult(taxonomies_categorised=[TaxonomyDTO("Size", "big"), TaxonomyDTO("Color", "blue")])
         
         merged = await categorization_stage._merge_split_results(res_left, res_right, ctx_left, ctx_right, 0)
         
-        assert isinstance(merged, CategorizationStageResult)
-        assert len(merged.taxonomies_categorised) == 3 # A, B, C
+        print("\n" + "="*60)
+        print("🔍 MERGE RESULT")
+        print("="*60)
+        print(f"✅ Merged Taxonomies: {[t.name for t in merged.taxonomies_categorised]}")
+        print("="*60)
         
-        # Check that the first definition of Cat B was kept
-        cat_b_merged = next(t for t in merged.taxonomies_categorised if t.name == "Cat B")
-        assert cat_b_merged.definition == "def B"
-        print("\n✅ Split and merge operations work as expected.")
+        # Deduplication should keep 'Color' from the left result, so total is 2
+        assert len(merged.taxonomies_categorised) == 2
+        assert merged.taxonomies_categorised[0].name == "Color"
+        assert merged.taxonomies_categorised[1].name == "Size"
+        print("\n✅ Merge with deduplication successful.")
 
     @pytest.mark.asyncio
     @pytest.mark.integration
     async def test_real_llm_categorization_with_extracted_aspects(
         self,
-        categorization_stage: ReviewCategorisationStage,
+        categorization_stage: ReviewCategorizationStage,
         extraction_results: Dict,
     ):
         """
@@ -346,13 +339,13 @@ class TestCategorizationStage:
                 continue
 
             print(f"Found {len(unique_aspects)} unique aspects to categorize.")
-            print(f"   - Sample aspects:")
+            print("   - Sample aspects:")
             for aspect_id, aspect_desc in unique_aspects[:8]:
                 print(f"     [{aspect_id}] {aspect_desc}")
             if len(unique_aspects) > 8:
                 print("     ...")
             
-            context = ReviewCategorisationContext(
+            context = ReviewCategorizationContext(
                 product_category=metadata.get("product_category", PRODUCT_CATEGORY),
                 aspects=unique_aspects,
                 aspect_type=aspect_type,

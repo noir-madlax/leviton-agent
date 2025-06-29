@@ -48,20 +48,17 @@ Configuration:
 
 import json
 import pytest
-import asyncio
 from pathlib import Path
 from typing import List, Dict, Any
 from unittest.mock import AsyncMock
 
-from review_analysis.llm.extraction_stage import (
+from review_analysis.llm.review_extraction_stage import (
     ReviewExtractionStage,
     ReviewExtractionContext,
     ReviewExtractionResult,
     format_reviews_for_prompt,
     count_extracted_aspects
 )
-from review_analysis.llm.validation import ReviewValidationContext
-from core.llm_taxonomy_pipeline.pipeline_stage import StageContext
 from core.utils.llm_utils import ValidationResult
 
 # Test configuration
@@ -214,11 +211,11 @@ class TestReviewExtractionStage:
         prompt = await extraction_stage._build_prompt(context)
         
         # Print full prompt for manual inspection
-        print(f"\n" + "="*80)
-        print(f"🔍 FULL PROMPT FOR MANUAL INSPECTION")
-        print(f"="*80)
+        print("\n" + "="*80)
+        print("🔍 FULL PROMPT FOR MANUAL INSPECTION")
+        print("="*80)
         print(prompt)
-        print(f"="*80)
+        print("="*80)
         # Verify prompt structure
         assert PRODUCT_CATEGORY in prompt
         assert "0#" in prompt  # First review
@@ -260,14 +257,14 @@ class TestReviewExtractionStage:
         
         result = extraction_stage._validate(valid_response, context)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - VALID RESPONSE")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - VALID RESPONSE")
+        print("="*60)
         print(f"✅ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {valid_response}")
-        print(f"="*60)
+        print("="*60)
         
         assert isinstance(result, ValidationResult)
         assert result.ok is True
@@ -292,17 +289,17 @@ class TestReviewExtractionStage:
         
         result = extraction_stage._validate(invalid_response, context)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 VALIDATION RESULT - INVALID RESPONSE")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 VALIDATION RESULT - INVALID RESPONSE")
+        print("="*60)
         print(f"❌ Validation Result: {result.ok}")
         print(f"📋 Error Categories: {result.error_categories}")
-        print(f"📝 Response being validated:")
+        print("📝 Response being validated:")
         print(f"   {invalid_response}")
-        print(f"🔍 Error Details:")
+        print("🔍 Error Details:")
         for category, errors in result.error_categories.items():
             print(f"   {category}: {errors}")
-        print(f"="*60)
+        print("="*60)
         
         assert isinstance(result, ValidationResult)
         assert result.ok is False
@@ -332,37 +329,37 @@ class TestReviewExtractionStage:
             product_title="Test Kit"
         )
         
-        print(f"\n" + "="*80)
-        print(f"🔍 SPLIT AND MERGE OPERATIONS - MANUAL INSPECTION")
-        print(f"="*80)
-        print(f"📊 ORIGINAL CONTEXT:")
+        print("\n" + "="*80)
+        print("🔍 SPLIT AND MERGE OPERATIONS - MANUAL INSPECTION")
+        print("="*80)
+        print("📊 ORIGINAL CONTEXT:")
         print(f"   - Review count: {len(expected_ids)}")
         print(f"   - Expected IDs: {expected_ids}")
-        print(f"   - Formatted reviews:")
+        print("   - Formatted reviews:")
         for line in formatted_reviews.split('\n'):
             print(f"     {line}")
-        print(f"="*80)
+        print("="*80)
         
         # 1. Test splitting
         ctx_left, ctx_right = extraction_stage._split_context(context, depth=0)
         
-        print(f"📊 AFTER SPLIT:")
-        print(f"   Left context:")
+        print("📊 AFTER SPLIT:")
+        print("   Left context:")
         print(f"     - Review count: {len(ctx_left.expected_review_ids)}")
         print(f"     - Expected IDs: {ctx_left.expected_review_ids}")
-        print(f"     - Formatted reviews:")
+        print("     - Formatted reviews:")
         for line in ctx_left.formatted_reviews.split('\n'):
             print(f"       {line}")
-        print(f"   Right context:")
+        print("   Right context:")
         print(f"     - Review count: {len(ctx_right.expected_review_ids)}")
         print(f"     - Expected IDs: {ctx_right.expected_review_ids}")
-        print(f"     - Formatted reviews:")
+        print("     - Formatted reviews:")
         for line in ctx_right.formatted_reviews.split('\n'):
             print(f"       {line}")
-        print(f"="*80)
+        print("="*80)
         
         # 2. Create mock results for merging
-        from review_analysis.llm.extraction_stage import ReviewExtractionResult
+        from review_analysis.llm.review_extraction_stage import ReviewExtractionResult
         
         # Left result (reviews 0,1 -> aspects A,B,a)
         left_hierarchy = {
@@ -410,14 +407,14 @@ class TestReviewExtractionStage:
             aspects_extracted=3  # C,b,educational activities
         )
         
-        print(f"📊 MOCK RESULTS FOR MERGE:")
-        print(f"   Left result (reviews 0,1):")
+        print("📊 MOCK RESULTS FOR MERGE:")
+        print("   Left result (reviews 0,1):")
         print(f"     - Aspects: {res_left.aspects_extracted}")
         print(f"     - Hierarchy: {res_left.review_hierarchy}")
-        print(f"   Right result (reviews 0,1, will be offset to 2,3):")
+        print("   Right result (reviews 0,1, will be offset to 2,3):")
         print(f"     - Aspects: {res_right.aspects_extracted}")
         print(f"     - Hierarchy: {res_right.review_hierarchy}")
-        print(f"="*80)
+        print("="*80)
         
         # 3. Test merging
         merged_result = await extraction_stage._merge_split_results(
@@ -428,14 +425,14 @@ class TestReviewExtractionStage:
             depth=0
         )
         
-        print(f"📊 MERGED RESULT:")
+        print("📊 MERGED RESULT:")
         print(f"   - Total aspects: {merged_result.aspects_extracted}")
-        print(f"   - Merged hierarchy:")
+        print("   - Merged hierarchy:")
         for section_name, section_content in merged_result.review_hierarchy.items():
             print(f"     {section_name}:")
             for category, details in section_content.items():
                 print(f"       {category}: {details}")
-        print(f"="*80)
+        print("="*80)
         
         # Verify split integrity
         assert len(ctx_left.expected_review_ids) == 2
@@ -474,7 +471,7 @@ class TestReviewExtractionStage:
         assert "b" in edu_aspect["+"]  # Reason a remapped to b
         assert 3 in edu_aspect["+"]["b"]  # Original 1 + offset 2
         
-        print(f"\n✅ Split and merge operations completed successfully")
+        print("\n✅ Split and merge operations completed successfully")
         print(f"   - Split: {len(expected_ids)} → {len(ctx_left.expected_review_ids)} + {len(ctx_right.expected_review_ids)}")
         print(f"   - Merge: {res_left.aspects_extracted} + {res_right.aspects_extracted} → {merged_result.aspects_extracted}")
 
@@ -484,9 +481,9 @@ class TestReviewExtractionStage:
         extraction_stage: ReviewExtractionStage
     ) -> None:
         """Test ID offsetting with multi-character IDs (AA, AB, aa, ab, etc.)."""
-        print(f"\n" + "="*80)
-        print(f"🔍 MULTI-CHARACTER ID OFFSET TEST")
-        print(f"="*80)
+        print("\n" + "="*80)
+        print("🔍 MULTI-CHARACTER ID OFFSET TEST")
+        print("="*80)
         
         # Create left result with multi-character IDs (Y, Z, y, z)
         left_hierarchy = {
@@ -553,11 +550,11 @@ class TestReviewExtractionStage:
             product_title="Test Kit"
         )
         
-        print(f"📊 LEFT RESULT (Y,Z,y,z IDs):")
+        print("📊 LEFT RESULT (Y,Z,y,z IDs):")
         print(f"   {left_hierarchy}")
-        print(f"📊 RIGHT RESULT (should become AA,AB,aa,ab after merge):")
+        print("📊 RIGHT RESULT (should become AA,AB,aa,ab after merge):")
         print(f"   {right_hierarchy}")
-        print(f"="*80)
+        print("="*80)
         
         # Test the merge
         merged_result = await extraction_stage._merge_split_results(
@@ -568,12 +565,12 @@ class TestReviewExtractionStage:
             depth=0
         )
         
-        print(f"📊 MERGED RESULT WITH MULTI-CHARACTER IDs:")
+        print("📊 MERGED RESULT WITH MULTI-CHARACTER IDs:")
         for section_name, section_content in merged_result.review_hierarchy.items():
             print(f"   {section_name}:")
             for category, details in section_content.items():
                 print(f"     {category}: {details}")
-        print(f"="*80)
+        print("="*80)
         
         # Verify multi-character ID generation
         phy_section = merged_result.review_hierarchy["phy"]
@@ -612,11 +609,11 @@ class TestReviewExtractionStage:
         assert 2 in testing_aspect["+"]["aa"]  # Original 0 + offset 2
         assert 3 in testing_aspect["+"]["ab"]  # Original 1 + offset 2
         
-        print(f"\n✅ Multi-character ID offset test passed!")
-        print(f"   - Left side: Y,Z,y,z (kept as-is)")
-        print(f"   - Right side: A,B,a,b → AA,AB,aa,ab (correctly offset)")
-        print(f"   - All RIDs properly offset by 2")
-        print(f"   - All reason IDs correctly remapped")
+        print("\n✅ Multi-character ID offset test passed!")
+        print("   - Left side: Y,Z,y,z (kept as-is)")
+        print("   - Right side: A,B,a,b → AA,AB,aa,ab (correctly offset)")
+        print("   - All RIDs properly offset by 2")
+        print("   - All reason IDs correctly remapped")
 
     @pytest.mark.asyncio
     async def test_multi_character_input_ids(
@@ -625,9 +622,9 @@ class TestReviewExtractionStage:
     ) -> None:
         """Test ID offsetting when left side already has multi-character IDs (AA, AB, etc.)."""
         
-        print(f"\n" + "="*80)
-        print(f"🔍 MULTI-CHARACTER INPUT IDS TEST")
-        print(f"="*80)
+        print("\n" + "="*80)
+        print("🔍 MULTI-CHARACTER INPUT IDS TEST")
+        print("="*80)
         
         # Create left result with multi-character IDs already present
         left_hierarchy = {
@@ -703,18 +700,18 @@ class TestReviewExtractionStage:
             product_title="Basic Test Kit"
         )
         
-        print(f"📊 LEFT RESULT (multi-character IDs: AA,AB,AC,AD,aa,ab,ac):")
+        print("📊 LEFT RESULT (multi-character IDs: AA,AB,AC,AD,aa,ab,ac):")
         for section_name, section_content in left_hierarchy.items():
             print(f"   {section_name}:")
             for category, details in section_content.items():
                 print(f"     {category}: {list(details.keys())}")
         
-        print(f"📊 RIGHT RESULT (should become AE,AF,AG,ad,ae,af after merge):")
+        print("📊 RIGHT RESULT (should become AE,AF,AG,ad,ae,af after merge):")
         for section_name, section_content in right_hierarchy.items():
             print(f"   {section_name}:")
             for category, details in section_content.items():
                 print(f"     {category}: {list(details.keys())}")
-        print(f"="*80)
+        print("="*80)
         
         # Test the merge with multi-character inputs
         merged_result = await extraction_stage._merge_split_results(
@@ -725,12 +722,12 @@ class TestReviewExtractionStage:
             depth=0
         )
         
-        print(f"📊 MERGED RESULT WITH ADVANCED MULTI-CHARACTER IDs:")
+        print("📊 MERGED RESULT WITH ADVANCED MULTI-CHARACTER IDs:")
         for section_name, section_content in merged_result.review_hierarchy.items():
             print(f"   {section_name}:")
             for category, details in section_content.items():
                 print(f"     {category}: {list(details.keys())}")
-        print(f"="*80)
+        print("="*80)
         
         # Verify advanced multi-character ID generation
         phy_section = merged_result.review_hierarchy["phy"]
@@ -777,11 +774,11 @@ class TestReviewExtractionStage:
         # Verify total aspects
         assert merged_result.aspects_extracted == 17  # 9 + 8
         
-        print(f"\n✅ Multi-character input IDs test passed!")
-        print(f"   - Left side: AA,AB,AC,AD,aa,ab,ac (kept as-is)")
-        print(f"   - Right side: A,B,C,a,b,c → AE,AF,AG,ad,ae,af (correctly offset)")
-        print(f"   - Complex reason mapping: A,C → AE,AG")
-        print(f"   - All RIDs properly offset by 3")
+        print("\n✅ Multi-character input IDs test passed!")
+        print("   - Left side: AA,AB,AC,AD,aa,ab,ac (kept as-is)")
+        print("   - Right side: A,B,C,a,b,c → AE,AF,AG,ad,ae,af (correctly offset)")
+        print("   - Complex reason mapping: A,C → AE,AG")
+        print("   - All RIDs properly offset by 3")
         print(f"   - Total aspects: {merged_result.aspects_extracted}")
 
     @pytest.mark.asyncio
@@ -836,16 +833,16 @@ class TestReviewExtractionStage:
         
         result = await extraction_stage._produce_result(raw_response, context, attempts=1)
         
-        print(f"\n" + "="*60)
-        print(f"🔍 RESULT CONVERSION")
-        print(f"="*60)
+        print("\n" + "="*60)
+        print("🔍 RESULT CONVERSION")
+        print("="*60)
         print(f"📝 Raw response: {raw_response}")
         print(f"📊 Result type: {type(result)}")
         print(f"📊 Aspects extracted: {result.aspects_extracted}")
-        print(f"📋 Hierarchy structure:")
+        print("📋 Hierarchy structure:")
         for section, content in result.review_hierarchy.items():
             print(f"   {section}: {content}")
-        print(f"="*60)
+        print("="*60)
         
         assert isinstance(result, ReviewExtractionResult)
         assert result.review_hierarchy == valid_hierarchy
@@ -868,9 +865,9 @@ class TestReviewExtractionStage:
         
         df = pd.read_csv(csv_path)
         
-        print(f"\n" + "="*80)
-        print(f"🤖 REAL LLM EXTRACTION WITH AMAZON REVIEWS DATA")
-        print(f"="*80)
+        print("\n" + "="*80)
+        print("🤖 REAL LLM EXTRACTION WITH AMAZON REVIEWS DATA")
+        print("="*80)
         print(f"📊 Loaded {len(df)} Amazon reviews from CSV")
         print(f"📋 Product: {df.iloc[0]['product_title'] if not df.empty else 'Unknown'}")
         print(f"📋 ASIN: {df.iloc[0]['asin'] if not df.empty else 'Unknown'}")
@@ -887,13 +884,13 @@ class TestReviewExtractionStage:
             reviews.append(review_dict)
         
         print(f"📊 Using {len(reviews)} reviews for extraction (subset for token efficiency)")
-        print(f"📝 Sample reviews:")
+        print("📝 Sample reviews:")
         for i, review in enumerate(reviews[:3]):
             print(f"   [{i}] Rating: {review['rating']}/5")
             print(f"       Title: {review['title']}")
             print(f"       Text: {review['text'][:100]}...")
         print(f"   ... and {len(reviews) - 3} more reviews")
-        print(f"="*80)
+        print("="*80)
         
         # Format reviews for extraction
         formatted_reviews, expected_ids = format_reviews_for_prompt(reviews)
@@ -911,21 +908,21 @@ class TestReviewExtractionStage:
         
         # Debug: Print the prompt being sent to LLM
         debug_prompt = await extraction_stage._build_prompt(context)
-        print(f"\n🔍 DEBUG - LLM PROMPT (first 500 chars):")
+        print("\n🔍 DEBUG - LLM PROMPT (first 500 chars):")
         print(f"{debug_prompt[:500]}...")
-        print(f"🔍 DEBUG - LLM PROMPT (last 200 chars):")
+        print("🔍 DEBUG - LLM PROMPT (last 200 chars):")
         print(f"...{debug_prompt[-200:]}")
         
         result = await extraction_stage.execute(context)
         
         # Debug: Try to get the raw LLM response
-        print(f"\n🔍 DEBUG - RAW LLM RESPONSE (if available):")
+        print("\n🔍 DEBUG - RAW LLM RESPONSE (if available):")
         if hasattr(result, '_raw_response'):
             print(f"{result._raw_response[:1000]}...")
         else:
             print("Raw response not available in result object")
         
-        print(f"📊 REAL LLM EXTRACTION RESULTS:")
+        print("📊 REAL LLM EXTRACTION RESULTS:")
         print(f"   - Aspects extracted: {result.aspects_extracted}")
         print(f"   - Hierarchy sections: {list(result.review_hierarchy.keys())}")
         
@@ -940,8 +937,8 @@ class TestReviewExtractionStage:
                     if len(details) > 2:
                         print(f"       ... and {len(details) - 2} more aspects")
             else:
-                print(f"     (No aspects found in this section)")
-        print(f"="*80)
+                print("     (No aspects found in this section)")
+        print("="*80)
         
         # Save results for consolidation testing (even if 0 aspects for debugging)
         save_path = TEST_DATA_DIR / "real_amazon_extraction_results.json"
@@ -978,12 +975,12 @@ class TestReviewExtractionStage:
             json.dump(extraction_data, f, indent=2, ensure_ascii=False)
         
         print(f"💾 Saved real Amazon extraction results to: {save_path}")
-        print(f"📊 Results summary:")
+        print("📊 Results summary:")
         print(f"   - Total aspects: {result.aspects_extracted}")
         print(f"   - Physical aspects: {len(result.review_hierarchy.get('phy', {}))}")
         print(f"   - Performance aspects: {len(result.review_hierarchy.get('perf', {}))}")
         print(f"   - Use case aspects: {len(result.review_hierarchy.get('use', {}))}")
-        print(f"="*80)
+        print("="*80)
         
         # Verify result structure (but allow 0 aspects for now)
         assert isinstance(result, ReviewExtractionResult)
@@ -992,12 +989,12 @@ class TestReviewExtractionStage:
         assert "use" in result.review_hierarchy
         
         if result.aspects_extracted > 0:
-            print(f"\n✅ Real Amazon LLM extraction completed successfully!")
+            print("\n✅ Real Amazon LLM extraction completed successfully!")
             print(f"   - Generated {result.aspects_extracted} aspects from real reviews")
         else:
-            print(f"\n⚠️  Real Amazon LLM extraction returned 0 aspects")
-            print(f"   - This may indicate LLM response parsing issues or token limits")
-            print(f"   - Results saved for debugging and consolidation testing")
+            print("\n⚠️  Real Amazon LLM extraction returned 0 aspects")
+            print("   - This may indicate LLM response parsing issues or token limits")
+            print("   - Results saved for debugging and consolidation testing")
         
-        print(f"   - Results saved for consolidation testing")
+        print("   - Results saved for consolidation testing")
         print(f"   - File: {save_path}")

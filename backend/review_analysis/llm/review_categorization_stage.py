@@ -38,7 +38,7 @@ with open(_RETRY_PROMPT_PATH, "r", encoding="utf-8") as f:
 # ---------------------------------------------------------------------------
 
 @dataclass(slots=True, frozen=True)
-class ReviewCategorisationContext(_BaseCtx):
+class ReviewCategorizationContext(_BaseCtx):
     """Extended context for review-aspect categorisation."""
 
     aspect_type: str  # e.g. "physical", "performance", "use case"
@@ -53,7 +53,7 @@ class ReviewCategorisationContext(_BaseCtx):
 # Stage implementation
 # ---------------------------------------------------------------------------
 
-class ReviewCategorisationStage(CategorizationStage):
+class ReviewCategorizationStage(CategorizationStage):
     """Concrete aspect categorisation stage for *review_analysis* domain."""
 
     # We simply wire the fixed templates into the generic base-class
@@ -66,7 +66,7 @@ class ReviewCategorisationStage(CategorizationStage):
 
     # ----------------------- Base hooks ----------------------------------
 
-    async def _build_prompt(self, ctx: ReviewCategorisationContext) -> str:  # noqa: D401
+    async def _build_prompt(self, ctx: ReviewCategorizationContext) -> str:  # noqa: D401
         # Compose dynamic product context
         product_context_block = ""
         if ctx.product_categories:

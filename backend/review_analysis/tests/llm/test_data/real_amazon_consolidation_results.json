@@ -1,161 +1,198 @@
 {
-  "test_metadata": {
-    "timestamp": "2024-01-01T00:00:00Z",
-    "source": "real_amazon_extraction_consolidation",
-    "aspect_type": "physical",
-    "input_taxonomies_a": 10,
-    "input_taxonomies_b": 11,
-    "output_taxonomies": 14
-  },
-  "consolidation_result": {
-    "taxonomies_consolidated": [
-      {
-        "name": "container size",
-        "definition": "Physical aspect relating to the dimensions and capacity of containers or packaging vessels, e.g. small containers, mini size containers, 1 ounce containers",
-        "original_count": 2,
-        "original_names": [
-          "size_small/mini size containers",
-          "size_1 onza/fistful amount of playdough"
-        ]
-      },
-      {
-        "name": "color variety and vibrancy",
-        "definition": "Physical aspect relating to the range, intensity, and visual appeal of colors available in art supplies, e.g. variety of colors, vibrant colors, bright and bold colors, very pigmented colors",
-        "original_count": 5,
-        "original_names": [
-          "colors_variety of colors available",
-          "colors_super nice/vibrant colors",
-          "colors_pencils_bright and bold colors",
-          "colors_pencils_vibrant color",
-          "colors_pencils_very pigmented"
-        ]
-      },
-      {
-        "name": "color application texture",
-        "definition": "Physical aspect relating to the tactile quality and smoothness of color application from art supplies, e.g. smooth texture when coloring, even color distribution",
-        "original_count": 1,
-        "original_names": [
-          "colors_pencils_smooth texture"
-        ]
-      },
-      {
-        "name": "packaging design quality",
-        "definition": "Physical aspect relating to the structural integrity and aesthetic appeal of product packaging, e.g. sturdy box, cute packaging, flip-top box design",
-        "original_count": 2,
-        "original_names": [
-          "packaging_sturdy and cute box packaging",
-          "packaging_caja con tapa abatible"
-        ]
-      },
-      {
-        "name": "packaging damage condition",
-        "definition": "Physical aspect relating to compromised or defective packaging integrity upon receipt, e.g. damaged boxes, open packaging, torn containers",
-        "original_count": 1,
-        "original_names": [
-          "packaging_damaged/open packaging"
-        ]
-      },
-      {
-        "name": "material safety composition",
-        "definition": "Physical aspect relating to the chemical composition and safety properties of art supply materials, e.g. non-toxic materials, wheat-free composition, allergen-free ingredients",
-        "original_count": 1,
-        "original_names": [
-          "material_non-toxic and wheat-free"
-        ]
-      },
-      {
-        "name": "tip writing performance",
-        "definition": "Physical aspect relating to the smoothness and consistency of writing or drawing tip performance, e.g. smooth writing, even ink flow, consistent line quality",
-        "original_count": 1,
-        "original_names": [
-          "tips_smooth and even writing tip"
-        ]
-      },
-      {
-        "name": "tip fragility and breakage",
-        "definition": "Physical aspect relating to the tendency of tips to break or become damaged during use, e.g. tips breaking easily, fragile points, brittle tips",
-        "original_count": 1,
-        "original_names": [
-          "tips_tips break easily"
-        ]
-      },
-      {
-        "name": "tip durability and strength",
-        "definition": "Physical aspect relating to the structural integrity and resistance of tips to wear and damage, e.g. strong tips, durable points, break-resistant tips",
-        "original_count": 1,
-        "original_names": [
-          "tips_strong tips"
-        ]
-      },
-      {
-        "name": "tip sharpness degradation",
-        "definition": "Physical aspect relating to the loss of tip sharpness and precision over time or with use, e.g. tips getting dull quickly, losing sharpness, becoming blunt",
-        "original_count": 1,
-        "original_names": [
-          "tips_tips get dull quickly"
-        ]
-      },
-      {
-        "name": "tip initial sharpness",
-        "definition": "Physical aspect relating to the sharpness and precision of tips when the product is new or unused, e.g. not sharp when new, dull out of package, blunt initial tips",
-        "original_count": 1,
-        "original_names": [
-          "tips_not sharp at tips when new"
-        ]
-      },
-      {
-        "name": "pencil structural deformity",
-        "definition": "Physical aspect relating to shape distortions and structural irregularities in pencil form, e.g. warped pencils, curved pencils, bent structure",
-        "original_count": 1,
-        "original_names": [
-          "pencil_structure_warped/curved pencils"
-        ]
-      },
-      {
-        "name": "pencil grip comfort",
-        "definition": "Physical aspect relating to the ergonomic comfort and ease of holding pencils during use, e.g. comfortable to hold, ergonomic design, pleasant grip feel",
-        "original_count": 2,
-        "original_names": [
-          "pencil_structure_comfortable to hold",
-          "pencil_structure_easy to grip"
-        ]
-      },
-      {
-        "name": "pencil size dimensions",
-        "definition": "Physical aspect relating to the overall dimensions and proportions of pencils, e.g. nice size pencil, appropriate length, good thickness",
-        "original_count": 1,
-        "original_names": [
-          "pencil_structure_nice size pencil"
-        ]
-      }
-    ]
-  },
-  "input_context": {
+  "metadata": {
     "product_category": "Kids Arts & Crafts",
-    "taxonomy_a_names": [
-      "size_small/mini size containers",
-      "size_1 onza/fistful amount of playdough",
-      "colors_variety of colors available",
-      "colors_super nice/vibrant colors",
-      "packaging_sturdy and cute box packaging",
-      "packaging_caja con tapa abatible",
-      "packaging_damaged/open packaging",
-      "material_non-toxic and wheat-free",
-      "tips_smooth and even writing tip",
-      "tips_tips break easily"
-    ],
-    "taxonomy_b_names": [
-      "tips_strong tips",
-      "tips_tips get dull quickly",
-      "tips_not sharp at tips when new",
-      "pencil_structure_warped/curved pencils",
-      "pencil_structure_comfortable to hold",
-      "pencil_structure_easy to grip",
-      "pencil_structure_nice size pencil",
-      "colors_pencils_bright and bold colors",
-      "colors_pencils_vibrant color",
-      "colors_pencils_very pigmented",
-      "colors_pencils_smooth texture"
-    ]
+    "asin": "B087N9N6HH",
+    "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
+    "categorization_timestamp": "2025-06-29T18:30:10.451878",
+    "source_file": "/Users/maoc/Desktop/3PO/leviton-agent/backend/review_analysis/tests/llm/test_data/real_amazon_extraction_results.json"
+  },
+  "consolidation_results": {
+    "phy": {
+      "consolidated_count": 12,
+      "taxonomies": [
+        {
+          "name": "Ergonomic Comfort",
+          "definition": "The ease and comfort of holding art supplies during use, e.g. comfortable grip, easy to hold design, appropriate sizing for hands",
+          "merged_count": 1,
+          "original_names": [
+            "Ergonomic Comfort"
+          ]
+        },
+        {
+          "name": "Tip Durability Quality",
+          "definition": "The robustness and resilience of writing instrument tips, including both strength and performance, e.g. strong points that resist breaking, smooth writing experience, even ink flow",
+          "merged_count": 2,
+          "original_names": [
+            "Tip Strength Quality",
+            "Writing Tip Performance"
+          ]
+        },
+        {
+          "name": "Container Size Convenience",
+          "definition": "The appropriateness of container dimensions for child use and storage needs, e.g. small containers that fit little hands, mini-sized packaging for portability",
+          "merged_count": 1,
+          "original_names": [
+            "Container Size Convenience"
+          ]
+        },
+        {
+          "name": "Tip Durability Problems",
+          "definition": "Issues with tip strength and longevity during normal use, e.g. easily breaking tips, quick dulling, fragile points",
+          "merged_count": 1,
+          "original_names": [
+            "Tip Durability Problems"
+          ]
+        },
+        {
+          "name": "Packaging Condition Issues",
+          "definition": "Problems with container integrity during shipping or storage, e.g. damaged boxes, open containers, broken packaging",
+          "merged_count": 1,
+          "original_names": [
+            "Packaging Condition Issues"
+          ]
+        },
+        {
+          "name": "Color Selection Range",
+          "definition": "The breadth of color options available in the product set, e.g. multiple color choices, diverse color palette",
+          "merged_count": 1,
+          "original_names": [
+            "Color Selection Range"
+          ]
+        },
+        {
+          "name": "Product Quantity Adequacy",
+          "definition": "The sufficiency of material amounts provided for creative activities, e.g. small portions of playdough, limited quantity per container",
+          "merged_count": 1,
+          "original_names": [
+            "Product Quantity Adequacy"
+          ]
+        },
+        {
+          "name": "Material Texture Quality",
+          "definition": "The tactile feel and consistency of art supply materials, e.g. smooth playdough texture, even material consistency",
+          "merged_count": 1,
+          "original_names": [
+            "Material Texture Quality"
+          ]
+        },
+        {
+          "name": "Packaging Design Appeal",
+          "definition": "The visual attractiveness and functional design of product containers, e.g. cute box designs, flip-top containers, sturdy packaging construction",
+          "merged_count": 1,
+          "original_names": [
+            "Packaging Design Appeal"
+          ]
+        },
+        {
+          "name": "Product Shape Integrity",
+          "definition": "The straightness and proper form of art supplies, e.g. warped pencils, curved writing instruments, bent materials",
+          "merged_count": 1,
+          "original_names": [
+            "Product Shape Integrity"
+          ]
+        },
+        {
+          "name": "Color Quality Appearance",
+          "definition": "The visual appeal and intensity of colors in art materials, e.g. vibrant hues, bold pigmentation, bright appearance",
+          "merged_count": 1,
+          "original_names": [
+            "Color Quality Appearance"
+          ]
+        },
+        {
+          "name": "Material Safety Standards",
+          "definition": "The non-harmful composition of art supplies for child use, e.g. non-toxic formulations, wheat-free ingredients",
+          "merged_count": 1,
+          "original_names": [
+            "Material Safety Standards"
+          ]
+        }
+      ]
+    },
+    "perf": {
+      "consolidated_count": 10,
+      "taxonomies": [
+        {
+          "name": "Color Blending Capability",
+          "definition": "How well different colors mix or transition together during artistic creation, e.g. watercolors that blend beautifully, pastels that create smooth gradients",
+          "merged_count": 1,
+          "original_names": [
+            "Color Blending Capability"
+          ]
+        },
+        {
+          "name": "Product Longevity",
+          "definition": "How long art supplies last through regular use before needing replacement, e.g. crayons that last a long time, markers with extended lifespan",
+          "merged_count": 1,
+          "original_names": [
+            "Product Longevity"
+          ]
+        },
+        {
+          "name": "Child Usability",
+          "definition": "How easily children can handle and use art supplies effectively, e.g. scissors that are easy for kids to grip, markers with child-friendly caps",
+          "merged_count": 1,
+          "original_names": [
+            "Child Usability"
+          ]
+        },
+        {
+          "name": "Drying Prevention",
+          "definition": "How well art materials resist drying out or maintain workability over time, e.g. markers that don't dry out quickly, paints that stay wet longer",
+          "merged_count": 1,
+          "original_names": [
+            "Drying Resistance"
+          ]
+        },
+        {
+          "name": "Application Smoothness",
+          "definition": "How evenly and effortlessly art materials apply to surfaces, e.g. crayons that go on smoothly, markers that write without skipping",
+          "merged_count": 1,
+          "original_names": [
+            "Application Smoothness"
+          ]
+        },
+        {
+          "name": "Quality Retention",
+          "definition": "How well products maintain their original performance characteristics over time, e.g. colors that don't fade, materials that maintain consistency",
+          "merged_count": 1,
+          "original_names": [
+            "Quality Retention"
+          ]
+        },
+        {
+          "name": "Reactivation Ability",
+          "definition": "How well dried art materials can be restored to working condition, e.g. watercolors that revive with water, dried paints that reactivate when moistened",
+          "merged_count": 1,
+          "original_names": [
+            "Reactivation Ability"
+          ]
+        },
+        {
+          "name": "Maintenance Fragility",
+          "definition": "Tendency for art supplies to break or fail during routine maintenance activities, e.g. colored pencils that break when sharpened, crayons that snap during use",
+          "merged_count": 1,
+          "original_names": [
+            "Maintenance Fragility"
+          ]
+        },
+        {
+          "name": "Structural Durability",
+          "definition": "How well art supplies withstand physical stress without breaking during normal use, e.g. crayons that don't break easily, pencils that resist snapping",
+          "merged_count": 1,
+          "original_names": [
+            "Structural Durability"
+          ]
+        },
+        {
+          "name": "Sharpening Performance",
+          "definition": "How well pencils and similar tools respond to sharpening processes, e.g. colored pencils that sharpen to fine points, crayons that don't crumble when sharpened",
+          "merged_count": 1,
+          "original_names": [
+            "Sharpening Performance"
+          ]
+        }
+      ]
+    }
   }
 }

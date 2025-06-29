@@ -38,26 +38,26 @@ This plan implements a review analysis module that extracts fine-grained custome
 
 ### Phase 1: Core Review Analysis Stages
 
-#### 1.1 Review Extraction Stage (`backend/review_analysis/llm/extraction_stage.py`)
+#### 1.1 Review Extraction Stage (`backend/review_analysis/llm/review_extraction_stage.py`)
 - **Purpose**: Extract review aspects from raw review text
 - **Input**: Product reviews (formatted as `{review_id}#{review_text}`)
 - **Output**: Hierarchical structure (phy/perf/use sections)
 - **Validation**: Complex structure validation with sentiment and ID format rules
 - **Reuses**: `ExtractionBase` from core pipeline
 
-#### 1.2 Review Categorization Stage (`backend/review_analysis/llm/categorization_stage.py`)
+#### 1.2 Review Categorization Stage (`backend/review_analysis/llm/review_categorization_stage.py`)
 - **Purpose**: Categorize extracted aspects into meaningful groups
 - **Input**: Deduplicated aspects from extraction
 - **Output**: Aspect categories with definitions
 - **Reuses**: Similar pattern to product segment extraction but for aspects
 
-#### 1.3 Review Consolidation Stage (`backend/review_analysis/llm/consolidation_stage.py`)
+#### 1.3 Review Consolidation Stage (`backend/review_analysis/llm/review_consolidation_stage.py`)
 - **Purpose**: Merge categories from multiple batches
 - **Input**: Multiple category taxonomies
 - **Output**: Unified category taxonomy
 - **Reuses**: `ConsolidationBase` from core pipeline
 
-#### 1.4 Review Refinement Stage (`backend/review_analysis/llm/refinement_stage.py`)
+#### 1.4 Review Refinement Stage (`backend/review_analysis/llm/review_refinement_stage.py`)
 - **Purpose**: Final assignment of aspects to consolidated categories
 - **Input**: Aspects + consolidated categories
 - **Output**: Final aspect-to-category mappings
@@ -196,10 +196,10 @@ This plan implements a review analysis module that extracts fine-grained custome
 ```
 backend/review_analysis/
 ├── llm/
-│   ├── extraction_stage.py      # Review aspect extraction
-│   ├── categorization_stage.py  # Aspect categorization  
-│   ├── consolidation_stage.py   # Category consolidation
-│   ├── refinement_stage.py      # Final aspect assignment
+│   ├── review_extraction_stage.py      # Review aspect extraction
+│   ├── review_categorization_stage.py  # Aspect categorization  
+│   ├── review_consolidation_stage.py   # Category consolidation
+│   ├── review_refinement_stage.py      # Final aspect assignment
 │   ├── validation.py            # Review-specific validation
 │   └── dedup_util.py            # Review deduplication
 ├── services/

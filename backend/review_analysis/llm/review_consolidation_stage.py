@@ -20,7 +20,7 @@ __all__ = [
     "ConsolidatedTaxonomyDTO",
     "ConsolidationStageResult", 
     "ConsolidationStageContext",
-    "ConsolidationStage",
+    "ReviewConsolidationStage",
 ]
 
 # Prompt template paths
@@ -28,7 +28,7 @@ _PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 _CONSOLIDATE_PROMPT_FILE = "review_aspects_consolidation_prompt_v0.txt"
 
 
-class ConsolidationStage(BaseConsolidationStage):
+class ReviewConsolidationStage(BaseConsolidationStage):
     """Review aspect consolidation stage with deduplication support."""
 
     def __init__(self, aspect_type: str = "", product_categories: set = None):
