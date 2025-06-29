@@ -27,21 +27,17 @@ from typing import Callable, Dict, List, Optional
 
 from core.utils.batching import make_batches
 from product_segment import config as seg_cfg
-from product_segment.llm.taxonomy_consolidation import (
+from product_segment.llm import (
     ConsolidationStage,
     ConsolidationStageContext,
+    ExtractionStage,
+    ExtractionStageContext,
+    RefinementStage,
+    RefinementStageContext,
+    TaxonomyDTO,
 )
 from product_segment.llm.taxonomy_dedup_uitl import (
     deduplicate_taxonomy_batches,
-)
-from product_segment.llm.taxonomy_extraction import (
-    ExtractionStage,
-    ExtractionStageContext,
-    TaxonomyDTO,
-)
-from product_segment.llm.taxonomy_refinement import (
-    RefinementStage,
-    RefinementStageContext,
 )
 from product_segment.models import (
     ProductSegmentAssignment,

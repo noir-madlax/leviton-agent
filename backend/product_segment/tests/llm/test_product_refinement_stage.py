@@ -53,7 +53,7 @@ from typing import Dict, List
 from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
-from product_segment.llm.refinement_stage import (
+from product_segment.llm.product_refinement_stage import (
     RefinementStage,
     RefinementStageResult,
     RefinementStageContext,

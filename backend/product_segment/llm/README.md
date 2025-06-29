@@ -12,9 +12,9 @@ product_segment/llm/
 │   ├── taxonomy_extraction_prompt_v0.txt
 │   ├── taxonomy_consolidation_prompt_v0.txt
 │   └── taxonomy_refinement_prompt_v0.txt
-├── extraction_stage.py       # concrete ExtractionStage
-├── consolidation_stage.py    # concrete ConsolidationStage
-├── refinement_stage.py       # concrete RefinementStage
+├── product_extraction_stage.py       # concrete ExtractionStage
+├── product_consolidation_stage.py    # concrete ConsolidationStage
+├── product_refinement_stage.py       # concrete RefinementStage
 └── taxonomy_dedup_uitl.py    # stemming-based dedup helper
 ```
 

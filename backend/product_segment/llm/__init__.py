@@ -1,13 +1,13 @@
 """LLM-powered taxonomy pipeline stages."""
 
-from .extraction_stage import (
+from .product_extraction_stage import (
     TaxonomyDTO,
     ExtractionStageResult,
     ExtractionStageContext,
     ExtractionStage,
 )
 
-from .consolidation_stage import (
+from .product_consolidation_stage import (
     ConsolidatedTaxonomyDTO,
     ConsolidationStageContext,
     ConsolidationStageResult,
@@ -21,7 +21,7 @@ from .taxonomy_dedup_uitl import (
     DeduplicationResult,
 )
 
-from .refinement_stage import (
+from .product_refinement_stage import (
     RefinementStageContext,
     RefinementStageResult,
     RefinementStage,

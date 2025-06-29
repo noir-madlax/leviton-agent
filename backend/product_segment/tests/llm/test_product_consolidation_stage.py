@@ -54,7 +54,7 @@ from typing import Dict
 from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
-from product_segment.llm.consolidation_stage import (
+from product_segment.llm.product_consolidation_stage import (
     ConsolidationStage,
     ConsolidationStageContext,
     ConsolidationStageResult,
@@ -70,8 +70,8 @@ from product_segment.llm.taxonomy_dedup_uitl import (
 
 # Test data paths
 TEST_DATA_DIR = Path(__file__).parent / "test_data"
-TAXONOMY_RESULTS_PATH = TEST_DATA_DIR / "real_amazon_categorization_results.json"
-CONSOLIDATION_RESULTS_PATH = TEST_DATA_DIR / "real_amazon_consolidation_results.json"
+TAXONOMY_RESULTS_PATH = TEST_DATA_DIR / "taxonomy_extraction_results.json"
+CONSOLIDATION_RESULTS_PATH = TEST_DATA_DIR / "taxonomy_consolidation_results.json"
 
 
 def save_consolidation_results(

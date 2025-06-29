@@ -61,7 +61,7 @@ from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
 from product_segment.config import PRODUCTS_PER_TAXONOMY_PROMPT
-from product_segment.llm.extraction_stage import (
+from product_segment.llm.product_extraction_stage import (
     ExtractionStage,
     ExtractionStageResult,
     ExtractionStageContext,
