@@ -228,10 +228,8 @@ class RefinementStage(BaseRefinementStage):
         error_details = create_retry_error_details(validation_result.error_categories)
         
         # Use the fixed retry prompt template
-        retry_block = _RETRY_PROMPT_TEMPLATE.format(
-            error_details=error_details,
-            content_sections=""  # Not used in current template but required for format string
-        )
+        retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
+        retry_block = retry_block.replace("{{content_sections}}", "")
         return f"{original_prompt}\n\n{retry_block}"
 
     async def _produce_result(

@@ -116,13 +116,8 @@ class ExtractionStage(BaseExtractionStage):
     async def _build_prompt(self, ctx: ExtractionStageContext) -> str:  # noqa: D401
         """Render the fixed prompt template and append the input lines."""
 
-        # Use the fixed extraction prompt template
-        template_vars = {"product_category": ctx.product_category}
-        
-        try:
-            rendered_template = _EXTRACT_PROMPT_TEMPLATE.format(**template_vars)
-        except KeyError as exc:
-            raise ValueError(f"Missing template variable {exc} for prompt_template") from exc
+        # Replace placeholder using double‐brace syntax to avoid escaping JSON braces
+        rendered_template = _EXTRACT_PROMPT_TEMPLATE.replace("{{product_category}}", ctx.product_category)
 
         input_lines = "\n".join(f"[{i}] {txt}" for i, txt in enumerate(ctx.input_texts))
         return f"{rendered_template}\n\n{input_lines}"
@@ -228,10 +223,8 @@ class ExtractionStage(BaseExtractionStage):
         error_details = create_retry_error_details(validation_result.error_categories)
         
         # Use the fixed retry prompt template
-        retry_block = _RETRY_PROMPT_TEMPLATE.format(
-            error_details=error_details,
-            content_sections=""  # Not used in current template but required for format string
-        )
+        retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
+        retry_block = retry_block.replace("{{content_sections}}", "")
         return f"{original_prompt}\n\n{retry_block}"
 
     async def _produce_result(

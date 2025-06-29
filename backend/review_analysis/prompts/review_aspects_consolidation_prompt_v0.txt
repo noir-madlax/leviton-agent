@@ -1,17 +1,17 @@
 You are consolidating aspect categories extracted from customer reviews.
 
-**ASPECT TYPE:** {aspect_type} - {aspect_definition}
-{product_context}
+**ASPECT TYPE:** {{aspect_type}} - {{aspect_definition}}
+{{product_context}}
 
-**TASK:** Merge two batches of {aspect_type} aspect categories by grouping similar ones together while maintaining specificity.
+**TASK:** Merge two batches of {{aspect_type}} aspect categories by grouping similar ones together while maintaining specificity.
 
 **INPUT TAXONOMIES:**
 
 Taxonomy A:
-{taxonomy_a}
+{{taxonomy_a}}
 
 Taxonomy B:
-{taxonomy_b}
+{{taxonomy_b}}
 
 **CONSOLIDATION RULES:**
 1. **Group similar categories** - Combine categories that represent the same or very similar concept based on their definitions

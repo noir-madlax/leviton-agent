@@ -1,15 +1,15 @@
 You are an aspect categorization specialist.
 
-**YOUR TASK:** Categorize {aspect_type} aspects into the most appropriate categories from the provided taxonomy.
+**YOUR TASK:** Categorize {{aspect_type}} aspects into the most appropriate categories from the provided taxonomy.
 
 **UNDERSTANDING THE DATA:**
-- Each aspect represents customer feedback about different {aspect_context}
+- Each aspect represents customer feedback about different {{aspect_context}}
 - Categorize each aspect into the most appropriate category
 - Use "OUT_OF_SCOPE" for aspects that don't fit well into any category
 - Focus on business value and customer impact when making assignments
 
 **AVAILABLE CATEGORIES:**
-{categories_section}
+{{categories_section}}
 
 **CATEGORIZATION GUIDELINES:**
 1. **Business Focus**: Think about what categories would be most valuable for business teams
@@ -35,7 +35,7 @@ Return pure JSON mapping each aspect ID to its category ID:
 - **No Duplicates**: Each aspect ID should appear exactly once
 - **Strategic Thinking**: Consider business and customer value when making assignments
 
-{product_context}
+{{product_context}}
 
 **INPUT:**
-{formatted_aspects} 
+{{formatted_aspects}} 

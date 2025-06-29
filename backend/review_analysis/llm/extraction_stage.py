@@ -220,13 +220,11 @@ class ReviewExtractionStage(BaseStage):
         
         # Use the shared retry template with structured error details
         try:
-            retry_block = _RETRY_PROMPT_TEMPLATE.format(
-                error_details=retry_ctx.get("error_details", "Unknown validation errors"),
-                content_sections=retry_ctx.get("content_sections", "")
-            )
+            retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", retry_ctx.get("error_details", "Unknown validation errors"))
+            retry_block = retry_block.replace("{{content_sections}}", retry_ctx.get("content_sections", ""))
             return f"{original_prompt}\n\n{retry_block}"
-        except KeyError as exc:
-            # Fallback if template formatting fails
+        except Exception as exc:
+            # Fallback if template replacement fails
             return f"{original_prompt}\n\nValidation failed. Please fix the errors and provide a valid JSON response."
 
     async def _produce_result(

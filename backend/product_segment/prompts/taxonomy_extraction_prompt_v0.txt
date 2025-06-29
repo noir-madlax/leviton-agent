@@ -1,6 +1,6 @@
 You are a product taxonomy extraction specialist.
 
-You are tasked with categorizing products that should belong to the "{product_category}" category into more specific subcategories.
+You are tasked with categorizing products that should belong to the "{{product_category}}" category into more specific subcategories.
 
 **INPUT FORMAT:**
 Given lines of the form: [<ID>] <title>
@@ -17,7 +17,7 @@ Return **pure JSON only** (no explanations, no markdown, no code blocks):
     "ids": [1, 8, 15]
   }},
   "OUT_OF_SCOPE": {{
-    "definition": "Products that clearly don't belong to {product_category}, e.g. ...",
+    "definition": "Products that clearly don't belong to {{product_category}}, e.g. ...",
     "ids": [3, 9]
   }}
 }}
@@ -33,9 +33,9 @@ Return **pure JSON only** (no explanations, no markdown, no code blocks):
 4. **Definitions**: Each category must have a "definition" field with a brief description ending with "e.g." and specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)
 
 **Categorization Logic:**
-5. **Categories & Mutual Exclusivity**: Create meaningful subcategories (words separated by spaces) for legitimate "{product_category}" products; NEVER include brand names, model numbers, or proprietary product line names; each subcategory must represent a SINGULAR, SPECIFIC concept with NO OVERLAP between categories - each product can only belong to ONE subcategory with clear boundaries
-6. **OUT_OF_SCOPE Usage**: Use this special category for products that aren't even remotely related to "{product_category}" - use "OUT_OF_SCOPE" as the last resort
-7. **Categorization Basis**: Group similar products within "{product_category}" by their key distinguishing features based on functionality or features
+5. **Categories & Mutual Exclusivity**: Create meaningful subcategories (words separated by spaces) for legitimate "{{product_category}}" products; NEVER include brand names, model numbers, or proprietary product line names; each subcategory must represent a SINGULAR, SPECIFIC concept with NO OVERLAP between categories - each product can only belong to ONE subcategory with clear boundaries
+6. **OUT_OF_SCOPE Usage**: Use this special category for products that aren't even remotely related to "{{product_category}}" - use "OUT_OF_SCOPE" as the last resort
+7. **Categorization Basis**: Group similar products within "{{product_category}}" by their key distinguishing features based on functionality or features
 
 **Category Quality:**
 8. **Consistent Granularity**: All subcategories must be at the same level of specificity - avoid mixing broad categories with narrow ones

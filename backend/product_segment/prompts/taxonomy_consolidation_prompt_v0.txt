@@ -5,10 +5,10 @@ You are a taxonomy consolidation specialist.
 **INPUT TAXONOMIES:**
 
 Taxonomy A (Current Consolidated):
-{taxonomy_a}
+{{taxonomy_a}}
 
 Taxonomy B (New Batch):
-{taxonomy_b}
+{{taxonomy_b}}
 
 **UNDERSTANDING THE INPUT:**
 - Taxonomy A is the existing consolidated taxonomy with categories A_0, A_1, A_2, etc.

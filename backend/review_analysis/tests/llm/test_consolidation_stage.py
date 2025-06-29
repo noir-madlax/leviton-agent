@@ -95,9 +95,9 @@ class TestConsolidationStage:
         assert stage._consolidate_prompt_template, (
             "Consolidate prompt template should not be empty"
         )
-        assert "{taxonomy_a}" in stage._consolidate_prompt_template
-        assert "{taxonomy_b}" in stage._consolidate_prompt_template
-        assert "{aspect_definition}" in stage._consolidate_prompt_template
+        assert "{{taxonomy_a}}" in stage._consolidate_prompt_template
+        assert "{{taxonomy_b}}" in stage._consolidate_prompt_template
+        assert "{{aspect_definition}}" in stage._consolidate_prompt_template
 
         assert stage._retry_prompt_template, (
             "Retry prompt template should not be empty"
