@@ -1,0 +1,175 @@
+{
+  "test_metadata": {
+    "timestamp": "2024-01-01T00:00:00Z",
+    "source": "real_amazon_extraction_consolidation",
+    "aspect_type": "physical",
+    "input_taxonomies_a": 10,
+    "input_taxonomies_b": 11,
+    "output_taxonomies": 16
+  },
+  "consolidation_result": {
+    "taxonomies_consolidated": [
+      {
+        "name": "Container Size and Dimensions",
+        "definition": "Physical aspect related to the size and dimensions of containers or packaging used for arts and crafts materials, e.g. small/mini size containers, compact storage solutions",
+        "original_count": 1,
+        "original_names": [
+          "size_small/mini size containers"
+        ]
+      },
+      {
+        "name": "Product Quantity and Amount",
+        "definition": "Physical aspect related to the amount or quantity of arts and crafts materials provided, e.g. 1 onza/fistful amount of playdough, portion sizes",
+        "original_count": 1,
+        "original_names": [
+          "size_1 onza/fistful amount of playdough"
+        ]
+      },
+      {
+        "name": "Color Variety and Selection",
+        "definition": "Physical aspect related to the range and diversity of colors available in arts and crafts products, e.g. variety of colors available, multiple color options",
+        "original_count": 1,
+        "original_names": [
+          "colors_variety of colors available"
+        ]
+      },
+      {
+        "name": "Color Vibrancy and Visual Appeal",
+        "definition": "Physical aspect related to the intensity, brightness, and visual attractiveness of colors in arts and crafts materials, e.g. super nice/vibrant colors, bright and bold colors, very pigmented colors",
+        "original_count": 4,
+        "original_names": [
+          "colors_super nice/vibrant colors",
+          "colors_pencils_bright and bold colors",
+          "colors_pencils_vibrant color",
+          "colors_pencils_very pigmented"
+        ]
+      },
+      {
+        "name": "Packaging Design and Structure",
+        "definition": "Physical aspect related to the design, appearance, and structural features of product packaging, e.g. sturdy and cute box packaging, caja con tapa abatible",
+        "original_count": 2,
+        "original_names": [
+          "packaging_sturdy and cute box packaging",
+          "packaging_caja con tapa abatible"
+        ]
+      },
+      {
+        "name": "Packaging Condition and Integrity",
+        "definition": "Physical aspect related to the condition and physical state of packaging upon receipt, e.g. damaged/open packaging, compromised packaging integrity",
+        "original_count": 1,
+        "original_names": [
+          "packaging_damaged/open packaging"
+        ]
+      },
+      {
+        "name": "Material Safety and Composition",
+        "definition": "Physical aspect related to the safety characteristics and material composition of arts and crafts products, e.g. non-toxic and wheat-free materials, safe ingredients",
+        "original_count": 1,
+        "original_names": [
+          "material_non-toxic and wheat-free"
+        ]
+      },
+      {
+        "name": "Writing Tip Performance Quality",
+        "definition": "Physical aspect related to the functional performance and quality of writing or drawing tips, e.g. smooth and even writing tip, consistent tip performance",
+        "original_count": 1,
+        "original_names": [
+          "tips_smooth and even writing tip"
+        ]
+      },
+      {
+        "name": "Tip Fragility and Breaking Issues",
+        "definition": "Physical aspect related to the tendency of tips to break or become damaged during use, e.g. tips break easily, fragile tip construction",
+        "original_count": 1,
+        "original_names": [
+          "tips_tips break easily"
+        ]
+      },
+      {
+        "name": "Tip Strength and Durability",
+        "definition": "Physical aspect related to the structural strength and durability of writing or drawing tips, e.g. strong tips, reinforced tip construction",
+        "original_count": 1,
+        "original_names": [
+          "tips_strong tips"
+        ]
+      },
+      {
+        "name": "Tip Sharpness Degradation",
+        "definition": "Physical aspect related to how quickly tips lose their sharpness or become dull with use, e.g. tips get dull quickly, rapid sharpness loss",
+        "original_count": 1,
+        "original_names": [
+          "tips_tips get dull quickly"
+        ]
+      },
+      {
+        "name": "Initial Tip Sharpness Quality",
+        "definition": "Physical aspect related to the sharpness condition of tips when the product is new or first used, e.g. not sharp at tips when new, initial tip condition",
+        "original_count": 1,
+        "original_names": [
+          "tips_not sharp at tips when new"
+        ]
+      },
+      {
+        "name": "Pencil Shape and Structural Defects",
+        "definition": "Physical aspect related to structural deformities or shape issues in pencils, e.g. warped/curved pencils, bent or misshapen pencils",
+        "original_count": 1,
+        "original_names": [
+          "pencil_structure_warped/curved pencils"
+        ]
+      },
+      {
+        "name": "Pencil Ergonomics and Comfort",
+        "definition": "Physical aspect related to how comfortable and ergonomic pencils are to hold and use, e.g. comfortable to hold, easy to grip",
+        "original_count": 2,
+        "original_names": [
+          "pencil_structure_comfortable to hold",
+          "pencil_structure_easy to grip"
+        ]
+      },
+      {
+        "name": "Pencil Size and Dimensions",
+        "definition": "Physical aspect related to the physical size and dimensional characteristics of pencils, e.g. nice size pencil, appropriate pencil dimensions",
+        "original_count": 1,
+        "original_names": [
+          "pencil_structure_nice size pencil"
+        ]
+      },
+      {
+        "name": "Color Application Texture and Smoothness",
+        "definition": "Physical aspect related to the texture and smoothness of color application from colored pencils, e.g. smooth texture when coloring, even color distribution",
+        "original_count": 1,
+        "original_names": [
+          "colors_pencils_smooth texture"
+        ]
+      }
+    ]
+  },
+  "input_context": {
+    "product_category": "Kids Arts & Crafts",
+    "taxonomy_a_names": [
+      "size_small/mini size containers",
+      "size_1 onza/fistful amount of playdough",
+      "colors_variety of colors available",
+      "colors_super nice/vibrant colors",
+      "packaging_sturdy and cute box packaging",
+      "packaging_caja con tapa abatible",
+      "packaging_damaged/open packaging",
+      "material_non-toxic and wheat-free",
+      "tips_smooth and even writing tip",
+      "tips_tips break easily"
+    ],
+    "taxonomy_b_names": [
+      "tips_strong tips",
+      "tips_tips get dull quickly",
+      "tips_not sharp at tips when new",
+      "pencil_structure_warped/curved pencils",
+      "pencil_structure_comfortable to hold",
+      "pencil_structure_easy to grip",
+      "pencil_structure_nice size pencil",
+      "colors_pencils_bright and bold colors",
+      "colors_pencils_vibrant color",
+      "colors_pencils_very pigmented",
+      "colors_pencils_smooth texture"
+    ]
+  }
+}

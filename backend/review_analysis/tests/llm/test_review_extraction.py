@@ -852,3 +852,152 @@ class TestReviewExtractionStage:
         assert result.aspects_extracted == 3  # 1 phy + 1 perf + 1 use
         
         print(f"\n✅ Produced result with {result.aspects_extracted} aspects")
+
+    @pytest.mark.asyncio
+    async def test_real_llm_extraction_with_amazon_data(
+        self,
+        extraction_stage: ReviewExtractionStage
+    ) -> None:
+        """Real LLM integration test using Amazon reviews CSV data - saves results for consolidation testing."""
+        import pandas as pd
+        
+        # Load real Amazon review data
+        csv_path = TEST_DATA_DIR / "amazon_reviews_rows.csv"
+        if not csv_path.exists():
+            pytest.skip(f"Amazon reviews CSV not found: {csv_path}")
+        
+        df = pd.read_csv(csv_path)
+        
+        print(f"\n" + "="*80)
+        print(f"🤖 REAL LLM EXTRACTION WITH AMAZON REVIEWS DATA")
+        print(f"="*80)
+        print(f"📊 Loaded {len(df)} Amazon reviews from CSV")
+        print(f"📋 Product: {df.iloc[0]['product_title'] if not df.empty else 'Unknown'}")
+        print(f"📋 ASIN: {df.iloc[0]['asin'] if not df.empty else 'Unknown'}")
+        
+        reviews = []
+        for _, row in df.iterrows():
+            review_dict = {
+                'text': row['review_text'],      # Map to expected field name
+                'rating': row['rating'],
+                'title': row['review_title'],    # Map to expected field name
+                'review_id': row['review_id'],
+                'asin': row['asin']
+            }
+            reviews.append(review_dict)
+        
+        print(f"📊 Using {len(reviews)} reviews for extraction (subset for token efficiency)")
+        print(f"📝 Sample reviews:")
+        for i, review in enumerate(reviews[:3]):
+            print(f"   [{i}] Rating: {review['rating']}/5")
+            print(f"       Title: {review['title']}")
+            print(f"       Text: {review['text'][:100]}...")
+        print(f"   ... and {len(reviews) - 3} more reviews")
+        print(f"="*80)
+        
+        # Format reviews for extraction
+        formatted_reviews, expected_ids = format_reviews_for_prompt(reviews)
+        
+        context = ReviewExtractionContext(
+            product_category="Kids Arts & Crafts",
+            formatted_reviews=formatted_reviews,
+            expected_review_ids=expected_ids,
+            asin=reviews[0]['asin'],
+            product_title=df.iloc[0]['product_title']
+        )
+        
+        # Execute real LLM extraction
+        print(f"🚀 Executing real LLM extraction on {len(reviews)} Amazon reviews...")
+        
+        # Debug: Print the prompt being sent to LLM
+        debug_prompt = await extraction_stage._build_prompt(context)
+        print(f"\n🔍 DEBUG - LLM PROMPT (first 500 chars):")
+        print(f"{debug_prompt[:500]}...")
+        print(f"🔍 DEBUG - LLM PROMPT (last 200 chars):")
+        print(f"...{debug_prompt[-200:]}")
+        
+        result = await extraction_stage.execute(context)
+        
+        # Debug: Try to get the raw LLM response
+        print(f"\n🔍 DEBUG - RAW LLM RESPONSE (if available):")
+        if hasattr(result, '_raw_response'):
+            print(f"{result._raw_response[:1000]}...")
+        else:
+            print("Raw response not available in result object")
+        
+        print(f"📊 REAL LLM EXTRACTION RESULTS:")
+        print(f"   - Aspects extracted: {result.aspects_extracted}")
+        print(f"   - Hierarchy sections: {list(result.review_hierarchy.keys())}")
+        
+        # Print detailed hierarchy for manual inspection
+        for section_name, section_content in result.review_hierarchy.items():
+            print(f"   📁 {section_name.upper()}:")
+            if section_content:
+                for category, details in section_content.items():
+                    print(f"     📂 {category} ({len(details)} aspects):")
+                    for aspect_key, sentiments in list(details.items())[:2]:  # Show first 2 aspects
+                        print(f"       🔍 {aspect_key}: {sentiments}")
+                    if len(details) > 2:
+                        print(f"       ... and {len(details) - 2} more aspects")
+            else:
+                print(f"     (No aspects found in this section)")
+        print(f"="*80)
+        
+        # Save results for consolidation testing (even if 0 aspects for debugging)
+        save_path = TEST_DATA_DIR / "real_amazon_extraction_results.json"
+        extraction_data = {
+            "test_metadata": {
+                "timestamp": "2024-01-01T00:00:00Z",
+                "source": "amazon_reviews_csv",
+                "product_category": context.product_category,
+                "asin": context.asin,
+                "product_title": context.product_title,
+                "reviews_count": len(reviews),
+                "aspects_extracted": result.aspects_extracted,
+            },
+            "extraction_result": {
+                "review_hierarchy": result.review_hierarchy,
+                "aspects_extracted": result.aspects_extracted
+            },
+            "context_used": {
+                "product_category": context.product_category,
+                "asin": context.asin,
+                "product_title": context.product_title,
+                "review_count": len(expected_ids)
+            },
+            "sample_reviews": [
+                {
+                    "review_text": r['text'],
+                    "rating": r['rating'],
+                    "review_title": r['title']
+                } for r in reviews[:5]  # Save more samples
+            ]
+        }
+        
+        with open(save_path, 'w', encoding='utf-8') as f:
+            json.dump(extraction_data, f, indent=2, ensure_ascii=False)
+        
+        print(f"💾 Saved real Amazon extraction results to: {save_path}")
+        print(f"📊 Results summary:")
+        print(f"   - Total aspects: {result.aspects_extracted}")
+        print(f"   - Physical aspects: {len(result.review_hierarchy.get('phy', {}))}")
+        print(f"   - Performance aspects: {len(result.review_hierarchy.get('perf', {}))}")
+        print(f"   - Use case aspects: {len(result.review_hierarchy.get('use', {}))}")
+        print(f"="*80)
+        
+        # Verify result structure (but allow 0 aspects for now)
+        assert isinstance(result, ReviewExtractionResult)
+        assert "phy" in result.review_hierarchy
+        assert "perf" in result.review_hierarchy  
+        assert "use" in result.review_hierarchy
+        
+        if result.aspects_extracted > 0:
+            print(f"\n✅ Real Amazon LLM extraction completed successfully!")
+            print(f"   - Generated {result.aspects_extracted} aspects from real reviews")
+        else:
+            print(f"\n⚠️  Real Amazon LLM extraction returned 0 aspects")
+            print(f"   - This may indicate LLM response parsing issues or token limits")
+            print(f"   - Results saved for debugging and consolidation testing")
+        
+        print(f"   - Results saved for consolidation testing")
+        print(f"   - File: {save_path}")

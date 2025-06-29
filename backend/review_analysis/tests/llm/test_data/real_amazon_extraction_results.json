@@ -1,0 +1,433 @@
+{
+  "test_metadata": {
+    "timestamp": "2024-01-01T00:00:00Z",
+    "source": "amazon_reviews_csv",
+    "product_category": "Kids Arts & Crafts",
+    "asin": "B087N9N6HH",
+    "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
+    "reviews_count": 100,
+    "aspects_extracted": 44
+  },
+  "extraction_result": {
+    "review_hierarchy": {
+      "phy": {
+        "size": {
+          "A@small/mini size containers": {
+            "+": [
+              0,
+              1,
+              6,
+              11,
+              18,
+              25,
+              27,
+              30,
+              36,
+              37,
+              38,
+              39,
+              41,
+              42,
+              44,
+              46
+            ]
+          },
+          "B@1 onza/fistful amount of playdough": {
+            "+": [
+              1,
+              38
+            ]
+          }
+        },
+        "colors": {
+          "C@variety of colors available": {
+            "+": [
+              1,
+              4,
+              26,
+              31,
+              37,
+              38,
+              41,
+              67,
+              69,
+              75,
+              78,
+              84
+            ]
+          },
+          "D@super nice/vibrant colors": {
+            "+": [
+              0,
+              14,
+              22,
+              38
+            ]
+          }
+        },
+        "packaging": {
+          "E@sturdy and cute box packaging": {
+            "+": [
+              1,
+              29
+            ]
+          },
+          "F@caja con tapa abatible": {
+            "+": [
+              38
+            ]
+          },
+          "G@damaged/open packaging": {
+            "-": [
+              7,
+              57,
+              62,
+              72,
+              73,
+              83
+            ]
+          }
+        },
+        "material": {
+          "H@non-toxic and wheat-free": {
+            "+": [
+              38
+            ]
+          }
+        },
+        "tips": {
+          "I@smooth and even writing tip": {
+            "+": [
+              56
+            ]
+          },
+          "J@tips break easily": {
+            "-": [
+              52,
+              60,
+              68,
+              77
+            ]
+          },
+          "K@strong tips": {
+            "+": [
+              64
+            ]
+          },
+          "L@tips get dull quickly": {
+            "-": [
+              76
+            ]
+          },
+          "M@not sharp at tips when new": {
+            "-": [
+              83
+            ]
+          }
+        },
+        "pencil_structure": {
+          "N@warped/curved pencils": {
+            "-": [
+              85
+            ]
+          },
+          "O@comfortable to hold": {
+            "+": [
+              55
+            ]
+          },
+          "P@easy to grip": {
+            "+": [
+              56
+            ]
+          },
+          "Q@nice size pencil": {
+            "+": [
+              84
+            ]
+          }
+        },
+        "colors_pencils": {
+          "R@bright and bold colors": {
+            "+": [
+              53,
+              55,
+              56,
+              84
+            ]
+          },
+          "S@vibrant color": {
+            "+": [
+              64,
+              99
+            ]
+          },
+          "T@very pigmented": {
+            "+": [
+              71
+            ]
+          },
+          "U@smooth texture": {
+            "+": [
+              64
+            ]
+          }
+        }
+      },
+      "perf": {
+        "durability": {
+          "a@doesn't dry out quickly": {
+            "+": {
+              "A": [
+                27,
+                49
+              ]
+            }
+          },
+          "b@lasts long time": {
+            "+": {
+              "A": [
+                37
+              ]
+            }
+          },
+          "c@maintains quality": {
+            "+": {
+              "?": [
+                56
+              ]
+            }
+          },
+          "d@don't break easily": {
+            "+": {
+              "?": [
+                55
+              ]
+            }
+          },
+          "e@break when sharpened": {
+            "-": {
+              "J": [
+                60,
+                68,
+                77
+              ]
+            }
+          }
+        },
+        "usability": {
+          "f@easy for kids to use": {
+            "+": {
+              "P": [
+                56
+              ]
+            }
+          },
+          "g@sharpen well": {
+            "+": {
+              "?": [
+                55
+              ]
+            }
+          },
+          "h@go on smoothly": {
+            "+": {
+              "I": [
+                55
+              ]
+            }
+          },
+          "i@write smoothly": {
+            "+": {
+              "?": [
+                76
+              ]
+            }
+          },
+          "j@blend beautifully": {
+            "+": {
+              "?": [
+                99
+              ]
+            }
+          }
+        },
+        "revivability": {
+          "k@can add water to revive if dry": {
+            "+": {
+              "?": [
+                27
+              ]
+            }
+          }
+        }
+      },
+      "use": {
+        "party_favors": {
+          "+": {
+            "A": [
+              0,
+              4,
+              6,
+              8,
+              10,
+              21,
+              24,
+              25,
+              32,
+              34,
+              37,
+              40,
+              44,
+              46,
+              47,
+              49
+            ]
+          }
+        },
+        "goodie_bags": {
+          "+": {
+            "A": [
+              0,
+              6,
+              8,
+              18,
+              34,
+              42,
+              44,
+              47
+            ]
+          }
+        },
+        "classroom_gifts": {
+          "+": {
+            "A": [
+              1,
+              2,
+              17,
+              19,
+              25,
+              31,
+              39,
+              42,
+              48,
+              74,
+              75,
+              82
+            ]
+          }
+        },
+        "easter_baskets": {
+          "+": {
+            "A": [
+              12,
+              16,
+              20,
+              23,
+              29,
+              37,
+              43,
+              67
+            ]
+          }
+        },
+        "travel_entertainment": {
+          "+": {
+            "A": [
+              11,
+              37,
+              41,
+              42
+            ]
+          }
+        },
+        "sensory_play": {
+          "+": {
+            "A": [
+              13
+            ]
+          }
+        },
+        "art_activities": {
+          "+": {
+            "A": [
+              13,
+              27,
+              30
+            ]
+          }
+        },
+        "coloring_books": {
+          "+": {
+            "R": [
+              53
+            ]
+          }
+        },
+        "schoolwork": {
+          "+": {
+            "?": [
+              55
+            ]
+          }
+        },
+        "creative_drawing": {
+          "+": {
+            "R,S": [
+              55,
+              56
+            ]
+          }
+        },
+        "detailed_artwork": {
+          "+": {
+            "T": [
+              99
+            ]
+          }
+        },
+        "sketching": {
+          "+": {
+            "?": [
+              99
+            ]
+          }
+        }
+      }
+    },
+    "aspects_extracted": 44
+  },
+  "context_used": {
+    "product_category": "Kids Arts & Crafts",
+    "asin": "B087N9N6HH",
+    "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
+    "review_count": 100
+  },
+  "sample_reviews": [
+    {
+      "review_text": "Small playdoh, great for goodie bags. Kids loved the playdoh and colors are super nice.",
+      "rating": 5,
+      "review_title": "Great"
+    },
+    {
+      "review_text": "I love how this set comes with a variety of colors to choose from. This was a great gift for my students-- mind the size, it's about a fistful of playdough to work with. The box packaging it comes in is so sturdy and cute. Would definitely purchase again in the future.",
+      "rating": 5,
+      "review_title": "Great gift for students!"
+    },
+    {
+      "review_text": "bought for my kids first grade class and they loved it",
+      "rating": 5,
+      "review_title": "perfect!"
+    },
+    {
+      "review_text": "Great price for the quality.",
+      "rating": 5,
+      "review_title": "👍"
+    },
+    {
+      "review_text": "These are great to use for party favors. Comes with a variety of colors.",
+      "rating": 5,
+      "review_title": "Play doh"
+    }
+  ]
+}
