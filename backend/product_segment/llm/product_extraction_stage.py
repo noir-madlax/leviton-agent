@@ -51,11 +51,15 @@ from core.llm_taxonomy_pipeline.extraction_base import (
     ExtractionStageResult,
 )
 
+# Product-specific aliases for consistency
+ProductExtractionStageContext = ExtractionStageContext
+ProductExtractionStageResult = ExtractionStageResult
+
 __all__ = [
     "TaxonomyDTO",
-    "ExtractionStageResult",
-    "ExtractionStageContext",
-    "ExtractionStage",
+    "ProductExtractionStageResult",
+    "ProductExtractionStageContext", 
+    "ProductExtractionStage",
 ]
 
 # ---------------------------------------------------------------------------
@@ -108,12 +112,12 @@ with open(_RETRY_PROMPT_PATH, "r", encoding="utf-8") as f:
 # ---------------------------------------------------------------------------
 
 
-class ExtractionStage(BaseExtractionStage):
+class ProductExtractionStage(BaseExtractionStage):
     """Concrete taxonomy-extraction stage built on :class:`BaseStage`."""
 
     # --------------------- BaseStage abstract hooks -------------------------
 
-    async def _build_prompt(self, ctx: ExtractionStageContext) -> str:  # noqa: D401
+    async def _build_prompt(self, ctx: ProductExtractionStageContext) -> str:  # noqa: D401
         """Render the fixed prompt template and append the input lines."""
 
         # Replace placeholder using double‐brace syntax to avoid escaping JSON braces
@@ -123,7 +127,7 @@ class ExtractionStage(BaseExtractionStage):
         return f"{rendered_template}\n\n{input_lines}"
 
     def _validate(
-        self, raw_response: str, ctx: ExtractionStageContext
+        self, raw_response: str, ctx: ProductExtractionStageContext
     ) -> ValidationResult:
         """Validate and (optionally) return retry-context."""
 
@@ -217,11 +221,11 @@ class ExtractionStage(BaseExtractionStage):
         return ValidationResult(ok=False, error_categories=error_categories)
 
     def _retry_prompt(
-        self, original_prompt: str, validation_result: ValidationResult, ctx: ExtractionStageContext
+        self, original_prompt: str, validation_result: ValidationResult, ctx: ProductExtractionStageContext
     ) -> str:  # noqa: D401
         # Build human-readable error details from retry_ctx.error_categories
         error_details = create_retry_error_details(validation_result.error_categories)
-        
+
         # Use the fixed retry prompt template
         retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
         retry_block = retry_block.replace("{{content_sections}}", "")
@@ -230,10 +234,10 @@ class ExtractionStage(BaseExtractionStage):
     async def _produce_result(
         self,
         raw_response: str,
-        ctx: ExtractionStageContext,
+        ctx: ProductExtractionStageContext,
         attempts: int,
-    ) -> ExtractionStageResult:
-        """Convert a valid raw response into an :class:`ExtractionStageResult`."""
+    ) -> ProductExtractionStageResult:
+        """Convert a valid raw response into an :class:`ProductExtractionStageResult`."""
 
         json_text = extract_json(raw_response)
         payload = json.loads(json_text)
@@ -252,19 +256,19 @@ class ExtractionStage(BaseExtractionStage):
                 for product_id in category_data["ids"]:
                     assignments[int(product_id)] = category_name
 
-        return ExtractionStageResult(
+        return ProductExtractionStageResult(
             taxonomies_extracted=taxonomies,
             assignments_initial=assignments,
         )
 
     async def _merge_split_results(
         self,
-        res_left: ExtractionStageResult,
-        res_right: ExtractionStageResult,
-        ctx_left: ExtractionStageContext,
-        ctx_right: ExtractionStageContext,
+        res_left: ProductExtractionStageResult,
+        res_right: ProductExtractionStageResult,
+        ctx_left: ProductExtractionStageContext,
+        ctx_right: ProductExtractionStageContext,
         depth: int,
-    ) -> ExtractionStageResult:  # noqa: D401 – signature enforced by BaseStage
+    ) -> ProductExtractionStageResult:  # noqa: D401 – signature enforced by BaseStage
         """Merge two partial results coming from auto-split recursion."""
 
         # Merge taxonomies – keep order but de-duplicate by *name*.
@@ -280,14 +284,14 @@ class ExtractionStage(BaseExtractionStage):
         for idx, category_name in res_right.assignments_initial.items():
             assignments[idx + left_size] = category_name
 
-        return ExtractionStageResult(
+        return ProductExtractionStageResult(
             taxonomies_extracted=list(taxonomy_by_name.values()),
             assignments_initial=assignments
         )
 
     def _split_context(
-        self, ctx: ExtractionStageContext, depth: int
-    ) -> tuple[ExtractionStageContext, ExtractionStageContext]:
+        self, ctx: ProductExtractionStageContext, depth: int
+    ) -> tuple[ProductExtractionStageContext, ProductExtractionStageContext]:
         """Split extraction context into two parts for recursive processing."""
         
         if len(ctx.input_texts) <= 1:
@@ -295,16 +299,16 @@ class ExtractionStage(BaseExtractionStage):
         
         mid = len(ctx.input_texts) // 2
         
-        ctx_left = ExtractionStageContext(
+        ctx_left = ProductExtractionStageContext(
             product_category=ctx.product_category,
             storage=ctx.storage,
             input_texts=ctx.input_texts[:mid]
         )
-        
-        ctx_right = ExtractionStageContext(
+
+        ctx_right = ProductExtractionStageContext(
             product_category=ctx.product_category,
             storage=ctx.storage,
             input_texts=ctx.input_texts[mid:]
         )
-        
+
         return ctx_left, ctx_right

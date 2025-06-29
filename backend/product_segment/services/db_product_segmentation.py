@@ -2,9 +2,9 @@
 
 Re-implemented to leverage the generic three-stage taxonomy pipeline used by
 unit-tests:
-  • ExtractionStage         – per-batch taxonomy extraction
-  • ConsolidationStage      – progressive taxonomy consolidation
-  • RefinementStage         – batched assignment refinement
+  • ProductExtractionStage     – per-batch taxonomy extraction
+  • ProductConsolidationStage  – progressive taxonomy consolidation
+  • ProductRefinementStage     – batched assignment refinement
 
 All LLM interaction happens inside these stage helpers, mirroring the exact
 control-flow exercised by
@@ -28,16 +28,21 @@ from typing import Callable, Dict, List, Optional
 from core.utils.batching import make_batches
 from product_segment import config as seg_cfg
 from product_segment.llm import (
-    ConsolidationStage,
-    ConsolidationStageContext,
-    ExtractionStage,
-    ExtractionStageContext,
-    RefinementStage,
-    RefinementStageContext,
     TaxonomyDTO,
-)
-from product_segment.llm.taxonomy_dedup_uitl import (
+    ProductExtractionStageResult,
+    ProductExtractionStageContext,
+    ProductExtractionStage,
+    ConsolidatedTaxonomyDTO,
+    ProductConsolidationStageResult,
+    ProductConsolidationStageContext,
+    ProductConsolidationStage,
+    ProductRefinementStageResult,
+    ProductRefinementStageContext,
+    ProductRefinementStage,
+    deduplicate_taxonomies,
     deduplicate_taxonomy_batches,
+    print_deduplication_summary,
+    DeduplicationResult,
 )
 from product_segment.models import (
     ProductSegmentAssignment,
@@ -81,9 +86,9 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
         self._title_fetcher: Callable[[int], str] = title_fetcher or (lambda pid: f"Product {pid}")
 
         # Stage instances are **stateless**, safe to keep around.
-        self._extraction_stage = ExtractionStage()
-        self._consolidation_stage = ConsolidationStage()
-        self._refinement_stage = RefinementStage()
+        self._extraction_stage = ProductExtractionStage()
+        self._consolidation_stage = ProductConsolidationStage()
+        self._refinement_stage = ProductRefinementStage()
 
     # ------------------------------------------------------------------
     # Public API
@@ -219,7 +224,7 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                 batch_product_ids = [pid for pid, _ in batch]
                 batch_titles = [title for _, title in batch]
 
-                ctx = ExtractionStageContext(
+                ctx = ProductExtractionStageContext(
                     product_category=run.processing_params.get('product_category', ''),
                     input_texts=batch_titles,
                 )
@@ -275,7 +280,7 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
 
             current_consolidated: List[TaxonomyDTO] = dedup_batches[0]
             for batch in dedup_batches[1:]:
-                ctx = ConsolidationStageContext(
+                ctx = ProductConsolidationStageContext(
                     product_category=run.processing_params.get('product_category', ''),
                     taxonomy_a=current_consolidated,
                     taxonomy_b=batch,
@@ -379,7 +384,7 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                         product_id, "__UNASSIGNED__"
                     )
 
-                ctx = RefinementStageContext(
+                ctx = ProductRefinementStageContext(
                     product_category=run.processing_params.get('product_category', ''),
                     taxonomies=final_taxonomies,
                     current_assignments=batch_assignments,
@@ -427,4 +432,6 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
     async def _update_final_segment_names(self, run_id: str, product_id_to_taxonomy: Dict[int, str]) -> None:
         """更新最终的细分名称到assignments表"""
         for product_id, segment_name in product_id_to_taxonomy.items():
-            await self._segment_repo.update_segment_name(run_id, product_id, segment_name) 
+            await self._segment_repo.update_segment_name(run_id, product_id, segment_name)
+
+ 

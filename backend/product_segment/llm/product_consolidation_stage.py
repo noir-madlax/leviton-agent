@@ -45,11 +45,15 @@ from core.llm_taxonomy_pipeline.consolidation_base import (
     ConsolidationStageResult,
 )
 
+# Product-specific aliases for consistency
+ProductConsolidationStageContext = ConsolidationStageContext
+ProductConsolidationStageResult = ConsolidationStageResult
+
 __all__ = [
     "ConsolidatedTaxonomyDTO",
-    "ConsolidationStageResult",
-    "ConsolidationStageContext", 
-    "ConsolidationStage",
+    "ProductConsolidationStageResult",
+    "ProductConsolidationStageContext",
+    "ProductConsolidationStage",
 ]
 
 # Path to prompt template files
@@ -57,7 +61,7 @@ _PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
 _CONSOLIDATE_PROMPT_FILE = "taxonomy_consolidation_prompt_v0.txt"
 
 
-class ConsolidationStage(BaseConsolidationStage):
+class ProductConsolidationStage(BaseConsolidationStage):
     """Concrete taxonomy-consolidation stage built on :class:`BaseStage`."""
 
     def __init__(self):

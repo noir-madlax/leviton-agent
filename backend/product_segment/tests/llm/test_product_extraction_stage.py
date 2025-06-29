@@ -62,9 +62,9 @@ from unittest.mock import AsyncMock
 from core.utils.llm_utils import ValidationResult
 from product_segment.config import PRODUCTS_PER_TAXONOMY_PROMPT
 from product_segment.llm.product_extraction_stage import (
-    ExtractionStage,
-    ExtractionStageResult,
-    ExtractionStageContext,
+    ProductExtractionStage,
+    ProductExtractionStageResult,
+    ProductExtractionStageContext,
     TaxonomyDTO,
 )
 from core.llm_taxonomy_pipeline.pipeline_stage import StageContext
@@ -78,7 +78,7 @@ TAXONOMY_RESULTS_PATH = Path(__file__).parent / "test_data" / "taxonomy_extracti
 
 
 def save_taxonomy_results(
-    all_results: List[ExtractionStageResult],
+    all_results: List[ProductExtractionStageResult],
     light_switch_titles: List[str],
     product_category: str
 ) -> None:
@@ -227,15 +227,15 @@ def saved_taxonomy_results() -> dict:
 
 
 @pytest.fixture
-def extraction_stage(mock_llm_client: AsyncMock) -> ExtractionStage:
-    """Create ExtractionStage instance with mocked LLM client."""
-    stage = ExtractionStage()
+def extraction_stage(mock_llm_client: AsyncMock) -> ProductExtractionStage:
+    """Create ProductExtractionStage instance with mocked LLM client."""
+    stage = ProductExtractionStage()
     stage._llm_client = mock_llm_client
     return stage
 
 
-class TestExtractionStage:
-    """Test cases for ExtractionStage."""
+class TestProductExtractionStage:
+    """Test cases for ProductExtractionStage."""
 
     @pytest.mark.asyncio
     @pytest.mark.integration  # Mark as integration test requiring real LLM
@@ -247,10 +247,10 @@ class TestExtractionStage:
         """Integration test – real LLM, 160 titles processed in parallel batches.
 
         • Input: 4 batches × 40 "light-switch" titles from the Amazon CSV (total 160).
-        • Behaviour under test: end-to-end `ExtractionStage.execute` for all batches
+        • Behaviour under test: end-to-end `ProductExtractionStage.execute` for all batches
           concurrently, including prompt construction, validation / retry loop, and 
           JSON → DTO parsing.
-        • Expectation: each batch returns a valid `ExtractionStageResult` with
+        • Expectation: each batch returns a valid `ProductExtractionStageResult` with
           non-empty taxonomies and a complete `assignments_initial` covering
           all 40 indices; results are aggregated to 160 assignments overall.
         • Results are saved to test_data/taxonomy_extraction_results.json for next stage.
@@ -259,7 +259,7 @@ class TestExtractionStage:
         from product_segment.config import PRODUCTS_PER_TAXONOMY_PROMPT
 
         # Create extraction stage (uses real LLM via safe_llm_call automatically)
-        real_extraction_stage = ExtractionStage()
+        real_extraction_stage = ProductExtractionStage()
 
         batch_size = PRODUCTS_PER_TAXONOMY_PROMPT
         batches: list[list[str]] = [
@@ -277,7 +277,7 @@ class TestExtractionStage:
             for i, title in enumerate(batch_titles):
                 print(f"  [{i}] {title}")
                 
-            context = ExtractionStageContext(
+            context = ProductExtractionStageContext(
                 product_category=stage_context.product_category,
                 input_texts=batch_titles,
             )
@@ -286,7 +286,7 @@ class TestExtractionStage:
         print("\n➡️   Calling real LLM for all batches in parallel...")
         
         # Execute all batches in parallel
-        async def process_batch(batch_idx: int, batch_titles: List[str], context: ExtractionStageContext) -> ExtractionStageResult:
+        async def process_batch(batch_idx: int, batch_titles: List[str], context: ProductExtractionStageContext) -> ProductExtractionStageResult:
             result = await real_extraction_stage.execute(context)
             print(f"✅  Batch {batch_idx} finished – extracted "
                   f"{len(result.taxonomies_extracted)} taxonomies and "
@@ -323,7 +323,7 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_build_prompt_with_context(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         light_switch_titles: List[str],
         stage_context: StageContext
     ) -> None:
@@ -337,7 +337,7 @@ class TestExtractionStage:
             print(f"  [{i}] {title}")
         
         # Create extraction context
-        extraction_context = ExtractionStageContext(
+        extraction_context = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=sample_titles
         )
@@ -374,14 +374,14 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_validation_with_valid_response(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         stage_context: StageContext
     ) -> None:
         """Valid JSON response should pass validation without errors."""
         sample_titles = ["Smart Switch", "Toggle Switch"]
         
         # Create extraction context
-        extraction_context = ExtractionStageContext(
+        extraction_context = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=sample_titles
         )
@@ -403,7 +403,7 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_validation_with_invalid_response(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         stage_context: StageContext
     ) -> None:
         """Validation should categorise format / schema / completeness errors.
@@ -416,7 +416,7 @@ class TestExtractionStage:
         sample_titles = ["Switch 1", "Switch 2"]
         
         # Create extraction context
-        extraction_context = ExtractionStageContext(
+        extraction_context = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=sample_titles
         )
@@ -451,7 +451,7 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_retry_prompt_generation(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         stage_context: StageContext
     ) -> None:
         """Retry prompt generation – ensure error details are injected.
@@ -472,7 +472,7 @@ class TestExtractionStage:
         )
         
         # Create extraction context
-        extraction_context = ExtractionStageContext(
+        extraction_context = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=["Switch 1"]
         )
@@ -496,7 +496,7 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_produce_result_conversion(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         stage_context: StageContext
     ) -> None:
         """_produce_result converts valid JSON → DTOs & id→category mapping."""
@@ -514,7 +514,7 @@ class TestExtractionStage:
         sample_titles = ["Switch 1", "Switch 2", "Switch 3"]
         
         # Create extraction context
-        extraction_context = ExtractionStageContext(
+        extraction_context = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=sample_titles
         )
@@ -523,7 +523,7 @@ class TestExtractionStage:
             raw_response, extraction_context, attempts=1
         )
         
-        assert isinstance(result, ExtractionStageResult)
+        assert isinstance(result, ProductExtractionStageResult)
         assert len(result.taxonomies_extracted) == 2
         assert len(result.assignments_initial) == 3
         
@@ -539,12 +539,12 @@ class TestExtractionStage:
     @pytest.mark.asyncio
     async def test_merge_split_results(
         self,
-        extraction_stage: ExtractionStage,
+        extraction_stage: ProductExtractionStage,
         stage_context: StageContext
     ) -> None:
         """Merge logic: de-dupe taxonomies, offset right-hand indices."""
         # Create left result
-        left_result = ExtractionStageResult(
+        left_result = ProductExtractionStageResult(
             taxonomies_extracted=[
                 TaxonomyDTO(name="Category A", definition="Definition A"),
                 TaxonomyDTO(name="Category B", definition="Definition B")
@@ -553,7 +553,7 @@ class TestExtractionStage:
         )
         
         # Create right result
-        right_result = ExtractionStageResult(
+        right_result = ProductExtractionStageResult(
             taxonomies_extracted=[
                 TaxonomyDTO(name="Category B", definition="Definition B"),  # Duplicate
                 TaxonomyDTO(name="Category C", definition="Definition C")
@@ -562,12 +562,12 @@ class TestExtractionStage:
         )
         
         # Create extraction contexts for left and right sides
-        ctx_left = ExtractionStageContext(
+        ctx_left = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=["item1", "item2"]
         )
         
-        ctx_right = ExtractionStageContext(
+        ctx_right = ProductExtractionStageContext(
             product_category=stage_context.product_category,
             input_texts=["item3", "item4"]
         )

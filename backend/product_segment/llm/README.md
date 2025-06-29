@@ -12,27 +12,30 @@ product_segment/llm/
 │   ├── taxonomy_extraction_prompt_v0.txt
 │   ├── taxonomy_consolidation_prompt_v0.txt
 │   └── taxonomy_refinement_prompt_v0.txt
-├── product_extraction_stage.py       # concrete ExtractionStage
-├── product_consolidation_stage.py    # concrete ConsolidationStage
-├── product_refinement_stage.py       # concrete RefinementStage
+├── product_extraction_stage.py       # concrete ProductExtractionStage
+├── product_consolidation_stage.py    # concrete ProductConsolidationStage
+├── product_refinement_stage.py       # concrete ProductRefinementStage
 └── taxonomy_dedup_uitl.py    # stemming-based dedup helper
 ```
 
-## 1. ExtractionStage
-* Converts *product titles* into provisional taxonomies.
-* Validation ensures every `[ID]` appears exactly once across the response.
-* Uses prompt `prompts/taxonomy_extraction_prompt_v0.txt`.
+### Stage Classes
 
-## 2. ConsolidationStage
-* Merges two taxonomy lists at a time; recursion handles >2 lists.
-* Validation guarantees unique names after consolidation.
-* Prompt: `prompts/taxonomy_consolidation_prompt_v0.txt`.
+The pipeline consists of three main stages:
 
-## 3. RefinementStage
-* Re-assigns products to the final consolidated taxonomy.
-* Accepts JSON `{"P_1": "S_0", ...}` where `P_*` are product indices and
-  `S_*` are sub-category IDs rendered in the prompt.
-* Prompt: `prompts/taxonomy_refinement_prompt_v0.txt`.
+1. **ProductExtractionStage** (`product_extraction_stage.py`)
+   - Converts raw product titles into provisional taxonomies
+   - Returns `ProductExtractionStageResult` with taxonomies and initial assignments
+   - Uses `ProductExtractionStageContext` for input configuration
+
+2. **ProductConsolidationStage** (`product_consolidation_stage.py`) 
+   - Consolidates overlapping taxonomies from multiple batches
+   - Returns `ProductConsolidationStageResult` with consolidated taxonomies
+   - Uses `ProductConsolidationStageContext` for consolidation parameters
+
+3. **ProductRefinementStage** (`product_refinement_stage.py`)
+   - Refines product assignments to better match taxonomy definitions
+   - Returns `ProductRefinementStageResult` with reassignment mappings
+   - Uses `ProductRefinementStageContext` for refinement configuration
 
 ## 4. Deduplication helper
 `taxonomy_dedup_uitl.py` normalises names via Porter stemming and collapses

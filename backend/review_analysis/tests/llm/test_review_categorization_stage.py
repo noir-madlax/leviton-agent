@@ -252,31 +252,36 @@ class TestCategorizationStage:
     
     @pytest.mark.asyncio
     async def test_produce_result_conversion(self, categorization_stage: ReviewCategorizationStage):
-        """Test the successful conversion of a valid raw JSON response."""
+        """Test conversion of a valid response to a result object."""
         raw_response = json.dumps({
-            "Durability": {"definition": "Issues related to the product drying out, e.g. markers drying up."},
-            "Cleanliness": {"definition": "How easy the product is to clean, e.g. washes off skin easily."}
+            "Category A": {"definition": "def A"},
+            "Category B": {"definition": "def B"}
         })
         context = ReviewCategorizationContext(
             product_category="", aspects=[], aspect_type="", aspect_context="", input_description="", product_categories=set()
         )
         result = await categorization_stage._produce_result(raw_response, context, 1)
-
+        
         print("\n" + "="*60)
-        print("🔍 CONVERSION RESULT")
+        print("🔍 RESULT CONVERSION")
         print("="*60)
-        print(f"✅ Result: {result}")
+        print(f"📝 Raw response: {raw_response}")
+        print(f"📊 Result type: {type(result)}")
+        print(f"📊 Taxonomies created: {len(result.taxonomies_categorised)}")
+        print("📋 Converted taxonomies:")
+        for tax in result.taxonomies_categorised:
+            print(f"   - {tax.name}: {tax.definition}")
         print("="*60)
 
+        assert isinstance(result, CategorizationStageResult)
         assert len(result.taxonomies_categorised) == 2
-        assert result.taxonomies_categorised[0].name == "Durability"
-        assert result.taxonomies_categorised[1].name == "Cleanliness"
-        print("\n✅ Conversion to structured result successful.")
+        assert result.taxonomies_categorised[0].name == "Category A"
+        print("\n✅ Result produced successfully from raw response.")
 
     @pytest.mark.asyncio
     async def test_split_and_merge_operations(self, categorization_stage: ReviewCategorizationStage):
-        """Verify context splitting and result merging logic."""
-        # Setup: create a context with more aspects than the split threshold (2)
+        """Test splitting a context and merging the results."""
+        # 1. Split
         context = ReviewCategorizationContext(
             product_category="",
             aspects=[(str(i), f"aspect_{i}") for i in range(4)],
@@ -289,22 +294,24 @@ class TestCategorizationStage:
         assert ctx_right.aspects[0][1] == "aspect_2"
         
         # 2. Merge
-        res_left = CategorizationStageResult(taxonomies_categorised=[TaxonomyDTO("Color", "red")])
-        res_right = CategorizationStageResult(taxonomies_categorised=[TaxonomyDTO("Size", "big"), TaxonomyDTO("Color", "blue")])
+        res_left = CategorizationStageResult(taxonomies_categorised=[
+            TaxonomyDTO(name="Cat A", definition="def A"),
+            TaxonomyDTO(name="Cat B", definition="def B")
+        ])
+        res_right = CategorizationStageResult(taxonomies_categorised=[
+            TaxonomyDTO(name="Cat B", definition="def B updated"), # Duplicate name
+            TaxonomyDTO(name="Cat C", definition="def C")
+        ])
         
         merged = await categorization_stage._merge_split_results(res_left, res_right, ctx_left, ctx_right, 0)
         
-        print("\n" + "="*60)
-        print("🔍 MERGE RESULT")
-        print("="*60)
-        print(f"✅ Merged Taxonomies: {[t.name for t in merged.taxonomies_categorised]}")
-        print("="*60)
+        assert isinstance(merged, CategorizationStageResult)
+        assert len(merged.taxonomies_categorised) == 3 # A, B, C
         
-        # Deduplication should keep 'Color' from the left result, so total is 2
-        assert len(merged.taxonomies_categorised) == 2
-        assert merged.taxonomies_categorised[0].name == "Color"
-        assert merged.taxonomies_categorised[1].name == "Size"
-        print("\n✅ Merge with deduplication successful.")
+        # Check that the first definition of Cat B was kept
+        cat_b_merged = next(t for t in merged.taxonomies_categorised if t.name == "Cat B")
+        assert cat_b_merged.definition == "def B"
+        print("\n✅ Split and merge operations work as expected.")
 
     @pytest.mark.asyncio
     @pytest.mark.integration

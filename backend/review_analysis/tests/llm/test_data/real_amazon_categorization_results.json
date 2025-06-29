@@ -3,7 +3,7 @@
     "product_category": "Kids Arts & Crafts",
     "asin": "B087N9N6HH",
     "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
-    "categorization_timestamp": "2025-06-29T18:30:10.451878",
+    "categorization_timestamp": "2025-06-29T19:01:36.287026",
     "source_file": "/Users/maoc/Desktop/3PO/leviton-agent/backend/review_analysis/tests/llm/test_data/real_amazon_extraction_results.json"
   },
   "categorization_results": {
@@ -11,130 +11,130 @@
       "taxonomy_count": 13,
       "taxonomies": [
         {
-          "name": "Container Size Convenience",
-          "definition": "The appropriateness of container dimensions for child use and storage needs, e.g. small containers that fit little hands, mini-sized packaging for portability"
+          "name": "Container Size",
+          "definition": "The physical dimensions and capacity of product containers or packaging units, e.g. small containers, mini-sized jars, compact storage boxes"
         },
         {
-          "name": "Product Quantity Adequacy",
-          "definition": "The sufficiency of material amounts provided for creative activities, e.g. small portions of playdough, limited quantity per container"
+          "name": "Product Quantity",
+          "definition": "The amount or volume of craft material provided in each package or unit, e.g. one ounce portions, handful amounts, bulk quantities"
         },
         {
-          "name": "Color Selection Range",
-          "definition": "The breadth of color options available in the product set, e.g. multiple color choices, diverse color palette"
+          "name": "Color Selection",
+          "definition": "The range and variety of different colors offered in a product set, e.g. multiple color options, diverse palette choices, assorted hues"
         },
         {
-          "name": "Color Quality Appearance",
-          "definition": "The visual appeal and intensity of colors in art materials, e.g. vibrant hues, bold pigmentation, bright appearance"
+          "name": "Color Quality",
+          "definition": "The visual appeal and intensity of colors in craft materials, e.g. vibrant shades, bright appearance, bold pigmentation"
         },
         {
-          "name": "Packaging Design Appeal",
-          "definition": "The visual attractiveness and functional design of product containers, e.g. cute box designs, flip-top containers, sturdy packaging construction"
+          "name": "Package Design",
+          "definition": "The visual appeal and structural features of product packaging, e.g. attractive box designs, cute containers, flip-top functionality"
         },
         {
-          "name": "Packaging Condition Issues",
-          "definition": "Problems with container integrity during shipping or storage, e.g. damaged boxes, open containers, broken packaging"
+          "name": "Package Condition",
+          "definition": "The physical state and integrity of packaging upon delivery or purchase, e.g. damaged boxes, opened containers, torn wrapping"
         },
         {
-          "name": "Material Safety Standards",
-          "definition": "The non-harmful composition of art supplies for child use, e.g. non-toxic formulations, wheat-free ingredients"
+          "name": "Material Safety",
+          "definition": "The safety characteristics and composition of craft materials for child use, e.g. non-toxic formulations, wheat-free ingredients, safe compounds"
         },
         {
-          "name": "Writing Tip Performance",
-          "definition": "The functional quality of pencil or marker tips during use, e.g. smooth writing experience, even ink flow, consistent tip quality"
+          "name": "Material Quality",
+          "definition": "The overall construction and composition quality of craft materials, e.g. premium ingredients, durable formulations, quality manufacturing"
         },
         {
-          "name": "Tip Durability Problems",
-          "definition": "Issues with tip strength and longevity during normal use, e.g. easily breaking tips, quick dulling, fragile points"
+          "name": "Surface Texture",
+          "definition": "The tactile feel and consistency of craft material surfaces, e.g. smooth application, even texture, consistent feel"
         },
         {
-          "name": "Tip Strength Quality",
-          "definition": "The robustness and resilience of writing instrument tips, e.g. strong points that resist breaking, durable tip construction"
+          "name": "Tip Durability",
+          "definition": "The strength and longevity of pointed ends on craft tools like markers or pencils, e.g. strong tips, break-resistant points, durable ends"
         },
         {
-          "name": "Product Shape Integrity",
-          "definition": "The straightness and proper form of art supplies, e.g. warped pencils, curved writing instruments, bent materials"
+          "name": "Tip Performance",
+          "definition": "The functional quality and consistency of pointed tool tips during use, e.g. smooth writing, even flow, consistent application"
         },
         {
-          "name": "Ergonomic Comfort",
-          "definition": "The ease and comfort of holding art supplies during use, e.g. comfortable grip, easy to hold design, appropriate sizing for hands"
+          "name": "Tool Shape",
+          "definition": "The physical form and straightness of craft tools and implements, e.g. warped pencils, curved markers, bent tools"
         },
         {
-          "name": "Material Texture Quality",
-          "definition": "The tactile feel and consistency of art supply materials, e.g. smooth playdough texture, even material consistency"
+          "name": "Grip Comfort",
+          "definition": "The ease and comfort of holding and manipulating craft tools and materials, e.g. easy grip surfaces, comfortable handling, ergonomic design"
         }
       ]
     },
     "perf": {
-      "taxonomy_count": 10,
+      "taxonomy_count": 9,
       "taxonomies": [
         {
-          "name": "Drying Resistance",
-          "definition": "How well art materials resist drying out or maintain workability over time, e.g. markers that don't dry out quickly, paints that stay wet longer"
+          "name": "Drying Speed Control",
+          "definition": "How well the product maintains optimal moisture levels during use, preventing premature drying or excessive wetness, e.g. paint stays workable for extended periods, markers don't dry out when caps are left off"
         },
         {
           "name": "Product Longevity",
-          "definition": "How long art supplies last through regular use before needing replacement, e.g. crayons that last a long time, markers with extended lifespan"
+          "definition": "The overall lifespan and durability of the art supply under normal usage conditions, e.g. crayons last through multiple projects, paint tubes provide consistent output over months"
         },
         {
-          "name": "Quality Retention",
-          "definition": "How well products maintain their original performance characteristics over time, e.g. colors that don't fade, materials that maintain consistency"
+          "name": "Structural Integrity",
+          "definition": "The physical robustness of the product during handling and maintenance activities, e.g. pencil leads don't snap during sharpening, brush handles don't crack with regular use"
         },
         {
-          "name": "Structural Durability",
-          "definition": "How well art supplies withstand physical stress without breaking during normal use, e.g. crayons that don't break easily, pencils that resist snapping"
+          "name": "Application Quality",
+          "definition": "The smoothness and ease of applying the medium to paper or canvas, e.g. crayons glide without scratching, paint flows evenly without streaking"
         },
         {
-          "name": "Maintenance Fragility",
-          "definition": "Tendency for art supplies to break or fail during routine maintenance activities, e.g. colored pencils that break when sharpened, crayons that snap during use"
+          "name": "Maintenance Effectiveness",
+          "definition": "How well the product responds to sharpening, cleaning, or other upkeep procedures, e.g. colored pencils achieve fine points when sharpened, brushes maintain their shape after washing"
         },
         {
-          "name": "Child Usability",
-          "definition": "How easily children can handle and use art supplies effectively, e.g. scissors that are easy for kids to grip, markers with child-friendly caps"
+          "name": "Color Performance",
+          "definition": "The visual quality and intensity of colors produced by the art supply, e.g. markers produce bold saturated lines, watercolors show rich pigmentation"
         },
         {
-          "name": "Sharpening Performance",
-          "definition": "How well pencils and similar tools respond to sharpening processes, e.g. colored pencils that sharpen to fine points, crayons that don't crumble when sharpened"
+          "name": "Blending Capability",
+          "definition": "The ability of the medium to mix and transition smoothly with other colors or layers, e.g. pastels create seamless gradients, colored pencils layer without waxy buildup"
         },
         {
-          "name": "Application Smoothness",
-          "definition": "How evenly and effortlessly art materials apply to surfaces, e.g. crayons that go on smoothly, markers that write without skipping"
+          "name": "Tool Wear Resistance",
+          "definition": "How well drawing or writing implements maintain their functional tip or edge during use, e.g. markers retain fine points after extensive drawing, chalk doesn't wear down too quickly"
         },
         {
-          "name": "Color Blending Capability",
-          "definition": "How well different colors mix or transition together during artistic creation, e.g. watercolors that blend beautifully, pastels that create smooth gradients"
-        },
-        {
-          "name": "Reactivation Ability",
-          "definition": "How well dried art materials can be restored to working condition, e.g. watercolors that revive with water, dried paints that reactivate when moistened"
+          "name": "Product Restoration",
+          "definition": "The ability to revive or refresh the art supply when it begins to lose effectiveness, e.g. dried paint can be reactivated with water, hardened clay becomes pliable with moisture"
         }
       ]
     },
     "use": {
-      "taxonomy_count": 6,
+      "taxonomy_count": 7,
       "taxonomies": [
         {
-          "name": "Party Entertainment",
-          "definition": "Arts and crafts products used to entertain children at parties and celebrations, e.g. party favors, goodie bags, easter baskets"
+          "name": "Party Entertainment Activities",
+          "definition": "Arts and crafts products used for party activities, celebrations, and goodie bag fillers, e.g. party favors, goodie bags, Halloween non-candy alternatives"
         },
         {
-          "name": "Educational Activities",
-          "definition": "Creative materials used in formal learning environments or homework assignments, e.g. classroom gifts, schoolwork"
+          "name": "Educational Classroom Applications",
+          "definition": "Arts and crafts materials used in educational settings as teaching tools, rewards, and classroom activities, e.g. classroom gifts, prizes, schoolwork projects"
         },
         {
-          "name": "Portable Entertainment",
-          "definition": "Compact arts and crafts supplies designed for entertainment during travel or on-the-go situations, e.g. travel entertainment"
+          "name": "Holiday Themed Projects",
+          "definition": "Seasonal and holiday-specific craft activities and decorations, e.g. Easter baskets, Easter eggs, Mother's Day projects"
         },
         {
-          "name": "Developmental Play",
-          "definition": "Creative materials that support sensory development and tactile learning experiences, e.g. sensory play"
+          "name": "Portable Entertainment Solutions",
+          "definition": "Compact arts and crafts activities designed for entertainment during travel and dining out, e.g. travel entertainment, restaurant activities, on-the-go entertainment"
         },
         {
-          "name": "Structured Art Projects",
-          "definition": "Guided creative activities with predetermined formats or templates, e.g. art activities, coloring books"
+          "name": "Sensory Development Activities",
+          "definition": "Arts and crafts focused on tactile experiences and sensory exploration for developmental benefits, e.g. sensory play activities, textured art projects"
         },
         {
-          "name": "Freeform Artistic Expression",
-          "definition": "Open-ended creative work allowing personal artistic interpretation and original creation, e.g. creative drawing, detailed artwork, sketching"
+          "name": "Creative Drawing Projects",
+          "definition": "Traditional drawing and coloring activities using various artistic mediums, e.g. coloring books, creative drawing, craft projects"
+        },
+        {
+          "name": "Color Management Techniques",
+          "definition": "Methods and products used to control and organize colors during art activities, e.g. preventing color mixing, color separation tools"
         }
       ]
     }

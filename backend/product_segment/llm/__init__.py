@@ -2,16 +2,16 @@
 
 from .product_extraction_stage import (
     TaxonomyDTO,
-    ExtractionStageResult,
-    ExtractionStageContext,
-    ExtractionStage,
+    ProductExtractionStageResult,
+    ProductExtractionStageContext,
+    ProductExtractionStage,
 )
 
 from .product_consolidation_stage import (
     ConsolidatedTaxonomyDTO,
-    ConsolidationStageContext,
-    ConsolidationStageResult,
-    ConsolidationStage,
+    ProductConsolidationStageContext,
+    ProductConsolidationStageResult,
+    ProductConsolidationStage,
 )
 
 from .taxonomy_dedup_uitl import (
@@ -22,30 +22,30 @@ from .taxonomy_dedup_uitl import (
 )
 
 from .product_refinement_stage import (
-    RefinementStageContext,
-    RefinementStageResult,
-    RefinementStage,
+    ProductRefinementStageContext,
+    ProductRefinementStageResult,
+    ProductRefinementStage,
 )
 
 
 __all__ = [
     # Extraction stage
     "TaxonomyDTO",
-    "ExtractionStageResult", 
-    "ExtractionStageContext",
-    "ExtractionStage",
+    "ProductExtractionStageResult", 
+    "ProductExtractionStageContext",
+    "ProductExtractionStage",
     # Consolidation stage
     "ConsolidatedTaxonomyDTO",
-    "ConsolidationStageResult",
-    "ConsolidationStageContext",
-    "ConsolidationStage",
+    "ProductConsolidationStageResult",
+    "ProductConsolidationStageContext",
+    "ProductConsolidationStage",
     # Deduplication utilities
     "deduplicate_taxonomies",
     "deduplicate_taxonomy_batches",
     "print_deduplication_summary",
     "DeduplicationResult",
     # Refinement stage
-    "RefinementStageContext",
-    "RefinementStageResult",
-    "RefinementStage",
+    "ProductRefinementStageContext",
+    "ProductRefinementStageResult",
+    "ProductRefinementStage",
 ] 
