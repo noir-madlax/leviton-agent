@@ -90,7 +90,9 @@ class ReviewScraper:
                     "total_asins": 0,
                     "successful": 0,
                     "skipped": 0,
-                    "errors": 0
+                    "errors": 0,
+                    "total_reviews_scraped": 0,
+                    "products_processed": 0
                 }
             
             # 提取ASIN列表
@@ -111,7 +113,9 @@ class ReviewScraper:
                     "total_asins": 0,
                     "successful": 0,
                     "skipped": 0,
-                    "errors": 0
+                    "errors": 0,
+                    "total_reviews_scraped": 0,
+                    "products_processed": 0
                 }
             
             logger.info(f"\n📋 评论爬取配置:")
@@ -140,11 +144,19 @@ class ReviewScraper:
             errors = sum(1 for r in results if isinstance(r, dict) and r.get("status") == "error")
             exceptions = sum(1 for r in results if not isinstance(r, dict))
             
+            # 计算总的评论数量
+            total_reviews_scraped = sum(
+                r.get("reviews_count", 0) 
+                for r in results 
+                if isinstance(r, dict) and r.get("status") == "success"
+            )
+            
             logger.info(f"\n📊 批次 {batch_id} 评论爬取汇总:")
             logger.info(f"   ✅ 成功: {successful}")
             logger.info(f"   ⏩ 跳过: {skipped}")
             logger.info(f"   ❌ 错误: {errors}")
             logger.info(f"   🚫 异常: {exceptions}")
+            logger.info(f"   📝 总评论数: {total_reviews_scraped}")
             logger.info(f"   📁 文件保存位置: {AMAZON_REVIEW_DIR}")
             
             # 生成批次汇总报告
@@ -157,6 +169,7 @@ class ReviewScraper:
                     "skipped": skipped,
                     "errors": errors,
                     "exceptions": exceptions,
+                    "total_reviews_scraped": total_reviews_scraped,
                     "review_coverage_months": review_coverage_months,
                     "configuration": {
                         "rate_limit_delay": RATE_LIMIT_DELAY,
@@ -201,6 +214,8 @@ class ReviewScraper:
                 "skipped": skipped,
                 "errors": errors,
                 "exceptions": exceptions,
+                "total_reviews_scraped": total_reviews_scraped,
+                "products_processed": successful,
                 "summary_file": summary_file,
                 "data_directory": AMAZON_REVIEW_DIR
             }
@@ -214,7 +229,9 @@ class ReviewScraper:
                 "total_asins": 0,
                 "successful": 0,
                 "skipped": 0,
-                "errors": 0
+                "errors": 0,
+                "total_reviews_scraped": 0,
+                "products_processed": 0
             }
     
     async def _scrape_product_reviews(self, asin: str, semaphore: asyncio.Semaphore, 
