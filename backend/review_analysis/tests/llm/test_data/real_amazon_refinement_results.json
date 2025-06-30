@@ -1,0 +1,92 @@
+{
+  "metadata": {
+    "product_category": "Kids Arts & Crafts",
+    "aspect_type": "use",
+    "refinement_timestamp": "2025-06-29T19:35:41.066683",
+    "total_aspects": 5,
+    "total_categories": 7,
+    "aspects_reassigned": 5,
+    "reassignment_percentage": 100.0
+  },
+  "categories": [
+    {
+      "name": "Party Entertainment Activities",
+      "definition": "Arts and crafts products used for party activities, celebrations, and goodie bag fillers, e.g. party favors, goodie bags, Halloween non-candy alternatives"
+    },
+    {
+      "name": "Educational Classroom Applications",
+      "definition": "Arts and crafts materials used in educational settings as teaching tools, rewards, and classroom activities, e.g. classroom gifts, prizes, schoolwork projects"
+    },
+    {
+      "name": "Holiday Themed Projects",
+      "definition": "Seasonal and holiday-specific craft activities and decorations, e.g. Easter baskets, Easter eggs, Mother's Day projects"
+    },
+    {
+      "name": "Portable Entertainment Solutions",
+      "definition": "Compact arts and crafts activities designed for entertainment during travel and dining out, e.g. travel entertainment, restaurant activities, on-the-go entertainment"
+    },
+    {
+      "name": "Sensory Development Activities",
+      "definition": "Arts and crafts focused on tactile experiences and sensory exploration for developmental benefits, e.g. sensory play activities, textured art projects"
+    },
+    {
+      "name": "Creative Drawing Projects",
+      "definition": "Traditional drawing and coloring activities using various artistic mediums, e.g. coloring books, creative drawing, craft projects"
+    },
+    {
+      "name": "Color Management Techniques",
+      "definition": "Methods and products used to control and organize colors during art activities, e.g. preventing color mixing, color separation tools"
+    }
+  ],
+  "aspects": [
+    "art projects and creative activities",
+    "educational and classroom use",
+    "professional illustration work",
+    "hobby and recreational drawing",
+    "craft and DIY applications"
+  ],
+  "reassignments": {
+    "0": "Creative Drawing Projects",
+    "1": "Educational Classroom Applications",
+    "2": "OUT_OF_SCOPE",
+    "3": "Creative Drawing Projects",
+    "4": "Creative Drawing Projects"
+  },
+  "reassignment_summary": {
+    "Creative Drawing Projects": 3,
+    "Educational Classroom Applications": 1,
+    "OUT_OF_SCOPE": 1
+  },
+  "reassigned_aspects": [
+    {
+      "aspect_index": 0,
+      "aspect_description": "art projects and creative activities",
+      "new_category": "Creative Drawing Projects",
+      "reason": "Better fit in Creative Drawing Projects"
+    },
+    {
+      "aspect_index": 1,
+      "aspect_description": "educational and classroom use",
+      "new_category": "Educational Classroom Applications",
+      "reason": "Better fit in Educational Classroom Applications"
+    },
+    {
+      "aspect_index": 2,
+      "aspect_description": "professional illustration work",
+      "new_category": "OUT_OF_SCOPE",
+      "reason": "Better fit in OUT_OF_SCOPE"
+    },
+    {
+      "aspect_index": 3,
+      "aspect_description": "hobby and recreational drawing",
+      "new_category": "Creative Drawing Projects",
+      "reason": "Better fit in Creative Drawing Projects"
+    },
+    {
+      "aspect_index": 4,
+      "aspect_description": "craft and DIY applications",
+      "new_category": "Creative Drawing Projects",
+      "reason": "Better fit in Creative Drawing Projects"
+    }
+  ]
+}

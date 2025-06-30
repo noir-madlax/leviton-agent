@@ -272,12 +272,28 @@ class LLMManager:  # pylint: disable=too-few-public-methods
 
                     if not validation_result.ok:
                         # Validation failure ------------------------------------
-                        logger.warning("LLM validation failed on attempt %d: %s", attempt, json.dumps(validation_result.error_categories, indent=2))
+                        logger.warning(
+                            "LLM validation failed on attempt %d: %s\n"
+                            "Full prompt: %s\n"
+                            "Original response: %s", 
+                            attempt, 
+                            json.dumps(validation_result.error_categories, indent=2),
+                            current_prompt,
+                            response_text
+                        )
                         
                         # Rebuild prompt or abort --------------------------------
                         if retry_prompt_builder is None or attempt == cfg.MAX_ATTEMPTS_PER_CALL:
                             # Exhausted retries or cannot build retry prompt
-                            logger.error("LLM call failed after %d attempts with validation errors: %s", attempt, json.dumps(validation_result.error_categories, indent=2))
+                            logger.error(
+                                "LLM call failed after %d attempts with validation errors: %s\n"
+                                "Final prompt: %s\n"
+                                "Final response: %s", 
+                                attempt, 
+                                json.dumps(validation_result.error_categories, indent=2),
+                                current_prompt,
+                                response_text
+                            )
                             raise LLMCallError("Validation failed after maximum attempts")
 
                         current_prompt = retry_prompt_builder(original_prompt, validation_result.error_categories)

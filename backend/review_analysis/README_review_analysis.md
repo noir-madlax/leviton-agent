@@ -169,5 +169,81 @@ This yields deterministic convergence within ≤3 attempts by design.
 * v1.2 – surfacing aspect importance metrics (frequency × sentiment) during categorization.
 * v2.0 – merge aspect data with product-segmentation segments for combined dashboards.
 
+## Pipeline Stages
+
+1. **Extraction Stage** - Extracts review aspects from raw review text
+2. **Categorization Stage** - Groups similar aspects into taxonomies
+3. **Consolidation Stage** - Merges taxonomies from multiple products
+
+## Testing
+
+### Running Pipeline Tests in Sequence
+
+The review analysis pipeline tests must be run in a specific order since each stage depends on the output of the previous stage:
+
+#### Method 1: Using pytest with automatic ordering
+```bash
+cd backend
+python -m pytest review_analysis/tests/llm/ -s
+```
+
+The `conftest.py` file automatically ensures tests run in the correct order:
+1. Extraction stage tests (generates `real_amazon_extraction_results.json`)
+2. Categorization stage tests (uses extraction results, generates categorization results)
+3. Consolidation stage tests (uses categorization results, generates final results)
+
+#### Method 2: Using the standalone test runner
+```bash
+cd backend
+python review_analysis/tests/run_pipeline_tests.py
+```
+
+Or as a module:
+```bash
+cd backend
+python -m review_analysis.tests.run_pipeline_tests
+```
+
+#### Method 3: Using the integration test
+```bash
+cd backend
+python -m pytest review_analysis/tests/llm/test_pipeline_integration.py -s -m integration
+```
+
+### Running Individual Stage Tests
+
+You can also run tests for individual stages:
+
+```bash
+# Extraction stage only
+python -m pytest review_analysis/tests/llm/test_review_extraction_stage.py -s -m integration
+
+# Categorization stage only (requires extraction results)
+python -m pytest review_analysis/tests/llm/test_review_categorization_stage.py -s -m integration
+
+# Consolidation stage only (requires categorization results)
+python -m pytest review_analysis/tests/llm/test_review_consolidation_stage.py -s -m integration
+```
+
+### Test Data Files
+
+The pipeline tests generate intermediate data files in `review_analysis/tests/llm/test_data/`:
+
+- `real_amazon_extraction_results.json` - Output from extraction stage
+- `real_amazon_categorization_results.json` - Output from categorization stage  
+- `real_amazon_consolidation_results.json` - Output from consolidation stage
+
+These files are used as input for subsequent stages and can be inspected to understand the pipeline flow.
+
+## Implementation Details
+
+Each stage is implemented using the generic LLM taxonomy pipeline framework:
+
+- **Extraction Stage** (`review_extraction_stage.py`) - Extends `ExtractionStage`
+- **Categorization Stage** (`review_categorization_stage.py`) - Extends `CategorizationStage`  
+- **Consolidation Stage** (`review_consolidation_stage.py`) - Extends `ConsolidationStage`
+
+All stages use prompt templates from the `prompts/` directory and implement validation, retry logic, and result parsing.
+
 ---
 © 2025 Leviton Intelligence

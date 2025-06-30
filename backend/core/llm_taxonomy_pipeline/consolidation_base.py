@@ -190,7 +190,6 @@ class ConsolidationStage(BaseStage, abc.ABC):
         """Build retry prompt with error details."""
         error_details = create_retry_error_details(validation_result.error_categories)
         retry_block = self._retry_prompt_template.replace("{{error_details}}", error_details)
-        retry_block = retry_block.replace("{{content_sections}}", "")
         return f"{original_prompt}\n\n{retry_block}"
 
     async def _produce_result(self, raw_response: str, ctx: ConsolidationStageContext, 

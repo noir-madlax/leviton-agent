@@ -11,7 +11,7 @@ import json
 
 from core.llm_taxonomy_pipeline.consolidation_base import (
     ConsolidationStage as BaseConsolidationStage,
-    ConsolidationStageContext,
+    ConsolidationStageContext as ReviewConsolidationStageContext,
     ConsolidationStageResult,
     ConsolidatedTaxonomyDTO,
 )
@@ -19,7 +19,7 @@ from core.llm_taxonomy_pipeline.consolidation_base import (
 __all__ = [
     "ConsolidatedTaxonomyDTO",
     "ConsolidationStageResult", 
-    "ConsolidationStageContext",
+    "ReviewConsolidationStageContext",
     "ReviewConsolidationStage",
 ]
 
@@ -57,7 +57,7 @@ class ReviewConsolidationStage(BaseConsolidationStage):
             ),
         }
 
-    def _get_additional_template_vars(self, ctx: ConsolidationStageContext) -> Dict[str, str]:
+    def _get_additional_template_vars(self, ctx: ReviewConsolidationStageContext) -> Dict[str, str]:
         """Add review-specific template variables."""
         # Resolve aspect definition, fall back to empty string if not available
         aspect_definition = self._aspect_type_definitions.get(self.aspect_type.lower(), "")

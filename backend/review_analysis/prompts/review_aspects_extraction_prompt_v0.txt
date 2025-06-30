@@ -43,6 +43,7 @@ CRITICAL INSTRUCTIONS:
 - If a review mentions any physical aspect, related performance, or use together, extract them as separate entries under "phy," "perf," and "use," with no overlap.
 - Make sure each <DETAIL> is under the most relevant <PHYSICAL> or <PERF> in the context of {{PRODUCT}}
 - Preserve negations
+- Sentiment consistency: a reason must have the same sentiment within the same review as the sentiment of <PERF> or <USE> caused by the <PERF_REASON> or <USE_REASON>.
 
 Key Instructions:
 - Break down reviews with multiple aspects, performances, or uses into individual entries.

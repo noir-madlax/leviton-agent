@@ -214,28 +214,17 @@ class ReviewExtractionStage(BaseStage):
     ) -> str:
         """Build retry prompt using shared retry template."""
         
-        # retry_ctx is the error_categories dict from ValidationResult
-        if not isinstance(retry_ctx, dict):
+        if not isinstance(retry_ctx, dict) or "error_categories" not in retry_ctx:
             # Fallback for unexpected retry context format
             return f"{original_prompt}\n\nPlease fix the errors and provide a valid JSON response."
         
-        # Format error details
-        error_lines = []
-        for category, errors in retry_ctx.items():
-            if errors:  # Only include categories with errors
-                error_lines.append(f"\n{category.upper().replace('_', ' ')}:")
-                for error in errors:
-                    error_lines.append(f"  • {error}")
-        
-        error_details = "\n".join(error_lines) if error_lines else "Unknown validation errors"
-        
         # Use the shared retry template with structured error details
         try:
-            retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
+            retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", retry_ctx.get("error_details", "Unknown validation errors"))
             return f"{original_prompt}\n\n{retry_block}"
         except Exception as exc:
             # Fallback if template replacement fails
-            return f"{original_prompt}\n\nValidation failed with errors: {error_details}\n\nPlease fix the errors and provide a valid JSON response."
+            return f"{original_prompt}\n\nValidation failed. Please fix the errors and provide a valid JSON response."
 
     async def _produce_result(
         self,

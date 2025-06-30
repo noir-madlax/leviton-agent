@@ -1,9 +1,37 @@
 __all__ = [
     "ReviewExtractionStage",
-    "ReviewConsolidationStage",
+    "ReviewExtractionContext",
+    "ReviewExtractionResult",
     "ReviewCategorizationStage",
+    "ReviewCategorizationContext",
+    "ReviewCategorizationStageContext",
+    "ReviewConsolidationStage",
+    "ReviewConsolidationStageContext",
+    "ReviewRefinementStage",
+    "ReviewRefinementStageContext",
 ]
 
-from .review_extraction_stage import ReviewExtractionStage  # noqa: E402
-from .review_consolidation_stage import ReviewConsolidationStage  # noqa: E402
-from .review_categorization_stage import ReviewCategorizationStage  # noqa: E402 
+# Stage implementations ----------------------------------------------------
+from .review_extraction_stage import (  # noqa: E402
+    ReviewExtractionStage,
+    ReviewExtractionContext,
+    ReviewExtractionResult,
+)
+
+from .review_categorization_stage import (  # noqa: E402
+    ReviewCategorizationStage,
+    ReviewCategorizationContext,
+)
+
+from .review_consolidation_stage import (  # noqa: E402
+    ReviewConsolidationStage,
+    ReviewConsolidationStageContext,
+)
+
+from .review_refinement_stage import (  # noqa: E402
+    ReviewRefinementStage,
+    ReviewRefinementStageContext,
+)
+
+# Provide backward-compat alias matching earlier naming convention
+ReviewCategorizationStageContext = ReviewCategorizationContext  # type: ignore 

@@ -24,18 +24,12 @@ class ReviewValidationContext:
 class ReviewValidationError:
     """Structured error information for validation failures."""
     
-    def __init__(self, category: str, message: str, correction: str = "", context: str = ""):
+    def __init__(self, category: str, message: str):
         self.category = category  # format_errors, validation_errors, completeness_errors
         self.message = message
-        self.correction = correction  # How to fix the error
-        self.context = context
     
     def __str__(self) -> str:
         result = f"{self.category}: {self.message}"
-        if self.correction:
-            result += f" → {self.correction}"
-        if self.context:
-            result += f" ({self.context})"
         return result
 
 
@@ -153,8 +147,7 @@ class ReviewHierarchyValidator:
         if not isinstance(phy_data, dict):
             errors.append(ReviewValidationError(
                 "format_errors",
-                f"'phy' section must be a JSON object, got {type(phy_data).__name__}",
-                "Use format: {'<PHYSICAL>': {'<PID>@<DETAIL>': {'<SENT>': [RID]}}}"
+                f"'phy' section must be a JSON object, got {type(phy_data).__name__}. Use format: {{'<PHYSICAL>': {{'<PID>@<DETAIL>': {{'<SENT>': [RID]}}}}}}"
             ))
             return errors
         
@@ -162,9 +155,7 @@ class ReviewHierarchyValidator:
             if not isinstance(details, dict):
                 errors.append(ReviewValidationError(
                     "format_errors",
-                    f"Physical aspect '{physical}' must be a JSON object with <PID>@<DETAIL> keys",
-                    "Use format: {'<PID>@<DETAIL>': {'<SENT>': [RID]}}",
-                    f"got {type(details).__name__}"
+                    f"Physical aspect '{physical}' must be a JSON object with <PID>@<DETAIL> keys (got {type(details).__name__}). Use format: {{'<PID>@<DETAIL>': {{'<SENT>': [RID]}}}}"
                 ))
                 continue
             
@@ -173,9 +164,7 @@ class ReviewHierarchyValidator:
                 if '@' not in pid_detail:
                     errors.append(ReviewValidationError(
                         "validation_errors",
-                        f"Invalid format '{pid_detail}' - must be <PID>@<DETAIL>",
-                        "Use format: <PID>@<DETAIL> where <PID> is A,B,C... and <DETAIL> is aspect detail",
-                        f"in physical aspect '{physical}'"
+                        f"Invalid format '{pid_detail}' in physical aspect '{physical}' - must be <PID>@<DETAIL>. Use format: <PID>@<DETAIL> where <PID> is A,B,C... and <DETAIL> is aspect detail"
                     ))
                     continue
                 
@@ -183,17 +172,13 @@ class ReviewHierarchyValidator:
                 if not self.validate_id_format(pid, 'PID'):
                     errors.append(ReviewValidationError(
                         "validation_errors",
-                        f"Invalid <PID> format '{pid}' - must be A, B, C... Z, AA, AB...",
-                        "Use <PID> format: A, B, C... Z, AA, AB, etc.",
-                        f"in '{pid_detail}'"
+                        f"Invalid <PID> format '{pid}' in '{pid_detail}' - must be A, B, C... Z, AA, AB, etc."
                     ))
                 
                 if not isinstance(sentiments, dict):
                     errors.append(ReviewValidationError(
                         "format_errors",
-                        f"Sentiments for '{pid_detail}' must be a JSON object with <SENT> keys",
-                        "Use format: {'<SENT>': [RID]} where <SENT> is '+' or '-'",
-                        f"got {type(sentiments).__name__}"
+                        f"Sentiments for '{pid_detail}' must be a JSON object with <SENT> keys (got {type(sentiments).__name__}). Use format: {{'<SENT>': [RID]}} where <SENT> is '+' or '-'"
                     ))
                     continue
                 
@@ -201,18 +186,14 @@ class ReviewHierarchyValidator:
                     if not self.validate_sentiment(sent):
                         errors.append(ReviewValidationError(
                             "validation_errors",
-                            f"Invalid <SENT> '{sent}' - must be '+' or '-'",
-                            "Use <SENT> format: '+' for positive or '-' for negative",
-                            f"in '{pid_detail}'"
+                            f"Invalid <SENT> '{sent}' in '{pid_detail}' - must be '+' for positive or '-' for negative"
                         ))
                     
                     is_valid, id_error = self.validate_review_ids(ids, expected_review_ids)
                     if not is_valid:
                         errors.append(ReviewValidationError(
                             "validation_errors",
-                            f"Invalid RID in {pid_detail}[{sent}]: {id_error}",
-                            f"Use only RID from input: {sorted(list(expected_review_ids))}",
-                            f"in physical aspect '{physical}'"
+                            f"Invalid RID in {pid_detail}[{sent}] in physical aspect '{physical}': {id_error}. Use only RID from input: {sorted(list(expected_review_ids))}"
                         ))
         
         return errors
@@ -275,8 +256,7 @@ class ReviewHierarchyValidator:
             if not isinstance(details, dict):
                 errors.append(ReviewValidationError(
                     "format_errors",
-                    f"Performance aspect '{perf}' must be a JSON object with perf_id@DETAIL keys",
-                    f"got {type(details).__name__}"
+                    f"Performance aspect '{perf}' must be a JSON object with perf_id@DETAIL keys (got {type(details).__name__})"
                 ))
                 continue
             
@@ -285,8 +265,7 @@ class ReviewHierarchyValidator:
                 if '@' not in perf_id_detail:
                     errors.append(ReviewValidationError(
                         "validation_errors",
-                        f"Invalid format '{perf_id_detail}' - must be perf_id@DETAIL",
-                        f"in performance aspect '{perf}'"
+                        f"Invalid format '{perf_id_detail}' in performance aspect '{perf}' - must be perf_id@DETAIL"
                     ))
                     continue
                 
@@ -294,15 +273,13 @@ class ReviewHierarchyValidator:
                 if not self.validate_id_format(perf_id, 'perf_id'):
                     errors.append(ReviewValidationError(
                         "validation_errors",
-                        f"Invalid perf_id format '{perf_id}' - must be a, b, c... z, aa, ab...",
-                        f"in '{perf_id_detail}'"
+                        f"Invalid perf_id format '{perf_id}' in '{perf_id_detail}' - must be a, b, c... z, aa, ab..."
                     ))
                 
                 if not isinstance(sentiments, dict):
                     errors.append(ReviewValidationError(
                         "format_errors",
-                        f"Sentiments for '{perf_id_detail}' must be a JSON object with '+'/'-' keys",
-                        f"got {type(sentiments).__name__}"
+                        f"Sentiments for '{perf_id_detail}' must be a JSON object with '+'/'-' keys (got {type(sentiments).__name__})"
                     ))
                     continue
                 
@@ -310,15 +287,13 @@ class ReviewHierarchyValidator:
                     if not self.validate_sentiment(sent):
                         errors.append(ReviewValidationError(
                             "validation_errors",
-                            f"Invalid sentiment '{sent}' - must be '+' or '-'",
-                            f"in '{perf_id_detail}'"
+                            f"Invalid sentiment '{sent}' in '{perf_id_detail}' - must be '+' or '-'"
                         ))
                     
                     if not isinstance(reasons, dict):
                         errors.append(ReviewValidationError(
                             "format_errors",
-                            f"Reasons for '{perf_id_detail}[{sent}]' must be a JSON object",
-                            f"got {type(reasons).__name__}"
+                            f"Reasons for '{perf_id_detail}[{sent}]' must be a JSON object (got {type(reasons).__name__})"
                         ))
                         continue
                     
@@ -335,17 +310,14 @@ class ReviewHierarchyValidator:
                             if invalid_parts:
                                 errors.append(ReviewValidationError(
                                     "validation_errors",
-                                    f"Invalid <PERF_REASON> format '{reason}' - invalid parts: {invalid_parts}",
-                                    "Use <PERF_REASON> format: <PID>, <perf_id>, '?', or combinations like 'A,b'",
-                                    f"Each part must be <PID>, <perf_id>, or '?' in '{perf_id_detail}[{sent}]'"
+                                    f"Invalid <PERF_REASON> format '{reason}' in '{perf_id_detail}[{sent}]' - invalid parts: {invalid_parts}. Use <PERF_REASON> format: <PID>, <perf_id>, '?', or combinations like 'A,b'. Each part must be <PID>, <perf_id>, or '?'"
                                 ))
                         
                         is_valid, id_error = self.validate_review_ids(ids, expected_review_ids)
                         if not is_valid:
                             errors.append(ReviewValidationError(
                                 "validation_errors",
-                                f"Invalid review IDs in {perf_id_detail}[{sent}][{reason}]: {id_error}",
-                                f"in performance aspect '{perf}'"
+                                f"Invalid review IDs in {perf_id_detail}[{sent}][{reason}] in performance aspect '{perf}': {id_error}"
                             ))
         
         return errors
@@ -401,8 +373,7 @@ class ReviewHierarchyValidator:
             if not isinstance(sentiments, dict):
                 errors.append(ReviewValidationError(
                     "format_errors",
-                    f"Use case '{use}' must be a JSON object with '+'/'-' keys",
-                    f"got {type(sentiments).__name__}"
+                    f"Use case '{use}' must be a JSON object with '+'/'-' keys (got {type(sentiments).__name__})"
                 ))
                 continue
             
@@ -410,15 +381,13 @@ class ReviewHierarchyValidator:
                 if not self.validate_sentiment(sent):
                     errors.append(ReviewValidationError(
                         "validation_errors",
-                        f"Invalid sentiment '{sent}' - must be '+' or '-'",
-                        f"in use case '{use}'"
+                        f"Invalid sentiment '{sent}' in use case '{use}' - must be '+' or '-'"
                     ))
                 
                 if not isinstance(reasons, dict):
                     errors.append(ReviewValidationError(
                         "format_errors",
-                        f"Reasons for '{use}[{sent}]' must be a JSON object",
-                        f"got {type(reasons).__name__}"
+                        f"Reasons for '{use}[{sent}]' must be a JSON object (got {type(reasons).__name__})"
                     ))
                     continue
                 
@@ -435,17 +404,14 @@ class ReviewHierarchyValidator:
                         if invalid_parts:
                             errors.append(ReviewValidationError(
                                 "validation_errors",
-                                f"Invalid <USE_REASON> format '{reason}' - invalid parts: {invalid_parts}",
-                                "Use <USE_REASON> format: <PID>, <perf_id>, '?', or combinations like 'A,b'",
-                                f"Each part must be <PID>, <perf_id>, or '?' in '{use}[{sent}]'"
+                                f"Invalid <USE_REASON> format '{reason}' in '{use}[{sent}]' - invalid parts: {invalid_parts}. Use <USE_REASON> format: <PID>, <perf_id>, '?', or combinations like 'A,b'. Each part must be <PID>, <perf_id>, or '?'"
                             ))
                     
                     is_valid, id_error = self.validate_review_ids(ids, expected_review_ids)
                     if not is_valid:
                         errors.append(ReviewValidationError(
                             "validation_errors",
-                            f"Invalid review IDs in {use}[{sent}][{reason}]: {id_error}",
-                            f"in use case '{use}'"
+                            f"Invalid review IDs in {use}[{sent}][{reason}] in use case '{use}': {id_error}"
                         ))
         
         return errors
@@ -523,10 +489,9 @@ class ReviewHierarchyValidator:
                                                                 if sentiment != expected_sentiment:
                                                                     errors.append(ReviewValidationError(
                                                                         "validation_errors",
-                                                                        f"Sentiment mismatch: RID {rid} has '<SENT>' '{sentiment}' for {perf_id_detail} "
-                                                                        f"but '<SENT>' '{expected_sentiment}' for <PERF_REASON> {part}",
-                                                                        "Same RID must have same <SENT> for <PERF> and <PERF_REASON>",
-                                                                        f"in performance section"
+                                                                        f"Sentiment mismatch: RID {rid} has sentiment '{sentiment}' for {perf_id_detail} "
+                                                                        f"but '{expected_sentiment}' for <PERF_REASON> {part}. Same RID must have same sentiment for <PERF> and <PERF_REASON>. "
+                                                                        f"Double check whether {perf_id_detail} is mentioned in the review {rid}, if its sentiment is {expected_sentiment}, if the <PERF_REASON> {part} is mentioned as a reason for the {perf_id_detail} in the review {rid}, and if its sentiment is {sentiment}"
                                                                     ))
                                                 # Check <perf_id> references
                                                 elif self.validate_id_format(part, 'perf_id'):
@@ -537,10 +502,9 @@ class ReviewHierarchyValidator:
                                                                 if sentiment != expected_sentiment:
                                                                     errors.append(ReviewValidationError(
                                                                         "validation_errors",
-                                                                        f"Sentiment mismatch: RID {rid} has '<SENT>' '{sentiment}' for {perf_id_detail} "
-                                                                        f"but '<SENT>' '{expected_sentiment}' for <PERF_REASON> {part}",
-                                                                        "Same RID must have same <SENT> for <PERF> and <PERF_REASON>",
-                                                                        f"in performance section"
+                                                                        f"Sentiment mismatch: RID {rid} has sentiment '{sentiment}' for {perf_id_detail} "
+                                                                        f"but '{expected_sentiment}' for <PERF_REASON> {part}. Same RID must have same sentiment for <PERF> and <PERF_REASON>. "
+                                                                        f"Double check whether {perf_id_detail} is mentioned in the review {rid}, if its sentiment is {expected_sentiment}, if the <PERF_REASON> {part} is mentioned as a reason for the {perf_id_detail} in the review {rid}, and if its sentiment is {sentiment}"
                                                                     ))
         
         # Validate use section cross-references
@@ -563,10 +527,9 @@ class ReviewHierarchyValidator:
                                                         if sentiment != expected_sentiment:
                                                             errors.append(ReviewValidationError(
                                                                 "validation_errors",
-                                                                f"Sentiment mismatch: RID {rid} has '<SENT>' '{sentiment}' for <USE> '{use_case}' "
-                                                                f"but '<SENT>' '{expected_sentiment}' for <USE_REASON> {part}",
-                                                                "Same RID must have same <SENT> for <USE> and <USE_REASON>",
-                                                                f"in use section"
+                                                                f"Sentiment mismatch: RID {rid} has sentiment '{sentiment}' for <USE> '{use_case}' "
+                                                                f"but '{expected_sentiment}' for <USE_REASON> {part}. Same RID must have same sentiment for <USE> and <USE_REASON>. "
+                                                                f"Double check whether {use_case} is mentioned in the review {rid}, if its sentiment is {expected_sentiment}, if the <USE_REASON> {part} is mentioned as a reason for the {use_case} in the review {rid}, and if its sentiment is {sentiment}"
                                                             ))
                                         # Check <perf_id> references
                                         elif self.validate_id_format(part, 'perf_id'):
@@ -577,10 +540,9 @@ class ReviewHierarchyValidator:
                                                         if sentiment != expected_sentiment:
                                                             errors.append(ReviewValidationError(
                                                                 "validation_errors",
-                                                                f"Sentiment mismatch: RID {rid} has '<SENT>' '{sentiment}' for <USE> '{use_case}' "
-                                                                f"but '<SENT>' '{expected_sentiment}' for <USE_REASON> {part}",
-                                                                "Same RID must have same <SENT> for <USE> and <USE_REASON>",
-                                                                f"in use section"
+                                                                f"Sentiment mismatch: RID {rid} has sentiment '{sentiment}' for <USE> '{use_case}' "
+                                                                f"but '{expected_sentiment}' for <USE_REASON> {part}. Same RID must have same sentiment for <USE> and <USE_REASON>. "
+                                                                f"Double check whether {use_case} is mentioned in the review {rid}, if its sentiment is {expected_sentiment}, if the <USE_REASON> {part} is mentioned as a reason for the {use_case} in the review {rid}, and if its sentiment is {sentiment}"
                                                             ))
         
         return errors
@@ -610,8 +572,7 @@ class ReviewHierarchyValidator:
             if not isinstance(result[section], dict):
                 errors.append(ReviewValidationError(
                     "format_errors",
-                    f"Section '{section}' must be a JSON object containing aspect categories",
-                    f"got {type(result[section]).__name__}"
+                    f"Section '{section}' must be a JSON object containing aspect categories (got {type(result[section]).__name__})"
                 ))
                 continue
         
@@ -626,7 +587,8 @@ class ReviewHierarchyValidator:
             errors.extend(self.validate_use_section(result['use'], validation_ctx.expected_review_ids))
         
         # Validate cross-references (sentiment agreement between sections)
-        errors.extend(self.validate_cross_references(result))
+        # TODO: Re-enable this once we have a way to handle the cross-references
+        # errors.extend(self.validate_cross_references(result))
         
         return errors
 

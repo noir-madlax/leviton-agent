@@ -70,7 +70,7 @@ class AllReviewDataService(BaseDashboardService):
         
         # Get analysis data
         analysis_query = self.supabase.from_('product_review_analysis').select(
-            'product_id, review_content, standardized_aspect, aspect_category, review_id'
+            'product_id, standardized_aspect, aspect_category, review_id'
         ).in_('product_id', self.project_asins).neq('standardized_aspect', 'OUT_OF_SCOPE').limit(2000)
         
         analysis_result = analysis_query.execute()
@@ -81,7 +81,7 @@ class AllReviewDataService(BaseDashboardService):
         # Get ratings data
         review_ids = [item['review_id'] for item in analysis_result.data]
         rating_query = self.supabase.from_('product_reviews').select(
-            'review_id, rating, verified, review_date'
+            'review_id, rating, verified, review_date, review_text'
         ).in_('review_id', review_ids)
         
         rating_result = rating_query.execute()
@@ -103,10 +103,11 @@ class AllReviewDataService(BaseDashboardService):
             
             rating_info = rating_map.get(review_id, {})
             brand = brand_map.get(product_id, 'Unknown')
+            review_text = rating_info.get('review_text', '')
             
             combined_data.append({
                 'product_id': product_id,
-                'review_content': item['review_content'],
+                'review_content': review_text,
                 'standardized_aspect': item['standardized_aspect'],
                 'aspect_category': item['aspect_category'],
                 'review_id': review_id,

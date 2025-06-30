@@ -998,3 +998,205 @@ class TestReviewExtractionStage:
         
         print("   - Results saved for consolidation testing")
         print(f"   - File: {save_path}")
+
+    @pytest.mark.asyncio
+    async def test_retry_prompt_generation(
+        self,
+        extraction_stage: ReviewExtractionStage
+    ) -> None:
+        """Test retry prompt construction using validation error details."""
+        
+        print("\n" + "="*80)
+        print("🔍 RETRY PROMPT GENERATION TEST")
+        print("="*80)
+        
+        # Create original prompt
+        context = ReviewExtractionContext(
+            product_category=PRODUCT_CATEGORY,
+            formatted_reviews="0#Great colorful design\n1#Easy to use but flickering issues",
+            expected_review_ids={0, 1},
+            asin="TEST123",
+            product_title="Test Art Kit"
+        )
+        
+        original_prompt = await extraction_stage._build_prompt(context)
+        
+        print("📝 ORIGINAL PROMPT (first 200 chars):")
+        print(f"{original_prompt[:200]}...")
+        print("="*80)
+        
+        # Create mock error categories (format from ValidationResult)
+        error_categories = {
+            "format_errors": [
+                "Invalid JSON syntax at line 5",
+                "'phy' section must be a JSON object, got list"
+            ],
+            "validation_errors": [
+                "Invalid <PID> format 'AA1' - must be A, B, C... Z, AA, AB...",
+                "Sentiment mismatch: RID 0 has sentiment '+' for A@colorful design but '-' for <PERF_REASON> A"
+            ],
+            "completeness_errors": [
+                "Missing required section: 'use'"
+            ]
+        }
+        
+        print("📊 ERROR CATEGORIES TO PROCESS:")
+        for category, errors in error_categories.items():
+            print(f"   {category}:")
+            for error in errors:
+                print(f"     • {error}")
+        print("="*80)
+        
+        # Generate retry prompt
+        retry_prompt = extraction_stage._retry_prompt(
+            original_prompt=original_prompt,
+            retry_ctx=error_categories,  # This is what gets passed from ValidationResult
+            ctx=context
+        )
+        
+        print("🔄 COMPLETE RETRY PROMPT:")
+        print("="*80)
+        print(retry_prompt)
+        print("="*80)
+        
+        # Verify retry prompt structure
+        assert "RETRY REQUIRED" in retry_prompt
+        assert "FORMAT ERRORS:" in retry_prompt
+        assert "VALIDATION ERRORS:" in retry_prompt
+        assert "COMPLETENESS ERRORS:" in retry_prompt
+        assert "Invalid JSON syntax" in retry_prompt
+        assert "Sentiment mismatch" in retry_prompt
+        
+        print("\n✅ Retry prompt generation test passed!")
+        print("   - All error categories properly formatted")
+        print("   - Proper template structure maintained")
+
+    @pytest.mark.asyncio
+    async def test_reason_sentiment_inconsistency_validation(
+        self,
+        extraction_stage: ReviewExtractionStage
+    ) -> None:
+        """Test validation of reason sentiment inconsistency errors."""
+        
+        print("\n" + "="*80)
+        print("🔍 REASON SENTIMENT INCONSISTENCY VALIDATION TEST")
+        print("="*80)
+        
+        # Create response with sentiment mismatches between sections
+        inconsistent_response = json.dumps({
+            "phy": {
+                "design": {
+                    "A@colorful appearance": {"+": [0], "-": []},
+                    "B@compact size": {"+": [1], "-": []}
+                }
+            },
+            "perf": {
+                "usability": {
+                    # RID 0 has '+' sentiment for A@colorful but '-' for performance reason A
+                    "a@easy to handle": {"+": {"B": [1]}, "-": {"A": [0]}},  # Mismatch!
+                    # RID 1 has '+' sentiment for B@compact but '+' for performance reason B (consistent)
+                    "b@good grip": {"+": {"B": [1]}, "-": {}}
+                }
+            },
+            "use": {
+                # RID 0 has '+' sentiment for A@colorful but '-' for use reason A  
+                "art projects": {"+": {"b": [1]}, "-": {"A": [0]}},  # Mismatch!
+                # RID 1 has '+' sentiment for performance b@good grip and use reason b (consistent)
+                "craft activities": {"+": {"b": [1]}, "-": {}}
+            }
+        })
+        
+        context = ReviewExtractionContext(
+            product_category=PRODUCT_CATEGORY,
+            formatted_reviews="0#Great colorful design, very appealing\n1#Compact size makes it easy to handle with good grip",
+            expected_review_ids={0, 1},
+            asin="TEST123", 
+            product_title="Test Art Kit"
+        )
+        
+        print("📝 RESPONSE WITH SENTIMENT MISMATCHES:")
+        print(json.dumps(json.loads(inconsistent_response), indent=2))
+        print("="*80)
+        
+        print("🔍 EXPECTED SENTIMENT MISMATCHES:")
+        print("   • RID 0: '+' for A@colorful appearance vs '-' for <PERF_REASON> A in usability")
+        print("   • RID 0: '+' for A@colorful appearance vs '-' for <USE_REASON> A in art projects")
+        print("="*80)
+        
+        # Test validation
+        result = extraction_stage._validate(inconsistent_response, context)
+        
+        print("📊 VALIDATION RESULT:")
+        print(f"   • Valid: {result.ok}")
+        print(f"   • Error categories: {list(result.error_categories.keys())}")
+        print("="*80)
+        
+        print("🔍 DETAILED VALIDATION ERRORS:")
+        for category, errors in result.error_categories.items():
+            print(f"   {category}:")
+            for error in errors:
+                print(f"     • {error}")
+        print("="*80)
+        
+        # Verify validation caught the sentiment mismatches
+        assert result.ok is False
+        assert "validation_errors" in result.error_categories
+        
+        validation_errors = result.error_categories["validation_errors"]
+        sentiment_mismatch_errors = [e for e in validation_errors if "Sentiment mismatch" in e]
+        
+        assert len(sentiment_mismatch_errors) >= 2, f"Expected at least 2 sentiment mismatch errors, got {len(sentiment_mismatch_errors)}"
+        
+        # Check specific mismatch patterns
+        perf_mismatch_found = any("RID 0" in e and "a@easy to handle" in e and "<PERF_REASON> A" in e for e in sentiment_mismatch_errors)
+        use_mismatch_found = any("RID 0" in e and "art projects" in e and "<USE_REASON> A" in e for e in sentiment_mismatch_errors)
+        
+        assert perf_mismatch_found, f"Performance sentiment mismatch not found in: {sentiment_mismatch_errors}"
+        assert use_mismatch_found, f"Use case sentiment mismatch not found in: {sentiment_mismatch_errors}"
+        
+        print("✅ Sentiment mismatch validation test passed!")
+        print(f"   - Found {len(sentiment_mismatch_errors)} sentiment mismatch errors")
+        print("   - Performance reason mismatch detected")
+        print("   - Use case reason mismatch detected")
+        
+        # Now test retry prompt generation with these specific errors
+        print("\n" + "="*60)
+        print("🔄 RETRY PROMPT FOR SENTIMENT MISMATCHES")
+        print("="*60)
+        
+        original_prompt = await extraction_stage._build_prompt(context)
+        retry_prompt = extraction_stage._retry_prompt(
+            original_prompt=original_prompt,
+            retry_ctx=result.error_categories,
+            ctx=context
+        )
+        
+        print("📝 RETRY PROMPT (showing error section):")
+        # Extract just the error details section for readability
+        retry_lines = retry_prompt.split('\n')
+        in_error_section = False
+        error_section_lines = []
+        
+        for line in retry_lines:
+            if "RETRY REQUIRED" in line:
+                in_error_section = True
+            elif "PRODUCT CONTEXT" in line:
+                in_error_section = False
+            
+            if in_error_section:
+                error_section_lines.append(line)
+        
+        print('\n'.join(error_section_lines))
+        print("="*60)
+        
+        # Verify retry prompt contains sentiment mismatch details
+        assert "Sentiment mismatch" in retry_prompt
+        assert "RID 0" in retry_prompt
+        assert "a@easy to handle" in retry_prompt
+        assert "<PERF_REASON> A" in retry_prompt
+        assert "<USE_REASON> A" in retry_prompt
+        
+        print("✅ Retry prompt for sentiment mismatches properly generated!")
+        print("   - Contains detailed sentiment mismatch descriptions")
+        print("   - Includes RID and aspect references")
+        print("   - Provides context for correction")

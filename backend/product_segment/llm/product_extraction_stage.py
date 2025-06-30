@@ -228,7 +228,6 @@ class ProductExtractionStage(BaseExtractionStage):
 
         # Use the fixed retry prompt template
         retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
-        retry_block = retry_block.replace("{{content_sections}}", "")
         return f"{original_prompt}\n\n{retry_block}"
 
     async def _produce_result(

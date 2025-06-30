@@ -170,7 +170,6 @@ class CategorizationStage(BaseStage, abc.ABC):
     def _retry_prompt(self, original_prompt: str, validation_result: ValidationResult, ctx: CategorizationStageContext) -> str:  # noqa: D401
         error_details = create_retry_error_details(validation_result.error_categories)
         retry_block = self._retry_prompt_template.replace("{{error_details}}", error_details)
-        retry_block = retry_block.replace("{{content_sections}}", "")
         return f"{original_prompt}\n\n{retry_block}"
 
     # ------------------------------------------------------------------

@@ -3,6 +3,7 @@ You are an aspect categorization specialist.
 **YOUR TASK:** Categorize {{aspect_type}} aspects into the most appropriate categories from the provided taxonomy.
 
 **UNDERSTANDING THE DATA:**
+- Product category: {{product_category}}
 - Each aspect represents customer feedback about different {{aspect_context}}
 - Categorize each aspect into the most appropriate category
 - Use "OUT_OF_SCOPE" for aspects that don't fit well into any category
@@ -20,13 +21,13 @@ You are an aspect categorization specialist.
 
 **REQUIRED OUTPUT FORMAT:**
 Return pure JSON mapping each aspect ID to its category ID:
-{{
+{
   "1": "C_0",
   "2": "C_1", 
   "3": "OUT_OF_SCOPE",
   "4": "C_2",
   ...
-}}
+}
 
 **CRITICAL RULES:**
 - **Complete Coverage**: Every aspect ID from the input must appear exactly once in the output
@@ -34,8 +35,6 @@ Return pure JSON mapping each aspect ID to its category ID:
 - **Pure JSON**: Return only the JSON object - no explanations or formatting
 - **No Duplicates**: Each aspect ID should appear exactly once
 - **Strategic Thinking**: Consider business and customer value when making assignments
-
-{{product_context}}
 
 **INPUT:**
 {{formatted_aspects}} 
