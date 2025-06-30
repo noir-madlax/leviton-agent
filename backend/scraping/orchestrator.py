@@ -7,6 +7,14 @@ from .products.importer import ProductImporter
 from .reviews.scraper import ReviewScraper
 from .reviews.importer import ReviewImporter
 
+# Data transformation integration
+from data_transformation.services.transformation_service import DataTransformationService
+from data_transformation.models import TransformationConfig
+
+# Database access
+from core.database.connection import get_supabase_service_client
+from core.repositories.scraping_request_repository import ScrapingRequestRepository
+
 logger = logging.getLogger(__name__)
 
 class ScrapingOrchestrator:
@@ -18,6 +26,10 @@ class ScrapingOrchestrator:
         self.product_importer = ProductImporter()
         self.review_scraper = ReviewScraper()
         self.review_importer = ReviewImporter()
+        
+        # 初始化数据库访问
+        self.supabase_client = get_supabase_service_client()
+        self.request_repository = ScrapingRequestRepository(self.supabase_client)
     
     async def process_url(self, url: str, max_products: int = 100, 
                          scrape_reviews: bool = True, 
@@ -74,6 +86,15 @@ class ScrapingOrchestrator:
             
             result["batch_id"] = batch_id
             
+            # Phase 2.5: 数据转换 (新增)
+            logger.info(f"Phase 2.5: 开始转换批次 {batch_id} 的数据...")
+            transformation_result = await self._transform_batch_data(batch_id, product_import_result.get("request_id"))
+            result["transformation_phase"] = transformation_result
+            
+            if not transformation_result.get("success"):
+                result["overall_status"] = "transformation_failed"
+                return result
+            
             # Phase 3: 爬取评论 (如果启用)
             if scrape_reviews:
                 logger.info(f"Phase 3: 开始爬取批次 {batch_id} 的评论...")
@@ -87,6 +108,15 @@ class ScrapingOrchestrator:
                     logger.info(f"Phase 4: 开始导入批次 {batch_id} 的评论数据...")
                     review_import_result = await self.review_importer.import_batch_reviews(batch_id)
                     result["reviews_phase"]["importing"] = review_import_result
+                    
+                    # 更新评论状态到 scraping_requests 表
+                    request_id = product_import_result.get("request_id")
+                    if request_id:
+                        await self._update_review_status_in_db(
+                            request_id, 
+                            review_scrape_result, 
+                            review_import_result
+                        )
                     
                     if review_import_result.get("status") == "success":
                         result["overall_status"] = "completed"
@@ -133,11 +163,24 @@ class ScrapingOrchestrator:
             json_file_path = scrape_result.get("file_path")
             import_result = await self.product_importer.import_products(json_file_path)
             
+            if import_result.get("status") != "success":
+                return {
+                    "status": "importing_failed",
+                    "scraping_result": scrape_result,
+                    "importing_result": import_result
+                }
+            
+            batch_id = import_result.get("batch_id")
+            
+            # 数据转换
+            transformation_result = await self._transform_batch_data(batch_id, import_result.get("request_id"))
+            
             return {
-                "status": "success" if import_result.get("status") == "success" else "importing_failed",
+                "status": "success" if transformation_result.get("success") else "transformation_failed",
                 "scraping_result": scrape_result,
                 "importing_result": import_result,
-                "batch_id": import_result.get("batch_id")
+                "transformation_result": transformation_result,
+                "batch_id": batch_id
             }
             
         except Exception as e:
@@ -244,4 +287,120 @@ class ScrapingOrchestrator:
             
         except Exception as e:
             logger.error(f"获取处理状态时出错: {e}")
-            return {"error": str(e)} 
+            return {"error": str(e)}
+    
+    async def _transform_batch_data(self, batch_id: int, request_id: Optional[int] = None) -> Dict[str, Any]:
+        """调用数据转换服务处理批次数据"""
+        logger.info(f"🔄 开始数据转换 - batch_id: {batch_id}, request_id: {request_id}")
+        
+        try:
+            # 使用保守的配置，避免跳过已存在的记录（因为是新批次）
+            config = TransformationConfig(
+                skip_existing=False,  # 新批次不跳过
+                validate_calculations=True,
+                dry_run=False,
+                batch_size=50  # 使用较小的批次大小
+            )
+            
+            logger.info(f"📋 数据转换配置: skip_existing={config.skip_existing}, validate_calculations={config.validate_calculations}, dry_run={config.dry_run}")
+            
+            transformation_service = DataTransformationService(config)
+            logger.info(f"✅ 数据转换服务初始化成功")
+            
+            result = await transformation_service.transform_batch_for_orchestrator(batch_id, request_id)
+            
+            logger.info(f"🎯 数据转换完成 - batch_id: {batch_id}")
+            logger.info(f"📊 转换结果: success={result.success}, processed={result.processed_count}, errors={result.error_count}")
+            logger.info(f"⏱️  转换耗时: {result.duration_seconds:.2f}秒")
+            
+            if result.errors:
+                logger.warning(f"⚠️  转换过程中发现错误: {result.errors[:3]}")  # 只显示前3个错误
+            
+            return {
+                "success": result.success,
+                "processed_count": result.processed_count,
+                "error_count": result.error_count,
+                "duration_seconds": result.duration_seconds,
+                "summary": result.summary,
+                "errors": result.errors[:5] if result.errors else []  # 限制错误数量
+            }
+            
+        except ImportError as e:
+            error_msg = f"数据转换模块导入失败: {e}"
+            logger.error(f"❌ {error_msg}")
+            return {
+                "success": False,
+                "error": error_msg,
+                "processed_count": 0,
+                "error_count": 1
+            }
+        except Exception as e:
+            error_msg = f"数据转换调用失败: {e}"
+            logger.error(f"❌ {error_msg}", exc_info=True)
+            return {
+                "success": False,
+                "error": error_msg,
+                "processed_count": 0,
+                "error_count": 1
+            }
+
+    async def _update_review_status_in_db(self, request_id: int, 
+                                         scrape_result: Dict[str, Any], 
+                                         import_result: Dict[str, Any]):
+        """更新评论状态到 scraping_requests 表"""
+        try:
+            # 从抓取结果中提取评论数量信息
+            reviews_scraped = 0
+            review_status = "failed"
+            
+            # 解析抓取结果
+            if scrape_result.get("status") in ["success", "partial_success"]:
+                # 从抓取结果中获取评论数量
+                if "total_reviews_scraped" in scrape_result:
+                    reviews_scraped = scrape_result["total_reviews_scraped"]
+                elif "reviews_scraped" in scrape_result:
+                    reviews_scraped = scrape_result["reviews_scraped"]
+                else:
+                    # 如果没有直接的数量，从产品结果中累计
+                    products_results = scrape_result.get("products_results", [])
+                    reviews_scraped = sum(
+                        product.get("reviews_scraped", 0) 
+                        for product in products_results
+                    )
+                
+                # 根据导入结果确定最终状态
+                if import_result.get("status") == "success":
+                    review_status = "completed"
+                    # 优先使用导入结果中的数量（更准确）
+                    if "reviews_imported" in import_result:
+                        reviews_scraped = import_result["reviews_imported"]
+                else:
+                    review_status = "import_failed"
+            else:
+                review_status = "scraping_failed"
+            
+            # 构建元数据
+            review_metadata = {
+                "scrape_status": scrape_result.get("status"),
+                "import_status": import_result.get("status"),
+                "scrape_summary": scrape_result.get("summary", {}),
+                "import_summary": import_result.get("summary", {}),
+                "files_processed": import_result.get("files_processed", 0)
+            }
+            
+            # 更新数据库状态
+            success = await self.request_repository.update_review_status(
+                request_id=request_id,
+                review_status=review_status,
+                reviews_scraped=reviews_scraped,
+                review_metadata=review_metadata,
+                set_completed_time=True
+            )
+            
+            if success:
+                logger.info(f"✅ 成功更新评论状态: request_id={request_id}, status={review_status}, count={reviews_scraped}")
+            else:
+                logger.error(f"❌ 更新评论状态失败: request_id={request_id}")
+                
+        except Exception as e:
+            logger.error(f"❌ 更新评论状态异常: {e}", exc_info=True) 

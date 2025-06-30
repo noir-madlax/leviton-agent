@@ -1,0 +1,7 @@
+{
+  "test_url": "https://www.amazon.com/b?node=166057011",
+  "max_products": 5,
+  "max_reviews": 1,
+  "start_time": "2025-06-30T17:02:13.971642",
+  "test_type": "end_to_end_scraping_transformation"
+}

@@ -11,8 +11,8 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
 
 interface ScrapingResult {
-  task_id: string;
-  status: 'completed' | 'failed' | 'running';
+  task_id?: string;
+  status?: 'completed' | 'failed' | 'running';
   message?: string;
   results?: {
     products_scraped: number;
@@ -20,6 +20,25 @@ interface ScrapingResult {
     data_saved_to: string;
   };
   error?: string;
+  url?: string;
+  batch_id?: number;
+  overall_status?: string;
+  products_phase?: {
+    scraping?: any;
+    importing?: any;
+  };
+  transformation_phase?: {
+    success?: boolean;
+    processed_count?: number;
+    error_count?: number;
+    duration_seconds?: number;
+    summary?: any;
+    errors?: string[];
+  };
+  reviews_phase?: {
+    scraping?: any;
+    importing?: any;
+  };
 }
 
 export function DataImportTab() {
@@ -81,6 +100,51 @@ export function DataImportTab() {
       case 'completed':
         return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Completed</Badge>;
       case 'failed':
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
+      case 'running':
+        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
+      default:
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+
+  const getStepStatus = (status: string) => {
+    switch (status) {
+      case 'success':
+        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Success</Badge>;
+      case 'failed':
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
+      case 'running':
+        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
+      default:
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  };
+
+  const getTransformationStatus = (phase: any) => {
+    if (phase.success) {
+      return (
+        <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Success</Badge>
+      );
+    } else {
+      return (
+        <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>
+      );
+    }
+  };
+
+  const getOverallStatusBadge = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Completed</Badge>;
+      case 'products_only_completed':
+        return <Badge variant="default" className="bg-blue-500"><CheckCircle className="w-3 h-3 mr-1" />Products Only</Badge>;
+      case 'failed':
+      case 'product_scraping_failed':
+      case 'product_importing_failed':
+      case 'transformation_failed':
+      case 'review_scraping_failed':
+      case 'review_importing_failed':
         return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
       case 'running':
         return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
@@ -188,36 +252,199 @@ export function DataImportTab() {
           </CardContent>
         </Card>
 
-
-
         {/* 结果显示 */}
         {result && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 Scraping Results
-                {getStatusBadge(result.status)}
+                {result.overall_status && getStatusBadge(result.overall_status)}
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="space-y-6">
+              {/* 基本信息 */}
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <Label>Task ID</Label>
-                  <div className="font-mono text-xs bg-muted p-2 rounded">
-                    {result.task_id}
+                  <Label>URL</Label>
+                  <div className="font-mono text-xs bg-muted p-2 rounded break-all">
+                    {result.url || result.task_id || 'N/A'}
                   </div>
                 </div>
                 <div>
-                  <Label>Status</Label>
-                  <div className="mt-1">
-                    {getStatusBadge(result.status)}
+                  <Label>Batch ID</Label>
+                  <div className="font-mono text-xs bg-muted p-2 rounded">
+                    {result.batch_id || 'N/A'}
                   </div>
                 </div>
               </div>
 
+              {/* 步骤进度显示 */}
+              <div className="space-y-4">
+                <Label className="text-base font-medium">Processing Steps</Label>
+                
+                {/* Step 1: 产品爬取 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">1</div>
+                    <span className="font-medium">Product Scraping</span>
+                    {result.products_phase?.scraping && getStepStatus(result.products_phase.scraping.status)}
+                  </div>
+                  {result.products_phase?.scraping && (
+                    <div className="ml-8 text-sm text-muted-foreground">
+                      {result.products_phase.scraping.status === 'success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ {result.products_phase.scraping.products_scraped || 0} products scraped</span>
+                          {result.products_phase.scraping.file_path && (
+                            <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
+                              Data saved
+                            </span>
+                          )}
+                        </div>
+                      ) : result.products_phase.scraping.status === 'failed' ? (
+                        <span className="text-red-600">❌ Failed: {result.products_phase.scraping.error || 'Unknown error'}</span>
+                      ) : (
+                        <span>🔄 In progress...</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 2: 产品导入 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">2</div>
+                    <span className="font-medium">Product Import</span>
+                    {result.products_phase?.importing && getStepStatus(result.products_phase.importing.status)}
+                  </div>
+                  {result.products_phase?.importing && (
+                    <div className="ml-8 text-sm text-muted-foreground">
+                      {result.products_phase.importing.status === 'success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ {result.products_phase.importing.products_imported || 0} products imported</span>
+                          <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
+                            Batch ID: {result.batch_id}
+                          </span>
+                        </div>
+                      ) : result.products_phase.importing.status === 'failed' ? (
+                        <span className="text-red-600">❌ Failed: {result.products_phase.importing.error || 'Import failed'}</span>
+                      ) : (
+                        <span>🔄 In progress...</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 3: 数据转换 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">3</div>
+                    <span className="font-medium">Data Transformation</span>
+                    {result.transformation_phase && getTransformationStatus(result.transformation_phase)}
+                  </div>
+                  {result.transformation_phase && (
+                    <div className="ml-8 text-sm text-muted-foreground">
+                      {result.transformation_phase.success ? (
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-4">
+                            <span>✅ {result.transformation_phase.processed_count || 0} products transformed</span>
+                            <span className="text-xs font-mono bg-purple-50 px-2 py-1 rounded">
+                              {result.transformation_phase.duration_seconds ? `${result.transformation_phase.duration_seconds.toFixed(1)}s` : 'N/A'}
+                            </span>
+                          </div>
+                          {(result.transformation_phase.error_count || 0) > 0 && (
+                            <div className="text-amber-600">
+                              ⚠️ {result.transformation_phase.error_count || 0} errors occurred
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="space-y-1">
+                          <span className="text-red-600">❌ Transformation failed</span>
+                          {result.transformation_phase.errors && result.transformation_phase.errors.length > 0 && (
+                            <div className="text-xs bg-red-50 p-2 rounded mt-1">
+                              {result.transformation_phase.errors[0]}
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 4: 评论爬取 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">4</div>
+                    <span className="font-medium">Review Scraping</span>
+                    {result.reviews_phase?.scraping && getStepStatus(result.reviews_phase.scraping.status)}
+                  </div>
+                  {result.reviews_phase?.scraping && (
+                    <div className="ml-8 text-sm text-muted-foreground">
+                      {result.reviews_phase.scraping.status === 'success' || result.reviews_phase.scraping.status === 'partial_success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ Reviews scraped for {result.reviews_phase.scraping.products_processed || 0} products</span>
+                          <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
+                            {result.reviews_phase.scraping.total_reviews_scraped || 0} reviews
+                          </span>
+                        </div>
+                      ) : result.reviews_phase.scraping.status === 'failed' ? (
+                        <span className="text-red-600">❌ Failed: {result.reviews_phase.scraping.error || 'Review scraping failed'}</span>
+                      ) : (
+                        <span>🔄 In progress...</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+
+                {/* Step 5: 评论导入 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">5</div>
+                    <span className="font-medium">Review Import</span>
+                    {result.reviews_phase?.importing && getStepStatus(result.reviews_phase.importing.status)}
+                  </div>
+                  {result.reviews_phase?.importing && (
+                    <div className="ml-8 text-sm text-muted-foreground">
+                      {result.reviews_phase.importing.status === 'success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ {result.reviews_phase.importing.reviews_imported || 0} reviews imported</span>
+                          <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
+                            {result.reviews_phase.importing.files_processed || 0} files processed
+                          </span>
+                        </div>
+                      ) : result.reviews_phase.importing.status === 'failed' ? (
+                        <span className="text-red-600">❌ Failed: {result.reviews_phase.importing.error || 'Review import failed'}</span>
+                      ) : (
+                        <span>🔄 In progress...</span>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* 总体状态 */}
+              {result.overall_status && (
+                <div className="pt-4 border-t">
+                  <div className="flex items-center justify-between">
+                    <Label className="text-base font-medium">Overall Status</Label>
+                    {getOverallStatusBadge(result.overall_status)}
+                  </div>
+                  {result.error && (
+                    <Alert variant="destructive" className="mt-2">
+                      <AlertCircle className="h-4 w-4" />
+                      <AlertDescription>
+                        <div className="font-medium">Error occurred</div>
+                        <div className="text-sm mt-1">{result.error}</div>
+                      </AlertDescription>
+                    </Alert>
+                  )}
+                </div>
+              )}
+
+              {/* 兼容旧格式的结果显示 */}
               {result.results && (
-                <div className="space-y-2">
-                  <Label>Results Summary</Label>
+                <div className="space-y-2 pt-4 border-t">
+                  <Label>Legacy Results Summary</Label>
                   <div className="grid grid-cols-3 gap-4 text-sm">
                     <div className="bg-blue-50 p-3 rounded-lg">
                       <div className="font-medium text-blue-900">Products Scraped</div>
@@ -240,26 +467,9 @@ export function DataImportTab() {
                   </div>
                 </div>
               )}
-
-              {result.error && (
-                <Alert variant="destructive">
-                  <AlertCircle className="h-4 w-4" />
-                  <AlertDescription>
-                    <div className="font-medium">Error occurred</div>
-                    <div className="text-sm mt-1">{result.error}</div>
-                  </AlertDescription>
-                </Alert>
-              )}
-
-              {result.message && (
-                <div className="text-sm text-muted-foreground">
-                  {result.message}
-                </div>
-              )}
             </CardContent>
           </Card>
         )}
-
 
       </div>
     </div>

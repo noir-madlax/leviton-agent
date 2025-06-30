@@ -1,0 +1,296 @@
+{
+  "status": "success",
+  "scraping_result": {
+    "status": "success",
+    "products_scraped": 5,
+    "file_path": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/amazon_category_cat_166057011_20250630_170222.json",
+    "category_info": {
+      "category_id": "166057011",
+      "search_term": null,
+      "method": "parsed_from_category_url",
+      "category_name": "Unknown"
+    },
+    "products": [
+      {
+        "position": 1,
+        "title": "Crayola Ultra-Clean Washable Markers, 12 Count",
+        "asin": "B003HGGPLW",
+        "link": "https://www.amazon.com/Crayola-12-Ultra-Clean-Washable-Markers/dp/B003HGGPLW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-1",
+        "recent_sales": "20K+ bought in past month",
+        "availability": {
+          "raw": null
+        },
+        "categories": [
+          {
+            "name": "Arts & Crafts Supplies",
+            "id": "166057011"
+          }
+        ],
+        "image": "https://m.media-amazon.com/images/I/81iNXL+fSpL._AC_UL320_.jpg",
+        "unit_price": "$0.42$0.42/count",
+        "is_prime": false,
+        "is_amazon_fresh": false,
+        "is_whole_foods_market": false,
+        "rating": 4.8,
+        "ratings_total": 17908,
+        "prices": [
+          {
+            "symbol": "$",
+            "value": 4.98,
+            "currency": "USD",
+            "raw": "$4.98",
+            "name": "Primary",
+            "is_primary": true,
+            "list_price": "$0.42",
+            "asin": "B003HGGPLW",
+            "link": "https://www.amazon.com/Crayola-12-Ultra-Clean-Washable-Markers/dp/B003HGGPLW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-1"
+          },
+          {
+            "symbol": "$",
+            "value": 10.69,
+            "currency": "USD",
+            "raw": "$10.69",
+            "name": "Original",
+            "is_rrp": true,
+            "link": "https://www.amazon.com/Crayola-12-Ultra-Clean-Washable-Markers/dp/B003HGGPLW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-1",
+            "asin": "B003HGGPLW"
+          }
+        ],
+        "price": {
+          "symbol": "$",
+          "value": 4.98,
+          "currency": "USD",
+          "raw": "$4.98",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$0.42",
+          "asin": "B003HGGPLW",
+          "link": "https://www.amazon.com/Crayola-12-Ultra-Clean-Washable-Markers/dp/B003HGGPLW/ref=sr_1_1?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-1"
+        }
+      },
+      {
+        "position": 2,
+        "title": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+        "asin": "B00JM5GW10",
+        "link": "https://www.amazon.com/Play-Doh-Modeling-Compound-Non-Toxic-Exclusive/dp/B00JM5GW10/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-2",
+        "recent_sales": "20K+ bought in past month",
+        "availability": {
+          "raw": null
+        },
+        "categories": [
+          {
+            "name": "Arts & Crafts Supplies",
+            "id": "166057011"
+          }
+        ],
+        "image": "https://m.media-amazon.com/images/I/71LqxbA1WCL._AC_UL320_.jpg",
+        "unit_price": "$0.80$0.80/count",
+        "is_prime": false,
+        "is_amazon_fresh": false,
+        "is_whole_foods_market": false,
+        "rating": 4.8,
+        "ratings_total": 64307,
+        "prices": [
+          {
+            "symbol": "$",
+            "value": 7.99,
+            "currency": "USD",
+            "raw": "$7.99",
+            "list_price": "$0.80",
+            "asin": "B00JM5GW10",
+            "link": "https://www.amazon.com/Play-Doh-Modeling-Compound-Non-Toxic-Exclusive/dp/B00JM5GW10/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-2"
+          }
+        ],
+        "price": {
+          "symbol": "$",
+          "value": 7.99,
+          "currency": "USD",
+          "raw": "$7.99",
+          "list_price": "$0.80",
+          "asin": "B00JM5GW10",
+          "link": "https://www.amazon.com/Play-Doh-Modeling-Compound-Non-Toxic-Exclusive/dp/B00JM5GW10/ref=sr_1_2?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-2"
+        }
+      },
+      {
+        "position": 3,
+        "title": "Crayola Colored Pencils (36ct), Kids Pencil Set, Back to School Essentials, Must Have Classroom Supplies for Kids, Pre-Sharpened Coloring Book Pencils, 3+",
+        "asin": "B00006RVTS",
+        "link": "https://www.amazon.com/Crayola-Colored-Pencil-Supplies-Assorted/dp/B00006RVTS/ref=sr_1_3?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-3",
+        "recent_sales": "20K+ bought in past month",
+        "availability": {
+          "raw": null
+        },
+        "categories": [
+          {
+            "name": "Arts & Crafts Supplies",
+            "id": "166057011"
+          }
+        ],
+        "image": "https://m.media-amazon.com/images/I/61TZzq7oBKL._AC_UL320_.jpg",
+        "unit_price": "$0.14$0.14/count",
+        "is_prime": false,
+        "is_amazon_fresh": false,
+        "is_whole_foods_market": false,
+        "rating": 4.8,
+        "ratings_total": 35659,
+        "prices": [
+          {
+            "symbol": "$",
+            "value": 4.94,
+            "currency": "USD",
+            "raw": "$4.94",
+            "name": "Primary",
+            "is_primary": true,
+            "list_price": "$0.14",
+            "asin": "B00006RVTS",
+            "link": "https://www.amazon.com/Crayola-Colored-Pencil-Supplies-Assorted/dp/B00006RVTS/ref=sr_1_3?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-3"
+          },
+          {
+            "symbol": "$",
+            "value": 9.69,
+            "currency": "USD",
+            "raw": "$9.69",
+            "name": "Original",
+            "is_rrp": true,
+            "link": "https://www.amazon.com/Crayola-Colored-Pencil-Supplies-Assorted/dp/B00006RVTS/ref=sr_1_3?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-3",
+            "asin": "B00006RVTS"
+          }
+        ],
+        "price": {
+          "symbol": "$",
+          "value": 4.94,
+          "currency": "USD",
+          "raw": "$4.94",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$0.14",
+          "asin": "B00006RVTS",
+          "link": "https://www.amazon.com/Crayola-Colored-Pencil-Supplies-Assorted/dp/B00006RVTS/ref=sr_1_3?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-3"
+        }
+      },
+      {
+        "position": 4,
+        "title": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+        "asin": "B09PGVGCH5",
+        "link": "https://www.amazon.com/Horizon-Group-USA-Bluey-Aqua/dp/B09PGVGCH5/ref=sr_1_4?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-4",
+        "recent_sales": "20K+ bought in past month",
+        "availability": {
+          "raw": null
+        },
+        "categories": [
+          {
+            "name": "Arts & Crafts Supplies",
+            "id": "166057011"
+          }
+        ],
+        "image": "https://m.media-amazon.com/images/I/71x-iCOHaaL._AC_UL320_.jpg",
+        "is_prime": false,
+        "is_amazon_fresh": false,
+        "is_whole_foods_market": false,
+        "rating": 4.7,
+        "ratings_total": 9211,
+        "prices": [
+          {
+            "symbol": "$",
+            "value": 4.99,
+            "currency": "USD",
+            "raw": "$4.99",
+            "asin": "B09PGVGCH5",
+            "link": "https://www.amazon.com/Horizon-Group-USA-Bluey-Aqua/dp/B09PGVGCH5/ref=sr_1_4?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-4"
+          }
+        ],
+        "price": {
+          "symbol": "$",
+          "value": 4.99,
+          "currency": "USD",
+          "raw": "$4.99",
+          "asin": "B09PGVGCH5",
+          "link": "https://www.amazon.com/Horizon-Group-USA-Bluey-Aqua/dp/B09PGVGCH5/ref=sr_1_4?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-4"
+        }
+      },
+      {
+        "position": 5,
+        "title": "JOYIN Rock Painting Kit- Glow in The Dark Rock Kit, Arts and Crafts for Kids Ages 6-12, Art Supplies Toy, Kids Craft Paint Kits, Arts & Crafts for Boys Girls Birthday Party Gift Toy",
+        "asin": "B08HD89CX6",
+        "link": "https://www.amazon.com/Painting-Creativity-Supplies-Metallic-Standard/dp/B08HD89CX6/ref=sr_1_5?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-5",
+        "recent_sales": "10K+ bought in past month",
+        "availability": {
+          "raw": null
+        },
+        "categories": [
+          {
+            "name": "Arts & Crafts Supplies",
+            "id": "166057011"
+          }
+        ],
+        "image": "https://m.media-amazon.com/images/I/811-oY6xryL._AC_UL320_.jpg",
+        "is_prime": false,
+        "is_amazon_fresh": false,
+        "is_whole_foods_market": false,
+        "rating": 4.6,
+        "ratings_total": 6787,
+        "prices": [
+          {
+            "symbol": "$",
+            "value": 14.99,
+            "currency": "USD",
+            "raw": "$14.99",
+            "name": "Primary",
+            "is_primary": true,
+            "list_price": "$29.99",
+            "asin": "B08HD89CX6",
+            "link": "https://www.amazon.com/Painting-Creativity-Supplies-Metallic-Standard/dp/B08HD89CX6/ref=sr_1_5?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-5"
+          },
+          {
+            "symbol": "$",
+            "value": 29.99,
+            "currency": "USD",
+            "raw": "$29.99",
+            "name": "Original",
+            "is_rrp": true,
+            "link": "https://www.amazon.com/Painting-Creativity-Supplies-Metallic-Standard/dp/B08HD89CX6/ref=sr_1_5?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-5",
+            "asin": "B08HD89CX6"
+          }
+        ],
+        "price": {
+          "symbol": "$",
+          "value": 14.99,
+          "currency": "USD",
+          "raw": "$14.99",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$29.99",
+          "asin": "B08HD89CX6",
+          "link": "https://www.amazon.com/Painting-Creativity-Supplies-Metallic-Standard/dp/B08HD89CX6/ref=sr_1_5?dib=eyJ2IjoiMSJ9.hSkLQYdUlKqymCQ91HwFT9PG0vxsSFcdoR51AirBv7lYKz83sxq9ToqsORioNRx0ChZ-sus_paPpBTbAZLlgYRrYos7OuTbA1Qk4lJzwjw81lBdUkzvQM0O3HL28bh7IiR7HCntA1413ceDh-w5itjr2PaX2dxMvKE715RrzK-d_fuhxxI34h80xBRASQVwkFIOX9GqW6SFk-Kxykx_VTD4o1b3f7MbGrmeZy4Qi7pBMD9qcXoXb3WS9VwlgzvCSqF6ITDVOZmvICerumI1lRy9RXjgzoiU6AYVWxRtrEf0.u0PS1Jr2hI6wyhkroLC6daHYr3hraAoEVcJWF46mN9g&dib_tag=se&qid=1751274136&s=toys-and-games&sr=1-5"
+        }
+      }
+    ]
+  },
+  "importing_result": {
+    "status": "success",
+    "message": "成功导入 5 个产品到批次 50",
+    "products_imported": 5,
+    "request_id": 50,
+    "batch_id": 50,
+    "request_type": "category",
+    "search_term": null,
+    "category_id": "166057011"
+  },
+  "transformation_result": {
+    "success": true,
+    "processed_count": 5,
+    "error_count": 0,
+    "duration_seconds": 1.5174739360809326,
+    "summary": {
+      "batch_id": 50,
+      "total_source_records": 5,
+      "processed_records": 5,
+      "skipped_records": 0,
+      "error_records": 0,
+      "success_rate": 100.0,
+      "processing_speed": 3.29
+    },
+    "errors": []
+  },
+  "batch_id": 50
+}

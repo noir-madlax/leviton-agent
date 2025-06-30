@@ -1,0 +1,31 @@
+{
+  "test_overview": {
+    "test_url": "https://www.amazon.com/b?node=166057011",
+    "batch_id": 50,
+    "status": "SUCCESS",
+    "total_duration_seconds": 37.81003761291504,
+    "start_time": "2025-06-30T17:02:51.781605",
+    "end_time": "2025-06-30T17:02:51.781610"
+  },
+  "data_flow_verification": {
+    "step1_scraping": "success",
+    "step2_amazon_products": 5,
+    "step3_transformation": true,
+    "step4_wide_table": 5,
+    "step5_data_consistency": 1.0
+  },
+  "key_metrics": {
+    "products_scraped": 5,
+    "products_transformed": 5,
+    "transformation_success_rate": 1.0,
+    "missing_products": 0
+  },
+  "data_quality_check": {
+    "field_mapping_correct": true,
+    "no_missing_products": true,
+    "batch_id_preserved": true
+  },
+  "recommendations": [
+    "所有测试通过，数据流程工作正常！"
+  ]
+}
