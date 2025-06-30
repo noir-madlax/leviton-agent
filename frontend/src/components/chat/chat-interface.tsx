@@ -11,6 +11,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
 import { MessageList } from './message-list';
+import { SingleChart } from '@/lib/types';
 
 // 图表数据类型定义
 interface ChartData {
@@ -45,6 +46,12 @@ export function ChatInterface() {
   const [testDataOpen, setTestDataOpen] = useState(false);
   const [testInput, setTestInput] = useState('');
   const [testError, setTestError] = useState<string | null>(null);
+
+  // 新增：当前对话中的图表列表
+  const [currentCharts, setCurrentCharts] = useState<SingleChart[]>([]);
+  
+  // 调试用：显示当前图表数量
+  console.log(`📊 当前图表数量: ${currentCharts.length}`);
 
   // 使用 Vercel AI SDK 的 useChat hook
   const { 
@@ -107,19 +114,50 @@ export function ChatInterface() {
                     if (sseData.status === 'rechart' && sseData.message) {
                       console.log('📊 收到 rechart 脚本:', sseData.message);
                       
-                      // 创建图表数据格式
-                      const singleChartData: SingleChartData = {
-                        chartData: {
-                          code: sseData.message,
-                          explanation: 'AI 生成的 Recharts 图表',
-                          insights: '基于数据分析生成的可视化图表'
-                        },
-                        timestamp: Date.now(),
-                        type: 'single' as const,
+                      // 创建新的图表数据
+                      const newChartData = {
+                        code: sseData.message,
+                        explanation: 'AI 生成的 Recharts 图表',
+                        insights: '基于数据分析生成的可视化图表'
                       };
                       
-                      // 立即更新图表
-                      updateChart(singleChartData);
+                      // 更新图表列表
+                      setCurrentCharts(prev => {
+                        const updatedCharts = [...prev, newChartData];
+                        
+                        // 根据图表数量构建不同格式的 ChartData
+                        let chartDataToUpdate: SingleChartData | MultiChartData;
+                        
+                        if (updatedCharts.length === 1) {
+                          // 单图表格式
+                          chartDataToUpdate = {
+                            chartData: updatedCharts[0],
+                            timestamp: Date.now(),
+                            type: 'single' as const,
+                          };
+                        } else {
+                          // 多图表格式
+                          const multiChartData: MultiChartData = {
+                            timestamp: Date.now(),
+                            type: 'multiple' as const,
+                          };
+                          
+                          // 添加图表到对应的属性
+                          updatedCharts.forEach((chart, index) => {
+                            if (index === 0) multiChartData.chart1 = chart;
+                            else if (index === 1) multiChartData.chart2 = chart;
+                            else if (index === 2) multiChartData.chart3 = chart;
+                          });
+                          
+                          chartDataToUpdate = multiChartData;
+                        }
+                        
+                        // 立即更新图表
+                        updateChart(chartDataToUpdate);
+                        
+                        return updatedCharts;
+                      });
+                      
                       // rechart 消息不需要传递给 useChat
                       shouldPassthrough = false;
                     }
@@ -177,6 +215,8 @@ export function ChatInterface() {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
     
+    // 开始新对话时清空图表列表
+    setCurrentCharts([]);
     setError(null);
     handleSubmit(e);
   };

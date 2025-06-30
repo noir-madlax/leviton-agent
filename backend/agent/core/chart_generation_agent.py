@@ -38,7 +38,7 @@ class ChartGenerationAgent:
             self.agent = ToolCallingAgent(
                 tools=[],  # 图表生成主要依赖代码生成能力，不需要外部工具
                 model=model,
-                max_steps=2,  # 适中的步数，专注于代码生成
+                max_steps=3,  # 适中的步数，专注于代码生成
                 name="chart_generation_agent",
                 description="专门负责生成前端 JavaScript 图表代码的代理。可以根据数据生成各种类型的图表代码，包括 Recharts 图表库的代码。"
             )

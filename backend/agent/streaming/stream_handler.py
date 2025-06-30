@@ -1,9 +1,10 @@
 """
-流式响应处理器 - 保持原有逻辑完全不变
+流式响应处理器 - 支持多个脚本块处理
 """
 import asyncio
 import json
 import logging
+import re
 from typing import AsyncGenerator
 from config import settings
 from agent.core.agent_manager import get_agent_manager
@@ -14,7 +15,7 @@ logger = logging.getLogger(__name__)
 
 async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
     """
-    运行 smolagents 代理并通过 SSE 流式输出结果 - 保持原有逻辑完全不变
+    运行 smolagents 代理并通过 SSE 流式输出结果 - 支持多个脚本块处理
     """
     agent_manager = get_agent_manager()
     query_processor = get_query_processor()
@@ -63,57 +64,12 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         elif isinstance(result, str):
             # 检查是否包含 RechartScript 脚本块
             if '[RechartScript]' in result and '[/RechartScript]' in result:
-                # 分割文本，提取脚本块
-                parts = result.split('[RechartScript]')
-                
-                # 处理脚本块之前的文本
-                if parts[0].strip():
-                    sentences = parts[0].split('。')
-                    for i, sentence in enumerate(sentences):
-                        if sentence.strip():
-                            chunk_data = {
-                                'status': 'streaming',
-                                'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
-                                'chunk_index': i
-                            }                 
-                            yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
-                            await asyncio.sleep(settings.STREAM_DELAY)
-                
-                # 处理脚本块
-                script_part = parts[1].split('[/RechartScript]')[0]
-                if script_part.strip():
-                    script_data = {
-                        'status': 'rechart',
-                        'message': script_part.strip()
-                    }
-                    yield f"data: {json.dumps(script_data, ensure_ascii=False)}\n\n"
-                    await asyncio.sleep(settings.STREAM_DELAY)
-                
-                # 处理脚本块之后的文本
-                remaining_text = parts[1].split('[/RechartScript]')[1] if '[/RechartScript]' in parts[1] else ''
-                if remaining_text.strip():
-                    sentences = remaining_text.split('。')
-                    for i, sentence in enumerate(sentences):
-                        if sentence.strip():
-                            chunk_data = {
-                                'status': 'streaming',
-                                'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
-                                'chunk_index': i
-                            }                 
-                            yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
-                            await asyncio.sleep(settings.STREAM_DELAY)
+                async for chunk in process_text_with_scripts(result):
+                    yield chunk
             else:
                 # 按句号分割结果，更自然的分块方式
-                sentences = result.split('。')
-                for i, sentence in enumerate(sentences):
-                    if sentence.strip():
-                        chunk_data = {
-                            'status': 'streaming',
-                            'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
-                            'chunk_index': i
-                        }                 
-                        yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
-                        await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
+                async for chunk in send_text_chunks(result):
+                    yield chunk
         else:
             # 如果结果不是字符串，直接发送
             yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
@@ -123,4 +79,74 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         
     except Exception as e:
         logger.error(f"处理查询时出错: {e}")
-        yield f"data: {json.dumps({'status': 'error', 'error': str(e)}, ensure_ascii=False)}\n\n" 
+        yield f"data: {json.dumps({'status': 'error', 'error': str(e)}, ensure_ascii=False)}\n\n"
+
+
+async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
+    """
+    处理包含多个 RechartScript 脚本块的文本
+    """
+    # 使用正则表达式找到所有脚本块的位置
+    script_pattern = r'\[RechartScript\](.*?)\[/RechartScript\]'
+    matches = list(re.finditer(script_pattern, text, re.DOTALL))
+    
+    if not matches:
+        # 如果没有找到脚本块，按普通文本处理
+        async for chunk in send_text_chunks(text):
+            yield chunk
+        return
+    
+    current_pos = 0
+    script_count = 0
+    
+    for match in matches:
+        script_count += 1
+        start_pos = match.start()
+        end_pos = match.end()
+        script_content = match.group(1).strip()
+        
+        # 处理脚本块前的文本
+        if start_pos > current_pos:
+            text_before = text[current_pos:start_pos]
+            if text_before.strip():
+                async for chunk in send_text_chunks(text_before):
+                    yield chunk
+        
+        # 发送脚本块
+        if script_content:
+            logger.info(f"发送第 {script_count} 个脚本块")
+            script_data = {
+                'status': 'rechart',
+                'message': script_content,
+                'script_index': script_count - 1  # 添加索引便于前端识别
+            }
+            yield f"data: {json.dumps(script_data, ensure_ascii=False)}\n\n"
+            await asyncio.sleep(settings.STREAM_DELAY)
+        
+        current_pos = end_pos
+    
+    # 处理最后一个脚本块后的文本
+    if current_pos < len(text):
+        remaining_text = text[current_pos:]
+        if remaining_text.strip():
+            async for chunk in send_text_chunks(remaining_text):
+                yield chunk
+
+
+async def send_text_chunks(text: str) -> AsyncGenerator[str, None]:
+    """
+    将文本按句号分割并流式发送
+    """
+    if not text.strip():
+        return
+        
+    sentences = text.split('。')
+    for i, sentence in enumerate(sentences):
+        if sentence.strip():
+            chunk_data = {
+                'status': 'streaming',
+                'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
+                'chunk_index': i
+            }                 
+            yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
+            await asyncio.sleep(settings.STREAM_DELAY)

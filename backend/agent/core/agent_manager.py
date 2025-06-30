@@ -33,7 +33,8 @@ class AgentManager:
         logger.info("FastAPI 应用启动，开始初始化多 Agent 系统...")
         
         try:
-            from smolagents import CodeAgent, OpenAIServerModel
+            from smolagents import CodeAgent, OpenAIServerModel, ToolCollection
+            from mcp import StdioServerParameters
             
             logger.info(f"使用模型: {settings.MODEL_ID}")
             model = OpenAIServerModel(
@@ -61,14 +62,31 @@ class AgentManager:
                 raise Exception(f"图表代码生成 Agent 初始化失败: {self.chart_generation_agent.get_init_error()}")
             
             # 步骤3: 创建管理 Agent（类似 HuggingFace demo 中的 manager_agent）
+
+            # 初始化 MCP 工具集
+            server_parameters = StdioServerParameters(
+                command="npx",
+                args=["-y", 
+                      "@supabase/mcp-server-supabase@latest",
+                      "--access-token",
+                      settings.MCP_ACCESS_TOKEN]
+            )
+            
+            logger.info("初始化 MCP ToolCollection...")
+            self.tool_collection_context = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
+            tool_collection = self.tool_collection_context.__enter__()
+            
+            # 组合所有数据库相关工具
+            database_tools = [*tool_collection.tools]
+
             logger.info("创建管理 Agent...")  
             self.manager_agent = CodeAgent(
-                tools=[],  # 管理 Agent 不直接使用工具，而是委托给下级 Agent
+                tools=database_tools, 
                 model=model,
                 # stream_outputs=True,
                 managed_agents=[
-                    self.database_agent.get_agent()  # 管理数据库 Agent
-                    # self.chart_generation_agent.get_agent()  # 管理图表代码生成 Agent
+                    # self.database_agent.get_agent()  # 管理数据库 Agent
+                    self.chart_generation_agent.get_agent()  # 管理图表代码生成 Agent
                 ],
                 max_steps=settings.MAX_ITERATIONS,
                 additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
@@ -80,7 +98,7 @@ class AgentManager:
             logger.info("追加自定义 system_prompt...")
             await self.append_custom_system_prompt(
                 agent=self.manager_agent,
-                prompt_id=11
+                prompt_id=12
             )
 
             logger.info("多 Agent 系统初始化成功")
@@ -154,7 +172,7 @@ class AgentManager:
                 agent.prompt_templates["system_prompt"] = final_prompt
                 
                 logger.info(f"已成功追加 ID {prompt_id} 的 prompt 到 agent，总长度: {len(final_prompt)} 字符")
-                # logger.info(f"追加后的 prompt: {final_prompt}")
+                logger.info(f"追加后的 prompt: {final_prompt}")
                 return True
             else:
                 logger.warning(f"未找到 ID {prompt_id} 的 prompt 或内容为空")
