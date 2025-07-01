@@ -5,10 +5,18 @@ Agent Tools 包
 """
 
 from .product_review_tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
+from .supabase_mcp import (
+    SupabaseMCPToolManager, 
+    MCPToolPresets, 
+    get_supabase_mcp_manager
+)
 
 __all__ = [
     'ProductQueryTool',
     'ReviewQueryTool', 
     'get_data_files_status',
-    'test_tools'
+    'test_tools',
+    'SupabaseMCPToolManager',
+    'MCPToolPresets',
+    'get_supabase_mcp_manager'
 ] 

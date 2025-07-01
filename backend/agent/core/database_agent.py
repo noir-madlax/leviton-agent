@@ -13,7 +13,7 @@ class DatabaseAgent:
     
     def __init__(self, agent_manager=None):
         self.agent = None
-        self.tool_collection_context = None
+        self.mcp_tool_manager = None
         self.init_error = None
         self.agent_manager = agent_manager  # 引用 AgentManager 以使用通用方法
     
@@ -22,8 +22,7 @@ class DatabaseAgent:
         logger.info("初始化数据库查询 Agent...")
         
         try:
-            from smolagents import ToolCollection, CodeAgent, OpenAIServerModel
-            from mcp import StdioServerParameters
+            from smolagents import CodeAgent, OpenAIServerModel
             
             # 创建模型实例
             model = OpenAIServerModel(
@@ -36,21 +35,11 @@ class DatabaseAgent:
             
             logger.info("初始化数据库相关工具...")
             
-            # 初始化 MCP 工具集
-            server_parameters = StdioServerParameters(
-                command="npx",
-                args=["-y", 
-                      "@supabase/mcp-server-supabase@latest",
-                      "--access-token",
-                      settings.MCP_ACCESS_TOKEN]
-            )
+            # 初始化 Supabase MCP 工具集 - 一键初始化
+            from agent.tools import get_supabase_mcp_manager
             
-            logger.info("初始化 MCP ToolCollection...")
-            self.tool_collection_context = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
-            tool_collection = self.tool_collection_context.__enter__()
-            
-            # 组合所有数据库相关工具
-            database_tools = [*tool_collection.tools]
+            self.mcp_tool_manager = get_supabase_mcp_manager()
+            database_tools = await self.mcp_tool_manager.initialize_with_preset("database_only")
             
             # 创建数据库查询专用的 ToolCallingAgent
             # 使用 ToolCallingAgent 因为数据库查询是单线程任务，JSON工具调用更适合
@@ -80,12 +69,12 @@ class DatabaseAgent:
     def cleanup(self):
         """清理数据库 Agent 资源"""
         logger.info("清理数据库查询 Agent 资源...")
-        if self.tool_collection_context:
+        if self.mcp_tool_manager:
             try:
-                self.tool_collection_context.__exit__(None, None, None)
-                logger.info("MCP 工具集资源已释放")
+                self.mcp_tool_manager.cleanup()
+                logger.info("MCP 工具管理器资源已释放")
             except Exception as e:
-                logger.error(f"释放 MCP 工具集资源时出错: {e}", exc_info=True)
+                logger.error(f"释放 MCP 工具管理器资源时出错: {e}", exc_info=True)
     
     def is_ready(self) -> bool:
         """检查数据库 Agent 是否准备就绪"""
