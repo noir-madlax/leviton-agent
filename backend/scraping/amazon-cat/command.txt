@@ -1,0 +1,20 @@
+# 进入目录
+cd scraping/amazon-cat
+
+# 测试API连接
+python3 main.py test
+
+# 开始获取所有类别
+python3 main.py start
+
+# 只获取特定类别（如Books）
+python3 main.py start --category "Books"
+
+# 恢复上次中断的获取
+python3 main.py resume
+
+# 查看当前进度
+python3 main.py status
+
+# 列出所有运行
+python3 main.py list

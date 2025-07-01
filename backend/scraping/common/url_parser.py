@@ -33,25 +33,58 @@ def parse_amazon_url(url: str, max_products: int = 100, max_reviews: int = 50) -
         }
     
     elif "/s?" in url:
-        # Search results URL
+        # Search results URL or Category URL with /s? format
         query_params = parse_qs(parsed_url.query)
         search_term = query_params.get('k', [''])[0]
-        category_id = query_params.get('rh', [''])[0]
         
-        # Extract category from rh parameter if present
+        # Check for node parameter (category ID)
+        node_id = query_params.get('node', [''])[0]
+        
+        # Check for rh parameter (alternative category format)
+        category_id = query_params.get('rh', [''])[0]
         if category_id and 'n:' in category_id:
             category_match = re.search(r'n:(\d+)', category_id)
             if category_match:
                 category_id = category_match.group(1)
         
-        return {
-            "url_type": "search",
-            "search_term": search_term,
-            "category_id": category_id,
-            "max_products": max_products,
-            "max_reviews": max_reviews,
-            "original_url": url
-        }
+        # If we have a node parameter, treat as category URL
+        if node_id:
+            return {
+                "url_type": "category",
+                "category_id": node_id,
+                "max_products": max_products,
+                "max_reviews": max_reviews,
+                "original_url": url
+            }
+        # If we have a search term, treat as search URL
+        elif search_term:
+            return {
+                "url_type": "search",
+                "search_term": search_term,
+                "category_id": category_id,
+                "max_products": max_products,
+                "max_reviews": max_reviews,
+                "original_url": url
+            }
+        # If we have category_id from rh parameter, treat as category
+        elif category_id:
+            return {
+                "url_type": "category",
+                "category_id": category_id,
+                "max_products": max_products,
+                "max_reviews": max_reviews,
+                "original_url": url
+            }
+        # Default to search if none of the above
+        else:
+            return {
+                "url_type": "search",
+                "search_term": search_term,
+                "category_id": category_id,
+                "max_products": max_products,
+                "max_reviews": max_reviews,
+                "original_url": url
+            }
     
     elif "/zgbs/" in url or "/best-sellers/" in url:
         # Best sellers URL

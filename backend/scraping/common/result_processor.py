@@ -214,14 +214,20 @@ class ScrapingResultProcessor:
                 'title': self._safe_strip(raw_product.get('title', '')),
                 'brand': self._safe_strip(raw_product.get('brand', '')),
                 'price_usd': self._extract_price(raw_product),  # 数据库字段：price_usd
+                'list_price_usd': self._extract_list_price(raw_product),  # 数据库字段：list_price_usd
                 'rating': self._extract_rating(raw_product),
                 'reviews_count': self._extract_review_count(raw_product),  # 数据库字段：reviews_count
+                'position': self._extract_position(raw_product),  # 数据库字段：position
                 'image_url': self._safe_strip(raw_product.get('image', '')),
                 'product_url': self._safe_strip(raw_product.get('link', '')),
                 'availability': self._extract_availability(raw_product),
+                'recent_sales': self._safe_strip(raw_product.get('recent_sales', '')),  # 数据库字段：recent_sales
+                'is_bestseller': self._extract_bestseller(raw_product),  # 数据库字段：is_bestseller
+                'unit_price': self._safe_strip(raw_product.get('unit_price', '')),  # 数据库字段：unit_price
                 'features': self._extract_features_as_text(raw_product),  # 数据库字段是text类型
                 'description': self._safe_strip(raw_product.get('description', '')),
                 'category': self._extract_category_as_text(raw_product),  # 数据库字段：category (text)
+                'categories_flat': self._extract_categories_flat_as_text(raw_product),  # 数据库字段：categories_flat (text)
                 'extract_date': datetime.now().strftime('%Y-%m-%d')  # 数据库字段：extract_date
             }
             
@@ -402,7 +408,135 @@ class ScrapingResultProcessor:
         try:
             categories = self._extract_categories(product)
             if categories:
-                return ' > '.join(categories)  # 用层级分隔符连接
+                # 只返回最下级的类别名称
+                return categories[-1]  # 最后一个元素是最下级的类别
             return ''
         except:
-            return '' 
+            return ''
+    
+    def _extract_categories_flat_as_text(self, product: Dict[str, Any]) -> str:
+        """提取产品类别完整路径（返回文本，用于数据库存储）"""
+        try:
+            categories = self._extract_categories(product)
+            if categories:
+                return ' > '.join(categories)  # 用层级分隔符连接完整路径
+            return ''
+        except:
+            return ''
+    
+    def _extract_list_price(self, product: Dict[str, Any]) -> Optional[float]:
+        """提取标价/原价信息"""
+        try:
+            # 从prices数组中查找原价 (is_rrp: true)
+            if 'prices' in product and isinstance(product['prices'], list):
+                for price_obj in product['prices']:
+                    if isinstance(price_obj, dict):
+                        # 优先查找is_rrp标记
+                        if price_obj.get('is_rrp') is True:
+                            return float(price_obj.get('value', 0))
+                        # 备用：查找名称匹配
+                        price_name = price_obj.get('name', '').lower()
+                        if 'original' in price_name or 'list' in price_name or 'retail' in price_name or 'was' in price_name:
+                            return float(price_obj.get('value', 0))
+            
+            # 直接从list_price字段获取
+            if 'list_price' in product:
+                list_price_value = product['list_price']
+                if isinstance(list_price_value, dict) and 'value' in list_price_value:
+                    return float(list_price_value['value'])
+                elif isinstance(list_price_value, (int, float)):
+                    return float(list_price_value)
+                elif isinstance(list_price_value, str):
+                    # 提取数字
+                    import re
+                    price_match = re.search(r'[\d,]+\.?\d*', list_price_value.replace(',', ''))
+                    if price_match:
+                        return float(price_match.group())
+            
+            # 尝试其他可能的字段
+            for field in ['original_price', 'retail_price', 'msrp']:
+                if field in product:
+                    value = product[field]
+                    if isinstance(value, (int, float)):
+                        return float(value)
+                    elif isinstance(value, str):
+                        import re
+                        price_match = re.search(r'[\d,]+\.?\d*', value.replace(',', ''))
+                        if price_match:
+                            return float(price_match.group())
+            
+            return None
+        except Exception as e:
+            logger.debug(f"提取标价时出错: {e}")
+            return None
+    
+    def _extract_position(self, product: Dict[str, Any]) -> Optional[int]:
+        """提取产品在搜索结果中的位置"""
+        try:
+            # 直接从position字段获取
+            if 'position' in product:
+                position_value = product['position']
+                if isinstance(position_value, int):
+                    return position_value
+                elif isinstance(position_value, str):
+                    # 提取数字
+                    import re
+                    position_match = re.search(r'(\d+)', position_value)
+                    if position_match:
+                        return int(position_match.group(1))
+            
+            # 从ranking字段获取
+            if 'ranking' in product:
+                ranking_value = product['ranking']
+                if isinstance(ranking_value, int):
+                    return ranking_value
+                elif isinstance(ranking_value, str):
+                    import re
+                    ranking_match = re.search(r'(\d+)', ranking_value)
+                    if ranking_match:
+                        return int(ranking_match.group(1))
+            
+            return None
+        except:
+            return None
+    
+    def _extract_bestseller(self, product: Dict[str, Any]) -> bool:
+        """提取是否为畅销产品"""
+        try:
+            # 检查bestseller_badge字段 (主要字段)
+            if 'bestseller_badge' in product:
+                bestseller_badge = product['bestseller_badge']
+                if isinstance(bestseller_badge, dict):
+                    # 如果有bestseller_badge对象，说明是畅销产品
+                    return bool(bestseller_badge.get('category') or bestseller_badge.get('link'))
+                elif bestseller_badge:  # 非空值
+                    return True
+            
+            # 检查is_bestseller字段
+            if 'is_bestseller' in product:
+                return bool(product['is_bestseller'])
+            
+            if 'bestseller' in product:
+                bestseller_value = product['bestseller']
+                if isinstance(bestseller_value, bool):
+                    return bestseller_value
+                elif isinstance(bestseller_value, str):
+                    return bestseller_value.lower() in ['true', 'yes', '1', 'bestseller']
+            
+            # 检查badges或标签中是否有bestseller标识
+            if 'badges' in product and isinstance(product['badges'], list):
+                for badge in product['badges']:
+                    if isinstance(badge, str) and 'bestseller' in badge.lower():
+                        return True
+                    elif isinstance(badge, dict) and 'text' in badge:
+                        if 'bestseller' in badge['text'].lower():
+                            return True
+            
+            # 检查title中是否包含bestseller标识
+            title = product.get('title', '').lower()
+            if '#1 best seller' in title or 'bestseller' in title:
+                return True
+            
+            return False
+        except:
+            return False 

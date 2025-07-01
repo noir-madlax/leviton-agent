@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "processed_count": 5,
+  "error_count": 0,
+  "duration_seconds": 1.4580271244049072,
+  "summary": {
+    "batch_id": 60,
+    "total_source_records": 5,
+    "processed_records": 5,
+    "skipped_records": 0,
+    "error_records": 0,
+    "success_rate": 100.0,
+    "processing_speed": 3.43
+  },
+  "errors": []
+}

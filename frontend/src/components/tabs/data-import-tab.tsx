@@ -39,6 +39,39 @@ interface ScrapingResult {
     scraping?: any;
     importing?: any;
   };
+  execution_stats?: {
+    start_time?: string;
+    end_time?: string;
+    total_duration?: number;
+    phase_durations?: {
+      product_scraping?: number;
+      product_importing?: number;
+      data_transformation?: number;
+      review_scraping?: number;
+      review_importing?: number;
+    };
+    api_calls?: {
+      category_api?: number;
+      product_details_api?: number;
+      reviews_api?: number;
+      total?: number;
+    };
+  };
+  data_quality?: {
+    total_products?: number;
+    overall_quality_score?: number;
+    field_coverage?: Record<string, {
+      total: number;
+      with_value: number;
+      coverage_percent: number;
+    }>;
+    quality_summary?: {
+      best_field?: { name: string; coverage: number };
+      worst_field?: { name: string; coverage: number };
+      key_fields_avg_coverage?: number;
+      recommendations?: string[];
+    };
+  };
 }
 
 export function DataImportTab() {
@@ -437,6 +470,138 @@ export function DataImportTab() {
                         <div className="text-sm mt-1">{result.error}</div>
                       </AlertDescription>
                     </Alert>
+                  )}
+                </div>
+              )}
+
+              {/* 执行统计和数据质量报告 */}
+              {(result.execution_stats || result.data_quality) && (
+                <div className="space-y-4 pt-4 border-t">
+                  <Label className="text-base font-medium">Execution Statistics & Data Quality</Label>
+                  
+                  {/* 执行时间统计 */}
+                  {result.execution_stats && (
+                    <div className="space-y-3">
+                      <div className="font-medium text-sm">⏱️ Execution Times</div>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
+                        <div className="bg-blue-50 p-3 rounded-lg">
+                          <div className="font-medium text-blue-900">Total Duration</div>
+                          <div className="text-lg font-bold text-blue-600">
+                            {result.execution_stats.total_duration?.toFixed(1)}s
+                          </div>
+                        </div>
+                        {result.execution_stats.phase_durations && Object.entries(result.execution_stats.phase_durations).map(([phase, duration]) => (
+                          <div key={phase} className="bg-gray-50 p-3 rounded-lg">
+                            <div className="font-medium text-gray-700 capitalize">
+                              {phase.replace(/_/g, ' ')}
+                            </div>
+                            <div className="text-sm font-bold text-gray-600">
+                              {(duration as number)?.toFixed(1)}s
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* API调用统计 */}
+                  {result.execution_stats?.api_calls && (
+                    <div className="space-y-3">
+                      <div className="font-medium text-sm">🔗 API Calls</div>
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                        <div className="bg-purple-50 p-3 rounded-lg">
+                          <div className="font-medium text-purple-900">Total Calls</div>
+                          <div className="text-lg font-bold text-purple-600">
+                            {result.execution_stats.api_calls.total || 0}
+                          </div>
+                        </div>
+                        <div className="bg-indigo-50 p-3 rounded-lg">
+                          <div className="font-medium text-indigo-900">Category API</div>
+                          <div className="text-sm font-bold text-indigo-600">
+                            {result.execution_stats.api_calls.category_api || 0}
+                          </div>
+                        </div>
+                        <div className="bg-cyan-50 p-3 rounded-lg">
+                          <div className="font-medium text-cyan-900">Product Details</div>
+                          <div className="text-sm font-bold text-cyan-600">
+                            {result.execution_stats.api_calls.product_details_api || 0}
+                          </div>
+                        </div>
+                        <div className="bg-teal-50 p-3 rounded-lg">
+                          <div className="font-medium text-teal-900">Reviews API</div>
+                          <div className="text-sm font-bold text-teal-600">
+                            {result.execution_stats.api_calls.reviews_api || 0}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 数据质量报告 */}
+                  {result.data_quality && (
+                    <div className="space-y-3">
+                      <div className="font-medium text-sm">📊 Data Quality Report</div>
+                      
+                      {/* 总体评分 */}
+                      <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-4 rounded-lg">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <div className="font-medium text-emerald-900">Overall Quality Score</div>
+                            <div className="text-2xl font-bold text-emerald-600">
+                              {result.data_quality.overall_quality_score}/100
+                            </div>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-sm text-emerald-700">
+                              {result.data_quality.total_products} products analyzed
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* 关键字段覆盖率 */}
+                      {result.data_quality.field_coverage && (
+                        <div className="space-y-2">
+                          <div className="text-sm font-medium">Key Field Coverage</div>
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
+                            {['platform_id', 'brand', 'recent_sales', 'unit_price', 'list_price_usd', 'is_bestseller'].map((field) => {
+                              const coverage = result.data_quality?.field_coverage?.[field];
+                              const percent = coverage?.coverage_percent || 0;
+                              const color = percent >= 80 ? 'green' : percent >= 60 ? 'yellow' : 'red';
+                              
+                              return (
+                                <div key={field} className={`bg-${color}-50 p-2 rounded`}>
+                                  <div className={`font-medium text-${color}-900 capitalize`}>
+                                    {field.replace(/_/g, ' ')}
+                                  </div>
+                                  <div className={`text-lg font-bold text-${color}-600`}>
+                                    {percent.toFixed(1)}%
+                                  </div>
+                                  <div className={`text-${color}-700`}>
+                                    {coverage?.with_value || 0}/{coverage?.total || 0}
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      )}
+
+                      {/* 改进建议 */}
+                      {result.data_quality.quality_summary?.recommendations && (
+                        <div className="bg-amber-50 p-3 rounded-lg">
+                          <div className="font-medium text-amber-900 mb-2">💡 Recommendations</div>
+                          <ul className="text-sm text-amber-800 space-y-1">
+                            {result.data_quality.quality_summary.recommendations.map((rec, index) => (
+                              <li key={index} className="flex items-start gap-2">
+                                <span className="text-amber-600">•</span>
+                                <span>{rec}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+                    </div>
                   )}
                 </div>
               )}

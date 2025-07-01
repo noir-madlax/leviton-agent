@@ -6,7 +6,7 @@ from fastapi import APIRouter, HTTPException, Query
 
 from .models import (
     BrandAnalysisResponse, BrandCategoryData,
-    ProductAnalysisResponse, CategoryProducts, ProductInfo,
+    ProductAnalysisResponse, CategoryProducts, ProductInfo, TopProductsData, SegmentSummary,
     PricingAnalysisResponse, PriceDistribution, BrandPriceDistribution, PriceStats, PriceStatsGroup, BrandPrices,
     MarketInsightsResponse, SegmentRevenue, SegmentData,
     PackagePreferenceResponse, SameProductComparison, PackageDistributionItem,
@@ -41,18 +41,25 @@ async def get_brand_analysis(
         # Initialize service with project-specific ASIN filtering
         service = BrandAnalysisService(project_id)
         
-        # Get filtered data
+        # Get filtered data (new format with segments)
         brand_data = service.get_data()
         
-        # Prepare response with metadata
+        # Extract data for response
+        brand_category_data = brand_data.get('brandCategoryRevenue', [])
+        segment_names = brand_data.get('segmentNames', [])
+        segment_colors = brand_data.get('segmentColors', [])
+        
+        # Prepare response with new format including segments
         response = BrandAnalysisResponse(
-            data=[BrandCategoryData(**item) for item in brand_data],
+            data=[BrandCategoryData(**item) for item in brand_category_data],
+            segmentNames=segment_names,
+            segmentColors=segment_colors,
             project_id=project_id,
-            total_brands=len(brand_data),
+            total_brands=len(brand_category_data),
             filtered_asin_count=len(service.project_asins)
         )
         
-        logger.info(f"Brand analysis API returned {len(brand_data)} brands for project {project_id}")
+        logger.info(f"Brand analysis API returned {len(brand_category_data)} brands with {len(segment_names)} segments for project {project_id}")
         return response
         
     except ValueError as e:
@@ -69,26 +76,46 @@ async def get_product_analysis(
 ):
     """Get product analysis data for a specific project.
     
-    This endpoint replaces the frontend getProductAnalysisData() method
-    with server-side implementation that applies project ASIN filtering.
+    Enhanced version: Returns complete data format including segment summary, 
+    segment names, and colors for frontend compatibility.
     """
     try:
         service = ProductAnalysisService(project_id)
         raw_data = service.get_data()
+        
+        # Convert segments dict to TopProductsData format
+        segments_dict = raw_data['topProducts']['segments']
+        segments_products = {}
+        for segment_name, products_list in segments_dict.items():
+            segments_products[segment_name] = [
+                ProductInfo(**product) for product in products_list
+            ]
         
         # Convert to response format
         response = ProductAnalysisResponse(
             priceVsRevenue=[
                 CategoryProducts(**category_data) for category_data in raw_data['priceVsRevenue']
             ],
-            topProducts=[
-                CategoryProducts(**category_data) for category_data in raw_data['topProducts']
-            ],
+            topProducts=TopProductsData(
+                segments=segments_products,
+                dimmerSwitches=[
+                    ProductInfo(**product) for product in raw_data['topProducts']['dimmerSwitches']
+                ],
+                lightSwitches=[
+                    ProductInfo(**product) for product in raw_data['topProducts']['lightSwitches']
+                ]
+            ),
+            segmentSummary={
+                segment_name: SegmentSummary(**summary_data) 
+                for segment_name, summary_data in raw_data['segmentSummary'].items()
+            },
+            segmentNames=raw_data['segmentNames'],
+            segmentColors=raw_data['segmentColors'],
             project_id=project_id,
             filtered_asin_count=len(service.project_asins)
         )
         
-        logger.info(f"Product analysis API returned data for {len(raw_data['priceVsRevenue'])} categories")
+        logger.info(f"Product analysis API returned data for {len(raw_data['priceVsRevenue'])} categories with {len(raw_data['segmentNames'])} segments")
         return response
         
     except ValueError as e:
@@ -180,6 +207,14 @@ async def get_package_preference(
         service = PackagePreferenceService(project_id)
         raw_data = service.get_data()
         
+        # Convert segment distributions to proper format
+        segment_distributions = {}
+        if 'segmentDistributions' in raw_data and raw_data['segmentDistributions']:
+            for segment_name, segment_data in raw_data['segmentDistributions'].items():
+                segment_distributions[segment_name] = [
+                    PackageDistributionItem(**item_data) for item_data in segment_data
+                ]
+        
         # Convert to response format
         response = PackagePreferenceResponse(
             sameProductComparison=[
@@ -188,6 +223,8 @@ async def get_package_preference(
             packageDistribution=[
                 PackageDistributionItem(**dist_data) for dist_data in raw_data['packageDistribution']
             ],
+            segmentDistributions=segment_distributions,
+            segmentNames=raw_data.get('segmentNames', []),
             dimmerSwitches=[
                 PackageDistributionItem(**dist_data) for dist_data in raw_data['dimmerSwitches']
             ],

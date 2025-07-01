@@ -8,7 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { CheckCircle, Database, TrendingUp, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 
@@ -228,6 +228,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const [isBrandsExpanded, setIsBrandsExpanded] = useState(false);
   const [createdProjectId, setCreatedProjectId] = useState<string | null>(null);
   const [isCreatingProject, setIsCreatingProject] = useState(false);
+  const [isLoadingBrands, setIsLoadingBrands] = useState(false);
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
@@ -281,17 +282,65 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       const result = await response.json();
       setData(result);
       
-      // 设置默认全选状态 - 修复：统一所有筛选的逻辑
+      // 修改：Categories默认为空，不全选，用户必须手动选择
       setFilters({
-        categories: result.availableCategories, // 明确选中所有类别
-        sources: result.availableSources, // 明确选中所有来源
-        brands: result.stats.brands.map((brand: { name: string }) => brand.name), // 明确选中所有品牌
+        categories: [], // 默认为空，用户必须手动选择
+        sources: result.availableSources, // 数据源默认全选
+        brands: [], // 品牌默认为空，等用户选择品类后动态加载
         topSalesCount: 100
       });
     } catch (error) {
       console.error('Failed to load initial data:', error);
     } finally {
       setPageLoading(false);
+    }
+  };
+
+  // 新增：动态获取品牌数据基于选择的品类
+  const loadBrandsForCategories = async (categories: string[]) => {
+    if (!categories.length) {
+      // 如果没有选择品类，清空品牌
+      setFilters(prev => ({
+        ...prev,
+        brands: []
+      }));
+      setIsLoadingBrands(false);
+      return;
+    }
+
+    setIsLoadingBrands(true);
+    try {
+      // 使用筛选API获取选定品类的品牌数据
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const params = new URLSearchParams();
+      categories.forEach(cat => params.append('categories', cat));
+      
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation?${params.toString()}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const result = await response.json();
+      
+      // 更新数据中的品牌统计，但保持其他数据不变
+      if (data) {
+        setData(prev => ({
+          ...prev!,
+          stats: {
+            ...prev!.stats,
+            brands: result.stats.brands // 只更新品牌数据
+          }
+        }));
+      }
+      
+      // 清空当前品牌选择，让用户重新选择
+      setFilters(prev => ({
+        ...prev,
+        brands: []
+      }));
+    } catch (error) {
+      console.error('Failed to load brands for categories:', error);
+    } finally {
+      setIsLoadingBrands(false);
     }
   };
 
@@ -339,12 +388,29 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   }, [data]);
 
   const handleCategoryChange = (category: string, checked: boolean) => {
-    setFilters(prev => ({
-      ...prev,
-      categories: checked 
+    setFilters(prev => {
+      const newCategories = checked 
         ? [...prev.categories, category]
-        : prev.categories.filter(c => c !== category)
-    }));
+        : prev.categories.filter(c => c !== category);
+      
+      // 限制最多选择2个品类
+      if (checked && newCategories.length > 2) {
+        alert('Maximum 2 product categories allowed');
+        return prev; // 不更新状态
+      }
+      
+      const newFilters = {
+        ...prev,
+        categories: newCategories
+      };
+      
+      // 当品类变化时，动态加载对应的品牌数据
+      setTimeout(() => {
+        loadBrandsForCategories(newCategories);
+      }, 100);
+      
+      return newFilters;
+    });
   };
 
   const handleSourceChange = (source: string, checked: boolean) => {
@@ -362,6 +428,67 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       brands: checked 
         ? [...prev.brands, brand]
         : prev.brands.filter(b => b !== brand)
+    }));
+  };
+
+  // Select/Clear All functions for each dimension
+  const handleSelectAllCategories = () => {
+    if (!data) return;
+    
+    // 限制最多选择2个品类
+    if (data.availableCategories.length > 2) {
+      alert('Maximum 2 product categories allowed, please select manually');
+      return;
+    }
+    
+    setFilters(prev => ({
+      ...prev,
+      categories: [...data.availableCategories]
+    }));
+    
+    // 动态加载对应的品牌数据
+    setTimeout(() => {
+      loadBrandsForCategories(data.availableCategories);
+    }, 100);
+  };
+
+  const handleClearAllCategories = () => {
+    setFilters(prev => ({
+      ...prev,
+      categories: []
+    }));
+    
+    // 清空品类时也清空品牌数据
+    loadBrandsForCategories([]);
+  };
+
+  const handleSelectAllSources = () => {
+    if (!data) return;
+    setFilters(prev => ({
+      ...prev,
+      sources: [...data.availableSources]
+    }));
+  };
+
+  const handleClearAllSources = () => {
+    setFilters(prev => ({
+      ...prev,
+      sources: []
+    }));
+  };
+
+  const handleSelectAllBrands = () => {
+    if (!data) return;
+    setFilters(prev => ({
+      ...prev,
+      brands: data.stats.brands.map((brand: { name: string }) => brand.name)
+    }));
+  };
+
+  const handleClearAllBrands = () => {
+    setFilters(prev => ({
+      ...prev,
+      brands: []
     }));
   };
 
@@ -427,12 +554,23 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const resetFilters = () => {
     if (!data) return;
     setFilters({
-      categories: data.availableCategories,
+      categories: [], // 重置时也不默认选择品类
       sources: data.availableSources,
-      brands: data.stats.brands.map((brand: { name: string }) => brand.name),
+      brands: [], // 重置时清空品牌，等用户选择品类后动态加载
       topSalesCount: 100
     });
     setIsConfirmed(false);
+    
+    // 重置时需要清空品牌数据显示
+    if (data) {
+      setData(prev => ({
+        ...prev!,
+        stats: {
+          ...prev!.stats,
+          brands: [] // 清空品牌统计
+        }
+      }));
+    }
   };
 
   // 处理project名字编辑
@@ -582,8 +720,31 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
               <div className="grid grid-cols-3 gap-6">
                 {/* 产品类别筛选 - 修复逻辑 */}
                 <div>
-                  <Label className="text-sm font-medium">Product Categories</Label>
-                  <div className="space-y-2 mt-2">
+                  <div className="flex items-center justify-between mb-2">
+                    <div className="flex flex-col">
+                      <Label className="text-sm font-medium">Product Categories</Label>
+                      <span className="text-xs text-gray-500">Select 1-2 categories ({filters.categories.length}/2)</span>
+                    </div>
+                    <div className="flex gap-1">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleSelectAllCategories}
+                        className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                      >
+                        Select All
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleClearAllCategories}
+                        className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                      >
+                        Clear All
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
                     {data.availableCategories.map(category => (
                       <div key={category} className="flex items-center space-x-2">
                         <Checkbox
@@ -608,8 +769,28 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                 <div className="space-y-4">
                   {/* 数据来源筛选 */}
                   <div>
-                    <Label className="text-sm font-medium">Data Sources</Label>
-                    <div className="space-y-2 mt-2">
+                    <div className="flex items-center justify-between mb-2">
+                      <Label className="text-sm font-medium">Data Sources</Label>
+                      <div className="flex gap-1">
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleSelectAllSources}
+                          className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                        >
+                          Select All
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="sm"
+                          onClick={handleClearAllSources}
+                          className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                        >
+                          Clear All
+                        </Button>
+                      </div>
+                    </div>
+                    <div className="space-y-2">
                       {data.availableSources.map(source => (
                         <div key={source} className="flex items-center space-x-2">
                           <Checkbox
@@ -686,60 +867,127 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                 {/* 品牌筛选 - 修复逻辑 */}
                 <div>
                   <Collapsible open={isBrandsExpanded} onOpenChange={setIsBrandsExpanded}>
-                    <CollapsibleTrigger asChild>
-                      <Button variant="ghost" className="w-full justify-between p-0 h-auto">
-                        <Label className="text-sm font-medium">Top Brands Filter</Label>
-                        {isBrandsExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-                      </Button>
-                    </CollapsibleTrigger>
-                    <div className="mt-2">
-                      {/* 默认显示前5个品牌 */}
-                      <div className="space-y-2">
-                        {data.stats.brands.slice(0, 5).map(brand => (
-                          <div key={brand.name} className="flex items-center justify-between">
-                            <div className="flex items-center space-x-2 flex-1">
-                              <Checkbox
-                                id={`brand-${brand.name}`}
-                                checked={filters.brands.includes(brand.name)}
-                                onCheckedChange={(checked) => 
-                                  handleBrandChange(brand.name, checked as boolean)
-                                }
-                              />
-                              <Label 
-                                htmlFor={`brand-${brand.name}`}
-                                className="text-xs cursor-pointer flex-1 select-none"
-                              >
-                                {brand.name}
-                              </Label>
+                    <div className="flex items-center justify-between mb-2">
+                      <CollapsibleTrigger asChild>
+                        <Button variant="ghost" className="p-0 h-auto flex items-center gap-2 hover:bg-transparent">
+                          <Label className="text-sm font-medium">Top Brands Filter</Label>
+                          {isBrandsExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
+                        </Button>
+                      </CollapsibleTrigger>
+                      {data.stats.brands.length > 0 && (
+                        <div className="flex gap-1">
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={handleSelectAllBrands}
+                            className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                          >
+                            Select All
+                          </Button>
+                          <Button
+                            variant="ghost"
+                            size="sm"
+                            onClick={handleClearAllBrands}
+                            className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                          >
+                            Clear All
+                          </Button>
+                        </div>
+                      )}
+                    </div>
+                    
+                    <div>
+                      {/* 根据状态显示不同内容 */}
+                      {filters.categories.length === 0 ? (
+                        <div className="p-4 border-2 border-dashed border-gray-200 rounded-lg text-center">
+                          <p className="text-sm text-gray-500">
+                            Please select product categories first to view corresponding brands
+                          </p>
+                          <p className="text-xs text-gray-400 mt-1">
+                            Maximum 2 product categories allowed
+                          </p>
+                        </div>
+                      ) : isLoadingBrands ? (
+                                                  <div className="p-4 border-2 border-dashed border-blue-200 rounded-lg text-center">
+                            <div className="flex items-center justify-center gap-2">
+                              <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
+                              <p className="text-sm text-blue-700">
+                                Loading brand data...
+                              </p>
                             </div>
-                            <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
                           </div>
-                        ))}
-                      </div>
-                      <CollapsibleContent>
-                        <div className="space-y-2 mt-2 pt-2 border-t">
-                          {data.stats.brands.slice(5).map(brand => (
-                            <div key={brand.name} className="flex items-center justify-between">
-                              <div className="flex items-center space-x-2 flex-1">
-                                                                  <Checkbox
+                      ) : data.stats.brands.length === 0 ? (
+                        <div className="p-4 border-2 border-dashed border-yellow-200 rounded-lg text-center">
+                          <p className="text-sm text-yellow-700">
+                            No brand data available for selected categories
+                          </p>
+                          <p className="text-xs text-yellow-600 mt-1">
+                            Selected: {filters.categories.join(', ')}
+                          </p>
+                        </div>
+                      ) : (
+                        <>
+                          {/* 显示前5个品牌 */}
+                          <div className="space-y-2">
+                            {data.stats.brands.slice(0, 5).map(brand => (
+                              <div key={brand.name} className="flex items-center justify-between">
+                                <div className="flex items-center space-x-2 flex-1">
+                                  <Checkbox
                                     id={`brand-${brand.name}`}
                                     checked={filters.brands.includes(brand.name)}
                                     onCheckedChange={(checked) => 
                                       handleBrandChange(brand.name, checked as boolean)
                                     }
                                   />
-                                <Label 
-                                  htmlFor={`brand-${brand.name}`}
-                                  className="text-xs cursor-pointer flex-1 select-none"
-                                >
-                                  {brand.name}
-                                </Label>
+                                  <Label 
+                                    htmlFor={`brand-${brand.name}`}
+                                    className="text-xs cursor-pointer flex-1 select-none"
+                                  >
+                                    {brand.name}
+                                  </Label>
+                                </div>
+                                <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
                               </div>
-                              <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
-                            </div>
-                          ))}
-                        </div>
-                      </CollapsibleContent>
+                            ))}
+                          </div>
+                          
+                          {/* 折叠显示更多品牌 */}
+                          {data.stats.brands.length > 5 && (
+                            <CollapsibleContent>
+                              <div className="space-y-2 mt-2 pt-2 border-t">
+                                {data.stats.brands.slice(5).map(brand => (
+                                  <div key={brand.name} className="flex items-center justify-between">
+                                    <div className="flex items-center space-x-2 flex-1">
+                                      <Checkbox
+                                        id={`brand-${brand.name}`}
+                                        checked={filters.brands.includes(brand.name)}
+                                        onCheckedChange={(checked) => 
+                                          handleBrandChange(brand.name, checked as boolean)
+                                        }
+                                      />
+                                      <Label 
+                                        htmlFor={`brand-${brand.name}`}
+                                        className="text-xs cursor-pointer flex-1 select-none"
+                                      >
+                                        {brand.name}
+                                      </Label>
+                                    </div>
+                                    <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </CollapsibleContent>
+                          )}
+                          
+                          {/* 显示品牌统计信息 */}
+                          <div className="mt-2 pt-2 border-t">
+                            <p className="text-xs text-gray-500">
+                              基于所选类别：{filters.categories.join(', ')} 
+                              {data.stats.brands.length > 10 && ` (显示前10个品牌)`}
+                            </p>
+                          </div>
+                        </>
+                      )}
                     </div>
                   </Collapsible>
                 </div>
@@ -762,7 +1010,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
             </CardHeader>
             <CardContent>
               {/* 主要统计数据 - 水平布局 */}
-              <div className="grid grid-cols-4 gap-4 mb-4">
+              <div className="grid grid-cols-3 gap-4 mb-4">
                 <Card className="border-blue-200">
                   <CardContent className="p-3">
                     <div className="flex items-center gap-2">
@@ -799,17 +1047,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                   </CardContent>
                 </Card>
 
-                <Card className="border-orange-200">
-                  <CardContent className="p-3">
-                    <div className="flex items-center gap-2">
-                      <TrendingUp className="w-4 h-4 text-orange-500" />
-                      <div>
-                        <p className="text-xl font-bold">{Math.round(filteredStats?.avgMonthlySales || 0)}</p>
-                        <p className="text-xs text-muted-foreground">Avg Sales/Month</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
+
               </div>
 
               {/* 详细分布统计 - 水平布局 */}

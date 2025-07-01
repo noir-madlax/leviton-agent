@@ -20,13 +20,59 @@ interface DashboardData {
   brandAnalysis: {
     brandCategoryRevenue: Array<{
       brand: string
+      segments: Record<string, { revenue: number; volume: number }>
       dimmerRevenue: number
       switchRevenue: number
       dimmerVolume: number
       switchVolume: number
     }>
+    segmentNames: string[]
+    segmentColors: string[]
   }
-  productAnalysis: ProductAnalysisData
+  productAnalysis: {
+    priceVsRevenue: ProductAnalysisData['priceVsRevenue']
+    topProducts: {
+      segments: Record<string, Array<{
+        id: string
+        name: string
+        brand: string
+        price: number
+        unitPrice: number
+        revenue: number
+        volume: number
+        url: string
+      }>>
+      dimmerSwitches: Array<{
+        id: string
+        name: string
+        brand: string
+        price: number
+        unitPrice: number
+        revenue: number
+        volume: number
+        url: string
+      }>
+      lightSwitches: Array<{
+        id: string
+        name: string
+        brand: string
+        price: number
+        unitPrice: number
+        revenue: number
+        volume: number
+        url: string
+      }>
+    }
+    segmentSummary: Record<string, {
+      totalRevenue: number
+      totalVolume: number
+      productCount: number
+      avgPrice: number
+      topBrand: string
+    }>
+    segmentNames: string[]
+    segmentColors: string[]
+  }
   pricingAnalysis: {
     priceDistribution: Array<{
       category: string
@@ -91,6 +137,14 @@ interface DashboardData {
       percentage: number
       salesVolume: number
     }>
+    segmentDistributions: Record<string, Array<{
+      packSize: string
+      count: number
+      percentage: number
+      salesVolume: number
+      salesRevenue: number
+    }>>
+    segmentNames: string[]
     dimmerSwitches: Array<{
       packSize: string
       count: number
@@ -172,25 +226,26 @@ async function fetchBrandAnalysisData(projectId?: string) {
     // 🔑 REQUIRE project ID for Brand Analysis - no fallback to unfiltered data
     if (!projectId) {
       console.log('⏳ Brand Analysis waiting for project selection...');
-      return { brandCategoryRevenue: [] };
+      return { brandCategoryRevenue: [], segmentNames: [], segmentColors: [] };
     }
     
     console.log(`📊 Fetching Brand Analysis data for project: ${projectId}`);
-    const brandCategoryRevenue = await databaseService.getBrandCategoryRevenueByProject(projectId);
-    console.log(`📈 Brand Analysis data received: ${brandCategoryRevenue.length} brands`);
+    const result = await databaseService.getBrandCategoryRevenueByProject(projectId);
+    console.log(`📈 Brand Analysis data received: ${result.brandCategoryRevenue.length} brands, ${result.segmentNames.length} segments`);
     
-    if (brandCategoryRevenue.length > 0) {
-      brandCategoryRevenue.forEach((brand, index) => {
-        console.log(`  Brand ${index + 1}: ${brand.brand} - Dimmer: $${brand.dimmerRevenue}, Switch: $${brand.switchRevenue}`);
+    if (result.brandCategoryRevenue.length > 0) {
+      result.brandCategoryRevenue.forEach((brand, index) => {
+        console.log(`  Brand ${index + 1}: ${brand.brand} - Segments: ${Object.keys(brand.segments || {}).join(', ')}`);
       });
+      console.log(`  Segments: ${result.segmentNames.join(', ')}`);
     } else {
       console.log('  ⚠️ No brand data returned from API');
     }
     
-    return { brandCategoryRevenue };
+    return result;
   } catch (error) {
     console.error('Error fetching brand analysis data:', error);
-    return { brandCategoryRevenue: [] };
+    return { brandCategoryRevenue: [], segmentNames: [], segmentColors: [] };
   }
 }
 
@@ -198,23 +253,22 @@ async function fetchProductAnalysisData(projectId?: string) {
   try {
     if (!projectId) {
       console.log('⏳ Product Analysis waiting for project selection...');
-      return {
-        priceVsRevenue: [
-          { category: 'Dimmer Switches', products: [] },
-          { category: 'Light Switches', products: [] }
-        ],
-        topProducts: [
-          { category: 'Dimmer Switches', products: [] },
-          { category: 'Light Switches', products: [] }
-        ]
+      return { 
+        priceVsRevenue: [], 
+        topProducts: { segments: {}, dimmerSwitches: [], lightSwitches: [] },
+        segmentSummary: {},
+        segmentNames: [],
+        segmentColors: []
       };
     }
     
     console.log(`📊 Fetching Product Analysis data for project: ${projectId}`);
-    const productAnalysisData = await databaseService.getProductAnalysisDataByProject(projectId);
-    console.log(`📈 Product Analysis data received`);
+    const data = await databaseService.getProductAnalysisDataByProject(projectId);
+    console.log(`📈 Product Analysis data received: ${data.priceVsRevenue.length} price vs revenue categories, ${data.segmentNames.length} segments`);
+    console.log(`  Segments: ${data.segmentNames.join(', ')}`);
+    console.log(`  Segment summary keys: ${Object.keys(data.segmentSummary).join(', ')}`);
     
-    return productAnalysisData;
+    return data;
   } catch (error) {
     console.error('Error fetching product analysis data:', error);
     return {
@@ -304,6 +358,8 @@ async function fetchPackagePreferenceData(projectId?: string) {
     return {
       sameProductComparison: [],
       packageDistribution: [],
+      segmentDistributions: {},
+      segmentNames: [],
       dimmerSwitches: [],
       lightSwitches: []
     };
@@ -424,16 +480,21 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
     console.error('Error fetching database data:', error)
     // 返回空数据结构
     return {
-      brandAnalysis: { brandCategoryRevenue: [] },
+      brandAnalysis: { 
+        brandCategoryRevenue: [],
+        segmentNames: [],
+        segmentColors: []
+      },
       productAnalysis: { 
-        priceVsRevenue: [
-          { category: 'Dimmer Switches', products: [] },
-          { category: 'Light Switches', products: [] }
-        ], 
-        topProducts: [
-          { category: 'Dimmer Switches', products: [] },
-          { category: 'Light Switches', products: [] }
-        ]
+        priceVsRevenue: [],
+        topProducts: {
+          segments: {},
+          dimmerSwitches: [],
+          lightSwitches: []
+        },
+        segmentSummary: {},
+        segmentNames: [],
+        segmentColors: []
       },
       pricingAnalysis: {
         priceDistribution: [],
@@ -448,6 +509,8 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
       packagePreference: {
         sameProductComparison: [],
         packageDistribution: [],
+        segmentDistributions: {},
+        segmentNames: [],
         dimmerSwitches: [],
         lightSwitches: []
       },
@@ -666,13 +729,15 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                       </TabsContent>
                       
                       <TabsContent value="product-analysis">
-                        <ProductAnalysis data={data.productAnalysis} />
+                        <ProductAnalysis 
+                          data={data.productAnalysis} 
+                          productLists={productLists}
+                        />
                       </TabsContent>
                       
                       <TabsContent value="pricing-analysis">
                         <PricingAnalysis 
                           data={data.pricingAnalysis}
-                          productAnalysis={data.productAnalysis}
                           productLists={productLists}
                         />
                       </TabsContent>

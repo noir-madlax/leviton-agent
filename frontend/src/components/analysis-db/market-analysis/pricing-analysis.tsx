@@ -1,27 +1,12 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import React, { useState, useMemo } from 'react'
 import { Card } from "@/components/ui/card"
-import { ViolinChart } from "@/components/analysis-db/charts/violin-chart"
-import { BrandViolinChart } from "@/components/analysis-db/charts/brand-violin-chart"
+import { BrandViolinChart } from "../charts/brand-violin-chart"
+import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import type { Product } from "@/components/analysis-db/types/analysis"
-
-function calculateStats(products: Product[], priceType: PriceType) {
-  const prices = products.map(p => priceType === 'unit' ? p.unitPrice : p.price).filter(p => p !== null && p !== undefined);
-  if (prices.length === 0) {
-    return { min: 0, q1: 0, median: 0, mean: 0, q3: 0, max: 0 };
-  }
-  prices.sort((a, b) => a - b);
-  const min = prices[0];
-  const max = prices[prices.length - 1];
-  const q1 = prices[Math.floor(prices.length / 4)];
-  const median = prices[Math.floor(prices.length / 2)];
-  const q3 = prices[Math.floor((prices.length * 3) / 4)];
-  const mean = prices.reduce((a, b) => a + b, 0) / prices.length;
-  return { min, q1, median, mean, q3, max };
-}
 
 interface PricingAnalysisProps {
   data: {
@@ -57,12 +42,6 @@ interface PricingAnalysisProps {
       }[]
     }[]
   }
-  productAnalysis: {
-    priceVsRevenue: {
-      category: string
-      products: Product[]
-    }[]
-  }
   productLists: {
     byBrand: Record<string, Product[]>
     bySegment: Record<string, Product[]>
@@ -70,82 +49,52 @@ interface PricingAnalysisProps {
   }
 }
 
-export function PricingAnalysis({ data, productLists, productAnalysis }: PricingAnalysisProps) {
-  const [priceType, setPriceType] = useState<PriceType>("unit")
+export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
+  const [priceType, setPriceType] = useState<PriceType>('unit')
   const { openPanel } = useProductPanel()
 
-  const dimmerProducts = useMemo(() => 
-    productAnalysis.priceVsRevenue.find(c => c.category === "Dimmer Switches")?.products || [], 
-    [productAnalysis]
-  );
-  
-  const switchProducts = useMemo(() =>
-    productAnalysis.priceVsRevenue.find(c => c.category === "Light Switches")?.products || [],
-    [productAnalysis]
-  );
+  // 获取所有分类数据
+  const allCategories = useMemo(() => 
+    data?.priceDistribution || [],
+    [data]
+  )
 
-  const dimmerPrices = useMemo(() => 
-    dimmerProducts.map(p => priceType === 'unit' ? p.unitPrice : p.price),
-    [dimmerProducts, priceType]
-  );
+  // 生成Multi-Segment Violin Chart数据
+  const violinSegments = useMemo(() => {
+    const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300"]
+    
+    return allCategories.map((category, index) => ({
+      name: category.category,
+      prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
+      color: colors[index % colors.length],
+      stats: priceType === 'unit' ? category.stats.unit : category.stats.sku
+    }))
+  }, [allCategories, priceType])
 
-  const switchPrices = useMemo(() =>
-    switchProducts.map(p => priceType === 'unit' ? p.unitPrice : p.price),
-    [switchProducts, priceType]
-  );
-
-  const dimmerStats = useMemo(() => 
-    calculateStats(dimmerProducts, priceType),
-    [dimmerProducts, priceType]
-  );
-
-  const switchStats = useMemo(() =>
-    calculateStats(switchProducts, priceType),
-    [switchProducts, priceType]
-  );
-
-  const getBrands = (category: number) => {
-    if (!data?.brandPriceDistribution?.[category]?.brands) {
-      console.error(`Brand price distribution data not found for category ${category}`)
-      return []
-    }
-    return data.brandPriceDistribution[category].brands
-  }
-
-  const handleViolinClick = (category: string, priceRange: { min: number; max: number }) => {
-    const centerPrice = (priceRange.min + priceRange.max) / 2
-    const tolerance = (priceRange.max - priceRange.min) / 2
-
-    const productsForCategory = category.includes("Dimmer") ? dimmerProducts : switchProducts;
-
-    const filteredProducts = productsForCategory.filter(product => {
-      const price = priceType === 'unit' ? product.unitPrice : product.price
-      return Math.abs(price - centerPrice) <= tolerance
-    })
-
+  const handleViolinClick = (segmentName: string) => {
+    const products = productLists.bySegment[segmentName] || []
     openPanel(
-      filteredProducts,
-      `${category}: $${priceRange.min.toFixed(2)} - $${priceRange.max.toFixed(2)}`,
-      `${filteredProducts.length} products found in ${category} with ${priceType === 'unit' ? 'unit' : 'SKU'} price within ±${tolerance.toFixed(2)} of $${centerPrice.toFixed(2)}`,
-      { brand: true, category: false, priceRange: false, packSize: true }
+      products,
+      segmentName,
+      `${products.length} products in ${segmentName}`,
+      { brand: true, category: false, priceRange: true, packSize: true }
     )
   }
 
   const handleBrandViolinClick = (brand: string, category: string) => {
     const allBrandProducts = productLists.byBrand[brand] || []
     
-    // Filter brand products directly by category instead of trying to match different datasets
+    // 通过segment匹配产品
     const filteredProducts = allBrandProducts.filter(product => {
-      // Check if product has a category field
-      if (product.category) {
-        return product.category === category
+      // 首先尝试直接匹配分类名称
+      if (product.category === category) {
+        return true
       }
-      // If no category field, infer from product name or other fields
-      const productName = product.name?.toLowerCase() || ''
-      const isDimmer = productName.includes('dimmer')
-      const isTargetDimmer = category === "Dimmer Switches"
-      
-      return isDimmer === isTargetDimmer
+      // 然后通过segment匹配（如果product有segment信息）
+      if (productLists.bySegment[category]) {
+        return productLists.bySegment[category].some(p => p.id === product.id)
+      }
+      return false
     })
     
     console.log('Filtered products:', filteredProducts.length)
@@ -153,18 +102,19 @@ export function PricingAnalysis({ data, productLists, productAnalysis }: Pricing
     openPanel(
       filteredProducts,
       `${brand} - ${category}`,
-      `${filteredProducts.length} ${category.toLowerCase()} from ${brand}`,
+      `${filteredProducts.length} products from ${brand} in ${category}`,
       { brand: false, category: false, priceRange: true, packSize: true }
     )
   }
 
-  // Check if we have the required data
-  if (!data?.priceDistribution || data.priceDistribution.length < 2) {
+  // 检查是否有所需的数据
+  if (!data?.priceDistribution || data.priceDistribution.length === 0) {
     return (
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
         <Card className="p-6 bg-gray-50">
           <p className="text-center text-gray-500">Price distribution data is not available.</p>
+          <p className="text-center text-gray-400 text-sm mt-2">Waiting for valid product data...</p>
         </Card>
       </section>
     )
@@ -174,40 +124,89 @@ export function PricingAnalysis({ data, productLists, productAnalysis }: Pricing
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
 
-      <h3 className="text-xl font-semibold mb-4">Price Distribution: Dimmers vs Switches</h3>
+      {/* 显示所有segments的价格分布概览 */}
+      <h3 className="text-xl font-semibold mb-4">Price Distribution by Segment</h3>
       <Card className="p-6 bg-gray-50 mb-8">
         <PriceTypeSelector onChange={setPriceType} />
-        <div className="h-[400px]">
-          <ViolinChart
-            dimmerPrices={dimmerPrices}
-            switchPrices={switchPrices}
-            dimmerStats={dimmerStats}
-            switchStats={switchStats}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
+          {allCategories.map((category, index) => {
+            const categoryPrices = priceType === 'unit' ? category.unitPrices : category.skuPrices
+            const categoryStats = priceType === 'unit' ? category.stats.unit : category.stats.sku
+            const icons = ["🔆", "💡", "🔥", "⚡"]
+            const icon = icons[index % icons.length]
+            
+            return (
+              <div key={category.category} className="bg-white p-4 rounded-lg border">
+                <h4 className="text-md font-medium mb-3 text-center">
+                  {icon} {category.category}
+                </h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span>Products:</span>
+                    <span className="font-medium">{categoryPrices.length}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Min:</span>
+                    <span className="font-medium">${categoryStats.min.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Median:</span>
+                    <span className="font-medium">${categoryStats.median.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Max:</span>
+                    <span className="font-medium">${categoryStats.max.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Average:</span>
+                    <span className="font-medium">${categoryStats.mean.toFixed(2)}</span>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      </Card>
+
+      {/* Multi-Segment Violin Chart: 显示所有segments的价格分布 */}
+      <h3 className="text-xl font-semibold mb-4">
+        All Segments Price Distribution Comparison
+      </h3>
+      <Card className="p-6 bg-gray-50 mb-8">
+        <PriceTypeSelector onChange={setPriceType} />
+        <div className="text-sm text-gray-600 mb-4">
+          <strong>Violin Chart:</strong> The width of each violin shows the density of products at different price points. 
+          Wider areas indicate more products at that price range.
+        </div>
+        <div className="h-[500px]">
+          <MultiSegmentViolinChart 
+            segments={violinSegments}
             priceType={priceType}
-            productLists={productLists}
             onViolinClick={handleViolinClick}
-            dimmerProducts={dimmerProducts}
-            switchProducts={switchProducts}
           />
         </div>
       </Card>
 
-      <h3 className="text-xl font-semibold mb-4">Brand Price Distribution by Category</h3>
+      {/* Brand Price Distribution: 显示所有segments */}
+      <h3 className="text-xl font-semibold mb-4">Brand Price Distribution by Segment</h3>
       <Card className="p-6 bg-gray-50">
         <PriceTypeSelector onChange={setPriceType} />
         <div className="space-y-8">
-          <div className="w-full">
-            <h4 className="text-lg font-medium mb-3 text-center">🔆 Dimmer Switches</h4>
-            <div className="h-[420px] w-full">
-              <BrandViolinChart brands={getBrands(0)} priceType={priceType} category="Dimmer Switches" onViolinClick={handleBrandViolinClick} />
+          {data.brandPriceDistribution.map((categoryData, index) => (
+            <div key={categoryData.category} className="w-full">
+              <h4 className="text-lg font-medium mb-3 text-center">
+                {index === 0 ? "🔆" : index === 1 ? "💡" : index === 2 ? "🔥" : "📊"} {categoryData.category}
+              </h4>
+              <div className="h-[420px] w-full">
+                <BrandViolinChart 
+                  brands={categoryData.brands} 
+                  priceType={priceType} 
+                  category={categoryData.category} 
+                  onViolinClick={handleBrandViolinClick} 
+                />
+              </div>
             </div>
-          </div>
-          <div className="w-full">
-            <h4 className="text-lg font-medium mb-3 text-center">💡 Light Switches</h4>
-            <div className="h-[420px] w-full">
-              <BrandViolinChart brands={getBrands(1)} priceType={priceType} category="Light Switches" onViolinClick={handleBrandViolinClick} />
-            </div>
-          </div>
+          ))}
         </div>
       </Card>
     </section>

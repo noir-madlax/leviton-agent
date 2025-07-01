@@ -8,17 +8,24 @@ class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.
     
     Matches the exact format expected by frontend components.
+    Enhanced to support dynamic segments.
     """
     brand: str = Field(description="Brand name")
-    dimmerRevenue: float = Field(default=0, description="Dimmer switches revenue")
-    switchRevenue: float = Field(default=0, description="Light switches revenue")
-    dimmerVolume: float = Field(default=0, description="Dimmer switches volume")
-    switchVolume: float = Field(default=0, description="Light switches volume")
+    segments: Optional[Dict[str, Dict[str, float]]] = Field(default={}, description="Segment-wise revenue and volume data")
+    dimmerRevenue: float = Field(default=0, description="Dimmer switches revenue (compatibility)")
+    switchRevenue: float = Field(default=0, description="Light switches revenue (compatibility)")
+    dimmerVolume: float = Field(default=0, description="Dimmer switches volume (compatibility)")
+    switchVolume: float = Field(default=0, description="Light switches volume (compatibility)")
 
 
 class BrandAnalysisResponse(BaseModel):
-    """Response model for brand analysis API."""
+    """Response model for brand analysis API.
+    
+    Enhanced to support dynamic segments.
+    """
     data: List[BrandCategoryData] = Field(description="Brand category data")
+    segmentNames: Optional[List[str]] = Field(default=[], description="List of segment names in the project")
+    segmentColors: Optional[List[str]] = Field(default=[], description="Colors for each segment")
     project_id: str = Field(description="Project ID used for filtering")
     total_brands: int = Field(description="Total number of brands")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
@@ -43,10 +50,29 @@ class CategoryProducts(BaseModel):
     products: List[ProductInfo] = Field(description="Products in category")
 
 
+class TopProductsData(BaseModel):
+    """Top products data structure."""
+    segments: Dict[str, List[ProductInfo]] = Field(description="Products by segment")
+    dimmerSwitches: List[ProductInfo] = Field(description="Dimmer switches products (legacy)")
+    lightSwitches: List[ProductInfo] = Field(description="Light switches products (legacy)")
+
+
+class SegmentSummary(BaseModel):
+    """Segment summary statistics."""
+    totalRevenue: float = Field(description="Total revenue")
+    totalVolume: float = Field(description="Total volume")
+    productCount: int = Field(description="Product count")
+    avgPrice: float = Field(description="Average price")
+    topBrand: str = Field(description="Top brand")
+
+
 class ProductAnalysisResponse(BaseModel):
     """Response model for product analysis API."""
     priceVsRevenue: List[CategoryProducts] = Field(description="Price vs revenue data")
-    topProducts: List[CategoryProducts] = Field(description="Top products data")
+    topProducts: TopProductsData = Field(description="Top products data with segments")
+    segmentSummary: Dict[str, SegmentSummary] = Field(description="Summary statistics by segment")
+    segmentNames: List[str] = Field(description="List of segment names")
+    segmentColors: List[str] = Field(description="Colors for each segment")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
@@ -107,9 +133,11 @@ class SegmentData(BaseModel):
 
 
 class SegmentRevenue(BaseModel):
-    """Segment revenue model."""
-    dimmerSwitches: List[SegmentData] = Field(description="Dimmer switches segments")
-    lightSwitches: List[SegmentData] = Field(description="Light switches segments")
+    """Segment revenue model with enhanced support for dynamic segments."""
+    segments: List[SegmentData] = Field(description="All project segments")
+    segmentNames: List[str] = Field(description="List of segment names")
+    dimmerSwitches: List[SegmentData] = Field(description="Legacy: first half of segments")
+    lightSwitches: List[SegmentData] = Field(description="Legacy: second half of segments")
 
 
 class MarketInsightsResponse(BaseModel):
@@ -143,8 +171,10 @@ class PackagePreferenceResponse(BaseModel):
     """Response model for package preference API."""
     sameProductComparison: List[SameProductComparison] = Field(description="Same product comparison data")
     packageDistribution: List[PackageDistributionItem] = Field(description="Overall package distribution")
-    dimmerSwitches: List[PackageDistributionItem] = Field(description="Dimmer switches package distribution")
-    lightSwitches: List[PackageDistributionItem] = Field(description="Light switches package distribution")
+    segmentDistributions: Optional[Dict[str, List[PackageDistributionItem]]] = Field(default={}, description="Package distribution by segment")
+    segmentNames: Optional[List[str]] = Field(default=[], description="List of segment names")
+    dimmerSwitches: List[PackageDistributionItem] = Field(description="Dimmer switches package distribution (legacy)")
+    lightSwitches: List[PackageDistributionItem] = Field(description="Light switches package distribution (legacy)")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 

@@ -15,7 +15,7 @@ class Settings:
     # API 设置
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
-    DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
+    DEBUG: bool = os.getenv("DEBUG", "False").lower() == "False"
     
     # Storage settings
     STORAGE_ROOT: Path = Path(os.getenv("STORAGE_ROOT", str(PROJECT_ROOT / "data" / "llm_logs")))

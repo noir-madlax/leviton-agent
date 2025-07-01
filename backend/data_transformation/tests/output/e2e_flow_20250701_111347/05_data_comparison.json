@@ -1,0 +1,11 @@
+{
+  "source_count": 5,
+  "target_count": 5,
+  "data_consistency": 1.0,
+  "missing_products": 0,
+  "verification_results": {
+    "field_mapping_correct": true,
+    "no_missing_products": true,
+    "batch_id_preserved": true
+  }
+}

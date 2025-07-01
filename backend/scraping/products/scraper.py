@@ -237,18 +237,21 @@ class ProductScraper:
     
     async def _scrape_category_products(self, category_id: str, target_count: int, 
                                        url_type: str, original_url: str = None) -> Tuple[int, List[Dict], str]:
-        """爬取类别商品"""
+        """爬取类别商品 - 使用混合API策略获取完整信息"""
         if url_type == "product":
             logger.info(f"从产品页面爬取同类别商品: category_id={category_id}, type={url_type}")
         else:
             logger.info(f"爬取类别商品: category_id={category_id}, type={url_type}")
         
-        all_products = []
+        # Phase 1: 使用Category API获取产品ASIN列表
+        all_basic_products = []
         page = 1
         first_page_metadata = {}
         amazon_domain = "amazon.com"
         
-        while len(all_products) < target_count:
+        logger.info(f"Phase 1: 获取产品ASIN列表...")
+        
+        while len(all_basic_products) < target_count:
             try:
                 logger.info(f"  获取第 {page} 页...")
                 
@@ -280,11 +283,11 @@ class ProductScraper:
                     break
                 
                 logger.info(f"  找到 {len(page_products)} 个商品")
-                all_products.extend(page_products)
+                all_basic_products.extend(page_products)
                 
                 # 如果达到目标数量，截断结果
-                if len(all_products) >= target_count:
-                    all_products = all_products[:target_count]
+                if len(all_basic_products) >= target_count:
+                    all_basic_products = all_basic_products[:target_count]
                     logger.info(f"  达到目标数量 {target_count}，停止")
                     break
                 
@@ -295,14 +298,83 @@ class ProductScraper:
                 logger.error(f"  获取第 {page} 页时出错: {str(e)}")
                 break
         
-        logger.info(f"类别爬取完成: 共爬取 {len(all_products)} 个商品")
+        logger.info(f"Phase 1 完成: 共获取 {len(all_basic_products)} 个基础产品信息")
+        
+        # Phase 2: 使用Product API获取每个产品的详细信息
+        logger.info(f"Phase 2: 获取详细产品信息（包含品牌）...")
+        enriched_products = []
+        
+        for i, basic_product in enumerate(all_basic_products):
+            asin = basic_product.get('asin')
+            if not asin:
+                logger.warning(f"  产品 {i+1}/{len(all_basic_products)}: 缺少ASIN，跳过")
+                continue
+            
+            try:
+                logger.info(f"  获取产品详情 {i+1}/{len(all_basic_products)}: {asin}")
+                
+                # 获取详细产品信息
+                product_details = await asyncio.to_thread(
+                    get_product_details_rainforest, asin, amazon_domain
+                )
+                
+                if product_details and 'product' in product_details:
+                    detailed_product = product_details['product']
+                    
+                    # 合并基础信息和详细信息
+                    # 详细信息优先，但保留一些基础信息中的有用字段
+                    merged_product = {
+                        **basic_product,  # 基础信息作为底层
+                        **detailed_product,  # 详细信息覆盖
+                        
+                        # 确保关键字段不被覆盖（如果详细信息中没有）
+                        'position': basic_product.get('position'),
+                        'recent_sales': basic_product.get('recent_sales', detailed_product.get('recent_sales')),
+                        
+                        # 添加数据来源标记
+                        '_data_enriched': True,
+                        '_enrichment_timestamp': datetime.now().isoformat(),
+                        '_category_api_data': basic_product,
+                    }
+                    
+                    enriched_products.append(merged_product)
+                    
+                    # 日志显示获取到的品牌信息
+                    brand = detailed_product.get('brand', 'N/A')
+                    logger.info(f"    ✅ 品牌: {brand}")
+                    
+                else:
+                    logger.warning(f"    ❌ 无法获取详细信息，使用基础信息")
+                    # 即使没有详细信息，也保留基础信息
+                    basic_product['_data_enriched'] = False
+                    basic_product['_enrichment_error'] = 'Failed to fetch product details'
+                    enriched_products.append(basic_product)
+                
+                # 控制请求频率
+                if i < len(all_basic_products) - 1:  # 不是最后一个
+                    time.sleep(0.5)  # 500ms间隔
+                    
+            except Exception as e:
+                logger.error(f"    ❌ 获取产品详情失败: {str(e)}")
+                # 发生错误时仍保留基础信息
+                basic_product['_data_enriched'] = False
+                basic_product['_enrichment_error'] = str(e)
+                enriched_products.append(basic_product)
+        
+        logger.info(f"类别爬取完成: 共处理 {len(enriched_products)} 个商品")
+        
+        # 统计enrichment结果
+        enriched_count = sum(1 for p in enriched_products if p.get('_data_enriched', False))
+        brand_count = sum(1 for p in enriched_products if p.get('brand'))
+        
+        logger.info(f"数据充实统计: {enriched_count}/{len(enriched_products)} 获得详细信息, {brand_count} 个产品有品牌信息")
         
         # 保存结果
         filepath = await self._save_category_results(
-            category_id, url_type, all_products, first_page_metadata, page - 1, target_count
+            category_id, url_type, enriched_products, first_page_metadata, page - 1, target_count
         )
         
-        return len(all_products), all_products, filepath
+        return len(enriched_products), enriched_products, filepath
     
     async def _ensure_original_product(self, original_asin: str, scraped_products: List[Dict], 
                                      filepath: str) -> Tuple[int, List[Dict], str]:

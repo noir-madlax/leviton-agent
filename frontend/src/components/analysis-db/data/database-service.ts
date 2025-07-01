@@ -90,6 +90,7 @@ export interface DataConfirmationData {
 
 export interface BrandCategoryData {
   brand: string
+  segments: Record<string, { revenue: number; volume: number }>
   dimmerRevenue: number
   switchRevenue: number
   dimmerVolume: number
@@ -128,7 +129,11 @@ export interface ProductAnalysisData {
 export class DatabaseService {
   
   // 🔑 Get brand category revenue data with project filtering via backend API
-  async getBrandCategoryRevenueByProject(projectId: string): Promise<BrandCategoryData[]> {
+  async getBrandCategoryRevenueByProject(projectId: string): Promise<{
+    brandCategoryRevenue: BrandCategoryData[]
+    segmentNames: string[]
+    segmentColors: string[]
+  }> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
@@ -139,7 +144,11 @@ export class DatabaseService {
       }
       
       const result = await response.json()
-      return result.data || []
+      return {
+        brandCategoryRevenue: result.data || [],
+        segmentNames: result.segmentNames || [],
+        segmentColors: result.segmentColors || []
+      }
     } catch (error) {
       console.error('Error fetching brand category revenue by project:', error)
       throw error
@@ -147,7 +156,23 @@ export class DatabaseService {
   }
 
   // 🔑 Get product analysis data with project filtering via backend API
-  async getProductAnalysisDataByProject(projectId: string): Promise<ProductAnalysisData> {
+  async getProductAnalysisDataByProject(projectId: string): Promise<{
+    priceVsRevenue: ProductAnalysisData['priceVsRevenue']
+    topProducts: {
+      segments: Record<string, any[]>
+      dimmerSwitches: any[]
+      lightSwitches: any[]
+    }
+    segmentSummary: Record<string, {
+      totalRevenue: number
+      totalVolume: number
+      productCount: number
+      avgPrice: number
+      topBrand: string
+    }>
+    segmentNames: string[]
+    segmentColors: string[]
+  }> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
@@ -158,9 +183,55 @@ export class DatabaseService {
       }
       
       const result = await response.json()
+      
+      // If backend returns enhanced format, use it directly
+      if (result.segmentNames && result.segmentColors && result.segmentSummary) {
+        return {
+          priceVsRevenue: result.priceVsRevenue || [],
+          topProducts: result.topProducts || { segments: {}, dimmerSwitches: [], lightSwitches: [] },
+          segmentSummary: result.segmentSummary || {},
+          segmentNames: result.segmentNames || [],
+          segmentColors: result.segmentColors || []
+        }
+      }
+      
+      // Fallback: Convert legacy format to expected format
+      const segments: Record<string, any[]> = {}
+      const segmentNames: string[] = []
+      
+      // Extract segments from topProducts
+      result.topProducts?.forEach((category: any) => {
+        if (category.category && category.products) {
+          segments[category.category] = category.products
+          if (!segmentNames.includes(category.category)) {
+            segmentNames.push(category.category)
+          }
+        }
+      })
+      
+      // Generate segment summary from available data
+      const segmentSummary: Record<string, any> = {}
+      Object.keys(segments).forEach(segment => {
+        const products = segments[segment] || []
+        segmentSummary[segment] = {
+          totalRevenue: products.reduce((sum: number, p: any) => sum + (p.revenue || 0), 0),
+          totalVolume: products.reduce((sum: number, p: any) => sum + (p.volume || 0), 0),
+          productCount: products.length,
+          avgPrice: products.length > 0 ? products.reduce((sum: number, p: any) => sum + (p.price || 0), 0) / products.length : 0,
+          topBrand: products.length > 0 ? products[0].brand || 'N/A' : 'N/A'
+        }
+      })
+      
       return {
         priceVsRevenue: result.priceVsRevenue || [],
-        topProducts: result.topProducts || []
+        topProducts: {
+          segments,
+          dimmerSwitches: segments['Dimmer Switches'] || [],
+          lightSwitches: segments['Light Switches'] || []
+        },
+        segmentSummary,
+        segmentNames,
+        segmentColors: ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"].slice(0, segmentNames.length)
       }
     } catch (error) {
       console.error('Error fetching product analysis data by project:', error)
@@ -225,6 +296,13 @@ export class DatabaseService {
   // 🔑 Get market insights data with project filtering via backend API
   async getMarketInsightsDataByProject(projectId: string): Promise<{
     segmentRevenue: {
+      segments?: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+      segmentNames?: string[]
       dimmerSwitches: Array<{
         segment: string
         revenue: number
@@ -249,8 +327,15 @@ export class DatabaseService {
       }
       
       const result = await response.json()
+      
+      // Return the enhanced format that supports both new and legacy formats
       return {
-        segmentRevenue: result.segmentRevenue || { dimmerSwitches: [], lightSwitches: [] }
+        segmentRevenue: {
+          segments: result.segmentRevenue?.segments || [],
+          segmentNames: result.segmentRevenue?.segmentNames || [],
+          dimmerSwitches: result.segmentRevenue?.dimmerSwitches || [],
+          lightSwitches: result.segmentRevenue?.lightSwitches || []
+        }
       }
     } catch (error) {
       console.error('Error fetching market insights data by project:', error)
@@ -274,6 +359,14 @@ export class DatabaseService {
       percentage: number
       salesVolume: number
     }>
+    segmentDistributions?: Record<string, Array<{
+      packSize: string
+      count: number
+      percentage: number
+      salesVolume: number
+      salesRevenue: number
+    }>>
+    segmentNames?: string[]
     dimmerSwitches: Array<{
       packSize: string
       count: number
@@ -302,6 +395,8 @@ export class DatabaseService {
       return {
         sameProductComparison: result.sameProductComparison || [],
         packageDistribution: result.packageDistribution || [],
+        segmentDistributions: result.segmentDistributions || {},
+        segmentNames: result.segmentNames || [],
         dimmerSwitches: result.dimmerSwitches || [],
         lightSwitches: result.lightSwitches || []
       }

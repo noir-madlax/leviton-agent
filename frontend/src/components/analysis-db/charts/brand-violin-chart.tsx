@@ -129,7 +129,7 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
     const filtered = brands
       .filter(brand => {
         const prices = priceType === "sku" ? brand.skuPrices : brand.unitPrices
-        return prices.length >= 3
+        return prices.length >= 1  // 降低要求：至少1个数据点就显示
       })
       .slice(0, 8)
 
@@ -140,17 +140,44 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
 
     const data = filtered.map(brand => {
       const prices = priceType === "sku" ? brand.skuPrices : brand.unitPrices
-      const bandwidth = 1.5
-      const min = Math.max(0, Math.min(...prices) - 10)
-      const max = Math.min(maxPrice, Math.max(...prices) + 10)
       const sortedPrices = [...prices].sort((a, b) => a - b)
       const median = sortedPrices[Math.floor(sortedPrices.length / 2)]
       const mean = prices.reduce((a, b) => a + b, 0) / prices.length
+      
+      let density: [number, number][]
+      
+      if (prices.length === 1) {
+        // 单个数据点：创建一个简单的点状显示
+        const price = prices[0]
+        const pointWidth = maxViolinHalfWidth * 0.3
+        density = [
+          [price - 1, 0],
+          [price, pointWidth],
+          [price + 1, 0]
+        ]
+      } else if (prices.length === 2) {
+        // 两个数据点：创建简单的双点显示
+        const [p1, p2] = sortedPrices
+        const pointWidth = maxViolinHalfWidth * 0.4
+        density = [
+          [p1 - 1, 0],
+          [p1, pointWidth],
+          [(p1 + p2) / 2, pointWidth * 0.5],
+          [p2, pointWidth],
+          [p2 + 1, 0]
+        ]
+      } else {
+        // 三个或更多数据点：使用正常的KDE
+        const bandwidth = Math.max(1, Math.sqrt(prices.length) * 1.5)
+        const min = Math.max(0, Math.min(...prices) - 10)
+        const max = Math.min(maxPrice, Math.max(...prices) + 10)
+        density = normalizeDensity(kde(prices, bandwidth, min, max, 50), maxViolinHalfWidth)
+      }
 
       return {
         name: brand.name,
         prices,
-        density: normalizeDensity(kde(prices, bandwidth, min, max, 50), maxViolinHalfWidth),
+        density,
         median,
         mean,
         count: prices.length,
@@ -166,6 +193,7 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
   const yAxisLabels = Array.from({ length: yAxisSteps + 1 }, (_, i) => i * layout.yAxisTickIncrement)
 
   const brandColors: Record<string, string> = {
+    // Switch/Dimmer brands
     Lutron: "#E67E22",
     GE: "#3498DB", 
     Leviton: "#9B59B6",
@@ -178,6 +206,12 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
     "SOZULAMP Store": "#95A5A6",
     Kasa: "#8DD3C7",
     "TP-Link": "#4ECDC4",
+    // Air Fryer brands
+    Chefman: "#FF6B6B",
+    COSORI: "#4ECDC4", 
+    "Instant Pot": "#45B7D1",
+    Ninja: "#96CEB4",
+    "Emeril Lagasse": "#FFEAA7",
     Other: "#D3D3D3",
   }
 

@@ -1,0 +1,7 @@
+{
+  "test_url": "https://www.amazon.com/kitchen-cabinet-drawer-organization/b/ref=dp_bc_5?ie=UTF8&node=3743971",
+  "max_products": 5,
+  "max_reviews": 1,
+  "start_time": "2025-07-01T11:13:47.568875",
+  "test_type": "end_to_end_scraping_transformation"
+}

@@ -2,6 +2,7 @@
 
 import logging
 from typing import List, Dict, Any
+from collections import defaultdict
 
 from .base_service import BaseDashboardService
 
@@ -9,99 +10,201 @@ logger = logging.getLogger(__name__)
 
 
 class BrandAnalysisService(BaseDashboardService):
-    """Service for brand category revenue analysis.
+    """Service for brand analysis data.
     
-    Replaces frontend getBrandCategoryRevenue() method with server-side
-    implementation that applies project ASIN filtering.
+    通用化版本：动态处理项目的所有segment类型，支持任意数量的segments。
     """
     
-    def get_data(self) -> List[Dict[str, Any]]:
-        """Get brand category revenue data with ASIN filtering.
-        
-        Returns data in the exact same format as frontend getBrandCategoryRevenue()
-        to ensure compatibility with existing UI components.
-        """
+    def get_data(self) -> Dict[str, Any]:
+        """Get brand analysis data with dynamic segment support."""
         try:
-            # Build query - replicate frontend logic exactly
-            # Correct Supabase query order: table -> select -> filters
-            query = self._get_base_product_table().select('brand, category, monthly_sales_volume, estimated_revenue')
+            # 获取项目segments
+            project_segments = self.get_project_segments()
             
-            # Apply base filters
+            if not project_segments:
+                logger.warning(f"No segments found for project {self.project_id}")
+                return self._get_empty_response()
+            
+            logger.info(f"📊 Processing {len(project_segments)} segments: {project_segments}")
+            
+            # 查询品牌数据
+            query = self._get_base_product_table().select('''
+                platform_id,
+                brand,
+                category,
+                estimated_revenue,
+                monthly_sales_volume
+            ''')
+            
+            # Apply filters
             query = self._apply_base_filters(query)
-            
-            # 🔑 CRITICAL: Apply ASIN filtering to prevent data leakage
             query = self._apply_asin_filter(query)
             
-            # Execute query (without revenue filter to avoid SQL errors)
             result = query.execute()
             
-            logger.info(f"🔍 Raw query returned {len(result.data) if result.data else 0} products for project {self.project_id}")
-            
             if not result.data:
-                logger.warning(f"No data found for project {self.project_id}")
-                return []
+                logger.warning(f"No brand data found for project {self.project_id}")
+                return self._get_empty_response()
             
-            # Debug: Log first few products
-            for i, item in enumerate(result.data[:3]):
-                logger.info(f"  Product {i+1}: brand={item.get('brand')}, category={item.get('category')}, revenue={item.get('estimated_revenue')}, volume={item.get('monthly_sales_volume')}")
+            # 获取segment assignments
+            segment_assignments = self._get_segment_assignments()
             
-            # Process data - replicate frontend aggregation logic
-            # Apply revenue filter in Python code instead of SQL
-            brand_data = {}
-            products_with_revenue = 0
-            products_without_revenue = 0
+            # 按品牌和segment聚合数据
+            brand_segment_data = self._aggregate_brand_data(result.data, segment_assignments, project_segments)
             
-            for item in result.data:
-                brand = item.get('brand')
-                if not brand:
-                    continue
-                
-                # Apply revenue filter here - only process items with revenue data
-                revenue = item.get('estimated_revenue')
-                logger.info(f"  🔍 Checking product: brand={brand}, revenue={revenue}, type={type(revenue)}")
-                
-                if revenue is None or revenue == 0:
-                    products_without_revenue += 1
-                    logger.info(f"  ❌ Skipping product with no revenue: brand={brand}, revenue={revenue}")
-                    continue  # Skip items without revenue data (matches frontend logic)
-                
-                products_with_revenue += 1
-                logger.info(f"  ✅ Processing product with revenue: brand={brand}, revenue={revenue}")
-                
-                if brand not in brand_data:
-                    brand_data[brand] = {
-                        'brand': brand,
-                        'dimmerRevenue': 0,
-                        'switchRevenue': 0,
-                        'dimmerVolume': 0,
-                        'switchVolume': 0
-                    }
-                
-                volume = item.get('monthly_sales_volume', 0) or 0
-                category = item.get('category', '')
-                
-                # Categorize by product type
-                if category == 'Dimmer Switches':
-                    brand_data[brand]['dimmerRevenue'] += revenue
-                    brand_data[brand]['dimmerVolume'] += volume
-                elif category == 'Light Switches':
-                    brand_data[brand]['switchRevenue'] += revenue
-                    brand_data[brand]['switchVolume'] += volume
+            # 格式化响应
+            response = self._format_brand_response(brand_segment_data, project_segments)
             
-            result_data = list(brand_data.values())
-            
-            logger.info(f"📊 Brand analysis summary for project {self.project_id}:")
-            logger.info(f"  - Raw products: {len(result.data) if result.data else 0}")
-            logger.info(f"  - Products with revenue: {products_with_revenue}")
-            logger.info(f"  - Products without revenue: {products_without_revenue}")
-            logger.info(f"  - Final brands: {len(result_data)}")
-            
-            if result_data:
-                for brand in result_data:
-                    logger.info(f"  📈 {brand['brand']}: Dimmer ${brand['dimmerRevenue']} | Switch ${brand['switchRevenue']}")
-            
-            return result_data
+            logger.info(f"📈 Brand analysis completed: {len(brand_segment_data)} brands processed")
+            return response
             
         except Exception as e:
             logger.error(f"Error in brand analysis for project {self.project_id}: {e}")
-            raise 
+            raise
+    
+    def _get_segment_assignments(self) -> Dict[str, str]:
+        """获取segment分配（platform_id到segment_name的映射）"""
+        try:
+            if not self.project_asins:
+                return {}
+            
+            # 查询ASINs在product_wide_table中的记录
+            wide_table_result = self.supabase.table('product_wide_table')\
+                .select('id, platform_id')\
+                .in_('platform_id', self.project_asins)\
+                .execute()
+            
+            if not wide_table_result.data:
+                return {}
+            
+            # 建立映射
+            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
+            
+            # 查询segment assignments
+            wide_table_ids = list(platform_to_wide_id.values())
+            assignments_result = self.supabase.table('product_segment_assignments')\
+                .select('product_id, segment_name')\
+                .eq('project_id', self.project_id)\
+                .in_('product_id', wide_table_ids)\
+                .neq('segment_name', None)\
+                .neq('segment_name', 'OUT_OF_SCOPE')\
+                .execute()
+            
+            if not assignments_result.data:
+                return {}
+            
+            # 建立映射
+            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
+            
+            # 转换为platform_id到segment的映射
+            platform_to_segment = {}
+            for platform_id, wide_id in platform_to_wide_id.items():
+                if wide_id in wide_id_to_segment:
+                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
+            
+            return platform_to_segment
+            
+        except Exception as e:
+            logger.error(f"Error getting segment assignments: {e}")
+            return {}
+    
+    def _aggregate_brand_data(self, products: List[Dict[str, Any]], 
+                            segment_assignments: Dict[str, str], 
+                            project_segments: List[str]) -> Dict[str, Dict[str, Any]]:
+        """按品牌和segment聚合数据"""
+        
+        brand_data = defaultdict(lambda: {segment: {'revenue': 0, 'volume': 0} for segment in project_segments})
+        
+        for product in products:
+            brand = product.get('brand')
+            platform_id = product.get('platform_id')
+            
+            if not brand or not platform_id:
+                continue
+            
+            segment = segment_assignments.get(platform_id)
+            
+            if not segment or segment not in project_segments:
+                continue
+            
+            # 聚合数据
+            brand_data[brand][segment]['revenue'] += product.get('estimated_revenue', 0) or 0
+            brand_data[brand][segment]['volume'] += product.get('monthly_sales_volume', 0) or 0
+        
+        return dict(brand_data)
+    
+    def _format_brand_response(self, brand_data: Dict[str, Dict[str, Any]], 
+                             project_segments: List[str]) -> Dict[str, Any]:
+        """格式化品牌分析响应数据
+        
+        新格式支持动态segments：
+        {
+            "brandCategoryRevenue": [
+                {
+                    "brand": "COSORI",
+                    "segments": {
+                        "Compact Single Basket Air Fryers": {"revenue": 1500000, "volume": 2000},
+                        "Dual Basket Air Fryers": {"revenue": 500000, "volume": 500}
+                    },
+                    "dimmerRevenue": 1500000,  # 为了向后兼容，映射到最大的segment
+                    "switchRevenue": 500000,   # 映射到第二大的segment
+                    "dimmerVolume": 2000,
+                    "switchVolume": 500
+                }
+            ],
+            "segmentNames": ["Compact Single Basket Air Fryers", "Dual Basket Air Fryers", ...],
+            "segmentColors": ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+        }
+        """
+        
+        # 定义颜色配色方案
+        colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8", "#F7DC6F"]
+        
+        formatted_brands = []
+        
+        for brand, segments in brand_data.items():
+            # 计算每个segment的总收入和销量
+            segment_totals = []
+            for segment in project_segments:
+                segment_data = segments.get(segment, {'revenue': 0, 'volume': 0})
+                segment_totals.append({
+                    'segment': segment,
+                    'revenue': segment_data['revenue'],
+                    'volume': segment_data['volume']
+                })
+            
+            # 按收入排序
+            segment_totals.sort(key=lambda x: x['revenue'], reverse=True)
+            
+            # 为了向后兼容，将前两个segment映射到dimmer/switch字段
+            dimmer_data = segment_totals[0] if len(segment_totals) > 0 else {'revenue': 0, 'volume': 0}
+            switch_data = segment_totals[1] if len(segment_totals) > 1 else {'revenue': 0, 'volume': 0}
+            
+            brand_entry = {
+                'brand': brand,
+                'segments': {item['segment']: {'revenue': item['revenue'], 'volume': item['volume']} 
+                           for item in segment_totals},
+                'dimmerRevenue': dimmer_data['revenue'],
+                'switchRevenue': switch_data['revenue'],
+                'dimmerVolume': dimmer_data['volume'],
+                'switchVolume': switch_data['volume']
+            }
+            
+            formatted_brands.append(brand_entry)
+        
+        # 按总收入排序
+        formatted_brands.sort(key=lambda x: x['dimmerRevenue'] + x['switchRevenue'], reverse=True)
+        
+        return {
+            'brandCategoryRevenue': formatted_brands,
+            'segmentNames': project_segments,
+            'segmentColors': colors[:len(project_segments)]
+        }
+    
+    def _get_empty_response(self) -> Dict[str, Any]:
+        """返回空的响应格式"""
+        return {
+            'brandCategoryRevenue': [],
+            'segmentNames': [],
+            'segmentColors': []
+        } 

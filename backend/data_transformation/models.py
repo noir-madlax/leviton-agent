@@ -27,6 +27,7 @@ class ProductTransformationData:
     brand: Optional[str]
     model_number: Optional[str]
     category: Optional[str]
+    categories_flat: Optional[str]  # 完整的类别路径
     image_url: Optional[str]
     product_url: Optional[str]
     availability: Optional[str]

@@ -1,39 +1,42 @@
 'use client'
 
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts'
-import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { Card } from "@/components/ui/card"
+import type { Product } from "@/components/analysis-db/types/analysis"
 
 interface PackagePreferenceData {
-  sameProductComparison: {
-    productName: string;
-    packSize: string;
-    packCount: number;
-    salesVolume: number;
-    price: number;
-    unitPrice: number;
-  }[];
-  packageDistribution: {
-    packSize: string;
-    count: number;
-    percentage: number;
-    salesVolume: number;
-  }[];
-  dimmerSwitches: {
+  segmentDistributions: Record<string, Array<{
     packSize: string;
     count: number;
     percentage: number;
     salesVolume: number;
     salesRevenue: number;
-  }[];
-  lightSwitches: {
-    packSize: string;
-    count: number;
-    percentage: number;
-    salesVolume: number;
-    salesRevenue: number;
-  }[];
+  }>>;
+  segmentNames: string[];
+}
+
+const MetricTypeSelector = ({ 
+  onChange, 
+  value 
+}: { 
+  onChange: (value: 'revenue' | 'volume') => void;
+  value: 'revenue' | 'volume';
+}) => {
+  return (
+    <div className="mb-4">
+      <label className="block text-sm font-medium text-gray-700 mb-2">Metric Type:</label>
+      <select 
+        value={value} 
+        onChange={(e) => onChange(e.target.value as 'revenue' | 'volume')}
+        className="block w-48 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+      >
+        <option value="revenue">Revenue</option>
+        <option value="volume">Volume</option>
+      </select>
+    </div>
+  )
 }
 
 export function PackagePreferenceAnalysis({ 
@@ -42,69 +45,63 @@ export function PackagePreferenceAnalysis({
 }: { 
   data: PackagePreferenceData
   productLists: {
-    byBrand: Record<string, any[]>
-    bySegment: Record<string, any[]>
-    byPackageSize: Record<string, any[]>
+    byBrand: Record<string, Product[]>
+    bySegment: Record<string, Product[]>
+    byPackageSize: Record<string, Product[]>
   }
 }) {
-  const [metricType, setMetricType] = useState<MetricType>("revenue")
+  const [metricType, setMetricType] = useState<'revenue' | 'volume'>('revenue')
   const { openPanel } = useProductPanel()
 
-  // Gentle, pastel color palette
-  const colors = [
-    '#A8D5BA', // Soft mint green
-    '#F4C2A1', // Warm peach
-    '#B8C5D6', // Soft lavender blue
-    '#F7D794', // Gentle yellow
-    '#E8A4C9', // Soft pink
-    '#C7D2CC', // Sage green
-    '#F2E2CE', // Cream beige
-    '#D4B5D4'  // Light purple
-  ]
+  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300", "#8dd1e1", "#d084d0", "#87d068", "#ffb347", "#ffa07a", "#20b2aa"]
+  const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
-  // Transform data based on selected metric
-  const getDimmerChartData = () => {
-    return data.dimmerSwitches.map(item => ({
-      name: item.packSize,
-      value: metricType === "revenue" ? item.salesRevenue : item.salesVolume,
-      percentage: item.percentage
-    }))
+  // 检查是否有segments数据
+  if (!data.segmentDistributions || !data.segmentNames || data.segmentNames.length === 0) {
+    return (
+      <section className="mb-10">
+        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
+        <Card className="p-6 bg-gray-50">
+          <p className="text-center text-gray-500">Package distribution data is not available.</p>
+          <p className="text-center text-gray-400 text-sm mt-2">Waiting for valid segment data...</p>
+        </Card>
+      </section>
+    )
   }
 
-  const getSwitchChartData = () => {
-    return data.lightSwitches.map(item => ({
-      name: item.packSize,
-      value: metricType === "revenue" ? item.salesRevenue : item.salesVolume,
-      percentage: item.percentage
-    }))
-  }
+  // 检查是否所有产品都是单包装
+  const allSegmentsData = data.segmentNames.map(segmentName => data.segmentDistributions[segmentName] || [])
+  const hasVariedPackaging = allSegmentsData.some(segmentData => 
+    segmentData.length > 1 || (segmentData.length === 1 && segmentData[0].packSize !== "1")
+  )
+  
+  // 计算总产品数
+  const totalProducts = Object.values(productLists.bySegment).reduce((sum, products) => sum + products.length, 0)
 
-  const formatValue = (value: number) => {
-    return metricType === "revenue" ? `$${value.toLocaleString()}` : value.toLocaleString()
-  }
-
-  const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume (Packages Sold)"
-
-  const handlePieClick = (data: any) => {
-    if (data && data.name) {
-      const packSize = data.name
-      const products = productLists.byPackageSize[packSize] || []
-      openPanel(
-        products,
-        `${packSize} Products`,
-        `All products sold in ${packSize} packages`,
-        { brand: true, category: true, priceRange: true, packSize: false }
-      )
+  // 为每个segment生成图表数据
+  const getSegmentChartData = (segmentName: string) => {
+    if (!data.segmentDistributions || !data.segmentDistributions[segmentName]) {
+      return []
     }
+    
+    return data.segmentDistributions[segmentName].map((item, index) => ({
+      name: item.packSize,
+      value: metricType === "revenue" ? item.salesRevenue || 0 : item.salesVolume,
+      percentage: item.percentage,
+      color: colors[index % colors.length]
+    }))
   }
 
-  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index, name }: any) => {
+  const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percentage }: {
+    cx: number; cy: number; midAngle: number; innerRadius: number; outerRadius: number; percentage: number;
+  }) => {
     const RADIAN = Math.PI / 180
     const radius = innerRadius + (outerRadius - innerRadius) * 0.5
     const x = cx + radius * Math.cos(-midAngle * RADIAN)
     const y = cy + radius * Math.sin(-midAngle * RADIAN)
 
-    if (percent < 0.05) return null // Don't show labels for slices < 5%
+    // Only show label if percentage is significant enough
+    if (percentage < 5) return null
 
     return (
       <text 
@@ -115,127 +112,119 @@ export function PackagePreferenceAnalysis({
         dominantBaseline="central"
         fontSize="12"
         fontWeight="bold"
-        style={{ textShadow: '1px 1px 1px rgba(0,0,0,0.7)' }}
       >
-        {`${(percent * 100).toFixed(0)}%`}
+        {`${percentage.toFixed(1)}%`}
       </text>
     )
   }
 
-  // Custom tooltip component
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: any[] }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload
       return (
-        <div className="bg-white p-3 border border-gray-300 rounded-lg shadow-lg">
-          <p className="font-semibold text-gray-800">{`Package Size: ${label}`}</p>
-          <p className="text-blue-600">
-            {metricType === "revenue" ? "Revenue: " : "Packages Sold: "}
-            <span className="font-medium">{formatValue(data.value)}</span>
-          </p>
-          <p className="text-green-600">
-            Percentage: <span className="font-medium">{data.percentage.toFixed(1)}%</span>
-          </p>
+        <div className="bg-white p-3 border border-gray-300 rounded shadow-lg">
+          <p className="font-medium">{`Pack Size: ${data.name}`}</p>
+          <p className="text-blue-600">{`${titleSuffix}: ${metricType === "revenue" ? `$${data.value.toLocaleString()}` : data.value.toLocaleString()}`}</p>
+          <p className="text-gray-600">{`Percentage: ${data.percentage.toFixed(1)}%`}</p>
         </div>
       )
     }
     return null
   }
 
+  const handlePieClick = (data: { name?: string }) => {
+    if (data && data.name) {
+      const packSize = data.name
+      const products = productLists.byPackageSize[packSize] || []
+      openPanel(
+        products,
+        `${packSize} Package`,
+        `Products with ${packSize} packaging`,
+        { brand: true, category: true, priceRange: true, packSize: false }
+      )
+    }
+  }
+
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-        📦 Package Preference Analysis
-      </h2>
+      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
 
-      <MetricTypeSelector onChange={setMetricType} value={metricType} />
+      <div className="mb-4">
+        <MetricTypeSelector onChange={setMetricType} value={metricType} />
+      </div>
 
-      <h3 className="text-xl font-semibold mb-4">Package Size Distribution by {titleSuffix}</h3>
-      
-      {/* Clarification note */}
-      <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
-        <div className="flex">
-          <div className="ml-3">
-            <p className="text-sm text-blue-700">
-              <strong>Note:</strong> {metricType === "revenue" ? 
-                "Revenue shows total sales value for each package size." : 
-                "Volume shows the number of packages sold (not individual units). For example, if 10 customers buy a '2 Pack', the volume would be 10 packages sold, representing 20 individual units total."
-              }
-            </p>
+      <div className="mb-8">
+        <h3 className="text-xl font-semibold mb-4">Package Size Distribution by {titleSuffix}</h3>
+        
+        {/* 单包装提示信息 */}
+        {!hasVariedPackaging && (
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+            <div className="flex items-center">
+              <div className="text-2xl mr-3">📦</div>
+              <div>
+                <h4 className="font-semibold text-blue-800">Uniform Single Packaging</h4>
+                <p className="text-sm text-blue-700 mt-1">
+                  All <strong>{totalProducts}</strong> products use single unit packaging across all segments.
+                </p>
+              </div>
+            </div>
           </div>
+        )}
+        
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+          <p className="text-sm text-blue-700">
+            <strong>Note:</strong> {metricType === "revenue" ? "Revenue shows total sales value for each package size." : "Volume shows total number of packages sold."}
+          </p>
         </div>
       </div>
       
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        {/* Dimmer Switches Pie Chart */}
-        <div className="bg-gray-50 p-6 rounded-lg">
-          <h4 className="text-lg font-medium mb-4 text-center">🔆 Dimmer Switches - Package Size by {titleSuffix}</h4>
-          <div className="h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={getDimmerChartData()}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomizedLabel}
-                  outerRadius={120}
-                  fill="#8884d8"
-                  dataKey="value"
-                  onClick={handlePieClick}
-                >
-                  {getDimmerChartData().map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                  ))}
-                </Pie>
-                <Tooltip content={<CustomTooltip />} />
-                <Legend 
-                  verticalAlign="bottom" 
-                  height={36}
-                  formatter={(value, entry) => {
-                    const item = getDimmerChartData().find(d => d.name === value)
-                    return `${value} (${item?.percentage.toFixed(1)}%)`
-                  }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
-
-        {/* Light Switches Pie Chart */}
-        <div className="bg-gray-50 p-6 rounded-lg">
-          <h4 className="text-lg font-medium mb-4 text-center">💡 Light Switches - Package Size by {titleSuffix}</h4>
-          <div className="h-[400px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={getSwitchChartData()}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomizedLabel}
-                  outerRadius={120}
-                  fill="#8884d8"
-                  dataKey="value"
-                  onClick={handlePieClick}
-                >
-                  {getSwitchChartData().map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                  ))}
-                </Pie>
-                <Tooltip content={<CustomTooltip />} />
-                <Legend 
-                  verticalAlign="bottom" 
-                  height={36}
-                  formatter={(value, entry) => {
-                    const item = getSwitchChartData().find(d => d.name === value)
-                    return `${value} (${item?.percentage.toFixed(1)}%)`
-                  }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
-        </div>
+      {/* 按segment分开显示 - 动态渲染所有segments */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
+        {data.segmentNames.map((segmentName, segmentIndex) => {
+          const segmentData = getSegmentChartData(segmentName)
+          if (segmentData.length === 0) return null
+          
+          const icons = ["🔆", "💡", "🔥", "⚡", "🌟", "🎯"]
+          const icon = icons[segmentIndex % icons.length]
+          
+          return (
+            <div key={segmentName} className="bg-gray-50 p-6 rounded-lg">
+              <h4 className="text-lg font-medium mb-4 text-center">
+                {icon} {segmentName} - Package Size by {titleSuffix}
+              </h4>
+              <div className="h-[400px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <PieChart>
+                    <Pie
+                      data={segmentData}
+                      cx="50%"
+                      cy="50%"
+                      labelLine={false}
+                      label={renderCustomizedLabel}
+                      outerRadius={120}
+                      fill="#8884d8"
+                      dataKey="value"
+                      onClick={handlePieClick}
+                    >
+                      {segmentData.map((entry, index) => (
+                        <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                      ))}
+                    </Pie>
+                    <Tooltip content={<CustomTooltip />} />
+                    <Legend 
+                      verticalAlign="bottom" 
+                      height={36}
+                      formatter={(value) => {
+                        const item = segmentData.find(d => d.name === value)
+                        return `${value} (${item?.percentage.toFixed(1)}%)`
+                      }}
+                    />
+                  </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+          )
+        })}
       </div>
     </section>
   )
