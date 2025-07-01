@@ -26,12 +26,13 @@ CREATE TABLE IF NOT EXISTS public.review_analysis_aspects (
 CREATE TABLE IF NOT EXISTS public.review_analysis_aspect_categories (
     category_pk BIGSERIAL PRIMARY KEY,
     project_id  VARCHAR NOT NULL,
+    aspect_type VARCHAR(8) NOT NULL,                            -- "phy" | "perf" | "use" - categories are specific to aspect type
     name        TEXT    NOT NULL,
     stage       VARCHAR(16) NOT NULL DEFAULT 'categorisation',  -- categorisation | consolidation | final
     definition  TEXT,
     created_at  TIMESTAMPTZ DEFAULT NOW(),
     updated_at  TIMESTAMPTZ DEFAULT NOW(),
-    UNIQUE (project_id, name, stage)
+    UNIQUE (project_id, aspect_type, name, stage)
 );
 
 -- Link FK now that category table exists

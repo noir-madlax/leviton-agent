@@ -51,6 +51,12 @@ from .validation import (
     ReviewValidationContext,
     create_retry_context
 )
+from .hierarchy_merger import (
+    extract_used_ids,
+    offset_id,
+    create_id_mapping,
+    remap_compound_reason
+)
 
 __all__ = [
     "ReviewExtractionContext",
@@ -305,128 +311,6 @@ class ReviewExtractionStage(BaseStage):
         
         return ctx_left, ctx_right
 
-    def _extract_used_ids(self, hierarchy: Dict[str, Any]) -> tuple[set[str], set[str]]:
-        """Extract used PID and perf_id from hierarchy."""
-        used_pids = set()
-        used_perf_ids = set()
-        
-        # Extract PIDs from phy section
-        if "phy" in hierarchy:
-            for category, details in hierarchy["phy"].items():
-                for pid_detail in details.keys():
-                    if "@" in pid_detail:
-                        pid = pid_detail.split("@")[0]
-                        used_pids.add(pid)
-        
-        # Extract perf_ids from perf section
-        if "perf" in hierarchy:
-            for category, details in hierarchy["perf"].items():
-                for perf_id_detail in details.keys():
-                    if "@" in perf_id_detail:
-                        perf_id = perf_id_detail.split("@")[0]
-                        used_perf_ids.add(perf_id)
-        
-        return used_pids, used_perf_ids
-    
-    def _offset_id(self, original_id: str, used_ids: set[str], is_perf: bool = False) -> str:
-        """Calculate offset ID to continue sequence after used IDs."""
-        if is_perf:
-            # perf_ids: a, b, c, ..., z, aa, ab, ...
-            base_chars = 'abcdefghijklmnopqrstuvwxyz'
-        else:
-            # PIDs: A, B, C, ..., Z, AA, AB, ...
-            base_chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-        
-        # Find the highest used ID
-        max_id = ""
-        for used_id in used_ids:
-            if len(used_id) > len(max_id) or (len(used_id) == len(max_id) and used_id > max_id):
-                max_id = used_id
-        
-        # Generate next ID in sequence
-        if not max_id:
-            return base_chars[0]  # Start with A or a
-        
-        # Convert to next ID
-        if len(max_id) == 1:
-            idx = base_chars.index(max_id)
-            if idx < len(base_chars) - 1:
-                return base_chars[idx + 1]
-            else:
-                return base_chars[0] + base_chars[0]  # AA or aa
-        else:
-            # Handle multi-character IDs (AA, AB, etc.)
-            first_char = max_id[0]
-            second_char = max_id[1]
-            second_idx = base_chars.index(second_char)
-            
-            if second_idx < len(base_chars) - 1:
-                return first_char + base_chars[second_idx + 1]
-            else:
-                first_idx = base_chars.index(first_char)
-                if first_idx < len(base_chars) - 1:
-                    return base_chars[first_idx + 1] + base_chars[0]
-                else:
-                    return base_chars[0] + base_chars[0] + base_chars[0]  # AAA or aaa
-
-    def _create_id_mapping(self, hierarchy: Dict[str, Any], used_pids: set[str], used_perf_ids: set[str]) -> tuple[Dict[str, str], Dict[str, str]]:
-        """Create mapping from original IDs to offset IDs."""
-        pid_mapping = {}
-        perf_id_mapping = {}
-        
-        # Create PID mapping
-        current_pids = set()
-        if "phy" in hierarchy:
-            for category, details in hierarchy["phy"].items():
-                for pid_detail in details.keys():
-                    if "@" in pid_detail:
-                        original_pid = pid_detail.split("@")[0]
-                        current_pids.add(original_pid)
-        
-        for original_pid in sorted(current_pids):
-            new_pid = self._offset_id(original_pid, used_pids, is_perf=False)
-            pid_mapping[original_pid] = new_pid
-            used_pids.add(new_pid)
-        
-        # Create perf_id mapping
-        current_perf_ids = set()
-        if "perf" in hierarchy:
-            for category, details in hierarchy["perf"].items():
-                for perf_id_detail in details.keys():
-                    if "@" in perf_id_detail:
-                        original_perf_id = perf_id_detail.split("@")[0]
-                        current_perf_ids.add(original_perf_id)
-        
-        for original_perf_id in sorted(current_perf_ids):
-            new_perf_id = self._offset_id(original_perf_id, used_perf_ids, is_perf=True)
-            perf_id_mapping[original_perf_id] = new_perf_id
-            used_perf_ids.add(new_perf_id)
-        
-        return pid_mapping, perf_id_mapping
-
-    def _remap_compound_reason(self, reason: str, pid_mapping: Dict[str, str], perf_id_mapping: Dict[str, str]) -> str:
-        """Remap compound reasons like 'A,C' to 'AE,AG' using mappings."""
-        if ',' in reason:
-            # Split compound reason and remap each part
-            parts = [part.strip() for part in reason.split(',')]
-            remapped_parts = []
-            for part in parts:
-                if part in pid_mapping:
-                    remapped_parts.append(pid_mapping[part])
-                elif part in perf_id_mapping:
-                    remapped_parts.append(perf_id_mapping[part])
-                else:
-                    remapped_parts.append(part)  # Keep as-is if not found
-            return ','.join(remapped_parts)
-        else:
-            # Single reason
-            if reason in pid_mapping:
-                return pid_mapping[reason]
-            elif reason in perf_id_mapping:
-                return perf_id_mapping[reason]
-            else:
-                return reason  # Keep as-is if not found
-
     async def _merge_split_results(
         self,
         res_left: ReviewExtractionResult,
@@ -447,8 +331,8 @@ class ReviewExtractionStage(BaseStage):
         left_size = len(ctx_left.expected_review_ids)
         
         # Extract used IDs from left result and create mappings for right result
-        used_pids, used_perf_ids = self._extract_used_ids(res_left.review_hierarchy)
-        pid_mapping, perf_id_mapping = self._create_id_mapping(res_right.review_hierarchy, used_pids, used_perf_ids)
+        used_pids, used_perf_ids = extract_used_ids(res_left.review_hierarchy)
+        pid_mapping, perf_id_mapping = create_id_mapping(res_right.review_hierarchy, used_pids, used_perf_ids)
         
         def merge_phy_section():
             """Merge physical aspects section."""
@@ -519,7 +403,7 @@ class ReviewExtractionStage(BaseStage):
                                 offset_reasons = {}
                                 for reason, rid_list in reasons.items():
                                     # Remap reason IDs (handles both single and compound reasons)
-                                    new_reason = self._remap_compound_reason(reason, pid_mapping, perf_id_mapping)
+                                    new_reason = remap_compound_reason(reason, pid_mapping, perf_id_mapping)
                                     
                                     if isinstance(rid_list, list):
                                         offset_reasons[new_reason] = [rid + left_size for rid in rid_list]
@@ -561,7 +445,7 @@ class ReviewExtractionStage(BaseStage):
                             offset_reasons = {}
                             for reason, rid_list in reasons.items():
                                 # Remap reason IDs (handles both single and compound reasons)
-                                new_reason = self._remap_compound_reason(reason, pid_mapping, perf_id_mapping)
+                                new_reason = remap_compound_reason(reason, pid_mapping, perf_id_mapping)
                                 
                                 if isinstance(rid_list, list):
                                     offset_reasons[new_reason] = [rid + left_size for rid in rid_list]

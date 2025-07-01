@@ -42,7 +42,8 @@ from review_analysis.repositories.aspect_category_repository import (
 )
 from core.database.connection import get_supabase_client
 from review_analysis.llm.review_extraction_stage import format_reviews_for_prompt
-from review_analysis import config as ra_cfg
+from review_analysis.llm.hierarchy_merger import merge_hierarchies_batch_with_mappings
+from review_analysis import review_analysis_config as ra_cfg
 from core.utils.batching import make_batches
 from core.llm_taxonomy_pipeline.pipeline_stage import TaxonomyDTO
 
@@ -133,25 +134,46 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 seen_texts.add(dedup_key)
                 unique_reviews.append(r)
 
-            # Build input string: "RID#review" per prompt spec
-            input_block, expected_ids = format_reviews_for_prompt(
-                [
-                    {"title": r.get("review_title", ""), "text": r.get("review_text", "")}
-                    for r in unique_reviews
-                ]
+            # Split reviews into batches for prompt size management -------
+            review_batches = make_batches(unique_reviews, ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT)
+            
+            # Process each batch of reviews for this product -------------
+            all_hierarchies: List[Dict[str, Any]] = []
+            all_review_mappings: List[Dict[int, str]] = []  # Track review ID mappings for each batch
+            
+            for batch in review_batches:
+                # Create review ID mapping for this batch (batch_index -> actual_review_id)
+                review_id_mapping = {
+                    idx: review["review_id"] 
+                    for idx, review in enumerate(batch)
+                }
+                all_review_mappings.append(review_id_mapping)
+                
+                # Build input string: "RID#review" per prompt spec (still uses 0,1,2...)
+                input_block, expected_ids = format_reviews_for_prompt(
+                    [
+                        {"title": r.get("review_title", ""), "text": r.get("review_text", "")}
+                        for r in batch
+                    ]
+                )
+
+                ctx = ReviewExtractionContext(
+                    product_category=request.product_category,
+                    formatted_reviews=input_block,
+                    expected_review_ids=set(expected_ids),
+                    asin=str(product_id),
+                    product_title=str(product_id),
+                )
+                result: ReviewExtractionResult = await self._extraction_stage.execute(ctx)
+                all_hierarchies.append(result.review_hierarchy)
+
+            # Merge all batch hierarchies with proper index offsetting ----
+            merged_hierarchy, global_review_mapping = merge_hierarchies_batch_with_mappings(
+                all_hierarchies, all_review_mappings
             )
 
-            ctx = ReviewExtractionContext(
-                product_category=request.product_category,
-                formatted_reviews=input_block,
-                expected_review_ids=set(expected_ids),
-                asin=str(product_id),
-                product_title=str(product_id),
-            )
-            result: ReviewExtractionResult = await self._extraction_stage.execute(ctx)
-
-            # Persist aspects & occurrences ------------------------------
-            await self._persist_extraction_result(request.project_id, product_id, result.review_hierarchy)
+            # Persist aspects & occurrences with actual review IDs --------
+            await self._persist_extraction_result(request.project_id, product_id, merged_hierarchy, global_review_mapping)
 
         # TODO: Categorisation, consolidation, refinement persistence     
         #       The skeleton ends here – add later as needed.              
@@ -177,7 +199,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
     # Internal helpers
     # ------------------------------------------------------------------
 
-    async def _persist_extraction_result(self, project_id: str, product_id: str, hierarchy: Dict[str, Any]) -> None:  # noqa: D401 – internal
+    async def _persist_extraction_result(self, project_id: str, product_id: str, hierarchy: Dict[str, Any], review_mapping: Dict[int, str]) -> None:  # noqa: D401 – internal
         """Flatten *hierarchy* into aspect / occurrence rows and persist them."""
         from review_analysis.models import ExtractionResult  # local import to avoid cycle
 
@@ -229,10 +251,16 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             aspect_pk = pk_map[aspect_id]
             causes_pks = [pk_map.get(cid) for cid in node["reasons"] if pk_map.get(cid) is not None]
 
-            for review_id in node["review_ids"]:
+            for review_index in node["review_ids"]:
+                # Convert batch index to actual review ID using the mapping
+                actual_review_id = review_mapping.get(review_index)
+                if actual_review_id is None:
+                    logger.error(f"Missing review index {review_index} in review_mapping. Available keys: {list(review_mapping.keys())}")
+                    raise KeyError(f"review_index {review_index} not found in review_mapping")
+                
                 occ = AspectOccurrence(
                     aspect_pk=aspect_pk,
-                    review_id=str(review_id),
+                    review_id=str(actual_review_id),
                     sentiment=node["sentiment"],
                     causes=causes_pks,
                 )
@@ -309,12 +337,13 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         aspect_type_map = ra_cfg.ASPECT_TYPE_MAP
 
         for aspect_code, (_human, _ctx_desc) in aspect_type_map.items():
-            # Pull all categories for this project / aspect
+            # Pull ONLY categorisation stage categories for this project / aspect
             rows = (
                 sb.table("review_analysis_aspect_categories")
                 .select("category_pk, name, definition")
                 .eq("project_id", project_id)
                 .eq("aspect_type", aspect_code)
+                .eq("stage", "categorisation")
                 .execute()
                 .data
                 or []
@@ -341,9 +370,8 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
                 # TODO: persist mapping between originals and new names (similar to product segmentation)
 
-            # Final consolidated categories in current_consolidated – ensure they exist in DB
-            # Simplified: upsert them as stage="final"
-            up_rows = [
+            # Insert final consolidated categories with stage="final"
+            final_rows = [
                 {
                     "project_id": project_id,
                     "aspect_type": aspect_code,
@@ -353,7 +381,8 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 }
                 for tax in current_consolidated
             ]
-            await self._cat_repo.batch_insert(up_rows) 
+            if final_rows:
+                await self._cat_repo.batch_insert(final_rows) 
 
     # ------------------------------------------------------------------
     # Refinement flow
@@ -379,12 +408,13 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             if not rows:
                 continue
 
-            # Load categories (should be stage="final")
+            # Load categories from stage="final" only
             cat_rows = (
                 sb.table("review_analysis_aspect_categories")
                 .select("category_pk, name, definition")
                 .eq("project_id", project_id)
                 .eq("aspect_type", aspect_code)
+                .eq("stage", "final")
                 .execute()
                 .data
                 or []
