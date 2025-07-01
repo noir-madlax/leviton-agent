@@ -87,6 +87,125 @@ except ImportError:  # noqa: WPS440
     except ImportError:
         ASGITransport = None  # type: ignore
 
+
+def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False) -> bool:
+    """
+    Comprehensive cleanup of test data from review analysis tables.
+    
+    Args:
+        sb_client: Supabase client
+        project_id: Project ID to clean up
+        fail_on_existing: If True, raise error when existing data found
+        
+    Returns:
+        bool: True if cleanup was needed and performed, False if already clean
+    """
+    log_with_timestamp(f"🧹 Starting cleanup for project_id: {project_id}")
+    
+    try:
+        # Step 1: Check what exists
+        log_with_timestamp("🔍 Checking for existing data...")
+        
+        aspects_count = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
+        aspects_total = aspects_count.count if hasattr(aspects_count, 'count') else len(aspects_count.data)
+        
+        categories_count = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
+        categories_total = categories_count.count if hasattr(categories_count, 'count') else len(categories_count.data)
+        
+        log_with_timestamp(f"📊 Found {aspects_total} aspects and {categories_total} categories")
+        
+        if aspects_total == 0 and categories_total == 0:
+            log_with_timestamp("✅ Database is already clean - no cleanup needed")
+            return False
+        
+        if fail_on_existing:
+            raise AssertionError(f"Test environment is dirty: {aspects_total} aspects and {categories_total} categories exist. Database must be clean before running test.")
+        
+        # Step 2: Get aspect PKs for occurrence cleanup
+        if aspects_total > 0:
+            log_with_timestamp("🔍 Getting aspect PKs for occurrence cleanup...")
+            all_aspects = []
+            offset = 0
+            batch_size = 1000
+            
+            while True:
+                batch = sb_client.table("review_analysis_aspects").select("aspect_pk").eq("project_id", project_id).range(offset, offset + batch_size - 1).execute().data
+                if not batch:
+                    break
+                all_aspects.extend(batch)
+                offset += batch_size
+                if len(all_aspects) % 1000 == 0:
+                    log_with_timestamp(f"  📦 Loaded {len(all_aspects)} aspect PKs so far...")
+            
+            aspect_pks = [a["aspect_pk"] for a in all_aspects]
+            log_with_timestamp(f"✅ Found {len(aspect_pks)} aspect PKs")
+            
+            # Step 3: Clean up aspect occurrences first (foreign key dependency)
+            if aspect_pks:
+                log_with_timestamp("🗑️ Cleaning up aspect occurrences...")
+                # Clean in batches to avoid query size limits
+                batch_size = 100
+                total_deleted = 0
+                
+                for i in range(0, len(aspect_pks), batch_size):
+                    batch_pks = aspect_pks[i:i + batch_size]
+                    try:
+                        result = sb_client.table("review_analysis_aspect_occurrences").delete().in_("aspect_pk", batch_pks).execute()
+                        batch_deleted = len(result.data) if result.data else 0
+                        total_deleted += batch_deleted
+                        if batch_deleted > 0:
+                            log_with_timestamp(f"  ✅ Batch {i//batch_size + 1}: Deleted {batch_deleted} occurrences")
+                    except Exception as e:
+                        log_with_timestamp(f"  ⚠️ Batch {i//batch_size + 1} failed: {e}", "WARNING")
+                
+                log_with_timestamp(f"✅ Deleted {total_deleted} aspect occurrences total")
+        
+        # Step 4: Delete aspects
+        if aspects_total > 0:
+            log_with_timestamp(f"🗑️ Deleting {aspects_total} aspects...")
+            try:
+                result = sb_client.table("review_analysis_aspects").delete().eq("project_id", project_id).execute()
+                deleted_count = len(result.data) if result.data else aspects_total
+                log_with_timestamp(f"✅ Deleted {deleted_count} aspects")
+            except Exception as e:
+                log_with_timestamp(f"❌ Failed to delete aspects: {e}", "ERROR")
+                raise
+        
+        # Step 5: Delete categories  
+        if categories_total > 0:
+            log_with_timestamp(f"🗑️ Deleting {categories_total} categories...")
+            try:
+                result = sb_client.table("review_analysis_aspect_categories").delete().eq("project_id", project_id).execute()
+                deleted_count = len(result.data) if result.data else categories_total
+                log_with_timestamp(f"✅ Deleted {deleted_count} categories")
+            except Exception as e:
+                log_with_timestamp(f"❌ Failed to delete categories: {e}", "ERROR")
+                raise
+        
+        # Step 6: Verify cleanup
+        log_with_timestamp("🔍 Verifying cleanup...")
+        
+        remaining_aspects = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
+        remaining_categories = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
+        
+        aspects_remaining = remaining_aspects.count if hasattr(remaining_aspects, 'count') else len(remaining_aspects.data)
+        categories_remaining = remaining_categories.count if hasattr(remaining_categories, 'count') else len(remaining_categories.data)
+        
+        if aspects_remaining > 0 or categories_remaining > 0:
+            error_msg = f"Cleanup incomplete: {aspects_remaining} aspects and {categories_remaining} categories remain"
+            log_with_timestamp(f"❌ {error_msg}", "ERROR")
+            raise AssertionError(error_msg)
+        
+        log_with_timestamp("✅ Cleanup completed successfully!")
+        return True
+        
+    except Exception as e:
+        log_with_timestamp(f"❌ Cleanup failed: {e}", "ERROR")
+        import traceback
+        traceback.print_exc()
+        raise
+
+
 @pytest.mark.asyncio
 async def test_full_review_analysis_pipeline() -> None:
     """Run full pipeline against real Supabase and assert rows are written."""
@@ -141,44 +260,25 @@ async def test_full_review_analysis_pipeline() -> None:
     print(f"✅ Found {len(reviews)} reviews", flush=True)
     log_with_timestamp(f"✅ Found reviews in database (check took {reviews_check_time:.2f}s)")
 
-    # --- Clean up any existing test data --------------------------------
-    print("🧹 Starting cleanup phase...", flush=True)
+    # --- Clean up any existing test data at the beginning ---------------
+    print("🧹 Starting initial cleanup check...", flush=True)
     cleanup_start_time = time.time()
-    log_with_timestamp(f"🧹 Starting cleanup of existing test data for project_id: {project_id}")
+    log_with_timestamp(f"🧹 Starting initial cleanup check for project_id: {project_id}")
     
     try:
-        # First, get a complete count of what exists
-        print("🔍 Getting complete inventory of existing data...", flush=True)
-        
-        existing_aspects_count = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
-        aspects_total = existing_aspects_count.count if hasattr(existing_aspects_count, 'count') else len(existing_aspects_count.data)
-        print(f"📊 Found {aspects_total} total aspects for project {project_id}", flush=True)
-        log_with_timestamp(f"📊 Found {aspects_total} total aspects for project {project_id}")
-        
-        existing_categories_count = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
-        categories_total = existing_categories_count.count if hasattr(existing_categories_count, 'count') else len(existing_categories_count.data)
-        print(f"📊 Found {categories_total} total categories for project {project_id}", flush=True)
-        log_with_timestamp(f"📊 Found {categories_total} total categories for project {project_id}")
-        
-        if aspects_total > 0 or categories_total > 0:
-            print(f"🚨 FOUND EXISTING DATA! This will cause duplicate key errors. Failing test immediately.", flush=True)
-            log_with_timestamp(f"🚨 FOUND EXISTING DATA! {aspects_total} aspects and {categories_total} categories found", "ERROR")
-            raise AssertionError(f"Test environment is dirty: {aspects_total} aspects and {categories_total} categories still exist from previous runs. Clean the database manually before running this test.")
-        
-        print("✅ Database is clean - no existing test data found", flush=True)
-        log_with_timestamp("✅ Database is clean - no existing test data found")
+        cleanup_needed = cleanup_test_data(sb_client, project_id, fail_on_existing=False)
+        if cleanup_needed:
+            log_with_timestamp("✅ Initial cleanup completed - database is now clean")
+        else:
+            log_with_timestamp("✅ Database was already clean")
         
         cleanup_time = time.time() - cleanup_start_time
-        print(f"✅ Cleanup verification completed in {cleanup_time:.2f}s", flush=True)
-        log_with_timestamp(f"✅ Cleanup verification completed in {cleanup_time:.2f}s")
+        log_with_timestamp(f"✅ Initial cleanup check completed in {cleanup_time:.2f}s")
         
-    except AssertionError:
-        # Re-raise assertion errors
-        raise
     except Exception as e:
         cleanup_time = time.time() - cleanup_start_time
-        print(f"❌ Cleanup verification failed: {e} (took {cleanup_time:.2f}s)", flush=True)
-        log_with_timestamp(f"❌ Cleanup verification failed: {e} (took {cleanup_time:.2f}s)", "ERROR")
+        print(f"❌ Initial cleanup failed: {e} (took {cleanup_time:.2f}s)", flush=True)
+        log_with_timestamp(f"❌ Initial cleanup failed: {e} (took {cleanup_time:.2f}s)", "ERROR")
         raise
 
     # --- call API --------------------------------------------------------
@@ -212,7 +312,7 @@ async def test_full_review_analysis_pipeline() -> None:
             print(f"📥 Got response: {resp.status_code}", flush=True)
     else:
         print("🔧 Using modern AsyncClient with ASGITransport", flush=True)
-        log_with_timestamp("🔧 Using modern httpx AsyncClient with ASGITransport")
+        log_with_timestamp("�� Using modern httpx AsyncClient with ASGITransport")
         try:
             transport = ASGITransport(app=app, lifespan="auto")  # httpx >=0.26
         except TypeError:  # older signature without lifespan
@@ -283,7 +383,6 @@ async def test_full_review_analysis_pipeline() -> None:
             sb_client.table("review_analysis_aspects")
             .select("aspect_pk, detail_text, category_pk")
             .eq("project_id", project_id)
-            .limit(20)
             .execute()
             .data
         )
@@ -315,7 +414,7 @@ async def test_full_review_analysis_pipeline() -> None:
         
         if aspects and not aspects_done:
             sample = [a["detail_text"][:50] + "..." if len(a["detail_text"]) > 50 else a["detail_text"] for a in aspects[:5]]
-            log_with_timestamp(f"🎯 MILESTONE: Extracted aspects detected! Sample of {len(sample)}/{len(aspects)}: {sample}")
+            log_with_timestamp(f"🎯 MILESTONE: Extracted aspects detected! Total: {len(aspects)}, Sample of first 5: {sample}")
             aspects_done = True
             changes_detected = True
 
@@ -326,7 +425,6 @@ async def test_full_review_analysis_pipeline() -> None:
             .select("name, stage")
             .eq("project_id", project_id)
             .eq("stage", "categorisation")
-            .limit(20)
             .execute()
             .data
         )
@@ -334,7 +432,7 @@ async def test_full_review_analysis_pipeline() -> None:
         
         if categories_cat and not cat_categorised:
             names = [c["name"] for c in categories_cat[:5]]
-            log_with_timestamp(f"🏷️ MILESTONE: Categorised categories detected! Count: {len(categories_cat)}, Sample: {names} (query: {categories_cat_query_time:.2f}s)")
+            log_with_timestamp(f"🏷️ MILESTONE: Categorised categories detected! Total: {len(categories_cat)}, Sample of first 5: {names} (query: {categories_cat_query_time:.2f}s)")
             cat_categorised = True
             changes_detected = True
 
@@ -345,7 +443,6 @@ async def test_full_review_analysis_pipeline() -> None:
             .select("name")
             .eq("project_id", project_id)
             .eq("stage", "final")
-            .limit(20)
             .execute()
             .data
         )
@@ -359,7 +456,7 @@ async def test_full_review_analysis_pipeline() -> None:
         
         if categories_final and not cat_final:
             names = [c["name"] for c in categories_final[:5]]
-            log_with_timestamp(f"🎉 MILESTONE: Final consolidated categories detected! Count: {len(categories_final)}, Sample: {names}")
+            log_with_timestamp(f"🎉 MILESTONE: Final consolidated categories detected! Total: {len(categories_final)}, Sample of first 5: {names}")
             cat_final = True
             changes_detected = True
 
@@ -424,32 +521,18 @@ async def test_full_review_analysis_pipeline() -> None:
     
     log_with_timestamp(f"✅ TEST PASSED! Final results: {len(final_aspects)} aspects, {len(final_categories)} final categories")
 
-        # Clean up
+    # --- Final cleanup using comprehensive cleanup function -------------
     log_with_timestamp("🧹 Starting final cleanup...")
     cleanup_final_start = time.time()
     
     try:
-        # Clean up test data
-        aspects_deleted = sb_client.table("review_analysis_aspects").delete().eq("project_id", project_id).execute()
-        categories_deleted = sb_client.table("review_analysis_aspect_categories").delete().eq("project_id", project_id).execute()
-        
-        # Verify cleanup
-        remaining_aspects = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
-        remaining_categories = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
-        
-        aspects_remaining = remaining_aspects.count if hasattr(remaining_aspects, 'count') else len(remaining_aspects.data)
-        categories_remaining = remaining_categories.count if hasattr(remaining_categories, 'count') else len(remaining_categories.data)
-        
-        if aspects_remaining > 0 or categories_remaining > 0:
-            log_with_timestamp(f"🚨 CLEANUP FAILED! {aspects_remaining} aspects and {categories_remaining} categories remain", "ERROR")
-            raise AssertionError(f"Final cleanup failed: {aspects_remaining} aspects and {categories_remaining} categories remain")
-        
-        log_with_timestamp("✅ Final cleanup completed successfully - all test data removed")
+        cleanup_test_data(sb_client, project_id, fail_on_existing=False)
+        cleanup_final_time = time.time() - cleanup_final_start
+        log_with_timestamp(f"✅ Final cleanup completed successfully in {cleanup_final_time:.2f}s - all test data removed")
     except Exception as e:
-        log_with_timestamp(f"❌ Final cleanup failed: {e}", "ERROR")
+        cleanup_final_time = time.time() - cleanup_final_start
+        log_with_timestamp(f"❌ Final cleanup failed: {e} (took {cleanup_final_time:.2f}s)", "ERROR")
         raise
     
-    cleanup_final_time = time.time() - cleanup_final_start
     final_total_time = time.time() - test_start_time
-    
-    log_with_timestamp(f"🎉 TEST COMPLETED SUCCESSFULLY! Cleanup: {cleanup_final_time:.2f}s, Total time: {final_total_time:.2f}s") 
+    log_with_timestamp(f"🎉 TEST COMPLETED SUCCESSFULLY! Total time: {final_total_time:.2f}s") 
