@@ -5,6 +5,7 @@ from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
 from pathlib import Path
 import sys
+import asyncio
 
 # Add project root to Python path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -19,6 +20,11 @@ from product_segment.services.db_product_segmentation import DatabaseProductSegm
 from product_segment.repositories.product_segment_assignment_repository import ProductSegmentRepository
 from product_segment.repositories.product_segment_run_repository import SegmentationRunRepository
 from product_segment.repositories.product_segment_taxonomy_repository import ProductTaxonomyRepository
+
+# 导入评论分析相关模块
+from review_analysis.models import ReviewAnalysisRequest
+from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
+from review_analysis import review_analysis_config as ra_cfg
 
 logger = logging.getLogger(__name__)
 
@@ -38,7 +44,10 @@ class ProjectService:
             # 2. Calculate statistics
             stats = await self._calculate_project_stats(filtered_asins, request.filters)
             
-            # 3. Create project record with segmentation fields
+            # 3. Calculate review analysis estimates for accurate display
+            review_estimates = await self._calculate_review_analysis_estimate(filtered_asins)
+            
+            # 4. Create project record with segmentation fields
             project_data = {
                 "project_name": request.project_name,
                 "company_name": request.company_name,
@@ -51,11 +60,14 @@ class ProjectService:
                 "top_sales_count": int(request.filters.top_sales_count) if request.filters.top_sales_count else None,
                 "total_products": int(stats["total_products"]),
                 "total_brands": int(stats["total_brands"]),
-                "total_reviews": int(stats["total_reviews"]),
+                "total_reviews": int(stats["total_reviews"]),  # This is total reviews in dataset
                 "avg_monthly_sales": float(stats["avg_monthly_sales"]),
                 "status": "active",
                 "segmentation_status": "pending",
-                "segmentation_started_at": datetime.utcnow().isoformat()
+                "segmentation_started_at": datetime.utcnow().isoformat(),
+                # Add review analysis estimates
+                "estimated_reviews_to_analyze": review_estimates['estimated_reviews_to_analyze'],
+                "estimated_llm_calls": review_estimates['estimated_llm_calls_extraction']
             }
             
             # 4. Save to database
@@ -151,11 +163,11 @@ class ProjectService:
             return f'Product {product_id}'
 
     async def _complete_segmentation(self, project_id: str):
-        """记录细分完成时间和耗时"""
+        """记录细分完成时间和耗时，并触发review analysis"""
         try:
-            # 获取开始时间
+            # 获取开始时间和项目信息
             project = self.supabase.table('projects')\
-                .select('segmentation_started_at')\
+                .select('segmentation_started_at, selected_product_asins, selected_categories')\
                 .eq('id', project_id)\
                 .single().execute()
             
@@ -167,10 +179,20 @@ class ProjectService:
                 self.supabase.table('projects').update({
                     "segmentation_completed_at": completed_at.isoformat(),
                     "segmentation_duration_seconds": duration_seconds,
-                    "segmentation_status": "completed"
+                    "segmentation_status": "completed",
+                    "review_analysis_status": "pending",
+                    "review_analysis_started_at": completed_at.isoformat()
                 }).eq('id', project_id).execute()
                 
                 logger.info(f"Project {project_id} segmentation completed in {duration_seconds} seconds")
+                
+                # 触发review analysis
+                if project.data.get('selected_product_asins') and project.data.get('selected_categories'):
+                    await self._process_project_review_analysis(
+                        project_id,
+                        project.data['selected_product_asins'],
+                        project.data['selected_categories'][0] if project.data['selected_categories'] else "Unknown"
+                    )
         except Exception as e:
             logger.error(f"Error completing segmentation for project {project_id}: {e}")
 
@@ -184,6 +206,70 @@ class ProjectService:
             logger.error(f"Project {project_id} segmentation failed: {error_message}")
         except Exception as e:
             logger.error(f"Error recording segmentation failure for project {project_id}: {e}")
+
+    async def _process_project_review_analysis(self, project_id: str, product_ids: List[str], category: str):
+        """处理项目的评论分析（异步）"""
+        try:
+            logger.info(f"Starting review analysis for project {project_id} with {len(product_ids)} products")
+            
+            # 1. 更新状态为处理中
+            self.supabase.table('projects').update({
+                "review_analysis_status": "processing"
+            }).eq('id', project_id).execute()
+            
+            # 2. 创建review analysis请求
+            review_service = DatabaseReviewAnalysisService()
+            review_request = ReviewAnalysisRequest(
+                project_id=project_id,
+                product_ids=product_ids,  # ASINs
+                product_category=category
+            )
+            
+            # 3. 执行review analysis
+            analysis_id = await review_service.analyse(review_request)
+            
+            # 4. 更新完成状态
+            await self._complete_review_analysis(project_id, analysis_id)
+            
+        except Exception as e:
+            logger.error(f"Error in project review analysis: {e}")
+            await self._fail_review_analysis(project_id, str(e))
+
+    async def _complete_review_analysis(self, project_id: str, analysis_id: str):
+        """记录review analysis完成"""
+        try:
+            # 获取开始时间
+            project = self.supabase.table('projects')\
+                .select('review_analysis_started_at')\
+                .eq('id', project_id)\
+                .single().execute()
+            
+            if project.data and project.data['review_analysis_started_at']:
+                started_at = datetime.fromisoformat(project.data['review_analysis_started_at'].replace('Z', '+00:00'))
+                completed_at = datetime.now(timezone.utc)
+                duration_seconds = int((completed_at - started_at).total_seconds())
+                
+                self.supabase.table('projects').update({
+                    "review_analysis_completed_at": completed_at.isoformat(),
+                    "review_analysis_duration_seconds": duration_seconds,
+                    "review_analysis_status": "completed",
+                    "review_analysis_id": analysis_id
+                }).eq('id', project_id).execute()
+                
+                logger.info(f"Project {project_id} review analysis completed in {duration_seconds} seconds")
+        except Exception as e:
+            logger.error(f"Error completing review analysis for project {project_id}: {e}")
+
+    async def _fail_review_analysis(self, project_id: str, error_message: str):
+        """记录review analysis失败状态"""
+        try:
+            self.supabase.table('projects').update({
+                "review_analysis_status": "failed"
+            }).eq('id', project_id).execute()
+            
+            logger.error(f"Project {project_id} review analysis failed: {error_message}")
+        except Exception as e:
+            logger.error(f"Error recording review analysis failure for project {project_id}: {e}")
 
     async def _extract_asins_from_filters(self, filters) -> List[str]:
         """Extract platform ID list based on project filters.
@@ -510,11 +596,16 @@ class ProjectService:
                 'stats': {
                     'totalProducts': total_products,
                     'totalBrands': total_brands,
-                    'totalReviews': total_reviews,
+                    'totalReviews': total_reviews,  # Total reviews in database
                     'avgMonthlySales': avg_monthly_sales,
                     'sources': source_stats,
                     'categories': category_stats,
-                    'brands': brand_stats
+                    'brands': brand_stats,
+                    # 🚀 NEW: Smart review analysis estimates
+                    'estimatedReviewsToAnalyze': review_estimates['estimated_reviews_to_analyze'],
+                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction'],
+                    'maxReviewsPerProduct': review_estimates['max_reviews_per_product'],
+                    'reviewSamplingStrategy': review_estimates['sampling_strategy']
                 },
                 'topProducts': top_products
             }
@@ -647,6 +738,10 @@ class ProjectService:
             total_products = len(final_products)
             total_brands = len(set(row['brand'] for row in final_products if row.get('brand')))
             total_reviews = sum(row.get('reviews_count', 0) or 0 for row in final_products)
+            
+            # Calculate smart review analysis estimates
+            product_asins = [str(row['platform_id']) for row in final_products if row.get('platform_id')]
+            review_estimates = await self._calculate_review_analysis_estimate(product_asins)
             
             sales_volumes = [row.get('monthly_sales_volume', 0) for row in final_products if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
             avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0
@@ -851,29 +946,109 @@ class ProjectService:
                 except Exception as e:
                     logger.warning(f"Failed to get segmentation run details: {e}")
             
-            # 步骤4: 数据准备完成
+            # 步骤4: 评论分析
+            review_analysis_status = project.get("review_analysis_status", "pending")
             step4_status = "pending"
             step4_description = "Waiting for segmentation completion"
             
             if segmentation_status == "completed":
-                step4_status = "completed"
-                step4_description = "Project ready for analysis"
+                if review_analysis_status == "pending":
+                    step4_status = "pending"
+                    step4_description = "Waiting to start review analysis"
+                elif review_analysis_status == "processing":
+                    step4_status = "in_progress"
+                    step4_description = "Processing review analysis with AI"
+                elif review_analysis_status == "completed":
+                    step4_status = "completed"
+                    duration = project.get("review_analysis_duration_seconds", 0)
+                    step4_description = f"Completed review analysis in {duration} seconds"
+                elif review_analysis_status == "failed":
+                    step4_status = "failed"
+                    step4_description = "Review analysis failed"
             elif segmentation_status == "failed":
                 step4_status = "failed"
-                step4_description = "Data preparation failed"
+                step4_description = "Cannot start review analysis due to segmentation failure"
             
             step4 = {
-                "step": "data_preparation",
-                "name": "Data Preparation",
+                "step": "review_analysis",
+                "name": "Review Analysis",
                 "status": step4_status,
-                "started_at": project.get("segmentation_completed_at"),
-                "completed_at": project.get("segmentation_completed_at"),
+                "started_at": project.get("review_analysis_started_at"),
+                "completed_at": project.get("review_analysis_completed_at"),
                 "description": step4_description
             }
             progress["steps"].append(step4)
+
+            # 步骤5: 数据准备完成
+            step5_status = "pending"
+            step5_description = "Waiting for all processing to complete"
+            
+            if review_analysis_status == "completed":
+                step5_status = "completed"
+                step5_description = "Project ready for analysis"
+            elif review_analysis_status == "failed" or segmentation_status == "failed":
+                step5_status = "failed"
+                step5_description = "Data preparation failed"
+            
+            step5 = {
+                "step": "data_preparation",
+                "name": "Data Preparation",
+                "status": step5_status,
+                "started_at": project.get("review_analysis_completed_at"),
+                "completed_at": project.get("review_analysis_completed_at"),
+                "description": step5_description
+            }
+            progress["steps"].append(step5)
             
             return progress
             
         except Exception as e:
             logger.error(f"Error getting project progress for {project_id}: {e}")
             raise 
+
+    async def _calculate_review_analysis_estimate(self, product_ids: List[str]) -> Dict[str, Any]:
+        """Calculate the estimated number of reviews that will actually be analyzed."""
+        try:
+            total_estimated_reviews = 0
+            total_estimated_llm_calls = 0
+            
+            supabase = get_supabase_client()
+            
+            for product_id in product_ids:
+                # Get review count for this product with sampling limit
+                review_result = supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .eq('product_id', product_id)\
+                    .limit(ra_cfg.MAX_REVIEWS_PER_PRODUCT)\
+                    .execute()
+                
+                product_review_count = min(review_result.count or 0, ra_cfg.MAX_REVIEWS_PER_PRODUCT)
+                total_estimated_reviews += product_review_count
+                
+                # Calculate LLM calls for this product
+                if product_review_count > 0:
+                    batches = (product_review_count + ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT - 1) // ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT
+                    total_estimated_llm_calls += batches
+                
+                # Apply global limit
+                if total_estimated_reviews >= ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL:
+                    total_estimated_reviews = ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL
+                    break
+            
+            return {
+                'estimated_reviews_to_analyze': total_estimated_reviews,
+                'estimated_llm_calls_extraction': total_estimated_llm_calls,
+                'max_reviews_per_product': ra_cfg.MAX_REVIEWS_PER_PRODUCT,
+                'global_review_limit': ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL,
+                'sampling_strategy': ra_cfg.SAMPLE_STRATEGY
+            }
+            
+        except Exception as e:
+            logger.error(f"Error calculating review analysis estimate: {e}")
+            return {
+                'estimated_reviews_to_analyze': 0,
+                'estimated_llm_calls_extraction': 0,
+                'max_reviews_per_product': ra_cfg.MAX_REVIEWS_PER_PRODUCT,
+                'global_review_limit': ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL,
+                'sampling_strategy': ra_cfg.SAMPLE_STRATEGY
+            } 

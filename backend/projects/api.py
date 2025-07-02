@@ -130,4 +130,92 @@ async def get_project_progress(
         return progress
     except Exception as e:
         logger.error(f"Error getting project progress: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to get project progress: {str(e)}") 
+        raise HTTPException(status_code=500, detail=f"Failed to get project progress: {str(e)}")
+
+
+@router.post("/trigger-review-analysis/{project_id}")
+async def trigger_review_analysis(
+    project_id: str,
+    service: ProjectService = Depends(get_project_service)
+):
+    """Manually trigger review analysis for a project."""
+    try:
+        # Get project details
+        project_result = service.supabase.table('projects')\
+            .select('selected_product_asins, selected_categories, review_analysis_status')\
+            .eq('id', project_id)\
+            .single()\
+            .execute()
+        
+        if not project_result.data:
+            raise HTTPException(status_code=404, detail="Project not found")
+        
+        project = project_result.data
+        
+        # Check if already processing or completed
+        if project.get('review_analysis_status') in ['processing', 'completed']:
+            return {
+                "message": f"Review analysis already {project['review_analysis_status']} for project {project_id}",
+                "status": project['review_analysis_status']
+            }
+        
+        # Check prerequisites
+        if not project.get('selected_product_asins'):
+            raise HTTPException(status_code=400, detail="Project has no selected ASINs")
+        
+        if not project.get('selected_categories'):
+            raise HTTPException(status_code=400, detail="Project has no selected categories")
+        
+        # Trigger review analysis
+        await service._process_project_review_analysis(
+            project_id,
+            project['selected_product_asins'],
+            project['selected_categories'][0]
+        )
+        
+        return {
+            "message": f"Review analysis triggered for project {project_id}",
+            "project_id": project_id,
+            "product_count": len(project['selected_product_asins']),
+            "category": project['selected_categories'][0]
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error triggering review analysis for project {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to trigger review analysis: {str(e)}")
+
+
+@router.get("/review-analysis-status/{project_id}")
+async def get_review_analysis_status(
+    project_id: str,
+    service: ProjectService = Depends(get_project_service)
+):
+    """Get the current review analysis status for a project."""
+    try:
+        project_result = service.supabase.table('projects')\
+            .select('''
+                review_analysis_status,
+                review_analysis_started_at,
+                review_analysis_completed_at,
+                review_analysis_duration_seconds,
+                review_analysis_id
+            ''')\
+            .eq('id', project_id)\
+            .single()\
+            .execute()
+        
+        if not project_result.data:
+            raise HTTPException(status_code=404, detail="Project not found")
+        
+        return {
+            "project_id": project_id,
+            **project_result.data
+        }
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error getting review analysis status for project {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get review analysis status: {str(e)}") 

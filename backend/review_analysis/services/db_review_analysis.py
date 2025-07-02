@@ -91,20 +91,36 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         logger.info("▶️  Starting review-analysis %s for %d products", analysis_id, len(request.product_ids))
 
         # ------------------------------------------------------------------
-        # 0) Load reviews for all products (SQL ‑> Supabase) -----------------
+        # 0) Load reviews with smart sampling (SQL ‑> Supabase) ---------------
         # ------------------------------------------------------------------
         sb = get_supabase_client()
         review_rows: List[Dict] = []
+        total_reviews_loaded = 0
+        
+        logger.info(f"🎯 Smart sampling: max {ra_cfg.MAX_REVIEWS_PER_PRODUCT} reviews per product, global limit {ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL}")
+        
         try:
-            review_rows = (
-                sb.table("product_reviews")
-                .select("product_id, review_id, review_title, review_text")
-                .in_("product_id", request.product_ids)
-                .limit(10_000)  # hard safety cap
-                .execute()
-                .data
-                or []
-            )
+            for product_id in request.product_ids:
+                if total_reviews_loaded >= ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL:
+                    logger.warning(f"⚠️  Reached global limit ({ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL}), stopping")
+                    break
+                
+                # Smart sampling per product with rating-based selection
+                product_reviews = (
+                    sb.table("product_reviews")
+                    .select("product_id, review_id, review_title, review_text, rating")
+                    .eq("product_id", product_id)
+                    .order("rating", desc=True)  # Prioritize high-quality reviews
+                    .limit(ra_cfg.MAX_REVIEWS_PER_PRODUCT)
+                    .execute()
+                    .data
+                    or []
+                )
+                
+                review_rows.extend(product_reviews)
+                total_reviews_loaded += len(product_reviews)
+                logger.info(f"📊 Product {product_id}: loaded {len(product_reviews)} reviews (total: {total_reviews_loaded})")
+                
         except Exception as exc:  # pylint: disable=broad-except
             logger.exception("Failed to load product reviews: %s", exc)
             raise
@@ -112,9 +128,11 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         if not review_rows:
             logger.warning("No reviews found – nothing to analyse")
             return analysis_id
+            
+        logger.info(f"✅ Smart sampling complete: {len(review_rows)} reviews from {len(request.product_ids)} products")
 
         # ------------------------------------------------------------------
-        # 1) Extraction Stage  ---------------------------------------------
+        # 1) Extraction Stage with Progress Tracking  ----------------------
         # ------------------------------------------------------------------
         # For simplicity we bundle **all** reviews of a product into one batch
         # because the extraction prompt already supports multiple reviews.
@@ -123,7 +141,22 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         for row in review_rows:
             reviews_by_product.setdefault(row["product_id"], []).append(row)
 
+        total_products = len(reviews_by_product)
+        total_batches_estimated = 0
+        
+        # Pre-calculate total batches for progress tracking
         for product_id, rows in reviews_by_product.items():
+            unique_count = len(set(f"{r.get('review_title', '')}|||{r.get('review_text', '')}" for r in rows))
+            batch_count = (unique_count + ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT - 1) // ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT
+            total_batches_estimated += batch_count
+            
+        logger.info(f"🚀 Starting extraction: {total_products} products, ~{total_batches_estimated} LLM calls estimated")
+        
+        current_product_idx = 0
+        current_batch_global = 0
+        
+        for product_id, rows in reviews_by_product.items():
+            current_product_idx += 1
             # Deduplicate identical review texts -------------------------
             seen_texts: set[str] = set()
             unique_reviews: List[Dict[str, str]] = []
@@ -144,6 +177,12 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             all_review_mappings: List[Dict[int, str]] = []  # Track review ID mappings for each batch
             
             for batch_idx, batch in enumerate(review_batches):
+                current_batch_global += 1
+                
+                # Progress logging
+                progress_pct = (current_batch_global / total_batches_estimated) * 100
+                logger.info(f"🔄 [{current_batch_global}/{total_batches_estimated}] ({progress_pct:.1f}%) Processing product {current_product_idx}/{total_products} - batch {batch_idx + 1}/{len(review_batches)}")
+                
                 # Create review ID mapping for this batch (batch_index -> actual_review_id)
                 review_id_mapping = {
                     idx: review["review_id"] 

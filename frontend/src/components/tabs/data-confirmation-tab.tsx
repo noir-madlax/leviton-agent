@@ -80,10 +80,16 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
               description: 'Waiting for product selection...'
             },
             {
+              step: 'review_analysis',
+              name: 'Review Analysis',
+              status: 'pending',
+              description: 'Waiting for segmentation...'
+            },
+            {
               step: 'data_preparation',
               name: 'Data Preparation',
               status: 'pending',
-              description: 'Waiting for segmentation...'
+              description: 'Waiting for review analysis...'
             }
           ]
         });
@@ -117,10 +123,12 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
     
     // 如果处理中或正在创建，定期轮询更新
     const interval = setInterval(() => {
-      if (isCreating || progress?.segmentation_status === 'processing') {
+      if (isCreating || 
+          progress?.segmentation_status === 'processing' ||
+          progress?.steps?.some(step => step.status === 'in_progress')) {
         fetchProgress();
       }
-    }, 9000); // 每9秒检查一次
+    }, 5000); // 改为每5秒检查一次，更及时
 
     return () => clearInterval(interval);
   }, [projectId, isCreating, progress?.segmentation_status]);

@@ -46,6 +46,15 @@ class Project(BaseModel):
     segmentation_completed_at: Optional[datetime] = None
     segmentation_duration_seconds: Optional[int] = None
     segmentation_status: Optional[str] = "pending"
+    # Review Analysis fields
+    review_analysis_id: Optional[str] = None
+    review_analysis_started_at: Optional[datetime] = None
+    review_analysis_completed_at: Optional[datetime] = None
+    review_analysis_duration_seconds: Optional[int] = None
+    review_analysis_status: Optional[str] = "pending"
+    # Review analysis estimates
+    estimated_reviews_to_analyze: Optional[int] = 0
+    estimated_llm_calls: Optional[int] = 0
 
 
 class ProjectCreateResponse(BaseModel):
