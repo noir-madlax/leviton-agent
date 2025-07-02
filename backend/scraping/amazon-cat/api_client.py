@@ -1,6 +1,5 @@
 """Amazon Category API Client - Rainforest API Integration"""
 
-import aiohttp
 import asyncio
 import logging
 import requests
