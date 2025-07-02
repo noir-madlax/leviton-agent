@@ -895,8 +895,8 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                           {/* 显示品牌统计信息 */}
                           <div className="mt-2 pt-2 border-t">
                             <p className="text-xs text-gray-500">
-                              基于所选类别：{filters.categories.join(', ')} 
-                              {data.stats.brands.length > 10 && ` (显示前10个品牌)`}
+                              Based on selected category: {filters.categories.join(', ')} 
+                              {data.stats.brands.length > 10 && ` (Top 10 brands)`}
                             </p>
                           </div>
                         </>

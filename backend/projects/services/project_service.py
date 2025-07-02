@@ -363,16 +363,15 @@ class ProjectService:
             total_products = len(products)
             total_brands = len(set(p['brand'] for p in products if p.get('brand')))
             
-            # Handle reviews_count which might be strings like "547.0"
+            # Calculate actual reviews from product_reviews table instead of reviews_count field
+            product_asins = [str(p['platform_id']) for p in products if p.get('platform_id')]
             total_reviews = 0
-            for p in products:
-                reviews_count = p.get('reviews_count', 0) or 0
-                if isinstance(reviews_count, str):
-                    try:
-                        reviews_count = float(reviews_count)
-                    except (ValueError, TypeError):
-                        reviews_count = 0
-                total_reviews += reviews_count
+            if product_asins:
+                review_count_result = self.supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .in_('product_id', product_asins)\
+                    .execute()
+                total_reviews = review_count_result.count or 0
             
             # Calculate average monthly sales
             sales_volumes = []
@@ -544,7 +543,18 @@ class ProjectService:
             # Calculate statistics
             total_products = len(final_products)
             total_brands = len(set(row['brand'] for row in final_products if row.get('brand')))
-            total_reviews = sum(row.get('reviews_count', 0) or 0 for row in final_products)
+            
+            # Calculate actual reviews from product_reviews table instead of reviews_count field
+            product_asins = [str(row['platform_id']) for row in final_products if row.get('platform_id')]
+            actual_review_count = 0
+            if product_asins:
+                review_count_result = self.supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .in_('product_id', product_asins)\
+                    .execute()
+                actual_review_count = review_count_result.count or 0
+            
+            total_reviews = actual_review_count  # Use actual count instead of reviews_count field
             
             sales_volumes = [row.get('monthly_sales_volume', 0) for row in final_products if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
             avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0
@@ -589,6 +599,9 @@ class ProjectService:
             # Top products for preview (limit to 50)
             top_products = sorted_products[:min(50, len(final_products))]
             
+            # Calculate review analysis estimates
+            review_estimates = await self._calculate_review_analysis_estimate(product_asins)
+            
             return {
                 'availableCategories': available_categories,
                 'availableSources': available_sources,
@@ -601,11 +614,9 @@ class ProjectService:
                     'sources': source_stats,
                     'categories': category_stats,
                     'brands': brand_stats,
-                    # 🚀 NEW: Smart review analysis estimates
+                    # 🚀 Review analysis estimates (no sampling)
                     'estimatedReviewsToAnalyze': review_estimates['estimated_reviews_to_analyze'],
-                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction'],
-                    'maxReviewsPerProduct': review_estimates['max_reviews_per_product'],
-                    'reviewSamplingStrategy': review_estimates['sampling_strategy']
+                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction']
                 },
                 'topProducts': top_products
             }
@@ -737,10 +748,20 @@ class ProjectService:
             # Calculate statistics
             total_products = len(final_products)
             total_brands = len(set(row['brand'] for row in final_products if row.get('brand')))
-            total_reviews = sum(row.get('reviews_count', 0) or 0 for row in final_products)
             
-            # Calculate smart review analysis estimates
+            # Calculate actual reviews from product_reviews table instead of reviews_count field
             product_asins = [str(row['platform_id']) for row in final_products if row.get('platform_id')]
+            actual_review_count = 0
+            if product_asins:
+                review_count_result = self.supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .in_('product_id', product_asins)\
+                    .execute()
+                actual_review_count = review_count_result.count or 0
+            
+            total_reviews = actual_review_count  # Use actual count instead of reviews_count field
+            
+            # Calculate review analysis estimates (no sampling)
             review_estimates = await self._calculate_review_analysis_estimate(product_asins)
             
             sales_volumes = [row.get('monthly_sales_volume', 0) for row in final_products if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
@@ -793,11 +814,14 @@ class ProjectService:
                 'stats': {
                     'totalProducts': total_products,
                     'totalBrands': total_brands,
-                    'totalReviews': total_reviews,
+                    'totalReviews': total_reviews,  # Now shows actual reviews from product_reviews table
                     'avgMonthlySales': avg_monthly_sales,
                     'sources': source_stats,
                     'categories': category_stats,
-                    'brands': brand_stats
+                    'brands': brand_stats,
+                    # 🚀 Review analysis estimates (no sampling)
+                    'estimatedReviewsToAnalyze': review_estimates['estimated_reviews_to_analyze'],
+                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction']
                 },
                 'topProducts': top_products
             }
@@ -1012,35 +1036,31 @@ class ProjectService:
             total_estimated_reviews = 0
             total_estimated_llm_calls = 0
             
+            if not product_ids:
+                return {
+                    'estimated_reviews_to_analyze': 0,
+                    'estimated_llm_calls_extraction': 0,
+                    'sampling_strategy': 'none'
+                }
+            
             supabase = get_supabase_client()
             
-            for product_id in product_ids:
-                # Get review count for this product with sampling limit
-                review_result = supabase.table('product_reviews')\
-                    .select('review_id', count='exact')\
-                    .eq('product_id', product_id)\
-                    .limit(ra_cfg.MAX_REVIEWS_PER_PRODUCT)\
-                    .execute()
-                
-                product_review_count = min(review_result.count or 0, ra_cfg.MAX_REVIEWS_PER_PRODUCT)
-                total_estimated_reviews += product_review_count
-                
-                # Calculate LLM calls for this product
-                if product_review_count > 0:
-                    batches = (product_review_count + ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT - 1) // ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT
-                    total_estimated_llm_calls += batches
-                
-                # Apply global limit
-                if total_estimated_reviews >= ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL:
-                    total_estimated_reviews = ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL
-                    break
+            # Get total review count for all products
+            review_result = supabase.table('product_reviews')\
+                .select('review_id', count='exact')\
+                .in_('product_id', product_ids)\
+                .execute()
+            
+            total_estimated_reviews = review_result.count or 0
+            
+            # Calculate LLM calls needed
+            if total_estimated_reviews > 0:
+                total_estimated_llm_calls = (total_estimated_reviews + ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT - 1) // ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT
             
             return {
                 'estimated_reviews_to_analyze': total_estimated_reviews,
                 'estimated_llm_calls_extraction': total_estimated_llm_calls,
-                'max_reviews_per_product': ra_cfg.MAX_REVIEWS_PER_PRODUCT,
-                'global_review_limit': ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL,
-                'sampling_strategy': ra_cfg.SAMPLE_STRATEGY
+                'sampling_strategy': 'none'  # No sampling applied
             }
             
         except Exception as e:
@@ -1048,7 +1068,5 @@ class ProjectService:
             return {
                 'estimated_reviews_to_analyze': 0,
                 'estimated_llm_calls_extraction': 0,
-                'max_reviews_per_product': ra_cfg.MAX_REVIEWS_PER_PRODUCT,
-                'global_review_limit': ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL,
-                'sampling_strategy': ra_cfg.SAMPLE_STRATEGY
+                'sampling_strategy': 'none'
             } 

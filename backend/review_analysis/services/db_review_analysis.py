@@ -91,36 +91,22 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         logger.info("▶️  Starting review-analysis %s for %d products", analysis_id, len(request.product_ids))
 
         # ------------------------------------------------------------------
-        # 0) Load reviews with smart sampling (SQL ‑> Supabase) ---------------
+        # 0) Load all available reviews (SQL ‑> Supabase) ---------------------
         # ------------------------------------------------------------------
         sb = get_supabase_client()
         review_rows: List[Dict] = []
-        total_reviews_loaded = 0
         
-        logger.info(f"🎯 Smart sampling: max {ra_cfg.MAX_REVIEWS_PER_PRODUCT} reviews per product, global limit {ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL}")
+        logger.info(f"📥 Loading all available reviews for {len(request.product_ids)} products")
         
         try:
-            for product_id in request.product_ids:
-                if total_reviews_loaded >= ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL:
-                    logger.warning(f"⚠️  Reached global limit ({ra_cfg.MAX_TOTAL_REVIEWS_GLOBAL}), stopping")
-                    break
-                
-                # Smart sampling per product with rating-based selection
-                product_reviews = (
-                    sb.table("product_reviews")
-                    .select("product_id, review_id, review_title, review_text, rating")
-                    .eq("product_id", product_id)
-                    .order("rating", desc=True)  # Prioritize high-quality reviews
-                    .limit(ra_cfg.MAX_REVIEWS_PER_PRODUCT)
-                    .execute()
-                    .data
-                    or []
-                )
-                
-                review_rows.extend(product_reviews)
-                total_reviews_loaded += len(product_reviews)
-                logger.info(f"📊 Product {product_id}: loaded {len(product_reviews)} reviews (total: {total_reviews_loaded})")
-                
+            review_rows = (
+                sb.table("product_reviews")
+                .select("product_id, review_id, review_title, review_text, rating")
+                .in_("product_id", request.product_ids)
+                .execute()
+                .data
+                or []
+            )
         except Exception as exc:  # pylint: disable=broad-except
             logger.exception("Failed to load product reviews: %s", exc)
             raise
@@ -129,7 +115,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             logger.warning("No reviews found – nothing to analyse")
             return analysis_id
             
-        logger.info(f"✅ Smart sampling complete: {len(review_rows)} reviews from {len(request.product_ids)} products")
+        logger.info(f"✅ Loaded {len(review_rows)} reviews from {len(request.product_ids)} products")
 
         # ------------------------------------------------------------------
         # 1) Extraction Stage with Progress Tracking  ----------------------
