@@ -11,6 +11,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/component
 import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
+import { CategorySelector } from '@/components/category-selector';
 
 // 进度显示接口
 interface ProjectProgress {
@@ -228,33 +229,29 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const [isBrandsExpanded, setIsBrandsExpanded] = useState(false);
   const [createdProjectId, setCreatedProjectId] = useState<string | null>(null);
   const [isCreatingProject, setIsCreatingProject] = useState(false);
-  const [isLoadingBrands, setIsLoadingBrands] = useState(false);
+  const [selectedCategoryId, setSelectedCategoryId] = useState<string>('');
+  const [selectedCategoryName, setSelectedCategoryName] = useState<string>('');
+  const [selectedCategoryPath, setSelectedCategoryPath] = useState<string>('');
+  const [isFilterApplied, setIsFilterApplied] = useState(false); // Track if filter has been applied
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
-    const categoriesPart = filters.categories.length > 0 
-      ? filters.categories.join('_').replace(/\s+/g, '') 
-      : 'AllCategories';
-    
-    const sourcesPart = filters.sources.length > 0 && data && filters.sources.length < data.availableSources.length
-      ? `_${filters.sources.join('_').replace(/\s+/g, '')}`
-      : '';
-    
-    const brandsPart = filters.brands.length > 0 && filters.brands.length <= 3
-      ? `_${filters.brands.slice(0, 3).join('_').replace(/\s+/g, '')}`
-      : filters.brands.length > 3
-      ? `_${filters.brands.length}Brands`
-      : '';
-    
-    const topCountPart = filters.topSalesCount ? `_Top${filters.topSalesCount}` : '';
-    
     const now = new Date();
     const month = String(now.getMonth() + 1).padStart(2, '0');
     const day = String(now.getDate()).padStart(2, '0');
-    const hours = String(now.getHours()).padStart(2, '0');
-    const minutes = String(now.getMinutes()).padStart(2, '0');
+    const year = now.getFullYear().toString().slice(-4);
     
-    return `${categoriesPart}${sourcesPart}${brandsPart}${topCountPart}_${month}${day}_${hours}${minutes}`;
+    // Use the last part of the category path or fallback to category name
+    let categoryForName = selectedCategoryName;
+    if (selectedCategoryPath) {
+      const pathParts = selectedCategoryPath.split(' > ');
+      categoryForName = pathParts[pathParts.length - 1]; // Use the most specific category
+    }
+    
+    // Clean category name for use in project name
+    const cleanCategory = categoryForName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_');
+    
+    return `${cleanCategory}_Top${filters.topSalesCount || 100}_${month}${day}_${year.slice(-4)}`;
   };
 
   // 初始加载数据（只执行一次）
@@ -264,10 +261,10 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
 
   // 实时更新project名字
   useEffect(() => {
-    if (data && !isEditingName) {
+    if (!isEditingName) {
       setProjectName(generateSmartProjectName());
     }
-  }, [filters, data, isEditingName]);
+  }, [selectedCategoryName, filters.sources, filters.brands, filters.topSalesCount, data, isEditingName]);
 
   // 初始加载数据 - 全量查询
   const loadInitialData = async () => {
@@ -296,65 +293,38 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     }
   };
 
-  // 新增：动态获取品牌数据基于选择的品类
-  const loadBrandsForCategories = async (categories: string[]) => {
-    if (!categories.length) {
-      // 如果没有选择品类，清空品牌
-      setFilters(prev => ({
-        ...prev,
-        brands: []
-      }));
-      setIsLoadingBrands(false);
-      return;
-    }
-
-    setIsLoadingBrands(true);
-    try {
-      // 使用筛选API获取选定品类的品牌数据
-      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-      const params = new URLSearchParams();
-      categories.forEach(cat => params.append('categories', cat));
-      
-      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation?${params.toString()}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const result = await response.json();
-      
-      // 更新数据中的品牌统计，但保持其他数据不变
-      if (data) {
-        setData(prev => ({
-          ...prev!,
-          stats: {
-            ...prev!.stats,
-            brands: result.stats.brands // 只更新品牌数据
-          }
-        }));
-      }
-      
-      // 清空当前品牌选择，让用户重新选择
-      setFilters(prev => ({
-        ...prev,
-        brands: []
-      }));
-    } catch (error) {
-      console.error('Failed to load brands for categories:', error);
-    } finally {
-      setIsLoadingBrands(false);
-    }
+  // Handle category selection from CategorySelector
+  const handleCategorySelect = (categoryId: string, categoryName: string, level: number, categoryPath?: string) => {
+    setSelectedCategoryId(categoryId);
+    setSelectedCategoryName(categoryName);
+    setSelectedCategoryPath(categoryPath || categoryName);
+    setIsConfirmed(false); // Reset confirmation when category changes
+    setIsFilterApplied(false); // Reset filter applied state when category changes
+    
+    // 🔥 关键修复：将选中的类别同步到filters.categories
+    setFilters(prev => ({
+      ...prev,
+      categories: categoryName ? [categoryName] : [] // 将类别名称添加到filters中
+    }));
   };
 
   // 手动筛选数据
   const handleFilterData = async () => {
-    if (!data) return;
+    if (!selectedCategoryId) {
+      alert('Please select a category first');
+      return;
+    }
     
+    // 🔥 修复：立即显示loading状态
     setFilterLoading(true);
+    
     try {
       // 构建查询参数
       const params = new URLSearchParams();
       
-      if (filters.categories.length > 0) {
-        filters.categories.forEach(cat => params.append('categories', cat));
+      // Use category_id instead of category names
+      if (selectedCategoryId) {
+        params.append('category_id', selectedCategoryId);
       }
       if (filters.sources.length > 0) {
         filters.sources.forEach(src => params.append('sources', src));
@@ -366,14 +336,15 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
         params.append('top_sales_count', filters.topSalesCount.toString());
       }
       
-      // 使用后端API进行筛选查询
+      // 使用新的category-based API进行筛选查询
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation?${params.toString()}`);
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation-by-category?${params.toString()}`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const result = await response.json();
       setData(result);
+      setIsFilterApplied(true); // Mark filter as applied
     } catch (error) {
       console.error('Failed to filter data:', error);
     } finally {
@@ -386,32 +357,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     if (!data) return null;
     return data.stats;
   }, [data]);
-
-  const handleCategoryChange = (category: string, checked: boolean) => {
-    setFilters(prev => {
-      const newCategories = checked 
-        ? [...prev.categories, category]
-        : prev.categories.filter(c => c !== category);
-      
-      // 限制最多选择2个品类
-      if (checked && newCategories.length > 2) {
-        alert('Maximum 2 product categories allowed');
-        return prev; // 不更新状态
-      }
-      
-      const newFilters = {
-        ...prev,
-        categories: newCategories
-      };
-      
-      // 当品类变化时，动态加载对应的品牌数据
-      setTimeout(() => {
-        loadBrandsForCategories(newCategories);
-      }, 100);
-      
-      return newFilters;
-    });
-  };
 
   const handleSourceChange = (source: string, checked: boolean) => {
     setFilters(prev => ({
@@ -429,37 +374,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
         ? [...prev.brands, brand]
         : prev.brands.filter(b => b !== brand)
     }));
-  };
-
-  // Select/Clear All functions for each dimension
-  const handleSelectAllCategories = () => {
-    if (!data) return;
-    
-    // 限制最多选择2个品类
-    if (data.availableCategories.length > 2) {
-      alert('Maximum 2 product categories allowed, please select manually');
-      return;
-    }
-    
-    setFilters(prev => ({
-      ...prev,
-      categories: [...data.availableCategories]
-    }));
-    
-    // 动态加载对应的品牌数据
-    setTimeout(() => {
-      loadBrandsForCategories(data.availableCategories);
-    }, 100);
-  };
-
-  const handleClearAllCategories = () => {
-    setFilters(prev => ({
-      ...prev,
-      categories: []
-    }));
-    
-    // 清空品类时也清空品牌数据
-    loadBrandsForCategories([]);
   };
 
   const handleSelectAllSources = () => {
@@ -559,7 +473,11 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       brands: [], // 重置时清空品牌，等用户选择品类后动态加载
       topSalesCount: 100
     });
+    setSelectedCategoryId('');
+    setSelectedCategoryName('');
+    setSelectedCategoryPath('');
     setIsConfirmed(false);
+    setIsFilterApplied(false); // Reset filter applied state
     
     // 重置时需要清空品牌数据显示
     if (data) {
@@ -642,7 +560,8 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
               <Button
                 onClick={handleConfirmSelection}
                 className="h-9"
-                disabled={isConfirmed}
+                disabled={isConfirmed || !isFilterApplied}
+                title={!isFilterApplied ? "Please apply filters first" : ""}
               >
                 {isConfirmed ? (
                   <>
@@ -687,6 +606,20 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
               )}
             </div>
           </div>
+
+          {/* 选中类别显示区域 */}
+          {selectedCategoryPath && (
+            <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
+              <div className="flex items-center gap-2">
+                <Check className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-green-800">Selected Category:</span>
+                <span className="text-sm text-green-700 font-medium">{selectedCategoryPath}</span>
+                <Badge variant="outline" className="text-xs text-green-600 border-green-300">
+                  Level {selectedCategoryName ? '5' : '0'}
+                </Badge>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -718,51 +651,14 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-3 gap-6">
-                {/* 产品类别筛选 - 修复逻辑 */}
+                {/* Amazon Category Selector */}
                 <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex flex-col">
-                      <Label className="text-sm font-medium">Product Categories</Label>
-                      <span className="text-xs text-gray-500">Select 1-2 categories ({filters.categories.length}/2)</span>
-                    </div>
-                    <div className="flex gap-1">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={handleSelectAllCategories}
-                        className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                      >
-                        Select All
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={handleClearAllCategories}
-                        className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                      >
-                        Clear All
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {data.availableCategories.map(category => (
-                      <div key={category} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`category-${category}`}
-                          checked={filters.categories.includes(category)}
-                          onCheckedChange={(checked) => 
-                            handleCategoryChange(category, checked as boolean)
-                          }
-                        />
-                        <Label 
-                          htmlFor={`category-${category}`}
-                          className="text-xs cursor-pointer flex-1 select-none"
-                        >
-                          {category}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
+                  <CategorySelector
+                    onCategorySelect={handleCategorySelect}
+                    selectedCategoryId={selectedCategoryId}
+                    selectedCategoryName={selectedCategoryName}
+                    selectedCategoryPath={selectedCategoryPath}
+                  />
                 </div>
 
                 {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
@@ -898,31 +794,22 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                     
                     <div>
                       {/* 根据状态显示不同内容 */}
-                      {filters.categories.length === 0 ? (
+                      {!selectedCategoryId ? (
                         <div className="p-4 border-2 border-dashed border-gray-200 rounded-lg text-center">
                           <p className="text-sm text-gray-500">
-                            Please select product categories first to view corresponding brands
+                            Please select a category first to view corresponding brands
                           </p>
                           <p className="text-xs text-gray-400 mt-1">
-                            Maximum 2 product categories allowed
+                            Use the category selector above
                           </p>
                         </div>
-                      ) : isLoadingBrands ? (
-                                                  <div className="p-4 border-2 border-dashed border-blue-200 rounded-lg text-center">
-                            <div className="flex items-center justify-center gap-2">
-                              <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
-                              <p className="text-sm text-blue-700">
-                                Loading brand data...
-                              </p>
-                            </div>
-                          </div>
                       ) : data.stats.brands.length === 0 ? (
                         <div className="p-4 border-2 border-dashed border-yellow-200 rounded-lg text-center">
                           <p className="text-sm text-yellow-700">
-                            No brand data available for selected categories
+                            No brand data available for selected category
                           </p>
                           <p className="text-xs text-yellow-600 mt-1">
-                            Selected: {filters.categories.join(', ')}
+                            Selected: {selectedCategoryName}
                           </p>
                         </div>
                       ) : (

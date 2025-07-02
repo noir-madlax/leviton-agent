@@ -49,6 +49,38 @@ async def get_data_confirmation_data(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.get("/data-confirmation-by-category", tags=["Projects"])
+async def get_data_confirmation_by_category_id(
+    category_id: Optional[str] = Query(None, description="Filter by Amazon category ID"),
+    sources: Optional[List[str]] = Query(None, description="Filter by sources"),
+    brands: Optional[List[str]] = Query(None, description="Filter by brands"),
+    top_sales_count: Optional[int] = Query(None, description="Limit to top N products by sales")
+):
+    """
+    Get data confirmation data for Step2 with category ID filter.
+    Supports hierarchical category filtering - selects all products under the given category.
+    """
+    try:
+        filters = None
+        if any([category_id, sources, brands, top_sales_count]):
+            filters = {}
+            if category_id:
+                filters['category_id'] = category_id
+            if sources:
+                filters['sources'] = sources
+            if brands:
+                filters['brands'] = brands
+            if top_sales_count:
+                filters['topSalesCount'] = top_sales_count
+        
+        service = get_project_service()
+        result = await service.get_data_confirmation_data_by_category_id(filters)
+        return result
+    except Exception as e:
+        logger.error(f"Error in get_data_confirmation_by_category_id API: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.post("/create", response_model=ProjectCreateResponse)
 async def create_project(
     request: ProjectCreateRequest,

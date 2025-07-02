@@ -1,0 +1,1 @@
+"""Categories module for dynamic Amazon category management.""" 

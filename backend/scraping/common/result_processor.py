@@ -228,8 +228,13 @@ class ScrapingResultProcessor:
                 'description': self._safe_strip(raw_product.get('description', '')),
                 'category': self._extract_category_as_text(raw_product),  # 数据库字段：category (text)
                 'categories_flat': self._extract_categories_flat_as_text(raw_product),  # 数据库字段：categories_flat (text)
+                'category_hierarchy': self._extract_categories_original(raw_product),  # 🔥 新增：保存完整的原始categories数据
                 'extract_date': datetime.now().strftime('%Y-%m-%d')  # 数据库字段：extract_date
             }
+            
+            # 🔥 启用层级类目信息提取
+            hierarchy_data = self._extract_category_hierarchy(raw_product)
+            product.update(hierarchy_data)
             
             return product
             
@@ -424,6 +429,40 @@ class ScrapingResultProcessor:
         except:
             return ''
     
+    def _extract_categories_original(self, product: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """
+        提取产品的原始categories数据（保存为JSON格式）
+        
+        Args:
+            product: 原始产品数据
+            
+        Returns:
+            Dict[str, Any]: 原始categories数据，包含每层的category_id和name
+        """
+        try:
+            if 'categories' in product:
+                categories = product['categories']
+                if isinstance(categories, list) and categories:
+                    # 验证每个category对象是否有必要的字段
+                    valid_categories = []
+                    for category in categories:
+                        if isinstance(category, dict) and 'category_id' in category and 'name' in category:
+                            valid_categories.append({
+                                'category_id': str(category['category_id']),
+                                'name': str(category['name'])
+                            })
+                    
+                    if valid_categories:
+                        return {
+                            'categories': valid_categories,
+                            'total_levels': len(valid_categories)
+                        }
+            
+            return None
+        except Exception as e:
+            logger.debug(f"提取原始categories数据时出错: {e}")
+            return None
+    
     def _extract_list_price(self, product: Dict[str, Any]) -> Optional[float]:
         """提取标价/原价信息"""
         try:
@@ -539,4 +578,52 @@ class ScrapingResultProcessor:
             
             return False
         except:
-            return False 
+            return False
+    
+    def _extract_category_hierarchy(self, product: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        提取产品的层级类目信息
+        从categories数组中提取L1-L6层级的category_id和对应的最深层级
+        
+        Args:
+            product: 原始产品数据
+            
+        Returns:
+            Dict[str, Any]: 层级类目字段
+        """
+        hierarchy_data = {
+            'category_l1_id': None,
+            'category_l2_id': None,
+            'category_l3_id': None,
+            'category_l4_id': None,
+            'category_l5_id': None,
+            'category_l6_id': None,
+            'category_deepest_level': 0
+        }
+        
+        try:
+            # 从categories数组提取层级信息
+            if 'categories' in product:
+                categories = product['categories']
+                if isinstance(categories, list) and categories:
+                    # categories数组就是按层级顺序排列的
+                    for i, category in enumerate(categories):
+                        if isinstance(category, dict) and 'category_id' in category:
+                            level = i + 1  # 数组索引0对应L1，索引1对应L2，以此类推
+                            category_id = str(category['category_id'])
+                            
+                            # 只处理L1-L6层级
+                            if level <= 6:
+                                hierarchy_data[f'category_l{level}_id'] = category_id
+                                hierarchy_data['category_deepest_level'] = level
+                    
+                    logger.debug(f"提取层级信息: 共{len(categories)}层, 最深层级: {hierarchy_data['category_deepest_level']}")
+                else:
+                    logger.debug("categories字段不是有效的数组")
+            else:
+                logger.debug("产品数据中没有categories字段")
+                
+        except Exception as e:
+            logger.error(f"提取层级类目信息时出错: {e}")
+        
+        return hierarchy_data 

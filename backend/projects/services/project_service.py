@@ -3,9 +3,15 @@
 import logging
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
+from pathlib import Path
+import sys
+
+# Add project root to Python path
+sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from core.database.connection import get_supabase_client
 from ..models import ProjectCreateRequest, Project, ProjectCreateResponse
+from categories.services import CategoryService
 
 # 导入产品细分相关模块
 from product_segment.models import StartSegmentationRequest
@@ -531,6 +537,197 @@ class ProjectService:
                 },
                 'topProducts': []
             }
+
+    async def get_data_confirmation_data_by_category_id(self, filters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+        """
+        Get data confirmation data for Step2 with category ID filter.
+        Uses hierarchical category_l{level}_id fields for direct querying.
+        """
+        try:
+            # Get category level to determine which field to query
+            category_level = None
+            if filters and filters.get('category_id'):
+                # Get category level from amazon_categories table
+                category_result = self.supabase.table('amazon_categories')\
+                    .select('level')\
+                    .eq('category_id', filters['category_id'])\
+                    .single()\
+                    .execute()
+                
+                if category_result.data:
+                    category_level = category_result.data['level']
+                    logger.info(f"Category ID {filters['category_id']} found at level {category_level}")
+                else:
+                    logger.warning(f"Category ID {filters['category_id']} not found in amazon_categories table")
+                    return self._get_empty_data_structure()
+            
+            # Build filtered query using category_l{level}_id field
+            query = self.supabase.table('product_wide_table').select(
+                'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
+            ).neq('category', None).neq('brand', None)
+            
+            # Apply category filter using appropriate level field
+            if category_level and filters.get('category_id'):
+                category_field = f'category_l{category_level}_id'
+                query = query.eq(category_field, filters['category_id'])
+                logger.info(f"Filtering by {category_field} = {filters['category_id']}")
+            
+            # Apply other filters
+            if filters:
+                if filters.get('sources'):
+                    query = query.in_('source', filters['sources'])
+                if filters.get('brands'):
+                    query = query.in_('brand', filters['brands'])
+            
+            # Execute filtered query
+            filtered_result = query.execute()
+            
+            if not filtered_result.data:
+                filtered_data = []
+            else:
+                filtered_data = filtered_result.data
+            
+            # Convert and clean data (same as original method)
+            for row in filtered_data:
+                if row.get('monthly_sales_volume'):
+                    try:
+                        row['monthly_sales_volume'] = int(float(row['monthly_sales_volume']))
+                    except (ValueError, TypeError):
+                        row['monthly_sales_volume'] = 0
+                if row.get('reviews_count'):
+                    try:
+                        row['reviews_count'] = int(float(row['reviews_count']))
+                    except (ValueError, TypeError):
+                        row['reviews_count'] = 0
+                if row.get('estimated_revenue'):
+                    try:
+                        row['estimated_revenue'] = float(row['estimated_revenue'])
+                    except (ValueError, TypeError):
+                        row['estimated_revenue'] = 0.0
+                if row.get('price_usd'):
+                    try:
+                        row['price_usd'] = float(row['price_usd'])
+                    except (ValueError, TypeError):
+                        row['price_usd'] = 0.0
+            
+            # Sort by sales volume
+            sorted_products = sorted(
+                [row for row in filtered_data if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0],
+                key=lambda x: x['monthly_sales_volume'] or 0,
+                reverse=True
+            )
+            
+            # Apply top sales count filter if specified
+            if filters and filters.get('topSalesCount'):
+                top_count = int(filters['topSalesCount'])
+                if top_count < len(sorted_products):
+                    final_products = sorted_products[:top_count]
+                else:
+                    final_products = filtered_data
+            else:
+                final_products = filtered_data
+            
+            # Get available options from all data for this category
+            all_options_query = self.supabase.table('product_wide_table').select(
+                'category, source, brand'
+            ).neq('category', None).neq('brand', None)
+            
+            if category_level and filters.get('category_id'):
+                category_field = f'category_l{category_level}_id'
+                all_options_query = all_options_query.eq(category_field, filters['category_id'])
+            
+            all_options_result = all_options_query.execute()
+            all_options_data = all_options_result.data if all_options_result.data else []
+            
+            available_categories = sorted(list(set(row['category'] for row in all_options_data if row['category'])))
+            available_sources = sorted(list(set(row['source'] for row in all_options_data if row['source'])))
+            available_brands = sorted(list(set(row['brand'] for row in all_options_data if row['brand'])))
+            
+            # Calculate statistics
+            total_products = len(final_products)
+            total_brands = len(set(row['brand'] for row in final_products if row.get('brand')))
+            total_reviews = sum(row.get('reviews_count', 0) or 0 for row in final_products)
+            
+            sales_volumes = [row.get('monthly_sales_volume', 0) for row in final_products if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
+            avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0
+            
+            # Source statistics
+            source_stats = []
+            for source in available_sources:
+                count = len([row for row in final_products if row.get('source') == source])
+                if count > 0:
+                    source_stats.append({
+                        'name': source,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+            
+            # Category statistics
+            category_stats = []
+            for category in available_categories:
+                count = len([row for row in final_products if row.get('category') == category])
+                if count > 0:
+                    category_stats.append({
+                        'name': category,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+            
+            # Brand statistics (top 10)
+            brand_counts = {}
+            for row in final_products:
+                brand = row.get('brand')
+                if brand:
+                    brand_counts[brand] = brand_counts.get(brand, 0) + 1
+            
+            brand_stats = []
+            for brand, count in sorted(brand_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
+                brand_stats.append({
+                    'name': brand,
+                    'count': count,
+                    'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                })
+            
+            # Top products for preview (limit to 50)
+            top_products = sorted_products[:min(50, len(final_products))]
+            
+            return {
+                'availableCategories': available_categories,
+                'availableSources': available_sources,
+                'availableBrands': available_brands,
+                'stats': {
+                    'totalProducts': total_products,
+                    'totalBrands': total_brands,
+                    'totalReviews': total_reviews,
+                    'avgMonthlySales': avg_monthly_sales,
+                    'sources': source_stats,
+                    'categories': category_stats,
+                    'brands': brand_stats
+                },
+                'topProducts': top_products
+            }
+            
+        except Exception as e:
+            logger.error(f"Error getting data confirmation data by category ID: {str(e)}")
+            return self._get_empty_data_structure()
+    
+    def _get_empty_data_structure(self):
+        """Return empty data structure for error cases."""
+        return {
+            'availableCategories': [],
+            'availableSources': [],
+            'availableBrands': [],
+            'stats': {
+                'totalProducts': 0,
+                'totalBrands': 0,
+                'totalReviews': 0,
+                'avgMonthlySales': 0,
+                'sources': [],
+                'categories': [],
+                'brands': []
+            },
+            'topProducts': []
+        }
 
     async def get_project_progress(self, project_id: str) -> Dict[str, Any]:
         """Get project processing progress and status."""

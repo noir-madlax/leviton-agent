@@ -81,11 +81,40 @@ export function DataImportTab() {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
   
+  // 🔥 新增：实时进度状态管理
+  const [isScrapingStarted, setIsScrapingStarted] = useState(false);
+  const [currentBatchId, setCurrentBatchId] = useState<number | null>(null);
+  const [currentRequestId, setCurrentRequestId] = useState<number | null>(null);
+  
   // 使用统一配置
   const backendUrl = config.backendUrl;
 
+  // 🔥 新增：轮询实时状态
+  const pollScrapingStatus = async (batchId: number) => {
+    try {
+      const response = await fetch(`${backendUrl}/api/scraping/status/${batchId}`);
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      const statusData = await response.json();
+      
+      // 更新结果状态
+      if (statusData) {
+        setResult(prev => ({
+          ...prev,
+          ...statusData,
+          batch_id: batchId
+        }));
+      }
+      
+      return statusData;
+    } catch (error) {
+      console.error('Failed to poll scraping status:', error);
+      return null;
+    }
+  };
 
-  // 启动爬虫
+  // 🔥 修改：支持实时进度的启动逻辑
   const handleStartScraping = async () => {
     if (!url.trim()) {
       alert('Please enter a URL first');
@@ -94,9 +123,12 @@ export function DataImportTab() {
 
     setIsLoading(true);
     setResult(null);
+    setIsScrapingStarted(true); // 🔥 立即显示进度界面
+    setCurrentBatchId(null);
+    setCurrentRequestId(null);
 
     try {
-      // 直接调用后端 REST API
+      // 🔥 修改：使用异步启动方式
       const response = await fetch(`${backendUrl}/api/scraping/process-url`, {
         method: 'POST',
         headers: {
@@ -116,6 +148,15 @@ export function DataImportTab() {
 
       const data = await response.json();
       setResult(data);
+      
+      // 🔥 新增：如果获得了batch_id，开始轮询状态
+      if (data.batch_id) {
+        setCurrentBatchId(data.batch_id);
+        
+        // 开始轮询（但现在API是同步的，所以这里主要是为了兼容未来的异步API）
+        // 暂时显示完整结果
+      }
+      
     } catch (error) {
       console.error('Scraping failed:', error);
       setResult({
@@ -285,13 +326,19 @@ export function DataImportTab() {
           </CardContent>
         </Card>
 
-        {/* 结果显示 */}
-        {result && (
+        {/* 结果显示 - 🔥 修改：支持立即显示进度 */}
+        {(result || isScrapingStarted) && (
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 Scraping Results
-                {result.overall_status && getStatusBadge(result.overall_status)}
+                {result?.overall_status && getStatusBadge(result.overall_status)}
+                {isScrapingStarted && !result && (
+                  <Badge variant="secondary">
+                    <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                    Starting...
+                  </Badge>
+                )}
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
@@ -300,18 +347,18 @@ export function DataImportTab() {
                 <div>
                   <Label>URL</Label>
                   <div className="font-mono text-xs bg-muted p-2 rounded break-all">
-                    {result.url || result.task_id || 'N/A'}
+                    {result?.url || url || 'N/A'}
                   </div>
                 </div>
                 <div>
                   <Label>Batch ID</Label>
                   <div className="font-mono text-xs bg-muted p-2 rounded">
-                    {result.batch_id || 'N/A'}
+                    {result?.batch_id || currentBatchId || 'Pending...'}
                   </div>
                 </div>
               </div>
 
-              {/* 步骤进度显示 */}
+              {/* 🔥 修改：立即显示步骤进度 */}
               <div className="space-y-4">
                 <Label className="text-base font-medium">Processing Steps</Label>
                 
@@ -320,11 +367,20 @@ export function DataImportTab() {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">1</div>
                     <span className="font-medium">Product Scraping</span>
-                    {result.products_phase?.scraping && getStepStatus(result.products_phase.scraping.status)}
+                    {result?.products_phase?.scraping ? (
+                      getStepStatus(result.products_phase.scraping.status)
+                    ) : isScrapingStarted ? (
+                      <Badge variant="secondary">
+                        <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                        In Progress
+                      </Badge>
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
                   </div>
-                  {result.products_phase?.scraping && (
-                    <div className="ml-8 text-sm text-muted-foreground">
-                      {result.products_phase.scraping.status === 'success' ? (
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.products_phase?.scraping ? (
+                      result.products_phase.scraping.status === 'success' ? (
                         <div className="flex items-center gap-4">
                           <span>✅ {result.products_phase.scraping.products_scraped || 0} products scraped</span>
                           {result.products_phase.scraping.file_path && (
@@ -337,9 +393,13 @@ export function DataImportTab() {
                         <span className="text-red-600">❌ Failed: {result.products_phase.scraping.error || 'Unknown error'}</span>
                       ) : (
                         <span>🔄 In progress...</span>
-                      )}
-                    </div>
-                  )}
+                      )
+                    ) : isScrapingStarted ? (
+                      <span>🔄 Starting product scraping...</span>
+                    ) : (
+                      <span>⏳ Waiting to start...</span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Step 2: 产品导入 */}
@@ -347,11 +407,15 @@ export function DataImportTab() {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">2</div>
                     <span className="font-medium">Product Import</span>
-                    {result.products_phase?.importing && getStepStatus(result.products_phase.importing.status)}
+                    {result?.products_phase?.importing ? (
+                      getStepStatus(result.products_phase.importing.status)
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
                   </div>
-                  {result.products_phase?.importing && (
-                    <div className="ml-8 text-sm text-muted-foreground">
-                      {result.products_phase.importing.status === 'success' ? (
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.products_phase?.importing ? (
+                      result.products_phase.importing.status === 'success' ? (
                         <div className="flex items-center gap-4">
                           <span>✅ {result.products_phase.importing.products_imported || 0} products imported</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
@@ -362,9 +426,11 @@ export function DataImportTab() {
                         <span className="text-red-600">❌ Failed: {result.products_phase.importing.error || 'Import failed'}</span>
                       ) : (
                         <span>🔄 In progress...</span>
-                      )}
-                    </div>
-                  )}
+                      )
+                    ) : (
+                      <span>⏳ Waiting for product scraping to complete...</span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Step 3: 数据转换 */}
@@ -372,11 +438,15 @@ export function DataImportTab() {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">3</div>
                     <span className="font-medium">Data Transformation</span>
-                    {result.transformation_phase && getTransformationStatus(result.transformation_phase)}
+                    {result?.transformation_phase ? (
+                      getTransformationStatus(result.transformation_phase)
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
                   </div>
-                  {result.transformation_phase && (
-                    <div className="ml-8 text-sm text-muted-foreground">
-                      {result.transformation_phase.success ? (
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.transformation_phase ? (
+                      result.transformation_phase.success ? (
                         <div className="space-y-1">
                           <div className="flex items-center gap-4">
                             <span>✅ {result.transformation_phase.processed_count || 0} products transformed</span>
@@ -399,9 +469,11 @@ export function DataImportTab() {
                             </div>
                           )}
                         </div>
-                      )}
-                    </div>
-                  )}
+                      )
+                    ) : (
+                      <span>⏳ Waiting for product import to complete...</span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Step 4: 评论爬取 */}
@@ -409,11 +481,15 @@ export function DataImportTab() {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">4</div>
                     <span className="font-medium">Review Scraping</span>
-                    {result.reviews_phase?.scraping && getStepStatus(result.reviews_phase.scraping.status)}
+                    {result?.reviews_phase?.scraping ? (
+                      getStepStatus(result.reviews_phase.scraping.status)
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
                   </div>
-                  {result.reviews_phase?.scraping && (
-                    <div className="ml-8 text-sm text-muted-foreground">
-                      {result.reviews_phase.scraping.status === 'success' || result.reviews_phase.scraping.status === 'partial_success' ? (
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.reviews_phase?.scraping ? (
+                      result.reviews_phase.scraping.status === 'success' || result.reviews_phase.scraping.status === 'partial_success' ? (
                         <div className="flex items-center gap-4">
                           <span>✅ Reviews scraped for {result.reviews_phase.scraping.products_processed || 0} products</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
@@ -424,9 +500,11 @@ export function DataImportTab() {
                         <span className="text-red-600">❌ Failed: {result.reviews_phase.scraping.error || 'Review scraping failed'}</span>
                       ) : (
                         <span>🔄 In progress...</span>
-                      )}
-                    </div>
-                  )}
+                      )
+                    ) : (
+                      <span>⏳ Waiting for data transformation to complete...</span>
+                    )}
+                  </div>
                 </div>
 
                 {/* Step 5: 评论导入 */}
@@ -434,11 +512,15 @@ export function DataImportTab() {
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">5</div>
                     <span className="font-medium">Review Import</span>
-                    {result.reviews_phase?.importing && getStepStatus(result.reviews_phase.importing.status)}
+                    {result?.reviews_phase?.importing ? (
+                      getStepStatus(result.reviews_phase.importing.status)
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
                   </div>
-                  {result.reviews_phase?.importing && (
-                    <div className="ml-8 text-sm text-muted-foreground">
-                      {result.reviews_phase.importing.status === 'success' ? (
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.reviews_phase?.importing ? (
+                      result.reviews_phase.importing.status === 'success' ? (
                         <div className="flex items-center gap-4">
                           <span>✅ {result.reviews_phase.importing.reviews_imported || 0} reviews imported</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
@@ -449,14 +531,16 @@ export function DataImportTab() {
                         <span className="text-red-600">❌ Failed: {result.reviews_phase.importing.error || 'Review import failed'}</span>
                       ) : (
                         <span>🔄 In progress...</span>
-                      )}
-                    </div>
-                  )}
+                      )
+                    ) : (
+                      <span>⏳ Waiting for review scraping to complete...</span>
+                    )}
+                  </div>
                 </div>
               </div>
 
               {/* 总体状态 */}
-              {result.overall_status && (
+              {result?.overall_status && (
                 <div className="pt-4 border-t">
                   <div className="flex items-center justify-between">
                     <Label className="text-base font-medium">Overall Status</Label>
@@ -475,12 +559,12 @@ export function DataImportTab() {
               )}
 
               {/* 执行统计和数据质量报告 */}
-              {(result.execution_stats || result.data_quality) && (
+              {(result?.execution_stats || result?.data_quality) && (
                 <div className="space-y-4 pt-4 border-t">
                   <Label className="text-base font-medium">Execution Statistics & Data Quality</Label>
                   
                   {/* 执行时间统计 */}
-                  {result.execution_stats && (
+                  {result?.execution_stats && (
                     <div className="space-y-3">
                       <div className="font-medium text-sm">⏱️ Execution Times</div>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
@@ -490,7 +574,7 @@ export function DataImportTab() {
                             {result.execution_stats.total_duration?.toFixed(1)}s
                           </div>
                         </div>
-                        {result.execution_stats.phase_durations && Object.entries(result.execution_stats.phase_durations).map(([phase, duration]) => (
+                        {result?.execution_stats?.phase_durations && Object.entries(result.execution_stats.phase_durations).map(([phase, duration]) => (
                           <div key={phase} className="bg-gray-50 p-3 rounded-lg">
                             <div className="font-medium text-gray-700 capitalize">
                               {phase.replace(/_/g, ' ')}
@@ -505,7 +589,7 @@ export function DataImportTab() {
                   )}
 
                   {/* API调用统计 */}
-                  {result.execution_stats?.api_calls && (
+                  {result?.execution_stats?.api_calls && (
                     <div className="space-y-3">
                       <div className="font-medium text-sm">🔗 API Calls</div>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
@@ -538,7 +622,7 @@ export function DataImportTab() {
                   )}
 
                   {/* 数据质量报告 */}
-                  {result.data_quality && (
+                  {result?.data_quality && (
                     <div className="space-y-3">
                       <div className="font-medium text-sm">📊 Data Quality Report</div>
                       
@@ -607,7 +691,7 @@ export function DataImportTab() {
               )}
 
               {/* 兼容旧格式的结果显示 */}
-              {result.results && (
+              {result?.results && (
                 <div className="space-y-2 pt-4 border-t">
                   <Label>Legacy Results Summary</Label>
                   <div className="grid grid-cols-3 gap-4 text-sm">

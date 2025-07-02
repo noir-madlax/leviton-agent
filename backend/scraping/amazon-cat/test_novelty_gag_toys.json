@@ -1,0 +1,239 @@
+{
+  "category_id": "166027011",
+  "timestamp": 1751456655.43218,
+  "success": true,
+  "response_data": {
+    "request_info": {
+      "success": true
+    },
+    "current_category": {
+      "id": "166027011",
+      "name": "Novelty & Gag Toys",
+      "has_children": true,
+      "is_root": false,
+      "path": "Toys & Games > Novelty & Gag Toys",
+      "link": "https://www.amazon.com/s?node=166027011",
+      "parent_id": "165795011",
+      "parent_name": "Toys & Games",
+      "type": "standard",
+      "domain": "amazon.com"
+    },
+    "parent_category": {
+      "id": "165795011",
+      "name": "Toys & Games",
+      "has_children": true,
+      "is_root": true,
+      "path": "Toys & Games",
+      "link": "https://www.amazon.com/s?node=165795011",
+      "type": "standard",
+      "domain": "amazon.com"
+    },
+    "categories": [
+      {
+        "id": "166052011",
+        "name": "Viewfinders",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Viewfinders",
+        "link": "https://www.amazon.com/s?node=166052011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166205011",
+        "name": "Spy Gadgets",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Spy Gadgets",
+        "link": "https://www.amazon.com/s?node=166205011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166047011",
+        "name": "Slime & Putty Toys",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Slime & Putty Toys",
+        "link": "https://www.amazon.com/s?node=166047011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "17238448011",
+        "name": "Fidget Toys",
+        "has_children": true,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Fidget Toys",
+        "link": "https://www.amazon.com/s?node=17238448011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166046011",
+        "name": "Prisms & Kaleidoscopes",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Prisms & Kaleidoscopes",
+        "link": "https://www.amazon.com/s?node=166046011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "2735439011",
+        "name": "Novelty Spinning Tops",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Novelty Spinning Tops",
+        "link": "https://www.amazon.com/s?node=2735439011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166037011",
+        "name": "Juggling Sets",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Juggling Sets",
+        "link": "https://www.amazon.com/s?node=166037011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166029011",
+        "name": "Finger Boards & Finger Bikes",
+        "has_children": true,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Finger Boards & Finger Bikes",
+        "link": "https://www.amazon.com/s?node=166029011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "2528079011",
+        "name": "Water Balloons",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Water Balloons",
+        "link": "https://www.amazon.com/s?node=2528079011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166355011",
+        "name": "Magic Kits & Accessories",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Magic Kits & Accessories",
+        "link": "https://www.amazon.com/s?node=166355011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166040011",
+        "name": "Miniatures",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Miniatures",
+        "link": "https://www.amazon.com/s?node=166040011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166033011",
+        "name": "Fortune Telling Toys",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Fortune Telling Toys",
+        "link": "https://www.amazon.com/s?node=166033011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166054011",
+        "name": "Wind-up Toys",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Wind-up Toys",
+        "link": "https://www.amazon.com/s?node=166054011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "5483953011",
+        "name": "Executive Desk Toys",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Executive Desk Toys",
+        "link": "https://www.amazon.com/s?node=5483953011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166034011",
+        "name": "Gag Toys & Practical Jokes",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Gag Toys & Practical Jokes",
+        "link": "https://www.amazon.com/s?node=166034011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166041011",
+        "name": "Nesting Dolls",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Nesting Dolls",
+        "link": "https://www.amazon.com/s?node=166041011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      },
+      {
+        "id": "166039011",
+        "name": "Magnets & Magnetic Toys",
+        "has_children": false,
+        "is_root": false,
+        "path": "Toys & Games > Novelty & Gag Toys > Magnets & Magnetic Toys",
+        "link": "https://www.amazon.com/s?node=166039011",
+        "parent_id": "166027011",
+        "parent_name": "Novelty & Gag Toys",
+        "type": "standard",
+        "domain": "amazon.com"
+      }
+    ]
+  },
+  "error_message": null
+}

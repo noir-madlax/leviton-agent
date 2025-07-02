@@ -297,6 +297,17 @@ class DataTransformationService:
                 'category_definition': record.get('category_definition'),  # Keep existing if present
             }
             
+            # 提取层级类目信息
+            # 🔥 优先使用category_hierarchy字段（包含完整的原始数据）
+            category_hierarchy = record.get('category_hierarchy')
+            if category_hierarchy:
+                hierarchy_data = self._extract_category_hierarchy_from_json(category_hierarchy)
+            else:
+                # 🔧 兼容性：如果没有category_hierarchy，继续使用categories_flat方法
+                hierarchy_data = self._extract_category_hierarchy_from_flat(record.get('categories_flat'))
+            
+            transformed.update(hierarchy_data)
+            
             # Log transformation details for debugging
             logger.debug(f"Transformed {platform_id}: pack_count={pack_count}, "
                         f"monthly_sales={monthly_sales_volume}, revenue={estimated_revenue}")
@@ -565,7 +576,7 @@ class DataTransformationService:
                 .execute()
                 
         except Exception as e:
-            logger.warning(f"Failed to update scraping request {request_id} status: {e}")
+            logger.error(f"Failed to update scraping request transformation status: {e}")
     
     async def _complete_scraping_request_transformation(self, request_id: int, result: TransformationResult):
         """Complete scraping request transformation with results."""
@@ -591,7 +602,7 @@ class DataTransformationService:
             logger.warning(f"Failed to complete scraping request {request_id} transformation: {e}")
     
     async def _fail_scraping_request_transformation(self, request_id: int, error_message: str):
-        """Mark scraping request transformation as failed."""
+        """Fail scraping request transformation with error."""
         try:
             update_data = {
                 'workflow_stage': 'failed',
@@ -608,4 +619,123 @@ class DataTransformationService:
                 .execute()
                 
         except Exception as e:
-            logger.warning(f"Failed to mark scraping request {request_id} as failed: {e}") 
+            logger.warning(f"Failed to fail scraping request {request_id} transformation: {e}")
+    
+    def _extract_category_hierarchy_from_flat(self, categories_flat: Optional[str]) -> Dict[str, Any]:
+        """
+        从categories_flat字段提取层级类目信息
+        通过类目名称查找对应的category_id
+        
+        Args:
+            categories_flat: 类目平铺路径，如 "Home & Kitchen > Kitchen & Dining > Storage & Organization"
+            
+        Returns:
+            Dict[str, Any]: 层级类目字段
+        """
+        hierarchy_data = {
+            'category_l1_id': None,
+            'category_l2_id': None,
+            'category_l3_id': None,
+            'category_l4_id': None,
+            'category_l5_id': None,
+            'category_l6_id': None,
+            'category_deepest_level': 0
+        }
+        
+        if not categories_flat:
+            return hierarchy_data
+        
+        try:
+            # 解析categories_flat路径
+            category_names = [name.strip() for name in categories_flat.split(' > ')]
+            
+            if not category_names:
+                return hierarchy_data
+            
+            # 查询所有可能的类目名称对应的category_id
+            # 使用IN查询提高效率
+            result = self.supabase.table('amazon_categories')\
+                .select('name, category_id, level')\
+                .in_('name', category_names)\
+                .execute()
+            
+            if not result.data:
+                logger.debug(f"No category IDs found for names: {category_names}")
+                return hierarchy_data
+            
+            # 建立名称到category_id的映射
+            name_to_id_map = {}
+            for cat in result.data:
+                name_to_id_map[cat['name']] = {
+                    'category_id': str(cat['category_id']),
+                    'level': cat.get('level', 0)
+                }
+            
+            # 按顺序提取层级信息
+            for i, category_name in enumerate(category_names[:6]):  # 最多处理6层
+                if category_name in name_to_id_map:
+                    level = i + 1  # 基于位置确定层级
+                    category_id = name_to_id_map[category_name]['category_id']
+                    
+                    hierarchy_data[f'category_l{level}_id'] = category_id
+                    hierarchy_data['category_deepest_level'] = level
+                    
+                    logger.debug(f"Mapped L{level}: {category_name} -> {category_id}")
+                else:
+                    logger.debug(f"Category not found in database: {category_name}")
+            
+            logger.debug(f"Extracted hierarchy: {hierarchy_data['category_deepest_level']} levels")
+            
+        except Exception as e:
+            logger.error(f"Failed to extract category hierarchy from '{categories_flat}': {e}")
+        
+        return hierarchy_data
+    
+    def _extract_category_hierarchy_from_json(self, category_hierarchy: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        从category_hierarchy JSONB字段直接提取层级类目信息
+        
+        Args:
+            category_hierarchy: 包含完整categories数据的JSON对象
+            
+        Returns:
+            Dict[str, Any]: 层级类目字段，包含L1-L6的category_id
+        """
+        hierarchy_data = {
+            'category_l1_id': None,
+            'category_l2_id': None,
+            'category_l3_id': None,
+            'category_l4_id': None,
+            'category_l5_id': None,
+            'category_l6_id': None,
+            'category_deepest_level': 0
+        }
+        
+        try:
+            # 从category_hierarchy中提取categories数组
+            if isinstance(category_hierarchy, dict) and 'categories' in category_hierarchy:
+                categories = category_hierarchy['categories']
+                
+                if isinstance(categories, list) and categories:
+                    # 按层级顺序提取L1-L6
+                    for i, category in enumerate(categories[:6]):  # 最多处理6层
+                        if isinstance(category, dict) and 'category_id' in category:
+                            level = i + 1  # 索引0对应L1，索引1对应L2等
+                            category_id = str(category['category_id'])
+                            category_name = category.get('name', 'Unknown')
+                            
+                            hierarchy_data[f'category_l{level}_id'] = category_id
+                            hierarchy_data['category_deepest_level'] = level
+                            
+                            logger.debug(f"Direct extract L{level}: {category_name} -> {category_id}")
+                    
+                    logger.debug(f"Extracted {hierarchy_data['category_deepest_level']} levels from category_hierarchy")
+                else:
+                    logger.debug("No valid categories array in category_hierarchy")
+            else:
+                logger.debug("Invalid category_hierarchy format")
+                
+        except Exception as e:
+            logger.error(f"Failed to extract category hierarchy from JSON: {e}")
+        
+        return hierarchy_data 
