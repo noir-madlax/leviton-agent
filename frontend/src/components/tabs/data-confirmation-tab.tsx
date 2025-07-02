@@ -102,10 +102,10 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
         const data = await response.json();
         setProgress(data);
         
-        // 如果完成，通知父组件
-        if (data.segmentation_status === 'completed' && onAnalysisReady && projectId) {
-          onAnalysisReady(projectId);
-        }
+        // 移除自动跳转逻辑 - 改为手动确认
+        // if (data.segmentation_status === 'completed' && onAnalysisReady && projectId) {
+        //   onAnalysisReady(projectId);
+        // }
       } catch (error) {
         console.error('Failed to fetch project progress:', error);
       } finally {
@@ -205,6 +205,24 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
             </div>
           ))}
         </div>
+        
+        {/* 添加手动跳转按钮 - 只有在项目完成后显示 */}
+        {progress.segmentation_status === 'completed' && onAnalysisReady && projectId && (
+          <div className="pt-4 border-t mt-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="w-5 h-5 text-green-500" />
+                <span className="font-medium text-green-700">Project Ready for Analysis!</span>
+              </div>
+              <Button 
+                onClick={() => onAnalysisReady(projectId)}
+                className="bg-green-600 hover:bg-green-700 text-white"
+              >
+                Go to Analysis Dashboard
+              </Button>
+            </div>
+          </div>
+        )}
       </CardContent>
     </Card>
   );

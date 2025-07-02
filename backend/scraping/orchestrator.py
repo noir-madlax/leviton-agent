@@ -12,6 +12,7 @@ from .common.quality_analyzer import DataQualityAnalyzer
 
 # Data transformation integration
 from data_transformation.services.transformation_service import DataTransformationService
+from data_transformation.services.review_transformation_service import ReviewTransformationService
 from data_transformation.models import TransformationConfig
 
 # Database access
@@ -177,6 +178,24 @@ class ScrapingOrchestrator:
                     phase4_duration = time.time() - phase4_start
                     result["execution_stats"]["phase_durations"]["review_importing"] = round(phase4_duration, 2)
                     
+                    # Phase 4.5: 转换评论数据 (如果导入成功)
+                    if review_import_result.get("status") == "success":
+                        logger.info(f"Phase 4.5: 开始转换批次 {batch_id} 的评论数据...")
+                        phase45_start = time.time()
+                        
+                        review_transformation_result = await self._transform_review_data(batch_id, product_import_result.get("request_id"))
+                        result["reviews_phase"]["transformation"] = review_transformation_result
+                        
+                        phase45_duration = time.time() - phase45_start
+                        result["execution_stats"]["phase_durations"]["review_transformation"] = round(phase45_duration, 2)
+                        
+                        if review_transformation_result.get("success"):
+                            result["overall_status"] = "completed"
+                        else:
+                            result["overall_status"] = "review_transformation_failed"
+                    else:
+                        result["overall_status"] = "review_importing_failed"
+                    
                     # 更新评论状态到 scraping_requests 表
                     request_id = product_import_result.get("request_id")
                     if request_id:
@@ -185,11 +204,6 @@ class ScrapingOrchestrator:
                             review_scrape_result, 
                             review_import_result
                         )
-                    
-                    if review_import_result.get("status") == "success":
-                        result["overall_status"] = "completed"
-                    else:
-                        result["overall_status"] = "review_importing_failed"
                 else:
                     # 评论爬取失败，记录失败状态
                     result["overall_status"] = "review_scraping_failed"
@@ -313,17 +327,35 @@ class ScrapingOrchestrator:
             # 导入评论
             import_result = await self.review_importer.import_batch_reviews(batch_id)
             
-            # 更新数据库状态
-            request_id = await self._get_request_id_by_batch_id(batch_id)
-            if request_id:
-                await self._update_review_status_in_db(request_id, scrape_result, import_result)
-            
-            return {
-                "status": "success" if import_result.get("status") == "success" else "importing_failed",
-                "scraping_result": scrape_result,
-                "importing_result": import_result,
-                "batch_id": batch_id
-            }
+            # 转换评论数据 (如果导入成功)
+            if import_result.get("status") == "success":
+                logger.info(f"开始转换批次 {batch_id} 的评论数据...")
+                request_id = await self._get_request_id_by_batch_id(batch_id)
+                transformation_result = await self._transform_review_data(batch_id, request_id)
+                
+                # 更新数据库状态
+                if request_id:
+                    await self._update_review_status_in_db(request_id, scrape_result, import_result)
+                
+                return {
+                    "status": "success" if transformation_result.get("success") else "transformation_failed",
+                    "scraping_result": scrape_result,
+                    "importing_result": import_result,
+                    "transformation_result": transformation_result,
+                    "batch_id": batch_id
+                }
+            else:
+                # 更新数据库状态
+                request_id = await self._get_request_id_by_batch_id(batch_id)
+                if request_id:
+                    await self._update_review_status_in_db(request_id, scrape_result, import_result)
+                
+                return {
+                    "status": "importing_failed",
+                    "scraping_result": scrape_result,
+                    "importing_result": import_result,
+                    "batch_id": batch_id
+                }
             
         except Exception as e:
             logger.error(f"仅处理评论时出现异常: {e}")
@@ -456,6 +488,61 @@ class ScrapingOrchestrator:
             }
         except Exception as e:
             error_msg = f"数据转换调用失败: {e}"
+            logger.error(f"❌ {error_msg}", exc_info=True)
+            return {
+                "success": False,
+                "error": error_msg,
+                "processed_count": 0,
+                "error_count": 1
+            }
+    
+    async def _transform_review_data(self, batch_id: int, request_id: Optional[int] = None) -> Dict[str, Any]:
+        """调用评论转换服务处理批次评论数据"""
+        logger.info(f"🔄 开始评论转换 - batch_id: {batch_id}, request_id: {request_id}")
+        
+        try:
+            # 使用和产品转换相同的配置
+            config = TransformationConfig(
+                skip_existing=True,  # 跳过已存在的评论
+                validate_calculations=True,
+                dry_run=False,
+                batch_size=100  # 评论可以使用更大的批次
+            )
+            
+            logger.info(f"📋 评论转换配置: skip_existing={config.skip_existing}, validate_calculations={config.validate_calculations}, dry_run={config.dry_run}")
+            
+            review_transformation_service = ReviewTransformationService(config)
+            logger.info(f"✅ 评论转换服务初始化成功")
+            
+            result = await review_transformation_service.transform_batch_for_orchestrator(batch_id, request_id)
+            
+            logger.info(f"🎯 评论转换完成 - batch_id: {batch_id}")
+            logger.info(f"📊 转换结果: success={result.success}, processed={result.processed_count}, errors={result.error_count}")
+            logger.info(f"⏱️  转换耗时: {result.duration_seconds:.2f}秒")
+            
+            if result.errors:
+                logger.warning(f"⚠️  评论转换过程中发现错误: {result.errors[:3]}")  # 只显示前3个错误
+            
+            return {
+                "success": result.success,
+                "processed_count": result.processed_count,
+                "error_count": result.error_count,
+                "duration_seconds": result.duration_seconds,
+                "summary": result.summary,
+                "errors": result.errors[:5] if result.errors else []  # 限制错误数量
+            }
+            
+        except ImportError as e:
+            error_msg = f"评论转换模块导入失败: {e}"
+            logger.error(f"❌ {error_msg}")
+            return {
+                "success": False,
+                "error": error_msg,
+                "processed_count": 0,
+                "error_count": 1
+            }
+        except Exception as e:
+            error_msg = f"评论转换调用失败: {e}"
             logger.error(f"❌ {error_msg}", exc_info=True)
             return {
                 "success": False,

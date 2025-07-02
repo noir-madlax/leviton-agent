@@ -38,6 +38,7 @@ interface ScrapingResult {
   reviews_phase?: {
     scraping?: any;
     importing?: any;
+    transformation?: any;
   };
   execution_stats?: {
     start_time?: string;
@@ -49,6 +50,7 @@ interface ScrapingResult {
       data_transformation?: number;
       review_scraping?: number;
       review_importing?: number;
+      review_transformation?: number;
     };
     api_calls?: {
       category_api?: number;
@@ -366,7 +368,7 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">1</div>
-                    <span className="font-medium">Product Scraping</span>
+                    <span className="font-medium">Product Scraping (API → JSON)</span>
                     {result?.products_phase?.scraping ? (
                       getStepStatus(result.products_phase.scraping.status)
                     ) : isScrapingStarted ? (
@@ -406,7 +408,7 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">2</div>
-                    <span className="font-medium">Product Import</span>
+                    <span className="font-medium">Product Import (JSON → amazon_products)</span>
                     {result?.products_phase?.importing ? (
                       getStepStatus(result.products_phase.importing.status)
                     ) : (
@@ -437,7 +439,7 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">3</div>
-                    <span className="font-medium">Data Transformation</span>
+                    <span className="font-medium">Product Transformation (amazon_products → product_wide_table)</span>
                     {result?.transformation_phase ? (
                       getTransformationStatus(result.transformation_phase)
                     ) : (
@@ -480,7 +482,7 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">4</div>
-                    <span className="font-medium">Review Scraping</span>
+                    <span className="font-medium">Review Scraping (API → JSON)</span>
                     {result?.reviews_phase?.scraping ? (
                       getStepStatus(result.reviews_phase.scraping.status)
                     ) : (
@@ -511,7 +513,7 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">5</div>
-                    <span className="font-medium">Review Import</span>
+                    <span className="font-medium">Review Import (JSON → amazon_reviews)</span>
                     {result?.reviews_phase?.importing ? (
                       getStepStatus(result.reviews_phase.importing.status)
                     ) : (
@@ -534,6 +536,49 @@ export function DataImportTab() {
                       )
                     ) : (
                       <span>⏳ Waiting for review scraping to complete...</span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Step 6: 评论转换 */}
+                <div className="border rounded-lg p-4 space-y-3">
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-sm font-bold text-orange-600">6</div>
+                    <span className="font-medium">Review Transformation (amazon_reviews → product_reviews)</span>
+                    {result?.reviews_phase?.transformation ? (
+                      getTransformationStatus(result.reviews_phase.transformation)
+                    ) : (
+                      <Badge variant="outline">Pending</Badge>
+                    )}
+                  </div>
+                  <div className="ml-8 text-sm text-muted-foreground">
+                    {result?.reviews_phase?.transformation ? (
+                      result.reviews_phase.transformation.success ? (
+                        <div className="space-y-1">
+                          <div className="flex items-center gap-4">
+                            <span>✅ {result.reviews_phase.transformation.processed_count || 0} reviews transformed</span>
+                            <span className="text-xs font-mono bg-orange-50 px-2 py-1 rounded">
+                              {result.reviews_phase.transformation.duration_seconds ? `${result.reviews_phase.transformation.duration_seconds.toFixed(1)}s` : 'N/A'}
+                            </span>
+                          </div>
+                          {(result.reviews_phase.transformation.error_count || 0) > 0 && (
+                            <div className="text-amber-600">
+                              ⚠️ {result.reviews_phase.transformation.error_count || 0} errors occurred
+                            </div>
+                          )}
+                        </div>
+                      ) : (
+                        <div className="space-y-1">
+                          <span className="text-red-600">❌ Review transformation failed</span>
+                          {result.reviews_phase.transformation.errors && result.reviews_phase.transformation.errors.length > 0 && (
+                            <div className="text-xs bg-red-50 p-2 rounded mt-1">
+                              {result.reviews_phase.transformation.errors[0]}
+                            </div>
+                          )}
+                        </div>
+                      )
+                    ) : (
+                      <span>⏳ Waiting for review import to complete...</span>
                     )}
                   </div>
                 </div>
@@ -577,7 +622,7 @@ export function DataImportTab() {
                         {result?.execution_stats?.phase_durations && Object.entries(result.execution_stats.phase_durations).map(([phase, duration]) => (
                           <div key={phase} className="bg-gray-50 p-3 rounded-lg">
                             <div className="font-medium text-gray-700 capitalize">
-                              {phase.replace(/_/g, ' ')}
+                              {phase.replace(/_/g, ' ').replace(/transformation/g, 'transform')}
                             </div>
                             <div className="text-sm font-bold text-gray-600">
                               {(duration as number)?.toFixed(1)}s
