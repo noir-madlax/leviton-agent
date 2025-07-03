@@ -32,6 +32,9 @@ export interface CategoryFeedback {
   topPositiveAspects: string[]
   topNegativeReasons: string[]
   topPositiveReasons: string[]
+  // Enhanced fields for tooltips and better UX
+  categoryDefinition?: string
+  impactedProducts?: number
 }
 
 export interface UseCaseFeedback {
@@ -44,6 +47,9 @@ export interface UseCaseFeedback {
   topSatisfactionReasons: string[]
   topGapReasons: string[]
   relatedCategories: string[]
+  // Enhanced fields for better analysis
+  categoryDefinition?: string
+  productCount?: number
 }
 
 export interface ProductPainPoint {

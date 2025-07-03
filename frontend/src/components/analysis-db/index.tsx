@@ -181,6 +181,8 @@ interface DashboardData {
       productAttribute: string
       gapLevel: number
       mentionCount: number
+      categoryDefinition?: string
+      productCount?: number
     }>
   }
   competitorAnalysis: {

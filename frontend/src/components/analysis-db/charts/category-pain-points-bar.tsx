@@ -26,8 +26,8 @@ interface CategoryPainPointsBarProps {
         <p className="text-sm text-gray-600">Type: {data.categoryType}</p>
         <p className="text-sm text-red-600 font-semibold">Negative Reviews: {data.negativeCount}</p>
         <p className="text-sm text-blue-600">Total Reviews: {data.totalReviews}</p>
-        <p className="text-sm text-orange-600">Negative Rate: {data.negativeRate}%</p>
-        <p className="text-sm text-green-600">Satisfaction Rate: {data.satisfactionRate}%</p>
+        <p className="text-sm text-orange-600">Negative Rate: {Math.round(data.negativeRate)}%</p>
+        <p className="text-sm text-green-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
           <p className="text-xs text-gray-500">Top Issue Details:</p>
           {data.topNegativeAspects.slice(0, 3).map((aspect: string, index: number) => (
@@ -172,7 +172,7 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
                 {item.category}
               </div>
               <div className="text-xs" style={{color: getBarColor(item)}}>
-                {item.satisfactionRate}% satisfaction
+                {Math.round(item.satisfactionRate)}% satisfaction
               </div>
             </div>
           ))}

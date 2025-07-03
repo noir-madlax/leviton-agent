@@ -18,18 +18,26 @@ interface ReviewInsightsProps {
         frequency: number
         impactedProducts: number
         type: 'Physical' | 'Performance' | 'Usability'
+        categoryDefinition?: string
+        totalMentions?: number
+        negativeRate?: number
       }>
       customerLikes: Array<{
         feature: string
         category: string
         frequency: number
         satisfactionLevel: 'High' | 'Medium' | 'Low'
+        categoryDefinition?: string
+        totalMentions?: number
+        positiveRate?: number
       }>
       underservedUseCases: Array<{
         useCase: string
         productAttribute: string
         gapLevel: number
         mentionCount: number
+        categoryDefinition?: string
+        productCount?: number
       }>
     }
     allReviewData: Record<string, Array<{
@@ -60,29 +68,44 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
     setReviewData(reviewDataForCharts)
   }, [data])
   
-  // 将数据库数据转换为图表所需的格式
+  // 将数据库数据转换为图表所需的格式，利用新的增强字段
   const transformPainPointsData = (): { topNegativeCategories: CategoryFeedback[] } => {
     const painPoints = data.reviewInsights.painPoints
     
-    // 转换为CategoryFeedback格式
+    // 转换为CategoryFeedback格式，使用实际的情感分析数据
     const categoryFeedbacks: CategoryFeedback[] = painPoints
       .sort((a, b) => b.frequency - a.frequency)
       .slice(0, 15) // 取前15个
-      .map(item => ({
-        category: item.aspect,
-        categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
-        mentions: item.frequency,
-        satisfactionRate: Math.max(0, 100 - item.severity), // severity越高，satisfaction越低
-        negativeRate: item.severity,
-        positiveCount: Math.floor(item.frequency * (100 - item.severity) / 100),
-        negativeCount: Math.floor(item.frequency * item.severity / 100),
-        totalReviews: item.frequency,
-        averageRating: Math.max(1, 5 - (item.severity / 20)), // severity转换为rating
-        topNegativeAspects: [item.aspect],
-        topPositiveAspects: [],
-        topNegativeReasons: [`High severity: ${item.severity}%`],
-        topPositiveReasons: []
-      }))
+      .map(item => {
+        // 使用新字段提供更精确的数据
+        const totalMentions = item.totalMentions || item.frequency
+        const negativeRate = item.negativeRate || item.severity
+        const positiveRate = 100 - negativeRate
+        const negativeCount = Math.floor(totalMentions * negativeRate / 100)
+        const positiveCount = totalMentions - negativeCount
+        
+        return {
+          category: item.aspect,
+          categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
+          mentions: totalMentions,
+          satisfactionRate: positiveRate,
+          negativeRate: negativeRate,
+          positiveCount: positiveCount,
+          negativeCount: negativeCount,
+          totalReviews: totalMentions,
+          averageRating: Math.max(1, 5 - (negativeRate / 20)), // 基于负面率计算平均评分
+          topNegativeAspects: [item.aspect],
+          topPositiveAspects: [],
+          topNegativeReasons: [
+            `${Math.round(negativeRate)}% negative sentiment`,
+            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+          ],
+          topPositiveReasons: [],
+          // Enhanced tooltip information
+          categoryDefinition: item.categoryDefinition,
+          impactedProducts: item.impactedProducts
+        }
+      })
     
     return {
       topNegativeCategories: categoryFeedbacks
@@ -92,28 +115,39 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
   const transformPositiveFeedbackData = (): { topPositiveCategories: CategoryFeedback[] } => {
     const customerLikes = data.reviewInsights.customerLikes
     
-    // 转换为CategoryFeedback格式
+    // 转换为CategoryFeedback格式，使用实际的情感分析数据
     const categoryFeedbacks: CategoryFeedback[] = customerLikes
       .sort((a, b) => b.frequency - a.frequency)
       .slice(0, 15) // 取前15个
       .map(item => {
-        const satisfactionScore = item.satisfactionLevel === 'High' ? 90 : 
-                                item.satisfactionLevel === 'Medium' ? 70 : 50
+        // 使用新字段提供更精确的数据
+        const totalMentions = item.totalMentions || item.frequency
+        const positiveRate = item.positiveRate || (item.satisfactionLevel === 'High' ? 90 : 
+                                                   item.satisfactionLevel === 'Medium' ? 70 : 50)
+        const negativeRate = 100 - positiveRate
+        const positiveCount = Math.floor(totalMentions * positiveRate / 100)
+        const negativeCount = totalMentions - positiveCount
         
         return {
           category: item.feature,
           categoryType: item.category === 'physical' ? 'Physical' : 'Performance',
-          mentions: item.frequency,
-          satisfactionRate: satisfactionScore,
-          negativeRate: 100 - satisfactionScore,
-          positiveCount: Math.floor(item.frequency * satisfactionScore / 100),
-          negativeCount: Math.floor(item.frequency * (100 - satisfactionScore) / 100),
-          totalReviews: item.frequency,
-          averageRating: 3 + (satisfactionScore / 50), // 转换为1-5星级
+          mentions: totalMentions,
+          satisfactionRate: positiveRate,
+          negativeRate: negativeRate,
+          positiveCount: positiveCount,
+          negativeCount: negativeCount,
+          totalReviews: totalMentions,
+          averageRating: 3 + (positiveRate / 50), // 基于正面率计算评分
           topNegativeAspects: [],
           topPositiveAspects: [item.feature],
           topNegativeReasons: [],
-          topPositiveReasons: [`${item.satisfactionLevel} satisfaction level`]
+          topPositiveReasons: [
+            `${Math.round(positiveRate)}% positive sentiment`,
+            `${item.satisfactionLevel} satisfaction level`,
+            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+          ],
+          // Enhanced tooltip information
+          categoryDefinition: item.categoryDefinition
         }
       })
     
@@ -138,9 +172,19 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
           negativeCount,
           satisfactionRate,
           categoryType: 'Performance', // 默认为Performance
-          topSatisfactionReasons: satisfactionRate > 50 ? [`Good coverage for ${item.useCase}`] : [],
-          topGapReasons: item.gapLevel > 50 ? [`Gap level: ${item.gapLevel}%`] : [],
-          relatedCategories: [item.productAttribute]
+          topSatisfactionReasons: satisfactionRate > 50 ? [
+            `Good coverage for ${item.useCase}`,
+            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+          ] : [],
+          topGapReasons: item.gapLevel > 50 ? [
+            `Gap level: ${item.gapLevel}%`,
+            ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
+            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+          ] : [],
+          relatedCategories: [item.productAttribute],
+          // Enhanced information
+          categoryDefinition: item.categoryDefinition,
+          productCount: item.productCount
         }
       })
   }
@@ -155,6 +199,14 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
 
   return (
     <div className="space-y-10">
+      {/* Enhanced header with migration info */}
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
+        <h3 className="text-lg font-semibold text-blue-800 mb-2">📊 Enhanced Review Insights</h3>
+        <p className="text-sm text-blue-700">
+          Now powered by advanced sentiment analysis with precise positive/negative breakdowns and category definitions for better understanding.
+        </p>
+      </div>
+
       {/* 分类痛点分析 */}
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
@@ -163,6 +215,8 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
           <p className="text-sm text-blue-700">
             🖱️ <strong>Interactive Chart:</strong> Click on any bar to view actual customer reviews mentioning those specific issues and pain points.
+            <br />
+            🎯 <strong>Enhanced Data:</strong> Now shows precise sentiment analysis with negative rates and category context.
           </p>
         </div>
 
@@ -182,6 +236,8 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
           <p className="text-sm text-green-700">
             🖱️ <strong>Interactive Chart:</strong> Click on any bar to view actual customer reviews highlighting those positive aspects and strengths.
+            <br />
+            🎯 <strong>Enhanced Data:</strong> Now shows precise sentiment analysis with positive rates and detailed satisfaction levels.
           </p>
         </div>
 
@@ -201,6 +257,8 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded-lg">
           <p className="text-sm text-purple-700">
             🖱️ <strong>Interactive Chart:</strong> Click on any bar to explore customer reviews related to specific use cases and applications.
+            <br />
+            🎯 <strong>Enhanced Data:</strong> Now includes product coverage information and detailed context for better gap analysis.
           </p>
         </div>
 

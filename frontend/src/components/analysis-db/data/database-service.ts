@@ -416,18 +416,29 @@ export class DatabaseService {
       frequency: number
       impactedProducts: number
       type: 'Physical' | 'Performance' | 'Usability'
+      // Enhanced fields from new table structure
+      categoryDefinition?: string
+      totalMentions?: number
+      negativeRate?: number
     }>
     customerLikes: Array<{
       feature: string
       category: string
       frequency: number
       satisfactionLevel: 'High' | 'Medium' | 'Low'
+      // Enhanced fields from new table structure
+      categoryDefinition?: string
+      totalMentions?: number
+      positiveRate?: number
     }>
     underservedUseCases: Array<{
       useCase: string
       productAttribute: string
       gapLevel: number
       mentionCount: number
+      // Enhanced fields from new table structure
+      categoryDefinition?: string
+      productCount?: number
     }>
   }> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'

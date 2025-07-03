@@ -182,27 +182,38 @@ class PackagePreferenceResponse(BaseModel):
 # ==================== Review Insights Models ====================
 
 class PainPoint(BaseModel):
-    """Pain point data model."""
+    """Pain point data model with enhanced fields."""
     aspect: str
     category: str
     severity: float
     frequency: int
     impactedProducts: int
     type: Literal["Physical", "Performance", "Usability"]
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
+    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative mentions")
 
 class CustomerLike(BaseModel):
-    """Customer like data model."""
+    """Customer like data model with enhanced fields."""
     feature: str
     category: str
     frequency: int
     satisfactionLevel: Literal["High", "Medium", "Low"]
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
+    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive mentions")
 
 class UnderservedUseCase(BaseModel):
-    """Underserved use case data model."""
+    """Underserved use case data model with enhanced fields."""
     useCase: str
     productAttribute: str
     gapLevel: float
     mentionCount: int
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
 
 class ReviewInsightsResponse(BaseModel):
     """Review insights response model."""
