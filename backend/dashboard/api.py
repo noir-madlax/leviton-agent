@@ -1,8 +1,8 @@
 """FastAPI router for Dashboard module."""
 
 import logging
-from typing import List
-from fastapi import APIRouter, HTTPException, Query
+from typing import List, Optional, Dict, Any
+from fastapi import APIRouter, HTTPException, Query, Depends
 
 from .models import (
     BrandAnalysisResponse, BrandCategoryData,
@@ -22,6 +22,7 @@ from .services.package_preference_service import PackagePreferenceService
 from .services.review_insights_service import ReviewInsightsService
 from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
+from core.database.connection import get_supabase_client
 
 logger = logging.getLogger(__name__)
 
@@ -339,4 +340,128 @@ async def get_all_review_data(
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         logger.error(f"Error in all review data API for project {project_id}: {e}")
-        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}") 
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/project-overview")
+async def get_project_overview(
+    project_id: str = Query(..., description="Project ID")
+):
+    """Get project data overview including basic statistics"""
+    try:
+        supabase = get_supabase_client()
+        
+        # Get project basic info
+        project_response = supabase.table('projects').select(
+            'project_name, total_products, total_brands, total_reviews, '
+            'selected_categories, selected_sources, selected_product_asins, created_at'
+        ).eq('id', project_id).single().execute()
+        
+        if not project_response.data:
+            raise HTTPException(status_code=404, detail="Project not found")
+        
+        project_info = project_response.data
+        
+        # Get segment count from products in this project
+        if project_info.get('selected_product_asins'):
+            asins_list = project_info['selected_product_asins']
+            
+            # Get distinct product segments
+            segments_response = supabase.table('product_wide_table').select(
+                'product_segment'
+            ).in_('platform_id', asins_list).neq('product_segment', None).execute()
+            
+            unique_segments = set()
+            if segments_response.data:
+                for item in segments_response.data:
+                    if item.get('product_segment'):
+                        unique_segments.add(item['product_segment'])
+            
+            segment_count = len(unique_segments)
+            
+            # Get categories available in this project
+            categories_response = supabase.table('product_wide_table').select(
+                'category'
+            ).in_('platform_id', asins_list).neq('category', None).execute()
+            
+            unique_categories = set()
+            if categories_response.data:
+                for item in categories_response.data:
+                    if item.get('category'):
+                        unique_categories.add(item['category'])
+            
+            available_categories = sorted(list(unique_categories))
+            
+            # Get data source distribution
+            sources_response = supabase.table('product_wide_table').select(
+                'source'
+            ).in_('platform_id', asins_list).neq('source', None).execute()
+            
+            sources_count = {}
+            total_sources = 0
+            if sources_response.data:
+                for item in sources_response.data:
+                    source = item.get('source')
+                    if source:
+                        sources_count[source] = sources_count.get(source, 0) + 1
+                        total_sources += 1
+            
+            sources_distribution = []
+            for source, count in sources_count.items():
+                percentage = round(count * 100.0 / total_sources, 1) if total_sources > 0 else 0
+                sources_distribution.append({
+                    "name": source,
+                    "count": count,
+                    "percentage": percentage
+                })
+            sources_distribution.sort(key=lambda x: x['count'], reverse=True)
+            
+            # Get category distribution
+            categories_response = supabase.table('product_wide_table').select(
+                'category'
+            ).in_('platform_id', asins_list).neq('category', None).execute()
+            
+            categories_count = {}
+            total_categories = 0
+            if categories_response.data:
+                for item in categories_response.data:
+                    category = item.get('category')
+                    if category:
+                        categories_count[category] = categories_count.get(category, 0) + 1
+                        total_categories += 1
+            
+            categories_distribution = []
+            for category, count in categories_count.items():
+                percentage = round(count * 100.0 / total_categories, 1) if total_categories > 0 else 0
+                categories_distribution.append({
+                    "name": category,
+                    "count": count,
+                    "percentage": percentage
+                })
+            categories_distribution.sort(key=lambda x: x['count'], reverse=True)
+            
+        else:
+            segment_count = 0
+            available_categories = []
+            sources_distribution = []
+            categories_distribution = []
+        
+        return {
+            "project_name": project_info['project_name'],
+            "created_at": project_info['created_at'],
+            "stats": {
+                "total_products": project_info['total_products'],
+                "total_brands": project_info['total_brands'], 
+                "total_reviews": project_info['total_reviews'],
+                "segment_count": segment_count
+            },
+            "distributions": {
+                "sources": sources_distribution,
+                "categories": categories_distribution
+            },
+            "available_categories": available_categories
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting project overview: {e}")
+        raise HTTPException(status_code=500, detail=str(e)) 

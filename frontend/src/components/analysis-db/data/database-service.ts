@@ -762,6 +762,46 @@ export class DatabaseService {
       return null
     }
   }
+
+  // 🔑 Get project overview data
+  async getProjectOverview(projectId: string): Promise<{
+    project_name: string
+    created_at: string
+    stats: {
+      total_products: number
+      total_brands: number
+      total_reviews: number
+      segment_count: number
+    }
+    distributions: {
+      sources: Array<{
+        name: string
+        count: number
+        percentage: number
+      }>
+      categories: Array<{
+        name: string
+        count: number
+        percentage: number
+      }>
+    }
+    available_categories: string[]
+  }> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/project-overview?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      return await response.json()
+    } catch (error) {
+      console.error('Error fetching project overview:', error)
+      throw error
+    }
+  }
 }
 
 export const databaseService = new DatabaseService() 
