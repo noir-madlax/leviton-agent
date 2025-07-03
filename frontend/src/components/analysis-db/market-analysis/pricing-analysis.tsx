@@ -14,6 +14,7 @@ interface PricingAnalysisProps {
       category: string
       skuPrices: number[]
       unitPrices: number[]
+      productCount: number
       stats: {
         sku: {
           min: number
@@ -67,6 +68,7 @@ export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
       name: category.category,
       prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
       color: colors[index % colors.length],
+      productCount: category.productCount,
       stats: priceType === 'unit' ? category.stats.unit : category.stats.sku
     }))
   }, [allCategories, priceType])

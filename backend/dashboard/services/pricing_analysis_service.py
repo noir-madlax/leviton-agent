@@ -180,6 +180,7 @@ class PricingAnalysisService(BaseDashboardService):
                 'category': category_name,
                 'skuPrices': sku_prices,
                 'unitPrices': unit_prices,
+                'productCount': len(products),
                 'stats': {
                     'sku': calculate_price_stats(sku_prices),
                     'unit': calculate_price_stats(unit_prices)

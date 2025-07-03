@@ -57,40 +57,36 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
 
   const productType = getProductType()
   
-  // Transform data for the chart - always show all segments
-  const chartData = data.brandCategoryRevenue.map((item) => {
-    const chartItem: any = { name: item.brand }
-    
-    // 显示所有segments
-    segmentNames.forEach((segment, index) => {
-      const segmentData = item.segments[segment] || { revenue: 0, volume: 0 }
-      const emojis = ["🔆", "💡", "🔥", "⚡", "🌟", "🎯", "📊", "💎"]
-      const emoji = emojis[index % emojis.length]
-      chartItem[`${emoji} ${segment}`] = metricType === "revenue" 
-        ? segmentData.revenue 
-        : segmentData.volume
-    })
-    
-    return chartItem
-  })
+  // 按segment重组数据 - 为每个segment创建独立的图表数据
+  const segmentChartData = segmentNames.map((segment, segmentIndex) => {
+    const brandsForSegment = data.brandCategoryRevenue
+      .map(item => {
+        const segmentData = item.segments[segment] || { revenue: 0, volume: 0 }
+        const value = metricType === "revenue" ? segmentData.revenue : segmentData.volume
+        return {
+          name: item.brand,
+          value: value
+        }
+      })
+      .filter(item => item.value > 0) // 只保留有数据的品牌
+      .sort((a, b) => b.value - a.value) // 按值排序
 
-  // 动态生成categories for chart - show all segments
-  const chartCategories = segmentNames.map((segment, index) => {
     const emojis = ["🔆", "💡", "🔥", "⚡", "🌟", "🎯", "📊", "💎"]
-    const emoji = emojis[index % emojis.length]
-    return `${emoji} ${segment}`
-  })
+    const emoji = emojis[segmentIndex % emojis.length]
+    
+    return {
+      segment,
+      emoji,
+      brands: brandsForSegment,
+      color: segmentColors[segmentIndex % segmentColors.length],
+      hasData: brandsForSegment.length > 0
+    }
+  }).filter(item => item.hasData) // 只保留有数据的segments
 
-  // 使用对应的颜色
-  const chartColors = segmentColors.slice(0, chartCategories.length)
-
-  const yAxisLabel = metricType === "revenue" ? "$ Total Revenue ($)" : "# Total Volume (Packages)"
+  const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
-  // 生成标题
-  const chartTitle = `Brand ${titleSuffix} by All Segments (${productType})`
-
-  const handleBarClick = (data: any) => {
+  const handleBarClick = (data: any, segment: string) => {
     if (data && data.activeLabel) {
       const brand = data.activeLabel
       const products = productLists.byBrand[brand] || []
@@ -107,31 +103,51 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Brand Analysis</h2>
 
-      <h3 className="text-xl font-semibold mb-4">{chartTitle}</h3>
+      <h3 className="text-xl font-semibold mb-4">Brand {titleSuffix} by Segment ({productType})</h3>
       <Card className="p-6 bg-gray-50">
         <MetricTypeSelector onChange={setMetricType} value={metricType} />
         
         {/* Segment info */}
         <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
           <p className="text-sm text-blue-700">
-            <strong>Segments analyzed:</strong> {segmentNames.length} segments ({productType})
+            <strong>Segments analyzed:</strong> {segmentChartData.length} segments with data ({productType})
           </p>
           <p className="text-xs text-blue-600 mt-1">
-            Showing all {segmentNames.length} segments across {data.brandCategoryRevenue.length} brands
+            Each chart shows brands competing in that specific segment
           </p>
         </div>
 
-        <div className="h-[500px]">
-          <BarChart
-            data={chartData}
-            index="name"
-            categories={chartCategories}
-            colors={chartColors}
-            yAxisLabel={yAxisLabel}
-            xAxisLabel="Brand"
-            metricType={metricType}
-            onBarClick={handleBarClick}
-          />
+        {/* Multiple charts - one per segment */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
+          {segmentChartData.map((segmentChart) => (
+            <div key={segmentChart.segment} className="bg-white p-3 rounded-lg border shadow-sm">
+              <h4 className="text-sm font-semibold mb-2 text-center text-gray-800">
+                {segmentChart.emoji} {segmentChart.segment}
+              </h4>
+              <p className="text-xs text-gray-600 text-center mb-2">
+                {segmentChart.brands.length} brands
+              </p>
+              
+              <div className="h-[280px]">
+                <BarChart
+                  data={segmentChart.brands}
+                  index="name"
+                  categories={["value"]}
+                  colors={[segmentChart.color]}
+                  yAxisLabel={yAxisLabel}
+                  metricType={metricType}
+                  onBarClick={(data) => handleBarClick(data, segmentChart.segment)}
+                />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Summary */}
+        <div className="mt-6 p-3 bg-gray-100 rounded">
+          <p className="text-sm text-gray-700">
+            <strong>Total segments with data:</strong> {segmentChartData.length} out of {segmentNames.length} segments
+          </p>
         </div>
       </Card>
     </section>

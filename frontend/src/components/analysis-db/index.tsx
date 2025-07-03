@@ -78,6 +78,7 @@ interface DashboardData {
       category: string
       skuPrices: number[]
       unitPrices: number[]
+      productCount: number
       stats: {
         sku: {
           min: number

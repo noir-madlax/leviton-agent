@@ -1,7 +1,7 @@
 "use client"
 
-import { useMemo, useState, useRef, useLayoutEffect } from "react"
-import type { PriceType } from "@/components/analysis-db/shared/price-type-selector"
+import React, { useState, useEffect, useRef, useMemo } from 'react'
+import { PriceType } from '../shared/price-type-selector'
 
 interface BrandViolinChartProps {
   brands: {
@@ -14,22 +14,16 @@ interface BrandViolinChartProps {
   onViolinClick?: (brand: string, category: string) => void
 }
 
-interface ChartRendererProps extends BrandViolinChartProps {
-  width?: number
-  height?: number
-}
-
 interface HoverState {
-  visible: boolean
   x: number
   y: number
-  cursorX: number
   price: number
-  products: number
   brand: string
+  products: number
+  visible: boolean
 }
 
-// Function to create kernel density estimation
+// KDE function - 采用MultiSegmentViolinChart的实现
 function kde(data: number[], bandwidth: number, min: number, max: number, steps: number): [number, number][] {
   const result: [number, number][] = []
   const range = max - min
@@ -51,224 +45,165 @@ function kde(data: number[], bandwidth: number, min: number, max: number, steps:
   return result
 }
 
-// Function to normalize density values to a specific range
-function normalizeDensity(densityData: [number, number][], maxHeight: number): [number, number][] {
+// Function to normalize density values - 采用MultiSegmentViolinChart的实现
+function normalizeDensity(densityData: [number, number][], maxHalfWidth: number): [number, number][] {
   const maxDensity = Math.max(...densityData.map((d) => d[1]))
-  const minWidth = 0.5 // Small constant minimal width in pixels
+  const minWidth = 0.5
   if (maxDensity === 0) return densityData.map(([x]) => [x, minWidth])
-  return densityData.map(([x, y]) => [x, Math.max(minWidth, (y / maxDensity) * maxHeight)])
+  return densityData.map(([x, y]) => [x, Math.max(minWidth, (y / maxDensity) * maxHalfWidth)])
 }
 
-// Function to lighten colors for tooltip background
-function lightenColor(color: string, percent: number): string {
-  if (color.startsWith("#")) {
-    const num = parseInt(color.slice(1), 16)
-    const r = Math.min(255, Math.floor((num >> 16) + (255 - (num >> 16)) * percent))
-    const g = Math.min(255, Math.floor(((num >> 8) & 0x00FF) + (255 - ((num >> 8) & 0x00FF)) * percent))
-    const b = Math.min(255, Math.floor((num & 0x0000FF) + (255 - (num & 0x0000FF)) * percent))
-    return `rgb(${r}, ${g}, ${b})`
-  }
-  
-  const rgbMatch = color.match(/rgb\\((\\d+),\\s*(\\d+),\\s*(\\d+)\\)/)
-  if (rgbMatch) {
-    const r = Math.min(255, Math.floor(parseInt(rgbMatch[1]) + (255 - parseInt(rgbMatch[1])) * percent))
-    const g = Math.min(255, Math.floor(parseInt(rgbMatch[2]) + (255 - parseInt(rgbMatch[2])) * percent))
-    const b = Math.min(255, Math.floor(parseInt(rgbMatch[3]) + (255 - parseInt(rgbMatch[3])) * percent))
-    return `rgb(${r}, ${g}, ${b})`
-  }
-  
-  return color
+// Clean brand name to remove invisible characters
+function cleanBrandName(brand: string): string {
+  return brand.replace(/[\u200B-\u200D\uFEFF\u202C\u202D\u2066-\u2069]/g, '').trim()
 }
 
-function ChartRenderer({ brands, priceType, category, width = 800, height = 370, onViolinClick }: ChartRendererProps) {
-  const svgRef = useRef<SVGSVGElement>(null)
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+export function BrandViolinChart({ brands, priceType, category, onViolinClick }: BrandViolinChartProps) {
   const [hoverState, setHoverState] = useState<HoverState>({
-    visible: false,
     x: 0,
     y: 0,
-    cursorX: 0,
     price: 0,
+    brand: '',
     products: 0,
-    brand: ""
+    visible: false,
   })
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
-  useLayoutEffect(() => {
-    if (containerRef.current) {
-      const { width, height } = containerRef.current.getBoundingClientRect();
-      setDimensions({ width, height });
-
-      const resizeObserver = new ResizeObserver(entries => {
-        if (!Array.isArray(entries) || !entries.length) {
-          return;
-        }
-        const entry = entries[0];
-        setDimensions({ width: entry.contentRect.width, height: entry.contentRect.height });
-      });
-
-      resizeObserver.observe(containerRef.current);
-      return () => resizeObserver.disconnect();
+  useEffect(() => {
+    const updateDimensions = () => {
+      if (containerRef.current) {
+        const { width, height } = containerRef.current.getBoundingClientRect()
+        setDimensions({ width, height })
+      }
     }
-  }, []);
 
-  const layout = useMemo(() => ({
-    width: dimensions.width || width,
-    height: dimensions.height || height,
-    marginTop: 30,
-    marginBottom: 70,
-    marginLeft: 70,
-    marginRight: 25,
-    get chartWidth() { return this.width - this.marginLeft - this.marginRight },
-    get chartHeight() { return this.height - this.marginTop - this.marginBottom },
-    get yAxisBottom() { return this.height - this.marginBottom },
-    yAxisTickIncrement: 50,
-  }), [dimensions.width, dimensions.height, width, height])
+    updateDimensions()
+    window.addEventListener('resize', updateDimensions)
+    return () => window.removeEventListener('resize', updateDimensions)
+  }, [])
 
-  const chartData = useMemo(() => {
-    const filtered = brands
-      .filter(brand => {
-        const prices = priceType === "sku" ? brand.skuPrices : brand.unitPrices
-        return prices.length >= 1  // 降低要求：至少1个数据点就显示
-      })
-      .slice(0, 8)
+  // 数据验证和过滤
+  const validBrands = brands.filter(brand => {
+    const prices = priceType === "sku" ? brand.skuPrices : brand.unitPrices
+    return prices && prices.length > 0
+  }).slice(0, 8) // 限制显示最多8个品牌
 
-    const allPrices = filtered.flatMap(brand => (priceType === "sku" ? brand.skuPrices : brand.unitPrices))
-    const maxPrice = Math.max(...allPrices, 0)
-    const brandWidth = filtered.length > 0 ? layout.chartWidth / filtered.length : 0
-    const maxViolinHalfWidth = (brandWidth / 2) * 0.9
+  const margin = { top: 40, right: 20, bottom: 80, left: 80 }
+  const chartWidth = Math.max(0, dimensions.width - margin.left - margin.right)
+  const chartHeight = Math.max(0, dimensions.height - margin.top - margin.bottom)
 
-    const data = filtered.map(brand => {
+  // 计算全局价格范围
+  const allPrices = validBrands.flatMap(brand => 
+    priceType === "sku" ? brand.skuPrices : brand.unitPrices
+  )
+  const globalMin = Math.min(...allPrices)
+  const globalMax = Math.max(...allPrices)
+  const bandwidth = Math.max(1, (globalMax - globalMin) * 0.05)
+  const steps = 50
+
+  // 使用MultiSegmentViolinChart的颜色方案
+  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300"]
+
+  // 计算每个品牌的violin数据
+  const violinData = useMemo(() => {
+    const brandWidth = chartWidth / validBrands.length
+    const maxHalfWidth = brandWidth * 0.35
+
+    return validBrands.map((brand, index) => {
       const prices = priceType === "sku" ? brand.skuPrices : brand.unitPrices
       const sortedPrices = [...prices].sort((a, b) => a - b)
-      const median = sortedPrices[Math.floor(sortedPrices.length / 2)]
-      const mean = prices.reduce((a, b) => a + b, 0) / prices.length
+      const centerX = (index + 0.5) * brandWidth
       
-      let density: [number, number][]
-      
-      if (prices.length === 1) {
-        // 单个数据点：创建一个简单的点状显示
-        const price = prices[0]
-        const pointWidth = maxViolinHalfWidth * 0.3
-        density = [
-          [price - 1, 0],
-          [price, pointWidth],
-          [price + 1, 0]
-        ]
-      } else if (prices.length === 2) {
-        // 两个数据点：创建简单的双点显示
-        const [p1, p2] = sortedPrices
-        const pointWidth = maxViolinHalfWidth * 0.4
-        density = [
-          [p1 - 1, 0],
-          [p1, pointWidth],
-          [(p1 + p2) / 2, pointWidth * 0.5],
-          [p2, pointWidth],
-          [p2 + 1, 0]
-        ]
-      } else {
-        // 三个或更多数据点：使用正常的KDE
-        const bandwidth = Math.max(1, Math.sqrt(prices.length) * 1.5)
-        const min = Math.max(0, Math.min(...prices) - 10)
-        const max = Math.min(maxPrice, Math.max(...prices) + 10)
-        density = normalizeDensity(kde(prices, bandwidth, min, max, 50), maxViolinHalfWidth)
+      // 计算统计信息
+      const stats = {
+        min: sortedPrices[0],
+        median: sortedPrices[Math.floor(sortedPrices.length / 2)],
+        mean: prices.reduce((a, b) => a + b, 0) / prices.length,
+        max: sortedPrices[sortedPrices.length - 1],
+        count: prices.length
       }
 
+      const density = normalizeDensity(
+        kde(prices, bandwidth, globalMin, globalMax, steps), 
+        maxHalfWidth
+      )
+
+      const cleanName = cleanBrandName(brand.name)
       return {
-        name: brand.name,
+        name: cleanName,
         prices,
+        color: colors[index % colors.length], // 使用循环颜色方案
+        stats,
+        centerX,
         density,
-        median,
-        mean,
-        count: prices.length,
+        brandWidth
       }
     })
+  }, [validBrands, priceType, chartWidth, globalMin, globalMax, bandwidth])
 
-    return { data, maxPrice, brandWidth }
-  }, [brands, priceType, layout.chartWidth])
-
-  const { data: brandData, maxPrice, brandWidth } = chartData
-  
-  const yAxisSteps = Math.ceil(maxPrice / layout.yAxisTickIncrement)
-  const yAxisLabels = Array.from({ length: yAxisSteps + 1 }, (_, i) => i * layout.yAxisTickIncrement)
-
-  const brandColors: Record<string, string> = {
-    // Switch/Dimmer brands
-    Lutron: "#E67E22",
-    GE: "#3498DB", 
-    Leviton: "#9B59B6",
-    BESTTEN: "#FDB462",
-    ELEGRP: "#80B1D3",
-    Amazon: "#FCCDE5",
-    TREATLIFE: "#FF6B6B",
-    "ENERLITES Store": "#B3DE69",
-    Legrand: "#2ECC71",
-    "SOZULAMP Store": "#95A5A6",
-    Kasa: "#8DD3C7",
-    "TP-Link": "#4ECDC4",
-    // Air Fryer brands
-    Chefman: "#FF6B6B",
-    COSORI: "#4ECDC4", 
-    "Instant Pot": "#45B7D1",
-    Ninja: "#96CEB4",
-    "Emeril Lagasse": "#FFEAA7",
-    Other: "#D3D3D3",
+  if (validBrands.length === 0) {
+    return (
+      <div className="h-full flex items-center justify-center">
+        <div className="text-center text-gray-500">
+          <div className="text-lg font-medium">No pricing data available</div>
+          <div className="text-sm">Waiting for valid brand data...</div>
+        </div>
+      </div>
+    )
   }
 
-  const getViolinWidth = (density: [number, number][], price: number): number => {
-    if (!density || density.length === 0) return 0
-    
-    let closestPoint = density[0]
-    let minDistance = Math.abs(density[0][0] - price)
-    
-    for (const point of density) {
-      const distance = Math.abs(point[0] - price)
-      if (distance < minDistance) {
-        minDistance = distance
-        closestPoint = point
-      }
-    }
-    
-    return closestPoint[1]
+  const yScale = (price: number) => {
+    if (globalMax <= globalMin) return chartHeight / 2
+    return chartHeight - ((price - globalMin) / (globalMax - globalMin)) * chartHeight
   }
 
-  const getDensityWidth = (density: [number, number][], price: number): number => {
-    return getViolinWidth(density, price)
+  const priceFromY = (y: number) => {
+    return globalMin + ((chartHeight - y) / chartHeight) * (globalMax - globalMin)
+  }
+
+  // Y轴标签 - 修复key重复问题
+  const yAxisLabels = globalMax > globalMin ? 
+    Array.from({ length: 6 }, (_, i) => Math.round(globalMin + ((globalMax - globalMin) / 5) * i)) : 
+    [0]
+
+  const createViolinPath = (density: [number, number][], centerX: number, side: 'left' | 'right') => {
+    if (density.length === 0) return ''
+    
+    const points = density.map(([price, width]) => {
+      const y = yScale(price)
+      const x = side === 'left' ? centerX - width : centerX + width
+      return `${x},${y}`
+    })
+
+    return `M${points.join(' L')}`
   }
 
   const handleMouseMove = (event: React.MouseEvent<SVGSVGElement>) => {
-    if (!svgRef.current) return
+    const svgRect = event.currentTarget.getBoundingClientRect()
+    const mouseX = event.clientX - svgRect.left - margin.left
+    const mouseY = event.clientY - svgRect.top - margin.top
 
-    const rect = svgRef.current.getBoundingClientRect()
-    const svgX = event.clientX - rect.left
-    const svgY = event.clientY - rect.top
-    
-    const brandIndex = Math.floor((svgX - layout.marginLeft) / brandWidth)
-
-    if (brandIndex >= 0 && brandIndex < brandData.length && 
-        svgX >= layout.marginLeft && svgX <= layout.marginLeft + layout.chartWidth && 
-        svgY >= layout.marginTop && svgY <= layout.marginTop + layout.chartHeight) {
-      const brand = brandData[brandIndex]
-      const xCenter = layout.marginLeft + brandIndex * brandWidth + brandWidth / 2
-      const price = ((layout.yAxisBottom - svgY) / layout.chartHeight) * maxPrice
-
-      const violinHalfWidth = getViolinWidth(brand.density, price)
-      
-      if (Math.abs(svgX - xCenter) <= violinHalfWidth) {
-        setHoverState({
-          visible: true,
-          x: xCenter,
-          y: svgY,
-          cursorX: svgX,
-          price,
-          products: brand.count,
-          brand: brand.name,
-        })
-      } else {
-        setHoverState(prev => ({ ...prev, visible: false }))
-      }
-    } else {
+    if (mouseX < 0 || mouseX > chartWidth || mouseY < 0 || mouseY > chartHeight) {
       setHoverState(prev => ({ ...prev, visible: false }))
+      return
+    }
+
+    const price = priceFromY(mouseY)
+    
+    // 找到鼠标位置对应的品牌
+    const brandIndex = Math.floor(mouseX / (chartWidth / validBrands.length))
+    const targetBrand = violinData[brandIndex]
+    
+    if (targetBrand) {
+      setHoverState({
+        x: event.clientX,
+        y: event.clientY,
+        price,
+        brand: targetBrand.name,
+        products: targetBrand.stats.count,
+        visible: true
+      })
     }
   }
 
@@ -277,187 +212,142 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
   }
 
   const handleClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    if (!svgRef.current || !onViolinClick) return
-
-    const rect = svgRef.current.getBoundingClientRect()
-    const svgX = event.clientX - rect.left
-    const brandIndex = Math.floor((svgX - layout.marginLeft) / brandWidth)
-
-    if (brandIndex >= 0 && brandIndex < brandData.length) {
-      const brand = brandData[brandIndex]
-      onViolinClick(brand.name, category)
+    if (!onViolinClick) return
+    
+    const svgRect = event.currentTarget.getBoundingClientRect()
+    const mouseX = event.clientX - svgRect.left - margin.left
+    
+    const brandIndex = Math.floor(mouseX / (chartWidth / validBrands.length))
+    const targetBrand = violinData[brandIndex]
+    
+    if (targetBrand) {
+      onViolinClick(targetBrand.name, category)
     }
   }
 
-  if (layout.chartHeight <= 0 || dimensions.width === 0 || dimensions.height === 0) {
-    return (
-      <div className="h-full w-full relative" ref={containerRef}>
-        <div className="flex items-center justify-center h-full">
-          <p className="text-gray-500">Chart is too small to display.</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (brandData.length === 0) {
-    return (
-      <div className="h-full w-full relative" ref={containerRef}>
-        <div className="flex items-center justify-center h-full">
-          <p className="text-gray-500">No sufficient data for violin plots</p>
-        </div>
-      </div>
-    )
-  }
-
   return (
-    <div className="h-full w-full relative" ref={containerRef}>
-      <svg 
-        ref={svgRef}
+    <div ref={containerRef} className="w-full h-full relative">
+      <svg
         width={dimensions.width}
         height={dimensions.height}
-        className="w-full h-full cursor-pointer"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
+        className="cursor-pointer"
       >
-        <rect x={layout.marginLeft} y={layout.marginTop} width={layout.chartWidth} height={layout.chartHeight} fill="#f8fafc" />
+        {/* Y轴 */}
+        <line
+          x1={margin.left}
+          y1={margin.top}
+          x2={margin.left}
+          y2={margin.top + chartHeight}
+          stroke="#000"
+          strokeWidth="1"
+        />
 
-        {yAxisLabels.map((price) => (
-          <line
-            key={price}
-            x1={layout.marginLeft}
-            y1={layout.yAxisBottom - (price / maxPrice) * layout.chartHeight}
-            x2={layout.width - layout.marginRight}
-            y2={layout.yAxisBottom - (price / maxPrice) * layout.chartHeight}
-            stroke="#e2e8f0"
-            strokeDasharray="2,2"
-          />
-        ))}
-
-        <line x1={layout.marginLeft} y1={layout.marginTop} x2={layout.marginLeft} y2={layout.yAxisBottom} stroke="#64748b" strokeWidth="1" />
-
-        {yAxisLabels.map((price) => (
-          <text 
-            key={price} 
-            x={layout.marginLeft - 5} 
-            y={layout.yAxisBottom - (price / maxPrice) * layout.chartHeight + 4} 
-            textAnchor="end" 
-            fontSize="14" 
-            fill="#64748b"
-          >
-            ${price}
-          </text>
-        ))}
-
-        <text x={20} y={layout.height / 2} textAnchor="middle" fontSize="16" fill="#64748b" transform={`rotate(-90, 20, ${layout.height / 2})`}>
-          Price (USD)
-        </text>
-
-        <line x1={layout.marginLeft} y1={layout.yAxisBottom} x2={layout.width - layout.marginRight} y2={layout.yAxisBottom} stroke="#64748b" strokeWidth="1" />
-
-        {brandData.map((brand, index) => {
-          if (brand.density.length === 0) return null
-
-          const xPosition = layout.marginLeft + index * brandWidth + brandWidth / 2
-          const color = brandColors[brand.name] || brandColors.Other
-
+        {/* Y轴标签 */}
+        {yAxisLabels.map((price, index) => {
+          const y = margin.top + yScale(price)
           return (
-            <g key={brand.name}>
-              <text 
-                x={xPosition} 
-                y={layout.yAxisBottom + 35} 
-                textAnchor="middle" 
-                fontSize="14" 
-                fill="#64748b"
-                transform={`rotate(-45, ${xPosition}, ${layout.yAxisBottom + 35})`}
+            <g key={`grid-${index}-${price}`}>
+              <line
+                x1={margin.left - 5}
+                y1={y}
+                x2={margin.left}
+                y2={y}
+                stroke="#000"
+                strokeWidth="1"
+              />
+              <text
+                x={margin.left - 10}
+                y={y}
+                textAnchor="end"
+                dominantBaseline="middle"
+                fontSize="11"
+                fill="#666"
               >
-                {brand.name}
+                ${price}
               </text>
-
-              <g transform={`translate(${xPosition}, ${layout.yAxisBottom})`}>
-                <path
-                  d={`M 0,0 ${brand.density.map(([price, density]) => 
-                    `L ${-density},${-(price / maxPrice) * layout.chartHeight}`
-                  ).join(" ")} 
-                     ${brand.density
-                       .slice()
-                       .reverse()
-                       .map(([price, density]) => 
-                         `L ${density},${-(price / maxPrice) * layout.chartHeight}`
-                       )
-                       .join(" ")} Z`}
-                  fill={color}
-                  fillOpacity="0.7"
-                  stroke={color}
-                  strokeWidth="1"
-                />
-
-                <line
-                  x1={-getDensityWidth(brand.density, brand.median)}
-                  y1={-(brand.median / maxPrice) * layout.chartHeight}
-                  x2={getDensityWidth(brand.density, brand.median)}
-                  y2={-(brand.median / maxPrice) * layout.chartHeight}
-                  stroke="#7c3aed"
-                  strokeWidth="2"
-                  strokeDasharray="6,3"
-                />
-
-                <line
-                  x1={-getDensityWidth(brand.density, brand.mean)}
-                  y1={-(brand.mean / maxPrice) * layout.chartHeight}
-                  x2={getDensityWidth(brand.density, brand.mean)}
-                  y2={-(brand.mean / maxPrice) * layout.chartHeight}
-                  stroke="#059669"
-                  strokeWidth="1.5"
-                  strokeDasharray="3,3"
-                />
-              </g>
             </g>
           )
         })}
 
-        {hoverState.visible && (
-          <g>
-            <line
-              x1={hoverState.x - getViolinWidth(brandData.find(b => b.name === hoverState.brand)?.density || [], hoverState.price)}
-              y1={hoverState.y}
-              x2={hoverState.x + getViolinWidth(brandData.find(b => b.name === hoverState.brand)?.density || [], hoverState.price)}
-              y2={hoverState.y}
-              stroke="#dc2626"
-              strokeWidth="2"
-              opacity="0.9"
+        {/* X轴 */}
+        <line
+          x1={margin.left}
+          y1={margin.top + chartHeight}
+          x2={margin.left + chartWidth}
+          y2={margin.top + chartHeight}
+          stroke="#000"
+          strokeWidth="1"
+        />
+
+        {/* Violin图形 */}
+        {violinData.map((brand) => (
+          <g key={brand.name} transform={`translate(${margin.left}, ${margin.top})`}>
+            {/* Violin shape - 使用封闭路径 */}
+            <path
+              d={`${createViolinPath(brand.density, brand.centerX, 'left')} L${brand.centerX + (brand.density[0]?.[1] || 0)},${yScale(brand.density[0]?.[0] || 0)} ${createViolinPath(brand.density, brand.centerX, 'right')} Z`}
+              fill={brand.color}
+              fillOpacity={0.7}
+              stroke={brand.color}
+              strokeWidth="1"
             />
+
+            {/* 中位线 - 添加固定宽度 */}
+            <line
+              x1={brand.centerX - 15}
+              y1={yScale(brand.stats.median)}
+              x2={brand.centerX + 15}
+              y2={yScale(brand.stats.median)}
+              stroke="#000"
+              strokeWidth="2"
+              strokeDasharray="5,5"
+            />
+
+            {/* 均值线 - 添加固定宽度 */}
+            <line
+              x1={brand.centerX - 12}
+              y1={yScale(brand.stats.mean)}
+              x2={brand.centerX + 12}
+              y2={yScale(brand.stats.mean)}
+              stroke="#000"
+              strokeWidth="2"
+              strokeDasharray="2,2"
+            />
+
+            {/* 品牌标签 */}
+            <text
+              x={brand.centerX}
+              y={chartHeight + 20}
+              textAnchor="middle"
+              fontSize="11"
+              fill="#666"
+              transform={`rotate(-45, ${brand.centerX}, ${chartHeight + 20})`}
+            >
+              {brand.name}
+            </text>
           </g>
-        )}
+        ))}
 
-        <text x={layout.width / 2} y={layout.height - 5} textAnchor="middle" fontSize="16" fill="#64748b">
-          Brands
-        </text>
-
-        <g transform={`translate(${layout.width - 90}, ${layout.marginTop + 10})`}>
-          <rect x="-5" y="-5" width="85" height="50" fill="white" stroke="#e2e8f0" strokeWidth="1" rx="4" />
-          
-          <line x1="5" y1="12" x2="22" y2="12" stroke="#7c3aed" strokeWidth="2" strokeDasharray="6,3" />
-          <text x="27" y="16" fontSize="12" fill="#374151">Median</text>
-
-          <line x1="5" y1="30" x2="22" y2="30" stroke="#059669" strokeWidth="1.5" strokeDasharray="3,3" />
-          <text x="27" y="34" fontSize="12" fill="#374151">Mean</text>
+        {/* 图例 */}
+        <g transform={`translate(${margin.left + chartWidth - 120}, ${margin.top + 10})`}>
+          <rect x="0" y="0" width="110" height="40" fill="white" stroke="#ccc" strokeWidth="1" rx="3" />
+          <line x1="10" y1="15" x2="25" y2="15" stroke="#000" strokeWidth="2" strokeDasharray="5,5" />
+          <text x="30" y="18" fontSize="10" fill="#666">Median</text>
+          <line x1="10" y1="28" x2="25" y2="28" stroke="#000" strokeWidth="2" strokeDasharray="2,2" />
+          <text x="30" y="31" fontSize="10" fill="#666">Mean</text>
         </g>
       </svg>
 
+      {/* 悬停提示 */}
       {hoverState.visible && (
         <div
-          className="absolute pointer-events-none z-10 p-3 rounded-lg shadow-lg border text-sm"
+          className="absolute bg-black text-white p-2 rounded shadow-lg text-sm pointer-events-none z-10"
           style={{
-            left: `${hoverState.cursorX}px`,
-            top: `${hoverState.y}px`,
-            transform: "translate(-50%, calc(-100% - 15px))",
-            backgroundColor: lightenColor(brandColors[hoverState.brand] || brandColors.Other, 0.4),
-            width: "33vw",
-            maxWidth: "400px",
-            minWidth: "250px",
-            wordWrap: "break-word",
-            lineHeight: "1.4"
+            left: hoverState.x + 10,
+            top: hoverState.y - 10,
+            transform: 'translateY(-100%)'
           }}
         >
           <div className="font-medium">{hoverState.brand}</div>
@@ -466,11 +356,5 @@ function ChartRenderer({ brands, priceType, category, width = 800, height = 370,
         </div>
       )}
     </div>
-  )
-}
-
-export function BrandViolinChart({ brands, priceType, category, onViolinClick }: BrandViolinChartProps) {
-  return (
-    <ChartRenderer brands={brands} priceType={priceType} category={category} onViolinClick={onViolinClick} />
   )
 }

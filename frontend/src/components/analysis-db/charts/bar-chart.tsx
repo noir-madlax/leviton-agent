@@ -18,7 +18,6 @@ interface BarChartProps {
   categories: string[]
   colors?: string[]
   yAxisLabel?: string
-  xAxisLabel?: string
   metricType?: "revenue" | "volume"
   onBarClick?: (data: unknown) => void
 }
@@ -29,7 +28,6 @@ export function BarChart({
   categories,
   colors = ["#FF6B6B", "#4ECDC4"],
   yAxisLabel,
-  xAxisLabel,
   metricType = "revenue",
   onBarClick,
 }: BarChartProps) {
@@ -37,15 +35,102 @@ export function BarChart({
     return metricType === "revenue" ? `$${value.toLocaleString()}` : value.toLocaleString()
   }
 
+  // 自定义Tooltip - 只显示有数据的segment信息
+  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: { value?: number; color?: string }[]; label?: string }) => {
+    if (active && payload && payload.length && label) {
+      // 找到当前悬停的品牌数据
+      const brandData = data.find(item => item[index] === label)
+      if (!brandData) return null
+
+      // 过滤出有数据的segments
+      const nonZeroSegments = categories
+        .map((category, categoryIndex) => ({
+          category,
+          value: Number(brandData[category] || 0),
+          color: colors[categoryIndex % colors.length]
+        }))
+        .filter(segment => segment.value > 0)
+
+      // 如果没有数据，不显示tooltip
+      if (nonZeroSegments.length === 0) return null
+
+      return (
+        <div 
+          style={{ 
+            backgroundColor: 'white', 
+            border: '1px solid #ccc', 
+            borderRadius: '6px',
+            padding: '12px',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+            maxWidth: '350px',
+            minWidth: '200px'
+          }}
+        >
+          <p style={{ 
+            fontWeight: 'bold', 
+            margin: '0 0 8px 0', 
+            color: '#333',
+            fontSize: '14px'
+          }}>
+            {label}
+          </p>
+          
+          {/* 只显示有数据的segments */}
+          {nonZeroSegments.map((segment) => (
+            <div key={segment.category} style={{ 
+              margin: '4px 0', 
+              color: '#333', 
+              display: 'flex', 
+              alignItems: 'center',
+              fontSize: '12px'
+            }}>
+              <div 
+                style={{ 
+                  width: '10px', 
+                  height: '10px', 
+                  backgroundColor: segment.color, 
+                  marginRight: '8px',
+                  borderRadius: '2px',
+                  flexShrink: 0
+                }} 
+              />
+              <span style={{ flex: 1 }}>
+                {segment.category}: <strong>{formatValue(segment.value)}</strong>
+              </span>
+            </div>
+          ))}
+          
+          {/* 显示总计 */}
+          {nonZeroSegments.length > 1 && (
+            <div style={{ 
+              marginTop: '8px', 
+              paddingTop: '6px', 
+              borderTop: '1px solid #eee',
+              fontSize: '12px',
+              fontWeight: 'bold',
+              color: '#333'
+            }}>
+              Total: {formatValue(nonZeroSegments.reduce((sum, seg) => sum + seg.value, 0))}
+            </div>
+          )}
+        </div>
+      )
+    }
+    return null
+  }
+
+  // 判断是否为单一类别（隐藏图例和简化布局）
+  const isSingleCategory = categories.length === 1
+
   return (
     <ResponsiveContainer width="100%" height="100%">
       <ReChartsBar
         data={data}
         margin={{
           top: 20,
-          right: 30,
-          left: 90,
-          bottom: 20,
+          right: 20,
+          left: 20,
+          bottom: isSingleCategory ? 20 : 20,
         }}
         onClick={onBarClick}
       >
@@ -55,45 +140,46 @@ export function BarChart({
           angle={-45}
           textAnchor="end"
           tick={{ fontSize: 12 }}
-          height={110} // Allocate a generous, fixed height for the entire X-axis block
+          height={60}
           interval={0}
-          label={{
-            value: xAxisLabel,
-            position: "bottom",
-            offset: 10,
-          }}
+          axisLine={false}
+          tickLine={false}
         />
         <YAxis
           tickFormatter={formatValue}
-        />
-        <Tooltip formatter={formatValue} />
-        <Legend
-          verticalAlign="bottom"
-          iconSize={12}
-          wrapperStyle={{
-            paddingTop: 30, // Push legend down from X-axis
+          axisLine={false}
+          tickLine={false}
+          tick={{ fontSize: 11 }}
+          label={{
+            value: yAxisLabel,
+            angle: -90,
+            offset: -10,
+            position: 'insideLeft',
+            style: { textAnchor: 'middle', fontSize: '12px', fill: '#666' }
           }}
         />
+        <Tooltip content={<CustomTooltip />} />
+        
+        {/* 只在多类别时显示图例 */}
+        {!isSingleCategory && (
+          <Legend
+            verticalAlign="bottom"
+            iconSize={12}
+            wrapperStyle={{
+              paddingTop: 20,
+            }}
+          />
+        )}
 
-        {/* Custom Y-axis label */}
-        <text
-          x={35}
-          y={250}
-          transform={`rotate(-90, 35, 250)`}
-          textAnchor="middle"
-          fontSize="18"
-          fontWeight="500"
-          fill="#374151"
-        >
-          {yAxisLabel}
-        </text>
         {categories.map((category, index) => (
           <Bar 
             key={category} 
             dataKey={category} 
             fill={colors[index % colors.length]} 
-            name={category}
+            name={isSingleCategory ? "" : category}
             style={{ cursor: 'pointer' }}
+            radius={[2, 2, 0, 0]}
+            maxBarSize={120}
           />
         ))}
       </ReChartsBar>

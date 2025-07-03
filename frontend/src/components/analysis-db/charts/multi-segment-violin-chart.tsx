@@ -7,6 +7,7 @@ interface SegmentData {
   name: string
   prices: number[]
   color: string
+  productCount?: number
   stats: {
     min: number
     q1: number
@@ -28,6 +29,7 @@ interface HoverState {
   y: number
   price: number
   segmentName: string
+  productCount: number
   visible: boolean
 }
 
@@ -71,6 +73,7 @@ export function MultiSegmentViolinChart({
     y: 0,
     price: 0,
     segmentName: '',
+    productCount: 0,
     visible: false,
   })
   const containerRef = useRef<HTMLDivElement>(null)
@@ -185,6 +188,7 @@ export function MultiSegmentViolinChart({
         y: event.clientY,
         price,
         segmentName: targetSegment.segment.name,
+        productCount: targetSegment.segment.productCount || targetSegment.segment.prices.length,
         visible: true
       })
     }
@@ -325,6 +329,7 @@ export function MultiSegmentViolinChart({
         >
           <div className="font-medium">{hoverState.segmentName}</div>
           <div className="text-blue-600">Price: ${hoverState.price.toFixed(2)}</div>
+          <div className="text-gray-600">Products: {hoverState.productCount}</div>
         </div>
       )}
     </div>
