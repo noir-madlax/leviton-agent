@@ -15,15 +15,17 @@ logger = logging.getLogger(__name__)
 
 
 class AllReviewDataService(BaseDashboardService):
-    """Service for all review data with project ASIN filtering.
+    """Service for all review data with project filtering.
     
-    Provides comprehensive review data by joining:
-    - product_review_analysis (main analysis data)
+    Updated to use new table structure:
+    - review_analysis_aspects (main analysis data)
+    - review_analysis_aspect_categories (category information)
+    - review_analysis_aspect_occurrences (sentiment data)
     - product_reviews (rating, verified, date)
     - product_wide_table (brand information)
     
     This replaces the frontend getAllReviewData() method with proper
-    project ASIN filtering and real data instead of random values.
+    project filtering and enhanced sentiment analysis.
     """
 
     def get_data(self) -> Dict[str, Any]:
@@ -66,59 +68,166 @@ class AllReviewDataService(BaseDashboardService):
         return self._get_review_data_fallback()
 
     def _get_review_data_fallback(self) -> List[Dict[str, Any]]:
-        """Fallback method using individual queries."""
+        """Get review data from new table structure."""
         
-        # Get analysis data
-        analysis_query = self.supabase.from_('product_review_analysis').select(
-            'product_id, standardized_aspect, aspect_category, review_id'
-        ).in_('product_id', self.project_asins).neq('standardized_aspect', 'OUT_OF_SCOPE').limit(2000)
-        
-        analysis_result = analysis_query.execute()
-        
-        if not analysis_result.data:
+        try:
+            # Get aspects filtered by project
+            aspects_query = self.supabase.from_('review_analysis_aspects').select('''
+                aspect_pk,
+                product_id,
+                aspect_type,
+                detail_text,
+                parent_group_name,
+                category_pk
+            ''').eq('project_id', self.project_id).limit(2000)
+            
+            # Apply ASIN filtering
+            if not self.project_asins:
+                logger.warning(f"No ASINs found for project {self.project_id}")
+                return []
+            
+            aspects_query = aspects_query.in_('product_id', self.project_asins)
+            aspects_result = aspects_query.execute()
+            
+            if not aspects_result.data:
+                return []
+            
+            # Get category information
+            category_pks = list(set([item['category_pk'] for item in aspects_result.data if item['category_pk']]))
+            categories_data = {}
+            
+            if category_pks:
+                categories_query = self.supabase.from_('review_analysis_aspect_categories').select('''
+                    category_pk,
+                    name,
+                    definition,
+                    aspect_type
+                ''').in_('category_pk', category_pks)
+                
+                categories_result = categories_query.execute()
+                if categories_result.data:
+                    categories_data = {item['category_pk']: item for item in categories_result.data}
+            
+            # Get occurrence data with sentiment
+            aspect_pks = [item['aspect_pk'] for item in aspects_result.data]
+            occurrences_data = {}
+            
+            if aspect_pks:
+                # Split into batches to avoid query length limits
+                batch_size = 100
+                all_occurrences = []
+                
+                for i in range(0, len(aspect_pks), batch_size):
+                    batch_pks = aspect_pks[i:i + batch_size]
+                    occurrences_query = self.supabase.from_('review_analysis_aspect_occurrences').select('''
+                        aspect_pk,
+                        sentiment,
+                        review_id
+                    ''').in_('aspect_pk', batch_pks)
+                    
+                    occurrences_result = occurrences_query.execute()
+                    if occurrences_result.data:
+                        all_occurrences.extend(occurrences_result.data)
+                
+                # Group occurrences by review_id for detailed review data
+                for occurrence in all_occurrences:
+                    review_id = occurrence['review_id']
+                    aspect_pk = occurrence['aspect_pk']
+                    
+                    if review_id not in occurrences_data:
+                        occurrences_data[review_id] = []
+                    
+                    occurrences_data[review_id].append({
+                        'aspect_pk': aspect_pk,
+                        'sentiment': occurrence['sentiment']
+                    })
+            
+            # Get ratings data
+            review_ids = list(occurrences_data.keys())
+            rating_map = {}
+            
+            if review_ids:
+                # Split into batches for rating queries
+                batch_size = 100
+                for i in range(0, len(review_ids), batch_size):
+                    batch_ids = review_ids[i:i + batch_size]
+                    rating_query = self.supabase.from_('product_reviews').select(
+                        'review_id, rating, verified, review_date, review_text'
+                    ).in_('review_id', batch_ids)
+                    
+                    rating_result = rating_query.execute()
+                    if rating_result.data:
+                        for item in rating_result.data:
+                            rating_map[item['review_id']] = item
+            
+            # Get brand data
+            product_ids = list(set([item['product_id'] for item in aspects_result.data]))
+            brand_query = self._get_base_product_table().select('platform_id, brand').in_('platform_id', product_ids)
+            brand_query = self._apply_base_filters(brand_query)
+            
+            brand_result = brand_query.execute()
+            brand_map = {item['platform_id']: item['brand'] for item in brand_result.data} if brand_result.data else {}
+            
+            # Combine data
+            combined_data = []
+            for aspect in aspects_result.data:
+                aspect_pk = aspect['aspect_pk']
+                category_pk = aspect['category_pk']
+                
+                # Get category info
+                if category_pk and category_pk in categories_data:
+                    category_name = categories_data[category_pk]['name']
+                else:
+                    # Fallback: use parent_group_name or detail_text as category name
+                    category_name = aspect['parent_group_name'] or aspect['detail_text'] or 'Unknown'
+                
+                # Find occurrences for this aspect
+                aspect_occurrences = []
+                for review_id, occurrences in occurrences_data.items():
+                    for occ in occurrences:
+                        if occ['aspect_pk'] == aspect_pk:
+                            aspect_occurrences.append({
+                                'review_id': review_id,
+                                'sentiment': occ['sentiment']
+                            })
+                
+                # Create review records for each occurrence
+                for occurrence in aspect_occurrences:
+                    review_id = occurrence['review_id']
+                    sentiment = occurrence['sentiment']
+                    
+                    # Get rating and review text
+                    rating_info = rating_map.get(review_id, {})
+                    brand = brand_map.get(aspect['product_id'], 'Unknown')
+                    review_text = rating_info.get('review_text', '')
+                    
+                    # Convert sentiment from new format to old format
+                    if sentiment == '+':
+                        sentiment_label = 'positive'
+                    elif sentiment == '-':
+                        sentiment_label = 'negative'
+                    else:
+                        sentiment_label = 'neutral'
+                    
+                    combined_data.append({
+                        'product_id': aspect['product_id'],
+                        'review_content': review_text,
+                        'standardized_aspect': aspect['detail_text'],
+                        'aspect_category': category_name,
+                        'review_id': review_id,
+                        'rating': rating_info.get('rating'),
+                        'verified': rating_info.get('verified', False),
+                        'review_date': rating_info.get('review_date'),
+                        'brand': brand,
+                        'sentiment': sentiment_label  # Direct sentiment from new table
+                    })
+            
+            logger.info(f"Retrieved {len(combined_data)} records from new table structure")
+            return combined_data
+            
+        except Exception as e:
+            logger.error(f"Error getting review data from new table structure: {e}")
             return []
-        
-        # Get ratings data
-        review_ids = [item['review_id'] for item in analysis_result.data]
-        rating_query = self.supabase.from_('product_reviews').select(
-            'review_id, rating, verified, review_date, review_text'
-        ).in_('review_id', review_ids)
-        
-        rating_result = rating_query.execute()
-        rating_map = {item['review_id']: item for item in rating_result.data} if rating_result.data else {}
-        
-        # Get brand data
-        product_ids = list(set([item['product_id'] for item in analysis_result.data]))
-        brand_query = self._get_base_product_table().select('platform_id, brand').in_('platform_id', product_ids)
-        brand_query = self._apply_base_filters(brand_query)
-        
-        brand_result = brand_query.execute()
-        brand_map = {item['platform_id']: item['brand'] for item in brand_result.data} if brand_result.data else {}
-        
-        # Combine data
-        combined_data = []
-        for item in analysis_result.data:
-            review_id = item['review_id']
-            product_id = item['product_id']
-            
-            rating_info = rating_map.get(review_id, {})
-            brand = brand_map.get(product_id, 'Unknown')
-            review_text = rating_info.get('review_text', '')
-            
-            combined_data.append({
-                'product_id': product_id,
-                'review_content': review_text,
-                'standardized_aspect': item['standardized_aspect'],
-                'aspect_category': item['aspect_category'],
-                'review_id': review_id,
-                'rating': rating_info.get('rating'),
-                'verified': rating_info.get('verified', False),
-                'review_date': rating_info.get('review_date'),
-                'brand': brand
-            })
-        
-        logger.info(f"Retrieved {len(combined_data)} records using fallback method")
-        return combined_data
 
     def _process_and_group_data(self, review_data: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
         """Process review data and group by standardized_aspect."""
@@ -131,10 +240,14 @@ class AllReviewDataService(BaseDashboardService):
             if aspect not in grouped_data:
                 grouped_data[aspect] = []
             
-            # Parse rating and determine sentiment
+            # Parse rating (fallback to rating-based sentiment if not available)
             rating_str = item.get('rating', '3.0')
             rating = self._parse_rating(rating_str)
-            sentiment = self._get_sentiment(rating)
+            
+            # Use direct sentiment from new table structure if available
+            sentiment = item.get('sentiment')
+            if not sentiment:
+                sentiment = self._get_sentiment(rating)
             
             # Parse date
             date = self._parse_date(item.get('review_date'))

@@ -16,32 +16,37 @@ logger = logging.getLogger(__name__)
 class CompetitorAnalysisService(BaseDashboardService):
     """Service for competitor analysis data with focused 6-product comparison.
     
+    Updated to use new table structure:
+    - review_analysis_aspects
+    - review_analysis_aspect_categories
+    - review_analysis_aspect_occurrences
+    
     Provides competitor analysis data for 6 core products:
     - Leviton D26HD, Leviton D215S, Lutron Caseta Diva
     - TP Link Switch, Leviton DSL06, Lutron Diva
     
     This replaces the frontend getCompetitorAnalysisData() method with proper
-    focused product comparison instead of all project ASINs.
+    focused product comparison and enhanced sentiment analysis.
     """
 
-    # Core 6 products for competitor analysis
+    # Core 6 products for competitor analysis (using products with analysis data)
     CORE_COMPETITOR_ASINS = [
-        'B08RRM8VH5',  # Leviton D26HD
-        'B0BVKZLT3B',  # Leviton D215S  
-        'B0BSHKS26L',  # Lutron Caseta Diva
-        'B01EZV35QU',  # TP Link Switch
-        'B00NG0ELL0',  # Leviton DSL06
-        'B085D8M2MR'   # Lutron Diva
+        'B08PKMT2DV',  # Philips Hue - Smart home brand representative
+        'B0771BC2YH',  # CLOUDY BAY - Mid-tier brand representative
+        'B004DZONXI',  # Lutron - Lutron brand representative
+        'B07SXDFH38',  # Feit Electric - Amazon/Smart brand representative
+        'B073H9Y7SH',  # Leviton - Leviton brand representative
+        'B0BTMWZH3K'   # Kasa - TP-Link/Kasa brand representative
     ]
 
     # ASIN to display name mapping (consistent with frontend)
     ASIN_TO_DISPLAY_NAME = {
-        'B08RRM8VH5': 'Leviton D26HD',
-        'B0BVKZLT3B': 'Leviton D215S',
-        'B0BSHKS26L': 'Lutron Caseta Diva', 
-        'B01EZV35QU': 'TP Link Switch',
-        'B00NG0ELL0': 'Leviton DSL06',
-        'B085D8M2MR': 'Lutron Diva'
+        'B08PKMT2DV': 'Philips Hue Smart',
+        'B0771BC2YH': 'CLOUDY BAY Dimmer',
+        'B004DZONXI': 'Lutron Credenza',
+        'B07SXDFH38': 'Feit Electric Smart',
+        'B073H9Y7SH': 'Leviton Trimatron',
+        'B0BTMWZH3K': 'Kasa HomeKit'
     }
 
     def get_data(self) -> Dict[str, Any]:
@@ -91,18 +96,120 @@ class CompetitorAnalysisService(BaseDashboardService):
             return []
 
     def _get_analysis_data(self) -> List[Dict[str, Any]]:
-        """Get review analysis data filtered by core competitor ASINs."""
-        query = self.supabase.from_('product_review_analysis').select(
-            'product_id, aspect_category, standardized_aspect, review_id'
-        ).in_('product_id', self.CORE_COMPETITOR_ASINS).neq('standardized_aspect', 'OUT_OF_SCOPE')
+        """Get review analysis data from new table structure filtered by core competitor ASINs."""
         
-        result = query.execute()
-        
-        if result.data:
-            logger.info(f"Retrieved {len(result.data)} analysis records for core competitors")
-            return result.data
-        else:
-            logger.warning("No analysis data found for core competitor ASINs")
+        try:
+            # Get aspects filtered by project and core competitor ASINs
+            aspects_query = self.supabase.from_('review_analysis_aspects').select('''
+                aspect_pk,
+                product_id,
+                aspect_type,
+                detail_text,
+                parent_group_name,
+                category_pk
+            ''').eq('project_id', self.project_id).in_('product_id', self.CORE_COMPETITOR_ASINS)
+            
+            aspects_result = aspects_query.execute()
+            
+            if not aspects_result.data:
+                logger.warning("No aspects data found for core competitor ASINs")
+                return []
+            
+            # Get category information
+            category_pks = list(set([item['category_pk'] for item in aspects_result.data if item['category_pk']]))
+            categories_data = {}
+            
+            if category_pks:
+                categories_query = self.supabase.from_('review_analysis_aspect_categories').select('''
+                    category_pk,
+                    name,
+                    definition,
+                    aspect_type
+                ''').in_('category_pk', category_pks)
+                
+                categories_result = categories_query.execute()
+                if categories_result.data:
+                    categories_data = {item['category_pk']: item for item in categories_result.data}
+            
+            # Get occurrence data with sentiment
+            aspect_pks = [item['aspect_pk'] for item in aspects_result.data]
+            occurrences_data = {}
+            
+            if aspect_pks:
+                # Split into batches to avoid query length limits
+                batch_size = 100
+                all_occurrences = []
+                
+                for i in range(0, len(aspect_pks), batch_size):
+                    batch_pks = aspect_pks[i:i + batch_size]
+                    occurrences_query = self.supabase.from_('review_analysis_aspect_occurrences').select('''
+                        aspect_pk,
+                        sentiment,
+                        review_id
+                    ''').in_('aspect_pk', batch_pks)
+                    
+                    occurrences_result = occurrences_query.execute()
+                    if occurrences_result.data:
+                        all_occurrences.extend(occurrences_result.data)
+                
+                # Group occurrences by aspect_pk
+                for occurrence in all_occurrences:
+                    aspect_pk = occurrence['aspect_pk']
+                    if aspect_pk not in occurrences_data:
+                        occurrences_data[aspect_pk] = []
+                    
+                    occurrences_data[aspect_pk].append({
+                        'sentiment': occurrence['sentiment'],
+                        'review_id': occurrence['review_id']
+                    })
+            
+            # Combine data to match old format
+            combined_data = []
+            for aspect in aspects_result.data:
+                aspect_pk = aspect['aspect_pk']
+                category_pk = aspect['category_pk']
+                
+                # Get category info (handle NULL category_pk)
+                if category_pk and category_pk in categories_data:
+                    category_info = categories_data[category_pk]
+                    category_name = category_info['name']
+                    aspect_type = category_info['aspect_type']
+                else:
+                    # Fallback mapping when category_pk is NULL
+                    aspect_type = aspect['aspect_type']
+                    if aspect['parent_group_name']:
+                        category_name = aspect['parent_group_name']
+                    else:
+                        # Generate category name from detail_text
+                        detail_text = aspect['detail_text'] or 'unknown'
+                        category_name = detail_text.split(' ')[0] if detail_text else 'unknown'
+                
+                # Map aspect_type to old format
+                if aspect_type == 'use':
+                    aspect_category = 'use_case'
+                elif aspect_type == 'phy':
+                    aspect_category = 'physical'
+                elif aspect_type == 'perf':
+                    aspect_category = 'performance'
+                else:
+                    aspect_category = 'unknown'
+                
+                # Add records for each occurrence
+                aspect_occurrences = occurrences_data.get(aspect_pk, [])
+                for occurrence in aspect_occurrences:
+                    combined_data.append({
+                        'product_id': aspect['product_id'],
+                        'aspect_category': aspect_category,
+                        'standardized_aspect': aspect['detail_text'],
+                        'review_id': occurrence['review_id'],
+                        'sentiment': occurrence['sentiment']  # Direct sentiment from new table
+                    })
+            
+            logger.info(f"Retrieved {len(combined_data)} analysis records for core competitors from new table structure")
+            return combined_data
+            
+        except Exception as e:
+            logger.error(f"Error getting analysis data from new table structure: {e}")
             return []
 
     def _get_rating_data(self) -> List[Dict[str, Any]]:
@@ -123,16 +230,35 @@ class CompetitorAnalysisService(BaseDashboardService):
     def _process_competitor_data(self, product_info: List[Dict], analysis_data: List[Dict], rating_data: List[Dict]) -> Dict[str, Any]:
         """Process competitor analysis data."""
         
-        # Build product mapping and total reviews using predefined display names
+        # Build product mapping using predefined display names
         asin_to_product = {}
-        product_total_reviews = {}
         
         for product in product_info:
             asin = product['platform_id']
             # Use predefined display name for consistency with frontend
             display_name = self.ASIN_TO_DISPLAY_NAME.get(asin, asin)
             asin_to_product[asin] = display_name
-            product_total_reviews[display_name] = product.get('reviews_count', 0)
+        
+        # Calculate actual project review counts from analysis_data (not Amazon totals)
+        product_total_reviews = {}
+        product_review_ids = {}
+        
+        # Initialize counters for all products
+        for display_name in asin_to_product.values():
+            product_review_ids[display_name] = set()
+        
+        # Count unique review_ids for each product from actual analysis data
+        for item in analysis_data:
+            product_asin = item['product_id']
+            product_name = asin_to_product.get(product_asin)
+            review_id = item.get('review_id')
+            
+            if product_name and review_id:
+                product_review_ids[product_name].add(review_id)
+        
+        # Convert sets to counts
+        for product_name, review_id_set in product_review_ids.items():
+            product_total_reviews[product_name] = len(review_id_set)
 
         # Build rating mapping for sentiment analysis
         rating_map = {}
@@ -193,11 +319,22 @@ class CompetitorAnalysisService(BaseDashboardService):
             if not product_name:
                 continue
 
-            # Get sentiment from rating
-            rating_key = f"{product_asin}_{item['review_id']}"
-            rating_str = rating_map.get(rating_key, '3.0')
-            rating = self._parse_rating(rating_str)
-            sentiment = self._get_sentiment(rating)
+            # Get sentiment - use direct sentiment from new table if available
+            if 'sentiment' in item:
+                # Convert new table sentiment format to old format
+                raw_sentiment = item['sentiment']
+                if raw_sentiment == '+':
+                    sentiment = 'positive'
+                elif raw_sentiment == '-':
+                    sentiment = 'negative'
+                else:
+                    sentiment = 'neutral'
+            else:
+                # Fallback to rating-based sentiment
+                rating_key = f"{product_asin}_{item['review_id']}"
+                rating_str = rating_map.get(rating_key, '3.0')
+                rating = self._parse_rating(rating_str)
+                sentiment = self._get_sentiment(rating)
 
             # Process non-use_case categories
             if item['aspect_category'] != 'use_case':

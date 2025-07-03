@@ -45,12 +45,12 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
   
   // Map product names to their ASINs for precise filtering
   const productToAsin: Record<string, string> = {
-    'Leviton D26HD': 'B08RRM8VH5',
-    'Leviton D215S': 'B0BVKZLT3B', 
-    'Lutron Caseta Diva': 'B0BSHKS26L',
-    'TP Link Switch': 'B01EZV35QU',
-    'Leviton DSL06': 'B00NG0ELL0',
-    'Lutron Diva': 'B085D8M2MR'
+    'Philips Hue Smart': 'B08PKMT2DV',
+    'CLOUDY BAY Dimmer': 'B0771BC2YH',
+    'Lutron Credenza': 'B004DZONXI',
+    'Feit Electric Smart': 'B07SXDFH38',
+    'Leviton Trimatron': 'B073H9Y7SH',
+    'Kasa HomeKit': 'B0BTMWZH3K'
   }
   
   const handleBarClick = (sentimentData: SentimentData) => {

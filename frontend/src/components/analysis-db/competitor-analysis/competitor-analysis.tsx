@@ -62,12 +62,12 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
 
   // Map product names to their ASINs (consistent with DatabaseService)
   const productToAsin: Record<string, string> = {
-    'Leviton D26HD': 'B08RRM8VH5',
-    'Leviton D215S': 'B0BVKZLT3B', 
-    'Lutron Caseta Diva': 'B0BSHKS26L',
-    'TP Link Switch': 'B01EZV35QU',
-    'Leviton DSL06': 'B00NG0ELL0',
-    'Lutron Diva': 'B085D8M2MR'
+    'Philips Hue Smart': 'B08PKMT2DV',
+    'CLOUDY BAY Dimmer': 'B0771BC2YH',
+    'Lutron Credenza': 'B004DZONXI',
+    'Feit Electric Smart': 'B07SXDFH38',
+    'Leviton Trimatron': 'B073H9Y7SH',
+    'Kasa HomeKit': 'B0BTMWZH3K'
   }
 
   // Use the pre-calculated matrix data from DatabaseService
@@ -83,12 +83,12 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
 
   // Amazon product URLs for focal products
   const productUrls: Record<string, string> = {
-    "Leviton D26HD": "https://www.amazon.com/dp/B0BVKYKKRK", // Leviton D26HD-1BZ Universal Dimmer
-    "Leviton D215S": "https://www.amazon.com/dp/B0BVKZLT3B", // Leviton D215S-1BW 15A Decora Switch
-    "Leviton DSL06": "https://www.amazon.com/dp/B00NG0ELL0", // Leviton DSL06-1LZ Slide Dimmer
-    "Lutron Caseta Diva": "https://www.amazon.com/dp/B01M3XJUAD", // Lutron Caseta Smart Dimmer Kit
-    "TP Link Switch": "https://www.amazon.com/dp/B01EZV35QU", // TP-Link Smart Wi-Fi Light Switch
-    "Lutron Diva": "https://www.amazon.com/dp/B085D8M2MR" // Lutron Diva C·L Dimmer
+    "Philips Hue Smart": "https://www.amazon.com/dp/B08PKMT2DV", // Philips Hue Smart Wireless Dimmer Switch V2
+    "CLOUDY BAY Dimmer": "https://www.amazon.com/dp/B0771BC2YH", // Cloudy Bay in Wall Dimmer Switch
+    "Lutron Credenza": "https://www.amazon.com/dp/B004DZONXI", // Lutron Credenza LED+ Plug-In Lamp Dimmer
+    "Feit Electric Smart": "https://www.amazon.com/dp/B07SXDFH38", // Feit Electric Smart Dimmer Switch
+    "Leviton Trimatron": "https://www.amazon.com/dp/B073H9Y7SH", // Leviton Trimatron Rotary Dimmer Switch
+    "Kasa HomeKit": "https://www.amazon.com/dp/B0BTMWZH3K" // Kasa Apple HomeKit Smart Dimmer Switch
   }
 
   const handleProductClick = (productName: string) => {
