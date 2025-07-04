@@ -15,8 +15,8 @@ inside the pipeline stage helpers so this module stays fairly small.
 import logging
 import secrets
 import traceback
-from datetime import datetime
-from typing import Dict, List, Any, Tuple
+from datetime import datetime, timezone
+from typing import Dict, List, Any, Tuple, Optional, Callable, Awaitable
 
 from review_analysis.models import (
     ReviewAnalysisRequest,
@@ -51,6 +51,8 @@ from core.utils.llm_utils import LLMCallError
 
 logger = logging.getLogger(__name__)
 
+ProgressCallback = Callable[[Dict[str, Any]], Awaitable[None]]
+
 
 class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevitably long
     """Orchestrates Extraction → Categorisation → Consolidation → Refinement."""
@@ -77,7 +79,9 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
     # Public API
     # ------------------------------------------------------------------
 
-    async def analyse(self, request: ReviewAnalysisRequest) -> str:  # noqa: D401
+    async def analyse(
+        self, request: ReviewAnalysisRequest, progress_callback: Optional[ProgressCallback] = None
+    ) -> str:  # noqa: D401
         """Run the full review-analysis pipeline for *request*.
 
         Returns a unique *analysis_id* that can be used by downstream code to
@@ -87,6 +91,11 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         analysis_id = (
             f"ANA_{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}_{secrets.token_hex(2)}"
         )
+        
+        async def _send_progress(step: str, status: str, **kwargs):
+            if progress_callback:
+                payload = {"step": step, "status": status, **kwargs}
+                await progress_callback(payload)
 
         logger.info("▶️  Starting review-analysis %s for %d products", analysis_id, len(request.product_ids))
 
@@ -120,6 +129,8 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         # ------------------------------------------------------------------
         # 1) Extraction Stage with Progress Tracking  ----------------------
         # ------------------------------------------------------------------
+        extraction_start_time = datetime.now(timezone.utc)
+        
         # For simplicity we bundle **all** reviews of a product into one batch
         # because the extraction prompt already supports multiple reviews.
         # ------------------------------------------------------------------
@@ -135,6 +146,21 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             unique_count = len(set(f"{r.get('review_title', '')}|||{r.get('review_text', '')}" for r in rows))
             batch_count = (unique_count + ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT - 1) // ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT
             total_batches_estimated += batch_count
+            
+        # 🔥 Update database with total batch counts
+        await _send_progress("extraction", "in_progress", progress_current=0, progress_total=total_batches_estimated, details={"message": f"Starting extraction ({total_products} products)..."})
+        
+        # Update the run record with batch totals
+        if progress_callback:
+            await progress_callback({
+                "step": "initialization",
+                "status": "in_progress", 
+                "details": {
+                    "extraction_batches_total": total_batches_estimated,
+                    "total_products": total_products,
+                    "message": f"Initialized: {total_products} products, {total_batches_estimated} extraction batches"
+                }
+            })
             
         logger.info(f"🚀 Starting extraction: {total_products} products, ~{total_batches_estimated} LLM calls estimated")
         
@@ -165,9 +191,40 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             for batch_idx, batch in enumerate(review_batches):
                 current_batch_global += 1
                 
+                # --- ETA Calculation ---
+                eta_seconds = None
+                if current_batch_global > 0:
+                    elapsed_seconds = (datetime.now(timezone.utc) - extraction_start_time).total_seconds()
+                    avg_time_per_batch = elapsed_seconds / current_batch_global
+                    remaining_batches = total_batches_estimated - current_batch_global
+                    if remaining_batches > 0:
+                        eta_seconds = int(avg_time_per_batch * remaining_batches)
+
                 # Progress logging
-                progress_pct = (current_batch_global / total_batches_estimated) * 100
-                logger.info(f"🔄 [{current_batch_global}/{total_batches_estimated}] ({progress_pct:.1f}%) Processing product {current_product_idx}/{total_products} - batch {batch_idx + 1}/{len(review_batches)}")
+                progress_pct = (current_batch_global / total_batches_estimated) * 100 if total_batches_estimated > 0 else 0
+                logger.info(f"🔄 Extraction batch {current_batch_global}/{total_batches_estimated} ({progress_pct:.1f}%) - Product {current_product_idx}/{total_products}, batch {batch_idx + 1}/{len(review_batches)} for analysis {analysis_id}")
+                
+                # Enhanced details for frontend display
+                details = {
+                    "message": f"Extraction ({current_batch_global}/{total_batches_estimated} batches)",
+                    "current_product": current_product_idx,
+                    "total_products": total_products,
+                    "current_batch": current_batch_global,
+                    "total_batches": total_batches_estimated,
+                    "progress_percentage": round(progress_pct, 1),
+                    "extraction_batches_done": current_batch_global,
+                    "extraction_batches_total": total_batches_estimated
+                }
+                if eta_seconds is not None:
+                    details["eta_seconds"] = eta_seconds
+
+                await _send_progress(
+                    "extraction", 
+                    "in_progress", 
+                    progress_current=current_batch_global,
+                    progress_total=total_batches_estimated,
+                    details=details
+                )
                 
                 # Create review ID mapping for this batch (batch_index -> actual_review_id)
                 review_id_mapping = {
@@ -220,20 +277,39 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         # TODO: Categorisation, consolidation, refinement persistence     
         #       The skeleton ends here – add later as needed.              
         logger.info("✅ Review-analysis %s completed extraction stage", analysis_id)
+        await _send_progress("extraction", "completed", progress_current=total_batches_estimated, progress_total=total_batches_estimated)
 
         # ------------------------------------------------------------------
         # 2) Categorisation Stage (per aspect_type) -------------------------
         # ------------------------------------------------------------------
+        await _send_progress("categorization", "in_progress", details={
+            "message": "Categorization (organizing aspects)",
+            "current_product": total_products,
+            "total_products": total_products
+        })
         await self._run_categorisation(request)
         logger.info("✅ Review-analysis %s completed categorisation stage", analysis_id)
+        await _send_progress("categorization", "completed")
 
         # 3) Consolidation Stage -------------------------------------------
+        await _send_progress("consolidation", "in_progress", details={
+            "message": "Consolidation (merging categories)",
+            "current_product": total_products,
+            "total_products": total_products
+        })
         await self._run_consolidation(request.project_id)
         logger.info("✅ Review-analysis %s completed consolidation stage", analysis_id)
+        await _send_progress("consolidation", "completed")
 
         # 4) Refinement Stage ----------------------------------------------
+        await _send_progress("refinement", "in_progress", details={
+            "message": f"Refinement ({total_products}/{total_products} assigned)",
+            "current_product": total_products,
+            "total_products": total_products
+        })
         await self._run_refinement(request.project_id)
         logger.info("✅ Review-analysis %s completed refinement stage", analysis_id)
+        await _send_progress("refinement", "completed")
 
         return analysis_id
 

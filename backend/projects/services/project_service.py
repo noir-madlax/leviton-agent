@@ -6,6 +6,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 import sys
 import asyncio
+from fastapi import BackgroundTasks
 
 # Add project root to Python path
 sys.path.insert(0, str(Path(__file__).parent.parent.parent))
@@ -13,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 from core.database.connection import get_supabase_client
 from ..models import ProjectCreateRequest, Project, ProjectCreateResponse
 from categories.services import CategoryService
+from core.sse_manager import sse_manager
 
 # 导入产品细分相关模块
 from product_segment.models import StartSegmentationRequest
@@ -35,8 +37,11 @@ class ProjectService:
     def __init__(self):
         self.supabase = get_supabase_client()
     
-    async def create_project(self, request: ProjectCreateRequest) -> ProjectCreateResponse:
-        """Create a new project with ASIN extraction and segmentation."""
+    async def create_project(self, request: ProjectCreateRequest, background_tasks: BackgroundTasks) -> ProjectCreateResponse:
+        """
+        Create a new project, and schedule segmentation/analysis as background tasks.
+        This method returns immediately after project creation.
+        """
         try:
             # 1. Extract ASINs based on filters
             filtered_asins = await self._extract_asins_from_filters(request.filters)
@@ -78,15 +83,19 @@ class ProjectService:
             
             created_project = result.data[0]
             
-            # 5. Trigger segmentation processing (async)
+            # 5. Broadcast initial project creation status
+            await self._broadcast_progress_update(created_project["id"])
+            
+            # 6. Schedule segmentation processing as a background task
             if filtered_asins and request.filters.categories:
-                await self._process_project_segmentation(
-                    created_project["id"],
-                    filtered_asins,
-                    request.filters.categories[0]
+                background_tasks.add_task(
+                    self._process_project_segmentation,
+                    project_id=created_project["id"],
+                    product_ids=filtered_asins,
+                    category=request.filters.categories[0]
                 )
             
-            # 6. Return response
+            # 7. Return response immediately
             return ProjectCreateResponse(
                 id=created_project["id"],
                 project_name=created_project["project_name"],
@@ -186,6 +195,9 @@ class ProjectService:
                 
                 logger.info(f"Project {project_id} segmentation completed in {duration_seconds} seconds")
                 
+                # 推送状态更新
+                await self._broadcast_progress_update(project_id)
+                
                 # 触发review analysis
                 if project.data.get('selected_product_asins') and project.data.get('selected_categories'):
                     await self._process_project_review_analysis(
@@ -200,76 +212,207 @@ class ProjectService:
         """记录细分失败状态"""
         try:
             self.supabase.table('projects').update({
-                "segmentation_status": "failed"
+                "segmentation_status": "failed",
+                "review_analysis_status": "failed", # If segmentation fails, review analysis also fails
             }).eq('id', project_id).execute()
             
             logger.error(f"Project {project_id} segmentation failed: {error_message}")
+            
+            # 推送状态更新
+            await self._broadcast_progress_update(project_id)
         except Exception as e:
             logger.error(f"Error recording segmentation failure for project {project_id}: {e}")
 
     async def _process_project_review_analysis(self, project_id: str, product_ids: List[str], category: str):
         """处理项目的评论分析（异步）"""
+        run_id = None
         try:
             logger.info(f"Starting review analysis for project {project_id} with {len(product_ids)} products")
+
+            # Get project estimates for the run record
+            project_result = self.supabase.table('projects')\
+                .select('total_products, estimated_reviews_to_analyze, estimated_llm_calls')\
+                .eq('id', project_id)\
+                .single().execute()
+            project_data = project_result.data or {}
+
+            # 1. 创建 review_analysis_runs 记录
+            run_result = self.supabase.table('review_analysis_runs').insert({
+                "project_id": project_id,
+                "status": "processing",
+                "stage": "starting",
+                "total_products": project_data.get('total_products'),
+                "total_reviews_to_analyze": project_data.get('estimated_reviews_to_analyze'),
+                "llm_calls_extraction": project_data.get('estimated_llm_calls') # Initial estimate
+            }).execute()
+
+            if not run_result.data:
+                raise Exception("Failed to create review analysis run record.")
             
-            # 1. 更新状态为处理中
+            run_id = run_result.data[0]['id']
+
+            # 2. 更新 projects 表，关联 run_id
             self.supabase.table('projects').update({
-                "review_analysis_status": "processing"
+                "review_analysis_status": "processing",
+                "review_analysis_run_id": run_id
             }).eq('id', project_id).execute()
-            
-            # 2. 创建review analysis请求
+
+            await self._broadcast_progress_update(project_id)
+
+            # 3. 定义进度回调函数
+            async def progress_callback(progress_data: Dict[str, Any]):
+                step_name = progress_data.get("step")
+                if not step_name:
+                    return
+                
+                logger.info(f"📈 Review Analysis Progress (Project: {project_id}, Run: {run_id}): {progress_data}")
+
+                # Prepare updates for the main run table
+                run_updates = {
+                    "stage": step_name,
+                    "updated_at": datetime.now(timezone.utc).isoformat()
+                }
+                
+                # Handle batch progress updates from details
+                details = progress_data.get("details", {})
+                if details:
+                    # Update batch progress fields if present
+                    if "extraction_batches_done" in details:
+                        run_updates["extraction_batches_done"] = details["extraction_batches_done"]
+                    if "extraction_batches_total" in details:
+                        run_updates["extraction_batches_total"] = details["extraction_batches_total"]
+                    if "categorization_batches_done" in details:
+                        run_updates["categorization_batches_done"] = details["categorization_batches_done"]
+                    if "categorization_batches_total" in details:
+                        run_updates["categorization_batches_total"] = details["categorization_batches_total"]
+                    if "consolidation_batches_done" in details:
+                        run_updates["consolidation_batches_done"] = details["consolidation_batches_done"]
+                    if "consolidation_batches_total" in details:
+                        run_updates["consolidation_batches_total"] = details["consolidation_batches_total"]
+                    if "refinement_batches_done" in details:
+                        run_updates["refinement_batches_done"] = details["refinement_batches_done"]
+                    if "refinement_batches_total" in details:
+                        run_updates["refinement_batches_total"] = details["refinement_batches_total"]
+                
+                # Increment processed reviews count if applicable
+                if progress_data.get("status") == "in_progress" and step_name == "extraction":
+                    run_updates["processed_reviews_count"] = progress_data.get("progress_current", 0)
+
+                # 更新主运行状态
+                self.supabase.table('review_analysis_runs').update(run_updates).eq('id', run_id).execute()
+
+                # Upsert 详细进度
+                self.supabase.table('review_analysis_progress').upsert({
+                    "run_id": run_id,
+                    "step_name": step_name,
+                    "status": progress_data.get("status"),
+                    "progress_current": progress_data.get("progress_current"),
+                    "progress_total": progress_data.get("progress_total"),
+                    "details": progress_data.get("details"),
+                    "updated_at": datetime.now(timezone.utc).isoformat()
+                }, on_conflict="run_id,step_name").execute()
+                
+                # 广播更新到前端
+                await self._broadcast_progress_update(project_id)
+
+            # 4. 创建 review analysis 请求并执行
             review_service = DatabaseReviewAnalysisService()
             review_request = ReviewAnalysisRequest(
                 project_id=project_id,
-                product_ids=product_ids,  # ASINs
+                product_ids=product_ids,
                 product_category=category
             )
             
-            # 3. 执行review analysis
-            analysis_id = await review_service.analyse(review_request)
+            analysis_id = await review_service.analyse(review_request, progress_callback)
             
-            # 4. 更新完成状态
-            await self._complete_review_analysis(project_id, analysis_id)
+            # 5. 更新完成状态
+            await self._complete_review_analysis(project_id, run_id, analysis_id)
             
         except Exception as e:
-            logger.error(f"Error in project review analysis: {e}")
-            await self._fail_review_analysis(project_id, str(e))
+            logger.exception(f"Error in project review analysis for project {project_id}: {e}")
+            await self._fail_review_analysis(project_id, run_id, str(e))
 
-    async def _complete_review_analysis(self, project_id: str, analysis_id: str):
-        """记录review analysis完成"""
+    async def _complete_review_analysis(self, project_id: str, run_id: int, analysis_id: str):
+        """记录评论分析完成状态"""
         try:
-            # 获取开始时间
             project = self.supabase.table('projects')\
                 .select('review_analysis_started_at')\
                 .eq('id', project_id)\
                 .single().execute()
+
+            if not project.data or not project.data.get('review_analysis_started_at'):
+                logger.warning(f"Project {project_id} has no review analysis start time. Cannot calculate duration.")
+                return
+
+            started_at = datetime.fromisoformat(project.data['review_analysis_started_at'].replace('Z', '+00:00'))
+            completed_at = datetime.now(timezone.utc)
+            duration_seconds = int((completed_at - started_at).total_seconds())
+
+            # 更新 projects 表
+            self.supabase.table('projects').update({
+                "review_analysis_status": "completed",
+                "review_analysis_completed_at": completed_at.isoformat(),
+                "review_analysis_duration_seconds": duration_seconds
+            }).eq('id', project_id).execute()
             
-            if project.data and project.data['review_analysis_started_at']:
-                started_at = datetime.fromisoformat(project.data['review_analysis_started_at'].replace('Z', '+00:00'))
-                completed_at = datetime.now(timezone.utc)
-                duration_seconds = int((completed_at - started_at).total_seconds())
-                
-                self.supabase.table('projects').update({
-                    "review_analysis_completed_at": completed_at.isoformat(),
-                    "review_analysis_duration_seconds": duration_seconds,
-                    "review_analysis_status": "completed",
-                    "review_analysis_id": analysis_id
-                }).eq('id', project_id).execute()
-                
-                logger.info(f"Project {project_id} review analysis completed in {duration_seconds} seconds")
+            # 更新 review_analysis_runs 表
+            self.supabase.table('review_analysis_runs').update({
+                "status": "completed",
+                "stage": "completed",
+                "processed_reviews_count": self.supabase.table('review_analysis_runs').select('total_reviews_to_analyze').eq('id', run_id).single().execute().data.get('total_reviews_to_analyze', 0), # Mark all as processed on completion
+                "completed_at": completed_at.isoformat()
+            }).eq('id', run_id).execute()
+
+            logger.info(f"Project {project_id} review analysis completed in {duration_seconds} seconds. Analysis ID: {analysis_id}")
+            
+            # 推送最终状态
+            await self._broadcast_progress_update(project_id)
+
         except Exception as e:
             logger.error(f"Error completing review analysis for project {project_id}: {e}")
 
-    async def _fail_review_analysis(self, project_id: str, error_message: str):
-        """记录review analysis失败状态"""
+    async def _fail_review_analysis(self, project_id: str, run_id: Optional[int], error_message: str):
+        """记录评论分析失败状态"""
         try:
+            # 更新 projects 表
             self.supabase.table('projects').update({
                 "review_analysis_status": "failed"
             }).eq('id', project_id).execute()
             
+            # 更新 review_analysis_runs 表
+            if run_id:
+                self.supabase.table('review_analysis_runs').update({
+                    "status": "failed",
+                    "error_message": error_message,
+                    "completed_at": datetime.now(timezone.utc).isoformat()
+                }).eq('id', run_id).execute()
+
             logger.error(f"Project {project_id} review analysis failed: {error_message}")
+            
+            # 推送状态更新
+            await self._broadcast_progress_update(project_id)
         except Exception as e:
             logger.error(f"Error recording review analysis failure for project {project_id}: {e}")
+
+    async def _broadcast_progress_update(self, project_id: str):
+        """Broadcast project progress update via SSE."""
+        try:
+            progress_data = await self.get_project_progress(project_id)
+            
+            # 🔥 详细日志：记录推送的进度数据
+            logger.info(f"📡 Broadcasting progress update for project {project_id}:")
+            logger.info(f"  - segmentation_status: {progress_data.get('segmentation_status')}")
+            logger.info(f"  - review_analysis_status: {progress_data.get('review_analysis_status')}")
+            logger.info(f"  - steps count: {len(progress_data.get('steps', []))}")
+            
+            # 记录每个步骤的状态
+            for i, step in enumerate(progress_data.get('steps', [])):
+                logger.info(f"  - Step {i+1}: {step.get('name')} = {step.get('status')}")
+            
+            await sse_manager.broadcast_to_project(project_id, progress_data)
+            logger.info(f"✅ Successfully broadcasted progress update for project {project_id}")
+        except Exception as e:
+            logger.error(f"❌ Error broadcasting progress update for project {project_id}: {e}")
 
     async def _extract_asins_from_filters(self, filters) -> List[str]:
         """Extract platform ID list based on project filters.
@@ -973,16 +1116,23 @@ class ProjectService:
                 "steps": []
             }
             
-            # 步骤1: 项目创建
+            # 步骤1: 项目创建 - 🔥 修复状态逻辑
+            project_created = bool(project.get("created_at"))
             step1 = {
                 "step": "project_creation",
                 "name": "Project Creation",
-                "status": "completed" if project.get("created_at") else "pending",
+                "status": "completed" if project_created else "pending",
                 "started_at": project.get("created_at"),
-                "completed_at": project.get("created_at"),
+                "completed_at": project.get("created_at") if project_created else None,
                 "description": f"Created project with {project.get('total_products', 0)} products"
             }
             progress["steps"].append(step1)
+            
+            # 🔥 调试日志：记录项目创建状态计算
+            logger.debug(f"🔍 Project {project_id} creation status calculation:")
+            logger.debug(f"  - created_at: {project.get('created_at')}")
+            logger.debug(f"  - project_created: {project_created}")
+            logger.debug(f"  - step1 status: {step1['status']}")
             
             # 步骤2: ASIN提取
             step2 = {
@@ -1050,13 +1200,33 @@ class ProjectService:
                                 if a.get('segment_name') and a['segment_name'] != '__UNASSIGNED__'
                             ])
                         
+                        # 🔥 获取批次进度信息
+                        extraction_batches_done = run_data.get("extraction_batches_done", 0)
+                        extraction_batches_total = run_data.get("extraction_batches_total", 0)
+                        consolidation_batches_done = run_data.get("consolidation_batches_done", 0)
+                        consolidation_batches_total = run_data.get("consolidation_batches_total", 0)
+                        refinement_batches_done = run_data.get("refinement_batches_done", 0)
+                        refinement_batches_total = run_data.get("refinement_batches_total", 0)
+                        
                         # 细分的子步骤 - 增加批次进度信息
                         if stage == "completed":
                             # 全部完成时才显示所有步骤为完成
                             sub_steps = [
-                                {"name": f"Extraction ({total_products_in_run} products)", "status": "completed"},
-                                {"name": "Consolidation", "status": "completed"},
-                                {"name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)", "status": "completed"}
+                                {
+                                    "name": f"Extraction ({total_products_in_run} products)", 
+                                    "status": "completed",
+                                    "description": f"{extraction_batches_done}/{extraction_batches_total} batches" if extraction_batches_total > 0 else "completed"
+                                },
+                                {
+                                    "name": "Consolidation", 
+                                    "status": "completed",
+                                    "description": f"{consolidation_batches_done}/{consolidation_batches_total} batches" if consolidation_batches_total > 0 else "completed"
+                                },
+                                {
+                                    "name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)", 
+                                    "status": "completed",
+                                    "description": f"{refinement_batches_done}/{refinement_batches_total} batches" if refinement_batches_total > 0 else "completed"
+                                }
                             ]
                             step3_description = f"Completed product segmentation: {completed_assignments}/{total_products_in_run} products assigned to segments"
                         else:
@@ -1068,15 +1238,18 @@ class ProjectService:
                             sub_steps = [
                                 {
                                     "name": f"Extraction ({total_products_in_run} products)",
-                                    "status": extraction_status
+                                    "status": extraction_status,
+                                    "description": f"{extraction_batches_done}/{extraction_batches_total} batches" if extraction_batches_total > 0 else ""
                                 },
                                 {
                                     "name": "Consolidation", 
-                                    "status": consolidation_status
+                                    "status": consolidation_status,
+                                    "description": f"{consolidation_batches_done}/{consolidation_batches_total} batches" if consolidation_batches_total > 0 else ""
                                 },
                                 {
                                     "name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)",
-                                    "status": refinement_status
+                                    "status": refinement_status,
+                                    "description": f"{refinement_batches_done}/{refinement_batches_total} batches" if refinement_batches_total > 0 else ""
                                 }
                             ]
                             
@@ -1104,78 +1277,9 @@ class ProjectService:
             
             # 获取LLM调用次数估计用于显示
             estimated_llm_calls = project.get("estimated_llm_calls", 0)
-            total_reviews = project.get("total_reviews", 0)
+            estimated_reviews_to_analyze = project.get("estimated_reviews_to_analyze", 0)
             
-            if segmentation_status == "completed":
-                if review_analysis_status == "pending":
-                    step4_status = "pending"
-                    step4_description = f"Waiting to start review analysis ({total_reviews} reviews, ~{estimated_llm_calls} LLM calls)"
-                elif review_analysis_status == "processing":
-                    step4_status = "in_progress"
-                    
-                    # 🔥 获取评论分析的详细进度信息
-                    if project.get("review_analysis_id"):
-                        try:
-                            # 获取评论分析的进度统计
-                            analysis_result = self.supabase.table('review_analysis_runs')\
-                                .select('*')\
-                                .eq('id', project["review_analysis_id"])\
-                                .single()\
-                                .execute()
-                            
-                            if analysis_result.data:
-                                analysis_data = analysis_result.data
-                                stage = analysis_data.get("stage", "init")
-                                
-                                # 获取评论数量统计
-                                processed_reviews = 0
-                                
-                                # 查询已处理的评论数量
-                                if project.get("selected_product_asins"):
-                                    processed_result = self.supabase.table('review_analysis_aspect_occurrences')\
-                                        .select('review_id', count='exact')\
-                                        .eq('analysis_id', project["review_analysis_id"])\
-                                        .execute()
-                                    
-                                    processed_reviews = processed_result.count or 0
-                                
-                                step4_description = f"Processing review analysis: {processed_reviews}/{total_reviews} reviews analyzed ({stage.replace('_', ' ')}, ~{estimated_llm_calls} LLM calls)"
-                                
-                                # 添加评论分析的子步骤
-                                extraction_status = "completed" if stage in ["consolidation", "completed"] else ("in_progress" if stage == "extraction" else "pending")
-                                consolidation_status = "completed" if stage == "completed" else ("in_progress" if stage == "consolidation" else "pending")
-                                
-                                step4_sub_steps = [
-                                    {
-                                        "name": f"Aspect Extraction ({processed_reviews}/{total_reviews} reviews, ~{estimated_llm_calls} LLM calls)",
-                                        "status": extraction_status
-                                    },
-                                    {
-                                        "name": "Category Consolidation",
-                                        "status": consolidation_status
-                                    }
-                                ]
-                                
-                                step4["sub_steps"] = step4_sub_steps
-                                step4["current_stage"] = stage
-                                
-                        except Exception as e:
-                            logger.warning(f"Failed to get review analysis details: {e}")
-                            step4_description = f"Processing review analysis with AI (~{estimated_llm_calls} LLM calls)"
-                    else:
-                        step4_description = f"Processing review analysis with AI (~{estimated_llm_calls} LLM calls)"
-                        
-                elif review_analysis_status == "completed":
-                    step4_status = "completed"
-                    duration = project.get("review_analysis_duration_seconds", 0)
-                    step4_description = f"Completed review analysis: {total_reviews} reviews processed in {duration} seconds ({estimated_llm_calls} LLM calls used)"
-                elif review_analysis_status == "failed":
-                    step4_status = "failed"
-                    step4_description = "Review analysis failed"
-            elif segmentation_status == "failed":
-                step4_status = "failed"
-                step4_description = "Cannot start review analysis due to segmentation failure"
-            
+            # The main step object, to be populated
             step4 = {
                 "step": "review_analysis",
                 "name": "Review Analysis",
@@ -1184,23 +1288,178 @@ class ProjectService:
                 "completed_at": project.get("review_analysis_completed_at"),
                 "description": step4_description
             }
+
+            if segmentation_status == "completed":
+                if review_analysis_status == "pending":
+                    step4["status"] = "pending"
+                    step4["description"] = f"Waiting to start review analysis ({estimated_reviews_to_analyze} reviews)"
+                elif review_analysis_status == "processing":
+                    step4["status"] = "in_progress"
+                    
+                    # 🔥 获取评论分析的详细进度信息
+                    if project.get("review_analysis_run_id"):
+                        try:
+                            # 获取主运行状态
+                            run_result = self.supabase.table('review_analysis_runs')\
+                                .select('status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total')\
+                                .eq('id', project["review_analysis_run_id"])\
+                                .single().execute()
+                            run_data = run_result.data or {}
+
+                            # 获取所有子步骤的进度
+                            progress_result = self.supabase.table('review_analysis_progress')\
+                                .select('step_name, status, progress_current, progress_total, details')\
+                                .eq('run_id', project["review_analysis_run_id"])\
+                                .execute()
+                            progress_map = {p['step_name']: p for p in progress_result.data} if progress_result.data else {}
+                            
+                            current_stage = run_data.get("stage", "starting")
+                            
+                            # 定义所有可能的子步骤
+                            all_stages = ["extraction", "categorization", "consolidation", "refinement"]
+                            sub_steps = []
+                            total_progress_current = 0
+                            total_progress_total = 0
+
+                            for stage_name in all_stages:
+                                progress_item = progress_map.get(stage_name, {})
+                                status = progress_item.get('status', 'pending')
+                                current = progress_item.get('progress_current') or 0
+                                total = progress_item.get('progress_total') or 0
+                                details = progress_item.get('details', {})
+                                eta_seconds = details.get('eta_seconds') if details else None
+                                
+                                # If the main stage has moved past this one, mark it completed
+                                if status == 'pending' and current_stage != stage_name and all_stages.index(current_stage) > all_stages.index(stage_name):
+                                    status = 'completed'
+
+                                # 🔥 获取批次进度信息
+                                batches_done_field = f"{stage_name}_batches_done"
+                                batches_total_field = f"{stage_name}_batches_total"
+                                batches_done = run_data.get(batches_done_field, 0) or 0
+                                batches_total = run_data.get(batches_total_field, 0) or 0
+                                
+                                # 构建描述信息
+                                description_parts = []
+                                if batches_total > 0:
+                                    description_parts.append(f"{batches_done}/{batches_total} batches")
+                                elif total > 0:
+                                    description_parts.append(f"{current}/{total}")
+                                    
+                                if eta_seconds is not None and status == 'in_progress':
+                                    minutes, seconds = divmod(eta_seconds, 60)
+                                    description_parts.append(f"ETA: {minutes}m {seconds}s")
+                                
+                                description = " - ".join(description_parts) if description_parts else ""
+
+                                sub_steps.append({
+                                    "name": stage_name.replace('_', ' ').capitalize(),
+                                    "status": status,
+                                    "description": description
+                                })
+                                if stage_name == 'extraction':
+                                    total_progress_current = current
+                                    total_progress_total = total
+                            
+                            step4["sub_steps"] = sub_steps
+                            step4["current_stage"] = current_stage
+                            
+                            # 更新主描述
+                            if total_progress_total > 0:
+                                step4["description"] = f"Processing review analysis: {total_progress_current}/{total_progress_total} batches processed in {current_stage.replace('_', ' ')} stage."
+                            else:
+                                step4["description"] = f"Processing review analysis in {current_stage.replace('_', ' ')} stage."
+
+                        except Exception as e:
+                            logger.warning(f"Failed to get review analysis details for run {project.get('review_analysis_run_id')}: {e}")
+                            step4["description"] = f"Processing review analysis..."
+                    else:
+                        step4["description"] = f"Processing review analysis..."
+                        
+                elif review_analysis_status == "completed":
+                    step4["status"] = "completed"
+                    duration = project.get("review_analysis_duration_seconds", 0)
+                    llm_calls = project.get("estimated_llm_calls", 0) # Just an estimate
+                    num_reviews = project.get("estimated_reviews_to_analyze", 0)
+                    step4["description"] = f"Completed review analysis: {num_reviews} reviews processed in {duration}s ({llm_calls} LLM calls used)"
+                    
+                    # 🔥 即使完成了也显示子步骤详情
+                    if project.get("review_analysis_run_id"):
+                        try:
+                            # 获取主运行状态和批次信息
+                            run_result = self.supabase.table('review_analysis_runs')\
+                                .select('extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total')\
+                                .eq('id', project["review_analysis_run_id"])\
+                                .single().execute()
+                            run_data = run_result.data or {}
+                            
+                            # 获取所有子步骤的进度
+                            progress_result = self.supabase.table('review_analysis_progress')\
+                                .select('step_name, status, progress_current, progress_total, details')\
+                                .eq('run_id', project["review_analysis_run_id"])\
+                                .execute()
+                            progress_map = {p['step_name']: p for p in progress_result.data} if progress_result.data else {}
+                            
+                            # 定义所有可能的子步骤
+                            all_stages = ["extraction", "categorization", "consolidation", "refinement"]
+                            sub_steps = []
+
+                            for stage_name in all_stages:
+                                progress_item = progress_map.get(stage_name, {})
+                                current = progress_item.get('progress_current') or 0
+                                total = progress_item.get('progress_total') or 0
+                                
+                                # 🔥 获取批次进度信息
+                                batches_done_field = f"{stage_name}_batches_done"
+                                batches_total_field = f"{stage_name}_batches_total"
+                                batches_done = run_data.get(batches_done_field, 0) or 0
+                                batches_total = run_data.get(batches_total_field, 0) or 0
+                                
+                                # 已完成的项目，优先显示批次信息
+                                if batches_total > 0:
+                                    description = f"{batches_done}/{batches_total} batches"
+                                elif total > 0:
+                                    description = f"{current}/{total}"
+                                else:
+                                    description = "completed"
+
+                                sub_steps.append({
+                                    "name": stage_name.replace('_', ' ').capitalize(),
+                                    "status": "completed",
+                                    "description": description
+                                })
+                            
+                            step4["sub_steps"] = sub_steps
+                            step4["current_stage"] = "completed"
+                            
+                        except Exception as e:
+                            logger.warning(f"Failed to get completed review analysis details for run {project.get('review_analysis_run_id')}: {e}")
+                
+                elif review_analysis_status == "failed":
+                    step4["status"] = "failed"
+                    step4["description"] = "Review analysis failed"
+
+            elif segmentation_status == "failed":
+                step4["status"] = "failed"
+                step4["description"] = "Cannot start, segmentation failed"
+            
             progress["steps"].append(step4)
 
-            # 步骤5: 数据准备完成
-            step5_status = "pending"
+            # 步骤5: 数据准备
+            data_preparation_status = "pending"
             step5_description = "Waiting for all processing to complete"
             
             if review_analysis_status == "completed":
-                step5_status = "completed"
+                data_preparation_status = "completed"
                 step5_description = "Project ready for analysis"
             elif review_analysis_status == "failed" or segmentation_status == "failed":
-                step5_status = "failed"
+                data_preparation_status = "failed"
                 step5_description = "Data preparation failed"
             
             step5 = {
                 "step": "data_preparation",
                 "name": "Data Preparation",
-                "status": step5_status,
+                "status": data_preparation_status,
                 "started_at": project.get("review_analysis_completed_at"),
                 "completed_at": project.get("review_analysis_completed_at"),
                 "description": step5_description

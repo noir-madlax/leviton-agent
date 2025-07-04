@@ -2,10 +2,12 @@
 
 import logging
 from typing import List, Optional, Dict, Any
-from fastapi import APIRouter, HTTPException, Depends, Query
+from fastapi import APIRouter, HTTPException, Depends, Query, Request, BackgroundTasks
+from fastapi.responses import StreamingResponse
 
 from .models import ProjectCreateRequest, ProjectCreateResponse, Project
 from .services.project_service import ProjectService
+from core.sse_manager import sse_manager
 
 logger = logging.getLogger(__name__)
 
@@ -84,11 +86,15 @@ async def get_data_confirmation_by_category_id(
 @router.post("/create", response_model=ProjectCreateResponse)
 async def create_project(
     request: ProjectCreateRequest,
+    background_tasks: BackgroundTasks,
     service: ProjectService = Depends(get_project_service)
 ):
-    """Create a new project with ASIN extraction."""
+    """
+    Create a new project and trigger background processing for analysis.
+    Returns immediately with the project ID.
+    """
     try:
-        return await service.create_project(request)
+        return await service.create_project(request, background_tasks)
     except Exception as e:
         logger.error(f"Error creating project: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to create project: {str(e)}")
@@ -218,4 +224,38 @@ async def get_review_analysis_status(
         raise
     except Exception as e:
         logger.error(f"Error getting review analysis status for project {project_id}: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to get review analysis status: {str(e)}") 
+        raise HTTPException(status_code=500, detail=f"Failed to get review analysis status: {str(e)}")
+
+
+@router.get("/progress-stream/{project_id}")
+async def stream_project_progress(
+    project_id: str,
+    request: Request,
+    service: ProjectService = Depends(get_project_service)
+):
+    """Stream real-time project progress updates via Server-Sent Events."""
+    try:
+        # Verify project exists
+        project = await service.get_project(project_id)
+        if not project:
+            raise HTTPException(status_code=404, detail="Project not found")
+        
+        # Get initial progress state to send immediately to the new client
+        initial_progress = await service.get_project_progress(project_id)
+        
+        # Return SSE stream, passing initial data to be sent first
+        return StreamingResponse(
+            sse_manager.stream_for_project(project_id, request, initial_progress),
+            media_type="text/event-stream",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "Access-Control-Allow-Origin": "*",
+            }
+        )
+    except Exception as e:
+        logger.error(f"Error streaming project progress for {project_id}: {e}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to stream project progress: {str(e)}"
+        ) 

@@ -190,14 +190,24 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             # ------------------------------------------------------------------
             # Calculate rough call budget (pre-extraction)
             # ------------------------------------------------------------------
+            total_products = len(product_ids)
             seg_batches = math.ceil(
                 len(product_titles) / seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
             )
             ref_batches = math.ceil(len(product_titles) / seg_cfg.PRODUCTS_PER_REFINEMENT)
             # Consolidation calls are approximated pessimistically (n-1)
             consolidation_calls_est = max(0, seg_batches - 1)
-            calls_done = 0
-
+            
+            # 🔥 Update run with total counts before starting
+            await self._run_repo.update_run_progress(
+                run_id,
+                total_products=total_products,
+                extraction_batches_total=seg_batches,
+                consolidation_batches_total=consolidation_calls_est,
+                refinement_batches_total=ref_batches,
+            )
+            
+            logger.info(f"🚀 Starting product segmentation run {run_id}: {total_products} products, {seg_batches} extraction batches, {consolidation_calls_est} consolidation batches, {ref_batches} refinement batches")
 
             # Mapping helpers -----------------------------------------------------
             taxonomy_name_to_id: Dict[str, int] = {}
@@ -268,6 +278,13 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
 
                 batch_taxonomies.append(result.taxonomies_extracted)
 
+                # 🔥 Update progress after each extraction batch
+                batches_done = batch_idx + 1
+                await self._run_repo.update_run_progress(run_id, extraction_batches_done=batches_done)
+                
+                progress_pct = (batches_done / seg_batches) * 100
+                logger.info(f"🔄 Extraction batch {batches_done}/{seg_batches} ({progress_pct:.1f}%) completed for run {run_id}")
+
             # ------------------------------------------------------------------
             # 2) Consolidation Stage
             # ------------------------------------------------------------------
@@ -279,7 +296,8 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                 raise RuntimeError("No taxonomies extracted – cannot consolidate")
 
             current_consolidated: List[TaxonomyDTO] = dedup_batches[0]
-            for batch in dedup_batches[1:]:
+            consolidation_batch_idx = 0
+            for batch_idx, batch in enumerate(dedup_batches[1:]):
                 ctx = ProductConsolidationStageContext(
                     product_category=run.processing_params.get('product_category', ''),
                     taxonomy_a=current_consolidated,
@@ -300,6 +318,13 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
 
                     for orig in cons.original_taxonomies:
                         raw_merge_map[orig.name] = new_name
+
+                # 🔥 Update progress after each consolidation batch
+                consolidation_batch_idx = batch_idx + 1
+                await self._run_repo.update_run_progress(run_id, consolidation_batches_done=consolidation_batch_idx)
+                
+                progress_pct = (consolidation_batch_idx / consolidation_calls_est) * 100 if consolidation_calls_est > 0 else 100
+                logger.info(f"🔄 Consolidation batch {consolidation_batch_idx}/{consolidation_calls_est} ({progress_pct:.1f}%) completed for run {run_id}")
 
             final_taxonomies: List[TaxonomyDTO] = current_consolidated
 
@@ -374,6 +399,7 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             await self._run_repo.update_stage(run_id, SegmentationStage.REFINEMENT)
 
             batch_size = seg_cfg.PRODUCTS_PER_REFINEMENT
+            refinement_batch_idx = 0
             for offset in range(0, len(product_titles), batch_size):
                 batch_titles = product_titles[offset : offset + batch_size]
                 batch_assignments = {}
@@ -414,6 +440,13 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                         run_id, product_id, taxonomy_id
                     )
 
+                # 🔥 Update progress after each refinement batch
+                refinement_batch_idx += 1
+                await self._run_repo.update_run_progress(run_id, refinement_batches_done=refinement_batch_idx)
+                
+                progress_pct = (refinement_batch_idx / ref_batches) * 100
+                logger.info(f"🔄 Refinement batch {refinement_batch_idx}/{ref_batches} ({progress_pct:.1f}%) completed for run {run_id}")
+
             # ------------------------------------------------------------------
             # Update segment_name in assignments table
             # ------------------------------------------------------------------
@@ -422,6 +455,14 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             # ------------------------------------------------------------------
             # Done!
             # ------------------------------------------------------------------
+            final_assigned_count = len([
+                tax for tax in product_id_to_taxonomy.values()
+                if tax != "__UNASSIGNED__"
+            ])
+            await self._run_repo.update_run_progress(
+                run_id,
+                processed_products=final_assigned_count,
+            )
             await self._run_repo.update_stage(run_id, SegmentationStage.COMPLETED)
 
         except Exception as exc:  # pylint: disable=broad-except
@@ -430,8 +471,17 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             raise
 
     async def _update_final_segment_names(self, run_id: str, product_id_to_taxonomy: Dict[int, str]) -> None:
-        """更新最终的细分名称到assignments表"""
-        for product_id, segment_name in product_id_to_taxonomy.items():
-            await self._segment_repo.update_segment_name(run_id, product_id, segment_name)
+        """Update segment_name in assignments table based on final taxonomy mapping."""
+        
+        # Invert the map for easier lookup
+        taxonomy_to_product_ids: Dict[str, List[int]] = {}
+        for pid, tax_name in product_id_to_taxonomy.items():
+            taxonomy_to_product_ids.setdefault(tax_name, []).append(pid)
+            
+        # Batch updates by segment name
+        for tax_name, pids in taxonomy_to_product_ids.items():
+            if tax_name == "__UNASSIGNED__":
+                continue
+            await self._segment_repo.batch_update_segment_name(run_id, pids, tax_name)
 
  

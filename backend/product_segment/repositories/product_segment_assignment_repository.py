@@ -75,6 +75,23 @@ class ProductSegmentRepository:
             logger.exception("Failed to update refined taxonomy: %s", exc)
             return False 
 
+    async def batch_update_segment_name(self, run_id: str, product_ids: List[int], segment_name: str) -> bool:
+        """Update segment name for a batch of products."""
+        try:
+            if not product_ids:
+                return True
+            result = (
+                self._client.table(_TABLE)
+                .update({"segment_name": segment_name})
+                .eq("run_id", run_id)
+                .in_("product_id", product_ids)
+                .execute()
+            )
+            return bool(result.data)
+        except Exception as exc:
+            logger.exception("Failed to batch update segment name: %s", exc)
+            return False
+
     async def update_segment_name(self, run_id: str, product_id: int, segment_name: str) -> bool:
         """Update segment name for final assignment."""
         try:

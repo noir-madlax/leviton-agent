@@ -85,3 +85,18 @@ class SegmentationRunRepository:
             .execute()
         )
         return bool(result.data)
+
+    async def update_run_progress(self, run_id: str, **kwargs) -> None:
+        """Update arbitrary progress fields for a given run."""
+        if not kwargs:
+            return
+        
+        # Filter out any None values to avoid overwriting with null
+        update_data = {key: value for key, value in kwargs.items() if value is not None}
+        
+        if not update_data:
+            return
+
+        self._client.table(_TABLE).update(update_data).eq(
+            "id", run_id
+        ).execute()
