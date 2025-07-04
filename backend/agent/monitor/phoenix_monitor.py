@@ -1,5 +1,5 @@
 """
-监控初始化模块 - 保持原有逻辑不变
+Phoenix监控初始化模块 - 保留原有Phoenix监控逻辑
 """
 import logging
 from config import settings
@@ -8,7 +8,7 @@ from openinference.instrumentation.smolagents import SmolagentsInstrumentor
 
 logger = logging.getLogger(__name__)
 
-def initialize_monitoring():
+def initialize_phoenix_monitoring():
     """初始化 Phoenix 监控 - 保持原有逻辑不变"""
     if settings.PHOENIX_ENDPOINT:
         try:

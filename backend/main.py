@@ -12,7 +12,7 @@ from product_segment.api import router as segmentation_router
 
 # 导入重构后的 agent 模块
 from agent.core.agent_manager import get_agent_manager
-from agent.core.monitoring import initialize_monitoring
+from agent.monitor import initialize_phoenix_monitoring
 from agent.streaming.stream_handler import stream_agent_response
 from agent.services.query_processor import get_query_processor
 
@@ -38,8 +38,8 @@ except ImportError as e:
 async def lifespan(app: FastAPI):
     """在应用启动时初始化 Agent，在关闭时清理资源。"""
     
-    # 初始化监控
-    initialize_monitoring()
+    # 初始化Phoenix监控
+    initialize_phoenix_monitoring()
     
     # 初始化 Agent
     agent_manager = get_agent_manager()
