@@ -962,11 +962,14 @@ class ProjectService:
                 "project_name": project["project_name"],
                 "status": project.get("status", "unknown"),
                 "segmentation_status": project.get("segmentation_status", "pending"),
+                "review_analysis_status": project.get("review_analysis_status", "pending"),
                 "created_at": project.get("created_at"),
                 "segmentation_started_at": project.get("segmentation_started_at"),
                 "segmentation_completed_at": project.get("segmentation_completed_at"),
                 "segmentation_duration_seconds": project.get("segmentation_duration_seconds"),
                 "total_products": project.get("total_products", 0),
+                "total_reviews": project.get("total_reviews", 0),
+                "estimated_llm_calls": project.get("estimated_llm_calls", 0),
                 "steps": []
             }
             
@@ -1099,10 +1102,14 @@ class ProjectService:
             step4_status = "pending"
             step4_description = "Waiting for segmentation completion"
             
+            # 获取LLM调用次数估计用于显示
+            estimated_llm_calls = project.get("estimated_llm_calls", 0)
+            total_reviews = project.get("total_reviews", 0)
+            
             if segmentation_status == "completed":
                 if review_analysis_status == "pending":
                     step4_status = "pending"
-                    step4_description = "Waiting to start review analysis"
+                    step4_description = f"Waiting to start review analysis ({total_reviews} reviews, ~{estimated_llm_calls} LLM calls)"
                 elif review_analysis_status == "processing":
                     step4_status = "in_progress"
                     
@@ -1121,7 +1128,6 @@ class ProjectService:
                                 stage = analysis_data.get("stage", "init")
                                 
                                 # 获取评论数量统计
-                                total_reviews = project.get("total_reviews", 0)
                                 processed_reviews = 0
                                 
                                 # 查询已处理的评论数量
@@ -1133,7 +1139,7 @@ class ProjectService:
                                     
                                     processed_reviews = processed_result.count or 0
                                 
-                                step4_description = f"Processing review analysis: {processed_reviews}/{total_reviews} reviews analyzed ({stage.replace('_', ' ')})"
+                                step4_description = f"Processing review analysis: {processed_reviews}/{total_reviews} reviews analyzed ({stage.replace('_', ' ')}, ~{estimated_llm_calls} LLM calls)"
                                 
                                 # 添加评论分析的子步骤
                                 extraction_status = "completed" if stage in ["consolidation", "completed"] else ("in_progress" if stage == "extraction" else "pending")
@@ -1141,7 +1147,7 @@ class ProjectService:
                                 
                                 step4_sub_steps = [
                                     {
-                                        "name": f"Aspect Extraction ({processed_reviews}/{total_reviews} reviews)",
+                                        "name": f"Aspect Extraction ({processed_reviews}/{total_reviews} reviews, ~{estimated_llm_calls} LLM calls)",
                                         "status": extraction_status
                                     },
                                     {
@@ -1155,15 +1161,14 @@ class ProjectService:
                                 
                         except Exception as e:
                             logger.warning(f"Failed to get review analysis details: {e}")
-                            step4_description = "Processing review analysis with AI"
+                            step4_description = f"Processing review analysis with AI (~{estimated_llm_calls} LLM calls)"
                     else:
-                        step4_description = "Processing review analysis with AI"
+                        step4_description = f"Processing review analysis with AI (~{estimated_llm_calls} LLM calls)"
                         
                 elif review_analysis_status == "completed":
                     step4_status = "completed"
                     duration = project.get("review_analysis_duration_seconds", 0)
-                    total_reviews = project.get("total_reviews", 0)
-                    step4_description = f"Completed review analysis: {total_reviews} reviews processed in {duration} seconds"
+                    step4_description = f"Completed review analysis: {total_reviews} reviews processed in {duration} seconds ({estimated_llm_calls} LLM calls used)"
                 elif review_analysis_status == "failed":
                     step4_status = "failed"
                     step4_description = "Review analysis failed"

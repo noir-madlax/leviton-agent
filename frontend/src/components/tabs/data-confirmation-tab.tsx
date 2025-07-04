@@ -19,7 +19,10 @@ interface ProjectProgress {
   project_name: string;
   status: string;
   segmentation_status: string;
+  review_analysis_status?: string;
   total_products: number;
+  total_reviews?: number;
+  estimated_llm_calls?: number;
   steps: {
     step: string;
     name: string;
@@ -125,32 +128,43 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
     const isProjectCompleted = (progressData: ProjectProgress | null) => {
       if (!progressData) return false;
       
-      // 检查关键状态是否都完成
+      // 🔥 增强完成条件检查
       const isSegmentationDone = progressData.segmentation_status === 'completed';
+      const isReviewAnalysisDone = progressData.review_analysis_status === 'completed';
       const allStepsCompleted = progressData.steps?.every(step => 
         step.status === 'completed' || step.status === 'failed'
       );
       
-      return isSegmentationDone && allStepsCompleted;
+      // 项目真正完成：segmentation和review analysis都完成，且所有步骤都完成
+      return isSegmentationDone && isReviewAnalysisDone && allStepsCompleted;
     };
     
     // 如果处理中或正在创建，定期轮询更新，但当项目完成时停止轮询
     const interval = setInterval(() => {
       // 🔥 关键修复：项目完成后停止轮询
       if (isProjectCompleted(progress)) {
-        console.log('Project completed, stopping polling');
+        console.log('Project fully completed, stopping polling');
         clearInterval(interval);
         return;
       }
       
-      // 只有在创建中、处理中或有步骤在进行时才继续轮询
-      if (isCreating || 
-          progress?.segmentation_status === 'processing' ||
-          progress?.steps?.some(step => step.status === 'in_progress')) {
+      // 🔥 增强轮询条件：只有在真正需要时才轮询
+      const shouldContinuePolling = 
+        isCreating || // 正在创建
+        progress?.segmentation_status === 'processing' || // 产品分割处理中
+        progress?.review_analysis_status === 'processing' || // 评论分析处理中
+        progress?.steps?.some(step => step.status === 'in_progress'); // 有步骤在进行中
+      
+      if (shouldContinuePolling) {
+        console.log('Continuing polling, reason:', {
+          isCreating,
+          segmentation_status: progress?.segmentation_status,
+          review_analysis_status: progress?.review_analysis_status,
+          stepsInProgress: progress?.steps?.filter(step => step.status === 'in_progress').length || 0
+        });
         fetchProgress();
-      } else if (progress?.segmentation_status === 'completed') {
-        // 项目完成但可能还需要最后一次更新
-        fetchProgress();
+      } else {
+        console.log('No reason to continue polling, stopping');
         clearInterval(interval);
       }
     }, 3000); // 改为每3秒检查一次
@@ -208,6 +222,12 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
         </CardTitle>
         <CardDescription>
           Processing status for {progress.total_products || totalProducts || 0} products
+          {progress.total_reviews && progress.total_reviews > 0 && (
+            <span className="text-blue-600"> • {progress.total_reviews} reviews</span>
+          )}
+          {progress.estimated_llm_calls && progress.estimated_llm_calls > 0 && (
+            <span className="text-purple-600"> • ~{progress.estimated_llm_calls} LLM calls</span>
+          )}
           {isProjectFullyCompleted && (
             <span className="text-green-600 font-medium"> • Analysis Ready!</span>
           )}
@@ -492,8 +512,9 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       const savedProject = await response.json();
       console.log('Project saved successfully:', savedProject);
       
-      // 设置项目ID，更新进度显示状态
+      // 🔥 关键修复：设置项目ID后立即停止"创建中"状态
       setCreatedProjectId(savedProject.id);
+      setIsCreatingProject(false); // 🔥 修复：停止创建状态，让组件获取真实进度
       
       // 不自动跳转，让用户看到进度
       // 可以在进度完成后再跳转
