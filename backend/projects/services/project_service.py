@@ -1031,39 +1031,70 @@ class ProjectService:
                         run_data = run_result.data
                         stage = run_data.get("stage", "init")
                         
-                        # 细分的子步骤 - 修改显示逻辑避免误导用户
-                        # 只有当前正在执行的步骤显示为in_progress，其他都显示为pending，直到整个分割完成
+                        # 🔥 获取详细的产品分配进度 - 批次级别信息
+                        assignments_result = self.supabase.table('product_segment_assignments')\
+                            .select('product_id, segment_name', count='exact')\
+                            .eq('run_id', project["segmentation_run_id"])\
+                            .execute()
+                        
+                        total_products_in_run = assignments_result.count or 0
+                        completed_assignments = 0
+                        
+                        if assignments_result.data:
+                            # 计算已完成分配的产品数量（有segment_name的）
+                            completed_assignments = len([
+                                a for a in assignments_result.data 
+                                if a.get('segment_name') and a['segment_name'] != '__UNASSIGNED__'
+                            ])
+                        
+                        # 细分的子步骤 - 增加批次进度信息
                         if stage == "completed":
                             # 全部完成时才显示所有步骤为完成
                             sub_steps = [
-                                {"name": "Extraction", "status": "completed"},
+                                {"name": f"Extraction ({total_products_in_run} products)", "status": "completed"},
                                 {"name": "Consolidation", "status": "completed"},
-                                {"name": "Refinement", "status": "completed"}
+                                {"name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)", "status": "completed"}
                             ]
+                            step3_description = f"Completed product segmentation: {completed_assignments}/{total_products_in_run} products assigned to segments"
                         else:
-                            # 处理中时，只显示当前步骤为进行中，其他为等待
+                            # 处理中时，显示详细的批次进度
+                            extraction_status = "completed" if stage in ["consolidation", "refinement", "completed"] else ("in_progress" if stage == "extraction" else "pending")
+                            consolidation_status = "completed" if stage in ["refinement", "completed"] else ("in_progress" if stage == "consolidation" else "pending")
+                            refinement_status = "completed" if stage == "completed" else ("in_progress" if stage == "refinement" else "pending")
+                            
                             sub_steps = [
                                 {
-                                    "name": "Extraction",
-                                    "status": "in_progress" if stage == "extraction" else "pending"
+                                    "name": f"Extraction ({total_products_in_run} products)",
+                                    "status": extraction_status
                                 },
                                 {
                                     "name": "Consolidation", 
-                                    "status": "in_progress" if stage == "consolidation" else "pending"
+                                    "status": consolidation_status
                                 },
                                 {
-                                    "name": "Refinement",
-                                    "status": "in_progress" if stage == "refinement" else "pending"
+                                    "name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)",
+                                    "status": refinement_status
                                 }
                             ]
+                            
+                            # 根据当前阶段更新描述
+                            if stage == "extraction":
+                                step3_description = f"Extracting product features from {total_products_in_run} products"
+                            elif stage == "consolidation":
+                                step3_description = f"Consolidating product taxonomies"
+                            elif stage == "refinement":
+                                step3_description = f"Refining product assignments: {completed_assignments}/{total_products_in_run} products assigned"
+                            else:
+                                step3_description = f"Processing product segmentation: {completed_assignments}/{total_products_in_run} products assigned"
                         
                         step3["sub_steps"] = sub_steps
                         step3["current_stage"] = stage
+                        step3["description"] = step3_description
                         
                 except Exception as e:
                     logger.warning(f"Failed to get segmentation run details: {e}")
             
-            # 步骤4: 评论分析
+            # 步骤4: 评论分析 - 增加详细进度信息
             review_analysis_status = project.get("review_analysis_status", "pending")
             step4_status = "pending"
             step4_description = "Waiting for segmentation completion"
@@ -1074,11 +1105,65 @@ class ProjectService:
                     step4_description = "Waiting to start review analysis"
                 elif review_analysis_status == "processing":
                     step4_status = "in_progress"
-                    step4_description = "Processing review analysis with AI"
+                    
+                    # 🔥 获取评论分析的详细进度信息
+                    if project.get("review_analysis_id"):
+                        try:
+                            # 获取评论分析的进度统计
+                            analysis_result = self.supabase.table('review_analysis_runs')\
+                                .select('*')\
+                                .eq('id', project["review_analysis_id"])\
+                                .single()\
+                                .execute()
+                            
+                            if analysis_result.data:
+                                analysis_data = analysis_result.data
+                                stage = analysis_data.get("stage", "init")
+                                
+                                # 获取评论数量统计
+                                total_reviews = project.get("total_reviews", 0)
+                                processed_reviews = 0
+                                
+                                # 查询已处理的评论数量
+                                if project.get("selected_product_asins"):
+                                    processed_result = self.supabase.table('review_analysis_aspect_occurrences')\
+                                        .select('review_id', count='exact')\
+                                        .eq('analysis_id', project["review_analysis_id"])\
+                                        .execute()
+                                    
+                                    processed_reviews = processed_result.count or 0
+                                
+                                step4_description = f"Processing review analysis: {processed_reviews}/{total_reviews} reviews analyzed ({stage.replace('_', ' ')})"
+                                
+                                # 添加评论分析的子步骤
+                                extraction_status = "completed" if stage in ["consolidation", "completed"] else ("in_progress" if stage == "extraction" else "pending")
+                                consolidation_status = "completed" if stage == "completed" else ("in_progress" if stage == "consolidation" else "pending")
+                                
+                                step4_sub_steps = [
+                                    {
+                                        "name": f"Aspect Extraction ({processed_reviews}/{total_reviews} reviews)",
+                                        "status": extraction_status
+                                    },
+                                    {
+                                        "name": "Category Consolidation",
+                                        "status": consolidation_status
+                                    }
+                                ]
+                                
+                                step4["sub_steps"] = step4_sub_steps
+                                step4["current_stage"] = stage
+                                
+                        except Exception as e:
+                            logger.warning(f"Failed to get review analysis details: {e}")
+                            step4_description = "Processing review analysis with AI"
+                    else:
+                        step4_description = "Processing review analysis with AI"
+                        
                 elif review_analysis_status == "completed":
                     step4_status = "completed"
                     duration = project.get("review_analysis_duration_seconds", 0)
-                    step4_description = f"Completed review analysis in {duration} seconds"
+                    total_reviews = project.get("total_reviews", 0)
+                    step4_description = f"Completed review analysis: {total_reviews} reviews processed in {duration} seconds"
                 elif review_analysis_status == "failed":
                     step4_status = "failed"
                     step4_description = "Review analysis failed"

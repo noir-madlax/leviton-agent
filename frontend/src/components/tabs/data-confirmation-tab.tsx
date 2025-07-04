@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
+
+import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 import { CategorySelector } from '@/components/category-selector';
@@ -121,17 +121,42 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
 
     fetchProgress();
     
-    // 如果处理中或正在创建，定期轮询更新
+    // 🔥 修复轮询停止逻辑：检查项目是否真正完成
+    const isProjectCompleted = (progressData: ProjectProgress | null) => {
+      if (!progressData) return false;
+      
+      // 检查关键状态是否都完成
+      const isSegmentationDone = progressData.segmentation_status === 'completed';
+      const allStepsCompleted = progressData.steps?.every(step => 
+        step.status === 'completed' || step.status === 'failed'
+      );
+      
+      return isSegmentationDone && allStepsCompleted;
+    };
+    
+    // 如果处理中或正在创建，定期轮询更新，但当项目完成时停止轮询
     const interval = setInterval(() => {
+      // 🔥 关键修复：项目完成后停止轮询
+      if (isProjectCompleted(progress)) {
+        console.log('Project completed, stopping polling');
+        clearInterval(interval);
+        return;
+      }
+      
+      // 只有在创建中、处理中或有步骤在进行时才继续轮询
       if (isCreating || 
           progress?.segmentation_status === 'processing' ||
           progress?.steps?.some(step => step.status === 'in_progress')) {
         fetchProgress();
+      } else if (progress?.segmentation_status === 'completed') {
+        // 项目完成但可能还需要最后一次更新
+        fetchProgress();
+        clearInterval(interval);
       }
-    }, 5000); // 改为每5秒检查一次，更及时
+    }, 3000); // 改为每3秒检查一次
 
     return () => clearInterval(interval);
-  }, [projectId, isCreating, progress?.segmentation_status]);
+  }, [projectId, isCreating]);
 
   if (!isCreating && !progress) {
     return null;
@@ -168,16 +193,24 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
     }
   };
 
+  // 🔥 增加项目完成状态检查
+  const isProjectFullyCompleted = progress.segmentation_status === 'completed' && 
+    progress.steps?.every(step => step.status === 'completed' || step.status === 'failed');
+
   return (
-    <Card className="mb-6 border-l-4 border-l-blue-500">
+    <Card className={`mb-6 border-l-4 ${isProjectFullyCompleted ? 'border-l-green-500' : 'border-l-blue-500'}`}>
       <CardHeader className="pb-3">
         <CardTitle className="flex items-center gap-2 text-lg">
-          <Database className="w-5 h-5 text-blue-500" />
+          <Database className={`w-5 h-5 ${isProjectFullyCompleted ? 'text-green-500' : 'text-blue-500'}`} />
           Project Progress: {progress.project_name}
           {loading && <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />}
+          {isProjectFullyCompleted && <CheckCircle className="w-5 h-5 text-green-500" />}
         </CardTitle>
         <CardDescription>
           Processing status for {progress.total_products || totalProducts || 0} products
+          {isProjectFullyCompleted && (
+            <span className="text-green-600 font-medium"> • Analysis Ready!</span>
+          )}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -196,7 +229,7 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
                 </div>
                 <p className="text-xs text-gray-600 mt-1">{step.description}</p>
                 
-                {/* 子步骤显示 */}
+                {/* 🔥 增强子步骤显示 - 显示更详细的批次信息 */}
                 {step.sub_steps && step.sub_steps.length > 0 && (
                   <div className="mt-2 ml-4 space-y-1">
                     {step.sub_steps.map((subStep, subIndex) => (
@@ -209,13 +242,21 @@ function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalP
                     ))}
                   </div>
                 )}
+                
+                {/* 🔥 新增：显示当前处理阶段的详细信息 */}
+                {step.current_stage && step.status === 'in_progress' && (
+                  <div className="mt-2 ml-4 p-2 bg-blue-50 border border-blue-200 rounded text-xs">
+                    <span className="font-medium text-blue-800">Current Stage: </span>
+                    <span className="text-blue-700 capitalize">{step.current_stage.replace('_', ' ')}</span>
+                  </div>
+                )}
               </div>
             </div>
           ))}
         </div>
         
         {/* 添加手动跳转按钮 - 只有在项目完成后显示 */}
-        {progress.segmentation_status === 'completed' && onAnalysisReady && projectId && (
+        {isProjectFullyCompleted && onAnalysisReady && projectId && (
           <div className="pt-4 border-t mt-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
@@ -252,7 +293,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const [projectName, setProjectName] = useState('');
   const [isEditingName, setIsEditingName] = useState(false);
   const [tempProjectName, setTempProjectName] = useState('');
-  const [isBrandsExpanded, setIsBrandsExpanded] = useState(false);
   const [createdProjectId, setCreatedProjectId] = useState<string | null>(null);
   const [isCreatingProject, setIsCreatingProject] = useState(false);
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('');
@@ -393,15 +433,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     }));
   };
 
-  const handleBrandChange = (brand: string, checked: boolean) => {
-    setFilters(prev => ({
-      ...prev,
-      brands: checked 
-        ? [...prev.brands, brand]
-        : prev.brands.filter(b => b !== brand)
-    }));
-  };
-
   const handleSelectAllSources = () => {
     if (!data) return;
     setFilters(prev => ({
@@ -414,21 +445,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     setFilters(prev => ({
       ...prev,
       sources: []
-    }));
-  };
-
-  const handleSelectAllBrands = () => {
-    if (!data) return;
-    setFilters(prev => ({
-      ...prev,
-      brands: data.stats.brands.map((brand: { name: string }) => brand.name)
-    }));
-  };
-
-  const handleClearAllBrands = () => {
-    setFilters(prev => ({
-      ...prev,
-      brands: []
     }));
   };
 
@@ -642,9 +658,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                 <Check className="w-4 h-4 text-green-600" />
                 <span className="text-sm font-medium text-green-800">Selected Category:</span>
                 <span className="text-sm text-green-700 font-medium">{selectedCategoryPath}</span>
-                <Badge variant="outline" className="text-xs text-green-600 border-green-300">
-                  Level {selectedCategoryName ? '5' : '0'}
-                </Badge>
               </div>
             </div>
           )}
@@ -678,7 +691,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 gap-6">
                 {/* Amazon Category Selector */}
                 <div>
                   <CategorySelector
@@ -786,125 +799,6 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
                       )}
                     </Button>
                   </div>
-                </div>
-
-                {/* 品牌筛选 - 修复逻辑 */}
-                <div>
-                  <Collapsible open={isBrandsExpanded} onOpenChange={setIsBrandsExpanded}>
-                    <div className="flex items-center justify-between mb-2">
-                      <CollapsibleTrigger asChild>
-                        <Button variant="ghost" className="p-0 h-auto flex items-center gap-2 hover:bg-transparent">
-                          <Label className="text-sm font-medium">Top Brands Filter</Label>
-                          {isBrandsExpanded ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
-                        </Button>
-                      </CollapsibleTrigger>
-                      {data.stats.brands.length > 0 && (
-                        <div className="flex gap-1">
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={handleSelectAllBrands}
-                            className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                          >
-                            Select All
-                          </Button>
-                          <Button
-                            variant="ghost"
-                            size="sm"
-                            onClick={handleClearAllBrands}
-                            className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                          >
-                            Clear All
-                          </Button>
-                        </div>
-                      )}
-                    </div>
-                    
-                    <div>
-                      {/* 根据状态显示不同内容 */}
-                      {!selectedCategoryId ? (
-                        <div className="p-4 border-2 border-dashed border-gray-200 rounded-lg text-center">
-                          <p className="text-sm text-gray-500">
-                            Please select a category first to view corresponding brands
-                          </p>
-                          <p className="text-xs text-gray-400 mt-1">
-                            Use the category selector above
-                          </p>
-                        </div>
-                      ) : data.stats.brands.length === 0 ? (
-                        <div className="p-4 border-2 border-dashed border-yellow-200 rounded-lg text-center">
-                          <p className="text-sm text-yellow-700">
-                            No brand data available for selected category
-                          </p>
-                          <p className="text-xs text-yellow-600 mt-1">
-                            Selected: {selectedCategoryName}
-                          </p>
-                        </div>
-                      ) : (
-                        <>
-                          {/* 显示前5个品牌 */}
-                          <div className="space-y-2">
-                            {data.stats.brands.slice(0, 5).map(brand => (
-                              <div key={brand.name} className="flex items-center justify-between">
-                                <div className="flex items-center space-x-2 flex-1">
-                                  <Checkbox
-                                    id={`brand-${brand.name}`}
-                                    checked={filters.brands.includes(brand.name)}
-                                    onCheckedChange={(checked) => 
-                                      handleBrandChange(brand.name, checked as boolean)
-                                    }
-                                  />
-                                  <Label 
-                                    htmlFor={`brand-${brand.name}`}
-                                    className="text-xs cursor-pointer flex-1 select-none"
-                                  >
-                                    {brand.name}
-                                  </Label>
-                                </div>
-                                <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
-                              </div>
-                            ))}
-                          </div>
-                          
-                          {/* 折叠显示更多品牌 */}
-                          {data.stats.brands.length > 5 && (
-                            <CollapsibleContent>
-                              <div className="space-y-2 mt-2 pt-2 border-t">
-                                {data.stats.brands.slice(5).map(brand => (
-                                  <div key={brand.name} className="flex items-center justify-between">
-                                    <div className="flex items-center space-x-2 flex-1">
-                                      <Checkbox
-                                        id={`brand-${brand.name}`}
-                                        checked={filters.brands.includes(brand.name)}
-                                        onCheckedChange={(checked) => 
-                                          handleBrandChange(brand.name, checked as boolean)
-                                        }
-                                      />
-                                      <Label 
-                                        htmlFor={`brand-${brand.name}`}
-                                        className="text-xs cursor-pointer flex-1 select-none"
-                                      >
-                                        {brand.name}
-                                      </Label>
-                                    </div>
-                                    <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
-                                  </div>
-                                ))}
-                              </div>
-                            </CollapsibleContent>
-                          )}
-                          
-                          {/* 显示品牌统计信息 */}
-                          <div className="mt-2 pt-2 border-t">
-                            <p className="text-xs text-gray-500">
-                              Based on selected category: {filters.categories.join(', ')} 
-                              {data.stats.brands.length > 10 && ` (Top 10 brands)`}
-                            </p>
-                          </div>
-                        </>
-                      )}
-                    </div>
-                  </Collapsible>
                 </div>
               </div>
             </CardContent>
