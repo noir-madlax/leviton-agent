@@ -766,7 +766,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                   </TabsContent>
 
                   <TabsContent value="competitor-analysis">
-                    <CompetitorAnalysis data={data} />
+                    <CompetitorAnalysis projectId={selectedProjectId} data={data} />
                   </TabsContent>
                 </Tabs>
               </div>

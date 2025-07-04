@@ -274,9 +274,102 @@ class ProjectService:
     async def _extract_asins_from_filters(self, filters) -> List[str]:
         """Extract platform ID list based on project filters.
         
-        CRITICAL: Must match the exact logic used in get_data_confirmation_data()
+        CRITICAL: Must match the exact logic used in get_data_confirmation_data_by_category_id()
         to ensure consistency between preview and saved project.
         """
+        try:
+            # 🔥 关键修复：使用与get_data_confirmation_data_by_category_id()完全相同的逻辑
+            # 如果有category_id，优先使用category_id过滤逻辑
+            if hasattr(filters, 'category_id') and filters.category_id:
+                return await self._extract_asins_by_category_id(filters)
+            
+            # 原有逻辑作为fallback（向后兼容）
+            return await self._extract_asins_by_category_name(filters)
+            
+        except Exception as e:
+            logger.error(f"Error extracting ASINs: {e}")
+            raise
+    
+    async def _extract_asins_by_category_id(self, filters) -> List[str]:
+        """Extract ASINs using category_id - 与get_data_confirmation_data_by_category_id()完全相同的逻辑"""
+        try:
+            # Get category level to determine which field to query
+            category_level = None
+            if filters.category_id:
+                # Get category level from amazon_categories table
+                category_result = self.supabase.table('amazon_categories')\
+                    .select('level')\
+                    .eq('category_id', filters.category_id)\
+                    .single()\
+                    .execute()
+                
+                if category_result.data:
+                    category_level = category_result.data['level']
+                    logger.info(f"Category ID {filters.category_id} found at level {category_level}")
+                else:
+                    logger.warning(f"Category ID {filters.category_id} not found in amazon_categories table")
+                    return []
+            
+            # Build filtered query using category_l{level}_id field - 与get_data_confirmation_data_by_category_id()完全相同
+            query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
+            
+            # Apply base filters
+            query = query.neq('category', None).neq('brand', None)
+            
+            # Apply category filter using appropriate level field
+            if category_level and filters.category_id:
+                category_field = f'category_l{category_level}_id'
+                query = query.eq(category_field, filters.category_id)
+                logger.info(f"Filtering by {category_field} = {filters.category_id}")
+            
+            # Apply other filters
+            if filters.brands:
+                query = query.in_('brand', filters.brands)
+            
+            if filters.sources:
+                query = query.in_('source', filters.sources)
+            
+            # Execute query to get all filtered data
+            result = query.execute()
+            
+            if not result.data:
+                return []
+            
+            # Apply sales ranking filter in Python (与get_data_confirmation_data_by_category_id()完全相同)
+            if filters.top_sales_count:
+                # Filter out products with no sales volume (NULL or 0)
+                products_with_sales = [
+                    row for row in result.data 
+                    if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0
+                ]
+                
+                # Sort by sales volume (descending)
+                sorted_products = sorted(
+                    products_with_sales,
+                    key=lambda x: x['monthly_sales_volume'] or 0,
+                    reverse=True
+                )
+                
+                # Take top N products
+                top_products = sorted_products[:filters.top_sales_count]
+                
+                # Extract platform IDs
+                platform_ids = [row['platform_id'] for row in top_products if row.get('platform_id')]
+                
+                logger.info(f"ASIN extraction by category_id: filtered {len(result.data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
+                
+            else:
+                # No top sales filter, use all filtered products
+                platform_ids = [row['platform_id'] for row in result.data if row.get('platform_id')]
+            
+            return list(set(platform_ids))  # Remove duplicates
+            
+        except Exception as e:
+            logger.error(f"Error extracting ASINs by category_id: {e}")
+            raise
+    
+    async def _extract_asins_by_category_name(self, filters) -> List[str]:
+        """Extract ASINs using category names - 原有逻辑作为fallback"""
         try:
             # Build query - get all necessary fields for filtering
             query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
@@ -321,7 +414,7 @@ class ProjectService:
                 # Extract platform IDs
                 platform_ids = [row['platform_id'] for row in top_products if row.get('platform_id')]
                 
-                logger.info(f"ASIN extraction: filtered {len(result.data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
+                logger.info(f"ASIN extraction by category_name: filtered {len(result.data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
                 
             else:
                 # No top sales filter, use all filtered products
@@ -330,7 +423,7 @@ class ProjectService:
             return list(set(platform_ids))  # Remove duplicates
             
         except Exception as e:
-            logger.error(f"Error extracting ASINs: {e}")
+            logger.error(f"Error extracting ASINs by category_name: {e}")
             raise
     
     async def _calculate_project_stats(self, asins: List[str], filters) -> dict:

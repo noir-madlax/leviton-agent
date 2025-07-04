@@ -462,7 +462,9 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
             categories: filters.categories,
             sources: filters.sources,
             brands: filters.brands,
-            top_sales_count: filters.topSalesCount
+            top_sales_count: filters.topSalesCount,
+            // 🔥 关键修复：同时传递category_id，确保与Apply Filter逻辑一致
+            category_id: selectedCategoryId
           }
         })
       });

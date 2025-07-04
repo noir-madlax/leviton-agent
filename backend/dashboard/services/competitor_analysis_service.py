@@ -5,7 +5,7 @@ Migrated from frontend logic to ensure consistent project-based filtering.
 """
 
 import logging
-from typing import Dict, List, Any, Literal
+from typing import Dict, List, Any, Literal, Optional
 import re
 
 from .base_service import BaseDashboardService
@@ -29,8 +29,8 @@ class CompetitorAnalysisService(BaseDashboardService):
     focused product comparison and enhanced sentiment analysis.
     """
 
-    # Core 6 products for competitor analysis (using products with analysis data)
-    CORE_COMPETITOR_ASINS = [
+    # Default core products for competitor analysis when no specific ASINs are provided
+    DEFAULT_COMPETITOR_ASINS = [
         'B08PKMT2DV',  # Philips Hue - Smart home brand representative
         'B0771BC2YH',  # CLOUDY BAY - Mid-tier brand representative
         'B004DZONXI',  # Lutron - Lutron brand representative
@@ -48,6 +48,16 @@ class CompetitorAnalysisService(BaseDashboardService):
         'B073H9Y7SH': 'Leviton Trimatron',
         'B0BTMWZH3K': 'Kasa HomeKit'
     }
+
+    def __init__(self, project_id: str, selected_asins: Optional[List[str]] = None):
+        """Initialize CompetitorAnalysisService with optional custom ASINs.
+        
+        Args:
+            project_id: The project ID for filtering
+            selected_asins: Optional list of ASINs to analyze. If None, uses default core ASINs.
+        """
+        super().__init__(project_id)
+        self.selected_asins = selected_asins or self.DEFAULT_COMPETITOR_ASINS
 
     def get_data(self) -> Dict[str, Any]:
         """Get competitor analysis data filtered by project ASINs.
@@ -81,25 +91,25 @@ class CompetitorAnalysisService(BaseDashboardService):
             }
 
     def _get_product_info(self) -> List[Dict[str, Any]]:
-        """Get product information for core 6 competitor products."""
+        """Get product information for selected competitor products."""
         query = self._get_base_product_table().select('platform_id, title, reviews_count')
         query = self._apply_base_filters(query)
-        # Use core competitor ASINs instead of all project ASINs
-        query = query.in_('platform_id', self.CORE_COMPETITOR_ASINS)
+        # Use selected ASINs for comparison
+        query = query.in_('platform_id', self.selected_asins)
         result = query.execute()
         
         if result.data:
-            logger.info(f"Retrieved {len(result.data)} core competitor products")
+            logger.info(f"Retrieved {len(result.data)} selected competitor products")
             return result.data
         else:
-            logger.warning("No product information found for core competitor ASINs")
+            logger.warning("No product information found for selected competitor ASINs")
             return []
 
     def _get_analysis_data(self) -> List[Dict[str, Any]]:
-        """Get review analysis data from new table structure filtered by core competitor ASINs."""
+        """Get review analysis data from new table structure filtered by selected competitor ASINs."""
         
         try:
-            # Get aspects filtered by project and core competitor ASINs
+            # Get aspects filtered by project and selected competitor ASINs
             aspects_query = self.supabase.from_('review_analysis_aspects').select('''
                 aspect_pk,
                 product_id,
@@ -107,12 +117,12 @@ class CompetitorAnalysisService(BaseDashboardService):
                 detail_text,
                 parent_group_name,
                 category_pk
-            ''').eq('project_id', self.project_id).in_('product_id', self.CORE_COMPETITOR_ASINS)
+            ''').eq('project_id', self.project_id).in_('product_id', self.selected_asins)
             
             aspects_result = aspects_query.execute()
             
             if not aspects_result.data:
-                logger.warning("No aspects data found for core competitor ASINs")
+                logger.warning("No aspects data found for selected competitor ASINs")
                 return []
             
             # Get category information
@@ -216,12 +226,12 @@ class CompetitorAnalysisService(BaseDashboardService):
         """Get rating data for sentiment analysis."""
         query = self.supabase.from_('product_reviews').select(
             'product_id, review_id, rating'
-        ).in_('product_id', self.CORE_COMPETITOR_ASINS).neq('rating', None)
+        ).in_('product_id', self.selected_asins).neq('rating', None)
         
         result = query.execute()
         
         if result.data:
-            logger.info(f"Retrieved {len(result.data)} rating records for core competitors")
+            logger.info(f"Retrieved {len(result.data)} rating records for selected competitors")
             return result.data
         else:
             logger.warning("No rating data found for core competitor ASINs")

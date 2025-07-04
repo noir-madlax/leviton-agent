@@ -11,6 +11,7 @@ class ProjectFilters(BaseModel):
     sources: List[str]
     brands: List[str]
     top_sales_count: Optional[int] = None
+    category_id: Optional[str] = None
 
 
 class ProjectCreateRequest(BaseModel):

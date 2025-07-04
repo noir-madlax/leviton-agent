@@ -463,7 +463,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get competitor analysis data with project filtering via backend API
-  async getCompetitorAnalysisDataByProject(projectId: string): Promise<{
+  async getCompetitorAnalysisDataByProject(projectId: string, selectedAsins?: string): Promise<{
     targetProducts: string[]
     matrixData: Array<{
       product: string
@@ -490,7 +490,12 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/competitor-analysis?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/competitor-analysis?project_id=${projectId}`
+      if (selectedAsins) {
+        url += `&selected_asins=${selectedAsins}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
@@ -799,6 +804,31 @@ export class DatabaseService {
       return await response.json()
     } catch (error) {
       console.error('Error fetching project overview:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get available ASINs with product info for competitor selection
+  async getAvailableAsins(projectId: string): Promise<Array<{
+    platform_id: string
+    title: string
+    brand: string
+    price_usd: number
+    reviews_count: number
+    category: string
+  }>> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/available-asins?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      return await response.json()
+    } catch (error) {
+      console.error('Error fetching available ASINs:', error)
       throw error
     }
   }

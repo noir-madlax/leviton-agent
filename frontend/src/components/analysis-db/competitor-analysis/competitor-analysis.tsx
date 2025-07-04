@@ -1,16 +1,19 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { ExternalLink } from "lucide-react"
+import { ExternalLink, Filter } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
 import { CompetitorPainPointsMatrix } from "@/components/analysis-db/charts/competitor-pain-points-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 import { CustomerSentimentBar } from "@/components/analysis-db/charts/customer-sentiment-bar"
+import { CompetitorAsinSelector } from "./competitor-asin-selector"
+import { databaseService } from "@/components/analysis-db/data/database-service"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 interface CompetitorAnalysisProps {
+  projectId: string | null;
   data: {
     competitorAnalysis: {
       targetProducts: string[]
@@ -51,14 +54,44 @@ interface CompetitorAnalysisProps {
   }
 }
 
-export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
-  // Use the pre-calculated data from DatabaseService directly
-  const competitorData = {
+export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps) {
+  const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
+  const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
+  const [loading, setLoading] = useState(false);
+  const [showAsinSelector, setShowAsinSelector] = useState(false);
+
+  // Default to using the original data
+  const competitorData = customCompetitorData || {
     targetProducts: data.competitorAnalysis.targetProducts,
     matrixData: data.competitorAnalysis.matrixData,
     productTotalReviews: data.competitorAnalysis.productTotalReviews
   }
-  const useCaseData = data.competitorAnalysis.useCaseData
+  const useCaseData = customCompetitorData?.useCaseData || data.competitorAnalysis.useCaseData
+
+  // Handle ASIN selection change
+  const handleAsinSelectionChange = async (asins: string[]) => {
+    setSelectedAsins(asins);
+    
+    if (asins.length === 0) {
+      setCustomCompetitorData(null);
+      return;
+    }
+
+    if (!projectId) return;
+
+    try {
+      setLoading(true);
+      const response = await databaseService.getCompetitorAnalysisDataByProject(
+        projectId,
+        asins.join(',')
+      );
+      setCustomCompetitorData(response);
+    } catch (error) {
+      console.error('Error fetching custom competitor data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
   // Map product names to their ASINs (consistent with DatabaseService)
   const productToAsin: Record<string, string> = {
@@ -74,7 +107,7 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
   const realMatrixData = competitorData.matrixData
 
   // Use the pre-calculated use case data from DatabaseService and add missing fields
-  const realUseCaseData = useCaseData.matrixData.map(item => ({
+  const realUseCaseData = useCaseData.matrixData.map((item: any) => ({
     ...item,
     positiveCount: Math.floor(item.mentions * item.satisfactionRate / 100),
     negativeCount: Math.floor(item.mentions * (100 - item.satisfactionRate) / 100),
@@ -99,13 +132,13 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
   }
 
   // Calculate statistics for each product - including all 6 products
-  const productStats = competitorData.targetProducts.map(product => {
-    const productData = competitorData.matrixData.filter(item => item.product === product)
+  const productStats = competitorData.targetProducts.map((product: string) => {
+    const productData = competitorData.matrixData.filter((item: any) => item.product === product)
     const actualTotalReviews = competitorData.productTotalReviews[product] || 0  // Use actual total review count
-    const totalMentions = productData.reduce((sum, item) => sum + item.mentions, 0)
+    const totalMentions = productData.reduce((sum: number, item: any) => sum + item.mentions, 0)
     const categoriesCount = productData.length
     const avgSatisfaction = productData.length > 0 
-      ? productData.reduce((sum, item) => sum + item.satisfactionRate, 0) / productData.length 
+      ? productData.reduce((sum: number, item: any) => sum + item.satisfactionRate, 0) / productData.length 
       : 0
     
     return {
@@ -119,14 +152,48 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">
+      {/* ASIN Selection */}
+      <section>
+        <div className="mb-4">
+          <Button
+            variant="outline"
+            onClick={() => setShowAsinSelector(!showAsinSelector)}
+            className="flex items-center gap-2"
+          >
+            <Filter className="w-4 h-4" />
+            {showAsinSelector ? 'Hide' : 'Show'} Product Selection
+          </Button>
+        </div>
+        
+        {showAsinSelector && (
+          <CompetitorAsinSelector
+            projectId={projectId}
+            onSelectionChange={handleAsinSelectionChange}
+            defaultSelection={selectedAsins}
+          />
+        )}
+      </section>
+
+      {/* Loading State */}
+      {loading && (
+        <div className="flex justify-center items-center h-32">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+        </div>
+      )}
+
       {/* Product Data Overview */}
       <section>
         <h2 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-4">
           📊 Product Data Overview
+          {selectedAsins.length > 0 && (
+            <span className="ml-2 text-sm font-normal text-gray-600">
+              ({selectedAsins.length} custom products selected)
+            </span>
+          )}
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {productStats.map((stat) => (
+          {productStats.map((stat: any) => (
             <Card 
               key={stat.name} 
               className="interactive-card p-4"
