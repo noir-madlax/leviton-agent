@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { useRouter } from "next/navigation"
-import { ChatInterface } from "@/components/chat/chat-interface"
+
 import { ChartRenderer } from "@/components/charts/chart-renderer"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -10,13 +10,17 @@ import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { DatabaseService } from "@/components/analysis-db/data/database-service"
-import { ArrowLeft, MessageSquare, TrendingUp, BarChart3, PieChart, Lightbulb, Send, Loader2 } from "lucide-react"
+import { ArrowLeft, MessageSquare, TrendingUp, BarChart3, PieChart, Lightbulb, Send, Loader2, ChevronDown, ChevronUp } from "lucide-react"
 import { ChartProvider, useChart } from "@/contexts/chart-context"
 import { config } from "@/lib/config"
-import { ChartData, SingleChart } from "@/lib/types"
+import { ChartData } from "@/lib/types"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
+
+import { ProjectDataOverview } from '@/components/analysis-db/shared/project-data-overview'
+import { ProjectFilters } from '@/components/analysis-db/shared/project-filters'
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 
 // 使用现有的Project接口
 interface Project {
@@ -307,8 +311,10 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   const [input, setInput] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [showTopics, setShowTopics] = useState(false)
+  const [showFilters, setShowFilters] = useState(false) // 默认折叠
   const [currentStage, setCurrentStage] = useState("")
   const [currentProgress, setCurrentProgress] = useState(0)
+  const [categoryFilters, setCategoryFilters] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
   const { updateChart, setCompiling, setError } = useChart()
 
@@ -323,6 +329,17 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   useEffect(() => {
     const loadProject = async () => {
       if (!projectId) return
+      
+      // 项目加载时参数检查
+      console.log('🏠 [CHAT PAGE] Project loading:')
+      console.log('  📊 Project ID:', projectId)
+      console.log('  🔍 Initial Category Filters:', categoryFilters)
+      console.warn('🔥 INITIAL PARAMS CHECK:', {
+        projectId: projectId,
+        categoryFilters: categoryFilters,
+        hasProjectId: !!projectId,
+        categoryFiltersCount: categoryFilters.length
+      })
       
       try {
         setLoading(true)
@@ -408,7 +425,35 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 10 * 60 * 1000) // 10分钟
       
-      const response = await fetch(`${backendUrl}/agent-stream?query=${encodeURIComponent(originalInput)}`, {
+      // 构建请求URL，添加项目ID和category filters
+      let url = `${backendUrl}/agent-stream?query=${encodeURIComponent(originalInput)}&projectId=${projectId}`
+      
+      // 添加category filters参数
+      if (categoryFilters.length > 0) {
+        url += `&categoryFilters=${encodeURIComponent(categoryFilters.join(','))}`
+      }
+      
+      // 重要参数日志 - 确保传递正确
+      console.log('=' .repeat(80))
+      console.log('🚀 [CHAT API] SENDING REQUEST TO BACKEND')
+      console.log('📊 Project ID:', projectId)
+      console.log('🔍 Category Filters:', categoryFilters)
+      console.log('📝 Category Filters Count:', categoryFilters.length)
+      console.log('❓ Query:', originalInput.substring(0, 100) + (originalInput.length > 100 ? '...' : ''))
+      console.log('🌐 Full URL:', url)
+      console.log('=' .repeat(80))
+      
+      // 额外的确认机制 - 用警告形式确保可见
+      console.warn('🔥 CRITICAL PARAMS CHECK:', {
+        hasProjectId: !!projectId,
+        projectIdValue: projectId,
+        hasCategoryFilters: categoryFilters.length > 0,
+        categoryFiltersValue: categoryFilters,
+        urlContainsProjectId: url.includes('projectId='),
+        urlContainsCategoryFilters: url.includes('categoryFilters=')
+      })
+      
+      const response = await fetch(url, {
         method: 'GET',
         headers: {
           'Accept': 'text/event-stream',
@@ -649,6 +694,24 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     }, 100)
   }
 
+  const handleCategoryFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
+    setCategoryFilters(filters.categories)
+    
+    // 增强的过滤器变更日志
+    console.log('🔍 [CHAT] Category filters updated:')
+    console.log('  📝 Categories:', filters.categories)
+    console.log('  🔢 Count:', filters.categories.length)
+    console.log('  📊 Project ID:', projectId)
+    console.log('  ⏰ Timestamp:', new Date().toISOString())
+    
+    // 警告形式确保可见
+    console.warn('🔥 FILTER UPDATE:', {
+      newCategories: filters.categories,
+      oldCategories: categoryFilters,
+      projectId: projectId
+    })
+  }
+
   if (loading) {
     return (
       <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
@@ -677,16 +740,35 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       <div className="flex h-screen bg-gray-50">
         {/* Topics Sidebar */}
         <div className={`${showTopics ? 'w-80' : 'w-0'} transition-all duration-300 overflow-hidden bg-white border-r border-gray-200`}>
-          <div className="p-6">
-            <h2 className="text-lg font-semibold mb-4">Topics</h2>
-            <div className="space-y-3">
-              {["Market Analysis", "Competitive Intelligence", "Customer Insights", "Price Optimization"].map((topic) => (
-                <div key={topic} className="p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer">
-                  <div className="font-medium text-sm">{topic}</div>
-                  <div className="text-xs text-gray-500 mt-1">Recent discussions</div>
-                </div>
-              ))}
+          <div className="p-6 space-y-6">
+            {/* Topics Section */}
+            <div>
+              <h2 className="text-lg font-semibold mb-4">Topics</h2>
+              <div className="space-y-3">
+                {["Market Analysis", "Competitive Intelligence", "Customer Insights", "Price Optimization"].map((topic) => (
+                  <div key={topic} className="p-3 rounded-lg border border-gray-200 hover:bg-gray-50 cursor-pointer">
+                    <div className="font-medium text-sm">{topic}</div>
+                    <div className="text-xs text-gray-500 mt-1">Recent discussions</div>
+                  </div>
+                ))}
+              </div>
             </div>
+
+
+
+            {/* Active Filters Display */}
+            {categoryFilters.length > 0 && (
+              <div className="p-4 border-b border-gray-200">
+                <h3 className="text-sm font-medium text-gray-900 mb-2">Active Filters</h3>
+                <div className="space-y-1">
+                  {categoryFilters.map((filter) => (
+                    <div key={filter} className="text-xs bg-blue-50 text-blue-700 px-2 py-1 rounded">
+                      {filter}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         </div>
 
@@ -722,6 +804,45 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* Filters Section - Collapsible */}
+          <div className="bg-white border-b border-gray-200">
+            <Collapsible open={showFilters} onOpenChange={setShowFilters}>
+              <CollapsibleTrigger asChild>
+                <Button
+                  variant="ghost"
+                  className="w-full justify-between px-6 py-4 hover:bg-gray-50"
+                >
+                  <span className="text-sm font-medium">Data Filters & Scope</span>
+                  {showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </Button>
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 py-4 border-t border-gray-100">
+                <div className="max-w-6xl mx-auto space-y-4">
+                  {/* Category Filters */}
+                  <ProjectFilters 
+                    projectId={projectId} 
+                    onFiltersChange={handleCategoryFiltersChange}
+                    initialFilters={{ categories: categoryFilters, asins: [] }}
+                  />
+
+                  {/* Project Data Overview - Remove Card container */}
+                  <div className="mb-4">
+                    <div className="mb-3">
+                      <h3 className="text-lg font-medium flex items-center gap-2">
+                        <BarChart3 className="w-5 h-5" />
+                        Project Data Scope
+                      </h3>
+                    </div>
+                    <ProjectDataOverview 
+                      projectId={projectId} 
+                      categoryFilters={categoryFilters}
+                    />
+                  </div>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
           {/* Messages Area */}

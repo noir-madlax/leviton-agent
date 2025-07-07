@@ -1,66 +1,32 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { databaseService, type Project } from '@/components/analysis-db/data/database-service';
+import { useState } from 'react';
 import { ProjectDataOverview } from './project-data-overview';
 import { ProjectFilters } from './project-filters';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { BarChart3 } from 'lucide-react';
 
 interface DashboardHeaderProps {
   onProjectChange?: (projectId: string) => void;
   selectedProjectId?: string | null;
+  onFiltersChange?: (filters: { categories: string[]; asins: string[] }) => void;
 }
 
-export function DashboardHeader({ onProjectChange, selectedProjectId: parentSelectedProjectId }: DashboardHeaderProps) {
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [localSelectedProjectId, setLocalSelectedProjectId] = useState<string>('');
-  const [loading, setLoading] = useState(false);
+export function DashboardHeader({ selectedProjectId: parentSelectedProjectId, onFiltersChange }: DashboardHeaderProps) {
+  const [localSelectedProjectId] = useState<string>('');
+  const [currentFilters, setCurrentFilters] = useState<{ categories: string[]; asins: string[] }>({ categories: [], asins: [] });
   
   // Use parent's selectedProjectId if provided, otherwise use local state
   const selectedProjectId = parentSelectedProjectId || localSelectedProjectId;
 
-  // 加载项目列表
-  useEffect(() => {
-    loadProjects();
-  }, []);
-
-  const loadProjects = async () => {
-    try {
-      const projectList = await databaseService.getProjects();
-      setProjects(projectList);
-      
-      // 🎯 NEW APPROACH: Don't auto-select any project - let user choose
-      console.log(`📋 Loaded ${projectList.length} projects, waiting for user selection...`);
-    } catch (error) {
-      console.error('Failed to load projects:', error);
-    }
-  };
-
-  const handleProjectChange = async (projectId: string) => {
-    if (projectId === selectedProjectId) return;
-    
-    setLoading(true);
-    try {
-      // Update local state only if parent doesn't control the state
-      if (!parentSelectedProjectId) {
-        setLocalSelectedProjectId(projectId);
-      }
-      
-      console.log(`🎯 DashboardHeader: Project selected - ${projectId}`);
-      
-      if (onProjectChange) {
-        onProjectChange(projectId);
-      }
-    } catch (error) {
-      console.error('Failed to change project:', error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
   const handleFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
-    // TODO: Implement filter application logic in next phase
-    console.log('Filters changed:', filters);
+    console.log('🔄 Filters applied:', filters);
+    setCurrentFilters(filters);
+    
+    // Pass filters up to parent component for dashboard data reload
+    if (onFiltersChange) {
+      onFiltersChange(filters);
+    }
   };
 
   return (
@@ -69,7 +35,7 @@ export function DashboardHeader({ onProjectChange, selectedProjectId: parentSele
       <div className="flex items-center justify-between mb-6">
         {/* 简化的页面标题 - 不显示具体项目名 */}
         <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 border-b-3 border-blue-500 pb-3 mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 border-b border-gray-200 pb-3 mb-4">
             Project Analysis Report
           </h1>
 
@@ -85,18 +51,29 @@ export function DashboardHeader({ onProjectChange, selectedProjectId: parentSele
             })}
           </div>
         </div>
-
-
       </div>
-
-      {/* Project Data Overview */}
-      <ProjectDataOverview projectId={selectedProjectId} />
 
       {/* Project Filters */}
       <ProjectFilters 
         projectId={selectedProjectId} 
         onFiltersChange={handleFiltersChange}
       />
+
+      {/* Project Data Scope */}
+      <Card className="mb-6">
+        <CardHeader className="pb-3">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            Project Data Scope
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-0">
+          <ProjectDataOverview 
+            projectId={selectedProjectId} 
+            categoryFilters={currentFilters.categories}
+          />
+        </CardContent>
+      </Card>
     </div>
   );
 }

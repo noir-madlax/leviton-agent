@@ -131,10 +131,13 @@ async def test_tools_endpoint():
 
 @app.get("/agent-stream")
 async def agent_stream(
-    query: str = Query(..., description="要处理的查询内容", min_length=1)
+    query: str = Query(..., description="要处理的查询内容", min_length=1),
+    projectId: Optional[str] = Query(None, description="项目ID"),
+    categoryFilters: Optional[str] = Query(None, description="类别过滤器，逗号分隔")
 ):
     """
     SSE 端点，接收查询并流式返回 smolagents 的输出
+    支持项目ID和类别过滤器参数
     """
     if not query.strip():
         return Response(
@@ -142,12 +145,27 @@ async def agent_stream(
             status_code=400,
             media_type="application/json"
         )
+    
+    # 解析类别过滤器
+    category_filters_list = []
+    if categoryFilters:
+        category_filters_list = [filter.strip() for filter in categoryFilters.split(',') if filter.strip()]
+    
+    # 重要参数日志 - 确保接收正确
+    logger.info("=" * 80)
+    logger.info("🚀 [AGENT-STREAM] RECEIVED REQUEST FROM FRONTEND")
+    logger.info(f"📊 Project ID: {projectId}")
+    logger.info(f"🔍 Category Filters: {category_filters_list}")
+    logger.info(f"📝 Category Filters Count: {len(category_filters_list)}")
+    logger.info(f"❓ Query: {query[:100]}{'...' if len(query) > 100 else ''}")
+    logger.info("=" * 80)
+    
     # 准备完整的查询（包含 prompt）
     # query_processor = get_query_processor()
     # complete_query = await query_processor.prepare_query_with_prompt(query)
         
     return StreamingResponse(
-        stream_agent_response(query),
+        stream_agent_response(query, projectId, category_filters_list),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",

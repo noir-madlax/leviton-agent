@@ -648,10 +648,38 @@ class ProjectService:
             logger.error(f"Error getting project: {e}")
             raise
     
-    async def list_projects(self) -> List[Project]:
-        """List all active projects."""
+    async def list_projects(self, user_uid: Optional[str] = None) -> List[Project]:
+        """List active projects with user access control."""
         try:
-            result = self.supabase.table('projects').select('*').eq('status', 'active').order('created_at', desc=True).execute()
+            # Get projects based on user access
+            if user_uid:
+                # Check if user has specific project access permissions
+                access_result = self.supabase.table('user_project_access')\
+                    .select('project_id, access_level')\
+                    .eq('user_uid', user_uid)\
+                    .execute()
+                
+                if access_result.data:
+                    # User has specific access permissions - only show those projects
+                    allowed_project_ids = [row['project_id'] for row in access_result.data]
+                    logger.info(f"User {user_uid} has access to projects: {allowed_project_ids}")
+                    result = self.supabase.table('projects')\
+                        .select('*')\
+                        .eq('status', 'active')\
+                        .in_('id', allowed_project_ids)\
+                        .order('created_at', desc=True)\
+                        .execute()
+                else:
+                    # No specific permissions found - return empty list for security
+                    logger.warning(f"No access permissions found for user UID: {user_uid}")
+                    return []
+            else:
+                # No user UID provided - show all projects (legacy behavior)
+                result = self.supabase.table('projects')\
+                    .select('*')\
+                    .eq('status', 'active')\
+                    .order('created_at', desc=True)\
+                    .execute()
             
             if not result.data:
                 return []

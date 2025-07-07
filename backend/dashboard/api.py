@@ -31,7 +31,8 @@ router = APIRouter()
 
 @router.get("/brand-analysis", response_model=BrandAnalysisResponse)
 async def get_brand_analysis(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get brand category revenue analysis for a specific project.
     
@@ -39,8 +40,15 @@ async def get_brand_analysis(
     with server-side implementation that applies project ASIN filtering.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         # Initialize service with project-specific ASIN filtering
         service = BrandAnalysisService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
         
         # Get filtered data (new format with segments)
         brand_data = service.get_data()
@@ -73,7 +81,8 @@ async def get_brand_analysis(
 
 @router.get("/product-analysis", response_model=ProductAnalysisResponse)
 async def get_product_analysis(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get product analysis data for a specific project.
     
@@ -81,7 +90,15 @@ async def get_product_analysis(
     segment names, and colors for frontend compatibility.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = ProductAnalysisService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert segments dict to TopProductsData format
@@ -129,7 +146,8 @@ async def get_product_analysis(
 
 @router.get("/pricing-analysis", response_model=PricingAnalysisResponse)
 async def get_pricing_analysis(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get pricing analysis data for a specific project.
     
@@ -137,7 +155,15 @@ async def get_pricing_analysis(
     with server-side implementation that applies project ASIN filtering.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = PricingAnalysisService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert to response format
@@ -165,7 +191,8 @@ async def get_pricing_analysis(
 
 @router.get("/market-insights", response_model=MarketInsightsResponse)
 async def get_market_insights(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get market insights data for a specific project.
     
@@ -173,7 +200,15 @@ async def get_market_insights(
     with server-side implementation that applies project ASIN filtering.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = MarketInsightsService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert to response format
@@ -197,7 +232,8 @@ async def get_market_insights(
 
 @router.get("/package-preference", response_model=PackagePreferenceResponse)
 async def get_package_preference(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get package preference data for a specific project.
     
@@ -205,7 +241,15 @@ async def get_package_preference(
     with server-side implementation that applies project ASIN filtering.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = PackagePreferenceService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert segment distributions to proper format
@@ -249,7 +293,8 @@ async def get_package_preference(
 
 @router.get("/review-insights", response_model=ReviewInsightsResponse)
 async def get_review_insights_data(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get review insights data for specific project.
     
@@ -259,7 +304,15 @@ async def get_review_insights_data(
     try:
         logger.info(f"Getting review insights data for project: {project_id}")
         
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = ReviewInsightsService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         data = service.get_data()
         
         return ReviewInsightsResponse(
@@ -279,6 +332,7 @@ async def get_review_insights_data(
 @router.get("/competitor-analysis", response_model=CompetitorAnalysisResponse)
 async def get_competitor_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     selected_asins: Optional[str] = Query(None, description="Comma-separated list of ASINs to analyze")
 ):
     """Get competitor analysis data for a specific project.
@@ -288,12 +342,20 @@ async def get_competitor_analysis(
     Now supports custom ASIN selection via selected_asins parameter.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         # Parse selected ASINs if provided
         asin_list = None
         if selected_asins:
             asin_list = [asin.strip() for asin in selected_asins.split(',') if asin.strip()]
         
         service = CompetitorAnalysisService(project_id, asin_list)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert to response format
@@ -320,7 +382,8 @@ async def get_competitor_analysis(
 
 @router.get("/all-review-data", response_model=AllReviewDataResponse)
 async def get_all_review_data(
-    project_id: str = Query(..., description="Project ID for ASIN filtering")
+    project_id: str = Query(..., description="Project ID for ASIN filtering"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get all review data for a specific project.
     
@@ -328,7 +391,15 @@ async def get_all_review_data(
     with server-side implementation that applies project ASIN filtering.
     """
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = AllReviewDataService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         raw_data = service.get_data()
         
         # Convert to response format - data is already grouped by aspect
@@ -353,11 +424,20 @@ async def get_all_review_data(
 
 @router.get("/project-overview")
 async def get_project_overview(
-    project_id: str = Query(..., description="Project ID")
+    project_id: str = Query(..., description="Project ID"),
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
     """Get project data overview including basic statistics"""
     try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
         service = ProjectOverviewService(project_id)
+        
+        # Apply category filtering if provided
+        if category_filters:
+            service.set_category_filters(category_filters)
+        
         return service.get_project_overview()
         
     except ValueError as e:

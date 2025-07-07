@@ -10,11 +10,12 @@ import { MarketInsights } from "@/components/analysis-db/market-analysis/market-
 import { PackagePreferenceAnalysis } from "@/components/analysis-db/market-analysis/package-preference-analysis"
 import { ReviewInsights } from "@/components/analysis-db/review-insights/review-insights"
 import { CompetitorAnalysis } from "@/components/analysis-db/competitor-analysis/competitor-analysis"
-import { ProductPanelProvider } from "@/components/analysis-db/contexts/product-panel-context"
-import { ReviewPanelProvider } from "@/components/analysis-db/contexts/review-panel-context"
+import { ProductPanelProvider } from './contexts/product-panel-context'
+import { ReviewPanelProvider } from './contexts/review-panel-context'
 import { ProductPanel } from "@/components/analysis-db/panels/product-panel"
 import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
-import { databaseService, type ProductAnalysisData } from "@/components/analysis-db/data/database-service"
+import { databaseService, type ProductAnalysisData } from '@/components/analysis-db/data/database-service'
+import { PageDivider } from '@/components/ui/page-divider'
 
 interface DashboardData {
   brandAnalysis: {
@@ -224,7 +225,7 @@ interface DashboardData {
 }
 
 // 🔑 NEW: Fetch data by module to avoid loading all data at once
-async function fetchBrandAnalysisData(projectId?: string) {
+async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[]) {
   try {
     // 🔑 REQUIRE project ID for Brand Analysis - no fallback to unfiltered data
     if (!projectId) {
@@ -233,7 +234,11 @@ async function fetchBrandAnalysisData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Brand Analysis data for project: ${projectId}`);
-    const result = await databaseService.getBrandCategoryRevenueByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const result = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters);
     console.log(`📈 Brand Analysis data received: ${result.brandCategoryRevenue.length} brands, ${result.segmentNames.length} segments`);
     
     if (result.brandCategoryRevenue.length > 0) {
@@ -252,7 +257,7 @@ async function fetchBrandAnalysisData(projectId?: string) {
   }
 }
 
-async function fetchProductAnalysisData(projectId?: string) {
+async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Product Analysis waiting for project selection...');
@@ -266,7 +271,11 @@ async function fetchProductAnalysisData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Product Analysis data for project: ${projectId}`);
-    const data = await databaseService.getProductAnalysisDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const data = await databaseService.getProductAnalysisDataByProject(projectId, categoryFilters);
     console.log(`📈 Product Analysis data received: ${data.priceVsRevenue.length} price vs revenue categories, ${data.segmentNames.length} segments`);
     console.log(`  Segments: ${data.segmentNames.join(', ')}`);
     console.log(`  Segment summary keys: ${Object.keys(data.segmentSummary).join(', ')}`);
@@ -287,7 +296,7 @@ async function fetchProductAnalysisData(projectId?: string) {
   }
 }
 
-async function fetchPricingAnalysisData(projectId?: string) {
+async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Pricing Analysis waiting for project selection...');
@@ -298,7 +307,11 @@ async function fetchPricingAnalysisData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Pricing Analysis data for project: ${projectId}`);
-    const pricingAnalysisData = await databaseService.getPricingAnalysisDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const pricingAnalysisData = await databaseService.getPricingAnalysisDataByProject(projectId, categoryFilters);
     console.log(`📈 Pricing Analysis data received`);
     
     return pricingAnalysisData;
@@ -311,7 +324,7 @@ async function fetchPricingAnalysisData(projectId?: string) {
   }
 }
 
-async function fetchMarketInsightsData(projectId?: string) {
+async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Market Insights waiting for project selection...');
@@ -324,7 +337,11 @@ async function fetchMarketInsightsData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Market Insights data for project: ${projectId}`);
-    const marketInsightsData = await databaseService.getMarketInsightsDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const marketInsightsData = await databaseService.getMarketInsightsDataByProject(projectId, categoryFilters);
     console.log(`📈 Market Insights data received`);
     
     return marketInsightsData;
@@ -339,20 +356,26 @@ async function fetchMarketInsightsData(projectId?: string) {
   }
 }
 
-async function fetchPackagePreferenceData(projectId?: string) {
+async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Package Preference waiting for project selection...');
       return {
         sameProductComparison: [],
         packageDistribution: [],
+        segmentDistributions: {},
+        segmentNames: [],
         dimmerSwitches: [],
         lightSwitches: []
       };
     }
     
     console.log(`📊 Fetching Package Preference data for project: ${projectId}`);
-    const packagePreferenceData = await databaseService.getPackagePreferenceDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const packagePreferenceData = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters);
     console.log(`📈 Package Preference data received`);
     
     return packagePreferenceData;
@@ -369,7 +392,7 @@ async function fetchPackagePreferenceData(projectId?: string) {
   }
 }
 
-async function fetchReviewInsightsData(projectId?: string) {
+async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Review Insights waiting for project selection...');
@@ -381,7 +404,11 @@ async function fetchReviewInsightsData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Review Insights data for project: ${projectId}`);
-    const reviewInsightsData = await databaseService.getReviewInsightsDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const reviewInsightsData = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters);
     console.log(`📈 Review Insights data received`);
     
     return reviewInsightsData;
@@ -395,9 +422,7 @@ async function fetchReviewInsightsData(projectId?: string) {
   }
 }
 
-
-
-async function fetchCompetitorAnalysisData(projectId?: string) {
+async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Competitor Analysis waiting for project selection...');
@@ -413,7 +438,11 @@ async function fetchCompetitorAnalysisData(projectId?: string) {
     }
     
     console.log(`📊 Fetching Competitor Analysis data for project: ${projectId}`);
-    const competitorAnalysisData = await databaseService.getCompetitorAnalysisDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const competitorAnalysisData = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters);
     console.log(`📈 Competitor Analysis data received`);
     
     return competitorAnalysisData;
@@ -431,7 +460,7 @@ async function fetchCompetitorAnalysisData(projectId?: string) {
   }
 }
 
-async function fetchAllReviewData(projectId?: string): Promise<Pick<DashboardData, 'allReviewData'>> {
+async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]): Promise<Pick<DashboardData, 'allReviewData'>> {
   try {
     if (!projectId) {
       console.log('⏳ All Review Data waiting for project selection...');
@@ -441,7 +470,11 @@ async function fetchAllReviewData(projectId?: string): Promise<Pick<DashboardDat
     }
     
     console.log(`📊 Fetching All Review Data for project: ${projectId}`);
-    const allReviewData = await databaseService.getAllReviewDataByProject(projectId);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    
+    const allReviewData = await databaseService.getAllReviewDataByProject(projectId, categoryFilters);
     console.log(`📈 All Review Data received`);
     
     return {
@@ -455,8 +488,6 @@ async function fetchAllReviewData(projectId?: string): Promise<Pick<DashboardDat
   }
 }
 
-
-
 interface AnalysisDbContainerProps {
   selectedProjectId?: string | null;
 }
@@ -466,6 +497,11 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
   const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
+  const [appliedFilters, setAppliedFilters] = useState<{ categories: string[]; asins: string[] }>({
+    categories: [],
+    asins: []
+  })
+
   
   // 为每个数据部分单独管理加载状态
   const [loadingStates, setLoadingStates] = useState({
@@ -482,8 +518,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
   // 跟踪已加载的数据
   const [loadedData, setLoadedData] = useState<Set<string>>(new Set())
 
-  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string) => {
-    if (!projectId || loadedData.has(dataType)) return
+  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], forceReload = false) => {
+    if (!projectId || (!forceReload && loadedData.has(dataType))) return
     
     try {
       setLoadingStates(prev => ({ ...prev, [dataType]: true }))
@@ -494,28 +530,28 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
       
       switch (dataType) {
         case 'brandAnalysis':
-          result.brandAnalysis = await fetchBrandAnalysisData(projectId)
+          result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters)
           break
         case 'productAnalysis':
-          result.productAnalysis = await fetchProductAnalysisData(projectId)
+          result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters)
           break
         case 'pricingAnalysis':
-          result.pricingAnalysis = await fetchPricingAnalysisData(projectId)
+          result.pricingAnalysis = await fetchPricingAnalysisData(projectId, categoryFilters)
           break
         case 'marketInsights':
-          result.marketInsights = await fetchMarketInsightsData(projectId)
+          result.marketInsights = await fetchMarketInsightsData(projectId, categoryFilters)
           break
         case 'packagePreference':
-          result.packagePreference = await fetchPackagePreferenceData(projectId)
+          result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters)
           break
         case 'reviewInsights':
-          result.reviewInsights = await fetchReviewInsightsData(projectId)
+          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters)
           break
         case 'competitorAnalysis':
-          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId)
+          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters)
           break
         case 'allReviewData':
-          const reviewData = await fetchAllReviewData(projectId)
+          const reviewData = await fetchAllReviewData(projectId, categoryFilters)
           result.allReviewData = reviewData.allReviewData
           break
       }
@@ -537,6 +573,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     // 清空之前的数据和状态
     setData({})
     setLoadedData(new Set())
+    setAppliedFilters({ categories: [], asins: [] })
     setLoadingStates({
       brandAnalysis: false,
       productAnalysis: false,
@@ -551,46 +588,80 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     loadSpecificData('brandAnalysis', projectId)
   }
 
+  // Filter变更回调 - 重新加载所有数据
+  const handleFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
+    console.log(`🔄 Filters applied:`, filters)
+    setAppliedFilters(filters)
+    
+    if (!selectedProjectId) return
+    
+    // 清空之前的数据，强制重新加载
+    setData({})
+    setLoadedData(new Set())
+    setLoadingStates({
+      brandAnalysis: false,
+      productAnalysis: false,
+      pricingAnalysis: false,
+      marketInsights: false,
+      packagePreference: false,
+      reviewInsights: false,
+      competitorAnalysis: false,
+      allReviewData: false
+    })
+    
+    // 🔑 直接传递新的filters值，而不是依赖状态更新
+    const categoryFilters = filters.categories.length > 0 ? filters.categories : undefined
+    
+    // ProjectDataOverview会通过props在appliedFilters变化时自动重新加载
+    
+    // 重新加载当前活跃tab的数据
+    loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters)
+    console.log(`📊 Data reload triggered by filter change with filters:`, categoryFilters)
+  }
+
   // Tab切换处理函数
   const handleTabChange = (tabValue: string) => {
     if (!selectedProjectId) return
     
+    // 🔑 传递当前的filters到loadSpecificData
+    const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined
+    // 如果有filters，强制重新加载数据
+    const forceReload = categoryFilters !== undefined
+    
     switch (tabValue) {
       case 'brand-analysis':
-        loadSpecificData('brandAnalysis', selectedProjectId)
+        loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, forceReload)
         break
       case 'product-analysis':
-        loadSpecificData('productAnalysis', selectedProjectId)
+        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, forceReload)
         break
       case 'pricing-analysis':
-        loadSpecificData('pricingAnalysis', selectedProjectId)
+        loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, forceReload)
         break
       case 'market-insights':
-        loadSpecificData('marketInsights', selectedProjectId)
+        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, forceReload)
         break
       case 'package-preference':
-        loadSpecificData('packagePreference', selectedProjectId)
+        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, forceReload)
         break
       case 'review-insights':
-        loadSpecificData('reviewInsights', selectedProjectId)
+        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, forceReload)
         // 同时加载原始评论数据，因为ReviewInsights组件需要allReviewData
-        loadSpecificData('allReviewData', selectedProjectId)
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, forceReload)
         break
       case 'competitor-analysis':
-        loadSpecificData('competitorAnalysis', selectedProjectId)
+        loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, forceReload)
         break
     }
   }
-
-
 
   useEffect(() => {
     // 如果有初始项目ID，自动加载数据
     if (initialProjectId) {
       console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
       setSelectedProjectId(initialProjectId);
-      // 立即加载第一个tab的数据
-      loadSpecificData('brandAnalysis', initialProjectId);
+      // 立即加载第一个tab的数据，初始化时没有filters
+      loadSpecificData('brandAnalysis', initialProjectId, undefined);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
@@ -626,13 +697,14 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
       <div className="flex h-screen bg-gray-50">
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* 数据库版本标识 */}
-          <div className="w-full h-1 bg-blue-600"></div>
+          <PageDivider />
           
           <div className="flex-1 overflow-auto">
             <div className="p-6">
               <DashboardHeader 
                 onProjectChange={handleProjectChange} 
-                selectedProjectId={selectedProjectId} 
+                selectedProjectId={selectedProjectId}
+                onFiltersChange={handleFiltersChange}
               />
               
               <div className="mt-12 text-center">
@@ -712,13 +784,14 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
         <div className="flex h-screen bg-gray-50">
           <div className="flex-1 flex flex-col overflow-hidden">
             {/* 数据库版本标识 */}
-            <div className="w-full h-1 bg-blue-600"></div>
+            <PageDivider />
             
             <div className="flex-1 overflow-auto">
               <div className="p-6">
                 <DashboardHeader 
                   onProjectChange={handleProjectChange} 
-                  selectedProjectId={selectedProjectId} 
+                  selectedProjectId={selectedProjectId}
+                  onFiltersChange={handleFiltersChange}
                 />
                 
                 <Tabs defaultValue="market-analysis" className="mt-6" onValueChange={(value) => handleTabChange(value)}>

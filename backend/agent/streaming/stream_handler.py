@@ -13,9 +13,10 @@ from agent.validators.chart_validator import is_valid_json
 
 logger = logging.getLogger(__name__)
 
-async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
+async def stream_agent_response(query: str, project_id: str = None, category_filters: list = None) -> AsyncGenerator[str, None]:
     """
     运行 smolagents 代理并通过 SSE 流式输出结果 - 支持多个脚本块处理
+    支持项目ID和类别过滤器参数
     """
     agent_manager = get_agent_manager()
     query_processor = get_query_processor()
@@ -28,7 +29,14 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         return
     
     try:
-        logger.info(f"开始处理查询: {query}")
+        # 详细记录接收到的参数
+        logger.info("=" * 60)
+        logger.info("🚀 [STREAM-HANDLER] 开始处理查询")
+        logger.info(f"📊 [STREAM-HANDLER] 项目ID: {project_id}")
+        logger.info(f"🔍 [STREAM-HANDLER] 类别过滤器: {category_filters}")
+        logger.info(f"📝 [STREAM-HANDLER] 过滤器数量: {len(category_filters) if category_filters else 0}")
+        logger.info(f"❓ [STREAM-HANDLER] 查询内容: {query[:100]}{'...' if len(query) > 100 else ''}")
+        logger.info("=" * 60)
         
         # 发送开始信号
         yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"

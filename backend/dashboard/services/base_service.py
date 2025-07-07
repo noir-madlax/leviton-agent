@@ -21,6 +21,7 @@ class BaseDashboardService(ABC):
         """Initialize with project ID and extract ASIN filter list."""
         self.project_id = project_id
         self.supabase: Client = get_supabase_client()
+        self.category_filters: Optional[List[str]] = None
         self.project_asins = self._get_project_asins()
         
         if not self.project_asins:
@@ -60,6 +61,24 @@ class BaseDashboardService(ABC):
             raise ValueError("Cannot apply ASIN filter: project has no ASINs")
         
         return query.in_('platform_id', self.project_asins)
+    
+    def set_category_filters(self, categories: List[str]):
+        """Set category filters for additional filtering."""
+        self.category_filters = categories
+        logger.info(f"Category filters set: {categories}")
+    
+    def _apply_category_filter(self, query):
+        """Apply category filtering to any Supabase query if category filters are set."""
+        if self.category_filters:
+            query = query.in_('category', self.category_filters)
+            logger.info(f"Applied category filter: {self.category_filters}")
+        return query
+    
+    def _apply_combined_filters(self, query):
+        """Apply both ASIN and category filters to a query."""
+        query = self._apply_asin_filter(query)
+        query = self._apply_category_filter(query)
+        return query
     
     def _get_base_product_table(self):
         """Get base product table reference."""

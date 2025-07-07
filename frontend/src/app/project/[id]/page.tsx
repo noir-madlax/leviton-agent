@@ -7,6 +7,7 @@ import { DatabaseService } from "@/components/analysis-db/data/database-service"
 import { ArrowLeft, MessageSquare, Download } from "lucide-react"
 import Link from "next/link"
 import { ChartProvider } from "@/contexts/chart-context"
+import { ProtectedRoute } from "@/components/auth/protected-route"
 
 // 使用现有的Project接口
 interface Project {
@@ -78,49 +79,46 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   }
 
   return (
-    <ChartProvider>
-      <div className="min-h-screen bg-gray-50/50">
-        {/* Header */}
-        <header className="border-b bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center gap-4">
-                <Link href="/">
-                  <Button variant="ghost" size="sm">
-                    <ArrowLeft className="h-4 w-4 mr-2" />
-                    Back to Projects
-                  </Button>
-                </Link>
-                <div>
-                  <h1 className="text-xl font-semibold">{project.project_name}</h1>
-                  <p className="text-sm text-muted-foreground">
-                    {project.description || "Project Dashboard"}
-                  </p>
+    <ProtectedRoute>
+      <ChartProvider>
+        <div className="min-h-screen bg-gray-50/50">
+          {/* Header */}
+          <header className="border-b bg-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-16">
+                <div className="flex items-center gap-4">
+                  <Link href="/">
+                    <Button variant="ghost" size="sm">
+                      <ArrowLeft className="h-4 w-4 mr-2" />
+                      Back to Projects
+                    </Button>
+                  </Link>
+                  <div>
+                    <h1 className="text-xl font-semibold">{project.project_name}</h1>
+                    <p className="text-sm text-muted-foreground">
+                      {project.description || "Project Dashboard"}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2">
+                  {/* Chat Button */}
+                  <Link href={projectId ? `/project/${projectId}/chat?from=dashboard` : '/'}>
+                    <Button variant="outline">
+                      <MessageSquare className="h-4 w-4 mr-2" />
+                      Chat
+                    </Button>
+                  </Link>
                 </div>
               </div>
-              <div className="flex items-center gap-2">
-                {/* Chat Button */}
-                <Link href={projectId ? `/project/${projectId}/chat?from=dashboard` : '/'}>
-                  <Button variant="outline">
-                    <MessageSquare className="h-4 w-4 mr-2" />
-                    Chat
-                  </Button>
-                </Link>
-                {/* 导出按钮 */}
-                <Button variant="outline" size="sm">
-                  <Download className="h-4 w-4 mr-2" />
-                  Export
-                </Button>
-              </div>
             </div>
-          </div>
-        </header>
+          </header>
 
-        {/* Main Content */}
-        <main className="h-[calc(100vh-4rem)]">
-          {projectId && <AnalysisDbTab selectedProjectId={projectId} />}
-        </main>
-      </div>
-    </ChartProvider>
+          {/* Main Content */}
+          <main className="h-[calc(100vh-4rem)]">
+            {projectId && <AnalysisDbTab selectedProjectId={projectId} />}
+          </main>
+        </div>
+      </ChartProvider>
+    </ProtectedRoute>
   )
 } 

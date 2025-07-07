@@ -6,6 +6,9 @@ import { Sidebar } from "@/components/layout/sidebar"
 import { ProjectCard } from "@/components/layout/project-card"
 import { Card, CardContent } from "@/components/ui/card"
 import { DatabaseService } from "@/components/analysis-db/data/database-service"
+import { ProtectedRoute } from "@/components/auth/protected-route"
+import { UserMenu } from "@/components/layout/user-menu"
+import { useAuth } from "@/contexts/auth-context"
 import {
   Plus,
   Upload,
@@ -31,6 +34,7 @@ export default function HomePage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const { isAuthenticated, user } = useAuth()
 
   // 获取最近使用的项目（作为Current Project）
   const mostRecentProject = projects.length > 0 ? projects[0] : null
@@ -38,10 +42,21 @@ export default function HomePage() {
   // 加载项目列表
   useEffect(() => {
     const loadProjects = async () => {
+      if (!isAuthenticated) {
+        console.log('User not authenticated, skipping project load')
+        setLoading(false)
+        return
+      }
+      
       try {
+        console.log('Loading projects...')
         setLoading(true)
         const databaseService = new DatabaseService()
-        const projectList = await databaseService.getProjects()
+        const userUid = user?.id || undefined
+        console.log('🔍 [HOMEPAGE] User UID for project filtering:', userUid, 'User data:', user)
+        const projectList = await databaseService.getProjects(userUid)
+        
+        console.log('Projects loaded:', projectList.length)
         
         // 按更新时间排序，最新的在前面
         const sortedProjects = projectList.sort((a, b) => 
@@ -52,14 +67,14 @@ export default function HomePage() {
         setError(null)
       } catch (err) {
         console.error('Failed to load projects:', err)
-        setError('Failed to load projects. Please try again.')
+        setError(`Failed to load projects: ${err instanceof Error ? err.message : 'Unknown error'}`)
       } finally {
         setLoading(false)
       }
     }
 
     loadProjects()
-  }, [])
+  }, [isAuthenticated])
 
   if (loading) {
     return (
@@ -75,37 +90,38 @@ export default function HomePage() {
   }
 
   return (
-    <div className="flex h-screen bg-gray-50">
-      <Sidebar
-        projects={projects}
-        collapsed={sidebarCollapsed}
-        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
-      />
+    <ProtectedRoute>
+      <div className="flex h-screen bg-gray-50">
+        <Sidebar
+          projects={projects}
+          collapsed={sidebarCollapsed}
+          onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+        />
 
-      <div className="flex-1 flex flex-col">
-        {/* Top Bar */}
-        <header className="bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <h1 className="text-2xl font-bold text-gray-900">Xenith</h1>
-          </div>
+        <div className="flex-1 flex flex-col">
+          {/* Top Bar */}
+          <header className="bg-white border-b border-gray-200 px-6 h-16 flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <h1 className="text-2xl font-bold text-gray-900">Xenith</h1>
+            </div>
 
-          <div className="flex items-center space-x-4">
-            {/* Import Data Button */}
-            <Link href="/import-data">
-              <Button variant="outline">
-                <Upload className="w-4 h-4 mr-1" />
-                Import Data
-              </Button>
-            </Link>
-            {/* New Project Button */}
-            <Link href="/onboarding">
-              <Button>
-                <Plus className="w-4 h-4 mr-1" />
-                New Project
-              </Button>
-            </Link>
-          </div>
-        </header>
+            <div className="flex items-center space-x-4">
+              {/* Import Data Button */}
+              <Link href="/import-data">
+                <Button variant="outline">
+                  <Upload className="w-4 h-4 mr-1" />
+                  Import Data
+                </Button>
+              </Link>
+              {/* New Project Button */}
+              <Link href="/onboarding">
+                <Button>
+                  <Plus className="w-4 h-4 mr-1" />
+                  New Project
+                </Button>
+              </Link>
+            </div>
+          </header>
 
         {/* Main Content */}
         <main className="flex-1 p-6 overflow-auto">
@@ -151,5 +167,6 @@ export default function HomePage() {
         </main>
       </div>
     </div>
+    </ProtectedRoute>
   )
 }

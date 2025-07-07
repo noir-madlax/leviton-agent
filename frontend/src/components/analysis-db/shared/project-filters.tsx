@@ -1,107 +1,110 @@
-'use client';
+"use client"
 
-import { useState, useEffect } from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Badge } from '@/components/ui/badge';
-import { Filter, RotateCcw, X } from 'lucide-react';
-import { databaseService } from '@/components/analysis-db/data/database-service';
+import { useState, useEffect } from 'react'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Badge } from "@/components/ui/badge"
+import { Filter, RotateCcw, X } from "lucide-react"
+import { databaseService } from '@/components/analysis-db/data/database-service'
 
 interface ProjectFiltersProps {
-  projectId: string | null;
-  onFiltersChange?: (filters: ProjectFilters) => void;
+  projectId: string | null
+  onFiltersChange?: (filters: ProjectFilters) => void
+  initialFilters?: ProjectFilters
 }
 
 interface ProjectFilters {
-  categories: string[];
-  asins: string[];
+  categories: string[]
+  asins: string[]
 }
 
-export function ProjectFilters({ projectId, onFiltersChange }: ProjectFiltersProps) {
-  const [availableCategories, setAvailableCategories] = useState<string[]>([]);
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
+export function ProjectFilters({ 
+  projectId, 
+  onFiltersChange, 
+  initialFilters = { categories: [], asins: [] } 
+}: ProjectFiltersProps) {
+  const [availableCategories, setAvailableCategories] = useState<string[]>([])
+  const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
+  const [appliedCategories, setAppliedCategories] = useState<string[]>(initialFilters.categories)
+  const [loading, setLoading] = useState(false)
 
   useEffect(() => {
     if (!projectId) {
-      setAvailableCategories([]);
-      setSelectedCategories([]);
-      return;
+      setAvailableCategories([])
+      setPendingCategories([])
+      setAppliedCategories([])
+      return
     }
 
     const loadFilterOptions = async () => {
-      setLoading(true);
+      setLoading(true)
       try {
-        const overview = await databaseService.getProjectOverview(projectId);
-        setAvailableCategories(overview.available_categories);
+        const overview = await databaseService.getProjectOverview(projectId)
+        setAvailableCategories(overview.available_categories)
       } catch (error) {
-        console.error('Failed to load filter options:', error);
-        setAvailableCategories([]);
+        console.error('Failed to load filter options:', error)
+        setAvailableCategories([])
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    loadFilterOptions();
-  }, [projectId]);
+    loadFilterOptions()
+  }, [projectId])
 
   const handleCategorySelect = (category: string) => {
-    if (!selectedCategories.includes(category)) {
-      const newCategories = [...selectedCategories, category];
-      setSelectedCategories(newCategories);
-      
-      // Call onFiltersChange if provided (for future implementation)
-      if (onFiltersChange) {
-        onFiltersChange({
-          categories: newCategories,
-          asins: [] // ASIN filtering to be implemented later
-        });
-      }
+    if (category === 'all') {
+      setPendingCategories([])
+    } else if (!pendingCategories.includes(category)) {
+      setPendingCategories(prev => [...prev, category])
     }
-  };
+  }
 
   const handleCategoryRemove = (category: string) => {
-    const newCategories = selectedCategories.filter(c => c !== category);
-    setSelectedCategories(newCategories);
-    
+    setPendingCategories(prev => prev.filter(c => c !== category))
+  }
+
+  const handleApplyFilters = () => {
+    setAppliedCategories(pendingCategories)
     if (onFiltersChange) {
       onFiltersChange({
-        categories: newCategories,
+        categories: pendingCategories,
         asins: []
-      });
+      })
     }
-  };
+  }
 
   const handleReset = () => {
-    setSelectedCategories([]);
-    
+    setPendingCategories([])
+    setAppliedCategories([])
     if (onFiltersChange) {
       onFiltersChange({
         categories: [],
         asins: []
-      });
+      })
     }
-  };
+  }
 
-  const hasActiveFilters = selectedCategories.length > 0;
+  const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories)
+  const hasActiveFilters = appliedCategories.length > 0
 
   if (!projectId) {
-    return null;
+    return null
   }
 
   return (
     <div className="mb-6">
       <Card className="border-gray-200">
-        <CardContent className="p-4">
+        <CardHeader className="pb-2">
+          <CardTitle className="text-lg flex items-center gap-2">
+            <Filter className="w-5 h-5" />
+            Category Filters
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-4 pt-0">
           <div className="flex items-center gap-4">
-            {/* Filter icon and title */}
-            <div className="flex items-center gap-2">
-              <Filter className="w-4 h-4 text-gray-500" />
-              <span className="text-sm font-medium text-gray-700">Quick Filters:</span>
-            </div>
-
-            {/* Category selector */}
+            {/* Filter controls */}
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-600">Category:</span>
               <Select onValueChange={handleCategorySelect} disabled={loading}>
@@ -109,8 +112,9 @@ export function ProjectFilters({ projectId, onFiltersChange }: ProjectFiltersPro
                   <SelectValue placeholder="Select category..." />
                 </SelectTrigger>
                 <SelectContent>
+                  <SelectItem value="all">All Categories (No Filter)</SelectItem>
                   {availableCategories
-                    .filter(category => !selectedCategories.includes(category))
+                    .filter(category => !pendingCategories.includes(category))
                     .map((category) => (
                       <SelectItem key={category} value={category}>
                         {category}
@@ -120,36 +124,55 @@ export function ProjectFilters({ projectId, onFiltersChange }: ProjectFiltersPro
               </Select>
             </div>
 
+            {/* Apply button */}
+            <Button
+              onClick={handleApplyFilters}
+              disabled={!hasPendingChanges}
+              size="sm"
+              className="h-8"
+            >
+              Apply Filters
+            </Button>
+
             {/* Reset button */}
             <Button
               variant="outline"
               size="sm"
               onClick={handleReset}
-              disabled={!hasActiveFilters}
+              disabled={!hasActiveFilters && pendingCategories.length === 0}
               className="h-8"
             >
               <RotateCcw className="w-3 h-3 mr-1" />
               Reset
             </Button>
 
-            {/* Active filters count */}
-            {hasActiveFilters && (
-              <div className="text-xs text-gray-500">
-                {selectedCategories.length} filter{selectedCategories.length > 1 ? 's' : ''} active
+            {/* Status indicator */}
+            {hasPendingChanges && (
+              <div className="text-xs text-orange-600">
+                {pendingCategories.length} pending changes
+              </div>
+            )}
+            {hasActiveFilters && !hasPendingChanges && (
+              <div className="text-xs text-green-600">
+                {appliedCategories.length} filter{appliedCategories.length > 1 ? 's' : ''} applied
               </div>
             )}
           </div>
 
-          {/* Selected filters display */}
-          {selectedCategories.length > 0 && (
+          {/* Pending filters display */}
+          {pendingCategories.length > 0 && (
             <div className="mt-3 pt-3 border-t border-gray-100">
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-xs text-gray-600">Active filters:</span>
-                {selectedCategories.map((category) => (
+                <span className="text-xs text-gray-600">
+                  {hasPendingChanges ? 'Pending filters:' : 'Applied filters:'}
+                </span>
+                {pendingCategories.map((category) => (
                   <Badge
                     key={category}
-                    variant="secondary"
-                    className="text-xs flex items-center gap-1"
+                    variant={hasPendingChanges ? "outline" : "secondary"}
+                    className={`text-xs flex items-center gap-1 ${
+                      hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                    }`}
                   >
                     {category}
                     <X
@@ -162,14 +185,19 @@ export function ProjectFilters({ projectId, onFiltersChange }: ProjectFiltersPro
             </div>
           )}
 
-          {/* Note about filter application */}
-          {hasActiveFilters && (
-            <div className="mt-2 p-2 bg-blue-50 border border-blue-200 rounded text-xs text-blue-700">
-              <strong>Note:</strong> Filter application to analysis charts will be implemented in the next phase.
+          {/* Status message */}
+          {hasActiveFilters && !hasPendingChanges && (
+            <div className="mt-2 p-2 bg-green-50 border border-green-200 rounded text-xs text-green-700">
+              <strong>✓ Filters Applied:</strong> Analysis data is now filtered by selected categories.
+            </div>
+          )}
+          {hasPendingChanges && (
+            <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs text-orange-700">
+              <strong>⏳ Pending Changes:</strong> Click "Apply Filters" to update the analysis data.
             </div>
           )}
         </CardContent>
       </Card>
     </div>
-  );
+  )
 } 

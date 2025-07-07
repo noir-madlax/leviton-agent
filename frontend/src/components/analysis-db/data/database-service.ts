@@ -129,7 +129,7 @@ export interface ProductAnalysisData {
 export class DatabaseService {
   
   // 🔑 Get brand category revenue data with project filtering via backend API
-  async getBrandCategoryRevenueByProject(projectId: string): Promise<{
+  async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[]): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
     segmentNames: string[]
     segmentColors: string[]
@@ -137,7 +137,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -156,7 +164,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get product analysis data with project filtering via backend API
-  async getProductAnalysisDataByProject(projectId: string): Promise<{
+  async getProductAnalysisDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
     priceVsRevenue: ProductAnalysisData['priceVsRevenue']
     topProducts: {
       segments: Record<string, any[]>
@@ -176,7 +184,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/product-analysis?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/product-analysis?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -240,7 +256,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get pricing analysis data with project filtering via backend API
-  async getPricingAnalysisDataByProject(projectId: string): Promise<{
+  async getPricingAnalysisDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
     priceDistribution: Array<{
       category: string
       skuPrices: number[]
@@ -277,7 +293,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/pricing-analysis?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/pricing-analysis?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -295,7 +319,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get market insights data with project filtering via backend API
-  async getMarketInsightsDataByProject(projectId: string): Promise<{
+  async getMarketInsightsDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
     segmentRevenue: {
       segments?: Array<{
         segment: string
@@ -321,7 +345,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/market-insights?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/market-insights?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -345,7 +377,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get package preference data with project filtering via backend API
-  async getPackagePreferenceDataByProject(projectId: string): Promise<{
+  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
     sameProductComparison: Array<{
       productName: string
       packSize: string
@@ -386,7 +418,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/package-preference?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/package-preference?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -408,7 +448,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get review insights data with project filtering via backend API
-  async getReviewInsightsDataByProject(projectId: string): Promise<{
+  async getReviewInsightsDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
     painPoints: Array<{
       aspect: string
       category: string
@@ -444,7 +484,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/review-insights?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/review-insights?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
@@ -463,7 +511,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get competitor analysis data with project filtering via backend API
-  async getCompetitorAnalysisDataByProject(projectId: string, selectedAsins?: string): Promise<{
+  async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string): Promise<{
     targetProducts: string[]
     matrixData: Array<{
       product: string
@@ -491,6 +539,13 @@ export class DatabaseService {
     
     try {
       let url = `${API_BASE_URL}/api/v1/dashboard/competitor-analysis?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
       if (selectedAsins) {
         url += `&selected_asins=${selectedAsins}`
       }
@@ -518,7 +573,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get all review data with project filtering via backend API
-  async getAllReviewDataByProject(projectId: string): Promise<Record<string, Array<{
+  async getAllReviewDataByProject(projectId: string, categoryFilters?: string[]): Promise<Record<string, Array<{
     id: string
     productId: string
     text: string
@@ -533,7 +588,15 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/all-review-data?project_id=${projectId}`)
+      let url = `${API_BASE_URL}/api/v1/dashboard/all-review-data?project_id=${projectId}`
+      
+      // Add category filters if provided
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
@@ -729,11 +792,20 @@ export class DatabaseService {
     }
   }
 
-  async getProjects(): Promise<Project[]> {
+  async getProjects(userUid?: string): Promise<Project[]> {
     try {
-      // 使用后端API获取项目列表
+      // First try to use backend API
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-      const response = await fetch(`${API_BASE_URL}/api/v1/projects/`, {
+      
+      // Build URL with user UID parameter if provided
+      let url = `${API_BASE_URL}/api/v1/projects/`
+      if (userUid) {
+        url += `?user_uid=${encodeURIComponent(userUid)}`
+      }
+      
+      console.log('🔍 [PROJECTS API] Fetching projects with user UID:', userUid)
+      
+      const response = await fetch(url, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -747,14 +819,53 @@ export class DatabaseService {
       const data = await response.json()
       return data || []
     } catch (error) {
-      console.error('Failed to get projects:', error)
-      throw error
+      console.warn('Backend API not available, falling back to direct Supabase access:', error)
+      
+      // Fallback to direct Supabase access
+      try {
+        const { data, error: supabaseError } = await supabase
+          .from('projects')
+          .select('*')
+          .eq('status', 'active')
+          .order('created_at', { ascending: false })
+
+        if (supabaseError) {
+          console.error('Supabase error:', supabaseError)
+          throw supabaseError
+        }
+
+        if (!data) {
+          return []
+        }
+
+        // Process data to match the expected format
+        const projects = data.map(project => {
+          // Ensure required fields have default values
+          const processedProject = {
+            ...project,
+            total_products: project.total_products || 0,
+            total_brands: project.total_brands || 0,
+            total_reviews: project.total_reviews || 0,
+            avg_monthly_sales: project.avg_monthly_sales || 0.0,
+            selected_categories: project.selected_categories || [],
+            selected_sources: project.selected_sources || [],
+            selected_brands: project.selected_brands || [],
+            selected_product_asins: project.selected_product_asins || [],
+          }
+          return processedProject
+        })
+
+        return projects
+      } catch (fallbackError) {
+        console.error('Failed to get projects via Supabase fallback:', fallbackError)
+        throw fallbackError
+      }
     }
   }
 
   async getProject(id: string): Promise<Project | null> {
     try {
-      // Use backend API to get project info, consistent with getProjects
+      // First try to use backend API
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
       const response = await fetch(`${API_BASE_URL}/api/v1/projects/${id}`, {
         method: 'GET',
@@ -773,13 +884,53 @@ export class DatabaseService {
       const data = await response.json()
       return data
     } catch (error) {
-      console.error('Failed to get project:', error)
-      return null
+      console.warn('Backend API not available, falling back to direct Supabase access:', error)
+      
+      // Fallback to direct Supabase access
+      try {
+        const { data, error: supabaseError } = await supabase
+          .from('projects')
+          .select('*')
+          .eq('id', id)
+          .eq('status', 'active')
+          .single()
+
+        if (supabaseError) {
+          console.error('Supabase error:', supabaseError)
+          if (supabaseError.code === 'PGRST116') {
+            // No rows returned
+            return null
+          }
+          throw supabaseError
+        }
+
+        if (!data) {
+          return null
+        }
+
+        // Process data to match the expected format
+        const processedProject = {
+          ...data,
+          total_products: data.total_products || 0,
+          total_brands: data.total_brands || 0,
+          total_reviews: data.total_reviews || 0,
+          avg_monthly_sales: data.avg_monthly_sales || 0.0,
+          selected_categories: data.selected_categories || [],
+          selected_sources: data.selected_sources || [],
+          selected_brands: data.selected_brands || [],
+          selected_product_asins: data.selected_product_asins || [],
+        }
+
+        return processedProject
+      } catch (fallbackError) {
+        console.error('Failed to get project via Supabase fallback:', fallbackError)
+        return null
+      }
     }
   }
 
   // 🔑 Get project overview data
-  async getProjectOverview(projectId: string): Promise<{
+  async getProjectOverview(projectId: string, categoryFilters?: string[]): Promise<{
     project_name: string
     created_at: string
     stats: {
@@ -805,7 +956,17 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/project-overview?project_id=${projectId}`)
+      // Build URL with category filters
+      let url = `${API_BASE_URL}/api/v1/dashboard/project-overview?project_id=${projectId}`
+      
+      if (categoryFilters && categoryFilters.length > 0) {
+        const categoriesParam = categoryFilters.join(',')
+        url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', categoryFilters)
+      
+      const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)

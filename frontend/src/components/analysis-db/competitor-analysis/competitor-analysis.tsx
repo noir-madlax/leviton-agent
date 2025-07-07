@@ -83,7 +83,8 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       setLoading(true);
       const response = await databaseService.getCompetitorAnalysisDataByProject(
         projectId,
-        asins.join(',')
+        undefined, // No category filters
+        asins.join(',') // Selected ASINs as string
       );
       setCustomCompetitorData(response);
     } catch (error) {

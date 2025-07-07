@@ -53,7 +53,7 @@ class ProjectOverviewService(BaseDashboardService):
         return response.data[0]
     
     def _get_project_statistics(self) -> Dict[str, Any]:
-        """Get actual project statistics based on selected ASINs"""
+        """Get actual project statistics based on selected ASINs and category filters"""
         # Get filtered ASINs
         filtered_asins = self.project_asins
         
@@ -65,31 +65,52 @@ class ProjectOverviewService(BaseDashboardService):
                 'segment_count': 0
             }
         
-        # Get product statistics
-        product_stats = self.supabase.table('product_wide_table').select(
+        # Get product statistics with category filtering
+        query = self.supabase.table('product_wide_table').select(
             'platform_id, brand, reviews_count'
-        ).in_('platform_id', filtered_asins).neq('category', None).neq('brand', None).execute()
+        ).in_('platform_id', filtered_asins).neq('category', None).neq('brand', None)
+        
+        # Apply category filters if set
+        query = self._apply_category_filter(query)
+        
+        product_stats = query.execute()
         
         products = product_stats.data
         
         # Get actual review count from product_reviews table
+        # First get filtered product IDs if category filters are applied
+        if self.category_filters:
+            # Get filtered product IDs based on category filters
+            filtered_products_query = self.supabase.table('product_wide_table').select(
+                'platform_id'
+            ).in_('platform_id', filtered_asins)
+            filtered_products_query = self._apply_category_filter(filtered_products_query)
+            filtered_products_response = filtered_products_query.execute()
+            review_product_ids = [p['platform_id'] for p in filtered_products_response.data]
+        else:
+            review_product_ids = filtered_asins
+        
         actual_reviews = self.supabase.table('product_reviews').select(
             'review_id', count='exact'
-        ).in_('product_id', filtered_asins).execute()
+        ).in_('product_id', review_product_ids).execute()
         
-        # Get segment assignments count
-        # First get the product_wide_table IDs for our ASINs
-        wide_table_result = self.supabase.table('product_wide_table').select(
-            'id'
-        ).in_('platform_id', filtered_asins).execute()
+        # Get segment count from product_wide_table (not assignments)
+        # Use the actual product_segment field and exclude OUT_OF_SCOPE
+        segments_query = self.supabase.table('product_wide_table').select(
+            'product_segment'
+        ).in_('platform_id', filtered_asins).neq('product_segment', None).neq('product_segment', 'OUT_OF_SCOPE')
         
-        if wide_table_result.data:
-            wide_table_ids = [item['id'] for item in wide_table_result.data]
-            segment_assignments = self.supabase.table('product_segment_assignments').select(
-                'product_id', count='exact'
-            ).eq('project_id', self.project_id).in_('product_id', wide_table_ids).execute()
+        # Apply category filters if set
+        segments_query = self._apply_category_filter(segments_query)
+        
+        segments_response = segments_query.execute()
+        
+        if segments_response.data:
+            # Calculate unique segments (excluding OUT_OF_SCOPE)
+            unique_segments = set(p['product_segment'] for p in segments_response.data if p['product_segment'] and p['product_segment'] != 'OUT_OF_SCOPE')
+            segment_count = len(unique_segments)
         else:
-            segment_assignments = type('MockResult', (), {'count': 0})()
+            segment_count = 0
         
         # Calculate unique brands
         unique_brands = set(p['brand'] for p in products if p['brand'])
@@ -98,20 +119,25 @@ class ProjectOverviewService(BaseDashboardService):
             'total_products': len(products),
             'total_brands': len(unique_brands),
             'total_reviews': actual_reviews.count,  # Fixed: use actual count
-            'segment_count': segment_assignments.count
+            'segment_count': segment_count
         }
     
     def _get_project_distributions(self) -> Dict[str, Any]:
-        """Get distribution data for sources and categories"""
+        """Get distribution data for sources and categories with category filtering"""
         filtered_asins = self.project_asins
         
         if not filtered_asins:
             return {'sources': [], 'categories': []}
         
-        # Get product data for distributions
-        response = self.supabase.table('product_wide_table').select(
+        # Get product data for distributions with category filtering
+        query = self.supabase.table('product_wide_table').select(
             'platform_id, category, source'
-        ).in_('platform_id', filtered_asins).neq('category', None).execute()
+        ).in_('platform_id', filtered_asins).neq('category', None)
+        
+        # Apply category filters if set
+        query = self._apply_category_filter(query)
+        
+        response = query.execute()
         
         products = response.data
         

@@ -8,6 +8,7 @@ import { databaseService } from '@/components/analysis-db/data/database-service'
 
 interface ProjectDataOverviewProps {
   projectId: string | null;
+  categoryFilters?: string[];
 }
 
 interface ProjectOverviewData {
@@ -34,7 +35,7 @@ interface ProjectOverviewData {
   available_categories: string[];
 }
 
-export function ProjectDataOverview({ projectId }: ProjectDataOverviewProps) {
+export function ProjectDataOverview({ projectId, categoryFilters }: ProjectDataOverviewProps) {
   const [data, setData] = useState<ProjectOverviewData | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -47,7 +48,8 @@ export function ProjectDataOverview({ projectId }: ProjectDataOverviewProps) {
     const loadProjectOverview = async () => {
       setLoading(true);
       try {
-        const overview = await databaseService.getProjectOverview(projectId);
+        // 如果有categoryFilters，传递给API
+        const overview = await databaseService.getProjectOverview(projectId, categoryFilters);
         setData(overview);
       } catch (error) {
         console.error('Failed to load project overview:', error);
@@ -58,7 +60,7 @@ export function ProjectDataOverview({ projectId }: ProjectDataOverviewProps) {
     };
 
     loadProjectOverview();
-  }, [projectId]);
+  }, [projectId, categoryFilters]);
 
   if (!projectId) {
     return (
@@ -104,13 +106,10 @@ export function ProjectDataOverview({ projectId }: ProjectDataOverviewProps) {
     .map(source => `${source.name} (${source.percentage}%)`)
     .join(' • ');
 
-  // Format categories distribution text (show top 3)
+  // Format categories distribution text (show all categories)
   const categoriesText = data.distributions.categories
-    .slice(0, 3)
     .map(category => `${category.name} (${category.percentage}%)`)
     .join(', ');
-
-  const moreCategoriesCount = data.distributions.categories.length - 3;
 
   return (
     <div className="mb-6">
@@ -161,15 +160,10 @@ export function ProjectDataOverview({ projectId }: ProjectDataOverviewProps) {
             )}
 
             {data.distributions.categories.length > 0 && (
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-gray-700">Categories:</span>
-                <span className="text-gray-600">
+              <div className="flex items-start gap-2">
+                <span className="font-medium text-gray-700 flex-shrink-0">Categories:</span>
+                <span className="text-gray-600 flex-1">
                   {categoriesText}
-                  {moreCategoriesCount > 0 && (
-                    <Badge variant="secondary" className="ml-2 text-xs">
-                      +{moreCategoriesCount} more
-                    </Badge>
-                  )}
                 </span>
               </div>
             )}

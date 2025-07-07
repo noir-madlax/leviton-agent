@@ -102,11 +102,12 @@ async def create_project(
 
 @router.get("/", response_model=List[Project])
 async def list_projects(
+    user_uid: Optional[str] = Query(None, description="User UID for access control"),
     service: ProjectService = Depends(get_project_service)
 ):
-    """List all active projects."""
+    """List active projects with user access control."""
     try:
-        return await service.list_projects()
+        return await service.list_projects(user_uid)
     except Exception as e:
         logger.error(f"Error listing projects: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to list projects: {str(e)}")
