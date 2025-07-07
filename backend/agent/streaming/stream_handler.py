@@ -62,8 +62,11 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
             # 直接发送 JSON 字符串，不要再次序列化
             yield f"data: {json.dumps({'status': 'streaming', 'message': result}, ensure_ascii=False)}\n\n"
         elif isinstance(result, str):
-            # 检查是否包含 RechartScript 脚本块
-            if '[RechartScript]' in result and '[/RechartScript]' in result:
+            # 检查是否包含脚本块（RechartScript 或 insight）
+            has_rechart = '[RechartScript]' in result and '[/RechartScript]' in result
+            has_insight = '[insight]' in result and '[/insight]' in result
+            
+            if has_rechart or has_insight:
                 async for chunk in process_text_with_scripts(result):
                     yield chunk
             else:
@@ -84,10 +87,10 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
 
 async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
     """
-    处理包含多个 RechartScript 脚本块的文本
+    处理包含多个脚本块的文本，支持 RechartScript 和 insight 代码块
     """
-    # 使用正则表达式找到所有脚本块的位置
-    script_pattern = r'\[RechartScript\](.*?)\[/RechartScript\]'
+    # 使用正则表达式找到所有脚本块的位置，支持两种类型
+    script_pattern = r'\[(RechartScript|insight)\](.*?)\[/(RechartScript|insight)\]'
     matches = list(re.finditer(script_pattern, text, re.DOTALL))
     
     if not matches:
@@ -96,6 +99,9 @@ async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
             yield chunk
         return
     
+    # 按位置排序所有匹配项
+    matches.sort(key=lambda x: x.start())
+    
     current_pos = 0
     script_count = 0
     
@@ -103,7 +109,8 @@ async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
         script_count += 1
         start_pos = match.start()
         end_pos = match.end()
-        script_content = match.group(1).strip()
+        script_type = match.group(1)  # RechartScript 或 insight
+        script_content = match.group(2).strip()
         
         # 处理脚本块前的文本
         if start_pos > current_pos:
@@ -114,11 +121,19 @@ async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
         
         # 发送脚本块
         if script_content:
-            logger.info(f"发送第 {script_count} 个脚本块")
+            # 根据脚本类型设置不同的 status
+            if script_type == "RechartScript":
+                status = "rechart"
+                logger.info(f"发送第 {script_count} 个 RechartScript 脚本块")
+            elif script_type == "insight":
+                status = "insight"
+                logger.info(f"发送第 {script_count} 个 insight 代码块")
+            
             script_data = {
-                'status': 'rechart',
+                'status': status,
                 'message': script_content,
-                'script_index': script_count - 1  # 添加索引便于前端识别
+                'script_index': script_count - 1,  # 添加索引便于前端识别
+                'script_type': script_type  # 添加脚本类型便于前端区分
             }
             yield f"data: {json.dumps(script_data, ensure_ascii=False)}\n\n"
             await asyncio.sleep(settings.STREAM_DELAY)

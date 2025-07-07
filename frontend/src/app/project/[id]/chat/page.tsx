@@ -14,6 +14,9 @@ import { ArrowLeft, MessageSquare, TrendingUp, BarChart3, PieChart, Lightbulb, S
 import { ChartProvider, useChart } from "@/contexts/chart-context"
 import { config } from "@/lib/config"
 import { ChartData, SingleChart } from "@/lib/types"
+import ReactMarkdown from 'react-markdown'
+import React from 'react'
+import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
 
 // 使用现有的Project接口
 interface Project {
@@ -25,12 +28,22 @@ interface Project {
   status: string
 }
 
+interface ContentPart {
+  type: 'text' | 'insight' | 'chart'
+  content: string
+  isComplete?: boolean
+  index?: number
+}
+
 interface Message {
   id: string
   content: string
   isUser: boolean
   timestamp: Date
   isAnalyzing?: boolean
+  contentParts?: ContentPart[]  // 支持多种内容类型
+  isStreaming?: boolean         // 标识是否正在流式接收
+  // 保留原有字段以兼容现有逻辑
   keyInsights?: string[]
   executiveSummary?: string
   hasChart?: boolean
@@ -79,6 +92,127 @@ function TypewriterText({ text, speed = 15, onComplete, className = "" }: Typewr
   return <span className={className}>{displayedText}</span>
 }
 
+// 内联图表渲染组件
+function InlineChartRenderer({ chartCode }: { chartCode: string }) {
+  const [CompiledChart, setCompiledChart] = useState<React.ComponentType | null>(null)
+  const [error, setError] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    renderChart()
+  }, [chartCode])
+
+  const renderChart = async () => {
+    setIsLoading(true)
+    setError(null)
+    
+    try {
+      // 验证代码安全性
+      const validation = validateChartCode(chartCode)
+      if (!validation.valid) {
+        throw new Error(validation.error)
+      }
+
+      // 编译代码
+      const result = compileChartCode(chartCode)
+      if (!result.success) {
+        throw new Error(result.error)
+      }
+
+      // 设置组件
+      setCompiledChart(() => result.component!)
+      
+    } catch (error) {
+      setError(error instanceof Error ? error.message : '未知错误')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  if (isLoading) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <Loader2 className="h-8 w-8 text-blue-500 animate-spin" />
+        <span className="ml-2 text-gray-600">生成图表中...</span>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="flex flex-col items-center justify-center h-full text-center">
+        <div className="text-red-500 mb-2">图表生成失败</div>
+        <div className="text-sm text-gray-500">{error}</div>
+      </div>
+    )
+  }
+
+  if (!CompiledChart) {
+    return (
+      <div className="flex items-center justify-center h-full">
+        <div className="text-gray-500">没有可渲染的图表</div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="w-full h-full">
+      <CompiledChart />
+    </div>
+  )
+}
+
+// Markdown打字机组件
+function MarkdownTypewriter({ text, speed = 15, onComplete, className = "" }: TypewriterTextProps) {
+  const [displayedText, setDisplayedText] = useState("")
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const [hasCompleted, setHasCompleted] = useState(false)
+
+  useEffect(() => {
+    setDisplayedText("")
+    setCurrentIndex(0)
+    setHasCompleted(false)
+  }, [text])
+
+  useEffect(() => {
+    if (!hasCompleted && currentIndex < text.length) {
+      const timer = setTimeout(() => {
+        setDisplayedText(prev => prev + text[currentIndex])
+        setCurrentIndex(prev => prev + 1)
+      }, speed)
+      return () => clearTimeout(timer)
+    } else if (!hasCompleted && currentIndex === text.length && text.length > 0) {
+      setHasCompleted(true)
+      if (onComplete) {
+        onComplete()
+      }
+    }
+  }, [currentIndex, text, speed, onComplete, hasCompleted])
+
+  return (
+    <div className={`prose prose-gray max-w-none ${className}`}>
+      <ReactMarkdown
+        components={{
+          // 自定义样式
+          h1: ({ children }) => <h1 className="text-xl font-bold text-gray-900 mb-3">{children}</h1>,
+          h2: ({ children }) => <h2 className="text-lg font-semibold text-gray-900 mb-2">{children}</h2>,
+          h3: ({ children }) => <h3 className="text-base font-medium text-gray-900 mb-2">{children}</h3>,
+          p: ({ children }) => <p className="text-gray-700 mb-2 leading-relaxed">{children}</p>,
+          code: ({ children }) => <code className="bg-gray-100 text-gray-800 px-1 py-0.5 rounded text-sm font-mono">{children}</code>,
+          pre: ({ children }) => <pre className="bg-gray-100 text-gray-800 p-3 rounded overflow-x-auto text-sm font-mono">{children}</pre>,
+          ul: ({ children }) => <ul className="list-disc list-inside text-gray-700 mb-2 space-y-1">{children}</ul>,
+          ol: ({ children }) => <ol className="list-decimal list-inside text-gray-700 mb-2 space-y-1">{children}</ol>,
+          li: ({ children }) => <li className="text-gray-700">{children}</li>,
+          strong: ({ children }) => <strong className="font-semibold text-gray-900">{children}</strong>,
+          em: ({ children }) => <em className="italic text-gray-600">{children}</em>,
+        }}
+      >
+        {displayedText}
+      </ReactMarkdown>
+    </div>
+  )
+}
+
 interface AnalyzingLoaderProps {
   stage: string
   progress: number
@@ -105,6 +239,63 @@ function AnalyzingLoader({ stage, progress }: AnalyzingLoaderProps) {
       </div>
     </div>
   )
+}
+
+// 新增Insight卡片组件
+function InsightCard({ insight, index }: { insight: string; index?: number }) {
+  return (
+    <Card className="mt-4 border-l-4 border-l-yellow-500">
+      <CardHeader>
+        <CardTitle className="flex items-center space-x-2">
+          <Lightbulb className="h-5 w-5 text-yellow-600" />
+          <span>数据洞察 {index !== undefined ? `#${index + 1}` : ''}</span>
+        </CardTitle>
+      </CardHeader>
+      <CardContent>
+        <TypewriterText 
+          text={insight}
+          speed={15}
+          className="text-gray-700"
+        />
+      </CardContent>
+    </Card>
+  )
+}
+
+// 内容部分渲染组件
+function ContentPartRenderer({ part }: { part: ContentPart }) {
+  switch (part.type) {
+    case 'text':
+      return (
+        <div className="p-4 rounded-lg bg-white border border-gray-200">
+          <MarkdownTypewriter 
+            text={part.content}
+            speed={10}
+            className="text-gray-900"
+          />
+        </div>
+      )
+    case 'insight':
+      return <InsightCard insight={part.content} index={part.index} />
+    case 'chart':
+      return (
+        <Card className="mt-6 border-l-4 border-l-purple-500">
+          <CardHeader>
+            <CardTitle className="flex items-center space-x-2">
+              <BarChart3 className="h-5 w-5 text-purple-600" />
+              <span>图表分析</span>
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="relative h-[400px] bg-gray-50 rounded-lg p-4">
+              <InlineChartRenderer chartCode={part.content} />
+            </div>
+          </CardContent>
+        </Card>
+      )
+    default:
+      return null
+  }
 }
 
 // 内部组件，使用useChart hook
@@ -226,8 +417,20 @@ function ChatPageContent({ projectId }: { projectId: string }) {
 
       const reader = response.body?.getReader()
       const decoder = new TextDecoder()
-      let fullResponse = ""
-      let aiResponseId = (Date.now() + 2).toString()
+      const aiResponseId = (Date.now() + 2).toString()
+      
+      // 创建AI回复消息，支持动态内容更新
+      const aiResponse: Message = {
+        id: aiResponseId,
+        content: "",
+        isUser: false,
+        timestamp: new Date(),
+        contentParts: [],
+        isStreaming: true
+      }
+
+      // 立即添加AI回复消息到消息列表
+      setMessages(prev => prev.filter(msg => msg.id !== analyzingMessage.id).concat([aiResponse]))
 
       while (true) {
         const { done, value } = await reader!.read()
@@ -243,7 +446,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
               const sseData = JSON.parse(jsonStr)
               
               if (sseData.status === 'rechart' && sseData.message) {
-                // 处理图表数据
+                // 处理图表数据 - 更新全局chart context用于主要图表显示
                 const chartData: ChartData = {
                   chartData: {
                     code: sseData.message,
@@ -254,41 +457,114 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   type: 'single'
                 }
                 updateChart(chartData)
-              } else if (sseData.status === 'streaming' && sseData.message) {
-                // 累积完整响应
-                fullResponse += sseData.message
-              } else if (sseData.status === 'completed') {
-                // 处理完成，解析完整响应
-                const parsedResponse = parseFullResponse(fullResponse)
                 
-                // 如果有RechartScript，处理图表
-                if (parsedResponse.rechartScript) {
-                  const chartData: ChartData = {
-                    chartData: {
-                      code: parsedResponse.rechartScript,
-                      explanation: 'Interactive chart generated from your data analysis',
-                      insights: 'This visualization represents the key findings from your query'
-                    },
-                    timestamp: Date.now(),
-                    type: 'single'
-                  }
-                  updateChart(chartData)
-                }
-                
-                // 移除analyzing消息，创建最终回复
+                // 添加图表内容部分
                 setMessages(prev => {
-                  const filtered = prev.filter(msg => msg.id !== analyzingMessage.id)
-                  
-                  const finalResponse: Message = {
-                    id: aiResponseId,
-                    content: parsedResponse.summary || "Here's the comprehensive analysis of your product segment data.",
-                    isUser: false,
-                    timestamp: new Date(),
-                    hasChart: !!parsedResponse.rechartScript,
-                    showKeyInsights: parsedResponse.insights.length > 0,
-                    keyInsights: parsedResponse.insights
-                  }
-                  return [...filtered, finalResponse]
+                  const updated = prev.map(msg => {
+                    if (msg.id === aiResponseId) {
+                      const newPart: ContentPart = {
+                        type: 'chart',
+                        content: sseData.message,
+                        isComplete: true,
+                        index: sseData.script_index || 0
+                      }
+                      return {
+                        ...msg,
+                        contentParts: [...(msg.contentParts || []), newPart],
+                        hasChart: true
+                      }
+                    }
+                    return msg
+                  })
+                  return updated
+                })
+                
+              } else if (sseData.status === 'insight' && sseData.message) {
+                // 新增：处理insight数据
+                setMessages(prev => {
+                  const updated = prev.map(msg => {
+                    if (msg.id === aiResponseId) {
+                      const newPart: ContentPart = {
+                        type: 'insight',
+                        content: sseData.message,
+                        isComplete: true,
+                        index: sseData.script_index || 0
+                      }
+                      return {
+                        ...msg,
+                        contentParts: [...(msg.contentParts || []), newPart]
+                      }
+                    }
+                    return msg
+                  })
+                  return updated
+                })
+                
+              } else if (sseData.status === 'streaming' && sseData.message) {
+                // 处理流式文本，实时更新
+                setMessages(prev => {
+                  const updated = prev.map(msg => {
+                    if (msg.id === aiResponseId) {
+                      // 查找或创建文本内容部分
+                      const existingTextParts = msg.contentParts?.filter(p => p.type === 'text') || []
+                      const lastTextPart = existingTextParts[existingTextParts.length - 1]
+                      
+                      if (lastTextPart && !lastTextPart.isComplete) {
+                        // 更新现有的文本部分
+                        const updatedParts = msg.contentParts?.map(part => {
+                          if (part === lastTextPart) {
+                            return {
+                              ...part,
+                              content: part.content + sseData.message
+                            }
+                          }
+                          return part
+                        }) || []
+                        
+                        return {
+                          ...msg,
+                          contentParts: updatedParts,
+                          content: msg.content + sseData.message
+                        }
+                      } else {
+                        // 创建新的文本部分
+                        const newPart: ContentPart = {
+                          type: 'text',
+                          content: sseData.message,
+                          isComplete: false,
+                          index: sseData.chunk_index || 0
+                        }
+                        return {
+                          ...msg,
+                          contentParts: [...(msg.contentParts || []), newPart],
+                          content: msg.content + sseData.message
+                        }
+                      }
+                    }
+                    return msg
+                  })
+                  return updated
+                })
+                
+              } else if (sseData.status === 'completed') {
+                // 处理完成，标记所有文本部分为完成
+                setMessages(prev => {
+                  const updated = prev.map(msg => {
+                    if (msg.id === aiResponseId) {
+                      const completedParts = msg.contentParts?.map(part => ({
+                        ...part,
+                        isComplete: true
+                      })) || []
+                      
+                      return {
+                        ...msg,
+                        contentParts: completedParts,
+                        isStreaming: false
+                      }
+                    }
+                    return msg
+                  })
+                  return updated
                 })
                 break
               }
@@ -322,85 +598,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     }
   }
 
-  // 解析完整响应的函数
-  const parseFullResponse = (response: string) => {
-    const result = {
-      summary: "",
-      rechartScript: "",
-      insights: [] as string[]
-    }
 
-    // 提取图表概括部分
-    const summaryMatch = response.match(/## 图表概括\s*([\s\S]*?)(?=\[RechartScript\]|## 数据洞察|$)/i)
-    if (summaryMatch) {
-      result.summary = summaryMatch[1].trim()
-    }
-
-    // 提取RechartScript部分
-    const rechartMatch = response.match(/\[RechartScript\]\s*([\s\S]*?)(?=\[\/RechartScript\]|## 数据洞察|$)/i)
-    if (rechartMatch) {
-      result.rechartScript = rechartMatch[1].trim()
-    }
-
-    // 提取数据洞察部分并转换为英文
-    const insightsMatch = response.match(/## 数据洞察\s*([\s\S]*?)$/i)
-    if (insightsMatch) {
-      const insightsText = insightsMatch[1].trim()
-      result.insights = extractAndTranslateInsights(insightsText)
-    }
-
-    return result
-  }
-
-  // 提取并翻译洞察的函数
-  const extractAndTranslateInsights = (chineseInsights: string): string[] => {
-    const insights: string[] = []
-    
-    // 智能家居/智能产品相关洞察
-    if (chineseInsights.includes('智能调光开关') || chineseInsights.includes('Smart Hub-Dependent')) {
-      insights.push("Smart Hub-Dependent Dimmer Switches lead the market with highest revenue performance.")
-    }
-    
-    if (chineseInsights.includes('智能Wi-Fi') || chineseInsights.includes('Smart Wi-Fi')) {
-      insights.push("Smart Wi-Fi enabled products show strong consumer adoption and revenue growth.")
-    }
-    
-    if (chineseInsights.includes('智能家居') || chineseInsights.includes('智能产品')) {
-      insights.push("The market shows clear preference for connected and intelligent home automation solutions.")
-    }
-    
-    // 传统产品相关洞察
-    if (chineseInsights.includes('传统产品') || chineseInsights.includes('Single Pole')) {
-      insights.push("Traditional switches maintain significant market share through volume sales strategy.")
-    }
-    
-    // 市场集中度相关洞察
-    if (chineseInsights.includes('市场集中度') || chineseInsights.includes('前三名')) {
-      insights.push("Top three product segments dominate market revenue with high concentration.")
-    }
-    
-    // 价格策略相关洞察
-    if (chineseInsights.includes('量价平衡') || chineseInsights.includes('规模效应')) {
-      insights.push("Volume-based pricing strategy proves effective for traditional product categories.")
-    }
-    
-    // 创新相关洞察
-    if (chineseInsights.includes('产品创新') || chineseInsights.includes('技术发展')) {
-      insights.push("Product innovation and smart technology integration are key revenue drivers.")
-    }
-    
-    // 如果没有提取到任何洞察，使用默认洞察
-    if (insights.length === 0) {
-      insights.push(
-        "Analysis reveals important trends in product segment performance and market positioning.",
-        "Smart product segments demonstrate significantly higher revenue per unit.",
-        "Market data indicates strong demand for intelligent home automation solutions.",
-        "Strategic opportunities exist in both premium smart products and volume-based traditional products."
-      )
-    }
-    
-    return insights.slice(0, 4) // 限制最多4个洞察
-  }
 
   const examplePrompts = [
     {
@@ -601,55 +799,70 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                           <div className="flex-1 pr-12">
                             {message.isAnalyzing ? (
                               <AnalyzingLoader stage={currentStage} progress={currentProgress} />
-                            ) : message.content ? (
-                              <div className="p-4 rounded-lg bg-white border border-gray-200">
-                                <TypewriterText 
-                                  text={message.content}
-                                  speed={10}
-                                  className="text-gray-900"
-                                />
-                              </div>
-                            ) : null}
-
-                            {/* Key Insights */}
-                            {message.showKeyInsights && message.keyInsights && (
-                              <Card className="mt-6 border-l-4 border-l-blue-500">
-                                <CardHeader>
-                                  <CardTitle className="flex items-center space-x-2">
-                                    <Lightbulb className="h-5 w-5 text-blue-600" />
-                                    <span>Key Insights</span>
-                                  </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                  <div className="space-y-3">
-                                    {message.keyInsights.map((insight, index) => (
-                                      <div key={`insight-${message.id}-${index}`} className="flex items-start space-x-3">
-                                        <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-                                          <span className="text-xs font-medium text-blue-600">{index + 1}</span>
-                                        </div>
-                                        <span className="text-gray-700 leading-relaxed">{insight}</span>
-                                      </div>
+                            ) : (
+                              <>
+                                {/* 使用新的内容部分渲染器 */}
+                                {message.contentParts && message.contentParts.length > 0 ? (
+                                  <div className="space-y-4">
+                                    {message.contentParts.map((part, index) => (
+                                      <ContentPartRenderer 
+                                        key={`${message.id}-part-${index}`} 
+                                        part={part}
+                                      />
                                     ))}
                                   </div>
-                                </CardContent>
-                              </Card>
-                            )}
-
-                            {/* Supporting Charts */}
-                            {message.hasChart && (
-                              <Card className="mt-6 border-l-4 border-l-purple-500">
-                                <CardHeader>
-                                  <CardTitle className="flex items-center space-x-2">
-                                    <BarChart3 className="h-5 w-5 text-purple-600" />
-                                    <span>Supporting Charts</span>
-                                  </CardTitle>
-                                </CardHeader>
-                                <CardContent>
-                                  <div className="relative h-[400px]">
-                                    <ChartRenderer />
+                                ) : message.content ? (
+                                  /* 兼容原有的content字段 */
+                                  <div className="p-4 rounded-lg bg-white border border-gray-200">
+                                    <TypewriterText 
+                                      text={message.content}
+                                      speed={10}
+                                      className="text-gray-900"
+                                    />
                                   </div>
-                                </CardContent>
-                              </Card>
+                                ) : null}
+
+                                {/* Key Insights - 保留兼容性 */}
+                                {message.showKeyInsights && message.keyInsights && (
+                                  <Card className="mt-6 border-l-4 border-l-blue-500">
+                                    <CardHeader>
+                                      <CardTitle className="flex items-center space-x-2">
+                                        <Lightbulb className="h-5 w-5 text-blue-600" />
+                                        <span>Key Insights</span>
+                                      </CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                      <div className="space-y-3">
+                                        {message.keyInsights.map((insight, index) => (
+                                          <div key={`insight-${message.id}-${index}`} className="flex items-start space-x-3">
+                                            <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                                              <span className="text-xs font-medium text-blue-600">{index + 1}</span>
+                                            </div>
+                                            <span className="text-gray-700 leading-relaxed">{insight}</span>
+                                          </div>
+                                        ))}
+                                      </div>
+                                    </CardContent>
+                                  </Card>
+                                )}
+
+                                {/* Supporting Charts - 保留兼容性 */}
+                                {message.hasChart && !message.contentParts?.some(p => p.type === 'chart') && (
+                                  <Card className="mt-6 border-l-4 border-l-purple-500">
+                                    <CardHeader>
+                                      <CardTitle className="flex items-center space-x-2">
+                                        <BarChart3 className="h-5 w-5 text-purple-600" />
+                                        <span>Supporting Charts</span>
+                                      </CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                      <div className="relative h-[400px]">
+                                        <ChartRenderer />
+                                      </div>
+                                    </CardContent>
+                                  </Card>
+                                )}
+                              </>
                             )}
                           </div>
                         </div>
