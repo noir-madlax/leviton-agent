@@ -13,16 +13,16 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
     <div className="space-y-4">
       {messages.length === 0 && !isLoading ? (
         <div className="text-center text-muted-foreground py-8">
-          <p className="text-lg mb-2">👋 欢迎使用 AI 数据分析助手</p>
+          <p className="text-lg mb-2">👋 Welcome to AI Data Analysis Assistant</p>
           <p className="text-sm">
-            问我关于数据的任何问题，我会为您生成相应的图表来可视化展示
+            Ask me any questions about your data, and I'll generate corresponding charts for visualization
           </p>
           <div className="mt-4 text-xs">
-            <p>💡 示例问题：</p>
+            <p>💡 Example Questions:</p>
             <ul className="mt-2 space-y-1">
-              <li>• &ldquo;显示最近6个月的销售趋势&rdquo;</li>
-              <li>• &ldquo;对比各产品的销售表现&rdquo;</li>
-              <li>• &ldquo;分析用户增长情况&rdquo;</li>
+              <li>• &ldquo;Show the sales trends for the last 6 months&rdquo;</li>
+              <li>• &ldquo;Compare the sales performance of each product&rdquo;</li>
+              <li>• &ldquo;Analyze user growth trends&rdquo;</li>
             </ul>
           </div>
         </div>
@@ -35,7 +35,7 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
       {isLoading && (
         <div className="flex items-center gap-2 text-muted-foreground">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current"></div>
-          <span className="text-sm">AI 正在分析数据并生成图表...</span>
+          <span className="text-sm">AI is analyzing data and generating charts...</span>
         </div>
       )}
     </div>

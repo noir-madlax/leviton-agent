@@ -554,7 +554,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       <div className="h-full overflow-auto">
         <div className="max-w-7xl mx-auto space-y-6 p-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Step 2: Data Scope Selection</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Create Research Project</h1>
             <p className="text-muted-foreground mt-2">
               Loading product data for scope selection...
             </p>
@@ -572,7 +572,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       <div className="h-full overflow-auto">
         <div className="max-w-7xl mx-auto space-y-6 p-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Step 2: Data Scope Selection</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Create Research Project</h1>
             <p className="text-muted-foreground mt-2">
               Failed to load product data. Please try again.
             </p>
@@ -591,7 +591,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
           {/* 页面标题和Confirm按钮 */}
           <div className="flex justify-between items-center">
             <div>
-              <h1 className="text-2xl font-bold tracking-tight">Step 2: Data Scope Selection</h1>
+              <h1 className="text-2xl font-bold tracking-tight">Create Research Project</h1>
               <p className="text-muted-foreground text-sm">
                 Define your research scope by selecting data filters to create a focused analysis project.
               </p>

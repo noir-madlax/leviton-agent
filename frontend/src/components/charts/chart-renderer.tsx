@@ -41,8 +41,8 @@ function SingleChartRenderer({ chartData, title }: { chartData: SingleChart, tit
       setCompiledChart(() => result.component!);
       
     } catch (error) {
-      console.error('图表渲染失败:', error);
-      setError(error instanceof Error ? error.message : '未知渲染错误');
+      console.error('Chart rendering failed:', error);
+      setError(error instanceof Error ? error.message : 'Unknown rendering error');
       setCompiledChart(null);
     } finally {
       setIsRendering(false);
@@ -83,7 +83,7 @@ function SingleChartRenderer({ chartData, title }: { chartData: SingleChart, tit
           </div>
         ) : (
           <div className="flex items-center justify-center h-64">
-            <p className="text-muted-foreground">图表加载中...</p>
+                          <p className="text-muted-foreground">Loading chart...</p>
           </div>
         )}
       </div>
@@ -91,14 +91,14 @@ function SingleChartRenderer({ chartData, title }: { chartData: SingleChart, tit
       {/* 图表说明和洞察 */}
       <div className="space-y-3">
         <div>
-          <h4 className="text-sm font-semibold mb-1">图表说明</h4>
+                        <h4 className="text-sm font-semibold mb-1">Chart Description</h4>
           <p className="text-sm text-muted-foreground">
             {chartData.explanation}
           </p>
         </div>
         
         <div>
-          <h4 className="text-sm font-semibold mb-1">数据洞察</h4>
+                        <h4 className="text-sm font-semibold mb-1">Data Insights</h4>
           <p className="text-sm text-muted-foreground">
             {chartData.insights}
           </p>
@@ -117,9 +117,9 @@ export function ChartRenderer() {
       <Card className="h-full flex items-center justify-center">
         <CardContent className="text-center">
           <BarChart3 className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
-          <h3 className="text-lg font-semibold mb-2">等待生成图表</h3>
+          <h3 className="text-lg font-semibold mb-2">Waiting for Chart Generation</h3>
           <p className="text-muted-foreground">
-            在左侧聊天区域问我关于数据的问题，我会为您生成相应的可视化图表
+            Ask questions about your data in the chat area, and I'll generate corresponding visualizations
           </p>
         </CardContent>
       </Card>
@@ -132,8 +132,8 @@ export function ChartRenderer() {
       <Card className="h-full flex items-center justify-center">
         <CardContent className="text-center">
           <Loader2 className="h-16 w-16 text-blue-500 animate-spin mx-auto mb-4" />
-          <h3 className="text-lg font-semibold mb-2">正在生成图表...</h3>
-          <p className="text-muted-foreground">AI 正在分析您的数据</p>
+          <h3 className="text-lg font-semibold mb-2">Generating Chart...</h3>
+          <p className="text-muted-foreground">AI is analyzing your data</p>
         </CardContent>
       </Card>
     );
@@ -146,7 +146,7 @@ export function ChartRenderer() {
         <CardHeader>
           <CardTitle className="flex items-center gap-2 text-red-600">
             <AlertTriangle className="h-5 w-5" />
-            图表生成失败
+            Chart Generation Failed
           </CardTitle>
         </CardHeader>
         <CardContent>
@@ -157,11 +157,11 @@ export function ChartRenderer() {
             </AlertDescription>
           </Alert>
           <div className="mt-4 text-sm text-muted-foreground">
-            <p>可能的解决方法：</p>
+            <p>Possible solutions:</p>
             <ul className="list-disc list-inside mt-2 space-y-1">
-              <li>重新描述您的数据分析需求</li>
-              <li>确保问题描述清晰明确</li>
-              <li>稍后再试</li>
+              <li>Rephrase your data analysis request</li>
+              <li>Ensure your question is clear and specific</li>
+              <li>Try again later</li>
             </ul>
           </div>
         </CardContent>
@@ -182,10 +182,10 @@ export function ChartRenderer() {
         <div className="flex items-center justify-between">
           <h2 className="text-xl font-semibold flex items-center gap-2">
             <BarChart3 className="h-6 w-6" />
-            {isMultipleCharts ? '产品市场分析报告' : '数据可视化'}
+            {isMultipleCharts ? 'Product Market Analysis Report' : 'Data Visualization'}
           </h2>
           <Badge variant="outline" className="text-xs">
-            {new Date(currentChart.timestamp).toLocaleString('zh-CN')}
+            {new Date(currentChart.timestamp).toLocaleString('en-US')}
           </Badge>
         </div>
       </div>
@@ -200,7 +200,7 @@ export function ChartRenderer() {
                 <CardContent className="p-6">
                   <SingleChartRenderer 
                     chartData={currentChart.chart1} 
-                    title="维度一：客户痛点分析"
+                    title="Dimension 1: Customer Pain Point Analysis"
                   />
                 </CardContent>
               </Card>
@@ -211,7 +211,7 @@ export function ChartRenderer() {
                 <CardContent className="p-6">
                   <SingleChartRenderer 
                     chartData={currentChart.chart2} 
-                    title="维度二：市场机会分析"
+                    title="Dimension 2: Market Opportunity Analysis"
                   />
                 </CardContent>
               </Card>
@@ -222,7 +222,7 @@ export function ChartRenderer() {
                 <CardContent className="p-6">
                   <SingleChartRenderer 
                     chartData={currentChart.chart3} 
-                    title="维度三：竞争优势分析"
+                    title="Dimension 3: Competitive Advantage Analysis"
                   />
                 </CardContent>
               </Card>
@@ -241,8 +241,8 @@ export function ChartRenderer() {
                 // 向后兼容：旧的直接属性格式（如果存在）
                 <div className="text-center text-muted-foreground">
                   <BarChart3 className="h-16 w-16 mx-auto mb-4 opacity-50" />
-                  <p>图表数据格式不正确</p>
-                  <p className="text-sm mt-2">请使用标准的图表数据格式</p>
+                  <p>Chart data format is incorrect</p>
+                  <p className="text-sm mt-2">Please use standard chart data format</p>
                 </div>
               )}
             </CardContent>

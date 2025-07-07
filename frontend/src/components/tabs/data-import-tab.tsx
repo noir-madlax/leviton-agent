@@ -234,7 +234,7 @@ export function DataImportTab() {
       <div className="max-w-4xl mx-auto space-y-6">
         {/* 页面标题 */}
         <div>
-          <h1 className="text-3xl font-bold tracking-tight">Step 1: Data Import</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Import Data</h1>
           <p className="text-muted-foreground mt-2">
             Import product and review data from Amazon URLs. Supports product pages, search results, and category pages.
           </p>

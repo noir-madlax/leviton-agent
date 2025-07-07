@@ -86,29 +86,7 @@ export function DashboardHeader({ onProjectChange, selectedProjectId: parentSele
           </div>
         </div>
 
-        {/* 项目选择器 - 始终显示 */}
-        {projects.length > 0 && (
-          <div className="flex-shrink-0 ml-8">
-            <div className="text-sm text-gray-600 mb-2">Switch Project:</div>
-            <Select value={selectedProjectId} onValueChange={handleProjectChange} disabled={loading}>
-              <SelectTrigger className="w-64">
-                <SelectValue placeholder="Select a project..." />
-              </SelectTrigger>
-              <SelectContent>
-                {projects.map((project) => (
-                  <SelectItem key={project.id} value={project.id}>
-                    <div className="flex flex-col">
-                      <span className="font-medium">{project.project_name}</span>
-                      <span className="text-xs text-gray-500">
-                        {project.total_products} products • {project.total_brands} brands
-                      </span>
-                    </div>
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
-        )}
+
       </div>
 
       {/* Project Data Overview */}

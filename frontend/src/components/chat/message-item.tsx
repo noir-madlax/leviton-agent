@@ -51,7 +51,7 @@ export function MessageItem({ message }: MessageItemProps) {
           <div className="flex items-center gap-2">
             <Badge variant="secondary" className="text-xs">
               <ChartBar className="h-3 w-3 mr-1" />
-              已生成图表
+                              Chart Generated
             </Badge>
           </div>
         )}

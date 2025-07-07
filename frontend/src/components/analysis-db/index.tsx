@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { DashboardHeader } from "@/components/analysis-db/shared/dashboard-header"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
@@ -455,134 +455,146 @@ async function fetchAllReviewData(projectId?: string): Promise<Pick<DashboardDat
   }
 }
 
-async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
-  try {
-    // 🔑 Load all market analysis modules with project filtering
-    const [brandAnalysisData, productAnalysisData, pricingAnalysisData, marketInsightsData, packagePreferenceData, reviewInsightsData, competitorAnalysisData, allReviewData] = await Promise.all([
-      fetchBrandAnalysisData(projectId),
-      fetchProductAnalysisData(projectId),
-      fetchPricingAnalysisData(projectId),
-      fetchMarketInsightsData(projectId),
-      fetchPackagePreferenceData(projectId),
-      fetchReviewInsightsData(projectId),
-      fetchCompetitorAnalysisData(projectId),
-      fetchAllReviewData(projectId)
-    ]);
 
-    return {
-      brandAnalysis: brandAnalysisData,
-      productAnalysis: productAnalysisData,
-      pricingAnalysis: pricingAnalysisData,
-      marketInsights: marketInsightsData,
-      packagePreference: packagePreferenceData,
-      reviewInsights: reviewInsightsData,
-      competitorAnalysis: competitorAnalysisData,
-      allReviewData: allReviewData.allReviewData
-    } as DashboardData;
-  } catch (error) {
-    console.error('Error fetching database data:', error)
-    // 返回空数据结构
-    return {
-      brandAnalysis: { 
-        brandCategoryRevenue: [],
-        segmentNames: [],
-        segmentColors: []
-      },
-      productAnalysis: { 
-        priceVsRevenue: [],
-        topProducts: {
-          segments: {},
-          dimmerSwitches: [],
-          lightSwitches: []
-        },
-        segmentSummary: {},
-        segmentNames: [],
-        segmentColors: []
-      },
-      pricingAnalysis: {
-        priceDistribution: [],
-        brandPriceDistribution: []
-      },
-      marketInsights: {
-        segmentRevenue: {
-          dimmerSwitches: [],
-          lightSwitches: []
-        }
-      },
-      packagePreference: {
-        sameProductComparison: [],
-        packageDistribution: [],
-        segmentDistributions: {},
-        segmentNames: [],
-        dimmerSwitches: [],
-        lightSwitches: []
-      },
-      reviewInsights: {
-        painPoints: [],
-        customerLikes: [],
-        underservedUseCases: []
-      },
-      competitorAnalysis: {
-        targetProducts: [],
-        matrixData: [],
-        productTotalReviews: {},
-        useCaseData: {
-          targetProducts: [],
-          matrixData: []
-        }
-      },
-      allReviewData: {}
-    } as DashboardData
-  }
-}
 
 interface AnalysisDbContainerProps {
   selectedProjectId?: string | null;
 }
 
 export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: AnalysisDbContainerProps) {
-  const [data, setData] = useState<DashboardData | null>(null)
-  const [loading, setLoading] = useState(true)
+  const [data, setData] = useState<Partial<DashboardData>>({})
+  const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
+  
+  // 为每个数据部分单独管理加载状态
+  const [loadingStates, setLoadingStates] = useState({
+    brandAnalysis: false,
+    productAnalysis: false,
+    pricingAnalysis: false,
+    marketInsights: false,
+    packagePreference: false,
+    reviewInsights: false,
+    competitorAnalysis: false,
+    allReviewData: false
+  })
 
-  const loadData = async (projectId?: string) => {
+  // 跟踪已加载的数据
+  const [loadedData, setLoadedData] = useState<Set<string>>(new Set())
+
+  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string) => {
+    if (!projectId || loadedData.has(dataType)) return
+    
     try {
-      setLoading(true)
+      setLoadingStates(prev => ({ ...prev, [dataType]: true }))
       setError(null)
-      console.log(`🔄 Loading dashboard data${projectId ? ` for project ${projectId}` : ' (waiting for project selection)'}`)
       
-      const dashboardData = await fetchDatabaseData(projectId || undefined)
-      setData(dashboardData)
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const result: any = {}
       
-      console.log(`✅ Dashboard data loaded successfully${projectId ? ` for project ${projectId}` : ' (empty data, waiting for project)'}`)
+      switch (dataType) {
+        case 'brandAnalysis':
+          result.brandAnalysis = await fetchBrandAnalysisData(projectId)
+          break
+        case 'productAnalysis':
+          result.productAnalysis = await fetchProductAnalysisData(projectId)
+          break
+        case 'pricingAnalysis':
+          result.pricingAnalysis = await fetchPricingAnalysisData(projectId)
+          break
+        case 'marketInsights':
+          result.marketInsights = await fetchMarketInsightsData(projectId)
+          break
+        case 'packagePreference':
+          result.packagePreference = await fetchPackagePreferenceData(projectId)
+          break
+        case 'reviewInsights':
+          result.reviewInsights = await fetchReviewInsightsData(projectId)
+          break
+        case 'competitorAnalysis':
+          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId)
+          break
+        case 'allReviewData':
+          const reviewData = await fetchAllReviewData(projectId)
+          result.allReviewData = reviewData.allReviewData
+          break
+      }
+      
+      setData(prevData => ({ ...prevData, ...result }))
+      setLoadedData(prev => new Set([...prev, dataType]))
     } catch (err) {
-      console.error('Failed to load database data:', err)
-      setError('Failed to load data from database')
+      setError(err instanceof Error ? err.message : 'Unknown error occurred')
     } finally {
-      setLoading(false)
+      setLoadingStates(prev => ({ ...prev, [dataType]: false }))
     }
-  }
+  }, [loadedData])
 
   // 项目变更回调
   const handleProjectChange = (projectId: string) => {
     console.log(`🔄 Project changed to: ${projectId}`)
     console.log(`📊 Starting data load for project: ${projectId}`)
     setSelectedProjectId(projectId)
-    loadData(projectId)
+    // 清空之前的数据和状态
+    setData({})
+    setLoadedData(new Set())
+    setLoadingStates({
+      brandAnalysis: false,
+      productAnalysis: false,
+      pricingAnalysis: false,
+      marketInsights: false,
+      packagePreference: false,
+      reviewInsights: false,
+      competitorAnalysis: false,
+      allReviewData: false
+    })
+    // 立即加载第一个tab的数据
+    loadSpecificData('brandAnalysis', projectId)
   }
+
+  // Tab切换处理函数
+  const handleTabChange = (tabValue: string) => {
+    if (!selectedProjectId) return
+    
+    switch (tabValue) {
+      case 'brand-analysis':
+        loadSpecificData('brandAnalysis', selectedProjectId)
+        break
+      case 'product-analysis':
+        loadSpecificData('productAnalysis', selectedProjectId)
+        break
+      case 'pricing-analysis':
+        loadSpecificData('pricingAnalysis', selectedProjectId)
+        break
+      case 'market-insights':
+        loadSpecificData('marketInsights', selectedProjectId)
+        break
+      case 'package-preference':
+        loadSpecificData('packagePreference', selectedProjectId)
+        break
+      case 'review-insights':
+        loadSpecificData('reviewInsights', selectedProjectId)
+        // 同时加载原始评论数据，因为ReviewInsights组件需要allReviewData
+        loadSpecificData('allReviewData', selectedProjectId)
+        break
+      case 'competitor-analysis':
+        loadSpecificData('competitorAnalysis', selectedProjectId)
+        break
+    }
+  }
+
+
 
   useEffect(() => {
     // 如果有初始项目ID，自动加载数据
     if (initialProjectId) {
       console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
       setSelectedProjectId(initialProjectId);
-      loadData(initialProjectId);
+      // 立即加载第一个tab的数据
+      loadSpecificData('brandAnalysis', initialProjectId);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
-      setLoading(false); // Stop loading immediately, wait for user action
     }
-  }, [initialProjectId])
+  }, [initialProjectId, loadSpecificData])
 
   if (loading) {
     return (
@@ -608,7 +620,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     )
   }
 
-  // 🎯 NEW: Show project selection UI when no data is loaded yet
+  // Show loading state when no data is loaded yet
   if (!data) {
     return (
       <div className="flex h-screen bg-gray-50">
@@ -625,13 +637,13 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
               
               <div className="mt-12 text-center">
                 <div className="w-full h-2 bg-blue-200 rounded-full mb-4 mx-auto max-w-md">
-                  <div className="h-2 bg-blue-600 rounded-full" style={{ width: '0%' }}></div>
+                  <div className="h-2 bg-blue-600 rounded-full animate-pulse" style={{ width: '60%' }}></div>
                 </div>
                 <div className="text-gray-600 text-lg">
-                  📋 Please select a project from the dropdown above to load analysis data
+                  Loading analysis data...
                 </div>
                 <div className="text-gray-400 text-sm mt-2">
-                  {selectedProjectId ? 'Loading data...' : 'Waiting for project selection...'}
+                  Preparing your dashboard
                 </div>
               </div>
             </div>
@@ -676,21 +688,23 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
   }
 
   // 从产品分析数据构建产品列表
-  data.productAnalysis.priceVsRevenue.forEach(categoryData => {
-    categoryData.products.forEach(product => {
-      // 按品牌分组
-      if (!productLists.byBrand[product.brand]) {
-        productLists.byBrand[product.brand] = []
-      }
-      productLists.byBrand[product.brand].push(product)
+  if (data.productAnalysis?.priceVsRevenue) {
+    data.productAnalysis.priceVsRevenue.forEach(categoryData => {
+      categoryData.products.forEach(product => {
+        // 按品牌分组
+        if (!productLists.byBrand[product.brand]) {
+          productLists.byBrand[product.brand] = []
+        }
+        productLists.byBrand[product.brand].push(product)
 
-      // 按类别分组（作为segment的替代）
-      if (!productLists.bySegment[categoryData.category]) {
-        productLists.bySegment[categoryData.category] = []
-      }
-      productLists.bySegment[categoryData.category].push(product)
+        // 按类别分组（作为segment的替代）
+        if (!productLists.bySegment[categoryData.category]) {
+          productLists.bySegment[categoryData.category] = []
+        }
+        productLists.bySegment[categoryData.category].push(product)
+      })
     })
-  })
+  }
 
   return (
     <ProductPanelProvider>
@@ -707,7 +721,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                   selectedProjectId={selectedProjectId} 
                 />
                 
-                <Tabs defaultValue="market-analysis" className="mt-6">
+                <Tabs defaultValue="market-analysis" className="mt-6" onValueChange={(value) => handleTabChange(value)}>
                   <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="market-analysis">Market Analysis</TabsTrigger>
                     <TabsTrigger value="review-insights">Review Insights</TabsTrigger>
@@ -715,7 +729,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                   </TabsList>
 
                   <TabsContent value="market-analysis" className="mt-6">
-                    <Tabs defaultValue="brand-analysis" className="w-full">
+                    <Tabs defaultValue="brand-analysis" className="w-full" onValueChange={(value) => handleTabChange(value)}>
                       <TabsList className="grid w-full grid-cols-5">
                         <TabsTrigger value="brand-analysis">Brand Analysis</TabsTrigger>
                         <TabsTrigger value="product-analysis">Product Analysis</TabsTrigger>
@@ -725,48 +739,127 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                       </TabsList>
 
                       <TabsContent value="brand-analysis">
-                        <BrandAnalysis 
-                          data={data.brandAnalysis} 
-                          productLists={productLists}
-                        />
+                        {data.brandAnalysis ? (
+                          <BrandAnalysis 
+                            data={data.brandAnalysis} 
+                            productLists={productLists}
+                          />
+                        ) : loadingStates.brandAnalysis ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Brand Analysis...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Brand Analysis data
+                          </div>
+                        )}
                       </TabsContent>
                       
                       <TabsContent value="product-analysis">
-                        <ProductAnalysis 
-                          data={data.productAnalysis} 
-                          productLists={productLists}
-                        />
+                        {data.productAnalysis ? (
+                          <ProductAnalysis 
+                            data={data.productAnalysis} 
+                            productLists={productLists}
+                          />
+                        ) : loadingStates.productAnalysis ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Product Analysis...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Product Analysis data
+                          </div>
+                        )}
                       </TabsContent>
                       
                       <TabsContent value="pricing-analysis">
-                        <PricingAnalysis 
-                          data={data.pricingAnalysis}
-                          productLists={productLists}
-                        />
+                        {data.pricingAnalysis ? (
+                          <PricingAnalysis 
+                            data={data.pricingAnalysis}
+                            productLists={productLists}
+                          />
+                        ) : loadingStates.pricingAnalysis ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Pricing Analysis...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Pricing Analysis data
+                          </div>
+                        )}
                       </TabsContent>
                       
                       <TabsContent value="market-insights">
-                        <MarketInsights 
-                          data={data.marketInsights}
-                          productLists={productLists}
-                        />
+                        {data.marketInsights ? (
+                          <MarketInsights 
+                            data={data.marketInsights}
+                            productLists={productLists}
+                          />
+                        ) : loadingStates.marketInsights ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Market Insights...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Market Insights data
+                          </div>
+                        )}
                       </TabsContent>
                       
                       <TabsContent value="package-preference">
-                        <PackagePreferenceAnalysis 
-                          data={data.packagePreference}
-                          productLists={productLists}
-                        />
+                        {data.packagePreference ? (
+                          <PackagePreferenceAnalysis 
+                            data={data.packagePreference}
+                            productLists={productLists}
+                          />
+                        ) : loadingStates.packagePreference ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Package Preference...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Package Preference data
+                          </div>
+                        )}
                       </TabsContent>
                     </Tabs>
                   </TabsContent>
 
                   <TabsContent value="review-insights">
-                    <ReviewInsights data={data} />
+                    {data.reviewInsights && data.allReviewData ? (
+                      <ReviewInsights data={data as DashboardData} />
+                    ) : (loadingStates.reviewInsights || loadingStates.allReviewData) ? (
+                      <div className="flex items-center justify-center py-8">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                        <span className="ml-2">
+                          Loading Review Insights{loadingStates.allReviewData ? ' and Review Data' : ''}...
+                        </span>
+                      </div>
+                    ) : (
+                      <div className="text-center py-8 text-gray-500">
+                        Click to load Review Insights data
+                      </div>
+                    )}
                   </TabsContent>
 
                   <TabsContent value="competitor-analysis">
-                    <CompetitorAnalysis projectId={selectedProjectId} data={data} />
+                    {data.competitorAnalysis ? (
+                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} />
+                    ) : loadingStates.competitorAnalysis ? (
+                      <div className="flex items-center justify-center py-8">
+                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                        <span className="ml-2">Loading Competitor Analysis...</span>
+                      </div>
+                    ) : (
+                      <div className="text-center py-8 text-gray-500">
+                        Click to load Competitor Analysis data
+                      </div>
+                    )}
                   </TabsContent>
                 </Tabs>
               </div>

@@ -305,11 +305,11 @@ export function ChatInterface() {
       <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex items-center gap-2 p-4">
           <MessageSquare className="h-5 w-5" />
-          <h2 className="font-semibold">AI 数据分析助手</h2>
+          <h2 className="font-semibold">AI Data Analysis Assistant</h2>
           {isLoading && (
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />
-              生成中...
+              Generating...
             </div>
           )}
         </div>
@@ -323,7 +323,7 @@ export function ChatInterface() {
               <Button variant="outline" className="w-full justify-between">
                 <div className="flex items-center gap-2">
                   <TestTube2 className="h-4 w-4" />
-                  测试图表数据输入
+                  Test Chart Data Input
                 </div>
                 {testDataOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
               </Button>
@@ -335,7 +335,7 @@ export function ChatInterface() {
                   <div className="space-y-2">
                     <div className="flex items-center justify-between">
                       <label className="text-sm font-medium">
-                        输入图表数据 (JSON格式)
+                        Input Chart Data (JSON Format)
                       </label>
                       <Button
                         variant="ghost"
@@ -346,7 +346,7 @@ export function ChatInterface() {
                         }}
                         className="text-xs h-6 px-2"
                       >
-                        清空
+                        Clear
                       </Button>
                     </div>
                     
@@ -356,26 +356,26 @@ export function ChatInterface() {
                         <Textarea
                           value={testInput}
                           onChange={(e) => setTestInput(e.target.value)}
-                          placeholder={`请输入图表数据，例如：
+                          placeholder={`Enter chart data, for example:
 {
   "chartData": {
-    "code": "React组件代码",
-    "explanation": "图表说明",
-    "insights": "数据洞察"
+    "code": "React component code",
+    "explanation": "Chart description",
+    "insights": "Data insights"
   }
 }
 
-或多图表格式：
+Or multi-chart format:
 {
   "chart1": {
-    "code": "第一个图表代码",
-    "explanation": "第一个图表说明",
-    "insights": "第一个图表洞察"
+    "code": "First chart code",
+    "explanation": "First chart description",
+    "insights": "First chart insights"
   },
   "chart2": {
-    "code": "第二个图表代码",
-    "explanation": "第二个图表说明", 
-    "insights": "第二个图表洞察"
+    "code": "Second chart code",
+    "explanation": "Second chart description", 
+    "insights": "Second chart insights"
   }
 }`}
                           className="min-h-[180px] text-xs font-mono border-0 resize-none focus-visible:ring-0"
@@ -394,14 +394,14 @@ export function ChatInterface() {
                   <div className="flex gap-2 pt-2 border-t bg-background">
                     <Button onClick={handleTestChart} className="flex-1">
                       <TestTube2 className="h-4 w-4 mr-2" />
-                      测试渲染图表
+                      Test Render Chart
                     </Button>
                     <Button
                       variant="outline"
                       onClick={() => setTestDataOpen(false)}
                       className="px-4"
                     >
-                      收起
+                      Collapse
                     </Button>
                   </div>
                 </div>
@@ -437,7 +437,7 @@ export function ChatInterface() {
             <Textarea
               value={input}
               onChange={handleInputChange}
-              placeholder="询问关于数据的任何问题..."
+              placeholder="Ask any question about your data..."
               className="min-h-[40px] max-h-[120px] resize-none"
               disabled={isLoading}
               onKeyDown={(e) => {
@@ -457,7 +457,7 @@ export function ChatInterface() {
           </form>
           
           <p className="text-xs text-muted-foreground mt-2 text-center">
-            按 Enter 发送，Shift + Enter 换行
+            Press Enter to send, Shift + Enter for new line
           </p>
           
           {error && (

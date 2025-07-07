@@ -754,13 +754,23 @@ export class DatabaseService {
 
   async getProject(id: string): Promise<Project | null> {
     try {
-      const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('id', id)
-        .single()
+      // Use backend API to get project info, consistent with getProjects
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/${id}`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
 
-      if (error) throw error
+      if (!response.ok) {
+        if (response.status === 404) {
+          return null
+        }
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const data = await response.json()
       return data
     } catch (error) {
       console.error('Failed to get project:', error)
