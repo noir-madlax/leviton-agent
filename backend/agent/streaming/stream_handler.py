@@ -88,29 +88,77 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
 async def process_text_with_scripts(text: str) -> AsyncGenerator[str, None]:
     """
     处理包含多个脚本块的文本，支持 RechartScript 和 insight 代码块
+    兼容LLM可能产生的连续开始标签错误，如：[RechartScript] [RechartScript] content [/RechartScript]
     """
-    # 使用正则表达式找到所有脚本块的位置，支持两种类型
-    script_pattern = r'\[(RechartScript|insight)\](.*?)\[/(RechartScript|insight)\]'
-    matches = list(re.finditer(script_pattern, text, re.DOTALL))
+    # 分别查找开始标签和结束标签
+    start_pattern = r'\[(RechartScript|insight)\]'
+    end_pattern = r'\[/(RechartScript|insight)\]'
     
-    if not matches:
+    start_matches = list(re.finditer(start_pattern, text))
+    end_matches = list(re.finditer(end_pattern, text))
+    
+    if not start_matches or not end_matches:
         # 如果没有找到脚本块，按普通文本处理
         async for chunk in send_text_chunks(text):
             yield chunk
         return
     
-    # 按位置排序所有匹配项
-    matches.sort(key=lambda x: x.start())
+    # 构建正确的标签对，优先匹配最接近的标签
+    script_blocks = []
+    used_starts = set()
+    used_ends = set()
+    
+    # 对每个结束标签，找到最近的未使用的开始标签
+    for end_match in end_matches:
+        end_pos = end_match.start()
+        end_type = end_match.group(1)
+        
+        # 找到此结束标签前的所有匹配类型的开始标签
+        candidate_starts = []
+        for i, start_match in enumerate(start_matches):
+            if (i not in used_starts and 
+                start_match.start() < end_pos and 
+                start_match.group(1) == end_type):
+                candidate_starts.append((i, start_match))
+        
+        if candidate_starts:
+            # 选择最接近结束标签的开始标签
+            closest_start_idx, closest_start = max(candidate_starts, key=lambda x: x[1].start())
+            
+            # 提取内容
+            content_start = closest_start.end()
+            content_end = end_pos
+            script_content = text[content_start:content_end].strip()
+            
+            script_blocks.append({
+                'start_pos': closest_start.start(),
+                'end_pos': end_match.end(),
+                'script_type': end_type,
+                'content': script_content
+            })
+            
+            # 标记为已使用
+            used_starts.add(closest_start_idx)
+            used_ends.add(end_matches.index(end_match))
+    
+    if not script_blocks:
+        # 如果没有找到有效的脚本块，按普通文本处理
+        async for chunk in send_text_chunks(text):
+            yield chunk
+        return
+    
+    # 按位置排序脚本块
+    script_blocks.sort(key=lambda x: x['start_pos'])
     
     current_pos = 0
     script_count = 0
     
-    for match in matches:
+    for block in script_blocks:
         script_count += 1
-        start_pos = match.start()
-        end_pos = match.end()
-        script_type = match.group(1)  # RechartScript 或 insight
-        script_content = match.group(2).strip()
+        start_pos = block['start_pos']
+        end_pos = block['end_pos']
+        script_type = block['script_type']
+        script_content = block['content']
         
         # 处理脚本块前的文本
         if start_pos > current_pos:

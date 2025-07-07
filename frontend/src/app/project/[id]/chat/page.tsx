@@ -248,7 +248,7 @@ function InsightCard({ insight, index }: { insight: string; index?: number }) {
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
           <Lightbulb className="h-5 w-5 text-yellow-600" />
-          <span>数据洞察 {index !== undefined ? `#${index + 1}` : ''}</span>
+          <span>Key Insights {index !== undefined ? `#${index + 1}` : ''}</span>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -283,7 +283,7 @@ function ContentPartRenderer({ part }: { part: ContentPart }) {
           <CardHeader>
             <CardTitle className="flex items-center space-x-2">
               <BarChart3 className="h-5 w-5 text-purple-600" />
-              <span>图表分析</span>
+              <span>Supporting Charts</span>
             </CardTitle>
           </CardHeader>
           <CardContent>
@@ -403,13 +403,21 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     try {
       // 真实的API调用
       const backendUrl = config.backendUrl
+      
+      // 设置10分钟超时
+      const controller = new AbortController()
+      const timeoutId = setTimeout(() => controller.abort(), 10 * 60 * 1000) // 10分钟
+      
       const response = await fetch(`${backendUrl}/agent-stream?query=${encodeURIComponent(originalInput)}`, {
         method: 'GET',
         headers: {
           'Accept': 'text/event-stream',
           'Cache-Control': 'no-cache',
         },
+        signal: controller.signal,
       })
+      
+      clearTimeout(timeoutId)
 
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`)
@@ -577,11 +585,17 @@ function ChatPageContent({ projectId }: { projectId: string }) {
 
     } catch (error) {
       console.error('Error sending message:', error)
-      setError(`Connection failed: ${error instanceof Error ? error.message : 'Unknown error'}`)
+      
+      // 检查是否为超时错误
+      const errorMessage = error instanceof Error && error.name === 'AbortError' 
+        ? "Request timed out after 10 minutes. Please try again."
+        : `Connection failed: ${error instanceof Error ? error.message : 'Unknown error'}`
+      
+      setError(errorMessage)
       
       // 移除analyzing消息，添加错误消息
       setMessages(prev => prev.filter(msg => !msg.isAnalyzing))
-      const errorMessage: Message = {
+      const errorMsg: Message = {
         id: (Date.now() + 2).toString(),
         content: "Sorry, I encountered an error while processing your request. Please try again.",
         isUser: false,
@@ -589,7 +603,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
         hasChart: false,
         showKeyInsights: false
       }
-      setMessages(prev => [...prev, errorMessage])
+      setMessages(prev => [...prev, errorMsg])
     } finally {
       setIsLoading(false)
       setCompiling(false)
