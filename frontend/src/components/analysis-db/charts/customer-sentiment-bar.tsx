@@ -11,7 +11,7 @@ import {
   Tooltip, 
   Cell
 } from "recharts"
-import { ProductPainPoint, getSatisfactionColor, getUseCaseAnalysisData } from "@/components/analysis-db/types/analysis"
+import { ProductPainPoint, getSatisfactionColor } from "@/components/analysis-db/types/analysis"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
 
 interface CustomerSentimentBarProps {
@@ -29,10 +29,12 @@ interface CustomerSentimentBarProps {
     date: string
     brand: string
   }>>
+  asinToProductNameMap?: Record<string, string>;
 }
 
 interface SentimentData {
   product: string
+  productName: string
   totalReviews: number
   avgSatisfactionRate: number
   color: string
@@ -40,18 +42,8 @@ interface SentimentData {
   useCaseMentions: number
 }
 
-export function CustomerSentimentBar({ data, productTotalReviews, allReviewData }: CustomerSentimentBarProps) {
+export function CustomerSentimentBar({ data, productTotalReviews, allReviewData, asinToProductNameMap }: CustomerSentimentBarProps) {
   const { openPanel } = useReviewPanel()
-  
-  // Map product names to their ASINs for precise filtering
-  const productToAsin: Record<string, string> = {
-    'Philips Hue Smart': 'B08PKMT2DV',
-    'CLOUDY BAY Dimmer': 'B0771BC2YH',
-    'Lutron Credenza': 'B004DZONXI',
-    'Feit Electric Smart': 'B07SXDFH38',
-    'Leviton Trimatron': 'B073H9Y7SH',
-    'Kasa HomeKit': 'B0BTMWZH3K'
-  }
   
   const handleBarClick = (sentimentData: SentimentData) => {
     // Add null check for allReviewData
@@ -60,23 +52,33 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
       return
     }
     
-    // Get reviews for this specific product using ASIN
-    const productAsin = productToAsin[sentimentData.product]
-    const allProductReviews: any[] = []
+    // Get reviews for this specific product using ASIN directly
+    const allProductReviews: Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+    }> = []
     
-    if (productAsin) {
-      // Collect all reviews for this specific product from all categories
-      Object.entries(allReviewData).forEach(([, reviews]) => {
-        const productReviews = reviews.filter(review => review.productId === productAsin)
-        allProductReviews.push(...productReviews)
-      })
-    }
+    // Collect all reviews for this specific product from all categories
+    Object.entries(allReviewData).forEach(([, reviews]) => {
+      const productReviews = reviews.filter(review => review.productId === sentimentData.product)
+      allProductReviews.push(...productReviews)
+    })
     
     if (allProductReviews.length === 0) return
     
+    const productName = asinToProductNameMap?.[sentimentData.product] || sentimentData.product
+    
     openPanel(
       allProductReviews,
-      `${sentimentData.product} Reviews`,
+      `${productName} Reviews`,
       `All reviews • ${sentimentData.totalReviews} total reviews in dataset • ${allProductReviews.length} product-specific reviews found • ${sentimentData.avgSatisfactionRate}% avg satisfaction`,
       { sentiment: true, brand: true, rating: true, verified: true }
     )
@@ -85,11 +87,8 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
   const sentimentData = useMemo(() => {
     if (!data || data.length === 0) return []
 
-    // Group products in the same order as matrices: Leviton first, then others
+    // Keep original order from productTotalReviews
     const allProducts = Object.keys(productTotalReviews)
-    const levitonProducts = allProducts.filter(product => product.startsWith('Leviton'))
-    const otherProducts = allProducts.filter(product => !product.startsWith('Leviton'))
-    const orderedProducts = [...levitonProducts, ...otherProducts]
 
     // Group pain point data by product
     const productGroups = data.reduce((groups, item) => {
@@ -101,9 +100,10 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
     }, {} as Record<string, ProductPainPoint[]>)
 
     // Calculate sentiment data for each product in the specified order
-    const sentimentArray: SentimentData[] = orderedProducts.map(product => {
-      const totalReviews = productTotalReviews[product] || 0
-      const painPointItems = productGroups[product] || []
+    const sentimentArray: SentimentData[] = allProducts.map(productAsin => {
+      const totalReviews = productTotalReviews[productAsin] || 0
+      const painPointItems = productGroups[productAsin] || []
+      const productName = asinToProductNameMap?.[productAsin] || productAsin
       
       // Calculate total mentions across all categories (pain points only for now)
       const painPointMentions = painPointItems.reduce((sum, item) => sum + item.mentions, 0)
@@ -124,7 +124,8 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
       const avgSatisfactionRate = totalWeightedMentions > 0 ? weightedSatisfaction / totalWeightedMentions : 0
 
       return {
-        product,
+        product: productAsin,
+        productName,
         totalReviews,
         avgSatisfactionRate: Math.round(avgSatisfactionRate * 10) / 10,
         color: getSatisfactionColor(avgSatisfactionRate),
@@ -134,16 +135,14 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
     })
 
     return sentimentArray
-  }, [data, productTotalReviews])
+  }, [data, productTotalReviews, asinToProductNameMap])
 
   // Format product names for display
   const formatProductName = (name: string) => {
-    if (name.includes('Leviton D26HD')) return 'Leviton\nD26HD'
-    if (name.includes('Leviton D215S')) return 'Leviton\nD215S'  
-    if (name.includes('Leviton DSL06')) return 'Leviton\nDSL06'
-    if (name.includes('Lutron Caseta Diva')) return 'Lutron\nCaseta Diva'
-    if (name.includes('TP Link Switch')) return 'TP Link\nSwitch'
-    if (name.includes('Lutron Diva')) return 'Lutron\nDiva'
+    // Truncate long names and add line breaks for better display
+    if (name.length > 25) {
+      return name.substring(0, 25) + '...'
+    }
     return name
   }
 
@@ -157,12 +156,12 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
   }
 
   // Custom Tooltip
-  const CustomTooltip = ({ active, payload }: any) => {
+  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: SentimentData }> }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload as SentimentData
       return (
         <div className="bg-white p-4 border border-gray-300 rounded-lg shadow-lg">
-          <p className="font-semibold text-gray-800">{data.product}</p>
+          <p className="font-semibold text-gray-800">{data.productName}</p>
           <div className="space-y-1 text-xs mt-2">
             <div className="flex justify-between">
               <span>Total Reviews:</span>
@@ -241,7 +240,7 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
               margin={{ top: 20, right: 30, bottom: 80, left: 40 }}
             >
               <XAxis 
-                dataKey="product"
+                dataKey="productName"
                 tickFormatter={formatProductName}
                 tick={{ fontSize: 11, fill: '#374151' }}
                 angle={0}
@@ -270,9 +269,9 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
 
         {/* Product headers with brand grouping */}
         <div className="mt-4 flex flex-wrap justify-center gap-4 text-xs">
-          {sentimentData.map((item, index) => (
-            <div key={item.product} className={`text-center ${getHeaderColor(item.product)}`}>
-              <div className="font-semibold">{item.product}</div>
+          {sentimentData.map((item) => (
+            <div key={item.product} className={`text-center ${getHeaderColor(item.productName)}`}>
+              <div className="font-semibold" title={item.productName}>{formatProductName(item.productName)}</div>
               <div className="text-gray-500">
                 {item.totalReviews} reviews • {item.avgSatisfactionRate}% satisfaction
               </div>
@@ -288,7 +287,7 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
               {(() => {
                 const mostReviewed = sentimentData.reduce((best, curr) => 
                   curr.totalReviews > best.totalReviews ? curr : best, sentimentData[0])
-                return `${mostReviewed?.product || ''} (${mostReviewed?.totalReviews || 0} reviews)`
+                return `${mostReviewed?.productName || ''} (${mostReviewed?.totalReviews || 0} reviews)`
               })()}
             </div>
           </div>
@@ -298,7 +297,7 @@ export function CustomerSentimentBar({ data, productTotalReviews, allReviewData 
               {(() => {
                 const bestSatisfaction = sentimentData.reduce((best, curr) => 
                   curr.avgSatisfactionRate > best.avgSatisfactionRate ? curr : best, sentimentData[0])
-                return `${bestSatisfaction?.product || ''} (${bestSatisfaction?.avgSatisfactionRate || 0}%)`
+                return `${bestSatisfaction?.productName || ''} (${bestSatisfaction?.avgSatisfactionRate || 0}%)`
               })()}
             </div>
           </div>

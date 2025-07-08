@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 
 interface BrandAnalysisProps {
   data: {
@@ -32,7 +33,7 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
 
   // 获取动态segment信息
   const segmentNames = data.segmentNames || []
-  const segmentColors = data.segmentColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+  const segmentColors = data.segmentColors || Array.from({ length: 20 }, (_, i) => getChartColor(i))
   
   // 如果没有segment数据，使用fallback
   if (!segmentNames.length || !data.brandCategoryRevenue.length) {

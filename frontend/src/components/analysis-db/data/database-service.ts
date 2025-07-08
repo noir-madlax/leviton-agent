@@ -980,28 +980,90 @@ export class DatabaseService {
   }
 
   // 🔑 Get available ASINs with product info for competitor selection
-  async getAvailableAsins(projectId: string): Promise<Array<{
+  async getAvailableAsins(): Promise<Array<{
     platform_id: string
     title: string
     brand: string
     price_usd: number
     reviews_count: number
     category: string
+    monthly_sales_volume?: number
+    product_url?: string
   }>> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
-    try {
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/available-asins?project_id=${projectId}`)
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      
-      return await response.json()
-    } catch (error) {
-      console.error('Error fetching available ASINs:', error)
-      throw error
+    const { data: products, error } = await supabase
+      .from('product_wide_table')
+      .select('platform_id, title, brand, price_usd, reviews_count, category, product_url')
+
+    if (error) throw error
+    return products || []
+  }
+
+  // 🔑 Get project selected products ranked by analysis review count
+  async getProjectProductsByReviewCount(projectId: string): Promise<Array<{
+    platform_id: string
+    title: string
+    brand: string
+    price_usd: number
+    reviews_count: number
+    actual_review_count: number
+    category: string
+    product_url?: string
+  }>> {
+    const { data: projectData, error: projectError } = await supabase
+      .from('projects')
+      .select('selected_product_asins')
+      .eq('id', projectId)
+      .single()
+
+    if (projectError) throw projectError
+    if (!projectData?.selected_product_asins || projectData.selected_product_asins.length === 0) {
+      return []
     }
+
+    const selectedAsins = projectData.selected_product_asins as string[]
+
+    // Get product details
+    const { data: products, error: productsError } = await supabase
+      .from('product_wide_table')
+      .select('platform_id, title, brand, price_usd, reviews_count, category, product_url')
+      .in('platform_id', selectedAsins)
+
+    if (productsError) throw productsError
+
+    // Get analysis review counts for each product
+    const productsWithCounts = await Promise.all(
+      (products || []).map(async (product) => {
+        // Get analysis review count from review_analysis_aspects and review_analysis_aspect_occurrences
+        const { data: aspectsData } = await supabase
+          .from('review_analysis_aspects')
+          .select('aspect_pk')
+          .eq('project_id', projectId)
+          .eq('product_id', product.platform_id)
+
+        let analysisReviewCount = 0
+        if (aspectsData && aspectsData.length > 0) {
+          const aspectPks = aspectsData.map(item => item.aspect_pk)
+          
+          // Get unique review_ids from aspect_occurrences
+          const { data: occurrencesData } = await supabase
+            .from('review_analysis_aspect_occurrences')
+            .select('review_id')
+            .in('aspect_pk', aspectPks)
+
+          if (occurrencesData) {
+            const uniqueReviewIds = new Set(occurrencesData.map(item => item.review_id))
+            analysisReviewCount = uniqueReviewIds.size
+          }
+        }
+
+        return {
+          ...product,
+          actual_review_count: analysisReviewCount // Use analysis review count as actual_review_count
+        }
+      })
+    )
+
+    return productsWithCounts.sort((a, b) => b.actual_review_count - a.actual_review_count)
   }
 }
 

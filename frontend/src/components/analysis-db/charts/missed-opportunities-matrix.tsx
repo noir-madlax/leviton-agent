@@ -30,22 +30,13 @@ interface UseCaseMatrixProps {
     date: string
     brand: string
   }>>
+  asinToProductNameMap?: Record<string, string>;
 }
 
-export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData }: UseCaseMatrixProps) {
+export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData, asinToProductNameMap }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
   
-  // Map product names to their ASINs for precise filtering (consistent with DatabaseService)
-  const productToAsin: Record<string, string> = {
-    'Philips Hue Smart': 'B08PKMT2DV',
-    'CLOUDY BAY Dimmer': 'B0771BC2YH',
-    'Lutron Credenza': 'B004DZONXI',
-    'Feit Electric Smart': 'B07SXDFH38',
-    'Leviton Trimatron': 'B073H9Y7SH',
-    'Kasa HomeKit': 'B0BTMWZH3K'
-  }
-  
-  const handleCellClick = (useCase: string, product: string, cellData: UseCaseData | null) => {
+  const handleCellClick = (useCase: string, productAsin: string, cellData: UseCaseData | null) => {
     if (!cellData || cellData.mentions === 0) return
     
     // Add null check for allReviewData and the specific use case
@@ -57,27 +48,23 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData 
     const categoryReviews = allReviewData[useCase] || []
     if (categoryReviews.length === 0) return
     
-    // Filter reviews by specific product using ASIN
-    const productAsin = productToAsin[product]
-    const productReviews = productAsin 
-      ? categoryReviews.filter(review => review.productId === productAsin)
-      : []
+    // Filter reviews by specific product using ASIN directly
+    const productReviews = categoryReviews.filter(review => review.productId === productAsin)
     
     const reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
+    const productName = asinToProductNameMap?.[productAsin] || productAsin
     
     openPanel(
       reviewsToShow, 
       `${useCase} Reviews`, 
-      `${product} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
+      `${productName} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
       { sentiment: true, brand: true, rating: true, verified: true }
     )
   }
   
   const orderedProducts = useMemo(() => {
-    // Group Leviton products first, then others
-    const levitonProducts = targetProducts.filter(product => product.startsWith('Leviton'))
-    const otherProducts = targetProducts.filter(product => !product.startsWith('Leviton'))
-    return [...levitonProducts, ...otherProducts]
+    // Keep original order from targetProducts
+    return targetProducts
   }, [targetProducts])
 
   const useCaseMatrixData = useMemo(() => {
@@ -132,8 +119,10 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData 
     else return 'bg-red-100 text-red-800'
   }
 
-  const getHeaderColor = (product: string) => {
-    if (product.startsWith('Leviton')) {
+  const getHeaderColor = (productAsin: string) => {
+    // Simple color scheme for differentiation
+    const productName = asinToProductNameMap?.[productAsin] || productAsin
+    if (productName.toLowerCase().includes('leviton')) {
       return 'bg-slate-100 text-slate-800' // Very light greyish blue for Leviton
     } else {
       return 'bg-amber-50 text-amber-800' // Light greyish yellow for other brands
@@ -149,11 +138,14 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData 
               <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[250px]">
                 Use Cases
               </th>
-              {orderedProducts.map(product => (
-                <th key={product} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(product)}`}>
-                  <div className="text-sm">{product}</div>
-                </th>
-              ))}
+              {orderedProducts.map(productAsin => {
+                const productName = asinToProductNameMap?.[productAsin] || productAsin
+                return (
+                  <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
+                    <div className="text-sm" title={productName}>{productName}</div>
+                  </th>
+                )
+              })}
             </tr>
           </thead>
           <tbody>
@@ -164,13 +156,13 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData 
                     <span className="text-sm">{row.useCase}</span>
                   </div>
                 </td>
-                {orderedProducts.map(product => {
-                  const cellData = row.cells[product]
+                {orderedProducts.map(productAsin => {
+                  const cellData = row.cells[productAsin]
                   
                   // Show N/A only if no data exists or no mentions at all
                   if (!cellData || cellData.mentions === 0) {
                     return (
-                      <td key={product} className="border border-gray-300 p-3 text-center">
+                      <td key={productAsin} className="border border-gray-300 p-3 text-center">
                         <div className="bg-gray-100 text-gray-400 py-2 px-3 rounded text-sm">
                           N/A
                         </div>
@@ -178,27 +170,29 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData 
                     )
                   }
                   
+                  const productName = asinToProductNameMap?.[productAsin] || productAsin
+                  
                   return (
-                    <td key={product} className="border border-gray-300 p-3 text-center">
+                    <td key={productAsin} className="border border-gray-300 p-3 text-center">
                       <div 
                         className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)}`}
-                        onClick={() => handleCellClick(row.useCase, product, cellData)}
+                        onClick={() => handleCellClick(row.useCase, productAsin, cellData)}
                         onKeyDown={(e) => {
                           if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault()
-                            handleCellClick(row.useCase, product, cellData)
+                            handleCellClick(row.useCase, productAsin, cellData)
                           }
                         }}
                         tabIndex={0}
                         role="button"
-                        aria-label={`View reviews for ${row.useCase} - ${product}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
-                        title={`Click to view reviews for ${row.useCase} - ${product}`}
+                        aria-label={`View reviews for ${row.useCase} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
+                        title={`Click to view reviews for ${row.useCase} - ${productName}`}
                       >
                         <div className="text-lg font-bold">
                           {cellData.mentions}
                         </div>
                         <div className="text-xs mt-1">
-                          {cellData.totalReviews > 0 ? `${cellData.satisfactionRate}%` : '—'}
+                          {cellData.satisfactionRate}%
                         </div>
                       </div>
                     </td>

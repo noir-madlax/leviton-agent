@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useMemo } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -59,6 +59,82 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
   const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
   const [showAsinSelector, setShowAsinSelector] = useState(false);
+  const [defaultProducts, setDefaultProducts] = useState<Array<{
+    platform_id: string
+    title: string
+    brand: string
+    price_usd: number
+    reviews_count: number
+    category: string
+    product_url?: string
+    monthly_sales_volume?: number
+  }>>([]);
+
+  // Load default top 6 products by analysis review count on component mount
+  useEffect(() => {
+    const loadDefaultProducts = async () => {
+      if (!projectId) return;
+      
+      try {
+        // Get products ranked by analysis review count from current project
+        const projectProducts = await databaseService.getProjectProductsByReviewCount(projectId);
+        
+        // Take top 6 products by analysis review count
+        const topProducts = projectProducts.slice(0, 6);
+        
+        // Convert to the expected format
+        const formattedProducts = topProducts.map(product => ({
+          platform_id: product.platform_id,
+          title: product.title,
+          brand: product.brand,
+          price_usd: product.price_usd,
+          reviews_count: product.actual_review_count,
+          category: product.category,
+          product_url: product.product_url
+        }));
+        
+        setDefaultProducts(formattedProducts);
+        
+        // If no custom selection, use these default products for analysis
+        if (selectedAsins.length === 0) {
+          const defaultAsins = topProducts.map(p => p.platform_id);
+          setSelectedAsins(defaultAsins);
+          
+          // Load competitor data for default products
+          if (defaultAsins.length > 0) {
+            setLoading(true);
+            try {
+              const response = await databaseService.getCompetitorAnalysisDataByProject(
+                projectId,
+                undefined, // No category filters
+                defaultAsins.join(',') // Selected ASINs as string
+              );
+              setCustomCompetitorData(response);
+            } catch (error) {
+              console.error('Error fetching default competitor data:', error);
+            } finally {
+              setLoading(false);
+            }
+          }
+        }
+      } catch (error) {
+        console.error('Error loading default products:', error);
+        
+        // Fallback to original logic if new method fails
+        try {
+          const availableProducts = await databaseService.getAvailableAsins();
+          const topProducts = availableProducts
+            .sort((a, b) => b.reviews_count - a.reviews_count)
+            .slice(0, 6);
+          setDefaultProducts(topProducts);
+        } catch (fallbackError) {
+          console.error('Fallback also failed:', fallbackError);
+        }
+      }
+    };
+
+    loadDefaultProducts();
+  }, [projectId]);
 
   // Default to using the original data
   const competitorData = customCompetitorData || {
@@ -94,16 +170,6 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     }
   };
 
-  // Map product names to their ASINs (consistent with DatabaseService)
-  const productToAsin: Record<string, string> = {
-    'Philips Hue Smart': 'B08PKMT2DV',
-    'CLOUDY BAY Dimmer': 'B0771BC2YH',
-    'Lutron Credenza': 'B004DZONXI',
-    'Feit Electric Smart': 'B07SXDFH38',
-    'Leviton Trimatron': 'B073H9Y7SH',
-    'Kasa HomeKit': 'B0BTMWZH3K'
-  }
-
   // Use the pre-calculated matrix data from DatabaseService
   const realMatrixData = competitorData.matrixData
 
@@ -115,41 +181,56 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     totalReviews: item.mentions
   }))
 
-  // Amazon product URLs for focal products
-  const productUrls: Record<string, string> = {
-    "Philips Hue Smart": "https://www.amazon.com/dp/B08PKMT2DV", // Philips Hue Smart Wireless Dimmer Switch V2
-    "CLOUDY BAY Dimmer": "https://www.amazon.com/dp/B0771BC2YH", // Cloudy Bay in Wall Dimmer Switch
-    "Lutron Credenza": "https://www.amazon.com/dp/B004DZONXI", // Lutron Credenza LED+ Plug-In Lamp Dimmer
-    "Feit Electric Smart": "https://www.amazon.com/dp/B07SXDFH38", // Feit Electric Smart Dimmer Switch
-    "Leviton Trimatron": "https://www.amazon.com/dp/B073H9Y7SH", // Leviton Trimatron Rotary Dimmer Switch
-    "Kasa HomeKit": "https://www.amazon.com/dp/B0BTMWZH3K" // Kasa Apple HomeKit Smart Dimmer Switch
-  }
-
-  const handleProductClick = (productName: string) => {
-    const url = productUrls[productName]
-    if (url) {
-      window.open(url, '_blank', 'noopener,noreferrer')
+  const handleProductClick = (productAsin: string) => {
+    // Find the product info by ASIN
+    const defaultProduct = defaultProducts.find(p => p.platform_id === productAsin);
+    
+    if (defaultProduct?.product_url) {
+      window.open(defaultProduct.product_url, '_blank', 'noopener,noreferrer');
+    } else {
+      // Fallback: construct Amazon URL from ASIN
+      const amazonUrl = `https://www.amazon.com/dp/${productAsin}`;
+      window.open(amazonUrl, '_blank', 'noopener,noreferrer');
     }
   }
 
-  // Calculate statistics for each product - including all 6 products
-  const productStats = competitorData.targetProducts.map((product: string) => {
-    const productData = competitorData.matrixData.filter((item: any) => item.product === product)
-    const actualTotalReviews = competitorData.productTotalReviews[product] || 0  // Use actual total review count
+  // Calculate statistics for each product - including all selected products
+  const productStats = competitorData.targetProducts.map((productAsin: string) => {
+    const productData = competitorData.matrixData.filter((item: any) => item.product === productAsin)
+    const actualTotalReviews = competitorData.productTotalReviews[productAsin] || 0  // Use actual total review count
     const totalMentions = productData.reduce((sum: number, item: any) => sum + item.mentions, 0)
     const categoriesCount = productData.length
     const avgSatisfaction = productData.length > 0 
       ? productData.reduce((sum: number, item: any) => sum + item.satisfactionRate, 0) / productData.length 
       : 0
     
+    // Find the product info to get the title
+    const productInfo = defaultProducts.find(p => p.platform_id === productAsin);
+    const productTitle = productInfo?.title || productAsin;
+    const shortTitle = productTitle.length > 50 ? `${productTitle.substring(0, 50)}...` : productTitle;
+    
     return {
-      name: product,
+      asin: productAsin,
+      name: shortTitle,
+      fullTitle: productTitle,
       totalReviews: actualTotalReviews,  // Use actual total review count
       totalMentions,
       categoriesCount,
       avgSatisfaction: Math.round(avgSatisfaction * 10) / 10
     }
-  }) // Show all 6 products, including those without data
+  }) // Show all selected products, including those without data
+
+  // Create ASIN to product name mapping for child components
+  const asinToProductNameMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    defaultProducts.forEach(product => {
+      const shortTitle = product.title.length > 30 ? 
+        `${product.title.substring(0, 30)}...` : 
+        product.title;
+      map[product.platform_id] = shortTitle;
+    });
+    return map;
+  }, [defaultProducts]);
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">
@@ -196,13 +277,13 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {productStats.map((stat: any) => (
             <Card 
-              key={stat.name} 
+              key={stat.asin} 
               className="interactive-card p-4"
-              onClick={() => handleProductClick(stat.name)}
+              onClick={() => handleProductClick(stat.asin)}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' || e.key === ' ') {
                   e.preventDefault()
-                  handleProductClick(stat.name)
+                  handleProductClick(stat.asin)
                 }
               }}
               tabIndex={0}
@@ -210,13 +291,13 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
               aria-label={`View ${stat.name} on Amazon`}
               title={`Click to view ${stat.name} on Amazon`}
             >
-              <h4 className="font-medium text-gray-900 mb-3 text-sm flex items-center justify-between">
+              <h4 className="font-medium text-gray-900 mb-3 text-sm flex items-center justify-between" title={stat.fullTitle}>
                 {stat.name}
                 <ExternalLink className="w-3 h-3 text-blue-500" />
               </h4>
               <div className="text-xs text-gray-600 space-y-2">
                 <div className="flex justify-between">
-                  <span>📝 Reviews:</span>
+                  <span>📝 Analyzed review count:</span>
                   <span className="font-medium">{stat.totalReviews}</span>
                 </div>
                 <div className="flex justify-between">
@@ -240,7 +321,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           🏆 Competitor Delights and Pain Points Matrix
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          <strong>How to read this table:</strong> Each cell shows the number of unique customer reviews (large number) for that product-category combination, 
+          <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
           with the satisfaction rate (%) below. Categories are ranked by frequency across all products. 
           <strong>Click any cell to view the actual reviews.</strong> 
           Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
@@ -254,6 +335,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           data={realMatrixData}
           targetProducts={competitorData.targetProducts}
           allReviewData={data.allReviewData}
+          asinToProductNameMap={asinToProductNameMap}
         />
       </section>
 
@@ -263,7 +345,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           🎯 Use Case Matrix
         </h2>
         <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-          <strong>How to read this table:</strong> Each cell shows the number of unique customer reviews (large number) for that product-use case combination, 
+          <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-use case combination, 
           with the satisfaction rate (%) below. Use cases are ranked by frequency across all products. 
           <strong>Click any cell to view the actual reviews.</strong> 
           Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
@@ -277,6 +359,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           data={realUseCaseData}
           targetProducts={useCaseData.targetProducts}
           allReviewData={data.allReviewData}
+          asinToProductNameMap={asinToProductNameMap}
         />
       </section>
 
@@ -294,6 +377,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           data={competitorData.matrixData}
           productTotalReviews={competitorData.productTotalReviews}
           allReviewData={data.allReviewData}
+          asinToProductNameMap={asinToProductNameMap}
         />
       </section>
     </div>

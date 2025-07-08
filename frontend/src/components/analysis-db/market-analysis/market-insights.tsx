@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { GroupedBarChart } from "@/components/analysis-db/charts/grouped-bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 
 interface SegmentData {
   segment: string
@@ -29,12 +30,7 @@ interface MarketInsightsProps {
   }
 }
 
-// Color palette for segments
-const segmentColors = [
-  "#E67E22", "#3498DB", "#9B59B6", "#2ECC71", "#F39C12", 
-  "#E74C3C", "#1ABC9C", "#34495E", "#F1C40F", "#95A5A6",
-  "#8E44AD", "#27AE60", "#D35400", "#2980B9", "#C0392B"
-]
+// 统一使用全局颜色配置
 
 export function MarketInsights({ data, productLists }: MarketInsightsProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
@@ -132,7 +128,7 @@ export function MarketInsights({ data, productLists }: MarketInsightsProps) {
         name: wrappedName,
         originalName: item.segment,
         value: metricType === "revenue" ? item.revenue : item.volume,
-        fill: segmentColors[index % segmentColors.length]
+        fill: getChartColor(index)
       }
     })
 
@@ -151,13 +147,13 @@ export function MarketInsights({ data, productLists }: MarketInsightsProps) {
   const categoryAChartData = data.segmentRevenue.dimmerSwitches.slice(0, 5).map((item, index) => ({
     name: wrapText(item.segment.replace("Air Fryers", "").replace("Air Fryer", "").trim(), 12),
     value: metricType === "revenue" ? item.revenue : item.volume,
-    fill: segmentColors[index % segmentColors.length]
+    fill: getChartColor(index)
   }))
   
   const categoryBChartData = data.segmentRevenue.lightSwitches.slice(0, 5).map((item, index) => ({
     name: wrapText(item.segment.replace("Air Fryers", "").replace("Air Fryer", "").trim(), 12),
     value: metricType === "revenue" ? item.revenue : item.volume,
-    fill: segmentColors[(index + 5) % segmentColors.length]
+    fill: getChartColor(index + 5)
   }))
 
   const topCategoryASegments = data.segmentRevenue.dimmerSwitches.slice(0, 3)
@@ -234,7 +230,7 @@ export function MarketInsights({ data, productLists }: MarketInsightsProps) {
         // 新格式：显示统一的segments图表
         <Card className="p-6 bg-gray-50">
           <div className="mb-4">
-            <h3 className="text-xl font-semibold mb-2 text-center">🔆 {projectType} - Top Segments by {titleSuffix}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center">Top Segments by {titleSuffix}</h3>
             <div className="text-sm text-gray-600 text-center mb-2">
               {topSegmentsText}
             </div>

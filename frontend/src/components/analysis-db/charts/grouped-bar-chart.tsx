@@ -2,6 +2,7 @@
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Cell } from "recharts"
 import { useMemo } from "react"
+import { getChartColors } from "../shared/chart-colors"
 
 interface GroupedBarChartProps {
   data: any[]
@@ -17,7 +18,7 @@ interface GroupedBarChartProps {
 export function GroupedBarChart({
   data,
   index,
-  colors = ["#3498DB", "#95A5A6"],
+  colors = getChartColors(2),
   yAxisLabel,
   xAxisLabel,
   metricType = "revenue",
