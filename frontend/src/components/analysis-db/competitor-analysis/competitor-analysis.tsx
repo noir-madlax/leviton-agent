@@ -70,10 +70,16 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     monthly_sales_volume?: number
   }>>([]);
 
+  // 添加数据准备状态管理
+  const [isDataReady, setIsDataReady] = useState(false);
+
   // Load default top 6 products by analysis review count on component mount
   useEffect(() => {
     const loadDefaultProducts = async () => {
       if (!projectId) return;
+      
+      // 重置数据准备状态
+      setIsDataReady(false);
       
       try {
         // Get products ranked by analysis review count from current project
@@ -110,12 +116,22 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
                 defaultAsins.join(',') // Selected ASINs as string
               );
               setCustomCompetitorData(response);
+              // 数据加载完成，设置为ready
+              setIsDataReady(true);
             } catch (error) {
               console.error('Error fetching default competitor data:', error);
+              // 即使出错也要设置为ready，避免无限loading
+              setIsDataReady(true);
             } finally {
               setLoading(false);
             }
+          } else {
+            // 没有默认产品时也设置为ready
+            setIsDataReady(true);
           }
+        } else {
+          // 已有自定义选择时设置为ready
+          setIsDataReady(true);
         }
       } catch (error) {
         console.error('Error loading default products:', error);
@@ -127,8 +143,12 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
             .sort((a, b) => b.reviews_count - a.reviews_count)
             .slice(0, 6);
           setDefaultProducts(topProducts);
+          // 设置为ready
+          setIsDataReady(true);
         } catch (fallbackError) {
           console.error('Fallback also failed:', fallbackError);
+          // 最终设置为ready
+          setIsDataReady(true);
         }
       }
     };
@@ -231,6 +251,18 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     });
     return map;
   }, [defaultProducts]);
+
+  // 如果数据还没有准备好，显示loading状态
+  if (!isDataReady) {
+    return (
+      <div className="space-y-10 max-w-7xl mx-auto px-4">
+        <div className="flex justify-center items-center h-64">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+          <span className="ml-2">Loading competitor analysis data...</span>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">

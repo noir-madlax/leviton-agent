@@ -57,12 +57,49 @@ interface ReviewInsightsProps {
 
 export function ReviewInsights({ data }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, any[]> } | null>(null)
+  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
   
   useEffect(() => {
     // Create the structure that charts expect using database data
+    // 需要将数据结构转换为图表组件期待的格式
     const reviewDataForCharts = {
-      reviewsByCategory: data.allReviewData // This is the Record<string, Review[]> structure charts need
+      reviewsByCategory: {} as Record<string, unknown[]>
+    }
+    
+    // 如果有allReviewData，需要正确映射到类别名称
+    if (data.allReviewData) {
+      // 直接使用allReviewData作为reviewsByCategory
+      reviewDataForCharts.reviewsByCategory = data.allReviewData
+      
+      // 为Use Case数据建立额外的映射关系
+      data.reviewInsights.underservedUseCases.forEach(useCaseItem => {
+        const useCaseName = useCaseItem.useCase
+        
+        // 如果没有直接的use case映射，尝试从相关的category/aspect中查找
+        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
+          // 尝试通过productAttribute字段查找相关评论
+          const relatedReviews: unknown[] = []
+          
+          Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            reviews.forEach(review => {
+              // 尝试通过aspect或其他字段匹配use case
+              if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+                relatedReviews.push(review)
+              } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+                relatedReviews.push(review)
+              } else if (useCaseItem.productAttribute && 
+                         (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+                          review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+                relatedReviews.push(review)
+              }
+            })
+          })
+          
+          if (relatedReviews.length > 0) {
+            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
+          }
+        }
+      })
     }
     
     setReviewData(reviewDataForCharts)
@@ -212,13 +249,7 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
           📊 Customer Pain Points by Category
         </h2>
-        <div className="mb-4 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-          <p className="text-sm text-blue-700">
-            🖱️ <strong>Interactive Chart:</strong> Click on any bar to view actual customer reviews mentioning those specific issues and pain points.
-            <br />
-            🎯 <strong>Enhanced Data:</strong> Now shows precise sentiment analysis with negative rates and category context.
-          </p>
-        </div>
+       
 
         <CategoryPainPointsBar 
           data={categoryPainPoints.topNegativeCategories} 
@@ -233,13 +264,7 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
           ⭐ Customer Delights by Category
         </h2>
-        <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-lg">
-          <p className="text-sm text-green-700">
-            🖱️ <strong>Interactive Chart:</strong> Click on any bar to view actual customer reviews highlighting those positive aspects and strengths.
-            <br />
-            🎯 <strong>Enhanced Data:</strong> Now shows precise sentiment analysis with positive rates and detailed satisfaction levels.
-          </p>
-        </div>
+      
 
         <CategoryPositiveFeedbackBar 
           data={categoryPositiveFeedback.topPositiveCategories} 
@@ -254,13 +279,7 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
           🎯 Use Case Satisfaction Analysis
         </h2>
-        <div className="mb-4 p-3 bg-purple-50 border border-purple-200 rounded-lg">
-          <p className="text-sm text-purple-700">
-            🖱️ <strong>Interactive Chart:</strong> Click on any bar to explore customer reviews related to specific use cases and applications.
-            <br />
-            🎯 <strong>Enhanced Data:</strong> Now includes product coverage information and detailed context for better gap analysis.
-          </p>
-        </div>
+       
 
         <CategoryUseCaseBar 
           data={useCases} 

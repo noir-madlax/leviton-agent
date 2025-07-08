@@ -22,9 +22,9 @@ export default function ImportDataPage() {
                   </Button>
                 </Link>
                 <div>
-                  <h1 className="text-xl font-semibold">Import Data</h1>
+                  <h1 className="text-xl font-semibold">Data Collection</h1>
                   <p className="text-sm text-muted-foreground">
-                    Import product and review data for analysis
+                    Collect product data and customer reviews for market analysis
                   </p>
                 </div>
               </div>

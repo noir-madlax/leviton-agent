@@ -232,20 +232,22 @@ export function DataImportTab() {
   return (
     <div className="h-full overflow-auto">
       <div className="max-w-4xl mx-auto space-y-6">
-        {/* 页面标题 */}
-        <div>
-          <h1 className="text-3xl font-bold tracking-tight">Import Data</h1>
-          <p className="text-muted-foreground mt-2">
-            Import product and review data from Amazon URLs. Supports product pages, search results, and category pages.
-          </p>
-        </div>
+      
 
         {/* URL输入区域 */}
         <Card>
           <CardHeader>
-            <CardTitle>Amazon URL Input</CardTitle>
+            <CardTitle>Data Source Paste</CardTitle>
             <CardDescription>
-              Enter an Amazon URL to scrape product and review data. Supported URL types include product pages, search results, and category pages.
+             
+              <div className="text-sm text-muted-foreground space-y-2">
+                <div>
+                  <strong>Category URL</strong> (collects <strong>top products</strong> from this category): https://www.amazon.com/b?node=629135801
+                </div>
+                <div>
+                  <strong>Product URL</strong> (collects data for <strong>specific product</strong>): https://www.amazon.com/dp/B00NG0ELL0
+                </div>
+              </div>
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
@@ -254,7 +256,7 @@ export function DataImportTab() {
               <div className="flex gap-2">
                 <Input
                   id="url"
-                  placeholder="https://www.amazon.com/dp/B08N5WRWNW or https://www.amazon.com/s?k=light+switches"
+                  placeholder="Enter Amazon category or product URL here"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   className="flex-1"
@@ -267,13 +269,14 @@ export function DataImportTab() {
                   {isLoading ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Scraping...
+                      Collecting...
                     </>
                   ) : (
-                    'Start Scraping'
+                    'Start Collection'
                   )}
                 </Button>
               </div>
+             
             </div>
           </CardContent>
         </Card>
@@ -281,9 +284,9 @@ export function DataImportTab() {
         {/* 参数设置 */}
         <Card>
           <CardHeader>
-            <CardTitle>Scraping Parameters</CardTitle>
+            <CardTitle>Collection Parameters</CardTitle>
             <CardDescription>
-              Configure the maximum number of products and reviews to scrape.
+              Configure how much data to collect from Amazon.
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

@@ -807,14 +807,40 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
         if (!productLists.byPackageSize[packSize]) {
           productLists.byPackageSize[packSize] = []
         }
-        // 添加包装信息到产品对象
-        const productWithPackInfo = {
-          ...product,
-          packCount: item.packCount,
-          packSize: item.packSize
-        }
-        productLists.byPackageSize[packSize].push(productWithPackInfo)
+        productLists.byPackageSize[packSize].push(product)
       }
+    })
+  }
+
+  // 补充方案：如果sameProductComparison为空，直接从segmentDistributions和产品数据构建
+  if (data.packagePreference?.segmentDistributions && Object.keys(productLists.byPackageSize).length === 0) {
+    // 遍历所有segment的包装分布数据
+    Object.values(data.packagePreference.segmentDistributions).forEach(distributions => {
+      distributions.forEach(distItem => {
+        const packSize = distItem.packSize
+        if (!productLists.byPackageSize[packSize]) {
+          productLists.byPackageSize[packSize] = []
+        }
+        
+        // 从所有产品中找到匹配的包装尺寸
+        if (data.productAnalysis?.priceVsRevenue) {
+          data.productAnalysis.priceVsRevenue.forEach(categoryData => {
+            categoryData.products.forEach(product => {
+              // 简单的包装匹配逻辑 - 可以根据实际产品数据调整
+              const productPackSize = product.name.toLowerCase().includes('pack') ? 
+                (product.name.match(/(\d+).*pack/i)?.[1] || '1') : '1'
+              
+              if (productPackSize === packSize || 
+                  (packSize === 'Single' && productPackSize === '1') ||
+                  (packSize === '1' && productPackSize === 'Single')) {
+                if (!productLists.byPackageSize[packSize].some(p => p.id === product.id)) {
+                  productLists.byPackageSize[packSize].push(product)
+                }
+              }
+            })
+          })
+        }
+      })
     })
   }
 
