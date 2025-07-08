@@ -30,22 +30,13 @@ interface CompetitorMatrixProps {
     date: string
     brand: string
   }>>
+  asinToProductNameMap?: Record<string, string>;
 }
 
-export function CompetitorMatrix({ data, targetProducts, allReviewData }: CompetitorMatrixProps) {
+export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToProductNameMap }: CompetitorMatrixProps) {
   const { openPanel } = useReviewPanel()
   
-  // Map product names to their ASINs for precise filtering
-  const productToAsin: Record<string, string> = {
-    'Philips Hue Smart': 'B08PKMT2DV',
-    'CLOUDY BAY Dimmer': 'B0771BC2YH',
-    'Lutron Credenza': 'B004DZONXI',
-    'Feit Electric Smart': 'B07SXDFH38',
-    'Leviton Trimatron': 'B073H9Y7SH',
-    'Kasa HomeKit': 'B0BTMWZH3K'
-  }
-  
-  const handleCellClick = (category: string, product: string, cellData: MatrixData | null) => {
+  const handleCellClick = (category: string, productAsin: string, cellData: MatrixData | null) => {
     if (!cellData || cellData.mentions === 0) return
     
     // Add null check for allReviewData and the specific category
@@ -57,27 +48,23 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData }: Compet
     const categoryReviews = allReviewData[category] || []
     if (categoryReviews.length === 0) return
     
-    // Filter reviews by specific product using ASIN
-    const productAsin = productToAsin[product]
-    const productReviews = productAsin 
-      ? categoryReviews.filter(review => review.productId === productAsin)
-      : []
+    // Filter reviews by specific product using ASIN directly
+    const productReviews = categoryReviews.filter(review => review.productId === productAsin)
     
     const reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
+    const productName = asinToProductNameMap?.[productAsin] || productAsin
     
     openPanel(
       reviewsToShow, 
       `${category} Reviews`, 
-      `${product} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
+      `${productName} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
       { sentiment: true, brand: true, rating: true, verified: true }
     )
   }
-  
+
   const orderedProducts = useMemo(() => {
-    // Group Leviton products first, then others
-    const levitonProducts = targetProducts.filter(product => product.startsWith('Leviton'))
-    const otherProducts = targetProducts.filter(product => !product.startsWith('Leviton'))
-    return [...levitonProducts, ...otherProducts]
+    // Keep original order from targetProducts
+    return targetProducts
   }, [targetProducts])
 
   const matrixData = useMemo(() => {
@@ -136,8 +123,10 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData }: Compet
     else return 'bg-red-100 text-red-800'
   }
 
-  const getHeaderColor = (product: string) => {
-    if (product.startsWith('Leviton')) {
+  const getHeaderColor = (productAsin: string) => {
+    // Simple color scheme for differentiation
+    const productName = asinToProductNameMap?.[productAsin] || productAsin
+    if (productName.toLowerCase().includes('leviton')) {
       return 'bg-slate-100 text-slate-800' // Very light greyish blue for Leviton
     } else {
       return 'bg-amber-50 text-amber-800' // Light greyish yellow for other brands
@@ -153,11 +142,14 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData }: Compet
               <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[250px]">
                 Category Dimensions
               </th>
-              {orderedProducts.map(product => (
-                <th key={product} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(product)}`}>
-                  <div className="text-sm">{product}</div>
-                </th>
-              ))}
+              {orderedProducts.map(productAsin => {
+                const productName = asinToProductNameMap?.[productAsin] || productAsin
+                return (
+                  <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
+                    <div className="text-sm" title={productName}>{productName}</div>
+                  </th>
+                )
+              })}
             </tr>
           </thead>
           <tbody>
@@ -171,13 +163,13 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData }: Compet
                     </span>
                   </div>
                 </td>
-                {orderedProducts.map(product => {
-                  const cellData = row.cells[product]
+                {orderedProducts.map(productAsin => {
+                  const cellData = row.cells[productAsin]
                   
                   // Show N/A only if no data exists or no mentions at all
                   if (!cellData || cellData.mentions === 0) {
                     return (
-                      <td key={product} className="border border-gray-300 p-3 text-center">
+                      <td key={productAsin} className="border border-gray-300 p-3 text-center">
                         <div className="bg-gray-100 text-gray-400 py-2 px-3 rounded text-sm">
                           N/A
                         </div>
@@ -185,27 +177,29 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData }: Compet
                     )
                   }
                   
+                  const productName = asinToProductNameMap?.[productAsin] || productAsin
+                  
                   return (
-                    <td key={product} className="border border-gray-300 p-3 text-center">
+                    <td key={productAsin} className="border border-gray-300 p-3 text-center">
                       <div 
                         className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)}`}
-                        onClick={() => handleCellClick(row.category, product, cellData)}
+                        onClick={() => handleCellClick(row.category, productAsin, cellData)}
                         onKeyDown={(e) => {
                           if (e.key === 'Enter' || e.key === ' ') {
                             e.preventDefault()
-                            handleCellClick(row.category, product, cellData)
+                            handleCellClick(row.category, productAsin, cellData)
                           }
                         }}
                         tabIndex={0}
                         role="button"
-                        aria-label={`View reviews for ${row.category} - ${product}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
-                        title={`Click to view reviews for ${row.category} - ${product}`}
+                        aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
+                        title={`Click to view reviews for ${row.category} - ${productName}`}
                       >
                         <div className="text-lg font-bold">
                           {cellData.mentions}
                         </div>
                         <div className="text-xs mt-1">
-                          {cellData.totalReviews > 0 ? `${cellData.satisfactionRate}%` : '—'}
+                          {cellData.satisfactionRate}%
                         </div>
                       </div>
                     </td>

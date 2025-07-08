@@ -57,7 +57,7 @@ interface ReviewInsightsProps {
 
 export function ReviewInsights({ data }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<Record<string, unknown> | null>(null)
+  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, any[]> } | null>(null)
   
   useEffect(() => {
     // Create the structure that charts expect using database data

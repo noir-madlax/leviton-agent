@@ -230,7 +230,7 @@ export function MarketInsights({ data, productLists }: MarketInsightsProps) {
         // 新格式：显示统一的segments图表
         <Card className="p-6 bg-gray-50">
           <div className="mb-4">
-            <h3 className="text-xl font-semibold mb-2 text-center">🔆 {projectType} - Top Segments by {titleSuffix}</h3>
+            <h3 className="text-xl font-semibold mb-2 text-center">Top Segments by {titleSuffix}</h3>
             <div className="text-sm text-gray-600 text-center mb-2">
               {topSegmentsText}
             </div>

@@ -778,6 +778,46 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     })
   }
 
+  // 从Package Preference数据构建按包装尺寸分组的产品列表
+  if (data.packagePreference?.sameProductComparison) {
+    // 创建产品名称到产品对象的映射
+    const productMap = new Map<string, {
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>()
+    if (data.productAnalysis?.priceVsRevenue) {
+      data.productAnalysis.priceVsRevenue.forEach(categoryData => {
+        categoryData.products.forEach(product => {
+          productMap.set(product.name, product)
+        })
+      })
+    }
+
+    // 使用Package Preference数据来构建按包装尺寸分组的产品列表
+    data.packagePreference.sameProductComparison.forEach(item => {
+      const product = productMap.get(item.productName)
+      if (product) {
+        const packSize = item.packSize
+        if (!productLists.byPackageSize[packSize]) {
+          productLists.byPackageSize[packSize] = []
+        }
+        // 添加包装信息到产品对象
+        const productWithPackInfo = {
+          ...product,
+          packCount: item.packCount,
+          packSize: item.packSize
+        }
+        productLists.byPackageSize[packSize].push(productWithPackInfo)
+      }
+    })
+  }
+
   return (
     <ProductPanelProvider>
       <ReviewPanelProvider>

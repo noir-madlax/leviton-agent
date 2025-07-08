@@ -44,7 +44,7 @@ export function CompetitorAsinSelector({
     const loadProducts = async () => {
       try {
         setLoading(true);
-        const products = await databaseService.getAvailableAsins(projectId);
+        const products = await databaseService.getAvailableAsins();
         setAvailableProducts(products);
         setFilteredProducts(products);
       } catch (error) {
