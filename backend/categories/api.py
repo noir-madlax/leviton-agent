@@ -102,4 +102,28 @@ async def get_category_path(
         }
     except Exception as e:
         logger.error(f"Error in get_category_path API for {category_id}: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/name/{category_id}")
+async def get_category_name(
+    category_id: str,
+    service: CategoryService = Depends(get_category_service)
+):
+    """Get category name and full path by category_id."""
+    try:
+        category_info = await service.get_category_info(category_id)
+        if not category_info:
+            raise HTTPException(status_code=404, detail="Category not found")
+        
+        return {
+            "success": True,
+            "category_id": category_id,
+            "name": category_info.get("name"),
+            "full_path": category_info.get("full_path")
+        }
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in get_category_name API for {category_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e)) 

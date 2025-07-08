@@ -218,9 +218,9 @@ class CategoryService:
     async def get_category_path(self, category_id: str) -> List[dict]:
         """Get the full category path from root to the specified category."""
         try:
-            # Get the category and its path
+            # Get the category and its full path
             result = self.supabase_client.table('amazon_categories')\
-                .select('*')\
+                .select('name, full_path')\
                 .eq('category_id', category_id)\
                 .single()\
                 .execute()
@@ -228,27 +228,39 @@ class CategoryService:
             if not result.data:
                 return []
             
-            category = result.data
-            path = [{'category_id': category['category_id'], 'name': category['name'], 'level': category['level']}]
+            # Parse the full path to create the path array
+            full_path = result.data.get('full_path', '')
+            if not full_path:
+                return [{"name": result.data['name'], "category_id": category_id}]
             
-            # Traverse up the hierarchy
-            current_parent_id = category.get('parent_category_id')
-            while current_parent_id:
-                parent_result = self.supabase_client.table('amazon_categories')\
-                    .select('*')\
-                    .eq('category_id', current_parent_id)\
-                    .single()\
-                    .execute()
-                
-                if parent_result.data:
-                    parent = parent_result.data
-                    path.insert(0, {'category_id': parent['category_id'], 'name': parent['name'], 'level': parent['level']})
-                    current_parent_id = parent.get('parent_category_id')
-                else:
-                    break
+            # Split the path and create the path array
+            path_parts = full_path.split(' > ')
+            path = [{"name": part.strip()} for part in path_parts if part.strip()]
             
             return path
             
         except Exception as e:
             logger.error(f"Error getting category path for {category_id}: {e}")
-            return [] 
+            return []
+
+    async def get_category_info(self, category_id: str) -> Optional[dict]:
+        """Get category information by category_id."""
+        try:
+            result = self.supabase_client.table('amazon_categories')\
+                .select('category_id, name, full_path')\
+                .eq('category_id', category_id)\
+                .single()\
+                .execute()
+            
+            if result.data:
+                return {
+                    "category_id": result.data['category_id'],
+                    "name": result.data['name'],
+                    "full_path": result.data.get('full_path')
+                }
+            else:
+                return None
+                
+        except Exception as e:
+            logger.error(f"Error getting category info for {category_id}: {e}")
+            return None 

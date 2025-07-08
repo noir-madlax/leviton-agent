@@ -19,6 +19,7 @@ class ProjectCreateRequest(BaseModel):
     project_name: str
     company_name: Optional[str] = "Leviton"
     user_name: Optional[str] = "Current User"
+    user_uid: Optional[str] = None  # 添加用户UID字段
     description: Optional[str] = None
     filters: ProjectFilters
 

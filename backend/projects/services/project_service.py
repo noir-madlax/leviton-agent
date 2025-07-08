@@ -83,10 +83,27 @@ class ProjectService:
             
             created_project = result.data[0]
             
-            # 5. Broadcast initial project creation status
+            # 5. Create user project access if user_uid is provided
+            if request.user_uid:
+                try:
+                    access_result = self.supabase.table('user_project_access').insert({
+                        'user_uid': request.user_uid,
+                        'project_id': created_project["id"],
+                        'access_level': 'admin'
+                    }).execute()
+                    
+                    if access_result.data:
+                        logger.info(f"Created user access for {request.user_uid} to project {created_project['id']}")
+                    else:
+                        logger.warning(f"Failed to create user access for {request.user_uid}")
+                except Exception as e:
+                    logger.error(f"Error creating user project access: {e}")
+                    # Continue with project creation even if access creation fails
+            
+            # 6. Broadcast initial project creation status
             await self._broadcast_progress_update(created_project["id"])
             
-            # 6. Schedule segmentation processing as a background task
+            # 7. Schedule segmentation processing as a background task
             if filtered_asins and request.filters.categories:
                 background_tasks.add_task(
                     self._process_project_segmentation,
@@ -95,7 +112,7 @@ class ProjectService:
                     category=request.filters.categories[0]
                 )
             
-            # 7. Return response immediately
+            # 8. Return response immediately
             return ProjectCreateResponse(
                 id=created_project["id"],
                 project_name=created_project["project_name"],

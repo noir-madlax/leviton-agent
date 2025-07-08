@@ -7,10 +7,12 @@ import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
 
 import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 import { CategorySelector } from '@/components/category-selector';
+import { useAuth } from '@/contexts/auth-context';
 
 // 进度显示接口
 interface ProjectProgress {
@@ -283,6 +285,7 @@ export function DataConfirmationTab({
 }) {
   // 暂时不使用onNavigateToAnalysis，让用户看到进度后手动跳转
   console.log('Navigation callback available:', !!onNavigateToAnalysis);
+  const { user } = useAuth();
   const [data, setData] = useState<DataConfirmationData | null>(null);
   const [pageLoading, setPageLoading] = useState(true); // 页面初始加载
   const [filterLoading, setFilterLoading] = useState(false); // 筛选数据加载
@@ -301,6 +304,7 @@ export function DataConfirmationTab({
   const [isFilterApplied, setIsFilterApplied] = useState(false); // Track if filter has been applied
   const [showAllCategories, setShowAllCategories] = useState(false); // 控制Categories展开状态
   const [showAllBrands, setShowAllBrands] = useState(false); // 控制Brands展开状态
+  const [categoryInput, setCategoryInput] = useState<string>(''); // 新增：类别URL或node ID输入
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
@@ -398,6 +402,80 @@ export function DataConfirmationTab({
       ...prev,
       categories: categoryName ? [categoryName] : [] // 将类别名称添加到filters中
     }));
+  };
+
+  // 新增：处理类别输入（URL或node ID）
+  const handleCategoryInputChange = async (value: string) => {
+    setCategoryInput(value);
+    
+    // 提取node ID
+    let nodeId = '';
+    if (value.includes('node=')) {
+      const match = value.match(/node=(\d+)/);
+      if (match) {
+        nodeId = match[1];
+      }
+    } else if (/^\d+$/.test(value.trim())) {
+      // 如果直接输入数字，当作node ID处理
+      nodeId = value.trim();
+    }
+    
+    if (nodeId) {
+      try {
+        // 查询真实的类别名称
+        const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/v1/categories/name/${nodeId}`);
+        
+        let categoryName = `Category ${nodeId}`;
+        let categoryPath = `Category ${nodeId}`;
+        
+        if (response.ok) {
+          const categoryData = await response.json();
+          categoryName = categoryData.name || `Category ${nodeId}`;
+          categoryPath = categoryData.full_path || categoryData.name || `Category ${nodeId}`;
+        } else {
+          console.warn(`Failed to fetch category name for ${nodeId}, using fallback`);
+        }
+        
+        // 设置选中的类别
+        setSelectedCategoryId(nodeId);
+        setSelectedCategoryName(categoryName);
+        setSelectedCategoryPath(categoryPath);
+        setIsConfirmed(false);
+        setIsFilterApplied(false);
+        setShowAllCategories(false);
+        setShowAllBrands(false);
+        
+        setFilters(prev => ({
+          ...prev,
+          categories: [categoryName]
+        }));
+      } catch (error) {
+        console.error('Error fetching category name:', error);
+        // 使用fallback显示
+        setSelectedCategoryId(nodeId);
+        setSelectedCategoryName(`Category ${nodeId}`);
+        setSelectedCategoryPath(`Category ${nodeId}`);
+        setIsConfirmed(false);
+        setIsFilterApplied(false);
+        setShowAllCategories(false);
+        setShowAllBrands(false);
+        
+        setFilters(prev => ({
+          ...prev,
+          categories: [`Category ${nodeId}`]
+        }));
+      }
+    } else {
+      // 清空选择
+      setSelectedCategoryId('');
+      setSelectedCategoryName('');
+      setSelectedCategoryPath('');
+      setFilters(prev => ({
+        ...prev,
+        categories: []
+      }));
+    }
   };
 
   // 手动筛选数据
@@ -501,7 +579,8 @@ export function DataConfirmationTab({
         body: JSON.stringify({
           project_name: projectName || 'New Project',
           company_name: 'Leviton',
-          user_name: 'Current User',
+          user_name: user?.email || 'Current User',
+          user_uid: user?.id, // 添加用户UID
           description: `Analysis project for ${filters.categories.join(', ')} products from ${filters.sources.join(', ')}`,
           filters: {
             categories: filters.categories,
@@ -554,6 +633,7 @@ export function DataConfirmationTab({
     setSelectedCategoryId('');
     setSelectedCategoryName('');
     setSelectedCategoryPath('');
+    setCategoryInput(''); // 重置类别输入框
     setIsConfirmed(false);
     setIsFilterApplied(false); // Reset filter applied state
     setProjectCreationStatus('idle'); // 🔥 重置时也重置创建状态
@@ -648,14 +728,41 @@ export function DataConfirmationTab({
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-6">
-              {/* Amazon Category Selector */}
+              {/* Amazon Category Selector - 新版本：URL/Node ID输入 */}
               <div>
-                <CategorySelector
-                  onCategorySelect={handleCategorySelect}
-                  selectedCategoryId={selectedCategoryId}
-                  selectedCategoryName={selectedCategoryName}
-                  selectedCategoryPath={selectedCategoryPath}
+                <Label className="text-sm font-medium mb-3 block">Amazon Category</Label>
+                
+                {/* 示例说明 */}
+                <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                  <p className="text-xs text-blue-800 font-medium mb-1">Examples:</p>
+                  <div className="space-y-1 text-xs text-blue-700">
+                    <div><code className="bg-blue-100 px-1 rounded">node=495324</code> - Switches & Dimmers category and all subcategories</div>
+                    <div><code className="bg-blue-100 px-1 rounded">node=507840</code> - Dimmer Switches subcategory</div>
+                    <div><code className="bg-blue-100 px-1 rounded">495324</code> - You can also enter just the number</div>
+                  </div>
+                </div>
+
+                {/* 输入框 */}
+                <Input
+                  placeholder="Enter category URL or node ID (e.g., node=495324)"
+                  value={categoryInput}
+                  onChange={(e) => handleCategoryInputChange(e.target.value)}
+                  className="mb-2"
                 />
+                
+                {/* 原有的CategorySelector - 保留但隐藏，以备后续使用 */}
+                {/* 
+                  保留原有CategorySelector组件，以备后续需要时重新启用
+                  如需重新使用，请取消下面代码的注释并隐藏上面的输入框
+                */}
+                {false && (
+                  <CategorySelector
+                    onCategorySelect={handleCategorySelect}
+                    selectedCategoryId={selectedCategoryId}
+                    selectedCategoryName={selectedCategoryName}
+                    selectedCategoryPath={selectedCategoryPath}
+                  />
+                )}
               </div>
 
               {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
