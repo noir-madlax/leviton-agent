@@ -2,10 +2,10 @@
 
 import React, { useState } from 'react'
 import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recharts'
-import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { Card } from "@/components/ui/card"
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+import { filterValidPackageSegments } from "@/components/analysis-db/shared/segment-filter-utils"
 
 interface PackagePreferenceData {
   segmentDistributions: Record<string, Array<{
@@ -52,7 +52,7 @@ export function PackagePreferenceAnalysis({
   }
 }) {
   const [metricType, setMetricType] = useState<'revenue' | 'volume'>('revenue')
-  const { openPanel } = useProductPanel()
+  // 移除 useProductPanel hook，因为不再需要点击功能
 
   const colors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
@@ -70,8 +70,11 @@ export function PackagePreferenceAnalysis({
     )
   }
 
-  // 检查是否所有产品都是单包装
-  const allSegmentsData = data.segmentNames.map(segmentName => data.segmentDistributions[segmentName] || [])
+  // 过滤有效的segments，基于当前选择的metric类型过滤
+  const validSegmentNames = filterValidPackageSegments(data.segmentNames, data.segmentDistributions, metricType)
+
+  // 检查是否所有产品都是单包装（只检查有效的segments）
+  const allSegmentsData = validSegmentNames.map(segmentName => data.segmentDistributions[segmentName] || [])
   const hasVariedPackaging = allSegmentsData.some(segmentData => 
     segmentData.length > 1 || (segmentData.length === 1 && segmentData[0].packSize !== "1")
   )
@@ -85,12 +88,17 @@ export function PackagePreferenceAnalysis({
       return []
     }
     
-    return data.segmentDistributions[segmentName].map((item, index) => ({
-      name: item.packSize,
-      value: metricType === "revenue" ? item.salesRevenue || 0 : item.salesVolume,
-      percentage: item.percentage,
-      color: colors[index % colors.length]
-    }))
+    return data.segmentDistributions[segmentName].map((item, index) => {
+      // 根据metric类型获取正确的数值，不使用fallback避免显示误导性数据
+      const value = metricType === "revenue" ? item.salesRevenue : item.salesVolume;
+      
+      return {
+        name: item.packSize,
+        value: value,
+        percentage: item.percentage,
+        color: colors[index % colors.length]
+      }
+    }).filter(item => item.value > 0) // 只显示有真实数据的项目
   }
 
   const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percentage }: {
@@ -119,7 +127,16 @@ export function PackagePreferenceAnalysis({
     )
   }
 
-  const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: any[] }) => {
+  const CustomTooltip = ({ active, payload }: { 
+    active?: boolean; 
+    payload?: Array<{
+      payload: {
+        name: string;
+        value: number;
+        percentage: number;
+      }
+    }> 
+  }) => {
     if (active && payload && payload.length) {
       const data = payload[0].payload
       return (
@@ -131,19 +148,6 @@ export function PackagePreferenceAnalysis({
       )
     }
     return null
-  }
-
-  const handlePieClick = (data: { name?: string }) => {
-    if (data && data.name) {
-      const packSize = data.name
-      const products = productLists.byPackageSize[packSize] || []
-      openPanel(
-        products,
-        `${packSize} Package`,
-        `Products with ${packSize} packaging`,
-        { brand: true, category: true, priceRange: true, packSize: false }
-      )
-    }
   }
 
   return (
@@ -179,9 +183,9 @@ export function PackagePreferenceAnalysis({
         </div>
       </div>
       
-      {/* 按segment分开显示 - 动态渲染所有segments */}
+      {/* 按segment分开显示 - 只渲染有效的segments */}
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6">
-        {data.segmentNames.map((segmentName, segmentIndex) => {
+        {validSegmentNames.map((segmentName, segmentIndex) => {
           const segmentData = getSegmentChartData(segmentName)
           if (segmentData.length === 0) return null
           
@@ -205,7 +209,6 @@ export function PackagePreferenceAnalysis({
                       outerRadius={120}
                       fill="#8884d8"
                       dataKey="value"
-                      onClick={handlePieClick}
                     >
                       {segmentData.map((entry, index) => (
                         <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />

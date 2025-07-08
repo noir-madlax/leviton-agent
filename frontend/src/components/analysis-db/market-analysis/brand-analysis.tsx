@@ -6,6 +6,7 @@ import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+import { filterValidBrandSegments } from "@/components/analysis-db/shared/segment-filter-utils"
 
 interface BrandAnalysisProps {
   data: {
@@ -21,9 +22,36 @@ interface BrandAnalysisProps {
     segmentColors: string[]
   }
   productLists: {
-    byBrand: Record<string, any[]>
-    bySegment: Record<string, any[]>
-    byPackageSize: Record<string, any[]>
+    byBrand: Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>
+    bySegment: Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>
+    byPackageSize: Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>
   }
 }
 
@@ -58,8 +86,11 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
 
   const productType = getProductType()
   
-  // 按segment重组数据 - 为每个segment创建独立的图表数据
-  const segmentChartData = segmentNames.map((segment, segmentIndex) => {
+  // 使用公共过滤函数过滤有效的segments
+  const validSegmentNames = filterValidBrandSegments(segmentNames, data.brandCategoryRevenue, metricType)
+  
+  // 按segment重组数据 - 为每个有效segment创建独立的图表数据
+  const segmentChartData = validSegmentNames.map((segment, segmentIndex) => {
     const brandsForSegment = data.brandCategoryRevenue
       .map(item => {
         const segmentData = item.segments[segment] || { revenue: 0, volume: 0 }
@@ -82,14 +113,15 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
       color: segmentColors[segmentIndex % segmentColors.length],
       hasData: brandsForSegment.length > 0
     }
-  }).filter(item => item.hasData) // 只保留有数据的segments
+  }) // 不再需要额外过滤，因为已经使用了过滤后的segments
 
   const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
-  const handleBarClick = (data: any, segment: string) => {
-    if (data && data.activeLabel) {
-      const brand = data.activeLabel
+  const handleBarClick = (data: unknown) => {
+    if (data && typeof data === 'object' && 'activeLabel' in data) {
+      const chartData = data as { activeLabel: string }
+      const brand = chartData.activeLabel
       const products = productLists.byBrand[brand] || []
       openPanel(
         products,
@@ -109,12 +141,9 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
         <MetricTypeSelector onChange={setMetricType} value={metricType} />
         
         {/* Segment info */}
-        <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+        <div className="mb-0 p-2 bg-blue-50 border-l-4 border-blue-400 rounded">
           <p className="text-sm text-blue-700">
             <strong>Segments analyzed:</strong> {segmentChartData.length} segments with data ({productType})
-          </p>
-          <p className="text-xs text-blue-600 mt-1">
-            Each chart shows brands competing in that specific segment
           </p>
         </div>
 
@@ -137,19 +166,13 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
                   colors={[segmentChart.color]}
                   yAxisLabel={yAxisLabel}
                   metricType={metricType}
-                  onBarClick={(data) => handleBarClick(data, segmentChart.segment)}
+                  onBarClick={(data) => handleBarClick(data)}
                 />
               </div>
             </div>
           ))}
         </div>
 
-        {/* Summary */}
-        <div className="mt-6 p-3 bg-gray-100 rounded">
-          <p className="text-sm text-gray-700">
-            <strong>Total segments with data:</strong> {segmentChartData.length} out of {segmentNames.length} segments
-          </p>
-        </div>
       </Card>
     </section>
   )

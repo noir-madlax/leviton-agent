@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, Cell } from 'recharts'
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+import { filterValidProductSegments } from "@/components/analysis-db/shared/segment-filter-utils"
 
 interface ProductAnalysisProps {
   data: {
@@ -35,19 +36,22 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
   const [selectedSegment, setSelectedSegment] = useState<string>("")
   const { openPanel } = useProductPanel()
 
-  // 获取动态segment信息
-  const segmentNames = data.segmentNames || []
+  // 获取动态segment信息并过滤，只保留有收入的segments
+  const allSegmentNames = data.segmentNames || []
+  const segmentSummary = data.segmentSummary || {}
+  const segmentNames = filterValidProductSegments(allSegmentNames, segmentSummary)
+  
   // 使用全局颜色配置，如果后端提供了颜色则使用后端的，否则使用全局配置
   const segmentColors = data.segmentColors || Array.from({ length: 20 }, (_, i) => getChartColor(i))
-  const segmentSummary = data.segmentSummary || {}
   
-  // 如果没有数据，显示空状态
+  // 如果没有有效的segments数据，显示空状态
   if (!segmentNames.length) {
     return (
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📊 Product Analysis</h2>
         <Card className="p-6 bg-gray-50">
-          <p className="text-gray-500 text-center">No product analysis data available</p>
+          <p className="text-gray-500 text-center">No valid product segments with revenue data available</p>
+          <p className="text-gray-400 text-sm text-center mt-2">Segments with zero revenue are filtered out</p>
         </Card>
       </section>
     )
