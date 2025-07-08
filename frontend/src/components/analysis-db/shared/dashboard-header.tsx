@@ -26,28 +26,6 @@ export function DashboardHeader({ selectedProjectId: parentSelectedProjectId, on
 
   return (
     <div className="mb-8">
-      {/* Original header section */}
-      <div className="flex items-center justify-between mb-6">
-        {/* 简化的页面标题 - 不显示具体项目名 */}
-        <div className="flex-1">
-          <h1 className="text-3xl md:text-4xl font-bold text-gray-800 border-b border-gray-200 pb-3 mb-4">
-            Project Analysis Report
-          </h1>
-
-          <div className="text-gray-500 italic">
-            Report Generated:{" "}
-            {new Date().toLocaleDateString("en-US", {
-              month: "long",
-              day: "numeric", 
-              year: "numeric",
-              hour: "numeric",
-              minute: "numeric",
-              hour12: true,
-            })}
-          </div>
-        </div>
-      </div>
-
       {/* Category Filter & Project Scope */}
       <CategoryFilterAndProjectScope 
         projectId={selectedProjectId} 

@@ -53,7 +53,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
     )
   }
 
-  // 预先计算按收入排序的segment数据，保持segment颜色的一致性
+  // 预先计算按收入排序的segment数据，颜色基于排序后位置分配
   const sortedSegmentData = segmentNames.map((segment, index) => {
     const summary = segmentSummary[segment] || {
       totalRevenue: 0,
@@ -70,10 +70,13 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
       productCount: summary.productCount,
       avgPrice: summary.avgPrice,
       topBrand: summary.topBrand,
-      originalIndex: index,
-      color: segmentColors[index] || getChartColor(index) // 基于原始位置分配固定颜色
+      originalIndex: index
     }
-  }).sort((a, b) => b.revenue - a.revenue) // 排序不影响颜色分配
+  }).sort((a, b) => b.revenue - a.revenue) // 先排序
+  .map((item, sortedIndex) => ({ 
+    ...item, 
+    color: getChartColor(sortedIndex) // 基于排序后位置分配颜色，确保第一名总是橙色
+  }))
 
   // 获取按收入排序的segment列表
   const sortedSegmentNames = sortedSegmentData.map(item => item.segment)
@@ -96,7 +99,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
   const getPriceVsRevenueData = () => {
     const allProducts: any[] = []
     
-    // 创建segment到颜色的映射
+    // 创建segment到颜色的映射（基于排序后位置的颜色）
     const segmentColorMap: Record<string, string> = {}
     sortedSegmentData.forEach((segmentData) => {
       segmentColorMap[segmentData.segment] = segmentData.color
@@ -108,7 +111,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
         allProducts.push({
           ...product,
           segment: segment,
-          color: segmentColorMap[segment] || '#8884d8',
+          color: segmentColorMap[segment] || getChartColor(0), // 使用统一颜色作为fallback
           x: product.price || 0,
           y: product.revenue || 0
         })
