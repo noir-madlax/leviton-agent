@@ -223,9 +223,16 @@ class ProductAnalysisService(BaseDashboardService):
                 'topBrand': top_brand
             }
         
-        # 生成segment colors
-        colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", "#A55EEA", "#26de81", "#FD79A8"]
-        segment_colors = colors[:len(project_segments)]
+        # 获取排序后的segment names（按收入从高到低）
+        sorted_segment_names = [segment for segment, _, _ in segment_revenue_list]
+        
+        # 生成segment colors - 增加到15个颜色
+        colors = [
+            "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+            "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+            "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+        ]
+        segment_colors = colors[:len(sorted_segment_names)]
         
         return {
             'priceVsRevenue': price_vs_revenue,
@@ -235,7 +242,7 @@ class ProductAnalysisService(BaseDashboardService):
                 'lightSwitches': segments_dict.get('Light Switches', [])     # Legacy compatibility
             },
             'segmentSummary': segment_summary,
-            'segmentNames': project_segments,
+            'segmentNames': sorted_segment_names,  # 使用排序后的segment names
             'segmentColors': segment_colors
         }
     

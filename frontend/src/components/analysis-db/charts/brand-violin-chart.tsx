@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef, useMemo } from 'react'
 import { PriceType } from '../shared/price-type-selector'
+import { getChartColor } from '../shared/chart-colors'
 
 interface BrandViolinChartProps {
   brands: {
@@ -102,8 +103,7 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
   const bandwidth = Math.max(1, (globalMax - globalMin) * 0.05)
   const steps = 50
 
-  // 使用MultiSegmentViolinChart的颜色方案
-  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300"]
+  // 使用全局颜色配置
 
   // 计算每个品牌的violin数据
   const violinData = useMemo(() => {
@@ -133,7 +133,7 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
       return {
         name: cleanName,
         prices,
-        color: colors[index % colors.length], // 使用循环颜色方案
+        color: getChartColor(index), // 使用全局颜色配置
         stats,
         centerX,
         density,

@@ -14,6 +14,7 @@ import {
 import type { PriceType } from "@/components/analysis-db/shared/price-type-selector"
 import type { MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { BRAND_COLORS } from "../shared/chart-colors"
 
 interface ScatterChartProps {
   dimmerData: {
@@ -81,19 +82,7 @@ export function ScatterChart({
     return `#${newR.toString(16).padStart(2, '0')}${newG.toString(16).padStart(2, '0')}${newB.toString(16).padStart(2, '0')}`
   }
 
-  const brandColors = {
-    Kasa: "rgb(141,211,199)",
-    Leviton: "#9B59B6",
-    Lutron: "#E67E22",
-    GE: "#3498DB",
-    ELEGRP: "rgb(128,177,211)",
-    BESTTEN: "rgb(253,180,98)",
-    "ENERLITES Store": "rgb(179,222,105)",
-    Amazon: "rgb(252,205,229)",
-    Other: "#D3D3D3",
-    TREATLIFE: "#FF6B6B",
-    "TP-Link": "#4ECDC4",
-  }
+  const brandColors = BRAND_COLORS
 
   const { openPanel } = useProductPanel()
   

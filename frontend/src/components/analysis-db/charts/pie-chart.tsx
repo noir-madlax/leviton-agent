@@ -1,6 +1,7 @@
 "use client"
 
 import { PieChart as ReChartsPie, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts"
+import { getChartColors } from "../shared/chart-colors"
 
 interface PieChartProps {
   data: {
@@ -12,7 +13,7 @@ interface PieChartProps {
   annotation?: string
 }
 
-export function PieChart({ data, title, colors = ["#FF6B6B", "#4ECDC4"], annotation }: PieChartProps) {
+export function PieChart({ data, title, colors = getChartColors(2), annotation }: PieChartProps) {
   const handleSliceClick = (data: any) => {
     // Since pie charts are typically high-level category data, 
     // we'll just log the click for now - specific implementations 

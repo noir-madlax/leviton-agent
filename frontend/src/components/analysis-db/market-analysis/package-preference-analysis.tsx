@@ -5,6 +5,7 @@ import { PieChart, Pie, Cell, Legend, ResponsiveContainer, Tooltip } from 'recha
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { Card } from "@/components/ui/card"
 import type { Product } from "@/components/analysis-db/types/analysis"
+import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 
 interface PackagePreferenceData {
   segmentDistributions: Record<string, Array<{
@@ -53,7 +54,7 @@ export function PackagePreferenceAnalysis({
   const [metricType, setMetricType] = useState<'revenue' | 'volume'>('revenue')
   const { openPanel } = useProductPanel()
 
-  const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300", "#8dd1e1", "#d084d0", "#87d068", "#ffb347", "#ffa07a", "#20b2aa"]
+  const colors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
   // 检查是否有segments数据

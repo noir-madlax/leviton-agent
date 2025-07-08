@@ -1,10 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { ProjectDataOverview } from './project-data-overview';
-import { ProjectFilters } from './project-filters';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { BarChart3 } from 'lucide-react';
+import { CategoryFilterAndProjectScope } from './category-filter-and-project-scope';
 
 interface DashboardHeaderProps {
   onProjectChange?: (projectId: string) => void;
@@ -14,14 +11,12 @@ interface DashboardHeaderProps {
 
 export function DashboardHeader({ selectedProjectId: parentSelectedProjectId, onFiltersChange }: DashboardHeaderProps) {
   const [localSelectedProjectId] = useState<string>('');
-  const [currentFilters, setCurrentFilters] = useState<{ categories: string[]; asins: string[] }>({ categories: [], asins: [] });
   
   // Use parent's selectedProjectId if provided, otherwise use local state
   const selectedProjectId = parentSelectedProjectId || localSelectedProjectId;
 
   const handleFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
     console.log('🔄 Filters applied:', filters);
-    setCurrentFilters(filters);
     
     // Pass filters up to parent component for dashboard data reload
     if (onFiltersChange) {
@@ -53,27 +48,11 @@ export function DashboardHeader({ selectedProjectId: parentSelectedProjectId, on
         </div>
       </div>
 
-      {/* Project Filters */}
-      <ProjectFilters 
+      {/* Category Filter & Project Scope */}
+      <CategoryFilterAndProjectScope 
         projectId={selectedProjectId} 
         onFiltersChange={handleFiltersChange}
       />
-
-      {/* Project Data Scope */}
-      <Card className="mb-6">
-        <CardHeader className="pb-3">
-          <CardTitle className="text-lg flex items-center gap-2">
-            <BarChart3 className="w-5 h-5" />
-            Project Data Scope
-          </CardTitle>
-        </CardHeader>
-        <CardContent className="p-0">
-          <ProjectDataOverview 
-            projectId={selectedProjectId} 
-            categoryFilters={currentFilters.categories}
-          />
-        </CardContent>
-      </Card>
     </div>
   );
 }

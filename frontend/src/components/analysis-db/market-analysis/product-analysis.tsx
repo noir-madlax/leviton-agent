@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter, Cell } from 'recharts'
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 
 interface ProductAnalysisProps {
   data: {
@@ -36,7 +37,8 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
 
   // 获取动态segment信息
   const segmentNames = data.segmentNames || []
-  const segmentColors = data.segmentColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+  // 使用全局颜色配置，如果后端提供了颜色则使用后端的，否则使用全局配置
+  const segmentColors = data.segmentColors || Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const segmentSummary = data.segmentSummary || {}
   
   // 如果没有数据，显示空状态
@@ -51,8 +53,33 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
     )
   }
 
+  // 预先计算按收入排序的segment数据，保持segment颜色的一致性
+  const sortedSegmentData = segmentNames.map((segment, index) => {
+    const summary = segmentSummary[segment] || {
+      totalRevenue: 0,
+      totalVolume: 0,
+      productCount: 0,
+      avgPrice: 0,
+      topBrand: 'N/A'
+    }
+    
+    return {
+      segment: segment,
+      revenue: summary.totalRevenue,
+      volume: summary.totalVolume,
+      productCount: summary.productCount,
+      avgPrice: summary.avgPrice,
+      topBrand: summary.topBrand,
+      originalIndex: index,
+      color: segmentColors[index] || getChartColor(index) // 基于原始位置分配固定颜色
+    }
+  }).sort((a, b) => b.revenue - a.revenue) // 排序不影响颜色分配
+
+  // 获取按收入排序的segment列表
+  const sortedSegmentNames = sortedSegmentData.map(item => item.segment)
+  
   // 设置默认选中的segment
-  const activeSegment = selectedSegment || segmentNames[0]
+  const activeSegment = selectedSegment || sortedSegmentNames[0]
 
   // 动态检测产品类型
   const getProductType = () => {
@@ -69,13 +96,19 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
   const getPriceVsRevenueData = () => {
     const allProducts: any[] = []
     
-    segmentNames.forEach((segment, index) => {
+    // 创建segment到颜色的映射
+    const segmentColorMap: Record<string, string> = {}
+    sortedSegmentData.forEach((segmentData) => {
+      segmentColorMap[segmentData.segment] = segmentData.color
+    })
+    
+    segmentNames.forEach((segment) => {
       const products = data.topProducts.segments[segment] || []
       products.forEach(product => {
         allProducts.push({
           ...product,
           segment: segment,
-          color: segmentColors[index] || '#8884d8',
+          color: segmentColorMap[segment] || '#8884d8',
           x: product.price || 0,
           y: product.revenue || 0
         })
@@ -85,28 +118,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
     return allProducts
   }
 
-  // Segment汇总数据用于条形图
-  const getSegmentSummaryData = () => {
-    return segmentNames.map((segment, index) => {
-      const summary = segmentSummary[segment] || {
-        totalRevenue: 0,
-        totalVolume: 0,
-        productCount: 0,
-        avgPrice: 0,
-        topBrand: 'N/A'
-      }
-      
-      return {
-        segment: segment,
-        revenue: summary.totalRevenue,
-        volume: summary.totalVolume,
-        productCount: summary.productCount,
-        avgPrice: summary.avgPrice,
-        topBrand: summary.topBrand,
-        color: segmentColors[index] || '#8884d8'
-      }
-    })
-  }
+
 
   // 获取当前选中segment的top产品
   const getTopProductsForSegment = (segment: string) => {
@@ -141,9 +153,8 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
         <h3 className="text-xl font-semibold mb-4">{productType} - Top Segments by Revenue</h3>
         <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
           <p className="text-sm text-blue-700">
-            <strong>Top 3:</strong> {segmentNames.slice(0, 3).map((segment, i) => 
-              `${i + 1}. ${segment} - ${segmentSummary[segment] ? 
-                `$${(segmentSummary[segment].totalRevenue / 1000000).toFixed(1)}M` : '$0'}`
+            <strong>Top 3:</strong> {sortedSegmentData.slice(0, 3).map((segmentData, i) => 
+              `${i + 1}. ${segmentData.segment} - $${(segmentData.revenue / 1000000).toFixed(1)}M`
             ).join(' • ')}
           </p>
         </div>
@@ -151,7 +162,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
         <Card className="p-6 bg-gray-50">
           <div className="h-[400px]">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={getSegmentSummaryData()}>
+              <BarChart data={sortedSegmentData}>
                 <CartesianGrid strokeDasharray="3,3" />
                 <XAxis 
                   dataKey="segment" 
@@ -176,7 +187,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
                   onClick={handleSegmentClick}
                   cursor="pointer"
                 >
-                  {getSegmentSummaryData().map((entry, index) => (
+                  {sortedSegmentData.map((entry, index) => (
                     <Cell key={`cell-${index}`} fill={entry.color} />
                   ))}
                 </Bar>
@@ -190,20 +201,20 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
       <div className="mb-6">
         <h3 className="text-xl font-semibold mb-4">Top Products by Segment</h3>
         <div className="flex flex-wrap gap-2 mb-4">
-          {segmentNames.map((segment, index) => (
+          {sortedSegmentData.map((segmentData, index) => (
             <Button
-              key={segment}
-              variant={activeSegment === segment ? "default" : "outline"}
+              key={segmentData.segment}
+              variant={activeSegment === segmentData.segment ? "default" : "outline"}
               size="sm"
-              onClick={() => setSelectedSegment(segment)}
+              onClick={() => setSelectedSegment(segmentData.segment)}
               className="text-xs"
               style={{
-                backgroundColor: activeSegment === segment ? segmentColors[index] : 'transparent',
-                borderColor: segmentColors[index],
-                color: activeSegment === segment ? 'white' : segmentColors[index]
+                backgroundColor: activeSegment === segmentData.segment ? segmentData.color : 'transparent',
+                borderColor: segmentData.color,
+                color: activeSegment === segmentData.segment ? 'white' : segmentData.color
               }}
             >
-              {segment} ({segmentSummary[segment]?.productCount || 0})
+              {segmentData.segment} ({segmentData.productCount || 0})
             </Button>
           ))}
         </div>
@@ -236,7 +247,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
                   <td className="p-2 font-medium">#{index + 1}</td>
                   <td className="p-2">
                     <div className="font-medium text-blue-600 hover:text-blue-800">
-                      {product.title?.slice(0, 60)}...
+                      {product.title?.length > 60 ? `${product.title.slice(0, 60)}...` : product.title}
                     </div>
                   </td>
                   <td className="p-2">{product.brand}</td>
@@ -291,7 +302,7 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
                       const data = payload[0].payload
                       return (
                         <div className="bg-white p-3 border border-gray-300 rounded shadow-lg">
-                          <p className="font-medium">{data.title?.slice(0, 40)}...</p>
+                          <p className="font-medium">{data.title?.length > 40 ? `${data.title.slice(0, 40)}...` : data.title}</p>
                           <p className="text-blue-600">Price: ${data.price?.toFixed(2)}</p>
                           <p className="text-green-600">Revenue: ${(data.revenue / 1000).toFixed(0)}K</p>
                           <p className="text-gray-600">Segment: {data.segment}</p>
@@ -301,12 +312,12 @@ export function ProductAnalysis({ data, productLists }: ProductAnalysisProps) {
                     return null
                   }}
                 />
-                {segmentNames.map((segment, index) => (
+                {sortedSegmentData.map((segmentData, index) => (
                   <Scatter
-                    key={segment}
-                    name={segment}
-                    data={getPriceVsRevenueData().filter(p => p.segment === segment)}
-                    fill={segmentColors[index]}
+                    key={segmentData.segment}
+                    name={segmentData.segment}
+                    data={getPriceVsRevenueData().filter(p => p.segment === segmentData.segment)}
+                    fill={segmentData.color}
                   />
                 ))}
                 <Legend />

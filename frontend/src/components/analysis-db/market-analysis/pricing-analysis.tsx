@@ -7,6 +7,7 @@ import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import type { Product } from "@/components/analysis-db/types/analysis"
+import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 
 interface PricingAnalysisProps {
   data: {
@@ -62,12 +63,10 @@ export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
 
   // 生成Multi-Segment Violin Chart数据
   const violinSegments = useMemo(() => {
-    const colors = ["#8884d8", "#82ca9d", "#ffc658", "#ff7300"]
-    
     return allCategories.map((category, index) => ({
       name: category.category,
       prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
-      color: colors[index % colors.length],
+      color: getChartColor(index),
       productCount: category.productCount,
       stats: priceType === 'unit' ? category.stats.unit : category.stats.sku
     }))
@@ -130,43 +129,52 @@ export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
       <h3 className="text-xl font-semibold mb-4">Price Distribution by Segment</h3>
       <Card className="p-6 bg-gray-50 mb-8">
         <PriceTypeSelector onChange={setPriceType} />
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-4">
-          {allCategories.map((category, index) => {
-            const categoryPrices = priceType === 'unit' ? category.unitPrices : category.skuPrices
-            const categoryStats = priceType === 'unit' ? category.stats.unit : category.stats.sku
-            const icons = ["🔆", "💡", "🔥", "⚡"]
-            const icon = icons[index % icons.length]
-            
-            return (
-              <div key={category.category} className="bg-white p-4 rounded-lg border">
-                <h4 className="text-md font-medium mb-3 text-center">
-                  {icon} {category.category}
-                </h4>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span>Products:</span>
-                    <span className="font-medium">{categoryPrices.length}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Min:</span>
-                    <span className="font-medium">${categoryStats.min.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Median:</span>
-                    <span className="font-medium">${categoryStats.median.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Max:</span>
-                    <span className="font-medium">${categoryStats.max.toFixed(2)}</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span>Average:</span>
-                    <span className="font-medium">${categoryStats.mean.toFixed(2)}</span>
-                  </div>
-                </div>
-              </div>
-            )
-          })}
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th className="text-left p-3 font-semibold">Segment</th>
+                <th className="text-right p-3 font-semibold">Products</th>
+                <th className="text-right p-3 font-semibold">Min</th>
+                <th className="text-right p-3 font-semibold">Median</th>
+                <th className="text-right p-3 font-semibold">Max</th>
+                <th className="text-right p-3 font-semibold">Average</th>
+              </tr>
+            </thead>
+            <tbody>
+              {allCategories.map((category, index) => {
+                const categoryPrices = priceType === 'unit' ? category.unitPrices : category.skuPrices
+                const categoryStats = priceType === 'unit' ? category.stats.unit : category.stats.sku
+                const icons = ["🔆", "💡", "🔥", "⚡", "🌟", "🎯", "📊", "💎", "🚀", "💡", "🔧", "⚙️", "🎨", "🏆", "⭐"]
+                const icon = icons[index % icons.length]
+                
+                return (
+                  <tr key={category.category} className="border-b border-gray-100 hover:bg-white transition-colors">
+                    <td className="p-3">
+                      <div className="font-medium text-gray-900">
+                        {icon} {category.category}
+                      </div>
+                    </td>
+                    <td className="p-3 text-right font-medium text-gray-700">
+                      {categoryPrices.length}
+                    </td>
+                    <td className="p-3 text-right font-medium text-green-600">
+                      ${categoryStats.min.toFixed(2)}
+                    </td>
+                    <td className="p-3 text-right font-medium text-blue-600">
+                      ${categoryStats.median.toFixed(2)}
+                    </td>
+                    <td className="p-3 text-right font-medium text-red-600">
+                      ${categoryStats.max.toFixed(2)}
+                    </td>
+                    <td className="p-3 text-right font-medium text-purple-600">
+                      ${categoryStats.mean.toFixed(2)}
+                    </td>
+                  </tr>
+                )
+              })}
+            </tbody>
+          </table>
         </div>
       </Card>
 

@@ -11,6 +11,7 @@ import {
   ResponsiveContainer,
 } from "recharts"
 import type { ChartDataItem } from "../types/chart-data"
+import { getChartColors } from "../shared/chart-colors"
 
 interface BarChartProps {
   data: ChartDataItem[]
@@ -26,7 +27,7 @@ export function BarChart({
   data,
   index,
   categories,
-  colors = ["#FF6B6B", "#4ECDC4"],
+  colors = getChartColors(2),
   yAxisLabel,
   metricType = "revenue",
   onBarClick,

@@ -18,8 +18,7 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
 
-import { ProjectDataOverview } from '@/components/analysis-db/shared/project-data-overview'
-import { ProjectFilters } from '@/components/analysis-db/shared/project-filters'
+import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
 
 // 使用现有的Project接口
@@ -856,27 +855,13 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                 </Button>
               </CollapsibleTrigger>
               <CollapsibleContent className="px-6 py-4 border-t border-gray-100">
-                <div className="max-w-6xl mx-auto space-y-4">
-                  {/* Category Filters */}
-                  <ProjectFilters 
+                <div className="max-w-6xl mx-auto">
+                  {/* Category Filter & Project Scope */}
+                  <CategoryFilterAndProjectScope 
                     projectId={projectId} 
                     onFiltersChange={handleCategoryFiltersChange}
                     initialFilters={{ categories: categoryFilters, asins: [] }}
                   />
-
-                  {/* Project Data Overview - Remove Card container */}
-                  <div className="mb-4">
-                    <div className="mb-3">
-                      <h3 className="text-lg font-medium flex items-center gap-2">
-                        <BarChart3 className="w-5 h-5" />
-                        Project Data Scope
-                      </h3>
-                    </div>
-                    <ProjectDataOverview 
-                      projectId={projectId} 
-                      categoryFilters={categoryFilters}
-                    />
-                  </div>
                 </div>
               </CollapsibleContent>
             </Collapsible>

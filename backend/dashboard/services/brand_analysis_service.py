@@ -153,12 +153,20 @@ class BrandAnalysisService(BaseDashboardService):
                 }
             ],
             "segmentNames": ["Compact Single Basket Air Fryers", "Dual Basket Air Fryers", ...],
-            "segmentColors": ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+            "segmentColors": [
+                "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+                "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+                "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+            ]
         }
         """
         
         # 定义颜色配色方案
-        colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7", "#DDA0DD", "#98D8C8", "#F7DC6F"]
+        colors = [
+            "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+            "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+            "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+        ]
         
         formatted_brands = []
         
