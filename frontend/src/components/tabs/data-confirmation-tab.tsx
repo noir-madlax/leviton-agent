@@ -8,8 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 
-import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
-import { Input } from '@/components/ui/input';
+import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 import { CategorySelector } from '@/components/category-selector';
 
@@ -268,7 +267,20 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts }: {
   );
 }
 
-export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnalysis?: (projectId: string) => void }) {
+export function DataConfirmationTab({ 
+  onNavigateToAnalysis, 
+  onRegisterCreateProject,
+  projectName 
+}: { 
+  onNavigateToAnalysis?: (projectId: string) => void;
+  onRegisterCreateProject?: (ref: {
+    handleConfirmSelection: () => void;
+    isConfirmed: boolean;
+    isFilterApplied: boolean;
+    generateSmartProjectName: () => string;
+  }) => void;
+  projectName?: string;
+}) {
   // 暂时不使用onNavigateToAnalysis，让用户看到进度后手动跳转
   console.log('Navigation callback available:', !!onNavigateToAnalysis);
   const [data, setData] = useState<DataConfirmationData | null>(null);
@@ -281,22 +293,22 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     topSalesCount: 100
   });
   const [isConfirmed, setIsConfirmed] = useState(false);
-  const [projectName, setProjectName] = useState('');
-  const [isEditingName, setIsEditingName] = useState(false);
-  const [tempProjectName, setTempProjectName] = useState('');
   const [createdProjectId, setCreatedProjectId] = useState<string | null>(null);
   const [projectCreationStatus, setProjectCreationStatus] = useState<'idle' | 'creating' | 'created'>('idle');
   const [selectedCategoryId, setSelectedCategoryId] = useState<string>('');
   const [selectedCategoryName, setSelectedCategoryName] = useState<string>('');
   const [selectedCategoryPath, setSelectedCategoryPath] = useState<string>('');
   const [isFilterApplied, setIsFilterApplied] = useState(false); // Track if filter has been applied
+  const [showAllCategories, setShowAllCategories] = useState(false); // 控制Categories展开状态
+  const [showAllBrands, setShowAllBrands] = useState(false); // 控制Brands展开状态
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
     const now = new Date();
-    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const month = monthNames[now.getMonth()];
     const day = String(now.getDate()).padStart(2, '0');
-    const year = now.getFullYear().toString().slice(-4);
     
     // Use the last part of the category path or fallback to category name
     let categoryForName = selectedCategoryName;
@@ -308,7 +320,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     // Clean category name for use in project name
     const cleanCategory = categoryForName.replace(/[^a-zA-Z0-9\s]/g, '').replace(/\s+/g, '_');
     
-    return `${cleanCategory}_Top${filters.topSalesCount || 100}_${month}${day}_${year.slice(-4)}`;
+    return `${cleanCategory}_Top${filters.topSalesCount || 100}_${month}${day}`;
   };
 
   // 初始加载数据（只执行一次）
@@ -316,25 +328,45 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     loadInitialData();
   }, []);
 
-  // 实时更新project名字
-  useEffect(() => {
-    if (!isEditingName) {
-      setProjectName(generateSmartProjectName());
-    }
-  }, [selectedCategoryName, filters.sources, filters.brands, filters.topSalesCount, data, isEditingName]);
+  // 移除实时更新project名字的逻辑，改为在Apply后由父组件处理
 
-  // 初始加载数据 - 全量查询
+  // 注册创建项目的方法到父组件
+  useEffect(() => {
+    if (onRegisterCreateProject) {
+      onRegisterCreateProject({
+        handleConfirmSelection,
+        isConfirmed,
+        isFilterApplied,
+        generateSmartProjectName
+      });
+    }
+  }, [isConfirmed, isFilterApplied, onRegisterCreateProject]);
+
+  // 初始加载数据 - 只加载基础配置数据，不计算统计信息
   const loadInitialData = async () => {
     setPageLoading(true);
     try {
-      // 使用后端API获取全量数据
+      // 使用后端API获取基础数据（不包含统计信息）
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
       const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation`);
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
       const result = await response.json();
-      setData(result);
+      
+      // 只保留基础配置数据，清空统计信息
+      setData({
+        ...result,
+        stats: {
+          totalProducts: 0,
+          totalBrands: 0,
+          totalReviews: 0,
+          sources: [],
+          categories: [],
+          brands: []
+        },
+        topProducts: [] // 清空产品预览
+      });
       
       // 修改：Categories默认为空，不全选，用户必须手动选择
       setFilters({
@@ -357,6 +389,9 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     setSelectedCategoryPath(categoryPath || categoryName);
     setIsConfirmed(false); // Reset confirmation when category changes
     setIsFilterApplied(false); // Reset filter applied state when category changes
+    // 重置展开状态
+    setShowAllCategories(false);
+    setShowAllBrands(false);
     
     // 🔥 关键修复：将选中的类别同步到filters.categories
     setFilters(prev => ({
@@ -374,6 +409,9 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     
     // 🔥 修复：立即显示loading状态
     setFilterLoading(true);
+    // 重置展开状态
+    setShowAllCategories(false);
+    setShowAllBrands(false);
     
     try {
       // 构建查询参数
@@ -461,7 +499,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          project_name: projectName,
+          project_name: projectName || 'New Project',
           company_name: 'Leviton',
           user_name: 'Current User',
           description: `Analysis project for ${filters.categories.join(', ')} products from ${filters.sources.join(', ')}`,
@@ -533,21 +571,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     }
   };
 
-  // 处理project名字编辑
-  const handleEditName = () => {
-    setTempProjectName(projectName);
-    setIsEditingName(true);
-  };
-
-  const handleSaveName = () => {
-    setProjectName(tempProjectName);
-    setIsEditingName(false);
-  };
-
-  const handleCancelEdit = () => {
-    setTempProjectName('');
-    setIsEditingName(false);
-  };
+  // 项目名编辑功能已移到父组件处理
 
   if (pageLoading) {
     return (
@@ -584,412 +608,415 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   }
 
   return (
-    <div className="h-full flex flex-col overflow-hidden">
-      {/* 固定顶部区域 - 类似导航栏 */}
-      <div className="flex-shrink-0 bg-background border-b sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 space-y-4">
-          {/* 页面标题和Confirm按钮 */}
-          <div className="flex justify-between items-center">
-            <div>
-              <h1 className="text-2xl font-bold tracking-tight">Create Research Project</h1>
-              <p className="text-muted-foreground text-sm">
-                Define your research scope by selecting data filters to create a focused analysis project.
-              </p>
-            </div>
-            
-            {/* Create Project按钮 */}
-            <div className="flex gap-2">
-              <Button
-                onClick={handleConfirmSelection}
-                className="h-9"
-                disabled={isConfirmed || !isFilterApplied}
-                title={!isFilterApplied ? "Please apply filters first" : ""}
-              >
-                {isConfirmed ? (
-                  <>
-                    <CheckCircle className="w-4 h-4 mr-2" />
-                    Project Created
-                  </>
-                ) : (
-                  'Create Research Project'
-                )}
-              </Button>
+    <div className="h-full overflow-auto">
+      <div className="max-w-7xl mx-auto space-y-4 p-4">
+        
+        {/* 选中类别显示区域 */}
+        {selectedCategoryPath && (
+          <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
+            <div className="flex items-center gap-2">
+              <Check className="w-4 h-4 text-green-600" />
+              <span className="text-sm font-medium text-green-800">Selected Category:</span>
+              <span className="text-sm text-green-700 font-medium">{selectedCategoryPath}</span>
             </div>
           </div>
-
-          {/* Project名字编辑区域 - 优化体验 */}
-          <div className="p-4 bg-blue-50 border border-blue-200 rounded-lg">
-            <div className="flex items-center gap-3">
-              <span className="text-sm font-medium text-blue-800 whitespace-nowrap">Project Name:</span>
-              {isEditingName ? (
-                <div className="flex items-center gap-2 flex-1">
-                  <Input
-                    value={tempProjectName}
-                    onChange={(e) => setTempProjectName(e.target.value)}
-                    className="flex-1 h-8 text-sm bg-white border-blue-300 shadow-none focus:ring-1 focus:ring-blue-500"
-                    autoFocus
-                  />
-                  <Button size="sm" variant="ghost" onClick={handleSaveName} className="h-8 w-8 p-0 hover:bg-green-100">
-                    <Check className="h-4 w-4 text-green-600" />
-                  </Button>
-                  <Button size="sm" variant="ghost" onClick={handleCancelEdit} className="h-8 w-8 p-0 hover:bg-red-100">
-                    <X className="h-4 w-4 text-red-600" />
-                  </Button>
-                </div>
-              ) : (
-                <div className="flex items-center gap-2 flex-1 min-w-0">
-                  <span className="text-sm font-medium text-blue-800 truncate flex-1" title={projectName}>
-                    {projectName}
-                  </span>
-                  <Button size="sm" variant="ghost" onClick={handleEditName} className="h-8 w-8 p-0 hover:bg-blue-100 flex-shrink-0">
-                    <Edit2 className="h-4 w-4 text-blue-600" />
-                  </Button>
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* 选中类别显示区域 */}
-          {selectedCategoryPath && (
-            <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
-              <div className="flex items-center gap-2">
-                <Check className="w-4 h-4 text-green-600" />
-                <span className="text-sm font-medium text-green-800">Selected Category:</span>
-                <span className="text-sm text-green-700 font-medium">{selectedCategoryPath}</span>
+        )}
+        
+        {/* 🔥 重新设计渲染逻辑 */}
+        {projectCreationStatus !== 'idle' && (
+           <ProjectProgressDisplay 
+             projectId={createdProjectId} 
+             totalProducts={filteredStats?.totalProducts}
+             onAnalysisReady={(projectId) => {
+               if (onNavigateToAnalysis) {
+                 onNavigateToAnalysis(projectId);
+               }
+             }}
+           />
+        )}
+        
+        {/* 横向筛选区域 - Data Filters */}
+        <Card>
+          <CardHeader className="pb-3">
+            <CardTitle className="flex items-center gap-2 text-lg">
+              <Filter className="w-5 h-5" />
+              Data Filters
+            </CardTitle>
+            <CardDescription className="text-sm">
+              Choose which products, brands, and data sources to include in your analysis
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <div className="grid grid-cols-2 gap-6">
+              {/* Amazon Category Selector */}
+              <div>
+                <CategorySelector
+                  onCategorySelect={handleCategorySelect}
+                  selectedCategoryId={selectedCategoryId}
+                  selectedCategoryName={selectedCategoryName}
+                  selectedCategoryPath={selectedCategoryPath}
+                />
               </div>
-            </div>
-          )}
-        </div>
-      </div>
 
-      {/* 可滚动内容区域 */}
-      <div className="flex-1 overflow-auto">
-        <div className="max-w-7xl mx-auto space-y-4 p-4">
-          
-          {/* 🔥 重新设计渲染逻辑 */}
-          {projectCreationStatus !== 'idle' && (
-             <ProjectProgressDisplay 
-               projectId={createdProjectId} 
-               totalProducts={filteredStats?.totalProducts}
-               onAnalysisReady={(projectId) => {
-                 if (onNavigateToAnalysis) {
-                   onNavigateToAnalysis(projectId);
-                 }
-               }}
-             />
-          )}
-          {/* 横向筛选区域 - Data Filters */}
-          <Card>
-            <CardHeader className="pb-3">
-              <CardTitle className="flex items-center gap-2 text-lg">
-                <Filter className="w-5 h-5" />
-                Data Filters
-              </CardTitle>
-              <CardDescription className="text-sm">
-                Choose which products, brands, and data sources to include in your analysis
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="grid grid-cols-2 gap-6">
-                {/* Amazon Category Selector */}
+              {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
+              <div className="space-y-4">
+                {/* 数据来源筛选 */}
                 <div>
-                  <CategorySelector
-                    onCategorySelect={handleCategorySelect}
-                    selectedCategoryId={selectedCategoryId}
-                    selectedCategoryName={selectedCategoryName}
-                    selectedCategoryPath={selectedCategoryPath}
-                  />
+                  <div className="flex items-center justify-between mb-2">
+                    <Label className="text-sm font-medium">Data Sources</Label>
+                    <div className="flex gap-1">
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleSelectAllSources}
+                        className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                      >
+                        Select All
+                      </Button>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={handleClearAllSources}
+                        className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
+                      >
+                        Clear All
+                      </Button>
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    {data.availableSources.map(source => (
+                      <div key={source} className="flex items-center space-x-2">
+                        <Checkbox
+                          id={`source-${source}`}
+                          checked={filters.sources.includes(source)}
+                          onCheckedChange={(checked) => 
+                            handleSourceChange(source, checked as boolean)
+                          }
+                        />
+                        <Label 
+                          htmlFor={`source-${source}`}
+                          className="text-xs cursor-pointer capitalize flex-1 select-none"
+                        >
+                          {source.replace('_', ' ')}
+                        </Label>
+                      </div>
+                    ))}
+                  </div>
                 </div>
 
-                {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
-                <div className="space-y-4">
-                  {/* 数据来源筛选 */}
-                  <div>
-                    <div className="flex items-center justify-between mb-2">
-                      <Label className="text-sm font-medium">Data Sources</Label>
-                      <div className="flex gap-1">
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={handleSelectAllSources}
-                          className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                        >
-                          Select All
-                        </Button>
-                        <Button
-                          variant="ghost"
-                          size="sm"
-                          onClick={handleClearAllSources}
-                          className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                        >
-                          Clear All
-                        </Button>
-                      </div>
-                    </div>
-                    <div className="space-y-2">
-                      {data.availableSources.map(source => (
-                        <div key={source} className="flex items-center space-x-2">
-                          <Checkbox
-                            id={`source-${source}`}
-                            checked={filters.sources.includes(source)}
-                            onCheckedChange={(checked) => 
-                              handleSourceChange(source, checked as boolean)
-                            }
-                          />
-                          <Label 
-                            htmlFor={`source-${source}`}
-                            className="text-xs cursor-pointer capitalize flex-1 select-none"
-                          >
-                            {source.replace('_', ' ')}
-                          </Label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+                {/* 销量排名筛选 */}
+                <div>
+                  <Label className="text-sm font-medium">Sales Ranking Filter</Label>
+                  <Select
+                    value={filters.topSalesCount?.toString() || 'all'}
+                    onValueChange={handleTopSalesCountChange}
+                  >
+                    <SelectTrigger className="mt-2">
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="50">Top 50 Products</SelectItem>
+                      <SelectItem value="100">Top 100 Products</SelectItem>
+                      <SelectItem value="200">Top 200 Products</SelectItem>
+                      <SelectItem value="500">Top 500 Products</SelectItem>
+                      <SelectItem value="all">All Products</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Based on monthly sales volume
+                  </p>
+                </div>
 
-                  {/* 销量排名筛选 */}
-                  <div>
-                    <Label className="text-sm font-medium">Sales Ranking Filter</Label>
-                    <Select
-                      value={filters.topSalesCount?.toString() || 'all'}
-                      onValueChange={handleTopSalesCountChange}
-                    >
-                      <SelectTrigger className="mt-2">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="50">Top 50 Products</SelectItem>
-                        <SelectItem value="100">Top 100 Products</SelectItem>
-                        <SelectItem value="200">Top 200 Products</SelectItem>
-                        <SelectItem value="500">Top 500 Products</SelectItem>
-                        <SelectItem value="all">All Products</SelectItem>
-                      </SelectContent>
-                    </Select>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Based on monthly sales volume
-                    </p>
-                  </div>
-
-                  {/* Filter按钮 - 调整视觉层次 */}
-                  <div className="flex gap-2 pt-2">
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      onClick={resetFilters}
-                      className="h-8 text-xs text-gray-500 hover:text-gray-700"
-                    >
-                      Reset Filters
-                    </Button>
-                    <Button
-                      onClick={handleFilterData}
-                      disabled={filterLoading}
-                      className="h-8 text-xs bg-blue-600 hover:bg-blue-700"
-                    >
-                      {filterLoading ? (
-                        <>
-                          <RefreshCw className="w-3 h-3 mr-1 animate-spin" />
-                          Filtering...
-                        </>
-                      ) : (
-                        <>
-                          <RefreshCw className="w-3 h-3 mr-1" />
-                          Apply Filters
-                        </>
-                      )}
-                    </Button>
-                  </div>
+                {/* Filter按钮 - 调整视觉层次 */}
+                <div className="flex gap-2 pt-2">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={resetFilters}
+                    className="h-8 text-xs text-gray-500 hover:text-gray-700"
+                  >
+                    Reset Filters
+                  </Button>
+                  <Button
+                    onClick={handleFilterData}
+                    disabled={filterLoading}
+                    className="h-8 text-xs bg-blue-600 hover:bg-blue-700"
+                  >
+                    {filterLoading ? (
+                      <>
+                        <RefreshCw className="w-3 h-3 mr-1 animate-spin" />
+                        Filtering...
+                      </>
+                    ) : (
+                      <>
+                        <RefreshCw className="w-3 h-3 mr-1" />
+                        Apply Filters
+                      </>
+                    )}
+                  </Button>
                 </div>
               </div>
-            </CardContent>
-          </Card>
+            </div>
+          </CardContent>
+        </Card>
 
-          {/* 横向数据统计区域 - Data Scope Overview */}
-          <Card className={filterLoading ? 'opacity-60' : ''}>
-            <CardHeader className="pb-3">
-                          <CardTitle className="text-lg flex items-center gap-2">
+        {/* 横向数据统计区域 - Data Scope Overview - 总是显示 */}
+        <Card className={filterLoading ? 'opacity-60' : ''}>
+          <CardHeader className="pb-3">
+            <CardTitle className="text-lg flex items-center gap-2">
               Selected Data Scope
               {filterLoading && (
                 <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
               )}
             </CardTitle>
             <CardDescription className="text-sm">
-              Preview of your research dataset. Your analysis project will be based on this filtered selection.
+              {isFilterApplied 
+                ? "Preview of your research dataset. Your analysis project will be based on this filtered selection."
+                : "Apply filters above to see your data scope preview."
+              }
             </CardDescription>
-            </CardHeader>
-            <CardContent>
-              {/* 主要统计数据 - 水平布局 */}
-              <div className="grid grid-cols-3 gap-4 mb-4">
-                <Card className="border-blue-200">
+          </CardHeader>
+          <CardContent>
+            {isFilterApplied ? (
+              <>
+                {/* 主要统计数据 - 水平布局 */}
+                <div className="grid grid-cols-3 gap-4 mb-4">
+                  <Card className="border-blue-200">
+                    <CardContent className="p-3">
+                      <div className="flex items-center gap-2">
+                        <Database className="w-4 h-4 text-blue-500" />
+                        <div>
+                          <p className="text-xl font-bold">{filteredStats?.totalProducts.toLocaleString()}</p>
+                          <p className="text-xs text-muted-foreground">Products</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-green-200">
+                    <CardContent className="p-3">
+                      <div className="flex items-center gap-2">
+                        <Users className="w-4 h-4 text-green-500" />
+                        <div>
+                          <p className="text-xl font-bold">{filteredStats?.totalBrands}</p>
+                          <p className="text-xs text-muted-foreground">Brands</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  <Card className="border-purple-200">
+                    <CardContent className="p-3">
+                      <div className="flex items-center gap-2">
+                        <MessageSquare className="w-4 h-4 text-purple-500" />
+                        <div>
+                          <p className="text-xl font-bold">{filteredStats?.totalReviews.toLocaleString()}</p>
+                          <p className="text-xs text-muted-foreground">Reviews</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+
+                {/* 详细分布统计 - 水平布局 */}
+                <div className="grid grid-cols-3 gap-4">
+                  {/* 按来源分布 */}
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm">Data Sources</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-1">
+                        {filteredStats?.sources.map(source => (
+                          <div key={source.name} className="flex justify-between items-center">
+                            <span className="text-xs capitalize">{source.name.replace('_', ' ')}</span>
+                            <div className="flex items-center gap-1">
+                              <Badge variant="secondary" className="text-xs">{source.count}</Badge>
+                              <span className="text-xs text-muted-foreground">{source.percentage}%</span>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* 按类别分布 */}
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm">Categories</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-1">
+                        {/* 确保按百分比排序 */}
+                        {filteredStats?.categories
+                          .sort((a, b) => b.percentage - a.percentage)
+                          .slice(0, showAllCategories ? filteredStats.categories.length : 3)
+                          .map(category => (
+                          <div key={category.name} className="flex justify-between items-center">
+                            <span className="text-xs">{category.name}</span>
+                            <div className="flex items-center gap-1">
+                              <Badge variant="secondary" className="text-xs">{category.count}</Badge>
+                              <span className="text-xs text-muted-foreground">{category.percentage}%</span>
+                            </div>
+                          </div>
+                        ))}
+                        {filteredStats && filteredStats.categories.length > 3 && (
+                          <button 
+                            onClick={() => setShowAllCategories(!showAllCategories)}
+                            className="text-xs text-blue-600 hover:text-blue-800 hover:underline cursor-pointer"
+                          >
+                            {showAllCategories 
+                              ? "Show Less" 
+                              : `+${filteredStats.categories.length - 3} more categories`
+                            }
+                          </button>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Top品牌 */}
+                  <Card>
+                    <CardHeader className="pb-2">
+                      <CardTitle className="text-sm">Top Brands</CardTitle>
+                    </CardHeader>
+                    <CardContent className="pt-0">
+                      <div className="space-y-1">
+                        {/* 确保按百分比排序 */}
+                        {filteredStats?.brands
+                          .sort((a, b) => b.percentage - a.percentage)
+                          .slice(0, showAllBrands ? filteredStats.brands.length : 3)
+                          .map(brand => (
+                          <div key={brand.name} className="flex justify-between items-center">
+                            <span className="text-xs">{brand.name}</span>
+                            <div className="flex items-center gap-1">
+                              <Badge variant="secondary" className="text-xs">{brand.count}</Badge>
+                              <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
+                            </div>
+                          </div>
+                        ))}
+                        {filteredStats && filteredStats.brands.length > 3 && (
+                          <button 
+                            onClick={() => setShowAllBrands(!showAllBrands)}
+                            className="text-xs text-blue-600 hover:text-blue-800 hover:underline cursor-pointer"
+                          >
+                            {showAllBrands 
+                              ? "Show Less" 
+                              : `+${filteredStats.brands.length - 3} more brands`
+                            }
+                          </button>
+                        )}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </>
+            ) : (
+              /* 占位符内容 */
+              <div className="grid grid-cols-3 gap-4">
+                <Card className="border-gray-200 bg-gray-50">
                   <CardContent className="p-3">
                     <div className="flex items-center gap-2">
-                      <Database className="w-4 h-4 text-blue-500" />
+                      <Database className="w-4 h-4 text-gray-400" />
                       <div>
-                        <p className="text-xl font-bold">{filteredStats?.totalProducts.toLocaleString()}</p>
+                        <p className="text-xl font-bold text-gray-400">---</p>
                         <p className="text-xs text-muted-foreground">Products</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-green-200">
+                <Card className="border-gray-200 bg-gray-50">
                   <CardContent className="p-3">
                     <div className="flex items-center gap-2">
-                      <Users className="w-4 h-4 text-green-500" />
+                      <Users className="w-4 h-4 text-gray-400" />
                       <div>
-                        <p className="text-xl font-bold">{filteredStats?.totalBrands}</p>
+                        <p className="text-xl font-bold text-gray-400">---</p>
                         <p className="text-xs text-muted-foreground">Brands</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
 
-                <Card className="border-purple-200">
+                <Card className="border-gray-200 bg-gray-50">
                   <CardContent className="p-3">
                     <div className="flex items-center gap-2">
-                      <MessageSquare className="w-4 h-4 text-purple-500" />
+                      <MessageSquare className="w-4 h-4 text-gray-400" />
                       <div>
-                        <p className="text-xl font-bold">{filteredStats?.totalReviews.toLocaleString()}</p>
+                        <p className="text-xl font-bold text-gray-400">---</p>
                         <p className="text-xs text-muted-foreground">Reviews</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-
-
               </div>
+            )}
+          </CardContent>
+        </Card>
 
-              {/* 详细分布统计 - 水平布局 */}
-              <div className="grid grid-cols-3 gap-4">
-                {/* 按来源分布 */}
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm">Data Sources</CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="space-y-1">
-                      {filteredStats?.sources.map(source => (
-                        <div key={source.name} className="flex justify-between items-center">
-                          <span className="text-xs capitalize">{source.name.replace('_', ' ')}</span>
-                          <div className="flex items-center gap-1">
-                            <Badge variant="secondary" className="text-xs">{source.count}</Badge>
-                            <span className="text-xs text-muted-foreground">{source.percentage}%</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* 按类别分布 */}
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm">Categories</CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="space-y-1">
-                      {filteredStats?.categories.map(category => (
-                        <div key={category.name} className="flex justify-between items-center">
-                          <span className="text-xs">{category.name}</span>
-                          <div className="flex items-center gap-1">
-                            <Badge variant="secondary" className="text-xs">{category.count}</Badge>
-                            <span className="text-xs text-muted-foreground">{category.percentage}%</span>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* Top品牌 */}
-                <Card>
-                  <CardHeader className="pb-2">
-                    <CardTitle className="text-sm">Top Brands</CardTitle>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <div className="space-y-1">
-                      {filteredStats?.brands.slice(0, 4).map(brand => (
-                        <div key={brand.name} className="flex justify-between items-center">
-                          <span className="text-xs">{brand.name}</span>
-                          <div className="flex items-center gap-1">
-                            <Badge variant="secondary" className="text-xs">{brand.count}</Badge>
-                            <span className="text-xs text-muted-foreground">{brand.percentage}%</span>
-                          </div>
-                        </div>
-                      ))}
-                      {filteredStats && filteredStats.brands.length > 4 && (
-                        <p className="text-xs text-muted-foreground">
-                          +{filteredStats.brands.length - 4} more
-                        </p>
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* 样本产品预览 */}
-          <Card>
-            <CardHeader className="pb-2">
-              <CardTitle className="flex items-center gap-2 text-sm">
-                <Eye className="w-4 h-4" />
-                Sample Products Preview
-                <Badge variant="outline" className="text-xs">{data.topProducts?.length || 0} items</Badge>
-              </CardTitle>
-              <CardDescription className="text-xs">
-                Preview of the filtered dataset for analysis (Top {filters.topSalesCount || 'All'} by sales volume)
-              </CardDescription>
-            </CardHeader>
-            <CardContent className="pt-0">
-              <div className="space-y-2 max-h-48 overflow-y-auto">
-                {data.topProducts.slice(0, 8).map(product => (
-                  <div key={product.platform_id} className="flex justify-between items-center p-2 border rounded-md">
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium text-xs truncate" title={product.title}>
-                        {product.title.length > 45 ? `${product.title.substring(0, 45)}...` : product.title}
-                      </p>
-                      <div className="flex items-center gap-1 mt-1">
-                        <Badge variant="outline" className="text-xs px-1 py-0">{product.brand}</Badge>
-                        <Badge variant="outline" className="text-xs px-1 py-0">{product.category}</Badge>
-                        <span className="text-xs text-muted-foreground">{(product as typeof product & {source: string}).source}</span>
-                      </div>
-                    </div>
-                    <div className="text-right ml-2">
-                      <p className="text-xs font-medium">${product.price_usd}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {product.monthly_sales_volume?.toLocaleString() || 0}/mo
-                      </p>
+        {/* 样本产品预览 - 只有点击Apply后才显示 */}
+        {isFilterApplied && (
+        <Card>
+          <CardHeader className="pb-2">
+            <CardTitle className="flex items-center gap-2 text-sm">
+              <Eye className="w-4 h-4" />
+              Sample Products Preview
+              <Badge variant="outline" className="text-xs">{data.topProducts?.length || 0} items</Badge>
+            </CardTitle>
+            <CardDescription className="text-xs">
+              Preview of the filtered dataset for analysis (Top {filters.topSalesCount || 'All'} by sales volume)
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="space-y-2 max-h-48 overflow-y-auto">
+              {data.topProducts.slice(0, 8).map(product => (
+                <div key={product.platform_id} className="flex justify-between items-center p-2 border rounded-md">
+                  <div className="flex-1 min-w-0">
+                    <p className="font-medium text-xs truncate" title={product.title}>
+                      {product.title.length > 45 ? `${product.title.substring(0, 45)}...` : product.title}
+                    </p>
+                    <div className="flex items-center gap-1 mt-1">
+                      <Badge variant="outline" className="text-xs px-1 py-0">{product.brand}</Badge>
+                      <Badge variant="outline" className="text-xs px-1 py-0">{product.category}</Badge>
+                      <span className="text-xs text-muted-foreground">{(product as typeof product & {source: string}).source}</span>
                     </div>
                   </div>
-                ))}
-                {data.topProducts.length > 8 && (
-                  <p className="text-xs text-muted-foreground text-center py-1">
-                    +{data.topProducts.length - 8} more products will be included in the analysis
-                  </p>
-                )}
-              </div>
-            </CardContent>
-          </Card>
-
-          {/* 确认状态 */}
-          {isConfirmed && (
-            <Card className="border-green-200 bg-green-50">
-              <CardContent className="p-4">
-                <div className="flex items-center gap-2 text-green-700">
-                  <CheckCircle className="w-5 h-5" />
-                  <div>
-                    <p className="font-medium">Research Project Created - {projectName}</p>
-                    <p className="text-sm">
-                      Project includes {filteredStats?.totalProducts} products from{' '}
-                      {filters.categories.length === 0 ? 'all categories' : filters.categories.join(', ')}{' '}
-                      and {filters.sources.length === 0 ? 'all sources' : filters.sources.join(', ')}. Ready for analysis!
+                  <div className="text-right ml-2">
+                    <p className="text-xs font-medium">${product.price_usd}</p>
+                    <p className="text-xs text-muted-foreground">
+                      {product.monthly_sales_volume?.toLocaleString() || 0}/mo
                     </p>
                   </div>
                 </div>
-              </CardContent>
-            </Card>
-          )}
-        </div>
+              ))}
+              {data.topProducts.length > 8 && (
+                <p className="text-xs text-muted-foreground text-center py-1">
+                  +{data.topProducts.length - 8} more products will be included in the analysis
+                </p>
+              )}
+            </div>
+          </CardContent>
+        </Card>
+        )}
+
+        {/* 确认状态 */}
+        {isConfirmed && (
+          <Card className="border-green-200 bg-green-50">
+            <CardContent className="p-4">
+              <div className="flex items-center gap-2 text-green-700">
+                <CheckCircle className="w-5 h-5" />
+                <div>
+                  <p className="font-medium">Research Project Created - {projectName || 'New Project'}</p>
+                  <p className="text-sm">
+                    Project includes {filteredStats?.totalProducts} products from{' '}
+                    {filters.categories.length === 0 ? 'all categories' : filters.categories.join(', ')}{' '}
+                    and {filters.sources.length === 0 ? 'all sources' : filters.sources.join(', ')}. Ready for analysis!
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        )}
       </div>
     </div>
   );

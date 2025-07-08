@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect } from 'react'
-import { ChevronRight, ChevronDown, Loader2, Folder, FolderOpen, Check } from 'lucide-react'
+import { ChevronRight, ChevronDown, ChevronUp, Loader2, Folder, FolderOpen, Check } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
 
@@ -34,6 +34,7 @@ export function CategorySelector({
   const [categoryChildren, setCategoryChildren] = useState<Map<string, CategoryNode[]>>(new Map())
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [showAllCategories, setShowAllCategories] = useState(false)
 
   const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
@@ -290,7 +291,34 @@ export function CategorySelector({
           </div>
         ) : (
           <div className="p-2">
-            {rootCategories.map(category => renderCategoryNode(category))}
+            {/* 显示前10个或全部categories */}
+            {rootCategories
+              .slice(0, showAllCategories ? rootCategories.length : 10)
+              .map(category => renderCategoryNode(category))}
+            
+            {/* 如果有超过10个categories，显示展开/收起按钮 */}
+            {rootCategories.length > 10 && (
+              <div className="pt-2 border-t mt-2">
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowAllCategories(!showAllCategories)}
+                  className="w-full text-blue-600 hover:text-blue-700 hover:bg-blue-50"
+                >
+                  {showAllCategories ? (
+                    <>
+                      <ChevronUp className="w-4 h-4 mr-1" />
+                      Show Less ({rootCategories.length - 10} categories hidden)
+                    </>
+                  ) : (
+                    <>
+                      <ChevronDown className="w-4 h-4 mr-1" />
+                      Show More ({rootCategories.length - 10} more categories)
+                    </>
+                  )}
+                </Button>
+              </div>
+            )}
           </div>
         )}
       </div>
