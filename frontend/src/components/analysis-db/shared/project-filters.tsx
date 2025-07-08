@@ -53,6 +53,14 @@ export function ProjectFilters({
     loadFilterOptions()
   }, [projectId])
 
+  // 监听initialFilters的变化，同步内部状态
+  useEffect(() => {
+    if (initialFilters) {
+      setPendingCategories(initialFilters.categories)
+      setAppliedCategories(initialFilters.categories)
+    }
+  }, [initialFilters])
+
   const handleCategorySelect = (category: string) => {
     if (category === 'all') {
       setPendingCategories([])
@@ -193,7 +201,7 @@ export function ProjectFilters({
           )}
           {hasPendingChanges && (
             <div className="mt-2 p-2 bg-orange-50 border border-orange-200 rounded text-xs text-orange-700">
-              <strong>⏳ Pending Changes:</strong> Click "Apply Filters" to update the analysis data.
+              <strong>⏳ Pending Changes:</strong> Click &quot;Apply Filters&quot; to update the analysis data.
             </div>
           )}
         </CardContent>

@@ -2,7 +2,7 @@
 查询处理器 - 负责处理用户查询和准备提示词，保持原有逻辑不变
 """
 import logging
-import warnings
+from typing import Optional, List
 from core.database.connection import get_supabase_client
 from core.repositories.product_prompt_repository import ProductPromptRepository
 from agent.services.product_prompt_service import ProductPromptService
@@ -11,14 +11,7 @@ logger = logging.getLogger(__name__)
 
 class QueryProcessor:
     """查询处理器类"""
-    """这是一个已被废弃的类。"""
-    def __init__(self):
-        warnings.warn(
-            "DeprecatedClass is deprecated and will be removed in future versions. Use NewClass instead.",
-            DeprecationWarning,
-            stacklevel=2
-        )
-
+    
     def __init__(self):
         self._service = None
     
@@ -30,37 +23,54 @@ class QueryProcessor:
             self._service = ProductPromptService(repository)
         return self._service
     
-    async def prepare_query_with_prompt(self, query: str) -> str:
-        """准备完整的查询，包含系统提示词 - 保持原有逻辑不变"""
+    async def prepare_query_with_prompt(
+        self, 
+        query: str, 
+        project_id: Optional[str] = None,
+        category_filters: Optional[List[str]] = None,
+        brand_filters: Optional[List[str]] = None
+    ) -> str:
+        """准备完整的查询，包含系统提示词和上下文信息"""
         try:
-            # 直接创建服务实例，不使用依赖注入
-            from core.database.connection import get_supabase_client
-            from core.repositories.product_prompt_repository import ProductPromptRepository
-            from agent.services.product_prompt_service import ProductPromptService
+
+            # 构建上下文信息
+            context_info = self._build_context_info(project_id, category_filters, brand_filters)
             
-            # 获取 Supabase 客户端
-            supabase_client = get_supabase_client()
+            # 拼接完整查询：系统提示词 + 上下文信息 + 用户问题
+            complete_query = context_info + "\n\n用户的问题如下：" + query  # 使用字符串连接
             
-            # 创建仓库和服务实例
-            repository = ProductPromptRepository(supabase_client)
-            service = ProductPromptService(repository)
-            
-            # 获取提示词
-            prefixPrompt = await service.get_prompt_by_id(11)
-            
-            if not prefixPrompt:
-                logger.warning("未找到 ID 为 11 的提示词，使用原始查询")
-                return query
-                
-            complete_query = prefixPrompt.prompt + "\n\n 用户的问题如下：" + query
-            
-            logger.info(f"已成功拼接提示词，总 prompt 长度: {len(complete_query)} 字符")
+            logger.info(f"最终的 query 为: {complete_query}")
             return complete_query
             
         except Exception as e:
-            logger.error(f"准备查询提示词时出错: {e}")
+            logger.error(f"准备查询提示词时出错: {e}", exc_info=True)
             logger.info("使用原始查询继续执行")
             return query
+    
+    def _build_context_info(
+        self, 
+        project_id: Optional[str], 
+        category_filters: Optional[List[str]], 
+        brand_filters: Optional[List[str]]
+    ) -> str:
+        """构建上下文信息"""
+        context_parts = []
+        
+        if project_id:
+            context_parts.append(f"本次查询必须使用的 projects 表的 ID 为: {project_id}")
+        
+        if category_filters and len(category_filters) > 0:
+            categories_str = ", ".join(category_filters)
+            context_parts.append(f"本次查询必须使用的 product_wide_table 表的 category 字段限定为: {categories_str}")
+        
+        if brand_filters and len(brand_filters) > 0:
+            brands_str = ", ".join(brand_filters)
+            context_parts.append(f"需要过滤的品牌是: {brands_str}")
+        
+        if context_parts:
+            return "\n".join(context_parts)
+        else:
+            return "任务上下文信息：本次任务没有特定的过滤条件"
 
 # 全局查询处理器实例
 query_processor = QueryProcessor()

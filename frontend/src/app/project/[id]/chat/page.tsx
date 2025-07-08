@@ -32,6 +32,26 @@ interface Project {
   status: string
 }
 
+// Agent API 请求接口定义
+interface AgentFilters {
+  categories: string[]
+  brands?: string[]
+  dateRange?: {
+    start: string
+    end: string
+  }
+  priceRange?: {
+    min: number
+    max: number
+  }
+}
+
+interface AgentStreamRequest {
+  query: string
+  projectId: string
+  filters: AgentFilters
+}
+
 interface ContentPart {
   type: 'text' | 'insight' | 'chart'
   content: string
@@ -421,6 +441,21 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     }
   }
 
+  // 创建API请求体的辅助函数
+  const createAgentRequest = (query: string, projectId: string, categoryFilters: string[]): AgentStreamRequest => {
+    return {
+      query,
+      projectId,
+      filters: {
+        categories: categoryFilters,
+        // 预留扩展空间
+        // brands: [],
+        // dateRange: null,
+        // priceRange: null
+      }
+    }
+  }
+
   // 真实的API调用函数
   const handleSendMessage = async () => {
     if (!input.trim() || isLoading) return
@@ -462,13 +497,8 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       const controller = new AbortController()
       const timeoutId = setTimeout(() => controller.abort(), 10 * 60 * 1000) // 10分钟
       
-      // 构建请求URL，添加项目ID和category filters
-      let url = `${backendUrl}/agent-stream?query=${encodeURIComponent(originalInput)}&projectId=${projectId}`
-      
-      // 添加category filters参数
-      if (categoryFilters.length > 0) {
-        url += `&categoryFilters=${encodeURIComponent(categoryFilters.join(','))}`
-      }
+      // 构建请求体
+      const requestBody = createAgentRequest(originalInput, projectId, categoryFilters)
       
       // 重要参数日志 - 确保传递正确
       console.log('=' .repeat(80))
@@ -477,7 +507,8 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       console.log('🔍 Category Filters:', categoryFilters)
       console.log('📝 Category Filters Count:', categoryFilters.length)
       console.log('❓ Query:', originalInput.substring(0, 100) + (originalInput.length > 100 ? '...' : ''))
-      console.log('🌐 Full URL:', url)
+      console.log('📦 Request Body:', JSON.stringify(requestBody, null, 2))
+      console.log('🌐 API Endpoint:', `${backendUrl}/agent/stream`)
       console.log('=' .repeat(80))
       
       // 额外的确认机制 - 用警告形式确保可见
@@ -486,16 +517,17 @@ function ChatPageContent({ projectId }: { projectId: string }) {
         projectIdValue: projectId,
         hasCategoryFilters: categoryFilters.length > 0,
         categoryFiltersValue: categoryFilters,
-        urlContainsProjectId: url.includes('projectId='),
-        urlContainsCategoryFilters: url.includes('categoryFilters=')
+        requestBodyValid: !!requestBody.query && !!requestBody.projectId
       })
       
-      const response = await fetch(url, {
-        method: 'GET',
+      const response = await fetch(`${backendUrl}/agent/stream`, {
+        method: 'POST',
         headers: {
+          'Content-Type': 'application/json',
           'Accept': 'text/event-stream',
           'Cache-Control': 'no-cache',
         },
+        body: JSON.stringify(requestBody),
         signal: controller.signal,
       })
       

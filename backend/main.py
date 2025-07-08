@@ -15,6 +15,8 @@ from agent.core.agent_manager import get_agent_manager
 from agent.monitor import initialize_phoenix_monitoring
 from agent.streaming.stream_handler import stream_agent_response
 from agent.services.query_processor import get_query_processor
+from agent.services.request_handler import get_request_handler
+from agent.services.request_models import AgentStreamRequest
 
 # 导入 ORM 相关模块
 from agent.dependencies import get_product_prompt_service
@@ -129,43 +131,18 @@ async def test_tools_endpoint():
     """测试工具功能"""
     return test_tools()
 
-@app.get("/agent-stream")
-async def agent_stream(
-    query: str = Query(..., description="要处理的查询内容", min_length=1),
-    projectId: Optional[str] = Query(None, description="项目ID"),
-    categoryFilters: Optional[str] = Query(None, description="类别过滤器，逗号分隔")
-):
+@app.post("/agent/stream")
+async def agent_stream_post(request: AgentStreamRequest):
     """
-    SSE 端点，接收查询并流式返回 smolagents 的输出
-    支持项目ID和类别过滤器参数
+    POST SSE 端点，接收 JSON 格式的查询并流式返回 smolagents 的输出
+    支持复杂的过滤器配置
     """
-    if not query.strip():
-        return Response(
-            content=json.dumps({"error": "查询内容不能为空"}, ensure_ascii=False),
-            status_code=400,
-            media_type="application/json"
-        )
+    # 获取请求处理器
+    request_handler = get_request_handler()
     
-    # 解析类别过滤器
-    category_filters_list = []
-    if categoryFilters:
-        category_filters_list = [filter.strip() for filter in categoryFilters.split(',') if filter.strip()]
-    
-    # 重要参数日志 - 确保接收正确
-    logger.info("=" * 80)
-    logger.info("🚀 [AGENT-STREAM] RECEIVED REQUEST FROM FRONTEND")
-    logger.info(f"📊 Project ID: {projectId}")
-    logger.info(f"🔍 Category Filters: {category_filters_list}")
-    logger.info(f"📝 Category Filters Count: {len(category_filters_list)}")
-    logger.info(f"❓ Query: {query[:100]}{'...' if len(query) > 100 else ''}")
-    logger.info("=" * 80)
-    
-    # 准备完整的查询（包含 prompt）
-    # query_processor = get_query_processor()
-    # complete_query = await query_processor.prepare_query_with_prompt(query)
-        
+    # 处理流式请求
     return StreamingResponse(
-        stream_agent_response(query, projectId, category_filters_list),
+        request_handler.handle_stream_request(request),
         media_type="text/event-stream",
         headers={
             "Cache-Control": "no-cache",
@@ -173,35 +150,6 @@ async def agent_stream(
             "Access-Control-Allow-Origin": "*",
         }
     )
-
-@app.post("/agent-query")
-async def agent_query(request: dict):
-    """
-    POST 端点，用于处理更复杂的查询请求
-    """
-    agent_manager = get_agent_manager()
-    if not agent_manager.is_ready():
-        return {"error": "Agent 未初始化", "init_error": agent_manager.get_init_error()}
-    
-    query = request.get("query", "")
-    if not query.strip():
-        return {"error": "查询内容不能为空"}
-    
-    try:
-        # 准备完整的查询（包含 prompt）
-        # query_processor = get_query_processor()
-        # complete_query = await query_processor.prepare_query_with_prompt(query)
-        
-        agent = agent_manager.get_agent()
-        result = await asyncio.to_thread(agent.run, query)
-        return {
-            "status": "success",
-            "query": query,
-            "result": result
-        }
-    except Exception as e:
-        logger.error(f"处理查询时出错: {e}")
-        return {"error": str(e)}
 
 # ProductPrompt CRUD API 端点
 @app.get("/prompts", response_model=List[ProductPromptResponse], tags=["提示词管理"])
