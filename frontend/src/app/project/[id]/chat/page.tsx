@@ -246,21 +246,58 @@ function AnalyzingLoader({ stage, progress }: AnalyzingLoaderProps) {
 }
 
 // 新增Insight卡片组件
-function InsightCard({ insight, index }: { insight: string; index?: number }) {
+function InsightCard({ insight }: { insight: string | string[]; index?: number }) {
+  // 处理数组情况
+  const parseInsights = (content: string | string[]): string[] => {
+    if (Array.isArray(content)) {
+      return content
+    }
+    
+    try {
+      // 尝试解析JSON字符串
+      const parsed = JSON.parse(content)
+      if (Array.isArray(parsed)) {
+        return parsed
+      }
+    } catch {
+      // 如果不是JSON，按换行符分割
+      const lines = content.split('\n').filter(line => line.trim())
+      if (lines.length > 1) {
+        return lines
+      }
+    }
+    
+    // 如果都不是，返回单个字符串作为数组
+    return [content]
+  }
+
+  const insights = parseInsights(insight)
+
   return (
-    <Card className="mt-4 border-l-4 border-l-yellow-500">
+    <Card className="mt-4 border-l-4 border-l-blue-500">
       <CardHeader>
         <CardTitle className="flex items-center space-x-2">
-          <Lightbulb className="h-5 w-5 text-yellow-600" />
-          <span>Key Insights {index !== undefined ? `#${index + 1}` : ''}</span>
+          <Lightbulb className="h-5 w-5 text-blue-600" />
+          <span>Key Insights</span>
         </CardTitle>
       </CardHeader>
       <CardContent>
-        <TypewriterText 
-          text={insight}
-          speed={15}
-          className="text-gray-700"
-        />
+        <div className="space-y-3">
+          {insights.map((singleInsight, idx) => (
+            <div key={`insight-${idx}`} className="flex items-start space-x-3">
+              <div className="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="text-xs font-medium text-blue-600">{idx + 1}</span>
+              </div>
+              <div className="flex-1">
+                <TypewriterText 
+                  text={singleInsight}
+                  speed={15}
+                  className="text-gray-700 leading-relaxed"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </CardContent>
     </Card>
   )
