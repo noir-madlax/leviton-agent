@@ -2,16 +2,13 @@
 
 import { useState, useEffect, useMemo } from "react"
 import { Card } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { ExternalLink, Filter } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
-import { CompetitorPainPointsMatrix } from "@/components/analysis-db/charts/competitor-pain-points-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 import { CustomerSentimentBar } from "@/components/analysis-db/charts/customer-sentiment-bar"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
 import { databaseService } from "@/components/analysis-db/data/database-service"
-import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 interface CompetitorAnalysisProps {
   projectId: string | null;
   data: {
@@ -58,6 +55,8 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
   const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
+  // 添加专门的Apply loading状态
+  const [applyLoading, setApplyLoading] = useState(false);
   const [showAsinSelector, setShowAsinSelector] = useState(false);
   const [defaultProducts, setDefaultProducts] = useState<Array<{
     platform_id: string
@@ -164,7 +163,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
   }
   const useCaseData = customCompetitorData?.useCaseData || data.competitorAnalysis.useCaseData
 
-  // Handle ASIN selection change
+  // Handle ASIN selection change - 修改为支持Apply loading状态
   const handleAsinSelectionChange = async (asins: string[]) => {
     setSelectedAsins(asins);
     
@@ -176,17 +175,25 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     if (!projectId) return;
 
     try {
-      setLoading(true);
+      // 使用Apply loading状态，提供更好的用户体验
+      setApplyLoading(true);
+      console.log('🔄 Applying product selection changes, loading new analysis data...');
+      
       const response = await databaseService.getCompetitorAnalysisDataByProject(
         projectId,
         undefined, // No category filters
         asins.join(',') // Selected ASINs as string
       );
+      
+      // 模拟一个短暂延迟确保用户能看到loading状态
+      await new Promise(resolve => setTimeout(resolve, 500));
+      
       setCustomCompetitorData(response);
+      console.log('✅ Analysis data updated successfully');
     } catch (error) {
       console.error('Error fetching custom competitor data:', error);
     } finally {
-      setLoading(false);
+      setApplyLoading(false);
     }
   };
 
@@ -288,12 +295,23 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
         )}
       </section>
 
-      {/* Loading State */}
-      {loading && (
-        <div className="flex justify-center items-center h-32">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+      {/* Apply Loading State - 统一的loading状态，隐藏所有内容 */}
+      {applyLoading ? (
+        <div className="flex flex-col justify-center items-center h-96 bg-white rounded-lg border">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
+          <h3 className="text-lg font-medium text-gray-900 mb-2">Applying Product Selection</h3>
+          <p className="text-sm text-gray-600 text-center max-w-md">
+            Loading new analysis data for selected products. All charts and data will be updated together.
+          </p>
         </div>
-      )}
+      ) : (
+        <>
+          {/* Regular Loading State - 只在非Apply loading时显示 */}
+          {loading && (
+            <div className="flex justify-center items-center h-32">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+            </div>
+          )}
 
       {/* Product Data Overview */}
       <section>
@@ -412,6 +430,8 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           asinToProductNameMap={asinToProductNameMap}
         />
       </section>
+        </>
+      )}
     </div>
   )
 } 

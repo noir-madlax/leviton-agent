@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
-import { Search, Filter, RotateCcw } from 'lucide-react';
+import { Search, Filter, RotateCcw, Check } from 'lucide-react';
 import { databaseService } from '@/components/analysis-db/data/database-service';
 
 interface ProductInfo {
@@ -31,7 +31,9 @@ export function CompetitorAsinSelector({
 }: CompetitorAsinSelectorProps) {
   const [availableProducts, setAvailableProducts] = useState<ProductInfo[]>([]);
   const [filteredProducts, setFilteredProducts] = useState<ProductInfo[]>([]);
-  const [selectedAsins, setSelectedAsins] = useState<string[]>(defaultSelection);
+  // 分离pending状态和已应用状态
+  const [pendingSelection, setPendingSelection] = useState<string[]>(defaultSelection);
+  const [appliedSelection, setAppliedSelection] = useState<string[]>(defaultSelection);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState<string>('');
@@ -86,14 +88,19 @@ export function CompetitorAsinSelector({
     setFilteredProducts(filtered);
   }, [availableProducts, searchTerm, selectedBrand, selectedCategory]);
 
-  // Handle ASIN selection
+  // Handle ASIN selection - 只更新pending状态，不立即触发回调
   const handleAsinToggle = (asin: string) => {
-    const newSelection = selectedAsins.includes(asin)
-      ? selectedAsins.filter(id => id !== asin)
-      : [...selectedAsins, asin];
+    const newSelection = pendingSelection.includes(asin)
+      ? pendingSelection.filter(id => id !== asin)
+      : [...pendingSelection, asin];
     
-    setSelectedAsins(newSelection);
-    onSelectionChange(newSelection);
+    setPendingSelection(newSelection);
+  };
+
+  // Handle Apply button click
+  const handleApply = () => {
+    setAppliedSelection(pendingSelection);
+    onSelectionChange(pendingSelection);
   };
 
   // Reset filters
@@ -102,6 +109,9 @@ export function CompetitorAsinSelector({
     setSelectedBrand('');
     setSelectedCategory('');
   };
+
+  // Check if there are pending changes
+  const hasPendingChanges = JSON.stringify(pendingSelection.sort()) !== JSON.stringify(appliedSelection.sort());
 
   // Get unique brands and categories
   const uniqueBrands = [...new Set(availableProducts.map(p => p.brand))].sort();
@@ -125,9 +135,27 @@ export function CompetitorAsinSelector({
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <Filter className="w-5 h-5" />
-          🔍 Select Products to Compare ({selectedAsins.length} selected)
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Filter className="w-5 h-5" />
+            🔍 Select Products to Compare ({pendingSelection.length} selected)
+          </div>
+          <div className="flex items-center gap-2">
+            {hasPendingChanges && (
+              <Badge variant="outline" className="text-xs bg-yellow-50 text-yellow-700 border-yellow-300">
+                Changes pending
+              </Badge>
+            )}
+            <Button
+              onClick={handleApply}
+              disabled={!hasPendingChanges}
+              className="flex items-center gap-2 text-sm px-3 py-1.5"
+              size="sm"
+            >
+              <Check className="w-4 h-4" />
+              Apply
+            </Button>
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent>
@@ -175,11 +203,13 @@ export function CompetitorAsinSelector({
         </div>
 
         {/* Selected Products Summary */}
-        {selectedAsins.length > 0 && (
+        {pendingSelection.length > 0 && (
           <div className="mb-6 p-4 bg-blue-50 rounded-lg">
-            <h4 className="font-medium text-gray-900 mb-2">Selected Products:</h4>
+            <h4 className="font-medium text-gray-900 mb-2">
+              {hasPendingChanges ? 'Pending Selection:' : 'Selected Products:'}
+            </h4>
             <div className="flex flex-wrap gap-2">
-              {selectedAsins.map(asin => {
+              {pendingSelection.map(asin => {
                 const product = availableProducts.find(p => p.platform_id === asin);
                 return (
                   <Badge key={asin} variant="secondary" className="text-xs">
@@ -188,6 +218,11 @@ export function CompetitorAsinSelector({
                 );
               })}
             </div>
+                         {hasPendingChanges && (
+               <div className="mt-2 text-xs text-blue-600">
+                 Click &quot;Apply&quot; to apply these changes to the analysis
+               </div>
+             )}
           </div>
         )}
 
@@ -202,7 +237,7 @@ export function CompetitorAsinSelector({
               <div
                 key={product.platform_id}
                 className={`p-4 border rounded-lg cursor-pointer transition-all ${
-                  selectedAsins.includes(product.platform_id)
+                  pendingSelection.includes(product.platform_id)
                     ? 'border-blue-500 bg-blue-50'
                     : 'border-gray-200 hover:border-gray-300'
                 }`}
@@ -210,7 +245,7 @@ export function CompetitorAsinSelector({
               >
                 <div className="flex items-start gap-3">
                   <Checkbox
-                    checked={selectedAsins.includes(product.platform_id)}
+                    checked={pendingSelection.includes(product.platform_id)}
                     onChange={() => handleAsinToggle(product.platform_id)}
                     className="mt-1"
                   />
