@@ -319,14 +319,14 @@ def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: s
         print(f"Error fetching bestsellers: {e}")
         return None
 
-def amazon_search(search_term: str, category_id: str, amazon_domain: str = "amazon.com", 
+def amazon_search(search_term: str, category_id: str = None, amazon_domain: str = "amazon.com", 
                   sort_by: str = "featured", page: int = 1, exclude_sponsored: bool = True):
     """
     Search Amazon products using Rainforest API.
     
     Args:
         search_term (str): Search query
-        category_id (str): Amazon category ID
+        category_id (str): Amazon category ID (optional)
         amazon_domain (str): Amazon domain (default: amazon.com)
         sort_by (str): Sort order (featured, price_low_to_high, price_high_to_low, etc.)
         page (int): Page number (default: 1)
@@ -338,22 +338,33 @@ def amazon_search(search_term: str, category_id: str, amazon_domain: str = "amaz
     if not RAINFOREST_API_KEY:
         raise ValueError("RAINFOREST_API_KEY environment variable is required")
     
+    # Clean and validate search term
+    clean_search_term = search_term.strip()
+    if not clean_search_term:
+        raise ValueError("Search term cannot be empty")
+    
+    # Replace URL-encoded plus signs with spaces and clean special characters
+    clean_search_term = clean_search_term.replace('+', ' ')
+    # Remove excessive whitespace
+    clean_search_term = ' '.join(clean_search_term.split())
+    
     params = {
         "api_key": RAINFOREST_API_KEY,
         "type": "search",
-        "query": search_term,
+        "query": clean_search_term,
         "amazon_domain": amazon_domain,
         "sort_by": sort_by,
         "page": page
     }
     
-    if category_id:
-        params["category_id"] = category_id
+    if category_id and category_id.strip():
+        params["category_id"] = category_id.strip()
     
     if exclude_sponsored:
         params["exclude_sponsored"] = "true"
     
     try:
+        # Use requests which will handle URL encoding properly
         response = requests.get(RAINFOREST_API_URL, params=params, timeout=30)
         response.raise_for_status()
         return response.json()

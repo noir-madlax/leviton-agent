@@ -1,18 +1,34 @@
 'use client';
 
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useRef } from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Checkbox } from '@/components/ui/checkbox';
+
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 
-import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
+import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, RefreshCw, Clock, AlertCircle, Loader2, Lightbulb } from 'lucide-react';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 import { CategorySelector } from '@/components/category-selector';
 import { useAuth } from '@/contexts/auth-context';
+
+// URL分析相关接口
+interface CategorySuggestion {
+  category_id: string;
+  category_name: string;
+  confidence: number;
+  reason: string;
+}
+
+interface AnalyzeUrlResponse {
+  success: boolean;
+  url_type: string;
+  suggestions: CategorySuggestion[];
+  confidence_level: string;
+  message: string;
+}
 
 // 进度显示接口
 interface ProjectProgress {
@@ -24,6 +40,7 @@ interface ProjectProgress {
   total_products: number;
   total_reviews?: number;
   estimated_llm_calls?: number;
+  created_at?: string; // 新增：创建时间用于计算进度
   steps: {
     step: string;
     name: string;
@@ -41,13 +58,50 @@ interface ProjectProgress {
 }
 
 // 🔥 重新设计：项目进度显示组件 - 简化状态管理
-function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts }: { 
+function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts, totalReviews, projectName }: { 
   projectId: string | null; 
   onAnalysisReady?: (projectId: string) => void;
   totalProducts?: number;
+  totalReviews?: number;
+  projectName?: string;
 }) {
   const [progress, setProgress] = useState<ProjectProgress | null>(null);
   const [connectionStatus, setConnectionStatus] = useState<'connecting' | 'connected' | 'error' | 'closed'>('closed');
+  const [isExpanded, setIsExpanded] = useState(false);
+  const [projectStartTime] = useState<Date>(new Date()); // 项目创建时间
+  const [, setTimeUpdate] = useState(0); // 用于强制重新渲染时间进度条
+
+  // 计算时间进度的函数
+  const calculateTimeProgress = () => {
+    const now = new Date();
+    const elapsed = now.getTime() - projectStartTime.getTime();
+    
+    // 使用动态计算的估计时间，而不是写死的30分钟
+    const estimatedMinutes = Math.max(10, Math.ceil((totalReviews || 0) / 100) * 1.5);
+    const totalTime = estimatedMinutes * 60 * 1000; // 转换为毫秒
+    
+    const progress = Math.min((elapsed / totalTime) * 100, 100);
+    const remainingMinutes = Math.max(0, Math.ceil((totalTime - elapsed) / (60 * 1000)));
+    
+    return {
+      progress,
+      remainingMinutes,
+      elapsed: Math.floor(elapsed / (60 * 1000)), // 已过时间(分钟)
+      isOverdue: elapsed > totalTime,
+      estimatedTotal: estimatedMinutes
+    };
+  };
+
+  // 时间进度条定时更新
+  useEffect(() => {
+    if (!projectId) return;
+    
+    const updateTimer = setInterval(() => {
+      setTimeUpdate(prev => prev + 1);
+    }, 30000); // 每30秒更新一次
+    
+    return () => clearInterval(updateTimer);
+  }, [projectId]);
 
   // 🔥 重新设计：简化的SSE连接逻辑
   useEffect(() => {
@@ -176,93 +230,191 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts }: {
   const isProjectFullyCompleted = progress.segmentation_status === 'completed' && 
     progress.steps?.every(step => step.status === 'completed' || step.status === 'failed');
 
+  const timeProgress = calculateTimeProgress();
+  const displayProjectName = projectName || progress.project_name || 'Research Project';
+
   return (
     <Card className={`mb-6 border-l-4 ${isProjectFullyCompleted ? 'border-l-green-500' : 'border-l-blue-500'}`}>
       <CardHeader className="pb-3">
-        <CardTitle className="flex items-center gap-2 text-lg">
-          <Database className={`w-5 h-5 ${isProjectFullyCompleted ? 'text-green-500' : 'text-blue-500'}`} />
-          Project Progress: {progress.project_name}
-          {connectionStatus === 'connecting' && <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />}
-          {isProjectFullyCompleted && <CheckCircle className="w-5 h-5 text-green-500" />}
+        <CardTitle className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <Database className={`w-5 h-5 ${isProjectFullyCompleted ? 'text-green-500' : 'text-blue-500'}`} />
+            <span className="text-lg">Project Progress: {displayProjectName}</span>
+            {connectionStatus === 'connecting' && <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />}
+            {isProjectFullyCompleted && <CheckCircle className="w-5 h-5 text-green-500" />}
+          </div>
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="text-xs"
+          >
+            {isExpanded ? 'Hide Details' : 'Show Details'}
+          </Button>
         </CardTitle>
+        
+        {/* 时间进度条 */}
+        <div className="space-y-2">
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-gray-600">
+              Time Progress: {timeProgress.elapsed}min / {timeProgress.estimatedTotal}min 
+            </span>
+            <span className={`text-sm ${timeProgress.isOverdue ? 'text-red-600' : 'text-gray-600'}`}>
+              {timeProgress.isOverdue ? 'Overdue' : `${timeProgress.remainingMinutes}min remaining`}
+            </span>
+          </div>
+          <div className="w-full bg-gray-200 rounded-full h-2">
+            <div 
+              className={`h-2 rounded-full transition-all duration-300 ${
+                timeProgress.isOverdue ? 'bg-red-500' : 'bg-blue-500'
+              }`}
+              style={{ width: `${Math.min(timeProgress.progress, 100)}%` }}
+            />
+          </div>
+          {!isProjectFullyCompleted && (
+            <div className="text-xs text-gray-500 mt-1">
+              💡 You can safely leave this page. Your project will continue processing in the background.
+            </div>
+          )}
+        </div>
+        
         <CardDescription>
           Processing status for {progress.total_products || totalProducts || 0} products
-          {progress.total_reviews && progress.total_reviews > 0 && (
-            <span className="text-blue-600"> • {progress.total_reviews} reviews</span>
-          )}
-          {progress.estimated_llm_calls && progress.estimated_llm_calls > 0 && (
-            <span className="text-purple-600"> • ~{progress.estimated_llm_calls} LLM calls</span>
-          )}
+         
+         
           {isProjectFullyCompleted && (
             <span className="text-green-600 font-medium"> • Analysis Ready!</span>
           )}
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="space-y-3">
-          {progress.steps.map((step) => (
-            <div key={step.step} className="flex items-start gap-3">
-              <div className="flex-shrink-0 mt-1">
-                {getStatusIcon(step.status)}
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center justify-between">
-                  <h4 className="font-medium text-sm">{step.name}</h4>
-                  <Badge variant="outline" className={getStatusColor(step.status)}>
-                    {step.status.replace('_', ' ')}
-                  </Badge>
+        {/* 简化版本显示 */}
+        {!isExpanded && (
+          <div className="space-y-3">
+            {/* 总体进度概览 */}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-1">
+                                     {progress.steps.map((step) => (
+                    <div key={step.step} className="w-3 h-3 rounded-full border border-white">
+                      {step.status === 'completed' && <div className="w-full h-full bg-green-500 rounded-full" />}
+                      {step.status === 'in_progress' && <div className="w-full h-full bg-blue-500 rounded-full animate-pulse" />}
+                      {step.status === 'failed' && <div className="w-full h-full bg-red-500 rounded-full" />}
+                      {step.status === 'pending' && <div className="w-full h-full bg-gray-300 rounded-full" />}
+                    </div>
+                  ))}
                 </div>
-                <p className="text-xs text-gray-600 mt-1">{step.description}</p>
-                
-                {/* 🔥 增强子步骤显示 - 显示更详细的批次信息 */}
-                {step.sub_steps && step.sub_steps.length > 0 && (
-                  <div className="mt-2 ml-4 space-y-1">
-                    {step.sub_steps.map((subStep, subIndex) => (
-                      <div key={subIndex} className="flex items-center justify-between gap-2 text-xs">
-                        <div className="flex items-center gap-2">
-                          {getStatusIcon(subStep.status)}
-                          <span className={subStep.status === 'completed' ? 'text-green-700' : subStep.status === 'in_progress' ? 'text-blue-700' : 'text-gray-500'}>
-                            {subStep.name}
-                          </span>
-                        </div>
-                        {subStep.description && (
-                          <span className="text-gray-500 text-xs">
-                            {subStep.description}
-                          </span>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                )}
-                
-                {/* 🔥 新增：显示当前处理阶段的详细信息 */}
-                {step.current_stage && step.status === 'in_progress' && (
-                  <div className="mt-2 ml-4 p-2 bg-blue-50 border border-blue-200 rounded text-xs">
-                    <span className="font-medium text-blue-800">Current Stage: </span>
-                    <span className="text-blue-700 capitalize">{step.current_stage.replace('_', ' ')}</span>
-                  </div>
-                )}
+                <span className="text-sm text-gray-600">
+                  {progress.steps.filter(s => s.status === 'completed').length} of {progress.steps.length} steps completed
+                </span>
               </div>
+              {/* 只在项目完成或失败时显示Badge状态 */}
+              {(progress.status === 'completed' || progress.status === 'failed') && (
+                <Badge variant="outline" className={getStatusColor(progress.status)}>
+                  {progress.status.replace('_', ' ')}
+                </Badge>
+              )}
             </div>
-          ))}
-        </div>
+            
+            {/* 当前进行的步骤 */}
+            {progress.steps.find(s => s.status === 'in_progress') && (
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-3">
+                <div className="flex items-center gap-2">
+                  <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+                  <span className="text-sm font-medium text-blue-900">
+                    {progress.steps.find(s => s.status === 'in_progress')?.name}
+                  </span>
+                </div>
+                <p className="text-xs text-blue-700 mt-1">
+                  {progress.steps.find(s => s.status === 'in_progress')?.description}
+                </p>
+              </div>
+            )}
+          </div>
+        )}
         
-        {/* 添加手动跳转按钮 - 只有在项目完成后显示 */}
-        {isProjectFullyCompleted && onAnalysisReady && projectId && (
+        {/* 详细版本显示 */}
+        {isExpanded && (
+          <div className="space-y-3">
+            {progress.steps.map((step) => (
+              <div key={step.step} className="flex items-start gap-3">
+                <div className="flex-shrink-0 mt-1">
+                  {getStatusIcon(step.status)}
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between">
+                    <h4 className="font-medium text-sm">{step.name}</h4>
+                    <Badge variant="outline" className={getStatusColor(step.status)}>
+                      {step.status.replace('_', ' ')}
+                    </Badge>
+                  </div>
+                  <p className="text-xs text-gray-600 mt-1">{step.description}</p>
+                  
+                  {/* 🔥 增强子步骤显示 - 显示更详细的批次信息 */}
+                  {step.sub_steps && step.sub_steps.length > 0 && (
+                    <div className="mt-2 ml-4 space-y-1">
+                      {step.sub_steps.map((subStep, subIndex) => (
+                        <div key={subIndex} className="flex items-center justify-between gap-2 text-xs">
+                          <div className="flex items-center gap-2">
+                            {getStatusIcon(subStep.status)}
+                            <span className={subStep.status === 'completed' ? 'text-green-700' : subStep.status === 'in_progress' ? 'text-blue-700' : 'text-gray-500'}>
+                              {subStep.name}
+                            </span>
+                          </div>
+                          {subStep.description && (
+                            <span className="text-gray-500 text-xs">
+                              {subStep.description}
+                            </span>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  
+                  {/* 🔥 新增：显示当前处理阶段的详细信息 */}
+                  {step.current_stage && step.status === 'in_progress' && (
+                    <div className="mt-2 ml-4 p-2 bg-blue-50 border border-blue-200 rounded text-xs">
+                      <span className="font-medium text-blue-800">Current Stage: </span>
+                      <span className="text-blue-700 capitalize">{step.current_stage.replace('_', ' ')}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+        
+        {/* 项目状态显示 - 根据项目状态显示不同内容 */}
+        {!isProjectFullyCompleted ? (
           <div className="pt-4 border-t mt-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
-                <CheckCircle className="w-5 h-5 text-green-500" />
-                <span className="font-medium text-green-700">Project Ready for Analysis!</span>
+                <Loader2 className="w-5 h-5 text-blue-500 animate-spin" />
+                <span className="font-medium text-blue-700">Processing</span>
               </div>
-              <Button 
-                onClick={() => onAnalysisReady(projectId)}
-                className="bg-green-600 hover:bg-green-700 text-white"
-              >
-                Go to Analysis Dashboard
-              </Button>
+              <span className="text-sm text-gray-600">
+                {progress.steps.filter(s => s.status === 'completed').length} of {progress.steps.length} steps completed
+              </span>
             </div>
           </div>
+        ) : (
+          /* 项目完成后显示跳转按钮 */
+          onAnalysisReady && projectId && (
+            <div className="pt-4 border-t mt-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-500" />
+                  <span className="font-medium text-green-700">Project Ready for Analysis!</span>
+                </div>
+                <Button 
+                  onClick={() => onAnalysisReady(projectId)}
+                  className="bg-green-600 hover:bg-green-700 text-white"
+                >
+                  Go to Analysis Dashboard
+                </Button>
+              </div>
+            </div>
+          )
         )}
       </CardContent>
     </Card>
@@ -280,6 +432,7 @@ export function DataConfirmationTab({
     isConfirmed: boolean;
     isFilterApplied: boolean;
     generateSmartProjectName: () => string;
+    estimatedTime: string;
   }) => void;
   projectName?: string;
 }) {
@@ -305,6 +458,14 @@ export function DataConfirmationTab({
   const [showAllCategories, setShowAllCategories] = useState(false); // 控制Categories展开状态
   const [showAllBrands, setShowAllBrands] = useState(false); // 控制Brands展开状态
   const [categoryInput, setCategoryInput] = useState<string>(''); // 新增：类别URL或node ID输入
+  
+  // URL分析相关状态
+  const [urlAnalyzing, setUrlAnalyzing] = useState(false);
+  const [urlAnalysisResult, setUrlAnalysisResult] = useState<AnalyzeUrlResponse | null>(null);
+  const [showUrlSuggestions, setShowUrlSuggestions] = useState(false);
+  
+  // Preview区域的ref，用于自动滚动
+  const previewRef = useRef<HTMLDivElement>(null);
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
@@ -315,10 +476,15 @@ export function DataConfirmationTab({
     const day = String(now.getDate()).padStart(2, '0');
     
     // Use the last part of the category path or fallback to category name
-    let categoryForName = selectedCategoryName;
+    let categoryForName = selectedCategoryName || '';
     if (selectedCategoryPath) {
       const pathParts = selectedCategoryPath.split(' > ');
       categoryForName = pathParts[pathParts.length - 1]; // Use the most specific category
+    }
+    
+    // 如果没有选择category，使用默认名称
+    if (!categoryForName) {
+      categoryForName = 'Products';
     }
     
     // Clean category name for use in project name
@@ -333,18 +499,6 @@ export function DataConfirmationTab({
   }, []);
 
   // 移除实时更新project名字的逻辑，改为在Apply后由父组件处理
-
-  // 注册创建项目的方法到父组件
-  useEffect(() => {
-    if (onRegisterCreateProject) {
-      onRegisterCreateProject({
-        handleConfirmSelection,
-        isConfirmed,
-        isFilterApplied,
-        generateSmartProjectName
-      });
-    }
-  }, [isConfirmed, isFilterApplied, onRegisterCreateProject]);
 
   // 初始加载数据 - 只加载基础配置数据，不计算统计信息
   const loadInitialData = async () => {
@@ -404,11 +558,122 @@ export function DataConfirmationTab({
     }));
   };
 
+  // 检测URL类型的辅助函数
+  const detectInputType = (input: string): 'url' | 'node_id' | 'empty' => {
+    if (!input.trim()) return 'empty';
+    
+    // Check if it's a URL (contains amazon.com or amazon domain)
+    if (input.includes('amazon.') || input.includes('amzn.') || input.startsWith('http')) {
+      return 'url';
+    }
+    
+    // Check if it's node ID format
+    if (input.includes('node=') || /^\d+$/.test(input.trim())) {
+      return 'node_id';
+    }
+    
+    // If contains other URL patterns, treat as URL
+    if (input.includes('/') || input.includes('?') || input.includes('&')) {
+      return 'url';
+    }
+    
+    return 'node_id'; // Default fallback
+  };
+
   // 新增：处理类别输入（URL或node ID）
   const handleCategoryInputChange = async (value: string) => {
     setCategoryInput(value);
     
-    // 提取node ID
+    // Reset previous analysis
+    setUrlAnalysisResult(null);
+    setShowUrlSuggestions(false);
+    
+    const inputType = detectInputType(value);
+    
+    if (inputType === 'empty') {
+      // 清空选择
+      setSelectedCategoryId('');
+      setSelectedCategoryName('');
+      setSelectedCategoryPath('');
+      setFilters(prev => ({
+        ...prev,
+        categories: []
+      }));
+      return;
+    }
+    
+    if (inputType === 'url') {
+      // 处理URL分析
+      await handleUrlAnalysis(value);
+    } else {
+      // 处理node ID（保持原有逻辑）
+      await handleNodeIdInput(value);
+    }
+  };
+
+  // 处理URL分析
+  const handleUrlAnalysis = async (url: string) => {
+    console.log('🔍 Starting URL analysis for:', url);
+    setUrlAnalyzing(true);
+    
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      console.log('📡 Making API request to:', `${API_BASE_URL}/api/v1/categories/analyze-url`);
+      
+      const response = await fetch(`${API_BASE_URL}/api/v1/categories/analyze-url`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url }),
+      });
+      
+      console.log('📨 Response status:', response.status, response.statusText);
+      
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('❌ HTTP error response:', errorText);
+        throw new Error(`HTTP error! status: ${response.status}, body: ${errorText}`);
+      }
+      
+      const result: AnalyzeUrlResponse = await response.json();
+      console.log('✅ URL analysis result received:', result);
+      setUrlAnalysisResult(result);
+      
+      if (result.success && result.suggestions.length > 0) {
+        console.log(`🎯 Found ${result.suggestions.length} suggestions`);
+        setShowUrlSuggestions(true);
+        
+        // If high confidence, auto-select the first suggestion
+        if (result.confidence_level === 'high' && result.suggestions[0].confidence >= 0.9) {
+          console.log('🚀 Auto-selecting high confidence suggestion');
+          const suggestion = result.suggestions[0];
+          await applyCategorySuggestion(suggestion);
+        }
+      } else {
+        console.log('⚠️ No valid suggestions received');
+        setShowUrlSuggestions(true);
+      }
+      
+    } catch (error) {
+      console.error('💥 Error analyzing URL:', error);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      setUrlAnalysisResult({
+        success: false,
+        url_type: 'unknown',
+        suggestions: [],
+        confidence_level: 'none',
+        message: `Failed to analyze URL: ${errorMessage}`
+      });
+      setShowUrlSuggestions(true);
+    } finally {
+      setUrlAnalyzing(false);
+      console.log('🔍 URL analysis completed');
+    }
+  };
+
+  // 处理node ID输入（原有逻辑）
+  const handleNodeIdInput = async (value: string) => {
     let nodeId = '';
     if (value.includes('node=')) {
       const match = value.match(/node=(\d+)/);
@@ -416,13 +681,14 @@ export function DataConfirmationTab({
         nodeId = match[1];
       }
     } else if (/^\d+$/.test(value.trim())) {
-      // 如果直接输入数字，当作node ID处理
       nodeId = value.trim();
     }
     
     if (nodeId) {
+      console.log('🔍 Starting Node ID analysis for:', nodeId);
+      setUrlAnalyzing(true);
+      
       try {
-        // 查询真实的类别名称
         const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
         const response = await fetch(`${API_BASE_URL}/api/v1/categories/name/${nodeId}`);
         
@@ -465,16 +731,42 @@ export function DataConfirmationTab({
           ...prev,
           categories: [`Category ${nodeId}`]
         }));
+      } finally {
+        setUrlAnalyzing(false);
+        console.log('🔍 Node ID analysis completed');
       }
-    } else {
-      // 清空选择
-      setSelectedCategoryId('');
-      setSelectedCategoryName('');
-      setSelectedCategoryPath('');
-      setFilters(prev => ({
-        ...prev,
-        categories: []
-      }));
+    }
+  };
+
+  // 应用类别建议
+  const applyCategorySuggestion = async (suggestion: CategorySuggestion) => {
+    setSelectedCategoryId(suggestion.category_id);
+    setSelectedCategoryName(suggestion.category_name);
+    setSelectedCategoryPath(suggestion.category_name); // Will be updated if we have full path info
+    setIsConfirmed(false);
+    setIsFilterApplied(false);
+    setShowAllCategories(false);
+    setShowAllBrands(false);
+    setShowUrlSuggestions(false);
+    
+    setFilters(prev => ({
+      ...prev,
+      categories: [suggestion.category_name]
+    }));
+    
+    // Try to get full path info
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/api/v1/categories/name/${suggestion.category_id}`);
+      
+      if (response.ok) {
+        const categoryData = await response.json();
+        if (categoryData.full_path) {
+          setSelectedCategoryPath(categoryData.full_path);
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching category path:', error);
     }
   };
 
@@ -518,6 +810,14 @@ export function DataConfirmationTab({
       const result = await response.json();
       setData(result);
       setIsFilterApplied(true); // Mark filter as applied
+      
+      // 自动滚动到Preview区域
+      setTimeout(() => {
+        previewRef.current?.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'center'
+        });
+      }, 200);
     } catch (error) {
       console.error('Failed to filter data:', error);
     } finally {
@@ -531,29 +831,63 @@ export function DataConfirmationTab({
     return data.stats;
   }, [data]);
 
-  const handleSourceChange = (source: string, checked: boolean) => {
-    setFilters(prev => ({
-      ...prev,
-      sources: checked 
-        ? [...prev.sources, source]
-        : prev.sources.filter(s => s !== source)
-    }));
-  };
+  // 计算预计处理时间的函数
+  const calculateEstimatedTime = useMemo(() => {
+    if (!filteredStats?.totalReviews) return { minutes: 10, text: "~10 minutes" };
+    
+    // 每100条评论需要1.5分钟，最少10分钟
+    const minutes = Math.max(10, Math.ceil((filteredStats.totalReviews / 100) * 1.5));
+    
+    if (minutes < 60) {
+      return { minutes, text: `~${minutes} minutes` };
+    } else {
+      const hours = Math.floor(minutes / 60);
+      const remainingMinutes = minutes % 60;
+      if (remainingMinutes === 0) {
+        return { minutes, text: `~${hours} hour${hours > 1 ? 's' : ''}` };
+      } else {
+        return { minutes, text: `~${hours}h ${remainingMinutes}m` };
+      }
+         }
+   }, [filteredStats?.totalReviews]);
 
-  const handleSelectAllSources = () => {
-    if (!data) return;
-    setFilters(prev => ({
-      ...prev,
-      sources: [...data.availableSources]
-    }));
-  };
+  // 注册创建项目的方法到父组件
+  useEffect(() => {
+    if (onRegisterCreateProject) {
+      onRegisterCreateProject({
+        handleConfirmSelection,
+        isConfirmed,
+        isFilterApplied,
+        generateSmartProjectName,
+        estimatedTime: calculateEstimatedTime.text
+      });
+    }
+  }, [isConfirmed, isFilterApplied, onRegisterCreateProject, calculateEstimatedTime.text]);
+  
+    // 未使用的处理函数，保留以备后续使用
+  // const handleSourceChange = (source: string, checked: boolean) => {
+  //   setFilters(prev => ({
+  //     ...prev,
+  //     sources: checked 
+  //       ? [...prev.sources, source]
+  //       : prev.sources.filter(s => s !== source)
+  //   }));
+  // };
 
-  const handleClearAllSources = () => {
-    setFilters(prev => ({
-      ...prev,
-      sources: []
-    }));
-  };
+  // const handleSelectAllSources = () => {
+  //   if (!data) return;
+  //   setFilters(prev => ({
+  //     ...prev,
+  //     sources: [...data.availableSources]
+  //   }));
+  // };
+
+  // const handleClearAllSources = () => {
+  //   setFilters(prev => ({
+  //     ...prev,
+  //     sources: []
+  //   }));
+  // };
 
   const handleTopSalesCountChange = (value: string) => {
     setFilters(prev => ({
@@ -569,6 +903,11 @@ export function DataConfirmationTab({
     setIsConfirmed(true);
     
     try {
+      // 🔥 修复：确保项目名正确生成
+      const finalProjectName = projectName && projectName !== 'New Project 1' 
+        ? projectName 
+        : generateSmartProjectName();
+      
       // 调用后端API创建项目
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
       const response = await fetch(`${API_BASE_URL}/api/v1/projects/create`, {
@@ -577,7 +916,7 @@ export function DataConfirmationTab({
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          project_name: projectName || 'New Project',
+          project_name: finalProjectName,
           company_name: 'Leviton',
           user_name: user?.email || 'Current User',
           user_uid: user?.id, // 添加用户UID
@@ -658,10 +997,7 @@ export function DataConfirmationTab({
       <div className="h-full overflow-auto">
         <div className="max-w-7xl mx-auto space-y-6 p-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Create Research Project</h1>
-            <p className="text-muted-foreground mt-2">
-              Loading product data for scope selection...
-            </p>
+            
           </div>
           <div className="flex items-center justify-center h-64">
             <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
@@ -688,9 +1024,33 @@ export function DataConfirmationTab({
   }
 
   return (
+
+    
     <div className="h-full overflow-auto">
       <div className="max-w-7xl mx-auto space-y-4 p-4">
         
+{/* 蓝色说明区域 - 告诉用户项目分析基于整个产品类别 - 只在项目创建前显示 */}
+{projectCreationStatus === 'idle' && (
+<div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mt-0.5">
+                  <span className="text-white text-xs font-bold">i</span>
+                </div>
+                <div className="flex-1">
+                  <h4 className="text-sm font-medium text-blue-900 mb-1">Category-Based Analysis</h4>
+                  <p className="text-sm text-blue-800 leading-relaxed">
+                    Your project analysis is based on Amazon product category. We compare brand performance, 
+                    competitive analysis, and user-preferred product features<strong> across products of different brands within Selected Category</strong> . 
+                    This comprehensive approach ensures you get complete market insights for strategic decision making.
+                  </p>
+                </div>
+              </div>
+            </div>
+)}
+
+
+
+
         {/* 选中类别显示区域 */}
         {selectedCategoryPath && (
           <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
@@ -707,6 +1067,8 @@ export function DataConfirmationTab({
            <ProjectProgressDisplay 
              projectId={createdProjectId} 
              totalProducts={filteredStats?.totalProducts}
+             totalReviews={filteredStats?.totalReviews}
+             projectName={projectName}
              onAnalysisReady={(projectId) => {
                if (onNavigateToAnalysis) {
                  onNavigateToAnalysis(projectId);
@@ -720,35 +1082,151 @@ export function DataConfirmationTab({
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2 text-lg">
               <Filter className="w-5 h-5" />
-              Data Filters
+              Data Selection
             </CardTitle>
             <CardDescription className="text-sm">
-              Choose which products, brands, and data sources to include in your analysis
+              Input which <strong>product category</strong> and <strong>number of products</strong> to include in your project
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-6">
               {/* Amazon Category Selector - 新版本：URL/Node ID输入 */}
               <div>
-                <Label className="text-sm font-medium mb-3 block">Amazon Category</Label>
+                <Label className="text-sm font-medium mb-3 block">Amazon Category Selection</Label>
                 
                 {/* 示例说明 */}
                 <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <p className="text-xs text-blue-800 font-medium mb-1">Examples:</p>
+                  <p className="text-xs text-blue-800 font-medium mb-1">Supported Input Types:</p>
                   <div className="space-y-1 text-xs text-blue-700">
-                    <div><code className="bg-blue-100 px-1 rounded">node=495324</code> - Switches & Dimmers category and all subcategories</div>
-                    <div><code className="bg-blue-100 px-1 rounded">node=507840</code> - Dimmer Switches subcategory</div>
-                    <div><code className="bg-blue-100 px-1 rounded">495324</code> - You can also enter just the number</div>
+                    <div><strong>Category URLs:</strong> <code className="bg-blue-100 px-1 rounded">https://amazon.com/b?node=495324</code></div>
+                    <div><strong>Node IDs:</strong> <code className="bg-blue-100 px-1 rounded">495324</code> or <code className="bg-blue-100 px-1 rounded">node=495324</code></div>
+                  
+                   
                   </div>
                 </div>
 
                 {/* 输入框 */}
                 <Input
-                  placeholder="Enter category URL or node ID (e.g., node=495324)"
+                  placeholder="Enter category URL or node ID"
                   value={categoryInput}
                   onChange={(e) => handleCategoryInputChange(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter') {
+                      e.preventDefault();
+                      if (selectedCategoryId && !filterLoading && !urlAnalyzing) {
+                        handleFilterData();
+                      }
+                    }
+                  }}
                   className="mb-2"
                 />
+                
+                {/* URL分析状态显示 */}
+                {urlAnalyzing && (
+                  <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                    <div className="flex items-center gap-2">
+                      <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+                      <span className="text-sm text-blue-700">Analyzing URL...</span>
+                    </div>
+                  </div>
+                )}
+                
+                {/* URL分析结果显示 */}
+                {showUrlSuggestions && urlAnalysisResult && (
+                  <div className="mb-3">
+                    {urlAnalysisResult.success ? (
+                      <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
+                        <div className="flex items-start gap-2 mb-2">
+                          <Lightbulb className="w-4 h-4 text-green-600 mt-0.5" />
+                          <div className="flex-1">
+                            <div className="text-sm font-medium text-green-800 mb-1">
+                              ✨ Smart Category Detection
+                            </div>
+                            <div className="text-xs text-green-700 mb-2">
+                              We&apos;ve analyzed your {urlAnalysisResult.url_type} URL and automatically extracted the highest relevance category for your analysis.
+                            </div>
+                            <div className="text-xs text-green-600 mb-2 bg-green-100 px-2 py-1 rounded">
+                              💡 <strong>Analysis Result:</strong> {urlAnalysisResult.message}
+                            </div>
+                            <div className="text-xs text-green-600 mb-2">
+                              📊 <strong>Analysis Type:</strong> {urlAnalysisResult.url_type.charAt(0).toUpperCase() + urlAnalysisResult.url_type.slice(1)} URL
+                            </div>
+                            
+                            {/* 类别建议列表 */}
+                            <div className="space-y-2">
+                              {urlAnalysisResult.suggestions.map((suggestion, index) => (
+                                <div key={suggestion.category_id} className="bg-white border border-green-300 rounded p-3">
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1">
+                                      <div className="font-medium text-sm text-gray-900 mb-1">
+                                        {suggestion.category_name}
+                                      </div>
+                                      <div className="text-xs text-gray-600 mb-2">
+                                        {suggestion.reason}
+                                      </div>
+                                      <div className="flex items-center gap-2">
+                                        <Badge 
+                                          variant={suggestion.confidence >= 0.8 ? 'default' : 'secondary'}
+                                          className="text-xs"
+                                        >
+                                          {Math.round(suggestion.confidence * 100)}% confidence
+                                        </Badge>
+                                        <span className="text-xs text-gray-500">
+                                          ID: {suggestion.category_id}
+                                        </span>
+                                      </div>
+                                    </div>
+                                    <Button
+                                      size="sm"
+                                      variant={index === 0 ? "default" : "outline"}
+                                      onClick={() => applyCategorySuggestion(suggestion)}
+                                      className="ml-3"
+                                    >
+                                      Use This Category
+                                    </Button>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                            
+                            {/* 高置信度自动选择提示 */}
+                            {urlAnalysisResult.confidence_level === 'high' && 
+                             urlAnalysisResult.suggestions.length > 0 && 
+                             urlAnalysisResult.suggestions[0].confidence >= 0.9 && (
+                              <div className="mt-2 text-xs text-green-600 font-medium">
+                                ✓ High confidence match - automatically selected
+                              </div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="p-3 bg-red-50 border border-red-200 rounded-lg">
+                        <div className="flex items-start gap-2">
+                          <AlertCircle className="w-4 h-4 text-red-500 mt-0.5" />
+                          <div className="flex-1">
+                            <div className="text-sm font-medium text-red-800 mb-1">
+                              URL Analysis Failed
+                            </div>
+                            <div className="text-xs text-red-700">
+                              {urlAnalysisResult.message}
+                            </div>
+                            <div className="mt-2">
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                onClick={() => setShowUrlSuggestions(false)}
+                                className="text-xs h-6"
+                              >
+                                Dismiss
+                              </Button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
                 
                 {/* 原有的CategorySelector - 保留但隐藏，以备后续使用 */}
                 {/* 
@@ -768,52 +1246,10 @@ export function DataConfirmationTab({
               {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
               <div className="space-y-4">
                 {/* 数据来源筛选 */}
-                <div>
-                  <div className="flex items-center justify-between mb-2">
-                    <Label className="text-sm font-medium">Data Sources</Label>
-                    <div className="flex gap-1">
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={handleSelectAllSources}
-                        className="h-6 px-2 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50"
-                      >
-                        Select All
-                      </Button>
-                      <Button
-                        variant="ghost"
-                        size="sm"
-                        onClick={handleClearAllSources}
-                        className="h-6 px-2 text-xs text-gray-500 hover:text-gray-700 hover:bg-gray-50"
-                      >
-                        Clear All
-                      </Button>
-                    </div>
-                  </div>
-                  <div className="space-y-2">
-                    {data.availableSources.map(source => (
-                      <div key={source} className="flex items-center space-x-2">
-                        <Checkbox
-                          id={`source-${source}`}
-                          checked={filters.sources.includes(source)}
-                          onCheckedChange={(checked) => 
-                            handleSourceChange(source, checked as boolean)
-                          }
-                        />
-                        <Label 
-                          htmlFor={`source-${source}`}
-                          className="text-xs cursor-pointer capitalize flex-1 select-none"
-                        >
-                          {source.replace('_', ' ')}
-                        </Label>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
+                
                 {/* 销量排名筛选 */}
                 <div>
-                  <Label className="text-sm font-medium">Sales Ranking Filter</Label>
+                  <Label className="text-sm font-medium">Number of products</Label>
                   <Select
                     value={filters.topSalesCount?.toString() || 'all'}
                     onValueChange={handleTopSalesCountChange}
@@ -822,58 +1258,89 @@ export function DataConfirmationTab({
                       <SelectValue />
                     </SelectTrigger>
                     <SelectContent>
+                    <SelectItem value="80percent" disabled>
+                        <div className="flex items-center justify-between w-full">
+                          <span>Exclude Longtail Products(only top 80% Sales Volume)</span>
+                          <span className="text-xs text-gray-500 ml-2">Support soon</span>
+                        </div>
+                      </SelectItem>
                       <SelectItem value="50">Top 50 Products</SelectItem>
                       <SelectItem value="100">Top 100 Products</SelectItem>
-                      <SelectItem value="200">Top 200 Products</SelectItem>
-                      <SelectItem value="500">Top 500 Products</SelectItem>
-                      <SelectItem value="all">All Products</SelectItem>
+                      <SelectItem value="200" disabled>
+                        <div className="flex items-center justify-between w-full">
+                          <span>Top 200 Products</span>
+                          <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="500" disabled>
+                        <div className="flex items-center justify-between w-full">
+                          <span>Top 500 Products</span>
+                          <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
+                        </div>
+                      </SelectItem>
+                      <SelectItem value="all" disabled>
+                        <div className="flex items-center justify-between w-full">
+                          <span>All Products</span>
+                          <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
+                        </div>
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                   <p className="text-xs text-muted-foreground mt-1">
                     Based on monthly sales volume
                   </p>
                 </div>
-
-                {/* Filter按钮 - 调整视觉层次 */}
-                <div className="flex gap-2 pt-2">
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    onClick={resetFilters}
-                    className="h-8 text-xs text-gray-500 hover:text-gray-700"
-                  >
-                    Reset Filters
-                  </Button>
-                  <Button
-                    onClick={handleFilterData}
-                    disabled={filterLoading}
-                    className="h-8 text-xs bg-blue-600 hover:bg-blue-700"
-                  >
-                    {filterLoading ? (
-                      <>
-                        <RefreshCw className="w-3 h-3 mr-1 animate-spin" />
-                        Filtering...
-                      </>
-                    ) : (
-                      <>
-                        <RefreshCw className="w-3 h-3 mr-1" />
-                        Apply Filters
-                      </>
-                    )}
-                  </Button>
-                </div>
               </div>
+            </div>
+            
+            {/* Filter按钮 - 移动到Data Selection区域底部居中 */}
+            <div className="flex justify-center gap-2 pt-4 mt-4">
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={resetFilters}
+                className="h-8 text-xs text-gray-500 hover:text-gray-700"
+              >
+                Reset Filters
+              </Button>
+              <Button
+                onClick={handleFilterData}
+                disabled={filterLoading || !selectedCategoryId}
+                className="h-8 text-xs bg-blue-600 hover:bg-blue-700"
+              >
+                {filterLoading ? (
+                  <>
+                    <RefreshCw className="w-3 h-3 mr-1 animate-spin" />
+                    Filtering...
+                  </>
+                ) : (
+                  <>
+                    <RefreshCw className="w-3 h-3 mr-1" />
+                    Apply Filters
+                  </>
+                )}
+              </Button>
             </div>
           </CardContent>
         </Card>
 
         {/* 横向数据统计区域 - Data Scope Overview - 总是显示 */}
-        <Card className={filterLoading ? 'opacity-60' : ''}>
+        <Card ref={previewRef} className={filterLoading ? 'opacity-60' : ''}>
           <CardHeader className="pb-3">
-            <CardTitle className="text-lg flex items-center gap-2">
-              Selected Data Scope
-              {filterLoading && (
-                <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
+            <CardTitle className="text-lg flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                Preview of Project Data Scope
+                {filterLoading && (
+                  <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
+                )}
+              </div>
+              {isFilterApplied && (
+                <div className="flex items-center gap-2 text-sm">
+                  <Clock className="w-4 h-4 text-blue-500" />
+                  <span className="text-blue-600 font-medium">
+                    Estimated processing time: {calculateEstimatedTime.text}
+                  </span>
+                </div>
               )}
             </CardTitle>
             <CardDescription className="text-sm">
@@ -884,6 +1351,8 @@ export function DataConfirmationTab({
             </CardDescription>
           </CardHeader>
           <CardContent>
+            
+            
             {isFilterApplied ? (
               <>
                 {/* 主要统计数据 - 水平布局 */}
@@ -1106,24 +1575,7 @@ export function DataConfirmationTab({
         </Card>
         )}
 
-        {/* 确认状态 */}
-        {isConfirmed && (
-          <Card className="border-green-200 bg-green-50">
-            <CardContent className="p-4">
-              <div className="flex items-center gap-2 text-green-700">
-                <CheckCircle className="w-5 h-5" />
-                <div>
-                  <p className="font-medium">Research Project Created - {projectName || 'New Project'}</p>
-                  <p className="text-sm">
-                    Project includes {filteredStats?.totalProducts} products from{' '}
-                    {filters.categories.length === 0 ? 'all categories' : filters.categories.join(', ')}{' '}
-                    and {filters.sources.length === 0 ? 'all sources' : filters.sources.join(', ')}. Ready for analysis!
-                  </p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        )}
+       
       </div>
     </div>
   );

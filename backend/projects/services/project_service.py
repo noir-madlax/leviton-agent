@@ -37,6 +37,33 @@ class ProjectService:
     def __init__(self):
         self.supabase = get_supabase_client()
     
+    def _calculate_overall_status(self, segmentation_status: str, review_analysis_status: str) -> str:
+        """
+        Calculate simplified overall status for frontend display.
+        
+        Args:
+            segmentation_status: Current segmentation status
+            review_analysis_status: Current review analysis status
+            
+        Returns:
+            overall_status: 'creating', 'ready', or 'failed'
+        """
+        # Check for failure states first
+        if segmentation_status == 'failed' or review_analysis_status == 'failed':
+            return 'failed'
+        
+        # Check if still processing
+        if (segmentation_status in ['pending', 'processing'] or 
+            review_analysis_status in ['pending', 'processing']):
+            return 'creating'
+        
+        # Both completed successfully
+        if segmentation_status == 'completed' and review_analysis_status == 'completed':
+            return 'ready'
+        
+        # Default to creating for any other state
+        return 'creating'
+    
     async def create_project(self, request: ProjectCreateRequest, background_tasks: BackgroundTasks) -> ProjectCreateResponse:
         """
         Create a new project, and schedule segmentation/analysis as background tasks.
@@ -53,6 +80,10 @@ class ProjectService:
             review_estimates = await self._calculate_review_analysis_estimate(filtered_asins)
             
             # 4. Create project record with segmentation fields
+            initial_segmentation_status = "pending"
+            initial_review_analysis_status = "pending"
+            overall_status = self._calculate_overall_status(initial_segmentation_status, initial_review_analysis_status)
+            
             project_data = {
                 "project_name": request.project_name,
                 "company_name": request.company_name,
@@ -68,8 +99,10 @@ class ProjectService:
                 "total_reviews": int(stats["total_reviews"]),  # This is total reviews in dataset
                 "avg_monthly_sales": float(stats["avg_monthly_sales"]),
                 "status": "active",
-                "segmentation_status": "pending",
+                "overall_status": overall_status,  # Add simplified status
+                "segmentation_status": initial_segmentation_status,
                 "segmentation_started_at": datetime.utcnow().isoformat(),
+                "review_analysis_status": initial_review_analysis_status,  # Initialize review analysis status
                 # Add review analysis estimates
                 "estimated_reviews_to_analyze": review_estimates['estimated_reviews_to_analyze'],
                 "estimated_llm_calls": review_estimates['estimated_llm_calls_extraction']
@@ -122,6 +155,7 @@ class ProjectService:
                 total_reviews=created_project["total_reviews"],
                 avg_monthly_sales=float(created_project["avg_monthly_sales"]),
                 status=created_project["status"],
+                overall_status=created_project["overall_status"],
                 segmentation_status=created_project["segmentation_status"]
             )
             
@@ -193,11 +227,15 @@ class ProjectService:
         try:
             # 获取开始时间和项目信息
             project = self.supabase.table('projects')\
-                .select('segmentation_started_at, selected_product_asins, selected_categories')\
+                .select('segmentation_started_at, selected_product_asins, selected_categories, review_analysis_status')\
                 .eq('id', project_id)\
                 .single().execute()
             
             if project.data and project.data['segmentation_started_at']:
+                # Calculate overall status
+                overall_status = self._calculate_overall_status('completed', project.data.get('review_analysis_status', 'pending'))
+                
+                # Update segmentation completion and overall status
                 started_at = datetime.fromisoformat(project.data['segmentation_started_at'].replace('Z', '+00:00'))
                 completed_at = datetime.now(timezone.utc)  # 使用带时区的时间
                 duration_seconds = int((completed_at - started_at).total_seconds())
@@ -207,7 +245,8 @@ class ProjectService:
                     "segmentation_duration_seconds": duration_seconds,
                     "segmentation_status": "completed",
                     "review_analysis_status": "pending",
-                    "review_analysis_started_at": completed_at.isoformat()
+                    "review_analysis_started_at": completed_at.isoformat(),
+                    "overall_status": overall_status
                 }).eq('id', project_id).execute()
                 
                 logger.info(f"Project {project_id} segmentation completed in {duration_seconds} seconds")
@@ -228,9 +267,12 @@ class ProjectService:
     async def _fail_segmentation(self, project_id: str, error_message: str):
         """记录细分失败状态"""
         try:
+            overall_status = self._calculate_overall_status('failed', 'failed')
+            
             self.supabase.table('projects').update({
                 "segmentation_status": "failed",
                 "review_analysis_status": "failed", # If segmentation fails, review analysis also fails
+                "overall_status": overall_status
             }).eq('id', project_id).execute()
             
             logger.error(f"Project {project_id} segmentation failed: {error_message}")
@@ -353,7 +395,7 @@ class ProjectService:
         """记录评论分析完成状态"""
         try:
             project = self.supabase.table('projects')\
-                .select('review_analysis_started_at')\
+                .select('review_analysis_started_at, segmentation_status')\
                 .eq('id', project_id)\
                 .single().execute()
 
@@ -365,11 +407,16 @@ class ProjectService:
             completed_at = datetime.now(timezone.utc)
             duration_seconds = int((completed_at - started_at).total_seconds())
 
+            # Calculate overall status
+            segmentation_status = project.data.get('segmentation_status', 'pending')
+            overall_status = self._calculate_overall_status(segmentation_status, 'completed')
+
             # 更新 projects 表
             self.supabase.table('projects').update({
                 "review_analysis_status": "completed",
                 "review_analysis_completed_at": completed_at.isoformat(),
-                "review_analysis_duration_seconds": duration_seconds
+                "review_analysis_duration_seconds": duration_seconds,
+                "overall_status": overall_status
             }).eq('id', project_id).execute()
             
             # 更新 review_analysis_runs 表
@@ -391,9 +438,19 @@ class ProjectService:
     async def _fail_review_analysis(self, project_id: str, run_id: Optional[int], error_message: str):
         """记录评论分析失败状态"""
         try:
+            # Get current segmentation status to calculate overall status
+            project = self.supabase.table('projects')\
+                .select('segmentation_status')\
+                .eq('id', project_id)\
+                .single().execute()
+            
+            segmentation_status = project.data.get('segmentation_status', 'pending') if project.data else 'pending'
+            overall_status = self._calculate_overall_status(segmentation_status, 'failed')
+            
             # 更新 projects 表
             self.supabase.table('projects').update({
-                "review_analysis_status": "failed"
+                "review_analysis_status": "failed",
+                "overall_status": overall_status
             }).eq('id', project_id).execute()
             
             # 更新 review_analysis_runs 表

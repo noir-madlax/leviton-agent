@@ -1,9 +1,11 @@
 """Categories module services."""
 
 import logging
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from pathlib import Path
 import sys
+from collections import Counter
+import asyncio
 
 # Add project root to Python path
 sys.path.insert(0, str(Path(__file__).parent.parent))
@@ -14,6 +16,11 @@ from category_repository import CategoryRepository
 from api_client import RainforestCategoryAPI
 from models import CategoryInfo, CategoryFetchStatus
 from .models import CategoryNode
+
+# Import scraping utilities
+sys.path.append(str(Path(__file__).parent.parent / "scraping"))
+from common.url_parser import parse_amazon_url
+from common.amazon_api import get_product_details_rainforest, amazon_search
 
 logger = logging.getLogger(__name__)
 
@@ -187,6 +194,77 @@ class CategoryService:
             logger.error(f"Error fetching children from API for {parent_category_id}: {e}")
             return []
 
+    async def _fetch_single_category_from_api(self, category_id: str) -> Optional[dict]:
+        """Fetch single category information from API and save to database."""
+        try:
+            logger.info(f"Fetching category {category_id} from Rainforest API using category endpoint")
+            
+            # Use category API to get category information
+            from ..scraping.common.amazon_api import get_products_from_category_rainforest
+            
+            category_results = await asyncio.to_thread(
+                get_products_from_category_rainforest,
+                category_id=category_id,
+                amazon_domain="amazon.com",
+                page=1
+            )
+            
+            if not category_results:
+                logger.warning(f"No category results returned for category {category_id}")
+                return None
+            
+            # Extract category information from the response
+            category_name = f"Category {category_id}"
+            full_path = category_name
+            
+            # Try to extract category name from the response
+            if "category" in category_results:
+                category_info = category_results["category"]
+                if "name" in category_info and category_info["name"]:
+                    category_name = category_info["name"]
+                    full_path = category_name
+                    logger.info(f"Extracted category name from API: {category_name}")
+            
+            # If we didn't get the name from category, try from search_information
+            if category_name == f"Category {category_id}" and "search_information" in category_results:
+                search_info = category_results["search_information"]
+                if "title" in search_info and search_info["title"]:
+                    category_name = search_info["title"]
+                    full_path = category_name
+            
+            # Try to save to database
+            try:
+                self.supabase_client.table('amazon_categories')\
+                    .insert({
+                        'category_id': category_id,
+                        'name': category_name,
+                        'full_path': full_path,
+                        'level': 1,
+                        'parent_category_id': None
+                    })\
+                    .execute()
+                
+                logger.info(f"Successfully saved category {category_id} to database")
+                        
+            except Exception as save_error:
+                logger.warning(f"Error saving category {category_id} to database: {save_error}")
+            
+            # Return the category info regardless of save status
+            return {
+                "category_id": category_id,
+                "name": category_name,
+                "full_path": full_path
+            }
+                
+        except Exception as e:
+            logger.error(f"Error fetching category {category_id} from API: {e}")
+            # Return basic info as fallback
+            return {
+                "category_id": category_id,
+                "name": f"Category {category_id}",
+                "full_path": f"Category {category_id}"
+            }
+
     async def get_descendant_categories(self, category_id: str) -> List[str]:
         """Get all descendant category names for product filtering."""
         try:
@@ -259,8 +337,183 @@ class CategoryService:
                     "full_path": result.data.get('full_path')
                 }
             else:
-                return None
+                logger.info(f"Category {category_id} not found in database, attempting to fetch from API")
+                return await self._fetch_single_category_from_api(category_id)
                 
         except Exception as e:
             logger.error(f"Error getting category info for {category_id}: {e}")
-            return None 
+            # Try fetching from API as fallback
+            logger.info(f"Attempting API fallback for category {category_id}")
+            return await self._fetch_single_category_from_api(category_id)
+
+    async def analyze_url_for_category(self, url: str) -> Dict[str, Any]:
+        """
+        Analyze Amazon URL and return category suggestions.
+        Supports product URLs, search URLs, and category URLs.
+        """
+        try:
+            # Parse URL to determine type
+            parsed_info = parse_amazon_url(url)
+            url_type = parsed_info.get("url_type")
+            
+            logger.info(f"Analyzing URL: {url}, detected type: {url_type}")
+            logger.info(f"Parsed info: {parsed_info}")
+            
+            result = None
+            if url_type == "product":
+                result = await self._analyze_product_url(parsed_info)
+            elif url_type == "search":
+                result = await self._analyze_search_url(parsed_info)
+            elif url_type == "category":
+                result = await self._analyze_category_url(parsed_info)
+            else:
+                result = {
+                    "success": False,
+                    "url_type": "unknown",
+                    "suggestions": [],
+                    "confidence_level": "none",
+                    "message": f"Unsupported URL type: {url_type}"
+                }
+            
+            logger.info(f"URL analysis result: {result}")
+            return result
+                
+        except Exception as e:
+            logger.error(f"Error analyzing URL {url}: {e}")
+            error_result = {
+                "success": False,
+                "url_type": "unknown",
+                "suggestions": [],
+                "confidence_level": "none",
+                "message": f"Failed to analyze URL: {str(e)}"
+            }
+            logger.info(f"Returning error result: {error_result}")
+            return error_result
+
+    async def _analyze_product_url(self, parsed_info: Dict) -> Dict[str, Any]:
+        """Analyze product URL to extract category information."""
+        asin = parsed_info.get("asin")
+        if not asin:
+            raise ValueError("Could not extract ASIN from product URL. Please ensure the URL is a valid Amazon product URL (e.g., https://amazon.com/dp/B08N123456)")
+        
+        logger.info(f"Fetching product details for ASIN: {asin}")
+        
+        # Get product details from Rainforest API
+        try:
+            product_details = await asyncio.to_thread(
+                get_product_details_rainforest, asin
+            )
+            logger.info(f"Rainforest API response received for ASIN {asin}: {bool(product_details)}")
+        except Exception as e:
+            logger.error(f"Error calling Rainforest API for ASIN {asin}: {e}")
+            raise ValueError(f"Failed to fetch product details for ASIN {asin}. API error: {str(e)}")
+        
+        if not product_details:
+            logger.error(f"Empty response from Rainforest API for ASIN {asin}")
+            raise ValueError(f"Unable to fetch product details for ASIN {asin}. The product may not exist or be unavailable.")
+        
+        if "product" not in product_details:
+            logger.error(f"Invalid product data structure for ASIN {asin}: {list(product_details.keys())}")
+            raise ValueError(f"Invalid product data received for ASIN {asin}. Please check if the ASIN is correct.")
+        
+        product_data = product_details["product"]
+        categories = product_data.get("categories", [])
+        logger.info(f"Found {len(categories)} categories for ASIN {asin}")
+        
+        if not categories:
+            raise ValueError(f"No category information found for product {asin}. This product may not have proper categorization.")
+        
+        # Extract the most specific category (last in the list)
+        last_category = categories[-1] if categories else None
+        if not last_category or "category_id" not in last_category:
+            raise ValueError(f"Invalid category data for product {asin}. Unable to extract category ID.")
+        
+        category_id = last_category["category_id"]
+        category_name = last_category.get("name", "Unknown Category")
+        
+        # Get category info from database if available
+        db_category_info = await self.get_category_info(category_id)
+        if db_category_info:
+            category_name = db_category_info["name"]
+            full_path = db_category_info.get("full_path", category_name)
+        else:
+            full_path = category_name
+        
+        suggestions = [{
+            "category_id": category_id,
+            "category_name": category_name,
+            "confidence": 0.95,
+            "reason": f"Automatically extracted from product details. This is the most specific category for this product. Full path: {full_path}"
+        }]
+        
+        return {
+            "success": True,
+            "url_type": "product",
+            "suggestions": suggestions,
+            "confidence_level": "high",
+            "message": f"Successfully extracted the highest relevance category from product {asin}. We analyzed this product and identified its most specific category classification."
+        }
+
+    async def _analyze_search_url(self, parsed_info: Dict) -> Dict[str, Any]:
+        """Analyze search URL to suggest categories based on search results."""
+        search_term = parsed_info.get("search_term")
+        category_id = parsed_info.get("category_id")
+        
+        # If URL already contains category_id, use it directly
+        if category_id:
+            logger.info(f"Found category_id in search URL: {category_id}")
+            db_category_info = await self.get_category_info(category_id)
+            if db_category_info:
+                logger.info(f"Successfully retrieved category info: {db_category_info}")
+                suggestions = [{
+                    "category_id": category_id,
+                    "category_name": db_category_info["name"],
+                    "confidence": 0.9,
+                    "reason": f"Category ID automatically detected in your search URL. This is the category you were browsing. Full path: {db_category_info.get('full_path', db_category_info['name'])}"
+                }]
+                
+                result = {
+                    "success": True,
+                    "url_type": "search",
+                    "suggestions": suggestions,
+                    "confidence_level": "high",
+                    "message": f"Successfully extracted category from your search URL. We found that you were browsing in the '{db_category_info['name']}' category."
+                }
+                logger.info(f"Returning search URL analysis result: {result}")
+                return result
+            else:
+                logger.warning(f"No category info found in database for category_id: {category_id}")
+        
+        # Search URLs without category_id are not supported
+        raise ValueError("Search URLs are not supported. Please provide a valid Amazon category URL with a category ID (node parameter), or use a product URL instead. Example: https://amazon.com/s?node=12345678 or https://amazon.com/dp/B08N123456")
+
+    async def _analyze_category_url(self, parsed_info: Dict) -> Dict[str, Any]:
+        """Analyze category URL - direct category ID extraction."""
+        category_id = parsed_info.get("category_id")
+        if not category_id:
+            raise ValueError("Could not extract category ID from URL")
+        
+        # Get category info from database
+        db_category_info = await self.get_category_info(category_id)
+        
+        category_name = f"Category {category_id}"
+        full_path = category_name
+        
+        if db_category_info:
+            category_name = db_category_info["name"]
+            full_path = db_category_info.get("full_path", category_name)
+        
+        suggestions = [{
+            "category_id": category_id,
+            "category_name": category_name,
+            "confidence": 1.0,
+            "reason": f"Direct category page URL detected. This is the exact category you provided. Full path: {full_path}"
+        }]
+        
+        return {
+            "success": True,
+            "url_type": "category",
+            "suggestions": suggestions,
+            "confidence_level": "high",
+            "message": f"Perfect match! We extracted the category '{category_name}' directly from your URL."
+        } 

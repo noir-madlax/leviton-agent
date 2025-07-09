@@ -43,6 +43,8 @@ class Project(BaseModel):
     created_at: datetime
     updated_at: datetime
     status: str
+    # Add simplified overall status for frontend display
+    overall_status: Optional[str] = "creating"  # 'creating', 'ready', 'failed'
     segmentation_run_id: Optional[str] = None
     segmentation_started_at: Optional[datetime] = None
     segmentation_completed_at: Optional[datetime] = None
@@ -69,4 +71,5 @@ class ProjectCreateResponse(BaseModel):
     total_reviews: int
     avg_monthly_sales: float
     status: str 
+    overall_status: Optional[str] = "creating"
     segmentation_status: Optional[str] = "pending" 

@@ -1,10 +1,10 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Calendar, ArrowRight, BarChart3, TrendingUp, MessageSquare, Clock, CheckCircle, AlertCircle } from "lucide-react"
+import { Calendar, ArrowRight, BarChart3, TrendingUp, MessageSquare, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
 import Link from "next/link"
 
-// 使用现有的Project接口
+// Updated Project interface with overall_status
 interface Project {
   id: string
   project_name: string
@@ -12,6 +12,7 @@ interface Project {
   created_at: string
   updated_at: string
   status: string
+  overall_status?: string  // New simplified status field
   total_products?: number
   total_brands?: number
   total_reviews?: number
@@ -23,8 +24,18 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
-  // 项目详情页面链接
-  const linkHref = `/project/${project.id}`
+  // Determine the correct link based on project status
+  const getLinkHref = () => {
+    if (project.overall_status === 'creating') {
+      return `/project/${project.id}/progress`
+    }
+    return `/project/${project.id}`
+  }
+
+  // Determine if we should show the processing badge
+  const showProcessingBadge = project.overall_status === 'creating'
+  
+  const linkHref = getLinkHref()
   const chatHref = `/project/${project.id}/chat?from=home`
   
   return (
@@ -33,9 +44,18 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         <div className="flex items-start justify-between">
           <div className="space-y-2">
             <CardTitle className={`${featured ? "text-lg" : "text-base"} line-clamp-2`}>{project.project_name}</CardTitle>
-            <Badge variant="outline" className="text-xs w-fit">
-              {project.description || "Analysis Project"}
-            </Badge>
+            <div className="flex items-center gap-2">
+              <Badge variant="outline" className="text-xs w-fit">
+                {project.description || "Analysis Project"}
+              </Badge>
+              {/* Only show processing badge when project is being created */}
+              {showProcessingBadge && (
+                <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700 border-blue-200">
+                  <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                  Processing
+                </Badge>
+              )}
+            </div>
           </div>
           {featured && <Badge className="bg-blue-100 text-blue-700 border-blue-200">Current</Badge>}
         </div>
@@ -72,17 +92,18 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
 
         <div className="flex items-center justify-between">
           <div className="flex items-center space-x-2">
-            {project.status === 'completed' ? (
+            {/* Simplified status display based on overall_status */}
+            {project.overall_status === 'ready' ? (
               <>
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-green-700">Analysis Complete</span>
+                <span className="text-sm text-green-700">Ready for Analysis</span>
               </>
-            ) : project.status === 'in_progress' ? (
+            ) : project.overall_status === 'creating' ? (
               <>
                 <Clock className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-blue-700">In Progress</span>
+                <span className="text-sm text-blue-700">Processing</span>
               </>
-            ) : project.status === 'failed' ? (
+            ) : project.overall_status === 'failed' ? (
               <>
                 <AlertCircle className="w-4 h-4 text-red-500" />
                 <span className="text-sm text-red-700">Failed</span>
@@ -96,18 +117,35 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           </div>
 
           <div className="flex items-center space-x-2">
-            {/* Chat Button */}
-            <Link href={chatHref}>
-              <Button variant="ghost" size="sm">
-                <MessageSquare className="w-3 h-3 mr-1" />
-                Chat
-              </Button>
-            </Link>
-            {/* View Project Button */}
+            {/* Only show Chat button for ready projects */}
+            {project.overall_status === 'ready' && (
+              <Link href={chatHref}>
+                <Button variant="ghost" size="sm">
+                  <MessageSquare className="w-3 h-3 mr-1" />
+                  Chat
+                </Button>
+              </Link>
+            )}
+            
+            {/* Main action button */}
             <Link href={linkHref}>
               <Button variant={featured ? "default" : "outline"} size="sm">
-                {featured ? "Continue" : "View Project"}
-                <ArrowRight className="w-3 h-3 ml-1" />
+                {project.overall_status === 'creating' ? (
+                  <>
+                    <Clock className="w-3 h-3 mr-1" />
+                    View Progress
+                  </>
+                ) : featured ? (
+                  <>
+                    Continue
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </>
+                ) : (
+                  <>
+                    View Project
+                    <ArrowRight className="w-3 h-3 ml-1" />
+                  </>
+                )}
               </Button>
             </Link>
           </div>

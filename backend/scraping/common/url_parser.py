@@ -15,6 +15,17 @@ def parse_amazon_url(url: str, max_products: int = 100, max_reviews: int = 50) -
     Returns:
         dict: Dictionary containing parsed information
     """
+    # Clean and normalize URL
+    url = url.strip()
+    
+    # Handle incomplete URLs (query parameters only)
+    if not url.startswith('http') and ('=' in url or '&' in url):
+        # This looks like query parameters, prepend Amazon domain and search path
+        url = f"https://www.amazon.com/s?{url}"
+    elif not url.startswith('http') and not url.startswith('amazon.'):
+        # Add protocol if missing
+        url = f"https://www.{url}" if url.startswith('amazon.') else f"https://www.amazon.com/{url}"
+    
     parsed_url = urlparse(url)
     
     # Determine the type of Amazon URL
@@ -37,6 +48,22 @@ def parse_amazon_url(url: str, max_products: int = 100, max_reviews: int = 50) -
         query_params = parse_qs(parsed_url.query)
         search_term = query_params.get('k', [''])[0]
         
+        # Also check for 'sprefix' parameter as alternative search term source
+        if not search_term:
+            sprefix = query_params.get('sprefix', [''])[0]
+            if sprefix:
+                # sprefix often contains URL encoded search terms
+                import urllib.parse
+                search_term = urllib.parse.unquote_plus(sprefix).split(',')[0]  # Clean up encoding
+        
+        # Clean up search term regardless of source
+        if search_term:
+            # URL decode and clean the search term
+            import urllib.parse
+            search_term = urllib.parse.unquote_plus(search_term)
+            # Remove extra whitespace and special characters
+            search_term = ' '.join(search_term.split())
+        
         # Check for node parameter (category ID)
         node_id = query_params.get('node', [''])[0]
         
@@ -46,6 +73,9 @@ def parse_amazon_url(url: str, max_products: int = 100, max_reviews: int = 50) -
             category_match = re.search(r'n:(\d+)', category_id)
             if category_match:
                 category_id = category_match.group(1)
+        else:
+            # Reset category_id if no valid format found
+            category_id = ''
         
         # If we have a node parameter, treat as category URL
         if node_id:
@@ -133,19 +163,23 @@ def extract_asin_from_url(url: str) -> Optional[str]:
     Returns:
         str: ASIN if found, None otherwise
     """
-    # Common ASIN patterns
+    # Common ASIN patterns - ASINs are typically 10 characters but can be 8-10
     patterns = [
-        r'/dp/([A-Z0-9]{10})',
-        r'/gp/product/([A-Z0-9]{10})',
-        r'/product/([A-Z0-9]{10})',
-        r'asin=([A-Z0-9]{10})',
-        r'/([A-Z0-9]{10})(?:[/?]|$)'
+        r'/dp/([A-Z0-9]{8,10})',
+        r'/gp/product/([A-Z0-9]{8,10})',
+        r'/product/([A-Z0-9]{8,10})',
+        r'asin=([A-Z0-9]{8,10})',
+        # More specific pattern for the last one to avoid false matches
+        r'/([B][A-Z0-9]{8,9})(?:[/?]|$)'  # Most ASINs start with B
     ]
     
     for pattern in patterns:
         match = re.search(pattern, url)
         if match:
-            return match.group(1)
+            asin = match.group(1)
+            # Validate ASIN format (should be 8-10 characters, usually starts with B)
+            if len(asin) >= 8 and len(asin) <= 10:
+                return asin
     
     return None
 

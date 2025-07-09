@@ -1,22 +1,17 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import { Button } from "@/components/ui/button"
-import { Sidebar } from "@/components/layout/sidebar"
 import { ProjectCard } from "@/components/layout/project-card"
 import { Card, CardContent } from "@/components/ui/card"
-import { DatabaseService } from "@/components/analysis-db/data/database-service"
-import { ProtectedRoute } from "@/components/auth/protected-route"
-import { UserMenu } from "@/components/layout/user-menu"
-import { useAuth } from "@/contexts/auth-context"
-import {
-  Plus,
-  Upload,
-  Loader2,
-} from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { Plus, Clock, Upload, Loader2, Info } from "lucide-react"
 import Link from "next/link"
+import { useEffect, useState } from "react"
+import { ProtectedRoute } from "@/components/auth/protected-route"
+import { DatabaseService } from "@/components/analysis-db/data/database-service"
+import { Sidebar } from "@/components/layout/sidebar"
+import { useAuth } from "@/contexts/auth-context"
 
-// 使用现有的Project接口
+// Updated Project interface with overall_status
 interface Project {
   id: string
   project_name: string
@@ -24,6 +19,7 @@ interface Project {
   created_at: string
   updated_at: string
   status: string
+  overall_status?: string  // New simplified status field
   total_products?: number
   total_brands?: number
   total_reviews?: number
@@ -36,10 +32,14 @@ export default function HomePage() {
   const [error, setError] = useState<string | null>(null)
   const { isAuthenticated, user } = useAuth()
 
-  // 获取最近使用的项目（作为Current Project）
+  // Get the most recent project as Current Project
   const mostRecentProject = projects.length > 0 ? projects[0] : null
+  
+  // Check if there are any processing projects
+  const processingProjects = projects.filter(p => p.overall_status === 'creating')
+  const hasProcessingProjects = processingProjects.length > 0
 
-  // 加载项目列表
+  // Load projects list
   useEffect(() => {
     const loadProjects = async () => {
       if (!isAuthenticated) {
@@ -58,7 +58,7 @@ export default function HomePage() {
         
         console.log('Projects loaded:', projectList.length)
         
-        // 按更新时间排序，最新的在前面
+        // Sort by update time, newest first
         const sortedProjects = projectList.sort((a, b) => 
           new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime()
         )
@@ -134,6 +134,43 @@ export default function HomePage() {
               </Card>
             )}
 
+            {/* User Tips Section */}
+            {hasProcessingProjects && (
+              <Card className="border-blue-200 bg-blue-50">
+                <CardContent className="pt-6">
+                  <div className="flex items-start space-x-3">
+                    <Clock className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-medium text-blue-900 mb-1">Projects in Progress</h3>
+                      <p className="text-blue-800 text-sm">
+                        You have {processingProjects.length} project{processingProjects.length > 1 ? 's' : ''} currently being processed. 
+                        The analysis typically takes 10-30 minutes to complete depending on the data size. You can click on any processing project to view detailed progress.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
+           
+
+            {/* Welcome Tips for New Users */}
+            {projects.length === 0 && (
+              <Card className="border-blue-200 bg-blue-50">
+                <CardContent className="pt-6">
+                  <div className="flex items-start space-x-3">
+                    <Info className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0" />
+                    <div>
+                      <h3 className="font-medium text-blue-900 mb-1">Welcome to Xenith</h3>
+                      <p className="text-blue-800 text-sm">
+                        Get started by creating your first research project. Select your product categories, apply filters, and let our AI analyze market insights for you.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            )}
+
             {/* Current Project */}
             {mostRecentProject && (
               <div>
@@ -143,8 +180,6 @@ export default function HomePage() {
                 <ProjectCard project={mostRecentProject} featured={true} />
               </div>
             )}
-
-
 
             {/* No projects message */}
             {projects.length === 0 && (

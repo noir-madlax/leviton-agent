@@ -16,6 +16,7 @@ export default function OnboardingPage() {
     isConfirmed: boolean;
     isFilterApplied: boolean;
     generateSmartProjectName: () => string;
+    estimatedTime: string;
   } | null>(null)
   
   // 项目名状态管理
@@ -61,7 +62,7 @@ export default function OnboardingPage() {
     <ProtectedRoute>
       <div className="min-h-screen bg-gray-50/50">
         {/* Header */}
-        <header className="border-b bg-white">
+        <header className="sticky top-0 z-10 border-b bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between h-16">
               <div className="flex items-center gap-6">
@@ -77,7 +78,7 @@ export default function OnboardingPage() {
                   <div className="flex flex-col">
                     <h1 className="text-xl font-semibold">Create New Project</h1>
                     <p className="text-sm text-muted-foreground">
-                      Select data scope and configure your analysis project
+                      Select project data scope
                     </p>
                   </div>
                   
@@ -114,27 +115,34 @@ export default function OnboardingPage() {
               
               {/* Create Research Project Button */}
               <div className="flex gap-2">
-                <Button
-                  onClick={handleCreateProject}
-                  disabled={!createProjectRef || createProjectRef.isConfirmed || !createProjectRef.isFilterApplied}
-                  title={!createProjectRef || !createProjectRef.isFilterApplied ? "Please apply filters first" : ""}
-                >
-                  {createProjectRef && createProjectRef.isConfirmed ? (
-                    <>
-                      <CheckCircle className="w-4 h-4 mr-2" />
-                      Project Created
-                    </>
-                  ) : (
-                    'Create Research Project'
+                <div className="flex flex-col items-end">
+                  <Button
+                    onClick={handleCreateProject}
+                    disabled={!createProjectRef || createProjectRef.isConfirmed || !createProjectRef.isFilterApplied}
+                    title={!createProjectRef || !createProjectRef.isFilterApplied ? "Please apply filters first" : ""}
+                  >
+                    {createProjectRef && createProjectRef.isConfirmed ? (
+                      <>
+                        <CheckCircle className="w-4 h-4 mr-2" />
+                        Project Created
+                      </>
+                    ) : (
+                      'Create Research Project'
+                    )}
+                  </Button>
+                  {createProjectRef?.isFilterApplied && createProjectRef?.estimatedTime && (
+                    <p className="text-xs text-gray-500 mt-1">
+                      Estimated time: {createProjectRef.estimatedTime}
+                    </p>
                   )}
-                </Button>
+                </div>
               </div>
             </div>
           </div>
         </header>
 
         {/* Main Content */}
-        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
           <DataConfirmationTab 
             onNavigateToAnalysis={handleNavigateToAnalysis}
             onRegisterCreateProject={setCreateProjectRef}

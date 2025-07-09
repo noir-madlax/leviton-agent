@@ -3,6 +3,7 @@
 import logging
 from typing import List
 from fastapi import APIRouter, HTTPException, Depends
+from pydantic import BaseModel
 
 from .models import CategoryChildrenResponse, CategoryTreeResponse, CategoryNode
 from .services import CategoryService
@@ -10,6 +11,25 @@ from .services import CategoryService
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+
+
+class AnalyzeUrlRequest(BaseModel):
+    url: str
+
+
+class CategorySuggestion(BaseModel):
+    category_id: str
+    category_name: str
+    confidence: float
+    reason: str
+
+
+class AnalyzeUrlResponse(BaseModel):
+    success: bool
+    url_type: str
+    suggestions: List[CategorySuggestion]
+    confidence_level: str
+    message: str = ""
 
 
 def get_category_service() -> CategoryService:
@@ -127,3 +147,26 @@ async def get_category_name(
     except Exception as e:
         logger.error(f"Error in get_category_name API for {category_id}: {e}")
         raise HTTPException(status_code=500, detail=str(e)) 
+
+
+@router.post("/analyze-url", response_model=AnalyzeUrlResponse)
+async def analyze_url_for_category(
+    request: AnalyzeUrlRequest,
+    service: CategoryService = Depends(get_category_service)
+):
+    """
+    Analyze Amazon URL and return category suggestions.
+    Supports product URLs, search URLs, and category URLs.
+    """
+    try:
+        result = await service.analyze_url_for_category(request.url)
+        return result
+    except Exception as e:
+        logger.error(f"Error in analyze_url_for_category API: {e}")
+        return AnalyzeUrlResponse(
+            success=False,
+            url_type="unknown",
+            suggestions=[],
+            confidence_level="none",
+            message=f"Failed to analyze URL: {str(e)}"
+        ) 

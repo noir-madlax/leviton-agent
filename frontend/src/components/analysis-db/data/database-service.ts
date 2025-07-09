@@ -35,6 +35,7 @@ export interface Project {
   created_at: string
   updated_at: string
   status: string
+  overall_status?: string  // New simplified status field for frontend display
 }
 
 // 新增数据确认页面相关接口
