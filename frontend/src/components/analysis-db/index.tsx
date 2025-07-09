@@ -878,21 +878,23 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                 />
                 
                 <Tabs value={mainTabValue} className="mt-6" onValueChange={(value) => handleTabChange(value)}>
-                  <TabsList className="grid w-full grid-cols-3">
+                  {/* 隐藏主要的Tab导航 */}
+                  {/* <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="market-analysis">Market Analysis</TabsTrigger>
                     <TabsTrigger value="review-insights">Review Insights</TabsTrigger>
                     <TabsTrigger value="competitor-analysis">Competitor Analysis</TabsTrigger>
-                  </TabsList>
+                  </TabsList> */}
 
                   <TabsContent value="market-analysis" className="mt-6">
                     <Tabs value={subTabValue} className="w-full" onValueChange={(value) => handleTabChange(value)}>
-                      <TabsList className="grid w-full grid-cols-5">
+                      {/* 隐藏次级Tab导航 */}
+                      {/* <TabsList className="grid w-full grid-cols-5">
                         <TabsTrigger value="brand-analysis">Brand Analysis</TabsTrigger>
                         <TabsTrigger value="product-analysis">Product Analysis</TabsTrigger>
                         <TabsTrigger value="pricing-analysis">Pricing Analysis</TabsTrigger>
                         <TabsTrigger value="market-insights">Market Insights</TabsTrigger>
                         <TabsTrigger value="package-preference">Package Preference</TabsTrigger>
-                      </TabsList>
+                      </TabsList> */}
 
                       <TabsContent value="brand-analysis">
                         {data.brandAnalysis ? (
