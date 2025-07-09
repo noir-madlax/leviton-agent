@@ -12,6 +12,8 @@ interface CategoryFilterAndProjectScopeProps {
   projectId: string | null
   onFiltersChange?: (filters: ProjectFilters) => void
   initialFilters?: ProjectFilters
+  preloadedData?: ProjectOverviewData | null
+  isDataLoading?: boolean
 }
 
 interface ProjectFilters {
@@ -46,7 +48,9 @@ interface ProjectOverviewData {
 export function CategoryFilterAndProjectScope({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [] } 
+  initialFilters = { categories: [], asins: [] },
+  preloadedData,
+  isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
   // Filter states
   const [availableCategories, setAvailableCategories] = useState<string[]>([])
@@ -54,27 +58,48 @@ export function CategoryFilterAndProjectScope({
   const [appliedCategories, setAppliedCategories] = useState<string[]>(initialFilters.categories)
   const [filterLoading, setFilterLoading] = useState(false)
 
-  // Project overview states
-  const [projectData, setProjectData] = useState<ProjectOverviewData | null>(null)
-  const [overviewLoading, setOverviewLoading] = useState(false)
+  // Project overview states - 优先使用预加载数据
+  const [projectData, setProjectData] = useState<ProjectOverviewData | null>(preloadedData || null)
+  const [overviewLoading, setOverviewLoading] = useState(isDataLoading || false)
 
-  // Load data when projectId changes
+  // 监听预加载数据变化
+  useEffect(() => {
+    if (preloadedData) {
+      setProjectData(preloadedData)
+      setAvailableCategories(preloadedData.available_categories)
+    }
+  }, [preloadedData])
+
+  // 监听加载状态变化
+  useEffect(() => {
+    setOverviewLoading(isDataLoading || false)
+  }, [isDataLoading])
+
+  // Load data when projectId changes - 只在没有预加载数据时才加载
   useEffect(() => {
     if (!projectId) {
       setAvailableCategories([])
       setPendingCategories([])
       setAppliedCategories([])
-      setProjectData(null)
+      if (!preloadedData) {
+        setProjectData(null)
+      }
       return
     }
 
-    loadData()
-  }, [projectId])
+    // 只在没有预加载数据时才进行数据加载
+    if (!preloadedData && !projectData) {
+      loadData()
+    }
+  }, [projectId, preloadedData, projectData])
 
-  // Load project overview when filters change
+  // Load project overview when filters change - 只在有过滤器变化时重新加载
   useEffect(() => {
     if (!projectId) return
-    loadProjectOverview()
+    // 只有在有活跃过滤器且不是初始加载时才重新加载
+    if (appliedCategories.length > 0) {
+      loadProjectOverview()
+    }
   }, [projectId, appliedCategories])
 
   const loadData = async () => {
@@ -165,7 +190,7 @@ export function CategoryFilterAndProjectScope({
         <CardHeader className="pb-2">
           <CardTitle className="text-lg flex items-center gap-2">
             <Filter className="w-5 h-5" />
-            Category Filter & Project Scope
+            Filter Project Scope by Product Categories
           </CardTitle>
         </CardHeader>
         <CardContent className="p-4 pt-0 space-y-4">
@@ -261,7 +286,7 @@ export function CategoryFilterAndProjectScope({
             )}
             {hasPendingChanges && (
               <div className="p-2 bg-orange-50 border border-orange-200 rounded text-xs text-orange-700">
-                <strong>⏳ Pending Changes:</strong> Click "Apply Filters" to update the analysis data.
+                <strong>⏳ Pending Changes:</strong> Click &quot;Apply Filters&quot; to update the analysis data.
               </div>
             )}
           </div>

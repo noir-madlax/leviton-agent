@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { DashboardHeader } from "@/components/analysis-db/shared/dashboard-header"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
@@ -490,17 +490,16 @@ async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]
 
 interface AnalysisDbContainerProps {
   selectedProjectId?: string | null;
+  filters?: { categories: string[]; asins: string[] };
 }
 
-export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: AnalysisDbContainerProps) {
+export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filters }: AnalysisDbContainerProps) {
   const [data, setData] = useState<Partial<DashboardData>>({})
   const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
-  const [appliedFilters, setAppliedFilters] = useState<{ categories: string[]; asins: string[] }>({
-    categories: [],
-    asins: []
-  })
+  // 使用传入的filters，提供默认值，并确保引用稳定性
+  const appliedFilters = useMemo(() => filters || { categories: [], asins: [] }, [filters]);
 
   
   // 为每个数据部分单独管理加载状态
@@ -517,9 +516,19 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
 
   // 跟踪已加载的数据
   const [loadedData, setLoadedData] = useState<Set<string>>(new Set())
+  const loadedDataRef = useRef<Set<string>>(new Set())
+
+  // 保持 ref 与 state 同步
+  useEffect(() => {
+    loadedDataRef.current = loadedData
+  }, [loadedData])
 
   const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], forceReload = false) => {
-    if (!projectId || (!forceReload && loadedData.has(dataType))) return
+    if (!projectId) return
+    
+    // 使用 ref 来检查已加载数据，避免依赖 state
+    const shouldLoad = forceReload || !loadedDataRef.current.has(dataType)
+    if (!shouldLoad) return
     
     try {
       setLoadingStates(prev => ({ ...prev, [dataType]: true }))
@@ -563,7 +572,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     } finally {
       setLoadingStates(prev => ({ ...prev, [dataType]: false }))
     }
-  }, [loadedData])
+  }, [])
 
   // 项目变更回调
   const handleProjectChange = (projectId: string) => {
@@ -573,7 +582,6 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     // 清空之前的数据和状态
     setData({})
     setLoadedData(new Set())
-    setAppliedFilters({ categories: [], asins: [] })
     setLoadingStates({
       brandAnalysis: false,
       productAnalysis: false,
@@ -588,36 +596,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     loadSpecificData('brandAnalysis', projectId)
   }
 
-  // Filter变更回调 - 重新加载所有数据
-  const handleFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
-    console.log(`🔄 Filters applied:`, filters)
-    setAppliedFilters(filters)
-    
-    if (!selectedProjectId) return
-    
-    // 清空之前的数据，强制重新加载
-    setData({})
-    setLoadedData(new Set())
-    setLoadingStates({
-      brandAnalysis: false,
-      productAnalysis: false,
-      pricingAnalysis: false,
-      marketInsights: false,
-      packagePreference: false,
-      reviewInsights: false,
-      competitorAnalysis: false,
-      allReviewData: false
-    })
-    
-    // 🔑 直接传递新的filters值，而不是依赖状态更新
-    const categoryFilters = filters.categories.length > 0 ? filters.categories : undefined
-    
-    // ProjectDataOverview会通过props在appliedFilters变化时自动重新加载
-    
-    // 重新加载当前活跃tab的数据
-    loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters)
-    console.log(`📊 Data reload triggered by filter change with filters:`, categoryFilters)
-  }
+
 
   // Tab切换处理函数
   const handleTabChange = (tabValue: string) => {
@@ -655,17 +634,31 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
     }
   }
 
+  // 初始化effect - 只在项目ID变化时执行
   useEffect(() => {
-    // 如果有初始项目ID，自动加载数据
     if (initialProjectId) {
       console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
       setSelectedProjectId(initialProjectId);
-      // 立即加载第一个tab的数据，初始化时没有filters
-      loadSpecificData('brandAnalysis', initialProjectId, undefined);
+      // 初始化时不传filters，使用默认值
+      loadSpecificData('brandAnalysis', initialProjectId);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
   }, [initialProjectId, loadSpecificData])
+
+  // 监听filters变化，重新加载数据
+  useEffect(() => {
+    if (selectedProjectId) {
+      console.log(`🔄 Filters changed:`, appliedFilters);
+      // 清空已加载的数据缓存，强制重新加载
+      setLoadedData(new Set());
+      setData({});
+      
+      // 重新加载当前数据
+      const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
+      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, true); // 强制重新加载
+    }
+  }, [appliedFilters, selectedProjectId, loadSpecificData])
 
   if (loading) {
     return (
@@ -704,7 +697,6 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
               <DashboardHeader 
                 onProjectChange={handleProjectChange} 
                 selectedProjectId={selectedProjectId}
-                onFiltersChange={handleFiltersChange}
               />
               
               <div className="mt-12 text-center">
@@ -857,7 +849,6 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: Ana
                 <DashboardHeader 
                   onProjectChange={handleProjectChange} 
                   selectedProjectId={selectedProjectId}
-                  onFiltersChange={handleFiltersChange}
                 />
                 
                 <Tabs defaultValue="market-analysis" className="mt-6" onValueChange={(value) => handleTabChange(value)}>

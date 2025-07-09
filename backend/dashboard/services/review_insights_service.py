@@ -69,7 +69,22 @@ class ReviewInsightsService(BaseDashboardService):
                 logger.warning(f"No ASINs found for project {self.project_id}")
                 return []
             
-            aspects_query = aspects_query.in_('product_id', self.project_asins)
+            # Apply category filtering if set by getting filtered product IDs first
+            filtered_product_ids = self.project_asins
+            if self.category_filters:
+                # Get product IDs that match both ASIN filter and category filter
+                product_filter_query = self._get_base_product_table().select('platform_id')
+                product_filter_query = self._apply_combined_filters(product_filter_query)
+                product_filter_result = product_filter_query.execute()
+                
+                if product_filter_result.data:
+                    filtered_product_ids = [item['platform_id'] for item in product_filter_result.data]
+                    logger.info(f"🔍 Category filters applied: {len(filtered_product_ids)} products after filtering")
+                else:
+                    logger.warning(f"No products found matching category filters: {self.category_filters}")
+                    return []
+            
+            aspects_query = aspects_query.in_('product_id', filtered_product_ids)
             aspects_result = aspects_query.execute()
             
             if not aspects_result.data:

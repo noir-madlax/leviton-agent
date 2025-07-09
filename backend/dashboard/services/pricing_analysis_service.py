@@ -35,7 +35,7 @@ class PricingAnalysisService(BaseDashboardService):
             
             # Apply filters
             query = self._apply_base_filters(query)
-            query = self._apply_asin_filter(query)
+            query = self._apply_combined_filters(query)
             
             result = query.execute()
             

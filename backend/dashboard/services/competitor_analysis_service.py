@@ -96,6 +96,8 @@ class CompetitorAnalysisService(BaseDashboardService):
         query = self._apply_base_filters(query)
         # Use selected ASINs for comparison
         query = query.in_('platform_id', self.selected_asins)
+        # Apply category filtering if set
+        query = self._apply_category_filter(query)
         result = query.execute()
         
         if result.data:
@@ -109,7 +111,24 @@ class CompetitorAnalysisService(BaseDashboardService):
         """Get review analysis data from new table structure filtered by selected competitor ASINs."""
         
         try:
-            # Get aspects filtered by project and selected competitor ASINs
+            # Apply category filtering to selected ASINs if category filters are set
+            filtered_asins = self.selected_asins
+            if self.category_filters:
+                # Get ASINs that match both selected ASINs and category filter
+                product_filter_query = self._get_base_product_table().select('platform_id')
+                product_filter_query = self._apply_base_filters(product_filter_query)
+                product_filter_query = product_filter_query.in_('platform_id', self.selected_asins)
+                product_filter_query = self._apply_category_filter(product_filter_query)
+                product_filter_result = product_filter_query.execute()
+                
+                if product_filter_result.data:
+                    filtered_asins = [item['platform_id'] for item in product_filter_result.data]
+                    logger.info(f"🔍 Category filters applied to competitor analysis: {len(filtered_asins)} products after filtering")
+                else:
+                    logger.warning(f"No competitor products found matching category filters: {self.category_filters}")
+                    return []
+            
+            # Get aspects filtered by project and filtered competitor ASINs
             aspects_query = self.supabase.from_('review_analysis_aspects').select('''
                 aspect_pk,
                 product_id,
@@ -117,7 +136,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                 detail_text,
                 parent_group_name,
                 category_pk
-            ''').eq('project_id', self.project_id).in_('product_id', self.selected_asins)
+            ''').eq('project_id', self.project_id).in_('product_id', filtered_asins)
             
             aspects_result = aspects_query.execute()
             
@@ -224,9 +243,24 @@ class CompetitorAnalysisService(BaseDashboardService):
 
     def _get_rating_data(self) -> List[Dict[str, Any]]:
         """Get rating data for sentiment analysis."""
+        # Apply category filtering to selected ASINs if category filters are set
+        filtered_asins = self.selected_asins
+        if self.category_filters:
+            # Get ASINs that match both selected ASINs and category filter
+            product_filter_query = self._get_base_product_table().select('platform_id')
+            product_filter_query = self._apply_base_filters(product_filter_query)
+            product_filter_query = product_filter_query.in_('platform_id', self.selected_asins)
+            product_filter_query = self._apply_category_filter(product_filter_query)
+            product_filter_result = product_filter_query.execute()
+            
+            if product_filter_result.data:
+                filtered_asins = [item['platform_id'] for item in product_filter_result.data]
+            else:
+                return []  # No products match category filter
+        
         query = self.supabase.from_('product_reviews').select(
             'product_id, review_id, rating'
-        ).in_('product_id', self.selected_asins).neq('rating', None)
+        ).in_('product_id', filtered_asins).neq('rating', None)
         
         result = query.execute()
         
