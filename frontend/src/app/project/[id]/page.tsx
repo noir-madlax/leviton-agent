@@ -1,14 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { AnalysisDbTab } from "@/components/tabs/analysis-db-tab"
 import { Button } from "@/components/ui/button"
 import { DatabaseService } from "@/components/analysis-db/data/database-service"
-import { ArrowLeft, MessageSquare } from "lucide-react"
 import Link from "next/link"
 import { ChartProvider } from "@/contexts/chart-context"
 import { ProtectedRoute } from "@/components/auth/protected-route"
-import { CategoryFilterAndProjectScope } from "@/components/analysis-db/shared/category-filter-and-project-scope"
+import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
 
 // 使用现有的Project接口
 interface Project {
@@ -148,60 +146,16 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   return (
     <ProtectedRoute>
       <ChartProvider>
-        <div className="min-h-screen bg-gray-50/50">
-          {/* Header */}
-          <header className="border-b bg-white">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-between h-16">
-                <div className="flex items-center gap-4">
-                  <Link href="/">
-                    <Button variant="ghost" size="sm">
-                      <ArrowLeft className="h-4 w-4 mr-2" />
-                      Back to Projects
-                    </Button>
-                  </Link>
-                  <div className="flex items-center gap-3">
-                    <h1 className="text-xl font-semibold">{project.project_name}</h1>
-                    {/* 蓝色提示文字移到项目名称右边 */}
-                    <button
-                      onClick={toggleFilterExpanded}
-                      className="text-xs text-blue-600 hover:text-blue-800 cursor-pointer transition-colors"
-                    >
-                      {isFilterExpanded ? 'Hide filters' : 'Click to adjust product category scope'}
-                    </button>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2">
-                  {/* Chat Button */}
-                  <Link href={projectId ? `/project/${projectId}/chat?from=dashboard` : '/'}>
-                    <Button variant="outline">
-                      <MessageSquare className="h-4 w-4 mr-2" />
-                      Chat
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-              
-              {/* 动态展开的过滤器区域 */}
-              {isFilterExpanded && projectId && (
-                <div className="pb-4 pt-2 mt-4">
-                  <CategoryFilterAndProjectScope 
-                    projectId={projectId}
-                    onFiltersChange={handleFiltersChange}
-                    initialFilters={filters}
-                    preloadedData={projectOverviewData}
-                    isDataLoading={overviewLoading}
-                  />
-                </div>
-              )}
-            </div>
-          </header>
-
-          {/* Main Content */}
-          <main className="h-[calc(100vh-4rem)]">
-            {projectId && <AnalysisDbTab selectedProjectId={projectId} filters={filters} />}
-          </main>
-        </div>
+        <IntegratedLayout
+          projectId={projectId!}
+          project={project}
+          projectOverviewData={projectOverviewData}
+          overviewLoading={overviewLoading}
+          onFiltersChange={handleFiltersChange}
+          filters={filters}
+          isFilterExpanded={isFilterExpanded}
+          onToggleFilter={toggleFilterExpanded}
+        />
       </ChartProvider>
     </ProtectedRoute>
   )

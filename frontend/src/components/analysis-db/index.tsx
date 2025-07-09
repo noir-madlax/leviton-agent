@@ -491,13 +491,15 @@ async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]
 interface AnalysisDbContainerProps {
   selectedProjectId?: string | null;
   filters?: { categories: string[]; asins: string[] };
+  activeTab?: string;
 }
 
-export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filters }: AnalysisDbContainerProps) {
+export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
   const [data, setData] = useState<Partial<DashboardData>>({})
   const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
+  const [currentActiveTab, setCurrentActiveTab] = useState<string>('brand-analysis')
   // 使用传入的filters，提供默认值，并确保引用稳定性
   const appliedFilters = useMemo(() => filters || { categories: [], asins: [] }, [filters]);
 
@@ -659,6 +661,31 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, true); // 强制重新加载
     }
   }, [appliedFilters, selectedProjectId, loadSpecificData])
+
+  // 监听外部传入的activeTab变化
+  useEffect(() => {
+    if (externalActiveTab && externalActiveTab !== currentActiveTab) {
+      setCurrentActiveTab(externalActiveTab)
+      handleTabChange(externalActiveTab)
+    }
+  }, [externalActiveTab, currentActiveTab])
+
+  // 根据activeTab决定主tab和子tab
+  const getMainTabFromActiveTab = (activeTab: string): string => {
+    if (['brand-analysis', 'product-analysis', 'pricing-analysis', 'market-insights', 'package-preference'].includes(activeTab)) {
+      return 'market-analysis'
+    } else if (activeTab === 'review-insights') {
+      return 'review-insights'
+    } else if (activeTab === 'competitor-analysis') {
+      return 'competitor-analysis'
+    }
+    return 'market-analysis' // 默认
+  }
+
+  const mainTabValue = getMainTabFromActiveTab(currentActiveTab)
+  const subTabValue = ['brand-analysis', 'product-analysis', 'pricing-analysis', 'market-insights', 'package-preference'].includes(currentActiveTab) 
+    ? currentActiveTab 
+    : 'brand-analysis'
 
   if (loading) {
     return (
@@ -839,19 +866,18 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   return (
     <ProductPanelProvider>
       <ReviewPanelProvider>
-        <div className="flex h-screen bg-gray-50">
-          <div className="flex-1 flex flex-col overflow-hidden">
-            {/* 数据库版本标识 */}
-            <PageDivider />
-            
-            <div className="flex-1 overflow-auto">
-              <div className="p-6">
+        <div className="h-full flex flex-col bg-gray-50">
+          {/* 数据库版本标识 */}
+          <PageDivider />
+          
+          <div className="flex-1 overflow-y-auto">
+            <div className="p-6">
                 <DashboardHeader 
                   onProjectChange={handleProjectChange} 
                   selectedProjectId={selectedProjectId}
                 />
                 
-                <Tabs defaultValue="market-analysis" className="mt-6" onValueChange={(value) => handleTabChange(value)}>
+                <Tabs value={mainTabValue} className="mt-6" onValueChange={(value) => handleTabChange(value)}>
                   <TabsList className="grid w-full grid-cols-3">
                     <TabsTrigger value="market-analysis">Market Analysis</TabsTrigger>
                     <TabsTrigger value="review-insights">Review Insights</TabsTrigger>
@@ -859,7 +885,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                   </TabsList>
 
                   <TabsContent value="market-analysis" className="mt-6">
-                    <Tabs defaultValue="brand-analysis" className="w-full" onValueChange={(value) => handleTabChange(value)}>
+                    <Tabs value={subTabValue} className="w-full" onValueChange={(value) => handleTabChange(value)}>
                       <TabsList className="grid w-full grid-cols-5">
                         <TabsTrigger value="brand-analysis">Brand Analysis</TabsTrigger>
                         <TabsTrigger value="product-analysis">Product Analysis</TabsTrigger>
@@ -994,8 +1020,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                 </Tabs>
               </div>
             </div>
-          </div>
-
+          
           <ProductPanel />
           <ReviewPanel />
         </div>
