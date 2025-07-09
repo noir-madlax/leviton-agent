@@ -98,16 +98,13 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 <CheckCircle className="w-4 h-4 text-green-500" />
                 <span className="text-sm text-green-700">Ready for Analysis</span>
               </>
-            ) : project.overall_status === 'creating' ? (
-              <>
-                <Clock className="w-4 h-4 text-blue-500" />
-                <span className="text-sm text-blue-700">Processing</span>
-              </>
             ) : project.overall_status === 'failed' ? (
               <>
                 <AlertCircle className="w-4 h-4 text-red-500" />
                 <span className="text-sm text-red-700">Failed</span>
               </>
+            ) : project.overall_status === 'creating' ? (
+              <></>
             ) : (
               <>
                 <BarChart3 className="w-4 h-4 text-gray-400" />

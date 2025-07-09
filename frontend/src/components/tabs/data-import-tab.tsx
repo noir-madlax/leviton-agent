@@ -237,7 +237,7 @@ export function DataImportTab() {
         {/* URL输入区域 */}
         <Card>
           <CardHeader>
-            <CardTitle>Data Source Paste</CardTitle>
+            <CardTitle>Data Source </CardTitle>
             <CardDescription>
              
               <div className="text-sm text-muted-foreground space-y-2">
@@ -256,7 +256,7 @@ export function DataImportTab() {
               <div className="flex gap-2">
                 <Input
                   id="url"
-                  placeholder="Enter Amazon category or product URL here"
+                  placeholder="Paste Amazon category or product URL here"
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   className="flex-1"
@@ -292,7 +292,7 @@ export function DataImportTab() {
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="maxProducts">Max Products</Label>
+                <Label htmlFor="maxProducts">Max Products in Selected Category</Label>
                 <Input
                   id="maxProducts"
                   type="text"

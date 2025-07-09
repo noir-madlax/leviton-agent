@@ -3,7 +3,7 @@
 import { DataConfirmationTab } from "@/components/tabs/data-confirmation-tab"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { ArrowLeft, CheckCircle, Edit2, Check, X } from "lucide-react"
+import { ArrowLeft, Edit2, Check, X } from "lucide-react"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { ProtectedRoute } from "@/components/auth/protected-route"
@@ -15,6 +15,7 @@ export default function OnboardingPage() {
     handleConfirmSelection: () => void;
     isConfirmed: boolean;
     isFilterApplied: boolean;
+    hasEnoughData: boolean;
     generateSmartProjectName: () => string;
     estimatedTime: string;
   } | null>(null)
@@ -29,11 +30,7 @@ export default function OnboardingPage() {
     router.push(`/project/${projectId}`)
   }
 
-  const handleCreateProject = () => {
-    if (createProjectRef) {
-      createProjectRef.handleConfirmSelection()
-    }
-  }
+
 
   // 当apply filters后，自动生成智能项目名
   useEffect(() => {
@@ -113,29 +110,9 @@ export default function OnboardingPage() {
                 </div>
               </div>
               
-              {/* Create Research Project Button */}
+              {/* 按钮已移动到Preview区域 */}
               <div className="flex gap-2">
-                <div className="flex flex-col items-end">
-                  <Button
-                    onClick={handleCreateProject}
-                    disabled={!createProjectRef || createProjectRef.isConfirmed || !createProjectRef.isFilterApplied}
-                    title={!createProjectRef || !createProjectRef.isFilterApplied ? "Please apply filters first" : ""}
-                  >
-                    {createProjectRef && createProjectRef.isConfirmed ? (
-                      <>
-                        <CheckCircle className="w-4 h-4 mr-2" />
-                        Project Created
-                      </>
-                    ) : (
-                      'Create Research Project'
-                    )}
-                  </Button>
-                  {createProjectRef?.isFilterApplied && createProjectRef?.estimatedTime && (
-                    <p className="text-xs text-gray-500 mt-1">
-                      Estimated time: {createProjectRef.estimatedTime}
-                    </p>
-                  )}
-                </div>
+                {/* 保持header布局，但移除按钮 */}
               </div>
             </div>
           </div>

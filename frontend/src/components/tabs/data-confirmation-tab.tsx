@@ -40,7 +40,11 @@ interface ProjectProgress {
   total_products: number;
   total_reviews?: number;
   estimated_llm_calls?: number;
-  created_at?: string; // 新增：创建时间用于计算进度
+  created_at?: string; // 项目创建时间
+  segmentation_started_at?: string; // 分割开始时间
+  segmentation_completed_at?: string; // 分割完成时间
+  review_analysis_started_at?: string; // 评论分析开始时间
+  review_analysis_completed_at?: string; // 评论分析完成时间
   steps: {
     step: string;
     name: string;
@@ -68,27 +72,88 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts, tot
   const [progress, setProgress] = useState<ProjectProgress | null>(null);
   const [connectionStatus, setConnectionStatus] = useState<'connecting' | 'connected' | 'error' | 'closed'>('closed');
   const [isExpanded, setIsExpanded] = useState(false);
-  const [projectStartTime] = useState<Date>(new Date()); // 项目创建时间
   const [, setTimeUpdate] = useState(0); // 用于强制重新渲染时间进度条
 
-  // 计算时间进度的函数
+  // 🔥 修复：计算时间进度的函数 - 正确处理项目时间状态
   const calculateTimeProgress = () => {
     const now = new Date();
-    const elapsed = now.getTime() - projectStartTime.getTime();
     
-    // 使用动态计算的估计时间，而不是写死的30分钟
-    const estimatedMinutes = Math.max(10, Math.ceil((totalReviews || 0) / 100) * 1.5);
-    const totalTime = estimatedMinutes * 60 * 1000; // 转换为毫秒
+    // 🔥 关键修复：根据项目状态使用正确的时间基准
+    let actualStartTime: Date;
+    let actualEndTime: Date | null = null;
+    let isProjectCompleted = false;
     
-    const progress = Math.min((elapsed / totalTime) * 100, 100);
-    const remainingMinutes = Math.max(0, Math.ceil((totalTime - elapsed) / (60 * 1000)));
+    // 1. 确定项目的实际开始时间（处理开始时间，不是创建时间）
+    if (progress?.segmentation_started_at) {
+      actualStartTime = new Date(progress.segmentation_started_at);
+    } else if (progress?.created_at) {
+      // 如果没有分割开始时间，使用创建时间作为fallback
+      actualStartTime = new Date(progress.created_at);
+    } else {
+      // 最后的fallback
+      actualStartTime = new Date(now.getTime() - 5 * 60 * 1000);
+    }
+    
+    // 2. 确定项目是否完成以及完成时间
+    const segmentationCompleted = progress?.segmentation_status === 'completed';
+    const reviewAnalysisCompleted = progress?.review_analysis_status === 'completed';
+    isProjectCompleted = segmentationCompleted && reviewAnalysisCompleted;
+    
+    if (isProjectCompleted && progress?.review_analysis_completed_at) {
+      actualEndTime = new Date(progress.review_analysis_completed_at);
+    }
+    
+    // 3. 计算时间进度
+    const currentTime = actualEndTime || now; // 如果完成了使用完成时间，否则使用当前时间
+    const elapsed = currentTime.getTime() - actualStartTime.getTime();
+    const elapsedMinutes = Math.floor(elapsed / (60 * 1000));
+    
+    // 4. 计算预计时间和剩余时间
+    let estimatedMinutes: number;
+    let remainingMinutes: number;
+    let progressPercentage: number;
+    
+    if (isProjectCompleted) {
+      // 项目已完成：显示实际耗时
+      estimatedMinutes = elapsedMinutes;
+      remainingMinutes = 0;
+      progressPercentage = 100;
+    } else {
+      // 项目进行中：基于当前状态动态估算
+      const baseEstimate = Math.max(10, Math.ceil((totalReviews || 0) / 100) * 1.5);
+      
+      // 根据项目进度调整估算时间
+      if (reviewAnalysisCompleted) {
+        // 评论分析完成，只剩数据准备
+        estimatedMinutes = elapsedMinutes + 1;
+        remainingMinutes = 1;
+        progressPercentage = 95;
+      } else if (segmentationCompleted) {
+        // 分割完成，评论分析进行中
+        const reviewEstimate = Math.max(5, Math.ceil((totalReviews || 0) / 200) * 1.2);
+        estimatedMinutes = elapsedMinutes + reviewEstimate;
+        remainingMinutes = reviewEstimate;
+        progressPercentage = Math.min((elapsedMinutes / estimatedMinutes) * 100, 90);
+      } else {
+        // 分割进行中
+        estimatedMinutes = baseEstimate;
+        const totalTime = estimatedMinutes * 60 * 1000;
+        progressPercentage = Math.min((elapsed / totalTime) * 100, 80);
+        remainingMinutes = Math.max(0, Math.ceil((totalTime - elapsed) / (60 * 1000)));
+      }
+    }
     
     return {
-      progress,
+      progress: progressPercentage,
       remainingMinutes,
-      elapsed: Math.floor(elapsed / (60 * 1000)), // 已过时间(分钟)
-      isOverdue: elapsed > totalTime,
-      estimatedTotal: estimatedMinutes
+      elapsed: elapsedMinutes,
+      isOverdue: !isProjectCompleted && elapsed > (estimatedMinutes * 60 * 1000),
+      estimatedTotal: estimatedMinutes,
+      isCompleted: isProjectCompleted,
+      actualStartTime: actualStartTime.toISOString(),
+      actualEndTime: actualEndTime?.toISOString() || null,
+      // 🔥 新增：用于显示的状态信息
+      statusText: isProjectCompleted ? 'Completed' : 'In Progress'
     };
   };
 
@@ -172,7 +237,7 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts, tot
         <CardHeader className="pb-4">
           <CardTitle className="flex items-center gap-2 text-lg">
             <Loader2 className="w-5 h-5 animate-spin text-blue-500" />
-            Creating Research Project...
+            Creating New Project...
           </CardTitle>
           <CardDescription>
             Please wait while we initialize the project and prepare for analysis.
@@ -257,12 +322,27 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady, totalProducts, tot
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
             <span className="text-gray-600">
-              Time Progress: {timeProgress.elapsed}min / {timeProgress.estimatedTotal}min 
+              {timeProgress.isCompleted ? 'Total Processing Time' : 'Time Progress'}: {timeProgress.elapsed}min
+              {!timeProgress.isCompleted && timeProgress.estimatedTotal > 0 && ` / ${timeProgress.estimatedTotal}min`}
             </span>
-            <span className={`text-sm ${timeProgress.isOverdue ? 'text-red-600' : 'text-gray-600'}`}>
-              {timeProgress.isOverdue ? 'Overdue' : `${timeProgress.remainingMinutes}min remaining`}
+            <span className={`text-sm ${timeProgress.isCompleted ? 'text-green-600' : timeProgress.isOverdue ? 'text-red-600' : 'text-gray-600'}`}>
+              {timeProgress.isCompleted ? 'Project Completed!' : 
+               timeProgress.isOverdue ? 'Overdue' : 
+               `${timeProgress.remainingMinutes}min remaining`}
             </span>
           </div>
+          {/* 🔥 调试信息：在开发环境下显示实际的项目时间信息 */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="text-xs text-gray-400 space-y-1">
+              {timeProgress.actualStartTime && (
+                <div>Started: {new Date(timeProgress.actualStartTime).toLocaleString()}</div>
+              )}
+              {timeProgress.actualEndTime && (
+                <div>Completed: {new Date(timeProgress.actualEndTime).toLocaleString()}</div>
+              )}
+              <div>Status: {timeProgress.statusText}</div>
+            </div>
+          )}
           <div className="w-full bg-gray-200 rounded-full h-2">
             <div 
               className={`h-2 rounded-full transition-all duration-300 ${
@@ -431,6 +511,7 @@ export function DataConfirmationTab({
     handleConfirmSelection: () => void;
     isConfirmed: boolean;
     isFilterApplied: boolean;
+    hasEnoughData: boolean;
     generateSmartProjectName: () => string;
     estimatedTime: string;
   }) => void;
@@ -455,6 +536,7 @@ export function DataConfirmationTab({
   const [selectedCategoryName, setSelectedCategoryName] = useState<string>('');
   const [selectedCategoryPath, setSelectedCategoryPath] = useState<string>('');
   const [isFilterApplied, setIsFilterApplied] = useState(false); // Track if filter has been applied
+  const [hasEverAppliedFilter, setHasEverAppliedFilter] = useState(false); // Track if user has ever applied filter
   const [showAllCategories, setShowAllCategories] = useState(false); // 控制Categories展开状态
   const [showAllBrands, setShowAllBrands] = useState(false); // 控制Brands展开状态
   const [categoryInput, setCategoryInput] = useState<string>(''); // 新增：类别URL或node ID输入
@@ -810,6 +892,7 @@ export function DataConfirmationTab({
       const result = await response.json();
       setData(result);
       setIsFilterApplied(true); // Mark filter as applied
+      setHasEverAppliedFilter(true); // Mark that user has ever applied filter
       
       // 自动滚动到Preview区域
       setTimeout(() => {
@@ -851,6 +934,16 @@ export function DataConfirmationTab({
          }
    }, [filteredStats?.totalReviews]);
 
+  // 检查数据是否足够创建项目
+  const hasEnoughData = useMemo(() => {
+    return Boolean(
+      isFilterApplied && 
+      filteredStats && 
+      filteredStats.totalProducts > 0 && 
+      filteredStats.totalReviews > 0
+    );
+  }, [filteredStats, isFilterApplied]);
+
   // 注册创建项目的方法到父组件
   useEffect(() => {
     if (onRegisterCreateProject) {
@@ -858,11 +951,12 @@ export function DataConfirmationTab({
         handleConfirmSelection,
         isConfirmed,
         isFilterApplied,
+        hasEnoughData,
         generateSmartProjectName,
-        estimatedTime: calculateEstimatedTime.text
+        estimatedTime: hasEnoughData ? calculateEstimatedTime.text : ''
       });
     }
-  }, [isConfirmed, isFilterApplied, onRegisterCreateProject, calculateEstimatedTime.text]);
+  }, [isConfirmed, isFilterApplied, hasEnoughData, onRegisterCreateProject, calculateEstimatedTime.text]);
   
     // 未使用的处理函数，保留以备后续使用
   // const handleSourceChange = (source: string, checked: boolean) => {
@@ -946,6 +1040,9 @@ export function DataConfirmationTab({
       // 🔥 新增：立即获取一次真实进度，避免显示延迟
       console.log('Project created successfully, immediately fetching real progress...');
       
+      // 🔥 新增：自动滚动到页面顶部
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+      
       // 不自动跳转，让用户看到进度
       // 可以在进度完成后再跳转
       // if (onNavigateToAnalysis) {
@@ -975,6 +1072,7 @@ export function DataConfirmationTab({
     setCategoryInput(''); // 重置类别输入框
     setIsConfirmed(false);
     setIsFilterApplied(false); // Reset filter applied state
+    setHasEverAppliedFilter(false); // Reset ever applied filter state
     setProjectCreationStatus('idle'); // 🔥 重置时也重置创建状态
     setCreatedProjectId(null);
     
@@ -1012,7 +1110,7 @@ export function DataConfirmationTab({
       <div className="h-full overflow-auto">
         <div className="max-w-7xl mx-auto space-y-6 p-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Create Research Project</h1>
+            <h1 className="text-3xl font-bold tracking-tight">Create New Project</h1>
             <p className="text-muted-foreground mt-2">
               Failed to load product data. Please try again.
             </p>
@@ -1029,8 +1127,8 @@ export function DataConfirmationTab({
     <div className="h-full overflow-auto">
       <div className="max-w-7xl mx-auto space-y-4 p-4">
         
-{/* 蓝色说明区域 - 告诉用户项目分析基于整个产品类别 - 只在项目创建前显示 */}
-{projectCreationStatus === 'idle' && (
+{/* 蓝色说明区域 - 告诉用户项目分析基于整个产品类别 - 只在项目创建前且从未应用过筛选时显示 */}
+{projectCreationStatus === 'idle' && !hasEverAppliedFilter && (
 <div className="mb-6 p-4 bg-blue-50 border border-blue-200 rounded-lg">
               <div className="flex items-start gap-3">
                 <div className="flex-shrink-0 w-5 h-5 bg-blue-500 rounded-full flex items-center justify-center mt-0.5">
@@ -1121,19 +1219,20 @@ export function DataConfirmationTab({
                   className="mb-2"
                 />
                 
-                {/* URL分析状态显示 */}
-                {urlAnalyzing && (
-                  <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                    <div className="flex items-center gap-2">
-                      <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
-                      <span className="text-sm text-blue-700">Analyzing URL...</span>
+                {/* URL分析状态显示 - 固定高度区域防止布局跳动 */}
+                <div className="mb-0 min-h-[80px]">
+                  {urlAnalyzing && (
+                    <div className="p-3 bg-blue-50 border border-blue-200 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        <Loader2 className="w-4 h-4 animate-spin text-blue-500" />
+                        <span className="text-sm text-blue-700">Analyzing URL...</span>
+                      </div>
                     </div>
-                  </div>
-                )}
-                
-                {/* URL分析结果显示 */}
-                {showUrlSuggestions && urlAnalysisResult && (
-                  <div className="mb-3">
+                  )}
+                  
+                  {/* URL分析结果显示 */}
+                  {showUrlSuggestions && urlAnalysisResult && (
+                    <div>
                     {urlAnalysisResult.success ? (
                       <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
                         <div className="flex items-start gap-2 mb-2">
@@ -1227,6 +1326,7 @@ export function DataConfirmationTab({
                     )}
                   </div>
                 )}
+                </div>
                 
                 {/* 原有的CategorySelector - 保留但隐藏，以备后续使用 */}
                 {/* 
@@ -1260,7 +1360,7 @@ export function DataConfirmationTab({
                     <SelectContent>
                     <SelectItem value="80percent" disabled>
                         <div className="flex items-center justify-between w-full">
-                          <span>Exclude Longtail Products(only top 80% Sales Volume)</span>
+                          <span>Exclude Low-Volume Products</span>
                           <span className="text-xs text-gray-500 ml-2">Support soon</span>
                         </div>
                       </SelectItem>
@@ -1294,7 +1394,7 @@ export function DataConfirmationTab({
             </div>
             
             {/* Filter按钮 - 移动到Data Selection区域底部居中 */}
-            <div className="flex justify-center gap-2 pt-4 mt-4">
+            <div className="flex justify-center gap-2 pt-0 mt-0">
               <Button
                 variant="ghost"
                 size="sm"
@@ -1334,18 +1434,53 @@ export function DataConfirmationTab({
                   <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
                 )}
               </div>
-              {isFilterApplied && (
-                <div className="flex items-center gap-2 text-sm">
-                  <Clock className="w-4 h-4 text-blue-500" />
-                  <span className="text-blue-600 font-medium">
-                    Estimated processing time: {calculateEstimatedTime.text}
-                  </span>
-                </div>
-              )}
+              
+              {/* 移动到这里的创建项目按钮 */}
+              <div className="flex flex-col items-end gap-2">
+                {/* 创建项目按钮 */}
+                <Button
+                  onClick={handleConfirmSelection}
+                  disabled={!hasEnoughData || isConfirmed}
+                  title={!hasEnoughData ? "Please apply filters and ensure you have enough data" : ""}
+                  className="bg-black hover:bg-gray-800 text-white"
+                >
+                  {isConfirmed ? (
+                    <>
+                      <CheckCircle className="w-4 h-4 mr-2" />
+                      Project Created
+                    </>
+                  ) : (
+                    'Create  Project'
+                  )}
+                </Button>
+                
+                {hasEnoughData && (
+                  <div className="flex items-center gap-2 text-sm">
+                    <Clock className="w-4 h-4 text-blue-500" />
+                    <span className="text-blue-600 font-medium">
+                      Estimated processing time: {calculateEstimatedTime.text}
+                    </span>
+                  </div>
+                )}
+              </div>
             </CardTitle>
             <CardDescription className="text-sm">
               {isFilterApplied 
-                ? "Preview of your research dataset. Your analysis project will be based on this filtered selection."
+                ? (
+                  <span>
+                    Your project analysis will be based on these data.{" "}
+                    <a 
+                      href="/import-data" 
+                      className="text-blue-600 hover:text-blue-800 underline font-medium cursor-pointer"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        window.location.href = '/import-data';
+                      }}
+                    >
+                      Not enough data? Click to scrape more →
+                    </a>
+                  </span>
+                )
                 : "Apply filters above to see your data scope preview."
               }
             </CardDescription>
