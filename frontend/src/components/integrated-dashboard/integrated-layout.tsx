@@ -1,13 +1,15 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { ChatWithNavigation } from './chat-with-navigation'
-import { AnalysisDbContainer } from '@/components/analysis-db'
+import { ChartContainer } from './chart/chart-container'
+import { useChartManagement } from './hooks/use-chart-management'
 import { useDashboardNavigation } from './hooks/use-dashboard-navigation'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, MessageSquare } from 'lucide-react'
+import { ArrowLeft, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
 import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
+import { ChartData } from './shared/types'
 
 // 使用现有的Project接口
 interface Project {
@@ -66,6 +68,17 @@ export function IntegratedLayout({
   onToggleFilter
 }: IntegratedLayoutProps) {
   const { activeTab, setActiveTab } = useDashboardNavigation()
+  const [isChartPanelExpanded, setIsChartPanelExpanded] = useState(false) // 默认为折叠状态
+  
+  const {
+    chartContainerState,
+    activeChartId,
+    dynamicCharts,
+    allCards,
+    setChartContainerState,
+    addDynamicChart,
+    selectChart
+  } = useChartManagement()
 
   // Tab映射：将图表导航的tab key映射到dashboard的实际tab
   const tabMapping: Record<string, string> = {
@@ -81,6 +94,26 @@ export function IntegratedLayout({
   const handleTabChange = (tabKey: string) => {
     const mappedTab = tabMapping[tabKey] || tabKey
     setActiveTab(mappedTab)
+  }
+
+  const handleChartSelect = (chartId: string) => {
+    selectChart(chartId)
+    // 当选择图表时，自动展开chart面板
+    setIsChartPanelExpanded(true)
+    const card = allCards.find(c => c.id === chartId)
+    if (card && card.type === 'preset' && card.tabKey) {
+      handleTabChange(card.tabKey)
+    }
+  }
+
+  const handleAddDynamicChart = (chart: ChartData) => {
+    addDynamicChart(chart)
+    // 当添加动态图表时，自动展开chart面板
+    setIsChartPanelExpanded(true)
+  }
+
+  const toggleChartPanel = () => {
+    setIsChartPanelExpanded(!isChartPanelExpanded)
   }
 
   return (
@@ -137,23 +170,57 @@ export function IntegratedLayout({
 
       {/* 主要内容区域 */}
       <div className="flex flex-1 h-80">
-        {/* 左侧Chat Panel - 1/3 */}
-        <div className="w-1/3 border-r bg-white overflow-y-auto">
-          <ChatWithNavigation 
-            projectId={projectId}
-            onTabChange={handleTabChange}
-            activeTab={activeTab}
-          />
+        {/* 左侧Chat Panel - 根据chart面板状态调整宽度 */}
+        <div className={`bg-white overflow-y-auto transition-all duration-300 ${
+          isChartPanelExpanded ? 'w-1/3 border-r' : 'w-full mx-[20%] max-w-none'
+        }`}>
+          <div className={`${isChartPanelExpanded ? '' : 'max-w-4xl mx-auto'}`}>
+            <ChatWithNavigation 
+              projectId={projectId}
+              chartCards={allCards}
+              activeChartId={activeChartId}
+              onChartSelect={handleChartSelect}
+              onAddDynamicChart={handleAddDynamicChart}
+            />
+          </div>
         </div>
         
-        {/* 右侧Dashboard Panel - 2/3 */}
-        <div className="w-2/3 overflow-y-auto">
-          <AnalysisDbContainer 
-            selectedProjectId={projectId}
-            filters={filters}
-            activeTab={activeTab}
-          />
-        </div>
+        {/* Chart面板切换按钮 - 仅在展开状态显示 */}
+        {isChartPanelExpanded && (
+          <button
+            onClick={toggleChartPanel}
+            className="w-6 bg-gray-200 hover:bg-gray-300 border-r border-gray-300 flex items-center justify-center transition-colors"
+            title="Hide Charts"
+          >
+            <ChevronRight className="h-4 w-4 text-gray-600" />
+          </button>
+        )}
+        
+        {/* 右侧Chart Panel - 仅在展开状态显示 */}
+        {isChartPanelExpanded && (
+          <div className="w-2/3 overflow-y-auto">
+            <ChartContainer
+              state={chartContainerState}
+              activeChartId={activeChartId}
+              dynamicCharts={dynamicCharts}
+              navigationTab={activeTab}
+              projectId={projectId}
+              filters={filters}
+              onStateChange={setChartContainerState}
+            />
+          </div>
+        )}
+        
+        {/* 展开Chart面板的按钮 - 仅在收起状态显示 */}
+        {!isChartPanelExpanded && (
+          <button
+            onClick={toggleChartPanel}
+            className="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-colors z-10"
+            title="Show Charts"
+          >
+            <ChevronLeft className="h-5 w-5" />
+          </button>
+        )}
       </div>
     </div>
   )
