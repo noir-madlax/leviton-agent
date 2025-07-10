@@ -3,11 +3,12 @@
 采用 Hugging Face smolagents 多 Agent 架构模式
 """
 import logging
-from typing import Optional
+from typing import Optional, Dict, Any
 from config import settings
 from agent.validators.chart_validator import check_reasoning_and_plot
 from agent.core.database_agent import DatabaseAgent
 from agent.core.chart_generation_agent import ChartGenerationAgent
+from core.services.conversation_service import ConversationService
 
 # 导入HTTP请求拦截器（导入时自动激活网络请求监控）
 from agent.monitor.http_interceptor import create_interceptor
@@ -27,6 +28,7 @@ class AgentManager:
         self.database_agent = None  # 数据库查询 Agent
         self.chart_generation_agent = None  # 图表代码生成 Agent
         self.mcp_tool_manager = None  # MCP 工具管理器
+        self.conversation_service = None  # 对话服务
         self.init_error = None
     
     async def initialize_agent(self) -> bool:
@@ -91,10 +93,15 @@ class AgentManager:
                 prompt_id=12
             )
 
+            # 初始化对话服务
+            logger.info("初始化对话服务...")
+            self.conversation_service = ConversationService()
+            
             logger.info("多 Agent 系统初始化成功")
             logger.info(f"- 管理 Agent: {type(self.manager_agent).__name__}")
             logger.info(f"- 数据库查询 Agent: {type(self.database_agent.get_agent()).__name__}")
             logger.info(f"- 图表代码生成 Agent: {type(self.chart_generation_agent.get_agent()).__name__}")
+            logger.info(f"- 对话服务: {type(self.conversation_service).__name__}")
             
             # 打印整体 Agent 结构
             logger.info("多 Agent 系统结构:")
@@ -276,17 +283,141 @@ class AgentManager:
             logger.error(f"重新加载 system_prompt 失败: {e}", exc_info=True)
             return False
     
-    async def run_query(self, query: str) -> str:
-        """运行查询（对外提供的统一接口）"""
+    async def run_query(self, query: str, user_id: str = None, session_id: str = None) -> Dict[str, Any]:
+        """运行查询（对外提供的统一接口）
+        
+        Args:
+            query: 用户查询内容
+            user_id: 用户ID，用于会话管理
+            session_id: 会话ID，由前端提供
+            
+        Returns:
+            Dict包含result和session_id
+        """
         if not self.is_ready():
-            return "多 Agent 系统未准备就绪"
+            return {
+                "result": "多 Agent 系统未准备就绪",
+                "session_id": session_id
+            }
         
         try:
-            result = await self.manager_agent.run(query)
-            return result
+            current_session_id = session_id
+            
+            # 步骤1: 处理会话ID（如果提供了user_id）
+            if user_id:
+                current_session_id = await self._validate_or_create_session(user_id, session_id)
+                
+                # 步骤2: 保存用户输入
+                if current_session_id:
+                    await self.conversation_service.add_user_message(
+                        current_session_id, 
+                        query,
+                        metadata={
+                            "is_new_session": not session_id,
+                            "original_session_id": session_id
+                        }
+                    )
+                
+                # 步骤3: 获取上下文并组装查询
+                enhanced_query = query
+                context_info = None
+                if current_session_id:
+                    context_response = await self.conversation_service.get_context_for_agent(current_session_id)
+                    if context_response.context:
+                        enhanced_query = f"{context_response.context}\n{query}"
+                        context_info = {
+                            "context_used": True,
+                            "context_message_count": context_response.message_count,
+                            "context_window_size": context_response.window_size
+                        }
+                    else:
+                        context_info = {
+                            "context_used": False,
+                            "context_message_count": 0,
+                            "context_window_size": 0
+                        }
+            else:
+                enhanced_query = query
+                context_info = None
+            
+            # 步骤4: 调用Agent
+            result = await self.manager_agent.run(enhanced_query)
+            
+            # 步骤5: 保存Agent完整响应
+            if current_session_id and user_id:
+                agent_metadata = {
+                    "tools_used": ["manager_agent"],
+                    "enhanced_query_length": len(enhanced_query),
+                    "original_query_length": len(query)
+                }
+                if context_info:
+                    agent_metadata.update(context_info)
+                
+                await self.conversation_service.add_agent_message(
+                    current_session_id,
+                    result,
+                    metadata=agent_metadata
+                )
+            
+            return {
+                "result": result,
+                "session_id": current_session_id
+            }
+            
         except Exception as e:
             logger.error(f"查询执行失败: {e}", exc_info=True)
-            return f"查询执行出错: {str(e)}"
+            return {
+                "result": f"查询执行出错: {str(e)}",
+                "session_id": current_session_id if 'current_session_id' in locals() else session_id
+            }
+    
+    async def _validate_or_create_session(self, user_id: str, session_id: str = None) -> str:
+        """验证会话或创建新会话"""
+        if not session_id:
+            # 没有session_id，创建新会话
+            session = await self.conversation_service.create_session(user_id)
+            return session.id if session else None
+        
+        # 验证session_id是否存在且属于该用户
+        session = await self.conversation_service.get_session(session_id)
+        if session and session.user_id == user_id:
+            return session_id
+        
+        # session_id无效，创建新会话
+        logger.warning(f"Invalid session_id {session_id} for user {user_id}, creating new session")
+        session = await self.conversation_service.create_session(user_id)
+        return session.id if session else None
+    
+    async def create_session(self, user_id: str, title: str = None) -> str:
+        """创建新会话"""
+        if not self.conversation_service:
+            logger.warning("对话服务未初始化，无法创建会话")
+            return None
+            
+        session = await self.conversation_service.create_session(user_id, title)
+        return session.id if session else None
+    
+    async def get_session_context(self, session_id: str) -> str:
+        """获取会话上下文"""
+        if not self.conversation_service:
+            return ""
+            
+        context_response = await self.conversation_service.get_context_for_agent(session_id)
+        return context_response.context
+    
+    async def get_user_sessions(self, user_id: str):
+        """获取用户会话列表"""
+        if not self.conversation_service:
+            return []
+            
+        return await self.conversation_service.get_user_sessions(user_id)
+    
+    async def delete_session(self, session_id: str) -> bool:
+        """删除会话"""
+        if not self.conversation_service:
+            return False
+            
+        return await self.conversation_service.delete_session(session_id)
     
     def get_mcp_tool_info(self):
         """获取当前 MCP 工具信息"""

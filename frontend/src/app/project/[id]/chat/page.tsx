@@ -17,6 +17,7 @@ import { ChartData } from "@/lib/types"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
+import { useAuth } from "@/contexts/auth-context"
 
 import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
@@ -49,6 +50,8 @@ interface AgentStreamRequest {
   query: string
   projectId: string
   filters: AgentFilters
+  userId?: string
+  sessionId: string
 }
 
 interface ContentPart {
@@ -361,6 +364,7 @@ function ContentPartRenderer({ part }: { part: ContentPart }) {
 // 内部组件，使用useChart hook
 function ChatPageContent({ projectId }: { projectId: string }) {
   const router = useRouter()
+  const { user } = useAuth()
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
   const [messages, setMessages] = useState<Message[]>([])
@@ -371,6 +375,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   const [currentStage, setCurrentStage] = useState("")
   const [currentProgress, setCurrentProgress] = useState(0)
   const [categoryFilters, setCategoryFilters] = useState<string[]>([])
+  const [sessionId, setSessionId] = useState<string>('')
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
   const { updateChart, setCompiling, setError } = useChart()
 
@@ -380,6 +385,18 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     const urlParams = new URLSearchParams(window.location.search)
     setFromHome(urlParams.get('from') === 'home')
   }, [])
+
+  // 生成和管理 sessionId
+  useEffect(() => {
+    // 生成新的 sessionId
+    const newSessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
+    setSessionId(newSessionId)
+    
+    // 存储到 localStorage
+    localStorage.setItem('chatSessionId', newSessionId)
+    
+    console.log('🆔 [SESSION] New session ID generated:', newSessionId)
+  }, [projectId]) // 每次进入不同项目时生成新的sessionId
 
   // 加载项目信息
   useEffect(() => {
@@ -441,7 +458,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   }
 
   // 创建API请求体的辅助函数
-  const createAgentRequest = (query: string, projectId: string, categoryFilters: string[]): AgentStreamRequest => {
+  const createAgentRequest = (query: string, projectId: string, categoryFilters: string[], userId?: string, sessionId: string = ''): AgentStreamRequest => {
     return {
       query,
       projectId,
@@ -451,7 +468,9 @@ function ChatPageContent({ projectId }: { projectId: string }) {
         // brands: [],
         // dateRange: null,
         // priceRange: null
-      }
+      },
+      userId,
+      sessionId
     }
   }
 
@@ -497,12 +516,15 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       const timeoutId = setTimeout(() => controller.abort(), 10 * 60 * 1000) // 10分钟
       
       // 构建请求体
-      const requestBody = createAgentRequest(originalInput, projectId, categoryFilters)
+      const userId = user?.id
+      const requestBody = createAgentRequest(originalInput, projectId, categoryFilters, userId, sessionId)
       
       // 重要参数日志 - 确保传递正确
       console.log('=' .repeat(80))
       console.log('🚀 [CHAT API] SENDING REQUEST TO BACKEND')
       console.log('📊 Project ID:', projectId)
+      console.log('👤 User ID:', userId)
+      console.log('🆔 Session ID:', sessionId)
       console.log('🔍 Category Filters:', categoryFilters)
       console.log('📝 Category Filters Count:', categoryFilters.length)
       console.log('❓ Query:', originalInput.substring(0, 100) + (originalInput.length > 100 ? '...' : ''))
@@ -796,7 +818,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
         <div className="text-center">
           <h2 className="text-lg font-medium text-gray-900 mb-2">Project not found</h2>
-          <p className="text-gray-600 mb-4">The project you're looking for doesn't exist.</p>
+          <p className="text-gray-600 mb-4">The project you&apos;re looking for doesn&apos;t exist.</p>
           <Button onClick={() => router.push("/")}>Back to Home</Button>
         </div>
       </div>

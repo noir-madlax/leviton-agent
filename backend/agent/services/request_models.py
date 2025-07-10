@@ -17,6 +17,8 @@ class AgentStreamRequest(BaseModel):
     """Agent 流式请求模型"""
     query: str = Field(..., min_length=1, description="要处理的查询内容")
     project_id: Optional[str] = Field(None, alias="projectId", description="项目ID")
+    user_id: Optional[str] = Field(None, alias="userId", description="用户ID")
+    session_id: Optional[str] = Field(None, alias="sessionId", description="会话ID")
     filters: AgentFilters = Field(default_factory=AgentFilters, description="过滤器配置")
     
     class Config:

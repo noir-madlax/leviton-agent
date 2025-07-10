@@ -5,21 +5,23 @@ import asyncio
 import json
 import logging
 import re
-from typing import AsyncGenerator
+from typing import AsyncGenerator, Optional
 from config import settings
 from agent.core.agent_manager import get_agent_manager
 from agent.services.query_processor import get_query_processor
 from agent.validators.chart_validator import is_valid_json
+from core.services.conversation_service import ConversationService
 
 logger = logging.getLogger(__name__)
 
-async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
+async def stream_agent_response(query: str, session_id: Optional[str] = None, user_id: Optional[str] = None) -> AsyncGenerator[str, None]:
     """
     运行 smolagents 代理并通过 SSE 流式输出结果 - 支持多个脚本块处理
-    支持项目ID和类别过滤器参数
+    支持会话管理和上下文检索
     """
     agent_manager = get_agent_manager()
     query_processor = get_query_processor()
+    conversation_service = ConversationService() if session_id and user_id else None
     
     if not agent_manager.is_ready():
         if agent_manager.get_init_error():
@@ -33,18 +35,35 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         logger.info("=" * 60)
         logger.info("🚀 [STREAM-HANDLER] 开始处理查询")
         logger.info(f"❓ [STREAM-HANDLER] 查询内容: {query[:100]}{'...' if len(query) > 100 else ''}")
+        logger.info(f"💬 [STREAM-HANDLER] Session ID: {session_id}")
+        logger.info(f"👤 [STREAM-HANDLER] User ID: {user_id}")
         logger.info("=" * 60)
         
         # 发送开始信号
         yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"
         
+        # 增强查询：添加会话上下文
+        enhanced_query = query
+        if conversation_service and session_id:
+            try:
+                context_response = await conversation_service.get_context_for_agent(session_id)
+                if context_response.context:
+                    enhanced_query = f"{context_response.context}\n\n{query}"
+                    logger.info(f"📚 [STREAM-HANDLER] 已添加会话上下文，消息数量: {context_response.message_count}")
+                else:
+                    logger.info("📚 [STREAM-HANDLER] 无会话上下文")
+            except Exception as context_error:
+                logger.warning(f"获取会话上下文失败: {context_error}")
+                # 继续处理，不因上下文获取失败而中断
+        
         try:
             
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
+            logger.info(f"📝 [STREAM-HANDLER] 最终查询长度: {len(enhanced_query)} 字符")
             agent = agent_manager.get_agent()
             result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, query),
+                asyncio.to_thread(agent.run, enhanced_query),
                 timeout=settings.AGENT_TIMEOUT
             )
             logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
@@ -81,6 +100,31 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         else:
             # 如果结果不是字符串，直接发送
             yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
+        
+        # 保存 agent 响应到会话
+        if conversation_service and session_id and isinstance(result, str):
+            try:
+                # 准备保存的元数据
+                response_metadata = {
+                    "response_type": "agent_response",
+                    "has_scripts": '[RechartScript]' in result or '[insight]' in result,
+                    "processing_time": None  # 可以添加处理时间记录
+                }
+                
+                agent_message = await conversation_service.add_agent_message(
+                    session_id=session_id,
+                    content=result,
+                    metadata=response_metadata
+                )
+                
+                if agent_message:
+                    logger.info(f"💾 [STREAM-HANDLER] Agent响应已保存: message_id={agent_message.id}")
+                else:
+                    logger.warning("💾 [STREAM-HANDLER] 保存Agent响应失败")
+                    
+            except Exception as save_error:
+                logger.error(f"保存Agent响应失败: {save_error}")
+                # 不因保存失败而中断响应流
         
         # 发送完成信号
         yield f"data: {json.dumps({'status': 'completed', 'message': '[DONE]'}, ensure_ascii=False)}\n\n"

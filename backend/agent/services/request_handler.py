@@ -2,10 +2,11 @@
 Agent 请求处理服务
 """
 import logging
-from typing import AsyncGenerator, Dict, Any
+from typing import AsyncGenerator, Dict, Any, Optional
 from agent.services.request_models import AgentStreamRequest, AgentQueryContext
 from agent.services.query_processor import get_query_processor
 from agent.streaming.stream_handler import stream_agent_response
+from core.services.conversation_service import ConversationService
 
 logger = logging.getLogger(__name__)
 
@@ -15,6 +16,7 @@ class AgentRequestHandler:
     
     def __init__(self):
         self.query_processor = get_query_processor()
+        self.conversation_service = ConversationService()
     
     async def handle_stream_request(self, request: AgentStreamRequest) -> AsyncGenerator[str, None]:
         """处理流式请求"""
@@ -22,6 +24,8 @@ class AgentRequestHandler:
             # 记录请求信息
             logger.info("=" * 80)
             logger.info("🚀 [AGENT-REQUEST-HANDLER] 接收到新的流式请求")
+            logger.info(f"👤 User ID: {request.user_id}")
+            logger.info(f"💬 Session ID: {request.session_id}")
             logger.info(f"📊 Project ID: {request.project_id}")
             logger.info(f"🔍 Category Filters: {request.filters.categories}")
             logger.info(f"🏷️ Brand Filters: {request.filters.brands}")
@@ -32,6 +36,13 @@ class AgentRequestHandler:
             if not request.query.strip():
                 logger.error("查询内容为空")
                 yield "data: " + '{"status": "error", "message": "查询内容不能为空"}' + "\n\n"
+                return
+            
+            # 处理会话管理
+            session_id = await self._handle_session_management(request)
+            if not session_id:
+                logger.error("会话处理失败")
+                yield "data: " + '{"status": "error", "message": "会话处理失败"}' + "\n\n"
                 return
             
             # 准备查询上下文
@@ -48,7 +59,9 @@ class AgentRequestHandler:
             logger.info(f"📝 Enhanced Query 长度: {len(enhanced_query)} 字符")
             
             async for chunk in stream_agent_response(
-                query=enhanced_query
+                query=enhanced_query,
+                session_id=session_id,
+                user_id=request.user_id
             ):
                 yield chunk
                 
@@ -96,6 +109,54 @@ class AgentRequestHandler:
             validation_result["errors"].append("类别过滤器数量过多")
         
         return validation_result
+    
+    async def _handle_session_management(self, request: AgentStreamRequest) -> Optional[str]:
+        """处理会话管理逻辑"""
+        try:
+            # 如果没有提供 user_id，无法进行会话管理
+            if not request.user_id:
+                logger.warning("未提供用户ID，跳过会话管理")
+                return None
+            
+            # 获取或创建会话
+            session = await self.conversation_service.create_or_get_session(
+                user_id=request.user_id,
+                session_id=request.session_id
+            )
+            
+            if not session:
+                logger.error(f"无法创建或获取会话: user_id={request.user_id}, session_id={request.session_id}")
+                return None
+            
+            logger.info(f"✅ 会话已准备: {session.id}")
+            
+            # 保存用户消息
+            message_metadata = {
+                "project_id": request.project_id,
+                "filters": {
+                    "categories": request.filters.categories,
+                    "brands": request.filters.brands,
+                    "date_range": request.filters.date_range,
+                    "price_range": request.filters.price_range
+                }
+            }
+            
+            user_message = await self.conversation_service.add_user_message(
+                session_id=session.id,
+                content=request.query,
+                metadata=message_metadata
+            )
+            
+            if user_message:
+                logger.info(f"💾 用户消息已保存: message_id={user_message.id}")
+            else:
+                logger.warning("保存用户消息失败")
+            
+            return session.id
+            
+        except Exception as e:
+            logger.error(f"会话管理处理失败: {e}", exc_info=True)
+            return None
 
 
 # 全局请求处理器实例
