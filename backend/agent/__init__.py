@@ -5,6 +5,7 @@ Agent module for AI-powered chat and tool calling functionality
 from .services.product_prompt_service import ProductPromptService
 from .dependencies import get_product_prompt_service, get_product_prompt_repository
 from .core.agent_manager import AgentManager, get_agent_manager
+from .core.extend_fields_agent import ExtendFieldsAgent
 from .monitor import initialize_phoenix_monitoring
 from .services.query_processor import QueryProcessor, get_query_processor
 from .streaming.stream_handler import stream_agent_response
@@ -16,6 +17,7 @@ __all__ = [
     'get_product_prompt_repository',
     'AgentManager',
     'get_agent_manager',
+    'ExtendFieldsAgent',
     'initialize_phoenix_monitoring',
     'QueryProcessor',
     'get_query_processor',

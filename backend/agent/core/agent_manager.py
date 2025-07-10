@@ -8,6 +8,7 @@ from config import settings
 from agent.validators.chart_validator import check_reasoning_and_plot
 from agent.core.database_agent import DatabaseAgent
 from agent.core.chart_generation_agent import ChartGenerationAgent
+from agent.core.extend_fields_agent import ExtendFieldsAgent
 
 # 导入HTTP请求拦截器（导入时自动激活网络请求监控）
 from agent.monitor.http_interceptor import create_interceptor
@@ -26,6 +27,7 @@ class AgentManager:
         self.manager_agent = None  # 管理 Agent
         self.database_agent = None  # 数据库查询 Agent
         self.chart_generation_agent = None  # 图表代码生成 Agent
+        self.extend_fields_agent = None  # 扩展字段管理 Agent
         self.mcp_tool_manager = None  # MCP 工具管理器
         self.init_error = None
     
@@ -61,7 +63,15 @@ class AgentManager:
             if not chart_init_success:
                 raise Exception(f"图表代码生成 Agent 初始化失败: {self.chart_generation_agent.get_init_error()}")
             
-            # 步骤3: 创建管理 Agent（类似 HuggingFace demo 中的 manager_agent）
+            # 步骤3: 初始化扩展字段管理 Agent
+            logger.info("初始化扩展字段管理 Agent...")
+            self.extend_fields_agent = ExtendFieldsAgent(agent_manager=self)  # 传递自身引用
+            extend_fields_init_success = await self.extend_fields_agent.initialize()
+            
+            if not extend_fields_init_success:
+                raise Exception(f"扩展字段管理 Agent 初始化失败: {self.extend_fields_agent.get_init_error()}")
+            
+            # 步骤4: 创建管理 Agent（类似 HuggingFace demo 中的 manager_agent）
 
             # 初始化 Supabase MCP 工具集 - 一键初始化
             from agent.tools import get_supabase_mcp_manager
@@ -71,12 +81,13 @@ class AgentManager:
 
             logger.info("创建管理 Agent...")  
             self.manager_agent = CodeAgent(
-                tools=database_tools, 
+                tools=[], 
                 model=model,
                 # stream_outputs=True,
                 managed_agents=[
                     # self.database_agent.get_agent()  # 管理数据库 Agent
-                    self.chart_generation_agent.get_agent()  # 管理图表代码生成 Agent
+                    self.chart_generation_agent.get_agent(),  # 管理图表代码生成 Agent
+                    self.extend_fields_agent.get_agent()  # 管理扩展字段管理 Agent
                 ],
                 max_steps=settings.MAX_ITERATIONS,
                 additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
@@ -95,6 +106,7 @@ class AgentManager:
             logger.info(f"- 管理 Agent: {type(self.manager_agent).__name__}")
             logger.info(f"- 数据库查询 Agent: {type(self.database_agent.get_agent()).__name__}")
             logger.info(f"- 图表代码生成 Agent: {type(self.chart_generation_agent.get_agent()).__name__}")
+            logger.info(f"- 扩展字段管理 Agent: {type(self.extend_fields_agent.get_agent()).__name__}")
             
             # 打印整体 Agent 结构
             logger.info("多 Agent 系统结构:")
@@ -197,6 +209,13 @@ class AgentManager:
                 logger.info("图表代码生成 Agent 资源已释放")
             except Exception as e:
                 logger.error(f"释放图表代码生成 Agent 资源时出错: {e}", exc_info=True)
+        
+        if self.extend_fields_agent:
+            try:
+                self.extend_fields_agent.cleanup()
+                logger.info("扩展字段管理 Agent 资源已释放")
+            except Exception as e:
+                logger.error(f"释放扩展字段管理 Agent 资源时出错: {e}", exc_info=True)
     
     def is_ready(self) -> bool:
         """检查多 Agent 系统是否准备就绪"""
@@ -204,7 +223,9 @@ class AgentManager:
                 self.database_agent is not None and 
                 self.database_agent.is_ready() and
                 self.chart_generation_agent is not None and
-                self.chart_generation_agent.is_ready())
+                self.chart_generation_agent.is_ready() and
+                self.extend_fields_agent is not None and
+                self.extend_fields_agent.is_ready())
     
     def get_agent(self):
         """获取管理 Agent 实例（对外接口保持兼容）"""
@@ -221,6 +242,10 @@ class AgentManager:
     def get_chart_generation_agent(self):
         """获取图表代码生成 Agent 实例"""
         return self.chart_generation_agent
+    
+    def get_extend_fields_agent(self):
+        """获取扩展字段管理 Agent 实例"""
+        return self.extend_fields_agent
     
     def get_init_error(self) -> Optional[str]:
         """获取初始化错误信息"""
