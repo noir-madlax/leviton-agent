@@ -2,12 +2,20 @@
 
 import React from 'react'
 
+// Unified size configuration for all thumbnails
+const THUMBNAIL_CONFIG = {
+  containerClass: "w-16 h-12", // More appropriate size for cards
+  svgWidth: 64,               // Adjusted accordingly
+  svgHeight: 48,              // Adjusted accordingly
+  viewBox: "0 0 64 48"        // Adjusted accordingly
+}
+
 interface ThumbnailPreviewProps {
   type: string
   className?: string
 }
 
-export function ThumbnailPreview({ type, className = "w-8 h-6" }: ThumbnailPreviewProps) {
+export function ThumbnailPreview({ type, className = THUMBNAIL_CONFIG.containerClass }: ThumbnailPreviewProps) {
   const thumbnails = {
     'brand-analysis': <MiniBarChart />,
     'product-analysis': <MiniScatterChart />,
@@ -27,47 +35,47 @@ export function ThumbnailPreview({ type, className = "w-8 h-6" }: ThumbnailPrevi
 
 function MiniBarChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-blue-500">
-      <rect x="2" y="9" width="2" height="4" fill="currentColor" opacity="0.8" />
-      <rect x="5" y="6" width="2" height="7" fill="currentColor" opacity="0.9" />
-      <rect x="8" y="4" width="2" height="9" fill="currentColor" />
-      <rect x="11" y="7" width="2" height="6" fill="currentColor" opacity="0.7" />
-      <rect x="14" y="5" width="2" height="8" fill="currentColor" opacity="0.8" />
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-blue-500">
+      <rect x="8" y="30" width="8" height="16" fill="currentColor" opacity="0.8" />
+      <rect x="20" y="20" width="8" height="26" fill="currentColor" opacity="0.9" />
+      <rect x="32" y="12" width="8" height="34" fill="currentColor" />
+      <rect x="44" y="24" width="8" height="22" fill="currentColor" opacity="0.7" />
+      <rect x="56" y="16" width="8" height="30" fill="currentColor" opacity="0.8" />
     </svg>
   )
 }
 
 function MiniScatterChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-green-500">
-      <circle cx="3" cy="10" r="1" fill="currentColor" opacity="0.8" />
-      <circle cx="6" cy="7" r="1" fill="currentColor" opacity="0.9" />
-      <circle cx="9" cy="5" r="1" fill="currentColor" />
-      <circle cx="12" cy="8" r="1" fill="currentColor" opacity="0.7" />
-      <circle cx="15" cy="6" r="1" fill="currentColor" opacity="0.8" />
-      <circle cx="7" cy="11" r="1" fill="currentColor" opacity="0.6" />
-      <circle cx="13" cy="4" r="1" fill="currentColor" opacity="0.9" />
-      <circle cx="16" cy="9" r="1" fill="currentColor" opacity="0.7" />
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-green-500">
+      <circle cx="12" cy="36" r="3" fill="currentColor" opacity="0.8" />
+      <circle cx="20" cy="24" r="3" fill="currentColor" opacity="0.9" />
+      <circle cx="28" cy="16" r="3" fill="currentColor" />
+      <circle cx="36" cy="28" r="3" fill="currentColor" opacity="0.7" />
+      <circle cx="44" cy="20" r="3" fill="currentColor" opacity="0.8" />
+      <circle cx="52" cy="32" r="3" fill="currentColor" opacity="0.6" />
+      <circle cx="60" cy="12" r="3" fill="currentColor" opacity="0.9" />
+      <circle cx="68" cy="26" r="3" fill="currentColor" opacity="0.7" />
     </svg>
   )
 }
 
 function MiniPieChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-purple-500">
-      <circle cx="10" cy="7" r="5" fill="currentColor" opacity="0.2" />
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-purple-500">
+      <circle cx="40" cy="24" r="18" fill="currentColor" opacity="0.2" />
       <path 
-        d="M 10 7 L 10 2 A 5 5 0 0 1 13.66 5.5 Z" 
+        d="M 40 24 L 40 6 A 18 18 0 0 1 53.18 18 Z" 
         fill="currentColor" 
         opacity="0.8" 
       />
       <path 
-        d="M 10 7 L 13.66 5.5 A 5 5 0 0 1 13.66 8.5 Z" 
+        d="M 40 24 L 53.18 18 A 18 18 0 0 1 53.18 30 Z" 
         fill="currentColor" 
         opacity="0.6" 
       />
       <path 
-        d="M 10 7 L 13.66 8.5 A 5 5 0 0 1 6.34 8.5 Z" 
+        d="M 40 24 L 53.18 30 A 18 18 0 0 1 26.82 30 Z" 
         fill="currentColor" 
         opacity="0.9" 
       />
@@ -77,77 +85,78 @@ function MiniPieChart() {
 
 function MiniLineChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-orange-500">
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-orange-500">
       <polyline 
-        points="2,10 5,7 8,8 11,5 14,6 17,4" 
+        points="8,36 18,24 28,28 38,16 48,20 58,12 68,18" 
         fill="none" 
         stroke="currentColor" 
-        strokeWidth="1.5" 
+        strokeWidth="4" 
         opacity="0.8"
       />
-      <circle cx="2" cy="10" r="1" fill="currentColor" />
-      <circle cx="5" cy="7" r="1" fill="currentColor" />
-      <circle cx="8" cy="8" r="1" fill="currentColor" />
-      <circle cx="11" cy="5" r="1" fill="currentColor" />
-      <circle cx="14" cy="6" r="1" fill="currentColor" />
-      <circle cx="17" cy="4" r="1" fill="currentColor" />
+      <circle cx="8" cy="36" r="3" fill="currentColor" />
+      <circle cx="18" cy="24" r="3" fill="currentColor" />
+      <circle cx="28" cy="28" r="3" fill="currentColor" />
+      <circle cx="38" cy="16" r="3" fill="currentColor" />
+      <circle cx="48" cy="20" r="3" fill="currentColor" />
+      <circle cx="58" cy="12" r="3" fill="currentColor" />
+      <circle cx="68" cy="18" r="3" fill="currentColor" />
     </svg>
   )
 }
 
 function MiniStackedBarChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-teal-500">
-      <rect x="3" y="8" width="2" height="3" fill="currentColor" opacity="0.9" />
-      <rect x="3" y="5" width="2" height="3" fill="currentColor" opacity="0.6" />
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-teal-500">
+      <rect x="12" y="28" width="8" height="12" fill="currentColor" opacity="0.9" />
+      <rect x="12" y="16" width="8" height="12" fill="currentColor" opacity="0.6" />
       
-      <rect x="7" y="6" width="2" height="5" fill="currentColor" opacity="0.9" />
-      <rect x="7" y="4" width="2" height="2" fill="currentColor" opacity="0.6" />
+      <rect x="24" y="20" width="8" height="20" fill="currentColor" opacity="0.9" />
+      <rect x="24" y="12" width="8" height="8" fill="currentColor" opacity="0.6" />
       
-      <rect x="11" y="7" width="2" height="4" fill="currentColor" opacity="0.9" />
-      <rect x="11" y="3" width="2" height="4" fill="currentColor" opacity="0.6" />
+      <rect x="36" y="24" width="8" height="16" fill="currentColor" opacity="0.9" />
+      <rect x="36" y="8" width="8" height="16" fill="currentColor" opacity="0.6" />
       
-      <rect x="15" y="9" width="2" height="2" fill="currentColor" opacity="0.9" />
-      <rect x="15" y="6" width="2" height="3" fill="currentColor" opacity="0.6" />
+      <rect x="48" y="32" width="8" height="8" fill="currentColor" opacity="0.9" />
+      <rect x="48" y="20" width="8" height="12" fill="currentColor" opacity="0.6" />
     </svg>
   )
 }
 
 function MiniRadarChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-pink-500">
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-pink-500">
       <polygon 
-        points="10,3 13,6 11,10 7,10 5,6" 
+        points="40,8 48,20 44,36 28,36 20,20" 
         fill="currentColor" 
         opacity="0.2" 
         stroke="currentColor" 
-        strokeWidth="1"
+        strokeWidth="3"
       />
-      <circle cx="10" cy="7" r="4" fill="none" stroke="currentColor" opacity="0.3" strokeWidth="0.5" />
-      <circle cx="10" cy="7" r="2" fill="none" stroke="currentColor" opacity="0.3" strokeWidth="0.5" />
-      <line x1="10" y1="3" x2="10" y2="11" stroke="currentColor" opacity="0.3" strokeWidth="0.5" />
-      <line x1="6" y1="7" x2="14" y2="7" stroke="currentColor" opacity="0.3" strokeWidth="0.5" />
+      <circle cx="40" cy="24" r="14" fill="none" stroke="currentColor" opacity="0.3" strokeWidth="1.5" />
+      <circle cx="40" cy="24" r="7" fill="none" stroke="currentColor" opacity="0.3" strokeWidth="1.5" />
+      <line x1="40" y1="10" x2="40" y2="38" stroke="currentColor" opacity="0.3" strokeWidth="1.5" />
+      <line x1="26" y1="24" x2="54" y2="24" stroke="currentColor" opacity="0.3" strokeWidth="1.5" />
     </svg>
   )
 }
 
 function MiniHeatmapChart() {
   return (
-    <svg width="20" height="14" viewBox="0 0 20 14" className="text-red-500">
-      <rect x="2" y="2" width="2" height="2" fill="currentColor" opacity="0.9" />
-      <rect x="5" y="2" width="2" height="2" fill="currentColor" opacity="0.6" />
-      <rect x="8" y="2" width="2" height="2" fill="currentColor" opacity="0.8" />
-      <rect x="11" y="2" width="2" height="2" fill="currentColor" opacity="0.4" />
+    <svg width={THUMBNAIL_CONFIG.svgWidth} height={THUMBNAIL_CONFIG.svgHeight} viewBox={THUMBNAIL_CONFIG.viewBox} className="text-red-500">
+      <rect x="8" y="8" width="8" height="8" fill="currentColor" opacity="0.9" />
+      <rect x="20" y="8" width="8" height="8" fill="currentColor" opacity="0.6" />
+      <rect x="32" y="8" width="8" height="8" fill="currentColor" opacity="0.8" />
+      <rect x="44" y="8" width="8" height="8" fill="currentColor" opacity="0.4" />
       
-      <rect x="2" y="5" width="2" height="2" fill="currentColor" opacity="0.7" />
-      <rect x="5" y="5" width="2" height="2" fill="currentColor" opacity="0.9" />
-      <rect x="8" y="5" width="2" height="2" fill="currentColor" opacity="0.5" />
-      <rect x="11" y="5" width="2" height="2" fill="currentColor" opacity="0.8" />
+      <rect x="8" y="20" width="8" height="8" fill="currentColor" opacity="0.7" />
+      <rect x="20" y="20" width="8" height="8" fill="currentColor" opacity="0.9" />
+      <rect x="32" y="20" width="8" height="8" fill="currentColor" opacity="0.5" />
+      <rect x="44" y="20" width="8" height="8" fill="currentColor" opacity="0.8" />
       
-      <rect x="2" y="8" width="2" height="2" fill="currentColor" opacity="0.5" />
-      <rect x="5" y="8" width="2" height="2" fill="currentColor" opacity="0.7" />
-      <rect x="8" y="8" width="2" height="2" fill="currentColor" opacity="0.9" />
-      <rect x="11" y="8" width="2" height="2" fill="currentColor" opacity="0.6" />
+      <rect x="8" y="32" width="8" height="8" fill="currentColor" opacity="0.5" />
+      <rect x="20" y="32" width="8" height="8" fill="currentColor" opacity="0.7" />
+      <rect x="32" y="32" width="8" height="8" fill="currentColor" opacity="0.9" />
+      <rect x="44" y="32" width="8" height="8" fill="currentColor" opacity="0.6" />
     </svg>
   )
 } 

@@ -114,17 +114,8 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           </div>
 
           <div className="flex items-center space-x-2">
-            {/* Only show Chat button for ready projects */}
-            {project.overall_status === 'ready' && (
-              <Link href={chatHref}>
-                <Button variant="ghost" size="sm">
-                  <MessageSquare className="w-3 h-3 mr-1" />
-                  Chat
-                </Button>
-              </Link>
-            )}
-            
-            {/* Main action button */}
+         
+            {/* Only show Main action button for ready projects */}
             <Link href={linkHref}>
               <Button variant={featured ? "default" : "outline"} size="sm">
                 {project.overall_status === 'creating' ? (

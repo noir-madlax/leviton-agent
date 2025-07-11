@@ -16,7 +16,7 @@ export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardLi
         <div key={card.id} className="space-y-1.5">
           {/* AI介绍文本 - 保留介绍文本但删除AI Avatar */}
           {card.type === 'preset' && card.aiIntroduction && (
-            <p className="text-base text-gray-700 leading-relaxed">
+            <p className="text-base font-semibold  text-gray-700 leading-relaxed">
               {card.aiIntroduction}
             </p>
           )}

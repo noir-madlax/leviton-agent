@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -93,15 +93,6 @@ export function CategoryFilterAndProjectScope({
     }
   }, [projectId, preloadedData, projectData])
 
-  // Load project overview when filters change - 只在有过滤器变化时重新加载
-  useEffect(() => {
-    if (!projectId) return
-    // 只有在有活跃过滤器且不是初始加载时才重新加载
-    if (appliedCategories.length > 0) {
-      loadProjectOverview()
-    }
-  }, [projectId, appliedCategories])
-
   const loadData = async () => {
     if (!projectId) return
 
@@ -119,7 +110,7 @@ export function CategoryFilterAndProjectScope({
     }
   }
 
-  const loadProjectOverview = async () => {
+  const loadProjectOverview = useCallback(async () => {
     if (!projectId) return
 
     setOverviewLoading(true)
@@ -133,7 +124,14 @@ export function CategoryFilterAndProjectScope({
     } finally {
       setOverviewLoading(false)
     }
-  }
+  }, [projectId, appliedCategories])
+
+  // Load project overview when filters change - 重新加载项目概览数据
+  useEffect(() => {
+    if (!projectId) return
+    // 当appliedCategories变化时总是重新加载数据（有过滤器或无过滤器）
+    loadProjectOverview()
+  }, [projectId, loadProjectOverview])
 
   const handleCategorySelect = (category: string) => {
     if (category === 'all') {
@@ -175,11 +173,7 @@ export function CategoryFilterAndProjectScope({
     return null
   }
 
-  // Format sources and categories text
-  const sourcesText = projectData?.distributions.sources
-    ?.map(source => `${source.name} (${source.percentage}%)`)
-    .join(' • ') || ''
-
+  // Format categories text
   const categoriesText = projectData?.distributions.categories
     ?.map(category => `${category.name} (${category.percentage}%)`)
     .join(', ') || ''
@@ -192,6 +186,9 @@ export function CategoryFilterAndProjectScope({
             <Filter className="w-5 h-5" />
             Filter Project Scope by Product Categories
           </CardTitle>
+          <div className="text-sm text-gray-600 mt-1">
+            Filters will <strong>apply to all</strong> charts and Xenith responses
+          </div>
         </CardHeader>
         <CardContent className="p-4 pt-0 space-y-4">
           {/* Category Filters Section */}
@@ -337,13 +334,6 @@ export function CategoryFilterAndProjectScope({
 
                 {/* Distribution information - Compact layout */}
                 <div className="space-y-1 text-sm">
-                  {projectData.distributions.sources.length > 0 && (
-                    <div className="flex items-center gap-2">
-                      <span className="font-medium text-gray-700 text-xs">Data Sources:</span>
-                      <span className="text-gray-600 text-xs">{sourcesText}</span>
-                    </div>
-                  )}
-
                   {projectData.distributions.categories.length > 0 && (
                     <div className="flex items-start gap-2">
                       <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Categories:</span>

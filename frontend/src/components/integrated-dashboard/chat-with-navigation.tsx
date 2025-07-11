@@ -321,7 +321,7 @@ export function ChatWithNavigation({
       <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="flex items-center gap-2 p-2">
           <MessageSquare className="h-4 w-4" />
-          <h2 className="font-medium text-sm">AI Assistant</h2>
+          <h2 className="font-medium text-sm">Xenith-AI Agent</h2>
           {isLoading && (
             <div className="flex items-center gap-2 text-xs text-muted-foreground">
               <Loader2 className="h-3 w-3 animate-spin" />
@@ -338,11 +338,13 @@ export function ChatWithNavigation({
           <div className="space-y-3">
             <div className="flex items-start gap-2">
               <Avatar className="h-6 w-6 mt-0.5">
-                <AvatarFallback className="text-xs">AI</AvatarFallback>
+                <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
+                  Xe
+                </AvatarFallback>
               </Avatar>
               <div className="flex-1">
-                <div className="max-w-[85%] p-3 rounded-lg bg-gray-100 text-gray-900 mb-3">
-                  <div className="text-sm font-semibold whitespace-pre-wrap">
+                <div className=" p-3 rounded-lg bg-gray-100 text-gray-900 mb-3">
+                  <div className="text-sm whitespace-pre-wrap">
                     I&apos;ve prepared comprehensive data analysis charts for your market research. Each chart provides unique insights:
                   </div>
                 </div>
@@ -358,10 +360,12 @@ export function ChatWithNavigation({
           {/* Additional AI Introduction */}
           <div className="flex items-start gap-2">
             <Avatar className="h-6 w-6 mt-0.5">
-            
+              <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
+                Xe
+              </AvatarFallback>
             </Avatar>
-            <div className="max-w-[85%] p-3 rounded-lg bg-gray-100 text-gray-900">
-              <div className="text-sm font-semibold whitespace-pre-wrap">
+            <div className="p-3 rounded-lg bg-gray-100 text-gray-900">
+              <div className="text-sm  whitespace-pre-wrap">
                                  Feel free to explore these insights or ask me any specific questions about your market data. I&apos;m here to help you dive deeper into any aspect of your analysis!
               </div>
             </div>
@@ -373,7 +377,9 @@ export function ChatWithNavigation({
               <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
                 {!message.isUser && (
                   <Avatar className="h-6 w-6 mr-2 mt-0.5">
-                    <AvatarFallback className="text-xs">AI</AvatarFallback>
+                    <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
+                      Xe
+                    </AvatarFallback>
                   </Avatar>
                 )}
                 <div className={`max-w-[85%] p-3 rounded-lg ${

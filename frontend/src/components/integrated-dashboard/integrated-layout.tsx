@@ -126,7 +126,7 @@ export function IntegratedLayout({
               <Link href="/">
                 <Button variant="ghost" size="sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Projects
+                  Back to Home
                 </Button>
               </Link>
               <div className="flex items-center gap-3">
@@ -137,12 +137,12 @@ export function IntegratedLayout({
                     onClick={onToggleFilter}
                     className="text-xs text-blue-600 hover:text-blue-800 cursor-pointer transition-colors"
                   >
-                    {isFilterExpanded ? 'Hide filters' : 'Click to adjust product category scope'}
+                    {isFilterExpanded ? 'Hide filters' : 'Click to filter product category '}
                   </button>
                 )}
               </div>
             </div>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 hidden">
               {/* Chat Button - 导航到独立chat页面 */}
               <Link href={`/project/${projectId}/chat?from=dashboard`}>
                 <Button variant="outline">

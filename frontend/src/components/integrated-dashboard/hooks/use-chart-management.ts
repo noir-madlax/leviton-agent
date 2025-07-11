@@ -27,7 +27,7 @@ export function useChartManagement() {
       icon: Building,
       tabKey: 'brand-analysis',
       isActive: false,
-      aiIntroduction: 'Below is the brand performance analysis across different product segments to understand revenue and volume dynamics:'
+      aiIntroduction: 'Brand performance analysis across different product segments to understand revenue and volume dynamics:'
     },
     {
       id: 'market-insights',
@@ -37,7 +37,7 @@ export function useChartManagement() {
       icon: TrendingUp,
       tabKey: 'market-insights',
       isActive: false,
-      aiIntroduction: 'Here is the revenue distribution analysis across product segments to identify high-growth opportunities:'
+      aiIntroduction: 'Revenue distribution analysis across product segments to identify high-growth opportunities:'
     },
     {
       id: 'product-analysis',
