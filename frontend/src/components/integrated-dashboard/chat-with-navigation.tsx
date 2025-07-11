@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { MessageSquare, Send, Loader2 } from 'lucide-react'
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
@@ -56,6 +56,19 @@ export function ChatWithNavigation({
   const [error, setError] = useState<string | null>(null)
   
   const { updateChart } = useChart()
+  const messagesEndRef = useRef<HTMLDivElement>(null)
+  
+  // 自动滚动到底部
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })
+  }
+  
+  // 当消息更新时自动滚动
+  useEffect(() => {
+    if (isLoading || messages.length > 1) {
+      scrollToBottom()
+    }
+  }, [messages, isLoading])
   
   // 解析图表标题的函数
   const parseChartTitle = (text: string): string => {
@@ -113,6 +126,11 @@ export function ChatWithNavigation({
     setIsLoading(true)
     setCompiling(false)
     setError(null)
+    
+    // 立即滚动到底部
+    setTimeout(() => {
+      scrollToBottom()
+    }, 100)
     
     // 添加分析中的消息
     const analyzingMessage: Message = {
@@ -334,6 +352,16 @@ export function ChatWithNavigation({
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto">
         <div className="p-3 space-y-4">
+          {/* Loading State Banner - 显示在消息区域顶部，类似图1的红色框 */}
+          {isLoading && (
+            <div className="flex items-center justify-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
+              <Loader2 className="h-4 w-4 animate-spin" />
+              <span className="text-sm font-medium">
+                {compiling ? 'Compiling chart...' : 'Analyzing...'}
+              </span>
+            </div>
+          )}
+          
           {/* AI Introduction with Chart Cards */}
           <div className="space-y-3">
             <div className="flex items-start gap-2">
@@ -407,6 +435,9 @@ export function ChatWithNavigation({
               {error}
             </div>
           )}
+          
+          {/* 滚动到底部的引用元素 */}
+          <div ref={messagesEndRef} />
         </div>
       </div>
 
@@ -432,7 +463,11 @@ export function ChatWithNavigation({
             size="sm"
             className="px-3"
           >
-            <Send className="h-4 w-4" />
+            {isLoading ? (
+              <Loader2 className="h-4 w-4 animate-spin" />
+            ) : (
+              <Send className="h-4 w-4" />
+            )}
           </Button>
         </form>
       </div>

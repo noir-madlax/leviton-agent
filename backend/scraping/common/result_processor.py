@@ -1,5 +1,6 @@
 import json
 import logging
+import re
 from typing import Dict, Any, List, Optional, Tuple
 from datetime import datetime
 from pathlib import Path
@@ -243,13 +244,20 @@ class ScrapingResultProcessor:
             return None
     
     def _safe_strip(self, value: Any) -> str:
-        """安全地对值执行strip操作"""
+        """安全地对值执行strip操作并清理Unicode字符"""
         if isinstance(value, str):
-            return value.strip()
+            # 第一步：原有的strip逻辑（保持向后兼容）
+            cleaned = value.strip()
+            # 第二步：新增Unicode清理（只移除不可见的非ASCII字符）
+            cleaned = re.sub(r'[^\x20-\x7E]', '', cleaned)
+            return cleaned
         elif value is None:
             return ''
         else:
-            return str(value).strip()
+            # 对非字符串值也进行同样处理
+            cleaned = str(value).strip()
+            cleaned = re.sub(r'[^\x20-\x7E]', '', cleaned)
+            return cleaned
     
     def _extract_availability(self, product: Dict[str, Any]) -> str:
         """提取可用性信息"""
@@ -305,7 +313,6 @@ class ScrapingResultProcessor:
                         return float(price_value)
                     elif isinstance(price_value, str):
                         # 提取数字
-                        import re
                         price_match = re.search(r'[\d,]+\.?\d*', price_value.replace(',', ''))
                         if price_match:
                             return float(price_match.group())
@@ -327,7 +334,6 @@ class ScrapingResultProcessor:
                         return float(rating_value)
                     elif isinstance(rating_value, str):
                         # 提取数字
-                        import re
                         rating_match = re.search(r'(\d+\.?\d*)', rating_value)
                         if rating_match:
                             return float(rating_match.group(1))
@@ -348,7 +354,6 @@ class ScrapingResultProcessor:
                         return review_value
                     elif isinstance(review_value, str):
                         # 提取数字
-                        import re
                         review_match = re.search(r'([\d,]+)', review_value.replace(',', ''))
                         if review_match:
                             return int(review_match.group(1))
@@ -487,7 +492,6 @@ class ScrapingResultProcessor:
                     return float(list_price_value)
                 elif isinstance(list_price_value, str):
                     # 提取数字
-                    import re
                     price_match = re.search(r'[\d,]+\.?\d*', list_price_value.replace(',', ''))
                     if price_match:
                         return float(price_match.group())
@@ -499,7 +503,6 @@ class ScrapingResultProcessor:
                     if isinstance(value, (int, float)):
                         return float(value)
                     elif isinstance(value, str):
-                        import re
                         price_match = re.search(r'[\d,]+\.?\d*', value.replace(',', ''))
                         if price_match:
                             return float(price_match.group())
@@ -519,7 +522,6 @@ class ScrapingResultProcessor:
                     return position_value
                 elif isinstance(position_value, str):
                     # 提取数字
-                    import re
                     position_match = re.search(r'(\d+)', position_value)
                     if position_match:
                         return int(position_match.group(1))
@@ -530,7 +532,6 @@ class ScrapingResultProcessor:
                 if isinstance(ranking_value, int):
                     return ranking_value
                 elif isinstance(ranking_value, str):
-                    import re
                     ranking_match = re.search(r'(\d+)', ranking_value)
                     if ranking_match:
                         return int(ranking_match.group(1))
