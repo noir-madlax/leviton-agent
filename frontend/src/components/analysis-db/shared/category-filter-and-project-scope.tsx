@@ -266,8 +266,11 @@ export function CategoryFilterAndProjectScope({
                     >
                       {category}
                       <X
-                        className="w-3 h-3 cursor-pointer hover:text-red-500"
-                        onClick={() => handleCategoryRemove(category)}
+                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          handleCategoryRemove(category)
+                        }}
                       />
                     </Badge>
                   ))}

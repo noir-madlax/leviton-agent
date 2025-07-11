@@ -64,11 +64,11 @@ class AllReviewDataService(BaseDashboardService):
     def _get_comprehensive_review_data(self) -> List[Dict[str, Any]]:
         """Get comprehensive review data using individual queries."""
         
-        # Use fallback method directly for better compatibility
-        return self._get_review_data_fallback()
+        # Get review data from new table structure
+        return self._get_review_data()
 
-    def _get_review_data_fallback(self) -> List[Dict[str, Any]]:
-        """Get review data from new table structure."""
+    def _get_review_data(self) -> List[Dict[str, Any]]:
+        """Get review data from new table structure (review_analysis_aspects, etc.)."""
         
         try:
             # Get aspects filtered by project

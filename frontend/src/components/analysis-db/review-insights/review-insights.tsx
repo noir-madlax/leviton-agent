@@ -68,8 +68,56 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
     
     // 如果有allReviewData，需要正确映射到类别名称
     if (data.allReviewData) {
-      // 直接使用allReviewData作为reviewsByCategory
-      reviewDataForCharts.reviewsByCategory = data.allReviewData
+      // 首先直接使用allReviewData的现有映射
+      reviewDataForCharts.reviewsByCategory = { ...data.allReviewData }
+      
+      // 为痛点数据建立aspect-based映射关系
+      data.reviewInsights.painPoints.forEach(painPoint => {
+        const aspectName = painPoint.aspect
+        if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
+          // 从allReviewData中查找相关的aspect评论
+          const relatedReviews: unknown[] = []
+          
+          Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            reviews.forEach(review => {
+              // 通过aspect字段匹配
+              if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
+                relatedReviews.push(review)
+              } else if (review.category && review.category.toLowerCase() === aspectName.toLowerCase()) {
+                relatedReviews.push(review)
+              }
+            })
+          })
+          
+          if (relatedReviews.length > 0) {
+            reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
+          }
+        }
+      })
+      
+      // 为亮点数据建立feature-based映射关系
+      data.reviewInsights.customerLikes.forEach(like => {
+        const featureName = like.feature
+        if (!reviewDataForCharts.reviewsByCategory[featureName]) {
+          // 从allReviewData中查找相关的feature评论
+          const relatedReviews: unknown[] = []
+          
+          Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            reviews.forEach(review => {
+              // 通过aspect或category字段匹配
+              if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
+                relatedReviews.push(review)
+              } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
+                relatedReviews.push(review)
+              }
+            })
+          })
+          
+          if (relatedReviews.length > 0) {
+            reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
+          }
+        }
+      })
       
       // 为Use Case数据建立额外的映射关系
       data.reviewInsights.underservedUseCases.forEach(useCaseItem => {
