@@ -444,8 +444,8 @@ class ReviewTransformationService:
         try:
             update_data = {
                 'workflow_stage': workflow_stage,
-                'review_transformation_status': transformation_status,
-                'review_transformation_started_at': datetime.fromtimestamp(start_time).isoformat()
+                'transformation_status': transformation_status,
+                'transformation_started_at': datetime.fromtimestamp(start_time).isoformat()
             }
             
             self.supabase.table('scraping_requests')\
@@ -461,11 +461,12 @@ class ReviewTransformationService:
         try:
             update_data = {
                 'workflow_stage': 'completed' if result.success else 'failed',
-                'review_transformation_status': 'completed' if result.success else 'failed',
-                'review_transformation_completed_at': datetime.now().isoformat(),
-                'review_transformation_duration_seconds': int(result.duration_seconds),
-                'reviews_transformed': result.processed_count,
-                'review_transformation_metadata': {
+                'transformation_status': 'completed' if result.success else 'failed',
+                'transformation_completed_at': datetime.now().isoformat(),
+                'transformation_duration_seconds': int(result.duration_seconds),
+                'products_transformed': result.processed_count,  # Note: reusing this field for review count
+                'transformation_metadata': {
+                    'type': 'review',  # Distinguish from product transformation
                     'summary': result.summary,
                     'errors': result.errors[:10]  # Limit errors to prevent large JSON
                 }
@@ -484,9 +485,10 @@ class ReviewTransformationService:
         try:
             update_data = {
                 'workflow_stage': 'failed',
-                'review_transformation_status': 'failed',
-                'review_transformation_completed_at': datetime.now().isoformat(),
-                'review_transformation_metadata': {
+                'transformation_status': 'failed',
+                'transformation_completed_at': datetime.now().isoformat(),
+                'transformation_metadata': {
+                    'type': 'review',  # Distinguish from product transformation
                     'error': error_message
                 }
             }
