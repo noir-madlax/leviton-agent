@@ -10,6 +10,19 @@ from .reviews.scraper import ReviewScraper
 from .reviews.importer import ReviewImporter
 from .common.quality_analyzer import DataQualityAnalyzer
 
+# 类别修复功能
+import sys
+import importlib.util
+from pathlib import Path
+
+def _import_category_extractor():
+    """动态导入CategoryExtractor"""
+    category_fix_path = Path(__file__).parent / "rerun-failed-request" / "category-fix" / "extract_categories_from_json.py"
+    spec = importlib.util.spec_from_file_location("extract_categories_from_json", category_fix_path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module.CategoryExtractor
+
 # Data transformation integration
 from data_transformation.services.transformation_service import DataTransformationService
 from data_transformation.services.review_transformation_service import ReviewTransformationService
@@ -31,6 +44,10 @@ class ScrapingOrchestrator:
         self.review_scraper = ReviewScraper()
         self.review_importer = ReviewImporter()
         self.quality_analyzer = DataQualityAnalyzer()
+        
+        # 初始化类别修复组件
+        CategoryExtractor = _import_category_extractor()
+        self.category_extractor = CategoryExtractor()
         
         # 初始化数据库访问
         self.supabase_client = get_supabase_service_client()
@@ -127,6 +144,20 @@ class ScrapingOrchestrator:
                 return result
             
             result["batch_id"] = batch_id
+            
+            # Phase 2.1: 导入类别信息
+            logger.info("Phase 2.1: 开始导入类别信息...")
+            phase21_start = time.time()
+            
+            category_import_result = await self._import_categories_from_json(json_file_path)
+            result["categories_phase"] = category_import_result
+            
+            phase21_duration = time.time() - phase21_start
+            result["execution_stats"]["phase_durations"]["category_importing"] = round(phase21_duration, 2)
+            
+            # 注意：类别导入失败不阻断主流程，只记录日志
+            if category_import_result.get('status') != 'success':
+                logger.warning(f"类别导入未完全成功，但继续主流程: {category_import_result.get('message', 'Unknown error')}")
             
             # Phase 2.5: 数据转换 (新增)
             logger.info(f"Phase 2.5: 开始转换批次 {batch_id} 的数据...")
@@ -273,6 +304,13 @@ class ScrapingOrchestrator:
             
             batch_id = import_result.get("batch_id")
             
+            # 类别导入
+            json_file_path = scrape_result.get("file_path")
+            if json_file_path:
+                category_import_result = await self._import_categories_from_json(json_file_path)
+            else:
+                category_import_result = {"status": "skipped", "message": "No JSON file path available"}
+            
             # 数据转换
             transformation_result = await self._transform_batch_data(batch_id, import_result.get("request_id"))
             
@@ -280,6 +318,7 @@ class ScrapingOrchestrator:
                 "status": "success" if transformation_result.get("success") else "transformation_failed",
                 "scraping_result": scrape_result,
                 "importing_result": import_result,
+                "category_import_result": category_import_result,
                 "transformation_result": transformation_result,
                 "batch_id": batch_id
             }
@@ -680,4 +719,39 @@ class ScrapingOrchestrator:
             result["data_quality"] = {
                 "error": f"Data quality analysis failed: {str(e)}",
                 "overall_quality_score": 0.0
+            }
+    
+    async def _import_categories_from_json(self, json_file_path: str) -> Dict[str, Any]:
+        """
+        从JSON文件导入类别信息
+        
+        Args:
+            json_file_path: JSON文件路径
+            
+        Returns:
+            Dict[str, Any]: 导入结果
+        """
+        try:
+            logger.info(f"开始从JSON文件导入类别信息: {json_file_path}")
+            
+            # 使用CategoryExtractor处理JSON文件
+            result = await self.category_extractor.process_json_file(json_file_path)
+            
+            # 记录结果
+            if result.get('status') == 'success':
+                categories_inserted = result.get('categories_inserted', 0)
+                categories_extracted = result.get('categories_extracted', 0)
+                logger.info(f"类别导入完成: 提取{categories_extracted}个, 新增{categories_inserted}个类别")
+            else:
+                logger.warning(f"类别导入结果: {result.get('message', 'Unknown result')}")
+            
+            return result
+            
+        except Exception as e:
+            logger.error(f"类别导入过程中出现异常: {e}")
+            return {
+                'status': 'error',
+                'message': f'类别导入失败: {str(e)}',
+                'categories_extracted': 0,
+                'categories_inserted': 0
             } 

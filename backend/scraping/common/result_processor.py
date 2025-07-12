@@ -158,7 +158,7 @@ class ScrapingResultProcessor:
             data: JSON数据
             
         Returns:
-            List[Dict[str, Any]]: 产品数据列表
+            List[Dict[str, Any]]: 产品数据列表（已去重）
         """
         products = []
         
@@ -176,15 +176,30 @@ class ScrapingResultProcessor:
                 raw_products = data
             
             # 转换每个产品
+            seen_asins = set()  # 用于去重
             for raw_product in raw_products:
                 if not isinstance(raw_product, dict):
+                    continue
+                
+                # 检查是否已经处理过相同的ASIN
+                asin = raw_product.get('asin')
+                if asin and asin in seen_asins:
+                    logger.debug(f"跳过重复的ASIN: {asin}")
                     continue
                 
                 processed_product = await self._process_single_product(raw_product)
                 if processed_product:
                     products.append(processed_product)
+                    if asin:
+                        seen_asins.add(asin)
             
-            logger.info(f"成功处理 {len(products)} 个产品")
+            original_count = len(raw_products)
+            final_count = len(products)
+            
+            if original_count != final_count:
+                logger.info(f"产品去重完成: {original_count} -> {final_count} 个产品")
+            else:
+                logger.info(f"成功处理 {final_count} 个产品")
             
         except Exception as e:
             logger.error(f"提取产品数据时出错: {e}")

@@ -121,7 +121,7 @@ class DataTransformationService:
             limit: Maximum number of records to fetch
             
         Returns:
-            List of product records
+            List of product records (deduplicated by platform_id)
         """
         try:
             query = self.supabase.table('amazon_products').select('*')
@@ -150,7 +150,32 @@ class DataTransformationService:
             query = query.order('extract_date', desc=True)
             
             result = query.execute()
-            return result.data or []
+            raw_data = result.data or []
+            
+            # Deduplicate by platform_id, keeping the first occurrence (most recent due to DESC order)
+            seen_platform_ids = set()
+            deduped_data = []
+            
+            for record in raw_data:
+                platform_id = record.get('platform_id')
+                if platform_id not in seen_platform_ids:
+                    seen_platform_ids.add(platform_id)
+                    deduped_data.append(record)
+            
+            if len(raw_data) != len(deduped_data):
+                logger.warning(f"General transform: Deduplicated {len(raw_data)} records to {len(deduped_data)} records")
+                
+                # Log duplicate platform_ids for debugging
+                platform_id_counts = {}
+                for record in raw_data:
+                    platform_id = record.get('platform_id')
+                    platform_id_counts[platform_id] = platform_id_counts.get(platform_id, 0) + 1
+                
+                duplicates = {pid: count for pid, count in platform_id_counts.items() if count > 1}
+                if duplicates:
+                    logger.info(f"General transform: Found duplicates: {duplicates}")
+            
+            return deduped_data
             
         except Exception as e:
             logger.error(f"Failed to get source data: {e}")
@@ -191,6 +216,25 @@ class DataTransformationService:
                 error_messages.append(f"Transform error for {record.get('platform_id', 'unknown')}: {str(e)}")
                 errors += 1
                 logger.warning(f"Failed to transform product {record.get('platform_id', 'unknown')}: {e}")
+        
+        # Additional safety check: deduplicate transformed_data by platform_id before upsert
+        if transformed_data:
+            original_count = len(transformed_data)
+            seen_platform_ids = set()
+            deduped_transformed_data = []
+            
+            for transformed in transformed_data:
+                platform_id = transformed.get('platform_id')
+                if platform_id not in seen_platform_ids:
+                    seen_platform_ids.add(platform_id)
+                    deduped_transformed_data.append(transformed)
+                else:
+                    logger.warning(f"Duplicate platform_id in transformed data: {platform_id}")
+            
+            if len(deduped_transformed_data) != original_count:
+                logger.warning(f"Deduplicated transformed data: {original_count} -> {len(deduped_transformed_data)} records")
+            
+            transformed_data = deduped_transformed_data
         
         # Bulk insert/update if not dry run
         if transformed_data and not self.config.dry_run:
@@ -544,7 +588,7 @@ class DataTransformationService:
             batch_id: The batch ID to filter by
             
         Returns:
-            List of product records for the batch
+            List of product records for the batch (deduplicated by platform_id)
         """
         try:
             query = self.supabase.table('amazon_products').select('*')
@@ -554,7 +598,36 @@ class DataTransformationService:
             query = query.order('id')
             
             result = query.execute()
-            return result.data or []
+            raw_data = result.data or []
+            
+            # Deduplicate by platform_id, keeping the last occurrence (most recent)
+            seen_platform_ids = set()
+            deduped_data = []
+            
+            # Process in reverse order to keep the last occurrence
+            for record in reversed(raw_data):
+                platform_id = record.get('platform_id')
+                if platform_id not in seen_platform_ids:
+                    seen_platform_ids.add(platform_id)
+                    deduped_data.append(record)
+            
+            # Reverse again to maintain original order
+            deduped_data.reverse()
+            
+            if len(raw_data) != len(deduped_data):
+                logger.warning(f"Batch {batch_id}: Deduplicated {len(raw_data)} records to {len(deduped_data)} records")
+                
+                # Log duplicate platform_ids for debugging
+                platform_id_counts = {}
+                for record in raw_data:
+                    platform_id = record.get('platform_id')
+                    platform_id_counts[platform_id] = platform_id_counts.get(platform_id, 0) + 1
+                
+                duplicates = {pid: count for pid, count in platform_id_counts.items() if count > 1}
+                if duplicates:
+                    logger.info(f"Batch {batch_id}: Found duplicates: {duplicates}")
+            
+            return deduped_data
             
         except Exception as e:
             logger.error(f"Failed to get batch source data for batch_id {batch_id}: {e}")
