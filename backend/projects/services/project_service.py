@@ -508,55 +508,69 @@ class ProjectService:
             raise
     
     async def _extract_asins_by_category_id(self, filters) -> List[str]:
-        """Extract ASINs using category_id - 与get_data_confirmation_data_by_category_id()完全相同的逻辑"""
+        """Extract ASINs using category_id with fallback strategy."""
         try:
-            # Get category level to determine which field to query
-            category_level = None
-            if filters.category_id:
-                # Get category level from amazon_categories table
-                category_result = self.supabase.table('amazon_categories')\
-                    .select('level')\
-                    .eq('category_id', filters.category_id)\
-                    .single()\
-                    .execute()
-                
-                if category_result.data:
-                    category_level = category_result.data['level']
-                    logger.info(f"Category ID {filters.category_id} found at level {category_level}")
-                else:
-                    logger.warning(f"Category ID {filters.category_id} not found in amazon_categories table")
-                    return []
+            category_id = filters.category_id
             
-            # Build filtered query using category_l{level}_id field - 与get_data_confirmation_data_by_category_id()完全相同
+            # 策略1：直接用category_id字段查询
             query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
-            
-            # Apply base filters
             query = query.neq('category', None).neq('brand', None)
+            query = query.eq('category_id', category_id)
             
-            # Apply category filter using appropriate level field
-            if category_level and filters.category_id:
-                category_field = f'category_l{category_level}_id'
-                query = query.eq(category_field, filters.category_id)
-                logger.info(f"Filtering by {category_field} = {filters.category_id}")
-            
-            # Apply other filters
-            if filters.brands:
-                query = query.in_('brand', filters.brands)
-            
-            if filters.sources:
-                query = query.in_('source', filters.sources)
-            
-            # Execute query to get all filtered data
             result = query.execute()
             
-            if not result.data:
-                return []
+            if result.data:
+                logger.info(f"Found {len(result.data)} products via direct category_id match")
+                return await self._process_query_results(result.data, filters)
             
-            # Apply sales ranking filter in Python (与get_data_confirmation_data_by_category_id()完全相同)
+            # 策略2：通过category_id获取名称，然后用名称查询category字段
+            category_name = await self._get_category_name(category_id)
+            if category_name:
+                query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
+                query = query.neq('category', None).neq('brand', None)
+                query = query.eq('category', category_name)
+                
+                # Apply other filters
+                if filters.brands:
+                    query = query.in_('brand', filters.brands)
+                
+                if filters.sources:
+                    query = query.in_('source', filters.sources)
+                
+                result = query.execute()
+                
+                if result.data:
+                    logger.info(f"Found {len(result.data)} products via category name match: {category_name}")
+                    return await self._process_query_results(result.data, filters)
+            
+            logger.warning(f"No products found for category_id {category_id}")
+            return []
+            
+        except Exception as e:
+            logger.error(f"Error extracting ASINs by category_id: {e}")
+            raise
+    
+    async def _get_category_name(self, category_id: str) -> Optional[str]:
+        """获取类别名称"""
+        try:
+            result = self.supabase.table('amazon_categories')\
+                .select('name')\
+                .eq('category_id', category_id)\
+                .single()\
+                .execute()
+            return result.data.get('name') if result.data else None
+        except Exception as e:
+            logger.warning(f"Failed to get category name for {category_id}: {e}")
+            return None
+    
+    async def _process_query_results(self, data: List[Dict], filters) -> List[str]:
+        """处理查询结果，应用销量过滤"""
+        try:
+            # Apply sales ranking filter in Python
             if filters.top_sales_count:
                 # Filter out products with no sales volume (NULL or 0)
                 products_with_sales = [
-                    row for row in result.data 
+                    row for row in data 
                     if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0
                 ]
                 
@@ -573,16 +587,16 @@ class ProjectService:
                 # Extract platform IDs
                 platform_ids = [row['platform_id'] for row in top_products if row.get('platform_id')]
                 
-                logger.info(f"ASIN extraction by category_id: filtered {len(result.data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
+                logger.info(f"Sales filtering: {len(data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
                 
             else:
                 # No top sales filter, use all filtered products
-                platform_ids = [row['platform_id'] for row in result.data if row.get('platform_id')]
+                platform_ids = [row['platform_id'] for row in data if row.get('platform_id')]
             
             return list(set(platform_ids))  # Remove duplicates
             
         except Exception as e:
-            logger.error(f"Error extracting ASINs by category_id: {e}")
+            logger.error(f"Error processing query results: {e}")
             raise
     
     async def _extract_asins_by_category_name(self, filters) -> List[str]:
@@ -981,46 +995,56 @@ class ProjectService:
     async def get_data_confirmation_data_by_category_id(self, filters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
         Get data confirmation data for Step2 with category ID filter.
-        Uses hierarchical category_l{level}_id fields for direct querying.
+        Uses fallback strategy: direct category_id -> category name match.
         """
         try:
-            # Get category level to determine which field to query
-            category_level = None
-            if filters and filters.get('category_id'):
-                # Get category level from amazon_categories table
-                category_result = self.supabase.table('amazon_categories')\
-                    .select('level')\
-                    .eq('category_id', filters['category_id'])\
-                    .single()\
-                    .execute()
-                
-                if category_result.data:
-                    category_level = category_result.data['level']
-                    logger.info(f"Category ID {filters['category_id']} found at level {category_level}")
-                else:
-                    logger.warning(f"Category ID {filters['category_id']} not found in amazon_categories table")
-                    return self._get_empty_data_structure()
+            if not filters or not filters.get('category_id'):
+                return self._get_empty_data_structure()
             
-            # Build filtered query using category_l{level}_id field
+            category_id = filters['category_id']
+            filtered_result = None
+            
+            # 策略1：直接用category_id字段查询
             query = self.supabase.table('product_wide_table').select(
                 'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
             ).neq('category', None).neq('brand', None)
-            
-            # Apply category filter using appropriate level field
-            if category_level and filters.get('category_id'):
-                category_field = f'category_l{category_level}_id'
-                query = query.eq(category_field, filters['category_id'])
-                logger.info(f"Filtering by {category_field} = {filters['category_id']}")
+            query = query.eq('category_id', category_id)
             
             # Apply other filters
-            if filters:
+            if filters.get('sources'):
+                query = query.in_('source', filters['sources'])
+            if filters.get('brands'):
+                query = query.in_('brand', filters['brands'])
+            
+            filtered_result = query.execute()
+            
+            if filtered_result.data:
+                logger.info(f"Found {len(filtered_result.data)} products via direct category_id match")
+            else:
+                # 策略2：通过category_id获取名称，然后用名称查询category字段
+                category_name = await self._get_category_name(category_id)
+                if not category_name:
+                    logger.warning(f"Category ID {category_id} not found in amazon_categories table")
+                    return self._get_empty_data_structure()
+                
+                query = self.supabase.table('product_wide_table').select(
+                    'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
+                ).neq('category', None).neq('brand', None)
+                query = query.eq('category', category_name)
+                
+                # Apply other filters
                 if filters.get('sources'):
                     query = query.in_('source', filters['sources'])
                 if filters.get('brands'):
                     query = query.in_('brand', filters['brands'])
-            
-            # Execute filtered query
-            filtered_result = query.execute()
+                
+                filtered_result = query.execute()
+                
+                if filtered_result.data:
+                    logger.info(f"Found {len(filtered_result.data)} products via category name match: {category_name}")
+                else:
+                    logger.warning(f"No products found for category_id {category_id}")
+                    return self._get_empty_data_structure()
             
             if not filtered_result.data:
                 filtered_data = []
@@ -1068,15 +1092,24 @@ class ProjectService:
                 final_products = filtered_data
             
             # Get available options from all data for this category
+            # 使用相同的策略获取可用选项
             all_options_query = self.supabase.table('product_wide_table').select(
                 'category, source, brand'
             ).neq('category', None).neq('brand', None)
-            
-            if category_level and filters.get('category_id'):
-                category_field = f'category_l{category_level}_id'
-                all_options_query = all_options_query.eq(category_field, filters['category_id'])
+            all_options_query = all_options_query.eq('category_id', category_id)
             
             all_options_result = all_options_query.execute()
+            
+            if not all_options_result.data:
+                # 策略2：通过category_name获取可用选项
+                category_name = await self._get_category_name(category_id)
+                if category_name:
+                    all_options_query = self.supabase.table('product_wide_table').select(
+                        'category, source, brand'
+                    ).neq('category', None).neq('brand', None)
+                    all_options_query = all_options_query.eq('category', category_name)
+                    all_options_result = all_options_query.execute()
+            
             all_options_data = all_options_result.data if all_options_result.data else []
             
             available_categories = sorted(list(set(row['category'] for row in all_options_data if row['category'])))

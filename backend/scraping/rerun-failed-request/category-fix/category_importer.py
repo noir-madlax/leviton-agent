@@ -3,7 +3,18 @@
 负责将类别信息导入到amazon_categories表
 """
 import logging
+import sys
+from pathlib import Path
 from typing import List, Dict, Any, Set
+
+# 添加项目根目录到Python路径
+project_root = Path(__file__).parent.parent.parent.parent
+sys.path.insert(0, str(project_root))
+
+# 添加backend目录到Python路径
+backend_root = Path(__file__).parent.parent.parent
+sys.path.insert(0, str(backend_root))
+
 from core.database.connection import get_supabase_client
 
 logger = logging.getLogger(__name__)

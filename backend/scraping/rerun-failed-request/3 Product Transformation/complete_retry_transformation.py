@@ -37,6 +37,13 @@ from retry_config import (
     SUPPORTED_STATUSES
 )
 
+# Import data transformation parsers
+try:
+    from backend.data_transformation.parsers import SalesVolumeParser, PackParser, PriceCalculator
+    PARSERS_AVAILABLE = True
+except ImportError:
+    PARSERS_AVAILABLE = False
+
 
 @dataclass
 class TransformationResult:
@@ -369,14 +376,14 @@ class CompleteRetryTransformationTool:
                 'position': record.get('position') or 0,  # Default to 0 if position is null
                 'recent_sales': record.get('recent_sales'),
                 
-                # Calculated fields - simplified without complex parsers
-                'monthly_sales_volume': None,  # Would need SalesVolumeParser
-                'estimated_revenue': None,     # Would need calculation
-                'pack_count': 1,               # Default to 1
-                'unit_price_calculated': None, # Would need calculation
-                'unit_price_numeric': None,    # Would need calculation
-                'estimated_volume': None,      # Would need calculation
-                'cleaned_title': title,        # Simplified
+                # Calculated fields - using proper parsers if available
+                'monthly_sales_volume': self._calculate_monthly_sales_volume(record.get('recent_sales')),
+                'estimated_revenue': None,     # Will be calculated after other fields
+                'pack_count': self._calculate_pack_count(title),
+                'unit_price_calculated': None, # Will be calculated after other fields
+                'unit_price_numeric': None,    # Will be calculated after other fields
+                'estimated_volume': None,      # Will be calculated after other fields
+                'cleaned_title': self._clean_title(title),
                 
                 # Additional fields from amazon_products
                 'batch_id': record.get('batch_id'),
@@ -399,6 +406,9 @@ class CompleteRetryTransformationTool:
                 hierarchy_data = self._extract_category_hierarchy_from_flat(record.get('categories_flat'))
             
             transformed.update(hierarchy_data)
+            
+            # Calculate additional fields (estimated_revenue, unit_price_calculated, etc.)
+            transformed = self._calculate_additional_fields(transformed)
             
             return transformed
             
@@ -574,6 +584,72 @@ class CompleteRetryTransformationTool:
             return None
         except (ValueError, TypeError):
             return None
+    
+    def _calculate_monthly_sales_volume(self, recent_sales: Optional[str]) -> Optional[int]:
+        """Calculate monthly sales volume from recent_sales text"""
+        if not PARSERS_AVAILABLE:
+            self.logger.warning("Parsers not available, skipping sales volume calculation")
+            return None
+        
+        try:
+            return SalesVolumeParser.parse(recent_sales)
+        except Exception as e:
+            self.logger.warning(f"Failed to parse sales volume from '{recent_sales}': {e}")
+            return None
+    
+    def _calculate_pack_count(self, title: Optional[str]) -> int:
+        """Calculate pack count from product title"""
+        if not PARSERS_AVAILABLE:
+            return 1
+        
+        try:
+            return PackParser.parse_pack_count(title)
+        except Exception as e:
+            self.logger.warning(f"Failed to parse pack count from '{title}': {e}")
+            return 1
+    
+    def _clean_title(self, title: Optional[str]) -> Optional[str]:
+        """Clean product title by removing pack information"""
+        if not PARSERS_AVAILABLE:
+            return title
+        
+        try:
+            return PackParser.extract_base_product_name(title)
+        except Exception as e:
+            self.logger.warning(f"Failed to clean title '{title}': {e}")
+            return title
+    
+    def _calculate_additional_fields(self, transformed: Dict[str, Any]) -> Dict[str, Any]:
+        """Calculate additional fields after basic transformation"""
+        if not PARSERS_AVAILABLE:
+            return transformed
+        
+        try:
+            # Calculate estimated_revenue
+            price_usd = transformed.get('price_usd')
+            monthly_sales_volume = transformed.get('monthly_sales_volume')
+            
+            if price_usd is not None and monthly_sales_volume is not None and monthly_sales_volume > 0:
+                estimated_revenue = PriceCalculator.calculate_estimated_revenue(
+                    Decimal(str(price_usd)), monthly_sales_volume
+                )
+                transformed['estimated_revenue'] = float(estimated_revenue) if estimated_revenue else None
+            
+            # Calculate unit prices
+            pack_count = transformed.get('pack_count', 1)
+            if price_usd is not None and pack_count > 0:
+                unit_price = float(price_usd) / pack_count
+                transformed['unit_price_calculated'] = unit_price
+                transformed['unit_price_numeric'] = unit_price
+            
+            # Set estimated_volume
+            if monthly_sales_volume is not None and monthly_sales_volume > 0:
+                transformed['estimated_volume'] = float(monthly_sales_volume)
+            
+        except Exception as e:
+            self.logger.warning(f"Failed to calculate additional fields: {e}")
+        
+        return transformed
     
     async def _bulk_upsert(self, data: List[Dict[str, Any]]) -> None:
         """Bulk upsert data to product_wide_table"""
