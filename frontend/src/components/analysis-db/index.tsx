@@ -21,14 +21,14 @@ interface DashboardData {
   brandAnalysis: {
     brandCategoryRevenue: Array<{
       brand: string
-      segments: Record<string, { revenue: number; volume: number }>
+      categories: Record<string, { revenue: number; volume: number }>
       dimmerRevenue: number
       switchRevenue: number
       dimmerVolume: number
       switchVolume: number
     }>
-    segmentNames: string[]
-    segmentColors: string[]
+    categoryNames: string[]
+    categoryColors: string[]
   }
   productAnalysis: {
     priceVsRevenue: ProductAnalysisData['priceVsRevenue']
@@ -230,7 +230,7 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
     // 🔑 REQUIRE project ID for Brand Analysis - no fallback to unfiltered data
     if (!projectId) {
       console.log('⏳ Brand Analysis waiting for project selection...');
-      return { brandCategoryRevenue: [], segmentNames: [], segmentColors: [] };
+      return { brandCategoryRevenue: [], categoryNames: [], categoryColors: [] };
     }
     
     console.log(`📊 Fetching Brand Analysis data for project: ${projectId}`);
@@ -239,21 +239,26 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
     }
     
     const result = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters);
-    console.log(`📈 Brand Analysis data received: ${result.brandCategoryRevenue.length} brands, ${result.segmentNames.length} segments`);
+    console.log(`📈 Brand Analysis data received: ${result.brandCategoryRevenue.length} brands, ${result.segmentNames.length} categories`);
     
     if (result.brandCategoryRevenue.length > 0) {
       result.brandCategoryRevenue.forEach((brand, index) => {
-        console.log(`  Brand ${index + 1}: ${brand.brand} - Segments: ${Object.keys(brand.segments || {}).join(', ')}`);
+        console.log(`  Brand ${index + 1}: ${brand.brand} - Categories: ${Object.keys(brand.categories || {}).join(', ')}`);
       });
-      console.log(`  Segments: ${result.segmentNames.join(', ')}`);
+      console.log(`  Categories: ${result.segmentNames.join(', ')}`);
     } else {
       console.log('  ⚠️ No brand data returned from API');
     }
     
-    return result;
+    // Convert field names to match component expectations
+    return {
+      brandCategoryRevenue: result.brandCategoryRevenue,
+      categoryNames: result.segmentNames,   // Map segmentNames to categoryNames
+      categoryColors: result.segmentColors  // Map segmentColors to categoryColors
+    };
   } catch (error) {
     console.error('Error fetching brand analysis data:', error);
-    return { brandCategoryRevenue: [], segmentNames: [], segmentColors: [] };
+    return { brandCategoryRevenue: [], categoryNames: [], categoryColors: [] };
   }
 }
 

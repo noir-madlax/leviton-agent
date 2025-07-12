@@ -34,10 +34,11 @@ async def get_brand_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
 ):
-    """Get brand category revenue analysis for a specific project.
+    """Get top 10 brand category revenue analysis for a specific project.
     
     This endpoint replaces the frontend getBrandCategoryRevenue() method
     with server-side implementation that applies project ASIN filtering.
+    Returns only the top 10 brands by total revenue.
     """
     try:
         # Parse categories if provided
@@ -50,25 +51,25 @@ async def get_brand_analysis(
         if category_filters:
             service.set_category_filters(category_filters)
         
-        # Get filtered data (new format with segments)
+        # Get filtered data (new format with segments, limited to top 10)
         brand_data = service.get_data()
         
-        # Extract data for response
+        # Extract data for response (fixed field mapping)
         brand_category_data = brand_data.get('brandCategoryRevenue', [])
-        segment_names = brand_data.get('segmentNames', [])
-        segment_colors = brand_data.get('segmentColors', [])
+        category_names = brand_data.get('categoryNames', [])
+        category_colors = brand_data.get('categoryColors', [])
         
-        # Prepare response with new format including segments
+        # Prepare response with new format including categories
         response = BrandAnalysisResponse(
             data=[BrandCategoryData(**item) for item in brand_category_data],
-            segmentNames=segment_names,
-            segmentColors=segment_colors,
+            segmentNames=category_names,  # Keep API field name for compatibility
+            segmentColors=category_colors,  # Keep API field name for compatibility
             project_id=project_id,
-            total_brands=len(brand_category_data),
+            total_brands=len(brand_category_data),  # Returns actual count (up to 10)
             filtered_asin_count=len(service.project_asins)
         )
         
-        logger.info(f"Brand analysis API returned {len(brand_category_data)} brands with {len(segment_names)} segments for project {project_id}")
+        logger.info(f"Brand analysis API returned top {len(brand_category_data)} brands with {len(category_names)} categories for project {project_id}")
         return response
         
     except ValueError as e:

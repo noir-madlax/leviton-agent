@@ -5,21 +5,19 @@ import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
-import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
-import { filterValidBrandSegments } from "@/components/analysis-db/shared/segment-filter-utils"
 
 interface BrandAnalysisProps {
   data: {
     brandCategoryRevenue: {
       brand: string
-      segments: Record<string, { revenue: number; volume: number }>
+      categories: Record<string, { revenue: number; volume: number }>
       dimmerRevenue: number
       switchRevenue: number
       dimmerVolume: number
       switchVolume: number
     }[]
-    segmentNames: string[]
-    segmentColors: string[]
+    categoryNames: string[]
+    categoryColors: string[]
   }
   productLists: {
     byBrand: Record<string, Array<{
@@ -59,12 +57,12 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const { openPanel } = useProductPanel()
 
-  // 获取动态segment信息
-  const segmentNames = data.segmentNames || []
-  const segmentColors = data.segmentColors || Array.from({ length: 20 }, (_, i) => getChartColor(i))
+  // 获取category信息
+  const categoryNames = data.categoryNames || []
+  const categoryColors = data.categoryColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
   
-  // 如果没有segment数据，使用fallback
-  if (!segmentNames.length || !data.brandCategoryRevenue.length) {
+  // 如果没有数据，显示空状态
+  if (!categoryNames.length || !data.brandCategoryRevenue.length) {
     return (
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Brand Analysis</h2>
@@ -75,46 +73,65 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
     )
   }
 
-  // 动态检测产品类型
-  const getProductType = () => {
-    const firstSegment = segmentNames[0] || ""
-    if (firstSegment.toLowerCase().includes('air fryer')) return "Air Fryers"
-    if (firstSegment.toLowerCase().includes('dimmer')) return "Dimmer Switches"
-    if (firstSegment.toLowerCase().includes('switch')) return "Light Switches"
-    return "Products"
+  // 构建grouped bar chart数据
+  const chartData = data.brandCategoryRevenue
+    .map(item => {
+      const brandData: { name: string; [key: string]: number | string } = { name: item.brand }
+      
+      // 为每个category添加数据
+      categoryNames.forEach(category => {
+        const categoryData = item.categories[category] || { revenue: 0, volume: 0 }
+        const value = metricType === "revenue" ? categoryData.revenue : categoryData.volume
+        brandData[category] = value
+      })
+      
+      return brandData
+    })
+    .filter(item => {
+      // 过滤掉所有category都为0的品牌
+      return categoryNames.some(category => {
+        const value = item[category]
+        return typeof value === 'number' && value > 0
+      })
+    })
+    .sort((a, b) => {
+      // 按总值排序
+      const aTotal = categoryNames.reduce((sum, cat) => {
+        const value = a[cat]
+        return sum + (typeof value === 'number' ? value : 0)
+      }, 0)
+      const bTotal = categoryNames.reduce((sum, cat) => {
+        const value = b[cat]
+        return sum + (typeof value === 'number' ? value : 0)
+      }, 0)
+      return bTotal - aTotal
+    })
+
+  // 动态检测产品类型和生成标题
+  const getProductTypeInfo = () => {
+    const hasDimmers = categoryNames.some(cat => cat.toLowerCase().includes('dimmer'))
+    const hasSwitches = categoryNames.some(cat => cat.toLowerCase().includes('switch'))
+    const hasAirFryers = categoryNames.some(cat => cat.toLowerCase().includes('air fryer'))
+    
+    if (hasDimmers && hasSwitches) {
+      return {
+        type: "Switches",
+        emoji: ""
+      }
+    } else if (hasAirFryers) {
+      return {
+        type: "Air Fryers", 
+        emoji: "🔥 Air Fryers"
+      }
+    } else {
+      return {
+        type: "Products",
+        emoji: "📊 Categories"
+      }
+    }
   }
 
-  const productType = getProductType()
-  
-  // 使用公共过滤函数过滤有效的segments
-  const validSegmentNames = filterValidBrandSegments(segmentNames, data.brandCategoryRevenue, metricType)
-  
-  // 按segment重组数据 - 为每个有效segment创建独立的图表数据
-  const segmentChartData = validSegmentNames.map((segment, segmentIndex) => {
-    const brandsForSegment = data.brandCategoryRevenue
-      .map(item => {
-        const segmentData = item.segments[segment] || { revenue: 0, volume: 0 }
-        const value = metricType === "revenue" ? segmentData.revenue : segmentData.volume
-        return {
-          name: item.brand,
-          value: value
-        }
-      })
-      .filter(item => item.value > 0) // 只保留有数据的品牌
-      .sort((a, b) => b.value - a.value) // 按值排序
-
-    const emojis = ["🔆", "💡", "🔥", "⚡", "🌟", "🎯", "📊", "💎"]
-    const emoji = emojis[segmentIndex % emojis.length]
-    
-    return {
-      segment,
-      emoji,
-      brands: brandsForSegment,
-      color: segmentColors[segmentIndex % segmentColors.length],
-      hasData: brandsForSegment.length > 0
-    }
-  }) // 不再需要额外过滤，因为已经使用了过滤后的segments
-
+  const productInfo = getProductTypeInfo()
   const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
@@ -136,41 +153,32 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Brand Analysis</h2>
 
-      <h3 className="text-xl font-semibold mb-4">Brand {titleSuffix} by Segment ({productType})</h3>
+      <h3 className="text-xl font-semibold mb-4">Top 10 Brand {titleSuffix} by Category</h3>
       <Card className="p-6 bg-gray-50">
         <MetricTypeSelector onChange={setMetricType} value={metricType} />
         
-        {/* Segment info */}
-        <div className="mb-0 p-2 bg-blue-50 border-l-4 border-blue-400 rounded">
+        {/* Category info */}
+        <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
           <p className="text-sm text-blue-700">
-            <strong>Segments analyzed:</strong> {segmentChartData.length} segments with data ({productType})
+            <strong>Categories analyzed:</strong> {categoryNames.join(', ')} 
           </p>
         </div>
 
-        {/* Multiple charts - one per segment */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
-          {segmentChartData.map((segmentChart) => (
-            <div key={segmentChart.segment} className="bg-white p-3 rounded-lg border shadow-sm">
-              <h4 className="text-sm font-semibold mb-2 text-center text-gray-800">
-                {segmentChart.emoji} {segmentChart.segment}
-              </h4>
-              <p className="text-xs text-gray-600 text-center mb-2">
-                {segmentChart.brands.length} brands
-              </p>
-              
-              <div className="h-[280px]">
-                <BarChart
-                  data={segmentChart.brands}
-                  index="name"
-                  categories={["value"]}
-                  colors={[segmentChart.color]}
-                  yAxisLabel={yAxisLabel}
-                  metricType={metricType}
-                  onBarClick={(data) => handleBarClick(data)}
-                />
-              </div>
-            </div>
-          ))}
+        {/* Single grouped bar chart */}
+        <div className="bg-white p-4 rounded-lg border shadow-sm">
+          <div className="h-[400px]">
+            <BarChart
+              data={chartData}
+              index="name"
+              categories={categoryNames}
+              colors={categoryColors.slice(0, categoryNames.length)}
+              yAxisLabel={yAxisLabel}
+              metricType={metricType}
+              onBarClick={(data) => handleBarClick(data)}
+            />
+          </div>
+          
+        
         </div>
 
       </Card>

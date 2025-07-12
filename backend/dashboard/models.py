@@ -8,10 +8,10 @@ class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.
     
     Matches the exact format expected by frontend components.
-    Enhanced to support dynamic segments.
+    Enhanced to support dynamic categories.
     """
     brand: str = Field(description="Brand name")
-    segments: Optional[Dict[str, Dict[str, float]]] = Field(default={}, description="Segment-wise revenue and volume data")
+    categories: Optional[Dict[str, Dict[str, float]]] = Field(default={}, description="Category-wise revenue and volume data")
     dimmerRevenue: float = Field(default=0, description="Dimmer switches revenue (compatibility)")
     switchRevenue: float = Field(default=0, description="Light switches revenue (compatibility)")
     dimmerVolume: float = Field(default=0, description="Dimmer switches volume (compatibility)")
@@ -21,13 +21,13 @@ class BrandCategoryData(BaseModel):
 class BrandAnalysisResponse(BaseModel):
     """Response model for brand analysis API.
     
-    Enhanced to support dynamic segments.
+    Enhanced to support dynamic categories and limited to top 10 brands by revenue.
     """
-    data: List[BrandCategoryData] = Field(description="Brand category data")
-    segmentNames: Optional[List[str]] = Field(default=[], description="List of segment names in the project")
-    segmentColors: Optional[List[str]] = Field(default=[], description="Colors for each segment")
+    data: List[BrandCategoryData] = Field(description="Top 10 brand category data")
+    segmentNames: Optional[List[str]] = Field(default=[], description="List of category names in the project (kept as segmentNames for API compatibility)")
+    segmentColors: Optional[List[str]] = Field(default=[], description="Colors for each category (kept as segmentColors for API compatibility)")
     project_id: str = Field(description="Project ID used for filtering")
-    total_brands: int = Field(description="Total number of brands")
+    total_brands: int = Field(description="Number of top brands returned (up to 10)")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 

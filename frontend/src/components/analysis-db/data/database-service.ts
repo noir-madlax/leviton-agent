@@ -91,7 +91,7 @@ export interface DataConfirmationData {
 
 export interface BrandCategoryData {
   brand: string
-  segments: Record<string, { revenue: number; volume: number }>
+  categories: Record<string, { revenue: number; volume: number }>
   dimmerRevenue: number
   switchRevenue: number
   dimmerVolume: number
@@ -129,7 +129,7 @@ export interface ProductAnalysisData {
 
 export class DatabaseService {
   
-  // 🔑 Get brand category revenue data with project filtering via backend API
+  // 🔑 Get top 10 brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[]): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
     segmentNames: string[]
@@ -154,12 +154,12 @@ export class DatabaseService {
       
       const result = await response.json()
       return {
-        brandCategoryRevenue: result.data || [],
-        segmentNames: result.segmentNames || [],
-        segmentColors: result.segmentColors || []
+        brandCategoryRevenue: result.data || [],           // Backend returns top 10 brands in 'data' field
+        segmentNames: result.segmentNames || [],           // Backend returns 'segmentNames' field 
+        segmentColors: result.segmentColors || []          // Backend returns 'segmentColors' field
       }
     } catch (error) {
-      console.error('Error fetching brand category revenue by project:', error)
+      console.error('Error fetching top 10 brand category revenue by project:', error)
       throw error
     }
   }
