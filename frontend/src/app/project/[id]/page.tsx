@@ -40,7 +40,19 @@ interface ProjectOverviewData {
       percentage: number;
     }>;
   };
-  available_categories: string[];
+  available_categories: {
+    flat_categories: string[];
+    hierarchical_categories: Array<{
+      parent_category: string;
+      parent_count: number;
+      children: Array<{
+        category: string;
+        count: number;
+        percentage: number;
+      }>;
+    }>;
+    total_products: number;
+  };
 }
 
 export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {

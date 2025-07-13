@@ -41,7 +41,7 @@ export function ProjectFilters({
       setLoading(true)
       try {
         const overview = await databaseService.getProjectOverview(projectId)
-        setAvailableCategories(overview.available_categories)
+        setAvailableCategories(overview.available_categories.flat_categories)
       } catch (error) {
         console.error('Failed to load filter options:', error)
         setAvailableCategories([])

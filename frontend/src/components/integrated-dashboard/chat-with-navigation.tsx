@@ -9,6 +9,7 @@ import { ChartCardList } from './chat/chart-card-list'
 import { UnifiedChartCard, ChartData } from './shared/types'
 import { useChart } from '@/contexts/chart-context'
 import { config } from '@/lib/config'
+import { usePermissions } from '@/hooks/use-permissions'
 
 interface Message {
   id: string
@@ -56,6 +57,7 @@ export function ChatWithNavigation({
   const [error, setError] = useState<string | null>(null)
   
   const { updateChart } = useChart()
+  const { permissions } = usePermissions()
   const messagesEndRef = useRef<HTMLDivElement>(null)
   
   // 自动滚动到底部
@@ -459,9 +461,10 @@ export function ChatWithNavigation({
           />
           <Button 
             type="submit"
-            disabled={isLoading || !input.trim()}
+            disabled={isLoading || !input.trim() || !permissions?.can_send_chat}
             size="sm"
             className="px-3"
+            title={!permissions?.can_send_chat ? "Currently in internal testing" : ""}
           >
             {isLoading ? (
               <Loader2 className="h-4 w-4 animate-spin" />

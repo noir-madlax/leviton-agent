@@ -10,6 +10,7 @@ import { ProtectedRoute } from "@/components/auth/protected-route"
 import { DatabaseService } from "@/components/analysis-db/data/database-service"
 import { Sidebar } from "@/components/layout/sidebar"
 import { useAuth } from "@/contexts/auth-context"
+import { usePermissions } from "@/hooks/use-permissions"
 
 // Updated Project interface with overall_status
 interface Project {
@@ -31,6 +32,7 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const { isAuthenticated, user } = useAuth()
+  const { permissions } = usePermissions()
 
   // Get the most recent project as Current Project
   const mostRecentProject = projects.length > 0 ? projects[0] : null
@@ -107,19 +109,44 @@ export default function HomePage() {
 
             <div className="flex items-center space-x-4">
               {/* Import Data Button */}
-              <Link href="/import-data">
-                <Button variant="outline">
-                  <Upload className="w-4 h-4 mr-1" />
-                  Import Data
-                </Button>
-              </Link>
+              <div className="relative">
+                {permissions?.can_import_data ? (
+                  <Link href="/import-data">
+                    <Button variant="outline">
+                      <Upload className="w-4 h-4 mr-1" />
+                      Import Data
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button 
+                    variant="outline" 
+                    disabled={true}
+                    title="Currently in internal testing"
+                  >
+                    <Upload className="w-4 h-4 mr-1" />
+                    Import Data
+                  </Button>
+                )}
+              </div>
               {/* New Project Button */}
-              <Link href="/onboarding">
-                <Button>
-                  <Plus className="w-4 h-4 mr-1" />
-                  New Project
-                </Button>
-              </Link>
+              <div className="relative">
+                {permissions?.can_create_project ? (
+                  <Link href="/onboarding">
+                    <Button>
+                      <Plus className="w-4 h-4 mr-1" />
+                      New Project
+                    </Button>
+                  </Link>
+                ) : (
+                  <Button 
+                    disabled={true}
+                    title="Currently in internal testing"
+                  >
+                    <Plus className="w-4 h-4 mr-1" />
+                    New Project
+                  </Button>
+                )}
+              </div>
             </div>
           </header>
 

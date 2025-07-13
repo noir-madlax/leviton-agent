@@ -12,6 +12,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
 import { MessageList } from './message-list';
 import { SingleChart } from '@/lib/types';
+import { usePermissions } from '@/hooks/use-permissions';
 
 // 图表数据类型定义
 interface ChartData {
@@ -38,6 +39,7 @@ interface MultiChartData {
 
 export function ChatInterface() {
   const { updateChart, setCompiling, setError } = useChart();
+  const { permissions } = usePermissions();
   
   // 使用统一配置
   const backendUrl = config.backendUrl;
@@ -450,7 +452,8 @@ Or multi-chart format:
             <Button 
               type="submit" 
               size="icon"
-              disabled={isLoading || !input.trim()}
+              disabled={isLoading || !input.trim() || !permissions?.can_send_chat}
+              title={!permissions?.can_send_chat ? "Currently in internal testing" : ""}
             >
               <Send className="h-4 w-4" />
             </Button>

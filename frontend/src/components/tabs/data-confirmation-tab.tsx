@@ -13,6 +13,7 @@ import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, Refres
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 import { CategorySelector } from '@/components/category-selector';
 import { useAuth } from '@/contexts/auth-context';
+import { usePermissions } from '@/hooks/use-permissions';
 
 // URL分析相关接口
 interface CategorySuggestion {
@@ -520,6 +521,7 @@ export function DataConfirmationTab({
   // 暂时不使用onNavigateToAnalysis，让用户看到进度后手动跳转
   console.log('Navigation callback available:', !!onNavigateToAnalysis);
   const { user } = useAuth();
+  const { permissions } = usePermissions();
   const [data, setData] = useState<DataConfirmationData | null>(null);
   const [pageLoading, setPageLoading] = useState(true); // 页面初始加载
   const [filterLoading, setFilterLoading] = useState(false); // 筛选数据加载
@@ -1440,8 +1442,8 @@ export function DataConfirmationTab({
                 {/* 创建项目按钮 */}
                 <Button
                   onClick={handleConfirmSelection}
-                  disabled={!hasEnoughData || isConfirmed}
-                  title={!hasEnoughData ? "Please apply filters and ensure you have enough data" : ""}
+                  disabled={!hasEnoughData || isConfirmed || !permissions?.can_create_project}
+                  title={!permissions?.can_create_project ? "Currently in internal testing" : !hasEnoughData ? "Please apply filters and ensure you have enough data" : ""}
                   className="bg-black hover:bg-gray-800 text-white"
                 >
                   {isConfirmed ? (

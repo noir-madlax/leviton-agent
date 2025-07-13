@@ -9,6 +9,7 @@ import { Badge } from '@/components/ui/badge';
 import { AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
+import { usePermissions } from '@/hooks/use-permissions';
 
 interface ScrapingResult {
   task_id?: string;
@@ -82,6 +83,7 @@ export function DataImportTab() {
   const [maxReviews, setMaxReviews] = useState<number | string>(15);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
+  const { permissions } = usePermissions();
   
   // 🔥 新增：实时进度状态管理
   const [isScrapingStarted, setIsScrapingStarted] = useState(false);
@@ -263,8 +265,9 @@ export function DataImportTab() {
                 />
                 <Button 
                   onClick={handleStartScraping} 
-                  disabled={isLoading || !url.trim()}
+                  disabled={isLoading || !url.trim() || !permissions?.can_import_data}
                   className="min-w-[120px]"
+                  title={!permissions?.can_import_data ? "Currently in internal testing" : ""}
                 >
                   {isLoading ? (
                     <>

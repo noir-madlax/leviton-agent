@@ -14,6 +14,7 @@ import { ArrowLeft, MessageSquare, TrendingUp, BarChart3, PieChart, Lightbulb, S
 import { ChartProvider, useChart } from "@/contexts/chart-context"
 import { config } from "@/lib/config"
 import { ChartData } from "@/lib/types"
+import { usePermissions } from "@/hooks/use-permissions"
 import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
@@ -372,6 +373,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   const [currentProgress, setCurrentProgress] = useState(0)
   const [categoryFilters, setCategoryFilters] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
+  const { permissions } = usePermissions()
   const { updateChart, setCompiling, setError } = useChart()
 
   // 检测来源
@@ -929,8 +931,9 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                       />
                       <Button
                         onClick={handleSendMessage}
-                        disabled={!input.trim() || isLoading}
+                        disabled={!input.trim() || isLoading || !permissions?.can_send_chat}
                         className="px-4 py-2"
+                        title={!permissions?.can_send_chat ? "Currently in internal testing" : ""}
                       >
                         {isLoading ? (
                           <Loader2 className="h-4 w-4 animate-spin" />
@@ -1085,8 +1088,9 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   />
                   <Button
                     onClick={handleSendMessage}
-                    disabled={!input.trim() || isLoading}
+                    disabled={!input.trim() || isLoading || !permissions?.can_send_chat}
                     className="px-4 py-2"
+                    title={!permissions?.can_send_chat ? "Currently in internal testing" : ""}
                   >
                     {isLoading ? (
                       <Loader2 className="h-4 w-4 animate-spin" />
