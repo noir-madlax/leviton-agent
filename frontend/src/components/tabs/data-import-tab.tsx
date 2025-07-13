@@ -10,6 +10,8 @@ import { AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
 import { usePermissions } from '@/hooks/use-permissions';
+import { useAuth } from '@/contexts/auth-context';
+import { usePostHog } from 'posthog-js/react';
 
 interface ScrapingResult {
   task_id?: string;
@@ -84,6 +86,8 @@ export function DataImportTab() {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
   const { permissions } = usePermissions();
+  const { user } = useAuth();
+  const posthog = usePostHog();
   
   // 🔥 新增：实时进度状态管理
   const [isScrapingStarted, setIsScrapingStarted] = useState(false);
@@ -125,6 +129,15 @@ export function DataImportTab() {
       return;
     }
 
+    // PostHog 埋点：数据导入尝试
+    posthog.capture('data_import_attempt', {
+      url: url.trim(),
+      max_products: maxProducts === '' ? 5 : maxProducts,
+      max_reviews: maxReviews === '' ? 15 : maxReviews,
+      user_id: user?.id,
+      user_email: user?.email,
+    });
+
     setIsLoading(true);
     setResult(null);
     setIsScrapingStarted(true); // 🔥 立即显示进度界面
@@ -153,6 +166,19 @@ export function DataImportTab() {
       const data = await response.json();
       setResult(data);
       
+      // PostHog 埋点：数据导入成功
+      posthog.capture('data_import_success', {
+        url: url.trim(),
+        max_products: maxProducts === '' ? 5 : maxProducts,
+        max_reviews: maxReviews === '' ? 15 : maxReviews,
+        batch_id: data.batch_id,
+        products_scraped: data.results?.products_scraped || 0,
+        reviews_scraped: data.results?.reviews_scraped || 0,
+        overall_status: data.overall_status,
+        user_id: user?.id,
+        user_email: user?.email,
+      });
+      
       // 🔥 新增：如果获得了batch_id，开始轮询状态
       if (data.batch_id) {
         setCurrentBatchId(data.batch_id);
@@ -163,6 +189,17 @@ export function DataImportTab() {
       
     } catch (error) {
       console.error('Scraping failed:', error);
+      
+      // PostHog 埋点：数据导入失败
+      posthog.capture('data_import_failed', {
+        url: url.trim(),
+        max_products: maxProducts === '' ? 5 : maxProducts,
+        max_reviews: maxReviews === '' ? 15 : maxReviews,
+        error: error instanceof Error ? error.message : 'Failed to start scraping task',
+        user_id: user?.id,
+        user_email: user?.email,
+      });
+      
       setResult({
         task_id: 'error',
         status: 'failed',

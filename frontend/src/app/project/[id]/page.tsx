@@ -7,6 +7,7 @@ import Link from "next/link"
 import { ChartProvider } from "@/contexts/chart-context"
 import { ProtectedRoute } from "@/components/auth/protected-route"
 import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
+import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
 
 // 使用现有的Project接口
 interface Project {
@@ -39,6 +40,16 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
+    packaging_types: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
+    segments: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
   };
   available_categories: {
     flat_categories: string[];
@@ -62,10 +73,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   // 添加过滤器展开状态
   const [isFilterExpanded, setIsFilterExpanded] = useState(false)
   // 添加过滤器变更处理
-  const [filters, setFilters] = useState<{ categories: string[]; asins: string[] }>({
-    categories: [],
-    asins: []
-  })
+  const [filters, setFilters] = useState<ProjectFilters>(DEFAULT_FILTERS)
   // 添加预加载的项目概览数据
   const [projectOverviewData, setProjectOverviewData] = useState<ProjectOverviewData | null>(null)
   const [overviewLoading, setOverviewLoading] = useState(false)
@@ -110,7 +118,18 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     try {
       const databaseService = new DatabaseService()
       const overview = await databaseService.getProjectOverview(projectId)
-      setProjectOverviewData(overview)
+      
+      // 确保包含所有必需字段，提供默认值
+      const completeOverview: ProjectOverviewData = {
+        ...overview,
+        distributions: {
+          ...overview.distributions,
+          packaging_types: (overview.distributions as any).packaging_types || [],
+          segments: (overview.distributions as any).segments || []
+        }
+      };
+      
+      setProjectOverviewData(completeOverview)
     } catch (error) {
       console.error('Failed to load project overview:', error)
       setProjectOverviewData(null)
@@ -120,7 +139,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   }
 
   // 处理过滤器变更
-  const handleFiltersChange = (newFilters: { categories: string[]; asins: string[] }) => {
+  const handleFiltersChange = (newFilters: ProjectFilters) => {
     setFilters(newFilters)
     // 这里可以传递给AnalysisDbTab组件或其他需要过滤器的组件
   }

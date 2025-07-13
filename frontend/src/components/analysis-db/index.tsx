@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
+import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { DashboardHeader } from "@/components/analysis-db/shared/dashboard-header"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
 import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
@@ -16,6 +16,7 @@ import { ProductPanel } from "@/components/analysis-db/panels/product-panel"
 import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
 import { databaseService, type ProductAnalysisData } from '@/components/analysis-db/data/database-service'
 import { PageDivider } from '@/components/ui/page-divider'
+import { ProjectFilters } from './types/filters'
 
 interface DashboardData {
   brandAnalysis: {
@@ -224,10 +225,9 @@ interface DashboardData {
   }>>
 }
 
-// 🔑 NEW: Fetch data by module to avoid loading all data at once
-async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[]) {
+// 获取品牌分析数据的async函数
+async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
-    // 🔑 REQUIRE project ID for Brand Analysis - no fallback to unfiltered data
     if (!projectId) {
       console.log('⏳ Brand Analysis waiting for project selection...');
       return { brandCategoryRevenue: [], categoryNames: [], categoryColors: [] };
@@ -237,32 +237,36 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    
-    const result = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters);
-    console.log(`📈 Brand Analysis data received: ${result.brandCategoryRevenue.length} brands, ${result.segmentNames.length} categories`);
-    
-    if (result.brandCategoryRevenue.length > 0) {
-      result.brandCategoryRevenue.forEach((brand, index) => {
-        console.log(`  Brand ${index + 1}: ${brand.brand} - Categories: ${Object.keys(brand.categories || {}).join(', ')}`);
-      });
-      console.log(`  Categories: ${result.segmentNames.join(', ')}`);
-    } else {
-      console.log('  ⚠️ No brand data returned from API');
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
     }
     
-    // Convert field names to match component expectations
+    const data = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    console.log(`📈 Brand Analysis data received: ${data.brandCategoryRevenue.length} brands, ${data.segmentNames.length} segments`);
+    console.log(`  Segments: ${data.segmentNames.join(', ')}`);
+    
+    // 转换数据结构以匹配DashboardData.brandAnalysis接口
     return {
-      brandCategoryRevenue: result.brandCategoryRevenue,
-      categoryNames: result.segmentNames,   // Map segmentNames to categoryNames
-      categoryColors: result.segmentColors  // Map segmentColors to categoryColors
+      brandCategoryRevenue: data.brandCategoryRevenue,
+      categoryNames: data.segmentNames,  // 将segmentNames重命名为categoryNames
+      categoryColors: data.segmentColors
     };
   } catch (error) {
     console.error('Error fetching brand analysis data:', error);
-    return { brandCategoryRevenue: [], categoryNames: [], categoryColors: [] };
+    return {
+      brandCategoryRevenue: [
+        { brand: 'Loading failed...', categories: {}, dimmerRevenue: 0, switchRevenue: 0, dimmerVolume: 0, switchVolume: 0 }
+      ],
+      categoryNames: ['Dimmer Switches', 'Light Switches'],  // 修复这里也使用categoryNames
+      categoryColors: ["#FF6B6B", "#4ECDC4"]
+    };
   }
 }
 
-async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[]) {
+async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Product Analysis waiting for project selection...');
@@ -279,8 +283,14 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const data = await databaseService.getProductAnalysisDataByProject(projectId, categoryFilters);
+    const data = await databaseService.getProductAnalysisDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
     console.log(`📈 Product Analysis data received: ${data.priceVsRevenue.length} price vs revenue categories, ${data.segmentNames.length} segments`);
     console.log(`  Segments: ${data.segmentNames.join(', ')}`);
     console.log(`  Segment summary keys: ${Object.keys(data.segmentSummary).join(', ')}`);
@@ -301,77 +311,74 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
   }
 }
 
-async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[]) {
+async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Pricing Analysis waiting for project selection...');
-      return {
-        priceDistribution: [],
-        brandPriceDistribution: []
-      };
+      return { priceDistribution: [], brandPriceDistribution: [] };
     }
     
     console.log(`📊 Fetching Pricing Analysis data for project: ${projectId}`);
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const pricingAnalysisData = await databaseService.getPricingAnalysisDataByProject(projectId, categoryFilters);
-    console.log(`📈 Pricing Analysis data received`);
+    const data = await databaseService.getPricingAnalysisDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    console.log(`📈 Pricing Analysis data received: ${data.priceDistribution.length} price distributions, ${data.brandPriceDistribution.length} brand distributions`);
     
-    return pricingAnalysisData;
+    return data;
   } catch (error) {
     console.error('Error fetching pricing analysis data:', error);
-    return {
-      priceDistribution: [],
-      brandPriceDistribution: []
-    };
+    return { priceDistribution: [], brandPriceDistribution: [] };
   }
 }
 
-async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[]) {
+async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Market Insights waiting for project selection...');
-      return {
-        segmentRevenue: {
-          dimmerSwitches: [],
-          lightSwitches: []
-        }
-      };
+      return { segmentRevenue: { dimmerSwitches: [], lightSwitches: [] } };
     }
     
     console.log(`📊 Fetching Market Insights data for project: ${projectId}`);
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const marketInsightsData = await databaseService.getMarketInsightsDataByProject(projectId, categoryFilters);
-    console.log(`📈 Market Insights data received`);
+    const data = await databaseService.getMarketInsightsDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    const totalSegments = data.segmentRevenue.dimmerSwitches.length + data.segmentRevenue.lightSwitches.length;
+    console.log(`📈 Market Insights data received: ${totalSegments} segments total`);
     
-    return marketInsightsData;
+    return data;
   } catch (error) {
     console.error('Error fetching market insights data:', error);
-    return {
-      segmentRevenue: {
-        dimmerSwitches: [],
-        lightSwitches: []
-      }
-    };
+    return { segmentRevenue: { dimmerSwitches: [], lightSwitches: [] } };
   }
 }
 
-async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[]) {
+async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Package Preference waiting for project selection...');
-      return {
-        sameProductComparison: [],
+      return { 
+        sameProductComparison: [], 
         packageDistribution: [],
         segmentDistributions: {},
         segmentNames: [],
-        dimmerSwitches: [],
-        lightSwitches: []
+        dimmerSwitches: [], 
+        lightSwitches: [] 
       };
     }
     
@@ -379,11 +386,17 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const packagePreferenceData = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters);
-    console.log(`📈 Package Preference data received`);
+    const data = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    console.log(`📈 Package Preference data received: ${data.packageDistribution.length} package distributions`);
     
-    return packagePreferenceData;
+    return data;
   } catch (error) {
     console.error('Error fetching package preference data:', error);
     return {
@@ -397,48 +410,43 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
   }
 }
 
-async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[]) {
+async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Review Insights waiting for project selection...');
-      return {
-        painPoints: [],
-        customerLikes: [],
-        underservedUseCases: []
-      };
+      return { painPoints: [], customerLikes: [], underservedUseCases: [] };
     }
     
     console.log(`📊 Fetching Review Insights data for project: ${projectId}`);
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const reviewInsightsData = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters);
-    console.log(`📈 Review Insights data received`);
+    const data = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.underservedUseCases.length} use cases`);
     
-    return reviewInsightsData;
+    return data;
   } catch (error) {
     console.error('Error fetching review insights data:', error);
-    return {
-      painPoints: [],
-      customerLikes: [],
-      underservedUseCases: []
-    };
+    return { painPoints: [], customerLikes: [], underservedUseCases: [] };
   }
 }
 
-async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[]) {
+async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]) {
   try {
     if (!projectId) {
       console.log('⏳ Competitor Analysis waiting for project selection...');
-      return {
-        targetProducts: [],
-        matrixData: [],
+      return { 
+        targetProducts: [], 
+        matrixData: [], 
         productTotalReviews: {},
-        useCaseData: {
-          targetProducts: [],
-          matrixData: []
-        }
+        useCaseData: { targetProducts: [], matrixData: [] }
       };
     }
     
@@ -446,56 +454,59 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const competitorAnalysisData = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters);
-    console.log(`📈 Competitor Analysis data received`);
+    const data = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters, undefined, packagingTypeFilters, segmentFilters);
+    console.log(`📈 Competitor Analysis data received: ${data.targetProducts.length} target products, ${data.matrixData.length} matrix items`);
     
-    return competitorAnalysisData;
+    return data;
   } catch (error) {
     console.error('Error fetching competitor analysis data:', error);
     return {
       targetProducts: [],
       matrixData: [],
       productTotalReviews: {},
-      useCaseData: {
-        targetProducts: [],
-        matrixData: []
-      }
+      useCaseData: { targetProducts: [], matrixData: [] }
     };
   }
 }
 
-async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]): Promise<Pick<DashboardData, 'allReviewData'>> {
+async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<Pick<DashboardData, 'allReviewData'>> {
   try {
     if (!projectId) {
       console.log('⏳ All Review Data waiting for project selection...');
-      return {
-        allReviewData: {}
-      };
+      return { allReviewData: {} };
     }
     
     console.log(`📊 Fetching All Review Data for project: ${projectId}`);
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
+    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
     
-    const allReviewData = await databaseService.getAllReviewDataByProject(projectId, categoryFilters);
-    console.log(`📈 All Review Data received`);
+    const data = await databaseService.getAllReviewDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters);
+    console.log(`📈 All Review Data received: ${Object.keys(data).length} aspects`);
     
-    return {
-      allReviewData
-    };
+    return { allReviewData: data };
   } catch (error) {
     console.error('Error fetching all review data:', error);
-    return {
-      allReviewData: {}
-    };
+    return { allReviewData: {} };
   }
 }
 
 interface AnalysisDbContainerProps {
   selectedProjectId?: string | null;
-  filters?: { categories: string[]; asins: string[] };
+  filters?: ProjectFilters;
   activeTab?: string;
 }
 
@@ -530,7 +541,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     loadedDataRef.current = loadedData
   }, [loadedData])
 
-  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], forceReload = false) => {
+  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], forceReload = false) => {
     if (!projectId) return
     
     // 使用 ref 来检查已加载数据，避免依赖 state
@@ -546,28 +557,28 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       
       switch (dataType) {
         case 'brandAnalysis':
-          result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters)
+          result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'productAnalysis':
-          result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters)
+          result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'pricingAnalysis':
-          result.pricingAnalysis = await fetchPricingAnalysisData(projectId, categoryFilters)
+          result.pricingAnalysis = await fetchPricingAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'marketInsights':
-          result.marketInsights = await fetchMarketInsightsData(projectId, categoryFilters)
+          result.marketInsights = await fetchMarketInsightsData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'packagePreference':
-          result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters)
+          result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'reviewInsights':
-          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters)
+          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'competitorAnalysis':
-          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters)
+          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           break
         case 'allReviewData':
-          const reviewData = await fetchAllReviewData(projectId, categoryFilters)
+          const reviewData = await fetchAllReviewData(projectId, categoryFilters, packagingTypeFilters, segmentFilters)
           result.allReviewData = reviewData.allReviewData
           break
       }
@@ -611,32 +622,34 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     
     // 🔑 传递当前的filters到loadSpecificData
     const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined
+    const packagingTypeFilters = ('packaging_types' in appliedFilters) ? appliedFilters.packaging_types : undefined
+    const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined
     // 如果有filters，强制重新加载数据
-    const forceReload = categoryFilters !== undefined
+    const forceReload = categoryFilters !== undefined || packagingTypeFilters !== undefined || segmentFilters !== undefined
     
     switch (tabValue) {
       case 'brand-analysis':
-        loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'product-analysis':
-        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'pricing-analysis':
-        loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'market-insights':
-        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'package-preference':
-        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'review-insights':
-        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         // 同时加载原始评论数据，因为ReviewInsights组件需要allReviewData
-        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
       case 'competitor-analysis':
-        loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, forceReload)
+        loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, forceReload)
         break
     }
   }
@@ -663,7 +676,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       
       // 重新加载当前数据
       const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
-      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, true); // 强制重新加载
+      const packagingTypeFilters = ('packaging_types' in appliedFilters) ? appliedFilters.packaging_types : undefined;
+      const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
+      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, true); // 强制重新加载
     }
   }, [appliedFilters, selectedProjectId, loadSpecificData])
 

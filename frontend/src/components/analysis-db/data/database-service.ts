@@ -130,7 +130,7 @@ export interface ProductAnalysisData {
 export class DatabaseService {
   
   // 🔑 Get top 10 brand category revenue data with project filtering via backend API
-  async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
     segmentNames: string[]
     segmentColors: string[]
@@ -144,6 +144,18 @@ export class DatabaseService {
       if (categoryFilters && categoryFilters.length > 0) {
         const categoriesParam = categoryFilters.join(',')
         url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
       const response = await fetch(url)
@@ -165,7 +177,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get product analysis data with project filtering via backend API
-  async getProductAnalysisDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getProductAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     priceVsRevenue: ProductAnalysisData['priceVsRevenue']
     topProducts: {
       segments: Record<string, any[]>
@@ -191,6 +203,18 @@ export class DatabaseService {
       if (categoryFilters && categoryFilters.length > 0) {
         const categoriesParam = categoryFilters.join(',')
         url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
       const response = await fetch(url)
@@ -257,7 +281,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get pricing analysis data with project filtering via backend API
-  async getPricingAnalysisDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getPricingAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     priceDistribution: Array<{
       category: string
       skuPrices: number[]
@@ -302,17 +326,25 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
       }
       
-      const result = await response.json()
-      return {
-        priceDistribution: result.priceDistribution || [],
-        brandPriceDistribution: result.brandPriceDistribution || []
-      }
+      return await response.json()
     } catch (error) {
       console.error('Error fetching pricing analysis data by project:', error)
       throw error
@@ -320,7 +352,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get market insights data with project filtering via backend API
-  async getMarketInsightsDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getMarketInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     segmentRevenue: {
       segments?: Array<{
         segment: string
@@ -354,23 +386,25 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
       }
       
-      const result = await response.json()
-      
-      // Return the enhanced format that supports both new and legacy formats
-      return {
-        segmentRevenue: {
-          segments: result.segmentRevenue?.segments || [],
-          segmentNames: result.segmentRevenue?.segmentNames || [],
-          dimmerSwitches: result.segmentRevenue?.dimmerSwitches || [],
-          lightSwitches: result.segmentRevenue?.lightSwitches || []
-        }
-      }
+      return await response.json()
     } catch (error) {
       console.error('Error fetching market insights data by project:', error)
       throw error
@@ -378,7 +412,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get package preference data with project filtering via backend API
-  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     sameProductComparison: Array<{
       productName: string
       packSize: string
@@ -427,21 +461,25 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
         throw new Error(`API call failed: ${response.status}`)
       }
       
-      const result = await response.json()
-      return {
-        sameProductComparison: result.sameProductComparison || [],
-        packageDistribution: result.packageDistribution || [],
-        segmentDistributions: result.segmentDistributions || {},
-        segmentNames: result.segmentNames || [],
-        dimmerSwitches: result.dimmerSwitches || [],
-        lightSwitches: result.lightSwitches || []
-      }
+      return await response.json()
     } catch (error) {
       console.error('Error fetching package preference data by project:', error)
       throw error
@@ -449,7 +487,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get review insights data with project filtering via backend API
-  async getReviewInsightsDataByProject(projectId: string, categoryFilters?: string[]): Promise<{
+  async getReviewInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     painPoints: Array<{
       aspect: string
       category: string
@@ -493,18 +531,25 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`API call failed: ${response.status}`)
       }
       
-      const data = await response.json()
-      return {
-        painPoints: data.painPoints || [],
-        customerLikes: data.customerLikes || [],
-        underservedUseCases: data.underservedUseCases || []
-      }
+      return await response.json()
     } catch (error) {
       console.error('Error fetching review insights data by project:', error)
       throw error
@@ -512,7 +557,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get competitor analysis data with project filtering via backend API
-  async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string): Promise<{
+  async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string, packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     targetProducts: string[]
     matrixData: Array<{
       product: string
@@ -547,34 +592,38 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
+      // Add selected ASINs if provided
       if (selectedAsins) {
-        url += `&selected_asins=${selectedAsins}`
+        url += `&selected_asins=${encodeURIComponent(selectedAsins)}`
+      }
+      
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
       const response = await fetch(url)
       
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
+        throw new Error(`API call failed: ${response.status}`)
       }
       
-      const data = await response.json()
-      return {
-        targetProducts: data.targetProducts || [],
-        matrixData: data.matrixData || [],
-        productTotalReviews: data.productTotalReviews || {},
-        useCaseData: {
-          targetProducts: data.useCaseData?.targetProducts || [],
-          matrixData: data.useCaseData?.matrixData || []
-        }
-      }
+      return await response.json()
     } catch (error) {
       console.error('Error fetching competitor analysis data by project:', error)
       throw error
     }
   }
 
-  // 🔑 Get all review data with project filtering via backend API
-  async getAllReviewDataByProject(projectId: string, categoryFilters?: string[]): Promise<Record<string, Array<{
+  // 🔑 Get all review data for project filtering via backend API
+  async getAllReviewDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<Record<string, Array<{
     id: string
     productId: string
     text: string
@@ -595,6 +644,18 @@ export class DatabaseService {
       if (categoryFilters && categoryFilters.length > 0) {
         const categoriesParam = categoryFilters.join(',')
         url += `&categories=${encodeURIComponent(categoriesParam)}`
+      }
+      
+      // Add packaging type filters if provided
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      // Add segment filters if provided
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
       const response = await fetch(url)
@@ -930,8 +991,8 @@ export class DatabaseService {
     }
   }
 
-  // 🔑 Get project overview data
-  async getProjectOverview(projectId: string, categoryFilters?: string[]): Promise<{
+  // 🔑 Get project overview data with optional filters
+  async getProjectOverview(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
     project_name: string
     created_at: string
     stats: {
@@ -969,7 +1030,7 @@ export class DatabaseService {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     
     try {
-      // Build URL with category filters
+      // Build URL with all filters
       let url = `${API_BASE_URL}/api/v1/dashboard/project-overview?project_id=${projectId}`
       
       if (categoryFilters && categoryFilters.length > 0) {
@@ -977,7 +1038,17 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
-      console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', categoryFilters)
+      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
+        const packagingTypesParam = packagingTypeFilters.join(',')
+        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      }
+      
+      if (segmentFilters && segmentFilters.length > 0) {
+        const segmentsParam = segmentFilters.join(',')
+        url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
+      console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', { categoryFilters, packagingTypeFilters, segmentFilters })
       
       const response = await fetch(url)
       
@@ -989,6 +1060,25 @@ export class DatabaseService {
     } catch (error) {
       console.error('Error fetching project overview:', error)
       throw error
+    }
+  }
+
+  // 🔑 Get project segments
+  async getProjectSegments(projectId: string): Promise<string[]> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/project-segments?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return result.segments || []
+    } catch (error) {
+      console.error('Error fetching project segments:', error)
+      return []
     }
   }
 

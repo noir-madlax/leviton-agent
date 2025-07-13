@@ -31,6 +31,16 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
+    packaging_types: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
+    segments: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
   };
   available_categories: {
     flat_categories: string[];
@@ -62,7 +72,18 @@ export function ProjectDataOverview({ projectId, categoryFilters }: ProjectDataO
       try {
         // 如果有categoryFilters，传递给API
         const overview = await databaseService.getProjectOverview(projectId, categoryFilters);
-        setData(overview);
+        
+        // 确保包含所有必需字段，提供默认值
+        const completeOverview: ProjectOverviewData = {
+          ...overview,
+          distributions: {
+            ...overview.distributions,
+            packaging_types: (overview.distributions as any).packaging_types || [],
+            segments: (overview.distributions as any).segments || []
+          }
+        };
+        
+        setData(completeOverview);
       } catch (error) {
         console.error('Failed to load project overview:', error);
         setData(null);

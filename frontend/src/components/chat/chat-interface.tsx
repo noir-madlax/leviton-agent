@@ -13,6 +13,8 @@ import { config } from '@/lib/config';
 import { MessageList } from './message-list';
 import { SingleChart } from '@/lib/types';
 import { usePermissions } from '@/hooks/use-permissions';
+import { useAuth } from '@/contexts/auth-context';
+import { usePostHog } from 'posthog-js/react';
 
 // 图表数据类型定义
 interface ChartData {
@@ -40,6 +42,8 @@ interface MultiChartData {
 export function ChatInterface() {
   const { updateChart, setCompiling, setError } = useChart();
   const { permissions } = usePermissions();
+  const { user } = useAuth();
+  const posthog = usePostHog();
   
   // 使用统一配置
   const backendUrl = config.backendUrl;
@@ -115,6 +119,13 @@ export function ChatInterface() {
                     // 处理 rechart 消息
                     if (sseData.status === 'rechart' && sseData.message) {
                       console.log('📊 收到 rechart 脚本:', sseData.message);
+                      
+                      // PostHog 埋点：图表生成成功
+                      posthog.capture('chart_generated', {
+                        user_id: user?.id,
+                        user_email: user?.email,
+                        chart_type: 'rechart',
+                      });
                       
                       // 创建新的图表数据
                       const newChartData = {
@@ -216,6 +227,13 @@ export function ChatInterface() {
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
+    
+    // PostHog 埋点：聊天消息发送
+    posthog.capture('chat_message_sent', {
+      message_length: input.trim().length,
+      user_id: user?.id,
+      user_email: user?.email,
+    });
     
     // 开始新对话时清空图表列表
     setCurrentCharts([]);

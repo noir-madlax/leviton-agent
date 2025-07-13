@@ -3,6 +3,8 @@
 import { useMemo, useState, useRef, useLayoutEffect, useEffect } from "react"
 import type { PriceType } from "@/components/analysis-db/shared/price-type-selector"
 import type { Product } from "@/components/analysis-db/types/analysis"
+import { usePostHog } from 'posthog-js/react'
+import { useAuth } from '@/contexts/auth-context'
 
 interface ViolinChartProps {
   dimmerPrices: number[]
@@ -123,6 +125,8 @@ export function ViolinChart({
   category1Name = "Category A",
   category2Name = "Category B",
 }: ViolinChartProps) {
+  const posthog = usePostHog()
+  const { user } = useAuth()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -259,6 +263,20 @@ export function ViolinChart({
           max: price + maxPrice * 0.05
         }
         const category = isDimmerClick ? "Dimmer Switches" : "Light Switches"
+        
+        // PostHog 埋点：小提琴图点击
+        posthog.capture('chart_interaction', {
+          chart_type: 'violin',
+          price_type: priceType,
+          clicked_category: category,
+          clicked_price: price,
+          price_range: priceRange,
+          category1_name: category1Name,
+          category2_name: category2Name,
+          user_id: user?.id,
+          user_email: user?.email,
+        })
+        
         onViolinClick(category, priceRange)
       }
     }

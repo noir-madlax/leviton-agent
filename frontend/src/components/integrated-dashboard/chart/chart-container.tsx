@@ -5,6 +5,7 @@ import { ChartContainerState, ChartData } from '../shared/types'
 import { AnalysisDbContainer } from '@/components/analysis-db'
 import { DynamicChartRenderer } from './dynamic-chart-renderer'
 import { ChevronRight } from 'lucide-react'
+import { ProjectFilters } from '@/components/analysis-db/types/filters'
 
 interface ChartContainerProps {
   state: ChartContainerState
@@ -12,7 +13,7 @@ interface ChartContainerProps {
   dynamicCharts: ChartData[]
   navigationTab: string
   projectId: string
-  filters: { categories: string[]; asins: string[] }
+  filters: ProjectFilters
   onStateChange: (state: ChartContainerState) => void
 }
 

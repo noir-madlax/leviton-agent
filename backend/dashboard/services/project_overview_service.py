@@ -65,26 +65,26 @@ class ProjectOverviewService(BaseDashboardService):
                 'segment_count': 0
             }
         
-        # Get product statistics with category filtering
+        # Get product statistics with all filtering applied
         query = self.supabase.table('product_wide_table').select(
             'platform_id, brand, reviews_count'
         ).in_('platform_id', filtered_asins).neq('category', None).neq('brand', None)
         
-        # Apply category filters if set
-        query = self._apply_category_filter(query)
+        # Apply all filters including packaging and segments
+        query = self._apply_combined_filters(query)
         
         product_stats = query.execute()
         
         products = product_stats.data
         
         # Get actual review count from product_reviews table
-        # First get filtered product IDs if category filters are applied
-        if self.category_filters:
-            # Get filtered product IDs based on category filters
+        # First get filtered product IDs based on all filters
+        if self.filters.has_filters():
+            # Get filtered product IDs based on all filters
             filtered_products_query = self.supabase.table('product_wide_table').select(
                 'platform_id'
             ).in_('platform_id', filtered_asins)
-            filtered_products_query = self._apply_category_filter(filtered_products_query)
+            filtered_products_query = self._apply_combined_filters(filtered_products_query)
             filtered_products_response = filtered_products_query.execute()
             review_product_ids = [p['platform_id'] for p in filtered_products_response.data]
         else:
@@ -100,8 +100,8 @@ class ProjectOverviewService(BaseDashboardService):
             'product_segment'
         ).in_('platform_id', filtered_asins).neq('product_segment', None).neq('product_segment', 'OUT_OF_SCOPE')
         
-        # Apply category filters if set
-        segments_query = self._apply_category_filter(segments_query)
+        # Apply all filters including packaging and segments
+        segments_query = self._apply_combined_filters(segments_query)
         
         segments_response = segments_query.execute()
         
@@ -123,19 +123,23 @@ class ProjectOverviewService(BaseDashboardService):
         }
     
     def _get_project_distributions(self) -> Dict[str, Any]:
-        """Get distribution data for sources and categories with category filtering"""
+        """Get distribution data for sources, categories, packaging types, and segments
+        
+        根据当前应用的所有filter（categories、packaging_types、segments）
+        动态计算数据分布统计。
+        """
         filtered_asins = self.project_asins
         
         if not filtered_asins:
-            return {'sources': [], 'categories': []}
+            return {'sources': [], 'categories': [], 'packaging_types': [], 'segments': []}
         
-        # Get product data for distributions with category filtering
+        # Get product data for distributions with ALL filters applied
         query = self.supabase.table('product_wide_table').select(
-            'platform_id, category, source'
+            'platform_id, category, source, packaging_type'
         ).in_('platform_id', filtered_asins).neq('category', None)
         
-        # Apply category filters if set
-        query = self._apply_category_filter(query)
+        # Apply ALL filters (categories, packaging_types, segments) to get filtered distribution
+        query = self._apply_combined_filters(query)
         
         response = query.execute()
         
@@ -157,7 +161,7 @@ class ProjectOverviewService(BaseDashboardService):
             for source, count in source_counts.items()
         ]
         
-        # Calculate category distribution
+        # Calculate category distribution (from filtered products)
         category_counts = {}
         for product in products:
             category = product.get('category', 'Unknown')
@@ -172,13 +176,77 @@ class ProjectOverviewService(BaseDashboardService):
             for category, count in category_counts.items()
         ]
         
+        # Calculate packaging type distribution (from filtered products)
+        packaging_counts = {}
+        for product in products:
+            packaging_type = product.get('packaging_type', 'Unknown')
+            if packaging_type:  # Only count non-null packaging types
+                packaging_counts[packaging_type] = packaging_counts.get(packaging_type, 0) + 1
+        
+        packaging_types = [
+            {
+                'name': packaging_type,
+                'count': count,
+                'percentage': round((count / total_products) * 100, 1) if total_products > 0 else 0
+            }
+            for packaging_type, count in packaging_counts.items()
+        ]
+        
+        # Calculate segments distribution from product_segment_assignments table
+        # This also needs to respect the current filters
+        segments = []
+        try:
+            # 获取filtered products对应的product IDs
+            if products:
+                filtered_platform_ids = [p['platform_id'] for p in products]
+                
+                product_ids_query = self.supabase.table('product_wide_table').select(
+                    'id, platform_id'
+                ).in_('platform_id', filtered_platform_ids).execute()
+                
+                if product_ids_query.data:
+                    product_ids = [p['id'] for p in product_ids_query.data]
+                    
+                    segments_response = self.supabase.table('product_segment_assignments').select(
+                        'segment_name'
+                    ).eq('project_id', self.project_id)\
+                    .in_('product_id', product_ids)\
+                    .neq('segment_name', None)\
+                    .neq('segment_name', 'OUT_OF_SCOPE')\
+                    .execute()
+                    
+                    if segments_response.data:
+                        segment_counts = {}
+                        for assignment in segments_response.data:
+                            segment_name = assignment.get('segment_name')
+                            if segment_name:
+                                segment_counts[segment_name] = segment_counts.get(segment_name, 0) + 1
+                        
+                        total_segments = sum(segment_counts.values())
+                        segments = [
+                            {
+                                'name': segment_name,
+                                'count': count,
+                                'percentage': round((count / total_segments) * 100, 1) if total_segments > 0 else 0
+                            }
+                            for segment_name, count in segment_counts.items()
+                        ]
+                        segments.sort(key=lambda x: x['count'], reverse=True)
+                        
+        except Exception as e:
+            logger.error(f"Error calculating segments distribution: {e}")
+            segments = []
+        
         # Sort by count descending
         sources.sort(key=lambda x: x['count'], reverse=True)
         categories.sort(key=lambda x: x['count'], reverse=True)
+        packaging_types.sort(key=lambda x: x['count'], reverse=True)
         
         return {
             'sources': sources,
-            'categories': categories
+            'categories': categories,
+            'packaging_types': packaging_types,
+            'segments': segments
         }
     
     def _get_available_categories(self) -> Dict[str, Any]:

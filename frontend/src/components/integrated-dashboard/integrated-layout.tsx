@@ -10,6 +10,7 @@ import { ArrowLeft, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-reac
 import Link from 'next/link'
 import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
 import { ChartData } from './shared/types'
+import { ProjectFilters, DEFAULT_FILTERS } from '@/components/analysis-db/types/filters'
 
 // 使用现有的Project接口
 interface Project {
@@ -42,6 +43,16 @@ interface ProjectOverviewData {
       count: number
       percentage: number
     }>
+    packaging_types: Array<{
+      name: string
+      count: number
+      percentage: number
+    }>
+    segments: Array<{
+      name: string
+      count: number
+      percentage: number
+    }>
   }
   available_categories: {
     flat_categories: string[];
@@ -63,8 +74,8 @@ interface IntegratedLayoutProps {
   project: Project
   projectOverviewData?: ProjectOverviewData | null
   overviewLoading?: boolean
-  onFiltersChange?: (filters: { categories: string[]; asins: string[] }) => void
-  filters?: { categories: string[]; asins: string[] }
+  onFiltersChange?: (filters: ProjectFilters) => void
+  filters?: ProjectFilters
   isFilterExpanded?: boolean
   onToggleFilter?: () => void
 }
@@ -75,7 +86,7 @@ export function IntegratedLayout({
   projectOverviewData,
   overviewLoading,
   onFiltersChange,
-  filters = { categories: [], asins: [] },
+  filters = DEFAULT_FILTERS,
   isFilterExpanded = false,
   onToggleFilter
 }: IntegratedLayoutProps) {

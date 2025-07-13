@@ -32,7 +32,9 @@ router = APIRouter()
 @router.get("/brand-analysis", response_model=BrandAnalysisResponse)
 async def get_brand_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get top 10 brand category revenue analysis for a specific project.
     
@@ -44,12 +46,18 @@ async def get_brand_analysis(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         # Initialize service with project-specific ASIN filtering
         service = BrandAnalysisService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         # Get filtered data (new format with segments, limited to top 10)
         brand_data = service.get_data()
@@ -83,7 +91,9 @@ async def get_brand_analysis(
 @router.get("/product-analysis", response_model=ProductAnalysisResponse)
 async def get_product_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get product analysis data for a specific project.
     
@@ -94,11 +104,17 @@ async def get_product_analysis(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = ProductAnalysisService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -148,7 +164,9 @@ async def get_product_analysis(
 @router.get("/pricing-analysis", response_model=PricingAnalysisResponse)
 async def get_pricing_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get pricing analysis data for a specific project.
     
@@ -159,11 +177,17 @@ async def get_pricing_analysis(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = PricingAnalysisService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -193,7 +217,9 @@ async def get_pricing_analysis(
 @router.get("/market-insights", response_model=MarketInsightsResponse)
 async def get_market_insights(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get market insights data for a specific project.
     
@@ -204,11 +230,17 @@ async def get_market_insights(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = MarketInsightsService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -234,7 +266,9 @@ async def get_market_insights(
 @router.get("/package-preference", response_model=PackagePreferenceResponse)
 async def get_package_preference(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get package preference data for a specific project.
     
@@ -245,11 +279,17 @@ async def get_package_preference(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = PackagePreferenceService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -295,7 +335,9 @@ async def get_package_preference(
 @router.get("/review-insights", response_model=ReviewInsightsResponse)
 async def get_review_insights_data(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get review insights data for specific project.
     
@@ -308,11 +350,17 @@ async def get_review_insights_data(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = ReviewInsightsService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         data = service.get_data()
         
@@ -334,6 +382,8 @@ async def get_review_insights_data(
 async def get_competitor_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     selected_asins: Optional[str] = Query(None, description="Comma-separated list of ASINs to analyze")
 ):
     """Get competitor analysis data for a specific project.
@@ -346,6 +396,12 @@ async def get_competitor_analysis(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         # Parse selected ASINs if provided
         asin_list = None
         if selected_asins:
@@ -353,9 +409,9 @@ async def get_competitor_analysis(
         
         service = CompetitorAnalysisService(project_id, asin_list)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -384,7 +440,9 @@ async def get_competitor_analysis(
 @router.get("/all-review-data", response_model=AllReviewDataResponse)
 async def get_all_review_data(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get all review data for a specific project.
     
@@ -395,11 +453,17 @@ async def get_all_review_data(
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = AllReviewDataService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         raw_data = service.get_data()
         
@@ -426,18 +490,26 @@ async def get_all_review_data(
 @router.get("/project-overview")
 async def get_project_overview(
     project_id: str = Query(..., description="Project ID"),
-    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by")
+    categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
+    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by")
 ):
     """Get project data overview including basic statistics"""
     try:
         # Parse categories if provided
         category_filters = categories.split(',') if categories else None
         
+        # Parse packaging types if provided
+        packaging_type_filters = packaging_types.split(',') if packaging_types else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
         service = ProjectOverviewService(project_id)
         
-        # Apply category filtering if provided
-        if category_filters:
-            service.set_category_filters(category_filters)
+        # Apply filters if provided
+        if category_filters or packaging_type_filters or segment_filters:
+            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters)
         
         return service.get_project_overview()
         
@@ -446,6 +518,29 @@ async def get_project_overview(
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         logger.error(f"Error in project overview API for project {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/project-segments")
+async def get_project_segments(
+    project_id: str = Query(..., description="Project ID")
+):
+    """Get project segments list"""
+    try:
+        service = ProjectOverviewService(project_id)
+        segments = service.get_project_segments()
+        
+        return {
+            "segments": segments,
+            "project_id": project_id,
+            "total_segments": len(segments)
+        }
+        
+    except ValueError as e:
+        logger.error(f"Invalid project {project_id}: {e}")
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logger.error(f"Error in project segments API for project {project_id}: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 

@@ -14,6 +14,7 @@ import { type DataConfirmationData, type DataConfirmationFilters } from '@/compo
 import { CategorySelector } from '@/components/category-selector';
 import { useAuth } from '@/contexts/auth-context';
 import { usePermissions } from '@/hooks/use-permissions';
+import { usePostHog } from 'posthog-js/react';
 
 // URL分析相关接口
 interface CategorySuggestion {
@@ -522,6 +523,7 @@ export function DataConfirmationTab({
   console.log('Navigation callback available:', !!onNavigateToAnalysis);
   const { user } = useAuth();
   const { permissions } = usePermissions();
+  const posthog = usePostHog();
   const [data, setData] = useState<DataConfirmationData | null>(null);
   const [pageLoading, setPageLoading] = useState(true); // 页面初始加载
   const [filterLoading, setFilterLoading] = useState(false); // 筛选数据加载
@@ -995,14 +997,29 @@ export function DataConfirmationTab({
   const handleConfirmSelection = async () => {
     if (!filteredStats) return;
     
+    // 🔥 修复：确保项目名正确生成
+    const finalProjectName = projectName && projectName !== 'New Project 1' 
+      ? projectName 
+      : generateSmartProjectName();
+    
+    // PostHog 埋点：项目创建尝试
+    posthog.capture('project_creation_attempt', {
+      project_name: finalProjectName,
+      total_products: filteredStats.totalProducts,
+      total_reviews: filteredStats.totalReviews,
+      categories: filters.categories,
+      sources: filters.sources,
+      brands: filters.brands,
+      top_sales_count: filters.topSalesCount,
+      category_id: selectedCategoryId,
+      user_id: user?.id,
+      user_email: user?.email,
+    });
+    
     setProjectCreationStatus('creating');
     setIsConfirmed(true);
     
     try {
-      // 🔥 修复：确保项目名正确生成
-      const finalProjectName = projectName && projectName !== 'New Project 1' 
-        ? projectName 
-        : generateSmartProjectName();
       
       // 调用后端API创建项目
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
@@ -1035,6 +1052,21 @@ export function DataConfirmationTab({
       const savedProject = await response.json();
       console.log('Project saved successfully:', savedProject);
       
+      // PostHog 埋点：项目创建成功
+      posthog.capture('project_creation_success', {
+        project_id: savedProject.id,
+        project_name: finalProjectName,
+        total_products: filteredStats.totalProducts,
+        total_reviews: filteredStats.totalReviews,
+        categories: filters.categories,
+        sources: filters.sources,
+        brands: filters.brands,
+        top_sales_count: filters.topSalesCount,
+        category_id: selectedCategoryId,
+        user_id: user?.id,
+        user_email: user?.email,
+      });
+      
       // 🔥 关键修复：设置项目ID，并更新状态为'created'
       setCreatedProjectId(savedProject.id);
       setProjectCreationStatus('created');
@@ -1052,6 +1084,22 @@ export function DataConfirmationTab({
       // }
     } catch (error) {
       console.error('Failed to save project:', error);
+      
+      // PostHog 埋点：项目创建失败
+      posthog.capture('project_creation_failed', {
+        project_name: finalProjectName,
+        total_products: filteredStats.totalProducts,
+        total_reviews: filteredStats.totalReviews,
+        categories: filters.categories,
+        sources: filters.sources,
+        brands: filters.brands,
+        top_sales_count: filters.topSalesCount,
+        category_id: selectedCategoryId,
+        user_id: user?.id,
+        user_email: user?.email,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      });
+      
       setIsConfirmed(false); // 重置确认状态
       setProjectCreationStatus('idle'); // 🔥 状态重置
       setCreatedProjectId(null); // 重置项目ID

@@ -1,10 +1,11 @@
 'use client';
 
 import { AnalysisDbContainer } from '@/components/analysis-db';
+import { ProjectFilters } from '@/components/analysis-db/types/filters';
 
 interface AnalysisDbTabProps {
   selectedProjectId?: string | null;
-  filters?: { categories: string[]; asins: string[] };
+  filters?: ProjectFilters;
 }
  
 export function AnalysisDbTab({ selectedProjectId, filters }: AnalysisDbTabProps) {

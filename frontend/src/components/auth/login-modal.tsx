@@ -7,6 +7,7 @@ import { Label } from '@/components/ui/label'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import { useAuth } from '@/contexts/auth-context'
+import { usePostHog } from 'posthog-js/react'
 
 interface LoginModalProps {
   isOpen: boolean
@@ -21,29 +22,68 @@ export function LoginModal({ isOpen, onClose, allowClose = false }: LoginModalPr
   const [showPasswordRules, setShowPasswordRules] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const { signIn, signInWithGoogle, resetPassword } = useAuth()
+  const posthog = usePostHog()
 
   const handleEmailAuth = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email || !password) return
 
+    // PostHog 埋点：邮箱登录尝试
+    posthog.capture('login_attempt', {
+      method: 'email',
+      email: email,
+    })
+
     try {
       setIsLoading(true)
       await signIn(email, password)
+      
+      // PostHog 埋点：登录成功
+      posthog.capture('login_success', {
+        method: 'email',
+        email: email,
+      })
+      
       onClose()
     } catch (error) {
       console.error('Auth error:', error)
+      
+      // PostHog 埋点：登录失败
+      posthog.capture('login_failed', {
+        method: 'email',
+        email: email,
+        error: error instanceof Error ? error.message : 'Unknown error',
+      })
     } finally {
       setIsLoading(false)
     }
   }
 
   const handleGoogleLogin = async () => {
+    // PostHog 埋点：Google登录尝试
+    posthog.capture('login_attempt', {
+      method: 'google',
+    })
+
     try {
       setIsLoading(true)
       await signInWithGoogle()
+      
+      // PostHog 埋点：Google登录成功
+      posthog.capture('login_success', {
+        method: 'google',
+      })
+      
       // Note: Google login redirects, so we don't close the modal here
     } catch (error) {
       console.error('Google login error:', error)
+      
+      // PostHog 埋点：Google登录失败
+      posthog.capture('login_failed', {
+        method: 'google',
+        error: error instanceof Error ? error.message : 'Unknown error',
+      })
+      
       setIsLoading(false)
     }
   }

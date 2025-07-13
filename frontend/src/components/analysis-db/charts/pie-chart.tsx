@@ -2,6 +2,8 @@
 
 import { PieChart as ReChartsPie, Pie, Cell, ResponsiveContainer, Legend, Tooltip } from "recharts"
 import { getChartColors } from "../shared/chart-colors"
+import { usePostHog } from 'posthog-js/react'
+import { useAuth } from '@/contexts/auth-context'
 
 interface PieChartProps {
   data: {
@@ -14,7 +16,19 @@ interface PieChartProps {
 }
 
 export function PieChart({ data, title, colors = getChartColors(2), annotation }: PieChartProps) {
+  const posthog = usePostHog()
+  const { user } = useAuth()
+  
   const handleSliceClick = (data: any) => {
+    // PostHog 埋点：饼图片段点击
+    posthog.capture('chart_interaction', {
+      chart_type: 'pie',
+      chart_title: title || 'Pie Chart',
+      clicked_data: data,
+      user_id: user?.id,
+      user_email: user?.email,
+    })
+    
     // Since pie charts are typically high-level category data, 
     // we'll just log the click for now - specific implementations 
     // can override this behavior

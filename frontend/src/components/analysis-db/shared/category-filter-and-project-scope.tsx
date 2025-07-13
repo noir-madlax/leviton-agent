@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
 import { databaseService } from '@/components/analysis-db/data/database-service'
+import { PACKAGING_TYPE_OPTIONS } from '@/components/analysis-db/types/filters'
 
 interface CategoryFilterAndProjectScopeProps {
   projectId: string | null
@@ -19,6 +20,8 @@ interface CategoryFilterAndProjectScopeProps {
 interface ProjectFilters {
   categories: string[]
   asins: string[]
+  packaging_types: string[]  // 新增: 包装类型筛选
+  segments: string[]  // 新增: 产品段筛选
 }
 
 interface ProjectOverviewData {
@@ -37,6 +40,16 @@ interface ProjectOverviewData {
       percentage: number;
     }>;
     categories: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
+    packaging_types: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
+    segments: Array<{
       name: string;
       count: number;
       percentage: number;
@@ -60,7 +73,7 @@ interface ProjectOverviewData {
 export function CategoryFilterAndProjectScope({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [] },
+  initialFilters = { categories: [], asins: [], packaging_types: [], segments: [] },
   preloadedData,
   isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
@@ -82,21 +95,83 @@ export function CategoryFilterAndProjectScope({
     hierarchical_categories: [],
     total_products: 0
   })
+  const [availableSegments, setAvailableSegments] = useState<string[]>([])
   const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
   const [appliedCategories, setAppliedCategories] = useState<string[]>(initialFilters.categories)
+  const [pendingPackagingTypes, setPendingPackagingTypes] = useState<string[]>(initialFilters.packaging_types)
+  const [appliedPackagingTypes, setAppliedPackagingTypes] = useState<string[]>(initialFilters.packaging_types)
+  const [pendingSegments, setPendingSegments] = useState<string[]>(initialFilters.segments)
+  const [appliedSegments, setAppliedSegments] = useState<string[]>(initialFilters.segments)
   const [filterLoading, setFilterLoading] = useState(false)
+
+  // 添加Select状态控制
+  const [categorySelectKey, setCategorySelectKey] = useState(0)
+  const [packagingSelectKey, setPackagingSelectKey] = useState(0)
+  const [segmentSelectKey, setSegmentSelectKey] = useState(0)
 
   // Project overview states - 优先使用预加载数据
   const [projectData, setProjectData] = useState<ProjectOverviewData | null>(preloadedData || null)
   const [overviewLoading, setOverviewLoading] = useState(isDataLoading || false)
+
+  const loadData = async () => {
+    if (!projectId) return
+
+    setFilterLoading(true)
+    try {
+      const overview = await databaseService.getProjectOverview(projectId)
+      
+      // 确保包含所有必需字段，提供默认值
+      const completeOverview: ProjectOverviewData = {
+        ...overview,
+        distributions: {
+          ...overview.distributions,
+          packaging_types: (overview.distributions as any).packaging_types || [],
+          segments: (overview.distributions as any).segments || []
+        }
+      }
+      
+      setAvailableCategories(overview.available_categories)
+      setProjectData(completeOverview)
+      
+      // 获取项目segments
+      const segments = await databaseService.getProjectSegments(projectId)
+      setAvailableSegments(segments)
+    } catch (error) {
+      console.error('Failed to load project data:', error)
+      setAvailableCategories({
+        flat_categories: [],
+        hierarchical_categories: [],
+        total_products: 0
+      })
+      setAvailableSegments([])
+      setProjectData(null)
+    } finally {
+      setFilterLoading(false)
+    }
+  }
+
+  // 单独的segments加载函数
+  const loadSegments = async () => {
+    if (!projectId) return
+
+    try {
+      const segments = await databaseService.getProjectSegments(projectId)
+      setAvailableSegments(segments)
+    } catch (error) {
+      console.error('Failed to load project segments:', error)
+      setAvailableSegments([])
+    }
+  }
 
   // 监听预加载数据变化
   useEffect(() => {
     if (preloadedData) {
       setProjectData(preloadedData)
       setAvailableCategories(preloadedData.available_categories)
+      // 即使有预加载数据，也要获取segments数据
+      loadSegments()
     }
-  }, [preloadedData])
+  }, [preloadedData, projectId])
 
   // 监听加载状态变化
   useEffect(() => {
@@ -111,8 +186,13 @@ export function CategoryFilterAndProjectScope({
         hierarchical_categories: [],
         total_products: 0
       })
+      setAvailableSegments([])
       setPendingCategories([])
       setAppliedCategories([])
+      setPendingPackagingTypes([])
+      setAppliedPackagingTypes([])
+      setPendingSegments([])
+      setAppliedSegments([])
       if (!preloadedData) {
         setProjectData(null)
       }
@@ -122,29 +202,11 @@ export function CategoryFilterAndProjectScope({
     // 只在没有预加载数据时才进行数据加载
     if (!preloadedData && !projectData) {
       loadData()
+    } else if (!preloadedData) {
+      // 如果没有预加载数据但有projectData，仍然需要加载segments
+      loadSegments()
     }
   }, [projectId, preloadedData, projectData])
-
-  const loadData = async () => {
-    if (!projectId) return
-
-    setFilterLoading(true)
-    try {
-      const overview = await databaseService.getProjectOverview(projectId)
-      setAvailableCategories(overview.available_categories)
-      setProjectData(overview)
-    } catch (error) {
-      console.error('Failed to load project data:', error)
-      setAvailableCategories({
-        flat_categories: [],
-        hierarchical_categories: [],
-        total_products: 0
-      })
-      setProjectData(null)
-    } finally {
-      setFilterLoading(false)
-    }
-  }
 
   const loadProjectOverview = useCallback(async () => {
     if (!projectId) return
@@ -152,20 +214,33 @@ export function CategoryFilterAndProjectScope({
     setOverviewLoading(true)
     try {
       const categoryFilters = appliedCategories.length > 0 ? appliedCategories : undefined
-      const overview = await databaseService.getProjectOverview(projectId, categoryFilters)
-      setProjectData(overview)
+      const packagingFilters = appliedPackagingTypes.length > 0 ? appliedPackagingTypes : undefined
+      const segmentFilters = appliedSegments.length > 0 ? appliedSegments : undefined
+      const overview = await databaseService.getProjectOverview(projectId, categoryFilters, packagingFilters, segmentFilters)
+      
+      // 确保包含所有必需字段，提供默认值
+      const completeOverview: ProjectOverviewData = {
+        ...overview,
+        distributions: {
+          ...overview.distributions,
+          packaging_types: (overview.distributions as any).packaging_types || [],
+          segments: (overview.distributions as any).segments || []
+        }
+      }
+      
+      setProjectData(completeOverview)
     } catch (error) {
       console.error('Failed to load project overview:', error)
       setProjectData(null)
     } finally {
       setOverviewLoading(false)
     }
-  }, [projectId, appliedCategories])
+  }, [projectId, appliedCategories, appliedPackagingTypes, appliedSegments])
 
   // Load project overview when filters change - 重新加载项目概览数据
   useEffect(() => {
     if (!projectId) return
-    // 当appliedCategories变化时总是重新加载数据（有过滤器或无过滤器）
+    // 当appliedFilters变化时总是重新加载数据（有过滤器或无过滤器）
     loadProjectOverview()
   }, [projectId, loadProjectOverview])
 
@@ -175,18 +250,61 @@ export function CategoryFilterAndProjectScope({
     } else if (!pendingCategories.includes(category)) {
       setPendingCategories(prev => [...prev, category])
     }
+    // 重置Select状态
+    setCategorySelectKey(prev => prev + 1)
   }
 
   const handleCategoryRemove = (category: string) => {
+    console.log('[FILTER-REMOVE] Clicking X for category:', category)
+    console.log('[FILTER-REMOVE] Before removal:', pendingCategories)
     setPendingCategories(prev => prev.filter(c => c !== category))
+    console.log('[FILTER-REMOVE] After removal should be triggered')
+  }
+
+  const handlePackagingTypeSelect = (packagingType: string) => {
+    if (packagingType === 'all') {
+      setPendingPackagingTypes([])
+    } else if (!pendingPackagingTypes.includes(packagingType)) {
+      setPendingPackagingTypes(prev => [...prev, packagingType])
+    }
+    // 重置Select状态
+    setPackagingSelectKey(prev => prev + 1)
+  }
+
+  const handlePackagingTypeRemove = (packagingType: string) => {
+    console.log('[FILTER-REMOVE] Clicking X for packaging:', packagingType)
+    console.log('[FILTER-REMOVE] Before removal:', pendingPackagingTypes)
+    setPendingPackagingTypes(prev => prev.filter(pt => pt !== packagingType))
+    console.log('[FILTER-REMOVE] After removal should be triggered')
+  }
+
+  const handleSegmentSelect = (segment: string) => {
+    if (segment === 'all') {
+      setPendingSegments([])
+    } else if (!pendingSegments.includes(segment)) {
+      setPendingSegments(prev => [...prev, segment])
+    }
+    // 重置Select状态
+    setSegmentSelectKey(prev => prev + 1)
+  }
+
+  const handleSegmentRemove = (segment: string) => {
+    console.log('[FILTER-REMOVE] Clicking X for segment:', segment)
+    console.log('[FILTER-REMOVE] Before removal:', pendingSegments)
+    setPendingSegments(prev => prev.filter(s => s !== segment))
+    console.log('[FILTER-REMOVE] After removal should be triggered')
   }
 
   const handleApplyFilters = () => {
     setAppliedCategories(pendingCategories)
+    setAppliedPackagingTypes(pendingPackagingTypes)
+    setAppliedSegments(pendingSegments)
     if (onFiltersChange) {
       onFiltersChange({
         categories: pendingCategories,
-        asins: []
+        asins: [],
+        packaging_types: pendingPackagingTypes,
+        segments: pendingSegments
       })
     }
   }
@@ -194,16 +312,28 @@ export function CategoryFilterAndProjectScope({
   const handleReset = () => {
     setPendingCategories([])
     setAppliedCategories([])
+    setPendingPackagingTypes([])
+    setAppliedPackagingTypes([])
+    setPendingSegments([])
+    setAppliedSegments([])
+    // 重置所有Select组件状态
+    setCategorySelectKey(prev => prev + 1)
+    setPackagingSelectKey(prev => prev + 1)
+    setSegmentSelectKey(prev => prev + 1)
     if (onFiltersChange) {
       onFiltersChange({
         categories: [],
-        asins: []
+        asins: [],
+        packaging_types: [],
+        segments: []
       })
     }
   }
 
-  const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories)
-  const hasActiveFilters = appliedCategories.length > 0
+  const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories) || 
+                          JSON.stringify(pendingPackagingTypes) !== JSON.stringify(appliedPackagingTypes) ||
+                          JSON.stringify(pendingSegments) !== JSON.stringify(appliedSegments)
+  const hasActiveFilters = appliedCategories.length > 0 || appliedPackagingTypes.length > 0 || appliedSegments.length > 0
 
   if (!projectId) {
     return null
@@ -214,28 +344,38 @@ export function CategoryFilterAndProjectScope({
     ?.map(category => `${category.name} (${category.percentage}%)`)
     .join(', ') || ''
 
+  // Format packaging types text
+  const packagingText = projectData?.distributions.packaging_types
+    ?.map(packaging => `${packaging.name} (${packaging.percentage}%)`)
+    .join(', ') || ''
+
+  // Format segments text  
+  const segmentsText = projectData?.distributions.segments
+    ?.map(segment => `${segment.name} (${segment.percentage}%)`)
+    .join(', ') || ''
+
   return (
     <div className="mb-4">
       <Card className="border-gray-200">
         <CardHeader className="pb-2">
           <CardTitle className="text-lg flex items-center gap-2">
             <Filter className="w-5 h-5" />
-            Filter Project Scope by Product Categories
+            Filter Project Scope by Product Properties
           </CardTitle>
           <div className="text-sm text-gray-600 mt-1">
-            Filters will <strong>apply to all</strong> charts and Xenith responses
+            Filters will <strong>apply to all</strong> charts and Xenith responses. Filter by category, packaging type, and segments.
           </div>
         </CardHeader>
         <CardContent className="p-4 pt-0 space-y-4">
           {/* Category Filters Section */}
           <div className="space-y-3">
-            <div className="flex items-center gap-4">
-              {/* Filter controls */}
+            <div className="flex items-center gap-4 flex-wrap">
+              {/* Category Filter */}
               <div className="flex items-center gap-2">
                 <span className="text-sm text-gray-600">Category:</span>
-                <Select onValueChange={handleCategorySelect} disabled={filterLoading}>
+                <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading}>
                   <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="Select category..." />
+                    <SelectValue placeholder="All Categories (No Filter)" />
                   </SelectTrigger>
                   <SelectContent className="max-h-80">
                     <SelectItem value="all">All Categories (No Filter)</SelectItem>
@@ -271,6 +411,46 @@ export function CategoryFilterAndProjectScope({
                 </Select>
               </div>
 
+              {/* Packaging Type Filter */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Packaging:</span>
+                <Select key={packagingSelectKey} onValueChange={handlePackagingTypeSelect} disabled={filterLoading}>
+                  <SelectTrigger className="w-48 h-8">
+                    <SelectValue placeholder="All Packaging Types" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Packaging Types</SelectItem>
+                    {PACKAGING_TYPE_OPTIONS
+                      .filter(option => !pendingPackagingTypes.includes(option.value))
+                      .map((option) => (
+                        <SelectItem key={option.value} value={option.value}>
+                          {option.label}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Segments Filter */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Segments:</span>
+                <Select key={segmentSelectKey} onValueChange={handleSegmentSelect} disabled={filterLoading}>
+                  <SelectTrigger className="w-48 h-8">
+                    <SelectValue placeholder="All Segments" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Segments</SelectItem>
+                    {availableSegments
+                      .filter(segment => !pendingSegments.includes(segment))
+                      .map((segment) => (
+                        <SelectItem key={segment} value={segment}>
+                          {segment}
+                        </SelectItem>
+                      ))}
+                  </SelectContent>
+                </Select>
+              </div>
+
               {/* Apply button */}
               <Button
                 onClick={handleApplyFilters}
@@ -286,7 +466,7 @@ export function CategoryFilterAndProjectScope({
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                disabled={!hasActiveFilters && pendingCategories.length === 0}
+                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingPackagingTypes.length === 0 && pendingSegments.length === 0}
                 className="h-8"
               >
                 <RotateCcw className="w-3 h-3 mr-1" />
@@ -296,18 +476,18 @@ export function CategoryFilterAndProjectScope({
               {/* Status indicator */}
               {hasPendingChanges && (
                 <div className="text-xs text-orange-600">
-                  {pendingCategories.length} pending changes
+                  {pendingCategories.length + pendingPackagingTypes.length + pendingSegments.length} pending changes
                 </div>
               )}
               {hasActiveFilters && !hasPendingChanges && (
                 <div className="text-xs text-green-600">
-                  {appliedCategories.length} filter{appliedCategories.length > 1 ? 's' : ''} applied
+                  {appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length} filter{(appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length) > 1 ? 's' : ''} applied
                 </div>
               )}
             </div>
 
             {/* Pending filters display */}
-            {pendingCategories.length > 0 && (
+            {(pendingCategories.length > 0 || pendingPackagingTypes.length > 0 || pendingSegments.length > 0) && (
               <div className="pt-2 border-t border-gray-100">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-600">
@@ -315,18 +495,60 @@ export function CategoryFilterAndProjectScope({
                   </span>
                   {pendingCategories.map((category) => (
                     <Badge
-                      key={category}
+                      key={`category-${category}`}
                       variant={hasPendingChanges ? "outline" : "secondary"}
                       className={`text-xs flex items-center gap-1 ${
                         hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
                       }`}
                     >
-                      {category}
+                      📁 {category}
                       <X
                         className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
                         onClick={(e) => {
+                          console.log('[FILTER-REMOVE] Clicking X for category badge:', category)
                           e.stopPropagation()
+                          e.preventDefault()
                           handleCategoryRemove(category)
+                        }}
+                      />
+                    </Badge>
+                  ))}
+                  {pendingPackagingTypes.map((packagingType) => (
+                    <Badge
+                      key={`packaging-${packagingType}`}
+                      variant={hasPendingChanges ? "outline" : "secondary"}
+                      className={`text-xs flex items-center gap-1 ${
+                        hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                      }`}
+                    >
+                      📦 {PACKAGING_TYPE_OPTIONS.find(opt => opt.value === packagingType)?.label || packagingType}
+                      <X
+                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                        onClick={(e) => {
+                          console.log('[FILTER-REMOVE] Clicking X for packaging badge:', packagingType)
+                          e.stopPropagation()
+                          e.preventDefault()
+                          handlePackagingTypeRemove(packagingType)
+                        }}
+                      />
+                    </Badge>
+                  ))}
+                  {pendingSegments.map((segment) => (
+                    <Badge
+                      key={`segment-${segment}`}
+                      variant={hasPendingChanges ? "outline" : "secondary"}
+                      className={`text-xs flex items-center gap-1 ${
+                        hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                      }`}
+                    >
+                      🎯 {segment}
+                      <X
+                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                        onClick={(e) => {
+                          console.log('[FILTER-REMOVE] Clicking X for segment badge:', segment)
+                          e.stopPropagation()
+                          e.preventDefault()
+                          handleSegmentRemove(segment)
                         }}
                       />
                     </Badge>
@@ -399,6 +621,22 @@ export function CategoryFilterAndProjectScope({
                       <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Categories:</span>
                       <span className="text-gray-600 flex-1 text-xs">
                         {categoriesText}
+                      </span>
+                    </div>
+                  )}
+                  {projectData.distributions.packaging_types.length > 0 && (
+                    <div className="flex items-start gap-2">
+                      <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Packaging Types:</span>
+                      <span className="text-gray-600 flex-1 text-xs">
+                        {packagingText}
+                      </span>
+                    </div>
+                  )}
+                  {projectData.distributions.segments.length > 0 && (
+                    <div className="flex items-start gap-2">
+                      <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Segments:</span>
+                      <span className="text-gray-600 flex-1 text-xs">
+                        {segmentsText}
                       </span>
                     </div>
                   )}

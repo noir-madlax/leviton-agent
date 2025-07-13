@@ -12,6 +12,8 @@ import {
 } from "recharts"
 import type { ChartDataItem } from "../types/chart-data"
 import { getChartColors } from "../shared/chart-colors"
+import { usePostHog } from 'posthog-js/react'
+import { useAuth } from '@/contexts/auth-context'
 
 interface BarChartProps {
   data: ChartDataItem[]
@@ -32,6 +34,27 @@ export function BarChart({
   metricType = "revenue",
   onBarClick,
 }: BarChartProps) {
+  const posthog = usePostHog()
+  const { user } = useAuth()
+  
+  // 包装点击事件处理器，添加埋点
+  const handleBarClick = (data: unknown) => {
+    // PostHog 埋点：柱状图点击
+    posthog.capture('chart_interaction', {
+      chart_type: 'bar',
+      chart_categories: categories,
+      chart_metric_type: metricType,
+      clicked_data: data,
+      user_id: user?.id,
+      user_email: user?.email,
+    })
+    
+    // 调用原始的点击处理器
+    if (onBarClick) {
+      onBarClick(data)
+    }
+  }
+  
   const formatValue = (value: number) => {
     return metricType === "revenue" ? `$${value.toLocaleString()}` : value.toLocaleString()
   }
@@ -133,7 +156,7 @@ export function BarChart({
           left: 20,
           bottom: isSingleCategory ? 20 : 20,
         }}
-        onClick={onBarClick}
+        onClick={handleBarClick}
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis
