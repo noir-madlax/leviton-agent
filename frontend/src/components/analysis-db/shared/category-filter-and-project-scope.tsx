@@ -42,7 +42,19 @@ interface ProjectOverviewData {
       percentage: number;
     }>;
   };
-  available_categories: string[];
+  available_categories: {
+    flat_categories: string[];
+    hierarchical_categories: Array<{
+      parent_category: string;
+      parent_count: number;
+      children: Array<{
+        category: string;
+        count: number;
+        percentage: number;
+      }>;
+    }>;
+    total_products: number;
+  };
 }
 
 export function CategoryFilterAndProjectScope({ 
@@ -53,7 +65,23 @@ export function CategoryFilterAndProjectScope({
   isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
   // Filter states
-  const [availableCategories, setAvailableCategories] = useState<string[]>([])
+  const [availableCategories, setAvailableCategories] = useState<{
+    flat_categories: string[];
+    hierarchical_categories: Array<{
+      parent_category: string;
+      parent_count: number;
+      children: Array<{
+        category: string;
+        count: number;
+        percentage: number;
+      }>;
+    }>;
+    total_products: number;
+  }>({
+    flat_categories: [],
+    hierarchical_categories: [],
+    total_products: 0
+  })
   const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
   const [appliedCategories, setAppliedCategories] = useState<string[]>(initialFilters.categories)
   const [filterLoading, setFilterLoading] = useState(false)
@@ -78,7 +106,11 @@ export function CategoryFilterAndProjectScope({
   // Load data when projectId changes - 只在没有预加载数据时才加载
   useEffect(() => {
     if (!projectId) {
-      setAvailableCategories([])
+      setAvailableCategories({
+        flat_categories: [],
+        hierarchical_categories: [],
+        total_products: 0
+      })
       setPendingCategories([])
       setAppliedCategories([])
       if (!preloadedData) {
@@ -103,7 +135,11 @@ export function CategoryFilterAndProjectScope({
       setProjectData(overview)
     } catch (error) {
       console.error('Failed to load project data:', error)
-      setAvailableCategories([])
+      setAvailableCategories({
+        flat_categories: [],
+        hierarchical_categories: [],
+        total_products: 0
+      })
       setProjectData(null)
     } finally {
       setFilterLoading(false)
@@ -201,15 +237,36 @@ export function CategoryFilterAndProjectScope({
                   <SelectTrigger className="w-48 h-8">
                     <SelectValue placeholder="Select category..." />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="max-h-80">
                     <SelectItem value="all">All Categories (No Filter)</SelectItem>
-                    {availableCategories
-                      .filter(category => !pendingCategories.includes(category))
-                      .map((category) => (
-                        <SelectItem key={category} value={category}>
-                          {category}
-                        </SelectItem>
-                      ))}
+                    {availableCategories.hierarchical_categories?.map((parentGroup) => (
+                      <div key={parentGroup.parent_category} className="mb-2">
+                        {/* 父类别标题 */}
+                        <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
+                          📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
+                        </div>
+                        
+                        {/* 子类别选项 */}
+                        {parentGroup.children
+                          .filter(child => !pendingCategories.includes(child.category))
+                          .map((child) => (
+                            <SelectItem 
+                              key={child.category} 
+                              value={child.category}
+                              className="pl-6 py-2"
+                            >
+                              <div className="flex justify-between items-center w-full">
+                                <span className="flex items-center gap-2">
+                                  🏷️ {child.category}
+                                </span>
+                                <span className="text-sm text-gray-500">
+                                  {child.count} ({child.percentage}%)
+                                </span>
+                              </div>
+                            </SelectItem>
+                          ))}
+                      </div>
+                    ))}
                   </SelectContent>
                 </Select>
               </div>

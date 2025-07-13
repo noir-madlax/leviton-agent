@@ -181,21 +181,77 @@ class ProjectOverviewService(BaseDashboardService):
             'categories': categories
         }
     
-    def _get_available_categories(self) -> List[str]:
-        """Get available categories for filtering"""
+    def _get_available_categories(self) -> Dict[str, Any]:
+        """Get available categories with hierarchy for filtering"""
         filtered_asins = self.project_asins
         
         if not filtered_asins:
-            return []
+            return {
+                "flat_categories": [],
+                "hierarchical_categories": []
+            }
         
         response = self.supabase.table('product_wide_table').select(
-            'category'
+            'category, categories_flat'
         ).in_('platform_id', filtered_asins).neq('category', None).execute()
         
-        # Get unique categories
-        categories = set(p['category'] for p in response.data if p['category'])
+        # 解析层级关系
+        category_hierarchy = {}
+        category_counts = {}
         
-        return sorted(list(categories))
+        for product in response.data:
+            leaf_category = product.get('category')
+            categories_flat = product.get('categories_flat', '')
+            
+            if not leaf_category:
+                continue
+                
+            # 计数
+            category_counts[leaf_category] = category_counts.get(leaf_category, 0) + 1
+            
+            # 解析父类别（向上一层）
+            parent_category = "其他类别"  # 默认分组
+            
+            if categories_flat and ' > ' in categories_flat:
+                path_parts = [part.strip() for part in categories_flat.split(' > ')]
+                if len(path_parts) >= 2:
+                    parent_category = path_parts[-2]  # 倒数第二个是父类别
+            
+            # 构建层级结构
+            if parent_category not in category_hierarchy:
+                category_hierarchy[parent_category] = []
+            
+            if leaf_category not in category_hierarchy[parent_category]:
+                category_hierarchy[parent_category].append(leaf_category)
+        
+        # 构建返回数据
+        hierarchical_categories = []
+        total_products = sum(category_counts.values())
+        
+        for parent, children in category_hierarchy.items():
+            parent_count = sum(category_counts.get(child, 0) for child in children)
+            
+            hierarchical_categories.append({
+                "parent_category": parent,
+                "parent_count": parent_count,
+                "children": [
+                    {
+                        "category": child,
+                        "count": category_counts.get(child, 0),
+                        "percentage": round((category_counts.get(child, 0) / total_products) * 100, 1) if total_products > 0 else 0
+                    }
+                    for child in sorted(children)
+                ]
+            })
+        
+        # 按父类别产品数量排序
+        hierarchical_categories.sort(key=lambda x: x["parent_count"], reverse=True)
+        
+        return {
+            "flat_categories": sorted(list(category_counts.keys())),
+            "hierarchical_categories": hierarchical_categories,
+            "total_products": total_products
+        }
     
     def get_available_asins_with_info(self) -> List[Dict[str, Any]]:
         """Get available ASINs with product info for competitor selection"""
