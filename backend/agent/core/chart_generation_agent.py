@@ -47,7 +47,7 @@ class ChartGenerationAgent:
             if self.agent_manager:
                 await self.agent_manager.append_custom_system_prompt(
                     agent=self.agent,
-                    prompt_id=9  # 为图表生成 Agent 使用专用的 prompt ID
+                    prompt_id=16  # 为图表生成 Agent 使用专用的 prompt ID
                 )
             
             logger.info(f"图表代码生成 Agent 初始化成功")

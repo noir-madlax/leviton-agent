@@ -68,7 +68,7 @@ class BiAgent:
                 managed_agents=[
                     self.chart_generation_agent.get_agent()  # 管理图表代码生成子 Agent
                 ],
-                max_steps=5,  # 增加步数以支持复杂的 BI 分析查询
+                max_steps=10,  # 增加步数以支持复杂的 BI 分析查询
                 name="bi_agent",
                 description="专业的产品市场分析Agent，根据用户的产品分析需求，根据数据库中的数据信息，完成从需求设计、数据获取到图表生成的完整分析流程",
                 additional_authorized_imports=['json'],
