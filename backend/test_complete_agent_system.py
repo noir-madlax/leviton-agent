@@ -31,12 +31,12 @@ async def test_complete_agent_system():
     
     # 获取各个 Agent 实例
     manager_agent = agent_manager.get_manager_agent()
-    database_agent = agent_manager.get_database_agent()
+    bi_agent = agent_manager.get_bi_agent()
     chart_generation_agent = agent_manager.get_chart_generation_agent()
     
     logger.info("Agent 实例检查:")
     logger.info(f"- 管理 Agent: {manager_agent is not None}")
-    logger.info(f"- 数据库 Agent: {database_agent is not None and database_agent.is_ready()}")
+    logger.info(f"- BI 分析 Agent: {bi_agent is not None and bi_agent.is_ready()}")
     logger.info(f"- 图表代码生成 Agent: {chart_generation_agent is not None and chart_generation_agent.is_ready()}")
     
     # 测试系统查询（通过管理 Agent）

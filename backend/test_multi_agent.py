@@ -38,7 +38,7 @@ async def test_multi_agent_system():
         # 检查系统状态
         print(f"🔍 系统准备状态: {agent_manager.is_ready()}")
         print(f"🎯 管理 Agent: {type(agent_manager.get_manager_agent()).__name__}")
-        print(f"💾 数据库 Agent: {type(agent_manager.get_database_agent().get_agent()).__name__}")
+        print(f"💾 BI 分析 Agent: {type(agent_manager.get_bi_agent().get_agent()).__name__}")
         
         # 测试简单查询
         print("\n📋 测试简单查询...")
@@ -55,9 +55,9 @@ async def test_multi_agent_system():
         # 测试通用 system_prompt 方法
         print("\n🔧 测试通用 system_prompt 功能...")
         # 为数据库 Agent 重新加载 system_prompt (ID=2)
-        db_agent = agent_manager.get_database_agent()
-        reload_result = await db_agent.reload_system_prompt(prompt_id=2)
-        print(f"🔄 数据库 Agent system_prompt 重新加载结果: {reload_result}")
+        bi_agent = agent_manager.get_bi_agent()
+        reload_result = await bi_agent.reload_system_prompt(prompt_id=2)
+        print(f"🔄 BI 分析 Agent system_prompt 重新加载结果: {reload_result}")
         
         # 为管理 Agent 重新加载 system_prompt (ID=1)
         manager_reload_result = await agent_manager.reload_system_prompt_from_database(prompt_id=1)

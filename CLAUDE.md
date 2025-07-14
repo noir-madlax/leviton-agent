@@ -35,7 +35,7 @@ This is a full-stack application with a **Next.js frontend** and **FastAPI backe
 ### Multi-Agent System
 The core AI system consists of:
 - **AgentManager**: Orchestrates multiple specialized agents
-- **DatabaseAgent**: Handles database queries and data retrieval
+- **BiAgent**: Handles business intelligence analysis, database queries and data retrieval
 - **ChartGenerationAgent**: Generates visualization code
 - **Manager Agent**: Coordinates between agents and handles user interactions
 
