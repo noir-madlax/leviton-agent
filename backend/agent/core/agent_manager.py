@@ -28,7 +28,6 @@ class AgentManager:
         self.database_agent = None  # 数据库查询 Agent
         self.chart_generation_agent = None  # 图表代码生成 Agent
         self.extend_fields_agent = None  # 扩展字段管理 Agent
-        self.mcp_tool_manager = None  # MCP 工具管理器
         self.init_error = None
     
     async def initialize_agent(self) -> bool:
@@ -73,11 +72,7 @@ class AgentManager:
             
             # 步骤4: 创建管理 Agent（类似 HuggingFace demo 中的 manager_agent）
 
-            # 初始化 Supabase MCP 工具集 - 一键初始化
-            from agent.tools import get_supabase_mcp_manager
-            
-            self.mcp_tool_manager = get_supabase_mcp_manager()
-            database_tools = await self.mcp_tool_manager.initialize_with_preset("safe_read_only")
+            # 注释：不再需要在管理 Agent 中使用 MCP 工具，因为各个子 Agent 已经独立配置了 MCP 工具
 
             logger.info("创建管理 Agent...")  
             self.manager_agent = CodeAgent(
@@ -187,14 +182,6 @@ class AgentManager:
     def cleanup(self):
         """清理多 Agent 系统资源"""
         logger.info("FastAPI 应用关闭，正在释放多 Agent 系统资源...")
-        
-        # 清理 MCP 工具管理器
-        if self.mcp_tool_manager:
-            try:
-                self.mcp_tool_manager.cleanup()
-                logger.info("MCP 工具管理器资源已释放")
-            except Exception as e:
-                logger.error(f"释放 MCP 工具管理器资源时出错: {e}", exc_info=True)
         
         if self.database_agent:
             try:
@@ -315,14 +302,8 @@ class AgentManager:
     
     def get_mcp_tool_info(self):
         """获取当前 MCP 工具信息"""
-        if self.mcp_tool_manager:
-            return {
-                "tool_count": len(self.mcp_tool_manager.get_tools()),
-                "tool_names": self.mcp_tool_manager.get_tool_names(),
-                "tool_details": self.mcp_tool_manager.get_tool_info(),
-                "filter_mode": self.mcp_tool_manager.tool_filter_mode
-            }
-        return {"error": "MCP 工具管理器未初始化"}
+        # 不再需要 MCP 工具管理器，因为每个子 Agent 都有自己的 MCP 工具管理器
+        return {"message": "MCP 工具管理器已移除，每个子 Agent 都有自己的 MCP 工具管理器"}
     
     def reconfigure_mcp_tools(self, **filter_config):
         """重新配置 MCP 工具筛选规则
@@ -331,17 +312,9 @@ class AgentManager:
             **filter_config: 工具筛选配置参数，例如:
                 mode="whitelist", allowed_tools=["execute_sql", "list_tables"]
         """
-        if not self.mcp_tool_manager:
-            logger.error("MCP 工具管理器未初始化，无法重新配置")
-            return False
-        
-        try:
-            self.mcp_tool_manager.configure_tool_filter(**filter_config)
-            logger.info("MCP 工具筛选规则已更新")
-            return True
-        except Exception as e:
-            logger.error(f"重新配置 MCP 工具失败: {e}")
-            return False
+        # 不再需要 MCP 工具管理器，因为每个子 Agent 都有自己的 MCP 工具管理器
+        logger.warning("MCP 工具筛选规则已移除，每个子 Agent 都有自己的 MCP 工具管理器")
+        return False
 
 # 全局 Agent 管理器实例
 agent_manager = AgentManager()

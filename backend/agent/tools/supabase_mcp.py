@@ -1,5 +1,6 @@
 """
 Supabase MCP 工具管理器 - 负责初始化、筛选和管理 Supabase MCP 工具
+支持多例模式，每个 Agent 可以有独立的 MCP 连接配置
 """
 import logging
 from typing import List, Optional, Dict, Any
@@ -8,9 +9,24 @@ from config import settings
 logger = logging.getLogger(__name__)
 
 class SupabaseMCPToolManager:
-    """Supabase MCP 工具管理器类"""
+    """Supabase MCP 工具管理器类 - 多例模式"""
     
-    def __init__(self):
+    def __init__(self, agent_id: str, mcp_config: Optional[Dict[str, Any]] = None):
+        """
+        初始化 MCP 工具管理器
+        
+        Args:
+            agent_id: Agent 标识符，用于日志和调试
+            mcp_config: MCP 连接配置，包含以下可选参数：
+                - command: 启动命令，默认 "npx"
+                - base_args: 基础参数列表，默认 ["-y", "@supabase/mcp-server-supabase@latest"]
+                - access_token: 访问令牌，默认使用 settings.MCP_ACCESS_TOKEN
+                - project_id: Supabase 项目 ID（可选），将使用 --project-ref=<value> 格式
+                - read_only: 是否启用只读模式，默认 True
+                - extra_args: 额外参数列表，默认 []
+        """
+        self.agent_id = agent_id
+        self.mcp_config = mcp_config or {}
         self.tool_collection_context = None
         self.tools = []
         self.init_error = None
@@ -20,6 +36,43 @@ class SupabaseMCPToolManager:
         self.allowed_tools = []
         self.blocked_tools = []
         self.allowed_categories = []
+        
+        logger.info(f"创建 Agent '{agent_id}' 的 MCP 工具管理器实例")
+    
+    def _get_server_parameters(self):
+        """根据配置生成 MCP 服务器参数"""
+        from mcp import StdioServerParameters
+        import os
+        
+        # 默认配置
+        command = self.mcp_config.get("command", "npx")
+        base_args = self.mcp_config.get("base_args", ["-y", "@supabase/mcp-server-supabase@latest"])
+        access_token = self.mcp_config.get("access_token", settings.MCP_ACCESS_TOKEN)
+        
+        # 构建参数列表
+        args = list(base_args)  # 复制基础参数
+        
+        # 添加项目 ID（如果指定）- 使用正确的格式 --project-ref=value
+        project_id = self.mcp_config.get("project_id")
+        if project_id:
+            args.append(f"--project-ref={project_id}")
+        
+        # 添加只读模式（推荐）
+        if self.mcp_config.get("read_only", True):
+            args.append("--read-only")
+        
+        # 添加额外参数
+        extra_args = self.mcp_config.get("extra_args", [])
+        args.extend(extra_args)
+        
+        # 设置环境变量而不是命令行参数
+        env = {
+            "SUPABASE_ACCESS_TOKEN": access_token
+        }
+        
+        logger.info(f"Agent '{self.agent_id}' MCP 服务器参数: {command} {' '.join(args[:3])}...")
+        
+        return StdioServerParameters(command=command, args=args, env=env)
     
     def configure_tool_filter(self, 
                             mode: str = "all",
@@ -39,13 +92,13 @@ class SupabaseMCPToolManager:
         self.blocked_tools = blocked_tools or []
         self.allowed_categories = allowed_categories or []
         
-        logger.info(f"工具筛选配置已更新: mode={mode}")
+        logger.info(f"Agent '{self.agent_id}' 工具筛选配置已更新: mode={mode}")
         if allowed_tools:
-            logger.info(f"允许的工具: {allowed_tools}")
+            logger.info(f"Agent '{self.agent_id}' 允许的工具: {allowed_tools}")
         if blocked_tools:
-            logger.info(f"禁用的工具: {blocked_tools}")
+            logger.info(f"Agent '{self.agent_id}' 禁用的工具: {blocked_tools}")
         if allowed_categories:
-            logger.info(f"允许的分类: {allowed_categories}")
+            logger.info(f"Agent '{self.agent_id}' 允许的分类: {allowed_categories}")
     
     def get_default_tool_categories(self) -> Dict[str, List[str]]:
         """获取默认的工具分类定义"""
@@ -94,7 +147,7 @@ class SupabaseMCPToolManager:
                     return True
             return False
         else:
-            logger.warning(f"未知的工具筛选模式: {self.tool_filter_mode}, 使用所有工具")
+            logger.warning(f"Agent '{self.agent_id}' 未知的工具筛选模式: {self.tool_filter_mode}, 使用所有工具")
             return True
     
     def _filter_tools(self, all_tools) -> List:
@@ -107,32 +160,25 @@ class SupabaseMCPToolManager:
                 if self._should_include_tool(tool)
             ]
         
-        logger.info(f"工具筛选结果: 从 {len(all_tools)} 个工具中选择了 {len(filtered_tools)} 个")
+        logger.info(f"Agent '{self.agent_id}' 工具筛选结果: 从 {len(all_tools)} 个工具中选择了 {len(filtered_tools)} 个")
         
         # 打印选中的工具名称
         selected_tool_names = [getattr(tool, 'name', str(tool)) for tool in filtered_tools]
-        logger.info(f"已选择的工具: {selected_tool_names}")
+        logger.info(f"Agent '{self.agent_id}' 已选择的工具: {selected_tool_names}")
         
         return filtered_tools
     
     async def initialize_mcp_tools(self) -> bool:
         """初始化 Supabase MCP 工具集"""
-        logger.info("开始初始化 Supabase MCP 工具集...")
+        logger.info(f"开始为 Agent '{self.agent_id}' 初始化 MCP 工具集...")
         
         try:
             from smolagents import ToolCollection
-            from mcp import StdioServerParameters
             
-            # 创建 MCP 服务器参数
-            server_parameters = StdioServerParameters(
-                command="npx",
-                args=["-y", 
-                      "@supabase/mcp-server-supabase@latest",
-                      "--access-token",
-                      settings.MCP_ACCESS_TOKEN]
-            )
+            # 获取配置化的服务器参数
+            server_parameters = self._get_server_parameters()
             
-            logger.info("正在连接 Supabase MCP 服务器...")
+            logger.info(f"Agent '{self.agent_id}' 正在连接 MCP 服务器...")
             self.tool_collection_context = ToolCollection.from_mcp(
                 server_parameters, 
                 trust_remote_code=True
@@ -142,12 +188,12 @@ class SupabaseMCPToolManager:
             # 应用工具筛选
             self.tools = self._filter_tools(tool_collection.tools)
             
-            logger.info(f"Supabase MCP 工具集初始化成功，可用工具数量: {len(self.tools)}")
+            logger.info(f"Agent '{self.agent_id}' MCP 工具集初始化成功，可用工具数量: {len(self.tools)}")
             return True
             
         except Exception as e:
             self.init_error = str(e)
-            logger.error(f"Supabase MCP 工具集初始化失败: {e}", exc_info=True)
+            logger.error(f"Agent '{self.agent_id}' MCP 工具集初始化失败: {e}", exc_info=True)
             return False
     
     def get_tools(self) -> List:
@@ -173,7 +219,7 @@ class SupabaseMCPToolManager:
     def print_tool_info(self):
         """打印所有工具信息，用于调试"""
         tools_info = self.get_tool_info()
-        logger.info("当前可用的 Supabase MCP 工具:")
+        logger.info(f"Agent '{self.agent_id}' 当前可用的 MCP 工具:")
         for i, tool in enumerate(tools_info, 1):
             logger.info(f"{i}. {tool['name']}: {tool['description']}")
     
@@ -204,7 +250,7 @@ class SupabaseMCPToolManager:
         Raises:
             Exception: 当预设名称不存在或初始化失败时
         """
-        logger.info(f"开始使用预设 '{preset_name}' 初始化 MCP 工具...")
+        logger.info(f"开始使用预设 '{preset_name}' 为 Agent '{self.agent_id}' 初始化 MCP 工具...")
         
         # 预设配置映射
         preset_mapping = {
@@ -231,24 +277,24 @@ class SupabaseMCPToolManager:
         # 初始化工具
         success = await self.initialize_mcp_tools()
         if not success:
-            raise Exception(f"MCP 工具初始化失败: {self.get_init_error()}")
+            raise Exception(f"Agent '{self.agent_id}' MCP 工具初始化失败: {self.get_init_error()}")
         
         # 可选的调试信息
         if debug:
             self.print_tool_info()
         
-        logger.info(f"✅ 预设 '{preset_name}' 初始化完成，可用工具数量: {len(self.tools)}")
+        logger.info(f"✅ Agent '{self.agent_id}' 预设 '{preset_name}' 初始化完成，可用工具数量: {len(self.tools)}")
         return self.tools
     
     def cleanup(self):
         """清理 MCP 工具集资源"""
-        logger.info("正在清理 Supabase MCP 工具集资源...")
+        logger.info(f"正在清理 Agent '{self.agent_id}' 的 MCP 工具集资源...")
         if self.tool_collection_context:
             try:
                 self.tool_collection_context.__exit__(None, None, None)
-                logger.info("Supabase MCP 工具集资源已释放")
+                logger.info(f"Agent '{self.agent_id}' MCP 工具集资源已释放")
             except Exception as e:
-                logger.error(f"释放 Supabase MCP 工具集资源时出错: {e}", exc_info=True)
+                logger.error(f"Agent '{self.agent_id}' 释放 MCP 工具集资源时出错: {e}", exc_info=True)
         
         # 重置状态
         self.tools = []
@@ -309,12 +355,31 @@ class MCPToolPresets:
         }
 
 
-# 全局工具管理器实例
-_supabase_mcp_manager = None
+# 工厂函数
+def create_supabase_mcp_manager(agent_id: str, mcp_config: Optional[Dict[str, Any]] = None) -> SupabaseMCPToolManager:
+    """创建 Supabase MCP 工具管理器实例
+    
+    Args:
+        agent_id: Agent 标识符
+        mcp_config: MCP 连接配置
+        
+    Returns:
+        SupabaseMCPToolManager: 工具管理器实例
+    """
+    return SupabaseMCPToolManager(agent_id, mcp_config)
 
-def get_supabase_mcp_manager() -> SupabaseMCPToolManager:
-    """获取全局 Supabase MCP 工具管理器实例"""
-    global _supabase_mcp_manager
-    if _supabase_mcp_manager is None:
-        _supabase_mcp_manager = SupabaseMCPToolManager()
-    return _supabase_mcp_manager 
+# 兼容性函数（保持向后兼容）
+def get_supabase_mcp_manager(agent_id: str = "default", mcp_config: Optional[Dict[str, Any]] = None) -> SupabaseMCPToolManager:
+    """获取 Supabase MCP 工具管理器实例（兼容性函数）
+    
+    注意：这个函数每次调用都会创建新实例，不再是单例模式
+    
+    Args:
+        agent_id: Agent 标识符，默认为 "default"
+        mcp_config: MCP 连接配置
+        
+    Returns:
+        SupabaseMCPToolManager: 工具管理器实例
+    """
+    logger.warning("get_supabase_mcp_manager() 已废弃，建议使用 create_supabase_mcp_manager()")
+    return create_supabase_mcp_manager(agent_id, mcp_config) 
