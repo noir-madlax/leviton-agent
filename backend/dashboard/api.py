@@ -249,14 +249,14 @@ async def get_pricing_analysis(
         response = PricingAnalysisResponse(
             priceDistribution=price_distribution,
             brandPriceDistribution=brand_price_distribution,
-            segmentNames=raw_data['segmentNames'],
-            segmentColors=raw_data['segmentColors'],
+            segmentNames=raw_data['categoryNames'],
+            segmentColors=raw_data['categoryColors'],
             project_id=project_id,
             total_products=raw_data.get('totalProducts', 0),
             filtered_asin_count=len(service.project_asins)
         )
         
-        logger.info(f"Pricing analysis API returned data for {len(raw_data['segmentNames'])} segments with {response.total_products} products for project {project_id}")
+        logger.info(f"Pricing analysis API returned data for {len(raw_data['categoryNames'])} categories with {response.total_products} products for project {project_id}")
         return response
         
     except Exception as e:

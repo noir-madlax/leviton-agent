@@ -33,11 +33,11 @@ export function useChartManagement() {
       id: 'market-insights',
       type: 'preset',
       title: 'Product Deep Dive',
-      description: 'Deep analysis of product revenue relationships across different market segments',
+      description: 'Revenue performance and product segments',
       icon: TrendingUp,
       tabKey: 'market-insights',
       isActive: false,
-      aiIntroduction: 'Revenue performance across different product segments:'
+      aiIntroduction: 'Analysis of product revenue relationships across different market segments：'
     },
     {
       id: 'pricing-analysis',

@@ -15,22 +15,16 @@ class PricingAnalysisService(BaseDashboardService):
     """
     
     def get_data(self) -> Dict[str, Any]:
-        """Get pricing analysis data with dynamic segment support."""
+        """Get pricing analysis data with dynamic category support."""
         try:
-            # 获取项目segments
-            project_segments = self.get_project_segments()
-            
-            if not project_segments:
-                logger.warning(f"No segments found for project {self.project_id}")
-                return self._get_empty_response()
-            
-            # 查询定价数据
+            # 查询定价数据 - 添加category字段
             query = self._get_base_product_table().select('''
                 platform_id,
                 title,
                 brand,
                 price_usd,
-                unit_price_calculated
+                unit_price_calculated,
+                category
             ''')
             
             # Apply filters
@@ -43,87 +37,42 @@ class PricingAnalysisService(BaseDashboardService):
                 logger.warning(f"No pricing analysis data found for project {self.project_id}")
                 return self._get_empty_response()
             
-            # 过滤有价格数据的产品
-            products_with_price = [item for item in result.data if item.get('price_usd')]
-            logger.info(f"📊 Found {len(products_with_price)} products with pricing data")
+            # 过滤有价格数据和类别数据的产品
+            products_with_price = [item for item in result.data if item.get('price_usd') and item.get('category')]
+            logger.info(f"📊 Found {len(products_with_price)} products with pricing and category data")
             
-            # 获取segment assignments
-            segment_assignments = self._get_segment_assignments()
+            # 获取所有产品的类别
+            categories = list(set(item.get('category') for item in products_with_price if item.get('category')))
+            
+            if not categories:
+                logger.warning(f"No categories found for project {self.project_id}")
+                return self._get_empty_response()
             
             # 分类产品
-            categorized_products = self._categorize_products(products_with_price, segment_assignments)
+            categorized_products = self._categorize_products_by_category(products_with_price)
             
             # 格式化响应
-            response = self._format_pricing_response(categorized_products, project_segments)
+            response = self._format_pricing_response(categorized_products, categories)
             
-            logger.info(f"📈 Pricing analysis completed")
+            logger.info(f"📈 Pricing analysis completed with {len(categories)} categories")
             return response
             
         except Exception as e:
             logger.error(f"Error in pricing analysis for project {self.project_id}: {e}")
             raise
     
-    def _get_segment_assignments(self) -> Dict[str, str]:
-        """获取segment分配（复用逻辑）"""
-        try:
-            if not self.project_asins:
-                return {}
-            
-            # 查询ASINs在product_wide_table中的记录
-            wide_table_result = self.supabase.table('product_wide_table')\
-                .select('id, platform_id')\
-                .in_('platform_id', self.project_asins)\
-                .execute()
-            
-            if not wide_table_result.data:
-                return {}
-            
-            # 建立映射
-            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
-            
-            # 查询segment assignments
-            wide_table_ids = list(platform_to_wide_id.values())
-            assignments_result = self.supabase.table('product_segment_assignments')\
-                .select('product_id, segment_name')\
-                .eq('project_id', self.project_id)\
-                .in_('product_id', wide_table_ids)\
-                .neq('segment_name', None)\
-                .neq('segment_name', 'OUT_OF_SCOPE')\
-                .execute()
-            
-            if not assignments_result.data:
-                return {}
-            
-            # 建立映射
-            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
-            
-            # 转换为platform_id到segment的映射
-            platform_to_segment = {}
-            for platform_id, wide_id in platform_to_wide_id.items():
-                if wide_id in wide_id_to_segment:
-                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
-            
-            return platform_to_segment
-            
-        except Exception as e:
-            logger.error(f"Error getting segment assignments: {e}")
-            return {}
-    
-    def _categorize_products(self, products: List[Dict[str, Any]], segment_assignments: Dict[str, str]) -> Dict[str, List[Dict[str, Any]]]:
-        """将产品按segment分类"""
-        project_segments = self.get_project_segments()
-        categorized = {segment: [] for segment in project_segments}
-        
+    def _categorize_products_by_category(self, products: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
+        """将产品按类别分类"""
+        categorized = {}
         for product in products:
-            platform_id = product.get('platform_id')
-            segment = segment_assignments.get(platform_id)
-            
-            if segment and segment in categorized:
-                categorized[segment].append(product)
-        
+            category = product.get('category')
+            if category:
+                if category not in categorized:
+                    categorized[category] = []
+                categorized[category].append(product)
         return categorized
     
-    def _format_pricing_response(self, categorized_products: Dict[str, List[Dict[str, Any]]], project_segments: List[str]) -> Dict[str, Any]:
+    def _format_pricing_response(self, categorized_products: Dict[str, List[Dict[str, Any]]], categories: List[str]) -> Dict[str, Any]:
         """格式化定价响应数据，返回真实的segment-based格式"""
         import statistics
         
@@ -131,16 +80,16 @@ class PricingAnalysisService(BaseDashboardService):
             return self._get_empty_response()
         
         # 按收入排序segments
-        segment_revenue_list = []
-        for segment, products in categorized_products.items():
+        category_revenue_list = []
+        for category, products in categorized_products.items():
             if products:  # 只包含有产品的segments
                 total_revenue = sum(float(p.get('price_usd', 0) or 0) for p in products)
-                segment_revenue_list.append((segment, total_revenue, products))
+                category_revenue_list.append((category, total_revenue, products))
         
-        segment_revenue_list.sort(key=lambda x: x[1], reverse=True)
+        category_revenue_list.sort(key=lambda x: x[1], reverse=True)
         
         # 显示所有有数据的segments，不限制数量
-        main_segments = segment_revenue_list
+        main_categories = category_revenue_list
         
         def calculate_price_stats(prices: List[float]) -> Dict[str, float]:
             """计算价格统计信息"""
@@ -221,13 +170,13 @@ class PricingAnalysisService(BaseDashboardService):
         price_distributions = []
         brand_price_distributions = []
         
-        for segment_name, total_revenue, products in main_segments:
+        for category_name, total_revenue, products in main_categories:
             if products:
-                price_distributions.append(get_price_distribution(products, segment_name))
-                brand_price_distributions.append(get_brand_price_distribution(products, segment_name))
+                price_distributions.append(get_price_distribution(products, category_name))
+                brand_price_distributions.append(get_brand_price_distribution(products, category_name))
         
         # 生成segmentNames和segmentColors
-        segment_names = [segment_name for segment_name, _, _ in main_segments]
+        category_names = [category_name for category_name, _, _ in main_categories]
         
         # 定义颜色配色方案 - 与其他服务保持一致
         colors = [
@@ -235,14 +184,14 @@ class PricingAnalysisService(BaseDashboardService):
             "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
             "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
         ]
-        segment_colors = colors[:len(segment_names)]
+        category_colors = colors[:len(category_names)]
         
         return {
             'priceDistribution': price_distributions,
             'brandPriceDistribution': brand_price_distributions,
-            'segmentNames': segment_names,
-            'segmentColors': segment_colors,
-            'totalProducts': sum(len(products) for _, _, products in main_segments)
+            'categoryNames': category_names,
+            'categoryColors': category_colors,
+            'totalProducts': sum(len(products) for _, _, products in main_categories)
         }
     
     def _get_empty_response(self) -> Dict[str, Any]:
@@ -250,7 +199,7 @@ class PricingAnalysisService(BaseDashboardService):
         return {
             'priceDistribution': [],
             'brandPriceDistribution': [],
-            'segmentNames': [],
-            'segmentColors': [],
+            'categoryNames': [],
+            'categoryColors': [],
             'totalProducts': 0
         } 
