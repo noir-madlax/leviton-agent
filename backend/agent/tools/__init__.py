@@ -8,7 +8,8 @@ from .product_review_tools import ProductQueryTool, ReviewQueryTool, get_data_fi
 from .supabase_mcp import (
     SupabaseMCPToolManager, 
     MCPToolPresets, 
-    get_supabase_mcp_manager
+    create_supabase_mcp_manager,
+    get_supabase_mcp_manager  # 兼容性函数
 )
 
 __all__ = [
@@ -18,5 +19,6 @@ __all__ = [
     'test_tools',
     'SupabaseMCPToolManager',
     'MCPToolPresets',
-    'get_supabase_mcp_manager'
+    'create_supabase_mcp_manager',
+    'get_supabase_mcp_manager'  # 兼容性函数
 ] 

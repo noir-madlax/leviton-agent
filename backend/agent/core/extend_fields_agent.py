@@ -34,10 +34,21 @@ class ExtendFieldsAgent:
             
             logger.info("初始化扩展字段管理相关工具...")
             
-            # 初始化 Supabase MCP 工具集
-            from agent.tools import get_supabase_mcp_manager
+            # 初始化 Supabase MCP 工具集 - 使用新的多例模式
+            from agent.tools import create_supabase_mcp_manager
             
-            self.mcp_tool_manager = get_supabase_mcp_manager()
+            # 为扩展字段管理 Agent 创建独立的 MCP 配置
+            extend_fields_mcp_config = {
+                "access_token": settings.MCP_ACCESS_TOKEN,
+                "project_id": "qsatkfdmgnbmohmqwvqc",  # 从 prompt 中获取的项目 ID
+                "read_only": False,  # 扩展字段管理需要写权限
+                "extra_args": []  # 可以添加额外的扩展字段特定参数
+            }
+            
+            self.mcp_tool_manager = create_supabase_mcp_manager(
+                agent_id="extend_fields_agent",
+                mcp_config=extend_fields_mcp_config
+            )
             database_tools = await self.mcp_tool_manager.initialize_with_preset("database_only")
             
             # 创建扩展字段管理专用的 CodeAgent
@@ -98,19 +109,4 @@ class ExtendFieldsAgent:
             return result
         except Exception as e:
             logger.error(f"扩展字段创建失败: {e}", exc_info=True)
-            return f"扩展字段创建出错: {str(e)}"
-    
-    async def reload_system_prompt(self, prompt_id: int = 14):
-        """重新加载扩展字段管理 Agent 的 system_prompt
-        
-        Args:
-            prompt_id: 要加载的 prompt ID，默认为 14
-        """
-        if not self.agent_manager:
-            logger.warning("没有 AgentManager 引用，无法重新加载 system_prompt")
-            return False
-            
-        return await self.agent_manager.reload_system_prompt_from_database(
-            agent=self.agent,
-            prompt_id=prompt_id
-        ) 
+            return f"扩展字段创建出错: {str(e)}" 

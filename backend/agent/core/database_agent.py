@@ -35,10 +35,20 @@ class DatabaseAgent:
             
             logger.info("初始化数据库相关工具...")
             
-            # 初始化 Supabase MCP 工具集 - 一键初始化
-            from agent.tools import get_supabase_mcp_manager
+            # 初始化 Supabase MCP 工具集 - 使用新的多例模式
+            from agent.tools import create_supabase_mcp_manager
             
-            self.mcp_tool_manager = get_supabase_mcp_manager()
+            # 为数据库 Agent 创建独立的 MCP 配置
+            database_mcp_config = {
+                "access_token": settings.MCP_ACCESS_TOKEN,
+                "project_id": "qsatkfdmgnbmohmqwvqc",  # 从 prompt 中获取的项目 ID
+                "extra_args": []  # 可以添加额外的数据库特定参数
+            }
+            
+            self.mcp_tool_manager = create_supabase_mcp_manager(
+                agent_id="database_agent",
+                mcp_config=database_mcp_config
+            )
             database_tools = await self.mcp_tool_manager.initialize_with_preset("database_only")
             
             # 创建数据库查询专用的 ToolCallingAgent
@@ -53,10 +63,11 @@ class DatabaseAgent:
             )
             
             # 如果有 AgentManager 引用，尝试追加自定义 system_prompt
-            await self.agent_manager.append_custom_system_prompt(
-                agent=self.agent,
-                prompt_id=8
-            )
+            if self.agent_manager:
+                await self.agent_manager.append_custom_system_prompt(
+                    agent=self.agent,
+                    prompt_id=8
+                )
             
             logger.info(f"数据库查询 Agent 初始化成功，加载的工具数量: {len(database_tools)}")
             return True
@@ -98,19 +109,4 @@ class DatabaseAgent:
             return result
         except Exception as e:
             logger.error(f"数据库查询失败: {e}", exc_info=True)
-            return f"数据库查询出错: {str(e)}"
-    
-    async def reload_system_prompt(self, prompt_id: int = 8):
-        """重新加载数据库 Agent 的 system_prompt
-        
-        Args:
-            prompt_id: 要加载的 prompt ID，默认为 8
-        """
-        if not self.agent_manager:
-            logger.warning("没有 AgentManager 引用，无法重新加载 system_prompt")
-            return False
-            
-        return await self.agent_manager.reload_system_prompt_from_database(
-            agent=self.agent,
-            prompt_id=prompt_id
-        ) 
+            return f"数据库查询出错: {str(e)}" 
