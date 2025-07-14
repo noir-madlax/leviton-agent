@@ -243,7 +243,8 @@ class ProductAnalysisService(BaseDashboardService):
             },
             'segmentSummary': segment_summary,
             'segmentNames': sorted_segment_names,  # 使用排序后的segment names
-            'segmentColors': segment_colors
+            'segmentColors': segment_colors,
+            'totalProducts': sum(len(products) for products in segments_dict.values())
         }
     
     def _get_empty_response(self) -> Dict[str, Any]:
@@ -257,5 +258,6 @@ class ProductAnalysisService(BaseDashboardService):
             },
             'segmentSummary': {},
             'segmentNames': [],
-            'segmentColors': []
+            'segmentColors': [],
+            'totalProducts': 0
         } 

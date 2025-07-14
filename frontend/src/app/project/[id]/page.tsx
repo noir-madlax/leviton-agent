@@ -50,6 +50,11 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
+    extend_fields: Record<string, Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>>;
   };
   available_categories: {
     flat_categories: string[];
@@ -125,7 +130,8 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         distributions: {
           ...overview.distributions,
           packaging_types: (overview.distributions as any).packaging_types || [],
-          segments: (overview.distributions as any).segments || []
+          segments: (overview.distributions as any).segments || [],
+          extend_fields: (overview.distributions as any).extend_fields || {}
         }
       };
       

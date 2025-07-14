@@ -226,14 +226,31 @@ class PricingAnalysisService(BaseDashboardService):
                 price_distributions.append(get_price_distribution(products, segment_name))
                 brand_price_distributions.append(get_brand_price_distribution(products, segment_name))
         
+        # 生成segmentNames和segmentColors
+        segment_names = [segment_name for segment_name, _, _ in main_segments]
+        
+        # 定义颜色配色方案 - 与其他服务保持一致
+        colors = [
+            "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+            "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+            "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+        ]
+        segment_colors = colors[:len(segment_names)]
+        
         return {
             'priceDistribution': price_distributions,
-            'brandPriceDistribution': brand_price_distributions
+            'brandPriceDistribution': brand_price_distributions,
+            'segmentNames': segment_names,
+            'segmentColors': segment_colors,
+            'totalProducts': sum(len(products) for _, _, products in main_segments)
         }
     
     def _get_empty_response(self) -> Dict[str, Any]:
         """返回空的响应格式"""
         return {
             'priceDistribution': [],
-            'brandPriceDistribution': []
+            'brandPriceDistribution': [],
+            'segmentNames': [],
+            'segmentColors': [],
+            'totalProducts': 0
         } 

@@ -275,11 +275,20 @@ class PackagePreferenceService(BaseDashboardService):
         dimmer_items = overall_list[:mid_point] if overall_list else []
         switch_items = overall_list[mid_point:] if overall_list else []
         
+        # 生成segment colors - 与其他service保持一致
+        colors = [
+            "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+            "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+            "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+        ]
+        segment_colors = colors[:len(project_segments)]
+        
         return {
             'sameProductComparison': same_product_comparison,
             'packageDistribution': overall_list,
             'segmentDistributions': segment_distributions,  # 新格式：按segment分开
             'segmentNames': project_segments,  # 新格式：segment名称列表
+            'segmentColors': segment_colors,  # 新增：segment颜色列表
             'dimmerSwitches': dimmer_items,  # 旧格式兼容
             'lightSwitches': switch_items    # 旧格式兼容
         }
@@ -291,6 +300,7 @@ class PackagePreferenceService(BaseDashboardService):
             'packageDistribution': [],
             'segmentDistributions': {},
             'segmentNames': [],
+            'segmentColors': [],
             'dimmerSwitches': [],
             'lightSwitches': []
         } 

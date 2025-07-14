@@ -15,10 +15,11 @@ class FilterConfig:
         self.categories: Optional[List[str]] = None
         self.packaging_types: Optional[List[str]] = None  # 新增: 包装类型筛选
         self.segments: Optional[List[str]] = None  # 新增: 产品段筛选
+        self.extend_fields: Optional[Dict[str, Any]] = None  # 新增: 扩展字段筛选
     
     def has_filters(self) -> bool:
         """Check if any filters are set."""
-        return bool(self.categories or self.packaging_types or self.segments)
+        return bool(self.categories or self.packaging_types or self.segments or self.extend_fields)
 
 class BaseDashboardService(ABC):
     """Base service for dashboard data queries with unified ASIN filtering.
@@ -48,20 +49,18 @@ class BaseDashboardService(ABC):
         """
         try:
             result = self.supabase.table('projects').select('selected_product_asins').eq('id', self.project_id).single().execute()
-            
-            if not result.data:
-                raise ValueError(f"Project {self.project_id} not found")
-            
-            asins = result.data.get('selected_product_asins', [])
-            if not asins:
-                logger.warning(f"Project {self.project_id} has empty ASIN list")
+            if result.data and result.data.get('selected_product_asins'):
+                # 验证 ASIN 列表格式
+                asins = result.data['selected_product_asins']
+                if not isinstance(asins, list):
+                    raise ValueError(f"Invalid ASIN format for project {self.project_id}")
+                return asins
+            else:
+                logger.warning(f"No ASIN filter found for project {self.project_id}")
                 return []
-            
-            return asins
-            
         except Exception as e:
-            logger.error(f"Error getting project ASINs: {e}")
-            raise
+            logger.error(f"Error fetching project ASINs: {e}")
+            return []
     
     def _apply_asin_filter(self, query):
         """Apply ASIN filtering to any Supabase query.
@@ -80,7 +79,7 @@ class BaseDashboardService(ABC):
         self.filters.categories = categories
         logger.info(f"Category filters set: {categories}")
     
-    def set_filters(self, categories: Optional[List[str]] = None, packaging_types: Optional[List[str]] = None, segments: Optional[List[str]] = None):
+    def set_filters(self, categories: Optional[List[str]] = None, packaging_types: Optional[List[str]] = None, segments: Optional[List[str]] = None, extend_fields: Optional[Dict[str, Any]] = None):
         """Set multiple filters for additional filtering."""
         if categories is not None:
             self.filters.categories = categories
@@ -89,8 +88,10 @@ class BaseDashboardService(ABC):
             self.filters.packaging_types = packaging_types
         if segments is not None:
             self.filters.segments = segments
+        if extend_fields is not None:
+            self.filters.extend_fields = extend_fields
         
-        logger.info(f"Filters set - Categories: {categories}, Packaging: {packaging_types}, Segments: {segments}")
+        logger.info(f"Filters set - Categories: {categories}, Packaging: {packaging_types}, Segments: {segments}, Extend Fields: {extend_fields}")
     
     def _apply_category_filter(self, query):
         """Apply category filtering to any Supabase query if category filters are set."""
@@ -157,13 +158,118 @@ class BaseDashboardService(ABC):
                 query = query.eq('id', -1)
         
         return query
+
+    def get_project_extend_fields(self) -> List[Dict[str, Any]]:
+        """获取项目的扩展字段定义"""
+        try:
+            result = self.supabase.table('project_extend_fields')\
+                .select('field_name, display_name, field_type, filter_options, sort_order')\
+                .eq('project_id', self.project_id)\
+                .eq('is_active', True)\
+                .order('sort_order')\
+                .execute()
+            
+            if result.data:
+                logger.info(f"Found {len(result.data)} extend fields for project {self.project_id}")
+                return result.data
+            else:
+                logger.info(f"No extend fields found for project {self.project_id}")
+                return []
+                
+        except Exception as e:
+            logger.error(f"Error fetching project extend fields: {e}")
+            return []
+
+    def _apply_extend_fields_filter(self, query):
+        """Apply extend fields filtering to any Supabase query if extend field filters are set."""
+        if not self.filters.extend_fields:
+            return query
+        
+        try:
+            # 获取字段定义以识别默认值
+            field_definitions = self.get_project_extend_fields()
+            field_defaults = {}
+            for field_def in field_definitions:
+                field_name = field_def['field_name']
+                filter_options = field_def.get('filter_options', {})
+                default_value = filter_options.get('default') if filter_options else None
+                field_defaults[field_name] = default_value
+            
+            # 过滤掉默认值，只保留需要过滤的字段
+            active_filters = {}
+            for field_name, field_value in self.filters.extend_fields.items():
+                if field_value is not None:
+                    default_value = field_defaults.get(field_name)
+                    
+                    # 检查是否为默认值
+                    is_default = False
+                    if default_value is not None:
+                        # 处理不同类型的默认值比较
+                        if isinstance(default_value, bool) and isinstance(field_value, bool):
+                            is_default = (field_value == default_value)
+                        elif isinstance(default_value, bool) and isinstance(field_value, str):
+                            # 处理前端传递的字符串boolean值
+                            is_default = (field_value.lower() == str(default_value).lower())
+                        else:
+                            is_default = (str(field_value) == str(default_value))
+                    
+                    # 只有非默认值才加入过滤条件
+                    if not is_default:
+                        active_filters[field_name] = field_value
+            
+            # 如果没有需要过滤的字段（都是默认值），直接返回原查询
+            if not active_filters:
+                logger.info(f"All extend fields are default values, skipping extend fields filter: {self.filters.extend_fields}")
+                return query
+            
+            # 应用extend_fields过滤
+            extend_query = self.supabase.table('project_extend_data')\
+                .select('asins')\
+                .eq('project_id', self.project_id)
+            
+            # 添加扩展字段过滤条件
+            for field_name, field_value in active_filters.items():
+                # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
+                if isinstance(field_value, bool):
+                    field_value = str(field_value).lower()  # true/false
+                elif field_value == 'true':
+                    field_value = 'true'
+                elif field_value == 'false':
+                    field_value = 'false'
+                
+                # 使用正确的JSON文本提取语法 ->> 而不是 ->
+                extend_query = extend_query.eq(f'extend->>{field_name}', field_value)
+            
+            extend_result = extend_query.execute()
+            
+            if extend_result.data:
+                valid_asins = [row['asins'] for row in extend_result.data]
+                if valid_asins:
+                    query = query.in_('platform_id', valid_asins)
+                    logger.info(f"Applied extend fields filter: {active_filters}, found {len(valid_asins)} matching ASINs")
+                else:
+                    # 如果没有符合条件的产品，返回空结果
+                    query = query.eq('id', -1)
+                    logger.info(f"No products found for extend fields filter: {active_filters}")
+            else:
+                # 如果没有找到符合条件的产品，返回空结果
+                query = query.eq('id', -1)
+                logger.info(f"No products found for extend fields filter: {active_filters}")
+                
+        except Exception as e:
+            logger.error(f"Error applying extend fields filter: {e}")
+            # 出错时返回空结果
+            query = query.eq('id', -1)
+        
+        return query
     
     def _apply_combined_filters(self, query):
-        """Apply ASIN, category, and packaging filters to a query."""
+        """Apply ASIN, category, packaging, segments, and extend fields filters to a query."""
         query = self._apply_asin_filter(query)
         query = self._apply_category_filter(query)
         query = self._apply_packaging_filter(query)
-        query = self._apply_segments_filter(query) # 新增：应用产品段筛选
+        query = self._apply_segments_filter(query)
+        query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query
     
     def _get_base_product_table(self):

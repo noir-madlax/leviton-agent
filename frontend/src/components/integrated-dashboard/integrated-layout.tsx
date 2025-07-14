@@ -6,7 +6,7 @@ import { ChartContainer } from './chart/chart-container'
 import { useChartManagement } from './hooks/use-chart-management'
 import { useDashboardNavigation } from './hooks/use-dashboard-navigation'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, MessageSquare, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowLeft, MessageSquare, ChevronLeft, ChevronRight, Filter } from 'lucide-react'
 import Link from 'next/link'
 import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
 import { ChartData } from './shared/types'
@@ -53,6 +53,11 @@ interface ProjectOverviewData {
       count: number
       percentage: number
     }>
+    extend_fields: Record<string, Array<{
+      name: string
+      count: number
+      percentage: number
+    }>>
   }
   available_categories: {
     flat_categories: string[];
@@ -158,9 +163,10 @@ export function IntegratedLayout({
                 {onToggleFilter && (
                   <button
                     onClick={onToggleFilter}
-                    className="text-xs text-blue-600 hover:text-blue-800 cursor-pointer transition-colors"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 hover:text-blue-800 text-sm font-medium transition-all duration-200 border border-blue-200 hover:border-blue-300 shadow-sm hover:shadow-md"
                   >
-                    {isFilterExpanded ? 'Hide filters' : 'Click to filter product category '}
+                    <Filter className="h-3.5 w-3.5" />
+                    {isFilterExpanded ? 'Hide filters' : 'Click to filter product category'}
                   </button>
                 )}
               </div>

@@ -74,6 +74,7 @@ class ProductAnalysisResponse(BaseModel):
     segmentNames: List[str] = Field(description="List of segment names")
     segmentColors: List[str] = Field(description="Colors for each segment")
     project_id: str = Field(description="Project ID used for filtering")
+    total_products: int = Field(description="Total number of products analyzed")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 
@@ -119,7 +120,10 @@ class PricingAnalysisResponse(BaseModel):
     """Response model for pricing analysis API."""
     priceDistribution: List[PriceDistribution] = Field(description="Price distribution data")
     brandPriceDistribution: List[BrandPriceDistribution] = Field(description="Brand price distribution data")
+    segmentNames: List[str] = Field(description="List of segment names")
+    segmentColors: List[str] = Field(description="Colors for each segment")
     project_id: str = Field(description="Project ID used for filtering")
+    total_products: int = Field(description="Total number of products analyzed")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 
@@ -173,9 +177,11 @@ class PackagePreferenceResponse(BaseModel):
     packageDistribution: List[PackageDistributionItem] = Field(description="Overall package distribution")
     segmentDistributions: Optional[Dict[str, List[PackageDistributionItem]]] = Field(default={}, description="Package distribution by segment")
     segmentNames: Optional[List[str]] = Field(default=[], description="List of segment names")
+    segmentColors: Optional[List[str]] = Field(default=[], description="Colors for each segment")
     dimmerSwitches: List[PackageDistributionItem] = Field(description="Dimmer switches package distribution (legacy)")
     lightSwitches: List[PackageDistributionItem] = Field(description="Light switches package distribution (legacy)")
     project_id: str = Field(description="Project ID used for filtering")
+    total_products: int = Field(description="Total number of products analyzed")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 
@@ -220,6 +226,8 @@ class ReviewInsightsResponse(BaseModel):
     painPoints: List[PainPoint]
     customerLikes: List[CustomerLike]
     underservedUseCases: List[UnderservedUseCase]
+    project_id: str = Field(description="Project ID used for filtering")
+    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 
 # ==================== Competitor Analysis Models ====================

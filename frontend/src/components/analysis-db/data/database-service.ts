@@ -1,4 +1,5 @@
 import { supabase } from '@/lib/supabase'
+import { ExtendFieldDefinition } from '../types/filters'
 
 export interface ProductData {
   platform_id: string
@@ -130,7 +131,7 @@ export interface ProductAnalysisData {
 export class DatabaseService {
   
   // 🔑 Get top 10 brand category revenue data with project filtering via backend API
-  async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
     segmentNames: string[]
     segmentColors: string[]
@@ -158,6 +159,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
@@ -177,7 +184,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get product analysis data with project filtering via backend API
-  async getProductAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getProductAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     priceVsRevenue: ProductAnalysisData['priceVsRevenue']
     topProducts: {
       segments: Record<string, any[]>
@@ -215,6 +222,12 @@ export class DatabaseService {
       if (segmentFilters && segmentFilters.length > 0) {
         const segmentsParam = segmentFilters.join(',')
         url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
       }
       
       const response = await fetch(url)
@@ -281,7 +294,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get pricing analysis data with project filtering via backend API
-  async getPricingAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getPricingAnalysisDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     priceDistribution: Array<{
       category: string
       skuPrices: number[]
@@ -338,6 +351,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
@@ -352,7 +371,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get market insights data with project filtering via backend API
-  async getMarketInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getMarketInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     segmentRevenue: {
       segments?: Array<{
         segment: string
@@ -398,6 +417,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
@@ -412,7 +437,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get package preference data with project filtering via backend API
-  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     sameProductComparison: Array<{
       productName: string
       packSize: string
@@ -473,6 +498,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
@@ -487,7 +518,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get review insights data with project filtering via backend API
-  async getReviewInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getReviewInsightsDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     painPoints: Array<{
       aspect: string
       category: string
@@ -543,6 +574,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       const response = await fetch(url)
       
       if (!response.ok) {
@@ -557,7 +594,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get competitor analysis data with project filtering via backend API
-  async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string, packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string, packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     targetProducts: string[]
     matrixData: Array<{
       product: string
@@ -597,6 +634,12 @@ export class DatabaseService {
         url += `&selected_asins=${encodeURIComponent(selectedAsins)}`
       }
       
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
@@ -623,7 +666,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get all review data for project filtering via backend API
-  async getAllReviewDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<Record<string, Array<{
+  async getAllReviewDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<Record<string, Array<{
     id: string
     productId: string
     text: string
@@ -656,6 +699,12 @@ export class DatabaseService {
       if (segmentFilters && segmentFilters.length > 0) {
         const segmentsParam = segmentFilters.join(',')
         url += `&segments=${encodeURIComponent(segmentsParam)}`
+      }
+      
+      // Add extend fields if provided
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
       }
       
       const response = await fetch(url)
@@ -992,7 +1041,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get project overview data with optional filters
-  async getProjectOverview(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[]): Promise<{
+  async getProjectOverview(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     project_name: string
     created_at: string
     stats: {
@@ -1048,7 +1097,12 @@ export class DatabaseService {
         url += `&segments=${encodeURIComponent(segmentsParam)}`
       }
       
-      console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', { categoryFilters, packagingTypeFilters, segmentFilters })
+      if (extendFields && Object.keys(extendFields).length > 0) {
+        const extendFieldsParam = JSON.stringify(extendFields)
+        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
+      console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', { categoryFilters, packagingTypeFilters, segmentFilters, extendFields })
       
       const response = await fetch(url)
       
@@ -1167,6 +1221,25 @@ export class DatabaseService {
     )
 
     return productsWithCounts.sort((a, b) => b.actual_review_count - a.actual_review_count)
+  }
+
+  // 🔑 Get project extend fields
+  async getProjectExtendFields(projectId: string): Promise<ExtendFieldDefinition[]> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/extend-fields`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return result.extend_fields || []
+    } catch (error) {
+      console.error('Error fetching project extend fields:', error)
+      return []
+    }
   }
 }
 

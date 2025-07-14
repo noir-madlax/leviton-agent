@@ -7,7 +7,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Badge } from "@/components/ui/badge"
 import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
 import { databaseService } from '@/components/analysis-db/data/database-service'
-import { PACKAGING_TYPE_OPTIONS } from '@/components/analysis-db/types/filters'
+import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
+
+// 包装类型选项
+const PACKAGING_TYPE_OPTIONS = [
+  { value: 'individual', label: 'Individual/Unknown' },
+  { value: 'package', label: 'Package (Multi-pack)' }
+] as const
 
 interface CategoryFilterAndProjectScopeProps {
   projectId: string | null
@@ -22,8 +28,10 @@ interface ProjectFilters {
   asins: string[]
   packaging_types: string[]  // 新增: 包装类型筛选
   segments: string[]  // 新增: 产品段筛选
+  extend_fields: Record<string, any>  // 新增: 扩展字段筛选
 }
 
+// 添加项目概览数据接口
 interface ProjectOverviewData {
   project_name: string;
   created_at: string;
@@ -54,6 +62,11 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
+    extend_fields: Record<string, Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>>;
   };
   available_categories: {
     flat_categories: string[];
@@ -73,7 +86,7 @@ interface ProjectOverviewData {
 export function CategoryFilterAndProjectScope({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [], packaging_types: [], segments: [] },
+  initialFilters = { categories: [], asins: [], packaging_types: [], segments: [], extend_fields: {} },
   preloadedData,
   isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
@@ -102,6 +115,8 @@ export function CategoryFilterAndProjectScope({
   const [appliedPackagingTypes, setAppliedPackagingTypes] = useState<string[]>(initialFilters.packaging_types)
   const [pendingSegments, setPendingSegments] = useState<string[]>(initialFilters.segments)
   const [appliedSegments, setAppliedSegments] = useState<string[]>(initialFilters.segments)
+  const [pendingExtendFields, setPendingExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
+  const [appliedExtendFields, setAppliedExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
   const [filterLoading, setFilterLoading] = useState(false)
 
   // 添加Select状态控制
@@ -126,7 +141,8 @@ export function CategoryFilterAndProjectScope({
         distributions: {
           ...overview.distributions,
           packaging_types: (overview.distributions as any).packaging_types || [],
-          segments: (overview.distributions as any).segments || []
+          segments: (overview.distributions as any).segments || [],
+          extend_fields: (overview.distributions as any).extend_fields || {}
         }
       }
       
@@ -216,7 +232,8 @@ export function CategoryFilterAndProjectScope({
       const categoryFilters = appliedCategories.length > 0 ? appliedCategories : undefined
       const packagingFilters = appliedPackagingTypes.length > 0 ? appliedPackagingTypes : undefined
       const segmentFilters = appliedSegments.length > 0 ? appliedSegments : undefined
-      const overview = await databaseService.getProjectOverview(projectId, categoryFilters, packagingFilters, segmentFilters)
+      const extendFields = Object.keys(appliedExtendFields).length > 0 ? appliedExtendFields : undefined
+      const overview = await databaseService.getProjectOverview(projectId, categoryFilters, packagingFilters, segmentFilters, extendFields)
       
       // 确保包含所有必需字段，提供默认值
       const completeOverview: ProjectOverviewData = {
@@ -224,7 +241,8 @@ export function CategoryFilterAndProjectScope({
         distributions: {
           ...overview.distributions,
           packaging_types: (overview.distributions as any).packaging_types || [],
-          segments: (overview.distributions as any).segments || []
+          segments: (overview.distributions as any).segments || [],
+          extend_fields: (overview.distributions as any).extend_fields || {}
         }
       }
       
@@ -235,7 +253,7 @@ export function CategoryFilterAndProjectScope({
     } finally {
       setOverviewLoading(false)
     }
-  }, [projectId, appliedCategories, appliedPackagingTypes, appliedSegments])
+  }, [projectId, appliedCategories, appliedPackagingTypes, appliedSegments, appliedExtendFields])
 
   // Load project overview when filters change - 重新加载项目概览数据
   useEffect(() => {
@@ -299,12 +317,14 @@ export function CategoryFilterAndProjectScope({
     setAppliedCategories(pendingCategories)
     setAppliedPackagingTypes(pendingPackagingTypes)
     setAppliedSegments(pendingSegments)
+    setAppliedExtendFields(pendingExtendFields)
     if (onFiltersChange) {
       onFiltersChange({
         categories: pendingCategories,
         asins: [],
         packaging_types: pendingPackagingTypes,
-        segments: pendingSegments
+        segments: pendingSegments,
+        extend_fields: pendingExtendFields
       })
     }
   }
@@ -316,6 +336,8 @@ export function CategoryFilterAndProjectScope({
     setAppliedPackagingTypes([])
     setPendingSegments([])
     setAppliedSegments([])
+    setPendingExtendFields({})
+    setAppliedExtendFields({})
     // 重置所有Select组件状态
     setCategorySelectKey(prev => prev + 1)
     setPackagingSelectKey(prev => prev + 1)
@@ -325,34 +347,23 @@ export function CategoryFilterAndProjectScope({
         categories: [],
         asins: [],
         packaging_types: [],
-        segments: []
+        segments: [],
+        extend_fields: {}
       })
     }
   }
 
   const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories) || 
                           JSON.stringify(pendingPackagingTypes) !== JSON.stringify(appliedPackagingTypes) ||
-                          JSON.stringify(pendingSegments) !== JSON.stringify(appliedSegments)
-  const hasActiveFilters = appliedCategories.length > 0 || appliedPackagingTypes.length > 0 || appliedSegments.length > 0
+                          JSON.stringify(pendingSegments) !== JSON.stringify(appliedSegments) ||
+                          JSON.stringify(pendingExtendFields) !== JSON.stringify(appliedExtendFields)
+  const hasActiveFilters = appliedCategories.length > 0 || appliedPackagingTypes.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0
 
   if (!projectId) {
     return null
   }
 
-  // Format categories text
-  const categoriesText = projectData?.distributions.categories
-    ?.map(category => `${category.name} (${category.percentage}%)`)
-    .join(', ') || ''
 
-  // Format packaging types text
-  const packagingText = projectData?.distributions.packaging_types
-    ?.map(packaging => `${packaging.name} (${packaging.percentage}%)`)
-    .join(', ') || ''
-
-  // Format segments text  
-  const segmentsText = projectData?.distributions.segments
-    ?.map(segment => `${segment.name} (${segment.percentage}%)`)
-    .join(', ') || ''
 
   return (
     <div className="mb-4">
@@ -422,11 +433,24 @@ export function CategoryFilterAndProjectScope({
                     <SelectItem value="all">All Packaging Types</SelectItem>
                     {PACKAGING_TYPE_OPTIONS
                       .filter(option => !pendingPackagingTypes.includes(option.value))
-                      .map((option) => (
-                        <SelectItem key={option.value} value={option.value}>
-                          {option.label}
-                        </SelectItem>
-                      ))}
+                      .map((option) => {
+                        // 从distributions数据中查找对应的计数信息
+                        const distributionData = projectData?.distributions.packaging_types?.find(
+                          item => item.name.toLowerCase() === option.value || 
+                                  (option.value === 'individual' && item.name.toLowerCase() === 'individual') ||
+                                  (option.value === 'package' && item.name.toLowerCase() === 'package')
+                        )
+                        
+                        const displayLabel = distributionData 
+                          ? `${option.label} (${distributionData.count} - ${distributionData.percentage}%)`
+                          : option.label
+                        
+                        return (
+                          <SelectItem key={option.value} value={option.value}>
+                            {displayLabel}
+                          </SelectItem>
+                        )
+                      })}
                   </SelectContent>
                 </Select>
               </div>
@@ -442,14 +466,34 @@ export function CategoryFilterAndProjectScope({
                     <SelectItem value="all">All Segments</SelectItem>
                     {availableSegments
                       .filter(segment => !pendingSegments.includes(segment))
-                      .map((segment) => (
-                        <SelectItem key={segment} value={segment}>
-                          {segment}
-                        </SelectItem>
-                      ))}
+                      .map((segment) => {
+                        // 从distributions数据中查找对应的计数信息
+                        const distributionData = projectData?.distributions.segments?.find(
+                          item => item.name === segment
+                        )
+                        
+                        const displayLabel = distributionData 
+                          ? `${segment} (${distributionData.count} - ${distributionData.percentage}%)`
+                          : segment
+                        
+                        return (
+                          <SelectItem key={segment} value={segment}>
+                            {displayLabel}
+                          </SelectItem>
+                        )
+                      })}
                   </SelectContent>
                 </Select>
               </div>
+
+              {/* Extend Fields Filter */}
+              <DynamicExtendFieldsFilter
+                projectId={projectId}
+                extendFields={pendingExtendFields}
+                onFilterChange={setPendingExtendFields}
+                className="flex-wrap"
+                projectData={projectData}
+              />
 
               {/* Apply button */}
               <Button
@@ -466,7 +510,7 @@ export function CategoryFilterAndProjectScope({
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingPackagingTypes.length === 0 && pendingSegments.length === 0}
+                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingPackagingTypes.length === 0 && pendingSegments.length === 0 && Object.keys(pendingExtendFields).length === 0}
                 className="h-8"
               >
                 <RotateCcw className="w-3 h-3 mr-1" />
@@ -476,18 +520,18 @@ export function CategoryFilterAndProjectScope({
               {/* Status indicator */}
               {hasPendingChanges && (
                 <div className="text-xs text-orange-600">
-                  {pendingCategories.length + pendingPackagingTypes.length + pendingSegments.length} pending changes
+                  {pendingCategories.length + pendingPackagingTypes.length + pendingSegments.length + Object.keys(pendingExtendFields).length} pending changes
                 </div>
               )}
               {hasActiveFilters && !hasPendingChanges && (
                 <div className="text-xs text-green-600">
-                  {appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length} filter{(appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length) > 1 ? 's' : ''} applied
+                  {appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length + Object.keys(appliedExtendFields).length} filter{(appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length + Object.keys(appliedExtendFields).length) > 1 ? 's' : ''} applied
                 </div>
               )}
             </div>
 
             {/* Pending filters display */}
-            {(pendingCategories.length > 0 || pendingPackagingTypes.length > 0 || pendingSegments.length > 0) && (
+            {(pendingCategories.length > 0 || pendingPackagingTypes.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0) && (
               <div className="pt-2 border-t border-gray-100">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-600">
@@ -553,6 +597,28 @@ export function CategoryFilterAndProjectScope({
                       />
                     </Badge>
                   ))}
+                  {Object.entries(pendingExtendFields).map(([fieldName, value]) => (
+                    <Badge
+                      key={`extend-${fieldName}`}
+                      variant={hasPendingChanges ? "outline" : "secondary"}
+                      className={`text-xs flex items-center gap-1 ${
+                        hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                      }`}
+                    >
+                      ⚙️ {fieldName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
+                      <X
+                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                        onClick={(e) => {
+                          console.log('[FILTER-REMOVE] Clicking X for extend field badge:', fieldName)
+                          e.stopPropagation()
+                          e.preventDefault()
+                          const newFields = { ...pendingExtendFields }
+                          delete newFields[fieldName]
+                          setPendingExtendFields(newFields)
+                        }}
+                      />
+                    </Badge>
+                  ))}
                 </div>
               </div>
             )}
@@ -614,33 +680,8 @@ export function CategoryFilterAndProjectScope({
                   </div>
                 </div>
 
-                {/* Distribution information - Compact layout */}
-                <div className="space-y-1 text-sm">
-                  {projectData.distributions.categories.length > 0 && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Categories:</span>
-                      <span className="text-gray-600 flex-1 text-xs">
-                        {categoriesText}
-                      </span>
-                    </div>
-                  )}
-                  {projectData.distributions.packaging_types.length > 0 && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Packaging Types:</span>
-                      <span className="text-gray-600 flex-1 text-xs">
-                        {packagingText}
-                      </span>
-                    </div>
-                  )}
-                  {projectData.distributions.segments.length > 0 && (
-                    <div className="flex items-start gap-2">
-                      <span className="font-medium text-gray-700 flex-shrink-0 text-xs">Segments:</span>
-                      <span className="text-gray-600 flex-1 text-xs">
-                        {segmentsText}
-                      </span>
-                    </div>
-                  )}
-                </div>
+
+
               </>
             ) : (
               <div className="text-center py-4">

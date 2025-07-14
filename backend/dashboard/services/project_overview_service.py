@@ -242,11 +242,69 @@ class ProjectOverviewService(BaseDashboardService):
         categories.sort(key=lambda x: x['count'], reverse=True)
         packaging_types.sort(key=lambda x: x['count'], reverse=True)
         
+        # Calculate extend fields distribution
+        extend_fields_distributions = {}
+        try:
+            # 获取项目的extend fields定义
+            extend_fields_defs = self.get_project_extend_fields()
+            
+            if extend_fields_defs and products:
+                # 获取filtered products对应的extend fields数据
+                filtered_platform_ids = [p['platform_id'] for p in products]
+                
+                extend_data_query = self.supabase.table('project_extend_data').select(
+                    'asins, extend'
+                ).eq('project_id', self.project_id)\
+                .in_('asins', filtered_platform_ids)\
+                .execute()
+                
+                if extend_data_query.data:
+                    # 为每个extend field计算分布
+                    for field_def in extend_fields_defs:
+                        field_name = field_def['field_name']
+                        field_type = field_def['field_type']
+                        
+                        field_counts = {}
+                        for data_row in extend_data_query.data:
+                            extend_data = data_row.get('extend', {})
+                            field_value = extend_data.get(field_name)
+                            
+                            if field_value is not None:
+                                # 对于boolean类型，转换为更友好的显示格式
+                                if field_type == 'boolean':
+                                    if field_value == 'true' or field_value is True:
+                                        display_value = field_def['filter_options'].get('true_label', 'Yes')
+                                    else:
+                                        display_value = field_def['filter_options'].get('false_label', 'No')
+                                else:
+                                    display_value = str(field_value)
+                                
+                                field_counts[display_value] = field_counts.get(display_value, 0) + 1
+                        
+                        # 计算百分比
+                        total_field_count = sum(field_counts.values())
+                        field_distribution = [
+                            {
+                                'name': value,
+                                'count': count,
+                                'percentage': round((count / total_field_count) * 100, 1) if total_field_count > 0 else 0
+                            }
+                            for value, count in field_counts.items()
+                        ]
+                        field_distribution.sort(key=lambda x: x['count'], reverse=True)
+                        
+                        extend_fields_distributions[field_name] = field_distribution
+                        
+        except Exception as e:
+            logger.error(f"Error calculating extend fields distribution: {e}")
+            extend_fields_distributions = {}
+        
         return {
             'sources': sources,
             'categories': categories,
             'packaging_types': packaging_types,
-            'segments': segments
+            'segments': segments,
+            'extend_fields': extend_fields_distributions
         }
     
     def _get_available_categories(self) -> Dict[str, Any]:
