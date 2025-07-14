@@ -661,6 +661,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
         break
       case 'pricing-analysis':
         loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        // 同时加载productAnalysis数据以支持散点图
+        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
         break
       case 'market-insights':
         loadSpecificData('marketInsights', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
@@ -917,7 +919,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
           <PageDivider />
           
           <div className="flex-1 overflow-y-auto">
-            <div className="p-6">
+            <div className="p-6 pt-0">
                 <DashboardHeader 
                   onProjectChange={handleProjectChange} 
                   selectedProjectId={selectedProjectId}
@@ -961,30 +963,22 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                       </TabsContent>
                       
                       <TabsContent value="product-analysis">
-                        {data.productAnalysis ? (
-                          <ProductAnalysis 
-                            data={data.productAnalysis} 
-                            productLists={productLists}
-                          />
-                        ) : loadingStates.productAnalysis ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Product Analysis...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Product Analysis data
-                          </div>
-                        )}
+                        <ProductAnalysis />
                       </TabsContent>
                       
                       <TabsContent value="pricing-analysis">
                         {data.pricingAnalysis ? (
                           <PricingAnalysis 
-                            data={data.pricingAnalysis}
+                            data={{
+                              ...data.pricingAnalysis,
+                              // 传递productAnalysis数据给散点图使用
+                              topProducts: data.productAnalysis?.topProducts,
+                              segmentSummary: data.productAnalysis?.segmentSummary,
+                              segmentNames: data.productAnalysis?.segmentNames
+                            }}
                             productLists={productLists}
                           />
-                        ) : loadingStates.pricingAnalysis ? (
+                        ) : (loadingStates.pricingAnalysis || loadingStates.productAnalysis) ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                             <span className="ml-2">Loading Pricing Analysis...</span>

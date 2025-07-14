@@ -220,7 +220,7 @@ export function MarketInsights({ data, productLists }: MarketInsightsProps) {
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📊 Market Insights</h2>
+      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">Product Deep Dive</h2>
 
       <div className="mb-4">
         <MetricTypeSelector onChange={setMetricType} value={metricType} />

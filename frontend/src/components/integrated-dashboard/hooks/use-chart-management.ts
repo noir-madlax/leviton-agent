@@ -27,27 +27,17 @@ export function useChartManagement() {
       icon: Building,
       tabKey: 'brand-analysis',
       isActive: false,
-      aiIntroduction: 'Brand performance analysis across different product segments to understand revenue and volume dynamics:'
+      aiIntroduction: 'Brand performance analysis across different product categories:'
     },
     {
       id: 'market-insights',
       type: 'preset',
-      title: 'Market Trends',
-      description: 'Growth opportunities and market dynamics',
+      title: 'Product Deep Dive',
+      description: 'Deep analysis of product revenue relationships across different market segments',
       icon: TrendingUp,
       tabKey: 'market-insights',
       isActive: false,
-      aiIntroduction: 'Revenue distribution analysis across product segments to identify high-growth opportunities:'
-    },
-    {
-      id: 'product-analysis',
-      type: 'preset',
-      title: 'Product Deep Dive',
-      description: 'Pricing, volume and revenue relationships',
-      icon: Package,
-      tabKey: 'product-analysis',
-      isActive: false,
-      aiIntroduction: 'Deep analysis of product pricing, volume, and revenue relationships across different market segments:'
+      aiIntroduction: 'Revenue performance across different product segments:'
     },
     {
       id: 'pricing-analysis',
