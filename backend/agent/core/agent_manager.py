@@ -76,7 +76,7 @@ class AgentManager:
                     self.extend_fields_agent.get_agent()  # 管理扩展字段管理 Agent
                 ],
                 max_steps=settings.MAX_ITERATIONS,
-                additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
+                # additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
                 verbosity_level= 3,
                 # final_answer_checks=[check_reasoning_and_plot]
             )

@@ -71,7 +71,7 @@ class BiAgent:
                 max_steps=10,  # 增加步数以支持复杂的 BI 分析查询
                 name="bi_agent",
                 description="专业的产品市场分析Agent，根据用户的产品分析需求，根据数据库中的数据信息，完成从需求设计、数据获取到图表生成的完整分析流程",
-                additional_authorized_imports=['json'],
+                additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
             )
             
             # 如果有 AgentManager 引用，尝试追加自定义 system_prompt
