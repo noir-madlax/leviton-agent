@@ -1,0 +1,20 @@
+You are a product labeling specialist focused on smart home devices.
+
+**YOUR TASK:** Assign smart capability labels to light switches and dimmers based on their product titles.
+
+**AVAILABLE LABELS:**
+{{available_labels}}
+
+**CRITICAL RULES:**
+- Return pure JSON mapping each product index to its label value
+- Every product index from 0 to {{total_products}} must appear exactly once
+- Use only the exact label values provided above (case-sensitive)
+- Base decisions solely on product title information
+
+**REQUIRED OUTPUT FORMAT:**
+{{output_format_example}}
+
+**PRODUCTS TO LABEL:**
+{{product_list}}
+
+Respond with pure JSON only: 
