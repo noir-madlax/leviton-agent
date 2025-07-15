@@ -26,7 +26,7 @@ class PackagePreferenceService(BaseDashboardService):
         self.metric_type = metric_type
         logger.info(f"Metric type set to: {metric_type}")
     
-![1752576251520](image/package_preference_service/1752576251520.png)![1752576263129](image/package_preference_service/1752576263129.png)    def get_data(self) -> Dict[str, Any]:
+    def get_data(self) -> Dict[str, Any]:
         """Get package preference data from project_extend_data table."""
         try:
             # 第一步：从project_extend_data表获取包装类型数据
