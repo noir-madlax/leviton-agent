@@ -437,7 +437,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get package preference data with project filtering via backend API
-  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
+  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string): Promise<{
     sameProductComparison: Array<{
       productName: string
       packSize: string
@@ -447,19 +447,23 @@ export class DatabaseService {
       unitPrice: number
     }>
     packageDistribution: Array<{
+      name: string
       packSize: string
-      count: number
-      percentage: number
-      salesVolume: number
-    }>
-    segmentDistributions?: Record<string, Array<{
-      packSize: string
-      count: number
-      percentage: number
-      salesVolume: number
+      value: number
       salesRevenue: number
+      count: number
+      percentage: number
+    }>
+    segmentDistributions: Record<string, Array<{
+      name: string
+      packSize: string
+      value: number
+      salesRevenue: number
+      count: number
+      percentage: number
     }>>
-    segmentNames?: string[]
+    segmentNames: string[]
+    segmentColors: string[]
     dimmerSwitches: Array<{
       packSize: string
       count: number
@@ -502,6 +506,11 @@ export class DatabaseService {
       if (extendFields && Object.keys(extendFields).length > 0) {
         const extendFieldsParam = JSON.stringify(extendFields)
         url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
+      }
+      
+      // Add metric type if provided
+      if (metricType) {
+        url += `&metric_type=${encodeURIComponent(metricType)}`
       }
       
       const response = await fetch(url)

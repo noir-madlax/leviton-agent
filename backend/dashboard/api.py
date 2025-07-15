@@ -364,7 +364,8 @@ async def get_package_preference(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
-    extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
+    extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters"),
+    metric_type: Optional[str] = Query("revenue", description="Metric type for calculations: 'revenue' or 'count'")
 ):
     """Get package preference data for a specific project.
     
@@ -389,6 +390,10 @@ async def get_package_preference(
                 raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
         
         service = PackagePreferenceService(project_id)
+        
+        # Set metric type if provided
+        if metric_type:
+            service.set_metric_type(metric_type)
         
         # Apply filters if provided
         if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:

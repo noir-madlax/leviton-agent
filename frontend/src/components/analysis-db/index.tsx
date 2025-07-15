@@ -16,7 +16,7 @@ import { ProductPanel } from "@/components/analysis-db/panels/product-panel"
 import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
 import { databaseService, type ProductAnalysisData } from '@/components/analysis-db/data/database-service'
 import { PageDivider } from '@/components/ui/page-divider'
-import { ProjectFilters } from './types/filters'
+import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
 
 interface DashboardData {
   brandAnalysis: {
@@ -135,19 +135,23 @@ interface DashboardData {
       unitPrice: number
     }>
     packageDistribution: Array<{
+      name: string
       packSize: string
+      value: number
+      salesRevenue: number
       count: number
       percentage: number
-      salesVolume: number
     }>
     segmentDistributions: Record<string, Array<{
+      name: string
       packSize: string
+      value: number
+      salesRevenue: number
       count: number
       percentage: number
-      salesVolume: number
-      salesRevenue: number
     }>>
     segmentNames: string[]
+    segmentColors: string[]
     dimmerSwitches: Array<{
       packSize: string
       count: number
@@ -391,7 +395,7 @@ async function fetchMarketInsightsData(projectId?: string, categoryFilters?: str
   }
 }
 
-async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string) {
   try {
     if (!projectId) {
       console.log('⏳ Package Preference waiting for project selection...');
@@ -400,6 +404,7 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
         packageDistribution: [],
         segmentDistributions: {},
         segmentNames: [],
+        segmentColors: [],
         dimmerSwitches: [], 
         lightSwitches: [] 
       };
@@ -419,8 +424,8 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
-    console.log(`�� Package Preference data received: ${data.packageDistribution.length} package distributions`);
+    const data = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, metricType);
+    console.log(`✅ Package Preference data received: ${data.packageDistribution.length} package distributions`);
     
     return data;
   } catch (error) {
@@ -430,6 +435,7 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
       packageDistribution: [],
       segmentDistributions: {},
       segmentNames: [],
+      segmentColors: [],
       dimmerSwitches: [],
       lightSwitches: []
     };
@@ -552,7 +558,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
   const [currentActiveTab, setCurrentActiveTab] = useState<string>('brand-analysis')
   // 使用传入的filters，提供默认值，并确保引用稳定性
-  const appliedFilters = useMemo(() => filters || { categories: [], asins: [] }, [filters]);
+  const appliedFilters = useMemo(() => filters || DEFAULT_FILTERS, [filters]);
 
   
   // 为每个数据部分单独管理加载状态
@@ -1026,6 +1032,11 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                           <PackagePreferenceAnalysis 
                             data={data.packagePreference}
                             productLists={productLists}
+                            projectId={selectedProjectId || undefined}
+                            categoryFilters={appliedFilters.categories}
+                            packagingTypeFilters={appliedFilters.packaging_types || []}
+                            segmentFilters={appliedFilters.segments || []}
+                            extendFields={appliedFilters.extend_fields || {}}
                           />
                         ) : loadingStates.packagePreference ? (
                           <div className="flex items-center justify-center py-8">

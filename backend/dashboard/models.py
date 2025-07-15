@@ -164,11 +164,13 @@ class SameProductComparison(BaseModel):
 
 class PackageDistributionItem(BaseModel):
     """Package distribution item model."""
+    name: Optional[str] = Field(description="Package type name")
     packSize: str = Field(description="Pack size label")
+    value: float = Field(description="Revenue value")
+    salesRevenue: float = Field(description="Sales revenue")
     count: int = Field(description="Product count")
     percentage: float = Field(description="Percentage")
-    salesVolume: float = Field(description="Sales volume")
-    salesRevenue: Optional[float] = Field(default=0, description="Sales revenue")
+    salesVolume: Optional[float] = Field(default=0, description="Sales volume (legacy compatibility)")
 
 
 class PackagePreferenceResponse(BaseModel):
