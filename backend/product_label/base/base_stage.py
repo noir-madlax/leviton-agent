@@ -1,8 +1,8 @@
 """
-Smart capability labeling stage implementation
+Base stage implementation for LLM-based product labeling
 
-This module defines a SmartCapabilityStage that processes product batches
-and assigns smart capability labels based on product titles.
+This module provides a generic stage that can handle any labeling task
+by using configurable prompt templates and validation logic.
 """
 
 import json
@@ -11,26 +11,18 @@ from pathlib import Path
 from typing import Dict, List
 
 from core.utils.llm_utils import safe_llm_call, extract_json, create_retry_error_details, ValidationResult
-from .models import SmartCapabilityContext, SmartCapabilityResult
+from .models import LabelingContext, LabelingResult
 
 logger = logging.getLogger(__name__)
 
-# Path to prompt template files
-_PROMPTS_DIR = Path(__file__).parent / "prompts"
-_SMART_CAPABILITY_PROMPT_PATH = _PROMPTS_DIR / "smart_capability_prompt_v0.txt"
-_RETRY_PROMPT_PATH = (
+# Path to shared retry prompt template
+_SHARED_RETRY_PROMPT_PATH = (
     Path(__file__).resolve().parents[3] / "core" / "prompts" / "shared_retry_prompt_v0.txt"
 )
 
-# Load prompt templates at module level
+# Load retry prompt template at module level
 try:
-    with open(_SMART_CAPABILITY_PROMPT_PATH, 'r', encoding='utf-8') as f:
-        _SMART_CAPABILITY_PROMPT_TEMPLATE = f.read()
-except FileNotFoundError:
-    raise RuntimeError(f"Required prompt template not found: {_SMART_CAPABILITY_PROMPT_PATH}")
-
-try:
-    with open(_RETRY_PROMPT_PATH, 'r', encoding='utf-8') as f:
+    with open(_SHARED_RETRY_PROMPT_PATH, 'r', encoding='utf-8') as f:
         _RETRY_PROMPT_TEMPLATE = f.read()
 except FileNotFoundError:
     # Fallback to a simple retry template if the shared one is not found
@@ -41,19 +33,37 @@ The previous response failed validation with the following issues:
 Please correct these issues and provide a valid response.
 """
 
-class SmartCapabilityStage:
-    """Stage for processing smart capability labeling"""
+class BaseStage:
+    """Generic stage for processing product labeling through LLM"""
     
-    def __init__(self, max_retries: int = 3):
+    def __init__(self, prompt_template_path: str, max_retries: int = 3):
         self.max_retries = max_retries
+        self.prompt_template_path = Path(prompt_template_path)
+        self._prompt_template = self._load_prompt_template()
         
-    async def execute(self, context: SmartCapabilityContext) -> SmartCapabilityResult:
-        """Execute smart capability labeling for a batch of products"""
+    def _load_prompt_template(self) -> str:
+        """Load the prompt template from file"""
+        try:
+            with open(self.prompt_template_path, 'r', encoding='utf-8') as f:
+                return f.read()
+        except FileNotFoundError:
+            raise RuntimeError(f"Required prompt template not found: {self.prompt_template_path}")
+        
+    async def execute(self, context: LabelingContext) -> LabelingResult:
+        """Execute labeling for a batch of products"""
         
         logger.info(f"Processing batch {context.batch_id} with {len(context.products)} products")
         
         # Build the prompt
         prompt = self._build_prompt(context)
+        
+        # Log the full prompt on first batch for manual inspection
+        if context.batch_id == 1:
+            logger.info("="*80)
+            logger.info("FULL PROMPT FOR MANUAL INSPECTION:")
+            logger.info("="*80)
+            logger.info(prompt)
+            logger.info("="*80)
         
         # Execute with retries
         for attempt in range(1, self.max_retries + 1):
@@ -77,7 +87,7 @@ class SmartCapabilityStage:
                 logger.warning(f"Attempt {attempt} failed for batch {context.batch_id}: {e}")
                 if attempt == self.max_retries:
                     logger.error(f"All attempts failed for batch {context.batch_id}")
-                    return SmartCapabilityResult(
+                    return LabelingResult(
                         assignments={},
                         batch_id=context.batch_id,
                         success=False,
@@ -86,7 +96,7 @@ class SmartCapabilityStage:
                     )
                     
         # This should never be reached, but just in case
-        return SmartCapabilityResult(
+        return LabelingResult(
             assignments={},
             batch_id=context.batch_id,
             success=False,
@@ -94,7 +104,7 @@ class SmartCapabilityStage:
             attempts=self.max_retries
         )
         
-    def _build_prompt(self, context: SmartCapabilityContext) -> str:
+    def _build_prompt(self, context: LabelingContext) -> str:
         """Build the prompt for batch processing"""
         
         # Format available labels
@@ -113,7 +123,7 @@ class SmartCapabilityStage:
         ])
         
         # Replace template variables
-        prompt = _SMART_CAPABILITY_PROMPT_TEMPLATE.replace(
+        prompt = self._prompt_template.replace(
             "{{available_labels}}", labels_section
         ).replace(
             "{{output_format_example}}", output_format_example
@@ -141,7 +151,7 @@ class SmartCapabilityStage:
         example_json = json.dumps(example_assignments, indent=2)
         return example_json
         
-    def _validate_response(self, response: str, context: SmartCapabilityContext) -> ValidationResult:
+    def _validate_response(self, response: str, context: LabelingContext) -> ValidationResult:
         """Validate the LLM response"""
         
         error_categories: Dict[str, List[str]] = {
@@ -183,7 +193,7 @@ class SmartCapabilityStage:
         # Check if all values are valid labels
         valid_labels = set(context.available_labels.keys())
         for idx, label in result.items():
-            if label not in valid_labels:
+            if not self._is_valid_label(label, valid_labels):
                 error_categories["validation_errors"].append(
                     f"Invalid label '{label}' for index {idx}. Valid labels: {', '.join(sorted(valid_labels))}"
                 )
@@ -195,6 +205,10 @@ class SmartCapabilityStage:
             
         return ValidationResult(ok=False, error_categories=error_categories)
         
+    def _is_valid_label(self, label: str, valid_labels: set) -> bool:
+        """Check if a label is valid - can be overridden by specific stages"""
+        return label in valid_labels
+        
     def _build_retry_prompt(self, original_prompt: str, validation_result: ValidationResult) -> str:
         """Build retry prompt with error details"""
         
@@ -203,13 +217,13 @@ class SmartCapabilityStage:
         
         return f"{original_prompt}\n\n{retry_block}"
         
-    def _parse_response(self, response: str, context: SmartCapabilityContext, attempts: int) -> SmartCapabilityResult:
+    def _parse_response(self, response: str, context: LabelingContext, attempts: int) -> LabelingResult:
         """Parse a validated response into a result object"""
         
         json_text = extract_json(response)
         assignments = json.loads(json_text)
         
-        return SmartCapabilityResult(
+        return LabelingResult(
             assignments=assignments,
             batch_id=context.batch_id,
             success=True,

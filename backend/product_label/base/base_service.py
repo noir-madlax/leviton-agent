@@ -1,31 +1,32 @@
 """
-Smart capability labeling service
+Base service implementation for product labeling
 
-This module provides a service class that orchestrates the entire smart capability
-labeling process including database operations, batch processing, and result storage.
+This module provides a generic service class that orchestrates the entire labeling
+process including database operations, batch processing, and result storage.
 """
 
 import logging
 from datetime import datetime
 from typing import List, Optional
+import pandas as pd
 
 from supabase import Client
 from core.utils.batching import make_batches
 from .models import (
-    ProductData, SmartCapabilityContext, SmartCapabilityResult, 
+    ProductData, LabelingContext, LabelingResult, 
     LabelingStats, LabelingConfiguration
 )
-from .smart_capability_stage import SmartCapabilityStage
+from .base_stage import BaseStage
 
 logger = logging.getLogger(__name__)
 
-class SmartCapabilityService:
-    """Service for managing smart capability labeling operations"""
+class BaseService:
+    """Generic service for managing product labeling operations"""
     
-    def __init__(self, supabase_client: Client, config: LabelingConfiguration):
+    def __init__(self, supabase_client: Client, config: LabelingConfiguration, stage: BaseStage):
         self.supabase = supabase_client
         self.config = config
-        self.stage = SmartCapabilityStage(max_retries=config.max_retries)
+        self.stage = stage
         self.stats = LabelingStats()
         self.field_id: Optional[int] = None
         
@@ -33,11 +34,13 @@ class SmartCapabilityService:
         """Execute the complete labeling process"""
         
         self.stats.start_time = datetime.utcnow()
-        logger.info("🚀 Starting smart capability labeling service")
+        logger.info("🚀 Starting product labeling service")
         logger.info(f"📊 Project ID: {self.config.project_id}")
         logger.info(f"🏷️  Field Name: {self.config.field_name}")
         logger.info(f"📦 Batch Size: {self.config.batch_size}")
         logger.info(f"🔄 Dry Run: {self.config.dry_run}")
+        if self.config.sample_size:
+            logger.info(f"🔬 Sample Size: {self.config.sample_size}")
         
         try:
             # Step 1: Setup field
@@ -49,12 +52,20 @@ class SmartCapabilityService:
                 logger.warning("No products found to label")
                 return self.stats
                 
+            # Step 3: Apply sample size limit if specified
+            if self.config.sample_size and len(product_data) > self.config.sample_size:
+                product_data = product_data[:self.config.sample_size]
+                logger.info(f"🔬 Limited to sample size: {len(product_data)} products")
+                
             self.stats.total_products = len(product_data)
             
-            # Step 3: Process in batches
+            # Step 4: Process in batches
             await self._process_batches(product_data)
             
-            # Step 4: Finalize
+            # Step 5: Display results summary
+            self._display_results_table(product_data)
+            
+            # Step 6: Finalize
             self.stats.end_time = datetime.utcnow()
             self._log_final_results()
             
@@ -66,8 +77,8 @@ class SmartCapabilityService:
             raise
             
     async def _setup_field(self) -> None:
-        """Create or find the smart_capability field in project_extend_fields"""
-        logger.info("🔧 Setting up smart capability field...")
+        """Create or find the labeling field in project_extend_fields"""
+        logger.info(f"🔧 Setting up labeling field: {self.config.field_name}")
         
         try:
             # First check if field already exists
@@ -158,12 +169,15 @@ class SmartCapabilityService:
         
         logger.info(f"📦 Created {total_batches} batches")
         
+        # Store results for table display
+        self._batch_results = {}
+        
         for batch_idx, batch in enumerate(batches, 1):
             logger.info(f"⏳ Processing batch {batch_idx}/{total_batches} ({len(batch)} products)")
             
             try:
                 # Create context for this batch
-                context = SmartCapabilityContext(
+                context = LabelingContext(
                     products=batch,
                     available_labels=self.config.available_labels,
                     batch_id=batch_idx,
@@ -179,6 +193,9 @@ class SmartCapabilityService:
                     self.stats.batches_processed += 1
                     self.stats.successful_labels += len(result.assignments)
                     logger.info(f"✅ Batch {batch_idx} completed successfully")
+                    
+                    # Store results for table display
+                    self._batch_results[batch_idx] = (batch, result)
                 else:
                     self.stats.batches_failed += 1
                     self.stats.failed_labels += len(batch)
@@ -192,7 +209,7 @@ class SmartCapabilityService:
                 
             self.stats.processed_products += len(batch)
             
-    async def _store_batch_results(self, batch: List[ProductData], result: SmartCapabilityResult) -> None:
+    async def _store_batch_results(self, batch: List[ProductData], result: LabelingResult) -> None:
         """Store batch results in project_extend_data"""
         if self.config.dry_run:
             logger.info(f"🔄 [DRY RUN] Would store {len(result.assignments)} labels")
@@ -245,10 +262,53 @@ class SmartCapabilityService:
             logger.error(f"❌ Failed to store batch results: {e}")
             raise
             
+    def _display_results_table(self, all_products: List[ProductData]) -> None:
+        """Display labeling results in a formatted table"""
+        if not hasattr(self, '_batch_results') or not self._batch_results:
+            return
+            
+        logger.info("="*100)
+        logger.info("📋 LABELING RESULTS TABLE (Sample)")
+        logger.info("="*100)
+        
+        # Collect results
+        results_data = []
+        product_index = 0
+        
+        for batch_idx in sorted(self._batch_results.keys()):
+            batch, result = self._batch_results[batch_idx]
+            if result.success:
+                for idx, label in result.assignments.items():
+                    product = batch[int(idx)]
+                    results_data.append({
+                        'Index': product_index,
+                        'Product_ID': product.product_id,
+                        'Title': product.title[:60] + "..." if len(product.title) > 60 else product.title,
+                        'Label': label,
+                        'Batch': batch_idx
+                    })
+                    product_index += 1
+                    
+                    # Show first 20 results for manual inspection
+                    if len(results_data) >= 20:
+                        break
+            if len(results_data) >= 20:
+                break
+        
+        if results_data:
+            # Create DataFrame for nice formatting
+            df = pd.DataFrame(results_data)
+            logger.info(f"\n{df.to_string(index=False)}")
+            
+            if len(results_data) == 20 and self.stats.successful_labels > 20:
+                logger.info(f"\n... and {self.stats.successful_labels - 20} more results")
+        
+        logger.info("="*100)
+        
     def _log_final_results(self) -> None:
         """Log final results and statistics"""
         logger.info("="*60)
-        logger.info("📊 SMART CAPABILITY LABELING RESULTS")
+        logger.info("📊 PRODUCT LABELING RESULTS")
         logger.info("="*60)
         logger.info(f"Total Products: {self.stats.total_products}")
         logger.info(f"Processed Products: {self.stats.processed_products}")

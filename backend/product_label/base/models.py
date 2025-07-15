@@ -1,9 +1,9 @@
 """
-Data transfer objects for smart capability labeling
+Base data models for product labeling services
 """
 
-from dataclasses import dataclass, field
-from typing import Dict, List, Optional
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Any, TypeVar, Generic
 from datetime import datetime
 
 @dataclass(slots=True, frozen=True)
@@ -12,17 +12,17 @@ class ProductData:
     product_id: str
     title: str
 
-@dataclass(slots=True, frozen=True)
-class SmartCapabilityContext:
-    """Context for smart capability labeling batch processing"""
+@dataclass(slots=True, frozen=True) 
+class LabelingContext:
+    """Generic context for labeling batch processing"""
     products: List[ProductData]
     available_labels: Dict[str, str]
     batch_id: int = 0
     project_id: str = ""
 
 @dataclass(slots=True, frozen=True)
-class SmartCapabilityResult:
-    """Result of smart capability labeling for a batch"""
+class LabelingResult:
+    """Generic result of labeling for a batch"""
     assignments: Dict[str, str]  # product_index -> label
     batch_id: int = 0
     success: bool = True
@@ -57,7 +57,7 @@ class LabelingStats:
 
 @dataclass
 class LabelingConfiguration:
-    """Configuration for the smart capability labeling process"""
+    """Configuration for labeling processes"""
     project_id: str
     field_name: str
     field_type: str
@@ -66,5 +66,7 @@ class LabelingConfiguration:
     max_retries: int
     llm_temperature: float
     available_labels: Dict[str, str]
-    ui_config: Dict[str, any]
-    dry_run: bool = False 
+    ui_config: Dict[str, Any]
+    dry_run: bool = False
+    prompt_template_path: Optional[str] = None
+    sample_size: Optional[int] = None  # For testing with limited products 

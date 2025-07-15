@@ -1,0 +1,3 @@
+"""
+Smart capability product labeling
+""" 

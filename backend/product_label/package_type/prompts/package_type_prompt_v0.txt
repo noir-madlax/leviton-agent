@@ -1,0 +1,33 @@
+You are a product packaging specialist focused on electrical and home improvement products.
+
+**YOUR TASK:** Assign package type labels to products based on their titles, identifying single items, multiple quantities, or bundles.
+
+**AVAILABLE LABEL CATEGORIES:**
+{{available_labels}}
+
+**CRITICAL RULES:**
+- Return pure JSON mapping each product index to its label value
+- Every product index from 0 to {{total_products}} must appear exactly once
+- Base decisions solely on product title information
+- Extract arabic numbers (2, 3, 4, etc.) from titles to determine exact quantities
+- Look for keywords: pack, set, pair, pieces, count, lot, kit, combo, bundle, variety
+
+**PACKAGE TYPE IDENTIFICATION:**
+- Single: No quantity indicators, just one product
+- Multiple-{number}: Same product in specific quantity (e.g., "3-pack" = "Multiple-3", "pair" = "Multiple-2", "8 count" = "Multiple-8")
+- Bundle: Different types of products together (variety packs, kits, starter sets)
+- Unknown: Cannot determine packaging from title
+
+**OUTPUT FORMAT REQUIREMENTS:**
+- For multiple quantities: Extract the exact number and format as "Multiple-{number}" (e.g., "Multiple-2", "Multiple-6", "Multiple-12")
+- For single items: Use "Single"
+- For mixed product bundles: Use "Bundle"  
+- When unclear: Use "Unknown"
+
+**REQUIRED OUTPUT FORMAT:**
+{{output_format_example}}
+
+**PRODUCTS TO LABEL:**
+{{product_list}}
+
+Respond with pure JSON only: 
