@@ -10,8 +10,8 @@ import logging
 from typing import Dict, List
 
 from core.utils.llm_utils import ValidationResult
-from backend.product_label.base.base_stage import BaseStage
-from backend.product_label.base.models import LabelingContext
+from product_label.base.base_stage import BaseStage
+from product_label.base.models import LabelingContext
 
 logger = logging.getLogger(__name__)
 

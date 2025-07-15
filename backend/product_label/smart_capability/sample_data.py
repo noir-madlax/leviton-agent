@@ -2,7 +2,7 @@
 Sample product data for smart capability labeling tests
 """
 
-from backend.product_label.base.models import ProductData
+from product_label.base.models import ProductData
 
 # Sample product data for testing smart capability labeling
 SAMPLE_PRODUCTS = [

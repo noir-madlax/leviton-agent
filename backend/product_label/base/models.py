@@ -3,7 +3,7 @@ Base data models for product labeling services
 """
 
 from dataclasses import dataclass
-from typing import Dict, List, Optional, Any, TypeVar, Generic
+from typing import Dict, List, Optional, Any
 from datetime import datetime
 
 @dataclass(slots=True, frozen=True)

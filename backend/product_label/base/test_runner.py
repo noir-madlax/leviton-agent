@@ -5,8 +5,8 @@ Generic test runner for product labeling services
 This script tests labeling functionality with sample data without hitting the database.
 
 Usage:
-    python -m backend.product_label.base.test_runner smart_capability
-    python -m backend.product_label.base.test_runner package_type
+    python -m product_label.base.test_runner smart_capability
+    python -m product_label.base.test_runner package_type
 """
 
 import asyncio
@@ -17,11 +17,9 @@ from typing import Dict, List, Optional
 import importlib
 import pandas as pd
 
-# Add backend to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
-from .models import LabelingContext, ProductData
-from .base_stage import BaseStage
+from product_label.base.models import LabelingContext, ProductData
+from product_label.base.base_stage import BaseStage
 
 # Configure logging
 logging.basicConfig(
@@ -43,7 +41,7 @@ class LabelingTester:
         """Load sample products for the labeling type"""
         try:
             # Import the sample data module for the labeling type
-            sample_module = importlib.import_module(f'backend.product_label.{self.labeling_type}.sample_data')
+            sample_module = importlib.import_module(f'product_label.{self.labeling_type}.sample_data')
             return sample_module.SAMPLE_PRODUCTS
         except ImportError:
             # Use default sample products if specific ones don't exist
@@ -67,7 +65,7 @@ class LabelingTester:
         
     def _load_config(self) -> Dict:
         """Load configuration for the labeling type"""
-        config_module = importlib.import_module(f'backend.product_label.{self.labeling_type}.config')
+        config_module = importlib.import_module(f'product_label.{self.labeling_type}.config')
         
         config = {}
         for attr_name in dir(config_module):
@@ -84,7 +82,7 @@ class LabelingTester:
         # Try to use labeling-type specific stage if available
         try:
             if self.labeling_type == "package_type":
-                from backend.product_label.package_type import PackageTypeStage
+                from product_label.package_type import PackageTypeStage
                 return PackageTypeStage(str(prompt_path), max_retries=3)
             elif self.labeling_type == "smart_capability":
                 # Use generic base stage for smart capability  

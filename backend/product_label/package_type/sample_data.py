@@ -2,7 +2,7 @@
 Sample product data for package type labeling tests
 """
 
-from backend.product_label.base.models import ProductData
+from product_label.base.models import ProductData
 
 # Sample product data for testing package type labeling
 SAMPLE_PRODUCTS = [

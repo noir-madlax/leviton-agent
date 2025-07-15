@@ -5,8 +5,8 @@ This module provides specific functionality for identifying package types
 (single, multiple quantities, bundles) of products.
 """
 
-from .config import *
-from .package_type_stage import PackageTypeStage
+from product_label.package_type.config import *
+from product_label.package_type.package_type_stage import PackageTypeStage
 
 __all__ = [
     'PROJECT_ID',

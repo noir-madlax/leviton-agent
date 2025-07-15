@@ -11,7 +11,7 @@ from pathlib import Path
 from typing import Dict, List
 
 from core.utils.llm_utils import safe_llm_call, extract_json, create_retry_error_details, ValidationResult
-from .models import LabelingContext, LabelingResult
+from product_label.base.models import LabelingContext, LabelingResult
 
 logger = logging.getLogger(__name__)
 

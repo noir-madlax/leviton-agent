@@ -6,8 +6,8 @@ This script can run any labeling service by loading the appropriate configuratio
 and prompt template.
 
 Usage:
-    python -m backend.product_label.base.cli_runner smart_capability [options]
-    python -m backend.product_label.base.cli_runner package_type [options]
+    python -m product_label.base.cli_runner smart_capability [options]
+    python -m product_label.base.cli_runner package_type [options]
 """
 
 import asyncio
@@ -18,13 +18,10 @@ from pathlib import Path
 from typing import Dict, Any
 import importlib
 
-# Add backend to path for imports
-sys.path.insert(0, str(Path(__file__).parent.parent.parent))
-
 from core.database.connection import get_supabase_service_client
-from .models import LabelingConfiguration
-from .base_service import BaseService
-from .base_stage import BaseStage
+from product_label.base.models import LabelingConfiguration
+from product_label.base.base_service import BaseService
+from product_label.base.base_stage import BaseStage
 
 # Configure logging
 logging.basicConfig(
@@ -42,7 +39,7 @@ def load_labeling_config(labeling_type: str) -> Dict[str, Any]:
     """Load configuration for a specific labeling type"""
     try:
         # Import the config module for the labeling type
-        config_module = importlib.import_module(f'backend.product_label.{labeling_type}.config')
+        config_module = importlib.import_module(f'product_label.{labeling_type}.config')
         
         # Extract all uppercase constants from the config
         config = {}

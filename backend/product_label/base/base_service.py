@@ -12,7 +12,7 @@ import pandas as pd
 
 from supabase import Client
 from core.utils.batching import make_batches
-from .models import (
+from product_label.base.models import (
     ProductData, LabelingContext, LabelingResult, 
     LabelingStats, LabelingConfiguration
 )
@@ -210,7 +210,7 @@ class BaseService:
             self.stats.processed_products += len(batch)
             
     async def _store_batch_results(self, batch: List[ProductData], result: LabelingResult) -> None:
-        """Store batch results in project_extend_data"""
+        """Store batch results in project_extend_data while preserving existing extend data"""
         if self.config.dry_run:
             logger.info(f"🔄 [DRY RUN] Would store {len(result.assignments)} labels")
             for idx, label in result.assignments.items():
@@ -222,6 +222,7 @@ class BaseService:
         try:
             # Get platform_id mapping for products
             product_platform_mapping = {}
+            platform_ids = []
             for product in batch:
                 # Get platform_id from the product_wide_table
                 platform_query = self.supabase.table('product_wide_table').select(
@@ -229,22 +230,38 @@ class BaseService:
                 ).eq('id', product.product_id).execute()
                 
                 if platform_query.data:
-                    product_platform_mapping[product.product_id] = platform_query.data[0]['platform_id']
+                    platform_id = platform_query.data[0]['platform_id']
+                    product_platform_mapping[product.product_id] = platform_id
+                    platform_ids.append(platform_id)
             
-            # Prepare data for upsert using the project_extend_data structure
+            # Get existing extend data for these products to preserve other labeling fields
+            existing_extend_data = {}
+            if platform_ids:
+                existing_query = self.supabase.table('project_extend_data').select(
+                    'asins, extend'
+                ).eq('project_id', self.config.project_id).in_('asins', platform_ids).execute()
+                
+                for row in existing_query.data:
+                    existing_extend_data[row['asins']] = row.get('extend', {}) or {}
+            
+            # Prepare data for upsert, merging with existing extend data
             upsert_data = []
             for idx, label in result.assignments.items():
                 product = batch[int(idx)]
                 platform_id = product_platform_mapping.get(product.product_id)
                 
                 if platform_id:
-                    # Store as extend field data
-                    extend_data = {self.config.field_name: label}
+                    # Get existing extend data for this product or initialize empty dict
+                    existing_data = existing_extend_data.get(platform_id, {})
+                    
+                    # Update only the current field, preserving other labeling fields
+                    merged_extend_data = existing_data.copy()
+                    merged_extend_data[self.config.field_name] = label
                     
                     upsert_data.append({
                         'project_id': self.config.project_id,
                         'asins': platform_id,
-                        'extend': extend_data
+                        'extend': merged_extend_data
                     })
                 
             # Upsert to database
@@ -254,7 +271,7 @@ class BaseService:
             ).execute()
             
             if db_result.data:
-                logger.info(f"✅ Stored {len(db_result.data)} labels in database")
+                logger.info(f"✅ Stored {len(db_result.data)} labels in database (preserving existing extend data)")
             else:
                 logger.warning("⚠️  No data returned from upsert operation")
                 
