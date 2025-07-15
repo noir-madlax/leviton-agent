@@ -34,6 +34,8 @@ export function CompetitorAsinSelector({
   // 分离pending状态和已应用状态
   const [pendingSelection, setPendingSelection] = useState<string[]>(defaultSelection);
   const [appliedSelection, setAppliedSelection] = useState<string[]>(defaultSelection);
+  // 保存初始的6个产品选择，用于Reset功能
+  const [initialSelection, setInitialSelection] = useState<string[]>(defaultSelection);
   const [loading, setLoading] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedBrand, setSelectedBrand] = useState<string>('');
@@ -46,7 +48,8 @@ export function CompetitorAsinSelector({
     const loadProducts = async () => {
       try {
         setLoading(true);
-        const products = await databaseService.getAvailableAsins();
+        // Pass projectId to get only project-related products
+        const products = await databaseService.getAvailableAsins(projectId);
         setAvailableProducts(products);
         setFilteredProducts(products);
       } catch (error) {
@@ -58,6 +61,13 @@ export function CompetitorAsinSelector({
     
     loadProducts();
   }, [projectId]);
+
+  // Update initial selection when defaultSelection changes
+  useEffect(() => {
+    setInitialSelection(defaultSelection);
+    setPendingSelection(defaultSelection);
+    setAppliedSelection(defaultSelection);
+  }, [defaultSelection]);
 
   // Filter products based on search and filters
   useEffect(() => {
@@ -103,17 +113,19 @@ export function CompetitorAsinSelector({
     onSelectionChange(pendingSelection);
   };
 
-  // Reset filters
+  // Reset filters and selection to initial state
   const resetFilters = () => {
     setSearchTerm('');
     setSelectedBrand('');
     setSelectedCategory('');
+    // Reset to initial 6 products selection
+    setPendingSelection(initialSelection);
   };
 
   // Check if there are pending changes
   const hasPendingChanges = JSON.stringify(pendingSelection.sort()) !== JSON.stringify(appliedSelection.sort());
 
-  // Get unique brands and categories
+  // Get unique brands and categories from project products only
   const uniqueBrands = [...new Set(availableProducts.map(p => p.brand))].sort();
   const uniqueCategories = [...new Set(availableProducts.map(p => p.category))].sort();
 
@@ -195,6 +207,7 @@ export function CompetitorAsinSelector({
               variant="outline"
               onClick={resetFilters}
               className="flex items-center gap-2"
+              title="Reset filters and restore to initial 6 products selection"
             >
               <RotateCcw className="w-4 h-4" />
               Reset

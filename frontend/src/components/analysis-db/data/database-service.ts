@@ -1149,7 +1149,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get available ASINs with product info for competitor selection
-  async getAvailableAsins(): Promise<Array<{
+  async getAvailableAsins(projectId?: string): Promise<Array<{
     platform_id: string
     title: string
     brand: string
@@ -1159,12 +1159,27 @@ export class DatabaseService {
     monthly_sales_volume?: number
     product_url?: string
   }>> {
-    const { data: products, error } = await supabase
-      .from('product_wide_table')
-      .select('platform_id, title, brand, price_usd, reviews_count, category, product_url')
+    if (projectId) {
+      // Use project-specific method to get products with correct review counts
+      const projectProducts = await this.getProjectProductsByReviewCount(projectId);
+      return projectProducts.map(product => ({
+        platform_id: product.platform_id,
+        title: product.title,
+        brand: product.brand,
+        price_usd: product.price_usd,
+        reviews_count: product.actual_review_count, // Use actual review count from project
+        category: product.category,
+        product_url: product.product_url
+      }));
+    } else {
+      // Fallback to original logic for backwards compatibility
+      const { data: products, error } = await supabase
+        .from('product_wide_table')
+        .select('platform_id, title, brand, price_usd, reviews_count, category, product_url')
 
-    if (error) throw error
-    return products || []
+      if (error) throw error
+      return products || []
+    }
   }
 
   // 🔑 Get project selected products ranked by analysis review count

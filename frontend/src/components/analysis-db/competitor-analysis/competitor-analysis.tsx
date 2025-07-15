@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Filter } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
-import { CustomerSentimentBar } from "@/components/analysis-db/charts/customer-sentiment-bar"
+import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 interface CompetitorAnalysisProps {
@@ -169,6 +169,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     
     if (asins.length === 0) {
       setCustomCompetitorData(null);
+      setApplyLoading(false); // 确保重置loading状态
       return;
     }
 
@@ -255,6 +256,15 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
         `${product.title.substring(0, 30)}...` : 
         product.title;
       map[product.platform_id] = shortTitle;
+    });
+    return map;
+  }, [defaultProducts]);
+
+  // Create ASIN to brand mapping for child components
+  const asinToBrandMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    defaultProducts.forEach(product => {
+      map[product.platform_id] = product.brand;
     });
     return map;
   }, [defaultProducts]);
@@ -419,15 +429,16 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           📈 Customer Sentiment Analysis
         </h2>
         <div className="bg-green-50 border-l-4 border-green-600 p-4 mb-6">
-          <strong>Sentiment Overview:</strong> Horizontal bar chart showing total review volume per product with satisfaction rate color coding.
-          Products ranked by review volume to understand market attention and customer sentiment patterns.
+          <strong>Sentiment Overview:</strong> Scatter plot showing review count vs average star rating with brand color coding.
+          Products positioned by review volume and rating to understand market attention and customer sentiment patterns.
         </div>
 
-        <CustomerSentimentBar 
+        <CustomerSentimentScatter 
           data={competitorData.matrixData}
           productTotalReviews={competitorData.productTotalReviews}
           allReviewData={data.allReviewData}
           asinToProductNameMap={asinToProductNameMap}
+          asinToBrandMap={asinToBrandMap}
         />
       </section>
         </>

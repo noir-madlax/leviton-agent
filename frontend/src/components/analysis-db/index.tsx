@@ -688,6 +688,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
         break
       case 'competitor-analysis':
         loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        // 同时加载原始评论数据，因为CustomerSentimentScatter组件需要allReviewData
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
         break
     }
   }
@@ -1057,12 +1059,14 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                   </TabsContent>
 
                   <TabsContent value="competitor-analysis">
-                    {data.competitorAnalysis ? (
+                    {data.competitorAnalysis && data.allReviewData ? (
                       <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} />
-                    ) : loadingStates.competitorAnalysis ? (
+                    ) : (loadingStates.competitorAnalysis || loadingStates.allReviewData) ? (
                       <div className="flex items-center justify-center py-8">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                        <span className="ml-2">Loading Competitor Analysis...</span>
+                        <span className="ml-2">
+                          Loading Competitor Analysis{loadingStates.allReviewData ? ' and Review Data' : ''}...
+                        </span>
                       </div>
                     ) : (
                       <div className="text-center py-8 text-gray-500">

@@ -287,22 +287,21 @@ class CompetitorAnalysisService(BaseDashboardService):
         product_total_reviews = {}
         product_review_ids = {}
         
-        # Initialize counters for all products
-        for display_name in asin_to_product.values():
-            product_review_ids[display_name] = set()
+        # Initialize counters for all products using ASIN as key
+        for asin in asin_to_product.keys():
+            product_review_ids[asin] = set()
         
         # Count unique review_ids for each product from actual analysis data
         for item in analysis_data:
             product_asin = item['product_id']
-            product_name = asin_to_product.get(product_asin)
             review_id = item.get('review_id')
             
-            if product_name and review_id:
-                product_review_ids[product_name].add(review_id)
+            if product_asin and review_id:
+                product_review_ids[product_asin].add(review_id)
         
-        # Convert sets to counts
-        for product_name, review_id_set in product_review_ids.items():
-            product_total_reviews[product_name] = len(review_id_set)
+        # Convert sets to counts using ASIN as key
+        for product_asin, review_id_set in product_review_ids.items():
+            product_total_reviews[product_asin] = len(review_id_set)
 
         # Build rating mapping for sentiment analysis
         rating_map = {}
@@ -319,7 +318,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         matrix_data = self._build_matrix_data(category_stats, asin_to_product)
         use_case_matrix_data = self._build_use_case_data(use_case_stats, asin_to_product)
 
-        target_products = list(asin_to_product.values())
+        target_products = list(asin_to_product.keys())
 
         return {
             'targetProducts': target_products,
@@ -460,7 +459,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         for category, category_data in top_categories:
             display_category = self._get_friendly_category_name(category)
             
-            for product_name in asin_to_product.values():
+            for product_asin, product_name in asin_to_product.items():
                 product_data = category_data['productData'].get(product_name)
                 
                 if product_data:
@@ -477,7 +476,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                         satisfaction_rate = 0.0
 
                     matrix_data.append({
-                        'product': product_name,
+                        'product': product_asin,
                         'category': display_category,
                         'categoryType': product_data['categoryType'],
                         'mentions': product_data['total'],
@@ -489,7 +488,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                 else:
                     # No data for this product-category combination
                     matrix_data.append({
-                        'product': product_name,
+                        'product': product_asin,
                         'category': display_category,
                         'categoryType': 'Performance',
                         'mentions': 0,
@@ -514,7 +513,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         use_case_matrix_data = []
         
         for use_case, use_case_data in top_use_cases:
-            for product_name in asin_to_product.values():
+            for product_asin, product_name in asin_to_product.items():
                 product_data = use_case_data['productData'].get(product_name)
                 
                 if product_data:
@@ -534,7 +533,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                     gap_level = 100 - satisfaction_rate
 
                     use_case_matrix_data.append({
-                        'product': product_name,
+                        'product': product_asin,
                         'useCase': use_case,
                         'mentions': product_data['total'],
                         'satisfactionRate': round(satisfaction_rate, 1),
