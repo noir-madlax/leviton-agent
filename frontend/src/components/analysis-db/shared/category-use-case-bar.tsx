@@ -18,6 +18,7 @@ interface CategoryUseCaseBarProps {
   reviewData?: {
     reviewsByCategory?: Record<string, any[]>
   }
+  totalUseMentions?: number;
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -36,7 +37,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           <div>
             <p className="text-sm text-gray-600">Satisfaction Rate:</p>
             <div className="flex items-center gap-2">
-              <p className="font-semibold">{data.satisfactionRate}%</p>
+              <p className="font-semibold">{Math.round(data.satisfactionRate)}%</p>
               <Badge 
                 variant="outline" 
                 style={{ 
@@ -96,7 +97,8 @@ export default function CategoryUseCaseBar({
   description = "Bars show mention count, colors indicate satisfaction levels",
   productType = 'dimmer',
   onProductTypeChange,
-  reviewData
+  reviewData,
+  totalUseMentions
 }: CategoryUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
   
@@ -222,7 +224,7 @@ export default function CategoryUseCaseBar({
                   {item.useCase}
                 </div>
                 <div className="text-xs" style={{color: getSatisfactionColor(item.satisfactionRate)}}>
-                  {item.satisfactionRate}% satisfaction
+                  {Math.round(item.satisfactionRate)}% satisfaction
                 </div>
               </div>
             ))}
@@ -245,7 +247,7 @@ export default function CategoryUseCaseBar({
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Mentions</p>
               <p className="text-lg font-semibold">
-                {data.reduce((sum, item) => sum + item.totalMentions, 0)}
+                {totalUseMentions || data.reduce((sum, item) => sum + item.totalMentions, 0)}
               </p>
             </div>
             <div className="text-center">

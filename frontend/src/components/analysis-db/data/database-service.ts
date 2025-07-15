@@ -541,6 +541,17 @@ export class DatabaseService {
       totalMentions?: number
       positiveRate?: number
     }>
+    allUseCases: Array<{
+      useCase: string
+      productAttribute: string
+      satisfactionRate: number
+      mentionCount: number
+      positiveCount: number
+      negativeCount: number
+      // Enhanced fields from new table structure
+      categoryDefinition?: string
+      productCount?: number
+    }>
     underservedUseCases: Array<{
       useCase: string
       productAttribute: string
@@ -550,6 +561,7 @@ export class DatabaseService {
       categoryDefinition?: string
       productCount?: number
     }>
+    totalUseMentions: number
   }> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
     

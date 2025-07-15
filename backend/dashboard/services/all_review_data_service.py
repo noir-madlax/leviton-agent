@@ -79,17 +79,28 @@ class AllReviewDataService(BaseDashboardService):
                 detail_text,
                 parent_group_name,
                 category_pk
-            ''').eq('project_id', self.project_id).limit(2000)
+            ''').eq('project_id', self.project_id)
+            
+            logger.info(f"Executing aspects query for project_id: {self.project_id}")
             
             # Apply ASIN filtering
             if not self.project_asins:
                 logger.warning(f"No ASINs found for project {self.project_id}")
                 return []
             
-            aspects_query = aspects_query.in_('product_id', self.project_asins)
-            aspects_result = aspects_query.execute()
+            logger.info(f"Project ASINs count: {len(self.project_asins)}, first 10: {self.project_asins[:10]}")
             
-            if not aspects_result.data:
+            aspects_query = aspects_query.in_('product_id', self.project_asins)
+            
+            try:
+                aspects_result = aspects_query.execute()
+                logger.info(f"Found {len(aspects_result.data) if aspects_result.data else 0} aspects for project {self.project_id}")
+                
+                if not aspects_result.data:
+                    logger.warning(f"No aspects data returned for project {self.project_id}")
+                    return []
+            except Exception as e:
+                logger.error(f"Error executing aspects query: {e}")
                 return []
             
             # Get category information
@@ -146,19 +157,41 @@ class AllReviewDataService(BaseDashboardService):
             review_ids = list(occurrences_data.keys())
             rating_map = {}
             
+            logger.info(f"Total review_ids to process: {len(review_ids)}")
+            
             if review_ids:
                 # Split into batches for rating queries
                 batch_size = 100
                 for i in range(0, len(review_ids), batch_size):
                     batch_ids = review_ids[i:i + batch_size]
-                    rating_query = self.supabase.from_('product_reviews').select(
-                        'review_id, rating, verified, review_date, review_text'
-                    ).in_('review_id', batch_ids)
-                    
-                    rating_result = rating_query.execute()
-                    if rating_result.data:
-                        for item in rating_result.data:
-                            rating_map[item['review_id']] = item
+                    # Convert text review_ids to integers for product_reviews table query
+                    try:
+                        int_batch_ids = [int(rid) for rid in batch_ids if rid and rid.isdigit()]
+                        if int_batch_ids:
+                            logger.info(f"Processing batch with {len(int_batch_ids)} review_ids")
+                            
+                            rating_query = self.supabase.from_('product_reviews').select(
+                                'review_id,product_id,review_text,rating,verified,review_date'
+                            ).in_('review_id', int_batch_ids)
+                            
+                            # Apply ASIN filtering to ensure we only get reviews for our project products
+                            rating_query = rating_query.in_('product_id', self.project_asins)
+                            
+                            rating_result = rating_query.execute()
+                            if rating_result.data:
+                                logger.info(f"Found {len(rating_result.data)} matching rating records")
+                                for item in rating_result.data:
+                                    # Use review_id as the key for simpler, more robust lookup
+                                    rating_map[str(item['review_id'])] = item
+                            else:
+                                logger.warning(f"No rating data found for batch_ids: {int_batch_ids}")
+                    except (ValueError, TypeError) as e:
+                        logger.warning(f"Error converting review_ids to integers: {e}")
+                        continue
+            
+            logger.info(f"Final rating_map size: {len(rating_map)}")
+            sample_keys = list(rating_map.keys())[:5]
+            logger.info(f"Sample rating_map keys: {sample_keys}")
             
             # Get brand data
             product_ids = list(set([item['product_id'] for item in aspects_result.data]))
@@ -196,10 +229,17 @@ class AllReviewDataService(BaseDashboardService):
                     review_id = occurrence['review_id']
                     sentiment = occurrence['sentiment']
                     
-                    # Get rating and review text
+                    # Get rating and review text using only review_id for lookup
                     rating_info = rating_map.get(review_id, {})
                     brand = brand_map.get(aspect['product_id'], 'Unknown')
                     review_text = rating_info.get('review_text', '')
+                    
+                    # Debug logging
+                    if not review_text:
+                        logger.warning(f"Empty review_text for review_id: {review_id}, product_id: {aspect['product_id']}, rating_info: {rating_info}")
+                        # Log available keys for debugging
+                        if len(rating_map) < 20: # Avoid logging huge maps
+                            logger.warning(f"Available rating_map keys: {list(rating_map.keys())}")
                     
                     # Convert sentiment from new format to old format
                     if sentiment == '+':

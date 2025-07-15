@@ -54,14 +54,14 @@ export function PainPointsScatter({ data, allReviewData }: PainPointsScatterProp
         const transformedReviews = relatedReviews.map(review => ({
           id: review.id,
           productId: review.productId,
-          text: review.content,
+          text: review.text,
           sentiment: review.sentiment,
           category: review.category,
           aspect: review.aspect,
-          rating: 3, // Default rating since not available in data
-          verified: false, // Default verified status
-          brand: 'Unknown', // Default brand since not available
-          date: 'Unknown date' // Default date since not available
+          rating: review.rating || 3, // Use actual rating if available
+          verified: review.verified || false, // Use actual verified status if available
+          brand: review.brand || 'Unknown', // Use actual brand if available
+          date: review.date || 'Unknown date' // Use actual date if available
         }))
         
         openPanel(

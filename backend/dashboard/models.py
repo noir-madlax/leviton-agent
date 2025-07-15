@@ -199,6 +199,8 @@ class PainPoint(BaseModel):
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
     totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
     negativeRate: Optional[float] = Field(default=0, description="Percentage of negative mentions")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
 class CustomerLike(BaseModel):
     """Customer like data model with enhanced fields."""
@@ -210,6 +212,22 @@ class CustomerLike(BaseModel):
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
     totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
     positiveRate: Optional[float] = Field(default=0, description="Percentage of positive mentions")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
+
+class AllUseCase(BaseModel):
+    """All use case data model with enhanced fields."""
+    useCase: str
+    productAttribute: str
+    satisfactionRate: float
+    mentionCount: int
+    positiveCount: int
+    negativeCount: int
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
 class UnderservedUseCase(BaseModel):
     """Underserved use case data model with enhanced fields."""
@@ -220,12 +238,16 @@ class UnderservedUseCase(BaseModel):
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
     productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
 class ReviewInsightsResponse(BaseModel):
     """Review insights response model."""
     painPoints: List[PainPoint]
     customerLikes: List[CustomerLike]
+    allUseCases: List[AllUseCase]
     underservedUseCases: List[UnderservedUseCase]
+    totalUseMentions: int = Field(description="Total mentions across all use cases")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 

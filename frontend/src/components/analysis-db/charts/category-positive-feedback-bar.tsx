@@ -92,11 +92,11 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-          Top 10 Customer Delights by Category 🖱️
+        Top 10 Most Critical Categories by Positive Reviews Count  🖱️
           <SatisfactionLegend />
         </CardTitle>
         <div className="flex items-center justify-between">
-          <CardDescription>Categories ranked by absolute positive review count</CardDescription>
+          <CardDescription>Categories include product performance and physical</CardDescription>
           {onProductTypeChange && (
             <div className="flex gap-2">
               <Button

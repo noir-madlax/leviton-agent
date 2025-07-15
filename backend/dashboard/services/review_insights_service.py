@@ -218,6 +218,10 @@ class ReviewInsightsService(BaseDashboardService):
             if item['total_count'] == 0:
                 continue
                 
+            # Filter out OUT_OF_SCOPE category
+            if item['category_name'] == 'OUT_OF_SCOPE':
+                continue
+                
             category_key = f"{item['category_name']}_{item['aspect_type']}"
             
             if category_key not in category_aggregates:
@@ -260,7 +264,9 @@ class ReviewInsightsService(BaseDashboardService):
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
                     'totalMentions': agg['total_mentions'],
-                    'negativeRate': negative_rate
+                    'negativeRate': negative_rate,
+                    # New field for frontend mapping
+                    'relatedDetailTexts': list(agg['details'])
                 })
         
         # Sort by severity and take top 15
@@ -288,12 +294,47 @@ class ReviewInsightsService(BaseDashboardService):
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
                     'totalMentions': agg['total_mentions'],
-                    'positiveRate': positive_rate
+                    'positiveRate': positive_rate,
+                    # New field for frontend mapping
+                    'relatedDetailTexts': list(agg['details'])
                 })
         
         # Sort by frequency and take top 10
         customer_likes.sort(key=lambda x: x['frequency'], reverse=True)
         customer_likes = customer_likes[:10]
+        
+        # Generate all use cases for satisfaction analysis (ALL use case types, not just underserved)
+        all_use_cases = []
+        # Calculate total mentions for all use cases (before filtering to top 15)
+        total_use_mentions = 0
+        for key, agg in category_aggregates.items():
+            if agg['aspect_type'] == 'use':
+                total_use_mentions += agg['total_mentions']
+                
+                # Calculate satisfaction rate from sentiment data
+                total_sentiment_mentions = agg['positive_mentions'] + agg['negative_mentions']
+                if total_sentiment_mentions > 0:
+                    satisfaction_rate = (agg['positive_mentions'] / total_sentiment_mentions) * 100
+                else:
+                    satisfaction_rate = 50.0  # Default for neutral cases
+                
+                all_use_cases.append({
+                    'useCase': agg['category_name'],
+                    'productAttribute': ', '.join(list(agg['parent_groups'])),
+                    'satisfactionRate': satisfaction_rate,
+                    'mentionCount': agg['total_mentions'],
+                    'positiveCount': agg['positive_mentions'],
+                    'negativeCount': agg['negative_mentions'],
+                    # Enhanced fields for frontend optimization
+                    'categoryDefinition': agg['category_definition'],
+                    'productCount': len(agg['products']),
+                    # New field for frontend mapping
+                    'relatedDetailTexts': list(agg['details'])
+                })
+        
+        # Sort by total mentions and take top 15
+        all_use_cases.sort(key=lambda x: x['mentionCount'], reverse=True)
+        all_use_cases = all_use_cases[:15]
         
         # Generate underserved use cases (categories with low overall mentions but presence across products)
         underserved_use_cases = []
@@ -313,17 +354,21 @@ class ReviewInsightsService(BaseDashboardService):
                     'mentionCount': agg['total_mentions'],
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
-                    'productCount': len(agg['products'])
+                    'productCount': len(agg['products']),
+                    # New field for frontend mapping
+                    'relatedDetailTexts': list(agg['details'])
                 })
         
         # Sort by gap level and take top 8
         underserved_use_cases.sort(key=lambda x: x['gapLevel'], reverse=True)
         underserved_use_cases = underserved_use_cases[:8]
         
-        logger.info(f"📈 Processed results: {len(pain_points)} pain points, {len(customer_likes)} likes, {len(underserved_use_cases)} underserved use cases")
+        logger.info(f"📈 Processed results: {len(pain_points)} pain points, {len(customer_likes)} likes, {len(all_use_cases)} all use cases, {len(underserved_use_cases)} underserved use cases, {total_use_mentions} total use mentions")
         
         return {
             'painPoints': pain_points,
             'customerLikes': customer_likes,
-            'underservedUseCases': underserved_use_cases
+            'allUseCases': all_use_cases,
+            'underservedUseCases': underserved_use_cases,
+            'totalUseMentions': total_use_mentions
         } 

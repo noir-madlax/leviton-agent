@@ -178,6 +178,16 @@ interface DashboardData {
       frequency: number
       satisfactionLevel: 'High' | 'Medium' | 'Low'
     }>
+    allUseCases: Array<{
+      useCase: string
+      productAttribute: string
+      satisfactionRate: number
+      mentionCount: number
+      positiveCount: number
+      negativeCount: number
+      categoryDefinition?: string
+      productCount?: number
+    }>
     underservedUseCases: Array<{
       useCase: string
       productAttribute: string
@@ -186,6 +196,7 @@ interface DashboardData {
       categoryDefinition?: string
       productCount?: number
     }>
+    totalUseMentions: number
   }
   competitorAnalysis: {
     targetProducts: string[]
@@ -429,7 +440,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
   try {
     if (!projectId) {
       console.log('⏳ Review Insights waiting for project selection...');
-      return { painPoints: [], customerLikes: [], underservedUseCases: [] };
+      return { painPoints: [], customerLikes: [], allUseCases: [], underservedUseCases: [] };
     }
     
     console.log(`📊 Fetching Review Insights data for project: ${projectId}`);
@@ -447,12 +458,12 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
     }
     
     const data = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
-    console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.underservedUseCases.length} use cases`);
+    console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.allUseCases.length} all use cases, ${data.underservedUseCases.length} underserved use cases`);
     
     return data;
   } catch (error) {
     console.error('Error fetching review insights data:', error);
-    return { painPoints: [], customerLikes: [], underservedUseCases: [] };
+    return { painPoints: [], customerLikes: [], allUseCases: [], underservedUseCases: [] };
   }
 }
 

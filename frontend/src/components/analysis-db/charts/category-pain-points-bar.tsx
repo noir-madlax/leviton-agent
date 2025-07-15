@@ -96,7 +96,7 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
           <SatisfactionLegend />
         </CardTitle>
         <div className="flex items-center justify-between">
-          <CardDescription>Categories ranked by absolute negative review count</CardDescription>
+          <CardDescription>Categories include product performance and physical </CardDescription>
           {onProductTypeChange && (
             <div className="flex gap-2">
               <Button

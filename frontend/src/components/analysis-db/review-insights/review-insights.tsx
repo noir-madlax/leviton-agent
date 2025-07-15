@@ -21,6 +21,7 @@ interface ReviewInsightsProps {
         categoryDefinition?: string
         totalMentions?: number
         negativeRate?: number
+        relatedDetailTexts?: string[] // Added for new mapping logic
       }>
       customerLikes: Array<{
         feature: string
@@ -30,6 +31,18 @@ interface ReviewInsightsProps {
         categoryDefinition?: string
         totalMentions?: number
         positiveRate?: number
+        relatedDetailTexts?: string[] // Added for new mapping logic
+      }>
+      allUseCases: Array<{
+        useCase: string
+        productAttribute: string
+        satisfactionRate: number
+        mentionCount: number
+        positiveCount: number
+        negativeCount: number
+        categoryDefinition?: string
+        productCount?: number
+        relatedDetailTexts?: string[] // Added for new mapping logic
       }>
       underservedUseCases: Array<{
         useCase: string
@@ -38,7 +51,9 @@ interface ReviewInsightsProps {
         mentionCount: number
         categoryDefinition?: string
         productCount?: number
+        relatedDetailTexts?: string[] // Added for new mapping logic
       }>
+      totalUseMentions: number
     }
     allReviewData: Record<string, Array<{
       id: string
@@ -71,23 +86,30 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
       // 首先直接使用allReviewData的现有映射
       reviewDataForCharts.reviewsByCategory = { ...data.allReviewData }
       
-      // 为痛点数据建立aspect-based映射关系
+      // 为痛点数据建立基于relatedDetailTexts的映射关系
       data.reviewInsights.painPoints.forEach(painPoint => {
         const aspectName = painPoint.aspect
         if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
-          // 从allReviewData中查找相关的aspect评论
           const relatedReviews: unknown[] = []
           
-          Object.entries(data.allReviewData).forEach(([, reviews]) => {
-            reviews.forEach(review => {
-              // 通过aspect字段匹配
-              if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
-                relatedReviews.push(review)
-              } else if (review.category && review.category.toLowerCase() === aspectName.toLowerCase()) {
-                relatedReviews.push(review)
-              }
+          // 使用新的relatedDetailTexts字段进行映射
+          if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
+            painPoint.relatedDetailTexts.forEach(detailText => {
+              const reviews = data.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
             })
-          })
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
+                  relatedReviews.push(review)
+                } else if (review.category && review.category.toLowerCase() === aspectName.toLowerCase()) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
           
           if (relatedReviews.length > 0) {
             reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
@@ -95,23 +117,30 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         }
       })
       
-      // 为亮点数据建立feature-based映射关系
+      // 为亮点数据建立基于relatedDetailTexts的映射关系
       data.reviewInsights.customerLikes.forEach(like => {
         const featureName = like.feature
         if (!reviewDataForCharts.reviewsByCategory[featureName]) {
-          // 从allReviewData中查找相关的feature评论
           const relatedReviews: unknown[] = []
           
-          Object.entries(data.allReviewData).forEach(([, reviews]) => {
-            reviews.forEach(review => {
-              // 通过aspect或category字段匹配
-              if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
-                relatedReviews.push(review)
-              } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
-                relatedReviews.push(review)
-              }
+          // 使用新的relatedDetailTexts字段进行映射
+          if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
+            like.relatedDetailTexts.forEach(detailText => {
+              const reviews = data.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
             })
-          })
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
+                  relatedReviews.push(review)
+                } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
           
           if (relatedReviews.length > 0) {
             reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
@@ -119,29 +148,71 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         }
       })
       
-      // 为Use Case数据建立额外的映射关系
+      // 为Use Case数据建立基于relatedDetailTexts的映射关系
+      data.reviewInsights.allUseCases.forEach(useCaseItem => {
+        const useCaseName = useCaseItem.useCase
+        
+        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
+          const relatedReviews: unknown[] = []
+          
+          // 使用新的relatedDetailTexts字段进行映射
+          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
+            useCaseItem.relatedDetailTexts.forEach(detailText => {
+              const reviews = data.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
+            })
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (useCaseItem.productAttribute && 
+                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
+          
+          if (relatedReviews.length > 0) {
+            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
+          }
+        }
+      })
+      
+      // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
       data.reviewInsights.underservedUseCases.forEach(useCaseItem => {
         const useCaseName = useCaseItem.useCase
         
-        // 如果没有直接的use case映射，尝试从相关的category/aspect中查找
         if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          // 尝试通过productAttribute字段查找相关评论
           const relatedReviews: unknown[] = []
           
-          Object.entries(data.allReviewData).forEach(([, reviews]) => {
-            reviews.forEach(review => {
-              // 尝试通过aspect或其他字段匹配use case
-              if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                relatedReviews.push(review)
-              } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                relatedReviews.push(review)
-              } else if (useCaseItem.productAttribute && 
-                         (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                          review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                relatedReviews.push(review)
-              }
+          // 使用新的relatedDetailTexts字段进行映射
+          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
+            useCaseItem.relatedDetailTexts.forEach(detailText => {
+              const reviews = data.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
             })
-          })
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (useCaseItem.productAttribute && 
+                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
           
           if (relatedReviews.length > 0) {
             reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
@@ -242,27 +313,26 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
   }
 
   const transformUseCaseData = (): UseCaseFeedback[] => {
-    return data.reviewInsights.underservedUseCases
+    // 使用新的allUseCases数据而不是underservedUseCases
+    return data.reviewInsights.allUseCases
       .sort((a, b) => b.mentionCount - a.mentionCount)
       .slice(0, 15) // 取前15个
       .map(item => {
-        const satisfactionRate = Math.max(0, 100 - item.gapLevel)
-        const positiveCount = Math.floor(item.mentionCount * satisfactionRate / 100)
-        const negativeCount = item.mentionCount - positiveCount
-        
         return {
           useCase: item.useCase,
           totalMentions: item.mentionCount,
-          positiveCount,
-          negativeCount,
-          satisfactionRate,
+          positiveCount: item.positiveCount,
+          negativeCount: item.negativeCount,
+          satisfactionRate: item.satisfactionRate,
           categoryType: 'Performance', // 默认为Performance
-          topSatisfactionReasons: satisfactionRate > 50 ? [
+          topSatisfactionReasons: item.satisfactionRate > 50 ? [
             `Good coverage for ${item.useCase}`,
+            `${item.positiveCount} positive mentions`,
             ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
           ] : [],
-          topGapReasons: item.gapLevel > 50 ? [
-            `Gap level: ${item.gapLevel}%`,
+          topGapReasons: item.satisfactionRate <= 50 ? [
+            `${item.negativeCount} negative mentions`,
+            `${item.satisfactionRate.toFixed(1)}% satisfaction rate`,
             ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
             ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
           ] : [],
@@ -331,11 +401,12 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
 
         <CategoryUseCaseBar 
           data={useCases} 
-          title="Use Case Analysis"
+          title="Top Mentioned Use Cases by Satisfaction Level"
           description="Bar height = mention count, color = satisfaction level (green=high, yellow=medium, red=low) - Click bars to explore reviews"
           productType={selectedProductType}
           onProductTypeChange={handleProductTypeChange}
           reviewData={reviewData || undefined}
+          totalUseMentions={data.reviewInsights.totalUseMentions}
         />
       </section>
 
