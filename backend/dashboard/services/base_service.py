@@ -6,6 +6,8 @@ from abc import ABC, abstractmethod
 from supabase import Client
 
 from core.database.connection import get_supabase_client
+from core.models.filters import ProjectFilters
+from dashboard.services.filter_service import FilterService
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +41,10 @@ class BaseDashboardService(ABC):
         
         if not self.project_asins:
             raise ValueError(f"Project {project_id} has no ASIN filter defined")
+        
+        # 初始化FilterService
+        self.filter_service = FilterService(self.supabase, self.project_asins)
+        self.project_filters = ProjectFilters.empty()
         
         logger.info(f"Dashboard service initialized for project {project_id} with {len(self.project_asins)} ASINs")
     
@@ -77,6 +83,8 @@ class BaseDashboardService(ABC):
         """Set category filters for additional filtering (deprecated - use set_filters instead)."""
         self.category_filters = categories
         self.filters.categories = categories
+        # 同时更新新的筛选器
+        self.project_filters.categories = categories
         logger.info(f"Category filters set: {categories}")
     
     def set_filters(self, categories: Optional[List[str]] = None, packaging_types: Optional[List[str]] = None, segments: Optional[List[str]] = None, extend_fields: Optional[Dict[str, Any]] = None):
@@ -84,14 +92,29 @@ class BaseDashboardService(ABC):
         if categories is not None:
             self.filters.categories = categories
             self.category_filters = categories  # 保持向后兼容性
+            self.project_filters.categories = categories
         if packaging_types is not None:
             self.filters.packaging_types = packaging_types
+            self.project_filters.packaging_types = packaging_types
         if segments is not None:
             self.filters.segments = segments
+            self.project_filters.segments = segments
         if extend_fields is not None:
             self.filters.extend_fields = extend_fields
+            self.project_filters.extend_fields = extend_fields
         
         logger.info(f"Filters set - Categories: {categories}, Packaging: {packaging_types}, Segments: {segments}, Extend Fields: {extend_fields}")
+    
+    def set_project_filters(self, filters: ProjectFilters):
+        """Set project filters using the new filter model."""
+        self.project_filters = filters
+        # 保持向后兼容性
+        self.category_filters = filters.categories
+        self.filters.categories = filters.categories
+        self.filters.packaging_types = filters.packaging_types
+        self.filters.segments = filters.segments
+        self.filters.extend_fields = filters.extend_fields
+        logger.info(f"Project filters set: {filters.to_dict()}")
     
     def _apply_category_filter(self, query):
         """Apply category filtering to any Supabase query if category filters are set."""
@@ -99,6 +122,10 @@ class BaseDashboardService(ABC):
             query = query.in_('category', self.filters.categories)
             logger.info(f"Applied category filter: {self.filters.categories}")
         return query
+    
+    def _apply_filters(self, query):
+        """Apply all filters using the new filter service."""
+        return self.filter_service.apply_filters(query, self.project_filters)
     
     def _apply_packaging_filter(self, query):
         """Apply packaging type filtering to any Supabase query if packaging filters are set.

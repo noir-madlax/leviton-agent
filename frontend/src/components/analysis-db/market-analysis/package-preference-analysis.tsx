@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { databaseService } from "@/components/analysis-db/data/database-service"
+import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 
 interface PackagePreferenceData {
   packageDistribution: Array<{
@@ -204,31 +205,42 @@ export function PackagePreferenceAnalysis({
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
 
-      <div className="mb-4">
-        <MetricTypeSelector onChange={setMetricType} value={metricType} />
-      </div>
+      <ChartWithFilters
+        chartId="package-preference"
+        chartType="pie"
+        projectId={projectId || ''}
+        title={`Package Type Distribution by ${titleSuffix}`}
+        projectFilters={{
+          categories: categoryFilters || [],
+          packaging_types: packagingTypeFilters || [],
+          segments: segmentFilters || [],
+          extend_fields: extendFields || {},
+          asins: []
+        }}
+      >
+        <div className="mb-4">
+          <MetricTypeSelector onChange={setMetricType} value={metricType} />
+        </div>
 
-      <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Package Type Distribution by {titleSuffix}</h3>
-        
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
-          <p className="text-sm text-blue-700">
-            <strong>Total Products:</strong> {totalProducts} products across {chartData.length} package types
-          </p>
-          {metricType === "revenue" && (
-            <p className="text-sm text-blue-700 mt-1">
-              <strong>Total Revenue:</strong> ${totalValue.toLocaleString()}
+        <div className="mb-8">
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+            <p className="text-sm text-blue-700">
+              <strong>Total Products:</strong> {totalProducts} products across {chartData.length} package types
             </p>
-          )}
+            {metricType === "revenue" && (
+              <p className="text-sm text-blue-700 mt-1">
+                <strong>Total Revenue:</strong> ${totalValue.toLocaleString()}
+              </p>
+            )}
+          </div>
+          
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+            <p className="text-sm text-blue-700">
+              <strong>Note:</strong> Data is based on package type classifications from product analysis. 
+              {metricType === "revenue" ? "Revenue shows total sales value for each package type." : "Count shows number of products for each package type."}
+            </p>
+          </div>
         </div>
-        
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
-          <p className="text-sm text-blue-700">
-            <strong>Note:</strong> Data is based on package type classifications from product analysis. 
-            {metricType === "revenue" ? "Revenue shows total sales value for each package type." : "Count shows number of products for each package type."}
-          </p>
-        </div>
-      </div>
       
       {/* 单一饼图显示 */}
       <div className="bg-gray-50 p-6 rounded-lg">
@@ -265,6 +277,7 @@ export function PackagePreferenceAnalysis({
           </ResponsiveContainer>
         </div>
       </div>
+      </ChartWithFilters>
     </section>
   )
 } 

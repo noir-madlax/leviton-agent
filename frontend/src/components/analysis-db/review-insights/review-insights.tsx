@@ -5,6 +5,8 @@ import { useState, useEffect } from "react"
 import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
 import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-case-bar"
+import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
 
 import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 
@@ -70,7 +72,7 @@ interface ReviewInsightsProps {
   }
 }
 
-export function ReviewInsights({ data }: ReviewInsightsProps) {
+export function ReviewInsights({ data, projectId }: ReviewInsightsProps & { projectId?: string }) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
   
@@ -367,14 +369,21 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
           📊 Customer Pain Points by Category
         </h2>
-       
-
-        <CategoryPainPointsBar 
-          data={categoryPainPoints.topNegativeCategories} 
-          productType={selectedProductType}
-          onProductTypeChange={handleProductTypeChange}
-          reviewData={reviewData || undefined}
-        />
+        
+        <ChartWithFilters
+          chartId="review-pain-points"
+          chartType="bar"
+          projectId={projectId || ''}
+          title="Customer Pain Points by Category"
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <CategoryPainPointsBar 
+            data={categoryPainPoints.topNegativeCategories} 
+            productType={selectedProductType}
+            onProductTypeChange={handleProductTypeChange}
+            reviewData={reviewData || undefined}
+          />
+        </ChartWithFilters>
       </section>
 
       {/* 分类正面反馈分析 */}
@@ -382,14 +391,21 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
           ⭐ Customer Delights by Category
         </h2>
-      
-
-        <CategoryPositiveFeedbackBar 
-          data={categoryPositiveFeedback.topPositiveCategories} 
-          productType={selectedProductType}
-          onProductTypeChange={handleProductTypeChange}
-          reviewData={reviewData || undefined}
-        />
+        
+        <ChartWithFilters
+          chartId="review-positive-feedback"
+          chartType="bar"
+          projectId={projectId || ''}
+          title="Customer Delights by Category"
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <CategoryPositiveFeedbackBar 
+            data={categoryPositiveFeedback.topPositiveCategories} 
+            productType={selectedProductType}
+            onProductTypeChange={handleProductTypeChange}
+            reviewData={reviewData || undefined}
+          />
+        </ChartWithFilters>
       </section>
 
       {/* 使用场景满意度分析 */}
@@ -397,17 +413,24 @@ export function ReviewInsights({ data }: ReviewInsightsProps) {
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
           🎯 Use Case Satisfaction Analysis
         </h2>
-       
-
-        <CategoryUseCaseBar 
-          data={useCases} 
+        
+        <ChartWithFilters
+          chartId="review-use-case"
+          chartType="bar"
+          projectId={projectId || ''}
           title="Top Mentioned Use Cases by Satisfaction Level"
-          description="Bar height = mention count, color = satisfaction level (green=high, yellow=medium, red=low) - Click bars to explore reviews"
-          productType={selectedProductType}
-          onProductTypeChange={handleProductTypeChange}
-          reviewData={reviewData || undefined}
-          totalUseMentions={data.reviewInsights.totalUseMentions}
-        />
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <CategoryUseCaseBar 
+            data={useCases} 
+            title="Top Mentioned Use Cases by Satisfaction Level"
+            description="Bar height = mention count, color = satisfaction level (green=high, yellow=medium, red=low) - Click bars to explore reviews"
+            productType={selectedProductType}
+            onProductTypeChange={handleProductTypeChange}
+            reviewData={reviewData || undefined}
+            totalUseMentions={data.reviewInsights.totalUseMentions}
+          />
+        </ChartWithFilters>
       </section>
 
 

@@ -10,6 +10,16 @@ export interface ProjectFilters {
 }
 
 /**
+ * 筛选器可用选项接口定义
+ */
+export interface FilterOptions {
+  categories: string[]
+  packaging_types: string[]
+  segments: string[]
+  extend_fields: Record<string, string[]>
+}
+
+/**
  * 扩展字段定义接口
  */
 export interface ExtendFieldDefinition {

@@ -35,7 +35,9 @@ class ReviewInsightsService(BaseDashboardService):
                 return {
                     'painPoints': [],
                     'customerLikes': [],
-                    'underservedUseCases': []
+                    'allUseCases': [],
+                    'underservedUseCases': [],
+                    'totalUseMentions': 0
                 }
             
             logger.info(f"🔍 Review insights query returned {len(comprehensive_data)} aspect records for project {self.project_id}")

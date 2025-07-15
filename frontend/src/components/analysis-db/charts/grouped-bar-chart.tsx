@@ -18,6 +18,7 @@ interface GroupedBarChartProps {
 export function GroupedBarChart({
   data,
   index,
+  categories,
   colors = getChartColors(2),
   yAxisLabel,
   xAxisLabel,
@@ -27,6 +28,9 @@ export function GroupedBarChart({
   const formatValue = (value: number) => {
     return metricType === "revenue" ? `$${value.toLocaleString()}` : value.toLocaleString()
   }
+
+  // 获取第一个category作为dataKey，如果没有则使用"value"
+  const dataKey = categories.length > 0 ? categories[0] : "value"
 
   // Calculate dynamic margins based on longest label
   const { bottomMargin, xAxisLabelOffset } = useMemo(() => {
@@ -197,7 +201,7 @@ export function GroupedBarChart({
           }))}
         />
                  <Bar 
-           dataKey="value" 
+           dataKey={dataKey} 
            maxBarSize={80}
            style={{ cursor: 'pointer' }}
          >

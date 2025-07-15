@@ -89,7 +89,7 @@ export function DynamicExtendFieldsFilter({
                     {String(field.filter_options.default)}
                   </SelectItem>
                 )}
-                {field.filter_options.options?.map((option) => {
+                {Array.isArray(field.filter_options.options) && field.filter_options.options.map((option) => {
                   // 从project data中查找对应的计数信息
                   const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
                   const distributionData = fieldDistribution?.find(item => item.name === option)

@@ -5,6 +5,8 @@ import json
 from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, Depends
 
+from core.models.filters import ProjectFilters, FilterOptions
+from dashboard.services.filter_service import FilterService
 from .models import (
     BrandAnalysisResponse, BrandCategoryData,
     ProductAnalysisResponse, CategoryProducts, ProductInfo, TopProductsData, SegmentSummary,
@@ -28,6 +30,101 @@ from .services.project_overview_service import ProjectOverviewService
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+
+# 筛选器相关端点
+@router.get("/projects/{project_id}/filter-options")
+async def get_filter_options(
+    project_id: str,
+    categories: Optional[List[str]] = Query(None),
+    packaging_types: Optional[List[str]] = Query(None),
+    segments: Optional[List[str]] = Query(None),
+    extend_fields: Optional[str] = Query(None)  # JSON string
+):
+    """获取筛选器选项"""
+    try:
+        # 创建一个临时服务实例来获取项目ASINs
+        temp_service = BrandAnalysisService(project_id)
+        project_asins = temp_service.project_asins
+        
+        # 解析extend_fields
+        extend_fields_dict = {}
+        if extend_fields:
+            extend_fields_dict = json.loads(extend_fields)
+        
+        # 构建筛选器
+        filters = ProjectFilters(
+            categories=categories or [],
+            packaging_types=packaging_types or [],
+            segments=segments or [],
+            extend_fields=extend_fields_dict,
+            asins=[]
+        )
+        
+        # 创建筛选服务
+        filter_service = FilterService(temp_service.supabase, project_asins)
+        
+        # 获取可用选项
+        options = filter_service.get_available_options(filters if not filters.is_empty() else None)
+        
+        return {
+            "options": options.to_dict(),
+            "project_id": project_id
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting filter options: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+@router.post("/projects/{project_id}/charts/{chart_type}/data")
+async def get_chart_data(
+    project_id: str,
+    chart_type: str,
+    filters: Dict[str, Any]
+):
+    """获取图表数据"""
+    try:
+        # 解析筛选器
+        project_filters = ProjectFilters.from_dict(filters)
+        
+        # 根据chart_type获取对应的服务
+        service_class = get_chart_service_class(chart_type)
+        service = service_class(project_id)
+        
+        # 应用筛选器
+        if not project_filters.is_empty():
+            service.set_project_filters(project_filters)
+        
+        # 获取数据
+        data = await service.get_data()
+        
+        return {
+            "data": data,
+            "chart_type": chart_type,
+            "project_id": project_id,
+            "filters": filters
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting chart data: {e}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+def get_chart_service_class(chart_type: str):
+    """根据chart类型获取对应的服务类"""
+    service_map = {
+        'brand-analysis': BrandAnalysisService,
+        'product-analysis': ProductAnalysisService,
+        'pricing-analysis': PricingAnalysisService,
+        'market-insights': MarketInsightsService,
+        'package-preference': PackagePreferenceService,
+        'review-insights': ReviewInsightsService,
+        'competitor-analysis': CompetitorAnalysisService,
+        'all-review-data': AllReviewDataService
+    }
+    
+    if chart_type not in service_map:
+        raise ValueError(f"Unknown chart type: {chart_type}")
+    
+    return service_map[chart_type]
 
 
 @router.get("/projects/{project_id}/extend-fields")

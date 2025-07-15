@@ -661,6 +661,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   const handleTabChange = (tabValue: string) => {
     if (!selectedProjectId) return
     
+    // 🔑 更新当前活跃tab状态
+    setCurrentActiveTab(tabValue)
+    
     // 🔑 传递当前的filters到loadSpecificData
     const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined
     const packagingTypeFilters = ('packaging_types' in appliedFilters) ? appliedFilters.packaging_types : undefined
@@ -968,6 +971,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                           <BrandAnalysis 
                             data={data.brandAnalysis} 
                             productLists={productLists}
+                            projectId={selectedProjectId || undefined}
+                            initialFilters={appliedFilters}
                           />
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">
@@ -1014,6 +1019,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                           <MarketInsights 
                             data={data.marketInsights}
                             productLists={productLists}
+                            projectId={selectedProjectId || undefined}
+                            initialFilters={appliedFilters}
                           />
                         ) : loadingStates.marketInsights ? (
                           <div className="flex items-center justify-center py-8">

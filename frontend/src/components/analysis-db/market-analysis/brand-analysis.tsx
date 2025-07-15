@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
 interface BrandAnalysisProps {
   data: {
@@ -51,11 +53,17 @@ interface BrandAnalysisProps {
       url: string
     }>>
   }
+  projectId?: string
+  initialFilters?: ProjectFilters
 }
 
-export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
+  const [data] = useState(initialData)
+  const [loading] = useState(false)
   const { openPanel } = useProductPanel()
+
+
 
   // 获取category信息
   const categoryNames = data.categoryNames || []
@@ -67,7 +75,14 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Brand Analysis</h2>
         <Card className="p-6 bg-gray-50">
-          <p className="text-gray-500 text-center">No brand analysis data available</p>
+          {loading ? (
+            <div className="flex items-center justify-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <span className="ml-2">Loading...</span>
+            </div>
+          ) : (
+            <p className="text-gray-500 text-center">No brand analysis data available</p>
+          )}
         </Card>
       </section>
     )
@@ -88,52 +103,26 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
       return brandData
     })
     .filter(item => {
-      // 过滤掉所有category都为0的品牌
-      return categoryNames.some(category => {
-        const value = item[category]
-        return typeof value === 'number' && value > 0
+      // 过滤掉所有category值都为0的品牌
+      const hasData = categoryNames.some(category => {
+        const value = item[category] as number
+        return value > 0
       })
+      return hasData
     })
     .sort((a, b) => {
-      // 按总值排序
-      const aTotal = categoryNames.reduce((sum, cat) => {
-        const value = a[cat]
-        return sum + (typeof value === 'number' ? value : 0)
-      }, 0)
-      const bTotal = categoryNames.reduce((sum, cat) => {
-        const value = b[cat]
-        return sum + (typeof value === 'number' ? value : 0)
-      }, 0)
+      // 按总收入/总量排序
+      const aTotal = categoryNames.reduce((sum, category) => sum + (a[category] as number), 0)
+      const bTotal = categoryNames.reduce((sum, category) => sum + (b[category] as number), 0)
       return bTotal - aTotal
     })
 
-  // 动态检测产品类型和生成标题
-  const getProductTypeInfo = () => {
-    const hasDimmers = categoryNames.some(cat => cat.toLowerCase().includes('dimmer'))
-    const hasSwitches = categoryNames.some(cat => cat.toLowerCase().includes('switch'))
-    const hasAirFryers = categoryNames.some(cat => cat.toLowerCase().includes('air fryer'))
-    
-    if (hasDimmers && hasSwitches) {
-      return {
-        type: "Switches",
-        emoji: ""
-      }
-    } else if (hasAirFryers) {
-      return {
-        type: "Air Fryers", 
-        emoji: "🔥 Air Fryers"
-      }
-    } else {
-      return {
-        type: "Products",
-        emoji: "📊 Categories"
-      }
-    }
-  }
+  // 确保颜色数组匹配categories数量
+  const colors = categoryColors.slice(0, categoryNames.length)
 
-  const productInfo = getProductTypeInfo()
+
+
   const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
-  const titleSuffix = metricType === "revenue" ? "Revenue" : "Volume"
 
   const handleBarClick = (data: unknown) => {
     if (data && typeof data === 'object' && 'activeLabel' in data) {
@@ -153,35 +142,46 @@ export function BrandAnalysis({ data, productLists }: BrandAnalysisProps) {
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Brand Analysis</h2>
 
-      <h3 className="text-xl font-semibold mb-4">Top 10 Brand {titleSuffix} by Category</h3>
-      <Card className="p-6 bg-gray-50">
-        <MetricTypeSelector onChange={setMetricType} value={metricType} />
-        
-        {/* Category info */}
-        <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
-          <p className="text-sm text-blue-700">
-            <strong>Categories analyzed:</strong> {categoryNames.join(', ')} 
-          </p>
-        </div>
-
-        {/* Single grouped bar chart */}
-        <div className="bg-white p-4 rounded-lg border shadow-sm">
-          <div className="h-[400px]">
-            <BarChart
-              data={chartData}
-              index="name"
-              categories={categoryNames}
-              colors={categoryColors.slice(0, categoryNames.length)}
-              yAxisLabel={yAxisLabel}
-              metricType={metricType}
-              onBarClick={(data) => handleBarClick(data)}
-            />
-          </div>
+      <ChartWithFilters
+        chartId="brand-analysis"
+        chartType="bar"
+        projectId={projectId || ''}
+        title="Top 10 Brand Revenue by Category"
+        projectFilters={initialFilters}
+      >
+        <Card className="p-6 bg-gray-50">
+          <MetricTypeSelector onChange={setMetricType} value={metricType} />
           
-        
-        </div>
+          {/* Category info */}
+          <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
+            <p className="text-sm text-blue-700">
+              <strong>Categories analyzed:</strong> {categoryNames.join(', ')} 
+            </p>
+          </div>
 
-      </Card>
+          {/* Single grouped bar chart */}
+          <div className="bg-white p-4 rounded-lg border shadow-sm">
+            <div className="h-[400px]">
+              {loading ? (
+                <div className="flex items-center justify-center h-full">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                  <span className="ml-2">Loading chart data...</span>
+                </div>
+              ) : (
+                <BarChart
+                  data={chartData}
+                  index="name"
+                  categories={categoryNames}
+                  colors={colors}
+                  yAxisLabel={yAxisLabel}
+                  metricType={metricType}
+                  onBarClick={(data) => handleBarClick(data)}
+                />
+              )}
+            </div>
+          </div>
+        </Card>
+      </ChartWithFilters>
     </section>
   )
 }

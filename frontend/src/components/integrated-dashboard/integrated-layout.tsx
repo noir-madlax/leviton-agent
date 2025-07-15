@@ -1,16 +1,19 @@
 "use client"
 
 import { useState } from 'react'
-import { ChatWithNavigation } from './chat-with-navigation'
-import { ChartContainer } from './chart/chart-container'
-import { useChartManagement } from './hooks/use-chart-management'
-import { useDashboardNavigation } from './hooks/use-dashboard-navigation'
+import { ArrowLeft, Filter, MessageSquare, ChevronRight, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { ArrowLeft, MessageSquare, ChevronLeft, ChevronRight, Filter } from 'lucide-react'
 import Link from 'next/link'
-import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
-import { ChartData } from './shared/types'
+import { ChartContainer } from './chart/chart-container'
+import { ChatWithNavigation } from './chat-with-navigation'
+import { ProjectFilterWrapper } from './components/project-filter-wrapper'
+import { AnalysisDbContainer } from '@/components/analysis-db'
+import { DynamicChartRenderer } from './chart/dynamic-chart-renderer'
+import { useDashboardNavigation } from './hooks/use-dashboard-navigation'
+import { useChartManagement } from './hooks/use-chart-management'
 import { ProjectFilters, DEFAULT_FILTERS } from '@/components/analysis-db/types/filters'
+import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
+import { ChartData } from './shared/types'
 
 // 使用现有的Project接口
 interface Project {
@@ -98,6 +101,9 @@ export function IntegratedLayout({
   const { activeTab, setActiveTab } = useDashboardNavigation()
   const [isChartPanelExpanded, setIsChartPanelExpanded] = useState(false) // 默认为折叠状态
   
+  // 获取缓存loading状态
+  const { isLoading: cacheLoading } = useFilterCache(projectId)
+  
   const {
     chartContainerState,
     activeChartId,
@@ -144,6 +150,20 @@ export function IntegratedLayout({
     setIsChartPanelExpanded(!isChartPanelExpanded)
   }
 
+  const getFilterButtonText = () => {
+    if (cacheLoading) {
+      return 'Loading filter options...'
+    }
+    return isFilterExpanded ? 'Hide filters' : 'Click to filter product category'
+  }
+
+  const getFilterButtonIcon = () => {
+    if (cacheLoading) {
+      return <Loader2 className="h-3.5 w-3.5 animate-spin" />
+    }
+    return <Filter className="h-3.5 w-3.5" />
+  }
+
   return (
     <div className="h-screen bg-gray-50/50 flex flex-col">
       {/* Header */}
@@ -163,10 +183,15 @@ export function IntegratedLayout({
                 {onToggleFilter && (
                   <button
                     onClick={onToggleFilter}
-                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 hover:text-blue-800 text-sm font-medium transition-all duration-200 border border-blue-200 hover:border-blue-300 shadow-sm hover:shadow-md"
+                    disabled={cacheLoading}
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border shadow-sm hover:shadow-md ${
+                      cacheLoading 
+                        ? 'bg-gray-100 text-gray-500 border-gray-300 cursor-not-allowed' 
+                        : 'bg-blue-100 hover:bg-blue-200 text-blue-700 hover:text-blue-800 border-blue-200 hover:border-blue-300'
+                    }`}
                   >
-                    <Filter className="h-3.5 w-3.5" />
-                    {isFilterExpanded ? 'Hide filters' : 'Click to filter product category'}
+                    {getFilterButtonIcon()}
+                    {getFilterButtonText()}
                   </button>
                 )}
               </div>
@@ -185,7 +210,7 @@ export function IntegratedLayout({
           {/* 动态展开的过滤器区域 */}
           {isFilterExpanded && onFiltersChange && (
             <div className="pb-4 pt-2 mt-4">
-              <CategoryFilterAndProjectScope 
+              <ProjectFilterWrapper
                 projectId={projectId}
                 onFiltersChange={onFiltersChange}
                 initialFilters={filters}
@@ -227,7 +252,7 @@ export function IntegratedLayout({
         
         {/* 右侧Chart Panel - 仅在展开状态显示 */}
         {isChartPanelExpanded && (
-          <div className="w-2/3 overflow-y-auto">
+          <div className="w-2/3 bg-white overflow-y-auto">
             <ChartContainer
               state={chartContainerState}
               activeChartId={activeChartId}
@@ -238,17 +263,6 @@ export function IntegratedLayout({
               onStateChange={setChartContainerState}
             />
           </div>
-        )}
-        
-        {/* 展开Chart面板的按钮 - 仅在收起状态显示 */}
-        {!isChartPanelExpanded && (
-          <button
-            onClick={toggleChartPanel}
-            className="fixed bottom-6 right-6 w-12 h-12 bg-blue-600 hover:bg-blue-700 text-white rounded-full shadow-lg flex items-center justify-center transition-colors z-10"
-            title="Show Charts"
-          >
-            <ChevronLeft className="h-5 w-5" />
-          </button>
         )}
       </div>
     </div>

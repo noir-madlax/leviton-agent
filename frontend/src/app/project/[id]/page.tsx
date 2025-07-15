@@ -8,6 +8,7 @@ import { ChartProvider } from "@/contexts/chart-context"
 import { ProtectedRoute } from "@/components/auth/protected-route"
 import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
 import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
+import { preloadFilterOptions } from "@/components/analysis-db/hooks/use-filter-cache"
 
 // 使用现有的Project接口
 interface Project {
@@ -103,8 +104,11 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         const projectData = await databaseService.getProject(projectId)
         setProject(projectData)
         
-        // 同时预加载项目概览数据
-        await loadProjectOverview()
+        // 同时预加载项目概览数据和筛选器数据
+        await Promise.all([
+          loadProjectOverview(),
+          preloadFilterOptions(projectId)
+        ])
       } catch (error) {
         console.error('Failed to load project:', error)
       } finally {

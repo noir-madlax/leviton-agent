@@ -9,6 +9,8 @@ import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shar
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
 
 interface PricingAnalysisProps {
   data: {
@@ -93,7 +95,7 @@ interface PricingAnalysisProps {
   }
 }
 
-export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
+export function PricingAnalysis({ data, productLists, projectId }: PricingAnalysisProps & { projectId?: string }) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
   const { openPanel } = useProductPanel()
 
@@ -292,173 +294,200 @@ export function PricingAnalysis({ data, productLists }: PricingAnalysisProps) {
 
       {/* Price vs Revenue Scatter Plot */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Top 20 Products by Revenue</h3>
-        <Card className="p-6 bg-gray-50">
-          {hasScatterData ? (
-            <div className="h-[400px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <ScatterChart data={getPriceVsRevenueData()}>
-                  <CartesianGrid strokeDasharray="3,3" />
-                  <XAxis 
-                    type="number" 
-                    dataKey="x" 
-                    name="Price"
-                    label={{ value: 'Price (USD)', position: 'insideBottom', offset: -5 }}
-                  />
-                  <YAxis 
-                    type="number" 
-                    dataKey="y" 
-                    name="Revenue"
-                    label={{ value: 'Revenue', angle: -90, position: 'insideLeft' }}
-                  />
-                  <Tooltip 
-                    cursor={{ strokeDasharray: '3,3' }}
-                    content={({ active, payload }) => {
-                      if (active && payload && payload.length) {
-                        const data = payload[0].payload
-                        return (
-                          <div className="bg-white p-3 border rounded shadow">
-                            <p className="font-medium">{data.name}</p>
-                            <p className="text-sm text-gray-600">Brand: {data.brand}</p>
-                            <p className="text-sm text-gray-600">Segment: {data.segment}</p>
-                            <p className="text-sm text-gray-600">Price: ${data.price}</p>
-                            <p className="text-sm text-gray-600">Revenue: ${data.revenue.toLocaleString()}</p>
-                          </div>
-                        )
-                      }
-                      return null
-                    }}
-                  />
-                  <Legend />
-                  {getBrandDataForScatterChart().map((brandData, index) => (
-                    <Scatter
-                      key={brandData.brand}
-                      name={brandData.brand}
-                      data={brandData.products}
-                      fill={getChartColor(index)}
-                      onClick={handleScatterClick}
-                      style={{ cursor: 'pointer' }}
+        <ChartWithFilters
+          chartId="pricing-scatter"
+          chartType="scatter"
+          projectId={projectId || ''}
+          title="Top 20 Products by Revenue"
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <Card className="p-6 bg-gray-50">
+            {hasScatterData ? (
+              <div className="h-[400px]">
+                <ResponsiveContainer width="100%" height="100%">
+                  <ScatterChart data={getPriceVsRevenueData()}>
+                    <CartesianGrid strokeDasharray="3,3" />
+                    <XAxis 
+                      type="number" 
+                      dataKey="x" 
+                      name="Price"
+                      label={{ value: 'Price (USD)', position: 'insideBottom', offset: -5 }}
                     />
-                  ))}
-                </ScatterChart>
-              </ResponsiveContainer>
-            </div>
-          ) : (
-            <div className="h-[400px] flex items-center justify-center">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                <p className="text-gray-500">Loading scatter chart data...</p>
-                <p className="text-sm text-gray-400 mt-2">Waiting for product analysis data</p>
+                    <YAxis 
+                      type="number" 
+                      dataKey="y" 
+                      name="Revenue"
+                      label={{ value: 'Revenue', angle: -90, position: 'insideLeft' }}
+                    />
+                    <Tooltip 
+                      cursor={{ strokeDasharray: '3,3' }}
+                      content={({ active, payload }) => {
+                        if (active && payload && payload.length) {
+                          const data = payload[0].payload
+                          return (
+                            <div className="bg-white p-3 border rounded shadow">
+                              <p className="font-medium">{data.name}</p>
+                              <p className="text-sm text-gray-600">Brand: {data.brand}</p>
+                              <p className="text-sm text-gray-600">Segment: {data.segment}</p>
+                              <p className="text-sm text-gray-600">Price: ${data.price}</p>
+                              <p className="text-sm text-gray-600">Revenue: ${data.revenue.toLocaleString()}</p>
+                            </div>
+                          )
+                        }
+                        return null
+                      }}
+                    />
+                    <Legend />
+                    {getBrandDataForScatterChart().map((brandData, index) => (
+                      <Scatter
+                        key={brandData.brand}
+                        name={brandData.brand}
+                        data={brandData.products}
+                        fill={getChartColor(index)}
+                        onClick={handleScatterClick}
+                        style={{ cursor: 'pointer' }}
+                      />
+                    ))}
+                  </ScatterChart>
+                </ResponsiveContainer>
               </div>
-            </div>
-          )}
-        </Card>
+            ) : (
+              <div className="h-[400px] flex items-center justify-center">
+                <div className="text-center">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                  <p className="text-gray-500">Loading scatter chart data...</p>
+                  <p className="text-sm text-gray-400 mt-2">Waiting for product analysis data</p>
+                </div>
+              </div>
+            )}
+          </Card>
+        </ChartWithFilters>
       </div>
 
       {/* Price Distribution by Segment */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Price Distribution by Segment</h3>
-        <Card className="p-6 bg-gray-50">
-          <div className="mb-4">
-            <PriceTypeSelector 
-              onChange={setPriceType} 
-              defaultValue={priceType}
-            />
-          </div>
-          
-          <div className="overflow-x-auto">
-            <table className="w-full">
-              <thead>
-                <tr className="border-b">
-                  <th className="text-left pb-2">Segment</th>
-                  <th className="text-right pb-2">Products</th>
-                  <th className="text-right pb-2">Min</th>
-                  <th className="text-right pb-2">Median</th>
-                  <th className="text-right pb-2">Max</th>
-                  <th className="text-right pb-2">Average</th>
-                </tr>
-              </thead>
-              <tbody>
-                {allCategories.map((category, index) => {
-                  const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
-                  const segmentName = category.category
-                  
-                  return (
-                    <tr key={index} className="border-b hover:bg-gray-50">
-                      <td className="py-2 flex items-center">
-                        <span className="mr-2">{getSegmentEmoji(segmentName)}</span>
-                        <span className="font-medium">{segmentName}</span>
-                      </td>
-                      <td className="text-right py-2">{category.productCount}</td>
-                      <td className="text-right py-2">
-                        <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
-                      </td>
-                      <td className="text-right py-2">
-                        <span className="text-blue-600 font-medium">${stats.median.toFixed(2)}</span>
-                      </td>
-                      <td className="text-right py-2">
-                        <span className="text-red-600 font-medium">${stats.max.toFixed(2)}</span>
-                      </td>
-                      <td className="text-right py-2">
-                        <span className="text-purple-600 font-medium">${stats.mean.toFixed(2)}</span>
-                      </td>
-                    </tr>
-                  )
-                })}
-              </tbody>
-            </table>
-          </div>
-        </Card>
+        <ChartWithFilters
+          chartId="pricing-distribution"
+          chartType="table"
+          projectId={projectId || ''}
+          title="Price Distribution by Segment"
+        >
+          <Card className="p-6 bg-gray-50">
+            <div className="mb-4">
+              <PriceTypeSelector 
+                onChange={setPriceType} 
+                defaultValue={priceType}
+              />
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b">
+                    <th className="text-left pb-2">Segment</th>
+                    <th className="text-right pb-2">Products</th>
+                    <th className="text-right pb-2">Min</th>
+                    <th className="text-right pb-2">Median</th>
+                    <th className="text-right pb-2">Max</th>
+                    <th className="text-right pb-2">Average</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {allCategories.map((category, index) => {
+                    const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
+                    const segmentName = category.category
+                    
+                    return (
+                      <tr key={index} className="border-b hover:bg-gray-50">
+                        <td className="py-2 flex items-center">
+                          <span className="mr-2">{getSegmentEmoji(segmentName)}</span>
+                          <span className="font-medium">{segmentName}</span>
+                        </td>
+                        <td className="text-right py-2">{category.productCount}</td>
+                        <td className="text-right py-2">
+                          <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
+                        </td>
+                        <td className="text-right py-2">
+                          <span className="text-blue-600 font-medium">${stats.median.toFixed(2)}</span>
+                        </td>
+                        <td className="text-right py-2">
+                          <span className="text-red-600 font-medium">${stats.max.toFixed(2)}</span>
+                        </td>
+                        <td className="text-right py-2">
+                          <span className="text-purple-600 font-medium">${stats.mean.toFixed(2)}</span>
+                        </td>
+                      </tr>
+                    )
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </Card>
+        </ChartWithFilters>
       </div>
 
       {/* All Segments Price Distribution Comparison */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">All Segments Price Distribution Comparison</h3>
-        <Card className="p-6 bg-gray-50">
-          <div className="mb-4">
-            <PriceTypeSelector 
-              onChange={setPriceType} 
-              defaultValue={priceType}
-            />
-          </div>
-          
-          <div className="h-[500px]">
-            <MultiSegmentViolinChart 
-              segments={violinSegments}
-              priceType={priceType}
-              onViolinClick={handleViolinClick}
-            />
-          </div>
-        </Card>
+        <ChartWithFilters
+          chartId="pricing-violin"
+          chartType="violin"
+          projectId={projectId || ''}
+          title="All Segments Price Distribution Comparison"
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <Card className="p-6 bg-gray-50">
+            <div className="mb-4">
+              <PriceTypeSelector 
+                onChange={setPriceType} 
+                defaultValue={priceType}
+              />
+            </div>
+            
+            <div className="h-[500px]">
+              <MultiSegmentViolinChart 
+                segments={violinSegments}
+                priceType={priceType}
+                onViolinClick={handleViolinClick}
+              />
+            </div>
+          </Card>
+        </ChartWithFilters>
       </div>
 
       {/* Brand Price Distribution */}
       <div className="mb-8">
-        <h3 className="text-xl font-semibold mb-4">Brand Price Distribution</h3>
-        <Card className="p-6 bg-gray-50">
-          <div className="mb-4">
-            <PriceTypeSelector 
-              onChange={setPriceType} 
-              defaultValue={priceType}
-            />
-          </div>
-          
-          <div className="space-y-8">
-            {data.brandPriceDistribution.map((categoryData, index) => (
-              <div key={index}>
-                <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
-                <div className="h-[400px]">
-                  <BrandViolinChart 
-                    brands={categoryData.brands}
-                    priceType={priceType}
-                    category={categoryData.category}
-                    onViolinClick={handleBrandViolinClick}
-                  />
+        <ChartWithFilters
+          chartId="pricing-brand"
+          chartType="violin"
+          projectId={projectId || ''}
+          title="Brand Price Distribution"
+          projectFilters={DEFAULT_FILTERS}
+        >
+          <Card className="p-6 bg-gray-50">
+            <div className="mb-4">
+              <PriceTypeSelector 
+                onChange={setPriceType} 
+                defaultValue={priceType}
+              />
+            </div>
+            
+            <div className="space-y-8">
+              {data.brandPriceDistribution.map((categoryData, index) => (
+                <div key={index}>
+                  <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
+                  <div className="h-[400px]">
+                    <BrandViolinChart 
+                      brands={categoryData.brands}
+                      priceType={priceType}
+                      category={categoryData.category}
+                      onViolinClick={handleBrandViolinClick}
+                    />
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </Card>
+              ))}
+            </div>
+          </Card>
+        </ChartWithFilters>
       </div>
     </section>
   )
