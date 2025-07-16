@@ -5,16 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Filter, RotateCcw, X, ChevronUp, ChevronDown } from "lucide-react"
-import { ProjectFilters, FilterOptions } from '../types/filters'
+import { Filter, RotateCcw, X } from "lucide-react"
+import { ProjectFilters, FilterOptions, PACKAGING_TYPE_OPTIONS } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
 
-// 包装类型选项
-const PACKAGING_TYPE_OPTIONS = [
-  { value: 'individual', label: 'Individual/Unknown' },
-  { value: 'package', label: 'Package (Multi-pack)' }
-] as const
+
 
 interface UniversalFilterProps {
   level: 'project' | 'chart'
@@ -24,7 +20,13 @@ interface UniversalFilterProps {
   appliedFilters?: ProjectFilters // 用于显示哪些来自project
   availableOptions?: FilterOptions // 现在是可选的，如果不提供则从缓存获取
   onFiltersChange: (filters: ProjectFilters) => void
-  projectData?: any
+  projectData?: {
+    distributions?: {
+      categories?: Array<{ name: string; count: number; percentage: number }>
+      packaging_types?: Array<{ name: string; count: number; percentage: number }>
+      segments?: Array<{ name: string; count: number; percentage: number }>
+    }
+  }
   loading?: boolean
   useCachedData?: boolean // 新增：是否使用缓存数据
 }
@@ -49,11 +51,13 @@ export function UniversalFilterComponent({
   })
 
   // 如果使用缓存数据，则从缓存获取筛选器选项
-  const { filterOptions: cachedOptions, isLoading: cacheLoading, error: cacheError } = useFilterCache(projectId)
+  const { filterOptions: cachedOptions, isLoading: cacheLoading } = useFilterCache(projectId)
   
   // 确定最终使用的筛选器选项
   const finalAvailableOptions = useCachedData ? cachedOptions : availableOptions
   const finalLoading = useCachedData ? cacheLoading : loading
+
+
 
   // 同步外部传入的筛选器变化
   useEffect(() => {
@@ -68,21 +72,96 @@ export function UniversalFilterComponent({
     return projectValues?.includes(value) || false
   }
 
+  // 处理extend_fields的删除
+  const handleRemoveExtendField = (fieldName: string) => {
+    setPendingFilters(prev => {
+      const newExtendFields = { ...prev.extend_fields }
+      delete newExtendFields[fieldName]
+      return {
+        ...prev,
+        extend_fields: newExtendFields
+      }
+    })
+  }
+
   // 渲染筛选项标签，区分来源
   const renderFilterBadge = (filterType: keyof ProjectFilters, value: string, onRemove: () => void) => {
     const fromProject = isFromProject(filterType, value)
     
+    // 添加对应的图标前缀
+    const getPrefix = (filterType: keyof ProjectFilters) => {
+      switch (filterType) {
+        case 'categories': return '📁'
+        case 'packaging_types': return '📦'
+        case 'segments': return '🎯'
+        default: return ''
+      }
+    }
+    
+    // 获取包装类型的显示标签
+    const getDisplayValue = (filterType: keyof ProjectFilters, value: string) => {
+      if (filterType === 'packaging_types') {
+        const option = PACKAGING_TYPE_OPTIONS.find(opt => opt.value === value)
+        return option?.label || value
+      }
+      return value
+    }
+    
     return (
       <Badge
-        key={value}
+        key={`${filterType}-${value}`}
         variant={fromProject ? "secondary" : "default"}
-        className={`mr-2 mb-2 ${fromProject ? 'bg-blue-100 text-blue-800 border-blue-300' : ''}`}
+        className={`text-xs flex items-center gap-1 mr-2 mb-2 ${fromProject ? 'bg-blue-100 text-blue-800 border-blue-300' : ''}`}
       >
         {fromProject && <span className="mr-1">📌</span>}
-        {value}
+        {getPrefix(filterType)} {getDisplayValue(filterType, value)}
         <X 
-          className="w-3 h-3 ml-1 cursor-pointer hover:text-red-500" 
-          onClick={onRemove} 
+          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto" 
+          onClick={(e) => {
+            console.log('[FILTER-REMOVE] Clicking X for filter:', filterType, value)
+            e.stopPropagation()
+            e.preventDefault()
+            onRemove()
+          }}
+        />
+      </Badge>
+    )
+  }
+
+  // 渲染extend_fields的Badge
+  const renderExtendFieldBadge = (fieldName: string, value: string | boolean | number | string[] | number[] | undefined, displayName: string, onRemove: () => void) => {
+    let displayValue = value
+    
+    // 对于数组值，显示第一个元素
+    if (Array.isArray(value)) {
+      displayValue = value[0] || ''
+    }
+    
+    // 对于boolean值，转换为Yes/No
+    if (typeof value === 'boolean') {
+      displayValue = value ? 'Yes' : 'No'
+    }
+    
+    // 对于range值，显示范围
+    if (Array.isArray(value) && value.length === 2) {
+      displayValue = `${value[0]}-${value[1]}`
+    }
+    
+    return (
+      <Badge
+        key={`extend-${fieldName}`}
+        variant="default"
+        className="text-xs flex items-center gap-1 mr-2 mb-2"
+      >
+        🔧 {displayName}: {displayValue}
+        <X 
+          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto" 
+          onClick={(e) => {
+            console.log('[FILTER-REMOVE] Clicking X for extend field:', fieldName, value)
+            e.stopPropagation()
+            e.preventDefault()
+            onRemove()
+          }}
         />
       </Badge>
     )
@@ -186,6 +265,8 @@ export function UniversalFilterComponent({
     )
   }
 
+
+
   return (
     <Card className="border-gray-200">
       <CardHeader className="pb-2">
@@ -227,13 +308,57 @@ export function UniversalFilterComponent({
               </SelectTrigger>
               <SelectContent className="max-h-80">
                 <SelectItem value="all">All Categories</SelectItem>
-                {finalAvailableOptions.categories
-                  .filter(cat => !pendingFilters.categories.includes(cat))
-                  .map(category => (
-                    <SelectItem key={category} value={category}>
-                      {category}
-                    </SelectItem>
-                  ))}
+                {finalAvailableOptions.hierarchical_categories && finalAvailableOptions.hierarchical_categories.length > 0 ? (
+                  // 显示层次结构
+                  finalAvailableOptions.hierarchical_categories.map((parentGroup) => (
+                    <div key={parentGroup.parent_category} className="mb-2">
+                      {/* 父类别标题 */}
+                      <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
+                        📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
+                      </div>
+                      
+                      {/* 子类别选项 */}
+                      {parentGroup.children
+                        .filter(child => !pendingFilters.categories.includes(child.category))
+                        .map((child) => (
+                          <SelectItem 
+                            key={child.category} 
+                            value={child.category}
+                            className="pl-6 py-2"
+                          >
+                            <div className="flex justify-between items-center w-full">
+                              <span className="flex items-center gap-2">
+                                🏷️ {child.category}
+                              </span>
+                              <span className="text-sm text-gray-500">
+                                {child.count} ({child.percentage}%)
+                              </span>
+                            </div>
+                          </SelectItem>
+                        ))}
+                    </div>
+                  ))
+                ) : (
+                  // Fallback: 显示扁平分类结构
+                  finalAvailableOptions.categories
+                    .filter(cat => !pendingFilters.categories.includes(cat))
+                    .map(category => {
+                      // 从projectData中查找对应的计数信息
+                      const distributionData = projectData?.distributions?.categories?.find(
+                        (item: { name: string; count: number; percentage: number }) => item.name === category
+                      )
+                      
+                      const displayLabel = distributionData 
+                        ? `${category} (${distributionData.count} - ${distributionData.percentage}%)`
+                        : category
+                      
+                      return (
+                        <SelectItem key={category} value={category}>
+                          {displayLabel}
+                        </SelectItem>
+                      )
+                    })
+                )}
               </SelectContent>
             </Select>
           </div>
@@ -251,13 +376,45 @@ export function UniversalFilterComponent({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Packaging Types</SelectItem>
-                {PACKAGING_TYPE_OPTIONS
-                  .filter(option => !pendingFilters.packaging_types.includes(option.value))
-                  .map(option => (
-                    <SelectItem key={option.value} value={option.value}>
-                      {option.label}
-                    </SelectItem>
-                  ))}
+                {/* 优先显示实际数据中的包装类型 */}
+                {projectData?.distributions?.packaging_types && projectData.distributions.packaging_types.length > 0 ? (
+                  projectData.distributions.packaging_types
+                    .filter(item => !pendingFilters.packaging_types.includes(item.name.toLowerCase()))
+                    .map((item) => {
+                      // 标准化名称映射
+                      const standardizedName = item.name.toLowerCase().includes('individual') ? 'individual' : 
+                                              item.name.toLowerCase().includes('package') ? 'package' : 
+                                              item.name.toLowerCase()
+                      
+                      return (
+                        <SelectItem key={standardizedName} value={standardizedName}>
+                          {item.name} ({item.count} - {item.percentage}%)
+                        </SelectItem>
+                      )
+                    })
+                ) : (
+                  // Fallback: 使用固定选项
+                  PACKAGING_TYPE_OPTIONS
+                    .filter(option => !pendingFilters.packaging_types.includes(option.value))
+                    .map((option) => {
+                      // 从distributions数据中查找对应的计数信息
+                      const distributionData = projectData?.distributions?.packaging_types?.find(
+                        (item: { name: string; count: number; percentage: number }) => item.name.toLowerCase() === option.value || 
+                                (option.value === 'individual' && item.name.toLowerCase() === 'individual') ||
+                                (option.value === 'package' && item.name.toLowerCase() === 'package')
+                      )
+                      
+                      const displayLabel = distributionData 
+                        ? `${option.label} (${distributionData.count} - ${distributionData.percentage}%)`
+                        : option.label
+                      
+                      return (
+                        <SelectItem key={option.value} value={option.value}>
+                          {displayLabel}
+                        </SelectItem>
+                      )
+                    })
+                )}
               </SelectContent>
             </Select>
           </div>
@@ -277,11 +434,22 @@ export function UniversalFilterComponent({
                 <SelectItem value="all">All Segments</SelectItem>
                 {finalAvailableOptions.segments
                   .filter(segment => !pendingFilters.segments.includes(segment))
-                  .map(segment => (
-                    <SelectItem key={segment} value={segment}>
-                      {segment}
-                    </SelectItem>
-                  ))}
+                  .map((segment) => {
+                    // 从distributions数据中查找对应的计数信息
+                    const distributionData = projectData?.distributions?.segments?.find(
+                      (item: { name: string; count: number; percentage: number }) => item.name === segment
+                    )
+                    
+                    const displayLabel = distributionData 
+                      ? `${segment} (${distributionData.count} - ${distributionData.percentage}%)`
+                      : segment
+                    
+                    return (
+                      <SelectItem key={segment} value={segment}>
+                        {displayLabel}
+                      </SelectItem>
+                    )
+                  })}
               </SelectContent>
             </Select>
           </div>
@@ -293,44 +461,38 @@ export function UniversalFilterComponent({
           extendFields={pendingFilters.extend_fields}
           onFilterChange={(fields) => setPendingFilters(prev => ({ ...prev, extend_fields: fields }))}
           className="flex-wrap"
-          projectData={projectData}
+          projectData={projectData as any}
         />
 
-        {/* 已选择的筛选器显示 */}
+        {/* 已选择的筛选器显示 - 横向排列 */}
         {hasActiveFilters && (
-          <div className="space-y-2">
-            {pendingFilters.categories.length > 0 && (
-              <div>
-                <span className="text-sm font-medium text-gray-700">Categories:</span>
-                <div className="mt-1">
-                  {pendingFilters.categories.map(category => 
-                    renderFilterBadge('categories', category, () => handleRemoveCategory(category))
-                  )}
-                </div>
-              </div>
-            )}
-
-            {pendingFilters.packaging_types.length > 0 && (
-              <div>
-                <span className="text-sm font-medium text-gray-700">Packaging Types:</span>
-                <div className="mt-1">
-                  {pendingFilters.packaging_types.map(packagingType => 
-                    renderFilterBadge('packaging_types', packagingType, () => handleRemovePackagingType(packagingType))
-                  )}
-                </div>
-              </div>
-            )}
-
-            {pendingFilters.segments.length > 0 && (
-              <div>
-                <span className="text-sm font-medium text-gray-700">Segments:</span>
-                <div className="mt-1">
-                  {pendingFilters.segments.map(segment => 
-                    renderFilterBadge('segments', segment, () => handleRemoveSegment(segment))
-                  )}
-                </div>
-              </div>
-            )}
+          <div className="pt-2 border-t border-gray-100">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-xs text-gray-600">Applied filters:</span>
+              {pendingFilters.categories.map(category => 
+                renderFilterBadge('categories', category, () => handleRemoveCategory(category))
+              )}
+              {pendingFilters.packaging_types.map(packagingType => 
+                renderFilterBadge('packaging_types', packagingType, () => handleRemovePackagingType(packagingType))
+              )}
+              {pendingFilters.segments.map(segment => 
+                renderFilterBadge('segments', segment, () => handleRemoveSegment(segment))
+              )}
+              {/* 添加extend_fields的Badge显示 */}
+              {Object.entries(pendingFilters.extend_fields).map(([fieldName, value]) => {
+                if (value === undefined || value === null || value === '') return null
+                
+                // 获取字段的显示名称
+                const displayName = fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+                
+                return renderExtendFieldBadge(
+                  fieldName, 
+                  value, 
+                  displayName, 
+                  () => handleRemoveExtendField(fieldName)
+                )
+              })}
+            </div>
           </div>
         )}
 
@@ -354,6 +516,8 @@ export function UniversalFilterComponent({
             Apply Filters
           </Button>
         </div>
+
+
       </CardContent>
     </Card>
   )

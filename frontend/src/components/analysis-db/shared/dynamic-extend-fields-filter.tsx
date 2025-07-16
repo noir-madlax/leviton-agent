@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Label } from '@/components/ui/label'
 import { Slider } from '@/components/ui/slider'
 import { ExtendFieldDefinition } from '../types/filters'
 
@@ -31,6 +30,7 @@ export function DynamicExtendFieldsFilter({
 }: DynamicExtendFieldsFilterProps) {
   const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
   const [loading, setLoading] = useState(false)
+  const [selectKeys, setSelectKeys] = useState<Record<string, number>>({})
 
   useEffect(() => {
     const loadExtendFields = async () => {
@@ -46,7 +46,15 @@ export function DynamicExtendFieldsFilter({
         }
         
         const result = await response.json()
-        setFieldDefinitions(result.extend_fields || [])
+        const fields = result.extend_fields || []
+        setFieldDefinitions(fields)
+        
+        // 初始化selectKeys
+        const initialKeys: Record<string, number> = {}
+        fields.forEach((field: ExtendFieldDefinition) => {
+          initialKeys[field.field_name] = 0
+        })
+        setSelectKeys(initialKeys)
       } catch (error) {
         console.error('Error loading extend fields:', error)
         setFieldDefinitions([])
@@ -58,9 +66,19 @@ export function DynamicExtendFieldsFilter({
     loadExtendFields()
   }, [projectId])
 
-  const handleFieldChange = (fieldName: string, value: any) => {
-    const newFilters = { ...extendFields, [fieldName]: value }
+  const handleFieldChange = (fieldName: string, value: string | boolean | number | string[] | number[] | undefined) => {
+    const newFilters = { ...extendFields }
+    
+    if (value === undefined || value === null || value === '') {
+      delete newFilters[fieldName]
+    } else {
+      newFilters[fieldName] = value
+    }
+    
     onFilterChange(newFilters)
+    
+    // 重置选择器
+    setSelectKeys(prev => ({ ...prev, [fieldName]: prev[fieldName] + 1 }))
   }
 
   const renderFieldComponent = (field: ExtendFieldDefinition) => {
@@ -70,15 +88,18 @@ export function DynamicExtendFieldsFilter({
       case 'select':
         return (
           <div key={field.field_name} className="flex items-center gap-2">
-            <Label className="text-sm text-gray-600 min-w-fit">
+            <label className="text-sm text-gray-600 min-w-fit">
               {field.display_name}:
-            </Label>
+            </label>
             <Select
-              value={currentValue || String(field.filter_options.default || '')}
-                              onValueChange={(value) => {
-                  const finalValue = value === String(field.filter_options.default) ? undefined : value
-                  handleFieldChange(field.field_name, finalValue)
-                }}
+              key={selectKeys[field.field_name] || 0}
+              onValueChange={(value) => {
+                if (value === String(field.filter_options.default)) {
+                  handleFieldChange(field.field_name, undefined)
+                } else {
+                  handleFieldChange(field.field_name, value)
+                }
+              }}
             >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={field.filter_options.placeholder || field.display_name} />
@@ -89,21 +110,25 @@ export function DynamicExtendFieldsFilter({
                     {String(field.filter_options.default)}
                   </SelectItem>
                 )}
-                {field.filter_options.options && Object.keys(field.filter_options.options).map((option) => {
-                  // 从project data中查找对应的计数信息
-                  const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
-                  const distributionData = fieldDistribution?.find(item => item.name === option)
-                  
-                  const displayLabel = distributionData 
-                    ? `${option} (${distributionData.count} - ${distributionData.percentage}%)`
-                    : option
-                  
-                  return (
-                    <SelectItem key={option} value={option}>
-                      {displayLabel}
-                    </SelectItem>
-                  )
-                })}
+                {/* 优先显示实际数据中的选项，并过滤已选择的项目 */}
+                {projectData?.distributions?.extend_fields?.[field.field_name] ? (
+                  projectData.distributions.extend_fields[field.field_name]
+                    .filter(item => currentValue !== item.name)
+                    .map((item) => (
+                      <SelectItem key={item.name} value={item.name}>
+                        {item.name} ({item.count} - {item.percentage}%)
+                      </SelectItem>
+                    ))
+                ) : (
+                  // Fallback: 如果没有实际数据，才使用定义中的选项（但不显示占比）
+                  field.filter_options.options && Object.keys(field.filter_options.options)
+                    .filter(option => currentValue !== option)
+                    .map((option) => (
+                      <SelectItem key={option} value={option}>
+                        {option}
+                      </SelectItem>
+                    ))
+                )}
               </SelectContent>
             </Select>
           </div>
@@ -113,26 +138,31 @@ export function DynamicExtendFieldsFilter({
         // For multi-select, we'll use a simplified approach with multiple Select components
         return (
           <div key={field.field_name} className="flex items-center gap-2">
-            <Label className="text-sm text-gray-600 min-w-fit">
+            <label className="text-sm text-gray-600 min-w-fit">
               {field.display_name}:
-            </Label>
+            </label>
             <Select
-              value={currentValue?.[0] || ''}
+              key={selectKeys[field.field_name] || 0}
               onValueChange={(value) => {
-                const newValue = value ? [value] : []
-                handleFieldChange(field.field_name, newValue.length > 0 ? newValue : undefined)
+                if (value === '' || value === 'none') {
+                  handleFieldChange(field.field_name, undefined)
+                } else {
+                  handleFieldChange(field.field_name, [value])
+                }
               }}
             >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={field.filter_options.placeholder || field.display_name} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="">None</SelectItem>
-                {field.filter_options.options && Object.keys(field.filter_options.options).map((option) => (
-                  <SelectItem key={option} value={option}>
-                    {option}
-                  </SelectItem>
-                ))}
+                <SelectItem value="none">None</SelectItem>
+                {field.filter_options.options && Object.keys(field.filter_options.options)
+                  .filter(option => !currentValue || !currentValue.includes(option))
+                  .map((option) => (
+                    <SelectItem key={option} value={option}>
+                      {option}
+                    </SelectItem>
+                  ))}
               </SelectContent>
             </Select>
           </div>
@@ -141,11 +171,11 @@ export function DynamicExtendFieldsFilter({
       case 'boolean':
         return (
           <div key={field.field_name} className="flex items-center gap-2">
-            <Label className="text-sm text-gray-600 min-w-fit">
+            <label className="text-sm text-gray-600 min-w-fit">
               {field.display_name}:
-            </Label>
+            </label>
             <Select
-              value={currentValue === true ? 'true' : currentValue === false ? 'false' : 'all'}
+              key={selectKeys[field.field_name] || 0}
               onValueChange={(value) => {
                 let newValue: boolean | undefined
                 if (value === 'true') {
@@ -163,28 +193,33 @@ export function DynamicExtendFieldsFilter({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All</SelectItem>
-                <SelectItem value="true">
-                  {(() => {
-                    const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
-                    const trueLabel = field.filter_options.true_label || 'Yes'
-                    const distributionData = fieldDistribution?.find(item => item.name === trueLabel)
-                    
-                    return distributionData 
-                      ? `${trueLabel} (${distributionData.count} - ${distributionData.percentage}%)`
-                      : trueLabel
-                  })()}
-                </SelectItem>
-                <SelectItem value="false">
-                  {(() => {
-                    const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
-                    const falseLabel = field.filter_options.false_label || 'No'
-                    const distributionData = fieldDistribution?.find(item => item.name === falseLabel)
-                    
-                    return distributionData 
-                      ? `${falseLabel} (${distributionData.count} - ${distributionData.percentage}%)`
-                      : falseLabel
-                  })()}
-                </SelectItem>
+                {/* 过滤已选择的项目 */}
+                {currentValue !== true && (
+                  <SelectItem value="true">
+                    {(() => {
+                      const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
+                      const trueLabel = field.filter_options.true_label || 'Yes'
+                      const distributionData = fieldDistribution?.find(item => item.name === trueLabel)
+                      
+                      return distributionData 
+                        ? `${trueLabel} (${distributionData.count} - ${distributionData.percentage}%)`
+                        : trueLabel
+                    })()}
+                  </SelectItem>
+                )}
+                {currentValue !== false && (
+                  <SelectItem value="false">
+                    {(() => {
+                      const fieldDistribution = projectData?.distributions?.extend_fields?.[field.field_name]
+                      const falseLabel = field.filter_options.false_label || 'No'
+                      const distributionData = fieldDistribution?.find(item => item.name === falseLabel)
+                      
+                      return distributionData 
+                        ? `${falseLabel} (${distributionData.count} - ${distributionData.percentage}%)`
+                        : falseLabel
+                    })()}
+                  </SelectItem>
+                )}
               </SelectContent>
             </Select>
           </div>
@@ -198,12 +233,12 @@ export function DynamicExtendFieldsFilter({
 
         return (
           <div key={field.field_name} className="flex items-center gap-2">
-            <Label className="text-sm text-gray-600 min-w-fit">
+            <label className="text-sm text-gray-600 min-w-fit">
               {field.display_name}:
-            </Label>
+            </label>
             <div className="flex items-center gap-2 w-48">
               <Slider
-                value={currentRange}
+                value={currentRange as number[]}
                 onValueChange={(value) => {
                   const newValue = value[0] === min && value[1] === max ? undefined : value
                   handleFieldChange(field.field_name, newValue)

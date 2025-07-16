@@ -14,6 +14,15 @@ export interface ProjectFilters {
  */
 export interface FilterOptions {
   categories: string[]
+  hierarchical_categories?: Array<{
+    parent_category: string
+    parent_count: number
+    children: Array<{
+      category: string
+      count: number
+      percentage: number
+    }>
+  }>
   packaging_types: string[]
   segments: string[]
   extend_fields: Record<string, string[]>
@@ -60,6 +69,14 @@ export const DEFAULT_FILTERS: ProjectFilters = {
   segments: [],
   extend_fields: {}
 }
+
+/**
+ * 包装类型选项
+ */
+export const PACKAGING_TYPE_OPTIONS = [
+  { value: 'individual', label: 'Individual/Unknown' },
+  { value: 'package', label: 'Package (Multi-pack)' }
+] as const
 
 /**
  * 包装类型定义

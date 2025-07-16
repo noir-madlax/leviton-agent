@@ -71,6 +71,7 @@ export function useFilterCache(projectId: string): FilterCacheHookReturn {
 
       const filterOptions: FilterOptions = {
         categories: overview.available_categories.flat_categories,
+        hierarchical_categories: overview.available_categories.hierarchical_categories,
         packaging_types: ['individual', 'package'],
         segments: segments,
         extend_fields: {} // 这个可以根据需要扩展

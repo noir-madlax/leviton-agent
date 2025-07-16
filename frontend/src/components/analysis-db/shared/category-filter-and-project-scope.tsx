@@ -8,12 +8,7 @@ import { Badge } from "@/components/ui/badge"
 import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
 import { databaseService } from '@/components/analysis-db/data/database-service'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
-
-// 包装类型选项
-const PACKAGING_TYPE_OPTIONS = [
-  { value: 'individual', label: 'Individual/Unknown' },
-  { value: 'package', label: 'Package (Multi-pack)' }
-] as const
+import { PACKAGING_TYPE_OPTIONS, ProjectFilters } from '@/components/analysis-db/types/filters'
 
 interface CategoryFilterAndProjectScopeProps {
   projectId: string | null
@@ -21,14 +16,6 @@ interface CategoryFilterAndProjectScopeProps {
   initialFilters?: ProjectFilters
   preloadedData?: ProjectOverviewData | null
   isDataLoading?: boolean
-}
-
-interface ProjectFilters {
-  categories: string[]
-  asins: string[]
-  packaging_types: string[]  // 新增: 包装类型筛选
-  segments: string[]  // 新增: 产品段筛选
-  extend_fields: Record<string, any>  // 新增: 扩展字段筛选
 }
 
 // 添加项目概览数据接口
