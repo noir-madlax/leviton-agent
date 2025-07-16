@@ -305,7 +305,7 @@ export function UniversalFilterComponent({
         {level === 'project' && projectData?.stats && (
           <div className="mb-4">
             <div className="mb-2">
-              <h3 className="text-sm font-medium text-gray-700">Project Data Scope Preview</h3>
+              <h3 className="text-sm font-medium text-gray-700">Project Data Scope：</h3>
             </div>
             <div className="grid grid-cols-4 gap-3 mb-3">
               <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
@@ -352,13 +352,13 @@ export function UniversalFilterComponent({
             </div>
           </div>
         )}
-
+  <h3 className="text-sm font-medium text-gray-700">Filters：</h3>
         {/* 筛选器控件 */}
         <div className="flex items-center gap-4 flex-wrap">
-          
+      
           {/* Category Filter */}
           <div className="flex items-center gap-2">
-            
+      
             <span className="text-sm text-gray-600">Category:</span>
             <Select 
               key={selectKeys.category}
