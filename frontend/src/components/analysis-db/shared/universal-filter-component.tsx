@@ -308,7 +308,20 @@ export function UniversalFilterComponent({
               </SelectTrigger>
               <SelectContent className="max-h-80">
                 <SelectItem value="all">All Categories</SelectItem>
-                {finalAvailableOptions.hierarchical_categories && finalAvailableOptions.hierarchical_categories.length > 0 ? (
+                {/* 调试日志 */}
+                {(() => {
+                  console.log('🔍 [UNIVERSAL-FILTER] Available category options:', {
+                    flat_categories: finalAvailableOptions.categories?.length || 0,
+                    hierarchical_categories: finalAvailableOptions.hierarchical_categories?.length || 0,
+                    hierarchical_with_children: finalAvailableOptions.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
+                    project_id: projectId,
+                    level: level
+                  })
+                  return null
+                })()}
+                {finalAvailableOptions.hierarchical_categories && 
+                 finalAvailableOptions.hierarchical_categories.length > 0 && 
+                 finalAvailableOptions.hierarchical_categories.some(group => group.children.length > 0) ? (
                   // 显示层次结构
                   finalAvailableOptions.hierarchical_categories.map((parentGroup) => (
                     <div key={parentGroup.parent_category} className="mb-2">

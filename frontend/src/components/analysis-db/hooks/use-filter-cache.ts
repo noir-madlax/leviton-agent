@@ -77,6 +77,13 @@ export function useFilterCache(projectId: string): FilterCacheHookReturn {
         extend_fields: {} // 这个可以根据需要扩展
       }
 
+      console.log('🔍 [FILTER-CACHE] Loaded filter options:', {
+        flat_categories: filterOptions.categories?.length || 0,
+        hierarchical_categories: filterOptions.hierarchical_categories?.length || 0,
+        hierarchical_with_children: filterOptions.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
+        project_id: projectId
+      })
+
       const successState: FilterCacheState = {
         data: filterOptions,
         loading: false,
@@ -146,10 +153,18 @@ export function preloadFilterOptions(projectId: string): Promise<void> {
 
         const filterOptions: FilterOptions = {
           categories: overview.available_categories.flat_categories,
+          hierarchical_categories: overview.available_categories.hierarchical_categories,
           packaging_types: ['individual', 'package'],
           segments: segments,
           extend_fields: {}
         }
+
+        console.log('🔍 [PRELOAD-CACHE] Preloaded filter options:', {
+          flat_categories: filterOptions.categories?.length || 0,
+          hierarchical_categories: filterOptions.hierarchical_categories?.length || 0,
+          hierarchical_with_children: filterOptions.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
+          project_id: projectId
+        })
 
         const cacheState: FilterCacheState = {
           data: filterOptions,

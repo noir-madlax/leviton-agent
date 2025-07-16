@@ -1001,6 +1001,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                               segmentNames: data.productAnalysis?.segmentNames
                             }}
                             productLists={productLists}
+                            projectId={selectedProjectId || undefined}
+                            initialFilters={appliedFilters}
                           />
                         ) : (loadingStates.pricingAnalysis || loadingStates.productAnalysis) ? (
                           <div className="flex items-center justify-center py-8">
@@ -1061,7 +1063,11 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
 
                   <TabsContent value="review-insights">
                     {data.reviewInsights && data.allReviewData ? (
-                      <ReviewInsights data={data as DashboardData} />
+                      <ReviewInsights 
+                        data={data as DashboardData} 
+                        projectId={selectedProjectId || undefined}
+                        initialFilters={appliedFilters}
+                      />
                     ) : (loadingStates.reviewInsights || loadingStates.allReviewData) ? (
                       <div className="flex items-center justify-center py-8">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

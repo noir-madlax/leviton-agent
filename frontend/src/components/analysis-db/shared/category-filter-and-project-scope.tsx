@@ -377,34 +377,58 @@ export function CategoryFilterAndProjectScope({
                   </SelectTrigger>
                   <SelectContent className="max-h-80">
                     <SelectItem value="all">All Categories (No Filter)</SelectItem>
-                    {availableCategories.hierarchical_categories?.map((parentGroup) => (
-                      <div key={parentGroup.parent_category} className="mb-2">
-                        {/* 父类别标题 */}
-                        <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
-                          📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
+                    {/* 调试日志 */}
+                    {(() => {
+                      console.log('🔍 [CATEGORY-FILTER-SCOPE] Available category options:', {
+                        flat_categories: availableCategories.flat_categories?.length || 0,
+                        hierarchical_categories: availableCategories.hierarchical_categories?.length || 0,
+                        hierarchical_with_children: availableCategories.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
+                        project_id: projectId
+                      })
+                      return null
+                    })()}
+                    {availableCategories.hierarchical_categories && 
+                     availableCategories.hierarchical_categories.length > 0 && 
+                     availableCategories.hierarchical_categories.some(group => group.children.length > 0) ? (
+                      // 显示层次结构
+                      availableCategories.hierarchical_categories.map((parentGroup) => (
+                        <div key={parentGroup.parent_category} className="mb-2">
+                          {/* 父类别标题 */}
+                          <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
+                            📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
+                          </div>
+                          
+                          {/* 子类别选项 */}
+                          {parentGroup.children
+                            .filter(child => !pendingCategories.includes(child.category))
+                            .map((child) => (
+                              <SelectItem 
+                                key={child.category} 
+                                value={child.category}
+                                className="pl-6 py-2"
+                              >
+                                <div className="flex justify-between items-center w-full">
+                                  <span className="flex items-center gap-2">
+                                    🏷️ {child.category}
+                                  </span>
+                                  <span className="text-sm text-gray-500">
+                                    {child.count} ({child.percentage}%)
+                                  </span>
+                                </div>
+                              </SelectItem>
+                            ))}
                         </div>
-                        
-                        {/* 子类别选项 */}
-                        {parentGroup.children
-                          .filter(child => !pendingCategories.includes(child.category))
-                          .map((child) => (
-                            <SelectItem 
-                              key={child.category} 
-                              value={child.category}
-                              className="pl-6 py-2"
-                            >
-                              <div className="flex justify-between items-center w-full">
-                                <span className="flex items-center gap-2">
-                                  🏷️ {child.category}
-                                </span>
-                                <span className="text-sm text-gray-500">
-                                  {child.count} ({child.percentage}%)
-                                </span>
-                              </div>
-                            </SelectItem>
-                          ))}
-                      </div>
-                    ))}
+                      ))
+                    ) : (
+                      // Fallback: 显示扁平分类结构
+                      availableCategories.flat_categories
+                        .filter(cat => !pendingCategories.includes(cat))
+                        .map(category => (
+                          <SelectItem key={category} value={category}>
+                            {category}
+                          </SelectItem>
+                        ))
+                    )}
                   </SelectContent>
                 </Select>
               </div>

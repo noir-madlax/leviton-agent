@@ -6,7 +6,7 @@ import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
 import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-case-bar"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
-import { DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
+import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
 import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 
@@ -70,9 +70,11 @@ interface ReviewInsightsProps {
       brand: string
     }>>
   }
+  projectId?: string
+  initialFilters?: ProjectFilters
 }
 
-export function ReviewInsights({ data, projectId }: ReviewInsightsProps & { projectId?: string }) {
+export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
   
@@ -375,7 +377,7 @@ export function ReviewInsights({ data, projectId }: ReviewInsightsProps & { proj
           chartType="bar"
           projectId={projectId || ''}
           title="Customer Pain Points by Category"
-          projectFilters={DEFAULT_FILTERS}
+          projectFilters={initialFilters}
         >
           <CategoryPainPointsBar 
             data={categoryPainPoints.topNegativeCategories} 
@@ -397,7 +399,7 @@ export function ReviewInsights({ data, projectId }: ReviewInsightsProps & { proj
           chartType="bar"
           projectId={projectId || ''}
           title="Customer Delights by Category"
-          projectFilters={DEFAULT_FILTERS}
+          projectFilters={initialFilters}
         >
           <CategoryPositiveFeedbackBar 
             data={categoryPositiveFeedback.topPositiveCategories} 
@@ -419,7 +421,7 @@ export function ReviewInsights({ data, projectId }: ReviewInsightsProps & { proj
           chartType="bar"
           projectId={projectId || ''}
           title="Top Mentioned Use Cases by Satisfaction Level"
-          projectFilters={DEFAULT_FILTERS}
+          projectFilters={initialFilters}
         >
           <CategoryUseCaseBar 
             data={useCases} 
