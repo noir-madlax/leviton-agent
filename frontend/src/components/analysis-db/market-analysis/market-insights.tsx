@@ -56,8 +56,10 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
   // 确保有数据并且是数组
   const validSegments = Array.isArray(allSegments) ? allSegments : []
   
-  // 按收入排序所有segments
-  const sortedSegments = [...validSegments].sort((a, b) => (b.revenue || 0) - (a.revenue || 0))
+  // 按收入排序所有segments，只取前10个
+  const sortedSegments = [...validSegments]
+    .sort((a, b) => (b.revenue || 0) - (a.revenue || 0))
+    .slice(0, 10)
 
   // Helper function to wrap long text
   const wrapLongText = (text: string, maxLength: number = 15) => {
@@ -78,6 +80,9 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
     products: segment.products || 0,
     fill: getChartColor(index)
   }))
+  
+  // 为每个segment生成不同的颜色
+  const chartColors = chartData.map((_, index) => getChartColor(index))
   
   // 如果没有数据，显示空状态
   if (chartData.length === 0) {
@@ -117,24 +122,16 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
         chartId="market-insights"
         chartType="bar"
         projectId={projectId || ''}
-        title="Market Insights"
+        title="Top 10 Segments by Revenue"
         projectFilters={initialFilters}
       >
         <Card className="p-6 bg-gray-50">
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
-          {/* 显示segments信息 */}
-          <div className="mb-4 p-3 bg-green-50 border-l-4 border-green-400 rounded">
-            <p className="text-sm text-green-700">
-              <strong>Total segments analyzed:</strong> {chartData.length}
-            </p>
-          </div>
-
           {/* Segment Revenue Chart */}
           <div className="mb-8">
-            <h3 className="text-xl font-semibold mb-4">Segment {yAxisLabel} Analysis</h3>
             <div className="bg-white p-4 rounded-lg border shadow-sm">
-              <div className="h-[400px]">
+              <div className="h-[600px] w-full">
                 {loading ? (
                   <div className="flex items-center justify-center h-full">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
@@ -145,8 +142,9 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
                     data={chartData}
                     index="name"
                     categories={[metricType]}
-                    colors={[getChartColor(0)]}
+                    colors={chartColors}
                     yAxisLabel={yAxisLabel}
+                    metricType={metricType}
                     onBarClick={handleBarClick}
                   />
                 )}
@@ -155,29 +153,7 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
           </div>
 
           {/* 统计摘要 */}
-          <div className="bg-white p-4 rounded-lg border shadow-sm">
-            <h4 className="text-lg font-semibold mb-4">Market Summary</h4>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">
-                  {chartData.length}
-                </div>
-                <div className="text-sm text-gray-600">Total Segments</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600">
-                  ${chartData.reduce((sum, item) => sum + item.revenue, 0).toLocaleString()}
-                </div>
-                <div className="text-sm text-gray-600">Total Revenue</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600">
-                  {chartData.reduce((sum, item) => sum + item.volume, 0).toLocaleString()}
-                </div>
-                <div className="text-sm text-gray-600">Total Volume</div>
-              </div>
-            </div>
-          </div>
+         
         </Card>
       </ChartWithFilters>
     </section>

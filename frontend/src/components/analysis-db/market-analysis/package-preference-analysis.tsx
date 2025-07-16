@@ -28,27 +28,6 @@ interface PackagePreferenceData {
   segmentNames: string[];
 }
 
-const MetricTypeSelector = ({ 
-  onChange, 
-  value 
-}: { 
-  onChange: (value: 'revenue' | 'count') => void;
-  value: 'revenue' | 'count';
-}) => {
-  return (
-    <div className="mb-4">
-      <label className="block text-sm font-medium text-gray-700 mb-2">Metric Type:</label>
-      <select 
-        value={value} 
-        onChange={(e) => onChange(e.target.value as 'revenue' | 'count')}
-        className="block w-48 px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-      >
-        <option value="revenue">Revenue</option>
-        <option value="count">Product Count</option>
-      </select>
-    </div>
-  )
-}
 
 export function PackagePreferenceAnalysis({ 
   data: initialData, 
@@ -104,17 +83,7 @@ export function PackagePreferenceAnalysis({
   const colors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Product Count"
 
-  // 检查是否有数据或正在加载
-  if (loading) {
-    return (
-      <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
-        <Card className="p-6 bg-gray-50">
-          <p className="text-center text-gray-500">Loading package preference data...</p>
-        </Card>
-      </section>
-    )
-  }
+ 
 
   if (!data.packageDistribution || data.packageDistribution.length === 0) {
     return (
@@ -218,28 +187,22 @@ export function PackagePreferenceAnalysis({
           asins: []
         }}
       >
-        <div className="mb-4">
-          <MetricTypeSelector onChange={setMetricType} value={metricType} />
-        </div>
+       
 
         <div className="mb-8">
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
-            <p className="text-sm text-blue-700">
-              <strong>Total Products:</strong> {totalProducts} products across {chartData.length} package types
-            </p>
+          
             {metricType === "revenue" && (
               <p className="text-sm text-blue-700 mt-1">
-                <strong>Total Revenue:</strong> ${totalValue.toLocaleString()}
+                <strong>Total addressable market (TAM): </strong> ${totalValue.toLocaleString()} with {totalProducts} products 
+                <p>
+                Approximated by the total Revenue of all products within this category in the current project within the selected time period
+                </p>
               </p>
             )}
           </div>
           
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
-            <p className="text-sm text-blue-700">
-              <strong>Note:</strong> Data is based on package type classifications from product analysis. 
-              {metricType === "revenue" ? "Revenue shows total sales value for each package type." : "Count shows number of products for each package type."}
-            </p>
-          </div>
+         
         </div>
       
       {/* 单一饼图显示 */}

@@ -152,13 +152,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
         <Card className="p-6 bg-gray-50">
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
           
-          {/* Category info */}
-          <div className="mb-4 p-3 bg-blue-50 border-l-4 border-blue-400 rounded">
-            <p className="text-sm text-blue-700">
-              <strong>Categories analyzed:</strong> {categoryNames.join(', ')} 
-            </p>
-          </div>
-
+        
           {/* Single grouped bar chart */}
           <div className="bg-white p-4 rounded-lg border shadow-sm">
             <div className="h-[400px]">

@@ -10,7 +10,39 @@ import { useProductPanel } from "@/components/analysis-db/contexts/product-panel
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
-import { DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
+import { ProjectFilters } from "@/components/analysis-db/types/filters"
+
+// 定义散点图数据类型
+interface ScatterPlotProduct {
+  id: string
+  name: string
+  brand: string
+  price: number
+  unitPrice: number
+  revenue: number
+  volume: number
+  url: string
+  segment: string
+  x: number
+  y: number
+}
+
+// 定义散点图点击事件数据类型
+interface ScatterClickData {
+  payload: {
+    id?: string
+    name: string
+    brand: string
+    price?: number
+    unitPrice?: number
+    revenue?: number
+    volume?: number
+    url?: string
+    segment?: string
+    x: number
+    y: number
+  }
+}
 
 interface PricingAnalysisProps {
   data: {
@@ -93,9 +125,11 @@ interface PricingAnalysisProps {
     bySegment: Record<string, Product[]>
     byPackageSize: Record<string, Product[]>
   }
+  projectId?: string
+  initialFilters?: ProjectFilters
 }
 
-export function PricingAnalysis({ data, productLists, projectId }: PricingAnalysisProps & { projectId?: string }) {
+export function PricingAnalysis({ data, productLists, projectId, initialFilters }: PricingAnalysisProps) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
   const { openPanel } = useProductPanel()
 
@@ -117,8 +151,8 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
   }, [allCategories, priceType])
 
   // 散点图相关的数据处理函数
-  const getPriceVsRevenueData = () => {
-    const allProducts: any[] = []
+  const getPriceVsRevenueData = (): ScatterPlotProduct[] => {
+    const allProducts: ScatterPlotProduct[] = []
     
     // 检查是否有散点图所需的数据
     if (!data?.topProducts) {
@@ -172,7 +206,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
 
   const getBrandDataForScatterChart = () => {
     const scatterData = getPriceVsRevenueData()
-    const brandData: Record<string, any[]> = {}
+    const brandData: Record<string, ScatterPlotProduct[]> = {}
     
     scatterData.forEach(item => {
       if (!brandData[item.brand]) {
@@ -239,7 +273,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
   }
 
   // 添加散点图点击事件处理器
-  const handleScatterClick = (data: any) => {
+  const handleScatterClick = (data: ScatterClickData) => {
     if (data && data.payload) {
       const product = {
         id: data.payload.id || data.payload.name,
@@ -262,7 +296,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
     }
   }
 
-  const handleBrandViolinClick = (brand: string, category: string) => {
+  const handleBrandViolinClick = (brand: string) => {
     // 获取该品牌的产品
     const products = productLists.byBrand[brand] || []
     openPanel(products, `${brand} Products`)
@@ -298,8 +332,8 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
           chartId="pricing-scatter"
           chartType="scatter"
           projectId={projectId || ''}
-          title="Top 20 Products by Revenue"
-          projectFilters={DEFAULT_FILTERS}
+          title="Price vs. Revenue Distribution of Top Selling 20 Products"
+          projectFilters={initialFilters}
         >
           <Card className="p-6 bg-gray-50">
             {hasScatterData ? (
@@ -371,6 +405,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
           chartType="table"
           projectId={projectId || ''}
           title="Price Distribution by Segment"
+          projectFilters={initialFilters}
         >
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
@@ -433,7 +468,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
           chartType="violin"
           projectId={projectId || ''}
           title="All Segments Price Distribution Comparison"
-          projectFilters={DEFAULT_FILTERS}
+          projectFilters={initialFilters}
         >
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
@@ -461,7 +496,7 @@ export function PricingAnalysis({ data, productLists, projectId }: PricingAnalys
           chartType="violin"
           projectId={projectId || ''}
           title="Brand Price Distribution"
-          projectFilters={DEFAULT_FILTERS}
+          projectFilters={initialFilters}
         >
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
