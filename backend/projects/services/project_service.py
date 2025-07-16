@@ -488,6 +488,29 @@ class ProjectService:
         except Exception as e:
             logger.error(f"❌ Error broadcasting progress update for project {project_id}: {e}")
 
+    async def _apply_multi_level_category_filter(self, query, category_id: str):
+        """Apply multi-level category ID filter to a query.
+        
+        This method applies OR condition to search across all category hierarchy levels:
+        category_id, category_l1_id, category_l2_id, category_l3_id, category_l4_id, category_l5_id, category_l6_id
+        
+        Args:
+            query: Supabase query object
+            category_id: Amazon category ID to search for
+            
+        Returns:
+            Query object with multi-level category filter applied
+        """
+        return query.or_(
+            f"category_id.eq.{category_id},"
+            f"category_l1_id.eq.{category_id},"
+            f"category_l2_id.eq.{category_id},"
+            f"category_l3_id.eq.{category_id},"
+            f"category_l4_id.eq.{category_id},"
+            f"category_l5_id.eq.{category_id},"
+            f"category_l6_id.eq.{category_id}"
+        )
+
     async def _extract_asins_from_filters(self, filters) -> List[str]:
         """Extract platform ID list based on project filters.
         
@@ -512,18 +535,12 @@ class ProjectService:
         try:
             category_id = filters.category_id
             
-            # 策略1：查询所有层级字段(category_id, category_l1_id到category_l6_id)
+            # 策略1：使用统一的多层级category ID查询
             query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
             query = query.neq('category', None).neq('brand', None)
-            query = query.or_(
-                f"category_id.eq.{category_id},"
-                f"category_l1_id.eq.{category_id},"
-                f"category_l2_id.eq.{category_id},"
-                f"category_l3_id.eq.{category_id},"
-                f"category_l4_id.eq.{category_id},"
-                f"category_l5_id.eq.{category_id},"
-                f"category_l6_id.eq.{category_id}"
-            )
+            
+            # Apply multi-level category filter
+            query = await self._apply_multi_level_category_filter(query, category_id)
             
             # Apply other filters
             if filters.brands:
@@ -1010,20 +1027,21 @@ class ProjectService:
     async def get_data_confirmation_data_by_category_id(self, filters: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
         """
         Get data confirmation data for Step2 with category ID filter.
-        Uses fallback strategy: direct category_id -> category name match.
+        Uses multi-level category hierarchy filter - same logic as project creation.
         """
         try:
             if not filters or not filters.get('category_id'):
                 return self._get_empty_data_structure()
             
             category_id = filters['category_id']
-            filtered_result = None
             
-            # 策略1：直接用category_id字段查询
+            # 策略1：使用统一的多层级category ID查询（与项目创建相同逻辑）
             query = self.supabase.table('product_wide_table').select(
                 'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
             ).neq('category', None).neq('brand', None)
-            query = query.eq('category_id', category_id)
+            
+            # Apply multi-level category filter
+            query = await self._apply_multi_level_category_filter(query, category_id)
             
             # Apply other filters
             if filters.get('sources'):
@@ -1034,9 +1052,10 @@ class ProjectService:
             filtered_result = query.execute()
             
             if filtered_result.data:
-                logger.info(f"Found {len(filtered_result.data)} products via direct category_id match")
+                logger.info(f"Found {len(filtered_result.data)} products via multi-level category_id match")
+                filtered_data = filtered_result.data
             else:
-                # 策略2：通过category_id获取名称，然后用名称查询category字段
+                # 策略2：通过category_id获取名称，然后用名称查询category字段（fallback）
                 category_name = await self._get_category_name(category_id)
                 if not category_name:
                     logger.warning(f"Category ID {category_id} not found in amazon_categories table")
@@ -1057,14 +1076,10 @@ class ProjectService:
                 
                 if filtered_result.data:
                     logger.info(f"Found {len(filtered_result.data)} products via category name match: {category_name}")
+                    filtered_data = filtered_result.data
                 else:
                     logger.warning(f"No products found for category_id {category_id}")
                     return self._get_empty_data_structure()
-            
-            if not filtered_result.data:
-                filtered_data = []
-            else:
-                filtered_data = filtered_result.data
             
             # Convert and clean data (same as original method)
             for row in filtered_data:
