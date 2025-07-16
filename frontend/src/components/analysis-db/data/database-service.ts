@@ -150,7 +150,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -215,7 +215,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -342,7 +342,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -408,7 +408,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -586,7 +586,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -664,7 +664,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -713,7 +713,7 @@ export class DatabaseService {
       // Add packaging type filters if provided
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       // Add segment filters if provided
@@ -1110,7 +1110,7 @@ export class DatabaseService {
       
       if (packagingTypeFilters && packagingTypeFilters.length > 0) {
         const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
       }
       
       if (segmentFilters && segmentFilters.length > 0) {
