@@ -5,6 +5,7 @@ import { useState, useEffect } from "react"
 import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
 import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-case-bar"
+import CategoryNegativeUseCaseBar from "@/components/analysis-db/shared/category-negative-use-case-bar"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
@@ -358,13 +359,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
   return (
     <div className="space-y-10">
-      {/* Enhanced header with migration info */}
-      <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6">
-        <h3 className="text-lg font-semibold text-blue-800 mb-2">📊 Enhanced Review Insights</h3>
-        <p className="text-sm text-blue-700">
-          Now powered by advanced sentiment analysis with precise positive/negative breakdowns and category definitions for better understanding.
-        </p>
-      </div>
 
       {/* 分类痛点分析 */}
       <section>
@@ -376,7 +370,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           chartId="review-pain-points"
           chartType="bar"
           projectId={projectId || ''}
-          title="Customer Pain Points by Category"
+          title="Top 10 Customer Pain Points by Category"
           projectFilters={initialFilters}
         >
           <CategoryPainPointsBar 
@@ -398,7 +392,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           chartId="review-positive-feedback"
           chartType="bar"
           projectId={projectId || ''}
-          title="Customer Delights by Category"
+          title="Top 10 Customer Delights by Category"
           projectFilters={initialFilters}
         >
           <CategoryPositiveFeedbackBar 
@@ -410,23 +404,47 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </ChartWithFilters>
       </section>
 
-      {/* 使用场景满意度分析 */}
+      {/* 使用场景分析 - 正面 */}
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-          🎯 Use Case Satisfaction Analysis
+          🎯 Top Positive Use Cases
         </h2>
         
         <ChartWithFilters
-          chartId="review-use-case"
+          chartId="review-positive-use-case"
           chartType="bar"
           projectId={projectId || ''}
-          title="Top Mentioned Use Cases by Satisfaction Level"
+          title="Top 10 most mentioned positive use cases"
           projectFilters={initialFilters}
         >
           <CategoryUseCaseBar 
             data={useCases} 
-            title="Top Mentioned Use Cases by Satisfaction Level"
-            description="Bar height = mention count, color = satisfaction level (green=high, yellow=medium, red=low) - Click bars to explore reviews"
+            description="Bars are sorted by positive mentions from left to right in descending order"
+            productType={selectedProductType}
+            onProductTypeChange={handleProductTypeChange}
+            reviewData={reviewData || undefined}
+            totalUseMentions={data.reviewInsights.totalUseMentions}
+          />
+        </ChartWithFilters>
+      </section>
+
+      {/* 使用场景分析 - 负面 */}
+      <section>
+        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
+          🎯 Top Negative Use Cases
+        </h2>
+        
+        <ChartWithFilters
+          chartId="review-negative-use-case"
+          chartType="bar"
+          projectId={projectId || ''}
+          title="Top 10 most mentioned negative use cases"
+          projectFilters={initialFilters}
+        >
+          <CategoryNegativeUseCaseBar 
+            data={useCases} 
+          
+            description="Bars are sorted by negative mentions from left to right in descending order"
             productType={selectedProductType}
             onProductTypeChange={handleProductTypeChange}
             reviewData={reviewData || undefined}

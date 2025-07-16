@@ -9,7 +9,7 @@ import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/ana
 import { getSatisfactionColor, getSatisfactionLevel, SatisfactionLegend } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
 
-interface CategoryUseCaseBarProps {
+interface CategoryNegativeUseCaseBarProps {
   data: UseCaseFeedback[];
   title?: string;
   description?: string;
@@ -61,16 +61,6 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* Top满意原因 */}
-        {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
-          <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
-            {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
-              <p key={index} className="text-xs text-green-600">• {reason}</p>
-            ))}
-          </div>
-        )}
-
         {/* Gap原因 */}
         {data.topGapReasons && data.topGapReasons.length > 0 && (
           <div className="mt-2">
@@ -80,21 +70,30 @@ const CustomTooltip = ({ active, payload, label }: any) => {
             ))}
           </div>
         )}
+
+        {/* Top满意原因 */}
+        {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
+          <div className="mt-2">
+            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
+            {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
+              <p key={index} className="text-xs text-green-600">• {reason}</p>
+            ))}
+          </div>
+        )}
       </div>
     );
   }
   return null;
 };
 
-export default function CategoryUseCaseBar({ 
+export default function CategoryNegativeUseCaseBar({ 
   data, 
-  title = "Top 10 most mentioned positive use cases",
-  description = "Bars are sorted by positive mentions from left to right in descending order",
+  description = "Bars are sorted by negative mentions from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
   reviewData,
   totalUseMentions
-}: CategoryUseCaseBarProps) {
+}: CategoryNegativeUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
   
   // 添加数据安全检查，防止预渲染时 data 为 undefined
@@ -108,9 +107,9 @@ export default function CategoryUseCaseBar({
     )
   }
   
-  // 按正面提及数排序，并取前10个
+  // 按负面提及数排序，并取前10个
   const sortedData = [...data]
-    .sort((a, b) => b.positiveCount - a.positiveCount)
+    .sort((a, b) => b.negativeCount - a.negativeCount)
     .slice(0, 10);
   
   const chartData = sortedData.map(item => ({
@@ -153,7 +152,7 @@ export default function CategoryUseCaseBar({
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
        
-         
+          
         </CardTitle>
         <CardDescription>
           {description}
@@ -214,8 +213,8 @@ export default function CategoryUseCaseBar({
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-4">
             {sortedData.slice(0, 4).map((item, index) => (
               <div key={index} className="text-center">
-                <div className="text-lg font-bold text-green-600">
-                  {item.positiveCount}
+                <div className="text-lg font-bold text-red-600">
+                  {item.negativeCount}
                 </div>
                 <div className="text-sm text-gray-600 truncate" title={item.useCase}>
                   {item.useCase}
