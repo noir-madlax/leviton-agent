@@ -1604,7 +1604,7 @@ export function DataConfirmationTab({
                   {/* 按类别分布 */}
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm">Categories</CardTitle>
+                      <CardTitle className="text-sm">Amazon Category</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
                       <div className="space-y-1">
@@ -1616,8 +1616,7 @@ export function DataConfirmationTab({
                           <div key={category.name} className="flex justify-between items-center">
                             <span className="text-xs">{category.name}</span>
                             <div className="flex items-center gap-1">
-                              <Badge variant="secondary" className="text-xs">{category.count}</Badge>
-                              <span className="text-xs text-muted-foreground">{category.percentage}%</span>
+                              <Badge variant="secondary" className="text-xs">{category.count} products</Badge>
                             </div>
                           </div>
                         ))}

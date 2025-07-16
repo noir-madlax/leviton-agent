@@ -377,13 +377,13 @@ export function CategoryFilterAndProjectScope({
             <div className="flex items-center gap-4 flex-wrap">
               {/* Category Filter */}
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Category:</span>
+                <span className="text-sm text-gray-600">Amazon Category:</span>
                 <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading}>
                   <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="All Categories (No Filter)" />
+                    <SelectValue placeholder="All Amazon Categories (No Filter)" />
                   </SelectTrigger>
                   <SelectContent className="max-h-80">
-                    <SelectItem value="all">All Categories (No Filter)</SelectItem>
+                    <SelectItem value="all">All Amazon Categories (No Filter)</SelectItem>
                     {/* 调试日志 */}
                     {(() => {
                       console.log('🔍 [CATEGORY-FILTER-SCOPE] Available category options:', {
@@ -470,7 +470,7 @@ export function CategoryFilterAndProjectScope({
 
               {/* Segments Filter */}
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Segments:</span>
+                <span className="text-sm text-gray-600">Product Segments:</span>
                 <Select key={segmentSelectKey} onValueChange={handleSegmentSelect} disabled={filterLoading}>
                   <SelectTrigger className="w-48 h-8">
                     <SelectValue placeholder="All Segments" />

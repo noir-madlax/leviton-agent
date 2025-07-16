@@ -163,7 +163,7 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
             </div>
           ))}
           <div className="text-center">
-            <p className="text-sm text-gray-600">Total Categories</p>
+                          <p className="text-sm text-gray-600">Total Amazon Categories</p>
             <p className="text-lg font-semibold">{data.length}</p>
           </div>
           <div className="text-center">
@@ -181,7 +181,7 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
             </p>
           </div>
           <div className="text-center">
-            <p className="text-sm text-gray-600">Excellent Categories</p>
+                          <p className="text-sm text-gray-600">Excellent Amazon Categories</p>
             <p className="text-lg font-semibold text-green-600">
               {data.filter(item => item.positiveCount >= 100).length}
             </p>

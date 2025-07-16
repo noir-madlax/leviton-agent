@@ -116,7 +116,7 @@ export function DynamicExtendFieldsFilter({
                     .filter(item => currentValue !== item.name)
                     .map((item) => (
                       <SelectItem key={item.name} value={item.name}>
-                        {item.name} ({item.count} - {item.percentage}%)
+                        {item.name} ({item.count} products)
                       </SelectItem>
                     ))
                 ) : (
@@ -202,7 +202,7 @@ export function DynamicExtendFieldsFilter({
                       const distributionData = fieldDistribution?.find(item => item.name === trueLabel)
                       
                       return distributionData 
-                        ? `${trueLabel} (${distributionData.count} - ${distributionData.percentage}%)`
+                        ? `${trueLabel} (${distributionData.count} products)`
                         : trueLabel
                     })()}
                   </SelectItem>
@@ -215,7 +215,7 @@ export function DynamicExtendFieldsFilter({
                       const distributionData = fieldDistribution?.find(item => item.name === falseLabel)
                       
                       return distributionData 
-                        ? `${falseLabel} (${distributionData.count} - ${distributionData.percentage}%)`
+                        ? `${falseLabel} (${distributionData.count} products)`
                         : falseLabel
                     })()}
                   </SelectItem>

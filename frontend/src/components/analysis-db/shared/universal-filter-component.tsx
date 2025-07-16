@@ -359,17 +359,17 @@ export function UniversalFilterComponent({
           {/* Category Filter */}
           <div className="flex items-center gap-2">
       
-            <span className="text-sm text-gray-600">Category:</span>
+            <span className="text-sm text-gray-600">Amazon Category:</span>
             <Select 
               key={selectKeys.category}
               onValueChange={handleCategorySelect}
               disabled={finalLoading}
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="All Categories" />
+                <SelectValue placeholder="All Amazon Categories" />
               </SelectTrigger>
               <SelectContent className="max-h-80">
-                <SelectItem value="all">All Categories</SelectItem>
+                <SelectItem value="all">All Amazon Categories</SelectItem>
                 {/* 调试日志 */}
                 {(() => {
                   console.log('🔍 [UNIVERSAL-FILTER] Available category options:', {
@@ -406,7 +406,7 @@ export function UniversalFilterComponent({
                                 🏷️ {child.category}
                               </span>
                               <span className="text-sm text-gray-500">
-                                {child.count} ({child.percentage}%)
+                              ({child.count} products)
                               </span>
                             </div>
                           </SelectItem>
@@ -424,7 +424,7 @@ export function UniversalFilterComponent({
                       )
                       
                       const displayLabel = distributionData 
-                        ? `${category} (${distributionData.count} - ${distributionData.percentage}%)`
+                        ? `${category} (${distributionData.count} products)`
                         : category
                       
                       return (
@@ -457,7 +457,9 @@ export function UniversalFilterComponent({
                     .filter(item => !pendingFilters.brands.includes(item.name))
                     .map((item) => (
                       <SelectItem key={item.name} value={item.name}>
-                        {item.name} ({item.count} - {item.percentage}%)
+                       
+                        {item.name}   <span className="text-sm text-gray-500">({item.count} products)
+                        </span>
                       </SelectItem>
                     ))
                 ) : (
@@ -471,7 +473,7 @@ export function UniversalFilterComponent({
                       )
                       
                       const displayLabel = distributionData 
-                        ? `${brand} (${distributionData.count} - ${distributionData.percentage}%)`
+                        ? `${brand} (${distributionData.count} products)`
                         : brand
                       
                       return (
@@ -487,7 +489,7 @@ export function UniversalFilterComponent({
 
           {/* Segments Filter */}
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Segments:</span>
+            <span className="text-sm text-gray-600">Product Segments:</span>
             <Select 
               key={selectKeys.segment}
               onValueChange={handleSegmentSelect}
@@ -507,7 +509,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${segment} (${distributionData.count} - ${distributionData.percentage}%)`
+                      ? `${segment} (${distributionData.count} products)`
                       : segment
                     
                     return (

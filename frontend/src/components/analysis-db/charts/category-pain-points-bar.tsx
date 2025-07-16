@@ -163,7 +163,7 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
             </div>
           ))}
           <div className="text-center">
-            <p className="text-sm text-gray-600">Total Categories</p>
+                          <p className="text-sm text-gray-600">Total Amazon Categories</p>
             <p className="text-lg font-semibold">{data.length}</p>
           </div>
           <div className="text-center">
