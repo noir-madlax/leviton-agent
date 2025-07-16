@@ -8,6 +8,7 @@ import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-cas
 import CategoryNegativeUseCaseBar from "@/components/analysis-db/shared/category-negative-use-case-bar"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
+import { databaseService } from "@/components/analysis-db/data/database-service"
 
 import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 
@@ -78,6 +79,45 @@ interface ReviewInsightsProps {
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+  const [filteredData, setFilteredData] = useState<{
+    reviewInsights: typeof data.reviewInsights
+    allReviewData: typeof data.allReviewData
+  }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
+
+  // 处理过滤器变化
+  const handleFilterChange = async (filters: ProjectFilters) => {
+    if (!projectId) return
+    
+    setIsLoading(true)
+    try {
+      const [reviewInsights, allReviewData] = await Promise.all([
+        databaseService.getReviewInsightsDataByProject(
+          projectId,
+          filters.categories,
+          filters.brands,
+          filters.segments,
+          filters.extend_fields
+        ),
+        databaseService.getAllReviewDataByProject(
+          projectId,
+          filters.categories,
+          filters.brands,
+          filters.segments,
+          filters.extend_fields
+        )
+      ])
+      
+      setFilteredData({
+        reviewInsights,
+        allReviewData
+      })
+    } catch (error) {
+      console.error('Error fetching filtered data:', error)
+    } finally {
+      setIsLoading(false)
+    }
+  }
   
   useEffect(() => {
     // Create the structure that charts expect using database data
@@ -87,12 +127,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     }
     
     // 如果有allReviewData，需要正确映射到类别名称
-    if (data.allReviewData) {
+    if (filteredData.allReviewData) {
       // 首先直接使用allReviewData的现有映射
-      reviewDataForCharts.reviewsByCategory = { ...data.allReviewData }
+      reviewDataForCharts.reviewsByCategory = { ...filteredData.allReviewData }
       
       // 为痛点数据建立基于relatedDetailTexts的映射关系
-      data.reviewInsights.painPoints.forEach(painPoint => {
+      filteredData.reviewInsights.painPoints.forEach(painPoint => {
         const aspectName = painPoint.aspect
         if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
           const relatedReviews: unknown[] = []
@@ -100,12 +140,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           // 使用新的relatedDetailTexts字段进行映射
           if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
             painPoint.relatedDetailTexts.forEach(detailText => {
-              const reviews = data.allReviewData[detailText] || []
+              const reviews = filteredData.allReviewData[detailText] || []
               relatedReviews.push(...reviews)
             })
           } else {
             // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
               reviews.forEach(review => {
                 if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
                   relatedReviews.push(review)
@@ -123,7 +163,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       })
       
       // 为亮点数据建立基于relatedDetailTexts的映射关系
-      data.reviewInsights.customerLikes.forEach(like => {
+      filteredData.reviewInsights.customerLikes.forEach(like => {
         const featureName = like.feature
         if (!reviewDataForCharts.reviewsByCategory[featureName]) {
           const relatedReviews: unknown[] = []
@@ -131,12 +171,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           // 使用新的relatedDetailTexts字段进行映射
           if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
             like.relatedDetailTexts.forEach(detailText => {
-              const reviews = data.allReviewData[detailText] || []
+              const reviews = filteredData.allReviewData[detailText] || []
               relatedReviews.push(...reviews)
             })
           } else {
             // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
               reviews.forEach(review => {
                 if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
                   relatedReviews.push(review)
@@ -154,7 +194,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       })
       
       // 为Use Case数据建立基于relatedDetailTexts的映射关系
-      data.reviewInsights.allUseCases.forEach(useCaseItem => {
+      filteredData.reviewInsights.allUseCases.forEach(useCaseItem => {
         const useCaseName = useCaseItem.useCase
         
         if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
@@ -163,12 +203,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           // 使用新的relatedDetailTexts字段进行映射
           if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
             useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = data.allReviewData[detailText] || []
+              const reviews = filteredData.allReviewData[detailText] || []
               relatedReviews.push(...reviews)
             })
           } else {
             // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
               reviews.forEach(review => {
                 if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
                   relatedReviews.push(review)
@@ -190,7 +230,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       })
       
       // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
-      data.reviewInsights.underservedUseCases.forEach(useCaseItem => {
+      filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
         const useCaseName = useCaseItem.useCase
         
         if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
@@ -199,12 +239,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           // 使用新的relatedDetailTexts字段进行映射
           if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
             useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = data.allReviewData[detailText] || []
+              const reviews = filteredData.allReviewData[detailText] || []
               relatedReviews.push(...reviews)
             })
           } else {
             // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(data.allReviewData).forEach(([, reviews]) => {
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
               reviews.forEach(review => {
                 if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
                   relatedReviews.push(review)
@@ -227,11 +267,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     }
     
     setReviewData(reviewDataForCharts)
-  }, [data])
+  }, [filteredData])
   
   // 将数据库数据转换为图表所需的格式，利用新的增强字段
   const transformPainPointsData = (): { topNegativeCategories: CategoryFeedback[] } => {
-    const painPoints = data.reviewInsights.painPoints
+    const painPoints = filteredData.reviewInsights.painPoints
     
     // 转换为CategoryFeedback格式，使用实际的情感分析数据
     const categoryFeedbacks: CategoryFeedback[] = painPoints
@@ -274,7 +314,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   }
 
   const transformPositiveFeedbackData = (): { topPositiveCategories: CategoryFeedback[] } => {
-    const customerLikes = data.reviewInsights.customerLikes
+    const customerLikes = filteredData.reviewInsights.customerLikes
     
     // 转换为CategoryFeedback格式，使用实际的情感分析数据
     const categoryFeedbacks: CategoryFeedback[] = customerLikes
@@ -319,7 +359,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
   const transformUseCaseData = (): UseCaseFeedback[] => {
     // 使用新的allUseCases数据而不是underservedUseCases
-    return data.reviewInsights.allUseCases
+    return filteredData.reviewInsights.allUseCases
       .sort((a, b) => b.mentionCount - a.mentionCount)
       .slice(0, 15) // 取前15个
       .map(item => {
@@ -372,13 +412,20 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectId={projectId || ''}
           title="Top 10 Customer Pain Points by Category"
           projectFilters={initialFilters}
+          onFilterChange={handleFilterChange}
         >
-          <CategoryPainPointsBar 
-            data={categoryPainPoints.topNegativeCategories} 
-            productType={selectedProductType}
-            onProductTypeChange={handleProductTypeChange}
-            reviewData={reviewData || undefined}
-          />
+          {isLoading ? (
+            <div className="flex items-center justify-center p-8">
+              <div className="text-gray-500">正在更新数据...</div>
+            </div>
+          ) : (
+            <CategoryPainPointsBar 
+              data={categoryPainPoints.topNegativeCategories} 
+              productType={selectedProductType}
+              onProductTypeChange={handleProductTypeChange}
+              reviewData={reviewData || undefined}
+            />
+          )}
         </ChartWithFilters>
       </section>
 
@@ -394,13 +441,20 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectId={projectId || ''}
           title="Top 10 Customer Delights by Category"
           projectFilters={initialFilters}
+          onFilterChange={handleFilterChange}
         >
-          <CategoryPositiveFeedbackBar 
-            data={categoryPositiveFeedback.topPositiveCategories} 
-            productType={selectedProductType}
-            onProductTypeChange={handleProductTypeChange}
-            reviewData={reviewData || undefined}
-          />
+          {isLoading ? (
+            <div className="flex items-center justify-center p-8">
+              <div className="text-gray-500">正在更新数据...</div>
+            </div>
+          ) : (
+            <CategoryPositiveFeedbackBar 
+              data={categoryPositiveFeedback.topPositiveCategories} 
+              productType={selectedProductType}
+              onProductTypeChange={handleProductTypeChange}
+              reviewData={reviewData || undefined}
+            />
+          )}
         </ChartWithFilters>
       </section>
 
@@ -416,15 +470,22 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectId={projectId || ''}
           title="Top 10 most mentioned positive use cases"
           projectFilters={initialFilters}
+          onFilterChange={handleFilterChange}
         >
-          <CategoryUseCaseBar 
-            data={useCases} 
-            description="Bars are sorted by positive mentions from left to right in descending order"
-            productType={selectedProductType}
-            onProductTypeChange={handleProductTypeChange}
-            reviewData={reviewData || undefined}
-            totalUseMentions={data.reviewInsights.totalUseMentions}
-          />
+          {isLoading ? (
+            <div className="flex items-center justify-center p-8">
+              <div className="text-gray-500">正在更新数据...</div>
+            </div>
+          ) : (
+            <CategoryUseCaseBar 
+              data={useCases} 
+              description="Bars are sorted by positive mentions from left to right in descending order"
+              productType={selectedProductType}
+              onProductTypeChange={handleProductTypeChange}
+              reviewData={reviewData || undefined}
+              totalUseMentions={filteredData.reviewInsights.totalUseMentions}
+            />
+          )}
         </ChartWithFilters>
       </section>
 
@@ -440,16 +501,22 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectId={projectId || ''}
           title="Top 10 most mentioned negative use cases"
           projectFilters={initialFilters}
+          onFilterChange={handleFilterChange}
         >
-          <CategoryNegativeUseCaseBar 
-            data={useCases} 
-          
-            description="Bars are sorted by negative mentions from left to right in descending order"
-            productType={selectedProductType}
-            onProductTypeChange={handleProductTypeChange}
-            reviewData={reviewData || undefined}
-            totalUseMentions={data.reviewInsights.totalUseMentions}
-          />
+          {isLoading ? (
+            <div className="flex items-center justify-center p-8">
+              <div className="text-gray-500">正在更新数据...</div>
+            </div>
+          ) : (
+            <CategoryNegativeUseCaseBar 
+              data={useCases} 
+              description="Bars are sorted by negative mentions from left to right in descending order"
+              productType={selectedProductType}
+              onProductTypeChange={handleProductTypeChange}
+              reviewData={reviewData || undefined}
+              totalUseMentions={filteredData.reviewInsights.totalUseMentions}
+            />
+          )}
         </ChartWithFilters>
       </section>
 

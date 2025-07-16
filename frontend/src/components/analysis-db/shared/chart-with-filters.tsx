@@ -16,6 +16,7 @@ interface ChartWithFiltersProps {
   title: string
   children: React.ReactNode
   projectFilters?: ProjectFilters
+  onFilterChange?: (filters: ProjectFilters) => void
 }
 
 export function ChartWithFilters({ 
@@ -24,7 +25,8 @@ export function ChartWithFilters({
   projectId, 
   title, 
   children,
-  projectFilters
+  projectFilters,
+  onFilterChange
 }: ChartWithFiltersProps) {
   const filterState = useFilterState(projectId, projectFilters)
   const [showFilters, setShowFilters] = useState(false)
@@ -42,6 +44,7 @@ export function ChartWithFilters({
 
   const handleChartFiltersChange = (newFilters: ProjectFilters) => {
     filterState.updateChartFilters(chartId, newFilters)
+    onFilterChange?.(newFilters)
   }
 
   // 计算活跃筛选器数量

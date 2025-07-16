@@ -67,6 +67,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     category: string
     product_url?: string
     monthly_sales_volume?: number
+    rating?: number | null
   }>>([]);
 
   // 添加数据准备状态管理
@@ -95,7 +96,8 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           price_usd: product.price_usd,
           reviews_count: product.actual_review_count,
           category: product.category,
-          product_url: product.product_url
+          product_url: product.product_url,
+          rating: product.rating
         }));
         
         setDefaultProducts(formattedProducts);
@@ -244,7 +246,8 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       totalReviews: actualTotalReviews,  // Use actual total review count
       totalMentions,
       categoriesCount,
-      avgSatisfaction: Math.round(avgSatisfaction * 10) / 10
+      avgSatisfaction: Math.round(avgSatisfaction * 10) / 10,
+      rating: productInfo?.rating || null
     }
   }) // Show all selected products, including those without data
 
@@ -326,7 +329,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       {/* Product Data Overview */}
       <section>
         <h2 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-4">
-          📊 Product Data Overview
+          📊 Customer satisfaction overview
           {selectedAsins.length > 0 && (
             <span className="ml-2 text-sm font-normal text-gray-600">
               ({selectedAsins.length} custom products selected)
@@ -360,15 +363,16 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
                   <span>📝 Analyzed review count:</span>
                   <span className="font-medium">{stat.totalReviews}</span>
                 </div>
-                <div className="flex justify-between">
-                  <span>😊 Satisfaction:</span>
-                  <span className={`font-medium ${stat.avgSatisfaction >= 60 ? 'text-green-600' : stat.avgSatisfaction >= 40 ? 'text-yellow-600' : 'text-red-600'}`}>
-                    {stat.avgSatisfaction}%
-                  </span>
-                </div>
-                <div className="text-xs text-blue-500 mt-2 text-center">
-                  Click to view on Amazon
-                </div>
+               
+                {stat.rating && (
+                  <div className="flex justify-between">
+                    <span>⭐ Average star rating:</span>
+                    <span className="font-medium text-yellow-600">
+                      {stat.rating.toFixed(1)}
+                    </span>
+                  </div>
+                )}
+
               </div>
             </Card>
           ))}
@@ -378,7 +382,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       {/* Competitor Delights and Pain Points Matrix */}
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-          🏆 Competitor Delights and Pain Points Matrix
+          🏆 Product Comparison by Key Dimensions
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
           <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
@@ -402,11 +406,10 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       {/* Use Case Matrix */}
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-          🎯 Use Case Matrix
+          🎯 Product Comparison by Main Use Cases
         </h2>
         <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-          <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-use case combination, 
-          with the satisfaction rate (%) below. Use cases are ranked by frequency across all products. 
+          <strong>How to read this table:</strong> Number refers to the count of reviews; Percentage: refers to the % of positive reviews)
           <strong>Click any cell to view the actual reviews.</strong> 
           Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
           <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 

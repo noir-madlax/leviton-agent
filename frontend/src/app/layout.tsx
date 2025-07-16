@@ -11,8 +11,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Chart Agent - AI 数据可视化助手",
-  description: "基于AI的智能数据分析和图表生成工具",
+  title: "Xenith - AI Agent for marketing data analysis",
+  description: "AI-powered data analysis and chart generation tool for marketing",
   icons: {
     icon: [
       {

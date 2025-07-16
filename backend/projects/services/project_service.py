@@ -512,15 +512,30 @@ class ProjectService:
         try:
             category_id = filters.category_id
             
-            # 策略1：直接用category_id字段查询
+            # 策略1：查询所有层级字段(category_id, category_l1_id到category_l6_id)
             query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
             query = query.neq('category', None).neq('brand', None)
-            query = query.eq('category_id', category_id)
+            query = query.or_(
+                f"category_id.eq.{category_id},"
+                f"category_l1_id.eq.{category_id},"
+                f"category_l2_id.eq.{category_id},"
+                f"category_l3_id.eq.{category_id},"
+                f"category_l4_id.eq.{category_id},"
+                f"category_l5_id.eq.{category_id},"
+                f"category_l6_id.eq.{category_id}"
+            )
+            
+            # Apply other filters
+            if filters.brands:
+                query = query.in_('brand', filters.brands)
+            
+            if filters.sources:
+                query = query.in_('source', filters.sources)
             
             result = query.execute()
             
             if result.data:
-                logger.info(f"Found {len(result.data)} products via direct category_id match")
+                logger.info(f"Found {len(result.data)} products via multi-level category_id match")
                 return await self._process_query_results(result.data, filters)
             
             # 策略2：通过category_id获取名称，然后用名称查询category字段

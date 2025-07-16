@@ -1201,6 +1201,7 @@ export class DatabaseService {
     actual_review_count: number
     category: string
     product_url?: string
+    rating?: number | null
   }>> {
     const { data: projectData, error: projectError } = await supabase
       .from('projects')
@@ -1218,7 +1219,7 @@ export class DatabaseService {
     // Get product details
     const { data: products, error: productsError } = await supabase
       .from('product_wide_table')
-      .select('platform_id, title, brand, price_usd, reviews_count, category, product_url')
+      .select('platform_id, title, brand, price_usd, reviews_count, category, product_url, rating')
       .in('platform_id', selectedAsins)
 
     if (productsError) throw productsError
