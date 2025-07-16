@@ -29,13 +29,25 @@ class FilterService:
         if filters.segments:
             query = query.in_('segment', filters.segments)
             logger.info(f"Applied segments filter: {filters.segments}")
-        
+
+        # 应用is_bestseller筛选
+        if filters.is_bestseller is not None:
+            if filters.is_bestseller == "true":
+                query = query.eq('is_bestseller', True)
+                logger.info(f"Applied is_bestseller filter: true")
+            elif filters.is_bestseller == "false":
+                query = query.eq('is_bestseller', False)
+                logger.info(f"Applied is_bestseller filter: false")
+            elif filters.is_bestseller == "null":
+                query = query.is_('is_bestseller', None)
+                logger.info(f"Applied is_bestseller filter: null")
+
         # 应用extend_fields筛选
         for field_name, field_value in filters.extend_fields.items():
             if field_value is not None:
                 query = query.eq(field_name, field_value)
                 logger.info(f"Applied extend_field filter: {field_name} = {field_value}")
-        
+
         return query
     
     def _apply_asin_filter(self, query):
@@ -60,7 +72,19 @@ class FilterService:
             categories = list(set(item['category'] for item in data if item.get('category')))
             brands = list(set(item['brand'] for item in data if item.get('brand')))  # 改：packaging_type -> brand
             segments = list(set(item['segment'] for item in data if item.get('segment')))
-            
+
+            # 获取is_bestseller的选项
+            is_bestseller_values = set()
+            for item in data:
+                bestseller_value = item.get('is_bestseller')
+                if bestseller_value is True:
+                    is_bestseller_values.add("true")
+                elif bestseller_value is False:
+                    is_bestseller_values.add("false")
+                elif bestseller_value is None:
+                    is_bestseller_values.add("null")
+            is_bestseller_options = list(is_bestseller_values)
+
             # 获取extend_fields的选项
             extend_fields = {}
             for item in data:
@@ -69,14 +93,15 @@ class FilterService:
                         if key not in extend_fields:
                             extend_fields[key] = set()
                         extend_fields[key].add(str(value))
-            
+
             # 转换为列表
             extend_fields = {k: list(v) for k, v in extend_fields.items()}
-            
+
             return FilterOptions(
                 categories=categories,
                 brands=brands,  # 改：packaging_types -> brands
                 segments=segments,
+                is_bestseller_options=is_bestseller_options,
                 extend_fields=extend_fields
             )
             
@@ -86,6 +111,7 @@ class FilterService:
                 categories=[],
                 brands=[],  # 改：packaging_types -> brands
                 segments=[],
+                is_bestseller_options=[],
                 extend_fields={}
             )
     

@@ -6,6 +6,7 @@ export interface ProjectFilters {
   asins: string[]
   brands: string[]  // 改：packaging_types -> brands (品牌筛选)
   segments: string[]  // 新增: 产品段筛选
+  is_bestseller?: string  // 新增: 畅销书状态筛选 ("true", "false", "null")
   extend_fields: Record<string, any>  // 新增: 扩展字段筛选
 }
 
@@ -25,6 +26,7 @@ export interface FilterOptions {
   }>
   brands: string[]  // 改：packaging_types -> brands
   segments: string[]
+  is_bestseller_options: string[]  // 新增: 畅销书状态选项
   extend_fields: Record<string, string[]>
 }
 
@@ -67,6 +69,7 @@ export const DEFAULT_FILTERS: ProjectFilters = {
   asins: [],
   brands: [],  // 改：packaging_types -> brands
   segments: [],
+  is_bestseller: undefined,
   extend_fields: {}
 }
 

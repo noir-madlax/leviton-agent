@@ -36,16 +36,18 @@ def parse_filters(
     categories: Optional[str] = None,
     brands: Optional[str] = None,
     segments: Optional[str] = None,
+    is_bestseller: Optional[str] = None,
     extend_fields: Optional[str] = None
 ) -> Dict[str, Any]:
     """解析前端传递的 filter 参数
-    
+
     Args:
         categories: 逗号分隔的类别列表
         brands: 逗号分隔的品牌列表
         segments: 逗号分隔的段列表
+        is_bestseller: 畅销书状态 ("true", "false", "null")
         extend_fields: JSON 格式的扩展字段过滤器
-    
+
     Returns:
         Dict containing parsed filter parameters
     """
@@ -71,6 +73,7 @@ def parse_filters(
             'categories': category_filters,
             'brands': brand_filters,
             'segments': segment_filters,
+            'is_bestseller': is_bestseller,
             'extend_fields': extend_fields_filters
         }
     except Exception as e:
@@ -89,6 +92,7 @@ def apply_filters_to_service(service, filters: Dict[str, Any]):
             categories=filters['categories'],
             brands=filters['brands'],
             segments=filters['segments'],
+            is_bestseller=filters['is_bestseller'],
             extend_fields=filters['extend_fields']
         )
 
@@ -120,7 +124,9 @@ async def get_filter_options(
             categories=categories or [],
             brands=brands or [],
             segments=segments or [],
-            extend_fields=extend_fields_dict
+            is_bestseller=None,
+            extend_fields=extend_fields_dict,
+            asins=[]
         )
         
         # 获取筛选器选项
@@ -220,6 +226,7 @@ async def get_brand_analysis(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: 'true', 'false', or 'null'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get top 10 brand category revenue analysis for a specific project.
@@ -230,7 +237,7 @@ async def get_brand_analysis(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         # Initialize service with project-specific ASIN filtering
         service = BrandAnalysisService(project_id)
@@ -270,6 +277,7 @@ async def get_product_analysis(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: 'true', 'false', or 'null'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get product analysis data for a specific project.
@@ -279,7 +287,7 @@ async def get_product_analysis(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = ProductAnalysisService(project_id)
         
@@ -333,6 +341,7 @@ async def get_pricing_analysis(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get pricing analysis data for a specific project.
@@ -341,7 +350,7 @@ async def get_pricing_analysis(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = PricingAnalysisService(project_id)
         
@@ -384,6 +393,7 @@ async def get_market_insights(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get market insights data for a specific project.
@@ -392,7 +402,7 @@ async def get_market_insights(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = MarketInsightsService(project_id)
         
@@ -463,6 +473,7 @@ async def get_package_preference(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters"),
     metric_type: Optional[str] = Query("revenue", description="Metric type for calculations: 'revenue' or 'count'")
 ):
@@ -472,7 +483,7 @@ async def get_package_preference(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = PackagePreferenceService(project_id)
         
@@ -530,6 +541,7 @@ async def get_review_insights_data(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get review insights data for a specific project.
@@ -538,7 +550,7 @@ async def get_review_insights_data(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = ReviewInsightsService(project_id)
         
@@ -567,6 +579,7 @@ async def get_competitor_analysis(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters"),
     selected_asins: Optional[str] = Query(None, description="Comma-separated list of ASINs to analyze")
 ):
@@ -576,7 +589,7 @@ async def get_competitor_analysis(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         # Parse selected ASINs if provided
         selected_asins_list = selected_asins.split(',') if selected_asins else None
@@ -611,6 +624,7 @@ async def get_all_review_data(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get all review data for a specific project.
@@ -619,7 +633,7 @@ async def get_all_review_data(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = AllReviewDataService(project_id)
         
@@ -655,6 +669,7 @@ async def get_project_overview(
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
     brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
+    is_bestseller: Optional[str] = Query(None, description="Bestseller status filter: \'true\', \'false\', or \'null\'"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
     """Get project overview data with optional filtering.
@@ -663,7 +678,7 @@ async def get_project_overview(
     """
     try:
         # 解析过滤器
-        filters = parse_filters(categories, brands, segments, extend_fields)
+        filters = parse_filters(categories, brands, segments, is_bestseller, extend_fields)
         
         service = ProjectOverviewService(project_id)
         

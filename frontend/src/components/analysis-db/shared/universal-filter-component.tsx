@@ -54,7 +54,8 @@ export function UniversalFilterComponent({
   const [selectKeys, setSelectKeys] = useState({
     category: 0,
     brand: 0,  // 改：packaging -> brand
-    segment: 0
+    segment: 0,
+    is_bestseller: 0
   })
 
   // 如果使用缓存数据，则从缓存获取筛选器选项
@@ -101,6 +102,7 @@ export function UniversalFilterComponent({
         case 'categories': return '📁'
         case 'brands': return '🏢'  // 改：packaging_types -> brands，使用品牌图标
         case 'segments': return '🎯'
+        case 'is_bestseller': return '⭐'
         default: return ''
       }
     }
@@ -199,12 +201,21 @@ export function UniversalFilterComponent({
     if (segment === 'all') {
       setPendingFilters(prev => ({ ...prev, segments: [] }))
     } else if (!pendingFilters.segments.includes(segment)) {
-      setPendingFilters(prev => ({ 
-        ...prev, 
-        segments: [...prev.segments, segment] 
+      setPendingFilters(prev => ({
+        ...prev,
+        segments: [...prev.segments, segment]
       }))
     }
     setSelectKeys(prev => ({ ...prev, segment: prev.segment + 1 }))
+  }
+
+  const handleIsBestsellerSelect = (value: string) => {
+    if (value === 'all') {
+      setPendingFilters(prev => ({ ...prev, is_bestseller: undefined }))
+    } else {
+      setPendingFilters(prev => ({ ...prev, is_bestseller: value }))
+    }
+    setSelectKeys(prev => ({ ...prev, is_bestseller: prev.is_bestseller + 1 }))
   }
 
   const handleRemoveCategory = (category: string) => {
@@ -228,6 +239,13 @@ export function UniversalFilterComponent({
     }))
   }
 
+  const handleRemoveIsBestseller = () => {
+    setPendingFilters(prev => ({
+      ...prev,
+      is_bestseller: undefined
+    }))
+  }
+
   const handleApplyFilters = () => {
     onFiltersChange(pendingFilters)
   }
@@ -237,6 +255,7 @@ export function UniversalFilterComponent({
     JSON.stringify(pendingFilters.categories) !== JSON.stringify(currentFilters.categories) ||
     JSON.stringify(pendingFilters.brands) !== JSON.stringify(currentFilters.brands) ||  // 改：packaging_types -> brands
     JSON.stringify(pendingFilters.segments) !== JSON.stringify(currentFilters.segments) ||
+    pendingFilters.is_bestseller !== currentFilters.is_bestseller ||
     JSON.stringify(pendingFilters.extend_fields) !== JSON.stringify(currentFilters.extend_fields)
   )
 
@@ -247,6 +266,7 @@ export function UniversalFilterComponent({
       asins: [],
       brands: [],  // 改：packaging_types -> brands
       segments: [],
+      is_bestseller: undefined,
       extend_fields: {}
     }
     setPendingFilters(resetFilters)
@@ -254,12 +274,13 @@ export function UniversalFilterComponent({
       ...prev,
       category: prev.category + 1,
       brand: prev.brand + 1,  // 改：packaging -> brand
-      segment: prev.segment + 1
+      segment: prev.segment + 1,
+      is_bestseller: prev.is_bestseller + 1
     }))
   }
 
   // 检查是否有活动的筛选器
-  const hasActiveFilters = pendingFilters.categories.length > 0 || pendingFilters.brands.length > 0 || pendingFilters.segments.length > 0
+  const hasActiveFilters = pendingFilters.categories.length > 0 || pendingFilters.brands.length > 0 || pendingFilters.segments.length > 0 || pendingFilters.is_bestseller
 
   // 如果没有筛选器选项，显示加载状态
   if (!finalAvailableOptions) {
@@ -519,6 +540,32 @@ export function UniversalFilterComponent({
               </SelectContent>
             </Select>
           </div>
+
+          {/* Is Bestseller Filter */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">Bestseller:</span>
+            <Select
+              key={selectKeys.is_bestseller}
+              onValueChange={handleIsBestsellerSelect}
+              disabled={finalLoading}
+            >
+              <SelectTrigger className="w-48 h-8">
+                <SelectValue placeholder="All Products" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="all">All Products</SelectItem>
+                {finalAvailableOptions.is_bestseller_options?.includes("true") && (
+                  <SelectItem value="true">Bestsellers Only</SelectItem>
+                )}
+                {finalAvailableOptions.is_bestseller_options?.includes("false") && (
+                  <SelectItem value="false">Non-Bestsellers Only</SelectItem>
+                )}
+                {finalAvailableOptions.is_bestseller_options?.includes("null") && (
+                  <SelectItem value="null">Unknown Status</SelectItem>
+                )}
+              </SelectContent>
+            </Select>
+          </div>
         </div>
 
         {/* Extend Fields Filter */}
@@ -541,8 +588,28 @@ export function UniversalFilterComponent({
               {pendingFilters.brands.map(brand => 
                 renderFilterBadge('brands', brand, () => handleRemoveBrand(brand))
               )}
-              {pendingFilters.segments.map(segment => 
+              {pendingFilters.segments.map(segment =>
                 renderFilterBadge('segments', segment, () => handleRemoveSegment(segment))
+              )}
+              {/* 添加is_bestseller的Badge显示 */}
+              {pendingFilters.is_bestseller && (
+                <Badge
+                  variant="default"
+                  className="text-xs flex items-center gap-1 mr-2 mb-2"
+                >
+                  ⭐ Bestseller: {
+                    pendingFilters.is_bestseller === 'true' ? 'Yes' :
+                    pendingFilters.is_bestseller === 'false' ? 'No' : 'Unknown'
+                  }
+                  <X
+                    className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                    onClick={(e) => {
+                      e.stopPropagation()
+                      e.preventDefault()
+                      handleRemoveIsBestseller()
+                    }}
+                  />
+                </Badge>
               )}
               {/* 添加extend_fields的Badge显示 */}
               {Object.entries(pendingFilters.extend_fields).map(([fieldName, value]) => {

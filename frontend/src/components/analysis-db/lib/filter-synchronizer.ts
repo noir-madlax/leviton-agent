@@ -25,6 +25,9 @@ export class FilterSynchronizer {
     this.syncArrayField(result, 'segments', oldProjectFilters, newProjectFilters)
     this.syncArrayField(result, 'asins', oldProjectFilters, newProjectFilters)
 
+    // 处理is_bestseller字段
+    this.syncStringField(result, 'is_bestseller', oldProjectFilters, newProjectFilters)
+
     // 处理extend_fields
     this.syncExtendFields(result, oldProjectFilters, newProjectFilters)
 
@@ -60,6 +63,28 @@ export class FilterSynchronizer {
       )
 
       ;(result[field] as string[]) = [...filtered, ...added]
+    }
+  }
+
+  /**
+   * 同步字符串类型的筛选器字段
+   * @param result 结果对象
+   * @param field 字段名
+   * @param oldProjectFilters 旧的project筛选器
+   * @param newProjectFilters 新的project筛选器
+   */
+  private syncStringField(
+    result: ProjectFilters,
+    field: keyof ProjectFilters,
+    oldProjectFilters: ProjectFilters,
+    newProjectFilters: ProjectFilters
+  ) {
+    const oldValue = oldProjectFilters[field] as string | undefined
+    const newValue = newProjectFilters[field] as string | undefined
+
+    // 如果project级别的值发生变化，更新chart级别的值
+    if (oldValue !== newValue) {
+      ;(result[field] as string | undefined) = newValue
     }
   }
 
