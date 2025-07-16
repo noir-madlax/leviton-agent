@@ -35,9 +35,10 @@ export interface ExtendFieldDefinition {
  */
 export interface ExtendFieldOptions {
   // 对于 select 和 multi_select 类型
-  options?: string[]
+  options?: Record<string, string> | string[]
   default?: string | boolean | number
   placeholder?: string
+  description?: string
   
   // 对于 boolean 类型
   true_label?: string
