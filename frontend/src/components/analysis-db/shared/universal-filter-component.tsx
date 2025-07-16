@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Filter, RotateCcw, X } from "lucide-react"
+import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
@@ -21,6 +21,12 @@ interface UniversalFilterProps {
   availableOptions?: FilterOptions // 现在是可选的，如果不提供则从缓存获取
   onFiltersChange: (filters: ProjectFilters) => void
   projectData?: {
+    stats?: {
+      total_products: number;
+      total_brands: number;
+      total_reviews: number;
+      segment_count: number;
+    };
     distributions?: {
       categories?: Array<{ name: string; count: number; percentage: number }>
       brands?: Array<{ name: string; count: number; percentage: number }>
@@ -274,7 +280,7 @@ export function UniversalFilterComponent({
       <CardHeader className="pb-2">
         <CardTitle className="text-lg flex items-center gap-2">
           <Filter className="w-5 h-5" />
-          {level === 'project' ? 'Project Filters' : 'Chart Filters'}
+          {level === 'project' ? 'Project Scope & Filters' : 'Chart Filters'}
           {level === 'chart' && chartId && (
             <Badge variant="outline" className="ml-2 text-xs">
               {chartId}
@@ -283,7 +289,7 @@ export function UniversalFilterComponent({
         </CardTitle>
         <div className="text-sm text-gray-600">
           {level === 'project' 
-            ? 'Filters will apply to all charts and responses' 
+            ? 'Filters will apply to the whole project' 
             : (
               <span>
                 📌 indicates filters inherited from project level. 
@@ -295,10 +301,64 @@ export function UniversalFilterComponent({
       </CardHeader>
       
       <CardContent className="p-4 pt-0 space-y-4">
+        {/* Project Data Preview - 4 color blocks */}
+        {level === 'project' && projectData?.stats && (
+          <div className="mb-4">
+            <div className="mb-2">
+              <h3 className="text-sm font-medium text-gray-700">Project Data Scope Preview</h3>
+            </div>
+            <div className="grid grid-cols-4 gap-3 mb-3">
+              <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
+                <Database className="w-4 h-4 text-blue-500" />
+                <div>
+                  <p className="text-lg font-bold text-blue-900">{projectData.stats.total_products.toLocaleString()}</p>
+                  <p className="text-xs text-blue-600">Products</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2 bg-green-50 rounded">
+                <Users className="w-4 h-4 text-green-500" />
+                <div>
+                  <p className="text-lg font-bold text-green-900">{projectData.stats.total_brands}</p>
+                  <p className="text-xs text-green-600">Brands</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2 bg-purple-50 rounded">
+                <MessageSquare className="w-4 h-4 text-purple-500" />
+                <div>
+                  <p className="text-lg font-bold text-purple-900">{projectData.stats.total_reviews.toLocaleString()}</p>
+                  <p className="text-xs text-purple-600">Reviews</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2 bg-orange-50 rounded">
+                <BarChart3 className="w-4 h-4 text-orange-500" />
+                <div>
+                  <p className="text-lg font-bold text-orange-900">{projectData.stats.segment_count}</p>
+                  <p className="text-xs text-orange-600">Segments</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Loading state for project data */}
+        {level === 'project' && loading && !projectData?.stats && (
+          <div className="mb-4">
+            <div className="flex items-center justify-center py-4">
+              <Loader2 className="w-4 h-4 animate-spin text-blue-500 mr-2" />
+              <span className="text-sm text-gray-600">Loading project data...</span>
+            </div>
+          </div>
+        )}
+
         {/* 筛选器控件 */}
         <div className="flex items-center gap-4 flex-wrap">
+          
           {/* Category Filter */}
           <div className="flex items-center gap-2">
+            
             <span className="text-sm text-gray-600">Category:</span>
             <Select 
               key={selectKeys.category}

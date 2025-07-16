@@ -31,7 +31,7 @@ interface PackagePreferenceData {
 
 export function PackagePreferenceAnalysis({ 
   data: initialData, 
-  productLists,
+  productLists, // eslint-disable-line @typescript-eslint/no-unused-vars
   projectId,
   categoryFilters,
   brandFilters,
@@ -48,7 +48,7 @@ export function PackagePreferenceAnalysis({
   categoryFilters?: string[]
   brandFilters?: string[]
   segmentFilters?: string[]
-  extendFields?: Record<string, any>
+  extendFields?: Record<string, string | number | boolean>
 }) {
   const [metricType, setMetricType] = useState<'revenue' | 'count'>('revenue')
   const [data, setData] = useState<PackagePreferenceData>(initialData)
@@ -191,7 +191,24 @@ export function PackagePreferenceAnalysis({
 
         <div className="mb-8">
           <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
-          
+            {/* Metric Type Selector */}
+            <div className="flex items-center gap-4 mb-4">
+              <label htmlFor="metric-type" className="text-sm font-medium text-gray-700">
+                Display Metric:
+              </label>
+              <select
+                id="metric-type"
+                value={metricType}
+                onChange={(e) => setMetricType(e.target.value as 'revenue' | 'count')}
+                className="px-3 py-1 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                disabled={loading}
+              >
+                <option value="revenue">Revenue</option>
+                <option value="count">Product Count</option>
+              </select>
+              {loading && <span className="text-sm text-gray-500">Loading...</span>}
+            </div>
+            
             {metricType === "revenue" && (
               <p className="text-sm text-blue-700 mt-1">
                 <strong>Total addressable market (TAM): </strong> ${totalValue.toLocaleString()} with {totalProducts} products 
@@ -207,41 +224,100 @@ export function PackagePreferenceAnalysis({
          
         </div>
       
-      {/* 单一饼图显示 */}
-      <div className="bg-gray-50 p-6 rounded-lg">
-        <h4 className="text-lg font-medium mb-4 text-center">
-          📦 Package Type Distribution by {titleSuffix}
-        </h4>
-        <div className="h-[500px]">
-          <ResponsiveContainer width="100%" height="100%">
-            <PieChart>
-              <Pie
-                data={chartData}
-                cx="50%"
-                cy="50%"
-                labelLine={false}
-                label={renderCustomizedLabel}
-                outerRadius={160}
-                fill="#8884d8"
-                dataKey="value"
-              >
-                {chartData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                ))}
-              </Pie>
-              <Tooltip content={<CustomTooltip />} />
-              <Legend 
-                verticalAlign="bottom" 
-                height={36}
-                formatter={(value) => {
-                  const item = chartData.find(d => d.name === value)
-                  return `${value} (${item?.percentage.toFixed(1)}%)`
-                }}
-              />
-            </PieChart>
-          </ResponsiveContainer>
+      {/* 多个category饼图显示 */}
+      {data.segmentDistributions && Object.keys(data.segmentDistributions).length > 0 ? (
+        <div className="space-y-8">
+          {Object.entries(data.segmentDistributions).map(([category, categoryData]) => {
+            // 生成该category的饼图数据
+            const categoryChartData = categoryData.map((item, index) => {
+              const value = metricType === "revenue" ? item.value : item.count;
+              return {
+                name: item.name || item.packSize,
+                value: value,
+                percentage: item.percentage,
+                color: colors[index % colors.length],
+                revenue: item.salesRevenue || item.value,
+                count: item.count
+              }
+            }).filter(item => item.value > 0);
+
+            if (categoryChartData.length === 0) return null;
+
+            return (
+              <div key={category} className="bg-gray-50 p-6 rounded-lg">
+                <h4 className="text-lg font-medium mb-4 text-center">
+                  📦 {category} - Package Type Distribution by {titleSuffix}
+                </h4>
+                <div className="h-[500px]">
+                  <ResponsiveContainer width="100%" height="100%">
+                    <PieChart>
+                      <Pie
+                        data={categoryChartData}
+                        cx="50%"
+                        cy="50%"
+                        labelLine={false}
+                        label={renderCustomizedLabel}
+                        outerRadius={160}
+                        fill="#8884d8"
+                        dataKey="value"
+                      >
+                        {categoryChartData.map((entry, index) => (
+                          <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                        ))}
+                      </Pie>
+                      <Tooltip content={<CustomTooltip />} />
+                      <Legend 
+                        verticalAlign="bottom" 
+                        height={36}
+                        formatter={(value) => {
+                          const item = categoryChartData.find(d => d.name === value)
+                          return `${value} (${item?.percentage.toFixed(1)}%)`
+                        }}
+                      />
+                    </PieChart>
+                  </ResponsiveContainer>
+                </div>
+              </div>
+            );
+          })}
         </div>
-      </div>
+      ) : (
+        // 如果没有category数据，显示总体饼图
+        <div className="bg-gray-50 p-6 rounded-lg">
+          <h4 className="text-lg font-medium mb-4 text-center">
+            📦 Package Type Distribution by {titleSuffix}
+          </h4>
+          <div className="h-[500px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  cx="50%"
+                  cy="50%"
+                  labelLine={false}
+                  label={renderCustomizedLabel}
+                  outerRadius={160}
+                  fill="#8884d8"
+                  dataKey="value"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+                  ))}
+                </Pie>
+                <Tooltip content={<CustomTooltip />} />
+                <Legend 
+                  verticalAlign="bottom" 
+                  height={36}
+                  formatter={(value) => {
+                    const item = chartData.find(d => d.name === value)
+                    return `${value} (${item?.percentage.toFixed(1)}%)`
+                  }}
+                />
+              </PieChart>
+            </ResponsiveContainer>
+          </div>
+        </div>
+      )}
       </ChartWithFilters>
     </section>
   )

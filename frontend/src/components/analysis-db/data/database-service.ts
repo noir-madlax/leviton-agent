@@ -437,7 +437,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get package preference data with project filtering via backend API
-  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string): Promise<{
+  async getPackagePreferenceDataByProject(projectId: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string): Promise<{
     sameProductComparison: Array<{
       productName: string
       packSize: string
@@ -490,10 +490,10 @@ export class DatabaseService {
         url += `&categories=${encodeURIComponent(categoriesParam)}`
       }
       
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&packaging_types=${encodeURIComponent(packagingTypesParam)}`
+      // Add brand filters if provided
+      if (brandFilters && brandFilters.length > 0) {
+        const brandsParam = brandFilters.join(',')
+        url += `&brands=${encodeURIComponent(brandsParam)}`
       }
       
       // Add segment filters if provided

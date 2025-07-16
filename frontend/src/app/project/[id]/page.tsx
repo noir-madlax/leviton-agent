@@ -120,13 +120,19 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   }, [projectId])
 
   // 预加载项目概览数据
-  const loadProjectOverview = async () => {
+  const loadProjectOverview = async (filters?: ProjectFilters) => {
     if (!projectId) return
 
     setOverviewLoading(true)
     try {
       const databaseService = new DatabaseService()
-      const overview = await databaseService.getProjectOverview(projectId)
+      const overview = await databaseService.getProjectOverview(
+        projectId,
+        filters?.categories || [],
+        filters?.brands || [], // 传递brands而不是packaging_types
+        filters?.segments || [],
+        filters?.extend_fields || {}
+      )
       
       // 确保包含所有必需字段，提供默认值
       const completeOverview: ProjectOverviewData = {
@@ -151,7 +157,8 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   // 处理过滤器变更
   const handleFiltersChange = (newFilters: ProjectFilters) => {
     setFilters(newFilters)
-    // 这里可以传递给AnalysisDbTab组件或其他需要过滤器的组件
+    // 重新获取基于新筛选器的项目概览数据
+    loadProjectOverview(newFilters)
   }
 
   // 切换过滤器展开状态
