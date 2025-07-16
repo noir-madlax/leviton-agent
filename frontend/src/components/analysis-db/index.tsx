@@ -241,7 +241,7 @@ interface DashboardData {
 }
 
 // 获取品牌分析数据的async函数
-async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Brand Analysis waiting for project selection...');
@@ -252,8 +252,8 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -262,7 +262,7 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getBrandCategoryRevenueByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Brand Analysis data received: ${data.brandCategoryRevenue.length} brands, ${data.segmentNames.length} segments`);
     console.log(`  Segments: ${data.segmentNames.join(', ')}`);
     
@@ -284,7 +284,7 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
   }
 }
 
-async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Product Analysis waiting for project selection...');
@@ -301,8 +301,8 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -311,7 +311,7 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getProductAnalysisDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getProductAnalysisDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Product Analysis data received: ${data.priceVsRevenue.length} price vs revenue categories, ${data.segmentNames.length} segments`);
     console.log(`  Segments: ${data.segmentNames.join(', ')}`);
     console.log(`  Segment summary keys: ${Object.keys(data.segmentSummary).join(', ')}`);
@@ -332,7 +332,7 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
   }
 }
 
-async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Pricing Analysis waiting for project selection...');
@@ -343,8 +343,8 @@ async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: st
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -353,7 +353,7 @@ async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: st
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getPricingAnalysisDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getPricingAnalysisDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Pricing Analysis data received: ${data.priceDistribution.length} price distributions, ${data.brandPriceDistribution.length} brand distributions`);
     
     return data;
@@ -363,7 +363,7 @@ async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: st
   }
 }
 
-async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Market Insights waiting for project selection...');
@@ -374,8 +374,8 @@ async function fetchMarketInsightsData(projectId?: string, categoryFilters?: str
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -384,7 +384,7 @@ async function fetchMarketInsightsData(projectId?: string, categoryFilters?: str
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getMarketInsightsDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getMarketInsightsDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     const totalSegments = data.segmentRevenue.dimmerSwitches.length + data.segmentRevenue.lightSwitches.length;
     console.log(`📈 Market Insights data received: ${totalSegments} segments total`);
     
@@ -395,7 +395,7 @@ async function fetchMarketInsightsData(projectId?: string, categoryFilters?: str
   }
 }
 
-async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string) {
+async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string) {
   try {
     if (!projectId) {
       console.log('⏳ Package Preference waiting for project selection...');
@@ -414,8 +414,8 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -424,7 +424,7 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, metricType);
+    const data = await databaseService.getPackagePreferenceDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields, metricType);
     console.log(`✅ Package Preference data received: ${data.packageDistribution.length} package distributions`);
     
     return data;
@@ -442,7 +442,7 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
   }
 }
 
-async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Review Insights waiting for project selection...');
@@ -453,8 +453,8 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -463,7 +463,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.allUseCases.length} all use cases, ${data.underservedUseCases.length} underserved use cases`);
     
     return data;
@@ -473,7 +473,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
   }
 }
 
-async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
   try {
     if (!projectId) {
       console.log('⏳ Competitor Analysis waiting for project selection...');
@@ -489,8 +489,8 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -499,7 +499,7 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters, undefined, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters, undefined, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Competitor Analysis data received: ${data.targetProducts.length} target products, ${data.matrixData.length} matrix items`);
     
     return data;
@@ -514,7 +514,7 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
   }
 }
 
-async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<Pick<DashboardData, 'allReviewData'>> {
+async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<Pick<DashboardData, 'allReviewData'>> {
   try {
     if (!projectId) {
       console.log('⏳ All Review Data waiting for project selection...');
@@ -525,8 +525,8 @@ async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]
     if (categoryFilters && categoryFilters.length > 0) {
       console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
     }
-    if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${packagingTypeFilters.join(', ')}`);
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
     }
     if (segmentFilters && segmentFilters.length > 0) {
       console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
@@ -535,7 +535,7 @@ async function fetchAllReviewData(projectId?: string, categoryFilters?: string[]
       console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
     }
     
-    const data = await databaseService.getAllReviewDataByProject(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields);
+    const data = await databaseService.getAllReviewDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
     console.log(`📈 All Review Data received: ${Object.keys(data).length} aspects`);
     
     return { allReviewData: data };
@@ -582,7 +582,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     loadedDataRef.current = loadedData
   }, [loadedData])
 
-  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, forceReload = false) => {
+  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, forceReload = false) => {
     if (!projectId) return
     
     // 使用 ref 来检查已加载数据，避免依赖 state
@@ -598,28 +598,28 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       
       switch (dataType) {
         case 'brandAnalysis':
-          result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'productAnalysis':
-          result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'pricingAnalysis':
-          result.pricingAnalysis = await fetchPricingAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.pricingAnalysis = await fetchPricingAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'marketInsights':
-          result.marketInsights = await fetchMarketInsightsData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.marketInsights = await fetchMarketInsightsData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'packagePreference':
-          result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'reviewInsights':
-          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'competitorAnalysis':
-          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'allReviewData':
-          const reviewData = await fetchAllReviewData(projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields)
+          const reviewData = await fetchAllReviewData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           result.allReviewData = reviewData.allReviewData
           break
       }
@@ -666,39 +666,39 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     
     // 🔑 传递当前的filters到loadSpecificData
     const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined
-    const packagingTypeFilters = ('packaging_types' in appliedFilters) ? appliedFilters.packaging_types : undefined
+    const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined
     const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined
     const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined
     // 如果有filters，强制重新加载数据
-    const forceReload = categoryFilters !== undefined || packagingTypeFilters !== undefined || segmentFilters !== undefined || extendFields !== undefined
+    const forceReload = categoryFilters !== undefined || brandFilters !== undefined || segmentFilters !== undefined || extendFields !== undefined
     
     switch (tabValue) {
       case 'brand-analysis':
-        loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'product-analysis':
-        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'pricing-analysis':
-        loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         // 同时加载productAnalysis数据以支持散点图
-        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'market-insights':
-        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'package-preference':
-        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'review-insights':
-        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         // 同时加载原始评论数据，因为ReviewInsights组件需要allReviewData
-        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'competitor-analysis':
-        loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         // 同时加载原始评论数据，因为CustomerSentimentScatter组件需要allReviewData
-        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
     }
   }
@@ -725,10 +725,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       
       // 重新加载当前数据
       const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
-      const packagingTypeFilters = ('packaging_types' in appliedFilters) ? appliedFilters.packaging_types : undefined;
+      const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined;
       const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
       const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
-      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields, true); // 强制重新加载
+      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true); // 强制重新加载
     }
   }, [appliedFilters, selectedProjectId, loadSpecificData])
 
@@ -1043,7 +1043,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
                             categoryFilters={appliedFilters.categories}
-                            packagingTypeFilters={appliedFilters.packaging_types || []}
+                            brandFilters={appliedFilters.brands || []}
                             segmentFilters={appliedFilters.segments || []}
                             extendFields={appliedFilters.extend_fields || {}}
                           />

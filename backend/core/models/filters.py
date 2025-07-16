@@ -5,7 +5,7 @@ from typing import List, Dict, Any, Optional
 class ProjectFilters:
     """项目筛选器模型"""
     categories: List[str]
-    packaging_types: List[str]
+    brands: List[str]
     segments: List[str]
     extend_fields: Dict[str, Any]
     asins: List[str]
@@ -14,7 +14,7 @@ class ProjectFilters:
         """检查筛选器是否为空"""
         return (
             not self.categories and 
-            not self.packaging_types and 
+            not self.brands and 
             not self.segments and 
             not self.extend_fields and 
             not self.asins
@@ -24,7 +24,7 @@ class ProjectFilters:
         """转换为字典格式"""
         return {
             'categories': self.categories,
-            'packaging_types': self.packaging_types,
+            'brands': self.brands,
             'segments': self.segments,
             'extend_fields': self.extend_fields,
             'asins': self.asins
@@ -35,7 +35,7 @@ class ProjectFilters:
         """从字典创建筛选器实例"""
         return cls(
             categories=data.get('categories', []),
-            packaging_types=data.get('packaging_types', []),
+            brands=data.get('brands', []),
             segments=data.get('segments', []),
             extend_fields=data.get('extend_fields', {}),
             asins=data.get('asins', [])
@@ -46,7 +46,7 @@ class ProjectFilters:
         """创建空的筛选器"""
         return cls(
             categories=[],
-            packaging_types=[],
+            brands=[],
             segments=[],
             extend_fields={},
             asins=[]
@@ -56,7 +56,7 @@ class ProjectFilters:
 class FilterOptions:
     """筛选器选项模型"""
     categories: List[str]
-    packaging_types: List[str]
+    brands: List[str]
     segments: List[str]
     extend_fields: Dict[str, List[str]]
     
@@ -64,7 +64,7 @@ class FilterOptions:
         """转换为字典格式"""
         return {
             'categories': self.categories,
-            'packaging_types': self.packaging_types,
+            'brands': self.brands,
             'segments': self.segments,
             'extend_fields': self.extend_fields
         } 

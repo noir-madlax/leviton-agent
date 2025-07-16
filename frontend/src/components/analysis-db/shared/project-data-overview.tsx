@@ -31,7 +31,7 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
-    packaging_types: Array<{
+    brands: Array<{
       name: string;
       count: number;
       percentage: number;
@@ -78,7 +78,7 @@ export function ProjectDataOverview({ projectId, categoryFilters }: ProjectDataO
           ...overview,
           distributions: {
             ...overview.distributions,
-            packaging_types: (overview.distributions as any).packaging_types || [],
+            brands: (overview.distributions as any).brands || [],
             segments: (overview.distributions as any).segments || []
           }
         };

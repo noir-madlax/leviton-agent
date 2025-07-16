@@ -41,7 +41,7 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
-    packaging_types: Array<{
+    brands: Array<{
       name: string;
       count: number;
       percentage: number;
@@ -133,7 +133,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         ...overview,
         distributions: {
           ...overview.distributions,
-          packaging_types: (overview.distributions as any).packaging_types || [],
+          brands: (overview.distributions as any).brands || [],
           segments: (overview.distributions as any).segments || [],
           extend_fields: (overview.distributions as any).extend_fields || {}
         }

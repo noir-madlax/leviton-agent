@@ -17,13 +17,13 @@ interface ProjectFiltersProps {
 interface ProjectFilters {
   categories: string[]
   asins: string[]
-  packaging_types: string[]  // 新增: 包装类型筛选
+  brands: string[]  // 新增: 品牌筛选
 }
 
 export function ProjectFilters({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [], packaging_types: [] } 
+  initialFilters = { categories: [], asins: [], brands: [] } 
 }: ProjectFiltersProps) {
   const [availableCategories, setAvailableCategories] = useState<string[]>([])
   const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
@@ -80,7 +80,7 @@ export function ProjectFilters({
       onFiltersChange({
         categories: pendingCategories,
         asins: [],
-        packaging_types: []
+        brands: []
       })
     }
   }
@@ -92,7 +92,7 @@ export function ProjectFilters({
       onFiltersChange({
         categories: [],
         asins: [],
-        packaging_types: []
+        brands: []
       })
     }
   }

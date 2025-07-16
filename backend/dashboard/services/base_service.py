@@ -15,13 +15,13 @@ class FilterConfig:
     """Configuration class for dashboard filters."""
     def __init__(self):
         self.categories: Optional[List[str]] = None
-        self.packaging_types: Optional[List[str]] = None  # 新增: 包装类型筛选
+        self.brands: Optional[List[str]] = None  # 改：packaging_types -> brands
         self.segments: Optional[List[str]] = None  # 新增: 产品段筛选
         self.extend_fields: Optional[Dict[str, Any]] = None  # 新增: 扩展字段筛选
     
     def has_filters(self) -> bool:
         """Check if any filters are set."""
-        return bool(self.categories or self.packaging_types or self.segments or self.extend_fields)
+        return bool(self.categories or self.brands or self.segments or self.extend_fields)  # 改：packaging_types -> brands
 
 class BaseDashboardService(ABC):
     """Base service for dashboard data queries with unified ASIN filtering.
@@ -87,15 +87,15 @@ class BaseDashboardService(ABC):
         self.project_filters.categories = categories
         logger.info(f"Category filters set: {categories}")
     
-    def set_filters(self, categories: Optional[List[str]] = None, packaging_types: Optional[List[str]] = None, segments: Optional[List[str]] = None, extend_fields: Optional[Dict[str, Any]] = None):
+    def set_filters(self, categories: Optional[List[str]] = None, brands: Optional[List[str]] = None, segments: Optional[List[str]] = None, extend_fields: Optional[Dict[str, Any]] = None):
         """Set multiple filters for additional filtering."""
         if categories is not None:
             self.filters.categories = categories
             self.category_filters = categories  # 保持向后兼容性
             self.project_filters.categories = categories
-        if packaging_types is not None:
-            self.filters.packaging_types = packaging_types
-            self.project_filters.packaging_types = packaging_types
+        if brands is not None:  # 改：packaging_types -> brands
+            self.filters.brands = brands
+            self.project_filters.brands = brands
         if segments is not None:
             self.filters.segments = segments
             self.project_filters.segments = segments
@@ -103,7 +103,7 @@ class BaseDashboardService(ABC):
             self.filters.extend_fields = extend_fields
             self.project_filters.extend_fields = extend_fields
         
-        logger.info(f"Filters set - Categories: {categories}, Packaging: {packaging_types}, Segments: {segments}, Extend Fields: {extend_fields}")
+        logger.info(f"Filters set - Categories: {categories}, Brands: {brands}, Segments: {segments}, Extend Fields: {extend_fields}")  # 改：Packaging -> Brands
     
     def set_project_filters(self, filters: ProjectFilters):
         """Set project filters using the new filter model."""
@@ -111,7 +111,7 @@ class BaseDashboardService(ABC):
         # 保持向后兼容性
         self.category_filters = filters.categories
         self.filters.categories = filters.categories
-        self.filters.packaging_types = filters.packaging_types
+        self.filters.brands = filters.brands
         self.filters.segments = filters.segments
         self.filters.extend_fields = filters.extend_fields
         logger.info(f"Project filters set: {filters.to_dict()}")
@@ -127,30 +127,11 @@ class BaseDashboardService(ABC):
         """Apply all filters using the new filter service."""
         return self.filter_service.apply_filters(query, self.project_filters)
     
-    def _apply_packaging_filter(self, query):
-        """Apply packaging type filtering to any Supabase query if packaging filters are set.
-        
-        Business logic:
-        - 'individual': INDIVIDUAL, UNKNOWN (非盒装都归类为单个装)
-        - 'package': PACKAGE (多包装)
-        """
-        if self.filters.packaging_types:
-            # 构建packaging_type筛选条件
-            db_packaging_values = []
-            for ptype in self.filters.packaging_types:
-                if ptype == 'individual':
-                    # 单个装包括INDIVIDUAL和UNKNOWN
-                    db_packaging_values.extend(['INDIVIDUAL', 'UNKNOWN'])
-                elif ptype == 'package':
-                    # 多包装只包括PACKAGE
-                    db_packaging_values.append('PACKAGE')
-                else:
-                    # 直接使用原值（用于未来扩展）
-                    db_packaging_values.append(ptype)
-            
-            if db_packaging_values:
-                query = query.in_('packaging_type', db_packaging_values)
-                logger.info(f"Applied packaging filter: {self.filters.packaging_types} -> {db_packaging_values}")
+    def _apply_brand_filter(self, query):  # 改：_apply_packaging_filter -> _apply_brand_filter
+        """Apply brand filtering to any Supabase query if brand filters are set."""
+        if self.filters.brands:  # 改：packaging_types -> brands
+            query = query.in_('brand', self.filters.brands)  # 改：packaging_type -> brand
+            logger.info(f"Applied brand filter: {self.filters.brands}")
         return query
 
     def _apply_segments_filter(self, query):
@@ -291,10 +272,10 @@ class BaseDashboardService(ABC):
         return query
     
     def _apply_combined_filters(self, query):
-        """Apply ASIN, category, packaging, segments, and extend fields filters to a query."""
+        """Apply ASIN, category, brand, segments, and extend fields filters to a query."""
         query = self._apply_asin_filter(query)
         query = self._apply_category_filter(query)
-        query = self._apply_packaging_filter(query)
+        query = self._apply_brand_filter(query)  # 改：_apply_packaging_filter -> _apply_brand_filter
         query = self._apply_segments_filter(query)
         query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query

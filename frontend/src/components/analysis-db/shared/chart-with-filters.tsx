@@ -46,7 +46,7 @@ export function ChartWithFilters({
 
   // 计算活跃筛选器数量
   const activeFiltersCount = finalFilters.categories.length + 
-                           finalFilters.packaging_types.length + 
+                           finalFilters.brands.length + 
                            finalFilters.segments.length +
                            Object.keys(finalFilters.extend_fields).length
 

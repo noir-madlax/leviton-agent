@@ -31,12 +31,73 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter()
 
+# 公共的 filter 处理函数
+def parse_filters(
+    categories: Optional[str] = None,
+    brands: Optional[str] = None,
+    segments: Optional[str] = None,
+    extend_fields: Optional[str] = None
+) -> Dict[str, Any]:
+    """解析前端传递的 filter 参数
+    
+    Args:
+        categories: 逗号分隔的类别列表
+        brands: 逗号分隔的品牌列表
+        segments: 逗号分隔的段列表
+        extend_fields: JSON 格式的扩展字段过滤器
+    
+    Returns:
+        Dict containing parsed filter parameters
+    """
+    try:
+        # Parse categories if provided
+        category_filters = categories.split(',') if categories else None
+        
+        # Parse brands if provided
+        brand_filters = brands.split(',') if brands else None
+        
+        # Parse segments if provided
+        segment_filters = segments.split(',') if segments else None
+        
+        # Parse extend fields if provided
+        extend_fields_filters = None
+        if extend_fields:
+            try:
+                extend_fields_filters = json.loads(extend_fields)
+            except json.JSONDecodeError:
+                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        
+        return {
+            'categories': category_filters,
+            'brands': brand_filters,
+            'segments': segment_filters,
+            'extend_fields': extend_fields_filters
+        }
+    except Exception as e:
+        logger.error(f"Error parsing filters: {e}")
+        raise HTTPException(status_code=400, detail=f"Error parsing filters: {str(e)}")
+
+def apply_filters_to_service(service, filters: Dict[str, Any]):
+    """将解析后的过滤器应用到服务实例
+    
+    Args:
+        service: 服务实例
+        filters: 解析后的过滤器字典
+    """
+    if any(filters.values()):
+        service.set_filters(
+            categories=filters['categories'],
+            brands=filters['brands'],
+            segments=filters['segments'],
+            extend_fields=filters['extend_fields']
+        )
+
 # 筛选器相关端点
 @router.get("/projects/{project_id}/filter-options")
 async def get_filter_options(
     project_id: str,
     categories: Optional[List[str]] = Query(None),
-    packaging_types: Optional[List[str]] = Query(None),
+    brands: Optional[List[str]] = Query(None),
     segments: Optional[List[str]] = Query(None),
     extend_fields: Optional[str] = Query(None)  # JSON string
 ):
@@ -49,30 +110,31 @@ async def get_filter_options(
         # 解析extend_fields
         extend_fields_dict = {}
         if extend_fields:
-            extend_fields_dict = json.loads(extend_fields)
+            try:
+                extend_fields_dict = json.loads(extend_fields)
+            except json.JSONDecodeError:
+                extend_fields_dict = {}
         
-        # 构建筛选器
-        filters = ProjectFilters(
+        # 创建filter对象
+        current_filters = ProjectFilters(
             categories=categories or [],
-            packaging_types=packaging_types or [],
+            brands=brands or [],
             segments=segments or [],
-            extend_fields=extend_fields_dict,
-            asins=[]
+            extend_fields=extend_fields_dict
         )
         
-        # 创建筛选服务
-        filter_service = FilterService(temp_service.supabase, project_asins)
-        
-        # 获取可用选项
-        options = filter_service.get_available_options(filters if not filters.is_empty() else None)
+        # 获取筛选器选项
+        filter_service = FilterService(project_asins)
+        options = filter_service.get_filter_options(current_filters)
         
         return {
-            "options": options.to_dict(),
-            "project_id": project_id
+            "categories": options.categories,
+            "brands": options.brands,
+            "segments": options.segments,
+            "extend_fields": options.extend_fields
         }
-        
     except Exception as e:
-        logger.error(f"Error getting filter options: {e}")
+        logger.error(f"Error getting filter options: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=str(e))
 
 @router.post("/projects/{project_id}/charts/{chart_type}/data")
@@ -156,7 +218,7 @@ async def get_project_extend_fields(
 async def get_brand_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -167,29 +229,14 @@ async def get_brand_analysis(
     Returns only the top 10 brands by total revenue.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         # Initialize service with project-specific ASIN filtering
         service = BrandAnalysisService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         # Get filtered data (new format with segments, limited to top 10)
         brand_data = service.get_data()
@@ -221,7 +268,7 @@ async def get_brand_analysis(
 async def get_product_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -231,28 +278,13 @@ async def get_product_analysis(
     segment names, and colors for frontend compatibility.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = ProductAnalysisService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -299,7 +331,7 @@ async def get_product_analysis(
 async def get_pricing_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -308,28 +340,13 @@ async def get_pricing_analysis(
     Enhanced version: Returns complete pricing data with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = PricingAnalysisService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -365,7 +382,7 @@ async def get_pricing_analysis(
 async def get_market_insights(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -374,28 +391,13 @@ async def get_market_insights(
     Enhanced version: Returns complete market insights with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = MarketInsightsService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -459,7 +461,7 @@ async def get_market_insights(
 async def get_package_preference(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters"),
     metric_type: Optional[str] = Query("revenue", description="Metric type for calculations: 'revenue' or 'count'")
@@ -469,22 +471,8 @@ async def get_package_preference(
     Enhanced version: Returns complete package preference data with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = PackagePreferenceService(project_id)
         
@@ -493,8 +481,7 @@ async def get_package_preference(
             service.set_metric_type(metric_type)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -541,7 +528,7 @@ async def get_package_preference(
 async def get_review_insights_data(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -550,28 +537,13 @@ async def get_review_insights_data(
     Enhanced version: Returns complete review insights with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = ReviewInsightsService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -593,7 +565,7 @@ async def get_review_insights_data(
 async def get_competitor_analysis(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters"),
     selected_asins: Optional[str] = Query(None, description="Comma-separated list of ASINs to analyze")
@@ -603,22 +575,8 @@ async def get_competitor_analysis(
     Enhanced version: Returns complete competitor analysis with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         # Parse selected ASINs if provided
         selected_asins_list = selected_asins.split(',') if selected_asins else None
@@ -626,8 +584,7 @@ async def get_competitor_analysis(
         service = CompetitorAnalysisService(project_id, selected_asins=selected_asins_list)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -652,7 +609,7 @@ async def get_competitor_analysis(
 async def get_all_review_data(
     project_id: str = Query(..., description="Project ID for ASIN filtering"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -661,28 +618,13 @@ async def get_all_review_data(
     Enhanced version: Returns complete review data with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = AllReviewDataService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         raw_data = service.get_data()
         
@@ -711,7 +653,7 @@ async def get_all_review_data(
 async def get_project_overview(
     project_id: str = Query(..., description="Project ID"),
     categories: Optional[str] = Query(None, description="Comma-separated list of categories to filter by"),
-    packaging_types: Optional[str] = Query(None, description="Comma-separated list of packaging types to filter by"),
+    brands: Optional[str] = Query(None, description="Comma-separated list of brands to filter by"),
     segments: Optional[str] = Query(None, description="Comma-separated list of segments to filter by"),
     extend_fields: Optional[str] = Query(None, description="JSON string of extend field filters")
 ):
@@ -720,28 +662,13 @@ async def get_project_overview(
     Enhanced version: Returns complete project overview with segment support.
     """
     try:
-        # Parse categories if provided
-        category_filters = categories.split(',') if categories else None
-        
-        # Parse packaging types if provided
-        packaging_type_filters = packaging_types.split(',') if packaging_types else None
-        
-        # Parse segments if provided
-        segment_filters = segments.split(',') if segments else None
-        
-        # Parse extend fields if provided
-        extend_fields_filters = None
-        if extend_fields:
-            try:
-                extend_fields_filters = json.loads(extend_fields)
-            except json.JSONDecodeError:
-                raise HTTPException(status_code=400, detail="Invalid JSON format for extend_fields parameter")
+        # 解析过滤器
+        filters = parse_filters(categories, brands, segments, extend_fields)
         
         service = ProjectOverviewService(project_id)
         
         # Apply filters if provided
-        if category_filters or packaging_type_filters or segment_filters or extend_fields_filters:
-            service.set_filters(categories=category_filters, packaging_types=packaging_type_filters, segments=segment_filters, extend_fields=extend_fields_filters)
+        apply_filters_to_service(service, filters)
         
         overview_data = service.get_data()
         

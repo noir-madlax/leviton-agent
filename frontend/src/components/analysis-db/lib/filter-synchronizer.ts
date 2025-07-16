@@ -21,7 +21,7 @@ export class FilterSynchronizer {
 
     // 处理数组类型的筛选器
     this.syncArrayField(result, 'categories', oldProjectFilters, newProjectFilters)
-    this.syncArrayField(result, 'packaging_types', oldProjectFilters, newProjectFilters)
+    this.syncArrayField(result, 'brands', oldProjectFilters, newProjectFilters)
     this.syncArrayField(result, 'segments', oldProjectFilters, newProjectFilters)
     this.syncArrayField(result, 'asins', oldProjectFilters, newProjectFilters)
 

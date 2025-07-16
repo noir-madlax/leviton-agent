@@ -4,7 +4,7 @@
 export interface ProjectFilters {
   categories: string[]
   asins: string[]
-  packaging_types: string[]  // 新增: 包装类型筛选 - 'individual' | 'package'
+  brands: string[]  // 改：packaging_types -> brands (品牌筛选)
   segments: string[]  // 新增: 产品段筛选
   extend_fields: Record<string, any>  // 新增: 扩展字段筛选
 }
@@ -23,7 +23,7 @@ export interface FilterOptions {
       percentage: number
     }>
   }>
-  packaging_types: string[]
+  brands: string[]  // 改：packaging_types -> brands
   segments: string[]
   extend_fields: Record<string, string[]>
 }
@@ -65,13 +65,13 @@ export interface ExtendFieldOptions {
 export const DEFAULT_FILTERS: ProjectFilters = {
   categories: [],
   asins: [],
-  packaging_types: [],
+  brands: [],  // 改：packaging_types -> brands
   segments: [],
   extend_fields: {}
 }
 
 /**
- * 包装类型选项
+ * 包装类型选项 (用于extend fields的package_type字段)
  */
 export const PACKAGING_TYPE_OPTIONS = [
   { value: 'individual', label: 'Individual/Unknown' },
@@ -79,7 +79,7 @@ export const PACKAGING_TYPE_OPTIONS = [
 ] as const
 
 /**
- * 包装类型定义
+ * 包装类型定义 (用于extend fields的package_type字段)
  */
 export type PackagingType = 'individual' | 'package'
 

@@ -123,22 +123,22 @@ class ProjectOverviewService(BaseDashboardService):
         }
     
     def _get_project_distributions(self) -> Dict[str, Any]:
-        """Get distribution data for sources, categories, packaging types, and segments
+        """Get distribution data for sources, categories, brands, and segments
         
-        根据当前应用的所有filter（categories、packaging_types、segments）
+        根据当前应用的所有filter（categories、brands、segments）
         动态计算数据分布统计。
         """
         filtered_asins = self.project_asins
         
         if not filtered_asins:
-            return {'sources': [], 'categories': [], 'packaging_types': [], 'segments': []}
+            return {'sources': [], 'categories': [], 'brands': [], 'segments': []}
         
         # Get product data for distributions with ALL filters applied
         query = self.supabase.table('product_wide_table').select(
-            'platform_id, category, source, packaging_type'
+            'platform_id, category, source, brand'
         ).in_('platform_id', filtered_asins).neq('category', None)
         
-        # Apply ALL filters (categories, packaging_types, segments) to get filtered distribution
+        # Apply ALL filters (categories, brands, segments) to get filtered distribution
         query = self._apply_combined_filters(query)
         
         response = query.execute()
@@ -176,20 +176,20 @@ class ProjectOverviewService(BaseDashboardService):
             for category, count in category_counts.items()
         ]
         
-        # Calculate packaging type distribution (from filtered products)
-        packaging_counts = {}
+        # Calculate brand distribution (from filtered products)
+        brand_counts = {}
         for product in products:
-            packaging_type = product.get('packaging_type', 'Unknown')
-            if packaging_type:  # Only count non-null packaging types
-                packaging_counts[packaging_type] = packaging_counts.get(packaging_type, 0) + 1
+            brand = product.get('brand', 'Unknown')
+            if brand:  # Only count non-null brands
+                brand_counts[brand] = brand_counts.get(brand, 0) + 1
         
-        packaging_types = [
+        brands = [
             {
-                'name': packaging_type,
+                'name': brand,
                 'count': count,
                 'percentage': round((count / total_products) * 100, 1) if total_products > 0 else 0
             }
-            for packaging_type, count in packaging_counts.items()
+            for brand, count in brand_counts.items()
         ]
         
         # Calculate segments distribution from product_segment_assignments table
@@ -240,7 +240,7 @@ class ProjectOverviewService(BaseDashboardService):
         # Sort by count descending
         sources.sort(key=lambda x: x['count'], reverse=True)
         categories.sort(key=lambda x: x['count'], reverse=True)
-        packaging_types.sort(key=lambda x: x['count'], reverse=True)
+        brands.sort(key=lambda x: x['count'], reverse=True)
         
         # Calculate extend fields distribution
         extend_fields_distributions = {}
@@ -302,7 +302,7 @@ class ProjectOverviewService(BaseDashboardService):
         return {
             'sources': sources,
             'categories': categories,
-            'packaging_types': packaging_types,
+            'brands': brands,
             'segments': segments,
             'extend_fields': extend_fields_distributions
         }

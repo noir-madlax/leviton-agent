@@ -34,7 +34,7 @@ export function PackagePreferenceAnalysis({
   productLists,
   projectId,
   categoryFilters,
-  packagingTypeFilters,
+  brandFilters,
   segmentFilters,
   extendFields
 }: { 
@@ -46,7 +46,7 @@ export function PackagePreferenceAnalysis({
   }
   projectId?: string
   categoryFilters?: string[]
-  packagingTypeFilters?: string[]
+  brandFilters?: string[]
   segmentFilters?: string[]
   extendFields?: Record<string, any>
 }) {
@@ -64,7 +64,7 @@ export function PackagePreferenceAnalysis({
         const newData = await databaseService.getPackagePreferenceDataByProject(
           projectId,
           categoryFilters,
-          packagingTypeFilters,
+          brandFilters,
           segmentFilters,
           extendFields,
           metricType
@@ -78,7 +78,7 @@ export function PackagePreferenceAnalysis({
     }
     
     fetchData()
-  }, [metricType, projectId, categoryFilters, packagingTypeFilters, segmentFilters, extendFields])
+  }, [metricType, projectId, categoryFilters, brandFilters, segmentFilters, extendFields])
 
   const colors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Product Count"
@@ -181,7 +181,7 @@ export function PackagePreferenceAnalysis({
         title={`Package Type Distribution by ${titleSuffix}`}
         projectFilters={{
           categories: categoryFilters || [],
-          packaging_types: packagingTypeFilters || [],
+          brands: brandFilters || [],
           segments: segmentFilters || [],
           extend_fields: extendFields || {},
           asins: []

@@ -22,9 +22,9 @@ class FilterService:
             query = query.in_('category', filters.categories)
             logger.info(f"Applied category filter: {filters.categories}")
         
-        if filters.packaging_types:
-            query = query.in_('packaging_type', filters.packaging_types)
-            logger.info(f"Applied packaging_types filter: {filters.packaging_types}")
+        if filters.brands:  # 改：packaging_types -> brands
+            query = query.in_('brand', filters.brands)  # 改：packaging_type -> brand
+            logger.info(f"Applied brands filter: {filters.brands}")
         
         if filters.segments:
             query = query.in_('segment', filters.segments)
@@ -58,7 +58,7 @@ class FilterService:
             
             # 从数据中提取唯一值
             categories = list(set(item['category'] for item in data if item.get('category')))
-            packaging_types = list(set(item['packaging_type'] for item in data if item.get('packaging_type')))
+            brands = list(set(item['brand'] for item in data if item.get('brand')))  # 改：packaging_type -> brand
             segments = list(set(item['segment'] for item in data if item.get('segment')))
             
             # 获取extend_fields的选项
@@ -75,7 +75,7 @@ class FilterService:
             
             return FilterOptions(
                 categories=categories,
-                packaging_types=packaging_types,
+                brands=brands,  # 改：packaging_types -> brands
                 segments=segments,
                 extend_fields=extend_fields
             )
@@ -84,7 +84,7 @@ class FilterService:
             logger.error(f"Failed to get available options: {e}")
             return FilterOptions(
                 categories=[],
-                packaging_types=[],
+                brands=[],  # 改：packaging_types -> brands
                 segments=[],
                 extend_fields={}
             )

@@ -39,7 +39,7 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>;
-    packaging_types: Array<{
+    brands: Array<{
       name: string;
       count: number;
       percentage: number;
@@ -54,6 +54,11 @@ interface ProjectOverviewData {
       count: number;
       percentage: number;
     }>>;
+    packaging_types: Array<{
+      name: string;
+      count: number;
+      percentage: number;
+    }>;
   };
   available_categories: {
     flat_categories: string[];
@@ -73,7 +78,7 @@ interface ProjectOverviewData {
 export function CategoryFilterAndProjectScope({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [], packaging_types: [], segments: [], extend_fields: {} },
+  initialFilters = { categories: [], asins: [], brands: [], segments: [], extend_fields: {} },  // 改：packaging_types -> brands
   preloadedData,
   isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
@@ -98,8 +103,8 @@ export function CategoryFilterAndProjectScope({
   const [availableSegments, setAvailableSegments] = useState<string[]>([])
   const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
   const [appliedCategories, setAppliedCategories] = useState<string[]>(initialFilters.categories)
-  const [pendingPackagingTypes, setPendingPackagingTypes] = useState<string[]>(initialFilters.packaging_types)
-  const [appliedPackagingTypes, setAppliedPackagingTypes] = useState<string[]>(initialFilters.packaging_types)
+  const [pendingBrands, setPendingBrands] = useState<string[]>(initialFilters.brands)  // 改：packaging_types -> brands
+  const [appliedBrands, setAppliedBrands] = useState<string[]>(initialFilters.brands)  // 改：packaging_types -> brands
   const [pendingSegments, setPendingSegments] = useState<string[]>(initialFilters.segments)
   const [appliedSegments, setAppliedSegments] = useState<string[]>(initialFilters.segments)
   const [pendingExtendFields, setPendingExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
@@ -108,7 +113,7 @@ export function CategoryFilterAndProjectScope({
 
   // 添加Select状态控制
   const [categorySelectKey, setCategorySelectKey] = useState(0)
-  const [packagingSelectKey, setPackagingSelectKey] = useState(0)
+  const [brandSelectKey, setBrandSelectKey] = useState(0)  // 改：packaging -> brand
   const [segmentSelectKey, setSegmentSelectKey] = useState(0)
 
   // Project overview states - 优先使用预加载数据
@@ -127,9 +132,10 @@ export function CategoryFilterAndProjectScope({
         ...overview,
         distributions: {
           ...overview.distributions,
-          packaging_types: (overview.distributions as any).packaging_types || [],
+          brands: (overview.distributions as any).brands || [],
           segments: (overview.distributions as any).segments || [],
-          extend_fields: (overview.distributions as any).extend_fields || {}
+          extend_fields: (overview.distributions as any).extend_fields || {},
+          packaging_types: (overview.distributions as any).packaging_types || []
         }
       }
       
@@ -192,8 +198,8 @@ export function CategoryFilterAndProjectScope({
       setAvailableSegments([])
       setPendingCategories([])
       setAppliedCategories([])
-      setPendingPackagingTypes([])
-      setAppliedPackagingTypes([])
+      setPendingBrands([])
+      setAppliedBrands([])
       setPendingSegments([])
       setAppliedSegments([])
       if (!preloadedData) {
@@ -217,7 +223,7 @@ export function CategoryFilterAndProjectScope({
     setOverviewLoading(true)
     try {
       const categoryFilters = appliedCategories.length > 0 ? appliedCategories : undefined
-      const packagingFilters = appliedPackagingTypes.length > 0 ? appliedPackagingTypes : undefined
+      const packagingFilters = appliedBrands.length > 0 ? appliedBrands : undefined
       const segmentFilters = appliedSegments.length > 0 ? appliedSegments : undefined
       const extendFields = Object.keys(appliedExtendFields).length > 0 ? appliedExtendFields : undefined
       const overview = await databaseService.getProjectOverview(projectId, categoryFilters, packagingFilters, segmentFilters, extendFields)
@@ -227,9 +233,10 @@ export function CategoryFilterAndProjectScope({
         ...overview,
         distributions: {
           ...overview.distributions,
-          packaging_types: (overview.distributions as any).packaging_types || [],
+          brands: (overview.distributions as any).brands || [],
           segments: (overview.distributions as any).segments || [],
-          extend_fields: (overview.distributions as any).extend_fields || {}
+          extend_fields: (overview.distributions as any).extend_fields || {},
+          packaging_types: (overview.distributions as any).packaging_types || []
         }
       }
       
@@ -240,7 +247,7 @@ export function CategoryFilterAndProjectScope({
     } finally {
       setOverviewLoading(false)
     }
-  }, [projectId, appliedCategories, appliedPackagingTypes, appliedSegments, appliedExtendFields])
+  }, [projectId, appliedCategories, appliedBrands, appliedSegments, appliedExtendFields])
 
   // Load project overview when filters change - 重新加载项目概览数据
   useEffect(() => {
@@ -266,20 +273,20 @@ export function CategoryFilterAndProjectScope({
     console.log('[FILTER-REMOVE] After removal should be triggered')
   }
 
-  const handlePackagingTypeSelect = (packagingType: string) => {
-    if (packagingType === 'all') {
-      setPendingPackagingTypes([])
-    } else if (!pendingPackagingTypes.includes(packagingType)) {
-      setPendingPackagingTypes(prev => [...prev, packagingType])
+  const handleBrandSelect = (brand: string) => {
+    if (brand === 'all') {
+      setPendingBrands([])
+    } else if (!pendingBrands.includes(brand)) {
+      setPendingBrands(prev => [...prev, brand])
     }
     // 重置Select状态
-    setPackagingSelectKey(prev => prev + 1)
+    setBrandSelectKey(prev => prev + 1)
   }
 
-  const handlePackagingTypeRemove = (packagingType: string) => {
-    console.log('[FILTER-REMOVE] Clicking X for packaging:', packagingType)
-    console.log('[FILTER-REMOVE] Before removal:', pendingPackagingTypes)
-    setPendingPackagingTypes(prev => prev.filter(pt => pt !== packagingType))
+  const handleBrandRemove = (brand: string) => {
+    console.log('[FILTER-REMOVE] Clicking X for brand:', brand)
+    console.log('[FILTER-REMOVE] Before removal:', pendingBrands)
+    setPendingBrands(prev => prev.filter(b => b !== brand))
     console.log('[FILTER-REMOVE] After removal should be triggered')
   }
 
@@ -302,14 +309,14 @@ export function CategoryFilterAndProjectScope({
 
   const handleApplyFilters = () => {
     setAppliedCategories(pendingCategories)
-    setAppliedPackagingTypes(pendingPackagingTypes)
+    setAppliedBrands(pendingBrands)
     setAppliedSegments(pendingSegments)
     setAppliedExtendFields(pendingExtendFields)
     if (onFiltersChange) {
       onFiltersChange({
         categories: pendingCategories,
         asins: [],
-        packaging_types: pendingPackagingTypes,
+        brands: pendingBrands,
         segments: pendingSegments,
         extend_fields: pendingExtendFields
       })
@@ -319,21 +326,21 @@ export function CategoryFilterAndProjectScope({
   const handleReset = () => {
     setPendingCategories([])
     setAppliedCategories([])
-    setPendingPackagingTypes([])
-    setAppliedPackagingTypes([])
+    setPendingBrands([])
+    setAppliedBrands([])
     setPendingSegments([])
     setAppliedSegments([])
     setPendingExtendFields({})
     setAppliedExtendFields({})
     // 重置所有Select组件状态
     setCategorySelectKey(prev => prev + 1)
-    setPackagingSelectKey(prev => prev + 1)
+    setBrandSelectKey(prev => prev + 1)
     setSegmentSelectKey(prev => prev + 1)
     if (onFiltersChange) {
       onFiltersChange({
         categories: [],
         asins: [],
-        packaging_types: [],
+        brands: [],
         segments: [],
         extend_fields: {}
       })
@@ -341,10 +348,10 @@ export function CategoryFilterAndProjectScope({
   }
 
   const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories) || 
-                          JSON.stringify(pendingPackagingTypes) !== JSON.stringify(appliedPackagingTypes) ||
+                          JSON.stringify(pendingBrands) !== JSON.stringify(appliedBrands) ||
                           JSON.stringify(pendingSegments) !== JSON.stringify(appliedSegments) ||
                           JSON.stringify(pendingExtendFields) !== JSON.stringify(appliedExtendFields)
-  const hasActiveFilters = appliedCategories.length > 0 || appliedPackagingTypes.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0
+  const hasActiveFilters = appliedCategories.length > 0 || appliedBrands.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0
 
   if (!projectId) {
     return null
@@ -433,35 +440,30 @@ export function CategoryFilterAndProjectScope({
                 </Select>
               </div>
 
-              {/* Packaging Type Filter */}
+              {/* Brand Filter */}
               <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Packaging:</span>
-                <Select key={packagingSelectKey} onValueChange={handlePackagingTypeSelect} disabled={filterLoading}>
+                <span className="text-sm text-gray-600">Brand:</span>
+                <Select key={brandSelectKey} onValueChange={handleBrandSelect} disabled={filterLoading}>
                   <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="All Packaging Types" />
+                    <SelectValue placeholder="All Brands" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Packaging Types</SelectItem>
-                    {PACKAGING_TYPE_OPTIONS
-                      .filter(option => !pendingPackagingTypes.includes(option.value))
-                      .map((option) => {
-                        // 从distributions数据中查找对应的计数信息
-                        const distributionData = projectData?.distributions.packaging_types?.find(
-                          item => item.name.toLowerCase() === option.value || 
-                                  (option.value === 'individual' && item.name.toLowerCase() === 'individual') ||
-                                  (option.value === 'package' && item.name.toLowerCase() === 'package')
-                        )
-                        
-                        const displayLabel = distributionData 
-                          ? `${option.label} (${distributionData.count} - ${distributionData.percentage}%)`
-                          : option.label
-                        
-                        return (
-                          <SelectItem key={option.value} value={option.value}>
-                            {displayLabel}
+                    <SelectItem value="all">All Brands</SelectItem>
+                    {/* 显示从project数据中获取的brands */}
+                    {projectData?.distributions?.brands && projectData.distributions.brands.length > 0 ? (
+                      projectData.distributions.brands
+                        .filter(brand => !pendingBrands.includes(brand.name))
+                        .map((brand) => (
+                          <SelectItem key={brand.name} value={brand.name}>
+                            {brand.name} ({brand.count} - {brand.percentage}%)
                           </SelectItem>
-                        )
-                      })}
+                        ))
+                    ) : (
+                      // Fallback: 如果没有brands分布数据，显示空状态
+                      <SelectItem value="" disabled>
+                        No brands available
+                      </SelectItem>
+                    )}
                   </SelectContent>
                 </Select>
               </div>
@@ -521,7 +523,7 @@ export function CategoryFilterAndProjectScope({
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingPackagingTypes.length === 0 && pendingSegments.length === 0 && Object.keys(pendingExtendFields).length === 0}
+                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingBrands.length === 0 && pendingSegments.length === 0 && Object.keys(pendingExtendFields).length === 0}
                 className="h-8"
               >
                 <RotateCcw className="w-3 h-3 mr-1" />
@@ -531,18 +533,18 @@ export function CategoryFilterAndProjectScope({
               {/* Status indicator */}
               {hasPendingChanges && (
                 <div className="text-xs text-orange-600">
-                  {pendingCategories.length + pendingPackagingTypes.length + pendingSegments.length + Object.keys(pendingExtendFields).length} pending changes
+                  {pendingCategories.length + pendingBrands.length + pendingSegments.length + Object.keys(pendingExtendFields).length} pending changes
                 </div>
               )}
               {hasActiveFilters && !hasPendingChanges && (
                 <div className="text-xs text-green-600">
-                  {appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length + Object.keys(appliedExtendFields).length} filter{(appliedCategories.length + appliedPackagingTypes.length + appliedSegments.length + Object.keys(appliedExtendFields).length) > 1 ? 's' : ''} applied
+                  {appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length} filter{(appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length) > 1 ? 's' : ''} applied
                 </div>
               )}
             </div>
 
             {/* Pending filters display */}
-            {(pendingCategories.length > 0 || pendingPackagingTypes.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0) && (
+            {(pendingCategories.length > 0 || pendingBrands.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0) && (
               <div className="pt-2 border-t border-gray-100">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-600">
@@ -568,22 +570,22 @@ export function CategoryFilterAndProjectScope({
                       />
                     </Badge>
                   ))}
-                  {pendingPackagingTypes.map((packagingType) => (
+                  {pendingBrands.map((brand) => (
                     <Badge
-                      key={`packaging-${packagingType}`}
+                      key={`brand-${brand}`}
                       variant={hasPendingChanges ? "outline" : "secondary"}
                       className={`text-xs flex items-center gap-1 ${
                         hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
                       }`}
                     >
-                      📦 {PACKAGING_TYPE_OPTIONS.find(opt => opt.value === packagingType)?.label || packagingType}
+                      🏷️ {brand}
                       <X
                         className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
                         onClick={(e) => {
-                          console.log('[FILTER-REMOVE] Clicking X for packaging badge:', packagingType)
+                          console.log('[FILTER-REMOVE] Clicking X for brand badge:', brand)
                           e.stopPropagation()
                           e.preventDefault()
-                          handlePackagingTypeRemove(packagingType)
+                          handleBrandRemove(brand)
                         }}
                       />
                     </Badge>

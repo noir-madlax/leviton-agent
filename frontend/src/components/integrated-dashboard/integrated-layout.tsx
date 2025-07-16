@@ -46,7 +46,7 @@ interface ProjectOverviewData {
       count: number
       percentage: number
     }>
-    packaging_types: Array<{
+    brands: Array<{
       name: string
       count: number
       percentage: number
