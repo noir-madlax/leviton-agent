@@ -18,12 +18,15 @@ interface ProjectFilters {
   categories: string[]
   asins: string[]
   brands: string[]  // 新增: 品牌筛选
+  segments: string[]  // 新增: 产品段筛选
+  is_bestseller?: string  // 新增: 畅销书状态筛选
+  extend_fields: Record<string, any>  // 新增: 扩展字段筛选
 }
 
 export function ProjectFilters({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [], brands: [] } 
+  initialFilters = { categories: [], asins: [], brands: [], segments: [], is_bestseller: undefined, extend_fields: {} }
 }: ProjectFiltersProps) {
   const [availableCategories, setAvailableCategories] = useState<string[]>([])
   const [pendingCategories, setPendingCategories] = useState<string[]>(initialFilters.categories)
@@ -80,7 +83,10 @@ export function ProjectFilters({
       onFiltersChange({
         categories: pendingCategories,
         asins: [],
-        brands: []
+        brands: [],
+        segments: [],
+        is_bestseller: undefined,
+        extend_fields: {}
       })
     }
   }
@@ -92,7 +98,10 @@ export function ProjectFilters({
       onFiltersChange({
         categories: [],
         asins: [],
-        brands: []
+        brands: [],
+        segments: [],
+        is_bestseller: undefined,
+        extend_fields: {}
       })
     }
   }

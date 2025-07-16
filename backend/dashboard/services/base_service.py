@@ -17,11 +17,12 @@ class FilterConfig:
         self.categories: Optional[List[str]] = None
         self.brands: Optional[List[str]] = None  # 改：packaging_types -> brands
         self.segments: Optional[List[str]] = None  # 新增: 产品段筛选
+        self.is_bestseller: Optional[str] = None  # 新增: 畅销书状态筛选
         self.extend_fields: Optional[Dict[str, Any]] = None  # 新增: 扩展字段筛选
     
     def has_filters(self) -> bool:
         """Check if any filters are set."""
-        return bool(self.categories or self.brands or self.segments or self.extend_fields)  # 改：packaging_types -> brands
+        return bool(self.categories or self.brands or self.segments or self.is_bestseller or self.extend_fields)  # 改：packaging_types -> brands
 
 class BaseDashboardService(ABC):
     """Base service for dashboard data queries with unified ASIN filtering.
@@ -87,7 +88,7 @@ class BaseDashboardService(ABC):
         self.project_filters.categories = categories
         logger.info(f"Category filters set: {categories}")
     
-    def set_filters(self, categories: Optional[List[str]] = None, brands: Optional[List[str]] = None, segments: Optional[List[str]] = None, extend_fields: Optional[Dict[str, Any]] = None):
+    def set_filters(self, categories: Optional[List[str]] = None, brands: Optional[List[str]] = None, segments: Optional[List[str]] = None, is_bestseller: Optional[str] = None, extend_fields: Optional[Dict[str, Any]] = None):
         """Set multiple filters for additional filtering."""
         if categories is not None:
             self.filters.categories = categories
@@ -99,11 +100,14 @@ class BaseDashboardService(ABC):
         if segments is not None:
             self.filters.segments = segments
             self.project_filters.segments = segments
+        if is_bestseller is not None:
+            self.filters.is_bestseller = is_bestseller
+            self.project_filters.is_bestseller = is_bestseller
         if extend_fields is not None:
             self.filters.extend_fields = extend_fields
             self.project_filters.extend_fields = extend_fields
-        
-        logger.info(f"Filters set - Categories: {categories}, Brands: {brands}, Segments: {segments}, Extend Fields: {extend_fields}")  # 改：Packaging -> Brands
+
+        logger.info(f"Filters set - Categories: {categories}, Brands: {brands}, Segments: {segments}, Is Bestseller: {is_bestseller}, Extend Fields: {extend_fields}")  # 改：Packaging -> Brands
     
     def set_project_filters(self, filters: ProjectFilters):
         """Set project filters using the new filter model."""
@@ -113,6 +117,7 @@ class BaseDashboardService(ABC):
         self.filters.categories = filters.categories
         self.filters.brands = filters.brands
         self.filters.segments = filters.segments
+        self.filters.is_bestseller = filters.is_bestseller
         self.filters.extend_fields = filters.extend_fields
         logger.info(f"Project filters set: {filters.to_dict()}")
     
@@ -165,6 +170,20 @@ class BaseDashboardService(ABC):
                 # 出错时返回空结果
                 query = query.eq('id', -1)
         
+        return query
+
+    def _apply_is_bestseller_filter(self, query):
+        """Apply is_bestseller filtering to any Supabase query if is_bestseller filter is set."""
+        if self.filters.is_bestseller is not None:
+            if self.filters.is_bestseller == "true":
+                query = query.eq('is_bestseller', True)
+                logger.info(f"Applied is_bestseller filter: true")
+            elif self.filters.is_bestseller == "false":
+                query = query.eq('is_bestseller', False)
+                logger.info(f"Applied is_bestseller filter: false")
+            elif self.filters.is_bestseller == "null":
+                query = query.is_('is_bestseller', None)
+                logger.info(f"Applied is_bestseller filter: null")
         return query
 
     def get_project_extend_fields(self) -> List[Dict[str, Any]]:
@@ -272,11 +291,12 @@ class BaseDashboardService(ABC):
         return query
     
     def _apply_combined_filters(self, query):
-        """Apply ASIN, category, brand, segments, and extend fields filters to a query."""
+        """Apply ASIN, category, brand, segments, is_bestseller, and extend fields filters to a query."""
         query = self._apply_asin_filter(query)
         query = self._apply_category_filter(query)
         query = self._apply_brand_filter(query)  # 改：_apply_packaging_filter -> _apply_brand_filter
         query = self._apply_segments_filter(query)
+        query = self._apply_is_bestseller_filter(query)  # 新增：应用畅销书状态筛选
         query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query
     

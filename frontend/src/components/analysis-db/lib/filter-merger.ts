@@ -16,6 +16,7 @@ export class FilterMerger {
       categories: this.mergeArray(projectFilters.categories, chartFilters.categories),
       brands: this.mergeArray(projectFilters.brands, chartFilters.brands),
       segments: this.mergeArray(projectFilters.segments, chartFilters.segments),
+      is_bestseller: chartFilters.is_bestseller || projectFilters.is_bestseller,
       extend_fields: this.mergeExtendFields(projectFilters.extend_fields, chartFilters.extend_fields),
       asins: this.mergeArray(projectFilters.asins || [], chartFilters.asins || [])
     }

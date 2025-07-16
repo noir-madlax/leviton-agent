@@ -7,16 +7,18 @@ class ProjectFilters:
     categories: List[str]
     brands: List[str]
     segments: List[str]
+    is_bestseller: Optional[str]  # 新增: 畅销书状态过滤 ("true", "false", None)
     extend_fields: Dict[str, Any]
     asins: List[str]
     
     def is_empty(self) -> bool:
         """检查筛选器是否为空"""
         return (
-            not self.categories and 
-            not self.brands and 
-            not self.segments and 
-            not self.extend_fields and 
+            not self.categories and
+            not self.brands and
+            not self.segments and
+            not self.is_bestseller and
+            not self.extend_fields and
             not self.asins
         )
     
@@ -26,6 +28,7 @@ class ProjectFilters:
             'categories': self.categories,
             'brands': self.brands,
             'segments': self.segments,
+            'is_bestseller': self.is_bestseller,
             'extend_fields': self.extend_fields,
             'asins': self.asins
         }
@@ -37,6 +40,7 @@ class ProjectFilters:
             categories=data.get('categories', []),
             brands=data.get('brands', []),
             segments=data.get('segments', []),
+            is_bestseller=data.get('is_bestseller'),
             extend_fields=data.get('extend_fields', {}),
             asins=data.get('asins', [])
         )
@@ -48,6 +52,7 @@ class ProjectFilters:
             categories=[],
             brands=[],
             segments=[],
+            is_bestseller=None,
             extend_fields={},
             asins=[]
         )
@@ -58,6 +63,7 @@ class FilterOptions:
     categories: List[str]
     brands: List[str]
     segments: List[str]
+    is_bestseller_options: List[str]  # 新增: 畅销书状态选项 ["true", "false", "null"]
     extend_fields: Dict[str, List[str]]
     
     def to_dict(self) -> Dict[str, Any]:
@@ -66,5 +72,6 @@ class FilterOptions:
             'categories': self.categories,
             'brands': self.brands,
             'segments': self.segments,
+            'is_bestseller_options': self.is_bestseller_options,
             'extend_fields': self.extend_fields
-        } 
+        }
