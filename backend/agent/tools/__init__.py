@@ -11,6 +11,7 @@ from .supabase_mcp import (
     create_supabase_mcp_manager,
     get_supabase_mcp_manager  # 兼容性函数
 )
+from .supabase_query_tool import SupabaseQueryTool
 
 __all__ = [
     'ProductQueryTool',
@@ -20,5 +21,6 @@ __all__ = [
     'SupabaseMCPToolManager',
     'MCPToolPresets',
     'create_supabase_mcp_manager',
-    'get_supabase_mcp_manager'  # 兼容性函数
+    'get_supabase_mcp_manager',  # 兼容性函数
+    'SupabaseQueryTool'
 ] 

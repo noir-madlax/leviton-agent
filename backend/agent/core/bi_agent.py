@@ -24,6 +24,7 @@ class BiAgent:
         
         try:
             from smolagents import CodeAgent, OpenAIServerModel
+            from agent.tools import SupabaseQueryTool
             
             # 创建模型实例
             model = OpenAIServerModel(
@@ -46,24 +47,24 @@ class BiAgent:
                 raise Exception(f"图表代码生成子 Agent 初始化失败: {self.chart_generation_agent.get_init_error()}")
             
             # 步骤2: 初始化 Supabase MCP 工具集 - 使用新的多例模式
-            from agent.tools import create_supabase_mcp_manager
+            # from agent.tools import create_supabase_mcp_manager
             
             # 为 BI Agent 创建独立的 MCP 配置
-            bi_mcp_config = {
-                "access_token": settings.MCP_ACCESS_TOKEN,
-                "project_id": "qsatkfdmgnbmohmqwvqc",  # 从 prompt 中获取的项目 ID
-                "extra_args": []  # 可以添加额外的 BI 分析特定参数
-            }
+            # bi_mcp_config = {
+            #     "access_token": settings.MCP_ACCESS_TOKEN,
+            #     "project_id": "qsatkfdmgnbmohmqwvqc",  # 从 prompt 中获取的项目 ID
+            #     "extra_args": []  # 可以添加额外的 BI 分析特定参数
+            # }
             
-            self.mcp_tool_manager = create_supabase_mcp_manager(
-                agent_id="bi_agent",
-                mcp_config=bi_mcp_config
-            )
-            bi_tools = await self.mcp_tool_manager.initialize_with_preset("database_only")
+            # self.mcp_tool_manager = create_supabase_mcp_manager(
+            #     agent_id="bi_agent",
+            #     mcp_config=bi_mcp_config
+            # )
+            # bi_tools = await self.mcp_tool_manager.initialize_with_preset("database_only")
             
             # 创建 BI 分析专用的 CodeAgent，管理图表生成子 Agent
             self.agent = CodeAgent(
-                tools=bi_tools,
+                tools=[SupabaseQueryTool()],
                 model=model,
                 managed_agents=[
                     self.chart_generation_agent.get_agent()  # 管理图表代码生成子 Agent
@@ -81,7 +82,7 @@ class BiAgent:
                     prompt_id=15
                 )
             
-            logger.info(f"BI 分析 Agent 初始化成功，加载的工具数量: {len(bi_tools)}")
+            logger.info(f"BI 分析 Agent 初始化成功")
             return True
             
         except Exception as e:
