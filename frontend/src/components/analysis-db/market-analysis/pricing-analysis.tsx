@@ -10,6 +10,7 @@ import { useProductPanel } from "@/components/analysis-db/contexts/product-panel
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ChartInteractionSummary } from "@/components/analysis-db/shared/chart-interaction-summary"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
 // 定义散点图数据类型
@@ -275,24 +276,14 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
   // 添加散点图点击事件处理器
   const handleScatterClick = (data: ScatterClickData) => {
     if (data && data.payload) {
-      const product = {
-        id: data.payload.id || data.payload.name,
-        name: data.payload.name,
-        brand: data.payload.brand,
-        price: data.payload.price || data.payload.x,
-        unitPrice: data.payload.unitPrice || data.payload.x,
-        revenue: data.payload.revenue || data.payload.y,
-        volume: data.payload.volume || 0,
-        url: data.payload.url || '',
-        category: data.payload.segment || 'Product'
+      // 直接跳转Amazon链接，参考竞品分析的实现
+      if (data.payload.url) {
+        window.open(data.payload.url, '_blank', 'noopener,noreferrer')
+      } else if (data.payload.id) {
+        // 如果没有直接的URL但有产品ID（ASIN），构造Amazon链接
+        const amazonUrl = `https://www.amazon.com/dp/${data.payload.id}`
+        window.open(amazonUrl, '_blank', 'noopener,noreferrer')
       }
-      
-      openPanel(
-        [product],
-        `Product Details`,
-        `${data.payload.name} • ${data.payload.brand}`,
-        { brand: false, category: false, priceRange: false, packSize: false }
-      )
     }
   }
 
@@ -335,6 +326,11 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
           title="Price vs. Revenue Distribution of Top Selling 20 Products"
           projectFilters={initialFilters}
         >
+          <ChartInteractionSummary>
+            <p className="text-sm text-blue-700">
+              <strong>Interaction Guide:</strong> Hover over any point to see detailed product information. Click on product names to visit the corresponding Amazon product page.
+            </p>
+          </ChartInteractionSummary>
           <Card className="p-6 bg-gray-50">
             {hasScatterData ? (
               <div className="h-[400px]">

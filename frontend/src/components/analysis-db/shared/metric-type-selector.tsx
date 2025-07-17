@@ -34,7 +34,7 @@ export function MetricTypeSelector({ onChange, value = "revenue" }: MetricTypeSe
         </div>
         <div className="flex items-center space-x-1 mt-1">
           <span className="font-semibold">Volume:</span>
-          <span>Total number of packages sold</span>
+          <span>Total number of SKUs sold</span>
         </div>
       </div>
     </div>
