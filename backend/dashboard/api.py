@@ -469,9 +469,12 @@ async def get_package_preference(
     Enhanced version: Returns complete package preference data with segment support.
     """
     # Set metric type if provided
+    logger.info(f"Package preference API received request: {request}")
     if request.metric_type:
         service.set_metric_type(request.metric_type)
+        logger.info(f"Package preference API set metric type to {request.metric_type}")
     raw_data = service.get_data()
+
 
     # Convert package distribution data (this is a list, not dict)
     package_distribution = [

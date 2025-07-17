@@ -1,9 +1,10 @@
 """Dashboard API 装饰器模块"""
 
 from functools import wraps
-from typing import Callable, Type, Any
+from typing import Callable, Type, Any, get_type_hints
 from fastapi import HTTPException
 import logging
+import inspect
 
 from .models import DashboardRequest
 from .services.base_service import BaseDashboardService
@@ -22,9 +23,13 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
         return service.get_data()
     """
     def decorator(func: Callable):
+        # 获取被装饰函数的类型注解
+        type_hints = get_type_hints(func)
+        request_type = type_hints.get('request', DashboardRequest)
+
         # 创建一个新的函数，只接受request参数
         # 这样FastAPI在解析路由时不会看到service参数
-        async def endpoint_handler(request: DashboardRequest) -> Any:
+        async def endpoint_handler(request: request_type) -> Any:
             try:
                 # 特殊处理 CompetitorAnalysisService，它需要额外的参数
                 from .models import CompetitorAnalysisRequest
@@ -53,6 +58,9 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
         # 复制原始函数的签名和文档
         endpoint_handler.__name__ = func.__name__
         endpoint_handler.__doc__ = func.__doc__
+
+        # 设置正确的类型注解，这样FastAPI就能正确解析请求体
+        endpoint_handler.__annotations__ = {'request': request_type, 'return': Any}
 
         return endpoint_handler
     return decorator
@@ -102,21 +110,21 @@ def log_request_response(func: Callable):
     """
     @wraps(func)
     async def wrapper(*args, **kwargs) -> Any:
-        # 查找request参数
+        # 查找request参数 - 检查是否是DashboardRequest的子类
         request = None
         for arg in args:
-            if isinstance(arg, DashboardRequest):
+            if hasattr(arg, 'project_id') and hasattr(arg, 'get_project_filters'):
                 request = arg
                 break
-        
+
         if not request:
             request = kwargs.get('request')
-        
+
         if request:
             logger.info(f"API {func.__name__} called for project {request.project_id}")
-            if request.filters:
+            if hasattr(request, 'filters') and request.filters:
                 logger.debug(f"Filters applied: {request.filters}")
-        
+
         try:
             result = await func(*args, **kwargs)
             logger.info(f"API {func.__name__} completed successfully")
@@ -124,5 +132,5 @@ def log_request_response(func: Callable):
         except Exception as e:
             logger.error(f"API {func.__name__} failed: {e}")
             raise
-    
+
     return wrapper
