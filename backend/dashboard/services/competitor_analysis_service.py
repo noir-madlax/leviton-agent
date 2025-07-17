@@ -46,6 +46,12 @@ class CompetitorAnalysisService(BaseDashboardService):
         'B004DZONXI': 'Lutron Credenza',
         'B07SXDFH38': 'Feit Electric Smart',
         'B073H9Y7SH': 'Leviton Trimatron',
+        'B00NG0ELL0': 'Leviton DSL06',
+        'B0BVKZLT3B': 'Leviton D215S',
+        'B0BVKYKKRK': 'Leviton D26HD',
+        'B0BSHKS26L': 'Lutron Caseta Diva',
+        'B073H9Y7SH': 'TP Link Switch',
+        'B085D8M2MR': 'Lutron Diva',
         'B0BTMWZH3K': 'Kasa HomeKit'
     }
 
