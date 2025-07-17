@@ -2,6 +2,7 @@
 
 import { useMemo } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
+import { Tooltip } from "@/components/ui/tooltip"
 // allReviewData now passed as prop instead of imported
 
 interface UseCaseData {
@@ -31,9 +32,10 @@ interface UseCaseMatrixProps {
     brand: string
   }>>
   asinToProductNameMap?: Record<string, string>;
+  asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData, asinToProductNameMap }: UseCaseMatrixProps) {
+export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData, asinToProductNameMap, asinToFullProductNameMap }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   const handleCellClick = (useCase: string, productAsin: string, cellData: UseCaseData | null) => {
@@ -140,9 +142,12 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData,
               </th>
               {orderedProducts.map(productAsin => {
                 const productName = asinToProductNameMap?.[productAsin] || productAsin
+                const fullProductName = asinToFullProductNameMap?.[productAsin] || productName
                 return (
                   <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
-                    <div className="text-sm" title={productName}>{productName}</div>
+                    <Tooltip content={fullProductName}>
+                      <div className="text-sm">{productName}</div>
+                    </Tooltip>
                   </th>
                 )
               })}
@@ -186,7 +191,6 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData,
                         tabIndex={0}
                         role="button"
                         aria-label={`View reviews for ${row.useCase} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
-                        title={`Click to view reviews for ${row.useCase} - ${productName}`}
                       >
                         <div className="text-lg font-bold">
                           {cellData.mentions}

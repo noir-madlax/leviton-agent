@@ -8,6 +8,7 @@ import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-mat
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
+import { Tooltip } from "@/components/ui/tooltip"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 interface CompetitorAnalysisProps {
   projectId: string | null;
@@ -263,6 +264,15 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
     return map;
   }, [defaultProducts]);
 
+  // Create ASIN to full product name mapping for tooltips
+  const asinToFullProductNameMap = useMemo(() => {
+    const map: Record<string, string> = {};
+    defaultProducts.forEach(product => {
+      map[product.platform_id] = product.title;
+    });
+    return map;
+  }, [defaultProducts]);
+
   // Create ASIN to brand mapping for child components
   const asinToBrandMap = useMemo(() => {
     const map: Record<string, string> = {};
@@ -354,8 +364,10 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
               aria-label={`View ${stat.name} on Amazon`}
               title={`Click to view ${stat.name} on Amazon`}
             >
-              <h4 className="font-medium text-gray-900 mb-3 text-sm flex items-center justify-between" title={stat.fullTitle}>
-                {stat.name}
+              <h4 className="font-medium text-gray-900 mb-3 text-sm flex items-center justify-between">
+                <Tooltip content={stat.fullTitle}>
+                  <span>{stat.name}</span>
+                </Tooltip>
                 <ExternalLink className="w-3 h-3 text-blue-500" />
               </h4>
               <div className="text-xs text-gray-600 space-y-2">
@@ -400,6 +412,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           targetProducts={competitorData.targetProducts}
           allReviewData={data.allReviewData}
           asinToProductNameMap={asinToProductNameMap}
+          asinToFullProductNameMap={asinToFullProductNameMap}
         />
       </section>
 
@@ -423,10 +436,11 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           targetProducts={useCaseData.targetProducts}
           allReviewData={data.allReviewData}
           asinToProductNameMap={asinToProductNameMap}
+          asinToFullProductNameMap={asinToFullProductNameMap}
         />
       </section>
 
-      {/* Customer Sentiment Analysis */}
+      {/* Customer Sentiment Analysis 
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
           📈 Customer Sentiment Analysis
@@ -444,6 +458,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           asinToBrandMap={asinToBrandMap}
         />
       </section>
+      */}
         </>
       )}
     </div>

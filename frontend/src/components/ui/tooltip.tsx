@@ -1,30 +1,73 @@
-"use client"
+import { useState, useRef, useEffect, ReactNode } from 'react';
 
-import * as React from "react"
-import * as TooltipPrimitive from "@radix-ui/react-tooltip"
+interface TooltipProps {
+  content: string;
+  children: ReactNode;
+  className?: string;
+}
 
-import { cn } from "@/lib/utils"
+export function Tooltip({ content, children, className = '' }: TooltipProps) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [position, setPosition] = useState({ top: 0, left: 0 });
+  const triggerRef = useRef<HTMLDivElement>(null);
+  const tooltipRef = useRef<HTMLDivElement>(null);
 
-const TooltipProvider = TooltipPrimitive.Provider
+  const updatePosition = () => {
+    if (!triggerRef.current || !tooltipRef.current) return;
 
-const Tooltip = TooltipPrimitive.Root
+    const triggerRect = triggerRef.current.getBoundingClientRect();
+    const tooltipRect = tooltipRef.current.getBoundingClientRect();
+    
+    // Position tooltip above the trigger element
+    let top = triggerRect.top - tooltipRect.height - 8;
+    let left = triggerRect.left + (triggerRect.width - tooltipRect.width) / 2;
 
-const TooltipTrigger = TooltipPrimitive.Trigger
+    // Adjust if tooltip goes outside viewport
+    if (left < 8) left = 8;
+    if (left + tooltipRect.width > window.innerWidth - 8) {
+      left = window.innerWidth - tooltipRect.width - 8;
+    }
+    if (top < 8) {
+      // If no space above, show below
+      top = triggerRect.bottom + 8;
+    }
 
-const TooltipContent = React.forwardRef<
-  React.ElementRef<typeof TooltipPrimitive.Content>,
-  React.ComponentPropsWithoutRef<typeof TooltipPrimitive.Content>
->(({ className, sideOffset = 4, ...props }, ref) => (
-  <TooltipPrimitive.Content
-    ref={ref}
-    sideOffset={sideOffset}
-    className={cn(
-      "z-50 overflow-hidden rounded-md border bg-popover px-3 py-1.5 text-sm text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95 data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=closed]:zoom-out-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
-      className
-    )}
-    {...props}
-  />
-))
-TooltipContent.displayName = TooltipPrimitive.Content.displayName
+    setPosition({ top, left });
+  };
 
-export { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider }
+  useEffect(() => {
+    if (isVisible) {
+      updatePosition();
+      const handleResize = () => updatePosition();
+      window.addEventListener('resize', handleResize);
+      return () => window.removeEventListener('resize', handleResize);
+    }
+  }, [isVisible]);
+
+  return (
+    <>
+      <div
+        ref={triggerRef}
+        className={`relative ${className}`}
+        onMouseEnter={() => setIsVisible(true)}
+        onMouseLeave={() => setIsVisible(false)}
+      >
+        {children}
+      </div>
+      
+      {isVisible && (
+        <div
+          ref={tooltipRef}
+          className="fixed z-50 px-3 py-2 text-sm text-gray-900 bg-white border border-gray-200 rounded-md shadow-lg pointer-events-none animate-in fade-in-0 zoom-in-95 duration-200 max-w-48 text-center break-words"
+          style={{
+            top: `${position.top}px`,
+            left: `${position.left}px`,
+          }}
+        >
+          {content}
+          <div className="absolute top-full left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-white" />
+        </div>
+      )}
+    </>
+  );
+}

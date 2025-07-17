@@ -2,6 +2,7 @@
 
 import { useMemo } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
+import { Tooltip } from "@/components/ui/tooltip"
 // allReviewData now passed as prop instead of imported
 
 interface MatrixData {
@@ -31,9 +32,10 @@ interface CompetitorMatrixProps {
     brand: string
   }>>
   asinToProductNameMap?: Record<string, string>;
+  asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToProductNameMap }: CompetitorMatrixProps) {
+export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToProductNameMap, asinToFullProductNameMap }: CompetitorMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   const handleCellClick = (category: string, productAsin: string, cellData: MatrixData | null) => {
@@ -144,9 +146,12 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToPr
               </th>
               {orderedProducts.map(productAsin => {
                 const productName = asinToProductNameMap?.[productAsin] || productAsin
+                const fullProductName = asinToFullProductNameMap?.[productAsin] || productName
                 return (
                   <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
-                    <div className="text-sm" title={productName}>{productName}</div>
+                    <Tooltip content={fullProductName}>
+                      <div className="text-sm">{productName}</div>
+                    </Tooltip>
                   </th>
                 )
               })}
@@ -193,7 +198,6 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToPr
                         tabIndex={0}
                         role="button"
                         aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
-                        title={`Click to view reviews for ${row.category} - ${productName}`}
                       >
                         <div className="text-lg font-bold">
                           {cellData.mentions}
