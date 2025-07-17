@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
-import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
+import { Filter, RotateCcw, X, Database, Users, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
@@ -395,29 +395,32 @@ export function UniversalFilterComponent({
                       
                       {/* 子类别选项 */}
                       {parentGroup.children
-                        .filter(child => !pendingFilters.categories.includes(child.category))
-                        .map((child) => (
-                          <SelectItem 
-                            key={child.category} 
-                            value={child.category}
-                            className="pl-6 py-2"
-                          >
-                            <div className="flex justify-between items-center w-full">
-                              <span className="flex items-center gap-2">
-                                🏷️ {child.category}
-                              </span>
-                              <span className="text-sm text-gray-500">
-                              ({child.count} products)
-                              </span>
-                            </div>
-                          </SelectItem>
-                        ))}
+                        .map((child) => {
+                          const isSelected = pendingFilters.categories.includes(child.category)
+                          return (
+                            <SelectItem 
+                              key={child.category} 
+                              value={child.category}
+                              className="pl-6 py-2"
+                              disabled={isSelected}
+                            >
+                              <div className="flex justify-between items-center w-full">
+                                <span className="flex items-center gap-2">
+                                  {isSelected && <span className="text-green-600">✅</span>}
+                                  🏷️ {child.category}
+                                </span>
+                                <span className="text-sm text-gray-500">
+                                  ({child.count} products)
+                                </span>
+                              </div>
+                            </SelectItem>
+                          )
+                        })}
                     </div>
                   ))
                 ) : (
                   // Fallback: 显示扁平分类结构
                   finalAvailableOptions.categories
-                    .filter(cat => !pendingFilters.categories.includes(cat))
                     .map(category => {
                       // 从projectData中查找对应的计数信息
                       const distributionData = projectData?.distributions?.categories?.find(
@@ -428,9 +431,14 @@ export function UniversalFilterComponent({
                         ? `${category} (${distributionData.count} products)`
                         : category
                       
+                      const isSelected = pendingFilters.categories.includes(category)
+                      
                       return (
-                        <SelectItem key={category} value={category}>
-                          {displayLabel}
+                        <SelectItem key={category} value={category} disabled={isSelected}>
+                          <span className="flex items-center gap-2">
+                            {isSelected && <span className="text-green-600">✅</span>}
+                            {displayLabel}
+                          </span>
                         </SelectItem>
                       )
                     })
@@ -455,18 +463,20 @@ export function UniversalFilterComponent({
                 {/* 显示实际数据中的品牌 */}
                 {projectData?.distributions?.brands && projectData.distributions.brands.length > 0 ? (
                   projectData.distributions.brands
-                    .filter(item => !pendingFilters.brands.includes(item.name))
-                    .map((item) => (
-                      <SelectItem key={item.name} value={item.name}>
-                       
-                        {item.name}   <span className="text-sm text-gray-500">({item.count} products)
-                        </span>
-                      </SelectItem>
-                    ))
+                    .map((item) => {
+                      const isSelected = pendingFilters.brands.includes(item.name)
+                      return (
+                        <SelectItem key={item.name} value={item.name} disabled={isSelected}>
+                          <span className="flex items-center gap-2">
+                            {isSelected && <span className="text-green-600">✅</span>}
+                            {item.name} <span className="text-sm text-gray-500">({item.count} products)</span>
+                          </span>
+                        </SelectItem>
+                      )
+                    })
                 ) : (
                   // Fallback: 显示从available options获取的品牌
                   finalAvailableOptions.brands
-                    .filter(brand => !pendingFilters.brands.includes(brand))
                     .map((brand) => {
                       // 从distributions数据中查找对应的计数信息
                       const distributionData = projectData?.distributions?.brands?.find(
@@ -477,13 +487,31 @@ export function UniversalFilterComponent({
                         ? `${brand} (${distributionData.count} products)`
                         : brand
                       
+                      const isSelected = pendingFilters.brands.includes(brand)
+                      
                       return (
-                        <SelectItem key={brand} value={brand}>
-                          {displayLabel}
+                        <SelectItem key={brand} value={brand} disabled={isSelected}>
+                          <span className="flex items-center gap-2">
+                            {isSelected && <span className="text-green-600">✅</span>}
+                            {displayLabel}
+                          </span>
                         </SelectItem>
                       )
                     })
                 )}
+              </SelectContent>
+            </Select>
+          </div>
+
+          {/* Time Period Filter */}
+          <div className="flex items-center gap-2">
+            <span className="text-sm text-gray-600">Time Period:</span>
+            <Select defaultValue="recent-month" disabled>
+              <SelectTrigger className="w-48 h-8">
+                <SelectValue placeholder="Select time period" />
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="recent-month">Since Last Month</SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -502,7 +530,6 @@ export function UniversalFilterComponent({
               <SelectContent>
                 <SelectItem value="all">All Segments</SelectItem>
                 {finalAvailableOptions.segments
-                  .filter(segment => !pendingFilters.segments.includes(segment))
                   .map((segment) => {
                     // 从distributions数据中查找对应的计数信息
                     const distributionData = projectData?.distributions?.segments?.find(
@@ -513,9 +540,14 @@ export function UniversalFilterComponent({
                       ? `${segment} (${distributionData.count} products)`
                       : segment
                     
+                    const isSelected = pendingFilters.segments.includes(segment)
+                    
                     return (
-                      <SelectItem key={segment} value={segment}>
-                        {displayLabel}
+                      <SelectItem key={segment} value={segment} disabled={isSelected}>
+                        <span className="flex items-center gap-2">
+                          {isSelected && <span className="text-green-600">✅</span>}
+                          {displayLabel}
+                        </span>
                       </SelectItem>
                     )
                   })}
@@ -530,7 +562,15 @@ export function UniversalFilterComponent({
           extendFields={pendingFilters.extend_fields}
           onFilterChange={(fields) => setPendingFilters(prev => ({ ...prev, extend_fields: fields }))}
           className="flex-wrap"
-          projectData={projectData as any}
+          projectData={projectData as {
+            distributions: {
+              extend_fields: Record<string, Array<{
+                name: string
+                count: number
+                percentage: number
+              }>>
+            }
+          } | null}
         />
 
         {/* 已选择的筛选器显示 - 横向排列 */}

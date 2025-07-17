@@ -407,34 +407,43 @@ export function CategoryFilterAndProjectScope({
                           
                           {/* 子类别选项 */}
                           {parentGroup.children
-                            .filter(child => !pendingCategories.includes(child.category))
-                            .map((child) => (
-                              <SelectItem 
-                                key={child.category} 
-                                value={child.category}
-                                className="pl-6 py-2"
-                              >
-                                <div className="flex justify-between items-center w-full">
-                                  <span className="flex items-center gap-2">
-                                    🏷️ {child.category}
-                                  </span>
-                                  <span className="text-sm text-gray-500">
-                                    {child.count} ({child.percentage}%)
-                                  </span>
-                                </div>
-                              </SelectItem>
-                            ))}
+                            .map((child) => {
+                              const isSelected = pendingCategories.includes(child.category)
+                              return (
+                                <SelectItem 
+                                  key={child.category} 
+                                  value={child.category}
+                                  className="pl-6 py-2"
+                                  disabled={isSelected}
+                                >
+                                  <div className="flex justify-between items-center w-full">
+                                    <span className="flex items-center gap-2">
+                                      {isSelected && <span className="text-green-600">✅</span>}
+                                      🏷️ {child.category}
+                                    </span>
+                                    <span className="text-sm text-gray-500">
+                                      {child.count} ({child.percentage}%)
+                                    </span>
+                                  </div>
+                                </SelectItem>
+                              )
+                            })}
                         </div>
                       ))
                     ) : (
                       // Fallback: 显示扁平分类结构
                       availableCategories.flat_categories
-                        .filter(cat => !pendingCategories.includes(cat))
-                        .map(category => (
-                          <SelectItem key={category} value={category}>
-                            {category}
-                          </SelectItem>
-                        ))
+                        .map(category => {
+                          const isSelected = pendingCategories.includes(category)
+                          return (
+                            <SelectItem key={category} value={category} disabled={isSelected}>
+                              <span className="flex items-center gap-2">
+                                {isSelected && <span className="text-green-600">✅</span>}
+                                {category}
+                              </span>
+                            </SelectItem>
+                          )
+                        })
                     )}
                   </SelectContent>
                 </Select>
@@ -452,18 +461,36 @@ export function CategoryFilterAndProjectScope({
                     {/* 显示从project数据中获取的brands */}
                     {projectData?.distributions?.brands && projectData.distributions.brands.length > 0 ? (
                       projectData.distributions.brands
-                        .filter(brand => !pendingBrands.includes(brand.name))
-                        .map((brand) => (
-                          <SelectItem key={brand.name} value={brand.name}>
-                            {brand.name} ({brand.count} - {brand.percentage}%)
-                          </SelectItem>
-                        ))
+                        .map((brand) => {
+                          const isSelected = pendingBrands.includes(brand.name)
+                          return (
+                            <SelectItem key={brand.name} value={brand.name} disabled={isSelected}>
+                              <span className="flex items-center gap-2">
+                                {isSelected && <span className="text-green-600">✅</span>}
+                                {brand.name} ({brand.count} - {brand.percentage}%)
+                              </span>
+                            </SelectItem>
+                          )
+                        })
                     ) : (
                       // Fallback: 如果没有brands分布数据，显示空状态
                       <SelectItem value="" disabled>
                         No brands available
                       </SelectItem>
                     )}
+                  </SelectContent>
+                </Select>
+              </div>
+
+              {/* Time Period Filter */}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Time Period:</span>
+                <Select defaultValue="recent-month" disabled>
+                  <SelectTrigger className="w-48 h-8">
+                    <SelectValue placeholder="Select time period" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="recent-month">最近一个月</SelectItem>
                   </SelectContent>
                 </Select>
               </div>
@@ -478,7 +505,6 @@ export function CategoryFilterAndProjectScope({
                   <SelectContent>
                     <SelectItem value="all">All Segments</SelectItem>
                     {availableSegments
-                      .filter(segment => !pendingSegments.includes(segment))
                       .map((segment) => {
                         // 从distributions数据中查找对应的计数信息
                         const distributionData = projectData?.distributions.segments?.find(
@@ -489,9 +515,14 @@ export function CategoryFilterAndProjectScope({
                           ? `${segment} (${distributionData.count} - ${distributionData.percentage}%)`
                           : segment
                         
+                        const isSelected = pendingSegments.includes(segment)
+                        
                         return (
-                          <SelectItem key={segment} value={segment}>
-                            {displayLabel}
+                          <SelectItem key={segment} value={segment} disabled={isSelected}>
+                            <span className="flex items-center gap-2">
+                              {isSelected && <span className="text-green-600">✅</span>}
+                              {displayLabel}
+                            </span>
                           </SelectItem>
                         )
                       })}

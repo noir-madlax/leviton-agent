@@ -335,8 +335,6 @@ class ProjectOverviewService(BaseDashboardService):
             # 计数
             category_counts[leaf_category] = category_counts.get(leaf_category, 0) + 1
             
-            # 解析父类别（向上一层）
-            parent_category = "其他类别"  # 默认分组
             
             if categories_flat and ' > ' in categories_flat:
                 path_parts = [part.strip() for part in categories_flat.split(' > ')]
