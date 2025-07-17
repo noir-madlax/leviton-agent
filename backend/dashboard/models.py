@@ -1,6 +1,6 @@
 """Data models for Dashboard API responses."""
 
-from typing import List, Optional, Dict, Any, Literal
+from typing import List, Optional, Dict, Any, Literal, Union
 from pydantic import BaseModel, Field
 
 
@@ -11,7 +11,7 @@ class BrandCategoryData(BaseModel):
     Enhanced to support dynamic categories.
     """
     brand: str = Field(description="Brand name")
-    categories: Optional[Dict[str, Dict[str, float]]] = Field(default={}, description="Category-wise revenue and volume data")
+    categories: Optional[Dict[str, Dict[str, Union[float, int]]]] = Field(default={}, description="Category-wise revenue, volume, and product count data")
     dimmerRevenue: float = Field(default=0, description="Dimmer switches revenue (compatibility)")
     switchRevenue: float = Field(default=0, description="Light switches revenue (compatibility)")
     dimmerVolume: float = Field(default=0, description="Dimmer switches volume (compatibility)")

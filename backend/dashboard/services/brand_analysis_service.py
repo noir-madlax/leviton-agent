@@ -79,7 +79,7 @@ class BrandAnalysisService(BaseDashboardService):
                             project_categories: List[str]) -> Dict[str, Dict[str, Any]]:
         """按品牌和category聚合数据"""
         
-        brand_data = defaultdict(lambda: {category: {'revenue': 0, 'volume': 0} for category in project_categories})
+        brand_data = defaultdict(lambda: {category: {'revenue': 0, 'volume': 0, 'product_count': 0} for category in project_categories})
         
         for product in products:
             brand = product.get('brand')
@@ -95,6 +95,7 @@ class BrandAnalysisService(BaseDashboardService):
             # 聚合数据
             brand_data[brand][category]['revenue'] += product.get('estimated_revenue', 0) or 0
             brand_data[brand][category]['volume'] += product.get('monthly_sales_volume', 0) or 0
+            brand_data[brand][category]['product_count'] += 1  # 每个产品（ASIN）计数加1
         
         return dict(brand_data)
     
@@ -139,26 +140,27 @@ class BrandAnalysisService(BaseDashboardService):
         formatted_brands = []
         
         for brand, categories in brand_data.items():
-            # 计算每个category的总收入和销量
+            # 计算每个category的总收入、销量和产品数量
             category_totals = []
             for category in project_categories:
-                category_data = categories.get(category, {'revenue': 0, 'volume': 0})
+                category_data = categories.get(category, {'revenue': 0, 'volume': 0, 'product_count': 0})
                 category_totals.append({
                     'category': category,
                     'revenue': category_data['revenue'],
-                    'volume': category_data['volume']
+                    'volume': category_data['volume'],
+                    'product_count': category_data['product_count']
                 })
             
             # 按收入排序
             category_totals.sort(key=lambda x: x['revenue'], reverse=True)
             
             # 为了向后兼容，将前两个category映射到dimmer/switch字段
-            dimmer_data = category_totals[0] if len(category_totals) > 0 else {'revenue': 0, 'volume': 0}
-            switch_data = category_totals[1] if len(category_totals) > 1 else {'revenue': 0, 'volume': 0}
+            dimmer_data = category_totals[0] if len(category_totals) > 0 else {'revenue': 0, 'volume': 0, 'product_count': 0}
+            switch_data = category_totals[1] if len(category_totals) > 1 else {'revenue': 0, 'volume': 0, 'product_count': 0}
             
             brand_entry = {
                 'brand': brand,
-                'categories': {item['category']: {'revenue': item['revenue'], 'volume': item['volume']} 
+                'categories': {item['category']: {'revenue': item['revenue'], 'volume': item['volume'], 'product_count': item['product_count']} 
                              for item in category_totals},
                 'dimmerRevenue': dimmer_data['revenue'],
                 'switchRevenue': switch_data['revenue'],

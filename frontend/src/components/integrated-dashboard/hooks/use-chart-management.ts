@@ -22,12 +22,12 @@ export function useChartManagement() {
     {
       id: 'brand-analysis',
       type: 'preset',
-      title: 'Brand Performance',
+      title: 'Market Analysis',
       description: 'Market share and brand positioning analysis',
       icon: Building,
-      tabKey: 'brand-analysis',
+      tabKey: 'market-analysis',
       isActive: false,
-      aiIntroduction: 'Brand performance analysis across different product categories:'
+      aiIntroduction: 'Market share and brand positioning analysis across different product categories:'
     },
     {
       id: 'market-insights',

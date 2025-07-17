@@ -22,7 +22,7 @@ interface DashboardData {
   brandAnalysis: {
     brandCategoryRevenue: Array<{
       brand: string
-      categories: Record<string, { revenue: number; volume: number }>
+      categories: Record<string, { revenue: number; volume: number; product_count: number }>
       dimmerRevenue: number
       switchRevenue: number
       dimmerVolume: number

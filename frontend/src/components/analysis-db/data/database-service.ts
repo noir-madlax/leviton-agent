@@ -92,7 +92,7 @@ export interface DataConfirmationData {
 
 export interface BrandCategoryData {
   brand: string
-  categories: Record<string, { revenue: number; volume: number }>
+  categories: Record<string, { revenue: number; volume: number; product_count: number }>
   dimmerRevenue: number
   switchRevenue: number
   dimmerVolume: number
