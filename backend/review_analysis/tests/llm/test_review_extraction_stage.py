@@ -1047,10 +1047,13 @@ class TestReviewExtractionStage:
                 print(f"     • {error}")
         print("="*80)
         
+        # Create ValidationResult object
+        validation_result = ValidationResult(ok=False, error_categories=error_categories)
+        
         # Generate retry prompt
         retry_prompt = extraction_stage._retry_prompt(
             original_prompt=original_prompt,
-            retry_ctx=error_categories,  # This is what gets passed from ValidationResult
+            retry_ctx=validation_result,  # Now passing ValidationResult object
             ctx=context
         )
         

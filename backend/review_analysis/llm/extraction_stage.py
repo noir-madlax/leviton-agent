@@ -43,7 +43,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Set, Tuple
 
-from core.utils.llm_utils import ValidationResult, extract_json
+from core.utils.llm_utils import ValidationResult, extract_json, create_retry_error_details
 from core.llm_taxonomy_pipeline.pipeline_stage import BaseStage, StageContext, StageResultBase
 
 from .validation import (
@@ -209,18 +209,19 @@ class ReviewExtractionStage(BaseStage):
     def _retry_prompt(
         self, 
         original_prompt: str, 
-        retry_ctx: Any, 
+        retry_ctx: ValidationResult, 
         ctx: ReviewExtractionContext
     ) -> str:
         """Build retry prompt using shared retry template."""
         
-        if not isinstance(retry_ctx, dict) or "error_categories" not in retry_ctx:
+        if not isinstance(retry_ctx, ValidationResult):
             # Fallback for unexpected retry context format
             return f"{original_prompt}\n\nPlease fix the errors and provide a valid JSON response."
         
-        # Use the shared retry template with structured error details
+        # Use the shared retry template with error details from ValidationResult
         try:
-            retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", retry_ctx.get("error_details", "Unknown validation errors"))
+            error_details = create_retry_error_details(retry_ctx.error_categories)
+            retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
             return f"{original_prompt}\n\n{retry_block}"
         except Exception as exc:
             # Fallback if template replacement fails

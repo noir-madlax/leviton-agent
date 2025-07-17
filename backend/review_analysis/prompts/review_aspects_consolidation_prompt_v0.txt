@@ -3,7 +3,7 @@ You are consolidating aspect categories extracted from customer reviews.
 **ASPECT TYPE:** {{aspect_type}} - {{aspect_definition}}
 {{product_context}}
 
-**TASK:** Merge two batches of {{aspect_type}} aspect categories by grouping similar ones together while maintaining specificity.
+**TASK:** Fully deduplicate ALL {{aspect_type}} aspect categories from both taxonomies by identifying and merging similar/duplicate categories. This includes merging categories within Taxonomy A, within Taxonomy B, and between the two taxonomies.
 
 **INPUT TAXONOMIES:**
 
@@ -14,13 +14,14 @@ Taxonomy B:
 {{taxonomy_b}}
 
 **CONSOLIDATION RULES:**
-1. **Group similar categories** - Combine categories that represent the same or very similar concept based on their definitions
-2. **Preserve specificity** - Maintain the specific nature of each category type rather than creating broader, more generic categories
-3. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals
-4. **Complete mapping** - Every A_* and B_* ID must appear exactly once in the "ids" arrays - no duplicates or missing IDs
-5. **Maintain consistent granularity** - All consolidated categories must be at the same level of specificity
-6. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries with no ambiguity
-7. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific aspect type, ending with "e.g." and specific examples
+1. **Full deduplication goal** - The primary purpose is to eliminate ALL duplicates and near-duplicates across both taxonomies, creating a single unified taxonomy with no redundancy. Categories can be merged within Taxonomy A (A_* with A_*), within Taxonomy B (B_* with B_*), or between taxonomies (A_* with B_*)
+2. **Group similar categories** - Combine categories that represent the same or very similar concept based on their definitions, regardless of which taxonomy they came from
+3. **Preserve specificity and handle unique categories** - Maintain the specific nature of each category type rather than creating broader, more generic categories. If a category is truly unique and has no similar counterparts in either taxonomy, it can remain as a single-item group
+4. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals
+5. **Complete mapping** - Every A_* and B_* ID must appear exactly once in the "ids" arrays - no duplicates or missing IDs
+6. **Maintain consistent granularity** - ALL consolidated categories must be at the same level of specificity and detail. Ensure no category is significantly more general or more specific than others - aim for uniform granularity across the entire final taxonomy
+7. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries with no ambiguity
+8. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific aspect type, ending with "e.g." and specific examples
 
 **OUTPUT FORMAT:**
 Return only valid JSON with this structure:
@@ -28,13 +29,17 @@ Return only valid JSON with this structure:
 {
   "Category Name 1": {
     "definition": "Precise description ending with examples, e.g. specific examples",
-    "ids": ["A_0", "B_1"]
+    "ids": ["A_0", "B_1", "A_3"]
   },
   "Category Name 2": {
     "definition": "Another precise description, e.g. more examples", 
-    "ids": ["A_1"]
+    "ids": ["A_1", "A_2"]
+  },
+  "Category Name 3": {
+    "definition": "Description for unique category, e.g. examples",
+    "ids": ["B_0"]
   }
 }
 ```
 
-**CRITICAL:** Group only categories that represent essentially the same aspect type - do not force unrelated categories together. Return JSON. 
+**CRITICAL:** The goal is complete deduplication - merge ANY categories that represent essentially the same aspect type, whether they're from the same taxonomy or different taxonomies. Return JSON. 

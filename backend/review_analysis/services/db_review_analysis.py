@@ -729,7 +729,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             # Load aspects (always include already assigned so OUT_OF_SCOPE can be handled)
             rows = (
                 sb.table("review_analysis_aspects")
-                .select("aspect_pk, detail_text, category_pk")
+                .select("aspect_pk, detail_text, category_pk, parent_group_name")
                 .eq("project_id", project_id)
                 .eq("aspect_type", aspect_code)
                 .execute()
@@ -804,12 +804,14 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
                 for batch in batches:
                     aspects_desc = [r["detail_text"] for r in batch]
+                    original_categories = [r["parent_group_name"] if r["parent_group_name"] else None for r in batch]
                     ctx = ReviewRefinementStageContext(
                         product_category="",
                         aspect_type=human_name,
                         aspect_context=aspect_context,
                         categories=cat_list,
                         aspects=aspects_desc,
+                        original_categories=original_categories,
                     )
                     
                     try:

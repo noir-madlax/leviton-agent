@@ -63,6 +63,7 @@ class ReviewRefinementStageContext(StageContext):
     aspect_context: str  # Human-readable description of the aspect domain
     categories: List[TaxonomyDTO]  # Available categories for assignment
     aspects: List[str]  # List of aspect descriptions (indexed by position)
+    original_categories: Optional[List[Optional[str]]] = None  # Original categories for each aspect (None for use cases or when not available)
 @dataclass(slots=True, frozen=True)
 class ReviewRefinementStageResult(StageResultBase):
     """Result payload mapping aspect_index → new category name."""
@@ -119,7 +120,18 @@ class ReviewRefinementStage(BaseStage):
         categories_section = "\n".join(categories_lines)
         
         # Build aspects section with integer IDs
-        formatted_aspects = "\n".join(f"[{i}] {description}" for i, description in enumerate(ctx.aspects))
+        formatted_aspects = []
+        for i, description in enumerate(ctx.aspects):
+            # Format with category if available (except for use cases which don't have categories)
+            if ctx.original_categories and i < len(ctx.original_categories) and ctx.original_categories[i]:
+                original_category = ctx.original_categories[i]
+                # Format as "{category} - {description}"
+                formatted_aspects.append(f"[{i}] {original_category} - {description}")
+            else:
+                # No category available, use description as-is
+                formatted_aspects.append(f"[{i}] {description}")
+        
+        formatted_aspects = "\n".join(formatted_aspects)
         
         # Render template with all placeholders using replace to avoid JSON conflicts
         full_prompt = _REFINEMENT_PROMPT_TEMPLATE.replace("{{aspect_type}}", ctx.aspect_type)
@@ -268,9 +280,15 @@ class ReviewRefinementStage(BaseStage):
         
         mid = len(ctx.aspects) // 2
         
-        # Split aspects
+        # Split aspects and original categories
         left_aspects = ctx.aspects[:mid]
         right_aspects = ctx.aspects[mid:]
+        
+        left_original_categories = None
+        right_original_categories = None
+        if ctx.original_categories:
+            left_original_categories = ctx.original_categories[:mid]
+            right_original_categories = ctx.original_categories[mid:]
         
         ctx_left = ReviewRefinementStageContext(
             product_category=ctx.product_category,
@@ -278,6 +296,7 @@ class ReviewRefinementStage(BaseStage):
             aspect_context=ctx.aspect_context,
             categories=ctx.categories,
             aspects=left_aspects,
+            original_categories=left_original_categories,
         )
 
         ctx_right = ReviewRefinementStageContext(
@@ -286,6 +305,7 @@ class ReviewRefinementStage(BaseStage):
             aspect_context=ctx.aspect_context,
             categories=ctx.categories,
             aspects=right_aspects,
+            original_categories=right_original_categories,
         )
 
         return ctx_left, ctx_right 

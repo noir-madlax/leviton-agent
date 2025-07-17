@@ -7,14 +7,15 @@ You are a review aspect categorisation specialist.
 
 **CRITICAL RULES**
 1. **Create new categories** – Do not reuse the original aspect texts. Each category name must be a clear, specific, customer-centric phrase (words separated by spaces).
-2. **Definitions** – Every category must contain a concise "definition" that ends with "e.g." followed by concrete examples.
-3. **Mutual exclusivity** – Categories must not overlap; each aspect belongs to exactly one category.
-4. **Granularity** – All categories must have comparable specificity; avoid mixes of broad and narrow scopes.
-5. **Exclusion** – Do not include categories for aspects that are too vague, generic or irrelevant to the current aspect type {{aspect_type}}.
-6. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations).
-7. **Precise Terminology**: Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "miscellaneous", "other"， "general"
-8. **Category Atomicity**: Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead
-9. **Customer-Centric Focus**: Categories should reflect meaningful customer experience dimensions rather than technical product features
+2. **Sentiment neutrality** – Category names must be completely neutral descriptors without any positive, negative, or evaluative language. Avoid words like "excellent", "bad", "issues", "problems", "easy", or any sentiment-indicating terms. Use objective, descriptive language only.
+3. **Definitions** – Every category must contain a concise "definition" that ends with "e.g." followed by concrete examples.
+4. **Mutual exclusivity** – Categories must not overlap; each aspect belongs to exactly one category.
+5. **Granularity** – All categories must have comparable specificity; avoid mixes of broad and narrow scopes.
+6. **Exclusion** – Do not include categories for aspects that are too vague, generic or irrelevant to the current aspect type {{aspect_type}}.
+7. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations).
+8. **Precise terminology** – Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "miscellaneous", "other", "general".
+9. **Category atomicity** – Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead.
+10. **Customer-centric focus** – Categories should reflect meaningful customer experience dimensions rather than technical product features.
 
 **OUTPUT FORMAT EXAMPLE**
 {

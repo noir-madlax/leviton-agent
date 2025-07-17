@@ -215,19 +215,22 @@ class ReviewExtractionStage(BaseStage):
     def _retry_prompt(
         self, 
         original_prompt: str, 
-        retry_ctx: Any, 
+        retry_ctx: ValidationResult, 
         ctx: ReviewExtractionContext
     ) -> str:
         """Build retry prompt using shared retry template."""
         
-        # retry_ctx is the error_categories dict from ValidationResult
-        if not isinstance(retry_ctx, dict):
+        # retry_ctx is now a ValidationResult object
+        if not isinstance(retry_ctx, ValidationResult):
             # Fallback for unexpected retry context format
             return f"{original_prompt}\n\nPlease fix the errors and provide a valid JSON response."
         
+        # Extract error_categories from ValidationResult
+        error_categories = retry_ctx.error_categories
+        
         # Format error details
         error_lines = []
-        for category, errors in retry_ctx.items():
+        for category, errors in error_categories.items():
             if errors:  # Only include categories with errors
                 error_lines.append(f"\n{category.upper().replace('_', ' ')}:")
                 for error in errors:
