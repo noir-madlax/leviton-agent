@@ -21,6 +21,8 @@ interface HoverState {
   price: number
   brand: string
   products: number
+  priceRangeProductCount: number // 新增：当前价格区间内的产品数量
+  priceRange: { min: number; max: number } // 新增：当前价格区间
   visible: boolean
   brandIndex: number
 }
@@ -103,6 +105,11 @@ function getDensityWidth(densityData: [number, number][], price: number): number
   return closestPoint[1]
 }
 
+// Function to count products in a price range
+function countProductsInPriceRange(prices: number[], minPrice: number, maxPrice: number): number {
+  return prices.filter(price => price >= minPrice && price <= maxPrice).length
+}
+
 // Clean brand name to remove invisible characters
 function cleanBrandName(brand: string): string {
   return brand.replace(/[\u200B-\u200D\uFEFF\u202C\u202D\u2066-\u2069]/g, '').trim()
@@ -115,6 +122,8 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
     price: 0,
     brand: '',
     products: 0,
+    priceRangeProductCount: 0,
+    priceRange: { min: 0, max: 0 },
     visible: false,
     brandIndex: -1
   })
@@ -225,6 +234,9 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
     return Array.from({ length: 6 }, (_, i) => i * Math.ceil(globalMax / 5 / 10) * 10)
   }, [globalMax, globalMin])
 
+  // 价格区间窗口大小，用于计算当前区间内的产品数量
+  const priceWindowPercentage = 0.03 // 3% 的价格窗口
+
   // 📏 Y轴坐标转换函数：将价格值转换为SVG的Y坐标
   // 注意：SVG坐标系Y轴向下，所以价格越高，Y坐标越小
   const yScale = (price: number) => margin.top + chartHeight - ((price - globalMin) / (globalMax - globalMin)) * chartHeight
@@ -293,12 +305,27 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
       
       if (hoveredBrandIndex >= 0) {
         const brand = violinData[hoveredBrandIndex]
+
+        // 计算当前价格区间
+        const priceWindow = Math.max((globalMax - globalMin) * priceWindowPercentage, 1) // 最小窗口为1
+        const priceRangeMin = Math.max(price - priceWindow / 2, brand.stats.min)
+        const priceRangeMax = Math.min(price + priceWindow / 2, brand.stats.max)
+
+        // 计算当前价格区间内的产品数量
+        const priceRangeProductCount = countProductsInPriceRange(
+          brand.prices,
+          priceRangeMin,
+          priceRangeMax
+        )
+
         setHoverState({
           x: svgX,
           y: svgY,
           price: price,
           brand: brand.name,
           products: brand.stats.count,
+          priceRangeProductCount: priceRangeProductCount,
+          priceRange: { min: priceRangeMin, max: priceRangeMax },
           visible: true,
           brandIndex: hoveredBrandIndex
         })
@@ -497,7 +524,14 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
           >
             <div className="text-sm font-medium text-gray-800">{hoverState.brand}</div>
             <div className="text-xs text-gray-600 mt-1">Price: ${hoverState.price.toFixed(2)}</div>
-            <div className="text-xs text-gray-600">Products: {hoverState.products}</div>
+            <div className="mt-1 text-xs">
+              <div className="font-medium text-blue-600">
+                Price range ${hoverState.priceRange.min.toFixed(2)} - ${hoverState.priceRange.max.toFixed(2)}: {hoverState.priceRangeProductCount} products
+              </div>
+              <div className="text-gray-500">
+                Total in brand: {hoverState.products} products
+              </div>
+            </div>
           </div>
         )}
     </div>

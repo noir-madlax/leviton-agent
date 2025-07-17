@@ -30,6 +30,8 @@ interface HoverState {
   price: number
   segmentName: string
   productCount: number
+  priceRangeProductCount: number // 新增：当前价格区间内的产品数量
+  priceRange: { min: number; max: number } // 新增：当前价格区间
   visible: boolean
   hoveredSegmentIndex?: number
 }
@@ -70,7 +72,7 @@ function getDensityWidth(densityData: [number, number][], price: number): number
   if (densityData.length === 0) return 0
   let closestPoint = densityData[0]
   let minDistance = Math.abs(densityData[0][0] - price)
-  
+
   for (const point of densityData) {
     const distance = Math.abs(point[0] - price)
     if (distance < minDistance) {
@@ -78,8 +80,13 @@ function getDensityWidth(densityData: [number, number][], price: number): number
       closestPoint = point
     }
   }
-  
+
   return closestPoint[1]
+}
+
+// Function to count products in a price range
+function countProductsInPriceRange(prices: number[], minPrice: number, maxPrice: number): number {
+  return prices.filter(price => price >= minPrice && price <= maxPrice).length
 }
 
 export function MultiSegmentViolinChart({
@@ -93,6 +100,8 @@ export function MultiSegmentViolinChart({
     price: 0,
     segmentName: '',
     productCount: 0,
+    priceRangeProductCount: 0,
+    priceRange: { min: 0, max: 0 },
     visible: false,
     hoveredSegmentIndex: undefined,
   })
@@ -159,6 +168,8 @@ export function MultiSegmentViolinChart({
   }, [maxPrice]);
 
   const fixedTolerance = maxPrice * 0.05
+  // 价格区间窗口大小，用于计算当前区间内的产品数量
+  const priceWindowPercentage = 0.03 // 3% 的价格窗口
 
   const getSegmentWidth = (segmentIndex: number, price: number) => 
     getDensityWidth(segmentDensities[segmentIndex] || [], price)
@@ -185,12 +196,27 @@ export function MultiSegmentViolinChart({
       
       if (hoveredSegmentIndex >= 0) {
         const segment = validSegments[hoveredSegmentIndex]
+
+        // 计算当前价格区间
+        const priceWindow = Math.max(maxPrice * priceWindowPercentage, 1) // 最小窗口为1
+        const priceRangeMin = Math.max(price - priceWindow / 2, segment.stats.min)
+        const priceRangeMax = Math.min(price + priceWindow / 2, segment.stats.max)
+
+        // 计算当前价格区间内的产品数量
+        const priceRangeProductCount = countProductsInPriceRange(
+          segment.prices,
+          priceRangeMin,
+          priceRangeMax
+        )
+
         setHoverState({
           x: svgX,
           y: svgY,
           price: price,
           segmentName: segment.name,
           productCount: segment.productCount || segment.prices.length,
+          priceRangeProductCount: priceRangeProductCount,
+          priceRange: { min: priceRangeMin, max: priceRangeMax },
           visible: true,
           hoveredSegmentIndex: hoveredSegmentIndex,
         })
@@ -378,7 +404,15 @@ export function MultiSegmentViolinChart({
             <div className="text-xs text-gray-600 mt-1">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 rounded-sm" style={{backgroundColor: validSegments[hoverState.hoveredSegmentIndex!]?.color}}></div>
-                {hoverState.segmentName}: {hoverState.productCount} products
+                {hoverState.segmentName}
+              </div>
+              <div className="mt-1 text-xs">
+                <div className="font-medium text-blue-600">
+                  Price range ${hoverState.priceRange.min.toFixed(2)} - ${hoverState.priceRange.max.toFixed(2)}: {hoverState.priceRangeProductCount} products
+                </div>
+                <div className="text-gray-500">
+                  Total in segment: {hoverState.productCount} products
+                </div>
               </div>
             </div>
                    </div>
