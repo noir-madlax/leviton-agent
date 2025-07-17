@@ -184,31 +184,41 @@ class AmazonProductRepository:
                     "threshold_hours": hours_threshold
                 }
             
-            # 统计每个批次的产品数量
-            batch_counts = {}
+            # 统计每个批次的唯一产品数量 (by platform_id)
+            batch_unique_products = {}
             for product in result.data:
                 batch_id = product['batch_id']
-                if batch_id not in batch_counts:
-                    batch_counts[batch_id] = 0
-                batch_counts[batch_id] += 1
+                if batch_id not in batch_unique_products:
+                    batch_unique_products[batch_id] = set()
+                
+                # Get unique products for this batch
+                batch_result = self.client.table('amazon_products')\
+                    .select("platform_id")\
+                    .eq('batch_id', batch_id)\
+                    .execute()
+                
+                unique_asins = set(p['platform_id'] for p in batch_result.data if p.get('platform_id'))
+                batch_unique_products[batch_id] = unique_asins
             
-            # 检查是否有批次满足最小产品数量要求
-            for batch_id, count in batch_counts.items():
-                if count >= min_products:
-                    logger.info(f"找到最近的符合条件的产品批次: batch_id={batch_id}, 产品数={count}")
+            # 检查是否有批次满足最小唯一产品数量要求
+            for batch_id, unique_asins in batch_unique_products.items():
+                unique_count = len(unique_asins)
+                if unique_count >= min_products:
+                    logger.info(f"找到最近的符合条件的产品批次: batch_id={batch_id}, 唯一产品数={unique_count}")
                     return {
                         "has_recent_products": True,
                         "batch_id": batch_id,
-                        "product_count": count,
+                        "product_count": unique_count,
                         "threshold_hours": hours_threshold,
-                        "reason": f"recent_batch_sufficient ({count} >= {min_products})"
+                        "reason": f"recent_batch_sufficient ({unique_count} unique >= {min_products})"
                     }
             
+            max_unique_count = max(len(asins) for asins in batch_unique_products.values()) if batch_unique_products else 0
             return {
                 "has_recent_products": False,
-                "reason": f"recent_batches_insufficient (max: {max(batch_counts.values()) if batch_counts else 0} < {min_products})",
+                "reason": f"recent_batches_insufficient (max: {max_unique_count} unique < {min_products})",
                 "threshold_hours": hours_threshold,
-                "batch_counts": batch_counts
+                "batch_unique_counts": {bid: len(asins) for bid, asins in batch_unique_products.items()}
             }
                 
         except Exception as e:
@@ -217,4 +227,78 @@ class AmazonProductRepository:
                 "has_recent_products": False,
                 "reason": f"error_checking_recent_products: {e}",
                 "threshold_hours": hours_threshold
-            } 
+            }
+    
+    async def batch_upsert_products(self, products: List[Dict[str, Any]], batch_id: int, batch_size: int = 1000) -> bool:
+        """
+        批量UPSERT产品数据 - 手动去重处理
+        
+        Args:
+            products: 产品数据列表
+            batch_id: 批次ID
+            batch_size: 批次大小
+            
+        Returns:
+            bool: 插入是否成功
+        """
+        try:
+            total_processed = 0
+            total_skipped = 0
+            
+            logger.info(f"开始批量UPSERT {len(products)} 条产品数据到 amazon_products 表")
+            
+            # 1. 获取数据库中已存在的platform_id (ASINs)
+            existing_result = self.client.table('amazon_products')\
+                .select('platform_id')\
+                .execute()
+            
+            existing_asins = set(row['platform_id'] for row in existing_result.data if row.get('platform_id'))
+            
+            # 2. Filter out duplicates and add batch_id
+            unique_products = []
+            for product in products:
+                asin = product.get('platform_id')
+                
+                if not asin:
+                    continue
+                    
+                if asin not in existing_asins:
+                    product['batch_id'] = batch_id  # Ensure batch_id is set
+                    unique_products.append(product)
+                    existing_asins.add(asin)  # Add to set to avoid within-batch duplicates
+                else:
+                    total_skipped += 1
+            
+            logger.info(f"去重完成: {len(products)} -> {len(unique_products)} (跳过 {total_skipped} 个重复)")
+            
+            if not unique_products:
+                logger.info("没有新的唯一产品需要插入")
+                return True
+            
+            # 3. 分批插入唯一产品
+            for i in range(0, len(unique_products), batch_size):
+                batch = unique_products[i:i + batch_size]
+                
+                logger.info(f"正在插入第 {i//batch_size + 1} 批，共 {len(batch)} 条唯一记录...")
+                
+                try:
+                    result = self.client.table('amazon_products').insert(batch).execute()
+                    
+                    if result.data:
+                        batch_processed = len(result.data)
+                        total_processed += batch_processed
+                        logger.info(f"第 {i//batch_size + 1} 批插入成功：{batch_processed} 条记录")
+                    else:
+                        logger.warning(f"第 {i//batch_size + 1} 批插入没有返回数据")
+                        
+                except Exception as batch_error:
+                    logger.error(f"第 {i//batch_size + 1} 批插入失败: {batch_error}")
+                    # Continue with other batches even if one fails
+                    continue
+            
+            logger.info(f"批量UPSERT完成，总共插入 {total_processed} 条新产品数据，跳过 {total_skipped} 条重复数据")
+            return True
+            
+        except Exception as e:
+            logger.error(f"批量UPSERT产品数据失败: {e}")
+            return False 

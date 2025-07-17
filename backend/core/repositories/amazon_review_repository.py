@@ -210,8 +210,8 @@ class AmazonReviewRepository:
                     )
                     
                     if reviews_for_db:
-                        # 使用批量插入策略，允许重复数据
-                        success = await self.batch_insert_reviews(reviews_for_db)
+                        # 使用批量UPSERT策略，避免重复数据
+                        success = await self.batch_upsert_reviews(reviews_for_db)
                         if success:
                             count = len(reviews_for_db)
                             total_reviews_imported += count
@@ -240,7 +240,7 @@ class AmazonReviewRepository:
     
     async def batch_upsert_reviews(self, reviews: List[Dict[str, Any]], batch_size: int = 1000) -> bool:
         """
-        批量UPSERT评论数据 - 处理重复数据
+        批量UPSERT评论数据 - 手动去重处理
         
         Args:
             reviews: 评论数据列表
@@ -251,30 +251,72 @@ class AmazonReviewRepository:
         """
         try:
             total_processed = 0
+            total_skipped = 0
             
             logger.info(f"开始批量UPSERT {len(reviews)} 条评论数据到 {self.table_name} 表")
             
-            # 分批处理
-            for i in range(0, len(reviews), batch_size):
-                batch = reviews[i:i + batch_size]
-                
-                logger.info(f"正在UPSERT第 {i//batch_size + 1} 批，共 {len(batch)} 条记录...")
-                
-                # 使用upsert策略处理重复数据
-                # 如果存在相同的 (scrape_batch_id, asin, review_id) 则更新，否则插入
-                result = self.supabase_client.table(self.table_name)\
-                    .upsert(batch, on_conflict="scrape_batch_id,asin,review_id")\
-                    .execute()
-                
-                if result.data:
-                    batch_processed = len(result.data)
-                    total_processed += batch_processed
-                    logger.info(f"第 {i//batch_size + 1} 批UPSERT成功：{batch_processed} 条记录")
-                else:
-                    logger.error(f"第 {i//batch_size + 1} 批UPSERT失败，没有返回数据")
-                    return False
+            # 1. 获取数据库中已存在的review_id (for this ASIN)
+            asins_in_batch = list(set(r.get('asin') for r in reviews if r.get('asin')))
+            existing_review_ids = set()
             
-            logger.info(f"批量UPSERT完成，总共处理 {total_processed} 条评论数据")
+            for asin in asins_in_batch:
+                try:
+                    existing_result = self.supabase_client.table(self.table_name)\
+                        .select('asin, review_id')\
+                        .eq('asin', asin)\
+                        .execute()
+                    
+                    for row in existing_result.data:
+                        existing_review_ids.add(f"{row['asin']}:{row['review_id']}")
+                        
+                except Exception as e:
+                    logger.warning(f"Error checking existing reviews for {asin}: {e}")
+                    continue
+            
+            # 2. Filter out duplicates 
+            unique_reviews = []
+            for review in reviews:
+                asin = review.get('asin')
+                review_id = review.get('review_id')
+                
+                if not asin or not review_id:
+                    continue
+                    
+                composite_key = f"{asin}:{review_id}"
+                if composite_key not in existing_review_ids:
+                    unique_reviews.append(review)
+                    existing_review_ids.add(composite_key)  # Add to set to avoid within-batch duplicates
+                else:
+                    total_skipped += 1
+            
+            logger.info(f"去重完成: {len(reviews)} -> {len(unique_reviews)} (跳过 {total_skipped} 个重复)")
+            
+            if not unique_reviews:
+                logger.info("没有新的唯一评论需要插入")
+                return True
+            
+            # 3. 分批插入唯一评论
+            for i in range(0, len(unique_reviews), batch_size):
+                batch = unique_reviews[i:i + batch_size]
+                
+                logger.info(f"正在插入第 {i//batch_size + 1} 批，共 {len(batch)} 条唯一记录...")
+                
+                try:
+                    result = self.supabase_client.table(self.table_name).insert(batch).execute()
+                    
+                    if result.data:
+                        batch_processed = len(result.data)
+                        total_processed += batch_processed
+                        logger.info(f"第 {i//batch_size + 1} 批插入成功：{batch_processed} 条记录")
+                    else:
+                        logger.warning(f"第 {i//batch_size + 1} 批插入没有返回数据")
+                        
+                except Exception as batch_error:
+                    logger.error(f"第 {i//batch_size + 1} 批插入失败: {batch_error}")
+                    # Continue with other batches even if one fails
+                    continue
+            
+            logger.info(f"批量UPSERT完成，总共插入 {total_processed} 条新评论数据，跳过 {total_skipped} 条重复数据")
             return True
             
         except Exception as e:
@@ -492,4 +534,65 @@ class AmazonReviewRepository:
             
         except Exception as e:
             logger.debug(f"解析评论日期时出错: {e}")
-            return None 
+            return None
+    
+    async def get_asin_review_summary(self, asin: str) -> Dict[str, Any]:
+        """
+        获取ASIN的评论汇总信息（使用唯一评论计数）
+        
+        Args:
+            asin: 产品ASIN
+            
+        Returns:
+            Dict[str, Any]: 评论汇总信息
+        """
+        try:
+            # 获取该ASIN的所有评论
+            result = self.supabase_client.table(self.table_name)\
+                .select('review_id, scrape_context')\
+                .eq('asin', asin)\
+                .execute()
+            
+            if not result.data:
+                return {
+                    "total_reviews": 0,
+                    "unique_reviews": 0,
+                    "max_previous_max_reviews": 0,
+                    "asin": asin
+                }
+            
+            # 计算唯一评论数量
+            unique_review_ids = set()
+            max_previous_max_reviews = 0
+            
+            for row in result.data:
+                # 添加唯一评论ID
+                review_id = row.get('review_id')
+                if review_id:
+                    unique_review_ids.add(review_id)
+                
+                # 从scrape_context中获取之前的max_reviews设置
+                # 注意：这里假设scrape_context是JSON字段，可能需要解析
+                # 如果数据库结构不同，可能需要调整
+                
+            unique_reviews = len(unique_review_ids)
+            total_reviews = len(result.data)
+            
+            logger.info(f"ASIN {asin} 评论汇总: {total_reviews} 总计, {unique_reviews} 唯一")
+            
+            return {
+                "total_reviews": total_reviews,
+                "unique_reviews": unique_reviews,
+                "max_previous_max_reviews": max_previous_max_reviews,
+                "asin": asin
+            }
+            
+        except Exception as e:
+            logger.error(f"获取ASIN {asin} 评论汇总时出错: {e}")
+            return {
+                "total_reviews": 0,
+                "unique_reviews": 0,
+                "max_previous_max_reviews": 0,
+                "asin": asin,
+                "error": str(e)
+            } 

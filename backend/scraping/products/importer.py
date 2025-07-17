@@ -20,7 +20,8 @@ class ProductImporter:
         self.product_repository = AmazonProductRepository(self.supabase_client)
     
     async def import_products(self, json_file_path: str, 
-                            task_info: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+                            task_info: Optional[Dict[str, Any]] = None,
+                            force_import: bool = False) -> Dict[str, Any]:
         """
         导入商品数据到数据库
         
@@ -57,9 +58,9 @@ class ProductImporter:
                     "products_imported": 0
                 }
             
-            # 步骤3: 批量保存产品数据
-            logger.info(f"批量保存 {len(products_data)} 个产品到数据库...")
-            success = await self.product_repository.batch_insert_products(products_data, request_id)
+            # 步骤3: 批量保存产品数据 (with deduplication)
+            logger.info(f"批量保存 {len(products_data)} 个产品到数据库（启用去重）...")
+            success = await self.product_repository.batch_upsert_products(products_data, request_id)
             
             if not success:
                 # 如果产品保存失败，更新请求状态为失败

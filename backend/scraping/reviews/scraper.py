@@ -2,8 +2,8 @@ import json
 import os
 import asyncio
 import aiofiles
-import pandas as pd
-from datetime import datetime, timedelta
+import math
+from datetime import datetime
 from apify_client import ApifyClient
 from typing import Dict, Any, List, Optional
 import logging
@@ -28,13 +28,16 @@ APIFY_API_TOKEN = os.getenv("APIFY_API_TOKEN")
 AXESSO_ACTOR_ID = "ZebkvH3nVOrafqr5T"
 
 # Amazon Review Scraper Configuration (constant across all requests)
-MAX_PAGES_PER_ASIN = 5  # Maximum pages to scrape per ASIN in single API call
 DEFAULT_REVIEWS_PER_PAGE = 10  # Default number of reviews per page when currentPage is missing
+
+def _calculate_max_pages(max_reviews: int) -> int:
+    """Calculate the maximum pages needed based on requested reviews"""
+    return math.ceil(max_reviews / DEFAULT_REVIEWS_PER_PAGE)
 
 AMAZON_REVIEW_CONFIG = {
     "domainCode": "com",           # Amazon.com (US marketplace)
     "sortBy": "recent",            # Sort by most recent reviews
-    "maxPages": MAX_PAGES_PER_ASIN,  # Maximum pages per request
+    # maxPages will be set dynamically based on max_reviews
     "filterByStar": None,          # No star filter (all ratings)
     "filterByKeyword": None,       # No keyword filter
     "reviewerType": "verified_reviews",  # Only verified purchase reviews
@@ -47,7 +50,7 @@ RATE_LIMIT_DELAY = 0.1  # seconds - 100ms delay between individual requests
 MAX_CONCURRENT_REQUESTS = 32  # Maximum concurrent API requests
 SCRAPE_RECENCY_DAYS = 30  # Days to consider a scrape "recent"
 DAYS_PER_MONTH = 30  # Approximation for months to days conversion
-DEFAULT_COVERAGE_MONTHS = 6  # Default months of review coverage required
+DEFAULT_COVERAGE_MONTHS = 36  # Default months of review coverage required
 
 # Review date filtering constants
 MIN_REVIEW_YEAR = 2010  # Earliest acceptable review year
@@ -121,12 +124,13 @@ class ReviewScraper:
                     "products_processed": 0
                 }
             
-            logger.info(f"\n📋 评论爬取配置:")
+            max_pages_per_asin = _calculate_max_pages(max_reviews)
+            logger.info("\n📋 评论爬取配置:")
             logger.info(f"   • 批次ID: {batch_id}")
             logger.info(f"   • ASIN数量: {len(asins)}")
             logger.info(f"   • 评论覆盖月数: {review_coverage_months}")
             logger.info(f"   • 最大并发请求: {MAX_CONCURRENT_REQUESTS}")
-            logger.info(f"   • 每个ASIN最大页数: {MAX_PAGES_PER_ASIN}")
+            logger.info(f"   • 每个ASIN最大页数: {max_pages_per_asin}")
             logger.info(f"   • 数据保存目录: {AMAZON_REVIEW_DIR}")
             
             # 创建信号量进行并发控制
@@ -178,7 +182,7 @@ class ReviewScraper:
                         "rate_limit_delay": RATE_LIMIT_DELAY,
                         "max_concurrent_requests": MAX_CONCURRENT_REQUESTS,
                         "scrape_recency_days": SCRAPE_RECENCY_DAYS,
-                        "max_pages_per_asin": MAX_PAGES_PER_ASIN,
+                        "max_pages_per_asin": max_pages_per_asin,
                         "min_review_year": MIN_REVIEW_YEAR,
                         "max_review_year": MAX_REVIEW_YEAR
                     }
@@ -263,18 +267,33 @@ class ReviewScraper:
                     
                     if skip_action["should_skip"]:
                         logger.info(f"⏩ 跳过ASIN {asin}: {skip_action['reason']}")
+                        unique_analysis = skip_action.get("unique_analysis", {})
                         return {
                             "status": "skipped",
                             "asin": asin,
                             "reason": skip_action["reason"],
+                            "unique_analysis": unique_analysis,
                             "message": f"ASIN {asin} 被跳过: {skip_action['reason']}"
                         }
+                    
+                    # Use intelligent recommendation for how many reviews to actually scrape
+                    recommended_max_reviews = skip_action.get("recommended_max_reviews", max_reviews)
+                    unique_analysis = skip_action.get("unique_analysis", {})
+                    
+                    logger.info(f"🎯 智能调整ASIN {asin}的爬取参数:")
+                    logger.info(f"   - 原始请求: {max_reviews} 评论")
+                    logger.info(f"   - 智能推荐: {recommended_max_reviews} 评论")
+                    logger.info(f"   - 实际需要: {unique_analysis.get('unique_reviews_needed', 0)} 唯一评论")
+                    
+                    # Use the intelligent recommendation
+                    actual_max_reviews = recommended_max_reviews
                 else:
                     logger.info(f"🔥 强制爬取ASIN {asin} (忽略现有文件)")
+                    actual_max_reviews = max_reviews
 
                 # 爬取评论
-                logger.info(f"🔍 爬取ASIN {asin} 的评论...")
-                reviews_data = await asyncio.to_thread(self._get_amazon_reviews_apify, asin, max_reviews)
+                logger.info(f"🔍 爬取ASIN {asin} 的评论 (请求 {actual_max_reviews} 条)...")
+                reviews_data = await asyncio.to_thread(self._get_amazon_reviews_apify, asin, actual_max_reviews)
                 
                 if not reviews_data.get("success"):
                     error_msg = reviews_data.get("error", "未知错误")
@@ -295,14 +314,15 @@ class ReviewScraper:
                     earliest_reviews_fetched = True
                 
                 # 保存评论数据
+                max_pages_calculated = _calculate_max_pages(actual_max_reviews)
                 await self._save_reviews_with_context(
                     asin, reviews_data, filepath, 
                     earliest_reviews_fetched=earliest_reviews_fetched,
                     max_pages_info={
-                        "max_pages_requested": reviews_data.get("max_pages_requested", MAX_PAGES_PER_ASIN),
+                        "max_pages_requested": reviews_data.get("max_pages_requested", max_pages_calculated),
                         "max_pages_reached": reviews_data.get("max_pages_reached", 0)
                     },
-                    max_reviews=max_reviews
+                    max_reviews=actual_max_reviews
                 )
                 
                 reviews_count = reviews_data.get("total_reviews", 0)
@@ -350,14 +370,15 @@ class ReviewScraper:
         client = ApifyClient(APIFY_API_TOKEN)
         
         # 创建输入配置
+        max_pages = _calculate_max_pages(max_reviews)
         config = AMAZON_REVIEW_CONFIG.copy()
         config["asin"] = asin
-        config["maxReviews"] = max_reviews # 添加maxReviews参数
+        config["maxPages"] = max_pages
         
         run_input = {"input": [config]}
         
         try:
-            logger.info(f"   🔄 启动Apify actor for ASIN {asin}, max_pages={MAX_PAGES_PER_ASIN}...")
+            logger.info(f"   🔄 启动Apify actor for ASIN {asin}, max_pages={max_pages}...")
             run = client.actor(AXESSO_ACTOR_ID).call(run_input=run_input)
             
             # 从运行的数据集获取结果
@@ -369,7 +390,7 @@ class ReviewScraper:
                 return {
                     "reviews": [],
                     "total_reviews": 0,
-                    "max_pages_requested": MAX_PAGES_PER_ASIN,
+                    "max_pages_requested": max_pages,
                     "max_pages_reached": 0,
                     "fetched_all_available_reviews": True,
                     "success": True
@@ -393,17 +414,17 @@ class ReviewScraper:
             
             # 确定是否已获取所有可用页面
             if has_current_page_info:
-                fetched_all_available_reviews = (max_current_page >= MAX_PAGES_PER_ASIN or 
-                                               len(all_reviews) < MAX_PAGES_PER_ASIN * DEFAULT_REVIEWS_PER_PAGE)
+                fetched_all_available_reviews = (max_current_page >= max_pages or 
+                                               len(all_reviews) < max_pages * DEFAULT_REVIEWS_PER_PAGE)
             else:
-                expected_reviews_for_max_pages = MAX_PAGES_PER_ASIN * DEFAULT_REVIEWS_PER_PAGE
+                expected_reviews_for_max_pages = max_pages * DEFAULT_REVIEWS_PER_PAGE
                 fetched_all_available_reviews = len(all_reviews) < expected_reviews_for_max_pages
-                max_current_page = min(MAX_PAGES_PER_ASIN, max(1, len(all_reviews) // DEFAULT_REVIEWS_PER_PAGE))
+                max_current_page = min(max_pages, max(1, len(all_reviews) // DEFAULT_REVIEWS_PER_PAGE))
             
             return {
                 "reviews": all_reviews,
                 "total_reviews": len(all_reviews),
-                "max_pages_requested": MAX_PAGES_PER_ASIN,
+                "max_pages_requested": max_pages,
                 "max_pages_reached": max_current_page,
                 "fetched_all_available_reviews": fetched_all_available_reviews,
                 "success": True
@@ -414,7 +435,7 @@ class ReviewScraper:
             return {
                 "reviews": [],
                 "total_reviews": 0,
-                "max_pages_requested": MAX_PAGES_PER_ASIN,
+                "max_pages_requested": max_pages,
                 "max_pages_reached": 0,
                 "fetched_all_available_reviews": False,
                 "success": False,
@@ -460,22 +481,123 @@ class ReviewScraper:
         year = parsed_date.year
         return MIN_REVIEW_YEAR <= year <= MAX_REVIEW_YEAR
     
+    async def _calculate_unique_reviews_needed(self, asin: str, target_unique_reviews: int = 200) -> Dict[str, Any]:
+        """
+        Calculate how many unique reviews we actually need for an ASIN
+        
+        Args:
+            asin: Product ASIN
+            target_unique_reviews: Target number of unique reviews needed
+            
+        Returns:
+            Dict with unique counts and recommendations
+        """
+        try:
+            # 1. Get unique reviews from database
+            supabase_client = get_supabase_service_client()
+            result = supabase_client.table('amazon_reviews')\
+                .select('review_id')\
+                .eq('asin', asin)\
+                .execute()
+            
+            unique_reviews_in_db = len(set(r['review_id'] for r in result.data if r.get('review_id')))
+            
+            # 2. Get unique reviews from existing files
+            existing_files = await self._get_existing_review_files(asin)
+            unique_reviews_in_files = set()
+            
+            for filepath in existing_files:
+                try:
+                    async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
+                        content = await f.read()
+                        data = json.loads(content)
+                    
+                    reviews = data.get("reviews", [])
+                    for review in reviews:
+                        review_id = review.get("reviewId") or review.get("review_id")
+                        if review_id:
+                            unique_reviews_in_files.add(review_id)
+                            
+                except Exception as e:
+                    logger.warning(f"Error reading review file {filepath}: {e}")
+                    continue
+            
+            # 3. Calculate total unique reviews available
+            # Combine DB and file review IDs (union to avoid double counting)
+            db_review_ids = set()
+            if result.data:
+                db_review_ids = set(r['review_id'] for r in result.data if r.get('review_id'))
+            
+            total_unique_reviews = len(db_review_ids.union(unique_reviews_in_files))
+            unique_reviews_needed = max(0, target_unique_reviews - total_unique_reviews)
+            
+            # 4. Estimate pages needed (with buffer for duplicates)
+            # Since we might get some duplicates, request extra pages
+            if unique_reviews_needed > 0:
+                # Add 50% buffer for potential duplicates/overlaps
+                estimated_reviews_needed = int(unique_reviews_needed * 1.5)
+                estimated_pages_needed = _calculate_max_pages(estimated_reviews_needed)
+            else:
+                estimated_reviews_needed = 0
+                estimated_pages_needed = 0
+            
+            logger.info(f"ASIN {asin} unique review analysis:")
+            logger.info(f"  - Unique in DB: {unique_reviews_in_db}")
+            logger.info(f"  - Unique in files: {len(unique_reviews_in_files)}")
+            logger.info(f"  - Total unique available: {total_unique_reviews}")
+            logger.info(f"  - Target: {target_unique_reviews}")
+            logger.info(f"  - Unique needed: {unique_reviews_needed}")
+            logger.info(f"  - Estimated scrape needed: {estimated_reviews_needed} reviews ({estimated_pages_needed} pages)")
+            
+            return {
+                "unique_reviews_in_db": unique_reviews_in_db,
+                "unique_reviews_in_files": len(unique_reviews_in_files),
+                "total_unique_available": total_unique_reviews,
+                "target_unique_reviews": target_unique_reviews,
+                "unique_reviews_needed": unique_reviews_needed,
+                "estimated_reviews_to_scrape": estimated_reviews_needed,
+                "estimated_pages_needed": estimated_pages_needed,
+                "should_skip": unique_reviews_needed == 0,
+                "skip_reason": f"already_have_sufficient_unique_reviews ({total_unique_reviews}/{target_unique_reviews})" if unique_reviews_needed == 0 else None
+            }
+            
+        except Exception as e:
+            logger.error(f"Error calculating unique reviews for {asin}: {e}")
+            return {
+                "unique_reviews_in_db": 0,
+                "unique_reviews_in_files": 0,
+                "total_unique_available": 0,
+                "target_unique_reviews": target_unique_reviews,
+                "unique_reviews_needed": target_unique_reviews,
+                "estimated_reviews_to_scrape": target_unique_reviews,
+                "estimated_pages_needed": _calculate_max_pages(target_unique_reviews),
+                "should_skip": False,
+                "skip_reason": None,
+                "error": str(e)
+            }
+
     async def _determine_skip_action(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
-        """确定是否应该跳过ASIN的爬取，基于本地文件和数据库检查"""
-        # 1. 检查本地文件
-        local_skip_action = await self._check_existing_review_files(asin, review_coverage_months, max_reviews)
+        """确定是否应该跳过ASIN的爬取，基于唯一评论数量分析"""
         
-        if local_skip_action["should_skip"]:
-            return local_skip_action
+        # Use intelligent unique review calculation instead of simple file/DB checks
+        unique_analysis = await self._calculate_unique_reviews_needed(asin, target_unique_reviews=max_reviews)
         
-        # 2. 检查数据库
-        db_skip_action = await self._check_existing_reviews_in_db(asin, review_coverage_months, max_reviews)
+        if unique_analysis["should_skip"]:
+            return {
+                "should_skip": True,
+                "reason": unique_analysis["skip_reason"],
+                "unique_analysis": unique_analysis
+            }
         
-        if db_skip_action["should_skip"]:
-            return db_skip_action
+        # If we need reviews, adjust the max_reviews to what we actually need
+        estimated_scrape_needed = unique_analysis["estimated_reviews_to_scrape"]
         
-        # 3. 不跳过
-        return {"should_skip": False, "reason": "no_existing_data"}
+        return {
+            "should_skip": False,
+            "reason": f"need_{unique_analysis['unique_reviews_needed']}_more_unique_reviews",
+            "unique_analysis": unique_analysis,
+            "recommended_max_reviews": estimated_scrape_needed
+        }
     
     async def _check_existing_review_files(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
         """检查本地评论文件"""
@@ -484,8 +606,8 @@ class ReviewScraper:
         if not existing_files:
             return {"should_skip": False, "reason": "no_existing_files"}
         
-        # 分析现有评论文件
-        total_existing_reviews = 0
+        # 分析现有评论文件 - 使用唯一评论计数
+        unique_review_ids = set()
         max_previous_max_reviews = 0
         most_recent_scrape_date = None
         
@@ -495,9 +617,12 @@ class ReviewScraper:
                     content = await f.read()
                     data = json.loads(content)
                 
-                # 获取评论数量
+                # 获取唯一评论ID
                 reviews = data.get("reviews", [])
-                total_existing_reviews += len(reviews)
+                for review in reviews:
+                    review_id = review.get("reviewId") or review.get("review_id")
+                    if review_id:
+                        unique_review_ids.add(review_id)
                 
                 # 获取之前请求的max_reviews
                 scrape_context = data.get("scrape_context", {})
@@ -518,13 +643,13 @@ class ReviewScraper:
                 logger.warning(f"读取文件时出错 {filepath}: {e}")
                 continue
         
-        # 检查是否需要更多评论
-        max_existing_requirement = max(max_previous_max_reviews, total_existing_reviews)
+        unique_existing_reviews = len(unique_review_ids)
         
-        if max_reviews > max_existing_requirement:
+        # Smart force logic: if current max_reviews > unique existing reviews, we should scrape more
+        if max_reviews > unique_existing_reviews:
             return {
                 "should_skip": False, 
-                "reason": f"need_more_reviews (requesting {max_reviews}, have {total_existing_reviews}, prev_max {max_previous_max_reviews})"
+                "reason": f"need_more_unique_reviews (requesting {max_reviews}, have {unique_existing_reviews} unique, prev_max {max_previous_max_reviews})"
             }
         
         # 检查是否有最近的爬取（避免频繁重复爬取）
@@ -533,7 +658,7 @@ class ReviewScraper:
             if days_since_scrape <= SCRAPE_RECENCY_DAYS:
                 return {
                     "should_skip": True,
-                    "reason": f"sufficient_recent_reviews ({total_existing_reviews} reviews, max_req {max_reviews}, scraped {days_since_scrape}d ago)"
+                    "reason": f"sufficient_recent_unique_reviews ({unique_existing_reviews} unique reviews, max_req {max_reviews}, scraped {days_since_scrape}d ago)"
                 }
         
         # 如果没有最近的爬取信息，检查覆盖要求
@@ -542,7 +667,7 @@ class ReviewScraper:
         if all_reviews_analysis["meets_coverage_requirement"]:
             return {
                 "should_skip": True,
-                "reason": f"sufficient_coverage ({total_existing_reviews} reviews, {all_reviews_analysis['latest_reviews_months']:.1f} months)"
+                "reason": f"sufficient_coverage ({unique_existing_reviews} unique reviews, {all_reviews_analysis['latest_reviews_months']:.1f} months)"
             }
         else:
             return {
@@ -556,6 +681,19 @@ class ReviewScraper:
             # 获取数据库客户端
             supabase_client = get_supabase_service_client()
             review_repository = AmazonReviewRepository(supabase_client)
+            
+            # 检查现有评论数量和之前的max_reviews设置（使用唯一计数）
+            existing_reviews_info = await review_repository.get_asin_review_summary(asin)
+            unique_existing_count = existing_reviews_info.get("unique_reviews", 0)
+            total_existing_count = existing_reviews_info.get("total_reviews", 0)
+            previous_max_reviews = existing_reviews_info.get("max_previous_max_reviews", 0)
+            
+            # Smart force logic: if requesting more unique reviews than we have
+            if max_reviews > unique_existing_count:
+                return {
+                    "should_skip": False,
+                    "reason": f"need_more_unique_reviews_db (requesting {max_reviews}, have {unique_existing_count} unique of {total_existing_count} total, prev_max {previous_max_reviews})"
+                }
             
             # 使用新的repository方法检查最近的评论
             recent_check = await review_repository.check_recent_reviews_by_asin(
@@ -699,7 +837,7 @@ class ReviewScraper:
                 "max_pages_info": max_pages_info or {},
                 "max_reviews_requested": max_reviews, # 添加max_reviews_requested
                 "configuration": {
-                    "max_pages_per_asin": MAX_PAGES_PER_ASIN,
+                    "max_pages_per_asin": _calculate_max_pages(max_reviews),
                     "reviews_per_page_default": DEFAULT_REVIEWS_PER_PAGE,
                     "sort_by": AMAZON_REVIEW_CONFIG["sortBy"],
                     "reviewer_type": AMAZON_REVIEW_CONFIG["reviewerType"],
@@ -710,7 +848,7 @@ class ReviewScraper:
             "reviews": reviews_data.get("reviews", []),
             "api_response_metadata": {
                 "success": reviews_data.get("success", False),
-                "max_pages_requested": reviews_data.get("max_pages_requested", MAX_PAGES_PER_ASIN),
+                "max_pages_requested": reviews_data.get("max_pages_requested", _calculate_max_pages(max_reviews)),
                 "max_pages_reached": reviews_data.get("max_pages_reached", 0),
                 "fetched_all_available_reviews": reviews_data.get("fetched_all_available_reviews", False)
             }

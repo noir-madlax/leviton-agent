@@ -85,8 +85,15 @@ class ScrapingResultProcessor:
             # 从scraping_summary获取信息（如果存在）
             if 'scraping_summary' in data:
                 summary = data['scraping_summary']
+                
+                # 处理request_type，映射不支持的类型到支持的类型
+                summary_type = summary.get('type', request_data['request_type'])
+                # 🔥 修复数据库约束：将 'bestsellers' 映射为 'category'
+                if summary_type == 'bestsellers':
+                    summary_type = 'category'
+                
                 request_data.update({
-                    'request_type': summary.get('type', request_data['request_type']),
+                    'request_type': summary_type,
                     'search_term': summary.get('search_term'),
                     'category_id': summary.get('category_id'),
                     'amazon_domain': summary.get('amazon_domain', 'amazon.com')

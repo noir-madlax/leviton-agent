@@ -38,7 +38,10 @@ class ProductScraper:
         os.makedirs(self.amazon_dir, exist_ok=True)
         os.makedirs(self.home_depot_dir, exist_ok=True)
     
-    async def scrape_from_url(self, url: str, max_products: int = 100, force_scrape: bool = False) -> Dict[str, Any]:
+    async def scrape_from_url(self, url: str, max_products: int = 100, 
+                             force_scrape: bool = False, 
+                             force_import: bool = False, 
+                             force_transformation: bool = False) -> Dict[str, Any]:
         """
         从URL爬取商品数据
         
@@ -69,14 +72,28 @@ class ProductScraper:
                 
                 if skip_action["should_skip"]:
                     logger.info(f"⏩ 跳过商品爬取: {skip_action['reason']}")
-                    return {
+                    
+                    # Return skip result with additional info for potential force import/transformation
+                    result = {
                         "status": "skipped",
                         "reason": skip_action["reason"],
                         "products_scraped": skip_action.get("existing_products_count", 0),
                         "file_path": skip_action.get("existing_file_path"),
+                        "existing_file_path": skip_action.get("existing_file_path"),  # Explicit field for force import
                         "category_info": category_info,
-                        "products": skip_action.get("existing_products", [])
+                        "products": skip_action.get("existing_products", []),
+                        "batch_id": skip_action.get("batch_id"),  # For potential force transformation
+                        "can_force_import": bool(skip_action.get("existing_file_path")),
+                        "can_force_transformation": bool(skip_action.get("batch_id"))
                     }
+                    
+                    # If force_import or force_transformation is set, indicate success status for downstream processing
+                    if force_import or force_transformation:
+                        result["status"] = "success"
+                        result["force_mode"] = True
+                        logger.info(f"🔥 跳过爬取但启用强制模式: force_import={force_import}, force_transformation={force_transformation}")
+                    
+                    return result
             else:
                 logger.info(f"🔥 强制爬取商品 (忽略现有文件和数据库记录)")
             
@@ -569,12 +586,20 @@ class ProductScraper:
                             elif 'category_results' in data:
                                 existing_products = data['category_results']
                             
-                            if len(existing_products) >= max_products:
-                                logger.info(f"找到现有产品文件: {file_path.name}, {len(existing_products)} 个产品")
+                            # Count unique products by ASIN/platform_id
+                            unique_asins = set()
+                            for product in existing_products:
+                                asin = product.get('asin') or product.get('platform_id')
+                                if asin:
+                                    unique_asins.add(asin)
+                            
+                            unique_count = len(unique_asins)
+                            if unique_count >= max_products:
+                                logger.info(f"找到现有产品文件: {file_path.name}, {len(existing_products)} 个产品 ({unique_count} 个唯一)")
                                 return {
                                     "should_skip": True,
-                                    "reason": f"sufficient_local_products ({len(existing_products)} >= {max_products})",
-                                    "existing_products_count": len(existing_products),
+                                    "reason": f"sufficient_local_unique_products ({unique_count} unique >= {max_products})",
+                                    "existing_products_count": unique_count,
                                     "existing_file_path": str(file_path),
                                     "existing_products": existing_products
                                 }
@@ -606,11 +631,18 @@ class ProductScraper:
             
             if recent_check.get("has_recent_products"):
                 logger.info(f"数据库中找到最近的符合条件的产品批次: {recent_check.get('reason')}")
+                
+                # Try to find corresponding file for force import support
+                existing_file_path = await self._find_file_for_batch(
+                    category_info, recent_check.get("batch_id"), url_type
+                )
+                
                 return {
                     "should_skip": True,
                     "reason": f"recent_db_batch ({recent_check.get('reason')})",
                     "existing_products_count": recent_check.get("product_count", 0),
-                    "batch_id": recent_check.get("batch_id")
+                    "batch_id": recent_check.get("batch_id"),
+                    "existing_file_path": existing_file_path  # Add file path for force import
                 }
             else:
                 return {
@@ -621,6 +653,46 @@ class ProductScraper:
         except Exception as e:
             logger.error(f"检查数据库产品时出错: {e}")
             return {"should_skip": False, "reason": f"error_checking_database: {e}"}
+    
+    async def _find_file_for_batch(self, category_info: Dict, batch_id: int, url_type: str) -> Optional[str]:
+        """Find existing file path for a given batch/category for force import support"""
+        try:
+            category_id = category_info.get("category_id")
+            search_term = category_info.get("search_term")
+            
+            # Build possible file name patterns based on category info
+            patterns = []
+            if search_term:
+                search_term_clean = search_term.replace(" ", "_").lower()
+                patterns.extend([
+                    f"amazon_search_{search_term_clean}_cat_{category_id}_*.json",
+                    f"amazon_search_{search_term_clean}_*.json"
+                ])
+            
+            # Add category/bestseller patterns
+            if category_id:
+                patterns.extend([
+                    f"amazon_bestsellers_cat_{category_id}_*.json",
+                    f"amazon_category_cat_{category_id}_*.json",
+                    f"amazon_product_cat_{category_id}_*.json"
+                ])
+            
+            # Search for matching files
+            amazon_dir_path = Path(self.amazon_dir)
+            for pattern in patterns:
+                matching_files = list(amazon_dir_path.glob(pattern))
+                if matching_files:
+                    # Return the most recent file
+                    most_recent = max(matching_files, key=lambda p: p.stat().st_mtime)
+                    logger.info(f"为批次 {batch_id} 找到文件: {most_recent.name}")
+                    return str(most_recent)
+            
+            logger.warning(f"未找到批次 {batch_id} 对应的文件")
+            return None
+            
+        except Exception as e:
+            logger.error(f"查找批次文件时出错: {e}")
+            return None
     
     async def _save_search_results(self, search_term: str, category_id: str, products: List[Dict],
                                   metadata: Dict, pages_scraped: int, target_count: int) -> str:

@@ -137,6 +137,16 @@ def parse_args():
         action="store_true",
         help="Force product scraping, ignoring existing product files and database records."
     )
+    parser.add_argument(
+        "--force-import",
+        action="store_true",
+        help="Force import to database, even if scraping was skipped."
+    )
+    parser.add_argument(
+        "--force-transformation",
+        action="store_true",
+        help="Force data transformation, even if import was skipped."
+    )
     return parser.parse_args()
 
 
@@ -176,7 +186,9 @@ def main():
             review_coverage_months=6,  # Use normal coverage requirement
             max_reviews=args.max_reviews,
             force_scrape_reviews=args.force_reviews,
-            force_scrape_products=args.force_products
+            force_scrape_products=args.force_products,
+            force_import=args.force_import,
+            force_transformation=args.force_transformation
         ))
         # Print completion message for test detection
         status = result.get("overall_status", "")
@@ -198,6 +210,8 @@ def main():
             "log_level": args.log_level,
             "force_reviews": args.force_reviews,
             "force_products": args.force_products,
+            "force_import": args.force_import,
+            "force_transformation": args.force_transformation,
         }
         result = asyncio.run(orchestrator.process_products_list(**orchestrator_kwargs))
         # Print completion message for test detection

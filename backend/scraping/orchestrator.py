@@ -55,7 +55,8 @@ class ScrapingOrchestrator:
     async def process_url(self, url: str, max_products: int = 100, 
                          scrape_reviews: bool = True, 
                          review_coverage_months: int = 6, max_reviews: int = 30,
-                         force_scrape_reviews: bool = False, force_scrape_products: bool = False) -> Dict[str, Any]:
+                         force_scrape_reviews: bool = False, force_scrape_products: bool = False,
+                         force_import: bool = False, force_transformation: bool = False) -> Dict[str, Any]:
         """
         完整的URL处理流程：爬取商品 → 导入商品 → 爬取评论 → 导入评论
         
@@ -98,7 +99,12 @@ class ScrapingOrchestrator:
             logger.info("Phase 1: 开始爬取商品...")
             phase1_start = time.time()
             
-            product_scrape_result = await self.product_scraper.scrape_from_url(url, max_products, force_scrape=force_scrape_products)
+            product_scrape_result = await self.product_scraper.scrape_from_url(
+                url, max_products, 
+                force_scrape=force_scrape_products,
+                force_import=force_import,
+                force_transformation=force_transformation
+            )
             result["products_phase"]["scraping"] = product_scrape_result
             
             phase1_duration = time.time() - phase1_start
@@ -112,7 +118,9 @@ class ScrapingOrchestrator:
                 result["execution_stats"]["api_calls"]["product_details_api"] = products_count
                 result["execution_stats"]["api_calls"]["total"] += (1 + products_count)
             
-            if product_scrape_result.get("status") != "success":
+            # Only exit early if product scraping actually failed (not just skipped)
+            # When products are skipped, we should still attempt review scraping for individual ASIN requests
+            if product_scrape_result.get("status") not in ["success", "skipped"]:
                 result["overall_status"] = "product_scraping_failed"
                 result["execution_stats"]["end_time"] = datetime.now().isoformat()
                 result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
@@ -123,26 +131,68 @@ class ScrapingOrchestrator:
             phase2_start = time.time()
             
             json_file_path = product_scrape_result.get("file_path")
-            if not json_file_path:
+            should_import = force_import or product_scrape_result.get("status") == "success"
+            
+            # Handle force import scenario - get existing batch_id if available
+            existing_batch_id = product_scrape_result.get("batch_id")
+            
+            if not json_file_path and not force_import:
                 result["overall_status"] = "no_product_file"
                 result["execution_stats"]["end_time"] = datetime.now().isoformat()
                 result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
                 return result
+            elif not json_file_path and force_import:
+                # Handle case where scraping was skipped but we want to force import
+                logger.info("强制导入: 尝试使用现有文件路径或跳过的结果")
+                json_file_path = product_scrape_result.get("existing_file_path")
             
-            product_import_result = await self.product_importer.import_products(json_file_path)
-            result["products_phase"]["importing"] = product_import_result
+            if should_import and json_file_path:
+                product_import_result = await self.product_importer.import_products(
+                    json_file_path, force_import=force_import
+                )
+                result["products_phase"]["importing"] = product_import_result
+            elif force_import and existing_batch_id:
+                # Use existing batch_id when scraping was skipped but we have database records
+                logger.info(f"跳过导入，使用现有批次ID: {existing_batch_id}")
+                product_import_result = {
+                    "status": "success", 
+                    "message": f"Using existing batch_id {existing_batch_id}",
+                    "batch_id": existing_batch_id,
+                    "request_id": existing_batch_id
+                }
+                result["products_phase"]["importing"] = product_import_result
+            else:
+                logger.info("跳过商品导入 (没有文件或未强制导入)")
+                product_import_result = {
+                    "status": "skipped",
+                    "message": "Import skipped - no file or force_import not set",
+                    "batch_id": existing_batch_id,  # Preserve existing batch_id if available
+                    "request_id": existing_batch_id
+                }
+                result["products_phase"]["importing"] = product_import_result
             
             phase2_duration = time.time() - phase2_start
             result["execution_stats"]["phase_durations"]["product_importing"] = round(phase2_duration, 2)
             
-            if product_import_result.get("status") != "success":
-                result["overall_status"] = "product_importing_failed"
-                result["execution_stats"]["end_time"] = datetime.now().isoformat()
-                result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
-                return result
+            should_continue_transformation = (
+                force_transformation or 
+                product_import_result.get("status") == "success"
+            )
+            
+            # Allow workflow to continue to reviews even if transformation is skipped for individual ASINs
+            should_continue_to_reviews = scrape_reviews and product_import_result.get("batch_id") is not None
+            
+            if not should_continue_transformation and not should_continue_to_reviews:
+                if not force_transformation:
+                    result["overall_status"] = "product_importing_failed"
+                    result["execution_stats"]["end_time"] = datetime.now().isoformat()
+                    result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
+                    return result
+                else:
+                    logger.info("强制执行转换，尽管导入可能失败")
             
             batch_id = product_import_result.get("batch_id")
-            if not batch_id:
+            if not batch_id and not force_transformation:
                 result["overall_status"] = "no_batch_id"
                 return result
             
@@ -187,74 +237,53 @@ class ScrapingOrchestrator:
                 logger.info(f"Phase 3: 开始爬取批次 {batch_id} 的评论...")
                 phase3_start = time.time()
                 
-                review_scrape_result = await self.review_scraper.scrape_for_batch(
-                    batch_id, review_coverage_months, force_scrape=force_scrape_reviews, max_reviews=max_reviews
-                )
-                result["reviews_phase"]["scraping"] = review_scrape_result
+                # For individual product URLs/ASINs, we should attempt review scraping even if product scraping was skipped
+                # This ensures that when users specify specific ASINs, they get the reviews they requested
+                review_batch_id = batch_id
+                if batch_id is None and product_scrape_result.get("status") == "skipped":
+                    # If product scraping was skipped but we have an existing batch_id from the skip result, use it
+                    existing_batch_id = product_scrape_result.get("batch_id")
+                    if existing_batch_id:
+                        logger.info(f"产品爬取被跳过，但找到现有批次 {existing_batch_id}，将用于评论爬取")
+                        review_batch_id = existing_batch_id
                 
-                phase3_duration = time.time() - phase3_start
-                result["execution_stats"]["phase_durations"]["review_scraping"] = round(phase3_duration, 2)
-                
-                # 统计评论API调用次数
-                if review_scrape_result.get("status") in ["success", "partial_success"]:
-                    reviews_api_calls = review_scrape_result.get("products_processed", 0)
-                    result["execution_stats"]["api_calls"]["reviews_api"] = reviews_api_calls
-                    result["execution_stats"]["api_calls"]["total"] += reviews_api_calls
-                
-                if review_scrape_result.get("status") in ["success", "partial_success"]:
-                    # Phase 4: 导入评论数据
-                    logger.info(f"Phase 4: 开始导入批次 {batch_id} 的评论数据...")
-                    phase4_start = time.time()
+                if review_batch_id is not None:
+                    review_scrape_result = await self.review_scraper.scrape_for_batch(
+                        review_batch_id, review_coverage_months, 
+                        force_scrape=force_scrape_reviews, 
+                        max_reviews=max_reviews
+                    )
                     
-                    review_import_result = await self.review_importer.import_batch_reviews(batch_id)
-                    result["reviews_phase"]["importing"] = review_import_result
+                    phase3_duration = time.time() - phase3_start
+                    result["execution_stats"]["phase_durations"]["review_scraping"] = round(phase3_duration, 2)
+                    result["review_scraping_result"] = review_scrape_result
                     
-                    phase4_duration = time.time() - phase4_start
-                    result["execution_stats"]["phase_durations"]["review_importing"] = round(phase4_duration, 2)
-                    
-                    # Phase 4.5: 转换评论数据 (如果导入成功)
-                    if review_import_result.get("status") == "success":
-                        logger.info(f"Phase 4.5: 开始转换批次 {batch_id} 的评论数据...")
-                        phase45_start = time.time()
+                    # 导入评论数据 (如果启用)
+                    if review_scrape_result.get("status") in ["success", "partial_success"]:
+                        logger.info(f"Phase 4: 开始导入评论数据...")
+                        phase4_start = time.time()
                         
-                        review_transformation_result = await self._transform_review_data(batch_id, product_import_result.get("request_id"))
-                        result["reviews_phase"]["transformation"] = review_transformation_result
+                        review_import_result = await self.review_importer.import_batch_reviews(review_batch_id)
                         
-                        phase45_duration = time.time() - phase45_start
-                        result["execution_stats"]["phase_durations"]["review_transformation"] = round(phase45_duration, 2)
+                        phase4_duration = time.time() - phase4_start
+                        result["execution_stats"]["phase_durations"]["review_importing"] = round(phase4_duration, 2)
+                        result["review_importing_result"] = review_import_result
                         
-                        if review_transformation_result.get("success"):
-                            result["overall_status"] = "completed"
-                        else:
-                            result["overall_status"] = "review_transformation_failed"
+                        logger.info(f"✅ 评论导入完成: {review_import_result}")
                     else:
-                        result["overall_status"] = "review_importing_failed"
-                    
-                    # 更新评论状态到 scraping_requests 表
-                    request_id = product_import_result.get("request_id")
-                    if request_id:
-                        await self._update_review_status_in_db(
-                            request_id, 
-                            review_scrape_result, 
-                            review_import_result
-                        )
-                else:
-                    # 评论爬取失败，记录失败状态
-                    result["overall_status"] = "review_scraping_failed"
-                    request_id = product_import_result.get("request_id")
-                    if request_id:
-                        # 创建失败的导入结果
-                        failed_import_result = {
-                            "status": "not_attempted",
-                            "message": "Import not attempted due to scraping failure"
+                        logger.warning(f"⚠️ 评论爬取状态不成功，跳过导入: {review_scrape_result.get('status')}")
+                        result["review_importing_result"] = {
+                            "status": "skipped",
+                            "reason": "review_scraping_failed"
                         }
-                        await self._update_review_status_in_db(
-                            request_id, 
-                            review_scrape_result, 
-                            failed_import_result
-                        )
+                else:
+                    logger.warning("⚠️ 无法确定批次ID，跳过评论爬取")
+                    result["review_scraping_result"] = {
+                        "status": "skipped",
+                        "reason": "no_batch_id_available"
+                    }
             else:
-                result["overall_status"] = "products_only_completed"
+                logger.info("⏩ 跳过评论爬取 (scrape_reviews=False)")
             
             # 添加完成时间统计
             result["execution_stats"]["end_time"] = datetime.now().isoformat()
@@ -271,7 +300,10 @@ class ScrapingOrchestrator:
             result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
             return result
     
-    async def scrape_products_only(self, url: str, max_products: int = 100, force_scrape: bool = False) -> Dict[str, Any]:
+    async def scrape_products_only(self, url: str, max_products: int = 100, 
+                                  force_scrape: bool = False,
+                                  force_import: bool = False, 
+                                  force_transformation: bool = False) -> Dict[str, Any]:
         """
         仅爬取和导入商品（不包括评论）
         
@@ -286,19 +318,36 @@ class ScrapingOrchestrator:
         
         try:
             # 爬取商品
-            scrape_result = await self.product_scraper.scrape_from_url(url, max_products, force_scrape=force_scrape)
+            scrape_result = await self.product_scraper.scrape_from_url(
+                url, max_products, 
+                force_scrape=force_scrape,
+                force_import=force_import,
+                force_transformation=force_transformation
+            )
             
-            if scrape_result.get("status") != "success":
+            should_import = force_import or scrape_result.get("status") == "success"
+            if not should_import:
                 return {
                     "status": "scraping_failed",
                     "scraping_result": scrape_result
                 }
             
             # 导入商品
-            json_file_path = scrape_result.get("file_path")
-            import_result = await self.product_importer.import_products(json_file_path)
+            json_file_path = scrape_result.get("file_path") or scrape_result.get("existing_file_path")
+            if json_file_path:
+                import_result = await self.product_importer.import_products(
+                    json_file_path, force_import=force_import
+                )
+            else:
+                import_result = {
+                    "status": "skipped",
+                    "message": "No file available for import",
+                    "batch_id": None,
+                    "request_id": None
+                }
             
-            if import_result.get("status") != "success":
+            should_transform = force_transformation or import_result.get("status") == "success"
+            if not should_transform:
                 return {
                     "status": "importing_failed",
                     "scraping_result": scrape_result,
@@ -308,14 +357,21 @@ class ScrapingOrchestrator:
             batch_id = import_result.get("batch_id")
             
             # 类别导入
-            json_file_path = scrape_result.get("file_path")
             if json_file_path:
                 category_import_result = await self._import_categories_from_json(json_file_path)
             else:
                 category_import_result = {"status": "skipped", "message": "No JSON file path available"}
             
             # 数据转换
-            transformation_result = await self._transform_batch_data(batch_id, import_result.get("request_id"))
+            if batch_id or force_transformation:
+                transformation_result = await self._transform_batch_data(
+                    batch_id, import_result.get("request_id")
+                )
+            else:
+                transformation_result = {
+                    "success": False,
+                    "error": "No batch_id available for transformation"
+                }
             
             return {
                 "status": "success" if transformation_result.get("success") else "transformation_failed",
@@ -761,7 +817,7 @@ class ScrapingOrchestrator:
                 'categories_inserted': 0
             } 
 
-    async def process_products_list(self, product_urls=None, asins=None, max_reviews=30, review_start_date=None, review_end_date=None, import_to_db=True, use_async=True, retry_failed=True, log_level="INFO", force_reviews=False, force_products=False, **kwargs):
+    async def process_products_list(self, product_urls=None, asins=None, max_reviews=30, review_start_date=None, review_end_date=None, import_to_db=True, use_async=True, retry_failed=True, log_level="INFO", force_reviews=False, force_products=False, force_import=False, force_transformation=False, **kwargs):
         """
         Process a list of product URLs or ASINs: scrape product info and reviews for each, aggregate results.
         Args:
@@ -789,7 +845,7 @@ class ScrapingOrchestrator:
         # Helper to process a single product URL
         async def process_single_url(url):
             try:
-                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products)
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products, force_import=force_import, force_transformation=force_transformation)
             except Exception as e:
                 logger.error(f"Error processing URL {url}: {e}")
                 return {"url": url, "status": "error", "error": str(e)}
@@ -798,7 +854,7 @@ class ScrapingOrchestrator:
         async def process_single_asin(asin):
             try:
                 url = f"https://www.amazon.com/dp/{asin}"
-                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products)
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products, force_import=force_import, force_transformation=force_transformation)
             except Exception as e:
                 logger.error(f"Error processing ASIN {asin}: {e}")
                 return {"asin": asin, "status": "error", "error": str(e)}
