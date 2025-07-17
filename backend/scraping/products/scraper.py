@@ -4,6 +4,7 @@ import time
 import asyncio
 from datetime import datetime
 from typing import Dict, Any, Optional, Tuple, List
+from pathlib import Path
 import logging
 
 from ..common.amazon_api import (
@@ -13,6 +14,10 @@ from ..common.amazon_api import (
     get_product_details_rainforest
 )
 from ..common.url_parser import parse_amazon_url
+
+# Database imports for skip logic
+from core.database.connection import get_supabase_service_client
+from core.repositories.amazon_product_repository import AmazonProductRepository
 
 logger = logging.getLogger(__name__)
 
@@ -33,13 +38,14 @@ class ProductScraper:
         os.makedirs(self.amazon_dir, exist_ok=True)
         os.makedirs(self.home_depot_dir, exist_ok=True)
     
-    async def scrape_from_url(self, url: str, max_products: int = 100) -> Dict[str, Any]:
+    async def scrape_from_url(self, url: str, max_products: int = 100, force_scrape: bool = False) -> Dict[str, Any]:
         """
         从URL爬取商品数据
         
         Args:
             url: Amazon URL
             max_products: 最大商品数量
+            force_scrape: 是否强制爬取，忽略现有文件和数据库记录
             
         Returns:
             Dict[str, Any]: 爬取结果
@@ -54,6 +60,25 @@ class ProductScraper:
             # 2. 发现类别信息
             category_info = await self._discover_category_info(scraping_params)
             logger.info(f"类别发现结果: {category_info}")
+            
+            # 2.5. 检查是否需要跳过 (除非强制爬取)
+            if not force_scrape:
+                skip_action = await self._determine_product_skip_action(
+                    category_info, max_products, scraping_params.get("url_type"), url
+                )
+                
+                if skip_action["should_skip"]:
+                    logger.info(f"⏩ 跳过商品爬取: {skip_action['reason']}")
+                    return {
+                        "status": "skipped",
+                        "reason": skip_action["reason"],
+                        "products_scraped": skip_action.get("existing_products_count", 0),
+                        "file_path": skip_action.get("existing_file_path"),
+                        "category_info": category_info,
+                        "products": skip_action.get("existing_products", [])
+                    }
+            else:
+                logger.info(f"🔥 强制爬取商品 (忽略现有文件和数据库记录)")
             
             # 3. 爬取商品
             product_count, scraped_products, filepath = await self._scrape_products(
@@ -255,12 +280,21 @@ class ProductScraper:
             try:
                 logger.info(f"  获取第 {page} 页...")
                 
-                page_data = await asyncio.to_thread(
-                    get_products_from_category_rainforest,
-                    category_id=category_id,
-                    page=page,
-                    amazon_domain=amazon_domain
-                )
+                if url_type == "product":
+                    page_data = await asyncio.to_thread(
+                        get_products_from_category_rainforest,
+                        category_id=category_id,
+                        page=page,
+                        amazon_domain=amazon_domain
+                    )
+                else:
+                    # For non-product URLs, use bestsellers API with URL
+                    bestseller_url = f"https://www.amazon.com/Best-Sellers/zgbs/hi/{category_id}"
+                    page_data = await asyncio.to_thread(
+                        get_bestsellers_rainforest,
+                        url=bestseller_url,
+                        page=page
+                    )
                 
                 # 保存第一页的元数据
                 if page == 1:
@@ -269,15 +303,39 @@ class ProductScraper:
                         "request_parameters": page_data.get("request_parameters", {}),
                         "request_metadata": page_data.get("request_metadata", {}),
                         "search_information": page_data.get("search_information", {}),
-                        "category_information": page_data.get("category_information", {}),
                         "pagination": page_data.get("pagination", {})
                     }
+                    
+                    # Add appropriate category information based on URL type
+                    if url_type == "product":
+                        first_page_metadata["category_information"] = page_data.get("category_information", {})
+                    else:
+                        # For bestsellers, include the rich category hierarchy information
+                        first_page_metadata["bestsellers_info"] = page_data.get("bestsellers_info", {})
+                        # Also store current and parent category info at top level for consistency
+                        bestsellers_info = page_data.get("bestsellers_info", {})
+                        first_page_metadata["category_information"] = {
+                            "title": bestsellers_info.get("title"),
+                            "current_category": bestsellers_info.get("current_category"),
+                            "parent_category": bestsellers_info.get("parent_category"),
+                            "child_categories": bestsellers_info.get("child_categories", [])
+                        }
                 
-                if not page_data or 'category_results' not in page_data:
+                if not page_data:
                     logger.info(f"  第 {page} 页没有返回数据，停止")
                     break
                 
-                page_products = page_data.get('category_results', [])
+                if url_type == "product":
+                    if 'category_results' not in page_data:
+                        logger.info(f"  第 {page} 页没有category_results数据，停止")
+                        break
+                    page_products = page_data.get('category_results', [])
+                else:
+                    if 'bestsellers' not in page_data:
+                        logger.info(f"  第 {page} 页没有bestsellers数据，停止")
+                        break
+                    page_products = page_data.get('bestsellers', [])
+                
                 if not page_products:
                     logger.info(f"  第 {page} 页没有找到商品，停止")
                     break
@@ -290,6 +348,16 @@ class ProductScraper:
                     all_basic_products = all_basic_products[:target_count]
                     logger.info(f"  达到目标数量 {target_count}，停止")
                     break
+                
+                # For bestsellers, check if we should continue to next page
+                if url_type != "product":
+                    pagination = page_data.get('pagination', {})
+                    current_page = pagination.get('current_page', 1)
+                    total_pages = pagination.get('total_pages', 1)
+                    
+                    if current_page >= total_pages:
+                        logger.info(f"  已到达最后一页 ({current_page}/{total_pages})，停止")
+                        break
                 
                 page += 1
                 time.sleep(1)  # 避免请求过于频繁
@@ -313,10 +381,24 @@ class ProductScraper:
             try:
                 logger.info(f"  获取产品详情 {i+1}/{len(all_basic_products)}: {asin}")
                 
-                # 获取详细产品信息
-                product_details = await asyncio.to_thread(
-                    get_product_details_rainforest, asin, amazon_domain
-                )
+                # 获取详细产品信息，增加重试机制
+                product_details = None
+                max_retries = 3
+                
+                for retry_count in range(max_retries + 1):
+                    try:
+                        product_details = await asyncio.to_thread(
+                            get_product_details_rainforest, asin, amazon_domain
+                        )
+                        if product_details:
+                            break
+                    except Exception as retry_error:
+                        if retry_count < max_retries:
+                            logger.warning(f"    重试 {retry_count + 1}/{max_retries}: {retry_error}")
+                            await asyncio.sleep(2*(retry_count+1))  # 等待1秒后重试
+                        else:
+                            logger.error(f"    所有重试均失败: {retry_error}")
+                            raise retry_error
                 
                 if product_details and 'product' in product_details:
                     detailed_product = product_details['product']
@@ -331,10 +413,16 @@ class ProductScraper:
                         'position': basic_product.get('position'),
                         'recent_sales': basic_product.get('recent_sales', detailed_product.get('recent_sales')),
                         
+                        # 保留bestseller特有字段
+                        'rank': basic_product.get('rank'),
+                        'current_category': basic_product.get('current_category'),
+                        'parent_category': basic_product.get('parent_category'),
+                        
                         # 添加数据来源标记
                         '_data_enriched': True,
                         '_enrichment_timestamp': datetime.now().isoformat(),
                         '_category_api_data': basic_product,
+                        '_data_source': 'bestsellers' if url_type != 'product' else 'category',
                     }
                     
                     enriched_products.append(merged_product)
@@ -344,21 +432,31 @@ class ProductScraper:
                     logger.info(f"    ✅ 品牌: {brand}")
                     
                 else:
-                    logger.warning(f"    ❌ 无法获取详细信息，使用基础信息")
+                    error_msg = "API returned empty response" if product_details else "API call failed"
+                    logger.warning(f"    ❌ 无法获取详细信息，使用基础信息 - {error_msg}")
                     # 即使没有详细信息，也保留基础信息
                     basic_product['_data_enriched'] = False
-                    basic_product['_enrichment_error'] = 'Failed to fetch product details'
+                    basic_product['_enrichment_error'] = error_msg
+                    basic_product['_data_source'] = 'bestsellers' if url_type != 'product' else 'category'
                     enriched_products.append(basic_product)
                 
-                # 控制请求频率
+                # 控制请求频率，避免API速率限制
                 if i < len(all_basic_products) - 1:  # 不是最后一个
-                    time.sleep(0.5)  # 500ms间隔
+                    await asyncio.sleep(1.0)  # 增加到1秒间隔，减少API压力
                     
             except Exception as e:
-                logger.error(f"    ❌ 获取产品详情失败: {str(e)}")
+                error_details = str(e)
+                if "timeout" in error_details.lower():
+                    logger.error(f"    ❌ API超时: {error_details}")
+                elif "rate" in error_details.lower() or "limit" in error_details.lower():
+                    logger.error(f"    ❌ API速率限制: {error_details}")
+                else:
+                    logger.error(f"    ❌ 获取产品详情失败: {error_details}")
+                
                 # 发生错误时仍保留基础信息
                 basic_product['_data_enriched'] = False
-                basic_product['_enrichment_error'] = str(e)
+                basic_product['_enrichment_error'] = error_details
+                basic_product['_data_source'] = 'bestsellers' if url_type != 'product' else 'category'
                 enriched_products.append(basic_product)
         
         logger.info(f"类别爬取完成: 共处理 {len(enriched_products)} 个商品")
@@ -401,6 +499,128 @@ class ProductScraper:
                 logger.info(f"已添加原始ASIN {original_asin} 到列表: {filepath}")
         
         return len(scraped_products), scraped_products, filepath
+    
+    async def _determine_product_skip_action(self, category_info: Dict, max_products: int, 
+                                           url_type: str, original_url: str) -> Dict[str, Any]:
+        """
+        确定是否应该跳过商品爬取，基于本地文件和数据库检查
+        
+        Args:
+            category_info: 类别信息
+            max_products: 目标商品数量
+            url_type: URL类型
+            original_url: 原始URL
+            
+        Returns:
+            Dict[str, Any]: 跳过决策结果
+        """
+        try:
+            # 1. 检查本地文件
+            local_skip_action = await self._check_existing_product_files(
+                category_info, max_products, url_type, original_url
+            )
+            
+            if local_skip_action["should_skip"]:
+                return local_skip_action
+            
+            # 2. 检查数据库
+            db_skip_action = await self._check_existing_products_in_db(
+                category_info, max_products, url_type, original_url
+            )
+            
+            if db_skip_action["should_skip"]:
+                return db_skip_action
+            
+            # 3. 不跳过
+            return {"should_skip": False, "reason": "no_existing_data"}
+            
+        except Exception as e:
+            logger.error(f"检查产品跳过条件时出错: {e}")
+            return {"should_skip": False, "reason": f"error_checking_skip_conditions: {e}"}
+    
+    async def _check_existing_product_files(self, category_info: Dict, max_products: int,
+                                          url_type: str, original_url: str) -> Dict[str, Any]:
+        """检查本地产品文件"""
+        try:
+            category_id = category_info.get("category_id")
+            search_term = category_info.get("search_term")
+            
+            # 构建可能的文件名模式
+            patterns = []
+            if search_term:
+                search_term_clean = search_term.replace(" ", "_").lower()
+                patterns.append(f"amazon_search_{search_term_clean}_cat_{category_id}_all_products_*.json")
+            elif url_type in ['category', 'bestsellers', 'product']:
+                patterns.append(f"amazon_{url_type}_cat_{category_id}_*.json")
+            
+            # 检查文件是否存在
+            amazon_dir_path = Path(self.amazon_dir)
+            for pattern in patterns:
+                for file_path in amazon_dir_path.glob(pattern):
+                    if file_path.is_file():
+                        # 检查文件中的产品数量
+                        try:
+                            with open(file_path, 'r', encoding='utf-8') as f:
+                                data = json.load(f)
+                            
+                            existing_products = []
+                            if 'search_results' in data:
+                                existing_products = data['search_results']
+                            elif 'category_results' in data:
+                                existing_products = data['category_results']
+                            
+                            if len(existing_products) >= max_products:
+                                logger.info(f"找到现有产品文件: {file_path.name}, {len(existing_products)} 个产品")
+                                return {
+                                    "should_skip": True,
+                                    "reason": f"sufficient_local_products ({len(existing_products)} >= {max_products})",
+                                    "existing_products_count": len(existing_products),
+                                    "existing_file_path": str(file_path),
+                                    "existing_products": existing_products
+                                }
+                                
+                        except (json.JSONDecodeError, KeyError) as e:
+                            logger.warning(f"无法读取产品文件 {file_path}: {e}")
+                            continue
+            
+            return {"should_skip": False, "reason": "no_sufficient_local_files"}
+            
+        except Exception as e:
+            logger.error(f"检查本地产品文件时出错: {e}")
+            return {"should_skip": False, "reason": f"error_checking_local_files: {e}"}
+    
+    async def _check_existing_products_in_db(self, category_info: Dict, max_products: int,
+                                           url_type: str, original_url: str) -> Dict[str, Any]:
+        """检查数据库中的现有产品"""
+        try:
+            # 获取数据库客户端
+            supabase_client = get_supabase_service_client()
+            product_repository = AmazonProductRepository(supabase_client)
+            
+            # 检查最近24小时内是否有足够的产品批次
+            recent_check = await product_repository.check_recent_products_by_criteria(
+                category_metadata=category_info,
+                min_products=max_products,
+                hours_threshold=24
+            )
+            
+            if recent_check.get("has_recent_products"):
+                logger.info(f"数据库中找到最近的符合条件的产品批次: {recent_check.get('reason')}")
+                return {
+                    "should_skip": True,
+                    "reason": f"recent_db_batch ({recent_check.get('reason')})",
+                    "existing_products_count": recent_check.get("product_count", 0),
+                    "batch_id": recent_check.get("batch_id")
+                }
+            else:
+                return {
+                    "should_skip": False,
+                    "reason": f"no_recent_db_products ({recent_check.get('reason')})"
+                }
+            
+        except Exception as e:
+            logger.error(f"检查数据库产品时出错: {e}")
+            return {"should_skip": False, "reason": f"error_checking_database: {e}"}
     
     async def _save_search_results(self, search_term: str, category_id: str, products: List[Dict],
                                   metadata: Dict, pages_scraped: int, target_count: int) -> str:

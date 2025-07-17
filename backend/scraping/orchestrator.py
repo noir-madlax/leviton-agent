@@ -54,7 +54,8 @@ class ScrapingOrchestrator:
     
     async def process_url(self, url: str, max_products: int = 100, 
                          scrape_reviews: bool = True, 
-                         review_coverage_months: int = 6, max_reviews: int = 30) -> Dict[str, Any]:
+                         review_coverage_months: int = 6, max_reviews: int = 30,
+                         force_scrape_reviews: bool = False, force_scrape_products: bool = False) -> Dict[str, Any]:
         """
         完整的URL处理流程：爬取商品 → 导入商品 → 爬取评论 → 导入评论
         
@@ -64,6 +65,8 @@ class ScrapingOrchestrator:
             scrape_reviews: 是否爬取评论
             review_coverage_months: 评论覆盖月数
             max_reviews: 最大评论数量限制
+            force_scrape_reviews: 是否强制爬取评论，忽略现有文件和数据库记录
+            force_scrape_products: 是否强制爬取商品，忽略现有文件和数据库记录
             
         Returns:
             Dict[str, Any]: 处理结果
@@ -95,7 +98,7 @@ class ScrapingOrchestrator:
             logger.info("Phase 1: 开始爬取商品...")
             phase1_start = time.time()
             
-            product_scrape_result = await self.product_scraper.scrape_from_url(url, max_products)
+            product_scrape_result = await self.product_scraper.scrape_from_url(url, max_products, force_scrape=force_scrape_products)
             result["products_phase"]["scraping"] = product_scrape_result
             
             phase1_duration = time.time() - phase1_start
@@ -185,7 +188,7 @@ class ScrapingOrchestrator:
                 phase3_start = time.time()
                 
                 review_scrape_result = await self.review_scraper.scrape_for_batch(
-                    batch_id, review_coverage_months, force_scrape=False, max_reviews=max_reviews
+                    batch_id, review_coverage_months, force_scrape=force_scrape_reviews, max_reviews=max_reviews
                 )
                 result["reviews_phase"]["scraping"] = review_scrape_result
                 
@@ -268,7 +271,7 @@ class ScrapingOrchestrator:
             result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
             return result
     
-    async def scrape_products_only(self, url: str, max_products: int = 100) -> Dict[str, Any]:
+    async def scrape_products_only(self, url: str, max_products: int = 100, force_scrape: bool = False) -> Dict[str, Any]:
         """
         仅爬取和导入商品（不包括评论）
         
@@ -283,7 +286,7 @@ class ScrapingOrchestrator:
         
         try:
             # 爬取商品
-            scrape_result = await self.product_scraper.scrape_from_url(url, max_products)
+            scrape_result = await self.product_scraper.scrape_from_url(url, max_products, force_scrape=force_scrape)
             
             if scrape_result.get("status") != "success":
                 return {
@@ -758,7 +761,7 @@ class ScrapingOrchestrator:
                 'categories_inserted': 0
             } 
 
-    async def process_products_list(self, product_urls=None, asins=None, max_reviews=30, review_start_date=None, review_end_date=None, import_to_db=True, use_async=True, retry_failed=True, log_level="INFO", **kwargs):
+    async def process_products_list(self, product_urls=None, asins=None, max_reviews=30, review_start_date=None, review_end_date=None, import_to_db=True, use_async=True, retry_failed=True, log_level="INFO", force_reviews=False, force_products=False, **kwargs):
         """
         Process a list of product URLs or ASINs: scrape product info and reviews for each, aggregate results.
         Args:
@@ -786,7 +789,7 @@ class ScrapingOrchestrator:
         # Helper to process a single product URL
         async def process_single_url(url):
             try:
-                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews)
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products)
             except Exception as e:
                 logger.error(f"Error processing URL {url}: {e}")
                 return {"url": url, "status": "error", "error": str(e)}
@@ -795,7 +798,7 @@ class ScrapingOrchestrator:
         async def process_single_asin(asin):
             try:
                 url = f"https://www.amazon.com/dp/{asin}"
-                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews)
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews, force_scrape_reviews=force_reviews, force_scrape_products=force_products)
             except Exception as e:
                 logger.error(f"Error processing ASIN {asin}: {e}")
                 return {"asin": asin, "status": "error", "error": str(e)}

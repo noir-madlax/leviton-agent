@@ -10,6 +10,7 @@ import logging
 
 from core.database.connection import get_supabase_service_client
 from core.repositories.amazon_product_repository import AmazonProductRepository
+from core.repositories.amazon_review_repository import AmazonReviewRepository
 
 logger = logging.getLogger(__name__)
 
@@ -460,7 +461,24 @@ class ReviewScraper:
         return MIN_REVIEW_YEAR <= year <= MAX_REVIEW_YEAR
     
     async def _determine_skip_action(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
-        """确定是否应该跳过ASIN的爬取，基于max_reviews需求"""
+        """确定是否应该跳过ASIN的爬取，基于本地文件和数据库检查"""
+        # 1. 检查本地文件
+        local_skip_action = await self._check_existing_review_files(asin, review_coverage_months, max_reviews)
+        
+        if local_skip_action["should_skip"]:
+            return local_skip_action
+        
+        # 2. 检查数据库
+        db_skip_action = await self._check_existing_reviews_in_db(asin, review_coverage_months, max_reviews)
+        
+        if db_skip_action["should_skip"]:
+            return db_skip_action
+        
+        # 3. 不跳过
+        return {"should_skip": False, "reason": "no_existing_data"}
+    
+    async def _check_existing_review_files(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
+        """检查本地评论文件"""
         existing_files = await self._get_existing_review_files(asin)
         
         if not existing_files:
@@ -531,6 +549,37 @@ class ReviewScraper:
                 "should_skip": False,
                 "reason": f"insufficient_coverage ({all_reviews_analysis['latest_reviews_months']:.1f} months)"
             }
+    
+    async def _check_existing_reviews_in_db(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
+        """检查数据库中的现有评论"""
+        try:
+            # 获取数据库客户端
+            supabase_client = get_supabase_service_client()
+            review_repository = AmazonReviewRepository(supabase_client)
+            
+            # 使用新的repository方法检查最近的评论
+            recent_check = await review_repository.check_recent_reviews_by_asin(
+                asin=asin,
+                min_reviews=max_reviews,
+                coverage_months=review_coverage_months,
+                hours_threshold=24  # 检查最近24小时内的导入
+            )
+            
+            if recent_check.get("has_sufficient_reviews"):
+                logger.info(f"数据库中找到足够的最近评论: ASIN {asin}, {recent_check.get('reason')}")
+                return {
+                    "should_skip": True,
+                    "reason": f"recent_db_reviews ({recent_check.get('reason')})"
+                }
+            else:
+                return {
+                    "should_skip": False,
+                    "reason": f"insufficient_recent_db_reviews ({recent_check.get('reason')})"
+                }
+                
+        except Exception as e:
+            logger.error(f"检查数据库评论时出错: {e}")
+            return {"should_skip": False, "reason": f"error_checking_database: {e}"}
     
     async def _analyze_all_existing_reviews(self, filepaths: List[str], review_coverage_months: int) -> Dict[str, Any]:
         """分析所有现有评论文件"""

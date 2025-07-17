@@ -130,7 +130,12 @@ def parse_args():
     parser.add_argument(
         "--force-reviews",
         action="store_true",
-        help="Force review scraping, ignoring existing review files."
+        help="Force review scraping, ignoring existing review files and database records."
+    )
+    parser.add_argument(
+        "--force-products",
+        action="store_true",
+        help="Force product scraping, ignoring existing product files and database records."
     )
     return parser.parse_args()
 
@@ -160,6 +165,8 @@ def main():
             "use_async": args.use_async,
             "retry_failed": args.retry_failed,
             "log_level": args.log_level,
+            "force_reviews": args.force_reviews,
+            "force_products": args.force_products,
         }
         # Use asyncio for orchestrator methods
         result = asyncio.run(orchestrator.process_url(
@@ -167,7 +174,9 @@ def main():
             max_products=args.max_products, 
             scrape_reviews=True,
             review_coverage_months=6,  # Use normal coverage requirement
-            max_reviews=args.max_reviews
+            max_reviews=args.max_reviews,
+            force_scrape_reviews=args.force_reviews,
+            force_scrape_products=args.force_products
         ))
         # Print completion message for test detection
         status = result.get("overall_status", "")
@@ -187,6 +196,8 @@ def main():
             "use_async": args.use_async,
             "retry_failed": args.retry_failed,
             "log_level": args.log_level,
+            "force_reviews": args.force_reviews,
+            "force_products": args.force_products,
         }
         result = asyncio.run(orchestrator.process_products_list(**orchestrator_kwargs))
         # Print completion message for test detection

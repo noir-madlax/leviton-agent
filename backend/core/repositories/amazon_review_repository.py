@@ -1,5 +1,6 @@
 from typing import List, Dict, Any, Optional
 import logging
+from datetime import datetime
 from supabase import Client
 
 logger = logging.getLogger(__name__)
@@ -293,8 +294,6 @@ class AmazonReviewRepository:
         Returns:
             List[Dict[str, Any]]: 转换后的评论数据列表
         """
-        from datetime import datetime
-        
         try:
             reviews_for_db = []
             
@@ -353,4 +352,144 @@ class AmazonReviewRepository:
             
         except Exception as e:
             logger.error(f"转换评论数据时出错: {e}")
-            return [] 
+            return []
+    
+    async def check_recent_reviews_by_asin(self, asin: str, min_reviews: int = 30, 
+                                         coverage_months: int = 6, 
+                                         hours_threshold: int = 24) -> Dict[str, Any]:
+        """
+        检查ASIN最近是否有足够的评论
+        
+        Args:
+            asin: 产品ASIN
+            min_reviews: 最小评论数量
+            coverage_months: 覆盖月数要求
+            hours_threshold: 时间阈值（小时）
+            
+        Returns:
+            Dict[str, Any]: 检查结果
+        """
+        try:
+            from datetime import timedelta
+            
+            # 计算时间阈值
+            threshold_time = datetime.now() - timedelta(hours=hours_threshold)
+            threshold_iso = threshold_time.isoformat()
+            
+            # 查询该ASIN最近导入的评论
+            result = self.supabase_client.table(self.table_name)\
+                .select("*")\
+                .eq("asin", asin)\
+                .gte('scrape_date', threshold_iso)\
+                .order('scrape_date', desc=True)\
+                .execute()
+            
+            if not result.data:
+                return {
+                    "has_sufficient_reviews": False,
+                    "reason": "no_recent_reviews",
+                    "threshold_hours": hours_threshold,
+                    "existing_count": 0
+                }
+            
+            reviews = result.data
+            review_count = len(reviews)
+            
+            # 检查数量是否足够
+            if review_count < min_reviews:
+                return {
+                    "has_sufficient_reviews": False,
+                    "reason": f"insufficient_count ({review_count} < {min_reviews})",
+                    "threshold_hours": hours_threshold,
+                    "existing_count": review_count
+                }
+            
+            # 检查覆盖时间范围
+            latest_review_date = None
+            valid_dates_count = 0
+            
+            for review in reviews:
+                review_date_str = review.get("review_date", "")
+                if self._is_valid_review_date_simple(review_date_str):
+                    parsed_date = self._parse_review_date_simple(review_date_str)
+                    if parsed_date:
+                        valid_dates_count += 1
+                        if not latest_review_date or parsed_date > latest_review_date:
+                            latest_review_date = parsed_date
+            
+            if not latest_review_date:
+                return {
+                    "has_sufficient_reviews": False,
+                    "reason": "no_valid_review_dates",
+                    "threshold_hours": hours_threshold,
+                    "existing_count": review_count
+                }
+            
+            # 计算覆盖月数
+            now = datetime.now()
+            days_difference = (now - latest_review_date).days
+            latest_reviews_months = days_difference / 30  # 简化为30天一个月
+            
+            if latest_reviews_months <= coverage_months:
+                logger.info(f"ASIN {asin} 有足够的最近评论: {review_count} 条, 最新评论 {latest_reviews_months:.1f} 个月前")
+                return {
+                    "has_sufficient_reviews": True,
+                    "reason": f"sufficient_recent_reviews ({review_count} reviews, {latest_reviews_months:.1f} months)",
+                    "threshold_hours": hours_threshold,
+                    "existing_count": review_count,
+                    "latest_review_months": latest_reviews_months,
+                    "valid_dates_count": valid_dates_count
+                }
+            else:
+                return {
+                    "has_sufficient_reviews": False,
+                    "reason": f"reviews_too_old ({latest_reviews_months:.1f} months > {coverage_months})",
+                    "threshold_hours": hours_threshold,
+                    "existing_count": review_count,
+                    "latest_review_months": latest_reviews_months
+                }
+                
+        except Exception as e:
+            logger.error(f"检查ASIN {asin} 最近评论时出错: {e}")
+            return {
+                "has_sufficient_reviews": False,
+                "reason": f"error_checking_recent_reviews: {e}",
+                "threshold_hours": hours_threshold,
+                "existing_count": 0
+            }
+    
+    def _is_valid_review_date_simple(self, date_str: str) -> bool:
+        """简化版的评论日期验证"""
+        if not date_str or not isinstance(date_str, str):
+            return False
+        return len(date_str.strip()) > 0
+    
+    def _parse_review_date_simple(self, date_str: str) -> Optional[datetime]:
+        """简化版的评论日期解析"""
+        try:
+            # 尝试多种日期格式
+            formats = [
+                "%Y-%m-%d",
+                "%m/%d/%Y", 
+                "%d/%m/%Y",
+                "%B %d, %Y",
+                "%b %d, %Y",
+                "%Y-%m-%d %H:%M:%S",
+                "%Y-%m-%dT%H:%M:%S"
+            ]
+            
+            date_str = date_str.strip()
+            
+            for fmt in formats:
+                try:
+                    return datetime.strptime(date_str, fmt)
+                except ValueError:
+                    continue
+            
+            # 如果所有格式都失败，返回None
+            logger.debug(f"无法解析日期格式: {date_str}")
+            return None
+            
+        except Exception as e:
+            logger.debug(f"解析评论日期时出错: {e}")
+            return None 

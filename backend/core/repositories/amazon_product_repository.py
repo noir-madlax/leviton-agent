@@ -144,4 +144,77 @@ class AmazonProductRepository:
                 
         except Exception as e:
             logger.error(f"获取产品批次记录时出错: {e}")
-            return [] 
+            return []
+    
+    async def check_recent_products_by_criteria(self, category_metadata: dict = None, 
+                                              min_products: int = 100, 
+                                              hours_threshold: int = 24) -> Dict[str, Any]:
+        """
+        检查最近是否有符合条件的产品批次
+        
+        Args:
+            category_metadata: 类别元数据字典，用于匹配
+            min_products: 最小产品数量
+            hours_threshold: 时间阈值（小时）
+            
+        Returns:
+            Dict[str, Any]: 检查结果
+        """
+        try:
+            from datetime import datetime, timedelta
+            
+            # 计算时间阈值
+            threshold_time = datetime.now() - timedelta(hours=hours_threshold)
+            threshold_iso = threshold_time.isoformat()
+            
+            # 查询最近的批次 - 按created_at降序排列
+            # 注意：这里假设amazon_products表有created_at字段
+            # 如果没有，可能需要从scraping_requests表关联查询
+            
+            result = self.client.table('amazon_products')\
+                .select("batch_id, created_at")\
+                .gte('created_at', threshold_iso)\
+                .order('created_at', desc=True)\
+                .execute()
+            
+            if not result.data:
+                return {
+                    "has_recent_products": False,
+                    "reason": "no_recent_batches",
+                    "threshold_hours": hours_threshold
+                }
+            
+            # 统计每个批次的产品数量
+            batch_counts = {}
+            for product in result.data:
+                batch_id = product['batch_id']
+                if batch_id not in batch_counts:
+                    batch_counts[batch_id] = 0
+                batch_counts[batch_id] += 1
+            
+            # 检查是否有批次满足最小产品数量要求
+            for batch_id, count in batch_counts.items():
+                if count >= min_products:
+                    logger.info(f"找到最近的符合条件的产品批次: batch_id={batch_id}, 产品数={count}")
+                    return {
+                        "has_recent_products": True,
+                        "batch_id": batch_id,
+                        "product_count": count,
+                        "threshold_hours": hours_threshold,
+                        "reason": f"recent_batch_sufficient ({count} >= {min_products})"
+                    }
+            
+            return {
+                "has_recent_products": False,
+                "reason": f"recent_batches_insufficient (max: {max(batch_counts.values()) if batch_counts else 0} < {min_products})",
+                "threshold_hours": hours_threshold,
+                "batch_counts": batch_counts
+            }
+                
+        except Exception as e:
+            logger.error(f"检查最近产品批次时出错: {e}")
+            return {
+                "has_recent_products": False,
+                "reason": f"error_checking_recent_products: {e}",
+                "threshold_hours": hours_threshold
+            } 

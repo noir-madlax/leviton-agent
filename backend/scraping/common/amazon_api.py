@@ -282,7 +282,7 @@ def get_product_details_rainforest(asin: str, amazon_domain: str = "amazon.com")
         print(f"Error fetching product details: {e}")
         return None
 
-def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: str = None, url: str = None):
+def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: str = None, url: str = None, page: int = 1):
     """
     Get Amazon bestsellers using Rainforest API.
     
@@ -290,6 +290,7 @@ def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: s
         amazon_domain (str): Amazon domain (default: amazon.com)
         category_id (str): Category ID (optional if url provided)
         url (str): Direct URL to bestsellers page (optional if category_id provided)
+        page (int): Page number (default: 1)
     
     Returns:
         dict: Bestsellers data from Rainforest API
@@ -303,13 +304,15 @@ def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: s
     params = {
         "api_key": RAINFOREST_API_KEY,
         "type": "bestsellers",
-        "amazon_domain": amazon_domain
+        "page": page
     }
     
     if category_id:
         params["category_id"] = category_id
+        params["amazon_domain"] = amazon_domain
     if url:
         params["url"] = url
+        # Don't use amazon_domain with url parameter
     
     try:
         response = requests.get(RAINFOREST_API_URL, params=params, timeout=30)
