@@ -332,7 +332,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           📊 Customer satisfaction overview
           {selectedAsins.length > 0 && (
             <span className="ml-2 text-sm font-normal text-gray-600">
-              ({selectedAsins.length} custom products selected)
+              ({selectedAsins.length} Focal products selected)
             </span>
           )}
         </h2>

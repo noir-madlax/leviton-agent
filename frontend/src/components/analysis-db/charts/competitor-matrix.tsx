@@ -140,7 +140,7 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToPr
           <thead>
             <tr className="bg-gray-50">
               <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[250px]">
-                Category Dimensions
+                Dimensions
               </th>
               {orderedProducts.map(productAsin => {
                 const productName = asinToProductNameMap?.[productAsin] || productAsin

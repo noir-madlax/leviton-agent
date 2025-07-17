@@ -445,7 +445,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         >
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">正在更新数据...</div>
+              <div className="text-gray-500">Loading...</div>
             </div>
           ) : (
             <CategoryPositiveFeedbackBar 
@@ -474,7 +474,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         >
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">正在更新数据...</div>
+              <div className="text-gray-500">Loading...</div>
             </div>
           ) : (
             <CategoryUseCaseBar 
@@ -505,7 +505,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         >
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">正在更新数据...</div>
+              <div className="text-gray-500">Loading...</div>
             </div>
           ) : (
             <CategoryNegativeUseCaseBar 

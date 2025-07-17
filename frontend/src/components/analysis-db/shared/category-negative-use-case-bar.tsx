@@ -1,13 +1,12 @@
 'use client';
 
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/analysis';
-import { getSatisfactionColor, getSatisfactionLevel, SatisfactionLegend } from '@/components/analysis-db/lib/satisfaction-colors';
+import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
+import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart';
 
 interface CategoryNegativeUseCaseBarProps {
   data: UseCaseFeedback[];
@@ -159,53 +158,14 @@ export default function CategoryNegativeUseCaseBar({
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <div className="h-[450px] w-full">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={chartData}
-              margin={{
-                top: 20,
-                right: 30,
-                left: 20,
-                bottom: 80,
-              }}
-            >
-              <CartesianGrid strokeDasharray="3 3" />
-              <XAxis 
-                dataKey="displayName" 
-                angle={-45}
-                textAnchor="end"
-                height={80}
-                interval={0}
-                fontSize={12}
-              />
-              <YAxis 
-                label={{ value: 'Number of mentions', angle: -90, position: 'insideLeft' }}
-                fontSize={12}
-              />
-              <Tooltip content={<CustomTooltip />} />
-              <Legend />
-              <Bar 
-                dataKey="positiveCount" 
-                stackId="mentions"
-                fill="#22c55e"
-                name="Positive Mentions"
-                radius={[0, 0, 0, 0]}
-                style={{ cursor: 'pointer' }}
-                onClick={handleBarClick}
-              />
-              <Bar 
-                dataKey="negativeCount" 
-                stackId="mentions"
-                fill="#ef4444"
-                name="Negative Mentions"
-                radius={[4, 4, 0, 0]}
-                style={{ cursor: 'pointer' }}
-                onClick={handleBarClick}
-              />
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+        <UnifiedStackedBarChart
+          data={chartData}
+          xAxisDataKey="displayName"
+          positiveDataKey="positiveCount"
+          negativeDataKey="negativeCount"
+          onBarClick={handleBarClick}
+          CustomTooltip={CustomTooltip}
+        />
         
         {/* 图表下方的统计信息 */}
         <div className="mt-4 pt-4 border-t">
