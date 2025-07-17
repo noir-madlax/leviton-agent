@@ -427,14 +427,16 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
                   {allCategories.map((category, index) => {
                     const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
                     const segmentName = category.category
-                    
+                    // 通过价格数组的长度计算产品数量
+                    const productCount = priceType === 'unit' ? category.unitPrices.length : category.skuPrices.length
+
                     return (
                       <tr key={index} className="border-b hover:bg-gray-50">
                         <td className="py-2 flex items-center">
                           <span className="mr-2">{getSegmentEmoji(segmentName)}</span>
                           <span className="font-medium">{segmentName}</span>
                         </td>
-                        <td className="text-right py-2">{category.productCount}</td>
+                        <td className="text-right py-2">{productCount}</td>
                         <td className="text-right py-2">
                           <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
                         </td>
