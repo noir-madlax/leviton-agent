@@ -104,11 +104,9 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         const projectData = await databaseService.getProject(projectId)
         setProject(projectData)
         
-        // 同时预加载项目概览数据和筛选器数据
-        await Promise.all([
-          loadProjectOverview(),
-          preloadFilterOptions(projectId)
-        ])
+        // 先加载项目概览数据，然后使用该数据预加载筛选器选项
+        const overview = await loadProjectOverview()
+        await preloadFilterOptions(projectId, overview)
       } catch (error) {
         console.error('Failed to load project:', error)
       } finally {
@@ -121,7 +119,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
   // 预加载项目概览数据
   const loadProjectOverview = async (filters?: ProjectFilters) => {
-    if (!projectId) return
+    if (!projectId) return null
 
     setOverviewLoading(true)
     try {
@@ -133,7 +131,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         filters?.segments || [],
         filters?.extend_fields || {}
       )
-      
+
       // 确保包含所有必需字段，提供默认值
       const completeOverview: ProjectOverviewData = {
         ...overview,
@@ -144,11 +142,13 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           extend_fields: (overview.distributions as any).extend_fields || {}
         }
       };
-      
+
       setProjectOverviewData(completeOverview)
+      return overview // 返回原始的 overview 数据供 preloadFilterOptions 使用
     } catch (error) {
       console.error('Failed to load project overview:', error)
       setProjectOverviewData(null)
+      return null
     } finally {
       setOverviewLoading(false)
     }

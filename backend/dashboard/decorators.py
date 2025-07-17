@@ -22,8 +22,9 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
         return service.get_data()
     """
     def decorator(func: Callable):
-        @wraps(func)
-        async def wrapper(request: DashboardRequest, **kwargs) -> Any:
+        # 创建一个新的函数，只接受request参数
+        # 这样FastAPI在解析路由时不会看到service参数
+        async def endpoint_handler(request: DashboardRequest) -> Any:
             try:
                 # 特殊处理 CompetitorAnalysisService，它需要额外的参数
                 from .models import CompetitorAnalysisRequest
@@ -40,7 +41,7 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
                     service.set_project_filters(filters)
 
                 # 调用原始函数，传入service和request
-                return await func(service=service, request=request, **kwargs)
+                return await func(service=service, request=request)
 
             except ValueError as e:
                 logger.error(f"Validation error in {func.__name__}: {e}")
@@ -49,7 +50,11 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
                 logger.error(f"Error in {func.__name__}: {e}", exc_info=True)
                 raise HTTPException(status_code=500, detail=str(e))
 
-        return wrapper
+        # 复制原始函数的签名和文档
+        endpoint_handler.__name__ = func.__name__
+        endpoint_handler.__doc__ = func.__doc__
+
+        return endpoint_handler
     return decorator
 
 
@@ -60,8 +65,7 @@ def with_service_and_options(service_class: Type[BaseDashboardService]):
     适用于需要处理查询选项（如分页、排序）的接口
     """
     def decorator(func: Callable):
-        @wraps(func)
-        async def wrapper(request: DashboardRequest, **kwargs) -> Any:
+        async def endpoint_handler(request: DashboardRequest) -> Any:
             try:
                 # 创建服务实例
                 service = service_class(request.project_id)
@@ -75,7 +79,7 @@ def with_service_and_options(service_class: Type[BaseDashboardService]):
                 options = request.get_query_options()
                 
                 # 调用原始函数
-                return await func(service=service, request=request, options=options, **kwargs)
+                return await func(service=service, request=request, options=options)
                 
             except ValueError as e:
                 logger.error(f"Validation error in {func.__name__}: {e}")
@@ -84,7 +88,11 @@ def with_service_and_options(service_class: Type[BaseDashboardService]):
                 logger.error(f"Error in {func.__name__}: {e}", exc_info=True)
                 raise HTTPException(status_code=500, detail=str(e))
         
-        return wrapper
+        # 复制原始函数的签名和文档
+        endpoint_handler.__name__ = func.__name__
+        endpoint_handler.__doc__ = func.__doc__
+
+        return endpoint_handler
     return decorator
 
 

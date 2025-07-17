@@ -129,7 +129,7 @@ export function useFilterCache(projectId: string): FilterCacheHookReturn {
 }
 
 // 预加载指定项目的筛选器数据
-export function preloadFilterOptions(projectId: string): Promise<void> {
+export function preloadFilterOptions(projectId: string, existingOverview?: any): Promise<void> {
   return new Promise((resolve, reject) => {
     const loadOptions = async () => {
       try {
@@ -145,9 +145,10 @@ export function preloadFilterOptions(projectId: string): Promise<void> {
         }
 
         console.log(`Preloading filter options for project ${projectId}`)
-        
+
+        // 如果已经有 overview 数据，就不需要重新获取
         const [overview, segments] = await Promise.all([
-          databaseService.getProjectOverview(projectId),
+          existingOverview || databaseService.getProjectOverview(projectId),
           databaseService.getProjectSegments(projectId)
         ])
 
