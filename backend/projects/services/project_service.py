@@ -166,34 +166,133 @@ class ProjectService:
     async def _process_project_segmentation(self, project_id: str, product_ids: List[str], category: str):
         """处理项目的产品细分（异步）"""
         try:
-            # 1. 创建segment运行，关联项目
+            # 🔥 NEW: Group products by category paths first
+            category_groups = await self._group_products_by_category_path(product_ids, category)
+            
+            if not category_groups:
+                logger.warning(f"No category groups found for project {project_id}")
+                await self._fail_segmentation(project_id, "No products found in categories")
+                return
+            
+            logger.info(f"Found {len(category_groups)} category groups for project {project_id}")
+            
+            # Process each category group separately
             segmentation_service = self._get_segmentation_service()
             
-            # 注意：这里的product_ids实际上是ASIN字符串，需要从platform_id获取实际的product_id
-            # 暂时使用ASIN字符串，后续在segmentation service中处理
-            segmentation_request = StartSegmentationRequest(
-                product_ids=product_ids,  # 保持字符串格式，在segmentation中处理
-                product_category=category,
-                project_id=project_id
-            )
+            for full_category_path, group_product_ids in category_groups.items():
+                # Extract terminal category from full path for segmentation service
+                terminal_category = self._extract_terminal_category(full_category_path)
+                
+                logger.info(f"Processing category group '{full_category_path}' -> terminal category '{terminal_category}' with {len(group_product_ids)} products")
+                
+                # TODO: product_ids are actually ASIN strings, need to get actual product_id from platform_id
+                # TODO: Temporarily using ASIN strings, to be handled later in segmentation service
+                # Create separate segmentation run for each category group
+                segmentation_request = StartSegmentationRequest(
+                    product_ids=group_product_ids,  # Keep string format, handle in segmentation service
+                    product_category=terminal_category,  # Use terminal category as input to segmentation
+                    project_id=f"{project_id}_{terminal_category.replace(' ', '_').lower()}"  # Unique project ID per group
+                )
+                
+                run_id = await segmentation_service.create_run(segmentation_request)
+                
+                # TODO: Update project association with segmentation run_id
+                # TODO: Set segmentation status to "processing" when starting
+                
+                # Execute segmentation for this category group
+                await segmentation_service.execute_run(run_id)
             
-            run_id = await segmentation_service.create_run(segmentation_request)
-            
-            # 2. 更新项目关联
-            self.supabase.table('projects').update({
-                "segmentation_run_id": run_id,
-                "segmentation_status": "processing"
-            }).eq('id', project_id).execute()
-            
-            # 3. 执行细分处理
-            await segmentation_service.execute_run(run_id)
-            
-            # 4. 更新完成状态和耗时
+            # Update completion status after all groups are processed
             await self._complete_segmentation(project_id)
             
         except Exception as e:
             logger.error(f"Error in project segmentation: {e}")
             await self._fail_segmentation(project_id, str(e))
+
+    async def _group_products_by_category_path(self, product_ids: List[str], category: str) -> Dict[str, List[str]]:
+        """
+        Group products by their full category path (categories_flat).
+        Terminal category is extracted later for segmentation service input.
+        
+        Returns:
+            Dict mapping full_category_path -> List[product_ids]
+        """
+        try:
+            if not product_ids:
+                return {}
+            
+            # Use direct SQL implementation to group by category path
+            return await self._group_products_by_category_path_sql(product_ids)
+            
+        except Exception as e:
+            logger.error(f"Error grouping products by category path: {e}")
+            # Ultimate fallback: return all products as one group
+            return {"Unknown Category": product_ids}
+    
+    async def _group_products_by_category_path_sql(self, product_ids: List[str]) -> Dict[str, List[str]]:
+        """
+        Fallback SQL implementation for category path grouping.
+        
+        Groups products by their full categories_flat path, extracting terminal category
+        for segmentation service input.
+        
+        TODO: Consider caching category groupings for performance optimization
+        TODO: Add validation for malformed category paths
+        TODO: product_ids are actually ASIN strings, need to get actual product_id from platform_id
+        TODO: Temporarily using ASIN strings, to be handled later in segmentation service
+        """
+        try:
+            if not product_ids:
+                return {}
+            
+            # Get product category data from Supabase
+            result = self.supabase.table('product_wide_table').select(
+                'platform_id, categories_flat'
+            ).in_('platform_id', product_ids).execute()
+            
+            if not result.data:
+                return {}
+            
+            # Group products by full categories_flat path
+            groups = {}
+            for row in result.data:
+                categories_flat = row.get('categories_flat')
+                if not categories_flat or not categories_flat.strip():
+                    continue
+                    
+                # Use full categories_flat as the group key
+                full_category_path = categories_flat.strip()
+                if full_category_path not in groups:
+                    groups[full_category_path] = []
+                groups[full_category_path].append(row['platform_id'])
+            
+            logger.info(f"Grouped {len(product_ids)} products into {len(groups)} category groups")
+            return groups
+            
+        except Exception as e:
+            logger.error(f"Error in SQL terminal category grouping: {e}")
+            # Ultimate fallback: return all products as one group
+            return {"Unknown Category": product_ids}
+
+    def _extract_terminal_category(self, full_category_path: str) -> str:
+        """
+        Extract terminal category from full category path.
+        
+        Args:
+            full_category_path: Full category path like "Home > Electronics > Switches > Dimmer Switches"
+            
+        Returns:
+            Terminal category name (last non-empty part after splitting by '>')
+        """
+        if not full_category_path or not full_category_path.strip():
+            return "Unknown Category"
+        
+        # Split by '>' and get the last non-empty part
+        parts = [part.strip() for part in full_category_path.split('>') if part.strip()]
+        if parts:
+            return parts[-1]
+        
+        return "Unknown Category"
 
     def _get_segmentation_service(self) -> DatabaseProductSegmentationService:
         """获取产品细分服务实例"""
