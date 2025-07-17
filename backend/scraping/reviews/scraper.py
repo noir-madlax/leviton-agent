@@ -59,13 +59,15 @@ class ReviewScraper:
     def __init__(self):
         self.review_dir = AMAZON_REVIEW_DIR
     
-    async def scrape_for_batch(self, batch_id: int, review_coverage_months: int = DEFAULT_COVERAGE_MONTHS) -> Dict[str, Any]:
+    async def scrape_for_batch(self, batch_id: int, review_coverage_months: int = DEFAULT_COVERAGE_MONTHS, force_scrape: bool = False, max_reviews: int = 30) -> Dict[str, Any]:
         """
         为特定批次的产品爬取评论数据
         
         Args:
             batch_id: 批次ID (对应scraping_requests.id)
             review_coverage_months: 评论覆盖月数
+            force_scrape: 是否强制爬取，忽略现有文件
+            max_reviews: 最大评论数量限制
             
         Returns:
             Dict[str, Any]: 爬取结果
@@ -131,7 +133,7 @@ class ReviewScraper:
             
             # 为所有ASIN创建爬取任务
             tasks = [
-                self._scrape_product_reviews(asin, semaphore, review_coverage_months, batch_id) 
+                self._scrape_product_reviews(asin, semaphore, review_coverage_months, batch_id, force_scrape, max_reviews) 
                 for asin in asins
             ]
             
@@ -235,7 +237,7 @@ class ReviewScraper:
             }
     
     async def _scrape_product_reviews(self, asin: str, semaphore: asyncio.Semaphore, 
-                                     review_coverage_months: int, batch_id: Optional[int] = None) -> Dict[str, Any]:
+                                     review_coverage_months: int, batch_id: Optional[int] = None, force_scrape: bool = False, max_reviews: int = 30) -> Dict[str, Any]:
         """
         爬取单个产品的评论
         
@@ -244,6 +246,8 @@ class ReviewScraper:
             semaphore: 并发控制信号量
             review_coverage_months: 评论覆盖月数
             batch_id: 批次ID（可选）
+            force_scrape: 是否强制爬取，忽略现有文件
+            max_reviews: 最大评论数量限制
             
         Returns:
             Dict[str, Any]: 爬取结果
@@ -252,21 +256,24 @@ class ReviewScraper:
             try:
                 logger.info(f"🎯 开始处理ASIN: {asin}")
                 
-                # 检查是否需要跳过
-                skip_action = await self._determine_skip_action(asin, review_coverage_months)
-                
-                if skip_action["should_skip"]:
-                    logger.info(f"⏩ 跳过ASIN {asin}: {skip_action['reason']}")
-                    return {
-                        "status": "skipped",
-                        "asin": asin,
-                        "reason": skip_action["reason"],
-                        "message": f"ASIN {asin} 被跳过: {skip_action['reason']}"
-                    }
-                
+                # 检查是否需要跳过 (除非强制爬取)
+                if not force_scrape:
+                    skip_action = await self._determine_skip_action(asin, review_coverage_months, max_reviews)
+                    
+                    if skip_action["should_skip"]:
+                        logger.info(f"⏩ 跳过ASIN {asin}: {skip_action['reason']}")
+                        return {
+                            "status": "skipped",
+                            "asin": asin,
+                            "reason": skip_action["reason"],
+                            "message": f"ASIN {asin} 被跳过: {skip_action['reason']}"
+                        }
+                else:
+                    logger.info(f"🔥 强制爬取ASIN {asin} (忽略现有文件)")
+
                 # 爬取评论
                 logger.info(f"🔍 爬取ASIN {asin} 的评论...")
-                reviews_data = await asyncio.to_thread(self._get_amazon_reviews_apify, asin)
+                reviews_data = await asyncio.to_thread(self._get_amazon_reviews_apify, asin, max_reviews)
                 
                 if not reviews_data.get("success"):
                     error_msg = reviews_data.get("error", "未知错误")
@@ -293,7 +300,8 @@ class ReviewScraper:
                     max_pages_info={
                         "max_pages_requested": reviews_data.get("max_pages_requested", MAX_PAGES_PER_ASIN),
                         "max_pages_reached": reviews_data.get("max_pages_reached", 0)
-                    }
+                    },
+                    max_reviews=max_reviews
                 )
                 
                 reviews_count = reviews_data.get("total_reviews", 0)
@@ -332,7 +340,7 @@ class ReviewScraper:
                 existing_files.append(os.path.join(AMAZON_REVIEW_DIR, filename))
         return existing_files
     
-    def _get_amazon_reviews_apify(self, asin: str) -> Dict[str, Any]:
+    def _get_amazon_reviews_apify(self, asin: str, max_reviews: int) -> Dict[str, Any]:
         """使用Apify API获取Amazon产品评论"""
         if not APIFY_API_TOKEN:
             raise ValueError("APIFY_API_TOKEN environment variable is required")
@@ -343,6 +351,7 @@ class ReviewScraper:
         # 创建输入配置
         config = AMAZON_REVIEW_CONFIG.copy()
         config["asin"] = asin
+        config["maxReviews"] = max_reviews # 添加maxReviews参数
         
         run_input = {"input": [config]}
         
@@ -450,32 +459,87 @@ class ReviewScraper:
         year = parsed_date.year
         return MIN_REVIEW_YEAR <= year <= MAX_REVIEW_YEAR
     
-    async def _determine_skip_action(self, asin: str, review_coverage_months: int) -> Dict[str, Any]:
-        """确定是否应该跳过ASIN的爬取"""
+    async def _determine_skip_action(self, asin: str, review_coverage_months: int, max_reviews: int) -> Dict[str, Any]:
+        """确定是否应该跳过ASIN的爬取，基于max_reviews需求"""
         existing_files = await self._get_existing_review_files(asin)
         
         if not existing_files:
             return {"should_skip": False, "reason": "no_existing_files"}
         
-        # 分析现有评论
+        # 分析现有评论文件
+        total_existing_reviews = 0
+        max_previous_max_reviews = 0
+        most_recent_scrape_date = None
+        
+        for filepath in existing_files:
+            try:
+                async with aiofiles.open(filepath, 'r', encoding='utf-8') as f:
+                    content = await f.read()
+                    data = json.loads(content)
+                
+                # 获取评论数量
+                reviews = data.get("reviews", [])
+                total_existing_reviews += len(reviews)
+                
+                # 获取之前请求的max_reviews
+                scrape_context = data.get("scrape_context", {})
+                previous_max_reviews = scrape_context.get("max_reviews_requested", 0)
+                max_previous_max_reviews = max(max_previous_max_reviews, previous_max_reviews)
+                
+                # 获取爬取时间
+                scrape_timestamp = scrape_context.get("scraped_at")
+                if scrape_timestamp:
+                    try:
+                        scrape_date = datetime.fromisoformat(scrape_timestamp.replace('Z', '+00:00'))
+                        if not most_recent_scrape_date or scrape_date > most_recent_scrape_date:
+                            most_recent_scrape_date = scrape_date
+                    except ValueError:
+                        pass
+                
+            except Exception as e:
+                logger.warning(f"读取文件时出错 {filepath}: {e}")
+                continue
+        
+        # 检查是否需要更多评论
+        max_existing_requirement = max(max_previous_max_reviews, total_existing_reviews)
+        
+        if max_reviews > max_existing_requirement:
+            return {
+                "should_skip": False, 
+                "reason": f"need_more_reviews (requesting {max_reviews}, have {total_existing_reviews}, prev_max {max_previous_max_reviews})"
+            }
+        
+        # 检查是否有最近的爬取（避免频繁重复爬取）
+        if most_recent_scrape_date:
+            days_since_scrape = (datetime.now() - most_recent_scrape_date).days
+            if days_since_scrape <= SCRAPE_RECENCY_DAYS:
+                return {
+                    "should_skip": True,
+                    "reason": f"sufficient_recent_reviews ({total_existing_reviews} reviews, max_req {max_reviews}, scraped {days_since_scrape}d ago)"
+                }
+        
+        # 如果没有最近的爬取信息，检查覆盖要求
         all_reviews_analysis = await self._analyze_all_existing_reviews(existing_files, review_coverage_months)
         
         if all_reviews_analysis["meets_coverage_requirement"]:
-            if all_reviews_analysis["recent_scrape_exists"]:
-                return {
-                    "should_skip": True, 
-                    "reason": f"recent_sufficient_coverage ({all_reviews_analysis['latest_reviews_months']:.1f} months, {all_reviews_analysis['total_reviews']} reviews)"
-                }
-            else:
-                return {"should_skip": False, "reason": "coverage_sufficient_but_old_scrape"}
+            return {
+                "should_skip": True,
+                "reason": f"sufficient_coverage ({total_existing_reviews} reviews, {all_reviews_analysis['latest_reviews_months']:.1f} months)"
+            }
         else:
-            return {"should_skip": False, "reason": f"insufficient_coverage ({all_reviews_analysis['latest_reviews_months']:.1f} months)"}
+            return {
+                "should_skip": False,
+                "reason": f"insufficient_coverage ({all_reviews_analysis['latest_reviews_months']:.1f} months)"
+            }
     
     async def _analyze_all_existing_reviews(self, filepaths: List[str], review_coverage_months: int) -> Dict[str, Any]:
         """分析所有现有评论文件"""
         all_reviews = []
         most_recent_scrape_date = None
         file_scrape_dates = []
+        # Use default if review_coverage_months is None
+        if review_coverage_months is None:
+            review_coverage_months = DEFAULT_COVERAGE_MONTHS
         
         for filepath in filepaths:
             try:
@@ -573,7 +637,7 @@ class ReviewScraper:
     
     async def _save_reviews_with_context(self, asin: str, reviews_data: Dict[str, Any], 
                                        filepath: str, earliest_reviews_fetched: bool = False,
-                                       max_pages_info: Optional[Dict[str, Any]] = None) -> None:
+                                       max_pages_info: Optional[Dict[str, Any]] = None, max_reviews: int = 30) -> None:
         """保存评论数据"""
         # 构建完整的数据结构
         complete_data = {
@@ -584,6 +648,7 @@ class ReviewScraper:
                 "total_reviews_fetched": reviews_data.get("total_reviews", 0),
                 "earliest_reviews_fetched": earliest_reviews_fetched,
                 "max_pages_info": max_pages_info or {},
+                "max_reviews_requested": max_reviews, # 添加max_reviews_requested
                 "configuration": {
                     "max_pages_per_asin": MAX_PAGES_PER_ASIN,
                     "reviews_per_page_default": DEFAULT_REVIEWS_PER_PAGE,

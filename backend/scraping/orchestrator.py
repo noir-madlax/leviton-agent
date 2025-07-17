@@ -11,7 +11,6 @@ from .reviews.importer import ReviewImporter
 from .common.quality_analyzer import DataQualityAnalyzer
 
 # 类别修复功能
-import sys
 import importlib.util
 from pathlib import Path
 
@@ -55,7 +54,7 @@ class ScrapingOrchestrator:
     
     async def process_url(self, url: str, max_products: int = 100, 
                          scrape_reviews: bool = True, 
-                         review_coverage_months: int = 6) -> Dict[str, Any]:
+                         review_coverage_months: int = 6, max_reviews: int = 30) -> Dict[str, Any]:
         """
         完整的URL处理流程：爬取商品 → 导入商品 → 爬取评论 → 导入评论
         
@@ -64,6 +63,7 @@ class ScrapingOrchestrator:
             max_products: 最大商品数量
             scrape_reviews: 是否爬取评论
             review_coverage_months: 评论覆盖月数
+            max_reviews: 最大评论数量限制
             
         Returns:
             Dict[str, Any]: 处理结果
@@ -185,7 +185,7 @@ class ScrapingOrchestrator:
                 phase3_start = time.time()
                 
                 review_scrape_result = await self.review_scraper.scrape_for_batch(
-                    batch_id, review_coverage_months
+                    batch_id, review_coverage_months, force_scrape=False, max_reviews=max_reviews
                 )
                 result["reviews_phase"]["scraping"] = review_scrape_result
                 
@@ -330,22 +330,24 @@ class ScrapingOrchestrator:
                 "error": str(e)
             }
     
-    async def scrape_reviews_only(self, batch_id: int, review_coverage_months: int = 6) -> Dict[str, Any]:
+    async def scrape_reviews_only(self, batch_id: int, review_coverage_months: int = 6, force_scrape: bool = False, max_reviews: int = 30) -> Dict[str, Any]:
         """
         仅爬取和导入评论（商品已存在）
         
         Args:
             batch_id: 批次ID
             review_coverage_months: 评论覆盖月数
+            force_scrape: 是否强制爬取，忽略现有文件
+            max_reviews: 最大评论数量限制
             
         Returns:
             Dict[str, Any]: 处理结果
         """
-        logger.info(f"开始仅处理评论: batch_id={batch_id}")
+        logger.info(f"开始仅处理评论: batch_id={batch_id}, force_scrape={force_scrape}, max_reviews={max_reviews}")
         
         try:
             # 爬取评论
-            scrape_result = await self.review_scraper.scrape_for_batch(batch_id, review_coverage_months)
+            scrape_result = await self.review_scraper.scrape_for_batch(batch_id, review_coverage_months, force_scrape=force_scrape, max_reviews=max_reviews)
             
             if scrape_result.get("status") not in ["success", "partial_success"]:
                 # 需要获取request_id来更新状态
@@ -496,7 +498,7 @@ class ScrapingOrchestrator:
             logger.info(f"📋 数据转换配置: skip_existing={config.skip_existing}, validate_calculations={config.validate_calculations}, dry_run={config.dry_run}")
             
             transformation_service = DataTransformationService(config)
-            logger.info(f"✅ 数据转换服务初始化成功")
+            logger.info("✅ 数据转换服务初始化成功")
             
             result = await transformation_service.transform_batch_for_orchestrator(batch_id, request_id)
             
@@ -551,7 +553,7 @@ class ScrapingOrchestrator:
             logger.info(f"📋 评论转换配置: skip_existing={config.skip_existing}, validate_calculations={config.validate_calculations}, dry_run={config.dry_run}")
             
             review_transformation_service = ReviewTransformationService(config)
-            logger.info(f"✅ 评论转换服务初始化成功")
+            logger.info("✅ 评论转换服务初始化成功")
             
             result = await review_transformation_service.transform_batch_for_orchestrator(batch_id, request_id)
             
@@ -755,3 +757,64 @@ class ScrapingOrchestrator:
                 'categories_extracted': 0,
                 'categories_inserted': 0
             } 
+
+    async def process_products_list(self, product_urls=None, asins=None, max_reviews=30, review_start_date=None, review_end_date=None, import_to_db=True, use_async=True, retry_failed=True, log_level="INFO", **kwargs):
+        """
+        Process a list of product URLs or ASINs: scrape product info and reviews for each, aggregate results.
+        Args:
+            product_urls (list[str]): List of Amazon product URLs.
+            asins (list[str]): List of Amazon product ASINs.
+            max_reviews (int): Maximum number of reviews per product.
+            review_start_date (str): Only scrape reviews after this date (YYYY-MM-DD).
+            review_end_date (str): Only scrape reviews before this date (YYYY-MM-DD).
+            import_to_db (bool): Whether to import data to DB after scraping.
+            use_async (bool): Whether to use asyncio for concurrent scraping.
+            retry_failed (bool): Whether to retry failed scraping tasks.
+            log_level (str): Logging level.
+            **kwargs: Other parameters (ignored).
+        Returns:
+            dict: Aggregated results for all products.
+        """
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.setLevel(log_level)
+
+        results = []
+        errors = []
+        tasks = []
+
+        # Helper to process a single product URL
+        async def process_single_url(url):
+            try:
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews)
+            except Exception as e:
+                logger.error(f"Error processing URL {url}: {e}")
+                return {"url": url, "status": "error", "error": str(e)}
+
+        # Helper to process a single ASIN
+        async def process_single_asin(asin):
+            try:
+                url = f"https://www.amazon.com/dp/{asin}"
+                return await self.process_url(url, max_products=1, scrape_reviews=True, review_coverage_months=6, max_reviews=max_reviews)
+            except Exception as e:
+                logger.error(f"Error processing ASIN {asin}: {e}")
+                return {"asin": asin, "status": "error", "error": str(e)}
+
+        if product_urls:
+            if use_async:
+                tasks = [process_single_url(url) for url in product_urls]
+                results = await asyncio.gather(*tasks, return_exceptions=False)
+            else:
+                for url in product_urls:
+                    results.append(await process_single_url(url))
+        elif asins:
+            if use_async:
+                tasks = [process_single_asin(asin) for asin in asins]
+                results = await asyncio.gather(*tasks, return_exceptions=False)
+            else:
+                for asin in asins:
+                    results.append(await process_single_asin(asin))
+        else:
+            raise ValueError("Either product_urls or asins must be provided.")
+
+        return {"results": results, "errors": errors, "count": len(results)} 
