@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import { ExtendFieldDefinition } from '../types/filters'
+import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS } from '../types/filters'
 
 export interface ProductData {
   platform_id: string
@@ -1276,6 +1276,32 @@ export class DatabaseService {
     } catch (error) {
       console.error('Error fetching project extend fields:', error)
       return []
+    }
+  }
+
+  // 🔑 Get project filter defaults
+  async getProjectFilterDefaults(projectId: string): Promise<ProjectFilters> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      console.log(`🔍 [DatabaseService] Fetching filter defaults for project: ${projectId}`)
+      
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-defaults`)
+      
+      if (!response.ok) {
+        console.warn(`⚠️ [DatabaseService] Failed to fetch filter defaults: HTTP ${response.status}`)
+        return DEFAULT_FILTERS
+      }
+      
+      const result = await response.json()
+      const filters = result.filters || DEFAULT_FILTERS
+      
+      console.log(`✅ [DatabaseService] Retrieved filter defaults:`, filters)
+      return filters
+      
+    } catch (error) {
+      console.error('❌ [DatabaseService] Error fetching project filter defaults:', error)
+      return DEFAULT_FILTERS
     }
   }
 }

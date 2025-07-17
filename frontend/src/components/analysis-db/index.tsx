@@ -707,13 +707,21 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   useEffect(() => {
     if (initialProjectId) {
       console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
+      console.log(`🔍 Dashboard initial filters:`, appliedFilters);
       setSelectedProjectId(initialProjectId);
-      // 初始化时不传filters，使用默认值
-      loadSpecificData('brandAnalysis', initialProjectId, undefined, undefined, undefined, undefined, false);
+      
+      // 🔧 FIX: 初始化时也使用传入的筛选器，而不是默认空值
+      const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
+      const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined;
+      const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
+      const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
+      
+      console.log(`🚀 Loading initial brand analysis with filters:`, { categoryFilters, brandFilters, segmentFilters, extendFields });
+      loadSpecificData('brandAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
-  }, [initialProjectId, loadSpecificData])
+  }, [initialProjectId, appliedFilters, loadSpecificData])
 
   // 监听filters变化，重新加载数据
   useEffect(() => {

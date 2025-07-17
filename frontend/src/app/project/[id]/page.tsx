@@ -101,16 +101,28 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
       try {
         setLoading(true)
         const databaseService = new DatabaseService()
-        const projectData = await databaseService.getProject(projectId)
-        setProject(projectData)
         
-        // 同时预加载项目概览数据和筛选器数据
-        await Promise.all([
-          loadProjectOverview(),
+        console.log(`🚀 [ProjectPage] Starting project load for ID: ${projectId}`)
+        
+        // 1. 先获取筛选器默认配置
+        console.log(`🔍 [ProjectPage] Fetching filter defaults...`)
+        const defaultFilters = await databaseService.getProjectFilterDefaults(projectId)
+        setFilters(defaultFilters) // 设置到状态中
+        console.log(`✅ [ProjectPage] Applied default filters:`, defaultFilters)
+        
+        // 2. 并行加载项目信息和使用配置好的筛选器加载概览数据
+        console.log(`📊 [ProjectPage] Loading project data and overview with filters...`)
+        const [projectData] = await Promise.all([
+          databaseService.getProject(projectId),
+          loadProjectOverview(defaultFilters), // 使用配置好的筛选器
           preloadFilterOptions(projectId)
         ])
+        
+        setProject(projectData)
+        console.log(`🎉 [ProjectPage] Project loaded successfully with pre-applied filters`)
+        
       } catch (error) {
-        console.error('Failed to load project:', error)
+        console.error('❌ [ProjectPage] Failed to load project:', error)
       } finally {
         setLoading(false)
       }

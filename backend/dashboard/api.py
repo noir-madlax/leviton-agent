@@ -6,6 +6,7 @@ from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Query, Depends
 
 from core.models.filters import ProjectFilters, FilterOptions
+from core.database.connection import get_supabase_client
 from dashboard.services.filter_service import FilterService
 from .models import (
     BrandAnalysisResponse, BrandCategoryData,
@@ -725,4 +726,51 @@ async def get_available_asins(
         
     except Exception as e:
         logger.error(f"Error getting available ASINs: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail=str(e)) 
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@router.get("/projects/{project_id}/filter-defaults")
+async def get_project_filter_defaults(project_id: str):
+    """获取项目的默认筛选器配置
+    
+    从 project_filter_defaults 表中读取项目级别的筛选器配置，
+    并转换为前端可以直接使用的 ProjectFilters 格式。
+    """
+    try:
+        supabase = get_supabase_client()
+        
+        # 查询项目级筛选器配置
+        response = supabase.table('project_filter_defaults').select('*').eq(
+            'project_id', project_id
+        ).eq('level', 'project').execute()
+        
+        # 构建 ProjectFilters 对象
+        filters = ProjectFilters.empty()
+        
+        for record in response.data:
+            filter_name = record['filter_name']
+            filter_values = record['filter_values']
+            
+            if filter_name == 'categories':
+                filters.categories = filter_values or []
+            elif filter_name == 'brands':
+                filters.brands = filter_values or []
+            elif filter_name == 'segments':
+                filters.segments = filter_values or []
+            elif filter_name == 'extend_fields':
+                filters.extend_fields = filter_values or {}
+        
+        logger.info(f"Retrieved filter defaults for project {project_id}: {filters.to_dict()}")
+        
+        return {
+            "filters": filters.to_dict(),
+            "project_id": project_id
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting project filter defaults: {e}", exc_info=True)
+        # 返回空的筛选器配置而不是抛出异常，保证系统可用性
+        return {
+            "filters": ProjectFilters.empty().to_dict(),
+            "project_id": project_id
+        } 
