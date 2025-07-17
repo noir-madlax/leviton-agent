@@ -128,6 +128,50 @@ export interface ProductAnalysisData {
   }>
 }
 
+// 通用的 Dashboard API 调用函数
+async function callDashboardAPI(endpoint: string, projectId: string, options: {
+  categoryFilters?: string[]
+  packagingTypeFilters?: string[]
+  segmentFilters?: string[]
+  extendFields?: Record<string, any>
+  selectedAsins?: string[]
+  metricType?: string
+} = {}) {
+  const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+  const requestBody: any = {
+    project_id: projectId,
+    filters: {
+      ...(options.categoryFilters && options.categoryFilters.length > 0 && { categories: options.categoryFilters }),
+      ...(options.packagingTypeFilters && options.packagingTypeFilters.length > 0 && { brands: options.packagingTypeFilters }),
+      ...(options.segmentFilters && options.segmentFilters.length > 0 && { segments: options.segmentFilters }),
+      ...(options.extendFields && Object.keys(options.extendFields).length > 0 && { extend_fields: options.extendFields })
+    }
+  }
+
+  // 添加特殊参数
+  if (options.selectedAsins) {
+    requestBody.selected_asins = options.selectedAsins
+  }
+  if (options.metricType) {
+    requestBody.metric_type = options.metricType
+  }
+
+  const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/${endpoint}`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(requestBody)
+  })
+
+  if (!response.ok) {
+    throw new Error(`API call failed: ${response.status}`)
+  }
+
+  return await response.json()
+}
+
 export class DatabaseService {
   
   // 🔑 Get top 10 brand category revenue data with project filtering via backend API
@@ -136,45 +180,17 @@ export class DatabaseService {
     segmentNames: string[]
     segmentColors: string[]
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      const result = await response.json()
+      const result = await callDashboardAPI('brand-analysis', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
       return {
         brandCategoryRevenue: result.data || [],           // Backend returns top 10 brands in 'data' field
-        segmentNames: result.segmentNames || [],           // Backend returns 'segmentNames' field 
+        segmentNames: result.segmentNames || [],           // Backend returns 'segmentNames' field
         segmentColors: result.segmentColors || []          // Backend returns 'segmentColors' field
       }
     } catch (error) {
@@ -201,42 +217,13 @@ export class DatabaseService {
     segmentNames: string[]
     segmentColors: string[]
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/product-analysis?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      const result = await response.json()
+      const result = await callDashboardAPI('product-analysis', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
       
       // If backend returns enhanced format, use it directly
       if (result.segmentNames && result.segmentColors && result.segmentSummary) {
@@ -328,42 +315,15 @@ export class DatabaseService {
       }>
     }>
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/pricing-analysis?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      return await response.json()
+      const result = await callDashboardAPI('pricing-analysis', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching pricing analysis data by project:', error)
       throw error
@@ -394,42 +354,15 @@ export class DatabaseService {
       }>
     }
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/market-insights?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      return await response.json()
+      const result = await callDashboardAPI('market-insights', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching market insights data by project:', error)
       throw error
@@ -479,47 +412,16 @@ export class DatabaseService {
       salesRevenue: number
     }>
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/package-preference?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add brand filters if provided
-      if (brandFilters && brandFilters.length > 0) {
-        const brandsParam = brandFilters.join(',')
-        url += `&brands=${encodeURIComponent(brandsParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      // Add metric type if provided
-      if (metricType) {
-        url += `&metric_type=${encodeURIComponent(metricType)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      return await response.json()
+      const result = await callDashboardAPI('package-preference', projectId, {
+        categoryFilters,
+        packagingTypeFilters: brandFilters,
+        segmentFilters,
+        extendFields,
+        metricType
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching package preference data by project:', error)
       throw error
@@ -572,42 +474,15 @@ export class DatabaseService {
     }>
     totalUseMentions: number
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/review-insights?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      return await response.json()
+      const result = await callDashboardAPI('review-insights', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching review insights data by project:', error)
       throw error
@@ -639,47 +514,16 @@ export class DatabaseService {
       }>
     }
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/competitor-analysis?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add selected ASINs if provided
-      if (selectedAsins) {
-        url += `&selected_asins=${encodeURIComponent(selectedAsins)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      return await response.json()
+      const result = await callDashboardAPI('competitor-analysis', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields,
+        selectedAsins: selectedAsins ? selectedAsins.split(',') : undefined
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching competitor analysis data by project:', error)
       throw error
@@ -699,42 +543,14 @@ export class DatabaseService {
     date: string
     brand: string
   }>>> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      let url = `${API_BASE_URL}/api/v1/dashboard/all-review-data?project_id=${projectId}`
-      
-      // Add category filters if provided
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      // Add packaging type filters if provided
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      // Add segment filters if provided
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      // Add extend fields if provided
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-      
-      const result = await response.json()
+      const result = await callDashboardAPI('all-review-data', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
       return result.data || {}
     } catch (error) {
       console.error('Error fetching all review data by project:', error)
@@ -1097,41 +913,17 @@ export class DatabaseService {
       total_products: number
     }
   }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
     try {
-      // Build URL with all filters
-      let url = `${API_BASE_URL}/api/v1/dashboard/project-overview?project_id=${projectId}`
-      
-      if (categoryFilters && categoryFilters.length > 0) {
-        const categoriesParam = categoryFilters.join(',')
-        url += `&categories=${encodeURIComponent(categoriesParam)}`
-      }
-      
-      if (packagingTypeFilters && packagingTypeFilters.length > 0) {
-        const packagingTypesParam = packagingTypeFilters.join(',')
-        url += `&brands=${encodeURIComponent(packagingTypesParam)}`
-      }
-      
-      if (segmentFilters && segmentFilters.length > 0) {
-        const segmentsParam = segmentFilters.join(',')
-        url += `&segments=${encodeURIComponent(segmentsParam)}`
-      }
-      
-      if (extendFields && Object.keys(extendFields).length > 0) {
-        const extendFieldsParam = JSON.stringify(extendFields)
-        url += `&extend_fields=${encodeURIComponent(extendFieldsParam)}`
-      }
-      
       console.log('🔍 [PROJECT OVERVIEW] Fetching with filters:', { categoryFilters, packagingTypeFilters, segmentFilters, extendFields })
-      
-      const response = await fetch(url)
-      
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`)
-      }
-      
-      return await response.json()
+
+      const result = await callDashboardAPI('project-overview', projectId, {
+        categoryFilters,
+        packagingTypeFilters,
+        segmentFilters,
+        extendFields
+      })
+
+      return result
     } catch (error) {
       console.error('Error fetching project overview:', error)
       throw error

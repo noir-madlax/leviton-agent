@@ -2,7 +2,52 @@
 
 from typing import List, Optional, Dict, Any, Literal
 from pydantic import BaseModel, Field
+from core.models.filters import ProjectFilters
 
+
+# ==================== 请求模型 ====================
+
+class DashboardQueryOptions(BaseModel):
+    """Dashboard 查询选项"""
+    limit: Optional[int] = Field(default=None, description="限制返回结果数量")
+    offset: Optional[int] = Field(default=0, description="分页偏移量")
+    sort_by: Optional[str] = Field(default=None, description="排序字段")
+    sort_order: Optional[Literal["asc", "desc"]] = Field(default="desc", description="排序方向")
+
+
+class DashboardRequest(BaseModel):
+    """Dashboard API 统一请求模型"""
+    project_id: str = Field(..., description="项目ID，用于ASIN过滤")
+    filters: Optional[Dict[str, Any]] = Field(default=None, description="过滤条件JSON对象")
+    options: Optional[DashboardQueryOptions] = Field(default=None, description="查询选项")
+
+    def get_project_filters(self) -> ProjectFilters:
+        """将请求中的 filters 转换为 ProjectFilters 对象"""
+        if not self.filters:
+            return ProjectFilters.empty()
+        return ProjectFilters.from_dict(self.filters)
+
+    def get_query_options(self) -> DashboardQueryOptions:
+        """获取查询选项，如果为空则返回默认选项"""
+        return self.options or DashboardQueryOptions()
+
+
+class SpecificAnalysisRequest(DashboardRequest):
+    """特定分析请求模型，可以扩展特殊参数"""
+    pass
+
+
+class PackagePreferenceRequest(DashboardRequest):
+    """包装偏好分析请求模型"""
+    metric_type: Optional[str] = Field(default=None, description="指标类型")
+
+
+class CompetitorAnalysisRequest(DashboardRequest):
+    """竞争对手分析请求模型"""
+    selected_asins: Optional[List[str]] = Field(default=None, description="选中的ASIN列表")
+
+
+# ==================== 响应模型 ====================
 
 class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.
