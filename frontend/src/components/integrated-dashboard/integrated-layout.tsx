@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { ArrowLeft, Filter, MessageSquare, ChevronRight, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -99,7 +99,7 @@ export function IntegratedLayout({
   onToggleFilter
 }: IntegratedLayoutProps) {
   const { activeTab, setActiveTab } = useDashboardNavigation()
-  const [isChartPanelExpanded, setIsChartPanelExpanded] = useState(false) // 默认为折叠状态
+  const [isChartPanelExpanded, setIsChartPanelExpanded] = useState(true) // 默认展开状态
   
   // 获取缓存loading状态
   const { isLoading: cacheLoading } = useFilterCache(projectId)
@@ -113,6 +113,18 @@ export function IntegratedLayout({
     addDynamicChart,
     selectChart
   } = useChartManagement()
+
+  // 设置默认选中市场分析chart card
+  useEffect(() => {
+    if (!activeChartId && allCards.length > 0) {
+      // 选择第一个chart card (brand-analysis - 市场分析)
+      const marketAnalysisCard = allCards.find(card => card.id === 'brand-analysis')
+      if (marketAnalysisCard) {
+        selectChart(marketAnalysisCard.id)
+        setActiveTab('brand-analysis')
+      }
+    }
+  }, [activeChartId, allCards, selectChart, setActiveTab])
 
   // Tab映射：将图表导航的tab key映射到dashboard的实际tab
   const tabMapping: Record<string, string> = {
