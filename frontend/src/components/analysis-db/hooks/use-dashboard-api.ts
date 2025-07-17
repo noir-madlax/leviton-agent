@@ -166,10 +166,15 @@ export function buildFilters(options: {
   return filters
 }
 
-// 使用示例组件
-export function ExampleUsage() {
+// 使用示例（代码示例，不包含JSX）
+/*
+使用示例：
+
+import { useDashboardAPI, buildFilters } from './use-dashboard-api'
+
+function MyComponent() {
   const { brandAnalysis, loading, error } = useDashboardAPI()
-  
+
   const handleLoadData = async () => {
     try {
       const filters = buildFilters({
@@ -179,14 +184,14 @@ export function ExampleUsage() {
           is_bestseller: true
         }
       })
-      
+
       const data = await brandAnalysis('project-123', filters)
       console.log('Brand analysis data:', data)
     } catch (err) {
       console.error('Failed to load data:', err)
     }
   }
-  
+
   return (
     <div>
       <button onClick={handleLoadData} disabled={loading}>
@@ -196,3 +201,4 @@ export function ExampleUsage() {
     </div>
   )
 }
+*/
