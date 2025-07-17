@@ -1416,19 +1416,19 @@ export function DataConfirmationTab({
                       </SelectItem>
                       <SelectItem value="50">Top 50 Products</SelectItem>
                       <SelectItem value="100">Top 100 Products</SelectItem>
-                      <SelectItem value="200" disabled>
+                      <SelectItem value="200">
                         <div className="flex items-center justify-between w-full">
                           <span>Top 200 Products</span>
                           <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
                         </div>
                       </SelectItem>
-                      <SelectItem value="500" disabled>
+                      <SelectItem value="500">
                         <div className="flex items-center justify-between w-full">
                           <span>Top 500 Products</span>
                           <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
                         </div>
                       </SelectItem>
-                      <SelectItem value="all" disabled>
+                      <SelectItem value="all">
                         <div className="flex items-center justify-between w-full">
                           <span>All Products</span>
                           <span className="text-xs text-gray-500 ml-2">Not supported during beta testing</span>
