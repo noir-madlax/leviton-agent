@@ -19,6 +19,12 @@ class ReviewInsightsService(BaseDashboardService):
     Provides enhanced sentiment analysis and category definitions.
     """
     
+    def _capitalize_words(self, text: str) -> str:
+        """Capitalize the first letter of each word in the text."""
+        if not text:
+            return text
+        return ' '.join(word.capitalize() for word in str(text).split())
+    
     def get_data(self) -> Dict[str, Any]:
         """Get review insights data with ASIN filtering from new table structure.
         
@@ -103,7 +109,7 @@ class ReviewInsightsService(BaseDashboardService):
                     name,
                     definition,
                     aspect_type
-                ''').in_('category_pk', category_pks)
+                ''').in_('category_pk', category_pks).eq('stage', 'final')
                 
                 categories_result = categories_query.execute()
                 if categories_result.data:
@@ -179,11 +185,15 @@ class ReviewInsightsService(BaseDashboardService):
                     category_name = aspect['parent_group_name'] or aspect['detail_text'] or 'Unknown'
                     category_definition = f"Aspect type: {aspect['aspect_type']}"
                 
+                # Apply capitalization to category name and detail text
+                category_name = self._capitalize_words(category_name)
+                detail_text = self._capitalize_words(aspect['detail_text'])
+
                 combined_data.append({
                     'aspect_pk': aspect_pk,
                     'product_id': aspect['product_id'],
                     'aspect_type': aspect['aspect_type'],
-                    'detail_text': aspect['detail_text'],
+                    'detail_text': detail_text,
                     'parent_group_name': aspect['parent_group_name'],
                     'category_name': category_name,
                     'category_definition': category_definition,
@@ -258,8 +268,8 @@ class ReviewInsightsService(BaseDashboardService):
                 severity = min(100, max(10, negative_rate))  # Severity based on negative percentage
                 
                 pain_points.append({
-                    'aspect': agg['category_name'],
-                    'category': ', '.join(list(agg['details'])[:3]),  # Sample details
+                    'aspect': self._capitalize_words(agg['category_name']),
+                    'category': ', '.join([self._capitalize_words(dt) for dt in list(agg['details'])[:3]]),  # Sample details
                     'severity': severity,
                     'frequency': agg['negative_mentions'],
                     'impactedProducts': len(agg['products']),
@@ -269,7 +279,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'totalMentions': agg['total_mentions'],
                     'negativeRate': negative_rate,
                     # New field for frontend mapping
-                    'relatedDetailTexts': list(agg['details'])
+                    'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
         # Sort by severity and take top 15
@@ -290,8 +300,8 @@ class ReviewInsightsService(BaseDashboardService):
                     satisfaction_level = 'Low'
                 
                 customer_likes.append({
-                    'feature': agg['category_name'],
-                    'category': ', '.join(list(agg['details'])[:3]),  # Sample details
+                    'feature': self._capitalize_words(agg['category_name']),
+                    'category': ', '.join([self._capitalize_words(dt) for dt in list(agg['details'])[:3]]),  # Sample details
                     'frequency': agg['positive_mentions'],
                     'satisfactionLevel': satisfaction_level,
                     # Enhanced fields for frontend optimization
@@ -299,7 +309,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'totalMentions': agg['total_mentions'],
                     'positiveRate': positive_rate,
                     # New field for frontend mapping
-                    'relatedDetailTexts': list(agg['details'])
+                    'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
         # Sort by frequency and take top 10
@@ -322,8 +332,8 @@ class ReviewInsightsService(BaseDashboardService):
                     satisfaction_rate = 50.0  # Default for neutral cases
                 
                 all_use_cases.append({
-                    'useCase': agg['category_name'],
-                    'productAttribute': ', '.join(list(agg['parent_groups'])),
+                    'useCase': self._capitalize_words(agg['category_name']),
+                    'productAttribute': ', '.join([self._capitalize_words(pg) for pg in list(agg['parent_groups'])]),
                     'satisfactionRate': satisfaction_rate,
                     'mentionCount': agg['total_mentions'],
                     'positiveCount': agg['positive_mentions'],
@@ -332,7 +342,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'categoryDefinition': agg['category_definition'],
                     'productCount': len(agg['products']),
                     # New field for frontend mapping
-                    'relatedDetailTexts': list(agg['details'])
+                    'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
         # Sort by total mentions and take top 15
@@ -351,15 +361,15 @@ class ReviewInsightsService(BaseDashboardService):
                 gap_level = max(30, 100 - (agg['total_mentions'] * 10))  # Inverse relationship with mentions, increased multiplier
                 
                 underserved_use_cases.append({
-                    'useCase': agg['category_name'],
-                    'productAttribute': ', '.join(list(agg['parent_groups'])),
+                    'useCase': self._capitalize_words(agg['category_name']),
+                    'productAttribute': ', '.join([self._capitalize_words(pg) for pg in list(agg['parent_groups'])]),
                     'gapLevel': gap_level,
                     'mentionCount': agg['total_mentions'],
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
                     'productCount': len(agg['products']),
                     # New field for frontend mapping
-                    'relatedDetailTexts': list(agg['details'])
+                    'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
         # Sort by gap level and take top 8

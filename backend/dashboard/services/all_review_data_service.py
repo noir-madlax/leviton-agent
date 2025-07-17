@@ -28,6 +28,12 @@ class AllReviewDataService(BaseDashboardService):
     project filtering and enhanced sentiment analysis.
     """
 
+    def _capitalize_words(self, text: str) -> str:
+        """Capitalize the first letter of each word in the text."""
+        if not text:
+            return text
+        return ' '.join(word.capitalize() for word in str(text).split())
+
     def get_data(self) -> Dict[str, Any]:
         """Get all review data filtered by project ASINs.
         
@@ -113,7 +119,7 @@ class AllReviewDataService(BaseDashboardService):
                     name,
                     definition,
                     aspect_type
-                ''').in_('category_pk', category_pks)
+                ''').in_('category_pk', category_pks).eq('stage', 'final')
                 
                 categories_result = categories_query.execute()
                 if categories_result.data:
@@ -252,8 +258,8 @@ class AllReviewDataService(BaseDashboardService):
                     combined_data.append({
                         'product_id': aspect['product_id'],
                         'review_content': review_text,
-                        'standardized_aspect': aspect['detail_text'],
-                        'aspect_category': category_name,
+                        'standardized_aspect': self._capitalize_words(aspect['detail_text']),
+                        'aspect_category': self._capitalize_words(category_name),
                         'review_id': review_id,
                         'rating': rating_info.get('rating'),
                         'verified': rating_info.get('verified', False),
@@ -298,7 +304,7 @@ class AllReviewDataService(BaseDashboardService):
                 'text': item['review_content'] or '',
                 'sentiment': sentiment,
                 'category': item['aspect_category'] or 'unknown',
-                'aspect': aspect,
+                'aspect': self._capitalize_words(aspect),
                 'rating': max(1, min(5, rating)),  # Ensure rating is 1-5
                 'verified': bool(item.get('verified', False)),
                 'date': date,

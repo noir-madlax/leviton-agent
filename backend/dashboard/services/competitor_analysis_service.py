@@ -59,6 +59,12 @@ class CompetitorAnalysisService(BaseDashboardService):
         super().__init__(project_id)
         self.selected_asins = selected_asins or self.DEFAULT_COMPETITOR_ASINS
 
+    def _capitalize_words(self, text: str) -> str:
+        """Capitalize the first letter of each word in the text."""
+        if not text:
+            return text
+        return ' '.join(word.capitalize() for word in str(text).split())
+
     def get_data(self) -> Dict[str, Any]:
         """Get competitor analysis data filtered by project ASINs.
         
@@ -154,7 +160,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                     name,
                     definition,
                     aspect_type
-                ''').in_('category_pk', category_pks)
+                ''').in_('category_pk', category_pks).eq('stage', 'final')
                 
                 categories_result = categories_query.execute()
                 if categories_result.data:
@@ -201,17 +207,17 @@ class CompetitorAnalysisService(BaseDashboardService):
                 # Get category info (handle NULL category_pk)
                 if category_pk and category_pk in categories_data:
                     category_info = categories_data[category_pk]
-                    category_name = category_info['name']
+                    category_name = self._capitalize_words(category_info['name'])
                     aspect_type = category_info['aspect_type']
                 else:
                     # Fallback mapping when category_pk is NULL
                     aspect_type = aspect['aspect_type']
                     if aspect['parent_group_name']:
-                        category_name = aspect['parent_group_name']
+                        category_name = self._capitalize_words(aspect['parent_group_name'])
                     else:
                         # Generate category name from detail_text
                         detail_text = aspect['detail_text'] or 'unknown'
-                        category_name = detail_text.split(' ')[0] if detail_text else 'unknown'
+                        category_name = self._capitalize_words(detail_text.split(' ')[0]) if detail_text else 'Unknown'
                 
                 # Map aspect_type to old format
                 if aspect_type == 'use':
@@ -229,7 +235,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                     combined_data.append({
                         'product_id': aspect['product_id'],
                         'aspect_category': aspect_category,
-                        'standardized_aspect': aspect['detail_text'],
+                        'standardized_aspect': self._capitalize_words(aspect['detail_text']),
                         'review_id': occurrence['review_id'],
                         'sentiment': occurrence['sentiment']  # Direct sentiment from new table
                     })
