@@ -101,7 +101,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
       try {
         setLoading(true)
         const databaseService = new DatabaseService()
-        
+
         console.log(`🚀 [ProjectPage] Starting project load for ID: ${projectId}`)
         
         // 1. 先获取筛选器默认配置
@@ -109,7 +109,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         const defaultFilters = await databaseService.getProjectFilterDefaults(projectId)
         setFilters(defaultFilters) // 设置到状态中
         console.log(`✅ [ProjectPage] Applied default filters:`, defaultFilters)
-        
+
         // 2. 并行加载项目信息和使用配置好的筛选器加载概览数据
         console.log(`📊 [ProjectPage] Loading project data and overview with filters...`)
         const [projectData] = await Promise.all([
@@ -117,10 +117,10 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           loadProjectOverview(defaultFilters), // 使用配置好的筛选器
           preloadFilterOptions(projectId)
         ])
-        
+
         setProject(projectData)
         console.log(`🎉 [ProjectPage] Project loaded successfully with pre-applied filters`)
-        
+
       } catch (error) {
         console.error('❌ [ProjectPage] Failed to load project:', error)
       } finally {
@@ -133,7 +133,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
   // 预加载项目概览数据
   const loadProjectOverview = async (filters?: ProjectFilters) => {
-    if (!projectId) return
+    if (!projectId) return null
 
     setOverviewLoading(true)
     try {
@@ -145,7 +145,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         filters?.segments || [],
         filters?.extend_fields || {}
       )
-      
+
       // 确保包含所有必需字段，提供默认值
       const completeOverview: ProjectOverviewData = {
         ...overview,
@@ -156,11 +156,13 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
           extend_fields: (overview.distributions as any).extend_fields || {}
         }
       };
-      
+
       setProjectOverviewData(completeOverview)
+      return overview // 返回原始的 overview 数据供 preloadFilterOptions 使用
     } catch (error) {
       console.error('Failed to load project overview:', error)
       setProjectOverviewData(null)
+      return null
     } finally {
       setOverviewLoading(false)
     }
