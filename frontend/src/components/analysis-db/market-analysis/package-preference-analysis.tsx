@@ -7,6 +7,7 @@ import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ChartInteractionSummary } from "@/components/analysis-db/shared/chart-interaction-summary"
 
 interface PackagePreferenceData {
   packageDistribution: Array<{
@@ -190,7 +191,7 @@ export function PackagePreferenceAnalysis({
        
 
         <div className="mb-8">
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-4">
+          <ChartInteractionSummary>
             {/* Metric Type Selector */}
             <div className="flex items-center gap-4 mb-4">
               <label htmlFor="metric-type" className="text-sm font-medium text-gray-700">
@@ -219,7 +220,7 @@ export function PackagePreferenceAnalysis({
                 
               </p>
             )}
-          </div>
+          </ChartInteractionSummary>
           
          
         </div>

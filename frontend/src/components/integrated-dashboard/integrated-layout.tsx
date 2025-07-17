@@ -166,7 +166,7 @@ export function IntegratedLayout({
     if (cacheLoading) {
       return 'Loading filter options...'
     }
-    return isFilterExpanded ? 'Hide filters' : 'Click to filter product category'
+    return isFilterExpanded ? 'Hide filters' : 'View Project Data Scope'
   }
 
   const getFilterButtonIcon = () => {

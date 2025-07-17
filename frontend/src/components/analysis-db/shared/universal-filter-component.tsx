@@ -323,7 +323,7 @@ export function UniversalFilterComponent({
                   <p className="text-xs text-green-600">Brands</p>
                 </div>
               </div>
-
+          {/* 暂时隐藏，project data scope 中的review数据 和 segment数据
               <div className="flex items-center gap-2 p-2 bg-purple-50 rounded">
                 <MessageSquare className="w-4 h-4 text-purple-500" />
                 <div>
@@ -336,9 +336,10 @@ export function UniversalFilterComponent({
                 <BarChart3 className="w-4 h-4 text-orange-500" />
                 <div>
                   <p className="text-lg font-bold text-orange-900">{projectData.stats.segment_count}</p>
-                  <p className="text-xs text-orange-600">Segments</p>
+                  <p className="text-xs text-orange-600">Segment</p>
                 </div>
               </div>
+              */}
             </div>
           </div>
         )}
@@ -489,7 +490,7 @@ export function UniversalFilterComponent({
 
           {/* Segments Filter */}
           <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Product Segments:</span>
+            <span className="text-sm text-gray-600">Product Segment:</span>
             <Select 
               key={selectKeys.segment}
               onValueChange={handleSegmentSelect}
