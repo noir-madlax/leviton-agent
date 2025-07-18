@@ -38,13 +38,12 @@ Each index from ``0`` … ``len(texts)-1`` must appear **exactly once** across
 all "ids" arrays with no duplicates or missing indices.
 """
 
-from dataclasses import dataclass, field
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Sequence
+from typing import Dict, List, Tuple
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
-from core.llm_taxonomy_pipeline.pipeline_stage import BaseStage, StageContext, StageResultBase, TaxonomyDTO
+from core.llm_taxonomy_pipeline.pipeline_stage import TaxonomyDTO
 from core.llm_taxonomy_pipeline.extraction_base import (
     ExtractionStage as BaseExtractionStage,
     ExtractionStageContext,
@@ -311,3 +310,27 @@ class ProductExtractionStage(BaseExtractionStage):
         )
 
         return ctx_left, ctx_right
+
+    async def run(
+        self,
+        product_titles: List[Tuple[int, str]],
+        product_category: str,
+        existing_taxonomy_names: List[str],
+    ) -> List[TaxonomyDTO]:
+        """Generate a taxonomy for a given list of products.
+
+        Args:
+            product_titles: List of (product_id, title) tuples.
+            product_category: The overall product category name.
+            existing_taxonomy_names: A list of existing taxonomy names to be
+                included in the prompt, so the LLM can try to align with them.
+        """
+        titles_only = [title for _, title in product_titles]
+        prompt = self._render_prompt(
+            product_titles=titles_only,
+            product_category=product_category,
+            existing_taxonomy_names=existing_taxonomy_names,
+        )
+        return await self._get_completion(prompt=prompt)
+
+    # -----------------------------------------------------------------------

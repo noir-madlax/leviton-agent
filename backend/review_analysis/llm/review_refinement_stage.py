@@ -110,11 +110,9 @@ class ReviewRefinementStage(BaseStage):
 
         # Build categories section with C_* IDs
         categories_lines = []
-        category_id_map = {}  # category_name -> C_id
         
         for i, category in enumerate(ctx.categories):
             c_id = f"C_{i}"
-            category_id_map[category.name] = c_id
             categories_lines.append(f"[{c_id}] {category.name}: {category.definition}")
         
         categories_section = "\n".join(categories_lines)

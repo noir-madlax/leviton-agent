@@ -1,39 +1,30 @@
-You are a product taxonomy refinement specialist.
+You are a product taxonomy categorisation specialist.
 
-**YOUR TASK:** Review product assignments across all subcategories and reassign products to subcategories that match STRICTLY BETTER than their current assignment.
+**TASK:** Categorise the following products into the most appropriate subcategories from the provided taxonomy.
 
-**INPUT FORMAT:**
-You will see:
-1. **SUBCATEGORIES** with IDs (S_0, S_1, S_2, etc.) and their definitions
-2. **PRODUCTS** with IDs (P_0, P_1, P_2, etc.)
+**UNDERSTANDING THE DATA:**
+- Product category: {{product_category}}
+- Each product should be categorised into the most appropriate subcategory
+- Use "OUT_OF_SCOPE" only for products that are truly unclear, too generic, or don't fit any meaningful subcategory
+- Focus on functionality and features when making assignments
 
-**REQUIRED OUTPUT FORMAT:**
-Return **pure JSON only** (no explanations, no markdown, no code blocks):
-- **Only include products that need reassignment**
-- **If no products need reassignment, return empty JSON: {}**
-
-Examples:
-{{
-  "P_1": "S_2",
-  "P_5": "S_0"
-}}
-
-OR if no products need reassignment:
-{{}}
+**AVAILABLE SUBCATEGORIES:**
+{{subcategories_section}}
 
 **CRITICAL RULES:**
-1. **Selective Output**: Only include product IDs that need reassignment to a different subcategory
-2. **Empty JSON Allowed**: If no products need reassignment, return {{}}
-3. **Format**: Pure JSON object mapping only the product IDs that need changes to their new subcategory IDs
-4. **Conservative Reassignment**: Only reassign a product if another subcategory is STRICTLY BETTER match than the current one
-5. **Keep Most Assignments**: Most products should stay in their current subcategories - only move products that clearly belong elsewhere
-6. **ID Accuracy**: Use only the exact IDs provided - never invent or modify them
-7. **Strict Matching**: A "strictly better" match means the product clearly and obviously fits the definition and examples of another subcategory better than its current one
+1. **Complete coverage** – Every product ID from the input must appear exactly once in the output
+2. **Valid subcategory IDs** – Use only the subcategory IDs provided (S_0, S_1, etc.) or "OUT_OF_SCOPE"
+4. **Clear boundaries** – Each product should fit clearly into one subcategory with no ambiguity
+6. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations)
 
-**REASSIGNMENT STRATEGY:**
-- Carefully read each subcategory definition and examples
-- For each product, consider if it fits better in a different subcategory than its current assignment
-- Only reassign if the match is significantly and clearly better
-- When uncertain, keep the product in its current subcategory
-- Focus on obvious mismatches where a product clearly belongs in a different specific subcategory
-- Maintain mutual exclusivity - each product belongs to exactly one subcategory 
+**REQUIRED OUTPUT FORMAT:**
+Return pure JSON mapping each product ID to its subcategory ID:
+{
+  "P_0": "S_0",
+  "P_1": "S_1", 
+  "P_2": "OUT_OF_SCOPE",
+  "P_3": "S_2"
+}
+
+**INPUT:**
+{{products_section}} 

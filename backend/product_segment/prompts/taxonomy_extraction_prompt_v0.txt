@@ -7,20 +7,20 @@ Given lines of the form: [<ID>] <title>
 
 **REQUIRED OUTPUT FORMAT:**
 Return **pure JSON only** (no explanations, no markdown, no code blocks):
-{{
-  "Meaningful Subcategory 1 (NEVER include brand names, model numbers, or proprietary product line names)": {{
+{
+  "Meaningful Subcategory 1 (NEVER include brand names, model numbers, or proprietary product line names)": {
     "definition": "..., e.g. <specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)>",
     "ids": [0, 5, 12]
-  }},
-  "Meaningful Subcategory 2": {{
+  },
+  "Meaningful Subcategory 2": {
     "definition": "..., e.g. ...",
     "ids": [1, 8, 15]
-  }},
-  "OUT_OF_SCOPE": {{
+  },
+  "OUT_OF_SCOPE": {
     "definition": "Products that clearly don't belong to {{product_category}}, e.g. ...",
     "ids": [3, 9]
-  }}
-}}
+  }
+}
 
 **CRITICAL RULES:**
 

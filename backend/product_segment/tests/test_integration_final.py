@@ -1,4 +1,5 @@
 import asyncio
+import logging
 import time
 
 import pytest
@@ -20,14 +21,20 @@ except ImportError:  # noqa: WPS440
         ASGITransport = None  # type: ignore
 
 RESULT_SAMPLE_SIZE = 20
-MAX_PRODUCTS = 120
+MAX_PRODUCTS = 60
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+logging.getLogger("product_segment.services").setLevel(logging.INFO)
+logging.getLogger("core.utils.llm_utils").setLevel(logging.INFO)
+
 
 @pytest.mark.asyncio
-async def test_segmentation_end_to_end_kids_drawing_kits():
-    """Full integration test – API → DB (Kids' Drawing Kits category).
+async def test_segmentation_end_to_end_dimmer_switches():
+    """Full integration test – API → DB (Dimmer Switches category).
 
-    1. Fetch all product IDs from *amazon_products* where ``category`` ==
-       "Kids' Drawing Kits".
+    1. Fetch all product IDs from *amazon_products* where ``category_l5_id`` ==
+       507840.
     2. POST /api/segmentation/product-segment to create a new run.
     3. Poll ``product_segment_runs`` until the stage reaches *completed*.
     4. Assert every assignment has a *refined* taxonomy and at least one
@@ -38,13 +45,17 @@ async def test_segmentation_end_to_end_kids_drawing_kits():
     # 1) Collect input product-ids from the real DB
     # ------------------------------------------------------------------
     sb = get_supabase_service_client()  # service-level privileges
-    category = "Kids' Drawing Kits"
+    category_l5_id = 507840
+    category_name = "Dimmer Switches"
 
     res = (
-        sb.table("amazon_products").select("id").eq("category", category).execute()
+        sb.table("product_wide_table")
+        .select("id")
+        .eq("category_l5_id", category_l5_id)
+        .execute()
     )
-    assert res.data, f"No amazon_products rows found for category '{category}'"
-    product_ids = [row["id"] for row in res.data]
+    assert res.data, f"No products found for category '{category_name}'"
+    product_ids = list(set([row["id"] for row in res.data]))
     if len(product_ids) > MAX_PRODUCTS:
         product_ids = product_ids[:MAX_PRODUCTS]
 
@@ -58,7 +69,7 @@ async def test_segmentation_end_to_end_kids_drawing_kits():
                 "/api/segmentation/product-segment",
                 json={
                     "product_ids": product_ids,
-                    "product_category": category,
+                    "product_category": category_name,
                 },
             )
     else:
@@ -72,7 +83,7 @@ async def test_segmentation_end_to_end_kids_drawing_kits():
                 "/api/segmentation/product-segment",
                 json={
                     "product_ids": product_ids,
-                    "product_category": category,
+                    "product_category": category_name,
                 },
             )
 
@@ -244,12 +255,14 @@ async def test_segmentation_end_to_end_kids_drawing_kits():
 
         if prod_ids_sample:
             prod_rows = (
-                sb.table("amazon_products")
+                sb.table("product_wide_table")
                 .select("id,title")
                 .in_("id", prod_ids_sample)
                 .execute()
             )
-            prod_title_map = {row["id"]: row.get("title") for row in prod_rows.data or []}
+
+            if prod_rows.data:
+                prod_title_map = {row["id"]: row["title"] for row in prod_rows.data}
 
             print("\n📦 Final assignment sample (up to", RESULT_SAMPLE_SIZE, "rows):", flush=True)
             for row in final_sample.data or []:

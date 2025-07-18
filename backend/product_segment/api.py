@@ -46,7 +46,10 @@ from product_segment.repositories.product_segment_run_repository import (
 from product_segment.repositories.product_segment_taxonomy_repository import (
     ProductTaxonomyRepository,
 )
-from product_segment.services.db_product_segmentation import DatabaseProductSegmentationService
+from product_segment.services.db_product_segmentation import (
+    DatabaseProductSegmentationService,
+    get_product_title,
+)
 
 
 async def _get_service(request: Request) -> DatabaseProductSegmentationService:  # noqa: D401
@@ -64,6 +67,7 @@ async def _get_service(request: Request) -> DatabaseProductSegmentationService: 
             run_repo=run_repo,
             segment_repo=assignment_repo,
             taxonomy_repo=taxonomy_repo,
+            title_fetcher=get_product_title,
         )
 
     return request.app.state.product_segment_service  # type: ignore[attr-defined]

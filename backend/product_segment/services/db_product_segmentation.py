@@ -19,11 +19,20 @@ repositories.
 
 from __future__ import annotations
 
+import asyncio
 import logging
 import math
 import secrets
 from datetime import datetime
-from typing import Callable, Dict, List, Optional
+from typing import (
+    Any,
+    Callable,
+    Dict,
+    List,
+    Optional,
+    Tuple,
+    Awaitable,
+)
 
 from core.utils.batching import make_batches
 from product_segment import config as seg_cfg
@@ -61,7 +70,26 @@ from product_segment.repositories.product_segment_taxonomy_repository import (
     ProductTaxonomyRepository,
 )
 
+from core.database.connection import get_supabase_service_client
+
 logger = logging.getLogger(__name__)
+
+
+async def get_product_title(product_id: int) -> str:
+    """Fetch product title from product_wide_table by product ID."""
+    try:
+        sb_client = get_supabase_service_client()
+        result = (
+            sb_client.table("product_wide_table")
+            .select("title")
+            .eq("id", product_id)
+            .single()
+            .execute()
+        )
+        return result.data.get("title", f"Product {product_id}") if result.data else f"Product {product_id}"
+    except Exception as e:
+        logger.warning(f"Failed to get title for product {product_id}: {e}")
+        return f"Product {product_id}"
 
 
 class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is inevitably long
@@ -76,14 +104,16 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
         run_repo: SegmentationRunRepository,
         segment_repo: ProductSegmentRepository,
         taxonomy_repo: ProductTaxonomyRepository,
-        *,
-        title_fetcher: Optional[Callable[[int], str]] = None,
+        title_fetcher: Optional[Callable[[int], Awaitable[str]]] = None,
     ) -> None:
         self._run_repo = run_repo
         self._segment_repo = segment_repo
         self._taxonomy_repo = taxonomy_repo
         # Fallback title-fetcher just converts the product-id to a placeholder str.
-        self._title_fetcher: Callable[[int], str] = title_fetcher or (lambda pid: f"Product {pid}")
+        async def _default_title_fetcher(pid: int) -> str:
+            return f"Product {pid}"
+
+        self._title_fetcher = title_fetcher or _default_title_fetcher
 
         # Stage instances are **stateless**, safe to keep around.
         self._extraction_stage = ProductExtractionStage()
@@ -185,8 +215,11 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             if not product_ids:
                 raise ValueError(f"No products found for run {run_id}")
 
-            product_titles: List[str] = [self._title_fetcher(pid) for pid in product_ids]
-
+            # --- Fetch product titles for the current batch ---
+            product_titles = await asyncio.gather(
+                *[self._title_fetcher(pid) for pid in product_ids]
+            )
+            product_id_titles = list(zip(product_ids, product_titles))
             # ------------------------------------------------------------------
             # Calculate rough call budget (pre-extraction)
             # ------------------------------------------------------------------
@@ -224,9 +257,8 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             await self._run_repo.update_stage(run_id, SegmentationStage.EXTRACTION)
 
             # Pair (id, title) to keep them together through the shuffling in make_batches
-            product_pairs: List[tuple[int, str]] = list(zip(product_ids, product_titles))
             extraction_batches = make_batches(
-                product_pairs, seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
+                product_id_titles, seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
             )
             batch_taxonomies: List[List[TaxonomyDTO]] = []
 
@@ -402,24 +434,16 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
             refinement_batch_idx = 0
             for offset in range(0, len(product_titles), batch_size):
                 batch_titles = product_titles[offset : offset + batch_size]
-                batch_assignments = {}
-                for idx, title in enumerate(batch_titles):
-                    global_product_idx = offset + idx
-                    product_id = product_ids[global_product_idx]
-                    batch_assignments[idx] = product_id_to_taxonomy.get(
-                        product_id, "__UNASSIGNED__"
-                    )
 
                 ctx = ProductRefinementStageContext(
                     product_category=run.processing_params.get('product_category', ''),
                     taxonomies=final_taxonomies,
-                    current_assignments=batch_assignments,
                     input_texts=batch_titles,
                 )
                 res = await self._refinement_stage.execute(ctx)
 
-                # Persist reassignments --------------------------------------
-                for local_idx, new_tax_name in res.reassignments.items():
+                # Persist assignments --------------------------------------
+                for local_idx, new_tax_name in res.assignments.items():
                     global_idx = offset + local_idx
                     product_id = product_ids[global_idx]
 

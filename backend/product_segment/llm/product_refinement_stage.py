@@ -1,14 +1,13 @@
 """Refinement stage implementation for the generic LLM-powered taxonomy pipeline.
 
-This module defines a *RefinementStage* that takes existing product assignments
-across all subcategories and reassigns products to subcategories that match
-STRICTLY BETTER than their current assignment.
+This module defines a *RefinementStage* that categorises all products into the most
+appropriate subcategories from the provided taxonomy.
 
 The stage is built on the generic :class:`BaseStage` utilities which already
 provide *attempt / retry / auto-split / persistence* mechanics.  The only
 responsibilities left here are:
 
-• Prompt construction with taxonomies and current assignments.
+• Prompt construction with taxonomies and products.
 • Response validation & parsing.
 • Retry-prompt construction given a structured *retry-context*.
 • Collating split-results back together.
@@ -16,27 +15,23 @@ responsibilities left here are:
 The expected LLM output **must** be a JSON object of the following shape::
 
     {
-      "P_1": "S_2",
-      "P_5": "S_0"
+      "P_0": "S_0",
+      "P_1": "S_1",
+      "P_2": "OUT_OF_SCOPE",
+      "P_3": "S_2"
     }
 
-OR if no products need reassignment::
-
-    {}
-
-Each key represents a product ID that needs reassignment, and each value represents
-the new subcategory ID. Only products that need reassignment should be included.
-If no products need reassignment, an empty JSON object should be returned.
+Each key represents a product ID, and each value represents the assigned subcategory ID.
+All products must be included in the output.
 """
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 import json
 from pathlib import Path
-from typing import Any, Dict, List, Sequence
+from typing import Dict, List
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
 from core.llm_taxonomy_pipeline.pipeline_stage import (
-    BaseStage,
     StageContext,
     StageResultBase,
     TaxonomyDTO,
@@ -62,15 +57,14 @@ class RefinementStageContext(StageContext):
     """Context for product-segment taxonomy refinement."""
 
     taxonomies: list[TaxonomyDTO]
-    current_assignments: dict[int, str]
     input_texts: list[str]
 
 
 @dataclass(slots=True, frozen=True)
 class RefinementStageResult(StageResultBase):
-    """Result payload mapping product index → new taxonomy name."""
+    """Result payload mapping product index → taxonomy name."""
 
-    reassignments: dict[int, str]
+    assignments: dict[int, str]
 
 # Product-specific aliases for consistency
 ProductRefinementStageContext = RefinementStageContext
@@ -115,29 +109,28 @@ class ProductRefinementStage(BaseRefinementStage):
     # --------------------- BaseStage abstract hooks -------------------------
 
     async def _build_prompt(self, ctx: ProductRefinementStageContext) -> str:  # noqa: D401
-        """Render the fixed prompt template with subcategories and product assignments."""
+        """Render the fixed prompt template with subcategories and products."""
 
         # Build subcategories section with S_* IDs
         subcategories_lines = []
         for i, taxonomy in enumerate(ctx.taxonomies):
             s_id = f"S_{i}"
-            subcategories_lines.append(f"{s_id}: {taxonomy.name}")
-            subcategories_lines.append(f"Definition: {taxonomy.definition}")
-            subcategories_lines.append("")  # Empty line for readability
+            subcategories_lines.append(f"[{s_id}] {taxonomy.name}: {taxonomy.definition}")
         
         subcategories_section = "\n".join(subcategories_lines)
         
         # Build products section with P_* IDs
         products_lines = []
-        
         for i, text in enumerate(ctx.input_texts):
             p_id = f"P_{i}"
-            products_lines.append(f"{p_id}: {text}")
+            products_lines.append(f"[{p_id}] {text}")
         
         products_section = "\n".join(products_lines)
         
-        # Combine template with sections
-        full_prompt = f"{_REFINE_PROMPT_TEMPLATE}\n\n**SUBCATEGORIES:**\n{subcategories_section}\n**PRODUCTS:**\n{products_section}"
+        # Render template with all placeholders using replace to avoid JSON conflicts
+        full_prompt = _REFINE_PROMPT_TEMPLATE.replace("{{product_category}}", ctx.product_category)
+        full_prompt = full_prompt.replace("{{subcategories_section}}", subcategories_section)
+        full_prompt = full_prompt.replace("{{products_section}}", products_section)
         
         return full_prompt
 
@@ -148,10 +141,7 @@ class ProductRefinementStage(BaseRefinementStage):
 
         # Build valid product and subcategory ID sets
         valid_product_ids = {f"P_{i}" for i in range(len(ctx.input_texts))}
-        valid_subcategory_ids = {f"S_{i}" for i in range(len(ctx.taxonomies))}
-        
-        # Build taxonomy name to S_id mapping for validation
-        taxonomy_id_map = {taxonomy.name: f"S_{i}" for i, taxonomy in enumerate(ctx.taxonomies)}
+        valid_subcategory_ids = {f"S_{i}" for i in range(len(ctx.taxonomies))} | {"OUT_OF_SCOPE"}
 
         error_categories: Dict[str, List[str]] = {
             "format_errors": [],
@@ -171,11 +161,7 @@ class ProductRefinementStage(BaseRefinementStage):
             error_categories["format_errors"].append("Top-level JSON must be an object")
             return ValidationResult(ok=False, error_categories=error_categories)
 
-        # Empty object is valid (no reassignments needed)
-        if not parsed:
-            return ValidationResult(ok=True, error_categories=error_categories)
-
-        # Validate each reassignment
+        # Validate each assignment
         for product_id, subcategory_id in parsed.items():
             # Validate product ID format and existence
             if not isinstance(product_id, str):
@@ -202,16 +188,6 @@ class ProductRefinementStage(BaseRefinementStage):
                     f"Invalid subcategory ID '{subcategory_id}' for product '{product_id}'"
                 )
                 continue
-
-            # Check if product is being reassigned to its current category (should not happen)
-            product_idx = int(product_id[2:])  # Extract index from P_*
-            current_taxonomy_name = ctx.current_assignments.get(product_idx)
-            current_s_id = taxonomy_id_map.get(current_taxonomy_name)
-            
-            if subcategory_id == current_s_id:
-                error_categories["validation_errors"].append(
-                    f"Product '{product_id}' is assigned to its current subcategory '{subcategory_id}'"
-                )
 
         all_errors = sum(len(v) for v in error_categories.values())
         if all_errors == 0:
@@ -241,20 +217,22 @@ class ProductRefinementStage(BaseRefinementStage):
         payload = json.loads(json_text)
 
         # Convert P_* and S_* IDs back to integer indices and taxonomy names
-        reassignments = {}
+        assignments = {}
         
         for product_id, subcategory_id in payload.items():
             # Extract product index from P_*
             product_idx = int(product_id[2:])
             
-            # Extract subcategory index from S_* and get taxonomy name
-            subcategory_idx = int(subcategory_id[2:])
-            new_taxonomy_name = ctx.taxonomies[subcategory_idx].name
-            
-            reassignments[product_idx] = new_taxonomy_name
+            if subcategory_id == "OUT_OF_SCOPE":
+                assignments[product_idx] = "OUT_OF_SCOPE"
+            else:
+                # Extract subcategory index from S_* and get taxonomy name
+                subcategory_idx = int(subcategory_id[2:])
+                taxonomy_name = ctx.taxonomies[subcategory_idx].name
+                assignments[product_idx] = taxonomy_name
 
         return ProductRefinementStageResult(
-            reassignments=reassignments,
+            assignments=assignments,
         )
 
     async def _merge_split_results(
@@ -267,16 +245,16 @@ class ProductRefinementStage(BaseRefinementStage):
     ) -> ProductRefinementStageResult:  # noqa: D401 – signature enforced by BaseStage
         """Merge two partial results coming from auto-split recursion."""
 
-        # Merge reassignments - adjust indices for right side to account for offset
-        reassignments = dict(res_left.reassignments)
+        # Merge assignments - adjust indices for right side to account for offset
+        assignments = dict(res_left.assignments)
         left_size = len(ctx_left.input_texts)
         
-        # Right side reassignments need to be offset by the size of left sequence
-        for idx, taxonomy_name in res_right.reassignments.items():
-            reassignments[idx + left_size] = taxonomy_name
+        # Right side assignments need to be offset by the size of left sequence
+        for idx, taxonomy_name in res_right.assignments.items():
+            assignments[idx + left_size] = taxonomy_name
 
         return ProductRefinementStageResult(
-            reassignments=reassignments
+            assignments=assignments
         )
 
     def _split_context(
@@ -289,31 +267,22 @@ class ProductRefinementStage(BaseRefinementStage):
         
         mid = len(ctx.input_texts) // 2
         
-        # Split input texts and adjust assignments for each side
-        left_assignments = {}
-        right_assignments = {}
-        
-        for i in range(len(ctx.input_texts)):
-            if i < mid:
-                left_assignments[i] = ctx.current_assignments.get(i)
-            else:
-                # Adjust index for right side (starts from 0)
-                right_assignments[i - mid] = ctx.current_assignments.get(i)
+        # Split input texts
+        left_input_texts = ctx.input_texts[:mid]
+        right_input_texts = ctx.input_texts[mid:]
         
         ctx_left = ProductRefinementStageContext(
             product_category=ctx.product_category,
             storage=ctx.storage,
             taxonomies=ctx.taxonomies,
-            current_assignments=left_assignments,
-            input_texts=ctx.input_texts[:mid]
+            input_texts=left_input_texts
         )
 
         ctx_right = ProductRefinementStageContext(
             product_category=ctx.product_category,
             storage=ctx.storage,
             taxonomies=ctx.taxonomies,
-            current_assignments=right_assignments,
-            input_texts=ctx.input_texts[mid:]
+            input_texts=right_input_texts
         )
 
         return ctx_left, ctx_right 
