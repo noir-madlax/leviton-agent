@@ -211,14 +211,22 @@ class ReviewRefinementStage(BaseStage):
         return ValidationResult(ok=False, error_categories=error_categories)
 
     def _retry_prompt(
-        self, original_prompt: str, validation_result: ValidationResult, ctx: ReviewRefinementStageContext
+        self, original_prompt: str, validation_result: ValidationResult, ctx: ReviewRefinementStageContext, previous_response: str
     ) -> str:  # noqa: D401
         # Build human-readable error details from validation_result.error_categories
         error_details = create_retry_error_details(validation_result.error_categories)
 
-        # Use the fixed retry prompt template
+        # Include the previous response in the retry instructions
+        previous_response_section = f"""
+=== PREVIOUS RESPONSE (INCORRECT) ===
+{previous_response}
+=== END PREVIOUS RESPONSE ===
+
+"""
+        
+        # Use the fixed retry prompt template with previous response
         retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
-        return f"{original_prompt}\n\n{retry_block}"
+        return f"{original_prompt}\n\n{previous_response_section}{retry_block}"
 
     async def _produce_result(
         self,

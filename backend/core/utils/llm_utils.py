@@ -215,7 +215,7 @@ class LLMManager:  # pylint: disable=too-few-public-methods
         prompt: str,
         *,
         validate_response: Optional[Callable[[str], ValidationResult]] = None,
-        retry_prompt_builder: Optional[Callable[[str, ValidationResult], str]] = None,
+        retry_prompt_builder: Optional[Callable[[str, ValidationResult, str], str]] = None,
         context: Optional[Dict[str, Any]] = None,
     ) -> str:
         """Call the LLM with built-in rate-limiting, retries and validation.
@@ -297,7 +297,7 @@ class LLMManager:  # pylint: disable=too-few-public-methods
                             )
                             raise LLMCallError("Validation failed after maximum attempts")
 
-                        current_prompt = retry_prompt_builder(original_prompt, validation_result)
+                        current_prompt = retry_prompt_builder(original_prompt, validation_result, response_text)
                         logger.info("Retrying with full updated prompt (attempt %d): %s", attempt + 1, current_prompt)
                         continue  # Next retry immediately
 
@@ -364,7 +364,7 @@ async def safe_llm_call(
     prompt: str,
     *,
     validate_response: Optional[Callable[[str], ValidationResult]] = None,
-    retry_prompt_builder: Optional[Callable[[str, ValidationResult], str]] = None,
+    retry_prompt_builder: Optional[Callable[[str, ValidationResult, str], str]] = None,
     context: Optional[Dict[str, Any]] = None,
 ) -> str:
     """Convenient wrapper around the *global* LLM manager.

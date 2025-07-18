@@ -62,6 +62,7 @@ class ExtractionStage(BaseStage, abc.ABC):
         original_prompt: str,
         retry_ctx: Any,
         ctx: ExtractionStageContext,
+        previous_response: str,
     ) -> str:  # noqa: D401
         raise NotImplementedError
 

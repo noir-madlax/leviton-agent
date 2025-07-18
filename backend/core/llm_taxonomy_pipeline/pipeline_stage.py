@@ -141,9 +141,9 @@ class BaseStage:
         raise NotImplementedError
 
     def _retry_prompt(
-        self, original_prompt: str, retry_ctx: Any, ctx: StageContext
+        self, original_prompt: str, retry_ctx: Any, ctx: StageContext, previous_response: str
     ) -> str:
-        """Return a new prompt based on *retry_ctx* coming from *_validate*."""
+        """Return a new prompt based on *retry_ctx* coming from *_validate* and the previous response."""
         raise NotImplementedError
 
     async def _produce_result(
@@ -208,8 +208,8 @@ class BaseStage:
                 result = self._validate(raw, current_ctx)
                 return result  # Return ValidationResult directly
 
-            def _retry_builder(original_prompt: str, retry_ctx: Any):
-                return self._retry_prompt(original_prompt, retry_ctx, current_ctx)
+            def _retry_builder(original_prompt: str, retry_ctx: Any, previous_response: str):
+                return self._retry_prompt(original_prompt, retry_ctx, current_ctx, previous_response)
 
             # 3) Fire the LLM – safe_llm_call handles its own retries ------------
             try:

@@ -216,7 +216,8 @@ class ReviewExtractionStage(BaseStage):
         self, 
         original_prompt: str, 
         retry_ctx: ValidationResult, 
-        ctx: ReviewExtractionContext
+        ctx: ReviewExtractionContext,
+        previous_response: str
     ) -> str:
         """Build retry prompt using shared retry template."""
         
@@ -238,13 +239,21 @@ class ReviewExtractionStage(BaseStage):
         
         error_details = "\n".join(error_lines) if error_lines else "Unknown validation errors"
         
-        # Use the shared retry template with structured error details
+        # Include the previous response in the retry instructions
+        previous_response_section = f"""
+=== PREVIOUS RESPONSE (INCORRECT) ===
+{previous_response}
+=== END PREVIOUS RESPONSE ===
+
+"""
+        
+        # Use the shared retry template with structured error details and previous response
         try:
             retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
-            return f"{original_prompt}\n\n{retry_block}"
+            return f"{original_prompt}\n\n{previous_response_section}{retry_block}"
         except Exception as exc:
             # Fallback if template replacement fails
-            return f"{original_prompt}\n\nValidation failed with errors: {error_details}\n\nPlease fix the errors and provide a valid JSON response."
+            return f"{original_prompt}\n\n=== PREVIOUS RESPONSE (INCORRECT) ===\n{previous_response}\n=== END PREVIOUS RESPONSE ===\n\nValidation failed with errors: {error_details}\n\nPlease fix the errors and provide a valid JSON response."
 
     async def _produce_result(
         self,

@@ -2,9 +2,10 @@
 
 {{error_details}}
 
-Please analyze the errors above and provide a corrected response that addresses all the issues. Make sure to:
+Please analyze the errors above and the previous incorrect response, then provide a corrected response that addresses all the issues. Make sure to:
 - Follow the exact JSON schema required
 - Fix all validation errors listed above
 - Provide complete and valid JSON
+- Avoid the mistakes made in the previous response
 
 === END RETRY INSTRUCTIONS === 

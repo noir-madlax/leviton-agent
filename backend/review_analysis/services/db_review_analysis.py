@@ -184,7 +184,19 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 unique_reviews.append(r)
 
             # Split reviews into batches for prompt size management -------
-            review_batches = make_batches(unique_reviews, ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT)
+            # Use both batch size and character count limits for review batching
+            def review_char_count(review: Dict) -> int:
+                """Calculate character count for a review."""
+                title = review.get("review_title", "") or ""
+                text = review.get("review_text", "") or ""
+                return len(title) + len(text)
+            
+            review_batches = make_batches(
+                unique_reviews, 
+                ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT,
+                max_chars=5000,  # 5000 chars per batch for reviews
+                char_count_func=review_char_count
+            )
             
             # Process each batch of reviews for this product -------------
             all_hierarchies: List[Dict[str, Any]] = []

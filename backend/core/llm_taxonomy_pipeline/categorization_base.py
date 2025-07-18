@@ -167,7 +167,7 @@ class CategorizationStage(BaseStage, abc.ABC):
     # Retry prompt helper
     # ------------------------------------------------------------------
 
-    def _retry_prompt(self, original_prompt: str, validation_result: ValidationResult, ctx: CategorizationStageContext) -> str:  # noqa: D401
+    def _retry_prompt(self, original_prompt: str, validation_result: ValidationResult, ctx: CategorizationStageContext, previous_response: str) -> str:  # noqa: D401
         error_details = create_retry_error_details(validation_result.error_categories)
         retry_block = self._retry_prompt_template.replace("{{error_details}}", error_details)
         return f"{original_prompt}\n\n{retry_block}"
