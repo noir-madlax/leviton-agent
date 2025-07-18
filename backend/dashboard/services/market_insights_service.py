@@ -73,12 +73,83 @@ class MarketInsightsService(BaseDashboardService):
     def _get_segment_assignments(self) -> Dict[str, str]:
         """获取项目的segment分配（platform_id到segment_name的映射）
         
-        Uses the shared helper method with hashing scheme support.
+        首先尝试使用原项目ID，如果找不到数据，再尝试哈希ID方案。
         
         Returns:
             Dict mapping platform_id to segment_name
         """
-        return self._get_segment_assignments_shared()
+        try:
+            # 方案1: 直接使用原项目ID（新格式）
+            direct_assignments = self._get_segment_assignments_direct()
+            if direct_assignments:
+                logger.info(f"Found segment assignments using direct project ID: {len(direct_assignments)} mappings")
+                return direct_assignments
+            
+            # 方案2: 使用哈希ID方案（旧格式）
+            hashed_assignments = self._get_segment_assignments_shared()
+            if hashed_assignments:
+                logger.info(f"Found segment assignments using hashed project IDs: {len(hashed_assignments)} mappings")
+                return hashed_assignments
+            
+            logger.warning(f"No segment assignments found for project {self.project_id}")
+            return {}
+            
+        except Exception as e:
+            logger.error(f"Error getting segment assignments: {e}")
+            return {}
+    
+    def _get_segment_assignments_direct(self) -> Dict[str, str]:
+        """使用原项目ID直接查找segment分配（新格式）
+        
+        Returns:
+            Dict mapping platform_id to segment_name
+        """
+        try:
+            if not self.project_asins:
+                return {}
+            
+            # 查询这些ASINs在product_wide_table中的记录，获取wide_table_id
+            wide_table_result = self.supabase.table('product_wide_table')\
+                .select('id, platform_id')\
+                .in_('platform_id', self.project_asins)\
+                .execute()
+            
+            if not wide_table_result.data:
+                logger.warning(f"No product_wide_table records found for project ASINs")
+                return {}
+            
+            # 建立platform_id到wide_table_id的映射
+            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
+            
+            # 查询segment assignments（使用原项目ID和wide_table_id）
+            wide_table_ids = list(platform_to_wide_id.values())
+            assignments_result = self.supabase.table('product_segment_assignments')\
+                .select('product_id, segment_name')\
+                .eq('project_id', self.project_id)\
+                .in_('product_id', wide_table_ids)\
+                .neq('segment_name', None)\
+                .neq('segment_name', 'OUT_OF_SCOPE')\
+                .execute()
+            
+            if not assignments_result.data:
+                logger.info(f"No segment assignments found using direct project ID: {self.project_id}")
+                return {}
+            
+            # 建立wide_table_id到segment的映射
+            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
+            
+            # 转换为platform_id到segment的映射
+            platform_to_segment = {}
+            for platform_id, wide_id in platform_to_wide_id.items():
+                if wide_id in wide_id_to_segment:
+                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
+            
+            logger.info(f"📋 Direct segment assignments: {len(platform_to_segment)} products mapped")
+            return platform_to_segment
+            
+        except Exception as e:
+            logger.error(f"Error getting direct segment assignments: {e}")
+            return {}
     
     def _aggregate_data_by_segments(self, products: List[Dict[str, Any]], 
                                   segment_assignments: Dict[str, str], 

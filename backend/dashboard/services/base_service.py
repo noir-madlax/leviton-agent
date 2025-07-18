@@ -355,13 +355,26 @@ class BaseDashboardService(ABC):
     def get_project_segments(self) -> List[str]:
         """获取项目的所有segment类型（排除OUT_OF_SCOPE）
         
-        Uses the hashing scheme to look up segments from the correct project IDs.
+        首先尝试使用原项目ID，如果找不到数据，再尝试哈希ID方案。
         
         Returns:
             项目所有有效segment名称列表
         """
         try:
-            # Get the hashed project IDs that were used during segmentation
+            # 方案1: 直接使用原项目ID（新格式）
+            direct_result = self.supabase.table('product_segment_assignments')\
+                .select('segment_name')\
+                .eq('project_id', self.project_id)\
+                .neq('segment_name', None)\
+                .neq('segment_name', 'OUT_OF_SCOPE')\
+                .execute()
+            
+            if direct_result.data:
+                segments = list(set(item['segment_name'] for item in direct_result.data))
+                logger.info(f"Found {len(segments)} segments using direct project ID {self.project_id}: {segments}")
+                return sorted(segments)
+            
+            # 方案2: 使用哈希ID方案（旧格式）
             hashed_project_ids = self._get_segmentation_hashed_project_ids()
             
             if not hashed_project_ids:
@@ -369,17 +382,16 @@ class BaseDashboardService(ABC):
                 return []
             
             # Look up segments using the hashed project IDs
-            result = self.supabase.table('product_segment_assignments')\
+            hashed_result = self.supabase.table('product_segment_assignments')\
                 .select('segment_name')\
                 .in_('project_id', hashed_project_ids)\
                 .neq('segment_name', None)\
                 .neq('segment_name', 'OUT_OF_SCOPE')\
                 .execute()
             
-            if result.data:
-                # 去重并排序
-                segments = list(set(item['segment_name'] for item in result.data))
-                logger.info(f"Found {len(segments)} segments for project {self.project_id}: {segments}")
+            if hashed_result.data:
+                segments = list(set(item['segment_name'] for item in hashed_result.data))
+                logger.info(f"Found {len(segments)} segments using hashed project IDs: {segments}")
                 return sorted(segments)
             else:
                 logger.warning(f"No segment assignments found for hashed project IDs: {hashed_project_ids}")
