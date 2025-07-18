@@ -82,7 +82,10 @@ export function ProductPanelProvider({ children }: { children: React.ReactNode }
         }
       )
 
-      setProducts(result.products)
+      setProducts(result.products.map(product => ({
+        ...product,
+        url: product.url || ''  // Handle optional url field
+      })))
       setIsOpen(true)
     } catch (err) {
       const errorMessage = err instanceof Error ? err.message : 'Failed to load products'

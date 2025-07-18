@@ -4,11 +4,13 @@ import { useState, useEffect } from "react"
 
 import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
-import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
+import { BarChart3, Target } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 
 import { CategoryFeedback, ProductType } from "@/components/analysis-db/types/analysis"
+import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
 
 interface ReviewInsightsProps {
   data: {
@@ -427,11 +429,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </ChartWithFilters>
       </section>
 
-      {/* 分类正面反馈分析 */}
+            {/* 分类正面反馈分析 */}
       <section data-chart-id="customer-delights">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
-          ⭐ Customer Delights by Category
-        </h2>
+        
         
         <ChartWithFilters
           chartId="review-positive-feedback"
@@ -456,80 +456,38 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </ChartWithFilters>
       </section>
 
-      {/* 使用场景分析 - 正面 
-      <section>
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-          🎯 Top Positive Use Cases
-        </h2>
-        
-        <ChartWithFilters
-          chartId="review-positive-use-case"
-          chartType="bar"
-          projectId={projectId || ''}
-          title="Top 10 most mentioned positive use cases"
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-          {isLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">Loading...</div>
-            </div>
-          ) : (
-            <CategoryUseCaseBar 
-              data={useCases} 
-              description="Bars are sorted by positive mentions from left to right in descending order"
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
-              totalUseMentions={filteredData.reviewInsights.totalUseMentions}
-            />
-          )}
-        </ChartWithFilters>
-      </section>
-*/}
-      {/* 使用场景分析 - 
-      <section>
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
-          🎯 Top Negative Use Cases
-        </h2>
-        
-        <ChartWithFilters
-          chartId="review-negative-use-case"
-          chartType="bar"
-          projectId={projectId || ''}
-          title="Top 10 most mentioned negative use cases"
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-          {isLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">Loading...</div>
-            </div>
-          ) : (
-            <CategoryNegativeUseCaseBar 
-              data={useCases} 
-              description="Bars are sorted by negative mentions from left to right in descending order"
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
-              totalUseMentions={filteredData.reviewInsights.totalUseMentions}
-            />
-          )}
-        </ChartWithFilters>
-      </section>
-负面 */}
-
       {/* Use Case Sentiment Analysis */}
       <section data-chart-id="use-case-sentiment">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-          🎯 Use Case Sentiment Analysis
-        </h2>
+        <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         
-        <div className="bg-purple-50 border-l-4 border-purple-400 p-4">
-          <p className="text-sm text-purple-700">
-            <strong>Use Case Analysis:</strong> This section will show sentiment analysis for different use cases mentioned in customer reviews.
-            Currently in development - data will be available once the use case analysis pipeline is complete.
-          </p>
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+          <UseCaseSentimentMatrix 
+            data={filteredData.reviewInsights.allUseCases.map(item => ({
+              useCase: item.useCase,
+              totalMentions: item.mentionCount,
+              positiveCount: item.positiveCount,
+              negativeCount: item.negativeCount,
+              satisfactionRate: item.satisfactionRate,
+              categoryType: 'Performance' as const,
+              topSatisfactionReasons: [],
+              topGapReasons: [],
+              relatedCategories: [item.productAttribute],
+              categoryDefinition: item.categoryDefinition,
+              productCount: item.productCount
+            }))} 
+            reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
+              id: string
+              productId: string
+              text: string
+              sentiment: 'positive' | 'negative' | 'neutral'
+              category: string
+              aspect: string
+              rating: number
+              verified: boolean
+              date: string
+              brand: string
+            }>> }}
+          />
         </div>
       </section>
 

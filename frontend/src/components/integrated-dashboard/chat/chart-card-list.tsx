@@ -132,7 +132,7 @@ export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardLi
         htmlElement.style.backgroundColor = '#fef3c7'
         htmlElement.style.transition = 'background-color 0.3s ease'
         htmlElement.style.borderRadius = '8px'
-        htmlElement.style.padding = '4px'
+        htmlElement.style.padding = '0px'
         setTimeout(() => {
           htmlElement.style.backgroundColor = ''
           htmlElement.style.padding = ''

@@ -6,10 +6,10 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scat
 import { BrandViolinChart } from "../charts/brand-violin-chart"
 import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
-
+import { BarChart3, Target } from "lucide-react"
 
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
-import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
 // 定义散点图数据类型
@@ -256,11 +256,17 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">💰 Pricing Strategy</h2>
+      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
+          💰 Pricing Analysis
+        </h2>
+    
+      <div className="mt-6"></div>
 
       {/* Price Distribution by Segment - 移至最上方 */}
       <div className="mb-8" data-chart-id="price-distribution-overview">
-        <h3 className="text-xl font-semibold text-gray-700 mb-4">Price Distribution by Segment</h3>
+      <ChartHeader title=" Price Distribution by Segment" icon={BarChart3} />
+      
+       
         <Card className="p-6 bg-gray-50">
           <div className="mb-4">
             <PriceTypeSelector 

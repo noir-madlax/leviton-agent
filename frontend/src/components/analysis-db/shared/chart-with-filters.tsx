@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Filter, ChevronUp, ChevronDown, BarChart3 } from "lucide-react"
+import { Filter, ChevronUp, ChevronDown, BarChart3, DollarSign, Target } from "lucide-react"
 import { ProjectFilters, DEFAULT_FILTERS } from '../types/filters'
 import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
@@ -95,6 +95,24 @@ export function ChartWithFilters({
 
       <div className="chart-content">
         {children}
+      </div>
+    </div>
+  )
+} 
+
+interface ChartHeaderProps {
+  title: string
+  icon?: React.ComponentType<{ className?: string }>
+}
+
+export function ChartHeader({ title, icon: Icon = BarChart3 }: ChartHeaderProps) {
+  return (
+    <div className="space-y-4">
+      <div className="flex items-center justify-between">
+        <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+          <Icon className="w-5 h-5" />
+          {title}
+        </h3>
       </div>
     </div>
   )

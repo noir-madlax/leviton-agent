@@ -34,7 +34,7 @@ interface MarketInsightsProps {
   initialFilters?: ProjectFilters
 }
 
-export function MarketInsights({ data: initialData, productLists, projectId, initialFilters }: MarketInsightsProps) {
+export function MarketInsights({ data: initialData, projectId, initialFilters }: MarketInsightsProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const [loading] = useState(false)
@@ -101,14 +101,14 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
       // 查找原始segment名称
       const clickedDisplayName = data.activeLabel
       const matchedItem = chartData.find(item => item.name === clickedDisplayName)
-      const segmentName = matchedItem?.originalName || clickedDisplayName
-      const products = productLists.bySegment[segmentName] || []
-      openPanel(
-        products,
-        `${segmentName} Products`,
-        `All products in ${segmentName}`,
-        { brand: true, category: true, priceRange: true, packSize: true }
-      )
+              const segmentName = matchedItem?.originalName || clickedDisplayName
+      openPanel({
+        projectId: projectId || '',
+        filters: { segments: [segmentName] },
+        title: `${segmentName} Products`,
+        subtitle: `All products in ${segmentName}`,
+        showFilters: { brand: true, category: true, priceRange: true, packSize: true }
+      })
     }
   }
 

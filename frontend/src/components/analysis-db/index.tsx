@@ -1019,7 +1019,6 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                               segmentSummary: data.productAnalysis?.segmentSummary,
                               segmentNames: data.productAnalysis?.segmentNames
                             }}
-                            productLists={productLists}
                             projectId={selectedProjectId || undefined}
                             initialFilters={appliedFilters}
                           />

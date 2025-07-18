@@ -60,13 +60,6 @@
   animation: spin 1s linear infinite;
 }
 
-/* Chart Highlight Animation */
-.integrated-dashboard .chart-highlight {
-  background-color: #fef3c7;
-  transition: background-color 0.3s ease;
-  border-radius: 8px;
-  padding: 4px;
-}
 
 /* Chart Card Styles */
 .integrated-dashboard .chart-card {

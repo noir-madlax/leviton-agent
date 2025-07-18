@@ -173,14 +173,14 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
   const handleBarClick = (data: unknown) => {
     if (data && typeof data === 'object' && 'activeLabel' in data) {
       const chartData = data as { activeLabel: string }
-      const brand = chartData.activeLabel
-      const products = productLists.byBrand[brand] || []
-      openPanel(
-        products,
-        `${brand} Products`,
-        `All products from ${brand}`,
-        { brand: false, category: true, priceRange: true, packSize: true }
-      )
+              const brand = chartData.activeLabel
+      openPanel({
+        projectId: projectId || '',
+        filters: { brands: [brand] },
+        title: `${brand} Products`,
+        subtitle: `All products from ${brand}`,
+        showFilters: { brand: false, category: true, priceRange: true, packSize: true }
+      })
     }
   }
 

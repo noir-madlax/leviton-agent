@@ -83,22 +83,21 @@ export function useProductQuery(): UseProductQueryReturn {
     priceType: 'sku' | 'unit' = 'sku'
   ) => {
     try {
-      const products = await productQueryService.queryByViolinClick(
+      await productQueryService.queryByViolinClick(
         projectId,
-        category,
-        priceRange,
-        priceType
+        category
       )
       
       const title = `${category} Products`
       const subtitle = `Price range: $${priceRange.min.toFixed(2)} - $${priceRange.max.toFixed(2)} (${priceType.toUpperCase()})`
       
-      openPanel(
-        products,
+      openPanel({
+        projectId,
+        filters: { categories: [category] },
         title,
         subtitle,
-        { brand: true, category: true, priceRange: true, packSize: true }
-      )
+        showFilters: { brand: true, category: true, priceRange: true, packSize: true }
+      })
     } catch (err) {
       console.error('Error in violin click handler:', err)
       setError(err instanceof Error ? err.message : 'Failed to load products')
@@ -111,7 +110,7 @@ export function useProductQuery(): UseProductQueryReturn {
     category?: string
   ) => {
     try {
-      const products = await productQueryService.queryByBrandViolinClick(
+      await productQueryService.queryByBrandViolinClick(
         projectId,
         brand,
         category
@@ -120,12 +119,13 @@ export function useProductQuery(): UseProductQueryReturn {
       const title = `${brand} Products`
       const subtitle = category ? `Category: ${category}` : 'All categories'
       
-      openPanel(
-        products,
+      openPanel({
+        projectId,
+        filters: { brands: [brand], ...(category && { categories: [category] }) },
         title,
         subtitle,
-        { brand: false, category: true, priceRange: true, packSize: true }
-      )
+        showFilters: { brand: false, category: true, priceRange: true, packSize: true }
+      })
     } catch (err) {
       console.error('Error in brand violin click handler:', err)
       setError(err instanceof Error ? err.message : 'Failed to load products')
@@ -138,21 +138,21 @@ export function useProductQuery(): UseProductQueryReturn {
     priceRange: { min: number, max: number }
   ) => {
     try {
-      const products = await productQueryService.queryByMultiSegmentViolinClick(
+      await productQueryService.queryByMultiSegmentViolinClick(
         projectId,
-        segment,
-        priceRange
+        segment
       )
       
       const title = `${segment} Products`
       const subtitle = `Price range: $${priceRange.min.toFixed(2)} - $${priceRange.max.toFixed(2)}`
       
-      openPanel(
-        products,
+      openPanel({
+        projectId,
+        filters: { segments: [segment] },
         title,
         subtitle,
-        { brand: true, category: true, priceRange: true, packSize: true }
-      )
+        showFilters: { brand: true, category: true, priceRange: true, packSize: true }
+      })
     } catch (err) {
       console.error('Error in multi-segment violin click handler:', err)
       setError(err instanceof Error ? err.message : 'Failed to load products')
@@ -164,17 +164,18 @@ export function useProductQuery(): UseProductQueryReturn {
     segment: string
   ) => {
     try {
-      const products = await productQueryService.queryByBarClick(projectId, segment)
+      await productQueryService.queryByBarClick(projectId, segment)
       
       const title = `${segment} Products`
       const subtitle = `All products in ${segment}`
       
-      openPanel(
-        products,
+      openPanel({
+        projectId,
+        filters: { segments: [segment] },
         title,
         subtitle,
-        { brand: true, category: true, priceRange: true, packSize: true }
-      )
+        showFilters: { brand: true, category: true, priceRange: true, packSize: true }
+      })
     } catch (err) {
       console.error('Error in bar click handler:', err)
       setError(err instanceof Error ? err.message : 'Failed to load products')
@@ -193,12 +194,13 @@ export function useProductQuery(): UseProductQueryReturn {
         const title = `Product Details`
         const subtitle = `${product.name} • ${product.brand}`
         
-        openPanel(
-          products,
+        openPanel({
+          projectId,
+          filters: {},
           title,
           subtitle,
-          { brand: false, category: false, priceRange: false, packSize: false }
-        )
+          showFilters: { brand: false, category: false, priceRange: false, packSize: false }
+        })
       }
     } catch (err) {
       console.error('Error in scatter click handler:', err)

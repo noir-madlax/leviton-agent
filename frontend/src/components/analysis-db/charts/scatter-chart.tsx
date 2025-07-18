@@ -100,12 +100,13 @@ export function ScatterChart({
         category: data.category
       }
       
-      openPanel(
-        [product],
-        `Product Details`,
-        `${data.name} • ${data.brand}`,
-        { brand: false, category: false, priceRange: false, packSize: false }
-      )
+      openPanel({
+        projectId: '',
+        filters: { brands: [product.brand] },
+        title: `Product Details`,
+        subtitle: `${data.name} • ${data.brand}`,
+        showFilters: { brand: false, category: false, priceRange: false, packSize: false }
+      })
     }
   }
 

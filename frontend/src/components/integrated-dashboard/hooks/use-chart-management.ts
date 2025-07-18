@@ -32,7 +32,7 @@ export function useChartManagement() {
     {
       id: 'pricing-analysis',
       type: 'preset',
-      title: 'Pricing Strategy',
+      title: 'Pricing Analysis',
       description: 'Competitive pricing and distribution analysis',
       icon: Target,
       tabKey: 'pricing-analysis',

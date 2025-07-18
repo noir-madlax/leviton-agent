@@ -40,12 +40,13 @@ export function HorizontalBarChart({ data, colors, valueLabel, metricType = "rev
           category: "Product"
         }
         
-        openPanel(
-          [product],
-          `Product Details`,
-          `${clickedData.name}`,
-          { brand: false, category: false, priceRange: false, packSize: false }
-        )
+        openPanel({
+          projectId: '',
+          filters: { brands: [product.brand] },
+          title: `Product Details`,
+          subtitle: `${clickedData.name}`,
+          showFilters: { brand: false, category: false, priceRange: false, packSize: false }
+        })
       }
     }
   }
