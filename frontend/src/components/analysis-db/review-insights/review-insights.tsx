@@ -4,13 +4,11 @@ import { useState, useEffect } from "react"
 
 import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
-import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-case-bar"
-import CategoryNegativeUseCaseBar from "@/components/analysis-db/shared/category-negative-use-case-bar"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/types/analysis"
+import { CategoryFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 
 interface ReviewInsightsProps {
   data: {
@@ -357,41 +355,41 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     }
   }
 
-  const transformUseCaseData = (): UseCaseFeedback[] => {
-    // 使用新的allUseCases数据而不是underservedUseCases
-    return filteredData.reviewInsights.allUseCases
-      .sort((a, b) => b.mentionCount - a.mentionCount)
-      .slice(0, 15) // 取前15个
-      .map(item => {
-        return {
-          useCase: item.useCase,
-          totalMentions: item.mentionCount,
-          positiveCount: item.positiveCount,
-          negativeCount: item.negativeCount,
-          satisfactionRate: item.satisfactionRate,
-          categoryType: 'Performance', // 默认为Performance
-          topSatisfactionReasons: item.satisfactionRate > 50 ? [
-            `Good coverage for ${item.useCase}`,
-            `${item.positiveCount} positive mentions`,
-            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-          ] : [],
-          topGapReasons: item.satisfactionRate <= 50 ? [
-            `${item.negativeCount} negative mentions`,
-            `${item.satisfactionRate.toFixed(1)}% satisfaction rate`,
-            ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
-            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-          ] : [],
-          relatedCategories: [item.productAttribute],
-          // Enhanced information
-          categoryDefinition: item.categoryDefinition,
-          productCount: item.productCount
-        }
-      })
-  }
+  // const transformUseCaseData = (): UseCaseFeedback[] => {
+  //   // 使用新的allUseCases数据而不是underservedUseCases
+  //   return filteredData.reviewInsights.allUseCases
+  //     .sort((a, b) => b.mentionCount - a.mentionCount)
+  //     .slice(0, 15) // 取前15个
+  //     .map(item => {
+  //       return {
+  //         useCase: item.useCase,
+  //         totalMentions: item.mentionCount,
+  //         positiveCount: item.positiveCount,
+  //         negativeCount: item.negativeCount,
+  //         satisfactionRate: item.satisfactionRate,
+  //         categoryType: 'Performance', // 默认为Performance
+  //         topSatisfactionReasons: item.satisfactionRate > 50 ? [
+  //           `Good coverage for ${item.useCase}`,
+  //           `${item.positiveCount} positive mentions`,
+  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+  //         ] : [],
+  //         topGapReasons: item.satisfactionRate <= 50 ? [
+  //           `${item.negativeCount} negative mentions`,
+  //           `${item.satisfactionRate.toFixed(1)}% satisfaction rate`,
+  //           ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
+  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
+  //         ] : [],
+  //         relatedCategories: [item.productAttribute],
+  //         // Enhanced information
+  //         categoryDefinition: item.categoryDefinition,
+  //         productCount: item.productCount
+  //       }
+  //     })
+  // }
 
   const categoryPainPoints = transformPainPointsData()
   const categoryPositiveFeedback = transformPositiveFeedbackData()
-  const useCases = transformUseCaseData()
+  // const useCases = transformUseCaseData() // Commented out as it's not used currently
 
   const handleProductTypeChange = (productType: ProductType) => {
     setSelectedProductType(productType)
@@ -401,7 +399,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     <div className="space-y-10">
 
       {/* 分类痛点分析 */}
-      <section>
+      <section data-chart-id="customer-pain-points">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
           📊 Customer Pain Points by Category
         </h2>
@@ -430,7 +428,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       </section>
 
       {/* 分类正面反馈分析 */}
-      <section>
+      <section data-chart-id="customer-delights">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
           ⭐ Customer Delights by Category
         </h2>
@@ -520,6 +518,20 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </ChartWithFilters>
       </section>
 负面 */}
+
+      {/* Use Case Sentiment Analysis */}
+      <section data-chart-id="use-case-sentiment">
+        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
+          🎯 Use Case Sentiment Analysis
+        </h2>
+        
+        <div className="bg-purple-50 border-l-4 border-purple-400 p-4">
+          <p className="text-sm text-purple-700">
+            <strong>Use Case Analysis:</strong> This section will show sentiment analysis for different use cases mentioned in customer reviews.
+            Currently in development - data will be available once the use case analysis pipeline is complete.
+          </p>
+        </div>
+      </section>
 
     </div>
   )

@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """Database-integrated Review-Analysis service (v0.1).
 
 This orchestration service reuses the generic four-stage taxonomy pipeline:
@@ -14,7 +12,6 @@ inside the pipeline stage helpers so this module stays fairly small.
 
 import logging
 import secrets
-import traceback
 from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple, Optional, Callable, Awaitable
 
@@ -28,11 +25,16 @@ from review_analysis.llm import (  # noqa: F401 – some imported for future sta
     ReviewExtractionContext,
     ReviewExtractionResult,
     ReviewCategorizationStage,
-    ReviewCategorizationStageContext,
+    ReviewCategorizationContext,
+    ReviewCategorizationResult,
     ReviewConsolidationStage,
     ReviewConsolidationStageContext,
     ReviewRefinementStage,
     ReviewRefinementStageContext,
+    # Deduplication utilities
+    deduplicate_review_categories,
+    print_review_deduplication_summary,
+    ReviewDeduplicationResult,
 )
 from review_analysis.repositories.aspect_repository import AspectRepository
 from review_analysis.repositories.aspect_occurrence_repository import (
@@ -182,7 +184,19 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 unique_reviews.append(r)
 
             # Split reviews into batches for prompt size management -------
-            review_batches = make_batches(unique_reviews, ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT)
+            # Use both batch size and character count limits for review batching
+            def review_char_count(review: Dict) -> int:
+                """Calculate character count for a review."""
+                title = review.get("review_title", "") or ""
+                text = review.get("review_text", "") or ""
+                return len(title) + len(text)
+            
+            review_batches = make_batches(
+                unique_reviews, 
+                ra_cfg.REVIEWS_PER_EXTRACTION_PROMPT,
+                max_chars=5000,  # 5000 chars per batch for reviews
+                char_count_func=review_char_count
+            )
             
             # Process each batch of reviews for this product -------------
             all_hierarchies: List[Dict[str, Any]] = []
@@ -301,15 +315,8 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         logger.info("✅ Review-analysis %s completed consolidation stage", analysis_id)
         await _send_progress("consolidation", "completed")
 
-        # 4) Refinement Stage ----------------------------------------------
-        await _send_progress("refinement", "in_progress", details={
-            "message": f"Refinement ({total_products}/{total_products} assigned)",
-            "current_product": total_products,
-            "total_products": total_products
-        })
-        await self._run_refinement(request.project_id)
-        logger.info("✅ Review-analysis %s completed refinement stage", analysis_id)
-        await _send_progress("refinement", "completed")
+        # Review analysis complete - no refinement stage needed!
+        # Aspects were assigned during categorization and reassigned during consolidation
 
         return analysis_id
 
@@ -497,10 +504,17 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             aspects_for_prompt: List[Tuple[str, str]] = []
             for idx, row in enumerate(batch):
                 prompt_id = str(idx)
-                desc = f"{row['parent_group_name']} – {row['detail_text']}"
+                
+                # For usability aspects, use detail_text directly (no parent_group_name prefix)
+                # For physical/performance aspects, combine parent_group_name with detail_text
+                if aspect_code == "use":
+                    desc = row['detail_text']
+                else:
+                    desc = f"{row['parent_group_name']} – {row['detail_text']}"
+                
                 aspects_for_prompt.append((prompt_id, desc))
 
-            ctx = ReviewCategorizationStageContext(
+            ctx = ReviewCategorizationContext(
                 product_category=request.product_category,
                 aspect_type=human_name,
                 aspect_context=aspect_context,
@@ -510,9 +524,25 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             )
 
             try:
-                result = await self._categorisation_stage.execute(ctx)
+                result: ReviewCategorizationResult = await self._categorisation_stage.execute(ctx)
 
-                # Persist categories from this batch
+                # Deduplicate categories before persisting to eliminate obvious duplicates
+                raw_categories = result.taxonomies_categorised
+                if raw_categories:
+                    logger.info(f"🔍 Deduplicating {len(raw_categories)} raw categories for {aspect_code}")
+                    dedup_result = deduplicate_review_categories(raw_categories)
+                    print_review_deduplication_summary(dedup_result)
+                    
+                    # Use deduplicated categories
+                    final_categories = dedup_result.unique_categories
+                    category_name_mapping = dedup_result.name_mapping
+                    
+                    logger.info(f"✅ Deduplicated {len(raw_categories)} → {len(final_categories)} categories for {aspect_code}")
+                else:
+                    final_categories = raw_categories
+                    category_name_mapping = {}
+
+                # Persist deduplicated categories
                 cat_rows = [
                     {
                         "project_id": request.project_id,
@@ -521,23 +551,54 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                         "definition": tax.definition,
                         "stage": "categorisation",
                     }
-                    for tax in result.taxonomies_categorised
+                    for tax in final_categories
                 ]
 
                 if cat_rows:
                     inserted_pks = await self._cat_repo.batch_insert(cat_rows)
-                    logger.info(f"✅ Processed {len(cat_rows)} categories for {aspect_code}, got {len(inserted_pks)} PKs")
+                    logger.info(f"✅ Processed {len(cat_rows)} deduplicated categories for {aspect_code}, got {len(inserted_pks)} PKs")
                     
-                    # Log any missing PKs for debugging
-                    if len(inserted_pks) != len(cat_rows):
-                        missing_count = len(cat_rows) - len(inserted_pks)
-                        logger.warning(f"⚠️ {missing_count} categories may have failed insertion (likely duplicates) for {aspect_code}")
-                        category_names = [row["name"] for row in cat_rows]
-                        logger.debug(f"📝 Category names attempted: {category_names}")
+                    # Create mapping from category name to PK
+                    name_to_pk = {}
+                    if len(inserted_pks) == len(cat_rows):
+                        name_to_pk = {row["name"]: pk for row, pk in zip(cat_rows, inserted_pks)}
+                    else:
+                        # Handle partial insertions due to duplicates - query existing categories
+                        sb_client = get_supabase_client()
+                        existing_cats = (
+                            sb_client.table("review_analysis_aspect_categories")
+                            .select("category_pk, name")
+                            .eq("project_id", request.project_id)
+                            .eq("aspect_type", aspect_code)
+                            .eq("stage", "categorisation")
+                            .in_("name", [row["name"] for row in cat_rows])
+                            .execute()
+                        )
+                        if existing_cats.data:
+                            name_to_pk = {row["name"]: row["category_pk"] for row in existing_cats.data}
 
-            except (LLMCallError, StageProtocolError) as exc:
-                # Categorisation LLM validation failed - create placeholder category
-                logger.warning(f"🚨 Categorisation LLM validation failed for {aspect_code}: {exc}")
+                    # Process aspect assignments with deduplication mapping
+                    updated_assignments = {}
+                    for aspect_id, raw_category_name in result.assignments_initial.items():
+                        # Map to deduplicated category name if needed
+                        final_category_name = category_name_mapping.get(raw_category_name, raw_category_name)
+                        updated_assignments[aspect_id] = final_category_name
+
+                    # Update aspect category assignments using deduplicated names
+                    for aspect_id, final_category_name in updated_assignments.items():
+                        category_pk = name_to_pk.get(final_category_name)
+                        if category_pk:
+                            await self._aspect_repo.update_category(aspect_id, category_pk)
+                        else:
+                            logger.warning(f"No PK found for deduplicated category '{final_category_name}' for aspect {aspect_id}")
+
+                    if updated_assignments:
+                        logger.info(f"✅ Updated {len(updated_assignments)} aspect assignments with deduplicated categories for {aspect_code}")
+                else:
+                    logger.warning(f"No categories to persist for {aspect_code}")
+
+            except Exception as exc:
+                logger.exception(f"❌ Normal categorisation failed for {aspect_code}: {exc}")
                 await self._create_placeholder_category(
                     request.project_id, aspect_code, "categorisation", str(exc)
                 )
@@ -586,7 +647,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             raise
 
     async def _run_consolidation(self, project_id: str) -> None:  # noqa: D401
-        """Progressively merge unc­onsolidated categories per aspect_type."""
+        """Progressively merge unconsolidated categories per aspect_type and reassign aspects."""
 
         sb = get_supabase_client()
         aspect_type_map = ra_cfg.ASPECT_TYPE_MAP
@@ -617,6 +678,9 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                         }
                     ]
                     await self._cat_repo.batch_insert(final_rows)
+                    
+                    # No consolidation needed - aspects keep their current assignments
+                    logger.info(f"✅ Aspect type '{aspect_code}': only 1 category, no consolidation needed")
                 continue
 
             # Build list[TaxonomyDTO] - exclude error categories from consolidation
@@ -643,14 +707,35 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 ]
                 if final_rows:
                     await self._cat_repo.batch_insert(final_rows)
+                    
+                logger.info(f"✅ Aspect type '{aspect_code}': only error categories, no consolidation needed")
                 continue
 
+            # Deduplicate categories before consolidation (like product segmentation)
+            logger.info(f"🔍 Pre-consolidation deduplication: {len(cat_dtos)} categories for {aspect_code}")
+            dedup_result = deduplicate_review_categories(cat_dtos)
+            print_review_deduplication_summary(dedup_result)
+            
+            # Use deduplicated categories for consolidation
+            deduped_categories = dedup_result.unique_categories
+            pre_consolidation_mapping = dedup_result.name_mapping
+            
+            logger.info(f"✅ Pre-consolidation: {len(cat_dtos)} → {len(deduped_categories)} categories for {aspect_code}")
+
+            # Tracks every *direct* merge seen during consolidation. Key = old
+            # category name, value = the immediate merge target. Will be
+            # collapsed to its canonical (final) representative after all
+            # consolidation passes finish.
+            raw_merge_map: Dict[str, str] = {}
+
             # Split evenly sized batches but **progressively** merge: A + B -> C, C + D -> E ...
-            batches = make_batches(cat_dtos, ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT)
+            batches = make_batches(deduped_categories, ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT)
             current_consolidated = batches[0]
+            
+            logger.info(f"🔄 Consolidating {len(deduped_categories)} deduplicated categories for {aspect_code} in {len(batches)} batches")
 
             try:
-                for batch in batches[1:]:
+                for batch_idx, batch in enumerate(batches[1:]):
                     ctx = ReviewConsolidationStageContext(
                         product_category="",
                         taxonomy_a=current_consolidated,
@@ -659,7 +744,22 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                     res = await self._consolidation_stage.execute(ctx)
                     current_consolidated = [c.taxonomy for c in res.taxonomies_consolidated]
 
-                    # TODO: persist mapping between originals and new names (similar to product segmentation)
+                    # ------------------------------------------------------------------
+                    # Record mapping old_name → new_name for *every* merge so we can
+                    # later rewrite aspect assignments in one shot.
+                    # ------------------------------------------------------------------
+                    for cons in res.taxonomies_consolidated:
+                        new_name = cons.taxonomy.name
+                        # Identity mapping for the consolidated category itself –
+                        # needed so _canonical below terminates for untouched names.
+                        raw_merge_map.setdefault(new_name, new_name)
+
+                        for orig in cons.original_taxonomies:
+                            raw_merge_map[orig.name] = new_name
+                    
+                    logger.info(f"🔄 Consolidation batch {batch_idx + 1}/{len(batches) - 1} completed for {aspect_code}")
+
+                final_taxonomies: List[TaxonomyDTO] = current_consolidated
 
                 # Insert final consolidated categories with stage="final"
                 final_rows = [
@@ -670,7 +770,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                         "definition": tax.definition,
                         "stage": "final",
                     }
-                    for tax in current_consolidated
+                    for tax in final_taxonomies
                 ]
                 
                 # Also add error categories to final stage
@@ -688,32 +788,172 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 all_final_rows = final_rows + error_final_rows
                 if all_final_rows:
                     await self._cat_repo.batch_insert(all_final_rows)
-                    logger.info(f"✅ Consolidated {len(final_rows)} categories + {len(error_final_rows)} error categories for {aspect_code}")
+                    logger.info(f"✅ Persisted {len(final_rows)} consolidated categories + {len(error_final_rows)} error categories for {aspect_code}")
 
-            except (LLMCallError, StageProtocolError) as exc:
-                # Consolidation LLM validation failed - copy categories to final stage as-is
-                logger.warning(f"🚨 Consolidation LLM validation failed for {aspect_code}: {exc}")
-                final_rows = [
-                    {
-                        "project_id": project_id,
-                        "aspect_type": aspect_code,
-                        "name": tax.name,
-                        "definition": tax.definition,
-                        "stage": "final",
-                    }
-                    for tax in cat_dtos
-                ] + [
-                    {
-                        "project_id": project_id,
-                        "aspect_type": aspect_code,
-                        "name": cat["name"],
-                        "definition": cat["definition"],
-                        "stage": "final",
-                    }
-                    for cat in error_categories
-                ]
-                if final_rows:
-                    await self._cat_repo.batch_insert(final_rows)
+                # ------------------------------------------------------------------
+                # Build *canonical* mapping (follow chains A→B→C→… ⇒ A→C, B→C, …)
+                # and update all aspect assignments in one shot.
+                # ------------------------------------------------------------------
+                if raw_merge_map or pre_consolidation_mapping:
+                    def _canonical(name: str) -> str:
+                        """Collapse raw_merge_map chains to their final representative."""
+                        seen: set[str] = set()
+                        while raw_merge_map.get(name) and raw_merge_map[name] != name:
+                            if name in seen:  # should not happen, safeguard against loops
+                                break
+                            seen.add(name)
+                            name = raw_merge_map[name]
+                        return name
+
+                    # Combine pre-consolidation deduplication mapping with consolidation mapping
+                    combined_mapping: Dict[str, str] = {}
+                    
+                    # Start with all original category names and apply both mappings
+                    for original_name in set(pre_consolidation_mapping.keys()) | set(raw_merge_map.keys()):
+                        # First apply pre-consolidation deduplication
+                        intermediate_name = pre_consolidation_mapping.get(original_name, original_name)
+                        # Then apply consolidation mapping
+                        final_name = _canonical(intermediate_name)
+                        combined_mapping[original_name] = final_name
+                    
+                    # Also handle categories that only went through consolidation (not pre-dedup)
+                    for name in raw_merge_map.keys():
+                        if name not in combined_mapping:
+                            combined_mapping[name] = _canonical(name)
+                    
+                    # Handle categories that only went through pre-dedup (not consolidation)
+                    for original_name, dedup_name in pre_consolidation_mapping.items():
+                        if original_name not in combined_mapping:
+                            combined_mapping[original_name] = dedup_name
+                    
+                    # Reassign aspects to consolidated categories
+                    await self._reassign_aspects_to_consolidated_categories(
+                        project_id, aspect_code, combined_mapping, final_rows + error_final_rows
+                    )
+                    
+                    mapping_count = len([name for name, final in combined_mapping.items() if name != final])
+                    logger.info(f"✅ Applied combined mapping (pre-dedup + consolidation) for {mapping_count} category changes in {aspect_code}")
+                else:
+                    logger.info(f"✅ No mapping needed for {aspect_code}")
+
+            except Exception as exc:  # pylint: disable=broad-except
+                logger.exception("Consolidation failed for aspect %s: %s", aspect_code, exc)
+                await self._create_placeholder_category(
+                    project_id, aspect_code, "consolidation", str(exc)
+                )
+
+    async def _reassign_aspects_to_consolidated_categories(
+        self, 
+        project_id: str, 
+        aspect_code: str, 
+        canonical_map: Dict[str, str], 
+        final_category_rows: List[Dict]
+    ) -> None:
+        """Reassign aspects from original categories to their consolidated categories."""
+        
+        try:
+            sb = get_supabase_client()
+            
+            # Build mapping from final category name to PK
+            final_name_to_pk = {row["name"]: None for row in final_category_rows}
+            
+            # Get PKs for final categories
+            if final_category_rows:
+                final_cats_result = (
+                    sb.table("review_analysis_aspect_categories")
+                    .select("category_pk, name")
+                    .eq("project_id", project_id)
+                    .eq("aspect_type", aspect_code)
+                    .eq("stage", "final")
+                    .in_("name", list(final_name_to_pk.keys()))
+                    .execute()
+                )
+                
+                if final_cats_result.data:
+                    for cat_row in final_cats_result.data:
+                        final_name_to_pk[cat_row["name"]] = cat_row["category_pk"]
+            
+            # Get all aspects currently assigned to categorisation-stage categories
+            aspects_query = (
+                sb.table("review_analysis_aspects")
+                .select("aspect_pk, category_pk")
+                .eq("project_id", project_id)
+                .eq("aspect_type", aspect_code)
+                .not_.is_("category_pk", "null")
+                .execute()
+            )
+            
+            if not aspects_query.data:
+                logger.info(f"No aspects to reassign for {aspect_code}")
+                return
+            
+            # Get the category names for current assignments
+            current_category_pks = [row["category_pk"] for row in aspects_query.data]
+            categories_query = (
+                sb.table("review_analysis_aspect_categories")
+                .select("category_pk, name")
+                .eq("project_id", project_id)
+                .eq("aspect_type", aspect_code)
+                .eq("stage", "categorisation")
+                .in_("category_pk", current_category_pks)
+                .execute()
+            )
+            
+            pk_to_name = {}
+            if categories_query.data:
+                pk_to_name = {row["category_pk"]: row["name"] for row in categories_query.data}
+            
+            # Track reassignments for logging
+            reassignments_made = 0
+            aspects_to_update = []
+            
+            for aspect_row in aspects_query.data:
+                aspect_pk = aspect_row["aspect_pk"]
+                current_category_pk = aspect_row["category_pk"]
+                
+                # Get current category name
+                current_category_name = pk_to_name.get(current_category_pk)
+                if not current_category_name:
+                    continue
+                
+                # Get consolidated category name using canonical mapping
+                consolidated_category_name = canonical_map.get(current_category_name, current_category_name)
+                
+                # Only update if the category actually changed
+                if consolidated_category_name != current_category_name:
+                    # Get the PK for the consolidated category
+                    consolidated_category_pk = final_name_to_pk.get(consolidated_category_name)
+                    
+                    if consolidated_category_pk:
+                        aspects_to_update.append({
+                            "aspect_pk": aspect_pk,
+                            "new_category_pk": consolidated_category_pk,
+                            "old_category": current_category_name,
+                            "new_category": consolidated_category_name
+                        })
+                        reassignments_made += 1
+            
+            # Batch update aspect assignments
+            if aspects_to_update:
+                for update_info in aspects_to_update:
+                    await self._aspect_repo.update_category(
+                        update_info["aspect_pk"], 
+                        update_info["new_category_pk"]
+                    )
+                
+                logger.info(f"📝 Reassigned {reassignments_made} aspects to consolidated categories for {aspect_code}")
+                
+                # Log some example reassignments for debugging
+                for i, update_info in enumerate(aspects_to_update[:5]):  # Show first 5
+                    logger.debug(f"  - Aspect {update_info['aspect_pk']}: {update_info['old_category']} → {update_info['new_category']}")
+                if len(aspects_to_update) > 5:
+                    logger.debug(f"  - ... and {len(aspects_to_update) - 5} more")
+            else:
+                logger.info(f"No aspect reassignments needed for {aspect_code}")
+                
+        except Exception as exc:
+            logger.exception(f"Failed to reassign aspects for {aspect_code}: {exc}")
+            raise
 
     # ------------------------------------------------------------------
     # Refinement flow

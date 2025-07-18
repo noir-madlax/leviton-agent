@@ -27,17 +27,7 @@ export function useChartManagement() {
       icon: Building,
       tabKey: 'market-analysis',
       isActive: false,
-      aiIntroduction: 'Market share and brand positioning analysis across different product categories:'
-    },
-    {
-      id: 'market-insights',
-      type: 'preset',
-      title: 'Product Deep Dive',
-      description: 'Revenue performance and product segments',
-      icon: TrendingUp,
-      tabKey: 'market-insights',
-      isActive: false,
-      aiIntroduction: 'Analysis of product revenue relationships across different market segments：'
+      aiIntroduction: 'Market Analysis'
     },
     {
       id: 'pricing-analysis',
@@ -47,7 +37,7 @@ export function useChartManagement() {
       icon: Target,
       tabKey: 'pricing-analysis',
       isActive: false,
-      aiIntroduction: 'Analysis of pricing strategy distribution across brands to understand competitive landscape:'
+      aiIntroduction: 'Pricing Analysis'
     },
     {
       id: 'review-insights',
@@ -57,17 +47,7 @@ export function useChartManagement() {
       icon: MessageCircle,
       tabKey: 'review-insights',
       isActive: false,
-      aiIntroduction: 'Customer pain points and satisfaction analysis based on reviews to identify product improvement opportunities:'
-    },
-    {
-      id: 'package-preference',
-      type: 'preset',
-      title: 'Package Preference',
-      description: 'Customer buying patterns and preferences',
-      icon: PieChart,
-      tabKey: 'package-preference',
-      isActive: false,
-      aiIntroduction: 'Customer preferences and buying patterns analysis for different package sizes:'
+      aiIntroduction: 'Customer Insights'
     },
     {
       id: 'competitor-analysis',
@@ -77,7 +57,7 @@ export function useChartManagement() {
       icon: Zap,
       tabKey: 'competitor-analysis',
       isActive: false,
-      aiIntroduction: 'Competitive performance analysis across different dimensions to identify differentiation opportunities:'
+      aiIntroduction: 'Competitive Product Analysis'
     }
   ]
 

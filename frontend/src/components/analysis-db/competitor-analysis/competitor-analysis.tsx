@@ -337,7 +337,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
           )}
 
       {/* Product Data Overview */}
-      <section>
+      <section data-chart-id="customer-satisfaction-overview">
         <h2 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-4">
           📊 Customer satisfaction overview
           {selectedAsins.length > 0 && (
@@ -392,7 +392,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       </section>
 
       {/* Competitor Delights and Pain Points Matrix */}
-      <section>
+      <section data-chart-id="product-comparison-dimensions">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
           🏆 Product Comparison by Key Dimensions
         </h2>
@@ -417,7 +417,7 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
       </section>
 
       {/* Use Case Matrix */}
-      <section>
+      <section data-chart-id="product-comparison-use-cases">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
           🎯 Product Comparison by Main Use Cases
         </h2>

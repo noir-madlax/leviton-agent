@@ -6,7 +6,7 @@
     "asin": "B087N9N6HH",
     "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
     "reviews_count": 100,
-    "aspects_extracted": 36
+    "aspects_extracted": 44
   },
   "extraction_result": {
     "review_hierarchy": {
@@ -27,7 +27,6 @@
               39,
               41,
               42,
-              44,
               46
             ]
           },
@@ -35,13 +34,96 @@
             "+": [
               38
             ]
+          }
+        },
+        "colors": {
+          "C@variety of colors available": {
+            "+": [
+              1,
+              4,
+              26,
+              31,
+              37,
+              41,
+              67,
+              70,
+              75,
+              78,
+              81,
+              84,
+              92,
+              96
+            ]
           },
-          "C@fist-sized amount of playdough": {
+          "D@bright and vibrant colors": {
+            "+": [
+              0,
+              14,
+              22,
+              26,
+              38,
+              53,
+              55,
+              56,
+              64,
+              69,
+              84
+            ]
+          },
+          "E@nice colors": {
+            "+": [
+              10,
+              60,
+              68
+            ]
+          }
+        },
+        "packaging": {
+          "F@sturdy and cute box packaging": {
             "+": [
               1
             ]
           },
-          "D@tips break easily": {
+          "G@nice bulk pack packaging": {
+            "+": [
+              29
+            ]
+          },
+          "H@box with flip-top lid for easy distribution": {
+            "+": [
+              38
+            ]
+          },
+          "I@damaged packaging": {
+            "-": [
+              57,
+              62,
+              64,
+              72,
+              73,
+              83
+            ]
+          },
+          "J@pre-opened packaging": {
+            "-": [
+              7
+            ]
+          },
+          "K@packaging not sturdy": {
+            "-": [
+              57
+            ]
+          }
+        },
+        "material": {
+          "L@non-toxic and wheat-free": {
+            "+": [
+              38
+            ]
+          }
+        },
+        "tips": {
+          "M@tips that break easily": {
             "-": [
               52,
               60,
@@ -49,145 +131,67 @@
               77
             ]
           },
-          "E@tips get dull quickly": {
+          "N@strong tips": {
+            "+": [
+              64
+            ]
+          },
+          "O@smooth and even writing tip": {
+            "+": [
+              56
+            ]
+          },
+          "P@tips get dull quickly": {
             "-": [
               76
             ]
           },
-          "F@warped and bent pencils": {
+          "Q@tips not sharp when new": {
+            "-": [
+              83
+            ]
+          }
+        },
+        "texture": {
+          "R@smooth texture": {
+            "+": [
+              55,
+              64,
+              76
+            ]
+          },
+          "S@soft play dough": {
+            "+": [
+              49
+            ]
+          }
+        },
+        "shape": {
+          "T@warped pencils with curves and bends": {
             "-": [
               85
             ]
           }
         },
-        "colors": {
-          "G@variety of bright vibrant colors": {
-            "+": [
-              0,
-              1,
-              4,
-              14,
-              22,
-              26,
-              31,
-              37,
-              38,
-              41,
-              53,
-              55,
-              56,
-              64,
-              67,
-              69,
-              70,
-              75,
-              78,
-              81,
-              84,
-              92,
-              96,
-              99
-            ]
-          },
-          "H@nice colors but break when sharpened": {
-            "-": [
-              60,
-              68
-            ]
-          }
-        },
-        "material": {
-          "I@non-toxic and wheat-free": {
-            "+": [
-              38
-            ]
-          },
-          "J@high-quality material": {
-            "+": [
-              56
-            ]
-          },
-          "K@smooth texture": {
-            "+": [
-              64,
-              76
-            ]
-          }
-        },
-        "packaging": {
-          "L@sturdy and cute box packaging": {
-            "+": [
-              1
-            ]
-          },
-          "M@flip-top box for easy distribution": {
-            "+": [
-              38
-            ]
-          },
-          "N@damaged packaging with scattered contents": {
-            "-": [
-              57,
-              62,
-              72,
-              73,
-              83
-            ]
-          },
-          "O@came pre-opened with missing items": {
-            "-": [
-              7
-            ]
-          }
-        },
         "grip": {
-          "P@easy to grip and hold": {
+          "U@easy to grip and hold": {
             "+": [
               53,
               56
-            ]
-          }
-        },
-        "writing_tip": {
-          "Q@smooth and even writing tip": {
-            "+": [
-              55,
-              56
-            ]
-          },
-          "R@tips not sharp as new": {
-            "-": [
-              83
             ]
           }
         }
       },
       "perf": {
         "durability": {
-          "a@lasts long time with proper storage": {
-            "+": {
-              "A": [
-                37
-              ],
-              "J": [
-                56
-              ],
-              "?": [
-                84
-              ]
-            }
-          },
-          "b@breaks easily when sharpened": {
+          "a@dries out quickly": {
             "-": {
-              "D": [
-                52,
-                60,
-                68,
-                77
+              "A": [
+                22
               ]
             }
           },
-          "c@doesn't dry out quickly": {
+          "b@doesn't dry out quickly": {
             "+": {
               "?": [
                 27,
@@ -195,64 +199,84 @@
               ]
             }
           },
-          "d@can be revived with water when dry": {
+          "c@durable and lasts long time": {
+            "+": {
+              "?": [
+                37,
+                56,
+                84
+              ]
+            }
+          },
+          "d@breaks when sharpening": {
+            "-": {
+              "M": [
+                60,
+                68,
+                77
+              ]
+            }
+          },
+          "e@doesn't break easily": {
+            "+": {
+              "?": [
+                55
+              ]
+            }
+          }
+        },
+        "color_application": {
+          "f@colors go on smoothly": {
+            "+": {
+              "?": [
+                55
+              ]
+            }
+          },
+          "g@vibrant and rich colors that blend beautifully": {
+            "+": {
+              "D": [
+                55,
+                99
+              ]
+            }
+          },
+          "h@very pigmented": {
+            "+": {
+              "?": [
+                71
+              ]
+            }
+          },
+          "i@lead doesn't stay sharpened": {
+            "-": {
+              "?": [
+                77
+              ]
+            }
+          }
+        },
+        "sharpening": {
+          "j@sharpens well": {
+            "+": {
+              "?": [
+                55
+              ]
+            }
+          }
+        },
+        "revivability": {
+          "k@can be revived with water when dried": {
             "+": {
               "?": [
                 27
               ]
             }
           }
-        },
-        "color_application": {
-          "e@colors go on smoothly": {
-            "+": {
-              "G": [
-                55
-              ],
-              "K": [
-                64,
-                76
-              ]
-            }
-          },
-          "f@vibrant and pigmented colors": {
-            "+": {
-              "G": [
-                53,
-                71,
-                99
-              ]
-            }
-          },
-          "g@blends beautifully for gradients": {
-            "+": {
-              "?": [
-                99
-              ]
-            }
-          }
-        },
-        "sharpening": {
-          "h@sharpens well": {
-            "+": {
-              "?": [
-                55
-              ]
-            }
-          },
-          "i@breaks when sharpened": {
-            "-": {
-              "D": [
-                60,
-                68,
-                77
-              ]
-            }
-          }
         }
       },
       "use": {
-        "party_favors": {
+        "party favors and goodie bags": {
           "+": {
             "A": [
               0,
@@ -262,8 +286,6 @@
               18,
               21,
               24,
-              25,
-              29,
               32,
               34,
               37,
@@ -271,12 +293,11 @@
               42,
               44,
               46,
-              47,
-              49
+              47
             ]
           }
         },
-        "classroom_gifts": {
+        "classroom gifts and prizes": {
           "+": {
             "A": [
               1,
@@ -285,8 +306,8 @@
               19,
               25,
               31,
+              33,
               39,
-              42,
               44,
               48,
               74,
@@ -295,7 +316,7 @@
             ]
           }
         },
-        "easter_baskets": {
+        "Easter baskets and egg stuffers": {
           "+": {
             "A": [
               12,
@@ -303,13 +324,12 @@
               20,
               23,
               29,
-              37,
               43,
               67
             ]
           }
         },
-        "travel_entertainment": {
+        "travel and on-the-go entertainment": {
           "+": {
             "A": [
               11,
@@ -319,63 +339,75 @@
             ]
           }
         },
-        "sensory_play": {
-          "+": {
-            "A": [
-              13
-            ]
-          }
-        },
-        "art_activities": {
+        "sensory play and art activities": {
           "+": {
             "A": [
               13,
-              27,
-              30
+              27
             ]
           }
         },
-        "coloring_and_drawing": {
+        "preventing color mixing waste": {
           "+": {
-            "G": [
+            "A": [
+              30,
+              42
+            ]
+          }
+        },
+        "coloring and crafting": {
+          "+": {
+            "C,D": [
               53,
               55,
-              56
-            ],
-            "e": [
-              55
-            ],
-            "f": [
-              71,
-              99
-            ],
-            "P": [
-              53
+              56,
+              75,
+              84,
+              87,
+              96
             ]
           }
         },
-        "school_supplies": {
+        "schoolwork": {
           "+": {
             "?": [
-              58,
+              55,
+              58
+            ]
+          }
+        },
+        "detailed drawing and shading": {
+          "+": {
+            "g": [
+              56,
+              99
+            ]
+          }
+        },
+        "sketching on the go": {
+          "+": {
+            "?": [
+              99
+            ]
+          }
+        },
+        "Mother's Day projects": {
+          "+": {
+            "?": [
               80
             ]
           }
         },
-        "creative_projects": {
+        "Halloween treats": {
           "+": {
-            "G": [
-              55,
-              99
-            ],
-            "g": [
-              99
+            "A,C": [
+              41
             ]
           }
         }
       }
     },
-    "aspects_extracted": 36
+    "aspects_extracted": 44
   },
   "context_used": {
     "product_category": "Kids Arts & Crafts",

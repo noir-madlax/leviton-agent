@@ -25,12 +25,10 @@ import math
 import secrets
 from datetime import datetime
 from typing import (
-    Any,
     Callable,
     Dict,
     List,
     Optional,
-    Tuple,
     Awaitable,
 )
 
@@ -38,20 +36,13 @@ from core.utils.batching import make_batches
 from product_segment import config as seg_cfg
 from product_segment.llm import (
     TaxonomyDTO,
-    ProductExtractionStageResult,
     ProductExtractionStageContext,
     ProductExtractionStage,
-    ConsolidatedTaxonomyDTO,
-    ProductConsolidationStageResult,
     ProductConsolidationStageContext,
     ProductConsolidationStage,
-    ProductRefinementStageResult,
     ProductRefinementStageContext,
     ProductRefinementStage,
-    deduplicate_taxonomies,
     deduplicate_taxonomy_batches,
-    print_deduplication_summary,
-    DeduplicationResult,
 )
 from product_segment.models import (
     ProductSegmentAssignment,
@@ -216,9 +207,33 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                 raise ValueError(f"No products found for run {run_id}")
 
             # --- Fetch product titles for the current batch ---
-            product_titles = await asyncio.gather(
-                *[self._title_fetcher(pid) for pid in product_ids]
-            )
+            logger.debug(f"Fetching titles for {len(product_ids)} products using title_fetcher: {self._title_fetcher}")
+            
+            # Ensure title_fetcher is callable and awaitable
+            if not self._title_fetcher:
+                logger.warning("Title fetcher is None, using default")
+                async def _fallback_title_fetcher(pid: int) -> str:
+                    return f"Product {pid}"
+                self._title_fetcher = _fallback_title_fetcher
+            
+            # Simple approach: try to call title_fetcher for each product
+            async def safe_get_title(product_id: int) -> str:
+                try:
+                    result = self._title_fetcher(product_id)
+                    # If it's awaitable, await it; otherwise use it directly
+                    if hasattr(result, '__await__'):
+                        return await result
+                    else:
+                        # Not awaitable, probably a regular string
+                        logger.warning(f"Title fetcher returned non-awaitable for product {product_id}: {type(result)}")
+                        return str(result) if result else f"Product {product_id}"
+                except Exception as e:
+                    logger.error(f"Error fetching title for product {product_id}: {e}")
+                    return f"Product {product_id}"
+            
+            # Create tasks for all products
+            title_tasks = [safe_get_title(pid) for pid in product_ids]
+            product_titles = await asyncio.gather(*title_tasks)
             product_id_titles = list(zip(product_ids, product_titles))
             # ------------------------------------------------------------------
             # Calculate rough call budget (pre-extraction)

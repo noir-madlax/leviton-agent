@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from 'react'
+import './styles.css'
 import { ArrowLeft, Filter, MessageSquare, ChevronRight, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
@@ -177,7 +178,7 @@ export function IntegratedLayout({
   }
 
   return (
-    <div className="h-screen bg-gray-50/50 flex flex-col">
+    <div className="integrated-dashboard h-screen bg-gray-50/50 flex flex-col">
       {/* Header */}
       <header className="flex-shrink-0 border-b bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -255,7 +256,7 @@ export function IntegratedLayout({
         {isChartPanelExpanded && (
           <button
             onClick={toggleChartPanel}
-            className="w-6 bg-gray-200 hover:bg-gray-300 border-r border-gray-300 flex items-center justify-center transition-colors"
+            className="hidden w-6 bg-gray-200 hover:bg-gray-300 border-r border-gray-300 flex items-center justify-center transition-colors"
             title="Hide Charts"
           >
             <ChevronRight className="h-4 w-4 text-gray-600" />

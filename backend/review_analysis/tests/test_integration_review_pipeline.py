@@ -12,17 +12,34 @@ from pathlib import Path
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S',
+    force=True  # Force reconfiguration
 )
 logger = logging.getLogger(__name__)
 
 # Enable detailed logging for LLM calls
 llm_logger = logging.getLogger('core.utils.llm_utils')
 llm_logger.setLevel(logging.INFO)
+llm_logger.propagate = True  # Ensure logs propagate to root logger
 
 # Enable detailed logging for review analysis service
 service_logger = logging.getLogger('review_analysis.services.db_review_analysis')
 service_logger.setLevel(logging.INFO)
+service_logger.propagate = True  # Ensure logs propagate to root logger
+
+# Also enable logging for the LLM client classes
+anthropic_logger = logging.getLogger('core.utils.llm_utils.AnthropicLLMClient')
+anthropic_logger.setLevel(logging.INFO)
+anthropic_logger.propagate = True
+
+openrouter_logger = logging.getLogger('core.utils.llm_utils.OpenRouterLLMClient')
+openrouter_logger.setLevel(logging.INFO)
+openrouter_logger.propagate = True
+
+# Enable logging for rate limiter
+rate_limiter_logger = logging.getLogger('core.utils.rate_limiter')
+rate_limiter_logger.setLevel(logging.INFO)
+rate_limiter_logger.propagate = True
 
 def log_with_timestamp(message: str, level: str = "INFO") -> None:
     """Helper function to log messages with consistent timestamp format."""
@@ -440,7 +457,6 @@ async def test_full_review_analysis_pipeline() -> None:
             log_with_timestamp(f"📊 Service progress: {step} - {status} | {details}")
         
         # Add a timeout wrapper to the service call
-        import asyncio
         try:
             analysis_id = await asyncio.wait_for(
                 service.analyse(req, progress_callback=debug_progress_callback), 
@@ -469,7 +485,7 @@ async def test_full_review_analysis_pipeline() -> None:
     # ------------------------------------------------------------------
     # Poll DB for progress & print small samples, similar to segmentation
     # ------------------------------------------------------------------
-    timeout_s = 900  # 15 min timeout to accommodate slower aspect assignment
+    timeout_s = 900  # 15 min timeout for the 3-stage workflow (extraction, categorization, consolidation)
     poll_interval = 10
     no_progress_timeout = 480  # 8 minutes - fail if no progress
     deadline = time.time() + timeout_s
@@ -483,7 +499,6 @@ async def test_full_review_analysis_pipeline() -> None:
     extraction_done = False
     categorization_done = False
     consolidation_done = False
-    refinement_done = False
 
     last_report = ""
     poll_count = 0
@@ -519,7 +534,7 @@ async def test_full_review_analysis_pipeline() -> None:
         runs_query_start = time.time()
         runs = (
             sb_client.table("review_analysis_runs")
-            .select("id, status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total")
+            .select("id, status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total")
             .eq("project_id", project_id)
             .execute()
             .data
@@ -551,7 +566,7 @@ async def test_full_review_analysis_pipeline() -> None:
         progress_map = {p['step_name']: p for p in progress}
         
         # Check each stage progress
-        for stage_name in ["extraction", "categorization", "consolidation", "refinement"]:
+        for stage_name in ["extraction", "categorization", "consolidation"]:
             stage_progress = progress_map.get(stage_name, {})
             stage_status = stage_progress.get("status", "pending")
             stage_current = stage_progress.get("progress_current", 0)
@@ -569,10 +584,6 @@ async def test_full_review_analysis_pipeline() -> None:
                 elif stage_name == "consolidation" and not consolidation_done:
                     log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
                     consolidation_done = True
-                    changes_detected = True
-                elif stage_name == "refinement" and not refinement_done:
-                    log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
-                    refinement_done = True
                     changes_detected = True
             elif stage_status == "in_progress":
                 progress_bar = create_progress_bar(stage_current, stage_total)
@@ -668,7 +679,15 @@ async def test_full_review_analysis_pipeline() -> None:
 
         # All done? ----------------------------------------------------
         if extraction_done and consolidation_done:
-            log_with_timestamp("🔍 Checking for unassigned aspects...")
+            # Pipeline is complete when all 3 stages are done - aspects are assigned during categorization
+            # and reassigned during consolidation, so no separate refinement needed
+            elapsed_time = time.time() - polling_start_time
+            log_with_timestamp(f"🎯 PIPELINE COMPLETE! All 3 stages completed (total polling time: {elapsed_time:.2f}s)")
+            break
+
+        # Check for any remaining unassigned aspects for monitoring (but don't block completion)
+        if extraction_done and categorization_done:
+            log_with_timestamp("🔍 Checking for unassigned aspects (for monitoring only)...")
             unassigned_check_start = time.time()
             unassigned = (
                 sb_client.table("review_analysis_aspects")
@@ -681,18 +700,15 @@ async def test_full_review_analysis_pipeline() -> None:
             )
             unassigned_check_time = time.time() - unassigned_check_start
             
-            if not unassigned:
-                elapsed_time = time.time() - polling_start_time
-                log_with_timestamp(f"🎯 PIPELINE COMPLETE! All aspects assigned to categories (unassigned check: {unassigned_check_time:.2f}s, total polling time: {elapsed_time:.2f}s)")
-                refinement_done = True
-                break
+            if unassigned:
+                log_with_timestamp(f"⏳ Still have unassigned aspects (check: {unassigned_check_time:.2f}s), waiting for consolidation...")
             else:
-                log_with_timestamp("⏳ Still have unassigned aspects, continuing to poll...")
+                log_with_timestamp(f"✅ All aspects are assigned (check: {unassigned_check_time:.2f}s), waiting for consolidation...")
 
         # progress message throttle
         elapsed_polling = time.time() - polling_start_time
         poll_time = time.time() - poll_start
-        progress_status = f"extraction: {'✅' if extraction_done else '❌'}, categorization: {'✅' if categorization_done else '❌'}, consolidation: {'✅' if consolidation_done else '❌'}, refinement: {'✅' if refinement_done else '❌'}"
+        progress_status = f"extraction: {'✅' if extraction_done else '❌'}, categorization: {'✅' if categorization_done else '❌'}, consolidation: {'✅' if consolidation_done else '❌'}"
         if current_aspects_count > 0:
             assignment_pct = (assigned_count / current_aspects_count * 100) if current_aspects_count > 0 else 0
             progress_status += f", assignment: {assignment_pct:.1f}%"
@@ -717,7 +733,6 @@ async def test_full_review_analysis_pipeline() -> None:
     assert extraction_done, "No aspects persisted"
     assert categorization_done, "No categorization completed"
     assert consolidation_done, "No final categories persisted"
-    assert refinement_done, "No refinement completed"
     
     # Get final counts for reporting
     final_aspects = sb_client.table("review_analysis_aspects").select("aspect_pk").eq("project_id", project_id).execute().data

@@ -587,8 +587,7 @@ class ReviewHierarchyValidator:
             errors.extend(self.validate_use_section(result['use'], validation_ctx.expected_review_ids))
         
         # Validate cross-references (sentiment agreement between sections)
-        # TODO: Re-enable this once we have a way to handle the cross-references
-        # errors.extend(self.validate_cross_references(result))
+        errors.extend(self.validate_cross_references(result))
         
         return errors
 

@@ -43,7 +43,7 @@ class RefinementStage(BaseStage, abc.ABC):
         raise NotImplementedError
 
     @abc.abstractmethod
-    def _retry_prompt(self, original_prompt: str, retry_ctx: any, ctx: RefinementStageContext) -> str:
+    def _retry_prompt(self, original_prompt: str, retry_ctx: any, ctx: RefinementStageContext, previous_response: str) -> str:
         raise NotImplementedError
 
     @abc.abstractmethod

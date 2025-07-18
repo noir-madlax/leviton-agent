@@ -1,194 +1,65 @@
 {
-  "metadata": {
-    "product_category": "Kids Arts & Crafts",
-    "asin": "B087N9N6HH",
-    "product_title": "Play Doh Bulk Handout 42-Pack of 1-Ounce Modeling Compound Cans, Non Candy Halloween Handout Toys & Party Favors, Kids Arts & Crafts, Preschool Toys, Ages 2+ (Amazon Exclusive)",
-    "categorization_timestamp": "2025-06-29T19:01:36.287026",
-    "source_file": "/Users/maoc/Desktop/3PO/leviton-agent/backend/review_analysis/tests/llm/test_data/real_amazon_extraction_results.json"
-  },
+  "metadata": null,
   "consolidation_results": {
     "phy": {
-      "consolidated_count": 13,
+      "consolidated_count": 7,
       "taxonomies": [
         {
-          "name": "Tool Shape",
-          "definition": "The physical form and straightness of craft tools and implements, e.g. warped pencils, curved markers, bent tools",
+          "name": "Color Characteristics",
+          "definition": "Visual color properties including variety, intensity, and appearance of arts and crafts materials, e.g. color selection range, brightness levels",
           "merged_count": 1,
           "original_names": [
-            "Tool Shape"
+            "Color Characteristics"
           ]
         },
         {
-          "name": "Tip Durability",
-          "definition": "The strength and longevity of pointed ends on craft tools like markers or pencils, e.g. strong tips, break-resistant points, durable ends",
+          "name": "Ergonomic Features",
+          "definition": "Physical design elements that affect handling and user comfort, e.g. grip surfaces, holding mechanisms",
           "merged_count": 1,
           "original_names": [
-            "Tip Durability"
+            "Ergonomic Features"
           ]
         },
         {
-          "name": "Container Size",
-          "definition": "The physical dimensions and capacity of product containers or packaging units, e.g. small containers, mini-sized jars, compact storage boxes",
-          "merged_count": 1,
+          "name": "Physical Structure and Integrity",
+          "definition": "Physical form, construction quality, and structural soundness of arts and crafts products and their packaging, e.g. pencil straightness, box construction durability, shape distortion, container lid mechanisms",
+          "merged_count": 3,
           "original_names": [
-            "Container Size"
-          ]
-        },
-        {
-          "name": "Surface Texture",
-          "definition": "The tactile feel and consistency of craft material surfaces, e.g. smooth application, even texture, consistent feel",
-          "merged_count": 1,
-          "original_names": [
-            "Surface Texture"
-          ]
-        },
-        {
-          "name": "Package Condition",
-          "definition": "The physical state and integrity of packaging upon delivery or purchase, e.g. damaged boxes, opened containers, torn wrapping",
-          "merged_count": 1,
-          "original_names": [
+            "Structural Integrity",
+            "Container Design",
             "Package Condition"
           ]
         },
         {
-          "name": "Color Selection",
-          "definition": "The range and variety of different colors offered in a product set, e.g. multiple color options, diverse palette choices, assorted hues",
+          "name": "Writing Tip Durability",
+          "definition": "Physical condition and performance characteristics of pencil, marker, or crayon tips during use, e.g. tip breakage resistance, sharpness retention, point wear patterns",
           "merged_count": 1,
           "original_names": [
-            "Color Selection"
+            "Writing Point Performance"
           ]
         },
         {
-          "name": "Product Quantity",
-          "definition": "The amount or volume of craft material provided in each package or unit, e.g. one ounce portions, handful amounts, bulk quantities",
+          "name": "Product Size Specifications",
+          "definition": "Physical measurements and dimensional properties of arts and crafts items, e.g. container volume capacity, item proportions for different age groups, length and width specifications",
           "merged_count": 1,
           "original_names": [
-            "Product Quantity"
+            "Product Dimensions"
           ]
         },
         {
-          "name": "Grip Comfort",
-          "definition": "The ease and comfort of holding and manipulating craft tools and materials, e.g. easy grip surfaces, comfortable handling, ergonomic design",
+          "name": "Material Safety Properties",
+          "definition": "Chemical composition and safety characteristics of arts and crafts materials, e.g. allergen content levels, toxicity ratings, ingredient safety profiles",
           "merged_count": 1,
           "original_names": [
-            "Grip Comfort"
+            "Material Composition"
           ]
         },
         {
-          "name": "Package Design",
-          "definition": "The visual appeal and structural features of product packaging, e.g. attractive box designs, cute containers, flip-top functionality",
+          "name": "Tactile Surface Quality",
+          "definition": "Physical texture and feel characteristics of arts and crafts materials during handling, e.g. smoothness consistency, softness levels, surface texture quality",
           "merged_count": 1,
           "original_names": [
-            "Package Design"
-          ]
-        },
-        {
-          "name": "Material Quality",
-          "definition": "The overall construction and composition quality of craft materials, e.g. premium ingredients, durable formulations, quality manufacturing",
-          "merged_count": 1,
-          "original_names": [
-            "Material Quality"
-          ]
-        },
-        {
-          "name": "Tip Performance",
-          "definition": "The functional quality and consistency of pointed tool tips during use, e.g. smooth writing, even flow, consistent application",
-          "merged_count": 1,
-          "original_names": [
-            "Tip Performance"
-          ]
-        },
-        {
-          "name": "Color Quality",
-          "definition": "The visual appeal and intensity of colors in craft materials, e.g. vibrant shades, bright appearance, bold pigmentation",
-          "merged_count": 1,
-          "original_names": [
-            "Color Quality"
-          ]
-        },
-        {
-          "name": "Material Safety",
-          "definition": "The safety characteristics and composition of craft materials for child use, e.g. non-toxic formulations, wheat-free ingredients, safe compounds",
-          "merged_count": 1,
-          "original_names": [
-            "Material Safety"
-          ]
-        }
-      ]
-    },
-    "perf": {
-      "consolidated_count": 9,
-      "taxonomies": [
-        {
-          "name": "Tip Wear Resistance",
-          "definition": "How well drawing or writing implements maintain their functional tip or edge during use, e.g. markers retain fine points after extensive drawing, chalk doesn't wear down too quickly",
-          "merged_count": 1,
-          "original_names": [
-            "Tool Wear Resistance"
-          ]
-        },
-        {
-          "name": "Product Longevity",
-          "definition": "The overall lifespan and durability of the art supply under normal usage conditions, e.g. crayons last through multiple projects, paint tubes provide consistent output over months",
-          "merged_count": 1,
-          "original_names": [
-            "Product Longevity"
-          ]
-        },
-        {
-          "name": "Color Vibrancy Performance",
-          "definition": "The visual quality and intensity of colors produced by the art supply, e.g. markers produce bold saturated lines, watercolors show rich pigmentation",
-          "merged_count": 1,
-          "original_names": [
-            "Color Performance"
-          ]
-        },
-        {
-          "name": "Moisture Control",
-          "definition": "How well the product maintains optimal moisture levels during use, preventing premature drying or excessive wetness, e.g. paint stays workable for extended periods, markers don't dry out when caps are left off",
-          "merged_count": 1,
-          "original_names": [
-            "Drying Speed Control"
-          ]
-        },
-        {
-          "name": "Product Restoration",
-          "definition": "The ability to revive or refresh the art supply when it begins to lose effectiveness, e.g. dried paint can be reactivated with water, hardened clay becomes pliable with moisture",
-          "merged_count": 1,
-          "original_names": [
-            "Product Restoration"
-          ]
-        },
-        {
-          "name": "Physical Durability",
-          "definition": "The physical robustness of the product during handling and maintenance activities, e.g. pencil leads don't snap during sharpening, brush handles don't crack with regular use",
-          "merged_count": 1,
-          "original_names": [
-            "Structural Integrity"
-          ]
-        },
-        {
-          "name": "Maintenance Response",
-          "definition": "How well the product responds to sharpening, cleaning, or other upkeep procedures, e.g. colored pencils achieve fine points when sharpened, brushes maintain their shape after washing",
-          "merged_count": 1,
-          "original_names": [
-            "Maintenance Effectiveness"
-          ]
-        },
-        {
-          "name": "Application Smoothness",
-          "definition": "The smoothness and ease of applying the medium to paper or canvas, e.g. crayons glide without scratching, paint flows evenly without streaking",
-          "merged_count": 1,
-          "original_names": [
-            "Application Quality"
-          ]
-        },
-        {
-          "name": "Color Blending Capability",
-          "definition": "The ability of the medium to mix and transition smoothly with other colors or layers, e.g. pastels create seamless gradients, colored pencils layer without waxy buildup",
-          "merged_count": 1,
-          "original_names": [
-            "Blending Capability"
+            "Surface Feel"
           ]
         }
       ]
