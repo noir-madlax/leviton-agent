@@ -70,7 +70,11 @@ def create_retry_error_details(error_categories: Dict[str, List[str]]) -> str:
     return error_details
 
 class LLMCallError(RuntimeError):
-    """Raised after *MAX_ATTEMPTS_PER_CALL* unsuccessful attempts."""
+    """Raised when an LLM call fails after exhausting all retries."""
+    
+    def __init__(self, message: str, last_response: Optional[str] = None):
+        super().__init__(message)
+        self.last_response = last_response
 
 
 # 抽象LLM客户端接口
@@ -295,7 +299,7 @@ class LLMManager:  # pylint: disable=too-few-public-methods
                                 response_text,
                                 exc_info=True
                             )
-                            raise LLMCallError("Validation failed after maximum attempts")
+                            raise LLMCallError("Validation failed after maximum attempts", last_response=response_text)
 
                         current_prompt = retry_prompt_builder(original_prompt, validation_result, response_text)
                         logger.info("Retrying with full updated prompt (attempt %d): %s", attempt + 1, current_prompt)
@@ -312,7 +316,7 @@ class LLMManager:  # pylint: disable=too-few-public-methods
                 
                 if attempt == cfg.MAX_ATTEMPTS_PER_CALL:
                     logger.error("LLM call failed after maximum attempts. All exceptions: %s", [str(e) for e in attempts_exceptions], exc_info=True)
-                    raise LLMCallError("LLM call failed after maximum attempts") from exc
+                    raise LLMCallError("LLM call failed after maximum attempts", last_response=None) from exc
                 # Else: fallthrough to next loop iteration – new attempt.
 
 

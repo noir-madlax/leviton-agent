@@ -12,6 +12,7 @@ responsibilities are:
 • Response validation using comprehensive review hierarchy validation.
 • Retry-prompt construction with detailed error feedback.
 • Split/merge operations that preserve RID integrity across splits.
+• Automatic error fixing when validation fails after max retries.
 
 The expected LLM output is a hierarchical JSON structure:
 
@@ -39,17 +40,21 @@ The expected LLM output is a hierarchical JSON structure:
 """
 
 import json
+import logging
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Set, Tuple
+from typing import Any, Dict, List, Set, Tuple, Optional
 
 from core.utils.llm_utils import ValidationResult, extract_json
 from core.llm_taxonomy_pipeline.pipeline_stage import BaseStage, StageContext, StageResultBase
+from core.utils.llm_utils import LLMCallError
 
 from .validation import (
     parse_and_validate_review_response,
     ReviewValidationContext,
-    create_retry_context
+    create_retry_context,
+    ReviewHierarchyValidator,
+    ReviewValidationError
 )
 from .hierarchy_merger import (
     extract_used_ids,
@@ -57,6 +62,8 @@ from .hierarchy_merger import (
     create_id_mapping,
     remap_compound_reason
 )
+
+logger = logging.getLogger(__name__)
 
 __all__ = [
     "ReviewExtractionContext",
@@ -179,6 +186,276 @@ if not _RETRY_PROMPT_PATH.exists():
 
 with open(_RETRY_PROMPT_PATH, "r", encoding="utf-8") as f:
     _RETRY_PROMPT_TEMPLATE = f.read()
+
+
+# ---------------------------------------------------------------------------
+# Error fixing utilities
+# ---------------------------------------------------------------------------
+
+def _fix_invalid_review_ids(rid_list: List[Any], expected_review_ids: Set[int]) -> List[int]:
+    """Fix invalid review IDs by filtering out invalid ones.
+    
+    Args:
+        rid_list: List of review IDs (may contain invalid values)
+        expected_review_ids: Set of valid review IDs
+        
+    Returns:
+        List of valid review IDs only
+    """
+    fixed_ids = []
+    for rid in rid_list:
+        try:
+            rid_int = int(rid)
+            if rid_int in expected_review_ids:
+                fixed_ids.append(rid_int)
+        except (ValueError, TypeError):
+            # Skip invalid IDs
+            continue
+    return fixed_ids
+
+
+def _fix_invalid_sentiment(sentiment: str) -> str:
+    """Fix invalid sentiment values.
+    
+    Args:
+        sentiment: Input sentiment value
+        
+    Returns:
+        Fixed sentiment ('+' or '-')
+    """
+    if sentiment in ['+', '-']:
+        return sentiment
+    
+    # Try to map common variations
+    sentiment_lower = str(sentiment).lower().strip()
+    if sentiment_lower in ['positive', 'pos', 'good', 'great', 'excellent', '1', 'true']:
+        return '+'
+    elif sentiment_lower in ['negative', 'neg', 'bad', 'poor', 'terrible', '0', 'false']:
+        return '-'
+    
+    # Default to positive if unclear
+    return '+'
+
+
+def _fix_invalid_id_format(id_str: str, id_type: str) -> str:
+    """Fix invalid ID format by generating a valid one.
+    
+    Args:
+        id_str: Input ID string
+        id_type: Either 'PID' or 'perf_id'
+        
+    Returns:
+        Valid ID string
+    """
+    if id_type == 'PID':
+        # Generate valid PID (A, B, C... Z, AA, AB...)
+        if not id_str or not isinstance(id_str, str):
+            return 'A'
+        
+        # Try to extract valid characters
+        valid_chars = ''.join(c for c in id_str.upper() if c.isalpha())
+        if valid_chars:
+            # Limit to reasonable length and ensure it's a valid PID format
+            if len(valid_chars) <= 2:  # A, B, C... Z, AA, AB, etc.
+                return valid_chars
+            else:
+                return 'A'  # Default if too long
+        else:
+            return 'A'
+    elif id_type == 'perf_id':
+        # Generate valid perf_id (a, b, c... z, aa, ab...)
+        if not id_str or not isinstance(id_str, str):
+            return 'a'
+        
+        # Try to extract valid characters
+        valid_chars = ''.join(c for c in id_str.lower() if c.isalpha())
+        if valid_chars:
+            # Limit to reasonable length and ensure it's a valid perf_id format
+            if len(valid_chars) <= 2:  # a, b, c... z, aa, ab, etc.
+                return valid_chars
+            else:
+                return 'a'  # Default if too long
+        else:
+            return 'a'
+    
+    return id_str
+
+
+def _fix_phy_section(phy_data: Dict[str, Any], expected_review_ids: Set[int]) -> Dict[str, Any]:
+    """Fix validation errors in the physical section.
+    
+    Args:
+        phy_data: Physical section data
+        expected_review_ids: Set of valid review IDs
+        
+    Returns:
+        Fixed physical section data
+    """
+    if not isinstance(phy_data, dict):
+        return {}
+    
+    fixed_phy = {}
+    for physical, details in phy_data.items():
+        if not isinstance(details, dict):
+            continue
+        
+        fixed_details = {}
+        for pid_detail, sentiments in details.items():
+            # Fix PID@DETAIL format
+            if '@' not in pid_detail:
+                # Try to split on common separators
+                if ' ' in pid_detail:
+                    parts = pid_detail.split(' ', 1)
+                    pid = _fix_invalid_id_format(parts[0], 'PID')
+                    detail = parts[1] if len(parts) > 1 else 'Unknown'
+                    pid_detail = f"{pid}@{detail}"
+                else:
+                    pid = _fix_invalid_id_format(pid_detail, 'PID')
+                    pid_detail = f"{pid}@Unknown"
+            
+            # Fix sentiments
+            if isinstance(sentiments, dict):
+                fixed_sentiments = {}
+                for sent, rid_list in sentiments.items():
+                    fixed_sent = _fix_invalid_sentiment(sent)
+                    fixed_rids = _fix_invalid_review_ids(rid_list, expected_review_ids)
+                    if fixed_rids:  # Only include if there are valid RIDs
+                        fixed_sentiments[fixed_sent] = fixed_rids
+                
+                if fixed_sentiments:  # Only include if there are valid sentiments
+                    fixed_details[pid_detail] = fixed_sentiments
+        
+        if fixed_details:  # Only include if there are valid details
+            fixed_phy[physical] = fixed_details
+    
+    return fixed_phy
+
+
+def _fix_perf_section(perf_data: Dict[str, Any], expected_review_ids: Set[int]) -> Dict[str, Any]:
+    """Fix validation errors in the performance section.
+    
+    Args:
+        perf_data: Performance section data
+        expected_review_ids: Set of valid review IDs
+        
+    Returns:
+        Fixed performance section data
+    """
+    if not isinstance(perf_data, dict):
+        return {}
+    
+    fixed_perf = {}
+    for perf, details in perf_data.items():
+        if not isinstance(details, dict):
+            continue
+        
+        fixed_details = {}
+        for perf_id_detail, sentiments in details.items():
+            # Fix perf_id@DETAIL format
+            if '@' not in perf_id_detail:
+                # Try to split on common separators
+                if ' ' in perf_id_detail:
+                    parts = perf_id_detail.split(' ', 1)
+                    perf_id = _fix_invalid_id_format(parts[0], 'perf_id')
+                    detail = parts[1] if len(parts) > 1 else 'Unknown'
+                    perf_id_detail = f"{perf_id}@{detail}"
+                else:
+                    perf_id = _fix_invalid_id_format(perf_id_detail, 'perf_id')
+                    perf_id_detail = f"{perf_id}@Unknown"
+            
+            # Fix sentiments and reasons
+            if isinstance(sentiments, dict):
+                fixed_sentiments = {}
+                for sent, reasons in sentiments.items():
+                    fixed_sent = _fix_invalid_sentiment(sent)
+                    
+                    if isinstance(reasons, dict):
+                        fixed_reasons = {}
+                        for reason, rid_list in reasons.items():
+                            # Fix reason format (should be PID, perf_id, or '?')
+                            if reason != '?':
+                                # Try to fix invalid reason references
+                                reason_parts = [r.strip() for r in reason.split(',')]
+                                fixed_parts = []
+                                for part in reason_parts:
+                                    if (ReviewHierarchyValidator.validate_id_format(part, 'PID') or 
+                                        ReviewHierarchyValidator.validate_id_format(part, 'perf_id')):
+                                        fixed_parts.append(part)
+                                    else:
+                                        # Replace invalid part with '?'
+                                        fixed_parts.append('?')
+                                fixed_reason = ','.join(fixed_parts) if fixed_parts else '?'
+                            else:
+                                fixed_reason = '?'
+                            
+                            fixed_rids = _fix_invalid_review_ids(rid_list, expected_review_ids)
+                            if fixed_rids:  # Only include if there are valid RIDs
+                                fixed_reasons[fixed_reason] = fixed_rids
+                        
+                        if fixed_reasons:  # Only include if there are valid reasons
+                            fixed_sentiments[fixed_sent] = fixed_reasons
+                
+                if fixed_sentiments:  # Only include if there are valid sentiments
+                    fixed_details[perf_id_detail] = fixed_sentiments
+        
+        if fixed_details:  # Only include if there are valid details
+            fixed_perf[perf] = fixed_details
+    
+    return fixed_perf
+
+
+def _fix_use_section(use_data: Dict[str, Any], expected_review_ids: Set[int]) -> Dict[str, Any]:
+    """Fix validation errors in the use case section.
+    
+    Args:
+        use_data: Use case section data
+        expected_review_ids: Set of valid review IDs
+        
+    Returns:
+        Fixed use case section data
+    """
+    if not isinstance(use_data, dict):
+        return {}
+    
+    fixed_use = {}
+    for use_case, sentiments in use_data.items():
+        if not isinstance(sentiments, dict):
+            continue
+        
+        fixed_sentiments = {}
+        for sent, reasons in sentiments.items():
+            fixed_sent = _fix_invalid_sentiment(sent)
+            
+            if isinstance(reasons, dict):
+                fixed_reasons = {}
+                for reason, rid_list in reasons.items():
+                    # Fix reason format (should be PID, perf_id, or '?')
+                    if reason != '?':
+                        # Try to fix invalid reason references
+                        reason_parts = [r.strip() for r in reason.split(',')]
+                        fixed_parts = []
+                        for part in reason_parts:
+                            if (ReviewHierarchyValidator.validate_id_format(part, 'PID') or 
+                                ReviewHierarchyValidator.validate_id_format(part, 'perf_id')):
+                                fixed_parts.append(part)
+                            else:
+                                # Replace invalid part with '?'
+                                fixed_parts.append('?')
+                        fixed_reason = ','.join(fixed_parts) if fixed_parts else '?'
+                    else:
+                        fixed_reason = '?'
+                    
+                    fixed_rids = _fix_invalid_review_ids(rid_list, expected_review_ids)
+                    if fixed_rids:  # Only include if there are valid RIDs
+                        fixed_reasons[fixed_reason] = fixed_rids
+                
+                if fixed_reasons:  # Only include if there are valid reasons
+                    fixed_sentiments[fixed_sent] = fixed_reasons
+        
+        if fixed_sentiments:  # Only include if there are valid sentiments
+            fixed_use[use_case] = fixed_sentiments
+    
+    return fixed_use
 
 
 # ---------------------------------------------------------------------------
@@ -488,3 +765,101 @@ class ReviewExtractionStage(BaseStage):
             review_hierarchy=merged_hierarchy,
             aspects_extracted=res_left.aspects_extracted + res_right.aspects_extracted
         )
+
+    # --------------------- Error fixing methods -------------------------
+
+    def _attempt_error_fixing(self, raw_response: str, ctx: ReviewExtractionContext) -> Optional[ReviewExtractionResult]:
+        """Attempt to automatically fix validation errors in the response.
+        
+        This method tries to fix common validation errors like:
+        - Invalid review IDs (filter out invalid ones)
+        - Invalid sentiment values (map to '+' or '-')
+        - Invalid ID formats (generate valid IDs)
+        - Missing required sections (create empty ones)
+        - Invalid JSON structure (try to extract valid parts)
+        
+        Args:
+            raw_response: Raw LLM response that failed validation
+            ctx: Review extraction context
+            
+        Returns:
+            Fixed ReviewExtractionResult if fixable, None if not fixable
+        """
+        try:
+            # Try to extract JSON from the response
+            json_text = extract_json(raw_response)
+            hierarchy = json.loads(json_text)
+            
+            if not isinstance(hierarchy, dict):
+                logger.warning("Response is not a JSON object, cannot fix")
+                return None
+            
+            # Ensure all required sections exist
+            if 'phy' not in hierarchy:
+                hierarchy['phy'] = {}
+            if 'perf' not in hierarchy:
+                hierarchy['perf'] = {}
+            if 'use' not in hierarchy:
+                hierarchy['use'] = {}
+            
+            # Fix each section
+            hierarchy['phy'] = _fix_phy_section(hierarchy['phy'], ctx.expected_review_ids)
+            hierarchy['perf'] = _fix_perf_section(hierarchy['perf'], ctx.expected_review_ids)
+            hierarchy['use'] = _fix_use_section(hierarchy['use'], ctx.expected_review_ids)
+            
+            # Validate the fixed hierarchy
+            validation_ctx = ReviewValidationContext(
+                expected_review_ids=ctx.expected_review_ids,
+                product_title=ctx.product_title,
+                asin=ctx.asin
+            )
+            
+            validation_result = parse_and_validate_review_response(
+                json.dumps(hierarchy, ensure_ascii=False), 
+                validation_ctx
+            )
+            
+            if validation_result.ok:
+                # Successfully fixed!
+                aspects_count = count_extracted_aspects(hierarchy)
+                logger.info(f"Successfully fixed validation errors for product {ctx.asin}")
+                return ReviewExtractionResult(
+                    review_hierarchy=hierarchy,
+                    aspects_extracted=aspects_count
+                )
+            else:
+                # Still has validation errors after fixing
+                logger.warning(f"Could not fix all validation errors for product {ctx.asin}: {validation_result.error_categories}")
+                return None
+                
+        except Exception as exc:
+            logger.warning(f"Error during automatic fixing for product {ctx.asin}: {exc}")
+            return None
+
+    # --------------------- Override execute method for error fixing -------------------------
+
+    async def execute(self, ctx: ReviewExtractionContext) -> ReviewExtractionResult:
+        """Override execute method to add automatic error fixing when all retries are exhausted."""
+        
+        try:
+            # Try normal execution first
+            return await super().execute(ctx)
+            
+        except LLMCallError as exc:
+            # All retries exhausted, try automatic error fixing
+            logger.info(f"All retries exhausted for product {ctx.asin}, attempting automatic error fixing")
+            
+            # Check if we have the last failed response
+            if exc.last_response:
+                # Attempt to fix the validation errors
+                fixed_result = self._attempt_error_fixing(exc.last_response, ctx)
+                if fixed_result:
+                    logger.info(f"Successfully fixed validation errors for product {ctx.asin}")
+                    return fixed_result
+                else:
+                    logger.warning(f"Could not fix validation errors for product {ctx.asin}, proceeding with split-and-conquer")
+            else:
+                logger.warning(f"No last response available for error fixing for product {ctx.asin}")
+            
+            # If error fixing failed or no response available, proceed with normal split-and-conquer
+            raise exc
