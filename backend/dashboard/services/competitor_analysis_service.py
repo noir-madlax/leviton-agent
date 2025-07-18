@@ -242,6 +242,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                         'product_id': aspect['product_id'],
                         'aspect_category': aspect_category,
                         'standardized_aspect': self._capitalize_words(aspect['detail_text']),
+                        'category_name': category_name,  # Add category name for proper use case aggregation
                         'review_id': occurrence['review_id'],
                         'sentiment': occurrence['sentiment']  # Direct sentiment from new table
                     })
@@ -414,9 +415,10 @@ class CompetitorAnalysisService(BaseDashboardService):
                 category_stats[aspect]['productData'][product_name][sentiment] += 1
                 category_stats[aspect]['productData'][product_name]['total'] += 1
 
-            # Process use_case categories
+            # Process use_case categories - FIXED: use category_name instead of detail_text
             else:
-                use_case = item['standardized_aspect']
+                # Use category name for proper "Main Use Cases" aggregation
+                use_case = item.get('category_name', item['standardized_aspect'])
                 
                 if use_case not in use_case_stats:
                     use_case_stats[use_case] = {
