@@ -318,7 +318,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
 
       {/* Price vs Revenue Scatter Plot */}
-      <div className="mb-8">
+      <div className="mb-8" data-chart-id="price-vs-revenue">
         <ChartWithFilters
           chartId="pricing-scatter"
           chartType="scatter"
@@ -395,7 +395,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
       </div>
 
       {/* Price Distribution by Segment */}
-      <div className="mb-8">
+      <div className="mb-8" data-chart-id="price-distribution-overview">
         <ChartWithFilters
           chartId="pricing-distribution"
           chartType="table"
@@ -460,7 +460,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
       </div>
 
       {/* All Segments Price Distribution Comparison */}
-      <div className="mb-8">
+      <div className="mb-8" data-chart-id="price-distribution-by-type">
         <ChartWithFilters
           chartId="pricing-violin"
           chartType="violin"
@@ -488,7 +488,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
       </div>
 
       {/* Brand Price Distribution */}
-      <div className="mb-8">
+      <div className="mb-8" data-chart-id="price-distribution-by-brands">
         <ChartWithFilters
           chartId="pricing-brand"
           chartType="violin"

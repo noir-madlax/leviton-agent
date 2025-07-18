@@ -46,7 +46,7 @@ export function ChatWithNavigation({
   const [messages, setMessages] = useState<Message[]>([
     {
       id: '1',
-      content: "I've prepared comprehensive data analysis charts for your market research. Each chart provides unique insights:",
+      content: "no,empty is fine nothing happends in web page,may be deleted can be ",
       isUser: false,
       timestamp: new Date()
     }
@@ -336,9 +336,9 @@ export function ChatWithNavigation({
   }
 
   return (
-    <div className="min-h-full flex flex-col bg-background">
+    <div className="ai-chat-container min-h-full flex flex-col">
       {/* Chat Header */}
-      <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="flex-shrink-0 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
         <div className="flex items-center gap-2 p-2">
           <MessageSquare className="h-4 w-4" />
           <h2 className="font-medium text-sm">Xenith-AI Agent</h2>
@@ -353,7 +353,7 @@ export function ChatWithNavigation({
 
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto">
-        <div className="p-3 space-y-4">
+        <div className="p-3 space-y-4 ai-chat-container">
           {/* Loading State Banner - 显示在消息区域顶部，类似图1的红色框 */}
           {isLoading && (
             <div className="flex items-center justify-center gap-2 p-3 bg-red-50 border border-red-200 rounded-lg text-red-700">
@@ -367,15 +367,14 @@ export function ChatWithNavigation({
           {/* AI Introduction with Chart Cards */}
           <div className="space-y-3">
             <div className="flex items-start gap-2">
-              <Avatar className="h-6 w-6 mt-0.5">
-                <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
-                  Xe
-                </AvatarFallback>
+              <Avatar className="h-6 w-2 mt-0.5">
+               
               </Avatar>
               <div className="flex-1">
-                <div className=" p-3 rounded-lg bg-gray-100 text-gray-900 mb-3">
-                  <div className="text-sm whitespace-pre-wrap">
-                    I&apos;ve prepared comprehensive data analysis charts for your market research. Each chart provides unique insights:
+                <div className="p-3  mb-3">
+                  <div className="ai-text">
+                  The data is ready for further analysis.<br/>
+                  Based on your questions, these charts present the key information:
                   </div>
                 </div>
                 <ChartCardList 
@@ -389,14 +388,12 @@ export function ChatWithNavigation({
           
           {/* Additional AI Introduction */}
           <div className="flex items-start gap-2">
-            <Avatar className="h-6 w-6 mt-0.5">
-              <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
-                Xe
-              </AvatarFallback>
+            <Avatar className="h-6 w-2 mt-0.5">
+           
             </Avatar>
-            <div className="p-3 rounded-lg bg-gray-100 text-gray-900">
-              <div className="text-sm  whitespace-pre-wrap">
-                                 Feel free to explore these insights or ask me any specific questions about your market data. I&apos;m here to help you dive deeper into any aspect of your analysis!
+            <div className="p-3">
+              <div className="ai-text">
+              Let me know if you&apos;d like to explore anything further.
               </div>
             </div>
           </div>
@@ -423,7 +420,7 @@ export function ChatWithNavigation({
                       <span className="text-sm">Analyzing your request...</span>
                     </div>
                   ) : (
-                    <div className="text-sm whitespace-pre-wrap">
+                    <div className="ai-text">
                       {message.content}
                     </div>
                   )}
@@ -444,7 +441,7 @@ export function ChatWithNavigation({
       </div>
 
       {/* Input Area */}
-      <div className="flex-shrink-0 p-3 border-t bg-background sticky bottom-0">
+      <div className="flex-shrink-0 p-3 border-t bg-white sticky bottom-0">
         <form onSubmit={handleFormSubmit} className="flex gap-2">
           <Textarea
             value={input}

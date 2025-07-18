@@ -1,0 +1,99 @@
+/* Integrated Dashboard Styles */
+
+/* Keyframes */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* AI Chat Styles */
+.integrated-dashboard .ai-text {
+  font-size: 0.875rem; /* text-sm */
+  color: rgb(75 85 99); /* text-gray-600 */
+  line-height: 1.625; /* leading-relaxed */
+  white-space: pre-wrap;
+}
+
+.integrated-dashboard .ai-text-title {
+  font-size: 1rem; /* text-base */
+  font-weight: 600; /* font-semibold */
+  color: rgb(55 65 81); /* text-gray-700 */
+  line-height: 1.625; /* leading-relaxed */
+}
+
+.integrated-dashboard .ai-chat-container {
+  background-color: rgba(221, 217, 189, 0.1); /* bg-gray-50/50 - 与外层容器一致 */
+}
+
+/* Chart Navigation Styles */
+.integrated-dashboard .chart-navigation-item {
+  font-size: 0.875rem; /* text-sm */
+  color: rgb(75 85 99); /* text-gray-600 */
+  line-height: 1.625; /* leading-relaxed */
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.integrated-dashboard .chart-navigation-item:hover {
+  color: rgb(37 99 235); /* hover:text-blue-600 */
+  text-decoration: underline; /* hover:underline */
+}
+
+.integrated-dashboard .chart-navigation-item.navigating {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.integrated-dashboard .chart-navigation-bullet {
+  color: rgb(156 163 175); /* text-gray-400 */
+  margin-right: 0.5rem; /* mr-2 */
+  margin-top: 0.125rem; /* mt-0.5 */
+}
+
+.integrated-dashboard .chart-navigation-bullet.spinning {
+  animation: spin 1s linear infinite;
+}
+
+/* Chart Highlight Animation */
+.integrated-dashboard .chart-highlight {
+  background-color: #fef3c7;
+  transition: background-color 0.3s ease;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* Chart Card Styles */
+.integrated-dashboard .chart-card {
+  background-color: white;
+  border-radius: 0.5rem; /* rounded-lg */
+  border-width: 2px;
+  transition: all 0.2s ease; /* transition-all duration-200 */
+  cursor: pointer;
+  transform: scale(1);
+}
+
+.integrated-dashboard .chart-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* hover:shadow-lg */
+}
+
+.integrated-dashboard .chart-card.active {
+  border-color: rgb(59 130 246); /* border-blue-500 */
+  background-color: rgb(239 246 255); /* bg-blue-50 */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* shadow-md */
+}
+
+.integrated-dashboard .chart-card.inactive {
+  border-color: rgb(229 231 235); /* border-gray-200 */
+}
+
+.integrated-dashboard .chart-card.inactive:hover {
+  border-color: rgb(147 197 253); /* hover:border-blue-300 */
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); /* hover:shadow-md */
+} 

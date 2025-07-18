@@ -5,8 +5,8 @@ import React from 'react'
 // Unified size configuration for all thumbnails
 const THUMBNAIL_CONFIG = {
   containerClass: "w-16 h-12", // More appropriate size for cards
-  svgWidth: 64,               // Adjusted accordingly
-  svgHeight: 48,              // Adjusted accordingly
+  svgWidth: 32,               // Adjusted accordingly
+  svgHeight: 24,              // Adjusted accordingly
   viewBox: "0 0 64 48"        // Adjusted accordingly
 }
 
@@ -27,7 +27,7 @@ export function ThumbnailPreview({ type, className = THUMBNAIL_CONFIG.containerC
   }
   
   return (
-    <div className={`${className} border rounded bg-gray-50 flex items-center justify-center overflow-hidden`}>
+    <div className={`${className}  rounded bg-gray-50 flex items-center justify-center overflow-hidden`}>
       {thumbnails[type as keyof typeof thumbnails] || <MiniBarChart />}
     </div>
   )

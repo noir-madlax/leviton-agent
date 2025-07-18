@@ -39,8 +39,8 @@ export function ChartCard({ card, isActive, onClick }: ChartCardProps) {
     >
       <div className="p-3 flex items-start justify-between">
         {/* 左侧内容区域 */}
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center space-x-2 mb-2">
+     
+          <div className="flex items-center space-x-2 mt-[2px]">
             {card.icon && <card.icon className={`h-4 w-4 ${getIconColor()}`} />}
             <h3 className="font-medium text-sm truncate">{card.title}</h3>
             {card.type === 'dynamic' && card.timestamp && (
@@ -49,13 +49,13 @@ export function ChartCard({ card, isActive, onClick }: ChartCardProps) {
               </span>
             )}
           </div>
-          <p className="text-xs text-gray-600 line-clamp-2 mb-1">{card.description}</p>
+         
           {card.type === 'dynamic' && (
             <div className="text-xs text-blue-600">
               🤖 AI Generated
             </div>
           )}
-        </div>
+    
         
         {/* 右侧图表预览区域 */}
         {card.type === 'preset' && card.tabKey && (

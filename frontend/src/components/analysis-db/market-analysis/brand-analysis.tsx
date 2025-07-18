@@ -371,6 +371,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       <div className="mt-5">
  
         {/* 第一层：ChartWithFilters包装整个Market Share section */}
+        <div data-chart-id="market-share-analysis">
         <ChartWithFilters
           chartId="market-share-analysis"
           chartType="pie"
@@ -451,11 +452,13 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           )}
           </Card>
         </ChartWithFilters>
+        </div>
 
      
       </div>
 
       <div className="mt-0">
+      <div data-chart-id="brand-analysis">
       <ChartWithFilters
         chartId="brand-analysis"
         chartType="bar"
@@ -490,9 +493,11 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
         </Card>
       </ChartWithFilters>
       </div>
+      </div>
 
       {/* Sales Trend Chart - New Addition */}
       <div className="mt-15">
+        <div data-chart-id="sales-trend-analysis">
         <ChartWithFilters
           chartId="sales-trend-analysis"
           chartType="area"
@@ -545,10 +550,11 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           
           </Card>
         </ChartWithFilters>
+        </div>
       </div>
 
       {/* Market Insights - New Addition */}
-      <div className="mt-15">
+      <div className="mt-15" data-chart-id="market-insights">
         {marketInsights ? (
           <MarketInsights 
             data={marketInsights}
@@ -566,7 +572,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </div>
 
       {/* Package Preference Analysis - New Addition */}
-      <div className="mt-15">
+      <div className="mt-15" data-chart-id="package-preference">
         {packagePreference ? (
           <PackagePreferenceAnalysis 
             data={packagePreference}
