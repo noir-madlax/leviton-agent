@@ -119,26 +119,20 @@ class ProductRefinementStage(BaseRefinementStage):
 
         # Build subcategories section with S_* IDs
         subcategories_lines = []
-        taxonomy_id_map = {}  # taxonomy_name -> S_id
-        
         for i, taxonomy in enumerate(ctx.taxonomies):
             s_id = f"S_{i}"
-            taxonomy_id_map[taxonomy.name] = s_id
             subcategories_lines.append(f"{s_id}: {taxonomy.name}")
             subcategories_lines.append(f"Definition: {taxonomy.definition}")
             subcategories_lines.append("")  # Empty line for readability
         
         subcategories_section = "\n".join(subcategories_lines)
         
-        # Build products section with P_* IDs and current assignments
+        # Build products section with P_* IDs
         products_lines = []
         
         for i, text in enumerate(ctx.input_texts):
             p_id = f"P_{i}"
-            current_taxonomy_name = ctx.current_assignments.get(i, "UNASSIGNED")
-            current_s_id = taxonomy_id_map.get(current_taxonomy_name, "UNKNOWN")
-            
-            products_lines.append(f"{p_id}: {text} → {current_s_id} ({current_taxonomy_name})")
+            products_lines.append(f"{p_id}: {text}")
         
         products_section = "\n".join(products_lines)
         
