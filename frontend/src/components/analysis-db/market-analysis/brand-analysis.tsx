@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
+import { StackedAreaChart } from "@/components/analysis-db/charts/stacked-area-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
@@ -88,7 +89,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
     )
   }
 
-  // 构建grouped bar chart数据
+  // 构建grouped bar chart数据 - 限制为Top 10品牌
   const chartData = data.brandCategoryRevenue
     .map(item => {
       const brandData: { name: string; [key: string]: number | string } = { name: item.brand }
@@ -116,6 +117,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       const bTotal = categoryNames.reduce((sum, category) => sum + (b[category] as number), 0)
       return bTotal - aTotal
     })
+    .slice(0, 10) // 🔧 FIX: 限制Bar Chart只显示前10个品牌
 
   // 确保颜色数组匹配categories数量
   const colors = categoryColors.slice(0, categoryNames.length)
@@ -135,6 +137,95 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       )
     }
   }
+
+  const handleSalesTrendClick = (data: unknown) => {
+    // Mock handler for sales trend chart clicks
+    console.log('Sales trend area clicked:', data)
+  }
+
+  // Mock data for Sales Trend Chart
+  const mockTopBrands = ['Leviton', 'Lutron', 'GE', 'Philips', 'Legrand', 'Eaton', 'Honeywell', 'Schneider', 'Hubbell', 'Pass & Seymour']
+  
+  const mockSalesTrendData = [
+    {
+      month: 'Jan 2024',
+      'Leviton': metricType === 'revenue' ? 850000 : 12500,
+      'Lutron': metricType === 'revenue' ? 720000 : 9800,
+      'GE': metricType === 'revenue' ? 680000 : 11200,
+      'Philips': metricType === 'revenue' ? 580000 : 8900,
+      'Legrand': metricType === 'revenue' ? 520000 : 7800,
+      'Eaton': metricType === 'revenue' ? 450000 : 7200,
+      'Honeywell': metricType === 'revenue' ? 380000 : 6100,
+      'Schneider': metricType === 'revenue' ? 320000 : 5400,
+      'Hubbell': metricType === 'revenue' ? 280000 : 4700,
+      'Pass & Seymour': metricType === 'revenue' ? 240000 : 3900,
+    },
+    {
+      month: 'Feb 2024',
+      'Leviton': metricType === 'revenue' ? 780000 : 11800,
+      'Lutron': metricType === 'revenue' ? 890000 : 12100,
+      'GE': metricType === 'revenue' ? 720000 : 11800,
+      'Philips': metricType === 'revenue' ? 610000 : 9300,
+      'Legrand': metricType === 'revenue' ? 480000 : 7200,
+      'Eaton': metricType === 'revenue' ? 520000 : 8100,
+      'Honeywell': metricType === 'revenue' ? 420000 : 6800,
+      'Schneider': metricType === 'revenue' ? 350000 : 5900,
+      'Hubbell': metricType === 'revenue' ? 290000 : 4900,
+      'Pass & Seymour': metricType === 'revenue' ? 260000 : 4200,
+    },
+    {
+      month: 'Mar 2024',
+      'Leviton': metricType === 'revenue' ? 920000 : 13800,
+      'Lutron': metricType === 'revenue' ? 760000 : 10300,
+      'GE': metricType === 'revenue' ? 640000 : 10500,
+      'Philips': metricType === 'revenue' ? 650000 : 9900,
+      'Legrand': metricType === 'revenue' ? 580000 : 8700,
+      'Eaton': metricType === 'revenue' ? 490000 : 7600,
+      'Honeywell': metricType === 'revenue' ? 360000 : 5800,
+      'Schneider': metricType === 'revenue' ? 380000 : 6400,
+      'Hubbell': metricType === 'revenue' ? 310000 : 5200,
+      'Pass & Seymour': metricType === 'revenue' ? 280000 : 4500,
+    },
+    {
+      month: 'Apr 2024',
+      'Leviton': metricType === 'revenue' ? 880000 : 13200,
+      'Lutron': metricType === 'revenue' ? 820000 : 11100,
+      'GE': metricType === 'revenue' ? 700000 : 11500,
+      'Philips': metricType === 'revenue' ? 590000 : 9000,
+      'Legrand': metricType === 'revenue' ? 540000 : 8100,
+      'Eaton': metricType === 'revenue' ? 510000 : 7900,
+      'Honeywell': metricType === 'revenue' ? 400000 : 6400,
+      'Schneider': metricType === 'revenue' ? 340000 : 5700,
+      'Hubbell': metricType === 'revenue' ? 300000 : 5000,
+      'Pass & Seymour': metricType === 'revenue' ? 270000 : 4300,
+    },
+    {
+      month: 'May 2024',
+      'Leviton': metricType === 'revenue' ? 950000 : 14200,
+      'Lutron': metricType === 'revenue' ? 780000 : 10600,
+      'GE': metricType === 'revenue' ? 660000 : 10800,
+      'Philips': metricType === 'revenue' ? 620000 : 9500,
+      'Legrand': metricType === 'revenue' ? 560000 : 8400,
+      'Eaton': metricType === 'revenue' ? 480000 : 7400,
+      'Honeywell': metricType === 'revenue' ? 410000 : 6600,
+      'Schneider': metricType === 'revenue' ? 360000 : 6000,
+      'Hubbell': metricType === 'revenue' ? 320000 : 5300,
+      'Pass & Seymour': metricType === 'revenue' ? 290000 : 4700,
+    },
+    {
+      month: 'Jun 2024',
+      'Leviton': metricType === 'revenue' ? 870000 : 13000,
+      'Lutron': metricType === 'revenue' ? 840000 : 11400,
+      'GE': metricType === 'revenue' ? 710000 : 11600,
+      'Philips': metricType === 'revenue' ? 580000 : 8800,
+      'Legrand': metricType === 'revenue' ? 520000 : 7800,
+      'Eaton': metricType === 'revenue' ? 530000 : 8200,
+      'Honeywell': metricType === 'revenue' ? 390000 : 6200,
+      'Schneider': metricType === 'revenue' ? 370000 : 6200,
+      'Hubbell': metricType === 'revenue' ? 310000 : 5100,
+      'Pass & Seymour': metricType === 'revenue' ? 250000 : 4000,
+    }
+  ]
 
   // 处理饼图数据
   const processCategoryPieData = () => {
@@ -232,6 +323,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
 
       {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
       <div className="mt-5">
+ 
         {/* 第一层：ChartWithFilters包装整个Market Share section */}
         <ChartWithFilters
           chartId="market-share-analysis"
@@ -262,13 +354,13 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
               Approximated by the total Revenue of all products within this category in the current project within the selected time period
             </p>
           </div>
-          
+          <Card className="p-6 bg-gray-50 mb-15">
           {/* 第三层：多个饼图区域 */}
           {categoryPieData.length > 0 ? (
             <div className="space-y-8">
               {categoryPieData.map((categoryData) => (
-                <div key={categoryData.category} className="bg-gray-50 p-6 rounded-lg">
-                  <h4 className="text-lg font-medium mb-4 text-center">
+                <div key={categoryData.category} className="bg-gray-50 p-6 mb-0 rounded-lg">
+                  <h4 className="text-lg font-medium mb-0 text-center">
                     📊 {categoryData.category} - Market Share by Brand
                   </h4>
                   <div className="h-[500px]">
@@ -291,7 +383,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                         <Tooltip content={<CustomTooltip />} />
                         <Legend 
                           verticalAlign="bottom" 
-                          height={36}
+                          height={100}
                           formatter={(value) => {
                             // value现在是brand名称（因为我们设置了name属性）
                             const item = categoryData.brandShares.find(d => d.brand === value)
@@ -303,21 +395,26 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                   </div>
                 </div>
               ))}
+           
             </div>
           ) : (
+       
             <div className="bg-gray-50 p-6 rounded-lg">
               <p className="text-center text-gray-500">No market share data available</p>
             </div>
           )}
+          </Card>
         </ChartWithFilters>
+
+     
       </div>
 
-      <div className="mt-15">
+      <div className="mt-0">
       <ChartWithFilters
         chartId="brand-analysis"
         chartType="bar"
         projectId={projectId || ''}
-        title="Brand Revenue by Category"
+        title="Top 10 Brand Revenue by Category"
         projectFilters={initialFilters}
       >
         <Card className="p-6 bg-gray-50">
@@ -348,6 +445,60 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </ChartWithFilters>
       </div>
 
+      {/* Sales Trend Chart - New Addition */}
+      <div className="mt-15">
+        <ChartWithFilters
+          chartId="sales-trend-analysis"
+          chartType="area"
+          projectId={projectId || ''}
+          title="Sales Trend of Top 10 brands"
+          projectFilters={initialFilters}
+        >
+          <Card className="p-6 bg-gray-50">
+            <MetricTypeSelector onChange={setMetricType} value={metricType} />
+            
+            {/* Development Status Banner */}
+            <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3">
+                  <p className="text-sm text-amber-700">
+                    <strong>Only placeholder in this Demo version - blocked by the sales history API</strong>
+                  </p>
+                  <p className="text-xs text-amber-600 mt-1">
+                    This feature is under development. Sales trend data will be available once the sales history API integration is complete.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Mock Sales Trend Chart */}
+            <div className="bg-white p-4 rounded-lg border shadow-sm">
+              <div className="h-[500px] w-full">
+                <StackedAreaChart
+                  data={mockSalesTrendData}
+                  brands={mockTopBrands}
+                  yAxisLabel={metricType === "revenue" ? "Revenue ($)" : "Volume (Units)"}
+                  onAreaClick={handleSalesTrendClick}
+                />
+              </div>
+            </div>
+
+            {/* Chart Description */}
+            <div className="mt-4 bg-blue-50 border-l-4 border-blue-400 p-3">
+              <p className="text-sm text-blue-700">
+                <strong>Chart Definition:</strong> Stacked area chart showing monthly {metricType} trends for top 10 brands. 
+                Height of each colored band represents {metricType === "revenue" ? "Revenue = SKU Price × Units sold" : "Volume = Units sold"} within the selected time period. 
+                Hover to display percentage of {metricType} for each brand at that time slice.
+              </p>
+            </div>
+          </Card>
+        </ChartWithFilters>
+      </div>
 
     </section>
   )
