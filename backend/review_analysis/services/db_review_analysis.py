@@ -492,7 +492,14 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             aspects_for_prompt: List[Tuple[str, str]] = []
             for idx, row in enumerate(batch):
                 prompt_id = str(idx)
-                desc = f"{row['parent_group_name']} – {row['detail_text']}"
+                
+                # For usability aspects, use detail_text directly (no parent_group_name prefix)
+                # For physical/performance aspects, combine parent_group_name with detail_text
+                if aspect_code == "use":
+                    desc = row['detail_text']
+                else:
+                    desc = f"{row['parent_group_name']} – {row['detail_text']}"
+                
                 aspects_for_prompt.append((prompt_id, desc))
 
             ctx = ReviewCategorizationContext(
@@ -560,7 +567,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
                     # Process aspect assignments with deduplication mapping
                     updated_assignments = {}
-                    for aspect_id, raw_category_name in result.aspect_assignments.items():
+                    for aspect_id, raw_category_name in result.assignments_initial.items():
                         # Map to deduplicated category name if needed
                         final_category_name = category_name_mapping.get(raw_category_name, raw_category_name)
                         updated_assignments[aspect_id] = final_category_name

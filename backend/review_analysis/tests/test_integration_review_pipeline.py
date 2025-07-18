@@ -12,17 +12,34 @@ from pathlib import Path
 logging.basicConfig(
     level=logging.INFO,
     format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
-    datefmt='%Y-%m-%d %H:%M:%S'
+    datefmt='%Y-%m-%d %H:%M:%S',
+    force=True  # Force reconfiguration
 )
 logger = logging.getLogger(__name__)
 
 # Enable detailed logging for LLM calls
 llm_logger = logging.getLogger('core.utils.llm_utils')
 llm_logger.setLevel(logging.INFO)
+llm_logger.propagate = True  # Ensure logs propagate to root logger
 
 # Enable detailed logging for review analysis service
 service_logger = logging.getLogger('review_analysis.services.db_review_analysis')
 service_logger.setLevel(logging.INFO)
+service_logger.propagate = True  # Ensure logs propagate to root logger
+
+# Also enable logging for the LLM client classes
+anthropic_logger = logging.getLogger('core.utils.llm_utils.AnthropicLLMClient')
+anthropic_logger.setLevel(logging.INFO)
+anthropic_logger.propagate = True
+
+openrouter_logger = logging.getLogger('core.utils.llm_utils.OpenRouterLLMClient')
+openrouter_logger.setLevel(logging.INFO)
+openrouter_logger.propagate = True
+
+# Enable logging for rate limiter
+rate_limiter_logger = logging.getLogger('core.utils.rate_limiter')
+rate_limiter_logger.setLevel(logging.INFO)
+rate_limiter_logger.propagate = True
 
 def log_with_timestamp(message: str, level: str = "INFO") -> None:
     """Helper function to log messages with consistent timestamp format."""
