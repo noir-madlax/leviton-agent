@@ -1,11 +1,11 @@
 """Project business logic service."""
 
 import logging
+import hashlib
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
 from pathlib import Path
 import sys
-import asyncio
 from fastapi import BackgroundTasks
 
 # Add project root to Python path
@@ -13,7 +13,6 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent))
 
 from core.database.connection import get_supabase_client
 from ..models import ProjectCreateRequest, Project, ProjectCreateResponse
-from categories.services import CategoryService
 from core.sse_manager import sse_manager
 
 # 导入产品细分相关模块
@@ -187,11 +186,19 @@ class ProjectService:
                 
                 # TODO: product_ids are actually ASIN strings, need to get actual product_id from platform_id
                 # TODO: Temporarily using ASIN strings, to be handled later in segmentation service
+                
+                # TODO: Rename `project_id` in product_segment_* tables to `run_group_id` 
+                # to better reflect its purpose of identifying a specific segmentation run group.
+                # Create a unique, fixed-length ID for the segmentation run group
+                # by hashing the project ID and the terminal category.
+                run_group_id_str = f"{project_id}_{full_category_path}"
+                run_group_id = hashlib.sha1(run_group_id_str.encode()).hexdigest()
+                
                 # Create separate segmentation run for each category group
                 segmentation_request = StartSegmentationRequest(
                     product_ids=group_product_ids,  # Keep string format, handle in segmentation service
                     product_category=terminal_category,  # Use terminal category as input to segmentation
-                    project_id=f"{project_id}_{terminal_category.replace(' ', '_').lower()}"  # Unique project ID per group
+                    project_id=run_group_id  # Unique hash-based ID for this group
                 )
                 
                 run_id = await segmentation_service.create_run(segmentation_request)
@@ -1521,7 +1528,7 @@ class ProjectService:
                             if stage == "extraction":
                                 step3_description = f"Extracting product features from {total_products_in_run} products"
                             elif stage == "consolidation":
-                                step3_description = f"Consolidating product taxonomies"
+                                step3_description = "Consolidating product taxonomies"
                             elif stage == "refinement":
                                 step3_description = f"Refining product assignments: {completed_assignments}/{total_products_in_run} products assigned"
                             else:
@@ -1636,9 +1643,9 @@ class ProjectService:
 
                         except Exception as e:
                             logger.warning(f"Failed to get review analysis details for run {project.get('review_analysis_run_id')}: {e}")
-                            step4["description"] = f"Processing review analysis..."
+                            step4["description"] = "Processing review analysis..."
                     else:
-                        step4["description"] = f"Processing review analysis..."
+                        step4["description"] = "Processing review analysis..."
                         
                 elif review_analysis_status == "completed":
                     step4["status"] = "completed"
