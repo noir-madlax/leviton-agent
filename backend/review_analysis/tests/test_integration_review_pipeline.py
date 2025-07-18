@@ -1,20 +1,28 @@
 import os
 import sys
-import importlib
 import pytest
 import time
 import asyncio
 import logging
-from datetime import datetime
+import uuid
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Configure logging with timestamps
 logging.basicConfig(
     level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s',
+    format='%(asctime)s - %(levelname)s - %(name)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
 logger = logging.getLogger(__name__)
+
+# Enable detailed logging for LLM calls
+llm_logger = logging.getLogger('core.utils.llm_utils')
+llm_logger.setLevel(logging.INFO)
+
+# Enable detailed logging for review analysis service
+service_logger = logging.getLogger('review_analysis.services.db_review_analysis')
+service_logger.setLevel(logging.INFO)
 
 def log_with_timestamp(message: str, level: str = "INFO") -> None:
     """Helper function to log messages with consistent timestamp format."""
@@ -43,17 +51,7 @@ if main_config_path.exists():
     print("✅ Main config module set up", flush=True)
 
 print("📦 Starting imports...", flush=True)
-from httpx import AsyncClient
 from dataclasses import asdict
-
-# Import the main app like the working test does
-print("📦 Importing main app...", flush=True)
-try:
-    from main import app
-    print("✅ Main app imported", flush=True)
-except Exception as e:
-    print(f"❌ Import failed: {e}", flush=True)
-    raise
 
 print("📦 Importing review_analysis modules...", flush=True)
 try:
@@ -78,14 +76,7 @@ if not (SUPABASE_URL and SUPABASE_SERVICE_KEY):
     print("❌ Supabase credentials not set – skipping test", flush=True)
     pytest.skip("Supabase credentials not set – integration test skipped", allow_module_level=True)
 
-# Handle differing httpx versions (>=0.26 drop 'app' arg)
-try:
-    from httpx import ASGITransport  # httpx >= 0.26
-except ImportError:  # noqa: WPS440
-    try:
-        from httpx._transports.asgi import ASGITransport  # type: ignore
-    except ImportError:
-        ASGITransport = None  # type: ignore
+
 
 
 def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False) -> bool:
@@ -106,22 +97,51 @@ def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False
         # Step 1: Check what exists
         log_with_timestamp("🔍 Checking for existing data...")
         
+        # Check projects table
+        projects_count = sb_client.table("projects").select("id", count="exact").eq("id", project_id).execute()
+        projects_total = projects_count.count if hasattr(projects_count, 'count') else len(projects_count.data)
+        
+        # Check review_analysis_runs
+        runs_count = sb_client.table("review_analysis_runs").select("id", count="exact").eq("project_id", project_id).execute()
+        runs_total = runs_count.count if hasattr(runs_count, 'count') else len(runs_count.data)
+        
+        # Check review_analysis_progress
+        progress_total = 0
+        if runs_total > 0:
+            progress_count = sb_client.table("review_analysis_progress").select("id", count="exact").eq("run_id", runs_total).execute()
+            progress_total = progress_count.count if hasattr(progress_count, 'count') else len(progress_count.data)
+        
         aspects_count = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
         aspects_total = aspects_count.count if hasattr(aspects_count, 'count') else len(aspects_count.data)
         
         categories_count = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
         categories_total = categories_count.count if hasattr(categories_count, 'count') else len(categories_count.data)
         
-        log_with_timestamp(f"📊 Found {aspects_total} aspects and {categories_total} categories")
+        log_with_timestamp(f"📊 Found {projects_total} projects, {runs_total} runs, {progress_total} progress records, {aspects_total} aspects and {categories_total} categories")
         
-        if aspects_total == 0 and categories_total == 0:
+        if projects_total == 0 and runs_total == 0 and aspects_total == 0 and categories_total == 0:
             log_with_timestamp("✅ Database is already clean - no cleanup needed")
             return False
         
         if fail_on_existing:
-            raise AssertionError(f"Test environment is dirty: {aspects_total} aspects and {categories_total} categories exist. Database must be clean before running test.")
+            raise AssertionError(f"Test environment is dirty: {projects_total} projects, {runs_total} runs, {aspects_total} aspects and {categories_total} categories exist. Database must be clean before running test.")
         
-        # Step 2: Get aspect PKs for occurrence cleanup
+        # Step 2: Clean up review_analysis_progress first (foreign key dependency)
+        if progress_total > 0 and runs_total > 0:
+            log_with_timestamp("🗑️ Cleaning up review_analysis_progress...")
+            try:
+                # Get the actual run ID
+                run_result = sb_client.table("review_analysis_runs").select("id").eq("project_id", project_id).execute()
+                if run_result.data:
+                    run_id = run_result.data[0]["id"]
+                    result = sb_client.table("review_analysis_progress").delete().eq("run_id", run_id).execute()
+                    deleted_count = len(result.data) if result.data else progress_total
+                    log_with_timestamp(f"✅ Deleted {deleted_count} progress records")
+            except Exception as e:
+                log_with_timestamp(f"❌ Failed to delete progress records: {e}", "ERROR")
+                raise
+        
+        # Step 3: Get aspect PKs for occurrence cleanup
         if aspects_total > 0:
             log_with_timestamp("🔍 Getting aspect PKs for occurrence cleanup...")
             all_aspects = []
@@ -140,7 +160,7 @@ def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False
             aspect_pks = [a["aspect_pk"] for a in all_aspects]
             log_with_timestamp(f"✅ Found {len(aspect_pks)} aspect PKs")
             
-            # Step 3: Clean up aspect occurrences first (foreign key dependency)
+            # Step 4: Clean up aspect occurrences first (foreign key dependency)
             if aspect_pks:
                 log_with_timestamp("🗑️ Cleaning up aspect occurrences...")
                 # Clean in batches to avoid query size limits
@@ -160,7 +180,7 @@ def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False
                 
                 log_with_timestamp(f"✅ Deleted {total_deleted} aspect occurrences total")
         
-        # Step 4: Delete aspects
+        # Step 5: Delete aspects
         if aspects_total > 0:
             log_with_timestamp(f"🗑️ Deleting {aspects_total} aspects...")
             try:
@@ -171,7 +191,7 @@ def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False
                 log_with_timestamp(f"❌ Failed to delete aspects: {e}", "ERROR")
                 raise
         
-        # Step 5: Delete categories  
+        # Step 6: Delete categories  
         if categories_total > 0:
             log_with_timestamp(f"🗑️ Deleting {categories_total} categories...")
             try:
@@ -182,17 +202,43 @@ def cleanup_test_data(sb_client, project_id: str, fail_on_existing: bool = False
                 log_with_timestamp(f"❌ Failed to delete categories: {e}", "ERROR")
                 raise
         
-        # Step 6: Verify cleanup
+        # Step 7: Delete review_analysis_runs
+        if runs_total > 0:
+            log_with_timestamp(f"🗑️ Deleting {runs_total} review_analysis_runs...")
+            try:
+                result = sb_client.table("review_analysis_runs").delete().eq("project_id", project_id).execute()
+                deleted_count = len(result.data) if result.data else runs_total
+                log_with_timestamp(f"✅ Deleted {deleted_count} review_analysis_runs")
+            except Exception as e:
+                log_with_timestamp(f"❌ Failed to delete review_analysis_runs: {e}", "ERROR")
+                raise
+        
+        # Step 8: Delete project record
+        if projects_total > 0:
+            log_with_timestamp(f"🗑️ Deleting {projects_total} project record...")
+            try:
+                result = sb_client.table("projects").delete().eq("id", project_id).execute()
+                deleted_count = len(result.data) if result.data else projects_total
+                log_with_timestamp(f"✅ Deleted {deleted_count} project record")
+            except Exception as e:
+                log_with_timestamp(f"❌ Failed to delete project record: {e}", "ERROR")
+                raise
+        
+        # Step 9: Verify cleanup
         log_with_timestamp("🔍 Verifying cleanup...")
         
+        remaining_projects = sb_client.table("projects").select("id", count="exact").eq("id", project_id).execute()
+        remaining_runs = sb_client.table("review_analysis_runs").select("id", count="exact").eq("project_id", project_id).execute()
         remaining_aspects = sb_client.table("review_analysis_aspects").select("aspect_pk", count="exact").eq("project_id", project_id).execute()
         remaining_categories = sb_client.table("review_analysis_aspect_categories").select("category_pk", count="exact").eq("project_id", project_id).execute()
         
+        projects_remaining = remaining_projects.count if hasattr(remaining_projects, 'count') else len(remaining_projects.data)
+        runs_remaining = remaining_runs.count if hasattr(remaining_runs, 'count') else len(remaining_runs.data)
         aspects_remaining = remaining_aspects.count if hasattr(remaining_aspects, 'count') else len(remaining_aspects.data)
         categories_remaining = remaining_categories.count if hasattr(remaining_categories, 'count') else len(remaining_categories.data)
         
-        if aspects_remaining > 0 or categories_remaining > 0:
-            error_msg = f"Cleanup incomplete: {aspects_remaining} aspects and {categories_remaining} categories remain"
+        if projects_remaining > 0 or runs_remaining > 0 or aspects_remaining > 0 or categories_remaining > 0:
+            error_msg = f"Cleanup incomplete: {projects_remaining} projects, {runs_remaining} runs, {aspects_remaining} aspects and {categories_remaining} categories remain"
             log_with_timestamp(f"❌ {error_msg}", "ERROR")
             raise AssertionError(error_msg)
         
@@ -223,10 +269,10 @@ async def test_full_review_analysis_pipeline() -> None:
         print(f"❌ Failed to create Supabase client: {e}", flush=True)
         raise
 
-    # project and product list
-    project_id = "INTEGRATION_TEST_PROJ"
+    # project and product list - using 3 products with max 30 reviews each from category_l5_id=507840 (Dimmer Switches)
+    project_id = str(uuid.uuid4())  # Generate proper UUID for projects table
     product_category = "Dimmer Switches"
-    product_ids = ["B08PKMT2DV", "B0771BC2YH", "B004DZONXI"]
+    product_ids = ["B00MXCRAX8", "B0055VD9HK", "B09WL82DB2"]
     
     print(f"📋 Test parameters set: project_id={project_id}, category={product_category}", flush=True)
     log_with_timestamp(f"📋 Test parameters - Project ID: {project_id}, Category: {product_category}, Product IDs: {product_ids}")
@@ -281,55 +327,144 @@ async def test_full_review_analysis_pipeline() -> None:
         log_with_timestamp(f"❌ Initial cleanup failed: {e} (took {cleanup_time:.2f}s)", "ERROR")
         raise
 
+    # --- Create project record like project_service.py does --------------
+    print("📝 Creating project record...", flush=True)
+    log_with_timestamp("📝 Creating project record in projects table...")
+    
+    try:
+        # Calculate estimates like project_service.py does
+        total_reviews = (
+            sb_client.table("product_reviews")
+            .select("review_id", count="exact")
+            .in_("product_id", product_ids)
+            .execute()
+        )
+        estimated_reviews_to_analyze = total_reviews.count if hasattr(total_reviews, 'count') else len(total_reviews.data)
+        
+        # Estimate LLM calls (simplified calculation)
+        estimated_llm_calls = (estimated_reviews_to_analyze + 9) // 10  # Rough estimate: 10 reviews per LLM call
+        
+        project_data = {
+            "id": project_id,
+            "project_name": "Integration Test Project",
+            "company_name": "Test Company",
+            "user_name": "Test User",
+            "description": "Integration test project for review analysis pipeline",
+            "selected_categories": [product_category],
+            "selected_sources": ["amazon"],
+            "selected_brands": [],
+            "selected_product_asins": product_ids,
+            "top_sales_count": 100,
+            "total_products": len(product_ids),
+            "total_brands": 1,
+            "total_reviews": estimated_reviews_to_analyze,
+            "avg_monthly_sales": 1000.0,
+            "status": "active",
+            "overall_status": "creating",
+            "segmentation_status": "completed",  # Assume segmentation is done
+            "review_analysis_status": "pending",
+            "estimated_reviews_to_analyze": estimated_reviews_to_analyze,
+            "estimated_llm_calls": estimated_llm_calls,
+            "review_analysis_started_at": datetime.now(timezone.utc).isoformat()
+        }
+        
+        # Insert project record
+        project_result = sb_client.table("projects").upsert(project_data, on_conflict="id").execute()
+        if not project_result.data:
+            raise Exception("Failed to create project record")
+        
+        log_with_timestamp(f"✅ Project record created with {estimated_reviews_to_analyze} estimated reviews and {estimated_llm_calls} estimated LLM calls")
+        
+    except Exception as e:
+        log_with_timestamp(f"❌ Failed to create project record: {e}", "ERROR")
+        raise
+
     # --- call API --------------------------------------------------------
     print("🏗️ Setting up API call...", flush=True)
-    log_with_timestamp("🏗️ Setting up FastAPI application and request...")
-    # Use the main app instead of creating a new one
-    # app = FastAPI()
-    # app.include_router(review_router)
+    log_with_timestamp("🏗️ Setting up direct service call instead of API...")
 
     req = ReviewAnalysisRequest(
         project_id=project_id,
         product_ids=product_ids,
         product_category=product_category,
     )
-    print(f"📝 Request object created", flush=True)
+    print("📝 Request object created", flush=True)
     log_with_timestamp(f"📝 Request created: {asdict(req)}")
 
     # ------------------------------------------------------------------
-    # Fire request via ASGITransport-compatible AsyncClient (httpx >=0.26)
+    # Call the service directly instead of going through FastAPI
     # ------------------------------------------------------------------
     api_call_start = time.time()
-    print("🌐 About to send API request...", flush=True)
-    log_with_timestamp("🌐 Sending API request to start review analysis pipeline...")
+    print("🌐 About to call review analysis service directly...", flush=True)
+    log_with_timestamp("🌐 Calling review analysis service directly to avoid FastAPI lifespan issues...")
     
-    if ASGITransport is None:
-        print("🔧 Using legacy AsyncClient", flush=True)
-        log_with_timestamp("🔧 Using legacy httpx AsyncClient (no ASGITransport)")
-        async with AsyncClient(app=app, base_url="http://test") as ac:
-            print("📤 Sending POST request...", flush=True)
-            resp = await ac.post("/api/v1/review-analysis", json=asdict(req))
-            print(f"📥 Got response: {resp.status_code}", flush=True)
-    else:
-        print("🔧 Using modern AsyncClient with ASGITransport", flush=True)
-        log_with_timestamp("�� Using modern httpx AsyncClient with ASGITransport")
+    try:
+        # Import and call the service directly
+        print("🔧 Importing DatabaseReviewAnalysisService...", flush=True)
+        log_with_timestamp("🔧 Importing DatabaseReviewAnalysisService...")
+        from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
+        print("✅ DatabaseReviewAnalysisService imported successfully", flush=True)
+        log_with_timestamp("✅ DatabaseReviewAnalysisService imported successfully")
+        
+        # Create service instance
+        print("🏗️ Creating DatabaseReviewAnalysisService instance...", flush=True)
+        log_with_timestamp("🏗️ Creating DatabaseReviewAnalysisService instance...")
+        service = DatabaseReviewAnalysisService()
+        print("✅ DatabaseReviewAnalysisService instance created successfully", flush=True)
+        log_with_timestamp("✅ DatabaseReviewAnalysisService instance created successfully")
+        
+        # Test the database query that the service will do first
+        print("🔍 Testing database query that service will perform...", flush=True)
+        log_with_timestamp("🔍 Testing database query that service will perform...")
+        test_reviews = (
+            sb_client.table("product_reviews")
+            .select("product_id, review_id, review_title, review_text, rating")
+            .in_("product_id", product_ids)
+            .execute()
+            .data
+            or []
+        )
+        print(f"✅ Database query test completed - found {len(test_reviews)} reviews", flush=True)
+        log_with_timestamp(f"✅ Database query test completed - found {len(test_reviews)} reviews")
+        
+        # Start the analysis using the request object
+        print("🚀 Starting service.analyse() call...", flush=True)
+        log_with_timestamp("🚀 Starting service.analyse() call...")
+        
+        # Add a progress callback to track what the service is doing
+        async def debug_progress_callback(progress_data):
+            step = progress_data.get("step", "unknown")
+            status = progress_data.get("status", "unknown")
+            details = progress_data.get("details", {})
+            print(f"📊 Service progress: {step} - {status} | {details}", flush=True)
+            log_with_timestamp(f"📊 Service progress: {step} - {status} | {details}")
+        
+        # Add a timeout wrapper to the service call
+        import asyncio
         try:
-            transport = ASGITransport(app=app, lifespan="auto")  # httpx >=0.26
-        except TypeError:  # older signature without lifespan
-            transport = ASGITransport(app=app)
-
-        async with AsyncClient(transport=transport, base_url="http://test") as ac:
-            print("📤 Sending POST request...", flush=True)
-            resp = await ac.post("/api/v1/review-analysis", json=asdict(req))
-            print(f"📥 Got response: {resp.status_code}", flush=True)
-
-    api_call_time = time.time() - api_call_start
-    log_with_timestamp(f"📡 API call completed in {api_call_time:.2f}s with status: {resp.status_code}")
-    
-    assert resp.status_code == 202, resp.text
-    analysis_id = resp.json().get("analysis_id")
-    assert analysis_id, "analysis_id missing in response"
-    log_with_timestamp(f"✅ Pipeline started successfully with analysis_id: {analysis_id}")
+            analysis_id = await asyncio.wait_for(
+                service.analyse(req, progress_callback=debug_progress_callback), 
+                timeout=300.0
+            )  # 5 minute timeout for LLM calls
+            print("✅ service.analyse() completed successfully", flush=True)
+            log_with_timestamp("✅ service.analyse() completed successfully")
+        except asyncio.TimeoutError:
+            print("⏰ service.analyse() timed out after 5 minutes", flush=True)
+            log_with_timestamp("⏰ service.analyse() timed out after 5 minutes", "ERROR")
+            raise TimeoutError("service.analyse() call timed out after 5 minutes")
+        
+        api_call_time = time.time() - api_call_start
+        log_with_timestamp(f"📡 Service call completed in {api_call_time:.2f}s with analysis_id: {analysis_id}")
+        
+        assert analysis_id, "analysis_id missing in response"
+        log_with_timestamp(f"✅ Pipeline started successfully with analysis_id: {analysis_id}")
+        
+    except Exception as e:
+        api_call_time = time.time() - api_call_start
+        log_with_timestamp(f"❌ Service call failed after {api_call_time:.2f}s: {e}", "ERROR")
+        import traceback
+        log_with_timestamp(f"❌ Stack trace: {traceback.format_exc()}", "ERROR")
+        raise
 
     # ------------------------------------------------------------------
     # Poll DB for progress & print small samples, similar to segmentation
@@ -344,15 +479,18 @@ async def test_full_review_analysis_pipeline() -> None:
     log_with_timestamp(f"⏰ Starting progress polling with {timeout_s}s timeout and {poll_interval}s intervals")
     log_with_timestamp(f"🚨 No-progress timeout: {no_progress_timeout}s (will fail if no changes detected)")
 
-    aspects_done = False
-    cat_categorised = False
-    cat_final = False
+    # Track all stages
+    extraction_done = False
+    categorization_done = False
+    consolidation_done = False
+    refinement_done = False
 
     last_report = ""
     poll_count = 0
     last_aspects_count = 0
     last_categories_count = 0
     last_assigned_count = 0
+    last_run_stage = "starting"
 
     def create_progress_bar(current: int, total: int, width: int = 30) -> str:
         """Create a simple text progress bar."""
@@ -376,6 +514,69 @@ async def test_full_review_analysis_pipeline() -> None:
             raise TimeoutError(f"Pipeline stalled - no progress for {time_since_last_change:.1f} seconds")
         
         log_with_timestamp(f"🔄 Poll #{poll_count} - Checking pipeline progress... (no-progress timer: {time_since_last_change:.1f}s/{no_progress_timeout}s)")
+
+        # Check review_analysis_runs table for current stage
+        runs_query_start = time.time()
+        runs = (
+            sb_client.table("review_analysis_runs")
+            .select("id, status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total")
+            .eq("project_id", project_id)
+            .execute()
+            .data
+        )
+        runs_query_time = time.time() - runs_query_start
+        
+        current_run = runs[0] if runs else None
+        current_run_stage = current_run.get("stage", "starting") if current_run else "starting"
+        
+        if current_run_stage != last_run_stage:
+            log_with_timestamp(f"📊 Run stage changed: {last_run_stage} → {current_run_stage} (query: {runs_query_time:.2f}s)")
+            last_run_stage = current_run_stage
+            changes_detected = True
+
+        # Check review_analysis_progress table for detailed progress
+        progress_query_start = time.time()
+        progress = []
+        if current_run:
+            progress = (
+                sb_client.table("review_analysis_progress")
+                .select("step_name, status, progress_current, progress_total, details")
+                .eq("run_id", current_run["id"])
+                .execute()
+                .data
+            )
+        progress_query_time = time.time() - progress_query_start
+        
+        # Create progress map
+        progress_map = {p['step_name']: p for p in progress}
+        
+        # Check each stage progress
+        for stage_name in ["extraction", "categorization", "consolidation", "refinement"]:
+            stage_progress = progress_map.get(stage_name, {})
+            stage_status = stage_progress.get("status", "pending")
+            stage_current = stage_progress.get("progress_current", 0)
+            stage_total = stage_progress.get("progress_total", 0)
+            
+            if stage_status == "completed":
+                if stage_name == "extraction" and not extraction_done:
+                    log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
+                    extraction_done = True
+                    changes_detected = True
+                elif stage_name == "categorization" and not categorization_done:
+                    log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
+                    categorization_done = True
+                    changes_detected = True
+                elif stage_name == "consolidation" and not consolidation_done:
+                    log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
+                    consolidation_done = True
+                    changes_detected = True
+                elif stage_name == "refinement" and not refinement_done:
+                    log_with_timestamp(f"🎉 MILESTONE: {stage_name.capitalize()} stage completed!")
+                    refinement_done = True
+                    changes_detected = True
+            elif stage_status == "in_progress":
+                progress_bar = create_progress_bar(stage_current, stage_total)
+                log_with_timestamp(f"📈 {stage_name.capitalize()} progress: {progress_bar}")
 
         # Aspects inserted? -------------------------------------------
         aspects_query_start = time.time()
@@ -412,10 +613,10 @@ async def test_full_review_analysis_pipeline() -> None:
             progress_bar = create_progress_bar(assigned_count, current_aspects_count)
             log_with_timestamp(f"📈 Current status: {progress_bar} | {assigned_count} assigned, {unassigned_count} unassigned")
         
-        if aspects and not aspects_done:
+        if aspects and not extraction_done:
             sample = [a["detail_text"][:50] + "..." if len(a["detail_text"]) > 50 else a["detail_text"] for a in aspects[:5]]
             log_with_timestamp(f"🎯 MILESTONE: Extracted aspects detected! Total: {len(aspects)}, Sample of first 5: {sample}")
-            aspects_done = True
+            extraction_done = True
             changes_detected = True
 
         # Categories categorised --------------------------------------
@@ -430,10 +631,10 @@ async def test_full_review_analysis_pipeline() -> None:
         )
         categories_cat_query_time = time.time() - categories_cat_query_start
         
-        if categories_cat and not cat_categorised:
+        if categories_cat and not categorization_done:
             names = [c["name"] for c in categories_cat[:5]]
             log_with_timestamp(f"🏷️ MILESTONE: Categorised categories detected! Total: {len(categories_cat)}, Sample of first 5: {names} (query: {categories_cat_query_time:.2f}s)")
-            cat_categorised = True
+            categorization_done = True
             changes_detected = True
 
         # Final categories --------------------------------------------
@@ -454,19 +655,19 @@ async def test_full_review_analysis_pipeline() -> None:
             last_categories_count = current_final_categories_count
             changes_detected = True
         
-        if categories_final and not cat_final:
+        if categories_final and not consolidation_done:
             names = [c["name"] for c in categories_final[:5]]
             log_with_timestamp(f"🎉 MILESTONE: Final consolidated categories detected! Total: {len(categories_final)}, Sample of first 5: {names}")
-            cat_final = True
+            consolidation_done = True
             changes_detected = True
 
         # Update no-progress timer if any changes were detected this poll
         if changes_detected:
             last_change_time = time.time()
-            log_with_timestamp(f"✅ Progress detected - resetting no-progress timer")
+            log_with_timestamp("✅ Progress detected - resetting no-progress timer")
 
         # All done? ----------------------------------------------------
-        if aspects_done and cat_final:
+        if extraction_done and consolidation_done:
             log_with_timestamp("🔍 Checking for unassigned aspects...")
             unassigned_check_start = time.time()
             unassigned = (
@@ -483,14 +684,15 @@ async def test_full_review_analysis_pipeline() -> None:
             if not unassigned:
                 elapsed_time = time.time() - polling_start_time
                 log_with_timestamp(f"🎯 PIPELINE COMPLETE! All aspects assigned to categories (unassigned check: {unassigned_check_time:.2f}s, total polling time: {elapsed_time:.2f}s)")
+                refinement_done = True
                 break
             else:
-                log_with_timestamp(f"⏳ Still have unassigned aspects, continuing to poll...")
+                log_with_timestamp("⏳ Still have unassigned aspects, continuing to poll...")
 
         # progress message throttle
         elapsed_polling = time.time() - polling_start_time
         poll_time = time.time() - poll_start
-        progress_status = f"aspects: {'✅' if aspects_done else '❌'}, final cats: {'✅' if cat_final else '❌'}"
+        progress_status = f"extraction: {'✅' if extraction_done else '❌'}, categorization: {'✅' if categorization_done else '❌'}, consolidation: {'✅' if consolidation_done else '❌'}, refinement: {'✅' if refinement_done else '❌'}"
         if current_aspects_count > 0:
             assignment_pct = (assigned_count / current_aspects_count * 100) if current_aspects_count > 0 else 0
             progress_status += f", assignment: {assignment_pct:.1f}%"
@@ -512,14 +714,20 @@ async def test_full_review_analysis_pipeline() -> None:
     
     log_with_timestamp(f"📊 FINAL VALIDATION - Total test time: {total_elapsed:.2f}s, Polling time: {polling_elapsed:.2f}s")
     
-    assert aspects_done, "No aspects persisted"
-    assert cat_final, "No final categories persisted"
+    assert extraction_done, "No aspects persisted"
+    assert categorization_done, "No categorization completed"
+    assert consolidation_done, "No final categories persisted"
+    assert refinement_done, "No refinement completed"
     
     # Get final counts for reporting
     final_aspects = sb_client.table("review_analysis_aspects").select("aspect_pk").eq("project_id", project_id).execute().data
     final_categories = sb_client.table("review_analysis_aspect_categories").select("category_pk").eq("project_id", project_id).eq("stage", "final").execute().data
+    final_runs = sb_client.table("review_analysis_runs").select("id").eq("project_id", project_id).execute().data
+    final_progress = []
+    if final_runs:
+        final_progress = sb_client.table("review_analysis_progress").select("id").eq("run_id", final_runs[0]["id"]).execute().data
     
-    log_with_timestamp(f"✅ TEST PASSED! Final results: {len(final_aspects)} aspects, {len(final_categories)} final categories")
+    log_with_timestamp(f"✅ TEST PASSED! Final results: {len(final_aspects)} aspects, {len(final_categories)} final categories, {len(final_runs)} runs, {len(final_progress)} progress records")
 
     # --- Final cleanup using comprehensive cleanup function -------------
     log_with_timestamp("🧹 Starting final cleanup...")

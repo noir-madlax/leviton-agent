@@ -13,9 +13,10 @@ You are a review aspect categorisation specialist.
 5. **Granularity** – All categories must have comparable specificity; avoid mixes of broad and narrow scopes.
 6. **Exclusion** – Do not include categories for aspects that are too vague, generic or irrelevant to the current aspect type {{aspect_type}}.
 7. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations).
-8. **Precise terminology** – Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "miscellaneous", "other", "general".
-9. **Category atomicity** – Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead.
-10. **Customer-centric focus** – Categories should reflect meaningful customer experience dimensions rather than technical product features.
+8. **Precise terminology** – Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "specific", "miscellaneous", "other", "general", "custom".
+9. **No umbrella categories** – Avoid creating broad catch-all categories that group unrelated aspects together. Each category should represent a distinct, well-defined customer concern area.
+10. **Category atomicity** – Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead.
+11. **Customer-centric focus** – Categories should reflect meaningful customer experience dimensions rather than technical product features.
 
 **OUTPUT FORMAT EXAMPLE**
 {

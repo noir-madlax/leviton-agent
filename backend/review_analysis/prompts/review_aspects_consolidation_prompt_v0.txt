@@ -17,11 +17,13 @@ Taxonomy B:
 1. **Full deduplication goal** - The primary purpose is to eliminate ALL duplicates and near-duplicates across both taxonomies, creating a single unified taxonomy with no redundancy. Categories can be merged within Taxonomy A (A_* with A_*), within Taxonomy B (B_* with B_*), or between taxonomies (A_* with B_*)
 2. **Group similar categories** - Combine categories that represent the same or very similar concept based on their definitions, regardless of which taxonomy they came from
 3. **Preserve specificity and handle unique categories** - Maintain the specific nature of each category type rather than creating broader, more generic categories. If a category is truly unique and has no similar counterparts in either taxonomy, it can remain as a single-item group
-4. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals
-5. **Complete mapping** - Every A_* and B_* ID must appear exactly once in the "ids" arrays - no duplicates or missing IDs
-6. **Maintain consistent granularity** - ALL consolidated categories must be at the same level of specificity and detail. Ensure no category is significantly more general or more specific than others - aim for uniform granularity across the entire final taxonomy
-7. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries with no ambiguity
-8. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific aspect type, ending with "e.g." and specific examples
+4. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals; avoid generic words like "specialty", "specific", "particular", "miscellaneous", "other", "general", "custom"
+5. **No umbrella categories** - Avoid creating broad catch-all categories that group unrelated aspects together. Each category should represent a distinct, well-defined customer concern area.
+6. **Complete mapping** - Every A_* and B_* ID must appear exactly once in either the "ids" arrays of consolidated categories OR in the special "__KEEP__" field - no duplicates or missing IDs
+7. **Maintain consistent granularity** - ALL consolidated categories must be at the same level of specificity and detail. Ensure no category is significantly more general or more specific than others - aim for uniform granularity across the entire final taxonomy
+8. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries with no ambiguity
+9. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific aspect type, ending with "e.g." and specific examples
+10. **Keep unchanged categories** - If certain categories are already perfect and should remain exactly as they are without any consolidation, place their IDs in the special "__KEEP__" field. These categories will retain their original names and definitions.
 
 **OUTPUT FORMAT:**
 Return only valid JSON with this structure:
@@ -38,7 +40,8 @@ Return only valid JSON with this structure:
   "Category Name 3": {
     "definition": "Description for unique category, e.g. examples",
     "ids": ["B_0"]
-  }
+  },
+  "__KEEP__": ["A_4", "B_5"]
 }
 ```
 
