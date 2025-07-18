@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 """Database-integrated Review-Analysis service (v0.1).
 
 This orchestration service reuses the generic four-stage taxonomy pipeline:
@@ -14,7 +12,6 @@ inside the pipeline stage helpers so this module stays fairly small.
 
 import logging
 import secrets
-import traceback
 from datetime import datetime, timezone
 from typing import Dict, List, Any, Tuple, Optional, Callable, Awaitable
 
@@ -863,7 +860,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 .select("aspect_pk, category_pk")
                 .eq("project_id", project_id)
                 .eq("aspect_type", aspect_code)
-                .neq("category_pk", "null")
+                .not_.is_("category_pk", "null")
                 .execute()
             )
             

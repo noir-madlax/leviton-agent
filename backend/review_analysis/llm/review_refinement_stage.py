@@ -120,8 +120,11 @@ class ReviewRefinementStage(BaseStage):
         # Build aspects section with integer IDs
         formatted_aspects = []
         for i, description in enumerate(ctx.aspects):
-            # Format with category if available (except for use cases which don't have categories)
-            if ctx.original_categories and i < len(ctx.original_categories) and ctx.original_categories[i]:
+            # For use aspect type, never combine category with description
+            if ctx.aspect_type.lower() == "use":
+                # Use cases don't have categories, use description as-is
+                formatted_aspects.append(f"[{i}] {description}")
+            elif ctx.original_categories and i < len(ctx.original_categories) and ctx.original_categories[i]:
                 original_category = ctx.original_categories[i]
                 # Format as "{category} - {description}"
                 formatted_aspects.append(f"[{i}] {original_category} - {description}")

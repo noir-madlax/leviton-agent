@@ -2,67 +2,61 @@
   "metadata": null,
   "consolidation_results": {
     "phy": {
-      "consolidated_count": 8,
+      "consolidated_count": 7,
       "taxonomies": [
         {
           "name": "Color Characteristics",
-          "definition": "Visual color properties and variety of the product, e.g. brightness, vibrancy, color selection",
+          "definition": "Visual color properties including variety, intensity, and appearance of arts and crafts materials, e.g. color selection range, brightness levels",
           "merged_count": 1,
           "original_names": [
             "Color Characteristics"
           ]
         },
         {
-          "name": "Product Form",
-          "definition": "Overall physical shape and structural integrity of the item, e.g. straightness, deformation",
+          "name": "Ergonomic Features",
+          "definition": "Physical design elements that affect handling and user comfort, e.g. grip surfaces, holding mechanisms",
           "merged_count": 1,
           "original_names": [
-            "Product Form"
+            "Ergonomic Features"
           ]
         },
         {
-          "name": "Product Dimensions",
-          "definition": "Physical size measurements and proportions of the product, e.g. container volume, item dimensions suitable for children",
-          "merged_count": 1,
+          "name": "Physical Structure and Integrity",
+          "definition": "Physical form, construction quality, and structural soundness of arts and crafts products and their packaging, e.g. pencil straightness, box construction durability, shape distortion, container lid mechanisms",
+          "merged_count": 3,
           "original_names": [
-            "Product Dimensions"
+            "Structural Integrity",
+            "Container Design",
+            "Package Condition"
           ]
         },
         {
-          "name": "Handling Ergonomics",
-          "definition": "Physical design features that affect how the product is held and manipulated, e.g. grip comfort, handling ease",
-          "merged_count": 1,
-          "original_names": [
-            "Handling Ergonomics"
-          ]
-        },
-        {
-          "name": "Container Design",
-          "definition": "Physical structure and condition of product packaging, e.g. box construction, lid mechanisms, packaging integrity",
-          "merged_count": 1,
-          "original_names": [
-            "Container Design"
-          ]
-        },
-        {
-          "name": "Writing Point Performance",
-          "definition": "Physical condition and functionality of writing or drawing tips, e.g. tip durability, sharpness, smoothness",
+          "name": "Writing Tip Durability",
+          "definition": "Physical condition and performance characteristics of pencil, marker, or crayon tips during use, e.g. tip breakage resistance, sharpness retention, point wear patterns",
           "merged_count": 1,
           "original_names": [
             "Writing Point Performance"
           ]
         },
         {
-          "name": "Material Composition",
-          "definition": "Physical substance and quality of materials used in product construction, e.g. safety ingredients, material durability",
+          "name": "Product Size Specifications",
+          "definition": "Physical measurements and dimensional properties of arts and crafts items, e.g. container volume capacity, item proportions for different age groups, length and width specifications",
+          "merged_count": 1,
+          "original_names": [
+            "Product Dimensions"
+          ]
+        },
+        {
+          "name": "Material Safety Properties",
+          "definition": "Chemical composition and safety characteristics of arts and crafts materials, e.g. allergen content levels, toxicity ratings, ingredient safety profiles",
           "merged_count": 1,
           "original_names": [
             "Material Composition"
           ]
         },
         {
-          "name": "Surface Feel",
-          "definition": "Tactile properties of product surfaces, e.g. smoothness, texture quality",
+          "name": "Tactile Surface Quality",
+          "definition": "Physical texture and feel characteristics of arts and crafts materials during handling, e.g. smoothness consistency, softness levels, surface texture quality",
           "merged_count": 1,
           "original_names": [
             "Surface Feel"

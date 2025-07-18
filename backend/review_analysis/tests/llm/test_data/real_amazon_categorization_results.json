@@ -10,35 +10,39 @@
       "taxonomies": [
         {
           "name": "Product Dimensions",
-          "definition": "Physical size measurements and proportions of the product, e.g. container volume, item dimensions suitable for children"
+          "definition": "Physical measurements and sizing specifications of arts and crafts products, e.g. container volume, item proportions for age groups"
         },
         {
           "name": "Color Characteristics",
-          "definition": "Visual color properties and variety of the product, e.g. brightness, vibrancy, color selection"
+          "definition": "Visual color properties including variety, intensity, and appearance of arts and crafts materials, e.g. color selection range, brightness levels"
         },
         {
           "name": "Container Design",
-          "definition": "Physical structure and condition of product packaging, e.g. box construction, lid mechanisms, packaging integrity"
+          "definition": "Physical structure and functionality of product packaging and storage containers, e.g. box construction, lid mechanisms, bulk packaging formats"
+        },
+        {
+          "name": "Package Condition",
+          "definition": "Physical state and integrity of packaging upon receipt, e.g. structural damage, seal tampering, durability failures"
         },
         {
           "name": "Material Composition",
-          "definition": "Physical substance and quality of materials used in product construction, e.g. safety ingredients, material durability"
+          "definition": "Chemical and ingredient properties of arts and crafts materials, e.g. allergen content, toxicity levels"
         },
         {
           "name": "Writing Point Performance",
-          "definition": "Physical condition and functionality of writing or drawing tips, e.g. tip durability, sharpness, smoothness"
-        },
-        {
-          "name": "Product Form",
-          "definition": "Overall physical shape and structural integrity of the item, e.g. straightness, deformation"
+          "definition": "Physical condition and functionality of pencil, marker, or crayon tips, e.g. durability, sharpness retention, breakage resistance"
         },
         {
           "name": "Surface Feel",
-          "definition": "Tactile properties of product surfaces, e.g. smoothness, texture quality"
+          "definition": "Tactile properties and consistency of arts and crafts materials, e.g. smoothness, softness, texture quality"
         },
         {
-          "name": "Handling Ergonomics",
-          "definition": "Physical design features that affect how the product is held and manipulated, e.g. grip comfort, handling ease"
+          "name": "Structural Integrity",
+          "definition": "Physical form and straightness of rigid arts and crafts items, e.g. pencil alignment, shape distortion"
+        },
+        {
+          "name": "Ergonomic Features",
+          "definition": "Physical design elements that affect handling and user comfort, e.g. grip surfaces, holding mechanisms"
         }
       ],
       "assignments": {
@@ -50,53 +54,61 @@
         "5": "Container Design",
         "6": "Container Design",
         "7": "Container Design",
-        "8": "Container Design",
-        "9": "Material Composition",
-        "10": "Material Composition",
-        "11": "Writing Point Performance",
+        "8": "Package Condition",
+        "9": "Package Condition",
+        "10": "Package Condition",
+        "11": "Material Composition",
         "12": "Writing Point Performance",
         "13": "Writing Point Performance",
         "14": "Writing Point Performance",
         "15": "Writing Point Performance",
-        "16": "Product Form",
+        "16": "Writing Point Performance",
         "17": "Surface Feel",
-        "18": "Handling Ergonomics"
+        "18": "Surface Feel",
+        "19": "Structural Integrity",
+        "20": "Ergonomic Features"
       },
-      "total_categories": 8,
-      "total_assignments": 19
+      "total_categories": 9,
+      "total_assignments": 21
     },
     "perf": {
       "taxonomies": [
         {
           "name": "Product Longevity",
-          "definition": "How long the product maintains its usability and structural integrity over time, e.g. lasting through multiple uses, maintaining moisture content, withstanding regular handling"
+          "definition": "How long arts and crafts products maintain their usability and structural integrity over time, e.g. markers drying out, pencils lasting through multiple projects"
         },
         {
           "name": "Structural Integrity During Use",
-          "definition": "How well the product maintains its physical form during normal operations, e.g. resistance to breaking during sharpening, maintaining shape during application"
+          "definition": "How well products withstand normal handling and usage without breaking or damage, e.g. pencil leads breaking during sharpening, crayons snapping under pressure"
         },
         {
-          "name": "Color Delivery",
-          "definition": "How the product transfers and applies color to surfaces, e.g. smoothness of application, intensity of pigmentation, blending capabilities"
+          "name": "Color Output Quality",
+          "definition": "The visual characteristics and application smoothness of colors produced by arts and crafts materials, e.g. pigment intensity, color blending capability, smoothness of application"
         },
         {
           "name": "Point Maintenance",
-          "definition": "How the product responds to sharpening processes and retains its sharpened state, e.g. ability to achieve sharp points, retention of sharpness during use"
+          "definition": "How well drawing and coloring tools maintain their tip sharpness and precision during use, e.g. pencil leads staying sharp after sharpening, markers maintaining fine tips"
+        },
+        {
+          "name": "Product Restoration",
+          "definition": "The ability to restore dried or depleted arts and crafts materials to working condition, e.g. reactivating watercolors with water, reconstituting dried paints"
         }
       ],
       "assignments": {
         "0": "Product Longevity",
         "1": "Product Longevity",
-        "8": "Product Longevity",
-        "2": "Structural Integrity During Use",
-        "3": "Color Delivery",
-        "4": "Color Delivery",
-        "5": "Color Delivery",
-        "6": "Point Maintenance",
-        "7": "Point Maintenance"
+        "2": "Product Longevity",
+        "3": "Structural Integrity During Use",
+        "4": "Structural Integrity During Use",
+        "5": "Color Output Quality",
+        "6": "Color Output Quality",
+        "7": "Color Output Quality",
+        "8": "Point Maintenance",
+        "9": "Point Maintenance",
+        "10": "Product Restoration"
       },
-      "total_categories": 4,
-      "total_assignments": 9
+      "total_categories": 5,
+      "total_assignments": 11
     }
   }
 }
