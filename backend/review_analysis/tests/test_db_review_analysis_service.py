@@ -33,7 +33,8 @@ class TestDatabaseReviewAnalysisService:
         return ReviewAnalysisRequest(
             project_id="TEST_DB_SERVICE",
             product_ids=["B08PKMT2DV", "B0771BC2YH"],
-            product_category="Test Switches"
+            product_category="Test Switches",
+            max_reviews_per_product=10  # Limit for faster testing
         )
 
     @pytest_asyncio.fixture
@@ -383,4 +384,83 @@ class TestDatabaseReviewAnalysisService:
         assert len(aspects_after) == 0, "All aspects should be cleaned up"
         assert len(categories_after) == 0, "All categories should be cleaned up"
         
-        print(f"✅ Cleanup verified: {len(aspects_after)} aspects, {len(categories_after)} categories remaining") 
+        print(f"✅ Cleanup verified: {len(aspects_after)} aspects, {len(categories_after)} categories remaining")
+
+    @pytest.mark.asyncio
+    async def test_category_assignment_persistence(self, service, sample_request, setup_test_reviews):
+        """Test that category assignments persist correctly after categorization stage.
+        
+        This test specifically investigates the issue where aspects are assigned to categories
+        during categorization but the assignments are lost before consolidation.
+        
+        Test Input:
+        - Sample request with project_id: "TEST_DB_SERVICE"
+        - Test reviews in database from setup_test_reviews fixture
+        
+        Expected Outcome:
+        - After categorization: aspects should have non-null category_pk values
+        - Sample log should show aspects with their category_pk assignments
+        - This will help identify if assignments are being lost between stages
+        """
+        
+        # Run the full analysis pipeline to test category assignment persistence
+        print(f"🚀 Starting analysis for project: {sample_request.project_id}")
+        
+        # Run the analysis (this will trigger our new debug log)
+        analysis_id = await service.analyse(sample_request)
+        
+        print(f"✅ Analysis completed with ID: {analysis_id}")
+        
+        # Check the final state of aspects in the database
+        sb_client = get_supabase_service_client()
+        
+        # Get all aspects for this project
+        all_aspects = sb_client.table("review_analysis_aspects").select(
+            "aspect_pk, aspect_type, category_pk, detail_text"
+        ).eq("project_id", sample_request.project_id).execute().data
+        
+        print(f"📊 Final aspect count: {len(all_aspects)}")
+        
+        # Count assigned vs unassigned aspects
+        assigned_aspects = [a for a in all_aspects if a["category_pk"] is not None]
+        unassigned_aspects = [a for a in all_aspects if a["category_pk"] is None]
+        
+        print(f"📊 Final assignment status:")
+        print(f"   • Total aspects: {len(all_aspects)}")
+        print(f"   • Assigned: {len(assigned_aspects)}")
+        print(f"   • Unassigned: {len(unassigned_aspects)}")
+        
+        # Show sample of assigned aspects
+        if assigned_aspects:
+            print(f"📋 Sample assigned aspects:")
+            for aspect in assigned_aspects[:5]:
+                print(f"   • {aspect['aspect_pk']} ({aspect['aspect_type']}): category_pk={aspect['category_pk']}")
+        else:
+            print("⚠️ No aspects are assigned to categories!")
+        
+        # Show sample of unassigned aspects
+        if unassigned_aspects:
+            print(f"📋 Sample unassigned aspects:")
+            for aspect in unassigned_aspects[:5]:
+                print(f"   • {aspect['aspect_pk']} ({aspect['aspect_type']}): {aspect['detail_text'][:50]}...")
+        
+        # Get categories for this project
+        categories = sb_client.table("review_analysis_aspect_categories").select(
+            "category_pk, name, aspect_type, stage"
+        ).eq("project_id", sample_request.project_id).execute().data
+        
+        print(f"📊 Categories created:")
+        print(f"   • Total categories: {len(categories)}")
+        for cat in categories:
+            print(f"   • {cat['category_pk']} ({cat['aspect_type']}/{cat['stage']}): {cat['name']}")
+        
+        # This test will help us understand if the issue is:
+        # 1. Aspects are never assigned to categories during categorization
+        # 2. Aspects are assigned but then lose their assignments before consolidation
+        # 3. Categories are created but aspects aren't linked to them
+        
+        # For now, we'll just log the results to help debug the issue
+        # In a real test, we might assert that aspects should be assigned
+        # But since we're investigating a bug, we'll just collect the data
+        
+        print(f"✅ Category assignment persistence test completed") 

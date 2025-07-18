@@ -404,6 +404,7 @@ async def test_full_review_analysis_pipeline() -> None:
         project_id=project_id,
         product_ids=product_ids,
         product_category=product_category,
+        max_reviews_per_product=30  # Limit for faster testing
     )
     print("📝 Request object created", flush=True)
     log_with_timestamp(f"📝 Request created: {asdict(req)}")

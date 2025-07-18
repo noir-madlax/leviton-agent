@@ -53,6 +53,7 @@ class ReviewAnalysisRequest:
     aspect_types: List[str] = None  # e.g. ["physical", "performance", "usability"]
     include_sentiment: bool = True  # Whether to perform sentiment analysis
     include_reasons: bool = True  # Whether to extract detailed reasons for perf/use
+    max_reviews_per_product: Optional[int] = None  # Limit reviews per product for faster testing
     
     def __post_init__(self):
         if self.aspect_types is None:
@@ -62,6 +63,10 @@ class ReviewAnalysisRequest:
         invalid_types = [t for t in self.aspect_types if t not in ASPECT_TYPES]
         if invalid_types:
             raise ValueError(f"Invalid aspect types: {invalid_types}. Valid types: {ASPECT_TYPES}")
+        
+        # Validate max_reviews_per_product
+        if self.max_reviews_per_product is not None and self.max_reviews_per_product <= 0:
+            raise ValueError("max_reviews_per_product must be positive if specified")
 
 
 @dataclass

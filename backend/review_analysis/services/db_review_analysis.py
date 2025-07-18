@@ -110,14 +110,36 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         logger.info(f"📥 Loading all available reviews for {len(request.product_ids)} products")
         
         try:
-            review_rows = (
-                sb.table("product_reviews")
-                .select("product_id, review_id, review_title, review_text, rating")
-                .in_("product_id", request.product_ids)
-                .execute()
-                .data
-                or []
-            )
+            # If max_reviews_per_product is specified, we need to limit per product
+            if request.max_reviews_per_product is not None:
+                logger.info(f"📥 Loading up to {request.max_reviews_per_product} reviews per product for {len(request.product_ids)} products")
+                
+                # Load reviews for each product with limit
+                all_review_rows = []
+                for product_id in request.product_ids:
+                    product_reviews = (
+                        sb.table("product_reviews")
+                        .select("product_id, review_id, review_title, review_text, rating")
+                        .eq("product_id", product_id)
+                        .limit(request.max_reviews_per_product)
+                        .execute()
+                        .data
+                        or []
+                    )
+                    all_review_rows.extend(product_reviews)
+                
+                review_rows = all_review_rows
+            else:
+                # Load all reviews (original behavior)
+                logger.info(f"📥 Loading all available reviews for {len(request.product_ids)} products")
+                review_rows = (
+                    sb.table("product_reviews")
+                    .select("product_id, review_id, review_title, review_text, rating")
+                    .in_("product_id", request.product_ids)
+                    .execute()
+                    .data
+                    or []
+                )
         except Exception as exc:  # pylint: disable=broad-except
             logger.exception("Failed to load product reviews: %s", exc)
             raise
@@ -341,6 +363,20 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         logger.info("✅ Review-analysis %s completed categorisation stage", analysis_id)
         await _send_progress("categorization", "completed")
 
+        # DEBUG: Log a sample of aspects with their category_pk after categorization
+        try:
+            sb = get_supabase_client()
+            sample_aspects = (
+                sb.table("review_analysis_aspects")
+                .select("aspect_pk, aspect_type, category_pk")
+                .eq("project_id", request.project_id)
+                .limit(10)
+                .execute()
+            )
+            logger.info(f"🔍 Sample aspects after categorization: {[{'aspect_pk': r['aspect_pk'], 'aspect_type': r['aspect_type'], 'category_pk': r['category_pk']} for r in (sample_aspects.data or [])]}")
+        except Exception as exc:
+            logger.exception(f"Failed to log sample aspects after categorization: {exc}")
+
         # 3) Consolidation Stage -------------------------------------------
         await _send_progress("consolidation", "in_progress", details={
             "message": "Consolidation (merging categories)",
@@ -362,6 +398,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
     async def _log_final_category_assignments(self, project_id: str) -> None:
         """Generate and log the complete final category assignments JSON structure."""
         try:
+            logger.info(f"🔍 Starting final category assignments logging for project {project_id}")
             final_assignments = await self._get_final_category_assignments_json(project_id)
             
             logger.info("🎯 FINAL CATEGORY ASSIGNMENTS COMPLETE STRUCTURE:")
@@ -372,6 +409,7 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             total_aspects = sum(len(cat_data.get("aspects", [])) for cat_data in final_assignments.get("categories", {}).values())
             
             logger.info(f"📊 Summary: {total_categories} final categories, {total_aspects} total aspects assigned")
+            logger.info(f"📋 Categories found: {list(final_assignments.get('categories', {}).keys())[:5]}...")
             logger.info(f"📦 Project ID: {project_id}")
             logger.info(f"🗓️ Generated at: {final_assignments.get('generated_at', 'unknown')}")
             
@@ -721,8 +759,11 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
         for batch in batches:
             aspects_for_prompt: List[Tuple[str, str]] = []
+            prompt_id_to_aspect_pk: Dict[str, str] = {}  # Map prompt_id to actual aspect_pk
+            
             for idx, row in enumerate(batch):
                 prompt_id = str(idx)
+                prompt_id_to_aspect_pk[prompt_id] = row['aspect_pk']  # Store the mapping
                 
                 # For usability aspects, use detail_text directly (no parent_group_name prefix)
                 # For physical/performance aspects, combine parent_group_name with detail_text
@@ -807,7 +848,12 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                     for aspect_id, final_category_name in updated_assignments.items():
                         category_pk = name_to_pk.get(final_category_name)
                         if category_pk:
-                            await self._aspect_repo.update_category(aspect_id, category_pk)
+                            # Map prompt_id to actual aspect_pk
+                            actual_aspect_pk = prompt_id_to_aspect_pk.get(aspect_id)
+                            if actual_aspect_pk:
+                                await self._aspect_repo.update_category(actual_aspect_pk, category_pk)
+                            else:
+                                logger.warning(f"No aspect_pk found for prompt_id '{aspect_id}'")
                         else:
                             logger.warning(f"No PK found for deduplicated category '{final_category_name}' for aspect {aspect_id}")
 
@@ -1184,6 +1230,9 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 logger.info(f"No aspects to reassign for {aspect_code}")
                 return
             
+            logger.info(f"Found {len(aspects_query.data)} aspects with category_pk assignments for {aspect_code}")
+            logger.info(f"Category PKs: {[row['category_pk'] for row in aspects_query.data[:5]]}...")
+            
             # Get the category names for current assignments
             current_category_pks = [row["category_pk"] for row in aspects_query.data]
             categories_query = (
@@ -1199,6 +1248,10 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             pk_to_name = {}
             if categories_query.data:
                 pk_to_name = {row["category_pk"]: row["name"] for row in categories_query.data}
+                logger.info(f"Found {len(pk_to_name)} category names for {aspect_code}")
+                logger.info(f"Category names: {list(pk_to_name.values())[:5]}...")
+            else:
+                logger.warning(f"No category names found for category PKs: {current_category_pks[:5]}...")
             
             # Track reassignments for logging
             reassignments_made = 0
