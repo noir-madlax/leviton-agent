@@ -14,6 +14,13 @@ interface BrandViolinChartProps {
   priceType: PriceType
   category: string
   projectId: string
+  // 新增：筛选模式配置
+  filterMode?: 'category' | 'extend_fields'
+  // 新增：扩展字段配置
+  extendFieldsConfig?: {
+    field: string  // 例如 'smart_capability'
+    value: string  // 例如 'Smart' 或 'Non-Smart'
+  }
 }
 
 interface HoverState {
@@ -116,9 +123,16 @@ function cleanBrandName(brand: string): string {
   return brand.replace(/[\u200B-\u200D\uFEFF\u202C\u202D\u2066-\u2069]/g, '').trim()
 }
 
-export function BrandViolinChart({ brands, priceType, category, projectId }: BrandViolinChartProps) {
+export function BrandViolinChart({
+  brands,
+  priceType,
+  category,
+  projectId,
+  filterMode = 'category',
+  extendFieldsConfig
+}: BrandViolinChartProps) {
   // 使用新的产品浮窗查询Hook
-  const { handleBrandViolinClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
+  const { handleBrandViolinClick, handleMultipleFiltersClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -357,14 +371,31 @@ export function BrandViolinChart({ brands, priceType, category, projectId }: Bra
         if (svgX >= brandX - maxViolinHalfWidth && svgX <= brandX + maxViolinHalfWidth) {
           const brandName = violinData[i].name
 
-          // 使用新的产品浮窗查询方法
-          await handleBrandViolinClick(
-            projectId,
-            brandName,
-            category,
-            `${brandName} Products`,
-            `${brandName} products in ${category}`
-          )
+          // 根据筛选模式选择不同的处理方式
+          if (filterMode === 'extend_fields' && extendFieldsConfig) {
+            // 使用扩展字段筛选
+            await handleMultipleFiltersClick(
+              projectId,
+              {
+                brands: [brandName],
+                extend_fields: {
+                  [extendFieldsConfig.field]: extendFieldsConfig.value
+                }
+              },
+              `${brandName} ${extendFieldsConfig.value} Products`,
+              `${brandName} products with ${extendFieldsConfig.value} capability`,
+              { brand: false, category: true, priceRange: true, packSize: true }
+            )
+          } else {
+            // 使用传统的 category + brand 筛选
+            await handleBrandViolinClick(
+              projectId,
+              brandName,
+              category,
+              `${brandName} Products`,
+              `${brandName} products in ${category}`
+            )
+          }
           break
         }
       }

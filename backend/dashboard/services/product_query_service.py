@@ -183,12 +183,8 @@ class ProductQueryService(BaseDashboardService):
                 query = query.eq('id', -1)
                 logger.info(f"Applied segments filter: {filters.segments}, no matching products found")
 
-        # 扩展字段筛选
-        if filters.extend_fields:
-            for field_name, field_value in filters.extend_fields.items():
-                if field_value is not None:
-                    query = query.eq(field_name, field_value)
-            logger.info(f"Applied extend_fields filter: {filters.extend_fields}")
+        # 扩展字段筛选 - 直接调用父类的实现
+        query = self._apply_extend_fields_filter(query)
 
         return query
 

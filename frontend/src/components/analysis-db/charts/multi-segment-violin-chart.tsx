@@ -96,7 +96,7 @@ export function MultiSegmentViolinChart({
   projectId,
 }: MultiSegmentViolinChartProps) {
   // 使用新的产品浮窗查询Hook
-  const { handleViolinClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
+  const { handleViolinClick, handleMultipleFiltersClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -249,14 +249,26 @@ export function MultiSegmentViolinChart({
         if (svgX >= segmentX - maxViolinHalfWidth && svgX <= segmentX + maxViolinHalfWidth) {
           const segmentName = validSegments[i].name
 
-          // 使用新的产品浮窗查询方法
-          // 注意：这里的segment实际上是category
-          await handleViolinClick(
-            projectId,
-            segmentName,
-            `${segmentName} Products`,
-            `All products in ${segmentName} category`
-          )
+          // 根据段落索引决定使用不同的筛选条件
+          if (i < 2) {
+            // 前两个小提琴：通过 category 筛选
+            await handleViolinClick(
+              projectId,
+              segmentName,
+              `${segmentName} Products`,
+              `All products in ${segmentName} category`
+            )
+          } else {
+            // 后两个小提琴：通过 extend_fields 的 smart_capability 筛选
+            const smartCapability = segmentName
+            await handleMultipleFiltersClick(
+              projectId,
+              { extend_fields: { smart_capability: smartCapability } },
+              `${smartCapability} Products`,
+              `All ${smartCapability.toLowerCase()} products`,
+              { brand: true, category: true, priceRange: true, packSize: true }
+            )
+          }
           break
         }
       }

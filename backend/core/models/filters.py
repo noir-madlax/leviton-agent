@@ -81,6 +81,18 @@ class EnhancedProjectFilters(ProjectFilters):
         })
         return base_dict
 
+    @classmethod
+    def empty(cls) -> 'EnhancedProjectFilters':
+        """创建空的增强筛选器"""
+        return cls(
+            categories=[],
+            brands=[],
+            segments=[],
+            extend_fields={},
+            asins=[],
+            exclude_asins=[]
+        )
+
 @dataclass
 class FilterOptions:
     """筛选器选项模型"""

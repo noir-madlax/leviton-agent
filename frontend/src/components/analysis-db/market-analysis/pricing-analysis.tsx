@@ -449,6 +449,12 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
                       priceType={priceType}
                       category={categoryData.category}
                       projectId={projectId || ''}
+                      // 根据索引决定筛选模式：前两个用 category，后两个用 extend_fields
+                      filterMode={index < 2 ? 'category' : 'extend_fields'}
+                      extendFieldsConfig={index >= 2 ? {
+                        field: 'smart_capability',
+                        value: index === 2 ? 'Smart' : 'Non-Smart'
+                      } : undefined}
                     />
                   </div>
                 </div>

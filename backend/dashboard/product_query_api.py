@@ -23,7 +23,13 @@ class ProductQueryRequest(DashboardRequest):
     filters字段支持标准的ProjectFilters格式，同时扩展支持：
     - exclude_asins: 要排除的ASIN列表
     """
-    pass
+
+    def get_project_filters(self):
+        """重写父类方法，返回增强筛选器"""
+        from core.models.filters import EnhancedProjectFilters
+        if not self.filters:
+            return EnhancedProjectFilters.empty()
+        return EnhancedProjectFilters.from_dict(self.filters)
 
 # ==================== 响应模型 ====================
 
