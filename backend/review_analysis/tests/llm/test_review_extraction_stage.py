@@ -1170,7 +1170,7 @@ class TestReviewExtractionStage:
         original_prompt = await extraction_stage._build_prompt(context)
         retry_prompt = extraction_stage._retry_prompt(
             original_prompt=original_prompt,
-            retry_ctx=result.error_categories,
+            retry_ctx=result,
             ctx=context
         )
         

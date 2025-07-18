@@ -2,6 +2,7 @@ import os
 import sys
 import pytest
 import time
+import asyncio
 import logging
 import uuid
 from datetime import datetime, timezone
@@ -439,7 +440,6 @@ async def test_full_review_analysis_pipeline() -> None:
             log_with_timestamp(f"📊 Service progress: {step} - {status} | {details}")
         
         # Add a timeout wrapper to the service call
-        import asyncio
         try:
             analysis_id = await asyncio.wait_for(
                 service.analyse(req, progress_callback=debug_progress_callback), 
