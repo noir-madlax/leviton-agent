@@ -125,8 +125,27 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         if not review_rows:
             logger.warning("No reviews found – nothing to analyse")
             return analysis_id
+
+        # Filter out reviews with invalid review_id values
+        valid_review_rows = []
+        invalid_review_count = 0
+        
+        for row in review_rows:
+            if row.get("review_id") is None:
+                invalid_review_count += 1
+                logger.warning(f"Skipping review with NULL review_id for product {row.get('product_id')}")
+                continue
+            valid_review_rows.append(row)
+        
+        if invalid_review_count > 0:
+            logger.warning(f"⚠️ Filtered out {invalid_review_count} reviews with invalid review_id values")
+        
+        if not valid_review_rows:
+            logger.warning("No valid reviews found after filtering – nothing to analyse")
+            return analysis_id
             
-        logger.info(f"✅ Loaded {len(review_rows)} reviews from {len(request.product_ids)} products")
+        review_rows = valid_review_rows
+        logger.info(f"✅ Loaded {len(review_rows)} valid reviews from {len(request.product_ids)} products")
 
         # ------------------------------------------------------------------
         # 1) Extraction Stage with Progress Tracking  ----------------------
@@ -203,6 +222,20 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             all_review_mappings: List[Dict[int, str]] = []  # Track review ID mappings for each batch
             
             for batch_idx, batch in enumerate(review_batches):
+                # Filter out any reviews with invalid review_id values in this batch
+                valid_batch_reviews = [r for r in batch if r.get("review_id") is not None]
+                invalid_count = len(batch) - len(valid_batch_reviews)
+                
+                if invalid_count > 0:
+                    logger.warning(f"⚠️ Skipping {invalid_count} reviews with NULL review_id in batch {batch_idx + 1} for product {product_id}")
+                
+                # Skip this batch entirely if no valid reviews remain
+                if not valid_batch_reviews:
+                    logger.warning(f"⚠️ Skipping batch {batch_idx + 1} - no valid reviews after filtering")
+                    continue
+                
+                # Use filtered batch for processing
+                batch = valid_batch_reviews
                 current_batch_global += 1
                 
                 # --- ETA Calculation ---
@@ -241,10 +274,13 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 )
                 
                 # Create review ID mapping for this batch (batch_index -> actual_review_id)
-                review_id_mapping = {
-                    idx: review["review_id"] 
-                    for idx, review in enumerate(batch)
-                }
+                review_id_mapping = {}
+                for idx, review in enumerate(batch):
+                    review_id = review.get("review_id")
+                    if review_id is None:
+                        logger.warning(f"⚠️ Skipping review at index {idx} with NULL review_id in batch {batch_idx + 1}")
+                        continue  # Skip this review but continue with others
+                    review_id_mapping[idx] = review_id
                 all_review_mappings.append(review_id_mapping)
                 
                 # Build input string: "RID#review" per prompt spec (still uses 0,1,2...)
@@ -318,7 +354,178 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
         # Review analysis complete - no refinement stage needed!
         # Aspects were assigned during categorization and reassigned during consolidation
 
+        # Log final category assignments structure
+        await self._log_final_category_assignments(request.project_id)
+
         return analysis_id
+
+    async def _log_final_category_assignments(self, project_id: str) -> None:
+        """Generate and log the complete final category assignments JSON structure."""
+        try:
+            final_assignments = await self._get_final_category_assignments_json(project_id)
+            
+            logger.info("🎯 FINAL CATEGORY ASSIGNMENTS COMPLETE STRUCTURE:")
+            logger.info("="*80)
+            
+            # Log summary statistics
+            total_categories = len(final_assignments.get("categories", {}))
+            total_aspects = sum(len(cat_data.get("aspects", [])) for cat_data in final_assignments.get("categories", {}).values())
+            
+            logger.info(f"📊 Summary: {total_categories} final categories, {total_aspects} total aspects assigned")
+            logger.info(f"📦 Project ID: {project_id}")
+            logger.info(f"🗓️ Generated at: {final_assignments.get('generated_at', 'unknown')}")
+            
+            # Log the complete JSON structure
+            import json
+            logger.info("📋 Complete JSON structure:")
+            logger.info(json.dumps(final_assignments, indent=2, ensure_ascii=False))
+            logger.info("="*80)
+            
+        except Exception as e:
+            logger.error(f"❌ Failed to generate final category assignments JSON: {e}")
+            import traceback
+            logger.error(f"Full traceback: {traceback.format_exc()}")
+
+    def _capitalize_words(self, text: str) -> str:
+        """Capitalize the first letter of each word in the text.
+        
+        This matches the same method used in ReviewInsightsService to ensure
+        consistent category name formatting between pain points data and
+        final category assignments.
+        """
+        if not text:
+            return text
+        return ' '.join(word.capitalize() for word in str(text).split())
+
+    async def _get_final_category_assignments_json(self, project_id: str) -> Dict[str, Any]:
+        """Generate the complete final category assignments JSON structure.
+        
+        Returns a JSON structure like:
+        {
+            "project_id": "...",
+            "generated_at": "2025-01-18T...",
+            "summary": {
+                "total_categories": 45,
+                "total_aspects": 256,
+                "categories_by_type": {"phy": 20, "perf": 15, "use": 10}
+            },
+            "categories": {
+                "Application Interface": {
+                    "definition": "User interface and app controls...",
+                    "aspect_type": "perf",
+                    "aspect_count": 12,
+                    "aspects": [
+                        {
+                            "aspect_pk": 123,
+                            "detail_text": "app is difficult to navigate",
+                            "product_id": "B00MXCRAX8",
+                            "local_id": "A"
+                        },
+                        ...
+                    ]
+                },
+                ...
+            }
+        }
+        """
+        from datetime import datetime, timezone
+        
+        sb = get_supabase_client()
+        
+        # Get all final categories for this project
+        categories_query = (
+            sb.table("review_analysis_aspect_categories")
+            .select("category_pk, name, definition, aspect_type")
+            .eq("project_id", project_id)
+            .eq("stage", "final")
+            .order("name")
+            .execute()
+        )
+        
+        if not categories_query.data:
+            return {
+                "project_id": project_id,
+                "generated_at": datetime.now(timezone.utc).isoformat(),
+                "summary": {"total_categories": 0, "total_aspects": 0, "categories_by_type": {}},
+                "categories": {}
+            }
+        
+        categories_data = {cat["name"]: cat for cat in categories_query.data}
+        category_pks = [cat["category_pk"] for cat in categories_query.data]
+        
+        # Get all aspects assigned to these categories
+        aspects_query = (
+            sb.table("review_analysis_aspects")
+            .select("aspect_pk, detail_text, product_id, local_id, aspect_type, category_pk")
+            .eq("project_id", project_id)
+            .in_("category_pk", category_pks)
+            .order("category_pk, detail_text")
+            .execute()
+        )
+        
+        # Group aspects by category
+        aspects_by_category = {}
+        for aspect in aspects_query.data or []:
+            category_pk = aspect["category_pk"]
+            
+            # Find category name by PK
+            category_name = None
+            for cat_name, cat_data in categories_data.items():
+                if cat_data["category_pk"] == category_pk:
+                    category_name = cat_name
+                    break
+            
+            if category_name:
+                # Apply consistent capitalization
+                capitalized_category_name = self._capitalize_words(category_name)
+                
+                if capitalized_category_name not in aspects_by_category:
+                    aspects_by_category[capitalized_category_name] = []
+                
+                aspects_by_category[capitalized_category_name].append({
+                    "aspect_pk": aspect["aspect_pk"],
+                    "detail_text": self._capitalize_words(aspect["detail_text"]),  # Apply capitalization for consistency
+                    "product_id": aspect["product_id"],
+                    "local_id": aspect["local_id"],
+                    "aspect_type": aspect["aspect_type"]
+                })
+        
+        # Build the final structure
+        result_categories = {}
+        categories_by_type = {}
+        
+        for category_name in sorted(categories_data.keys()):
+            cat_data = categories_data[category_name]
+            aspect_type = cat_data["aspect_type"]
+            
+            # Apply consistent capitalization
+            capitalized_category_name = self._capitalize_words(category_name)
+            aspects = aspects_by_category.get(capitalized_category_name, [])
+            
+            result_categories[capitalized_category_name] = {
+                "definition": cat_data["definition"],
+                "aspect_type": aspect_type,
+                "aspect_count": len(aspects),
+                "aspects": aspects
+            }
+            
+            # Track counts by type
+            if aspect_type not in categories_by_type:
+                categories_by_type[aspect_type] = 0
+            categories_by_type[aspect_type] += 1
+        
+        total_aspects = sum(len(aspects) for aspects in aspects_by_category.values())
+        
+        return {
+            "project_id": project_id,
+            "generated_at": datetime.now(timezone.utc).isoformat(),
+            "summary": {
+                "total_categories": len(result_categories),
+                "total_aspects": total_aspects,
+                "categories_by_type": categories_by_type
+            },
+            "categories": result_categories
+        }
 
     # ------------------------------------------------------------------
     # Internal helpers
@@ -428,8 +635,12 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 # Convert batch index to actual review ID using the mapping
                 actual_review_id = review_mapping.get(review_index)
                 if actual_review_id is None:
-                    logger.error(f"Missing review index {review_index} in review_mapping. Available keys: {list(review_mapping.keys())}")
-                    raise KeyError(f"review_index {review_index} not found in review_mapping")
+                    # Skip this occurrence and log warning instead of raising error
+                    if review_index in review_mapping:
+                        logger.warning(f"⚠️ Skipping occurrence for aspect {aspect_id}: review index {review_index} maps to NULL review_id")
+                    else:
+                        logger.warning(f"⚠️ Skipping occurrence for aspect {aspect_id}: review index {review_index} not found in mapping (available: {list(review_mapping.keys())})")
+                    continue  # Skip this occurrence but continue with others
                 
                 occ = AspectOccurrence(
                     aspect_pk=aspect_pk,
@@ -439,7 +650,15 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 )
                 occurrences.append(occ)
 
-        await self._occ_repo.batch_insert([o.model_dump() for o in occurrences])
+        # Log summary of processing results
+        total_aspects = len(aspects)
+        total_occurrences = len(occurrences)
+        logger.info(f"📊 Persistence summary for product {product_id}: {total_aspects} aspects, {total_occurrences} aspect occurrences created")
+        
+        if total_occurrences > 0:
+            await self._occ_repo.batch_insert([o.model_dump() for o in occurrences])
+        else:
+            logger.warning(f"⚠️ No valid aspect occurrences to persist for product {product_id}")
 
     # ------------------------------------------------------------------
     # Categorisation flow
@@ -651,8 +870,13 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
         sb = get_supabase_client()
         aspect_type_map = ra_cfg.ASPECT_TYPE_MAP
+        
+        logger.info(f"🚀 Starting consolidation for project {project_id}")
+        logger.info(f"📊 Processing {len(aspect_type_map)} aspect types: {list(aspect_type_map.keys())}")
 
         for aspect_code, (_human, _ctx_desc) in aspect_type_map.items():
+            logger.info(f"🔄 Processing aspect type: {aspect_code}")
+            
             # Pull ONLY categorisation stage categories for this project / aspect
             rows = (
                 sb.table("review_analysis_aspect_categories")
@@ -664,6 +888,11 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                 .data
                 or []
             )
+            
+            logger.info(f"📋 Found {len(rows)} categorisation-stage categories for {aspect_code}")
+            if rows:
+                category_names = [r["name"] for r in rows]
+                logger.info(f"📝 Category names: {category_names}")
 
             if len(rows) <= 1:
                 # Not enough categories to consolidate, just copy to final stage
@@ -681,6 +910,8 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
                     
                     # No consolidation needed - aspects keep their current assignments
                     logger.info(f"✅ Aspect type '{aspect_code}': only 1 category, no consolidation needed")
+                else:
+                    logger.info(f"⚠️ Aspect type '{aspect_code}': no categories found, skipping")
                 continue
 
             # Build list[TaxonomyDTO] - exclude error categories from consolidation
@@ -690,8 +921,11 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             for r in rows:
                 if r["name"].startswith(("EXTRACTION_ERRORS", "CATEGORISATION_FAILED")):
                     error_categories.append(r)
+                    logger.info(f"🚨 Found error category: {r['name']}")
                 else:
                     cat_dtos.append(TaxonomyDTO(name=r["name"], definition=r["definition"]))
+
+            logger.info(f"📊 Normal categories: {len(cat_dtos)}, Error categories: {len(error_categories)}")
 
             if not cat_dtos:
                 # Only error categories exist, copy them to final stage
@@ -721,6 +955,57 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             pre_consolidation_mapping = dedup_result.name_mapping
             
             logger.info(f"✅ Pre-consolidation: {len(cat_dtos)} → {len(deduped_categories)} categories for {aspect_code}")
+            
+            # Split evenly sized batches but **progressively** merge: A + B -> C, C + D -> E ...
+            batches = make_batches(deduped_categories, ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT)
+            
+            # Check if there are multiple batches to consolidate
+            if len(batches) <= 1:
+                logger.info(f"📝 Only {len(batches)} batch for {aspect_code}, skipping LLM consolidation")
+                
+                # Create final categories from deduplicated result
+                final_rows = []
+                for cat in deduped_categories:
+                    final_rows.append({
+                        "project_id": project_id,
+                        "aspect_type": aspect_code,
+                        "name": cat.name,
+                        "definition": cat.definition,
+                        "stage": "final",
+                    })
+                
+                # Add error categories
+                error_final_rows = [
+                    {
+                        "project_id": project_id,
+                        "aspect_type": aspect_code,
+                        "name": cat["name"],
+                        "definition": cat["definition"],
+                        "stage": "final",
+                    }
+                    for cat in error_categories
+                ]
+                
+                all_final_rows = final_rows + error_final_rows
+                if all_final_rows:
+                    await self._cat_repo.batch_insert(all_final_rows)
+                
+                # Always reassign aspects to final categories, even if no mapping is needed
+                # Create identity mapping for categories that didn't change
+                identity_mapping = {cat.name: cat.name for cat in deduped_categories}
+                
+                # Combine with pre-consolidation mapping if any
+                final_mapping = {**identity_mapping, **pre_consolidation_mapping}
+                
+                await self._reassign_aspects_to_consolidated_categories(
+                    project_id, aspect_code, final_mapping, all_final_rows
+                )
+                
+                if pre_consolidation_mapping:
+                    logger.info(f"✅ Applied pre-consolidation mapping for {len(pre_consolidation_mapping)} categories in {aspect_code}")
+                else:
+                    logger.info(f"✅ Reassigned aspects to final categories for {aspect_code} (no consolidation needed)")
+                continue
 
             # Tracks every *direct* merge seen during consolidation. Key = old
             # category name, value = the immediate merge target. Will be
@@ -728,20 +1013,29 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
             # consolidation passes finish.
             raw_merge_map: Dict[str, str] = {}
 
-            # Split evenly sized batches but **progressively** merge: A + B -> C, C + D -> E ...
-            batches = make_batches(deduped_categories, ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT)
             current_consolidated = batches[0]
             
             logger.info(f"🔄 Consolidating {len(deduped_categories)} deduplicated categories for {aspect_code} in {len(batches)} batches")
+            logger.info(f"📦 Batch breakdown: {[len(batch) for batch in batches]}")
 
             try:
                 for batch_idx, batch in enumerate(batches[1:]):
+                    logger.info(f"🤖 Starting LLM consolidation call {batch_idx + 1}/{len(batches) - 1} for {aspect_code}")
+                    logger.info(f"   Input A ({len(current_consolidated)} categories): {[c.name for c in current_consolidated]}")
+                    logger.info(f"   Input B ({len(batch)} categories): {[c.name for c in batch]}")
+                    
                     ctx = ReviewConsolidationStageContext(
                         product_category="",
                         taxonomy_a=current_consolidated,
                         taxonomy_b=batch,
                     )
+                    
+                    # This should trigger LLM call with detailed logging
                     res = await self._consolidation_stage.execute(ctx)
+                    
+                    logger.info(f"✅ LLM consolidation call {batch_idx + 1}/{len(batches) - 1} completed for {aspect_code}")
+                    logger.info(f"   Output ({len(res.taxonomies_consolidated)} consolidated categories): {[c.taxonomy.name for c in res.taxonomies_consolidated]}")
+                    
                     current_consolidated = [c.taxonomy for c in res.taxonomies_consolidated]
 
                     # ------------------------------------------------------------------
@@ -756,10 +1050,13 @@ class DatabaseReviewAnalysisService:  # noqa: WPS230 – orchestrator is inevita
 
                         for orig in cons.original_taxonomies:
                             raw_merge_map[orig.name] = new_name
+                            logger.debug(f"📝 Mapping: {orig.name} → {new_name}")
                     
                     logger.info(f"🔄 Consolidation batch {batch_idx + 1}/{len(batches) - 1} completed for {aspect_code}")
 
                 final_taxonomies: List[TaxonomyDTO] = current_consolidated
+                logger.info(f"🎯 Final consolidation result for {aspect_code}: {len(final_taxonomies)} categories")
+                logger.info(f"📝 Final category names: {[t.name for t in final_taxonomies]}")
 
                 # Insert final consolidated categories with stage="final"
                 final_rows = [

@@ -5,7 +5,7 @@ import abc
 import json
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Any
 
 from ..utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
 from .pipeline_stage import (
@@ -185,10 +185,10 @@ class ConsolidationStage(BaseStage, abc.ABC):
         all_errors = sum(len(v) for v in error_categories.values())
         return ValidationResult(ok=all_errors == 0, error_categories=error_categories)
 
-    def _retry_prompt(self, original_prompt: str, validation_result: ValidationResult, 
-                     ctx: ConsolidationStageContext) -> str:
+    def _retry_prompt(self, original_prompt: str, retry_ctx: Any, ctx: ConsolidationStageContext, 
+                     previous_response: str) -> str:
         """Build retry prompt with error details."""
-        error_details = create_retry_error_details(validation_result.error_categories)
+        error_details = create_retry_error_details(retry_ctx.error_categories)
         retry_block = self._retry_prompt_template.replace("{{error_details}}", error_details)
         return f"{original_prompt}\n\n{retry_block}"
 

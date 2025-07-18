@@ -29,6 +29,7 @@ from .services.review_insights_service import ReviewInsightsService
 from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
+from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 
 logger = logging.getLogger(__name__)
 
@@ -543,6 +544,63 @@ async def get_review_insights_data(
 
     logger.info(f"Review insights API returned data for project {request.project_id}")
     return response
+
+
+@router.get("/review-analysis/{project_id}/final-category-assignments")
+async def get_final_category_assignments(project_id: str):
+    """Get the complete final category assignments JSON structure.
+    
+    Returns a detailed JSON structure showing all categories and their assigned aspects
+    after the review analysis consolidation process is complete.
+    
+    GET /api/v1/dashboard/review-analysis/{project_id}/final-category-assignments
+    
+    Response format:
+    {
+        "project_id": "...",
+        "generated_at": "2025-01-18T...",
+        "summary": {
+            "total_categories": 45,
+            "total_aspects": 256,
+            "categories_by_type": {"phy": 20, "perf": 15, "use": 10}
+        },
+        "categories": {
+            "Category Name": {
+                "definition": "Category definition...",
+                "aspect_type": "phy|perf|use",
+                "aspect_count": 12,
+                "aspects": [
+                    {
+                        "aspect_pk": 123,
+                        "detail_text": "specific aspect text",
+                        "product_id": "B00MXCRAX8",
+                        "local_id": "A"
+                    },
+                    ...
+                ]
+            },
+            ...
+        }
+    }
+    """
+    try:
+        # Create service instance to access the method we added
+        service = DatabaseReviewAnalysisService()
+        
+        # Get the final category assignments JSON
+        final_assignments = await service._get_final_category_assignments_json(project_id)
+        
+        logger.info(f"Final category assignments API returned data for project {project_id}")
+        logger.info(f"Summary: {final_assignments.get('summary', {})}")
+        
+        return final_assignments
+        
+    except Exception as e:
+        logger.error(f"Error getting final category assignments for project {project_id}: {e}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Failed to get final category assignments: {str(e)}"
+        ) from e
 
 
 @router.post("/competitor-analysis", response_model=CompetitorAnalysisResponse)

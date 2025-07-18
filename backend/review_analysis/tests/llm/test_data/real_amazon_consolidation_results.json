@@ -5,19 +5,19 @@
       "consolidated_count": 7,
       "taxonomies": [
         {
-          "name": "Color Characteristics",
-          "definition": "Visual color properties including variety, intensity, and appearance of arts and crafts materials, e.g. color selection range, brightness levels",
-          "merged_count": 1,
-          "original_names": [
-            "Color Characteristics"
-          ]
-        },
-        {
           "name": "Ergonomic Features",
           "definition": "Physical design elements that affect handling and user comfort, e.g. grip surfaces, holding mechanisms",
           "merged_count": 1,
           "original_names": [
             "Ergonomic Features"
+          ]
+        },
+        {
+          "name": "Material Composition",
+          "definition": "Chemical and ingredient properties of arts and crafts materials, e.g. allergen content, toxicity levels",
+          "merged_count": 1,
+          "original_names": [
+            "Material Composition"
           ]
         },
         {
@@ -31,32 +31,32 @@
           ]
         },
         {
-          "name": "Writing Tip Durability",
-          "definition": "Physical condition and performance characteristics of pencil, marker, or crayon tips during use, e.g. tip breakage resistance, sharpness retention, point wear patterns",
+          "name": "Writing Tip Condition and Performance",
+          "definition": "Physical state and functionality of pencil, marker, or crayon tips and points, e.g. tip durability, sharpness retention, breakage resistance, point wear patterns",
           "merged_count": 1,
           "original_names": [
             "Writing Point Performance"
           ]
         },
         {
-          "name": "Product Size Specifications",
-          "definition": "Physical measurements and dimensional properties of arts and crafts items, e.g. container volume capacity, item proportions for different age groups, length and width specifications",
+          "name": "Color Visual Properties",
+          "definition": "Visual color characteristics including variety, intensity, and appearance of arts and crafts materials, e.g. color selection range, brightness levels, pigment vibrancy",
+          "merged_count": 1,
+          "original_names": [
+            "Color Characteristics"
+          ]
+        },
+        {
+          "name": "Product Size and Dimensions",
+          "definition": "Physical measurements and sizing specifications of arts and crafts products, e.g. container volume, item proportions for age groups, length and width specifications",
           "merged_count": 1,
           "original_names": [
             "Product Dimensions"
           ]
         },
         {
-          "name": "Material Safety Properties",
-          "definition": "Chemical composition and safety characteristics of arts and crafts materials, e.g. allergen content levels, toxicity ratings, ingredient safety profiles",
-          "merged_count": 1,
-          "original_names": [
-            "Material Composition"
-          ]
-        },
-        {
-          "name": "Tactile Surface Quality",
-          "definition": "Physical texture and feel characteristics of arts and crafts materials during handling, e.g. smoothness consistency, softness levels, surface texture quality",
+          "name": "Tactile Surface Properties",
+          "definition": "Physical texture and feel characteristics of arts and crafts materials during use, e.g. smoothness, softness, surface consistency, grip texture",
           "merged_count": 1,
           "original_names": [
             "Surface Feel"

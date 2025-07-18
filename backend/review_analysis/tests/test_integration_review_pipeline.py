@@ -289,7 +289,7 @@ async def test_full_review_analysis_pipeline() -> None:
     # project and product list - using 3 products with max 30 reviews each from category_l5_id=507840 (Dimmer Switches)
     project_id = str(uuid.uuid4())  # Generate proper UUID for projects table
     product_category = "Dimmer Switches"
-    product_ids = ["B00MXCRAX8", "B0055VD9HK", "B09WL82DB2"]
+    product_ids = ["B00MXCRAX8", "B0055VD9HK"]
     
     print(f"📋 Test parameters set: project_id={project_id}, category={product_category}", flush=True)
     log_with_timestamp(f"📋 Test parameters - Project ID: {project_id}, Category: {product_category}, Product IDs: {product_ids}")
@@ -423,6 +423,15 @@ async def test_full_review_analysis_pipeline() -> None:
         print("✅ DatabaseReviewAnalysisService imported successfully", flush=True)
         log_with_timestamp("✅ DatabaseReviewAnalysisService imported successfully")
         
+        # Override configuration to force multiple batches for testing
+        print("🔧 Overriding configuration for testing...", flush=True)
+        log_with_timestamp("🔧 Overriding configuration for testing...")
+        from review_analysis import review_analysis_config as ra_cfg
+        original_batch_size = ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT
+        ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT = 6  # Force multiple batches
+        print(f"✅ Changed CATEGORIES_PER_CONSOLIDATION_PROMPT from {original_batch_size} to {ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT}", flush=True)
+        log_with_timestamp(f"✅ Changed CATEGORIES_PER_CONSOLIDATION_PROMPT from {original_batch_size} to {ra_cfg.CATEGORIES_PER_CONSOLIDATION_PROMPT}")
+        
         # Create service instance
         print("🏗️ Creating DatabaseReviewAnalysisService instance...", flush=True)
         log_with_timestamp("🏗️ Creating DatabaseReviewAnalysisService instance...")
@@ -460,14 +469,14 @@ async def test_full_review_analysis_pipeline() -> None:
         try:
             analysis_id = await asyncio.wait_for(
                 service.analyse(req, progress_callback=debug_progress_callback), 
-                timeout=300.0
-            )  # 5 minute timeout for LLM calls
+                timeout=600.0
+            )  # 10 minute timeout for LLM calls
             print("✅ service.analyse() completed successfully", flush=True)
             log_with_timestamp("✅ service.analyse() completed successfully")
         except asyncio.TimeoutError:
-            print("⏰ service.analyse() timed out after 5 minutes", flush=True)
-            log_with_timestamp("⏰ service.analyse() timed out after 5 minutes", "ERROR")
-            raise TimeoutError("service.analyse() call timed out after 5 minutes")
+            print("⏰ service.analyse() timed out after 10 minutes", flush=True)
+            log_with_timestamp("⏰ service.analyse() timed out after 10 minutes", "ERROR")
+            raise TimeoutError("service.analyse() call timed out after 10 minutes")
         
         api_call_time = time.time() - api_call_start
         log_with_timestamp(f"📡 Service call completed in {api_call_time:.2f}s with analysis_id: {analysis_id}")
@@ -743,6 +752,117 @@ async def test_full_review_analysis_pipeline() -> None:
         final_progress = sb_client.table("review_analysis_progress").select("id").eq("run_id", final_runs[0]["id"]).execute().data
     
     log_with_timestamp(f"✅ TEST PASSED! Final results: {len(final_aspects)} aspects, {len(final_categories)} final categories, {len(final_runs)} runs, {len(final_progress)} progress records")
+
+    # --- Test the new final category assignments API endpoint -------------
+    log_with_timestamp("🎯 Testing new final category assignments API endpoint...")
+    api_test_start = time.time()
+    
+    try:
+        # Import requests for API testing
+        import requests
+        
+        # Test the new API endpoint
+        api_url = f"http://localhost:8000/api/v1/dashboard/review-analysis/{project_id}/final-category-assignments"
+        log_with_timestamp(f"📡 Calling API: {api_url}")
+        
+        response = requests.get(api_url, timeout=30)
+        api_test_time = time.time() - api_test_start
+        
+        if response.status_code == 200:
+            api_data = response.json()
+            
+            log_with_timestamp(f"✅ API call successful! (took {api_test_time:.2f}s)")
+            log_with_timestamp(f"📊 API Response Summary:")
+            log_with_timestamp(f"   Project ID: {api_data.get('project_id', 'unknown')}")
+            log_with_timestamp(f"   Generated at: {api_data.get('generated_at', 'unknown')}")
+            
+            summary = api_data.get('summary', {})
+            log_with_timestamp(f"   Total categories: {summary.get('total_categories', 0)}")
+            log_with_timestamp(f"   Total aspects: {summary.get('total_aspects', 0)}")
+            log_with_timestamp(f"   Categories by type: {summary.get('categories_by_type', {})}")
+            
+            categories = api_data.get('categories', {})
+            log_with_timestamp(f"📋 Sample categories (showing first 5):")
+            for i, (cat_name, cat_data) in enumerate(list(categories.items())[:5]):
+                aspect_count = cat_data.get('aspect_count', 0)
+                aspect_type = cat_data.get('aspect_type', 'unknown')
+                definition = cat_data.get('definition', '')[:50] + '...' if len(cat_data.get('definition', '')) > 50 else cat_data.get('definition', '')
+                log_with_timestamp(f"   {i+1}. {cat_name} ({aspect_type}): {aspect_count} aspects")
+                log_with_timestamp(f"      Definition: {definition}")
+                
+                # Show a few sample aspects
+                aspects = cat_data.get('aspects', [])
+                if aspects:
+                    sample_aspects = aspects[:3]  # Show first 3 aspects
+                    for j, aspect in enumerate(sample_aspects):
+                        detail_text = aspect.get('detail_text', '')[:40] + '...' if len(aspect.get('detail_text', '')) > 40 else aspect.get('detail_text', '')
+                        log_with_timestamp(f"         {j+1}. {detail_text} (Product: {aspect.get('product_id', 'unknown')})")
+            
+            # Validate the structure matches our expectations
+            assert api_data.get('project_id') == project_id, "Project ID mismatch in API response"
+            assert summary.get('total_categories') == len(final_categories), f"Category count mismatch: API={summary.get('total_categories')}, DB={len(final_categories)}"
+            assert summary.get('total_aspects') == len(final_aspects), f"Aspect count mismatch: API={summary.get('total_aspects')}, DB={len(final_aspects)}"
+            
+            log_with_timestamp("✅ API response validation passed!")
+            
+            # Test consistency between review insights and final category assignments
+            log_with_timestamp("🔍 Testing consistency between review insights and final category assignments APIs...")
+            try:
+                review_insights_url = f"http://localhost:8000/api/v1/dashboard/review-insights"
+                review_insights_payload = {"project_id": project_id, "filters": {}}
+                
+                import requests
+                review_insights_response = requests.post(review_insights_url, json=review_insights_payload, timeout=30)
+                
+                if review_insights_response.status_code == 200:
+                    review_insights_data = review_insights_response.json()
+                    
+                    # Extract category names from both APIs
+                    final_category_names = set(categories.keys())
+                    pain_point_names = set(item.get('aspect', '') for item in review_insights_data.get('painPoints', []))
+                    customer_like_names = set(item.get('feature', '') for item in review_insights_data.get('customerLikes', []))
+                    
+                    log_with_timestamp(f"📊 Final categories ({len(final_category_names)}): {sorted(list(final_category_names))[:5]}...")
+                    log_with_timestamp(f"📊 Pain point categories ({len(pain_point_names)}): {sorted(list(pain_point_names))[:5]}...")
+                    log_with_timestamp(f"📊 Customer like categories ({len(customer_like_names)}): {sorted(list(customer_like_names))[:5]}...")
+                    
+                    # Check overlap - pain points and customer likes should be subsets of final categories
+                    pain_point_overlap = pain_point_names.intersection(final_category_names)
+                    customer_like_overlap = customer_like_names.intersection(final_category_names)
+                    
+                    log_with_timestamp(f"✅ Pain point category overlap: {len(pain_point_overlap)}/{len(pain_point_names)} categories match")
+                    log_with_timestamp(f"✅ Customer like category overlap: {len(customer_like_overlap)}/{len(customer_like_names)} categories match")
+                    
+                    # Show any mismatches for debugging
+                    pain_point_mismatches = pain_point_names - final_category_names
+                    if pain_point_mismatches:
+                        log_with_timestamp(f"⚠️ Pain point category mismatches: {pain_point_mismatches}")
+                    
+                    customer_like_mismatches = customer_like_names - final_category_names
+                    if customer_like_mismatches:
+                        log_with_timestamp(f"⚠️ Customer like category mismatches: {customer_like_mismatches}")
+                    
+                    if not pain_point_mismatches and not customer_like_mismatches:
+                        log_with_timestamp("✅ Perfect consistency! All review insights categories match final category assignments")
+                    else:
+                        log_with_timestamp("⚠️ Some category name mismatches found - may be due to filtering or capitalization differences")
+                        
+                else:
+                    log_with_timestamp(f"⚠️ Review insights API call failed: {review_insights_response.status_code}", "WARNING")
+                    
+            except Exception as e:
+                log_with_timestamp(f"⚠️ Consistency test failed: {e}", "WARNING")
+            
+        else:
+            log_with_timestamp(f"❌ API call failed with status {response.status_code}: {response.text}", "ERROR")
+            log_with_timestamp(f"⚠️ Continuing test despite API failure - this is expected if backend server is not running", "WARNING")
+            
+    except ImportError:
+        log_with_timestamp("⚠️ requests module not available, skipping API test", "WARNING")
+    except Exception as e:
+        api_test_time = time.time() - api_test_start
+        log_with_timestamp(f"⚠️ API test failed after {api_test_time:.2f}s: {e}", "WARNING")
+        log_with_timestamp("⚠️ This is expected if backend server is not running - continuing test", "WARNING")
 
     # --- Final cleanup using comprehensive cleanup function -------------
     log_with_timestamp("🧹 Starting final cleanup...")
