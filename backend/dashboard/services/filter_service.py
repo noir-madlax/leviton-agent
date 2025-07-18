@@ -27,7 +27,9 @@ class FilterService:
             logger.info(f"Applied brands filter: {filters.brands}")
         
         if filters.segments:
-            query = query.in_('segment', filters.segments)
+            # 注意：对于 product_query_service，segment 筛选在 _apply_project_filters 中处理
+            # 因为需要使用关联表 product_segment_assignments
+            query = query.in_('product_segment', filters.segments)
             logger.info(f"Applied segments filter: {filters.segments}")
         
         # 应用extend_fields筛选

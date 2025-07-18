@@ -6,8 +6,8 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scat
 import { BrandViolinChart } from "../charts/brand-violin-chart"
 import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
-import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
-import type { Product } from "@/components/analysis-db/types/analysis"
+
+
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ChartInteractionSummary } from "@/components/analysis-db/shared/chart-interaction-summary"
@@ -121,18 +121,13 @@ interface PricingAnalysisProps {
     }>
     segmentNames?: string[]
   }
-  productLists: {
-    byBrand: Record<string, Product[]>
-    bySegment: Record<string, Product[]>
-    byPackageSize: Record<string, Product[]>
-  }
+
   projectId?: string
   initialFilters?: ProjectFilters
 }
 
-export function PricingAnalysis({ data, productLists, projectId, initialFilters }: PricingAnalysisProps) {
+export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnalysisProps) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
-  const { openPanel } = useProductPanel()
 
   // 获取所有分类数据
   const allCategories = useMemo(() => 
@@ -222,56 +217,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
     }))
   }
 
-  const handleViolinClick = (segmentName: string) => {
-    // 调试：输出可用的segment键名
-    console.log('Violin click - segmentName:', segmentName)
-    console.log('Available productLists.bySegment keys:', Object.keys(productLists.bySegment))
-    
-    // 获取该分类的产品
-    let products = productLists.bySegment[segmentName] || []
-    
-    // 如果直接匹配失败，尝试一些常见的映射
-    if (products.length === 0) {
-      const segmentMappings = {
-        'Dimmer Switches': ['Dimmer Switches', 'dimmer switches', 'Dimmer Switch', 'dimmer switch'],
-        'Light Switches': ['Light Switches', 'light switches', 'Light Switch', 'light switch'],
-        'Timer Switches': ['Timer Switches', 'timer switches', 'Timer Switch', 'timer switch'],
-        'Smart WiFi Dimmer Switches': ['Smart WiFi Dimmer Switches', 'Smart Wi-Fi Dimmer Switches', 'WiFi Dimmer Switches'],
-        'Smart WiFi Light Switches': ['Smart WiFi Light Switches', 'Smart Wi-Fi Light Switches', 'WiFi Light Switches']
-      }
-      
-      // 尝试直接匹配
-      for (const [key, value] of Object.entries(productLists.bySegment)) {
-        if (key === segmentName) {
-          products = value
-          break
-        }
-      }
-      
-      // 如果还是没有找到，尝试映射
-      if (products.length === 0) {
-        for (const [mappedName, alternatives] of Object.entries(segmentMappings)) {
-          if (alternatives.includes(segmentName)) {
-            products = productLists.bySegment[mappedName] || []
-            if (products.length > 0) break
-          }
-        }
-      }
-      
-      // 如果仍然没有找到，尝试部分匹配
-      if (products.length === 0) {
-        for (const [key, value] of Object.entries(productLists.bySegment)) {
-          if (key.toLowerCase().includes(segmentName.toLowerCase()) || segmentName.toLowerCase().includes(key.toLowerCase())) {
-            products = value
-            break
-          }
-        }
-      }
-    }
-    
-    console.log('Final products found:', products.length)
-    openPanel(products, `${segmentName} Products`, `${products.length} products found in ${segmentName}`)
-  }
+
 
   // 添加散点图点击事件处理器
   const handleScatterClick = (data: ScatterClickData) => {
@@ -287,11 +233,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
     }
   }
 
-  const handleBrandViolinClick = (brand: string) => {
-    // 获取该品牌的产品
-    const products = productLists.byBrand[brand] || []
-    openPanel(products, `${brand} Products`)
-  }
+
 
   // 检查是否有基础数据
   const hasBaseData = data?.priceDistribution && data.priceDistribution.length > 0
@@ -477,10 +419,10 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
             </div>
             
             <div className="h-[500px]">
-              <MultiSegmentViolinChart 
+              <MultiSegmentViolinChart
                 segments={violinSegments}
                 priceType={priceType}
-                onViolinClick={handleViolinClick}
+                projectId={projectId || ''}
               />
             </div>
           </Card>
@@ -509,11 +451,11 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
                 <div key={index}>
                   <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
                   <div className="h-[400px]">
-                    <BrandViolinChart 
+                    <BrandViolinChart
                       brands={categoryData.brands}
                       priceType={priceType}
                       category={categoryData.category}
-                      onViolinClick={handleBrandViolinClick}
+                      projectId={projectId || ''}
                     />
                   </div>
                 </div>

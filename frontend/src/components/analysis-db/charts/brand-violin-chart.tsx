@@ -3,6 +3,7 @@
 import React, { useState, useRef, useLayoutEffect, useMemo } from 'react'
 import { PriceType } from '../shared/price-type-selector'
 import { getChartColor } from '../shared/chart-colors'
+import { useProductPanelQuery } from '@/components/analysis-db/hooks/use-product-panel-query'
 
 interface BrandViolinChartProps {
   brands: {
@@ -12,7 +13,7 @@ interface BrandViolinChartProps {
   }[]
   priceType: PriceType
   category: string
-  onViolinClick?: (brand: string, category: string) => void
+  projectId: string
 }
 
 interface HoverState {
@@ -115,7 +116,9 @@ function cleanBrandName(brand: string): string {
   return brand.replace(/[\u200B-\u200D\uFEFF\u202C\u202D\u2066-\u2069]/g, '').trim()
 }
 
-export function BrandViolinChart({ brands, priceType, category, onViolinClick }: BrandViolinChartProps) {
+export function BrandViolinChart({ brands, priceType, category, projectId }: BrandViolinChartProps) {
+  // 使用新的产品浮窗查询Hook
+  const { handleBrandViolinClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -341,18 +344,27 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
     setHoverState(prev => ({ ...prev, visible: false }))
   }
 
-  const handleClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    if (!svgRef.current || !onViolinClick) return
-    
+  const handleClick = async (event: React.MouseEvent<SVGSVGElement>) => {
+    if (!svgRef.current) return
+
     const rect = svgRef.current.getBoundingClientRect()
     const svgX = event.clientX - rect.left
-    
+
     if (svgX >= margin.left && svgX <= margin.left + chartWidth) {
       // 找到点击的品牌
       for (let i = 0; i < violinData.length; i++) {
         const brandX = violinData[i].x
         if (svgX >= brandX - maxViolinHalfWidth && svgX <= brandX + maxViolinHalfWidth) {
-          onViolinClick(violinData[i].name, category)
+          const brandName = violinData[i].name
+
+          // 使用新的产品浮窗查询方法
+          await handleBrandViolinClick(
+            projectId,
+            brandName,
+            category,
+            `${brandName} Products`,
+            `${brandName} products in ${category}`
+          )
           break
         }
       }
@@ -378,15 +390,32 @@ export function BrandViolinChart({ brands, priceType, category, onViolinClick }:
 
   return (
     <div className="h-full relative" ref={containerRef}>
-        <svg 
-          ref={svgRef}
-          width={dimensions.width}
-          height={dimensions.height}
-          className="w-full h-full cursor-pointer"
-          onMouseMove={handleMouseMove}
-          onMouseLeave={handleMouseLeave}
-          onClick={handleClick}
-        >
+      {/* 加载状态覆盖层 */}
+      {panelLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-20">
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+            <span className="text-sm text-gray-600">Loading products...</span>
+          </div>
+        </div>
+      )}
+
+      {/* 错误提示 */}
+      {panelError && (
+        <div className="absolute top-4 right-4 bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded-md text-sm z-20">
+          Error: {panelError}
+        </div>
+      )}
+
+      <svg
+        ref={svgRef}
+        width={dimensions.width}
+        height={dimensions.height}
+        className={`w-full h-full cursor-pointer ${panelLoading ? 'pointer-events-none' : ''}`}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onClick={handleClick}
+      >
           {/* Background */}
           <rect x={margin.left} y={margin.top} width={chartWidth} height={chartHeight} fill="#f8fafc" />
 

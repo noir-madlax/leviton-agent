@@ -21,7 +21,7 @@ interface Product {
 }
 
 export function ProductPanel() {
-  const { isOpen, products, title, subtitle, showFilters, closePanel } = useProductPanel()
+  const { isOpen, products, title, subtitle, loading, error, showFilters, closePanel } = useProductPanel()
   const [filteredProducts, setFilteredProducts] = useState<Product[]>(products)
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedBrand, setSelectedBrand] = useState('all')
@@ -219,7 +219,24 @@ export function ProductPanel() {
 
           {/* Product List */}
           <div className="flex-1 overflow-y-auto p-6">
-            {filteredProducts.length === 0 ? (
+            {loading ? (
+              <div className="text-center py-12">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+                <p className="text-gray-500 text-lg">Loading products...</p>
+              </div>
+            ) : error ? (
+              <div className="text-center py-12">
+                <p className="text-red-500 text-lg mb-4">Error loading products</p>
+                <p className="text-gray-500 text-sm">{error}</p>
+                <Button
+                  onClick={() => window.location.reload()}
+                  className="mt-4"
+                  variant="outline"
+                >
+                  Retry
+                </Button>
+              </div>
+            ) : filteredProducts.length === 0 ? (
               <div className="text-center py-12">
                 <p className="text-gray-500 text-lg">No products found matching your filters.</p>
               </div>

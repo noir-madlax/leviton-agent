@@ -72,6 +72,7 @@ app.add_middleware(
 # Register all API routers
 from projects.api import router as projects_router
 from dashboard.api import router as dashboard_router
+from dashboard.product_query_api import router as product_query_router
 from data_transformation.api import router as data_transformation_router
 from review_analysis.api import router as review_analysis_router
 from categories.api import router as categories_router
@@ -80,6 +81,7 @@ from permissions.api import router as permissions_router
 app.include_router(segmentation_router, prefix="/api/segmentation", tags=["Product Segmentation"])
 app.include_router(projects_router, prefix="/api/v1/projects", tags=["Projects"])
 app.include_router(dashboard_router, prefix="/api/v1/dashboard", tags=["Dashboard"])
+app.include_router(product_query_router, prefix="/api/v1/dashboard", tags=["产品查询"])
 app.include_router(data_transformation_router, tags=["Data Transformation"])
 app.include_router(review_analysis_router, prefix="/api/v1", tags=["Review Analysis"])
 app.include_router(categories_router, prefix="/api/v1/categories", tags=["Categories"])

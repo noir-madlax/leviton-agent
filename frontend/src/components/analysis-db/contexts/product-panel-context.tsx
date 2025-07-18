@@ -3,23 +3,44 @@
 import { createContext, useContext, useState, ReactNode } from 'react'
 import type { Product } from '@/components/analysis-db/types/analysis'
 
+// 产品筛选条件接口
+export interface ProductFilterCriteria {
+  categories?: string[]
+  brands?: string[]
+  segments?: string[]
+  extend_fields?: Record<string, any>
+  exclude_asins?: string[]
+}
+
+// 浮窗显示选项
+export interface ProductPanelShowFilters {
+  brand?: boolean
+  category?: boolean
+  priceRange?: boolean
+  packSize?: boolean
+}
+
+// 打开浮窗的参数
+export interface OpenPanelParams {
+  projectId: string
+  filters: ProductFilterCriteria
+  title: string
+  subtitle?: string
+  showFilters?: ProductPanelShowFilters
+}
+
 interface ProductPanelContextType {
   isOpen: boolean
   products: Product[]
   title: string
   subtitle?: string
-  showFilters?: {
-    brand?: boolean
-    category?: boolean
-    priceRange?: boolean
-    packSize?: boolean
-  }
-  openPanel: (products: Product[], title: string, subtitle?: string, showFilters?: {
-    brand?: boolean
-    category?: boolean
-    priceRange?: boolean
-    packSize?: boolean
-  }) => void
+  loading: boolean
+  error: string | null
+  showFilters?: ProductPanelShowFilters
+
+  // 新的方法
+  openPanel: (params: OpenPanelParams) => Promise<void>
+
   closePanel: () => void
 }
 
@@ -30,33 +51,51 @@ export function ProductPanelProvider({ children }: { children: React.ReactNode }
   const [products, setProducts] = useState<Product[]>([])
   const [title, setTitle] = useState('')
   const [subtitle, setSubtitle] = useState<string | undefined>()
-  const [showFilters, setShowFilters] = useState<{
-    brand?: boolean
-    category?: boolean
-    priceRange?: boolean
-    packSize?: boolean
-  }>({ brand: true, category: true, priceRange: true, packSize: true })
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
+  const [showFilters, setShowFilters] = useState<ProductPanelShowFilters>({
+    brand: true,
+    category: true,
+    priceRange: true,
+    packSize: true
+  })
 
-  const openPanel = (
-    newProducts: Product[], 
-    newTitle: string, 
-    newSubtitle?: string,
-    newShowFilters?: {
-      brand?: boolean
-      category?: boolean
-      priceRange?: boolean
-      packSize?: boolean
+  // 新的方法：根据查询参数获取产品
+  const openPanel = async (params: OpenPanelParams) => {
+    try {
+      setLoading(true)
+      setError(null)
+      setTitle(params.title)
+      setSubtitle(params.subtitle)
+      setShowFilters(params.showFilters || { brand: true, category: true, priceRange: true, packSize: true })
+
+      // 根据查询参数获取产品
+      const { productQueryService } = await import('@/components/analysis-db/services/product-query-service')
+
+      const result = await productQueryService.queryProducts(
+        params.projectId,
+        params.filters,
+        {
+          limit: 200, // 默认限制
+          sort_by: 'revenue',
+          sort_order: 'desc'
+        }
+      )
+
+      setProducts(result.products)
+      setIsOpen(true)
+    } catch (err) {
+      const errorMessage = err instanceof Error ? err.message : 'Failed to load products'
+      setError(errorMessage)
+      console.error('Error opening product panel:', err)
+    } finally {
+      setLoading(false)
     }
-  ) => {
-    setProducts(newProducts)
-    setTitle(newTitle)
-    setSubtitle(newSubtitle)
-    setShowFilters(newShowFilters || { brand: true, category: true, priceRange: true, packSize: true })
-    setIsOpen(true)
   }
 
   const closePanel = () => {
     setIsOpen(false)
+    setError(null)
   }
 
   return (
@@ -65,6 +104,8 @@ export function ProductPanelProvider({ children }: { children: React.ReactNode }
       products,
       title,
       subtitle,
+      loading,
+      error,
       showFilters,
       openPanel,
       closePanel

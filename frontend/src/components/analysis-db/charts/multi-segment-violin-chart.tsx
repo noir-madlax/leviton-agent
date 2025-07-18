@@ -2,6 +2,7 @@
 
 import { useMemo, useState, useRef, useLayoutEffect } from "react"
 import type { PriceType } from "@/components/analysis-db/shared/price-type-selector"
+import { useProductPanelQuery } from '@/components/analysis-db/hooks/use-product-panel-query'
 
 interface SegmentData {
   name: string
@@ -21,7 +22,7 @@ interface SegmentData {
 interface MultiSegmentViolinChartProps {
   segments: SegmentData[]
   priceType?: PriceType
-  onViolinClick?: (segmentName: string, priceRange: { min: number; max: number }) => void
+  projectId: string
 }
 
 interface HoverState {
@@ -92,8 +93,10 @@ function countProductsInPriceRange(prices: number[], minPrice: number, maxPrice:
 export function MultiSegmentViolinChart({
   segments,
   priceType = "sku",
-  onViolinClick,
+  projectId,
 }: MultiSegmentViolinChartProps) {
+  // 使用新的产品浮窗查询Hook
+  const { handleViolinClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -232,25 +235,28 @@ export function MultiSegmentViolinChart({
     setHoverState(prev => ({ ...prev, visible: false }))
   }
 
-  const handleClick = (event: React.MouseEvent<SVGSVGElement>) => {
-    if (!svgRef.current || !onViolinClick) return
-    
+  const handleClick = async (event: React.MouseEvent<SVGSVGElement>) => {
+    if (!svgRef.current) return
+
     const rect = svgRef.current.getBoundingClientRect()
     const svgX = event.clientX - rect.left
     const svgY = event.clientY - rect.top
-    
+
     if (svgX >= margin.left && svgX <= margin.left + chartWidth && svgY >= margin.top && svgY <= margin.top + chartHeight) {
-      const price = priceFromY(svgY)
-      
       // 找到点击的段落
       for (let i = 0; i < validSegments.length; i++) {
         const segmentX = segmentPositions[i]
         if (svgX >= segmentX - maxViolinHalfWidth && svgX <= segmentX + maxViolinHalfWidth) {
-          const priceRange = {
-            min: price - fixedTolerance,
-            max: price + fixedTolerance
-          }
-          onViolinClick(validSegments[i].name, priceRange)
+          const segmentName = validSegments[i].name
+
+          // 使用新的产品浮窗查询方法
+          // 注意：这里的segment实际上是category
+          await handleViolinClick(
+            projectId,
+            segmentName,
+            `${segmentName} Products`,
+            `All products in ${segmentName} category`
+          )
           break
         }
       }
@@ -288,11 +294,28 @@ export function MultiSegmentViolinChart({
 
   return (
     <div className="h-full w-full relative" ref={containerRef}>
-      <svg 
+      {/* 加载状态覆盖层 */}
+      {panelLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-20">
+          <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md">
+            <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+            <span className="text-sm text-gray-600">Loading products...</span>
+          </div>
+        </div>
+      )}
+
+      {/* 错误提示 */}
+      {panelError && (
+        <div className="absolute top-4 right-4 bg-red-50 border border-red-200 text-red-700 px-3 py-2 rounded-md text-sm z-20">
+          Error: {panelError}
+        </div>
+      )}
+
+      <svg
         ref={svgRef}
         width={dimensions.width}
         height={dimensions.height}
-        className="w-full h-full cursor-pointer"
+        className={`w-full h-full cursor-pointer ${panelLoading ? 'pointer-events-none' : ''}`}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         onClick={handleClick}
