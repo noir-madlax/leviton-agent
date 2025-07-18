@@ -404,20 +404,13 @@ class BaseDashboardService(ABC):
     def _get_segment_assignments_shared(self) -> Dict[str, str]:
         """获取项目的segment分配（platform_id到segment_name的映射）
         
-        使用哈希项目ID方案查找正确的segment assignments。
+        首先尝试使用哈希项目ID方案，如果找不到数据，再尝试原项目ID。
         
         Returns:
             Dict mapping platform_id to segment_name
         """
         try:
             if not self.project_asins:
-                return {}
-            
-            # Get the hashed project IDs that were used during segmentation
-            hashed_project_ids = self._get_segmentation_hashed_project_ids()
-            
-            if not hashed_project_ids:
-                logger.warning(f"No segmentation hashes found for project {self.project_id}")
                 return {}
             
             # 查询这些ASINs在product_wide_table中的记录，获取wide_table_id
@@ -432,20 +425,43 @@ class BaseDashboardService(ABC):
             
             # 建立platform_id到wide_table_id的映射
             platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
-            
-            # 查询segment assignments（使用wide_table_id作为product_id和hashed_project_ids）
             wide_table_ids = list(platform_to_wide_id.values())
-            assignments_result = self.supabase.table('product_segment_assignments')\
-                .select('product_id, segment_name')\
-                .in_('project_id', hashed_project_ids)\
-                .in_('product_id', wide_table_ids)\
-                .neq('segment_name', None)\
-                .neq('segment_name', 'OUT_OF_SCOPE')\
-                .execute()
             
-            if not assignments_result.data:
-                logger.warning(f"No segment assignments found for hashed project IDs: {hashed_project_ids}")
-                return {}
+            # 方案1: 使用哈希ID方案（旧格式）
+            hashed_project_ids = self._get_segmentation_hashed_project_ids()
+            assignments_result = None
+            
+            if hashed_project_ids:
+                # 查询segment assignments（使用hashed_project_ids）
+                assignments_result = self.supabase.table('product_segment_assignments')\
+                    .select('product_id, segment_name')\
+                    .in_('project_id', hashed_project_ids)\
+                    .in_('product_id', wide_table_ids)\
+                    .neq('segment_name', None)\
+                    .neq('segment_name', 'OUT_OF_SCOPE')\
+                    .execute()
+                
+                if assignments_result.data:
+                    logger.info(f"Found segment assignments using hashed project IDs: {len(assignments_result.data)} mappings")
+                else:
+                    logger.info(f"No segment assignments found using hashed project IDs")
+                    assignments_result = None
+            
+            # 方案2: 使用原项目ID（新格式）作为fallback
+            if not assignments_result or not assignments_result.data:
+                assignments_result = self.supabase.table('product_segment_assignments')\
+                    .select('product_id, segment_name')\
+                    .eq('project_id', self.project_id)\
+                    .in_('product_id', wide_table_ids)\
+                    .neq('segment_name', None)\
+                    .neq('segment_name', 'OUT_OF_SCOPE')\
+                    .execute()
+                
+                if assignments_result.data:
+                    logger.info(f"Found segment assignments using direct project ID: {len(assignments_result.data)} mappings")
+                else:
+                    logger.warning(f"No segment assignments found for either hashed or direct project ID")
+                    return {}
             
             # 建立wide_table_id到segment的映射
             wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
@@ -456,11 +472,11 @@ class BaseDashboardService(ABC):
                 if wide_id in wide_id_to_segment:
                     platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
             
-            logger.info(f"📋 Segment assignments (shared): {len(platform_to_segment)} products mapped")
+            logger.info(f"Successfully mapped {len(platform_to_segment)} products to segments")
             return platform_to_segment
-            
+                
         except Exception as e:
-            logger.error(f"Error getting segment assignments (shared): {e}")
+            logger.error(f"Error getting segment assignments: {e}")
             return {}
     
     def get_product_segments_mapping(self, platform_ids: List[str]) -> Dict[str, str]:
