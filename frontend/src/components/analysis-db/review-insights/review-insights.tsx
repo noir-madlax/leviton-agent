@@ -458,7 +458,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </ChartWithFilters>
       </section>
 
-      {/* 使用场景分析 - 正面 */}
+      {/* 使用场景分析 - 正面 
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
           🎯 Top Positive Use Cases
@@ -488,8 +488,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           )}
         </ChartWithFilters>
       </section>
-
-      {/* 使用场景分析 - 负面 */}
+*/}
+      {/* 使用场景分析 - 
       <section>
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
           🎯 Top Negative Use Cases
@@ -519,7 +519,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           )}
         </ChartWithFilters>
       </section>
-
+负面 */}
 
     </div>
   )

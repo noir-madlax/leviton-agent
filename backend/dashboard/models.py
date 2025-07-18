@@ -66,13 +66,13 @@ class BrandCategoryData(BaseModel):
 class BrandAnalysisResponse(BaseModel):
     """Response model for brand analysis API.
     
-    Enhanced to support dynamic categories and limited to top 10 brands by revenue.
+    Enhanced to support dynamic categories and returns all brands by revenue.
     """
-    data: List[BrandCategoryData] = Field(description="Top 10 brand category data")
+    data: List[BrandCategoryData] = Field(description="All brand category data sorted by revenue")
     segmentNames: Optional[List[str]] = Field(default=[], description="List of category names in the project (kept as segmentNames for API compatibility)")
     segmentColors: Optional[List[str]] = Field(default=[], description="Colors for each category (kept as segmentColors for API compatibility)")
     project_id: str = Field(description="Project ID used for filtering")
-    total_brands: int = Field(description="Number of top brands returned (up to 10)")
+    total_brands: int = Field(description="Number of brands returned (all brands)")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 

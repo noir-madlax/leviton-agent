@@ -173,13 +173,13 @@ class BrandAnalysisService(BaseDashboardService):
         # 按总收入排序
         formatted_brands.sort(key=lambda x: x['dimmerRevenue'] + x['switchRevenue'], reverse=True)
         
-        # 🔥 CRITICAL: 限制为Top 10品牌
-        top_10_brands = formatted_brands[:10]
+        # 🔄 UPDATED: 返回所有品牌，不再限制为Top 10
+        # top_10_brands = formatted_brands[:10]  # 移除这行限制
         
-        logger.info(f"📈 Brand analysis: returning top {len(top_10_brands)} brands out of {len(formatted_brands)} total brands")
+        logger.info(f"📈 Brand analysis: returning all {len(formatted_brands)} brands")
         
         return {
-            'brandCategoryRevenue': top_10_brands,
+            'brandCategoryRevenue': formatted_brands,  # 返回所有品牌
             'categoryNames': project_categories,
             'categoryColors': colors[:len(project_categories)]
         }

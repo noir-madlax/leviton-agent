@@ -174,7 +174,7 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 
 export class DatabaseService {
   
-  // 🔑 Get top 10 brand category revenue data with project filtering via backend API
+  // 🔑 Get brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
     segmentNames: string[]
@@ -189,12 +189,12 @@ export class DatabaseService {
       })
 
       return {
-        brandCategoryRevenue: result.data || [],           // Backend returns top 10 brands in 'data' field
+        brandCategoryRevenue: result.data || [],           // Backend returns all brands in 'data' field
         segmentNames: result.segmentNames || [],           // Backend returns 'segmentNames' field
         segmentColors: result.segmentColors || []          // Backend returns 'segmentColors' field
       }
     } catch (error) {
-      console.error('Error fetching top 10 brand category revenue by project:', error)
+      console.error('Error fetching brand category revenue by project:', error)
       throw error
     }
   }

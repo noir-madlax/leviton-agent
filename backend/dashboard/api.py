@@ -224,7 +224,7 @@ async def get_brand_analysis(
     service: BrandAnalysisService,
     request: DashboardRequest
 ):
-    """Get top 10 brand category revenue analysis for a specific project.
+    """Get brand category revenue analysis for a specific project.
 
     POST请求，使用JSON格式传递过滤条件：
     {
@@ -237,9 +237,9 @@ async def get_brand_analysis(
         }
     }
 
-    Returns only the top 10 brands by total revenue.
+    Returns all brands by total revenue (sorted descending).
     """
-    # Get filtered data (new format with segments, limited to top 10)
+    # Get filtered data (new format with segments, returns all brands)
     brand_data = service.get_data()
 
     # Extract data for response (fixed field mapping)
@@ -253,11 +253,11 @@ async def get_brand_analysis(
         segmentNames=category_names,  # Keep API field name for compatibility
         segmentColors=category_colors,  # Keep API field name for compatibility
         project_id=request.project_id,
-        total_brands=len(brand_category_data),  # Returns actual count (up to 10)
+        total_brands=len(brand_category_data),  # Returns actual count (all brands)
         filtered_asin_count=len(service.project_asins)
     )
 
-    logger.info(f"Brand analysis API returned top {len(brand_category_data)} brands with {len(category_names)} categories for project {request.project_id}")
+    logger.info(f"Brand analysis API returned all {len(brand_category_data)} brands with {len(category_names)} categories for project {request.project_id}")
     return response
 
 

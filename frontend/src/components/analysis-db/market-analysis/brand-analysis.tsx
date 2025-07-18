@@ -230,42 +230,8 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
 
-      <ChartWithFilters
-        chartId="brand-analysis"
-        chartType="bar"
-        projectId={projectId || ''}
-        title="Top 10 Brand Revenue by Category"
-        projectFilters={initialFilters}
-      >
-        <Card className="p-6 bg-gray-50">
-          <MetricTypeSelector onChange={setMetricType} value={metricType} />
-          
-          {/* Single grouped bar chart */}
-          <div className="bg-white p-4 rounded-lg border shadow-sm">
-            <div className="h-[400px]">
-              {loading ? (
-                <div className="flex items-center justify-center h-full">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  <span className="ml-2">Loading chart data...</span>
-                </div>
-              ) : (
-                <BarChart
-                  data={chartData}
-                  index="name"
-                  categories={categoryNames}
-                  colors={colors}
-                  yAxisLabel={yAxisLabel}
-                  metricType={metricType}
-                  onBarClick={(data) => handleBarClick(data)}
-                />
-              )}
-            </div>
-          </div>
-        </Card>
-      </ChartWithFilters>
-
       {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
-      <div className="mt-10">
+      <div className="mt-5">
         {/* 第一层：ChartWithFilters包装整个Market Share section */}
         <ChartWithFilters
           chartId="market-share-analysis"
@@ -275,12 +241,24 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           projectFilters={initialFilters}
         >
           {/* 第二层：单一的Summary区域 */}
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
             <p className="text-sm text-blue-700">
               <strong>Total addressable market (TAM): </strong>
               ${totalMarketRevenue.toLocaleString()} with {totalMarketProducts} products
             </p>
-            <p className="text-sm text-blue-700 mt-1">
+           
+            
+            {/* 分类别明细 */}
+            {categoryPieData.length > 0 && (
+              <div className="mt-0 pt-0 ">
+                {categoryPieData.map((categoryData) => (
+                  <p key={categoryData.category} className="text-sm text-blue-600 mt-1">
+                    <strong>{categoryData.category}:</strong> ${categoryData.totalRevenue.toLocaleString()} with {categoryData.totalProducts} products
+                  </p>
+                ))}
+              </div>
+            )}
+             <p className="text-sm pt-0 text-blue-700 mt-3">
               Approximated by the total Revenue of all products within this category in the current project within the selected time period
             </p>
           </div>
@@ -333,6 +311,44 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           )}
         </ChartWithFilters>
       </div>
+
+      <div className="mt-15">
+      <ChartWithFilters
+        chartId="brand-analysis"
+        chartType="bar"
+        projectId={projectId || ''}
+        title="Brand Revenue by Category"
+        projectFilters={initialFilters}
+      >
+        <Card className="p-6 bg-gray-50">
+          <MetricTypeSelector onChange={setMetricType} value={metricType} />
+          
+          {/* Single grouped bar chart */}
+          <div className="bg-white p-4 rounded-lg border shadow-sm">
+            <div className="h-[400px]">
+              {loading ? (
+                <div className="flex items-center justify-center h-full">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                  <span className="ml-2">Loading chart data...</span>
+                </div>
+              ) : (
+                <BarChart
+                  data={chartData}
+                  index="name"
+                  categories={categoryNames}
+                  colors={colors}
+                  yAxisLabel={yAxisLabel}
+                  metricType={metricType}
+                  onBarClick={(data) => handleBarClick(data)}
+                />
+              )}
+            </div>
+          </div>
+        </Card>
+      </ChartWithFilters>
+      </div>
+
+
     </section>
   )
 }
