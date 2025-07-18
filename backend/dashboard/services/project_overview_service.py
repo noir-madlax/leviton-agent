@@ -207,15 +207,21 @@ class ProjectOverviewService(BaseDashboardService):
                 if product_ids_query.data:
                     product_ids = [p['id'] for p in product_ids_query.data]
                     
-                    segments_response = self.supabase.table('product_segment_assignments').select(
-                        'segment_name'
-                    ).eq('project_id', self.project_id)\
-                    .in_('product_id', product_ids)\
-                    .neq('segment_name', None)\
-                    .neq('segment_name', 'OUT_OF_SCOPE')\
-                    .execute()
+                    # Get the hashed project IDs that were used during segmentation
+                    hashed_project_ids = self._get_segmentation_hashed_project_ids()
                     
-                    if segments_response.data:
+                    if hashed_project_ids:
+                        segments_response = self.supabase.table('product_segment_assignments').select(
+                            'segment_name'
+                        ).in_('project_id', hashed_project_ids)\
+                        .in_('product_id', product_ids)\
+                        .neq('segment_name', None)\
+                        .neq('segment_name', 'OUT_OF_SCOPE')\
+                        .execute()
+                    else:
+                        segments_response = None
+                    
+                    if segments_response and segments_response.data:
                         segment_counts = {}
                         for assignment in segments_response.data:
                             segment_name = assignment.get('segment_name')

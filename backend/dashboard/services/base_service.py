@@ -138,14 +138,22 @@ class BaseDashboardService(ABC):
         """Apply product segment filtering to any Supabase query if segment filters are set.
         
         此方法使用product_segment_assignments表来过滤产品，
-        因为product_wide_table中没有segment_name字段。
+        使用哈希项目ID方案查找正确的segment assignments。
         """
         if self.filters.segments:
             try:
+                # Get the hashed project IDs that were used during segmentation
+                hashed_project_ids = self._get_segmentation_hashed_project_ids()
+                
+                if not hashed_project_ids:
+                    logger.warning(f"No segmentation hashes found for segment filter")
+                    query = query.eq('id', -1)
+                    return query
+                
                 # 第一步：从product_segment_assignments表获取符合segment条件的product_id
                 segment_assignments_result = self.supabase.table('product_segment_assignments')\
                     .select('product_id')\
-                    .eq('project_id', self.project_id)\
+                    .in_('project_id', hashed_project_ids)\
                     .in_('segment_name', self.filters.segments)\
                     .execute()
                 
@@ -295,16 +303,75 @@ class BaseDashboardService(ABC):
         """Abstract method to be implemented by subclasses."""
         pass
     
+    def _get_segmentation_hashed_project_ids(self) -> List[str]:
+        """获取用于细分的哈希项目ID列表
+        
+        During segmentation, products are grouped by categories_flat and each group
+        gets a hashed project_id = SHA1(actual_project_id + categories_flat).
+        This method replicates that logic to find the hashed IDs.
+        
+        Returns:
+            List of hashed project IDs used during segmentation
+        """
+        try:
+            if not self.project_asins:
+                return []
+            
+            # Get category groupings for project's ASINs (same as segmentation logic)
+            result = self.supabase.table('product_wide_table').select(
+                'platform_id, categories_flat'
+            ).in_('platform_id', self.project_asins).execute()
+            
+            if not result.data:
+                return []
+            
+            # Group by categories_flat (same as segmentation)
+            category_groups = {}
+            for row in result.data:
+                categories_flat = row.get('categories_flat')
+                if not categories_flat or not categories_flat.strip():
+                    continue
+                    
+                full_category_path = categories_flat.strip()
+                if full_category_path not in category_groups:
+                    category_groups[full_category_path] = []
+                category_groups[full_category_path].append(row['platform_id'])
+            
+            # Generate the same hashes that were used during segmentation
+            import hashlib
+            hashed_project_ids = []
+            for full_category_path in category_groups.keys():
+                run_group_id_str = f"{self.project_id}_{full_category_path}"
+                run_group_id = hashlib.sha1(run_group_id_str.encode()).hexdigest()
+                hashed_project_ids.append(run_group_id)
+            
+            logger.info(f"Found {len(hashed_project_ids)} segmentation group hashes for project {self.project_id}")
+            return hashed_project_ids
+                
+        except Exception as e:
+            logger.error(f"Error generating segmentation hashed project IDs: {e}")
+            return []
+    
     def get_project_segments(self) -> List[str]:
         """获取项目的所有segment类型（排除OUT_OF_SCOPE）
+        
+        Uses the hashing scheme to look up segments from the correct project IDs.
         
         Returns:
             项目所有有效segment名称列表
         """
         try:
+            # Get the hashed project IDs that were used during segmentation
+            hashed_project_ids = self._get_segmentation_hashed_project_ids()
+            
+            if not hashed_project_ids:
+                logger.warning(f"No segmentation hashes found for project {self.project_id}")
+                return []
+            
+            # Look up segments using the hashed project IDs
             result = self.supabase.table('product_segment_assignments')\
                 .select('segment_name')\
-                .eq('project_id', self.project_id)\
+                .in_('project_id', hashed_project_ids)\
                 .neq('segment_name', None)\
                 .neq('segment_name', 'OUT_OF_SCOPE')\
                 .execute()
@@ -312,13 +379,77 @@ class BaseDashboardService(ABC):
             if result.data:
                 # 去重并排序
                 segments = list(set(item['segment_name'] for item in result.data))
+                logger.info(f"Found {len(segments)} segments for project {self.project_id}: {segments}")
                 return sorted(segments)
             else:
+                logger.warning(f"No segment assignments found for hashed project IDs: {hashed_project_ids}")
                 return []
                 
         except Exception as e:
             logger.error(f"Error fetching project segments: {e}")
             return []
+    
+    def _get_segment_assignments_shared(self) -> Dict[str, str]:
+        """获取项目的segment分配（platform_id到segment_name的映射）
+        
+        使用哈希项目ID方案查找正确的segment assignments。
+        
+        Returns:
+            Dict mapping platform_id to segment_name
+        """
+        try:
+            if not self.project_asins:
+                return {}
+            
+            # Get the hashed project IDs that were used during segmentation
+            hashed_project_ids = self._get_segmentation_hashed_project_ids()
+            
+            if not hashed_project_ids:
+                logger.warning(f"No segmentation hashes found for project {self.project_id}")
+                return {}
+            
+            # 查询这些ASINs在product_wide_table中的记录，获取wide_table_id
+            wide_table_result = self.supabase.table('product_wide_table')\
+                .select('id, platform_id')\
+                .in_('platform_id', self.project_asins)\
+                .execute()
+            
+            if not wide_table_result.data:
+                logger.warning(f"No product_wide_table records found for project ASINs")
+                return {}
+            
+            # 建立platform_id到wide_table_id的映射
+            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
+            
+            # 查询segment assignments（使用wide_table_id作为product_id和hashed_project_ids）
+            wide_table_ids = list(platform_to_wide_id.values())
+            assignments_result = self.supabase.table('product_segment_assignments')\
+                .select('product_id, segment_name')\
+                .in_('project_id', hashed_project_ids)\
+                .in_('product_id', wide_table_ids)\
+                .neq('segment_name', None)\
+                .neq('segment_name', 'OUT_OF_SCOPE')\
+                .execute()
+            
+            if not assignments_result.data:
+                logger.warning(f"No segment assignments found for hashed project IDs: {hashed_project_ids}")
+                return {}
+            
+            # 建立wide_table_id到segment的映射
+            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
+            
+            # 转换为platform_id到segment的映射
+            platform_to_segment = {}
+            for platform_id, wide_id in platform_to_wide_id.items():
+                if wide_id in wide_id_to_segment:
+                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
+            
+            logger.info(f"📋 Segment assignments (shared): {len(platform_to_segment)} products mapped")
+            return platform_to_segment
+            
+        except Exception as e:
+            logger.error(f"Error getting segment assignments (shared): {e}")
+            return {}
     
     def get_product_segments_mapping(self, platform_ids: List[str]) -> Dict[str, str]:
         """获取产品的segment映射

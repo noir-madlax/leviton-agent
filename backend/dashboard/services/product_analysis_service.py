@@ -65,50 +65,11 @@ class ProductAnalysisService(BaseDashboardService):
             raise
     
     def _get_segment_assignments(self) -> Dict[str, str]:
-        """获取segment分配（platform_id到segment_name的映射）"""
-        try:
-            if not self.project_asins:
-                return {}
-            
-            # 查询ASINs在product_wide_table中的记录
-            wide_table_result = self.supabase.table('product_wide_table')\
-                .select('id, platform_id')\
-                .in_('platform_id', self.project_asins)\
-                .execute()
-            
-            if not wide_table_result.data:
-                return {}
-            
-            # 建立映射
-            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
-            
-            # 查询segment assignments
-            wide_table_ids = list(platform_to_wide_id.values())
-            assignments_result = self.supabase.table('product_segment_assignments')\
-                .select('product_id, segment_name')\
-                .eq('project_id', self.project_id)\
-                .in_('product_id', wide_table_ids)\
-                .neq('segment_name', None)\
-                .neq('segment_name', 'OUT_OF_SCOPE')\
-                .execute()
-            
-            if not assignments_result.data:
-                return {}
-            
-            # 建立映射
-            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
-            
-            # 转换为platform_id到segment的映射
-            platform_to_segment = {}
-            for platform_id, wide_id in platform_to_wide_id.items():
-                if wide_id in wide_id_to_segment:
-                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
-            
-            return platform_to_segment
-            
-        except Exception as e:
-            logger.error(f"Error getting segment assignments: {e}")
-            return {}
+        """获取segment分配（platform_id到segment_name的映射）
+        
+        Uses the shared helper method with hashing scheme support.
+        """
+        return self._get_segment_assignments_shared()
     
     def _categorize_and_rank_products(self, products: List[Dict[str, Any]], 
                                     segment_assignments: Dict[str, str], 
