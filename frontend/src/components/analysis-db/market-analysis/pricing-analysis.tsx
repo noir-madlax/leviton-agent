@@ -10,7 +10,6 @@ import { useProductPanel } from "@/components/analysis-db/contexts/product-panel
 import type { Product } from "@/components/analysis-db/types/analysis"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
-import { ChartInteractionSummary } from "@/components/analysis-db/shared/chart-interaction-summary"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
 // 定义散点图数据类型
@@ -315,22 +314,75 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
+      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">💰 Pricing Strategy</h2>
 
-      {/* Price vs Revenue Scatter Plot */}
+      {/* Price Distribution by Segment - 移至最上方 */}
+      <div className="mb-8" data-chart-id="price-distribution-overview">
+        <h3 className="text-xl font-semibold text-gray-700 mb-4">Price Distribution by Segment</h3>
+        <Card className="p-6 bg-gray-50">
+          <div className="mb-4">
+            <PriceTypeSelector 
+              onChange={setPriceType} 
+              defaultValue={priceType}
+            />
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left pb-2">Segment</th>
+                  <th className="text-right pb-2">Products</th>
+                  <th className="text-right pb-2">Min</th>
+                  <th className="text-right pb-2">Median</th>
+                  <th className="text-right pb-2">Max</th>
+                  <th className="text-right pb-2">Average</th>
+                </tr>
+              </thead>
+              <tbody>
+                {allCategories.map((category, index) => {
+                  const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
+                  const segmentName = category.category
+                  // 通过价格数组的长度计算产品数量
+                  const productCount = priceType === 'unit' ? category.unitPrices.length : category.skuPrices.length
+
+                  return (
+                    <tr key={index} className="border-b hover:bg-gray-50">
+                      <td className="py-2 flex items-center">
+                        <span className="mr-2">{getSegmentEmoji(segmentName)}</span>
+                        <span className="font-medium">{segmentName}</span>
+                      </td>
+                      <td className="text-right py-2">{productCount}</td>
+                      <td className="text-right py-2">
+                        <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
+                      </td>
+                      <td className="text-right py-2">
+                        <span className="text-blue-600 font-medium">${stats.median.toFixed(2)}</span>
+                      </td>
+                      <td className="text-right py-2">
+                        <span className="text-red-600 font-medium">${stats.max.toFixed(2)}</span>
+                      </td>
+                      <td className="text-right py-2">
+                        <span className="text-purple-600 font-medium">${stats.mean.toFixed(2)}</span>
+                      </td>
+                    </tr>
+                  )
+                })}
+              </tbody>
+            </table>
+          </div>
+        </Card>
+      </div>
+
+      {/* Price vs Revenue Distribution of Top Selling 20 Products */}
       <div className="mb-8" data-chart-id="price-vs-revenue">
         <ChartWithFilters
           chartId="pricing-scatter"
           chartType="scatter"
           projectId={projectId || ''}
-          title="Price vs. Revenue Distribution of Top Selling 20 Products"
+          title="Price vs Revenue Distribution of Top Selling 20 Products"
           projectFilters={initialFilters}
         >
-          <ChartInteractionSummary>
-            <p className="text-sm text-blue-700">
-              <strong>Interaction Guide:</strong> Hover over any point to see detailed product information. Click on product names to visit the corresponding Amazon product page.
-            </p>
-          </ChartInteractionSummary>
           <Card className="p-6 bg-gray-50">
             {hasScatterData ? (
               <div className="h-[400px]">
@@ -390,71 +442,6 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
                 </div>
               </div>
             )}
-          </Card>
-        </ChartWithFilters>
-      </div>
-
-      {/* Price Distribution by Segment */}
-      <div className="mb-8" data-chart-id="price-distribution-overview">
-        <ChartWithFilters
-          chartId="pricing-distribution"
-          chartType="table"
-          projectId={projectId || ''}
-          title="Price Distribution by Segment"
-          projectFilters={initialFilters}
-        >
-          <Card className="p-6 bg-gray-50">
-            <div className="mb-4">
-              <PriceTypeSelector 
-                onChange={setPriceType} 
-                defaultValue={priceType}
-              />
-            </div>
-            
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b">
-                    <th className="text-left pb-2">Segment</th>
-                    <th className="text-right pb-2">Products</th>
-                    <th className="text-right pb-2">Min</th>
-                    <th className="text-right pb-2">Median</th>
-                    <th className="text-right pb-2">Max</th>
-                    <th className="text-right pb-2">Average</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {allCategories.map((category, index) => {
-                    const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
-                    const segmentName = category.category
-                    // 通过价格数组的长度计算产品数量
-                    const productCount = priceType === 'unit' ? category.unitPrices.length : category.skuPrices.length
-
-                    return (
-                      <tr key={index} className="border-b hover:bg-gray-50">
-                        <td className="py-2 flex items-center">
-                          <span className="mr-2">{getSegmentEmoji(segmentName)}</span>
-                          <span className="font-medium">{segmentName}</span>
-                        </td>
-                        <td className="text-right py-2">{productCount}</td>
-                        <td className="text-right py-2">
-                          <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
-                        </td>
-                        <td className="text-right py-2">
-                          <span className="text-blue-600 font-medium">${stats.median.toFixed(2)}</span>
-                        </td>
-                        <td className="text-right py-2">
-                          <span className="text-red-600 font-medium">${stats.max.toFixed(2)}</span>
-                        </td>
-                        <td className="text-right py-2">
-                          <span className="text-purple-600 font-medium">${stats.mean.toFixed(2)}</span>
-                        </td>
-                      </tr>
-                    )
-                  })}
-                </tbody>
-              </table>
-            </div>
           </Card>
         </ChartWithFilters>
       </div>
@@ -529,6 +516,7 @@ export function PricingAnalysis({ data, productLists, projectId, initialFilters 
 // 根据分类名称获取emoji
 function getSegmentEmoji(segmentName: string): string {
   const emojiMap: Record<string, string> = {
+    // Category维度
     'Smart WiFi Dimmer Switches': '🔆',
     'Manual Slide Dimmer Switches': '🎛️',
     'Smart WiFi On Off Switches': '🔥',
@@ -536,7 +524,13 @@ function getSegmentEmoji(segmentName: string): string {
     'In Wall Timer Switches': '⏰',
     'Motion Sensor Switches': '🚶',
     'RF Wireless Remote Switch Systems': '📡',
-    'Mechanical Timer Outlets': '🔌'
+    'Mechanical Timer Outlets': '🔌',
+    'Dimmer Switches': '🎛️',
+    'Light Switches': '💡',
+    // Smart Capability维度
+    'Smart': '🔌',
+    'Non-Smart': '🔧'
   }
+  
   return emojiMap[segmentName] || '🔲'
 }
