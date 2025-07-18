@@ -653,6 +653,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     })
     // 立即加载第一个tab的数据
     loadSpecificData('brandAnalysis', projectId, undefined, undefined, undefined, undefined, false)
+    // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
+    loadSpecificData('marketInsights', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('packagePreference', projectId, undefined, undefined, undefined, undefined, false)
   }
 
 
@@ -675,6 +678,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     switch (tabValue) {
       case 'brand-analysis':
         loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
+        // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
+        loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'product-analysis':
         loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
@@ -718,6 +724,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       
       console.log(`🚀 Loading initial brand analysis with filters:`, { categoryFilters, brandFilters, segmentFilters, extendFields });
       loadSpecificData('brandAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
+      loadSpecificData('marketInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('packagePreference', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
@@ -981,6 +990,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
                             initialFilters={appliedFilters}
+                            marketInsights={data.marketInsights}
+                            packagePreference={data.packagePreference}
                           />
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">

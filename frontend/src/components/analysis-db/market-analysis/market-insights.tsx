@@ -88,7 +88,7 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
   if (chartData.length === 0) {
     return (
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📊 Market Insights</h2>
+      
         <Card className="p-6 bg-gray-50">
           <p className="text-center text-gray-500">No segment data available for this project.</p>
         </Card>
@@ -116,7 +116,7 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">📊 Market Insights</h2>
+    
       
       <ChartWithFilters
         chartId="market-insights"
@@ -125,12 +125,12 @@ export function MarketInsights({ data: initialData, productLists, projectId, ini
         title="Top 10 Segments by Revenue"
         projectFilters={initialFilters}
       >
-        <Card className="p-6 bg-gray-50">
+        <Card className="p-6 bg-gray-50 pb-0">
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
           {/* Segment Revenue Chart */}
           <div className="mb-8">
-            <div className="bg-white p-4 rounded-lg border shadow-sm">
+            <div className="bg-gray-50 p-4 ">
               <div className="h-[600px] w-full">
                 {loading ? (
                   <div className="flex items-center justify-center h-full">

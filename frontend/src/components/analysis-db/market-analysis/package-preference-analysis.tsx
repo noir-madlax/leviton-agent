@@ -89,7 +89,7 @@ export function PackagePreferenceAnalysis({
   if (!data.packageDistribution || data.packageDistribution.length === 0) {
     return (
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
+       
         <Card className="p-6 bg-gray-50">
           <p className="text-center text-gray-500">Package distribution data is not available.</p>
           <p className="text-center text-gray-400 text-sm mt-2">Waiting for package type data...</p>
@@ -173,7 +173,7 @@ export function PackagePreferenceAnalysis({
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">📦 Package Preference Analysis</h2>
+     
 
       <ChartWithFilters
         chartId="package-preference"
@@ -224,7 +224,7 @@ export function PackagePreferenceAnalysis({
           
          
         </div>
-      
+      <Card className="p-6 bg-gray-50">
       {/* 多个category饼图显示 */}
       {data.segmentDistributions && Object.keys(data.segmentDistributions).length > 0 ? (
         <div className="space-y-8">
@@ -245,8 +245,8 @@ export function PackagePreferenceAnalysis({
             if (categoryChartData.length === 0) return null;
 
             return (
-              <div key={category} className="bg-gray-50 p-6 rounded-lg">
-                <h4 className="text-lg font-medium mb-4 text-center">
+              <div key={category} className="bg-gray-50 p-0 pb-0 rounded-lg mb-[-10px]">
+                <h4 className="text-lg font-medium mb-0 text-center">
                   📦 {category} - Package Type Distribution by {titleSuffix}
                 </h4>
                 <div className="h-[500px]">
@@ -269,7 +269,7 @@ export function PackagePreferenceAnalysis({
                       <Tooltip content={<CustomTooltip />} />
                       <Legend 
                         verticalAlign="bottom" 
-                        height={36}
+                        height={100}
                         formatter={(value) => {
                           const item = categoryChartData.find(d => d.name === value)
                           return `${value} (${item?.percentage.toFixed(1)}%)`
@@ -281,44 +281,16 @@ export function PackagePreferenceAnalysis({
               </div>
             );
           })}
+     
         </div>
       ) : (
+       
         // 如果没有category数据，显示总体饼图
         <div className="bg-gray-50 p-6 rounded-lg">
-          <h4 className="text-lg font-medium mb-4 text-center">
-            📦 Package Type Distribution by {titleSuffix}
-          </h4>
-          <div className="h-[500px]">
-            <ResponsiveContainer width="100%" height="100%">
-              <PieChart>
-                <Pie
-                  data={chartData}
-                  cx="50%"
-                  cy="50%"
-                  labelLine={false}
-                  label={renderCustomizedLabel}
-                  outerRadius={160}
-                  fill="#8884d8"
-                  dataKey="value"
-                >
-                  {chartData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
-                  ))}
-                </Pie>
-                <Tooltip content={<CustomTooltip />} />
-                <Legend 
-                  verticalAlign="bottom" 
-                  height={36}
-                  formatter={(value) => {
-                    const item = chartData.find(d => d.name === value)
-                    return `${value} (${item?.percentage.toFixed(1)}%)`
-                  }}
-                />
-              </PieChart>
-            </ResponsiveContainer>
-          </div>
+          
         </div>
       )}
+      </Card>
       </ChartWithFilters>
     </section>
   )

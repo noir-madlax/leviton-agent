@@ -10,6 +10,9 @@ import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-fil
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+// 导入需要集成的组件
+import { MarketInsights } from './market-insights'
+import { PackagePreferenceAnalysis } from './package-preference-analysis'
 
 interface BrandAnalysisProps {
   data: {
@@ -23,6 +26,49 @@ interface BrandAnalysisProps {
     }[]
     categoryNames: string[]
     categoryColors: string[]
+  }
+  // 添加新的数据字段
+  marketInsights?: {
+    segmentRevenue: {
+      segments?: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+      segmentNames?: string[]
+      dimmerSwitches: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+      lightSwitches: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+    }
+  }
+  packagePreference?: {
+    packageDistribution: Array<{
+      name: string
+      packSize: string
+      value: number
+      salesRevenue: number
+      count: number
+      percentage: number
+    }>
+    segmentDistributions: Record<string, Array<{
+      name: string
+      packSize: string
+      value: number
+      salesRevenue: number
+      count: number
+      percentage: number
+    }>>
+    segmentNames: string[]
   }
   productLists: {
     byBrand: Record<string, Array<{
@@ -60,7 +106,7 @@ interface BrandAnalysisProps {
   initialFilters?: ProjectFilters
 }
 
-export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const [loading] = useState(false)
@@ -299,7 +345,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
     if (active && payload && payload.length) {
       const data = payload[0].payload
       return (
-        <div className="bg-white p-3 border border-gray-300 rounded shadow-lg">
+        <div className="bg-gray-50 p-3  ">
           <p className="font-medium">{`Brand: ${data.brand}`}</p>
           <p className="text-blue-600">{`Revenue: $${data.revenue.toLocaleString()}`}</p>
           <p className="text-green-600">{`Total number of products: ${data.productCount}`}</p>
@@ -329,7 +375,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           chartId="market-share-analysis"
           chartType="pie"
           projectId={projectId || ''}
-          title="Total addressable market (TAM) and Market Share by brands/product segments"
+          title="Total addressable market (TAM) and Market Share by brands"
           projectFilters={initialFilters}
         >
           {/* 第二层：单一的Summary区域 */}
@@ -421,7 +467,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
           
           {/* Single grouped bar chart */}
-          <div className="bg-white p-4 rounded-lg border shadow-sm">
+          <div className="bg-gray-50 p-4 rounded-lg  ">
             <div className="h-[400px]">
               {loading ? (
                 <div className="flex items-center justify-center h-full">
@@ -454,6 +500,14 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           title="Sales Trend of Top 10 brands"
           projectFilters={initialFilters}
         >
+            {/* Chart Description 类似summary*/}
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+              <p className="text-sm text-blue-700">
+                <strong>Chart Definition:</strong> Stacked area chart showing monthly {metricType} trends for top 10 brands. 
+                Height of each colored band represents {metricType === "revenue" ? "Revenue = SKU Price × Units sold" : "Volume = Units sold"} within the selected time period. 
+                Hover to display percentage of {metricType} for each brand at that time slice.
+              </p>
+            </div>
           <Card className="p-6 bg-gray-50">
             <MetricTypeSelector onChange={setMetricType} value={metricType} />
             
@@ -477,7 +531,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
             </div>
 
             {/* Mock Sales Trend Chart */}
-            <div className="bg-white p-4 rounded-lg border shadow-sm">
+            <div className="bg-gray-50 p-4 ">
               <div className="h-[500px] w-full">
                 <StackedAreaChart
                   data={mockSalesTrendData}
@@ -488,16 +542,48 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
               </div>
             </div>
 
-            {/* Chart Description */}
-            <div className="mt-4 bg-blue-50 border-l-4 border-blue-400 p-3">
-              <p className="text-sm text-blue-700">
-                <strong>Chart Definition:</strong> Stacked area chart showing monthly {metricType} trends for top 10 brands. 
-                Height of each colored band represents {metricType === "revenue" ? "Revenue = SKU Price × Units sold" : "Volume = Units sold"} within the selected time period. 
-                Hover to display percentage of {metricType} for each brand at that time slice.
-              </p>
-            </div>
+          
           </Card>
         </ChartWithFilters>
+      </div>
+
+      {/* Market Insights - New Addition */}
+      <div className="mt-15">
+        {marketInsights ? (
+          <MarketInsights 
+            data={marketInsights}
+            productLists={productLists}
+            projectId={projectId}
+            initialFilters={initialFilters}
+          />
+        ) : (
+          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+            <p className="text-sm text-yellow-700">
+              <strong>Top 10 Segments by Revenue</strong> - Loading market insights data...
+            </p>
+          </div>
+        )}
+      </div>
+
+      {/* Package Preference Analysis - New Addition */}
+      <div className="mt-15">
+        {packagePreference ? (
+          <PackagePreferenceAnalysis 
+            data={packagePreference}
+            productLists={productLists}
+            projectId={projectId}
+            categoryFilters={initialFilters?.categories}
+            brandFilters={initialFilters?.brands}
+            segmentFilters={initialFilters?.segments}
+            extendFields={initialFilters?.extend_fields}
+          />
+        ) : (
+          <div className="bg-gray-50  p-4">
+            <p className="text-sm text-yellow-700">
+              <strong>Package Type Distribution by Revenue</strong> - Loading package preference data...
+            </p>
+          </div>
+        )}
       </div>
 
     </section>

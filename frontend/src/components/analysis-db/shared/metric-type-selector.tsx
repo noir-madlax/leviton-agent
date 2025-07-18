@@ -10,7 +10,7 @@ interface MetricTypeSelectorProps {
 
 export function MetricTypeSelector({ onChange, value = "revenue" }: MetricTypeSelectorProps) {
   return (
-    <div className="flex items-center space-x-4 mb-5">
+    <div className="flex items-center space-x-4 mb-0">
       <Label htmlFor="metric-type" className="text-lg font-semibold text-gray-800">
         Choose to show <span className="font-bold">Revenue</span> or <span className="font-bold">Volume</span>:
       </Label>
