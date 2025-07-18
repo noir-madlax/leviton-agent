@@ -4,6 +4,7 @@ __all__ = [
     "ReviewExtractionResult",
     "ReviewCategorizationStage",
     "ReviewCategorizationContext",
+    "ReviewCategorizationResult",
     "ReviewCategorizationStageContext",
     "ReviewConsolidationStage",
     "ReviewConsolidationStageContext",
@@ -21,6 +22,7 @@ from .review_extraction_stage import (  # noqa: E402
 from .review_categorization_stage import (  # noqa: E402
     ReviewCategorizationStage,
     ReviewCategorizationContext,
+    ReviewCategorizationResult,
 )
 
 from .review_consolidation_stage import (  # noqa: E402

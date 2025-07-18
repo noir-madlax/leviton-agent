@@ -2,12 +2,16 @@ from __future__ import annotations
 
 from pathlib import Path
 from dataclasses import dataclass
-from typing import List, Tuple, Set
+from typing import List, Tuple, Set, Dict, Any
+import json
 
 from core.llm_taxonomy_pipeline.categorization_base import (
     CategorizationStage,
     CategorizationStageContext as _BaseCtx,
+    CategorizationStageResult,
 )
+from core.utils.llm_utils import ValidationResult, extract_json, create_retry_error_details
+from core.llm_taxonomy_pipeline.pipeline_stage import TaxonomyDTO
 
 # ---------------------------------------------------------------------------
 # Fixed prompt templates
@@ -47,6 +51,17 @@ class ReviewCategorizationContext(_BaseCtx):
     product_categories: Set[str]  # Used for contextual hints
 
     aspects: List[Tuple[str, str]]  # Override type so mypy sees the same field
+
+
+# ---------------------------------------------------------------------------
+# Enhanced result dataclass to include aspect assignments
+# ---------------------------------------------------------------------------
+
+@dataclass(slots=True, frozen=True)
+class ReviewCategorizationResult(CategorizationStageResult):
+    """Enhanced result that includes aspect-to-category assignments."""
+    
+    assignments_initial: Dict[str, str]  # aspect_id -> category_name
 
 
 # ---------------------------------------------------------------------------
@@ -90,8 +105,185 @@ class ReviewCategorizationStage(CategorizationStage):
         aspect_lines = "\n".join(f"[{aid}] {desc}" for aid, desc in ctx.aspects)
         return f"{rendered_template}\n\n{aspect_lines}"
 
-    # _validate, _retry_prompt, _produce_result, _merge_split_results are
-    # provided by the generic base-class – no overrides needed.
+    def _validate(self, raw_response: str, ctx: ReviewCategorizationContext) -> ValidationResult:
+        """Validate response with aspect ID assignment similar to product extraction."""
+        
+        expected_ids = {aid for aid, _ in ctx.aspects}
+        
+        error_categories: Dict[str, List[str]] = {
+            "format_errors": [],
+            "validation_errors": [],
+            "completeness_errors": [],
+        }
 
-    # Only splitting behaviour is reused from base. If desired we could
-    # customise, but the default half-split is appropriate. 
+        try:
+            json_text = extract_json(raw_response)
+            parsed = json.loads(json_text)
+        except Exception as exc:  # pylint: disable=broad-except
+            error_categories["format_errors"].append(str(exc))
+            return ValidationResult(ok=False, error_categories=error_categories)
+
+        # Basic structure checks
+        if not isinstance(parsed, dict):
+            error_categories["format_errors"].append("Top-level JSON must be an object")
+            return ValidationResult(ok=False, error_categories=error_categories)
+
+        if not parsed:
+            error_categories["format_errors"].append("JSON object cannot be empty")
+            return ValidationResult(ok=False, error_categories=error_categories)
+
+        # Validate each category
+        all_assigned_ids = set()
+        
+        for category_name, category_data in parsed.items():
+            if not isinstance(category_data, dict):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' must be an object"
+                )
+                continue
+                
+            # Check required fields
+            if "definition" not in category_data:
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' missing 'definition' field"
+                )
+            elif not isinstance(category_data["definition"], str):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' definition must be a string"
+                )
+                
+            if "ids" not in category_data:
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' missing 'ids' field"
+                )
+            elif not isinstance(category_data["ids"], list):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' ids must be a list"
+                )
+            else:
+                # Validate ids and collect them
+                category_ids = category_data["ids"]
+                for idx, id_val in enumerate(category_ids):
+                    if not isinstance(id_val, (int, str)):
+                        error_categories["validation_errors"].append(
+                            f"Category '{category_name}' ids[{idx}] must be an integer or string"
+                        )
+                    else:
+                        str_id = str(id_val)
+                        if str_id not in expected_ids:
+                            error_categories["completeness_errors"].append(
+                                f"Category '{category_name}' contains invalid id {id_val}"
+                            )
+                        elif str_id in all_assigned_ids:
+                            error_categories["completeness_errors"].append(
+                                f"ID {id_val} appears in multiple categories"
+                            )
+                        else:
+                            all_assigned_ids.add(str_id)
+
+        # Check for missing assignments
+        missing_ids = expected_ids - all_assigned_ids
+        if missing_ids:
+            error_categories["completeness_errors"].append(
+                f"Missing assignments for ids: {sorted(missing_ids)}"
+            )
+
+        all_errors = sum(len(v) for v in error_categories.values())
+        if all_errors == 0:
+            return ValidationResult(ok=True, error_categories=error_categories)
+
+        return ValidationResult(ok=False, error_categories=error_categories)
+
+    def _retry_prompt(
+        self, original_prompt: str, validation_result: ValidationResult, ctx: ReviewCategorizationContext
+    ) -> str:  # noqa: D401
+        # Build human-readable error details from validation_result.error_categories
+        error_details = create_retry_error_details(validation_result.error_categories)
+
+        # Use the fixed retry prompt template
+        retry_block = _RETRY_PROMPT_TEMPLATE.replace("{{error_details}}", error_details)
+        return f"{original_prompt}\n\n{retry_block}"
+
+    async def _produce_result(
+        self,
+        raw_response: str,
+        ctx: ReviewCategorizationContext,
+        attempts: int,
+    ) -> ReviewCategorizationResult:
+        """Convert a valid raw response into a ReviewCategorizationResult with assignments."""
+
+        json_text = extract_json(raw_response)
+        payload = json.loads(json_text)
+
+        # Extract taxonomies from the category structure
+        taxonomies = [
+            TaxonomyDTO(name=category_name, definition=category_data["definition"])
+            for category_name, category_data in payload.items()
+            if isinstance(category_data, dict) and "definition" in category_data
+        ]
+        
+        # Convert ids arrays to assignments mapping
+        assignments = {}
+        for category_name, category_data in payload.items():
+            if isinstance(category_data, dict) and "ids" in category_data:
+                for aspect_id in category_data["ids"]:
+                    assignments[str(aspect_id)] = category_name
+
+        return ReviewCategorizationResult(
+            taxonomies_categorised=taxonomies,
+            assignments_initial=assignments,
+        )
+
+    async def _merge_split_results(
+        self,
+        res_left: ReviewCategorizationResult,
+        res_right: ReviewCategorizationResult,
+        ctx_left: ReviewCategorizationContext,
+        ctx_right: ReviewCategorizationContext,
+        depth: int,
+    ) -> ReviewCategorizationResult:  # noqa: D401 – signature enforced by BaseStage
+        """Merge two partial results coming from auto-split recursion."""
+
+        # Merge taxonomies – keep order but de-duplicate by *name*.
+        taxonomy_by_name: Dict[str, TaxonomyDTO] = {}
+        for t in res_left.taxonomies_categorised + res_right.taxonomies_categorised:
+            taxonomy_by_name.setdefault(t.name, t)
+
+        # Merge assignments - no offset needed since aspect IDs are strings
+        assignments = dict(res_left.assignments_initial)
+        assignments.update(res_right.assignments_initial)
+
+        return ReviewCategorizationResult(
+            taxonomies_categorised=list(taxonomy_by_name.values()),
+            assignments_initial=assignments,
+        )
+
+    def _split_context(
+        self, ctx: ReviewCategorizationContext, depth: int
+    ) -> tuple[ReviewCategorizationContext, ReviewCategorizationContext]:
+        """Split categorization context into two parts for recursive processing."""
+        
+        if len(ctx.aspects) <= 1:
+            raise NotImplementedError("Cannot split context with single aspect")
+        
+        mid = len(ctx.aspects) // 2
+        
+        ctx_left = ReviewCategorizationContext(
+            product_category=ctx.product_category,
+            aspect_type=ctx.aspect_type,
+            aspect_context=ctx.aspect_context,
+            input_description=ctx.input_description,
+            product_categories=ctx.product_categories,
+            aspects=ctx.aspects[:mid]
+        )
+
+        ctx_right = ReviewCategorizationContext(
+            product_category=ctx.product_category,
+            aspect_type=ctx.aspect_type,
+            aspect_context=ctx.aspect_context,
+            input_description=ctx.input_description,
+            product_categories=ctx.product_categories,
+            aspects=ctx.aspects[mid:]
+        )
+
+        return ctx_left, ctx_right 

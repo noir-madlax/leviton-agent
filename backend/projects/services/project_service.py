@@ -454,10 +454,7 @@ class ProjectService:
                         run_updates["consolidation_batches_done"] = details["consolidation_batches_done"]
                     if "consolidation_batches_total" in details:
                         run_updates["consolidation_batches_total"] = details["consolidation_batches_total"]
-                    if "refinement_batches_done" in details:
-                        run_updates["refinement_batches_done"] = details["refinement_batches_done"]
-                    if "refinement_batches_total" in details:
-                        run_updates["refinement_batches_total"] = details["refinement_batches_total"]
+                    # Refinement stage removed - aspects are assigned during categorization and reassigned during consolidation
                 
                 # Increment processed reviews count if applicable
                 if progress_data.get("status") == "in_progress" and step_name == "extraction":
@@ -1476,8 +1473,7 @@ class ProjectService:
                         extraction_batches_total = run_data.get("extraction_batches_total", 0)
                         consolidation_batches_done = run_data.get("consolidation_batches_done", 0)
                         consolidation_batches_total = run_data.get("consolidation_batches_total", 0)
-                        refinement_batches_done = run_data.get("refinement_batches_done", 0)
-                        refinement_batches_total = run_data.get("refinement_batches_total", 0)
+                        # Refinement stage removed from review analysis workflow
                         
                         # 细分的子步骤 - 增加批次进度信息
                         if stage == "completed":
@@ -1496,7 +1492,7 @@ class ProjectService:
                                 {
                                     "name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)", 
                                     "status": "completed",
-                                    "description": f"{refinement_batches_done}/{refinement_batches_total} batches" if refinement_batches_total > 0 else "completed"
+                                    "description": "Final assignments completed"
                                 }
                             ]
                             step3_description = f"Completed product segmentation: {completed_assignments}/{total_products_in_run} products assigned to segments"
@@ -1520,7 +1516,7 @@ class ProjectService:
                                 {
                                     "name": f"Refinement ({completed_assignments}/{total_products_in_run} assigned)",
                                     "status": refinement_status,
-                                    "description": f"{refinement_batches_done}/{refinement_batches_total} batches" if refinement_batches_total > 0 else ""
+                                    "description": "Assigning final segments"
                                 }
                             ]
                             
@@ -1572,7 +1568,7 @@ class ProjectService:
                         try:
                             # 获取主运行状态
                             run_result = self.supabase.table('review_analysis_runs')\
-                                .select('status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total')\
+                                .select('status, stage, extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total')\
                                 .eq('id', project["review_analysis_run_id"])\
                                 .single().execute()
                             run_data = run_result.data or {}
@@ -1586,8 +1582,8 @@ class ProjectService:
                             
                             current_stage = run_data.get("stage", "starting")
                             
-                            # 定义所有可能的子步骤
-                            all_stages = ["extraction", "categorization", "consolidation", "refinement"]
+                            # 定义所有可能的子步骤 - refinement stage removed
+                            all_stages = ["extraction", "categorization", "consolidation"]
                             sub_steps = []
                             total_progress_current = 0
                             total_progress_total = 0
@@ -1659,7 +1655,7 @@ class ProjectService:
                         try:
                             # 获取主运行状态和批次信息
                             run_result = self.supabase.table('review_analysis_runs')\
-                                .select('extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total, refinement_batches_done, refinement_batches_total')\
+                                .select('extraction_batches_done, extraction_batches_total, categorization_batches_done, categorization_batches_total, consolidation_batches_done, consolidation_batches_total')\
                                 .eq('id', project["review_analysis_run_id"])\
                                 .single().execute()
                             run_data = run_result.data or {}
@@ -1671,8 +1667,8 @@ class ProjectService:
                                 .execute()
                             progress_map = {p['step_name']: p for p in progress_result.data} if progress_result.data else {}
                             
-                            # 定义所有可能的子步骤
-                            all_stages = ["extraction", "categorization", "consolidation", "refinement"]
+                            # 定义所有可能的子步骤 - refinement stage removed  
+                            all_stages = ["extraction", "categorization", "consolidation"]
                             sub_steps = []
 
                             for stage_name in all_stages:

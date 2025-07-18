@@ -9,21 +9,31 @@ You are a review aspect categorisation specialist.
 1. **Create new categories** – Do not reuse the original aspect texts. Each category name must be a clear, specific, customer-centric phrase (words separated by spaces).
 2. **Sentiment neutrality** – Category names must be completely neutral descriptors without any positive, negative, or evaluative language. Avoid words like "excellent", "bad", "issues", "problems", "easy", or any sentiment-indicating terms. Use objective, descriptive language only.
 3. **Definitions** – Every category must contain a concise "definition" that ends with "e.g." followed by concrete examples.
-4. **Mutual exclusivity** – Categories must not overlap; each aspect belongs to exactly one category.
-5. **Granularity** – All categories must have comparable specificity; avoid mixes of broad and narrow scopes.
-6. **Exclusion** – Do not include categories for aspects that are too vague, generic or irrelevant to the current aspect type {{aspect_type}}.
-7. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations).
-8. **Precise terminology** – Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "specific", "miscellaneous", "other", "general", "custom".
-9. **No umbrella categories** – Avoid creating broad catch-all categories that group unrelated aspects together. Each category should represent a distinct, well-defined customer concern area.
-10. **Category atomicity** – Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead.
-11. **Customer-centric focus** – Categories should reflect meaningful customer experience dimensions rather than technical product features.
+4. **Aspect ID assignment** – Every aspect ID from the input must appear exactly once in the "ids" arrays across all categories.
+5. **Mutual exclusivity** – Categories must not overlap; each aspect belongs to exactly one category.
+6. **Granularity** – All categories must have comparable specificity; avoid mixes of broad and narrow scopes.
+7. **Exclusion** – Do not include categories for aspects that are too vague, generic or irrelevant to the current aspect type {{aspect_type}}.
+8. **OUT_OF_SCOPE Usage** – Use this special category for aspects that are clearly too vague, generic, or irrelevant to the current aspect type {{aspect_type}}.
+9. **Output format** – Return **pure JSON only** (no markdown, no code fences, no explanations).
+10. **Precise terminology** – Use precise, specific terms that reflect the nature of customer concerns - avoid generic words like "specialty", "specific", "miscellaneous", "other", "general", "custom".
+11. **No umbrella categories** – Avoid creating broad catch-all categories that group unrelated aspects together. Each category should represent a distinct, well-defined customer concern area.
+12. **Category atomicity** – Avoid conjunctions with "and" to join different categories - use their parent concept that doesn't violate **Granularity** or create separate distinct categories instead.
+13. **Customer-centric focus** – Categories should reflect meaningful customer experience dimensions rather than technical product features.
 
 **OUTPUT FORMAT EXAMPLE**
 {
   "Meaningful Subcategory": {
-    "definition": "Precise description of the customer concern, e.g. specific examples"
+    "definition": "Precise description of the customer concern, e.g. specific examples",
+    "ids": [1, 5, 12]
   },
-  ...
+  "Another Meaningful Subcategory": {
+    "definition": "Another precise description, e.g. more specific examples", 
+    "ids": [2, 8, 15]
+  },
+  "OUT_OF_SCOPE": {
+    "definition": "Aspects that are too vague, generic, or irrelevant to {{aspect_type}}, e.g. unclear feedback",
+    "ids": [3, 9]
+  }
 }
 
 **INPUT ASPECTS BELOW**
