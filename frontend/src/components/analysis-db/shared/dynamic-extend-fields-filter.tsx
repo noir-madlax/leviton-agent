@@ -19,6 +19,17 @@ interface DynamicExtendFieldsFilterProps {
       }>>
     }
   } | null
+  // 新增：过滤器配置，用于控制显示哪些扩展字段
+  filterConfig?: {
+    visible_filters: Record<string, boolean>
+    default_values: Record<string, any>
+    extend_fields: Array<{
+      field_name: string
+      display_name: string
+      field_type: string
+      filter_options: Record<string, any>
+    }>
+  } | null
 }
 
 export function DynamicExtendFieldsFilter({
@@ -26,7 +37,8 @@ export function DynamicExtendFieldsFilter({
   extendFields,
   onFilterChange,
   className = '',
-  projectData
+  projectData,
+  filterConfig
 }: DynamicExtendFieldsFilterProps) {
   const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
   const [loading, setLoading] = useState(false)
@@ -36,6 +48,27 @@ export function DynamicExtendFieldsFilter({
     const loadExtendFields = async () => {
       if (!projectId) return
       
+      // 如果有过滤器配置，优先使用配置中的extend_fields
+      if (filterConfig?.extend_fields) {
+        const fields = filterConfig.extend_fields.map(field => ({
+          ...field,
+          sort_order: 1, // 添加必需的 sort_order 字段
+          field_type: field.field_type as 'boolean' | 'select' | 'multi_select' | 'range'
+        })) as ExtendFieldDefinition[]
+        setFieldDefinitions(fields)
+        
+        // 初始化selectKeys
+        const initialKeys: Record<string, number> = {}
+        fields.forEach((field: any) => {
+          initialKeys[field.field_name] = 0
+        })
+        setSelectKeys(initialKeys)
+        
+        console.log('🔧 [EXTEND-FIELDS] Using filterConfig extend_fields:', fields.map(f => f.field_name))
+        return
+      }
+      
+      // Fallback: 从API获取
       setLoading(true)
       try {
         const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
@@ -55,6 +88,8 @@ export function DynamicExtendFieldsFilter({
           initialKeys[field.field_name] = 0
         })
         setSelectKeys(initialKeys)
+        
+        console.log('🔧 [EXTEND-FIELDS] Loaded from API:', fields.map((f: any) => f.field_name))
       } catch (error) {
         console.error('Error loading extend fields:', error)
         setFieldDefinitions([])
@@ -64,7 +99,7 @@ export function DynamicExtendFieldsFilter({
     }
 
     loadExtendFields()
-  }, [projectId])
+  }, [projectId, filterConfig])
 
   const handleFieldChange = (fieldName: string, value: string | boolean | number | string[] | number[] | undefined) => {
     const newFilters = { ...extendFields }
@@ -94,22 +129,19 @@ export function DynamicExtendFieldsFilter({
             <Select
               key={selectKeys[field.field_name] || 0}
               onValueChange={(value) => {
-                if (value === String(field.filter_options.default)) {
+                if (value === 'All' || value === String(field.filter_options.default)) {
                   handleFieldChange(field.field_name, undefined)
                 } else {
                   handleFieldChange(field.field_name, value)
                 }
               }}
+              defaultValue="All"
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder={field.filter_options.placeholder || field.display_name} />
+                <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
-                {field.filter_options.default && (
-                  <SelectItem value={String(field.filter_options.default)}>
-                    {String(field.filter_options.default)}
-                  </SelectItem>
-                )}
+                <SelectItem value="All">All</SelectItem>
                 {/* 优先显示实际数据中的选项，并过滤已选择的项目 */}
                 {projectData?.distributions?.extend_fields?.[field.field_name] ? (
                   projectData.distributions.extend_fields[field.field_name]
@@ -144,18 +176,19 @@ export function DynamicExtendFieldsFilter({
             <Select
               key={selectKeys[field.field_name] || 0}
               onValueChange={(value) => {
-                if (value === '' || value === 'none') {
+                if (value === '' || value === 'all' || value === 'none') {
                   handleFieldChange(field.field_name, undefined)
                 } else {
                   handleFieldChange(field.field_name, [value])
                 }
               }}
+              defaultValue="all"
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder={field.filter_options.placeholder || field.display_name} />
+                <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="none">None</SelectItem>
+                <SelectItem value="all">All</SelectItem>
                 {field.filter_options.options && Object.keys(field.filter_options.options)
                   .filter(option => !currentValue || !currentValue.includes(option))
                   .map((option) => (
@@ -187,9 +220,10 @@ export function DynamicExtendFieldsFilter({
                 }
                 handleFieldChange(field.field_name, newValue)
               }}
+              defaultValue="all"
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder={field.filter_options.placeholder || field.display_name} />
+                <SelectValue placeholder="All" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All</SelectItem>
@@ -272,9 +306,34 @@ export function DynamicExtendFieldsFilter({
     return null
   }
 
+  // 根据filterConfig.visible_filters过滤要显示的字段
+  const visibleFields = fieldDefinitions.filter(field => {
+    // 如果没有filterConfig或visible_filters，显示所有字段（向后兼容）
+    if (!filterConfig?.visible_filters) {
+      return true
+    }
+    
+    // 检查字段是否在visible_filters中被标记为true
+    const fieldVisible = filterConfig.visible_filters[field.display_name] || 
+                        filterConfig.visible_filters[field.field_name]
+    
+    console.log(`🔧 [DYNAMIC-EXTEND] Field visibility check:`, {
+      field_name: field.field_name,
+      display_name: field.display_name,
+      visible: fieldVisible,
+      visible_filters: filterConfig.visible_filters
+    })
+    
+    return fieldVisible === true
+  })
+
+  if (visibleFields.length === 0) {
+    return null
+  }
+
   return (
     <div className={`flex flex-wrap gap-4 ${className}`}>
-      {fieldDefinitions.map(field => renderFieldComponent(field))}
+      {visibleFields.map(field => renderFieldComponent(field))}
     </div>
   )
 } 

@@ -802,4 +802,65 @@ async def get_project_filter_defaults(project_id: str):
         return {
             "filters": ProjectFilters.empty().to_dict(),
             "project_id": project_id
+        }
+
+
+@router.get("/projects/{project_id}/filter-config")
+async def get_project_filter_config(project_id: str):
+    """获取项目的完整过滤器配置
+    
+    整合 project_filter_defaults 和 project_extend_fields，
+    返回哪些过滤器应该显示以及它们的默认值。
+    """
+    try:
+        supabase = get_supabase_client()
+        
+        # 查询基础过滤器配置
+        filter_defaults_response = supabase.table('project_filter_defaults').select('*').eq(
+            'project_id', project_id
+        ).eq('level', 'project').execute()
+        
+        # 查询扩展字段配置
+        extend_fields_response = supabase.table('project_extend_fields').select('*').eq(
+            'project_id', project_id
+        ).eq('is_active', True).order('sort_order').execute()
+        
+        # 构建配置对象
+        config = {
+            "visible_filters": {},
+            "default_values": {},
+            "extend_fields": extend_fields_response.data or []
+        }
+        
+        # 处理基础过滤器配置
+        for record in filter_defaults_response.data:
+            filter_name = record['filter_name']
+            filter_values = record['filter_values']
+            
+            # 标记为可见
+            config["visible_filters"][filter_name] = True
+            
+            # 设置默认值
+            if filter_values and len(filter_values) > 0:
+                config["default_values"][filter_name] = filter_values
+            else:
+                config["default_values"][filter_name] = []
+        
+        logger.info(f"Retrieved filter config for project {project_id}: visible={list(config['visible_filters'].keys())}, extend_fields={len(config['extend_fields'])}")
+        
+        return {
+            "config": config,
+            "project_id": project_id
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting project filter config: {e}", exc_info=True)
+        # 返回空配置保证系统可用性
+        return {
+            "config": {
+                "visible_filters": {},
+                "default_values": {},
+                "extend_fields": []
+            },
+            "project_id": project_id
         } 

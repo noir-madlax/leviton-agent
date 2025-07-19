@@ -10,6 +10,18 @@ import { databaseService } from '@/components/analysis-db/data/database-service'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { PACKAGING_TYPE_OPTIONS, ProjectFilters } from '@/components/analysis-db/types/filters'
 
+// 新增：过滤器配置接口
+interface FilterConfig {
+  visible_filters: Record<string, boolean>
+  default_values: Record<string, any>
+  extend_fields: Array<{
+    field_name: string
+    display_name: string
+    field_type: string
+    filter_options: Record<string, any>
+  }>
+}
+
 interface CategoryFilterAndProjectScopeProps {
   projectId: string | null
   onFiltersChange?: (filters: ProjectFilters) => void
@@ -120,6 +132,10 @@ export function CategoryFilterAndProjectScope({
   const [projectData, setProjectData] = useState<ProjectOverviewData | null>(preloadedData || null)
   const [overviewLoading, setOverviewLoading] = useState(isDataLoading || false)
 
+  // 新增：过滤器配置状态
+  const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
+  const [configLoading, setConfigLoading] = useState(false)
+
   const loadData = async () => {
     if (!projectId) return
 
@@ -156,6 +172,43 @@ export function CategoryFilterAndProjectScope({
       setProjectData(null)
     } finally {
       setFilterLoading(false)
+    }
+  }
+
+  // 新增：加载过滤器配置
+  const loadFilterConfig = async () => {
+    if (!projectId) return
+
+    setConfigLoading(true)
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-config`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      setFilterConfig(result.config)
+      
+      console.log('🔧 [FILTER-CONFIG] Loaded filter configuration:', result.config)
+    } catch (error) {
+      console.error('Error loading filter config:', error)
+      // 如果加载失败，使用默认配置（显示所有过滤器）
+      setFilterConfig({
+        visible_filters: {
+          'categories': true,
+          'brands': true,
+          'Time Period': true,
+          'segments': true,
+          'Smart Capability': true,
+          'Package Type': true
+        },
+        default_values: {},
+        extend_fields: []
+      })
+    } finally {
+      setConfigLoading(false)
     }
   }
 
@@ -202,11 +255,15 @@ export function CategoryFilterAndProjectScope({
       setAppliedBrands([])
       setPendingSegments([])
       setAppliedSegments([])
+      setFilterConfig(null)
       if (!preloadedData) {
         setProjectData(null)
       }
       return
     }
+
+    // 总是加载过滤器配置
+    loadFilterConfig()
 
     // 只在没有预加载数据时才进行数据加载
     if (!preloadedData && !projectData) {
@@ -357,6 +414,28 @@ export function CategoryFilterAndProjectScope({
     return null
   }
 
+  // 如果配置还在加载中，显示加载状态
+  if (configLoading && !filterConfig) {
+    return (
+      <div className="mb-4">
+        <Card className="border-gray-200">
+          <CardHeader className="pb-2">
+            <CardTitle className="text-lg flex items-center gap-2">
+              <Filter className="w-5 h-5" />
+              Loading Filter Configuration...
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="p-4 pt-0">
+            <div className="flex items-center justify-center gap-2">
+              <Loader2 className="w-4 h-4 animate-spin" />
+              <span className="text-gray-500">Loading project filters...</span>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    )
+  }
+
 
 
   return (
@@ -376,12 +455,13 @@ export function CategoryFilterAndProjectScope({
           <div className="space-y-3">
             <div className="flex items-center gap-4 flex-wrap">
               {/* Category Filter */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Amazon Category:</span>
-                <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading}>
-                  <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="All Amazon Categories (No Filter)" />
-                  </SelectTrigger>
+              {filterConfig?.visible_filters?.categories && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">Amazon Category:</span>
+                  <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading || configLoading}>
+                    <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="All Amazon Categories" />
+                    </SelectTrigger>
                   <SelectContent className="max-h-80">
                     <SelectItem value="all">All Amazon Categories (No Filter)</SelectItem>
                     {/* 调试日志 */}
@@ -448,14 +528,16 @@ export function CategoryFilterAndProjectScope({
                   </SelectContent>
                 </Select>
               </div>
+              )}
 
               {/* Brand Filter */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Brand:</span>
-                <Select key={brandSelectKey} onValueChange={handleBrandSelect} disabled={filterLoading}>
-                  <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="All Brands" />
-                  </SelectTrigger>
+              {filterConfig?.visible_filters?.brands && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">Brand:</span>
+                  <Select key={brandSelectKey} onValueChange={handleBrandSelect} disabled={filterLoading || configLoading}>
+                    <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="All Brands" />
+                    </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Brands</SelectItem>
                     {/* 显示从project数据中获取的brands */}
@@ -481,27 +563,31 @@ export function CategoryFilterAndProjectScope({
                   </SelectContent>
                 </Select>
               </div>
+              )}
 
               {/* Time Period Filter */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Time Period:</span>
-                <Select defaultValue="recent-month" disabled>
-                  <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="Select time period" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="recent-month">最近一个月</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
+              {filterConfig?.visible_filters?.["Time Period"] && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">Time Period:</span>
+                  <Select defaultValue="recent-month" disabled>
+                    <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="Since Last Month" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="recent-month">Since Last Month</SelectItem>
+                    </SelectContent>
+                  </Select>
+                </div>
+              )}
 
               {/* Segments Filter */}
-              <div className="flex items-center gap-2">
-                <span className="text-sm text-gray-600">Product Segments:</span>
-                <Select key={segmentSelectKey} onValueChange={handleSegmentSelect} disabled={filterLoading}>
-                  <SelectTrigger className="w-48 h-8">
-                    <SelectValue placeholder="All Segments" />
-                  </SelectTrigger>
+              {filterConfig?.visible_filters?.segments && (
+                <div className="flex items-center gap-2">
+                  <span className="text-sm text-gray-600">Product Segment:</span>
+                  <Select key={segmentSelectKey} onValueChange={handleSegmentSelect} disabled={filterLoading || configLoading}>
+                    <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="All Segments" />
+                    </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Segments</SelectItem>
                     {availableSegments
@@ -529,6 +615,7 @@ export function CategoryFilterAndProjectScope({
                   </SelectContent>
                 </Select>
               </div>
+              )}
 
               {/* Extend Fields Filter */}
               <DynamicExtendFieldsFilter
@@ -537,6 +624,7 @@ export function CategoryFilterAndProjectScope({
                 onFilterChange={setPendingExtendFields}
                 className="flex-wrap"
                 projectData={projectData}
+                filterConfig={filterConfig}
               />
 
               {/* Apply button */}

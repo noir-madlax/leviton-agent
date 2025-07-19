@@ -10,6 +10,17 @@ import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
 
+// 新增：过滤器配置接口
+interface FilterConfig {
+  visible_filters: Record<string, boolean>
+  default_values: Record<string, any>
+  extend_fields: Array<{
+    field_name: string
+    display_name: string
+    field_type: string
+    filter_options: Record<string, any>
+  }>
+}
 
 
 interface UniversalFilterProps {
@@ -57,6 +68,10 @@ export function UniversalFilterComponent({
     segment: 0
   })
 
+  // 新增：过滤器配置状态
+  const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
+  const [configLoading, setConfigLoading] = useState(false)
+
   // 如果使用缓存数据，则从缓存获取筛选器选项
   const { filterOptions: cachedOptions, isLoading: cacheLoading } = useFilterCache(projectId)
   
@@ -64,7 +79,44 @@ export function UniversalFilterComponent({
   const finalAvailableOptions = useCachedData ? cachedOptions : availableOptions
   const finalLoading = useCachedData ? cacheLoading : loading
 
+  // 新增：加载过滤器配置
+  useEffect(() => {
+    const loadFilterConfig = async () => {
+      if (!projectId) return
 
+      setConfigLoading(true)
+      try {
+        const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+        const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-config`)
+        
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`)
+        }
+        
+        const result = await response.json()
+        setFilterConfig(result.config)
+        
+        console.log('🔧 [UNIVERSAL-FILTER] Loaded filter configuration:', result.config)
+      } catch (error) {
+        console.error('Error loading filter config:', error)
+        // 如果加载失败，使用默认配置（显示所有过滤器）
+        setFilterConfig({
+          visible_filters: {
+            'categories': true,
+            'brands': true,
+            'Time Period': true,
+            'segments': true
+          },
+          default_values: {},
+          extend_fields: []
+        })
+      } finally {
+        setConfigLoading(false)
+      }
+    }
+
+    loadFilterConfig()
+  }, [projectId])
 
   // 同步外部传入的筛选器变化
   useEffect(() => {
@@ -95,19 +147,18 @@ export function UniversalFilterComponent({
   const renderFilterBadge = (filterType: keyof ProjectFilters, value: string, onRemove: () => void) => {
     const fromProject = isFromProject(filterType, value)
     
-    // 添加对应的图标前缀
+    // 添加对应的图标前缀和筛选器类型标识
     const getPrefix = (filterType: keyof ProjectFilters) => {
       switch (filterType) {
-        case 'categories': return '📁'
-        case 'brands': return '🏢'  // 改：packaging_types -> brands，使用品牌图标
-        case 'segments': return '🎯'
+        case 'categories': return '📁 Amazon Category:'
+        case 'brands': return '🏢 Brand:'  
+        case 'segments': return '🎯 Product Segment:'
         default: return ''
       }
     }
     
     // 获取显示标签
     const getDisplayValue = (filterType: keyof ProjectFilters, value: string) => {
-      // 移除包装类型的特殊处理，brand直接显示原值
       return value
     }
     
@@ -261,6 +312,18 @@ export function UniversalFilterComponent({
   // 检查是否有活动的筛选器
   const hasActiveFilters = pendingFilters.categories.length > 0 || pendingFilters.brands.length > 0 || pendingFilters.segments.length > 0
 
+  // 如果配置还在加载中，显示加载状态
+  if (configLoading && !filterConfig) {
+    return (
+      <div className="p-4 text-center">
+        <div className="flex items-center justify-center gap-2">
+          <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+          <span className="text-gray-500">Loading filter configuration...</span>
+        </div>
+      </div>
+    )
+  }
+
   // 如果没有筛选器选项，显示加载状态
   if (!finalAvailableOptions) {
     return (
@@ -358,14 +421,15 @@ export function UniversalFilterComponent({
         <div className="flex items-center gap-4 flex-wrap">
       
           {/* Category Filter */}
-          <div className="flex items-center gap-2">
-      
-            <span className="text-sm text-gray-600">Amazon Category:</span>
-            <Select 
-              key={selectKeys.category}
-              onValueChange={handleCategorySelect}
-              disabled={finalLoading}
-            >
+          {filterConfig?.visible_filters?.categories && (
+            <div className="flex items-center gap-2">
+        
+              <span className="text-sm text-gray-600">Amazon Category:</span>
+              <Select 
+                key={selectKeys.category}
+                onValueChange={handleCategorySelect}
+                disabled={finalLoading || configLoading}
+              >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder="All Amazon Categories" />
               </SelectTrigger>
@@ -446,15 +510,17 @@ export function UniversalFilterComponent({
               </SelectContent>
             </Select>
           </div>
+          )}
 
           {/* Brand Filter */}
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Brand:</span>  {/* 改：Packaging -> Brand */}
-            <Select 
-              key={selectKeys.brand}
-              onValueChange={handleBrandSelect}
-              disabled={finalLoading}
-            >
+          {filterConfig?.visible_filters?.brands && (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">Brand:</span>  {/* 改：Packaging -> Brand */}
+              <Select 
+                key={selectKeys.brand}
+                onValueChange={handleBrandSelect}
+                disabled={finalLoading || configLoading}
+              >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder="All Brands" />  {/* 改：All Packaging Types -> All Brands */}
               </SelectTrigger>
@@ -502,28 +568,32 @@ export function UniversalFilterComponent({
               </SelectContent>
             </Select>
           </div>
+          )}
 
           {/* Time Period Filter */}
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Time Period:</span>
-            <Select defaultValue="recent-month" disabled>
-              <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select time period" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="recent-month">Since Last Month</SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
+          {filterConfig?.visible_filters?.["Time Period"] && (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">Time Period:</span>
+              <Select defaultValue="recent-month" disabled>
+                <SelectTrigger className="w-48 h-8">
+                  <SelectValue placeholder="Since Last Month" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectItem value="recent-month">Since Last Month</SelectItem>
+                </SelectContent>
+              </Select>
+            </div>
+          )}
 
           {/* Segments Filter */}
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-gray-600">Product Segment:</span>
-            <Select 
-              key={selectKeys.segment}
-              onValueChange={handleSegmentSelect}
-              disabled={finalLoading}
-            >
+          {filterConfig?.visible_filters?.segments && (
+            <div className="flex items-center gap-2">
+              <span className="text-sm text-gray-600">Product Segment:</span>
+              <Select 
+                key={selectKeys.segment}
+                onValueChange={handleSegmentSelect}
+                disabled={finalLoading || configLoading}
+              >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder="All Segments" />
               </SelectTrigger>
@@ -554,6 +624,7 @@ export function UniversalFilterComponent({
               </SelectContent>
             </Select>
           </div>
+          )}
         </div>
 
         {/* Extend Fields Filter */}
@@ -571,6 +642,7 @@ export function UniversalFilterComponent({
               }>>
             }
           } | null}
+          filterConfig={filterConfig}
         />
 
         {/* 已选择的筛选器显示 - 横向排列 */}
