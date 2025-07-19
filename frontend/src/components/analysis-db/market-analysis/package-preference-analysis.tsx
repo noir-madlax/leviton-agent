@@ -275,6 +275,33 @@ export function PackagePreferenceAnalysis({
               )
             };
 
+            // 为每个category创建专用的CustomTooltip函数
+            const CategoryCustomTooltip = ({ active, payload }: { 
+              active?: boolean; 
+              payload?: Array<{
+                payload: {
+                  name: string;
+                  value: number;
+                  percentage: number;
+                  revenue: number;
+                  count: number;
+                }
+              }> 
+            }) => {
+              if (active && payload && payload.length) {
+                const data = payload[0].payload
+                return (
+                  <div className="bg-white p-3 border border-gray-300 rounded shadow-lg">
+                    <p className="font-medium">{`Package Type: ${data.name}`}</p>
+                    <p className="text-blue-600">{`Revenue: $${data.revenue.toLocaleString()}`}</p>
+                    <p className="text-green-600">{`Product Count: ${data.count}`}</p>
+                    <p className="text-gray-600">{`Percentage: ${data.percentage.toFixed(1)}%`}</p>
+                  </div>
+                )
+              }
+              return null
+            };
+
             return (
               <div key={category} className="bg-gray-50 p-0 pb-0 rounded-lg mb-[-10px]">
                 <h4 className="text-lg font-medium mb-0 text-center">
@@ -297,7 +324,7 @@ export function PackagePreferenceAnalysis({
                           <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
                         ))}
                       </Pie>
-                      <Tooltip content={<CustomTooltip />} />
+                      <Tooltip content={<CategoryCustomTooltip />} />
                       <Legend 
                         verticalAlign="bottom" 
                         height={100}
