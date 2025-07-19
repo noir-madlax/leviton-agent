@@ -410,7 +410,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                   <h4 className="text-lg font-medium mb-0 text-center">
                     📊 {categoryData.category} - Market Share by Brand
                   </h4>
-                  <div className="h-[500px]">
+                  <div className="h-[600px]">
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
                         <Pie
@@ -430,7 +430,11 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                         <Tooltip content={<CustomTooltip />} />
                         <Legend 
                           verticalAlign="bottom" 
-                          height={100}
+                          height={250}
+                          wrapperStyle={{
+                            paddingTop: 20,
+                            maxHeight: 200,
+                          }}
                           formatter={(value) => {
                             // value现在是brand名称（因为我们设置了name属性）
                             const item = categoryData.brandShares.find(d => d.brand === value)

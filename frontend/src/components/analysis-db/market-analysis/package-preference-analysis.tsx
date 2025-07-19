@@ -244,6 +244,37 @@ export function PackagePreferenceAnalysis({
 
             if (categoryChartData.length === 0) return null;
 
+            // 为每个category创建专用的renderCustomizedLabel函数
+            const renderCategoryCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, name }: {
+              cx: number; cy: number; midAngle: number; innerRadius: number; outerRadius: number; name: string;
+            }) => {
+              const RADIAN = Math.PI / 180
+              const radius = innerRadius + (outerRadius - innerRadius) * 0.5
+              const x = cx + radius * Math.cos(-midAngle * RADIAN)
+              const y = cy + radius * Math.sin(-midAngle * RADIAN)
+
+              // 使用正确的categoryChartData来查找百分比
+              const item = categoryChartData.find(d => d.name === name)
+              const correctPercentage = item ? item.percentage : 0
+
+              // Only show label if percentage is significant enough
+              if (correctPercentage < 5) return null
+
+              return (
+                <text 
+                  x={x} 
+                  y={y} 
+                  fill="white" 
+                  textAnchor={x > cx ? 'start' : 'end'} 
+                  dominantBaseline="central"
+                  fontSize="12"
+                  fontWeight="bold"
+                >
+                  {`${correctPercentage.toFixed(1)}%`}
+                </text>
+              )
+            };
+
             return (
               <div key={category} className="bg-gray-50 p-0 pb-0 rounded-lg mb-[-10px]">
                 <h4 className="text-lg font-medium mb-0 text-center">
@@ -257,7 +288,7 @@ export function PackagePreferenceAnalysis({
                         cx="50%"
                         cy="50%"
                         labelLine={false}
-                        label={renderCustomizedLabel}
+                        label={renderCategoryCustomizedLabel}
                         outerRadius={160}
                         fill="#8884d8"
                         dataKey="value"

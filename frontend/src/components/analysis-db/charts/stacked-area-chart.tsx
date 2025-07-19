@@ -32,8 +32,12 @@ export function StackedAreaChart({
   onAreaClick,
 }: StackedAreaChartProps) {
   
-  // 生成颜色数组
-  const chartColors = colors || brands.map((_, index) => getChartColor(index))
+  // 生成颜色数组（灰色遮罩用于假数据）
+  const chartColors = colors || brands.map((_, index) => {
+    const originalColor = getChartColor(index)
+    // 添加半透明灰色遮罩，使颜色变淡
+    return `${originalColor}80` // 添加80的透明度（50%透明）
+  })
 
   // 格式化数值
   const formatValue = (value: number) => {
@@ -100,17 +104,21 @@ export function StackedAreaChart({
   }
 
   return (
-    <ResponsiveContainer width="100%" height="100%">
-      <AreaChart
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 20,
-        }}
-        onClick={handleAreaClick}
-      >
+    <div className="relative">
+      {/* 假数据遮罩层 */}
+      <div className="absolute inset-0 bg-gray-500 bg-opacity-20 z-10 rounded-lg pointer-events-none" />
+      
+      <ResponsiveContainer width="100%" height="100%">
+        <AreaChart
+          data={data}
+          margin={{
+            top: 20,
+            right: 30,
+            left: 20,
+            bottom: 20,
+          }}
+          onClick={handleAreaClick}
+        >
         <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
         <XAxis
           dataKey="month"
@@ -154,5 +162,6 @@ export function StackedAreaChart({
         ))}
       </AreaChart>
     </ResponsiveContainer>
+    </div>
   )
 } 
