@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import './styles.css'
 import { ArrowLeft, Filter, MessageSquare, ChevronRight, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
 import Link from 'next/link'
 import { ChartContainer } from './chart/chart-container'
 import { ChatWithNavigation } from './chat-with-navigation'
@@ -177,6 +178,12 @@ export function IntegratedLayout({
     return <Filter className="h-3.5 w-3.5" />
   }
 
+  // 计算活跃筛选器数量
+  const activeFiltersCount = filters.categories.length + 
+                           filters.brands.length + 
+                           filters.segments.length +
+                           Object.keys(filters.extend_fields).length;
+
   return (
     <div className="integrated-dashboard h-screen bg-gray-50/50 flex flex-col">
       {/* Header */}
@@ -206,6 +213,12 @@ export function IntegratedLayout({
                     {getFilterButtonIcon()}
                     {getFilterButtonText()}
                   </button>
+                )}
+                {/* Filter count badge */}
+                {activeFiltersCount > 0 && (
+                  <Badge variant="secondary" className="text-xs">
+                    {activeFiltersCount} filter{activeFiltersCount > 1 ? 's' : ''} applied
+                  </Badge>
                 )}
               </div>
             </div>
