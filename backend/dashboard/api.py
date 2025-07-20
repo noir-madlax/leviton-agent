@@ -863,4 +863,92 @@ async def get_project_filter_config(project_id: str):
                 "extend_fields": []
             },
             "project_id": project_id
+        }
+
+
+@router.get("/projects/{project_id}/charts/{chart_type}/filter-config")
+async def get_chart_filter_config(project_id: str, chart_type: str):
+    """获取特定图表的筛选器配置
+    
+    从 project_filter_defaults 表中获取 level='chart' 且 chart_type 匹配的筛选器配置。
+    
+    Args:
+        project_id: 项目ID
+        chart_type: 图表类型，如 'market-share-analysis', 'brand-analysis' 等
+    
+    Returns:
+        图表专属的筛选器配置，只包含该图表需要显示的筛选器
+    """
+    try:
+        supabase = get_supabase_client()
+        
+        # 查询该chart的筛选器配置
+        chart_filters_response = supabase.table('project_filter_defaults').select('*').eq(
+            'project_id', project_id
+        ).eq('level', 'chart').eq('chart_name', chart_type).execute()
+        
+        # 构建配置对象
+        config = {
+            "visible_filters": {},
+            "default_values": {},
+            "extend_fields": [],
+            "chart_type": chart_type
+        }
+        
+        # 收集该chart需要的extend字段名称
+        required_extend_fields = set()
+        
+        # 处理chart级筛选器配置
+        for record in chart_filters_response.data:
+            filter_name = record['filter_name']
+            filter_values = record['filter_values']
+            
+            # 标记为可见
+            config["visible_filters"][filter_name] = True
+            
+            # 设置默认值
+            if filter_values and len(filter_values) > 0:
+                if filter_name == 'extend_fields':
+                    # extend_fields是对象格式，解析其中的字段名
+                    config["default_values"][filter_name] = filter_values
+                    # 从filter_values中提取需要的字段名
+                    if isinstance(filter_values, dict):
+                        required_extend_fields.update(filter_values.keys())
+                else:
+                    # 其他是数组格式
+                    config["default_values"][filter_name] = filter_values if isinstance(filter_values, list) else [filter_values]
+            else:
+                config["default_values"][filter_name] = {} if filter_name == 'extend_fields' else []
+        
+        # 查询扩展字段配置，并根据required_extend_fields过滤
+        if required_extend_fields:
+            extend_fields_response = supabase.table('project_extend_fields').select('*').eq(
+                'project_id', project_id
+            ).eq('is_active', True).in_('field_name', list(required_extend_fields)).order('sort_order').execute()
+            
+            config["extend_fields"] = extend_fields_response.data or []
+        else:
+            # 如果没有extend_fields配置，返回空数组
+            config["extend_fields"] = []
+        
+        logger.info(f"Retrieved chart filter config for project {project_id}, chart {chart_type}: visible={list(config['visible_filters'].keys())}")
+        
+        return {
+            "config": config,
+            "project_id": project_id,
+            "chart_type": chart_type
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting chart filter config for project {project_id}, chart {chart_type}: {e}", exc_info=True)
+        # 返回空配置保证系统可用性
+        return {
+            "config": {
+                "visible_filters": {},
+                "default_values": {},
+                "extend_fields": [],
+                "chart_type": chart_type
+            },
+            "project_id": project_id,
+            "chart_type": chart_type
         } 

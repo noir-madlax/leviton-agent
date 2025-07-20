@@ -407,7 +407,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         </h2>
         
         <ChartWithFilters
-          chartId="review-pain-points"
+          chartId="customer-pain-points"
           chartType="bar"
           projectId={projectId || ''}
           title="Top 10 Customer Pain Points by Category"
@@ -434,7 +434,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         
         
         <ChartWithFilters
-          chartId="review-positive-feedback"
+          chartId="customer-delights"
           chartType="bar"
           projectId={projectId || ''}
           title="Top 10 Customer Delights by Category"

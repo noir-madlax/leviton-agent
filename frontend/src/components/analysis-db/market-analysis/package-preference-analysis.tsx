@@ -211,14 +211,14 @@ export function PackagePreferenceAnalysis({
             </div>
             
             {metricType === "revenue" && (
-              <p className="text-sm text-blue-700 mt-1">
-                <strong>Total addressable market (TAM): </strong> ${totalValue.toLocaleString()} with {totalProducts} products 
-                
-                <p className="text-sm text-blue-700 mt-1">
-                Approximated by the total Revenue of all products within this category in the current project within the selected time period
+              <div className="text-sm text-blue-700 mt-1">
+                <p>
+                  <strong>Total addressable market (TAM): </strong> ${totalValue.toLocaleString()} with {totalProducts} products 
                 </p>
-                
-              </p>
+                <p className="mt-1">
+                  Approximated by the total Revenue of all products within this category in the current project within the selected time period
+                </p>
+              </div>
             )}
           </ChartInteractionSummary>
           

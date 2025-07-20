@@ -6,12 +6,16 @@ import { Button } from "@/components/ui/button"
 import { ExternalLink, Filter } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
-import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
+// import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
 import { Tooltip } from "@/components/ui/tooltip"
 import { databaseService } from "@/components/analysis-db/data/database-service"
+import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
+import { ProjectFilters } from "@/components/analysis-db/types/filters"
+
 interface CompetitorAnalysisProps {
   projectId: string | null;
+  initialFilters?: ProjectFilters;
   data: {
     competitorAnalysis: {
       targetProducts: string[]
@@ -52,7 +56,7 @@ interface CompetitorAnalysisProps {
   }
 }
 
-export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps) {
+export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
   const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -393,51 +397,61 @@ export function CompetitorAnalysis({ projectId, data }: CompetitorAnalysisProps)
 
       {/* Competitor Delights and Pain Points Matrix */}
       <section data-chart-id="product-comparison-dimensions">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-          🏆 Product Comparison by Key Dimensions
-        </h2>
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
-          with the satisfaction rate (%) below. Categories are ranked by frequency across all products. 
-          <strong>Click any cell to view the actual reviews.</strong> 
-          Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
-          <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
-          <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
-          <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
-          <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
-        </div>
+        <ChartWithFilters
+          chartId="product-comparison-dimensions"
+          projectId={projectId || ''}
+          title="🏆 Product Comparison by Key Dimensions"
+          projectFilters={initialFilters}
+          chartType="matrix"
+        >
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+            <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
+            with the satisfaction rate (%) below. Categories are ranked by frequency across all products. 
+            <strong>Click any cell to view the actual reviews.</strong> 
+            Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
+            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
+            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
+            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
+            <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
+          </div>
 
-        <CompetitorMatrix 
-          data={realMatrixData}
-          targetProducts={competitorData.targetProducts}
-          allReviewData={data.allReviewData}
-          asinToProductNameMap={asinToProductNameMap}
-          asinToFullProductNameMap={asinToFullProductNameMap}
-        />
+          <CompetitorMatrix 
+            data={realMatrixData}
+            targetProducts={competitorData.targetProducts}
+            allReviewData={data.allReviewData}
+            asinToProductNameMap={asinToProductNameMap}
+            asinToFullProductNameMap={asinToFullProductNameMap}
+          />
+        </ChartWithFilters>
       </section>
 
       {/* Use Case Matrix */}
       <section data-chart-id="product-comparison-use-cases">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-          🎯 Product Comparison by Main Use Cases
-        </h2>
-        <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-          <strong>How to read this table:</strong> Number refers to the count of reviews; Percentage: refers to the % of positive reviews)
-          <strong>Click any cell to view the actual reviews.</strong> 
-          Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
-          <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
-          <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
-          <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
-          <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
-        </div>
+        <ChartWithFilters
+          chartId="product-comparison-use-cases"
+          projectId={projectId || ''}
+          title="🎯 Product Comparison by Main Use Cases"
+          projectFilters={initialFilters}
+          chartType="matrix"
+        >
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
+            <strong>How to read this table:</strong> Number refers to the count of reviews; Percentage: refers to the % of positive reviews)
+            <strong>Click any cell to view the actual reviews.</strong> 
+            Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
+            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
+            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
+            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
+            <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
+          </div>
 
-        <MissedOpportunitiesMatrix 
-          data={realUseCaseData}
-          targetProducts={useCaseData.targetProducts}
-          allReviewData={data.allReviewData}
-          asinToProductNameMap={asinToProductNameMap}
-          asinToFullProductNameMap={asinToFullProductNameMap}
-        />
+          <MissedOpportunitiesMatrix 
+            data={realUseCaseData}
+            targetProducts={useCaseData.targetProducts}
+            allReviewData={data.allReviewData}
+            asinToProductNameMap={asinToProductNameMap}
+            asinToFullProductNameMap={asinToFullProductNameMap}
+          />
+        </ChartWithFilters>
       </section>
 
       {/* Customer Sentiment Analysis 

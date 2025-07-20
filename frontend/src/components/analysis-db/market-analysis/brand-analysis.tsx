@@ -374,7 +374,6 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
         <div data-chart-id="market-share-analysis">
         <ChartWithFilters
           chartId="market-share-analysis"
-          chartType="pie"
           projectId={projectId || ''}
           title="Total addressable market (TAM) and Market Share by brands"
           projectFilters={initialFilters}
@@ -465,7 +464,6 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       <div data-chart-id="brand-analysis">
       <ChartWithFilters
         chartId="brand-analysis"
-        chartType="bar"
         projectId={projectId || ''}
         title="Top 10 Brand Revenue by Category"
         projectFilters={initialFilters}

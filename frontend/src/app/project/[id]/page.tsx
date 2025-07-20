@@ -8,7 +8,7 @@ import { ChartProvider } from "@/contexts/chart-context"
 import { ProtectedRoute } from "@/components/auth/protected-route"
 import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
 import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
-import { preloadFilterOptions } from "@/components/analysis-db/hooks/use-filter-cache"
+import { preloadUnifiedFilterData } from "@/components/analysis-db/hooks/use-unified-filter-data"
 
 // 使用现有的Project接口
 interface Project {
@@ -115,7 +115,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         const [projectData] = await Promise.all([
           databaseService.getProject(projectId),
           loadProjectOverview(defaultFilters), // 使用配置好的筛选器
-          preloadFilterOptions(projectId)
+          preloadUnifiedFilterData(projectId)
         ])
 
         setProject(projectData)

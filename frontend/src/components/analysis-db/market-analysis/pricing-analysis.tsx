@@ -325,7 +325,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       {/* Price vs Revenue Distribution of Top Selling 20 Products */}
       <div className="mb-8" data-chart-id="price-vs-revenue">
         <ChartWithFilters
-          chartId="pricing-scatter"
+          chartId="price-vs-revenue"
           chartType="scatter"
           projectId={projectId || ''}
           title="Price vs Revenue Distribution of Top Selling 20 Products"
@@ -397,7 +397,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       {/* All Segments Price Distribution Comparison */}
       <div className="mb-8" data-chart-id="price-distribution-by-type">
         <ChartWithFilters
-          chartId="pricing-violin"
+          chartId="price-distribution-by-type"
           chartType="violin"
           projectId={projectId || ''}
           title="All Segments Price Distribution Comparison"
@@ -425,7 +425,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       {/* Brand Price Distribution */}
       <div className="mb-8" data-chart-id="price-distribution-by-brands">
         <ChartWithFilters
-          chartId="pricing-brand"
+          chartId="price-distribution-by-brands"
           chartType="violin"
           projectId={projectId || ''}
           title="Brand Price Distribution"

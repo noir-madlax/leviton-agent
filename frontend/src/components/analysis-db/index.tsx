@@ -1102,7 +1102,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
 
                   <TabsContent value="competitor-analysis">
                     {data.competitorAnalysis && data.allReviewData ? (
-                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} />
+                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} initialFilters={appliedFilters} />
                     ) : (loadingStates.competitorAnalysis || loadingStates.allReviewData) ? (
                       <div className="flex items-center justify-center py-8">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

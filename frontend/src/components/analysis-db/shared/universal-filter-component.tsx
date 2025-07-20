@@ -9,6 +9,7 @@ import { Filter, RotateCcw, X, Database, Users, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
+import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 
 // 新增：过滤器配置接口
 interface FilterConfig {
@@ -72,12 +73,17 @@ export function UniversalFilterComponent({
   const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
   const [configLoading, setConfigLoading] = useState(false)
 
-  // 如果使用缓存数据，则从缓存获取筛选器选项
+  // 使用统一数据源，优先使用统一filter数据，fallback到原有逻辑
+  const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
   const { filterOptions: cachedOptions, isLoading: cacheLoading } = useFilterCache(projectId)
   
-  // 确定最终使用的筛选器选项
-  const finalAvailableOptions = useCachedData ? cachedOptions : availableOptions
-  const finalLoading = useCachedData ? cacheLoading : loading
+  // 确定最终使用的筛选器选项：优先统一数据源，fallback到原有逻辑
+  const finalAvailableOptions = useCachedData 
+    ? (unifiedFilterData || cachedOptions || availableOptions)
+    : availableOptions
+  const finalLoading = useCachedData 
+    ? (unifiedLoading || cacheLoading) 
+    : loading
 
   // 新增：加载过滤器配置
   useEffect(() => {
@@ -526,16 +532,24 @@ export function UniversalFilterComponent({
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="all">All Brands</SelectItem>  {/* 改：All Packaging Types -> All Brands */}
-                {/* 显示实际数据中的品牌 */}
-                {projectData?.distributions?.brands && projectData.distributions.brands.length > 0 ? (
-                  projectData.distributions.brands
-                    .map((item) => {
-                      const isSelected = pendingFilters.brands.includes(item.name)
+                {/* 优先使用统一数据源的brands，fallback到projectData */}
+                {finalAvailableOptions?.brands && finalAvailableOptions.brands.length > 0 ? (
+                  finalAvailableOptions.brands
+                    .map((brandName) => {
+                      const isSelected = pendingFilters.brands.includes(brandName)
+                      // 尝试从projectData获取计数信息（如果有的话）
+                      const distributionData = projectData?.distributions?.brands?.find(
+                        (item: any) => item.name === brandName
+                      )
+                      const displayLabel = distributionData 
+                        ? `${brandName} (${distributionData.count} products)`
+                        : brandName
+                      
                       return (
-                        <SelectItem key={item.name} value={item.name} disabled={isSelected}>
+                        <SelectItem key={brandName} value={brandName} disabled={isSelected}>
                           <span className="flex items-center gap-2">
                             {isSelected && <span className="text-green-600">✅</span>}
-                            {item.name} <span className="text-sm text-gray-500">({item.count} products)</span>
+                            {displayLabel}
                           </span>
                         </SelectItem>
                       )
