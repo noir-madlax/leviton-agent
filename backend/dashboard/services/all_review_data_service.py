@@ -172,7 +172,14 @@ class AllReviewDataService(BaseDashboardService):
                     batch_ids = review_ids[i:i + batch_size]
                     # Convert text review_ids to integers for product_reviews table query
                     try:
-                        int_batch_ids = [int(rid) for rid in batch_ids if rid and rid.isdigit()]
+                        int_batch_ids = []
+                        for rid in batch_ids:
+                            try:
+                                int_batch_ids.append(int(rid))
+                            except (ValueError, TypeError):
+                                # Log the problematic ID and skip it
+                                logger.warning(f"Skipping non-integer review_id: {rid}")
+                                continue
                         if int_batch_ids:
                             logger.info(f"Processing batch with {len(int_batch_ids)} review_ids")
                             

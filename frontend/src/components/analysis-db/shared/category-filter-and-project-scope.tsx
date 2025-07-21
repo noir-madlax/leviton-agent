@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Filter, RotateCcw, X, Database, Users, MessageSquare, BarChart3, Loader2 } from "lucide-react"
 import { databaseService } from '@/components/analysis-db/data/database-service'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
@@ -138,7 +139,6 @@ export function CategoryFilterAndProjectScope({
   const [applyingFilters, setApplyingFilters] = useState(false)
 
   // 添加Select状态控制
-  const [categorySelectKey, setCategorySelectKey] = useState(0)
   const [brandSelectKey, setBrandSelectKey] = useState(0)  // 改：packaging -> brand
   const [segmentSelectKey, setSegmentSelectKey] = useState(0)
 
@@ -359,8 +359,16 @@ export function CategoryFilterAndProjectScope({
     } else if (!pendingCategories.includes(category)) {
       setPendingCategories(prev => [...prev, category])
     }
-    // 重置Select状态
-    setCategorySelectKey(prev => prev + 1)
+  }
+
+  const handleCategoryToggle = (category: string, checked: boolean) => {
+    if (checked) {
+      if (!pendingCategories.includes(category)) {
+        setPendingCategories(prev => [...prev, category])
+      }
+    } else {
+      setPendingCategories(prev => prev.filter(c => c !== category))
+    }
   }
 
   const handleCategoryRemove = (category: string) => {
@@ -482,7 +490,6 @@ export function CategoryFilterAndProjectScope({
     setAppliedTimePeriod("30 days")
     
     // 重置所有Select组件状态
-    setCategorySelectKey(prev => prev + 1)
     setBrandSelectKey(prev => prev + 1)
     setSegmentSelectKey(prev => prev + 1)
     
@@ -588,79 +595,52 @@ export function CategoryFilterAndProjectScope({
           {/* Category Filters Section */}
           <div className="space-y-3">
             <div className="flex items-center gap-4 flex-wrap">
-              {/* Category Filter */}
+                            {/* Category Filter */}
               {filterConfig?.visible_filters?.categories && (
-                <div className="flex items-center gap-2">
+                <div className="flex flex-col gap-2">
                   <span className="text-sm text-gray-600">Amazon Category:</span>
-                  <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading || configLoading}>
-                    <SelectTrigger className="w-48 h-8">
-                      <SelectValue placeholder="Select" />
-                    </SelectTrigger>
-                  <SelectContent className="max-h-80">
-                    {/* 调试日志 */}
-                    {(() => {
-                      console.log('🔍 [CATEGORY-FILTER-SCOPE] Available category options:', {
-                        flat_categories: availableCategories.flat_categories?.length || 0,
-                        hierarchical_categories: availableCategories.hierarchical_categories?.length || 0,
-                        hierarchical_with_children: availableCategories.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
-                        project_id: projectId
-                      })
-                      return null
-                    })()}
+                  <div className="flex items-center gap-4 flex-wrap">
                     {availableCategories.hierarchical_categories && 
                      availableCategories.hierarchical_categories.length > 0 && 
                      availableCategories.hierarchical_categories.some(group => group.children.length > 0) ? (
-                      // 显示层次结构
-                      availableCategories.hierarchical_categories.map((parentGroup) => (
-                        <div key={parentGroup.parent_category} className="mb-2">
-                          {/* 父类别标题 */}
-                          <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
-                            📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
-                          </div>
-                          
-                          {/* 子类别选项 */}
-                          {parentGroup.children
-                            .map((child) => {
-                              const isSelected = pendingCategories.includes(child.category)
-                              return (
-                                <SelectItem 
-                                  key={child.category} 
-                                  value={child.category}
-                                  className="pl-6 py-2"
-                                  disabled={isSelected}
-                                >
-                                  <div className="flex justify-between items-center w-full">
-                                    <span className="flex items-center gap-2">
-                                      {isSelected && <span className="text-green-600">✅</span>}
-                                      🏷️ {child.category}
-                                    </span>
-                                    <span className="text-sm text-gray-500">
-                                      {child.count} ({child.percentage}%)
-                                    </span>
-                                  </div>
-                                </SelectItem>
-                              )
-                            })}
-                        </div>
-                      ))
-                    ) : (
-                      // Fallback: 显示扁平分类结构
-                      availableCategories.flat_categories
-                        .map(category => {
-                          const isSelected = pendingCategories.includes(category)
+                      // 显示层次结构的复选框
+                      availableCategories.hierarchical_categories.map((parentGroup) =>
+                        parentGroup.children.map((child) => {
+                          const isSelected = pendingCategories.includes(child.category)
                           return (
-                            <SelectItem key={category} value={category} disabled={isSelected}>
-                              <span className="flex items-center gap-2">
-                                {isSelected && <span className="text-green-600">✅</span>}
-                                {category}
-                              </span>
-                            </SelectItem>
+                            <div key={child.category} className="flex items-center gap-2">
+                              <Checkbox
+                                checked={isSelected}
+                                onCheckedChange={(checked) => handleCategoryToggle(child.category, checked as boolean)}
+                                disabled={filterLoading || configLoading}
+                              />
+                              <label className="text-sm cursor-pointer">
+                                {child.category} ({child.count} - {child.percentage}%)
+                              </label>
+                            </div>
                           )
                         })
+                      ).flat()
+                    ) : (
+                      // Fallback: 显示扁平分类结构的复选框
+                      availableCategories.flat_categories.map(category => {
+                        const isSelected = pendingCategories.includes(category)
+                        return (
+                          <div key={category} className="flex items-center gap-2">
+                            <Checkbox
+                              checked={isSelected}
+                              onCheckedChange={(checked) => handleCategoryToggle(category, checked as boolean)}
+                              disabled={filterLoading || configLoading}
+                            />
+                            <label className="text-sm cursor-pointer">
+                              {category}
+                            </label>
+                          </div>
+                        )
+                      })
                     )}
-                  </SelectContent>
-                </Select>
-              </div>
+                  </div>
+                </div>
               )}
 
               {/* Brand Filter */}
@@ -860,7 +840,7 @@ export function CategoryFilterAndProjectScope({
                         hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
                       }`}
                     >
-                      🏷️ {brand}
+                       {brand}
                      
                     </Badge>
                   ))}

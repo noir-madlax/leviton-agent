@@ -416,7 +416,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+           Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -446,7 +446,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+            Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -467,7 +467,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+        Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
           <UseCaseSentimentMatrix 

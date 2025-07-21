@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
+import { Checkbox } from '@/components/ui/checkbox'
 import { ExtendFieldDefinition } from '../types/filters'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 
@@ -134,86 +135,71 @@ export function DynamicExtendFieldsFilter({
 
     switch (field.field_type) {
       case 'select':
-        // Select类型支持多选（和Amazon Category一样的逻辑）
+        // Select类型改为复选框形式（与boolean_select保持一致）
         const selectCurrentValue = Array.isArray(currentValue) ? currentValue : (
           typeof currentValue === 'string' ? [currentValue] :
           currentValue ? [String(currentValue)] :
           []
         )
         
+        // 获取可用选项列表，优先使用统一数据源
+        const selectStableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
+        let availableSelectOptions = selectStableOptions.map(optionName => {
+          // 尝试从projectData获取count信息（如果可用）
+          const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
+            (item: any) => item.name === optionName
+          )
+          
+          return {
+            name: optionName,
+            count: countInfo?.count || 0
+          }
+        })
+        
+        // 如果统一数据源没有数据，fallback到定义中的选项
+        if (availableSelectOptions.length === 0 && field.filter_options.options) {
+          availableSelectOptions = Object.keys(field.filter_options.options).map(option => ({
+            name: option,
+            count: 0
+          }))
+        }
+        
+        // 最后fallback到projectData
+        if (availableSelectOptions.length === 0) {
+          availableSelectOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
+        }
+        
         return (
-          <div key={field.field_name} className="flex items-center gap-2">
-            <label className="text-sm text-gray-600 min-w-fit">
+          <div key={field.field_name} className="flex flex-col gap-2">
+            <label className="text-sm text-gray-600">
               {field.display_name}:
             </label>
-            <Select
-              key={selectKeys[field.field_name] || 0}
-              value=""
-              onValueChange={(value) => {
-                // 实现和Amazon Category一样的多选逻辑
-                let newValue: string[]
-                if (!selectCurrentValue.includes(value)) {
-                  newValue = [...selectCurrentValue, value]
-                  console.log(`✅ [${field.field_name.toUpperCase()}] Multi-select working! Added "${value}" to array:`, newValue)
-                } else {
-                  return // 如果已经选中了，不做任何操作
-                }
-                
-                handleFieldChange(field.field_name, newValue.length > 0 ? newValue : undefined)
-              }}
-            >
-              <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                {/* 优先使用统一数据源中的原始选项（不受当前筛选条件影响），并尝试获取count信息 */}
-                {(() => {
-                  // 获取稳定的选项列表（从统一数据源）
-                  const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
-                  
-                  if (stableOptions.length > 0) {
-                    return stableOptions.map((optionName) => {
-                      const isSelected = selectCurrentValue.includes(optionName)
-                      
-                      // 尝试从projectData获取count信息（如果可用）
-                      const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
-                        (item: any) => item.name === optionName
-                      )
-                      
-                      const displayLabel = countInfo 
-                        ? `${optionName}`
-                        : optionName
-                      
-                      return (
-                        <SelectItem key={optionName} value={optionName} disabled={isSelected}>
-                          <div className="flex items-center gap-2">
-                            {isSelected && <span className="text-green-600">✅</span>}
-                            {displayLabel}
-                          </div>
-                        </SelectItem>
-                      )
-                    })
-                  }
-                  
-                  // Fallback: 如果统一数据源没有数据，使用定义中的选项
-                  if (field.filter_options.options) {
-                    return Object.keys(field.filter_options.options).map((option) => {
-                      const isSelected = selectCurrentValue.includes(option)
-                      return (
-                        <SelectItem key={option} value={option} disabled={isSelected}>
-                          <div className="flex items-center gap-2">
-                            {isSelected && <span className="text-green-600">✅</span>}
-                            {option}
-                          </div>
-                        </SelectItem>
-                      )
-                    })
-                  }
-                  
-                  return null
-                })()}
-              </SelectContent>
-            </Select>
+            <div className="flex items-center gap-4 flex-wrap">
+              {availableSelectOptions.map((item) => {
+                const isSelected = selectCurrentValue.includes(item.name)
+                return (
+                  <div key={item.name} className="flex items-center gap-2">
+                    <Checkbox
+                      checked={isSelected}
+                      onCheckedChange={(checked) => {
+                        let newValue: string[]
+                        if (checked && !selectCurrentValue.includes(item.name)) {
+                          newValue = [...selectCurrentValue, item.name]
+                        } else if (!checked) {
+                          newValue = selectCurrentValue.filter(v => v !== item.name)
+                        } else {
+                          return
+                        }
+                        handleFieldChange(field.field_name, newValue.length > 0 ? newValue : undefined)
+                      }}
+                    />
+                    <label className="text-sm cursor-pointer">
+                      {item.name} {item.count > 0 ? `(${item.count} products)` : ''}
+                    </label>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         )
 
@@ -297,43 +283,36 @@ export function DynamicExtendFieldsFilter({
         }
         
         return (
-          <div key={field.field_name} className="flex items-center gap-2">
-            <label className="text-sm text-gray-600 min-w-fit">
+          <div key={field.field_name} className="flex flex-col gap-2">
+            <label className="text-sm text-gray-600">
               {field.display_name}:
             </label>
-            <Select
-              key={selectKeys[field.field_name] || 0}
-              value=""
-              onValueChange={(value) => {
-                // 实现和Amazon Category一样的多选逻辑
-                let newValue: string[]
-                if (!booleanSelectValues.includes(value)) {
-                  newValue = [...booleanSelectValues, value]
-                  console.log(`✅ [${field.field_name.toUpperCase()}] Multi-select working! Added "${value}" to array:`, newValue)
-                } else {
-                  return // 如果已经选中了，不做任何操作
-                }
-                
-                handleFieldChange(field.field_name, newValue.length > 0 ? newValue : undefined)
-              }}
-            >
-              <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                {availableOptions.map((item) => {
-                  const isSelected = booleanSelectValues.includes(item.name)
-                  return (
-                    <SelectItem key={item.name} value={item.name} disabled={isSelected}>
-                      <div className="flex items-center gap-2">
-                        {isSelected && <span className="text-green-600">✅</span>}
-                        {item.name} ({item.count} products)
-                      </div>
-                    </SelectItem>
-                  )
-                })}
-              </SelectContent>
-            </Select>
+            <div className="flex items-center gap-4 flex-wrap">
+              {availableOptions.map((item) => {
+                const isSelected = booleanSelectValues.includes(item.name)
+                return (
+                  <div key={item.name} className="flex items-center gap-2">
+                    <Checkbox
+                      checked={isSelected}
+                      onCheckedChange={(checked) => {
+                        let newValue: string[]
+                        if (checked && !booleanSelectValues.includes(item.name)) {
+                          newValue = [...booleanSelectValues, item.name]
+                        } else if (!checked) {
+                          newValue = booleanSelectValues.filter(v => v !== item.name)
+                        } else {
+                          return
+                        }
+                        handleFieldChange(field.field_name, newValue.length > 0 ? newValue : undefined)
+                      }}
+                    />
+                    <label className="text-sm cursor-pointer">
+                      {item.name} ({item.count} products)
+                    </label>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         )
 

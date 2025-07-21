@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Badge } from "@/components/ui/badge"
+import { Checkbox } from "@/components/ui/checkbox"
 import { Filter, RotateCcw, X, Database, Users, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
@@ -247,7 +248,6 @@ export function UniversalFilterComponent({
         categories: [...prev.categories, category] 
       }))
     }
-    setSelectKeys(prev => ({ ...prev, category: prev.category + 1 }))
   }
 
   const handleBrandSelect = (brand: string) => {
@@ -259,7 +259,38 @@ export function UniversalFilterComponent({
         brands: [...prev.brands, brand] 
       }))
     }
-    setSelectKeys(prev => ({ ...prev, brand: prev.brand + 1 }))
+  }
+
+  const handleCategoryToggle = (category: string, checked: boolean) => {
+    if (checked) {
+      if (!pendingFilters.categories.includes(category)) {
+        setPendingFilters(prev => ({ 
+          ...prev, 
+          categories: [...prev.categories, category] 
+        }))
+      }
+    } else {
+      setPendingFilters(prev => ({
+        ...prev,
+        categories: prev.categories.filter(c => c !== category)
+      }))
+    }
+  }
+
+  const handleBrandToggle = (brand: string, checked: boolean) => {
+    if (checked) {
+      if (!pendingFilters.brands.includes(brand)) {
+        setPendingFilters(prev => ({ 
+          ...prev, 
+          brands: [...prev.brands, brand] 
+        }))
+      }
+    } else {
+      setPendingFilters(prev => ({
+        ...prev,
+        brands: prev.brands.filter(b => b !== brand)
+      }))
+    }
   }
 
   const handleSegmentSelect = (segment: string) => {
@@ -446,158 +477,121 @@ export function UniversalFilterComponent({
       
           {/* Category Filter */}
           {filterConfig?.visible_filters?.categories && (
-            <div className="flex items-center gap-2">
-        
+            <div className="flex flex-col gap-2">
               <span className="text-sm text-gray-600">Amazon Category:</span>
-              <Select 
-                key={selectKeys.category}
-                onValueChange={handleCategorySelect}
-                disabled={finalLoading || configLoading}
-              >
-              <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent className="max-h-80">
-                {/* 调试日志 */}
-                {(() => {
-                  console.log('🔍 [UNIVERSAL-FILTER] Available category options:', {
-                    flat_categories: finalAvailableOptions.categories?.length || 0,
-                    hierarchical_categories: finalAvailableOptions.hierarchical_categories?.length || 0,
-                    hierarchical_with_children: finalAvailableOptions.hierarchical_categories?.filter(g => g.children.length > 0).length || 0,
-                    project_id: projectId,
-                    level: level
-                  })
-                  return null
-                })()}
+              <div className="flex items-center gap-4 flex-wrap">
                 {finalAvailableOptions.hierarchical_categories && 
                  finalAvailableOptions.hierarchical_categories.length > 0 && 
                  finalAvailableOptions.hierarchical_categories.some(group => group.children.length > 0) ? (
-                  // 显示层次结构
-                  finalAvailableOptions.hierarchical_categories.map((parentGroup) => (
-                    <div key={parentGroup.parent_category} className="mb-2">
-                      {/* 父类别标题 */}
-                      <div className="px-2 py-1.5 text-sm font-semibold text-gray-700 bg-gray-100 border-b sticky top-0 z-10">
-                        📁 {parentGroup.parent_category} ({parentGroup.parent_count} products)
-                      </div>
-                      
-                      {/* 子类别选项 */}
-                      {parentGroup.children
-                        .map((child) => {
-                          const isSelected = pendingFilters.categories.includes(child.category)
-                          return (
-                            <SelectItem 
-                              key={child.category} 
-                              value={child.category}
-                              className="pl-6 py-2"
-                              disabled={isSelected}
-                            >
-                              <div className="flex justify-between items-center w-full">
-                                <span className="flex items-center gap-2">
-                                  {isSelected && <span className="text-green-600">✅</span>}
-                                  🏷️ {child.category}
-                                </span>
-                                <span className="text-sm text-gray-500">
-                                  ({child.count} products)
-                                </span>
-                              </div>
-                            </SelectItem>
-                          )
-                        })}
-                    </div>
-                  ))
-                ) : (
-                  // Fallback: 显示扁平分类结构
-                  finalAvailableOptions.categories
-                    .map(category => {
-                      // 从projectData中查找对应的计数信息
-                      const distributionData = projectData?.distributions?.categories?.find(
-                        (item: { name: string; count: number; percentage: number }) => item.name === category
-                      )
-                      
-                      const displayLabel = distributionData 
-                        ? `${category} (${distributionData.count} products)`
-                        : category
-                      
-                      const isSelected = pendingFilters.categories.includes(category)
-                      
+                  // 显示层次结构的复选框
+                  finalAvailableOptions.hierarchical_categories.map((parentGroup) =>
+                    parentGroup.children.map((child) => {
+                      const isSelected = pendingFilters.categories.includes(child.category)
                       return (
-                        <SelectItem key={category} value={category} disabled={isSelected}>
-                          <span className="flex items-center gap-2">
-                            {isSelected && <span className="text-green-600">✅</span>}
-                            {displayLabel}
-                          </span>
-                        </SelectItem>
+                        <div key={child.category} className="flex items-center gap-2">
+                          <Checkbox
+                            checked={isSelected}
+                            onCheckedChange={(checked) => handleCategoryToggle(child.category, checked as boolean)}
+                            disabled={finalLoading || configLoading}
+                          />
+                          <label className="text-sm cursor-pointer">
+                            {child.category} ({child.count} products)
+                          </label>
+                        </div>
                       )
                     })
+                  ).flat()
+                ) : (
+                  // Fallback: 显示扁平分类结构的复选框
+                  finalAvailableOptions.categories.map(category => {
+                    // 从projectData中查找对应的计数信息
+                    const distributionData = projectData?.distributions?.categories?.find(
+                      (item: { name: string; count: number; percentage: number }) => item.name === category
+                    )
+                    
+                    const displayLabel = distributionData 
+                      ? `${category} (${distributionData.count} products)`
+                      : category
+                    
+                    const isSelected = pendingFilters.categories.includes(category)
+                    
+                    return (
+                      <div key={category} className="flex items-center gap-2">
+                        <Checkbox
+                          checked={isSelected}
+                          onCheckedChange={(checked) => handleCategoryToggle(category, checked as boolean)}
+                          disabled={finalLoading || configLoading}
+                        />
+                        <label className="text-sm cursor-pointer">
+                          {displayLabel}
+                        </label>
+                      </div>
+                    )
+                  })
                 )}
-              </SelectContent>
-            </Select>
-          </div>
+              </div>
+            </div>
           )}
 
           {/* Brand Filter */}
           {filterConfig?.visible_filters?.brands && (
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Brand:</span>  {/* 改：Packaging -> Brand */}
-              <Select 
-                key={selectKeys.brand}
-                onValueChange={handleBrandSelect}
-                disabled={finalLoading || configLoading}
-              >
-              <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
-              </SelectTrigger>
-              <SelectContent>
-                {/* 优先使用统一数据源的brands，fallback到projectData */}
+            <div className="flex flex-col gap-2">
+              <span className="text-sm text-gray-600">Brand:</span>
+              <div className="flex items-center gap-4 flex-wrap">
                 {finalAvailableOptions?.brands && finalAvailableOptions.brands.length > 0 ? (
-                  finalAvailableOptions.brands
-                    .map((brandName) => {
-                      const isSelected = pendingFilters.brands.includes(brandName)
-                      // 尝试从projectData获取计数信息（如果有的话）
-                      const distributionData = projectData?.distributions?.brands?.find(
-                        (item: any) => item.name === brandName
-                      )
-                      const displayLabel = distributionData 
-                        ? `${brandName} (${distributionData.count} products)`
-                        : brandName
-                      
-                      return (
-                        <SelectItem key={brandName} value={brandName} disabled={isSelected}>
-                          <span className="flex items-center gap-2">
-                            {isSelected && <span className="text-green-600">✅</span>}
-                            {displayLabel}
-                          </span>
-                        </SelectItem>
-                      )
-                    })
+                  finalAvailableOptions.brands.map((brandName) => {
+                    const isSelected = pendingFilters.brands.includes(brandName)
+                    // 尝试从projectData获取计数信息（如果有的话）
+                    const distributionData = projectData?.distributions?.brands?.find(
+                      (item: any) => item.name === brandName
+                    )
+                    const displayLabel = distributionData 
+                      ? `${brandName} (${distributionData.count} products)`
+                      : brandName
+                    
+                    return (
+                      <div key={brandName} className="flex items-center gap-2">
+                        <Checkbox
+                          checked={isSelected}
+                          onCheckedChange={(checked) => handleBrandToggle(brandName, checked as boolean)}
+                          disabled={finalLoading || configLoading}
+                        />
+                        <label className="text-sm cursor-pointer">
+                          {displayLabel}
+                        </label>
+                      </div>
+                    )
+                  })
                 ) : (
-                  // Fallback: 显示从available options获取的品牌
-                  finalAvailableOptions.brands
-                    .map((brand) => {
-                      // 从distributions数据中查找对应的计数信息
-                      const distributionData = projectData?.distributions?.brands?.find(
-                        (item: { name: string; count: number; percentage: number }) => item.name === brand
-                      )
-                      
-                      const displayLabel = distributionData 
-                        ? `${brand} (${distributionData.count} products)`
-                        : brand
-                      
-                      const isSelected = pendingFilters.brands.includes(brand)
-                      
-                      return (
-                        <SelectItem key={brand} value={brand} disabled={isSelected}>
-                          <span className="flex items-center gap-2">
-                            {isSelected && <span className="text-green-600">✅</span>}
-                            {displayLabel}
-                          </span>
-                        </SelectItem>
-                      )
-                    })
+                  // Fallback: 显示从available options获取的品牌复选框
+                  finalAvailableOptions.brands.map((brand) => {
+                    // 从distributions数据中查找对应的计数信息
+                    const distributionData = projectData?.distributions?.brands?.find(
+                      (item: { name: string; count: number; percentage: number }) => item.name === brand
+                    )
+                    
+                    const displayLabel = distributionData 
+                      ? `${brand} (${distributionData.count} products)`
+                      : brand
+                    
+                    const isSelected = pendingFilters.brands.includes(brand)
+                    
+                    return (
+                      <div key={brand} className="flex items-center gap-2">
+                        <Checkbox
+                          checked={isSelected}
+                          onCheckedChange={(checked) => handleBrandToggle(brand, checked as boolean)}
+                          disabled={finalLoading || configLoading}
+                        />
+                        <label className="text-sm cursor-pointer">
+                          {displayLabel}
+                        </label>
+                      </div>
+                    )
+                  })
                 )}
-              </SelectContent>
-            </Select>
-          </div>
+              </div>
+            </div>
           )}
 
           {/* Time Period Filter */}
