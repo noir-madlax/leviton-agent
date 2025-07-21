@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { CategoryFeedback, ProductType, StandardizedInsightData } from '@/components/analysis-db/types/analysis'
+import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart'
 
@@ -13,9 +13,6 @@ interface CategoryPositiveFeedbackBarProps {
   reviewData?: {
     reviewsByCategory?: Record<string, any[]>
   }
-  // New prop for standardized data
-  standardizedData?: StandardizedInsightData
-  useStandardizedData?: boolean
 }
 
 const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: any[], label?: string}) => {
@@ -49,48 +46,7 @@ const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: 
   return null
 }
 
-// Transform standardized data to CategoryFeedback format for positive feedback
-const transformStandardizedDataForDelights = (standardizedData: StandardizedInsightData): CategoryFeedback[] => {
-  return Object.entries(standardizedData)
-    .map(([categoryKey, categoryData]) => {
-      const parts = categoryKey.split('#')
-      const categoryName = parts[0] || 'Unknown'
-      const aspectType = parts[1] || 'Performance'
-      
-      const positiveCount = categoryData["+"]?.count || 0
-      const negativeCount = categoryData["-"]?.count || 0
-      const totalMentions = categoryData.num_mentions || 0
-      const positiveRatio = categoryData.positive_ratio || 0
-      
-      return {
-        category: categoryName,
-        categoryType: (aspectType === 'phy' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
-        mentions: totalMentions,
-        satisfactionRate: positiveRatio * 100,
-        negativeRate: ((totalMentions - positiveCount) / Math.max(totalMentions, 1)) * 100,
-        positiveCount: positiveCount,
-        negativeCount: negativeCount,
-        totalReviews: categoryData.num_reviews || 0,
-        averageRating: Math.min(5, 1 + ((positiveCount / Math.max(totalMentions, 1)) * 4)),
-        topPositiveAspects: [categoryName],
-        topNegativeAspects: [],
-        topPositiveReasons: [`${Math.round((positiveCount / Math.max(totalMentions, 1)) * 100)}% positive sentiment`],
-        topNegativeReasons: [],
-        categoryDefinition: `Aspect type: ${aspectType}`,
-        impactedProducts: 1
-      }
-    })
-    .sort((a, b) => b.positiveCount - a.positiveCount) // Sort by positive count descending
-}
-
-export function CategoryPositiveFeedbackBar({ 
-  data, 
-  productType = 'dimmer', 
-  onProductTypeChange, 
-  reviewData,
-  standardizedData,
-  useStandardizedData = false
-}: CategoryPositiveFeedbackBarProps) {
+export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onProductTypeChange, reviewData }: CategoryPositiveFeedbackBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
   const { openPanel } = useReviewPanel()
 
@@ -99,13 +55,8 @@ export function CategoryPositiveFeedbackBar({
     setSelectedProductType(productType)
   }, [productType])
 
-  // Use standardized data if available and enabled, otherwise use traditional data
-  const processedData = useStandardizedData && standardizedData 
-    ? transformStandardizedDataForDelights(standardizedData) 
-    : data
-
   // 数据已经按正面评价数排序，直接使用前10个
-  const filteredData = processedData.slice(0, 10)
+  const filteredData = data.slice(0, 10)
 
   const handleProductTypeChange = (value: ProductType) => {
     setSelectedProductType(value)

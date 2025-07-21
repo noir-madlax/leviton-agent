@@ -9,7 +9,7 @@ import { BarChart3, Target } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { CategoryFeedback, ProductType, StandardizedInsightData, AllInsightsResponse } from "@/components/analysis-db/types/analysis"
+import { CategoryFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
 
 interface ReviewInsightsProps {
@@ -78,132 +78,12 @@ interface ReviewInsightsProps {
 
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<{
-    painPointsReviews?: Record<string, unknown[]>
-    customerLikesReviews?: Record<string, unknown[]>
-    useCaseReviews?: Record<string, unknown[]>
-  } | null>(null)
+  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [filteredData, setFilteredData] = useState<{
     reviewInsights: typeof data.reviewInsights
     allReviewData: typeof data.allReviewData
   }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
-  
-  // New state for standardized data
-  const [standardizedInsights, setStandardizedInsights] = useState<{
-    delights?: StandardizedInsightData
-    pain_points?: StandardizedInsightData
-    use_cases?: StandardizedInsightData
-  }>({})
-  const [useStandardizedData, setUseStandardizedData] = useState(false)
-  const [isDataSwitching, setIsDataSwitching] = useState(false)
-  
-  // Environment check - only show debug panel in development
-  const isDevelopment = typeof window !== 'undefined' && (
-    window.location.hostname === 'localhost' || 
-    window.location.hostname === '127.0.0.1' ||
-    process.env.NODE_ENV === 'development'
-  )
-
-  // Fetch standardized insights data
-  const fetchStandardizedData = async (): Promise<boolean> => {
-    if (!projectId) return false
-    
-    try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/insights/all/${projectId}`)
-      if (!response.ok) {
-        throw new Error(`Failed to fetch standardized data: ${response.statusText}`)
-      }
-      
-      const result: AllInsightsResponse = await response.json()
-      if (result.success && result.data) {
-        setStandardizedInsights(result.data)
-        console.log('Standardized insights loaded:', result.data)
-        return true
-      }
-      return false
-    } catch (error) {
-      console.error('Error fetching standardized insights:', error)
-      return false
-    }
-  }
-
-  // Fetch traditional insights data (force refresh)
-  const fetchTraditionalData = async () => {
-    if (!projectId) return
-    
-    try {
-      const [reviewInsights, allReviewData] = await Promise.all([
-        databaseService.getReviewInsightsDataByProject(
-          projectId,
-          initialFilters?.categories || [],
-          initialFilters?.brands || [],
-          initialFilters?.segments || [],
-          initialFilters?.extend_fields || {}
-        ),
-        databaseService.getAllReviewDataByProject(
-          projectId,
-          initialFilters?.categories || [],
-          initialFilters?.brands || [],
-          initialFilters?.segments || [],
-          initialFilters?.extend_fields || {}
-        )
-      ])
-      
-      setFilteredData({
-        reviewInsights,
-        allReviewData
-      })
-      console.log('Traditional insights refreshed:', { reviewInsights, allReviewData })
-    } catch (error) {
-      console.error('Error fetching traditional data:', error)
-    }
-  }
-
-  // Handle data source toggle with forced refresh
-  const handleDataSourceToggle = async () => {
-    if (!projectId) return
-    
-    setIsDataSwitching(true)
-    const newValue = !useStandardizedData
-    
-    try {
-      if (newValue) {
-        // Switching to standardized data - force refresh standardized data
-        console.log('Switching to standardized data, refreshing...')
-        const success = await fetchStandardizedData()
-        if (success) {
-          setUseStandardizedData(true)
-        } else {
-          console.log('Standardized data loading failed, staying with traditional data')
-          // Keep using traditional data if standardized fails
-        }
-      } else {
-        // Switching to traditional data - force refresh traditional data  
-        console.log('Switching to traditional data, refreshing...')
-        await fetchTraditionalData()
-        setUseStandardizedData(false)
-      }
-    } catch (error) {
-      console.error('Error during data source switch:', error)
-    } finally {
-      setIsDataSwitching(false)
-    }
-  }
-
-  // Load standardized data on component mount and when projectId changes
-  useEffect(() => {
-    if (projectId) {
-      fetchStandardizedData().then((success) => {
-        // Only enable standardized data if it was successfully loaded
-        setUseStandardizedData(success)
-        if (!success) {
-          console.log('Standardized data loading failed, falling back to traditional data')
-        }
-      })
-    }
-  }, [projectId])
 
   // 处理过滤器变化
   const handleFilterChange = async (filters: ProjectFilters) => {
@@ -243,19 +123,20 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     // Create the structure that charts expect using database data
     // 需要将数据结构转换为图表组件期待的格式
     const reviewDataForCharts = {
-      painPointsReviews: {} as Record<string, unknown[]>,     // 第一个图表：痛点数据
-      customerLikesReviews: {} as Record<string, unknown[]>,  // 第二个图表：客户喜爱数据
-      useCaseReviews: {} as Record<string, unknown[]>         // 第三个图表：用例数据
+      reviewsByCategory: {} as Record<string, unknown[]>
     }
     
     // 如果有allReviewData，需要正确映射到类别名称
     if (filteredData.allReviewData) {
+      // 首先直接使用allReviewData的现有映射
+      reviewDataForCharts.reviewsByCategory = { ...filteredData.allReviewData }
+      
       // 为痛点数据建立基于relatedDetailTexts的映射关系
       filteredData.reviewInsights.painPoints.forEach(painPoint => {
         const aspectName = painPoint.aspect
-        if (!reviewDataForCharts.painPointsReviews[aspectName]) {
+        if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
           const relatedReviews: unknown[] = []
-
+          
           // 使用新的relatedDetailTexts字段进行映射
           if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
             painPoint.relatedDetailTexts.forEach(detailText => {
@@ -274,93 +155,115 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               })
             })
           }
-
+          
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.painPointsReviews[aspectName] = relatedReviews
+            reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
           }
         }
       })
       
-      // 为亮点数据建立映射关系：feature 对应 review.category
+      // 为亮点数据建立基于relatedDetailTexts的映射关系
       filteredData.reviewInsights.customerLikes.forEach(like => {
         const featureName = like.feature
-        if (!reviewDataForCharts.customerLikesReviews[featureName]) {
+        if (!reviewDataForCharts.reviewsByCategory[featureName]) {
           const relatedReviews: unknown[] = []
-
-          // 直接通过 category 匹配
-          Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-            reviews.forEach(review => {
-              if (review.category === featureName) {
-                relatedReviews.push(review)
-              }
+          
+          // 使用新的relatedDetailTexts字段进行映射
+          if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
+            like.relatedDetailTexts.forEach(detailText => {
+              const reviews = filteredData.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
             })
-          })
-
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
+                  relatedReviews.push(review)
+                } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
+          
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.customerLikesReviews[featureName] = relatedReviews
+            reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
           }
         }
       })
       
-      // 为Use Case数据建立映射关系：useCase 对应 review.category
+      // 为Use Case数据建立基于relatedDetailTexts的映射关系
       filteredData.reviewInsights.allUseCases.forEach(useCaseItem => {
         const useCaseName = useCaseItem.useCase
-
-        if (!reviewDataForCharts.useCaseReviews[useCaseName]) {
+        
+        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
           const relatedReviews: unknown[] = []
-
-          // 直接通过 category 匹配
-          Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-            reviews.forEach(review => {
-              if (review.category === useCaseName) {
-                relatedReviews.push(review)
-              }
+          
+          // 使用新的relatedDetailTexts字段进行映射
+          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
+            useCaseItem.relatedDetailTexts.forEach(detailText => {
+              const reviews = filteredData.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
             })
-          })
-
-          console.log("relatedReviews", relatedReviews)
-
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (useCaseItem.productAttribute && 
+                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
+          
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.useCaseReviews[useCaseName] = relatedReviews
+            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
           }
         }
       })
       
-      // // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
-      // filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
-      //   const useCaseName = useCaseItem.useCase
+      // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
+      filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
+        const useCaseName = useCaseItem.useCase
         
-      //   if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-      //     const relatedReviews: unknown[] = []
+        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
+          const relatedReviews: unknown[] = []
           
-      //     // 使用新的relatedDetailTexts字段进行映射
-      //     if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-      //       useCaseItem.relatedDetailTexts.forEach(detailText => {
-      //         const reviews = filteredData.allReviewData[detailText] || []
-      //         relatedReviews.push(...reviews)
-      //       })
-      //     } else {
-      //       // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-      //       Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-      //         reviews.forEach(review => {
-      //           if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-      //             relatedReviews.push(review)
-      //           } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-      //             relatedReviews.push(review)
-      //           } else if (useCaseItem.productAttribute && 
-      //                      (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-      //                       review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-      //             relatedReviews.push(review)
-      //           }
-      //         })
-      //       })
-      //     }
+          // 使用新的relatedDetailTexts字段进行映射
+          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
+            useCaseItem.relatedDetailTexts.forEach(detailText => {
+              const reviews = filteredData.allReviewData[detailText] || []
+              relatedReviews.push(...reviews)
+            })
+          } else {
+            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+              reviews.forEach(review => {
+                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+                  relatedReviews.push(review)
+                } else if (useCaseItem.productAttribute && 
+                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+                  relatedReviews.push(review)
+                }
+              })
+            })
+          }
           
-      //     if (relatedReviews.length > 0) {
-      //       reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-      //     }
-      //   }
-      // })
+          if (relatedReviews.length > 0) {
+            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
+          }
+        }
+      })
     }
     
     setReviewData(reviewDataForCharts)
@@ -496,74 +399,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
   return (
     <div className="space-y-10">
-      
-      {/* Debug Toggle for Standardized Data - Only show in development */}
-      {isDevelopment && (
-        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-          <div className="flex items-center justify-between">
-            <div>
-              <h4 className="text-sm font-medium text-yellow-800">Data Source Selection (Debug Mode)</h4>
-              <p className="text-sm text-yellow-600">
-                {useStandardizedData 
-                  ? 'Using standardized data from Python script logic' 
-                  : 'Using traditional dashboard API data'}
-              </p>
-            </div>
-            <div className="flex items-center gap-3">
-              {isDataSwitching && (
-                <div className="flex items-center gap-2 text-sm text-yellow-600">
-                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-yellow-600 border-t-transparent"></div>
-                  Loading...
-                </div>
-              )}
-              <button
-                onClick={handleDataSourceToggle}
-                disabled={isDataSwitching}
-                className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
-                  isDataSwitching 
-                    ? 'bg-gray-400 text-white cursor-not-allowed'
-                    : useStandardizedData 
-                      ? 'bg-green-600 hover:bg-green-700 text-white' 
-                      : 'bg-gray-600 hover:bg-gray-700 text-white'
-                }`}
-              >
-                {isDataSwitching 
-                  ? 'Switching...' 
-                  : useStandardizedData 
-                    ? 'Standardized ON' 
-                    : 'Traditional ON'}
-              </button>
-            </div>
-          </div>
-          
-          {/* Data Statistics */}
-          <div className="mt-3 pt-3 border-t border-yellow-200">
-            <div className="grid grid-cols-2 gap-4 text-xs">
-              <div>
-                <span className="font-medium text-yellow-800">Standardized Data:</span>
-                <div className="text-yellow-600">
-                  {Object.keys(standardizedInsights).length > 0 ? (
-                    <>
-                      Types: {Object.keys(standardizedInsights).join(', ')}<br/>
-                      Total categories: {Object.values(standardizedInsights).reduce((sum, data) => sum + Object.keys(data || {}).length, 0)}
-                    </>
-                  ) : (
-                    'Not loaded'
-                  )}
-                </div>
-              </div>
-              <div>
-                <span className="font-medium text-yellow-800">Traditional Data:</span>
-                <div className="text-yellow-600">
-                  Pain Points: {filteredData.reviewInsights.painPoints?.length || 0}<br/>
-                  Customer Likes: {filteredData.reviewInsights.customerLikes?.length || 0}<br/>
-                  Use Cases: {filteredData.reviewInsights.allUseCases?.length || 0}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
@@ -581,20 +416,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Analysis uses up to 200 most recent reviews per product (all-time data)
+          How to read this table: review is based on 200 top
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
               <div className="text-gray-500">正在更新数据...</div>
             </div>
           ) : (
-            <CategoryPainPointsBar
-              data={categoryPainPoints.topNegativeCategories}
+            <CategoryPainPointsBar 
+              data={categoryPainPoints.topNegativeCategories} 
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={{ reviewsByCategory: reviewData?.painPointsReviews || {} }}
-              standardizedData={standardizedInsights.pain_points}
-              useStandardizedData={useStandardizedData}
+              reviewData={reviewData || undefined}
             />
           )}
         </ChartWithFilters>
@@ -613,20 +446,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Analysis uses up to 200 most recent reviews per product (all-time data)
+          How to read this table: review is based on 200 top
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
               <div className="text-gray-500">Loading...</div>
             </div>
           ) : (
-            <CategoryPositiveFeedbackBar
-              data={categoryPositiveFeedback.topPositiveCategories}
+            <CategoryPositiveFeedbackBar 
+              data={categoryPositiveFeedback.topPositiveCategories} 
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={{ reviewsByCategory: reviewData?.customerLikesReviews || {} }}
-              standardizedData={standardizedInsights.delights}
-              useStandardizedData={useStandardizedData}
+              reviewData={reviewData || undefined}
             />
           )}
         </ChartWithFilters>
@@ -636,7 +467,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Analysis uses up to 200 most recent reviews per product (all-time data)
+          How to read this table: review is based on 200 top
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
           <UseCaseSentimentMatrix 
@@ -653,7 +484,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               categoryDefinition: item.categoryDefinition,
               productCount: item.productCount
             }))} 
-            reviewData={{ reviewsByCategory: reviewData?.useCaseReviews as Record<string, Array<{
+            reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
               id: string
               productId: string
               text: string
@@ -664,9 +495,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               verified: boolean
               date: string
               brand: string
-            }>> || {} }}
-            standardizedData={standardizedInsights.use_cases}
-            useStandardizedData={useStandardizedData}
+            }>> }}
           />
         </div>
       </section>

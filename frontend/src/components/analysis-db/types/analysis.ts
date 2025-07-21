@@ -118,47 +118,4 @@ export const getUseCaseAnalysisData = () => {
     targetProducts: [],
     matrixData: []
   }
-}
-
-// Standardized data types that match the Python script output format
-export interface ReviewData {
-  review: string;
-  aspects: string[];
-}
-
-export interface SentimentData {
-  count: number;
-  reviews: Record<string, ReviewData>;
-}
-
-export interface StandardizedCategoryData {
-  num_mentions: number;
-  num_reviews: number;
-  positive_ratio: number;
-  "+"?: SentimentData;
-  "-"?: SentimentData;
-}
-
-export interface StandardizedInsightData {
-  [categoryKey: string]: StandardizedCategoryData;
-}
-
-export interface StandardizedInsightResponse {
-  success: boolean;
-  data: StandardizedInsightData;
-  analysis_type: string;
-  project_id: string;
-  category_count: number;
-}
-
-export interface AllInsightsResponse {
-  success: boolean;
-  data: {
-    delights: StandardizedInsightData;
-    pain_points: StandardizedInsightData;
-    use_cases: StandardizedInsightData;
-  };
-  project_id: string;
-  analysis_types: string[];
-  total_categories: number;
-}
+} 
