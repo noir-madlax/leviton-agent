@@ -27,9 +27,10 @@ class PricingAnalysisService(BaseDashboardService):
                 category
             ''')
             
-            # Apply filters
+            # 先应用基础的 project ASINs 过滤
             query = self._apply_base_filters(query)
-            query = self._apply_combined_filters(query)
+            
+            # 注意：这里不应用 _apply_combined_filters，因为我们需要基于所有产品创建组合，然后再根据前端的 filters 筛选这些组合
             
             result = query.execute()
             
@@ -49,12 +50,15 @@ class PricingAnalysisService(BaseDashboardService):
                 return self._get_empty_response()
             
             # 使用交叉组合分类产品 - 按category和smart_capability组合
-            combination_categorized_products = self._categorize_products_by_category_smart_combination(products_with_price)
+            all_combination_categorized_products = self._categorize_products_by_category_smart_combination(products_with_price)
             
-            # 格式化响应 - 使用组合数据
-            response = self._format_combination_pricing_response(combination_categorized_products)
+            # 根据前端传递的 filters 筛选这些组合
+            filtered_combinations = self._filter_combinations_by_request(all_combination_categorized_products)
             
-            logger.info(f"📈 Pricing analysis completed with {len(combination_categorized_products)} category-smart combinations")
+            # 格式化响应 - 使用筛选后的组合数据
+            response = self._format_combination_pricing_response(filtered_combinations)
+            
+            logger.info(f"📈 Pricing analysis completed with {len(filtered_combinations)} filtered category-smart combinations")
             return response
             
         except Exception as e:
@@ -110,6 +114,52 @@ class PricingAnalysisService(BaseDashboardService):
         except Exception as e:
             logger.error(f"Error fetching smart capability data: {e}")
             return []
+    
+    def _filter_combinations_by_request(self, all_combinations: Dict[str, List[Dict[str, Any]]]) -> Dict[str, List[Dict[str, Any]]]:
+        """根据前端传递的 filters 筛选已经生成的组合"""
+        
+        # 从 self.filters 获取前端选择的条件
+        selected_categories = self.filters.categories
+        selected_extend_fields = self.filters.extend_fields or {}
+        smart_filter = selected_extend_fields.get('smart_capability')
+        
+        # 如果没有任何筛选条件，返回所有组合
+        if not selected_categories and not smart_filter:
+            return all_combinations
+            
+        filtered_results = {}
+        
+        logger.info(f"Applying filters - Categories: {selected_categories}, Smart Capability: {smart_filter}")
+        
+        # 遍历所有组合，检查是否匹配筛选条件
+        for combination_name, products in all_combinations.items():
+            should_include = True
+            
+            # 解析组合名称: "Light Switches + Smart" -> ["Light Switches", "Smart"]
+            parts = combination_name.split(' + ')
+            if len(parts) != 2:
+                continue  # 跳过格式不正确的组合名称
+                
+            combo_category = parts[0].strip()
+            combo_smart_capability = parts[1].strip()
+            
+            # 检查 category 筛选条件
+            if selected_categories:
+                if combo_category not in selected_categories:
+                    should_include = False
+            
+            # 检查 smart_capability 筛选条件
+            if smart_filter:
+                if combo_smart_capability != smart_filter:
+                    should_include = False
+            
+            # 如果同时满足所有条件，包含这个组合
+            if should_include:
+                filtered_results[combination_name] = products
+                logger.info(f"Including combination: {combination_name} with {len(products)} products")
+        
+        logger.info(f"Filtered combinations: {len(filtered_results)} out of {len(all_combinations)} combinations match filters")
+        return filtered_results
     
     def _format_combination_pricing_response(self, combination_categorized_products: Dict[str, List[Dict[str, Any]]]) -> Dict[str, Any]:
         """格式化交叉组合的定价响应数据"""

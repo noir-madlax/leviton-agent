@@ -276,15 +276,15 @@ class AllReviewDataService(BaseDashboardService):
             return []
 
     def _process_and_group_data(self, review_data: List[Dict[str, Any]]) -> Dict[str, List[Dict[str, Any]]]:
-        """Process review data and group by standardized_aspect."""
+        """Process review data and group by aspect_category."""
         
         grouped_data = {}
         
         for item in review_data:
-            aspect = item['standardized_aspect']
+            category = item['aspect_category'] or 'unknown'
             
-            if aspect not in grouped_data:
-                grouped_data[aspect] = []
+            if category not in grouped_data:
+                grouped_data[category] = []
             
             # Parse rating (fallback to rating-based sentiment if not available)
             rating_str = item.get('rating', '3.0')
@@ -299,19 +299,19 @@ class AllReviewDataService(BaseDashboardService):
             date = self._parse_date(item.get('review_date'))
             
             review_item = {
-                'id': f"{item['review_id']}_{len(grouped_data[aspect])}",
+                'id': f"{item['review_id']}_{len(grouped_data[category])}",
                 'productId': item['product_id'],
                 'text': item['review_content'] or '',
                 'sentiment': sentiment,
-                'category': item['aspect_category'] or 'unknown',
-                'aspect': self._capitalize_words(aspect),
+                'category': category,
+                'aspect': self._capitalize_words(item['standardized_aspect']),
                 'rating': max(1, min(5, rating)),  # Ensure rating is 1-5
                 'verified': bool(item.get('verified', False)),
                 'date': date,
                 'brand': item.get('brand', 'Unknown')
             }
             
-            grouped_data[aspect].append(review_item)
+            grouped_data[category].append(review_item)
         
         return grouped_data
 

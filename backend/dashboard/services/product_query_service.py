@@ -199,13 +199,9 @@ class ProductQueryService(BaseDashboardService):
             # 如果需要segment筛选但没有segment映射数据，说明配置有误，记录警告但不阻断查询
             logger.warning(f"Segment filter requested {filters.segments} but no segment mapping available, skipping segment filter")
 
-        # 扩展字段筛选 (新)
+        # 扩展字段筛选 (新) - 调用基类的方法
         if filters.extend_fields:
-            for field, value in filters.extend_fields.items():
-                # 使用 ->> 操作符来查询JSONB字段中的文本值
-                # 注意：这里假设 extend_fields 是 product_wide_table 的一个列
-                query = query.eq(f'extend_fields->>{field}', value)
-                logger.info(f"Applied extend_fields filter: {field} = {value}")
+            query = self._apply_extend_fields_filter(query)
 
         return query
 
