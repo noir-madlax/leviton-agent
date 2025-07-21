@@ -177,7 +177,7 @@ export function UniversalFilterComponent({
         {fromProject && <span className="mr-1">📌</span>}
         {getPrefix(filterType)} {getDisplayValue(filterType, value)}
         <X 
-          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto" 
+          className="w-3 h-3 hidden cursor-pointer hover:text-red-500 pointer-events-auto" 
           onClick={(e) => {
             console.log('[FILTER-REMOVE] Clicking X for filter:', filterType, value)
             e.stopPropagation()
