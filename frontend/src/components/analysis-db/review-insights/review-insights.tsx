@@ -459,7 +459,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       {/* Use Case Sentiment Analysis */}
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
-        
+        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+            </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
           <UseCaseSentimentMatrix 
             data={filteredData.reviewInsights.allUseCases.map(item => ({

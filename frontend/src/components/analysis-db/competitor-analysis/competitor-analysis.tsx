@@ -344,6 +344,11 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       <section data-chart-id="customer-satisfaction-overview">
         <h2 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-4">
           📊 Customer satisfaction overview
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+            </div>
+
+
           {selectedAsins.length > 0 && (
             <span className="ml-2 text-sm font-normal text-gray-600">
               ({selectedAsins.length} Focal products selected)
@@ -400,7 +405,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         <ChartWithFilters
           chartId="product-comparison-dimensions"
           projectId={projectId || ''}
-          title="🏆 Product Comparison by Key Dimensions"
+          title="Product Comparison by Key Dimensions"
           projectFilters={initialFilters}
           chartType="matrix"
         >
@@ -430,7 +435,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         <ChartWithFilters
           chartId="product-comparison-use-cases"
           projectId={projectId || ''}
-          title="🎯 Product Comparison by Main Use Cases"
+          title="Product Comparison by Main Use Cases"
           projectFilters={initialFilters}
           chartType="matrix"
         >

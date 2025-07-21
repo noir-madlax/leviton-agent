@@ -85,7 +85,9 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
     <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
-         
+        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+            </div>
         
         </CardTitle>
         <CardDescription>
