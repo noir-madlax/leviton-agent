@@ -194,7 +194,7 @@ export function DynamicExtendFieldsFilter({
                       }}
                     />
                     <label className="text-sm cursor-pointer">
-                      {item.name} {item.count > 0 ? `(${item.count} products)` : ''}
+                      {item.name}
                     </label>
                   </div>
                 )
@@ -307,7 +307,7 @@ export function DynamicExtendFieldsFilter({
                       }}
                     />
                     <label className="text-sm cursor-pointer">
-                      {item.name} ({item.count} products)
+                      {item.name}
                     </label>
                   </div>
                 )

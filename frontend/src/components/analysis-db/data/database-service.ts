@@ -1088,14 +1088,28 @@ export class DatabaseService {
       }
       
       const result = await response.json()
-      const filters = result.filters || DEFAULT_FILTERS
+      let filters = result.filters || DEFAULT_FILTERS
+      
+      // 🔧 Set default values for Smart Capability: select both Non-Smart and Smart by default
+      if (!filters.extend_fields) {
+        filters.extend_fields = {}
+      }
+      
+      if (!filters.extend_fields.smart_capability) {
+        filters.extend_fields.smart_capability = ['Non-Smart', 'Smart']
+        console.log(`🔧 [DatabaseService] Set Smart Capability default values: ['Non-Smart', 'Smart']`)
+      }
       
       console.log(`✅ [DatabaseService] Retrieved filter defaults:`, filters)
       return filters
       
     } catch (error) {
       console.error('❌ [DatabaseService] Error fetching project filter defaults:', error)
-      return DEFAULT_FILTERS
+      // 🔧 Also set Smart Capability defaults in error fallback
+      const defaultFilters = { ...DEFAULT_FILTERS }
+      defaultFilters.extend_fields.smart_capability = ['Non-Smart', 'Smart']
+      console.log(`🔧 [DatabaseService] Set Smart Capability default values in fallback: ['Non-Smart', 'Smart']`)
+      return defaultFilters
     }
   }
 }

@@ -314,11 +314,9 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       setApplyLoading(true);
       console.log('🔄 Applying product selection changes, loading new analysis data...');
       
-      const categoryFilters = initialFilters && initialFilters.categories && initialFilters.categories.length > 0 ? initialFilters.categories : undefined;
-      
       const response = await databaseService.getCompetitorAnalysisDataByProject(
         projectId,
-        categoryFilters, // Pass the category filters
+        undefined, // No category filters
         asins.join(',') // Selected ASINs as string
       );
       
@@ -431,7 +429,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     <div className="space-y-10 max-w-7xl mx-auto px-4">
       {/* ASIN Selection */}
       <section>
-        <div className="hidden mb-4">
+        <div className="hidden md:block mb-4">
           <Button
             variant="outline"
             onClick={() => setShowAsinSelector(!showAsinSelector)}
@@ -481,7 +479,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           )}
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Analysis uses up to 200 most recent reviews per product (all-time data)
+          How to read this table: review is based on 200 top
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {productStats.map((stat: any) => (
