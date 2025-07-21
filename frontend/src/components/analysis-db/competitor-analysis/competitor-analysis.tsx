@@ -428,7 +428,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">
       {/* ASIN Selection */}
-      <section>
+      <section className="hidden">
         <div className="hidden md:block mb-4">
           <Button
             variant="outline"
