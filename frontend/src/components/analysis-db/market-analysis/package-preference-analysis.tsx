@@ -51,17 +51,53 @@ export function PackagePreferenceAnalysis({
   segmentFilters?: string[]
   extendFields?: Record<string, string | number | boolean>
 }) {
+  console.log('🔍PACKAGE_DEBUG: ===== Component Props =====')
+  console.log('🔍PACKAGE_DEBUG: initialData:', JSON.stringify(initialData, null, 2))
+  console.log('🔍PACKAGE_DEBUG: projectId:', projectId)
+  console.log('🔍PACKAGE_DEBUG: categoryFilters:', categoryFilters)
+  console.log('🔍PACKAGE_DEBUG: brandFilters:', brandFilters)
+  console.log('🔍PACKAGE_DEBUG: segmentFilters:', segmentFilters)
+  console.log('🔍PACKAGE_DEBUG: extendFields:', extendFields)
+  console.log('🔍PACKAGE_DEBUG: ===== End Props =====')
+
   const [metricType, setMetricType] = useState<'revenue' | 'count'>('revenue')
   const [data, setData] = useState<PackagePreferenceData>(initialData)
   const [loading, setLoading] = useState(false)
 
+  console.log('🔍PACKAGE_DEBUG: Current state data:', JSON.stringify(data, null, 2))
+  console.log('🔍PACKAGE_DEBUG: Current loading state:', loading)
+  console.log('🔍PACKAGE_DEBUG: Current metricType:', metricType)
+
   // Effect to refetch data when metric type changes
   useEffect(() => {
-    if (!projectId) return
+    console.log('🔍PACKAGE_DEBUG: ===== useEffect triggered =====')
+    console.log('🔍PACKAGE_DEBUG: projectId:', projectId)
+    console.log('🔍PACKAGE_DEBUG: metricType:', metricType)
+    console.log('🔍PACKAGE_DEBUG: categoryFilters:', categoryFilters)
+    console.log('🔍PACKAGE_DEBUG: brandFilters:', brandFilters)
+    console.log('🔍PACKAGE_DEBUG: segmentFilters:', segmentFilters)
+    console.log('🔍PACKAGE_DEBUG: extendFields:', extendFields)
+
+    if (!projectId) {
+      console.log('🔍PACKAGE_DEBUG: No projectId, skipping fetch')
+      return
+    }
     
     const fetchData = async () => {
+      console.log('🔍PACKAGE_DEBUG: ===== Starting fetchData =====')
       setLoading(true)
+      console.log('🔍PACKAGE_DEBUG: Loading set to true')
+      
       try {
+        console.log('🔍PACKAGE_DEBUG: About to call databaseService.getPackagePreferenceDataByProject')
+        console.log('🔍PACKAGE_DEBUG: API call parameters:')
+        console.log('🔍PACKAGE_DEBUG: - projectId:', projectId)
+        console.log('🔍PACKAGE_DEBUG: - categoryFilters:', categoryFilters)
+        console.log('🔍PACKAGE_DEBUG: - brandFilters:', brandFilters)
+        console.log('🔍PACKAGE_DEBUG: - segmentFilters:', segmentFilters)
+        console.log('🔍PACKAGE_DEBUG: - extendFields:', extendFields)
+        console.log('🔍PACKAGE_DEBUG: - metricType:', metricType)
+
         const newData = await databaseService.getPackagePreferenceDataByProject(
           projectId,
           categoryFilters,
@@ -70,23 +106,43 @@ export function PackagePreferenceAnalysis({
           extendFields,
           metricType
         )
+        
+        console.log('🔍PACKAGE_DEBUG: ===== API Response Received =====')
+        console.log('🔍PACKAGE_DEBUG: Full API response:', JSON.stringify(newData, null, 2))
+        console.log('🔍PACKAGE_DEBUG: newData.packageDistribution:', newData.packageDistribution)
+        console.log('🔍PACKAGE_DEBUG: newData.packageDistribution length:', newData.packageDistribution?.length)
+        console.log('🔍PACKAGE_DEBUG: typeof newData.packageDistribution:', typeof newData.packageDistribution)
+        
+        console.log('🔍PACKAGE_DEBUG: About to call setData with newData')
         setData(newData)
+        console.log('🔍PACKAGE_DEBUG: setData called successfully')
+        
       } catch (error) {
-        console.error('Error fetching package preference data:', error)
+        console.error('🔍PACKAGE_DEBUG: Error in fetchData:', error)
+        console.error('🔍PACKAGE_DEBUG: Error details:', JSON.stringify(error, null, 2))
       } finally {
+        console.log('🔍PACKAGE_DEBUG: Setting loading to false')
         setLoading(false)
+        console.log('🔍PACKAGE_DEBUG: ===== fetchData completed =====')
       }
     }
     
     fetchData()
+    console.log('🔍PACKAGE_DEBUG: ===== useEffect completed =====')
   }, [metricType, projectId, categoryFilters, brandFilters, segmentFilters, extendFields])
 
   const colors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
   const titleSuffix = metricType === "revenue" ? "Revenue" : "Product Count"
 
- 
+  console.log('🔍PACKAGE_DEBUG: ===== Render condition check =====')
+  console.log('🔍PACKAGE_DEBUG: data.packageDistribution:', data.packageDistribution)
+  console.log('🔍PACKAGE_DEBUG: data.packageDistribution?.length:', data.packageDistribution?.length)
+  console.log('🔍PACKAGE_DEBUG: !data.packageDistribution:', !data.packageDistribution)
+  console.log('🔍PACKAGE_DEBUG: data.packageDistribution.length === 0:', data.packageDistribution?.length === 0)
+  console.log('🔍PACKAGE_DEBUG: Final condition result:', !data.packageDistribution || data.packageDistribution.length === 0)
 
   if (!data.packageDistribution || data.packageDistribution.length === 0) {
+    console.log('🔍PACKAGE_DEBUG: Rendering empty state component')
     return (
       <section className="mb-10">
        
@@ -97,6 +153,9 @@ export function PackagePreferenceAnalysis({
       </section>
     )
   }
+
+  console.log('🔍PACKAGE_DEBUG: Rendering chart component with data')
+  console.log('🔍PACKAGE_DEBUG: Chart data will be based on:', data.packageDistribution)
 
   // 生成饼图数据
   const chartData = data.packageDistribution.map((item, index) => {

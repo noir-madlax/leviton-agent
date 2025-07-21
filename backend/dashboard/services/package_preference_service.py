@@ -84,22 +84,59 @@ class PackagePreferenceService(BaseDashboardService):
             
             # 应用extend_fields过滤到project_extend_data表
             for field_name, field_value in active_filters.items():
-                # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
-                if isinstance(field_value, bool):
-                    field_value = str(field_value).lower()  # true/false
-                elif field_value == 'true':
-                    field_value = 'true'
-                elif field_value == 'false':
-                    field_value = 'false'
-                
-                # 使用正确的JSON文本提取语法 ->> 而不是 ->
-                query = query.eq(f'extend->>{field_name}', field_value)
-                logger.info(f"Applied extend field filter to project_extend_data: {field_name} = {field_value}")
+                # 处理不同数据类型的field_value
+                if isinstance(field_value, list):
+                    # 🔧 新增：支持数组格式的多选过滤
+                    if len(field_value) == 0:
+                        continue  # 空数组跳过
+                    elif len(field_value) == 1:
+                        # 单个值，使用等于操作
+                        value = field_value[0]
+                        # 处理布尔值转换
+                        if isinstance(value, bool):
+                            value = str(value).lower()
+                        elif value == 'true':
+                            value = 'true'
+                        elif value == 'false':
+                            value = 'false'
+                        
+                        query = query.eq(f'extend->>{field_name}', value)
+                        logger.info(f"Applied extend field filter (single from array) to project_extend_data: {field_name} = {value}")
+                    else:
+                        # 多个值，使用IN操作
+                        processed_values = []
+                        for value in field_value:
+                            # 处理布尔值转换
+                            if isinstance(value, bool):
+                                processed_values.append(str(value).lower())
+                            elif value == 'true':
+                                processed_values.append('true')
+                            elif value == 'false':
+                                processed_values.append('false')
+                            else:
+                                processed_values.append(value)
+                        
+                        query = query.in_(f'extend->>{field_name}', processed_values)
+                        logger.info(f"Applied extend field filter (multi-select) to project_extend_data: {field_name} IN {processed_values}")
+                else:
+                    # 🔧 保留原有逻辑：单个值的处理
+                    # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
+                    if isinstance(field_value, bool):
+                        field_value = str(field_value).lower()  # true/false
+                    elif field_value == 'true':
+                        field_value = 'true'
+                    elif field_value == 'false':
+                        field_value = 'false'
+                    
+                    # 使用正确的JSON文本提取语法 ->> 而不是 ->
+                    query = query.eq(f'extend->>{field_name}', field_value)
+                    logger.info(f"Applied extend field filter (single value) to project_extend_data: {field_name} = {field_value}")
                 
         except Exception as e:
             logger.error(f"Error applying extend fields filter to project_extend_data: {e}")
-            # 出错时返回空结果
-            query = query.eq('id', -1)
+            # 🔧 修复：出错时不返回空结果，而是跳过extend fields过滤继续使用原查询
+            logger.warning("Skipping extend fields filtering due to error, continuing with original query")
+            return query  # 返回原查询，而不是空结果
         
         return query
     
@@ -109,7 +146,8 @@ class PackagePreferenceService(BaseDashboardService):
             # 第一步：从project_extend_data表获取包装类型数据并应用extend fields过滤
             extend_data_query = self.supabase.table('project_extend_data')\
                 .select('asins, extend')\
-                .eq('project_id', self.project_id)
+                .eq('project_id', self.project_id)\
+                .in_('asins', self.project_asins)
             
             # 应用extend fields过滤到project_extend_data表
             extend_data_query = self._apply_extend_fields_filter_to_extend_data(extend_data_query)

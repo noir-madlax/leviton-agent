@@ -137,7 +137,13 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
   selectedAsins?: string[]
   metricType?: string
 } = {}) {
+  console.log('🔍PACKAGE_DEBUG: ===== callDashboardAPI called =====')
+  console.log('🔍PACKAGE_DEBUG: endpoint:', endpoint)
+  console.log('🔍PACKAGE_DEBUG: projectId:', projectId)
+  console.log('🔍PACKAGE_DEBUG: options:', JSON.stringify(options, null, 2))
+
   const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+  console.log('🔍PACKAGE_DEBUG: API_BASE_URL:', API_BASE_URL)
 
   const requestBody: any = {
     project_id: projectId,
@@ -157,6 +163,14 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
     requestBody.metric_type = options.metricType
   }
 
+  console.log('🔍PACKAGE_DEBUG: ===== HTTP Request Details =====')
+  console.log('🔍PACKAGE_DEBUG: Full URL:', `${API_BASE_URL}/api/v1/dashboard/${endpoint}`)
+  console.log('🔍PACKAGE_DEBUG: Request method: POST')
+  console.log('🔍PACKAGE_DEBUG: Request headers: Content-Type: application/json')
+  console.log('🔍PACKAGE_DEBUG: Request body:', JSON.stringify(requestBody, null, 2))
+  console.log('🔍PACKAGE_DEBUG: Request body stringified:', JSON.stringify(requestBody))
+
+  console.log('🔍PACKAGE_DEBUG: About to send fetch request')
   const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/${endpoint}`, {
     method: 'POST',
     headers: {
@@ -165,11 +179,27 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
     body: JSON.stringify(requestBody)
   })
 
+  console.log('🔍PACKAGE_DEBUG: ===== HTTP Response Details =====')
+  console.log('🔍PACKAGE_DEBUG: response.ok:', response.ok)
+  console.log('🔍PACKAGE_DEBUG: response.status:', response.status)
+  console.log('🔍PACKAGE_DEBUG: response.statusText:', response.statusText)
+  console.log('🔍PACKAGE_DEBUG: response.headers:', [...response.headers.entries()])
+
   if (!response.ok) {
+    console.error('🔍PACKAGE_DEBUG: API call failed!')
     throw new Error(`API call failed: ${response.status}`)
   }
 
-  return await response.json()
+  console.log('🔍PACKAGE_DEBUG: About to parse JSON response')
+  const jsonResult = await response.json()
+  console.log('🔍PACKAGE_DEBUG: ===== Parsed JSON Response =====')
+  console.log('🔍PACKAGE_DEBUG: Full JSON result:', JSON.stringify(jsonResult, null, 2))
+  console.log('🔍PACKAGE_DEBUG: jsonResult.packageDistribution:', jsonResult.packageDistribution)
+  console.log('🔍PACKAGE_DEBUG: jsonResult.packageDistribution type:', typeof jsonResult.packageDistribution)
+  console.log('🔍PACKAGE_DEBUG: jsonResult.packageDistribution length:', jsonResult.packageDistribution?.length)
+
+  console.log('🔍PACKAGE_DEBUG: Returning JSON result from callDashboardAPI')
+  return jsonResult
 }
 
 export class DatabaseService {
@@ -412,17 +442,48 @@ export class DatabaseService {
       salesRevenue: number
     }>
   }> {
+    console.log('🔍PACKAGE_DEBUG: ===== DatabaseService.getPackagePreferenceDataByProject called =====')
+    console.log('🔍PACKAGE_DEBUG: Input parameters:')
+    console.log('🔍PACKAGE_DEBUG: - projectId:', projectId)
+    console.log('🔍PACKAGE_DEBUG: - categoryFilters:', categoryFilters)
+    console.log('🔍PACKAGE_DEBUG: - brandFilters:', brandFilters)
+    console.log('🔍PACKAGE_DEBUG: - segmentFilters:', segmentFilters)
+    console.log('🔍PACKAGE_DEBUG: - extendFields:', extendFields)
+    console.log('🔍PACKAGE_DEBUG: - metricType:', metricType)
+
     try {
-      const result = await callDashboardAPI('package-preference', projectId, {
+      console.log('🔍PACKAGE_DEBUG: About to call callDashboardAPI with endpoint "package-preference"')
+      console.log('🔍PACKAGE_DEBUG: callDashboardAPI parameters:')
+      const callParams = {
         categoryFilters,
         packagingTypeFilters: brandFilters,
         segmentFilters,
         extendFields,
         metricType
-      })
+      }
+      console.log('🔍PACKAGE_DEBUG: - callParams:', JSON.stringify(callParams, null, 2))
 
+      const result = await callDashboardAPI('package-preference', projectId, callParams)
+
+      console.log('🔍PACKAGE_DEBUG: ===== callDashboardAPI response received =====')
+      console.log('🔍PACKAGE_DEBUG: Raw API result:', JSON.stringify(result, null, 2))
+      console.log('🔍PACKAGE_DEBUG: result.packageDistribution:', result.packageDistribution)
+      console.log('🔍PACKAGE_DEBUG: result.packageDistribution type:', typeof result.packageDistribution)
+      console.log('🔍PACKAGE_DEBUG: result.packageDistribution length:', result.packageDistribution?.length)
+      console.log('🔍PACKAGE_DEBUG: Is result.packageDistribution an array?', Array.isArray(result.packageDistribution))
+      
+      if (result.packageDistribution && Array.isArray(result.packageDistribution)) {
+        console.log('🔍PACKAGE_DEBUG: packageDistribution items:')
+        result.packageDistribution.forEach((item: any, index: number) => {
+          console.log(`🔍PACKAGE_DEBUG: - [${index}]:`, JSON.stringify(item, null, 2))
+        })
+      }
+
+      console.log('🔍PACKAGE_DEBUG: Returning result from getPackagePreferenceDataByProject')
       return result
     } catch (error) {
+      console.error('🔍PACKAGE_DEBUG: Error in getPackagePreferenceDataByProject:', error)
+      console.error('🔍PACKAGE_DEBUG: Error details:', JSON.stringify(error, null, 2))
       console.error('Error fetching package preference data by project:', error)
       throw error
     }

@@ -172,7 +172,7 @@ export function DynamicExtendFieldsFilter({
                       )
                       
                       const displayLabel = countInfo 
-                        ? `${optionName} (${countInfo.count} products)`
+                        ? `${optionName}`
                         : optionName
                       
                       return (
