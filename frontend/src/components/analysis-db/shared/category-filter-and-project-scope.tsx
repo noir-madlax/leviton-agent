@@ -429,7 +429,8 @@ export function CategoryFilterAndProjectScope({
     setApplyingFilters(false)
   }
 
-  const handleReset = () => {
+  const handleReset = async () => {
+    // 重置所有状态
     setPendingCategories([])
     setAppliedCategories([])
     setPendingBrands([])
@@ -440,10 +441,35 @@ export function CategoryFilterAndProjectScope({
     setAppliedExtendFields({})
     setPendingTimePeriod("30 days")
     setAppliedTimePeriod("30 days")
+    
     // 重置所有Select组件状态
     setCategorySelectKey(prev => prev + 1)
     setBrandSelectKey(prev => prev + 1)
     setSegmentSelectKey(prev => prev + 1)
+    
+    // 重新加载原始项目数据（不带任何筛选条件），确保Smart Capability等选项恢复到原始状态
+    if (projectId) {
+      try {
+        const overview = await databaseService.getProjectOverview(projectId)
+        
+        const completeOverview: ProjectOverviewData = {
+          ...overview,
+          distributions: {
+            ...overview.distributions,
+            brands: (overview.distributions as any).brands || [],
+            segments: (overview.distributions as any).segments || [],
+            extend_fields: (overview.distributions as any).extend_fields || {},
+            packaging_types: (overview.distributions as any).packaging_types || []
+          }
+        }
+        
+        setProjectData(completeOverview)
+        console.log('🔄 [RESET] Reloaded original project data with all extend_fields options')
+      } catch (error) {
+        console.error('Failed to reload original project data during reset:', error)
+      }
+    }
+    
     if (onFiltersChange) {
       onFiltersChange({
         categories: [],
@@ -747,15 +773,7 @@ export function CategoryFilterAndProjectScope({
                       }`}
                     >
                       📁 {category}
-                      <X
-                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                        onClick={(e) => {
-                          console.log('[FILTER-REMOVE] Clicking X for category badge:', category)
-                          e.stopPropagation()
-                          e.preventDefault()
-                          handleCategoryRemove(category)
-                        }}
-                      />
+                     
                     </Badge>
                   ))}
                   {pendingBrands.map((brand) => (
@@ -767,15 +785,7 @@ export function CategoryFilterAndProjectScope({
                       }`}
                     >
                       🏷️ {brand}
-                      <X
-                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                        onClick={(e) => {
-                          console.log('[FILTER-REMOVE] Clicking X for brand badge:', brand)
-                          e.stopPropagation()
-                          e.preventDefault()
-                          handleBrandRemove(brand)
-                        }}
-                      />
+                     
                     </Badge>
                   ))}
                   {pendingSegments.map((segment) => (
@@ -787,15 +797,7 @@ export function CategoryFilterAndProjectScope({
                       }`}
                     >
                       🎯 {segment}
-                      <X
-                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                        onClick={(e) => {
-                          console.log('[FILTER-REMOVE] Clicking X for segment badge:', segment)
-                          e.stopPropagation()
-                          e.preventDefault()
-                          handleSegmentRemove(segment)
-                        }}
-                      />
+                     
                     </Badge>
                   ))}
                   {Object.entries(pendingExtendFields).map(([fieldName, value]) => {
@@ -810,23 +812,7 @@ export function CategoryFilterAndProjectScope({
                           }`}
                         >
                           ⚙️ {fieldName === 'smart_capability' ? 'Smart Capability' : fieldName}: {item}
-                          <X
-                            className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                            onClick={(e) => {
-                              console.log('[FILTER-REMOVE] Clicking X for extend field array item:', fieldName, item)
-                              e.stopPropagation()
-                              e.preventDefault()
-                              const newFields = { ...pendingExtendFields }
-                              const currentArray = Array.isArray(newFields[fieldName]) ? newFields[fieldName] : []
-                              const updatedArray = currentArray.filter((i: any) => i !== item)
-                              if (updatedArray.length === 0) {
-                                delete newFields[fieldName]
-                              } else {
-                                newFields[fieldName] = updatedArray
-                              }
-                              setPendingExtendFields(newFields)
-                            }}
-                          />
+                        
                         </Badge>
                       ))
                     } else {
@@ -840,17 +826,7 @@ export function CategoryFilterAndProjectScope({
                           }`}
                         >
                           ⚙️ {fieldName === 'smart_capability' ? 'Smart Capability' : fieldName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
-                          <X
-                            className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                            onClick={(e) => {
-                              console.log('[FILTER-REMOVE] Clicking X for extend field badge:', fieldName)
-                              e.stopPropagation()
-                              e.preventDefault()
-                              const newFields = { ...pendingExtendFields }
-                              delete newFields[fieldName]
-                              setPendingExtendFields(newFields)
-                            }}
-                          />
+                         
                         </Badge>
                       )
                     }

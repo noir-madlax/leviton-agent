@@ -233,15 +233,7 @@ export function UniversalFilterComponent({
         className="text-xs flex items-center gap-1 mr-2 mb-2"
       >
         🔧 {displayName}: {displayValue}
-        <X 
-          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto" 
-          onClick={(e) => {
-            console.log('[FILTER-REMOVE] Clicking X for extend field:', fieldName, value)
-            e.stopPropagation()
-            e.preventDefault()
-            onRemove()
-          }}
-        />
+       
       </Badge>
     )
   }

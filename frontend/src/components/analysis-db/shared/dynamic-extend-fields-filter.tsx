@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { ExtendFieldDefinition } from '../types/filters'
+import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 
 interface DynamicExtendFieldsFilterProps {
   projectId: string
@@ -43,6 +44,9 @@ export function DynamicExtendFieldsFilter({
   const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
   const [loading, setLoading] = useState(false)
   const [selectKeys, setSelectKeys] = useState<Record<string, number>>({})
+
+  // 使用统一筛选器数据源获取原始extend_fields选项（不受当前筛选条件影响）
+  const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
 
   useEffect(() => {
     const loadExtendFields = async () => {
@@ -153,24 +157,38 @@ export function DynamicExtendFieldsFilter({
                 <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
-                {/* 优先显示实际数据中的选项，保留已选择的项目并显示✅符号 */}
-                {projectData?.distributions?.extend_fields?.[field.field_name] ? (
-                  projectData.distributions.extend_fields[field.field_name]
-                    .map((item) => {
-                      const isSelected = selectCurrentValue.includes(item.name)
+                {/* 优先使用统一数据源中的原始选项（不受当前筛选条件影响），并尝试获取count信息 */}
+                {(() => {
+                  // 获取稳定的选项列表（从统一数据源）
+                  const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
+                  
+                  if (stableOptions.length > 0) {
+                    return stableOptions.map((optionName) => {
+                      const isSelected = selectCurrentValue.includes(optionName)
+                      
+                      // 尝试从projectData获取count信息（如果可用）
+                      const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
+                        (item: any) => item.name === optionName
+                      )
+                      
+                      const displayLabel = countInfo 
+                        ? `${optionName} (${countInfo.count} products)`
+                        : optionName
+                      
                       return (
-                        <SelectItem key={item.name} value={item.name} disabled={isSelected}>
+                        <SelectItem key={optionName} value={optionName} disabled={isSelected}>
                           <div className="flex items-center gap-2">
                             {isSelected && <span className="text-green-600">✅</span>}
-                            {item.name} ({item.count} products)
+                            {displayLabel}
                           </div>
                         </SelectItem>
                       )
                     })
-                ) : (
-                  // Fallback: 如果没有实际数据，才使用定义中的选项（但不显示占比）
-                  field.filter_options.options && Object.keys(field.filter_options.options)
-                    .map((option) => {
+                  }
+                  
+                  // Fallback: 如果统一数据源没有数据，使用定义中的选项
+                  if (field.filter_options.options) {
+                    return Object.keys(field.filter_options.options).map((option) => {
                       const isSelected = selectCurrentValue.includes(option)
                       return (
                         <SelectItem key={option} value={option} disabled={isSelected}>
@@ -181,7 +199,10 @@ export function DynamicExtendFieldsFilter({
                         </SelectItem>
                       )
                     })
-                )}
+                  }
+                  
+                  return null
+                })()}
               </SelectContent>
             </Select>
           </div>
@@ -245,8 +266,26 @@ export function DynamicExtendFieldsFilter({
           []
         )
         
-        // 获取所有可用选项（从实际数据中获取）
-        const availableOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
+        // 获取所有可用选项（从统一数据源中获取，不受当前筛选条件影响）
+        const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
+        
+        // 构建可用选项列表，尝试包含count信息
+        let availableOptions = stableOptions.map(optionName => {
+          // 尝试从projectData获取count信息（如果可用）
+          const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
+            (item: any) => item.name === optionName
+          )
+          
+          return {
+            name: optionName,
+            count: countInfo?.count || 0
+          }
+        })
+        
+        // 如果统一数据源也没有数据，fallback到projectData
+        if (availableOptions.length === 0) {
+          availableOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
+        }
         
         return (
           <div key={field.field_name} className="flex items-center gap-2">

@@ -37,16 +37,6 @@ export function PriceTypeSelector({ onChange, defaultValue = "unit" }: PriceType
           </SelectItem>
         </SelectContent>
       </Select>
-      <div className="text-sm text-gray-600 ml-4">
-        <div className="flex items-center space-x-1">
-          <span className="font-semibold">Full Pack Price:</span>
-          <span>Total price for a full package</span>
-        </div>
-        <div className="flex items-center space-x-1 mt-1">
-          <span className="font-semibold">Unit Price:</span>
-          <span>Price per individual unit within a package</span>
-        </div>
-      </div>
     </div>
   )
 }
