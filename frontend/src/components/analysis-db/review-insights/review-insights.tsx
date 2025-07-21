@@ -78,7 +78,11 @@ interface ReviewInsightsProps {
 
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
+  const [reviewData, setReviewData] = useState<{
+    painPointsReviews?: Record<string, unknown[]>
+    customerLikesReviews?: Record<string, unknown[]>
+    useCaseReviews?: Record<string, unknown[]>
+  } | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [filteredData, setFilteredData] = useState<{
     reviewInsights: typeof data.reviewInsights
@@ -161,20 +165,19 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     // Create the structure that charts expect using database data
     // 需要将数据结构转换为图表组件期待的格式
     const reviewDataForCharts = {
-      reviewsByCategory: {} as Record<string, unknown[]>
+      painPointsReviews: {} as Record<string, unknown[]>,     // 第一个图表：痛点数据
+      customerLikesReviews: {} as Record<string, unknown[]>,  // 第二个图表：客户喜爱数据
+      useCaseReviews: {} as Record<string, unknown[]>         // 第三个图表：用例数据
     }
     
     // 如果有allReviewData，需要正确映射到类别名称
     if (filteredData.allReviewData) {
-      // 首先直接使用allReviewData的现有映射
-      reviewDataForCharts.reviewsByCategory = { ...filteredData.allReviewData }
-      
       // 为痛点数据建立基于relatedDetailTexts的映射关系
       filteredData.reviewInsights.painPoints.forEach(painPoint => {
         const aspectName = painPoint.aspect
-        if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
+        if (!reviewDataForCharts.painPointsReviews[aspectName]) {
           const relatedReviews: unknown[] = []
-          
+
           // 使用新的relatedDetailTexts字段进行映射
           if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
             painPoint.relatedDetailTexts.forEach(detailText => {
@@ -193,115 +196,93 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               })
             })
           }
-          
+
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
+            reviewDataForCharts.painPointsReviews[aspectName] = relatedReviews
           }
         }
       })
       
-      // 为亮点数据建立基于relatedDetailTexts的映射关系
+      // 为亮点数据建立映射关系：feature 对应 review.category
       filteredData.reviewInsights.customerLikes.forEach(like => {
         const featureName = like.feature
-        if (!reviewDataForCharts.reviewsByCategory[featureName]) {
+        if (!reviewDataForCharts.customerLikesReviews[featureName]) {
           const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
-            like.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
+
+          // 直接通过 category 匹配
+          Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+            reviews.forEach(review => {
+              if (review.category === featureName) {
+                relatedReviews.push(review)
+              }
             })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
+          })
+
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
+            reviewDataForCharts.customerLikesReviews[featureName] = relatedReviews
           }
         }
       })
       
-      // 为Use Case数据建立基于relatedDetailTexts的映射关系
+      // 为Use Case数据建立映射关系：useCase 对应 review.category
       filteredData.reviewInsights.allUseCases.forEach(useCaseItem => {
         const useCaseName = useCaseItem.useCase
-        
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
+
+        if (!reviewDataForCharts.useCaseReviews[useCaseName]) {
           const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
+
+          // 直接通过 category 匹配
+          Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+            reviews.forEach(review => {
+              if (review.category === useCaseName) {
+                relatedReviews.push(review)
+              }
             })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
+          })
+
+          console.log("relatedReviews", relatedReviews)
+
           if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
+            reviewDataForCharts.useCaseReviews[useCaseName] = relatedReviews
           }
         }
       })
       
-      // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
-        const useCaseName = useCaseItem.useCase
+      // // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
+      // filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
+      //   const useCaseName = useCaseItem.useCase
         
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          const relatedReviews: unknown[] = []
+      //   if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
+      //     const relatedReviews: unknown[] = []
           
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
+      //     // 使用新的relatedDetailTexts字段进行映射
+      //     if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
+      //       useCaseItem.relatedDetailTexts.forEach(detailText => {
+      //         const reviews = filteredData.allReviewData[detailText] || []
+      //         relatedReviews.push(...reviews)
+      //       })
+      //     } else {
+      //       // fallback: 如果没有relatedDetailTexts，使用原有逻辑
+      //       Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
+      //         reviews.forEach(review => {
+      //           if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
+      //             relatedReviews.push(review)
+      //           } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
+      //             relatedReviews.push(review)
+      //           } else if (useCaseItem.productAttribute && 
+      //                      (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
+      //                       review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
+      //             relatedReviews.push(review)
+      //           }
+      //         })
+      //       })
+      //     }
           
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-          }
-        }
-      })
+      //     if (relatedReviews.length > 0) {
+      //       reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
+      //     }
+      //   }
+      // })
     }
     
     setReviewData(reviewDataForCharts)
@@ -491,11 +472,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               <div className="text-gray-500">正在更新数据...</div>
             </div>
           ) : (
-            <CategoryPainPointsBar 
-              data={categoryPainPoints.topNegativeCategories} 
+            <CategoryPainPointsBar
+              data={categoryPainPoints.topNegativeCategories}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
+              reviewData={{ reviewsByCategory: reviewData?.painPointsReviews || {} }}
               standardizedData={standardizedInsights.pain_points}
               useStandardizedData={useStandardizedData}
             />
@@ -523,11 +504,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               <div className="text-gray-500">Loading...</div>
             </div>
           ) : (
-            <CategoryPositiveFeedbackBar 
-              data={categoryPositiveFeedback.topPositiveCategories} 
+            <CategoryPositiveFeedbackBar
+              data={categoryPositiveFeedback.topPositiveCategories}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
+              reviewData={{ reviewsByCategory: reviewData?.customerLikesReviews || {} }}
               standardizedData={standardizedInsights.delights}
               useStandardizedData={useStandardizedData}
             />
@@ -556,7 +537,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               categoryDefinition: item.categoryDefinition,
               productCount: item.productCount
             }))} 
-            reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
+            reviewData={{ reviewsByCategory: reviewData?.useCaseReviews as Record<string, Array<{
               id: string
               productId: string
               text: string
@@ -567,7 +548,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               verified: boolean
               date: string
               brand: string
-            }>> }}
+            }>> || {} }}
             standardizedData={standardizedInsights.use_cases}
             useStandardizedData={useStandardizedData}
           />
