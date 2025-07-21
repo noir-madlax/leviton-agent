@@ -3,6 +3,7 @@
 import { useMemo } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
 import { Tooltip } from "@/components/ui/tooltip"
+import { DetailedTooltip } from "@/components/ui/detailed-tooltip"
 // allReviewData now passed as prop instead of imported
 
 interface MatrixData {
@@ -186,26 +187,38 @@ export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToPr
                   
                   return (
                     <td key={productAsin} className="border border-gray-300 p-3 text-center">
-                      <div 
-                        className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)}`}
-                        onClick={() => handleCellClick(row.category, productAsin, cellData)}
-                        onKeyDown={(e) => {
-                          if (e.key === 'Enter' || e.key === ' ') {
-                            e.preventDefault()
-                            handleCellClick(row.category, productAsin, cellData)
-                          }
+                      <DetailedTooltip
+                        content={{
+                          title: row.category,
+                          type: row.categoryType,
+                          positiveCount: cellData.positiveCount,
+                          negativeCount: cellData.negativeCount,
+                          totalMentions: cellData.mentions,
+                          satisfactionRate: cellData.satisfactionRate,
+                          additionalInfo: [
+                            `Product: ${productName}`,
+                            `Total reviews analyzed: ${cellData.totalReviews}`
+                          ]
                         }}
-                        tabIndex={0}
-                        role="button"
-                        aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
                       >
-                        <div className="text-lg font-bold">
-                          {cellData.mentions}
+                        <div 
+                          className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)} cursor-pointer`}
+                          onClick={() => handleCellClick(row.category, productAsin, cellData)}
+                          onKeyDown={(e) => {
+                            if (e.key === 'Enter' || e.key === ' ') {
+                              e.preventDefault()
+                              handleCellClick(row.category, productAsin, cellData)
+                            }
+                          }}
+                          tabIndex={0}
+                          role="button"
+                          aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
+                        >
+                          <div className="text-lg font-bold">
+                            {cellData.mentions}
+                          </div>
                         </div>
-                        <div className="text-xs mt-1">
-                          {cellData.satisfactionRate}%
-                        </div>
-                      </div>
+                      </DetailedTooltip>
                     </td>
                   )
                 })}

@@ -40,10 +40,10 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
   const loadFilterData = useCallback(async (projectId: string, forceRefresh = false) => {
     const cached = unifiedFilterCacheStore.get(projectId)
     
-    // 如果缓存存在且不强制刷新，且缓存时间不超过5分钟，则直接返回缓存
+    // 如果缓存存在且不强制刷新，且缓存时间不超过30分钟，则直接返回缓存
     if (cached && cached.data && !forceRefresh && cached.lastUpdated) {
       const cacheAge = Date.now() - cached.lastUpdated
-      if (cacheAge < 5 * 60 * 1000) { // 5分钟缓存仍然有效
+      if (cacheAge < 30 * 60 * 1000) { // 30分钟缓存仍然有效
         setCacheState(cached)
         return
       }
@@ -178,7 +178,7 @@ export function preloadUnifiedFilterData(projectId: string, existingOverview?: a
         const cached = unifiedFilterCacheStore.get(projectId)
         if (cached && cached.data && cached.lastUpdated) {
           const cacheAge = Date.now() - cached.lastUpdated
-          if (cacheAge < 5 * 60 * 1000) { // 5分钟缓存仍然有效
+          if (cacheAge < 30 * 60 * 1000) { // 30分钟缓存仍然有效
             console.log(`Unified filter data already cached for project ${projectId}`)
             resolve()
             return

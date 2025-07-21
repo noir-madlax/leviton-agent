@@ -282,8 +282,8 @@ class ReviewInsightsService(BaseDashboardService):
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
-        # Sort by severity and take top 15
-        pain_points.sort(key=lambda x: x['severity'], reverse=True)
+        # Sort by frequency and take top 15
+        pain_points.sort(key=lambda x: x['frequency'], reverse=True)
         pain_points = pain_points[:15]
         
         # Generate customer likes (categories with high positive sentiment)

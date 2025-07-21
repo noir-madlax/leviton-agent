@@ -73,10 +73,10 @@ export function ChartWithFilters({
       const cacheKey = `${projectId}-${chartId}`
       const cached = filterConfigCacheStore.get(cacheKey)
       
-      // 如果缓存存在且有效（5分钟内），直接使用缓存
+      // 如果缓存存在且有效（30分钟内），直接使用缓存
       if (cached && cached.data && cached.lastUpdated) {
         const cacheAge = Date.now() - cached.lastUpdated
-        if (cacheAge < 5 * 60 * 1000) { // 5分钟缓存有效
+        if (cacheAge < 30 * 60 * 1000) { // 30分钟缓存有效
           setChartFilterConfig(cached.data)
           setConfigLoading(false)
           console.log('🔧 [CHART-FILTER] Using cached chart filter configuration:', chartId)

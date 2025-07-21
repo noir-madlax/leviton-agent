@@ -14,6 +14,26 @@ import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-fil
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { supabase } from "@/lib/supabase"
 
+// 全局默认产品数据缓存
+interface DefaultProductsCacheState {
+  data: Array<{
+    platform_id: string
+    title: string
+    brand: string
+    price_usd: number
+    reviews_count: number
+    category: string
+    product_url?: string
+    monthly_sales_volume?: number
+    rating?: number | null
+  }> | null
+  loading: boolean
+  error: string | null
+  lastUpdated: number | null
+}
+
+const defaultProductsCacheStore = new Map<string, DefaultProductsCacheState>()
+
 interface CompetitorAnalysisProps {
   projectId: string | null;
   initialFilters?: ProjectFilters;
@@ -89,54 +109,105 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
   // 添加数据准备状态管理
   const [isDataReady, setIsDataReady] = useState(false);
 
-  // Load fixed default products for Customer satisfaction overview
+  // 检查是否有预载数据，如果有则立即设置为ready
+  useEffect(() => {
+    if (data && data.competitorAnalysis && data.competitorAnalysis.targetProducts.length > 0) {
+      console.log('🏆 [COMPETITOR-ANALYSIS] Using preloaded competitorAnalysis data');
+      setIsDataReady(true);
+    }
+  }, [data]);
+
+  // Load fixed default products for Customer satisfaction overview - 使用缓存机制
   useEffect(() => {
     const loadDefaultProducts = async () => {
       if (!projectId) return;
-      
-      // 重置数据准备状态
-      setIsDataReady(false);
-      
-              try {
-          // Direct query for fixed DEFAULT_COMPETITOR_ASINS (bypass project logic)
-          const { data: products, error: productsError } = await supabase
-            .from('product_wide_table')
-            .select('platform_id, title, brand, price_usd, reviews_count, category, product_url, rating')
-            .in('platform_id', DEFAULT_COMPETITOR_ASINS)
+
+      const cacheKey = `default-products-${projectId}`;
+      const cached = defaultProductsCacheStore.get(cacheKey);
+
+      // 如果缓存存在且有效（30分钟内），直接使用缓存
+      if (cached && cached.data && cached.lastUpdated) {
+        const cacheAge = Date.now() - cached.lastUpdated;
+        if (cacheAge < 30 * 60 * 1000) { // 30分钟缓存有效
+          setDefaultProducts(cached.data);
           
-          if (productsError) {
-            console.error('Error fetching fixed competitor products:', productsError);
-            setIsDataReady(true);
-            return;
+          // 如果没有自定义选择，使用缓存的默认产品
+          if (selectedAsins.length === 0) {
+            setSelectedAsins(DEFAULT_COMPETITOR_ASINS);
           }
           
-          // Convert to the expected format, preserving the order of DEFAULT_COMPETITOR_ASINS  
-          const formattedProducts = DEFAULT_COMPETITOR_ASINS.map(asin => {
-            const product = products?.find((p: any) => p.platform_id === asin);
-            if (product) {
-              return {
-                platform_id: product.platform_id,
-                title: product.title,
-                brand: product.brand,
-                price_usd: product.price_usd,
-                reviews_count: product.reviews_count, // Use regular reviews_count for fixed products
-                category: product.category,
-                product_url: product.product_url,
-                rating: product.rating
-              };
-            }
-            return null;
-          }).filter(Boolean) as Array<{
-            platform_id: string
-            title: string
-            brand: string
-            price_usd: number
-            reviews_count: number
-            category: string
-            product_url?: string
-            monthly_sales_volume?: number
-            rating?: number | null
-          }>;
+          // 只有在没有预载数据时才设置为ready（避免覆盖预载逻辑）
+          if (!data || !data.competitorAnalysis || data.competitorAnalysis.targetProducts.length === 0) {
+            setIsDataReady(true);
+          }
+          console.log('🏆 [COMPETITOR-ANALYSIS] Using cached default products data');
+          return;
+        }
+      }
+      
+      // 只有在没有预载数据时才重置数据准备状态
+      if (!data || !data.competitorAnalysis || data.competitorAnalysis.targetProducts.length === 0) {
+        setIsDataReady(false);
+      }
+      
+      // 更新缓存状态
+      const newCacheState: DefaultProductsCacheState = {
+        data: cached?.data || null,
+        loading: true,
+        error: null,
+        lastUpdated: cached?.lastUpdated || null
+      };
+      defaultProductsCacheStore.set(cacheKey, newCacheState);
+      
+      try {
+        // Direct query for fixed DEFAULT_COMPETITOR_ASINS (bypass project logic)
+        const { data: products, error: productsError } = await supabase
+          .from('product_wide_table')
+          .select('platform_id, title, brand, price_usd, reviews_count, category, product_url, rating')
+          .in('platform_id', DEFAULT_COMPETITOR_ASINS)
+        
+        if (productsError) {
+          console.error('Error fetching fixed competitor products:', productsError);
+          setIsDataReady(true);
+          return;
+        }
+        
+        // Convert to the expected format, preserving the order of DEFAULT_COMPETITOR_ASINS  
+        const formattedProducts = DEFAULT_COMPETITOR_ASINS.map(asin => {
+          const product = products?.find((p: any) => p.platform_id === asin);
+          if (product) {
+            return {
+              platform_id: product.platform_id,
+              title: product.title,
+              brand: product.brand,
+              price_usd: product.price_usd,
+              reviews_count: product.reviews_count, // Use regular reviews_count for fixed products
+              category: product.category,
+              product_url: product.product_url,
+              rating: product.rating
+            };
+          }
+          return null;
+        }).filter(Boolean) as Array<{
+          platform_id: string
+          title: string
+          brand: string
+          price_usd: number
+          reviews_count: number
+          category: string
+          product_url?: string
+          monthly_sales_volume?: number
+          rating?: number | null
+        }>;
+      
+        // 更新缓存和组件状态
+        const successCacheState: DefaultProductsCacheState = {
+          data: formattedProducts,
+          loading: false,
+          error: null,
+          lastUpdated: Date.now()
+        };
+        defaultProductsCacheStore.set(cacheKey, successCacheState);
         
         setDefaultProducts(formattedProducts);
         
@@ -155,25 +226,44 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
                 defaultAsins.join(',') // Selected ASINs as string
               );
               setCustomCompetitorData(response);
-              // 数据加载完成，设置为ready
-              setIsDataReady(true);
+              // 数据加载完成，设置为ready（如果还没有ready的话）
+              if (!isDataReady) {
+                setIsDataReady(true);
+              }
             } catch (error) {
               console.error('Error fetching default competitor data:', error);
-              // 即使出错也要设置为ready，避免无限loading
-              setIsDataReady(true);
+              // 即使出错也要设置为ready，避免无限loading（如果还没有ready的话）
+              if (!isDataReady) {
+                setIsDataReady(true);
+              }
             } finally {
               setLoading(false);
             }
           } else {
-            // 没有默认产品时也设置为ready
-            setIsDataReady(true);
+            // 没有默认产品时也设置为ready（如果还没有ready的话）
+            if (!isDataReady) {
+              setIsDataReady(true);
+            }
           }
         } else {
-          // 已有自定义选择时设置为ready
-          setIsDataReady(true);
+          // 已有自定义选择时设置为ready（如果还没有ready的话）
+          if (!isDataReady) {
+            setIsDataReady(true);
+          }
         }
+        
+        console.log('🏆 [COMPETITOR-ANALYSIS] Loaded and cached default products data');
       } catch (error) {
         console.error('Error loading default products:', error);
+        
+        // 错误缓存状态
+        const errorCacheState: DefaultProductsCacheState = {
+          data: cached?.data || null,
+          loading: false,
+          error: error instanceof Error ? error.message : 'Failed to load default products',
+          lastUpdated: cached?.lastUpdated || null
+        };
+        defaultProductsCacheStore.set(cacheKey, errorCacheState);
         
         // Fallback to original logic if new method fails
         try {
@@ -182,12 +272,16 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
             .sort((a, b) => b.reviews_count - a.reviews_count)
             .slice(0, 6);
           setDefaultProducts(topProducts);
-          // 设置为ready
-          setIsDataReady(true);
+          // 设置为ready（如果还没有ready的话）
+          if (!isDataReady) {
+            setIsDataReady(true);
+          }
         } catch (fallbackError) {
           console.error('Fallback also failed:', fallbackError);
-          // 最终设置为ready
-          setIsDataReady(true);
+          // 最终设置为ready（如果还没有ready的话）
+          if (!isDataReady) {
+            setIsDataReady(true);
+          }
         }
       }
     };
@@ -335,7 +429,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     <div className="space-y-10 max-w-7xl mx-auto px-4">
       {/* ASIN Selection */}
       <section>
-        <div className="mb-4">
+        <div className="hidden mb-4">
           <Button
             variant="outline"
             onClick={() => setShowAsinSelector(!showAsinSelector)}
