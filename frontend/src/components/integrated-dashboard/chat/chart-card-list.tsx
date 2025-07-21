@@ -208,11 +208,7 @@ export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardLi
                       </span>
                       <span className="leading-relaxed flex-1">
                         {chart.name}
-                        {navigatingToChart === chart.id && (
-                          <span className="text-blue-600 text-xs ml-2 animate-pulse">
-                            Navigating...
-                          </span>
-                        )}
+                       
                       </span>
                     </button>
                   </li>
