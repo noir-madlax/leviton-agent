@@ -37,8 +37,7 @@ interface MarketInsightsProps {
 export function MarketInsights({ data: initialData, projectId, initialFilters }: MarketInsightsProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
-  const [loading] = useState(false)
-  const { openPanel } = useProductPanel()
+  const { openPanel, loading } = useProductPanel()
 
 
 
@@ -130,25 +129,27 @@ export function MarketInsights({ data: initialData, projectId, initialFilters }:
 
           {/* Segment Revenue Chart */}
           <div className="mb-8">
-            <div className="bg-gray-50 p-4 ">
+            <div className="bg-gray-50 p-4 relative">
               <div className="h-[600px] w-full">
-                {loading ? (
-                  <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                    <span className="ml-2">Loading chart data...</span>
-                  </div>
-                ) : (
-                  <GroupedBarChart
-                    data={chartData}
-                    index="name"
-                    categories={[metricType]}
-                    colors={chartColors}
-                    yAxisLabel={yAxisLabel}
-                    metricType={metricType}
-                    onBarClick={handleBarClick}
-                  />
-                )}
+                <GroupedBarChart
+                  data={chartData}
+                  index="name"
+                  categories={[metricType]}
+                  colors={chartColors}
+                  yAxisLabel={yAxisLabel}
+                  metricType={metricType}
+                  onBarClick={handleBarClick}
+                />
               </div>
+              {/* Loading overlay */}
+              {loading && (
+                <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
+                  <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+                    <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                    <span className="text-gray-700 font-medium">Loading products...</span>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 

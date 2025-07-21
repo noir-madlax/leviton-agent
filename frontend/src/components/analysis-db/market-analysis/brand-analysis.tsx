@@ -109,8 +109,7 @@ interface BrandAnalysisProps {
 export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
-  const [loading] = useState(false)
-  const { openPanel } = useProductPanel()
+  const { openPanel, loading } = useProductPanel()
 
   // 获取category信息
   const categoryNames = data.categoryNames || []
@@ -173,12 +172,19 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
   const handleBarClick = (data: unknown) => {
     if (data && typeof data === 'object' && 'activeLabel' in data) {
       const chartData = data as { activeLabel: string }
-              const brand = chartData.activeLabel
+      const brand = chartData.activeLabel
+      
+      // 合并现有筛选条件和当前点击的品牌
+      const newFilters = {
+        ...initialFilters,
+        brands: [brand],
+      }
+
       openPanel({
         projectId: projectId || '',
-        filters: { brands: [brand] },
+        filters: newFilters,
         title: `${brand} Products`,
-        subtitle: `All products from ${brand}`,
+        subtitle: `All products from ${brand} matching current filters`,
         showFilters: { brand: false, category: true, priceRange: true, packSize: true }
       })
     }
@@ -472,25 +478,27 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
           
           {/* Single grouped bar chart */}
-          <div className="bg-gray-50 p-4 rounded-lg  ">
+          <div className="bg-gray-50 p-4 rounded-lg relative">
             <div className="h-[400px]">
-              {loading ? (
-                <div className="flex items-center justify-center h-full">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  <span className="ml-2">Loading chart data...</span>
-                </div>
-              ) : (
-                <BarChart
-                  data={chartData}
-                  index="name"
-                  categories={categoryNames}
-                  colors={colors}
-                  yAxisLabel={yAxisLabel}
-                  metricType={metricType}
-                  onBarClick={(data) => handleBarClick(data)}
-                />
-              )}
+              <BarChart
+                data={chartData}
+                index="name"
+                categories={categoryNames}
+                colors={colors}
+                yAxisLabel={yAxisLabel}
+                metricType={metricType}
+                onBarClick={(data) => handleBarClick(data)}
+              />
             </div>
+            {/* Loading overlay */}
+            {loading && (
+              <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
+                <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                  <span className="text-gray-700 font-medium">Loading products...</span>
+                </div>
+              </div>
+            )}
           </div>
         </Card>
       </ChartWithFilters>
