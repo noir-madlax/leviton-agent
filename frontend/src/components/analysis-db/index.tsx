@@ -746,6 +746,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
       const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
       loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true); // 强制重新加载
+      // 同时重新加载 marketInsights 和 packagePreference 数据，因为 BrandAnalysis 组件需要它们
+      loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
     }
   }, [appliedFilters, selectedProjectId, loadSpecificData])
 
