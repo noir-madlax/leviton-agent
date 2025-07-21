@@ -181,7 +181,7 @@ export function BrandViolinChart({
   const globalMax = Math.max(...allPrices)
 
   const { margin, chartWidth, chartHeight, maxViolinHalfWidth, brandPositions } = useMemo(() => {
-    const margin = { top: 50, right: 40, bottom: 80, left: 80 }
+    const margin = { top: 30, right: 40, bottom: 60, left: 60 }
     const chartWidth = dimensions.width > 0 ? dimensions.width - margin.left - margin.right : 0
     const chartHeight = dimensions.height > 0 ? dimensions.height - margin.top - margin.bottom : 0
     const maxViolinHalfWidth = chartWidth / (validBrands.length * 2.5)
@@ -482,7 +482,7 @@ export function BrandViolinChart({
           ))}
 
           {/* Y-axis title */}
-          <text x={20} y={margin.top + chartHeight / 2} textAnchor="middle" fontSize="14" fill="#64748b" transform={`rotate(-90, 20, ${margin.top + chartHeight / 2})`}>
+          <text x={15} y={margin.top + chartHeight / 2} textAnchor="middle" fontSize="14" fill="#64748b" transform={`rotate(-90, 15, ${margin.top + chartHeight / 2})`}>
             Price (USD)
           </text>
 
@@ -551,18 +551,18 @@ export function BrandViolinChart({
             <text 
               key={brand.name}
               x={brand.x} 
-              y={margin.top + chartHeight + 30} 
+              y={margin.top + chartHeight + 20} 
               textAnchor="middle" 
               fontSize="11" 
               fill="#64748b"
-              transform={`rotate(-45, ${brand.x}, ${margin.top + chartHeight + 30})`}
+              transform={`rotate(-45, ${brand.x}, ${margin.top + chartHeight + 20})`}
             >
               {brand.name}
             </text>
           ))}
 
           {/* Legend */}
-          <g transform={`translate(${margin.left + 20}, ${margin.top})`}>
+          <g transform={`translate(${margin.left + 620}, ${margin.top - 35})`}>
             <rect x="0" y="0" width="120" height="55" fill="white" fillOpacity="0.9" stroke="#e5e7eb" strokeWidth="1" rx="4" />
             <line x1="10" y1="20" x2="25" y2="20" stroke="#7c3aed" strokeWidth="3" strokeDasharray="8,4" />
             <text x="30" y="23" fontSize="11" fill="#374151">Median</text>

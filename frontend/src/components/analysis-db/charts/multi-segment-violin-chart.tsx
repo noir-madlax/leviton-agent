@@ -97,6 +97,9 @@ export function MultiSegmentViolinChart({
 }: MultiSegmentViolinChartProps) {
   // 使用新的产品浮窗查询Hook
   const { handleViolinClick, handleMultipleFiltersClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
+  
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const _ = priceType // Acknowledge priceType parameter for future use
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -143,7 +146,7 @@ export function MultiSegmentViolinChart({
   }, [validSegments])
   
   const { margin, chartWidth, chartHeight, maxViolinHalfWidth, segmentPositions } = useMemo(() => {
-    const margin = { top: 50, right: 20, bottom: 50, left: 80 };
+    const margin = { top: 30, right: 20, bottom: 40, left: 60 };
     const chartWidth = dimensions.width > 0 ? dimensions.width - margin.left - margin.right : 0;
     const chartHeight = dimensions.height > 0 ? dimensions.height - margin.top - margin.bottom : 0;
     const maxViolinHalfWidth = chartWidth / (validSegments.length * 3);
@@ -170,7 +173,6 @@ export function MultiSegmentViolinChart({
     return Array.from({ length: 6 }, (_, i) => i * Math.ceil(maxPrice / 5 / 10) * 10);
   }, [maxPrice]);
 
-  const fixedTolerance = maxPrice * 0.05
   // 价格区间窗口大小，用于计算当前区间内的产品数量
   const priceWindowPercentage = 0.03 // 3% 的价格窗口
 
@@ -367,7 +369,7 @@ export function MultiSegmentViolinChart({
           ))}
 
           {/* Y-axis title */}
-          <text x={20} y={margin.top + chartHeight / 2} textAnchor="middle" fontSize="14" fill="#64748b" transform={`rotate(-90, 20, ${margin.top + chartHeight / 2})`}>
+          <text x={15} y={margin.top + chartHeight / 2} textAnchor="middle" fontSize="14" fill="#64748b" transform={`rotate(-90, 15, ${margin.top + chartHeight / 2})`}>
             Price (USD)
           </text>
 
@@ -401,13 +403,13 @@ export function MultiSegmentViolinChart({
 
           {/* X-axis labels */}
           {validSegments.map((segment, index) => (
-            <text key={segment.name} x={segmentPositions[index]} y={margin.top + chartHeight + 30} textAnchor="middle" fontSize="14" fill="#64748b">
+            <text key={segment.name} x={segmentPositions[index]} y={margin.top + chartHeight + 25} textAnchor="middle" fontSize="12" fill="#64748b">
               {segment.name.length > 15 ? `${segment.name.substring(0, 12)}...` : segment.name}
             </text>
           ))}
 
           {/* Legend */}
-          <g transform={`translate(${margin.left + 20}, ${margin.top})`}>
+          <g transform={`translate(${margin.left + 620}, ${margin.top - 35})`}>
             <rect x="0" y="0" width="160" height="65" fill="white" fillOpacity="0.9" stroke="#e5e7eb" strokeWidth="1" rx="4"/>
             {validSegments.slice(0, 2).map((segment, index) => (
               <g key={segment.name}>

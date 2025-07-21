@@ -411,7 +411,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
               />
             </div>
             
-            <div className="h-[500px]">
+            <div className="h-[350px]">
               <MultiSegmentViolinChart
                 segments={violinSegments}
                 priceType={priceType}
@@ -443,7 +443,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
               {data.brandPriceDistribution.map((categoryData, index) => (
                 <div key={index}>
                   <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
-                  <div className="h-[400px]">
+                  <div className="h-[320px]">
                     <BrandViolinChart
                       brands={categoryData.brands}
                       priceType={priceType}
@@ -484,6 +484,26 @@ function getSegmentEmoji(segmentName: string): string {
     // Smart Capability维度
     'Smart': '🔌',
     'Non-Smart': '🔧'
+  }
+  
+  // 处理组合名称（如 "Dimmer Switches + Smart"）
+  if (segmentName.includes(' + ')) {
+    const parts = segmentName.split(' + ')
+    if (parts.length >= 2) {
+      const category = parts[0].trim()
+      const smart = parts[1].trim()
+      
+      // 为组合提供特定的emoji
+      if (category === 'Dimmer Switches' && smart === 'Smart') {
+        return '🔆' // 智能调光开关
+      } else if (category === 'Dimmer Switches' && smart === 'Non-Smart') {
+        return '🎛️' // 非智能调光开关
+      } else if (category === 'Light Switches' && smart === 'Smart') {
+        return '💡' // 智能电灯开关
+      } else if (category === 'Light Switches' && smart === 'Non-Smart') {
+        return '⚡' // 非智能电灯开关
+      }
+    }
   }
   
   return emojiMap[segmentName] || '🔲'
