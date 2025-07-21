@@ -403,7 +403,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
               </div>
             )}
              <p className="text-sm pt-0 text-blue-700 mt-3">
-              Approximated by the total Revenue of all products within this category in the current project within the selected time period
+             Approximated by the total Revenue of all products in the selected categories and time period.
             </p>
           </div>
           <Card className="p-6 bg-gray-50 mb-15">

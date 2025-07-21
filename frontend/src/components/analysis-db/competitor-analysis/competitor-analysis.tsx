@@ -84,7 +84,7 @@ const DEFAULT_COMPETITOR_ASINS = [
   'B0BVKYKKRK', // Leviton D26HD - Mid-tier brand representative
   'B0BSHKS26L', // Lutron Caseta Diva - Mid-tier brand representative
   'B085D8M2MR', // Lutron Diva - Mid-tier brand representative
-  'B0BTMWZH3K'  // Kasa HomeKit - Mid-tier brand representative
+  'B01EZV35QU'  // Kasa HomeKit - Mid-tier brand representative
 ];
 
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
@@ -479,7 +479,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           )}
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+        Calculated from the latest 200 reviews per product.
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {productStats.map((stat: any) => (
@@ -535,10 +535,8 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           chartType="matrix"
         >
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
-            with the satisfaction rate (%) below. Categories are ranked by frequency across all products. 
-            <strong>Click any cell to view the actual reviews.</strong> 
-            Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
+          The number represents total mentions. Color indicates satisfaction rate (positive mentions / total mentions):
+            <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
             <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
             <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
             <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
@@ -565,9 +563,8 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           chartType="matrix"
         >
           <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-            <strong>How to read this table:</strong> Number refers to the count of reviews; Percentage: refers to the % of positive reviews)
-            <strong>Click any cell to view the actual reviews.</strong> 
-            Color coding: <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
+          The number represents total mentions. Color indicates satisfaction rate (positive mentions / total mentions):
+            <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
             <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
             <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
             <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 

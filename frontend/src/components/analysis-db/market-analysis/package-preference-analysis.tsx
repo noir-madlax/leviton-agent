@@ -220,7 +220,7 @@ export function PackagePreferenceAnalysis({
                   <strong>Total addressable market (TAM): </strong> ${totalValue.toLocaleString()} with {totalProducts} products 
                 </p>
                 <p className="mt-1">
-                  Approximated by the total Revenue of all products within this category in the current project within the selected time period
+                Approximated by the total Revenue of all products in the selected categories and time period.
                 </p>
               </div>
             )}
@@ -309,7 +309,7 @@ export function PackagePreferenceAnalysis({
             return (
               <div key={category} className="bg-gray-50 p-0 pb-0 rounded-lg mb-[-10px]">
                 <h4 className="text-lg font-medium mb-0 text-center">
-                  📦 {category} - Package Type Distribution by {titleSuffix}
+                  📦 {category} - Purchase Format Distribution by {titleSuffix}
                 </h4>
                 <div className="h-[500px]">
                   <ResponsiveContainer width="100%" height="100%">

@@ -12,7 +12,7 @@ export function MetricTypeSelector({ onChange, value = "revenue" }: MetricTypeSe
   return (
     <div className="flex items-center space-x-4 mb-0">
       <Label htmlFor="metric-type" className="text-lg font-semibold text-gray-800">
-        Choose to show <span className="font-bold">Revenue</span> or <span className="font-bold">Volume</span>:
+      Sorted by: <span className="font-bold">Revenue</span> or <span className="font-bold">Volume</span>:
       </Label>
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger id="metric-type" className="w-[180px] text-base">

@@ -170,7 +170,7 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
               >
                 <Tooltip content="Positive Mentions / Total Mentions">
                   <div className="flex items-center justify-center gap-1">
-                    Positive Share (%)
+                  Satisfaction Rate (%)
                     <span className="text-xs">{getSortIcon('positiveShare')}</span>
                   </div>
                 </Tooltip>

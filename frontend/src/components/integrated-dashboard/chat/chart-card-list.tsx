@@ -32,7 +32,7 @@ const CHART_DETAILS = {
         id: 'market-insights'
       },
       {
-        name: 'Market Share by Package-Type',
+        name: 'Market Share by Purchase Format',
         id: 'package-preference'
       }
     ]

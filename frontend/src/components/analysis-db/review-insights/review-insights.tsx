@@ -416,7 +416,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-           Analysis uses up to 200 most recent reviews per product (all-time data)
+           Bars are sorted by descending negative mentions left to right, calculated from the latest 40 reviews per product in selected categories.
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -446,7 +446,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Analysis uses up to 200 most recent reviews per product (all-time data)
+            Bars are sorted by descending positive mentions left to right, calculated from the latest 40 reviews per product in selected categories.
+
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -467,7 +468,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-        Analysis uses up to 200 most recent reviews per product (all-time data)
+        Calculated from the latest 40 reviews per product in selected categories.
+
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
           <UseCaseSentimentMatrix 
