@@ -339,16 +339,7 @@ export function ChatWithNavigation({
     <div className="ai-chat-container min-h-full flex flex-col">
       {/* Chat Header */}
       <div className="flex-shrink-0 border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="flex items-center gap-2 p-2">
-          <MessageSquare className="h-4 w-4" />
-          <h2 className="font-medium text-sm">Xenith-AI Agent</h2>
-          {isLoading && (
-            <div className="flex items-center gap-2 text-xs text-muted-foreground">
-              <Loader2 className="h-3 w-3 animate-spin" />
-              {compiling ? 'Compiling chart...' : 'Analyzing...'}
-            </div>
-          )}
-        </div>
+        
       </div>
 
       {/* Messages Area */}
