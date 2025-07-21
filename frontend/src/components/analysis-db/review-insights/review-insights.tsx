@@ -403,7 +403,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
         <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">
-          📊 Customer Pain Points by Category
+          📊 Customer Pain Points
         </h2>
        
         
@@ -411,7 +411,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           chartId="customer-pain-points"
           chartType="bar"
           projectId={projectId || ''}
-          title="Top 10 Customer Pain Points by Category"
+          title="Top 10 Customer Pain Points"
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >
@@ -441,7 +441,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           chartId="customer-delights"
           chartType="bar"
           projectId={projectId || ''}
-          title="Top 10 Customer Delights by Category"
+          title="Top 10 Customer Delights"
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >

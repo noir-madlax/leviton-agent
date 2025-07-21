@@ -32,7 +32,7 @@ const CHART_DETAILS = {
         id: 'market-insights'
       },
       {
-        name: 'Market Share by Purchase Format',
+        name: 'Market Share by Sales Unit',
         id: 'package-preference'
       }
     ]
@@ -62,11 +62,11 @@ const CHART_DETAILS = {
     title: 'Customer Insights',
     charts: [
       {
-        name: 'Top 10 Customer Pain Points by Product Segments',
+        name: 'Top 10 Customer Pain Points',
         id: 'customer-pain-points'
       },
       {
-        name: 'Top 10 Customer Delights by Product Segments',
+        name: 'Top 10 Customer Delights',
         id: 'customer-delights'
       },
       {
@@ -79,7 +79,7 @@ const CHART_DETAILS = {
     title: 'Competitive Product Analysis',
     charts: [
       {
-        name: 'Customer satisfaction overview',
+        name: 'Customer Satisfaction Overview',
         id: 'customer-satisfaction-overview'
       },
       {

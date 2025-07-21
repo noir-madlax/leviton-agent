@@ -309,7 +309,7 @@ export function PackagePreferenceAnalysis({
             return (
               <div key={category} className="bg-gray-50 p-0 pb-0 rounded-lg mb-[-10px]">
                 <h4 className="text-lg font-medium mb-0 text-center">
-                  📦 {category} - Purchase Format Distribution by {titleSuffix}
+                  📦 {category} - Sales Unit Distribution by {titleSuffix}
                 </h4>
                 <div className="h-[500px]">
                   <ResponsiveContainer width="100%" height="100%">
