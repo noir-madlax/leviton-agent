@@ -199,21 +199,6 @@ class ProductQueryService(BaseDashboardService):
             # 如果需要segment筛选但没有segment映射数据，说明配置有误，记录警告但不阻断查询
             logger.warning(f"Segment filter requested {filters.segments} but no segment mapping available, skipping segment filter")
 
-        # 价格范围筛选
-        if filters.price_range:
-            min_price = filters.price_range.get('min')
-            max_price = filters.price_range.get('max')
-            if min_price is not None:
-                query = query.gte('price_usd', min_price)
-            if max_price is not None:
-                query = query.lte('price_usd', max_price)
-            logger.info(f"Applied price_range filter: {filters.price_range}")
-
-        # 包大小筛选
-        if filters.pack_sizes:
-            query = query.in_('pack_count', filters.pack_sizes)
-            logger.info(f"Applied pack_sizes filter: {filters.pack_sizes}")
-
         # 扩展字段筛选 (新)
         if filters.extend_fields:
             for field, value in filters.extend_fields.items():
