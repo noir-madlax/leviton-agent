@@ -373,11 +373,16 @@ export function BrandViolinChart({
 
           // 根据筛选模式选择不同的处理方式
           if (filterMode === 'extend_fields' && extendFieldsConfig) {
+            // 拆分组合的 category 名称，提取基础类别
+            const categoryParts = category.split(' + ')
+            const baseCategory = categoryParts.length > 0 ? categoryParts[0].trim() : category
+            
             // 使用扩展字段筛选
             await handleMultipleFiltersClick(
               projectId,
               {
                 brands: [brandName],
+                categories: [baseCategory],
                 extend_fields: {
                   [extendFieldsConfig.field]: extendFieldsConfig.value
                 }

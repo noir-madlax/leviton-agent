@@ -440,25 +440,42 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
             </div>
             
             <div className="space-y-8">
-              {data.brandPriceDistribution.map((categoryData, index) => (
-                <div key={index}>
-                  <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
-                  <div className="h-[320px]">
-                    <BrandViolinChart
-                      brands={categoryData.brands}
-                      priceType={priceType}
-                      category={categoryData.category}
-                      projectId={projectId || ''}
-                      // 根据索引决定筛选模式：前两个用 category，后两个用 extend_fields
-                      filterMode={index < 2 ? 'category' : 'extend_fields'}
-                      extendFieldsConfig={index >= 2 ? {
-                        field: 'smart_capability',
-                        value: index === 2 ? 'Smart' : 'Non-Smart'
-                      } : undefined}
-                    />
+              {data.brandPriceDistribution.map((categoryData) => {
+                const categoryName = categoryData.category
+                const isCombinedCategory = categoryName.includes(' + ')
+
+                let filterMode = 'category'
+                let extendFieldsConfig
+
+                if (isCombinedCategory) {
+                  const parts = categoryName.split(' + ')
+                  const smartCapability = parts.length > 1 ? parts[1].trim() : null
+
+                  if (smartCapability && (smartCapability === 'Smart' || smartCapability === 'Non-Smart')) {
+                    filterMode = 'extend_fields'
+                    extendFieldsConfig = {
+                      field: 'smart_capability',
+                      value: smartCapability,
+                    }
+                  }
+                }
+
+                return (
+                  <div key={categoryName}>
+                    <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
+                    <div className="h-[320px]">
+                      <BrandViolinChart
+                        brands={categoryData.brands}
+                        priceType={priceType}
+                        category={categoryData.category}
+                        projectId={projectId || ''}
+                        filterMode={filterMode as 'category' | 'extend_fields'}
+                        extendFieldsConfig={extendFieldsConfig}
+                      />
+                    </div>
                   </div>
-                </div>
-              ))}
+                )
+              })}
             </div>
           </Card>
         </ChartWithFilters>
