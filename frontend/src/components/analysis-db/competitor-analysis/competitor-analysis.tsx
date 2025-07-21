@@ -314,9 +314,11 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       setApplyLoading(true);
       console.log('🔄 Applying product selection changes, loading new analysis data...');
       
+      const categoryFilters = initialFilters && initialFilters.categories && initialFilters.categories.length > 0 ? initialFilters.categories : undefined;
+      
       const response = await databaseService.getCompetitorAnalysisDataByProject(
         projectId,
-        undefined, // No category filters
+        categoryFilters, // Pass the category filters
         asins.join(',') // Selected ASINs as string
       );
       

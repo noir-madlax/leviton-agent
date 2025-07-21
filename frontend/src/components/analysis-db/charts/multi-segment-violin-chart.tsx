@@ -251,26 +251,35 @@ export function MultiSegmentViolinChart({
         if (svgX >= segmentX - maxViolinHalfWidth && svgX <= segmentX + maxViolinHalfWidth) {
           const segmentName = validSegments[i].name
 
-          // 根据段落索引决定使用不同的筛选条件
-          if (i < 2) {
-            // 前两个小提琴：通过 category 筛选
-            await handleViolinClick(
-              projectId,
-              segmentName,
-              `${segmentName} Products`,
-              `All products in ${segmentName} category`
-            )
+          // 解析 segmentName，支持 "Category + Smart Capability" 格式
+          const parts = segmentName.split(' + ')
+          const filters: any = {}
+          let title = `${segmentName} Products`
+          let subtitle = `All products in ${segmentName}`
+
+          if (parts.length === 2) {
+            const category = parts[0].trim()
+            const smartCapability = parts[1].trim()
+            filters.categories = [category]
+            filters.extend_fields = { smart_capability: smartCapability }
+            subtitle = `Category: ${category}, Capability: ${smartCapability}`
+          } else if (i < 2) {
+            // 回退到旧逻辑：前两个按 category 筛选
+            filters.categories = [segmentName]
           } else {
-            // 后两个小提琴：通过 extend_fields 的 smart_capability 筛选
-            const smartCapability = segmentName
-            await handleMultipleFiltersClick(
-              projectId,
-              { extend_fields: { smart_capability: smartCapability } },
-              `${smartCapability} Products`,
-              `All ${smartCapability.toLowerCase()} products`,
-              { brand: true, category: true, priceRange: true, packSize: true }
-            )
+            // 回退到旧逻辑：后两个按 smart_capability 筛选
+            filters.extend_fields = { smart_capability: segmentName }
+            subtitle = `All ${segmentName.toLowerCase()} products`
           }
+
+          await handleMultipleFiltersClick(
+            projectId,
+            filters,
+            title,
+            subtitle,
+            { brand: true, category: true, priceRange: true, packSize: true }
+          )
+          
           break
         }
       }

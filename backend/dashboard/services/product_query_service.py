@@ -89,43 +89,57 @@ class ProductQueryService(BaseDashboardService):
         return self._calculate_comprehensive_statistics(result.data or [])
     
     def _build_product_query(self):
-        """构建产品查询，分两步获取数据"""
-        # 第一步：获取该项目的所有产品segment分配（包括segment_name为空的情况）
+        """构建产品查询，只在需要segment筛选时查询segment数据"""
         try:
-            segment_assignments = self.supabase.table('product_segment_assignments').select(
-                'product_id, segment_name'
-            ).eq('project_id', self.project_id).execute()
+            # 检查是否需要segment筛选
+            need_segment_filter = (self.project_filters and 
+                                  self.project_filters.segments and 
+                                  len(self.project_filters.segments) > 0)
+            
+            if need_segment_filter:
+                # 只有在需要segment筛选时才查询segment assignments
+                logger.info(f"Segment filter required, querying segment assignments for project {self.project_id}")
+                segment_assignments = self.supabase.table('product_segment_assignments').select(
+                    'product_id, segment_name'
+                ).eq('project_id', self.project_id).execute()
 
-            # 创建产品ID到segment的映射，处理空值
-            # 注意：product_segment_assignments.product_id 关联 product_wide_table.id
-            self._segment_map = {}
-            project_product_ids = set()
+                # 创建产品ID到segment的映射
+                self._segment_map = {}
+                project_product_ids = set()
 
-            for assignment in segment_assignments.data or []:
-                product_id = assignment.get('product_id')  # 这是 wide 表的 id
-                segment_name = assignment.get('segment_name')  # 可能为空
-                if product_id:
-                    project_product_ids.add(product_id)
-                    self._segment_map[product_id] = segment_name  # 保留空值
+                for assignment in segment_assignments.data or []:
+                    product_id = assignment.get('product_id')
+                    segment_name = assignment.get('segment_name')
+                    if product_id:
+                        project_product_ids.add(product_id)
+                        self._segment_map[product_id] = segment_name
 
-            logger.info(f"Found {len(project_product_ids)} products in project {self.project_id}")
+                logger.info(f"Found {len(project_product_ids)} products in segment assignments")
 
-            if not project_product_ids:
-                # 如果项目没有任何产品分配，返回空查询
-                logger.warning(f"No products found for project {self.project_id}")
-                return self.supabase.table('product_wide_table').select('*').eq('id', -1)
+                if not project_product_ids:
+                    # 如果需要segment筛选但没有segment数据，返回空结果
+                    logger.warning(f"No segment assignments found for project {self.project_id}")
+                    return self.supabase.table('product_wide_table').select('*').eq('id', -1)
 
-            # 第二步：查询这些产品的详细信息
-            # 使用 id 字段进行关联，而不是 platform_id
-            query = self.supabase.table('product_wide_table').select(
-                'id, platform_id, title, brand, category, '
-                'price_usd, unit_price_calculated, estimated_revenue, '
-                'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
-            ).in_('id', list(project_product_ids))
+                # 基于segment assignments查询产品
+                query = self.supabase.table('product_wide_table').select(
+                    'id, platform_id, title, brand, category, '
+                    'price_usd, unit_price_calculated, estimated_revenue, '
+                    'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
+                ).in_('id', list(project_product_ids))
+            else:
+                # 不需要segment筛选时，直接基于项目ASINs查询
+                logger.info(f"No segment filter needed, querying directly by project ASINs for project {self.project_id}")
+                self._segment_map = {}  # 设置为空，表示没有segment信息
+                query = self.supabase.table('product_wide_table').select(
+                    'id, platform_id, title, brand, category, '
+                    'price_usd, unit_price_calculated, estimated_revenue, '
+                    'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
+                )
 
         except Exception as e:
             logger.error(f"Failed to get segment assignments: {e}")
-            # 如果获取segment分配失败，使用原有逻辑
+            # 出错时回退到基础查询
             self._segment_map = {}
             query = self.supabase.table('product_wide_table').select(
                 'id, platform_id, title, brand, category, '
@@ -161,13 +175,13 @@ class ProductQueryService(BaseDashboardService):
             query = query.in_('brand', filters.brands)
             logger.info(f"Applied brand filter: {filters.brands}")
 
-        # 段筛选 - 使用内存中的segment映射进行筛选
-        if filters.segments and hasattr(self, '_segment_map'):
-            # 找到匹配指定segment的产品ID，处理空值情况
+        # 段筛选 - 只有当有segment映射数据时才应用segment筛选
+        if filters.segments and hasattr(self, '_segment_map') and self._segment_map:
+            # 找到匹配指定segment的产品ID
             filtered_product_ids = []
 
             for product_id, segment_name in self._segment_map.items():
-                # 检查segment_name是否匹配（包括空值处理）
+                # 检查segment_name是否匹配
                 if segment_name and segment_name in filters.segments:
                     filtered_product_ids.append(product_id)
                 elif not segment_name and None in filters.segments:
@@ -179,12 +193,34 @@ class ProductQueryService(BaseDashboardService):
                 logger.info(f"Applied segments filter: {filters.segments}, found {len(filtered_product_ids)} matching products")
             else:
                 # 如果没有匹配的产品，返回空结果
-                # 使用一个不存在的整数ID，而不是字符串
                 query = query.eq('id', -1)
                 logger.info(f"Applied segments filter: {filters.segments}, no matching products found")
+        elif filters.segments and not (hasattr(self, '_segment_map') and self._segment_map):
+            # 如果需要segment筛选但没有segment映射数据，说明配置有误，记录警告但不阻断查询
+            logger.warning(f"Segment filter requested {filters.segments} but no segment mapping available, skipping segment filter")
 
-        # 扩展字段筛选 - 直接调用父类的实现
-        query = self._apply_extend_fields_filter(query)
+        # 价格范围筛选
+        if filters.price_range:
+            min_price = filters.price_range.get('min')
+            max_price = filters.price_range.get('max')
+            if min_price is not None:
+                query = query.gte('price_usd', min_price)
+            if max_price is not None:
+                query = query.lte('price_usd', max_price)
+            logger.info(f"Applied price_range filter: {filters.price_range}")
+
+        # 包大小筛选
+        if filters.pack_sizes:
+            query = query.in_('pack_count', filters.pack_sizes)
+            logger.info(f"Applied pack_sizes filter: {filters.pack_sizes}")
+
+        # 扩展字段筛选 (新)
+        if filters.extend_fields:
+            for field, value in filters.extend_fields.items():
+                # 使用 ->> 操作符来查询JSONB字段中的文本值
+                # 注意：这里假设 extend_fields 是 product_wide_table 的一个列
+                query = query.eq(f'extend_fields->>{field}', value)
+                logger.info(f"Applied extend_fields filter: {field} = {value}")
 
         return query
 
