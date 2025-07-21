@@ -31,12 +31,18 @@ class CompetitorAnalysisService(BaseDashboardService):
 
     # Default core products for competitor analysis when no specific ASINs are provided
     DEFAULT_COMPETITOR_ASINS = [
-        'B08PKMT2DV',  # Philips Hue - Smart home brand representative
-        'B0771BC2YH',  # CLOUDY BAY - Mid-tier brand representative
-        'B004DZONXI',  # Lutron - Lutron brand representative
-        'B07SXDFH38',  # Feit Electric - Amazon/Smart brand representative
-        'B073H9Y7SH',  # Leviton - Leviton brand representative
-        'B0BTMWZH3K'   # Kasa - TP-Link/Kasa brand representative
+       # 'B08PKMT2DV',  # Philips Hue - Smart home brand representative
+        'B00NG0ELL0',  # Leviton DSL06 - Mid-tier brand representative
+        'B0BVKZLT3B',  # Leviton D215S - Mid-tier brand representative
+        'B0BVKYKKRK',  # Leviton D26HD - Mid-tier brand representative
+        'B0BSHKS26L',  # Lutron Caseta Diva - Mid-tier brand representative
+        'B085D8M2MR',  # Lutron Diva - Mid-tier brand representative
+        'B0BTMWZH3K'  # Kasa HomeKit - Mid-tier brand representative
+     #   'B0771BC2YH',  # CLOUDY BAY - Mid-tier brand representative
+     #   'B004DZONXI',  # Lutron - Lutron brand representative
+     #   'B07SXDFH38',  # Feit Electric - Amazon/Smart brand representative
+     #   'B073H9Y7SH',  # Leviton - Leviton brand representative
+     #   'B0BTMWZH3K'   # Kasa - TP-Link/Kasa brand representative
     ]
 
     # ASIN to display name mapping (consistent with frontend)
