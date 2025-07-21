@@ -92,6 +92,14 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     use_cases?: StandardizedInsightData
   }>({})
   const [useStandardizedData, setUseStandardizedData] = useState(false)
+  const [isDataSwitching, setIsDataSwitching] = useState(false)
+  
+  // Environment check - only show debug panel in development
+  const isDevelopment = typeof window !== 'undefined' && (
+    window.location.hostname === 'localhost' || 
+    window.location.hostname === '127.0.0.1' ||
+    process.env.NODE_ENV === 'development'
+  )
 
   // Fetch standardized insights data
   const fetchStandardizedData = async () => {
@@ -112,6 +120,65 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       console.error('Error fetching standardized insights:', error)
       // Fallback to traditional data if standardized data fails
       setUseStandardizedData(false)
+    }
+  }
+
+  // Fetch traditional insights data (force refresh)
+  const fetchTraditionalData = async () => {
+    if (!projectId) return
+    
+    try {
+      const [reviewInsights, allReviewData] = await Promise.all([
+        databaseService.getReviewInsightsDataByProject(
+          projectId,
+          initialFilters?.categories || [],
+          initialFilters?.brands || [],
+          initialFilters?.segments || [],
+          initialFilters?.extend_fields || {}
+        ),
+        databaseService.getAllReviewDataByProject(
+          projectId,
+          initialFilters?.categories || [],
+          initialFilters?.brands || [],
+          initialFilters?.segments || [],
+          initialFilters?.extend_fields || {}
+        )
+      ])
+      
+      setFilteredData({
+        reviewInsights,
+        allReviewData
+      })
+      console.log('Traditional insights refreshed:', { reviewInsights, allReviewData })
+    } catch (error) {
+      console.error('Error fetching traditional data:', error)
+    }
+  }
+
+  // Handle data source toggle with forced refresh
+  const handleDataSourceToggle = async () => {
+    if (!projectId) return
+    
+    setIsDataSwitching(true)
+    const newValue = !useStandardizedData
+    
+    try {
+      if (newValue) {
+        // Switching to standardized data - force refresh standardized data
+        console.log('Switching to standardized data, refreshing...')
+        await fetchStandardizedData()
+      } else {
+        // Switching to traditional data - force refresh traditional data  
+        console.log('Switching to traditional data, refreshing...')
+        await fetchTraditionalData()
+      }
+      
+      // Only set the new value after successful data fetch
+      setUseStandardizedData(newValue)
+    } catch (error) {
+      console.error('Error during data source switch:', error)
+    } finally {
+      setIsDataSwitching(false)
     }
   }
 
@@ -438,35 +505,73 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   return (
     <div className="space-y-10">
       
-      {/* Debug Toggle for Standardized Data - Remove in production */}
-      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
-        <div className="flex items-center justify-between">
-          <div>
-            <h4 className="text-sm font-medium text-yellow-800">Data Source Selection (Debug)</h4>
-            <p className="text-sm text-yellow-600">
-              {useStandardizedData 
-                ? 'Using standardized data from Python script logic' 
-                : 'Using traditional dashboard API data'}
-            </p>
+      {/* Debug Toggle for Standardized Data - Only show in development */}
+      {isDevelopment && (
+        <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+          <div className="flex items-center justify-between">
+            <div>
+              <h4 className="text-sm font-medium text-yellow-800">Data Source Selection (Debug Mode)</h4>
+              <p className="text-sm text-yellow-600">
+                {useStandardizedData 
+                  ? 'Using standardized data from Python script logic' 
+                  : 'Using traditional dashboard API data'}
+              </p>
+            </div>
+            <div className="flex items-center gap-3">
+              {isDataSwitching && (
+                <div className="flex items-center gap-2 text-sm text-yellow-600">
+                  <div className="animate-spin rounded-full h-4 w-4 border-2 border-yellow-600 border-t-transparent"></div>
+                  Loading...
+                </div>
+              )}
+              <button
+                onClick={handleDataSourceToggle}
+                disabled={isDataSwitching}
+                className={`px-4 py-2 rounded text-sm font-medium transition-colors ${
+                  isDataSwitching 
+                    ? 'bg-gray-400 text-white cursor-not-allowed'
+                    : useStandardizedData 
+                      ? 'bg-green-600 hover:bg-green-700 text-white' 
+                      : 'bg-gray-600 hover:bg-gray-700 text-white'
+                }`}
+              >
+                {isDataSwitching 
+                  ? 'Switching...' 
+                  : useStandardizedData 
+                    ? 'Standardized ON' 
+                    : 'Traditional ON'}
+              </button>
+            </div>
           </div>
-          <button
-            onClick={() => setUseStandardizedData(!useStandardizedData)}
-            className={`px-4 py-2 rounded text-sm font-medium ${
-              useStandardizedData 
-                ? 'bg-green-600 text-white' 
-                : 'bg-gray-600 text-white'
-            }`}
-          >
-            {useStandardizedData ? 'Standardized ON' : 'Traditional ON'}
-          </button>
+          
+          {/* Data Statistics */}
+          <div className="mt-3 pt-3 border-t border-yellow-200">
+            <div className="grid grid-cols-2 gap-4 text-xs">
+              <div>
+                <span className="font-medium text-yellow-800">Standardized Data:</span>
+                <div className="text-yellow-600">
+                  {Object.keys(standardizedInsights).length > 0 ? (
+                    <>
+                      Types: {Object.keys(standardizedInsights).join(', ')}<br/>
+                      Total categories: {Object.values(standardizedInsights).reduce((sum, data) => sum + Object.keys(data || {}).length, 0)}
+                    </>
+                  ) : (
+                    'Not loaded'
+                  )}
+                </div>
+              </div>
+              <div>
+                <span className="font-medium text-yellow-800">Traditional Data:</span>
+                <div className="text-yellow-600">
+                  Pain Points: {filteredData.reviewInsights.painPoints?.length || 0}<br/>
+                  Customer Likes: {filteredData.reviewInsights.customerLikes?.length || 0}<br/>
+                  Use Cases: {filteredData.reviewInsights.allUseCases?.length || 0}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        {Object.keys(standardizedInsights).length > 0 && (
-          <div className="mt-2 text-xs text-yellow-600">
-            Loaded insights: {Object.keys(standardizedInsights).join(', ')} 
-            (Total categories: {Object.values(standardizedInsights).reduce((sum, data) => sum + Object.keys(data || {}).length, 0)})
-          </div>
-        )}
-      </div>
+      )}
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
