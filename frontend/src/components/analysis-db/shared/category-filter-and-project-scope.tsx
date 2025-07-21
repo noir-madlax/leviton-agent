@@ -228,6 +228,24 @@ export function CategoryFilterAndProjectScope({
     }
   }
 
+  // 监听initialFilters的变化，同步内部状态
+  useEffect(() => {
+    if (initialFilters) {
+      setPendingCategories(initialFilters.categories || [])
+      setAppliedCategories(initialFilters.categories || [])
+      setPendingBrands(initialFilters.brands || [])
+      setAppliedBrands(initialFilters.brands || [])
+      setPendingSegments(initialFilters.segments || [])
+      setAppliedSegments(initialFilters.segments || [])
+      setPendingExtendFields(initialFilters.extend_fields || {})
+      setAppliedExtendFields(initialFilters.extend_fields || {})
+      setPendingTimePeriod(initialFilters.time_period || "30 days")
+      setAppliedTimePeriod(initialFilters.time_period || "30 days")
+      
+      console.log('🔄 [FILTER-SYNC] Synced initialFilters to component state:', initialFilters)
+    }
+  }, [initialFilters])
+
   // 监听预加载数据变化
   useEffect(() => {
     if (preloadedData) {

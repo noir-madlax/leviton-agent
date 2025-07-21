@@ -22,6 +22,16 @@ interface ChartFilterConfig {
   chart_type: string
 }
 
+// 全局 filter-config 缓存
+interface FilterConfigCacheState {
+  data: ChartFilterConfig | null
+  loading: boolean
+  error: string | null
+  lastUpdated: number | null
+}
+
+const filterConfigCacheStore = new Map<string, FilterConfigCacheState>()
+
 interface ChartWithFiltersProps {
   chartId: string
   projectId: string
@@ -55,15 +65,38 @@ export function ChartWithFilters({
   const filterOptions = unifiedFilterData || cachedOptions
   const dataLoading = unifiedLoading || cacheLoading
 
-  // 加载chart专用筛选器配置
+  // 加载chart专用筛选器配置 - 使用缓存机制
   useEffect(() => {
     const loadChartFilterConfig = async () => {
       if (!projectId || !chartId) return
 
+      const cacheKey = `${projectId}-${chartId}`
+      const cached = filterConfigCacheStore.get(cacheKey)
+      
+      // 如果缓存存在且有效（5分钟内），直接使用缓存
+      if (cached && cached.data && cached.lastUpdated) {
+        const cacheAge = Date.now() - cached.lastUpdated
+        if (cacheAge < 5 * 60 * 1000) { // 5分钟缓存有效
+          setChartFilterConfig(cached.data)
+          setConfigLoading(false)
+          console.log('🔧 [CHART-FILTER] Using cached chart filter configuration:', chartId)
+          return
+        }
+      }
+
+      // 更新加载状态
       setConfigLoading(true)
+      
+      const newCacheState: FilterConfigCacheState = {
+        data: cached?.data || null,
+        loading: true,
+        error: null,
+        lastUpdated: cached?.lastUpdated || null
+      }
+      filterConfigCacheStore.set(cacheKey, newCacheState)
+
       try {
         const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-        // 使用chartId而不是chartType，因为chartId对应数据库中的chart_name
         const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/charts/${chartId}/filter-config`)
         
         if (!response.ok) {
@@ -71,18 +104,38 @@ export function ChartWithFilters({
         }
         
         const result = await response.json()
-        setChartFilterConfig(result.config)
         
-        console.log('🔧 [CHART-FILTER] Loaded chart filter configuration:', chartId, result.config)
+        // 更新缓存和组件状态
+        const successCacheState: FilterConfigCacheState = {
+          data: result.config,
+          loading: false,
+          error: null,
+          lastUpdated: Date.now()
+        }
+        filterConfigCacheStore.set(cacheKey, successCacheState)
+        
+        setChartFilterConfig(result.config)
+        console.log('🔧 [CHART-FILTER] Loaded and cached chart filter configuration:', chartId, result.config)
       } catch (error) {
         console.error('Error loading chart filter config:', error)
-        // 如果加载失败，使用空配置
-        setChartFilterConfig({
+        
+        // 错误时的默认配置
+        const defaultConfig: ChartFilterConfig = {
           visible_filters: {},
           default_values: {},
           extend_fields: [],
-          chart_type: chartId // 使用chartId作为chart_type
-        })
+          chart_type: chartId
+        }
+        
+        const errorCacheState: FilterConfigCacheState = {
+          data: defaultConfig,
+          loading: false,
+          error: error instanceof Error ? error.message : 'Failed to load chart filter config',
+          lastUpdated: Date.now()
+        }
+        filterConfigCacheStore.set(cacheKey, errorCacheState)
+        
+        setChartFilterConfig(defaultConfig)
       } finally {
         setConfigLoading(false)
       }

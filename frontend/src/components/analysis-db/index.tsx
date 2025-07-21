@@ -651,11 +651,16 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       competitorAnalysis: false,
       allReviewData: false
     })
-    // 立即加载第一个tab的数据
+    // 预加载所有 chart card 数据
+    console.log(`🚀 Preloading all chart data for new project...`)
     loadSpecificData('brandAnalysis', projectId, undefined, undefined, undefined, undefined, false)
-    // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
     loadSpecificData('marketInsights', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('packagePreference', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('pricingAnalysis', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('productAnalysis', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('reviewInsights', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('competitorAnalysis', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('allReviewData', projectId, undefined, undefined, undefined, undefined, false)
   }
 
 
@@ -723,10 +728,18 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
       
       console.log(`🚀 Loading initial brand analysis with filters:`, { categoryFilters, brandFilters, segmentFilters, extendFields });
+      // 预加载 Market Analysis 数据 (保持优先级)
       loadSpecificData('brandAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
       loadSpecificData('marketInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
       loadSpecificData('packagePreference', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      
+      // 预加载其他 Chart Card 数据
+      console.log(`📊 Preloading additional chart data...`);
+      loadSpecificData('pricingAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('productAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('reviewInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('competitorAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('allReviewData', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
@@ -745,10 +758,16 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined;
       const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
       const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
-      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true); // 强制重新加载
-      // 同时重新加载 marketInsights 和 packagePreference 数据，因为 BrandAnalysis 组件需要它们
+      
+      // 重新加载所有预加载的数据
+      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('allReviewData', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
     }
   }, [appliedFilters, selectedProjectId, loadSpecificData])
 
