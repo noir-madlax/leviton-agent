@@ -36,7 +36,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         'B0BVKYKKRK',  # Leviton D26HD - Mid-tier brand representative
         'B0BSHKS26L',  # Lutron Caseta Diva - Mid-tier brand representative
         'B085D8M2MR',  # Lutron Diva - Mid-tier brand representative
-        'B01EZV35QU'  # Kasa HomeKit - Mid-tier brand representative
+        "B01EZV35QU",  # TP Link Switch
     
     ]
 
@@ -51,7 +51,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         'B0BVKZLT3B': 'Leviton D215S',
         'B0BVKYKKRK': 'Leviton D26HD',
         'B0BSHKS26L': 'Lutron Caseta Diva',
-        'B073H9Y7SH': 'TP Link Switch',
+        'B01EZV35QU': 'TP Link Switch',
         'B085D8M2MR': 'Lutron Diva',
         'B0BTMWZH3K': 'Kasa HomeKit'
     }
