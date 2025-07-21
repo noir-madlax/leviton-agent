@@ -894,7 +894,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   <CategoryFilterAndProjectScope 
                     projectId={projectId} 
                     onFiltersChange={handleCategoryFiltersChange}
-                    initialFilters={{ categories: categoryFilters, asins: [], brands: [], segments: [], extend_fields: {} }}
+                    initialFilters={{ categories: categoryFilters, asins: [], brands: [], segments: [], extend_fields: {}, time_period: "30 days" }}
                   />
                 </div>
               </CollapsibleContent>

@@ -17,7 +17,8 @@ export class FilterMerger {
       brands: this.mergeArray(projectFilters.brands, chartFilters.brands),
       segments: this.mergeArray(projectFilters.segments, chartFilters.segments),
       extend_fields: this.mergeExtendFields(projectFilters.extend_fields, chartFilters.extend_fields),
-      asins: this.mergeArray(projectFilters.asins || [], chartFilters.asins || [])
+      asins: this.mergeArray(projectFilters.asins || [], chartFilters.asins || []),
+      time_period: chartFilters.time_period || projectFilters.time_period // Chart级优先，否则使用project级
     }
   }
 

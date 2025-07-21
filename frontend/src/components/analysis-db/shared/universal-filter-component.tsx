@@ -304,7 +304,8 @@ export function UniversalFilterComponent({
       asins: [],
       brands: [],  // 改：packaging_types -> brands
       segments: [],
-      extend_fields: {}
+      extend_fields: {},
+      time_period: "30 days"
     }
     setPendingFilters(resetFilters)
     setSelectKeys(prev => ({

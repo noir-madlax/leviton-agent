@@ -7,6 +7,7 @@ export interface ProjectFilters {
   brands: string[]  // 改：packaging_types -> brands (品牌筛选)
   segments: string[]  // 新增: 产品段筛选
   extend_fields: Record<string, any>  // 新增: 扩展字段筛选
+  time_period: string  // 新增: 时间周期筛选
 }
 
 /**
@@ -67,7 +68,8 @@ export const DEFAULT_FILTERS: ProjectFilters = {
   asins: [],
   brands: [],  // 改：packaging_types -> brands
   segments: [],
-  extend_fields: {}
+  extend_fields: {},
+  time_period: "30 days"  // 新增: 默认30天
 }
 
 /**

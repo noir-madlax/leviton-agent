@@ -90,7 +90,7 @@ interface ProjectOverviewData {
 export function CategoryFilterAndProjectScope({ 
   projectId, 
   onFiltersChange, 
-  initialFilters = { categories: [], asins: [], brands: [], segments: [], extend_fields: {} },  // 改：packaging_types -> brands
+  initialFilters = { categories: [], asins: [], brands: [], segments: [], extend_fields: {}, time_period: "30 days" },  // 改：packaging_types -> brands
   preloadedData,
   isDataLoading
 }: CategoryFilterAndProjectScopeProps) {
@@ -121,6 +121,8 @@ export function CategoryFilterAndProjectScope({
   const [appliedSegments, setAppliedSegments] = useState<string[]>(initialFilters.segments)
   const [pendingExtendFields, setPendingExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
   const [appliedExtendFields, setAppliedExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
+  const [pendingTimePeriod, setPendingTimePeriod] = useState<string>(initialFilters.time_period)
+  const [appliedTimePeriod, setAppliedTimePeriod] = useState<string>(initialFilters.time_period)
   const [filterLoading, setFilterLoading] = useState(false)
 
   // 添加Select状态控制
@@ -364,18 +366,25 @@ export function CategoryFilterAndProjectScope({
     console.log('[FILTER-REMOVE] After removal should be triggered')
   }
 
+  const handleTimePeriodSelect = (timePeriod: string) => {
+    console.log('[TIME-PERIOD] Selecting time period:', timePeriod)
+    setPendingTimePeriod(timePeriod)
+  }
+
   const handleApplyFilters = () => {
     setAppliedCategories(pendingCategories)
     setAppliedBrands(pendingBrands)
     setAppliedSegments(pendingSegments)
     setAppliedExtendFields(pendingExtendFields)
+    setAppliedTimePeriod(pendingTimePeriod)
     if (onFiltersChange) {
       onFiltersChange({
         categories: pendingCategories,
         asins: [],
         brands: pendingBrands,
         segments: pendingSegments,
-        extend_fields: pendingExtendFields
+        extend_fields: pendingExtendFields,
+        time_period: pendingTimePeriod
       })
     }
   }
@@ -389,6 +398,8 @@ export function CategoryFilterAndProjectScope({
     setAppliedSegments([])
     setPendingExtendFields({})
     setAppliedExtendFields({})
+    setPendingTimePeriod("30 days")
+    setAppliedTimePeriod("30 days")
     // 重置所有Select组件状态
     setCategorySelectKey(prev => prev + 1)
     setBrandSelectKey(prev => prev + 1)
@@ -399,7 +410,8 @@ export function CategoryFilterAndProjectScope({
         asins: [],
         brands: [],
         segments: [],
-        extend_fields: {}
+        extend_fields: {},
+        time_period: "30 days"
       })
     }
   }
@@ -407,8 +419,9 @@ export function CategoryFilterAndProjectScope({
   const hasPendingChanges = JSON.stringify(pendingCategories) !== JSON.stringify(appliedCategories) || 
                           JSON.stringify(pendingBrands) !== JSON.stringify(appliedBrands) ||
                           JSON.stringify(pendingSegments) !== JSON.stringify(appliedSegments) ||
-                          JSON.stringify(pendingExtendFields) !== JSON.stringify(appliedExtendFields)
-  const hasActiveFilters = appliedCategories.length > 0 || appliedBrands.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0
+                          JSON.stringify(pendingExtendFields) !== JSON.stringify(appliedExtendFields) ||
+                          pendingTimePeriod !== appliedTimePeriod
+  const hasActiveFilters = appliedCategories.length > 0 || appliedBrands.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0 || appliedTimePeriod !== "30 days"
 
   if (!projectId) {
     return null
@@ -566,19 +579,21 @@ export function CategoryFilterAndProjectScope({
               )}
 
               {/* Time Period Filter */}
-              {filterConfig?.visible_filters?.["Time Period"] && (
-                <div className="flex items-center gap-2">
-                  <span className="text-sm text-gray-600">Time Period:</span>
-                  <Select defaultValue="recent-month" disabled>
-                    <SelectTrigger className="w-48 h-8">
-                      <SelectValue placeholder="Since Last Month" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="recent-month">Since Last Month</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              )}
+              <div className="flex items-center gap-2">
+                <span className="text-sm text-gray-600">Time Period:</span>
+                <Select value={pendingTimePeriod} onValueChange={handleTimePeriodSelect}>
+                  <SelectTrigger className="w-48 h-8">
+                    <SelectValue placeholder="Select time period" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="7 days">Last 7 days</SelectItem>
+                    <SelectItem value="30 days">Last 30 days</SelectItem>
+                    <SelectItem value="90 days">Last 90 days</SelectItem>
+                    <SelectItem value="6 months">Last 6 months</SelectItem>
+                    <SelectItem value="1 year">Last 1 year</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
 
               {/* Segments Filter */}
               {filterConfig?.visible_filters?.segments && (
@@ -642,7 +657,7 @@ export function CategoryFilterAndProjectScope({
                 variant="outline"
                 size="sm"
                 onClick={handleReset}
-                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingBrands.length === 0 && pendingSegments.length === 0 && Object.keys(pendingExtendFields).length === 0}
+                disabled={!hasActiveFilters && pendingCategories.length === 0 && pendingBrands.length === 0 && pendingSegments.length === 0 && Object.keys(pendingExtendFields).length === 0 && pendingTimePeriod === "30 days"}
                 className="h-8"
               >
                 <RotateCcw className="w-3 h-3 mr-1" />
@@ -652,23 +667,33 @@ export function CategoryFilterAndProjectScope({
               {/* Status indicator */}
               {hasPendingChanges && (
                 <div className="text-xs text-orange-600">
-                  {pendingCategories.length + pendingBrands.length + pendingSegments.length + Object.keys(pendingExtendFields).length} pending changes
+                  {pendingCategories.length + pendingBrands.length + pendingSegments.length + Object.keys(pendingExtendFields).length + (pendingTimePeriod !== "30 days" ? 1 : 0)} pending changes
                 </div>
               )}
               {hasActiveFilters && !hasPendingChanges && (
                 <div className="text-xs text-green-600">
-                  {appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length} filter{(appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length) > 1 ? 's' : ''} applied
+                  {appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length + (appliedTimePeriod !== "30 days" ? 1 : 0)} filter{(appliedCategories.length + appliedBrands.length + appliedSegments.length + Object.keys(appliedExtendFields).length + (appliedTimePeriod !== "30 days" ? 1 : 0)) > 1 ? 's' : ''} applied
                 </div>
               )}
             </div>
 
             {/* Pending filters display */}
-            {(pendingCategories.length > 0 || pendingBrands.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0) && (
+            {(pendingCategories.length > 0 || pendingBrands.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0 || pendingTimePeriod !== "30 days") && (
               <div className="pt-2 border-t border-gray-100">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-600">
                     {hasPendingChanges ? 'Pending filters:' : 'Applied filters:'}
                   </span>
+                  {/* Time Period filter badge (always show) */}
+                  <Badge
+                    key="time-period"
+                    variant={hasPendingChanges ? "outline" : "secondary"}
+                    className={`text-xs flex items-center gap-1 ${
+                      hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                    }`}
+                  >
+                    ⏰ Time Period: Last 30 days
+                  </Badge>
                   {pendingCategories.map((category) => (
                     <Badge
                       key={`category-${category}`}

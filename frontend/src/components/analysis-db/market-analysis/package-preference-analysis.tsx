@@ -185,7 +185,8 @@ export function PackagePreferenceAnalysis({
           brands: brandFilters || [],
           segments: segmentFilters || [],
           extend_fields: extendFields || {},
-          asins: []
+          asins: [],
+          time_period: "30 days"
         }}
       >
        

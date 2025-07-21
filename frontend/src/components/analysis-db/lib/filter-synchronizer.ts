@@ -28,6 +28,11 @@ export class FilterSynchronizer {
     // 处理extend_fields
     this.syncExtendFields(result, oldProjectFilters, newProjectFilters)
 
+    // 处理time_period (如果chart级没有设置或使用project级的值，则更新)
+    if (result.time_period === oldProjectFilters.time_period) {
+      result.time_period = newProjectFilters.time_period
+    }
+
     return result
   }
 

@@ -398,7 +398,7 @@ export function ChartWithFilters({
           <BarChart3 className="w-5 h-5" />
           {title}
         </h3>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 hidden">
           {/* 保留原有的详细筛选器按钮 */}
           <Button
             variant="outline"
@@ -415,7 +415,7 @@ export function ChartWithFilters({
       </div>
 
       {/* Inline筛选器 - 放在按钮下方一行 */}
-      <div className="flex items-center justify-end gap-3">
+      <div className="flex items-center justify-end gap-3 hidden">
         {inlineFilters}
       </div>
 

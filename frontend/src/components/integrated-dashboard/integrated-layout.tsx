@@ -9,8 +9,6 @@ import Link from 'next/link'
 import { ChartContainer } from './chart/chart-container'
 import { ChatWithNavigation } from './chat-with-navigation'
 import { ProjectFilterWrapper } from './components/project-filter-wrapper'
-import { AnalysisDbContainer } from '@/components/analysis-db'
-import { DynamicChartRenderer } from './chart/dynamic-chart-renderer'
 import { useDashboardNavigation } from './hooks/use-dashboard-navigation'
 import { useChartManagement } from './hooks/use-chart-management'
 import { ProjectFilters, DEFAULT_FILTERS } from '@/components/analysis-db/types/filters'
@@ -178,11 +176,58 @@ export function IntegratedLayout({
     return <Filter className="h-3.5 w-3.5" />
   }
 
-  // 计算活跃筛选器数量
-  const activeFiltersCount = filters.categories.length + 
-                           filters.brands.length + 
-                           filters.segments.length +
-                           Object.keys(filters.extend_fields).length;
+  // 渲染具体的过滤器badges
+  const renderFilterBadges = () => {
+    const badges = [];
+
+    // Time Period filter (always show, including default)
+    badges.push(
+      <Badge key="time-period" variant="secondary" className="text-xs flex items-center gap-1">
+        ⏰ Time Period: Last 30 days
+      </Badge>
+    );
+
+    // Category filters
+    filters.categories.forEach(category => {
+      badges.push(
+        <Badge key={`category-${category}`} variant="secondary" className="text-xs flex items-center gap-1">
+          📁Category: {category}
+        </Badge>
+      );
+    });
+
+    // Brand filters
+    filters.brands.forEach(brand => {
+      badges.push(
+        <Badge key={`brand-${brand}`} variant="secondary" className="text-xs flex items-center gap-1">
+          🏢 Brand: {brand}
+        </Badge>
+      );
+    });
+
+    // Segment filters
+    filters.segments.forEach(segment => {
+      badges.push(
+        <Badge key={`segment-${segment}`} variant="secondary" className="text-xs flex items-center gap-1">
+          🎯 Product Segment: {segment}
+        </Badge>
+      );
+    });
+
+    // Extend field filters
+    Object.entries(filters.extend_fields).forEach(([fieldName, value]) => {
+      if (value !== undefined && value !== null && value !== '') {
+        const displayName = fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+        badges.push(
+          <Badge key={`extend-${fieldName}`} variant="secondary" className="text-xs flex items-center gap-1">
+            ⚙️ {displayName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
+          </Badge>
+        );
+      }
+    });
+
+    return badges;
+  };
 
   return (
     <div className="integrated-dashboard h-screen bg-gray-50/50 flex flex-col">
@@ -197,14 +242,14 @@ export function IntegratedLayout({
                   Back to Home
                 </Button>
               </Link>
-              <div className="flex items-center gap-3">
-                <h1 className="text-xl font-semibold">{project.project_name}</h1>
+              <div className="flex items-center gap-3 whitespace-nowrap overflow-hidden">
+                <h1 className="text-xl font-semibold whitespace-nowrap overflow-hidden text-ellipsis">{project.project_name}</h1>
                 {/* Filter toggle button */}
                 {onToggleFilter && (
                   <button
                     onClick={onToggleFilter}
                     disabled={cacheLoading}
-                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border shadow-sm hover:shadow-md ${
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 border shadow-sm hover:shadow-md whitespace-nowrap ${
                       cacheLoading 
                         ? 'bg-gray-100 text-gray-500 border-gray-300 cursor-not-allowed' 
                         : 'bg-blue-100 hover:bg-blue-200 text-blue-700 hover:text-blue-800 border-blue-200 hover:border-blue-300'
@@ -214,12 +259,10 @@ export function IntegratedLayout({
                     {getFilterButtonText()}
                   </button>
                 )}
-                {/* Filter count badge */}
-                {activeFiltersCount > 0 && (
-                  <Badge variant="secondary" className="text-xs">
-                    {activeFiltersCount} filter{activeFiltersCount > 1 ? 's' : ''} applied
-                  </Badge>
-                )}
+                {/* Applied filters display */}
+                <div className="flex items-center gap-1 flex-wrap">
+                  {renderFilterBadges()}
+                </div>
               </div>
             </div>
             <div className="flex items-center gap-2 hidden">
