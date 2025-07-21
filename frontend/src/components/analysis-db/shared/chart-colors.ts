@@ -87,4 +87,48 @@ export const getChartColors = (count?: number): string[] => {
     return Array.from({ length: count }, (_, i) => getChartColor(i))
   }
   return CHART_COLORS
+}
+
+// Chart color configuration for stacked bar charts
+export interface ColorConfig {
+  positive: string;
+  negative: string;
+  upperBarOpacity: number;
+}
+
+// Default color configurations for different chart types
+export const CHART_COLOR_CONFIGS: Record<string, ColorConfig> = {
+  painPoints: {
+    positive: '#22c55e', // Green
+    negative: '#ef4444', // Red
+    upperBarOpacity: 0.3
+  },
+  delights: {
+    positive: '#22c55e', // Green
+    negative: '#ef4444', // Red
+    upperBarOpacity: 0.3
+  },
+  useCaseSentiment: {
+    positive: '#22c55e', // Green
+    negative: '#ef4444', // Red
+    upperBarOpacity: 0.3
+  }
+};
+
+// Helper function to get color config by type
+export function getColorConfig(type: keyof typeof CHART_COLOR_CONFIGS): ColorConfig {
+  return CHART_COLOR_CONFIGS[type];
+}
+
+// Helper function to create custom color config
+export function createColorConfig(
+  positive: string,
+  negative: string,
+  upperBarOpacity: number = 0.3
+): ColorConfig {
+  return {
+    positive,
+    negative,
+    upperBarOpacity
+  };
 } 

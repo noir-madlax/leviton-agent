@@ -446,7 +446,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Bars are sorted by descending positive mentions left to right, calculated from the latest 40 reviews per product in selected categories.
+            Bars are sorted by descending positive mentions left to right, calculated from the ~50 most recent reviews per product in selected categories.
 
             </div>
           {isLoading ? (
@@ -468,7 +468,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-        Calculated from the latest 40 reviews per product in selected categories.
+        Calculated from the ～50 most recent reviews per product in selected categories.
 
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">

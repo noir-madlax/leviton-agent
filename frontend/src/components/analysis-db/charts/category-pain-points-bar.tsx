@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart'
+import { getColorConfig } from '@/components/analysis-db/shared/chart-colors'
 
 interface CategoryPainPointsBarProps {
   data: CategoryFeedback[]
@@ -104,6 +105,8 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
           CustomTooltip={CustomTooltip}
           maxLabelLength={25} // 设置最大标签长度
           showFromBottom={true} // 从下往上显示，优先显示开头字符
+          bottomBarType="negative" // 负面bar在底部
+          colorConfig={getColorConfig('painPoints')}
         />
         
         {/* 统计摘要 */}

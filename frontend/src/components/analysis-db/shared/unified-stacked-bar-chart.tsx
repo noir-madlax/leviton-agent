@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { ColorConfig, getColorConfig } from './chart-colors';
 
 interface UnifiedStackedBarChartProps {
   data: Array<{
@@ -15,6 +16,8 @@ interface UnifiedStackedBarChartProps {
   CustomTooltip?: React.ComponentType<any>;
   maxLabelLength?: number; // 新增：最大标签长度
   showFromBottom?: boolean; // 新增：是否从下往上显示
+  bottomBarType?: 'positive' | 'negative'; // 新增：确定哪个bar在底部
+  colorConfig?: ColorConfig; // 新增：颜色配置
 }
 
 const defaultTooltip = ({ active, payload, label }: {active?: boolean, payload?: any[], label?: string}) => {
@@ -49,13 +52,18 @@ export function UnifiedStackedBarChart({
   onBarClick,
   CustomTooltip = defaultTooltip,
   maxLabelLength = 20, // 默认最大长度20字符
-  showFromBottom = true // 默认从下往上显示
+  showFromBottom = true, // 默认从下往上显示
+  bottomBarType = 'negative', // 默认负面bar在底部
+  colorConfig
 }: UnifiedStackedBarChartProps) {
   const handleBarClick = (data: any, index: number) => {
     if (onBarClick) {
       onBarClick(data, index);
     }
   };
+
+  // 使用提供的颜色配置或默认配置
+  const colors = colorConfig || getColorConfig('painPoints');
 
   // 格式化X轴标签
   const formatXAxisLabel = (value: string) => {
@@ -97,6 +105,47 @@ export function UnifiedStackedBarChart({
       </g>
     );
   };
+
+  // 根据bottomBarType确定bar的顺序和样式
+  const getBarConfig = () => {
+    if (bottomBarType === 'positive') {
+      // 正面bar在底部，负面bar在顶部
+      return {
+        firstBar: {
+          dataKey: positiveDataKey,
+          fill: colors.positive,
+          name: "Positive Mentions",
+          radius: [0, 0, 0, 0] as [number, number, number, number]
+        },
+        secondBar: {
+          dataKey: negativeDataKey,
+          fill: colors.negative,
+          name: "Negative Mentions", 
+          radius: [4, 4, 0, 0] as [number, number, number, number],
+          fillOpacity: colors.upperBarOpacity
+        }
+      };
+    } else {
+      // 负面bar在底部，正面bar在顶部
+      return {
+        firstBar: {
+          dataKey: negativeDataKey,
+          fill: colors.negative,
+          name: "Negative Mentions",
+          radius: [0, 0, 0, 0] as [number, number, number, number]
+        },
+        secondBar: {
+          dataKey: positiveDataKey,
+          fill: colors.positive,
+          name: "Positive Mentions",
+          radius: [4, 4, 0, 0] as [number, number, number, number],
+          fillOpacity: colors.upperBarOpacity
+        }
+      };
+    }
+  };
+
+  const barConfig = getBarConfig();
 
   return (
     <div className="h-[450px] w-full">
@@ -149,20 +198,21 @@ export function UnifiedStackedBarChart({
             }}
           />
           <Bar 
-            dataKey={positiveDataKey}
+            dataKey={barConfig.firstBar.dataKey}
             stackId="mentions"
-            fill="#22c55e"
-            name="Positive Mentions"
-            radius={[0, 0, 0, 0]}
+            fill={barConfig.firstBar.fill}
+            name={barConfig.firstBar.name}
+            radius={barConfig.firstBar.radius}
             style={{ cursor: 'pointer' }}
             onClick={handleBarClick}
           />
           <Bar 
-            dataKey={negativeDataKey}
+            dataKey={barConfig.secondBar.dataKey}
             stackId="mentions"
-            fill="#ef4444"
-            name="Negative Mentions"
-            radius={[4, 4, 0, 0]}
+            fill={barConfig.secondBar.fill}
+            name={barConfig.secondBar.name}
+            radius={barConfig.secondBar.radius}
+            fillOpacity={barConfig.secondBar.fillOpacity}
             style={{ cursor: 'pointer' }}
             onClick={handleBarClick}
           />
