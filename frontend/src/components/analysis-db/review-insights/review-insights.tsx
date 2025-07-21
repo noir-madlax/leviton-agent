@@ -9,7 +9,7 @@ import { BarChart3, Target } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { CategoryFeedback, ProductType } from "@/components/analysis-db/types/analysis"
+import { CategoryFeedback, ProductType, StandardizedInsightData, AllInsightsResponse } from "@/components/analysis-db/types/analysis"
 import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
 
 interface ReviewInsightsProps {
@@ -84,6 +84,44 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     reviewInsights: typeof data.reviewInsights
     allReviewData: typeof data.allReviewData
   }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
+  
+  // New state for standardized data
+  const [standardizedInsights, setStandardizedInsights] = useState<{
+    delights?: StandardizedInsightData
+    pain_points?: StandardizedInsightData
+    use_cases?: StandardizedInsightData
+  }>({})
+  const [useStandardizedData, setUseStandardizedData] = useState(false)
+
+  // Fetch standardized insights data
+  const fetchStandardizedData = async () => {
+    if (!projectId) return
+    
+    try {
+      const response = await fetch(`/api/dashboard/insights/all/${projectId}`)
+      if (!response.ok) {
+        throw new Error(`Failed to fetch standardized data: ${response.statusText}`)
+      }
+      
+      const result: AllInsightsResponse = await response.json()
+      if (result.success) {
+        setStandardizedInsights(result.data)
+        console.log('Standardized insights loaded:', result.data)
+      }
+    } catch (error) {
+      console.error('Error fetching standardized insights:', error)
+      // Fallback to traditional data if standardized data fails
+      setUseStandardizedData(false)
+    }
+  }
+
+  // Load standardized data on component mount and when projectId changes
+  useEffect(() => {
+    if (projectId) {
+      fetchStandardizedData()
+      setUseStandardizedData(true) // Enable standardized data by default
+    }
+  }, [projectId])
 
   // 处理过滤器变化
   const handleFilterChange = async (filters: ProjectFilters) => {
@@ -399,6 +437,36 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
   return (
     <div className="space-y-10">
+      
+      {/* Debug Toggle for Standardized Data - Remove in production */}
+      <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 mb-6">
+        <div className="flex items-center justify-between">
+          <div>
+            <h4 className="text-sm font-medium text-yellow-800">Data Source Selection (Debug)</h4>
+            <p className="text-sm text-yellow-600">
+              {useStandardizedData 
+                ? 'Using standardized data from Python script logic' 
+                : 'Using traditional dashboard API data'}
+            </p>
+          </div>
+          <button
+            onClick={() => setUseStandardizedData(!useStandardizedData)}
+            className={`px-4 py-2 rounded text-sm font-medium ${
+              useStandardizedData 
+                ? 'bg-green-600 text-white' 
+                : 'bg-gray-600 text-white'
+            }`}
+          >
+            {useStandardizedData ? 'Standardized ON' : 'Traditional ON'}
+          </button>
+        </div>
+        {Object.keys(standardizedInsights).length > 0 && (
+          <div className="mt-2 text-xs text-yellow-600">
+            Loaded insights: {Object.keys(standardizedInsights).join(', ')} 
+            (Total categories: {Object.values(standardizedInsights).reduce((sum, data) => sum + Object.keys(data || {}).length, 0)})
+          </div>
+        )}
+      </div>
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
@@ -428,6 +496,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
+              standardizedData={standardizedInsights.pain_points}
+              useStandardizedData={useStandardizedData}
             />
           )}
         </ChartWithFilters>
@@ -458,6 +528,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
+              standardizedData={standardizedInsights.delights}
+              useStandardizedData={useStandardizedData}
             />
           )}
         </ChartWithFilters>
@@ -496,6 +568,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               date: string
               brand: string
             }>> }}
+            standardizedData={standardizedInsights.use_cases}
+            useStandardizedData={useStandardizedData}
           />
         </div>
       </section>

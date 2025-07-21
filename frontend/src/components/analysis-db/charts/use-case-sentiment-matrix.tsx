@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { Tooltip } from "@/components/ui/tooltip"
-import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
+import { UseCaseFeedback, StandardizedInsightData } from "@/components/analysis-db/types/analysis"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
 
 interface UseCaseSentimentMatrixProps {
@@ -21,15 +21,57 @@ interface UseCaseSentimentMatrixProps {
       brand: string
     }>>
   }
+  // New prop for standardized data
+  standardizedData?: StandardizedInsightData
+  useStandardizedData?: boolean
 }
 
 type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
-export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMatrixProps) {
+// Transform standardized data to UseCaseFeedback format (only use 'use' aspect types)
+const transformStandardizedDataForUseCases = (standardizedData: StandardizedInsightData): UseCaseFeedback[] => {
+  return Object.entries(standardizedData)
+    .filter(([categoryKey]) => categoryKey.includes('#use#')) // Only include 'use' aspect types
+    .map(([categoryKey, categoryData]) => {
+      const parts = categoryKey.split('#')
+      const categoryName = parts[0] || 'Unknown'
+      
+      const positiveCount = categoryData["+"]?.count || 0
+      const negativeCount = categoryData["-"]?.count || 0
+      const totalMentions = categoryData.num_mentions || 0
+      const positiveRatio = categoryData.positive_ratio || 0
+      
+      return {
+        useCase: categoryName,
+        totalMentions: totalMentions,
+        positiveCount: positiveCount,
+        negativeCount: negativeCount,
+        satisfactionRate: positiveRatio * 100,
+        categoryType: 'Performance' as const,
+        topSatisfactionReasons: [`${Math.round(positiveRatio * 100)}% positive sentiment`],
+        topGapReasons: [`${Math.round((1 - positiveRatio) * 100)}% negative sentiment`],
+        relatedCategories: [categoryName],
+        categoryDefinition: 'Use case scenario',
+        productCount: categoryData.num_reviews || 0
+      }
+    })
+}
+
+export function UseCaseSentimentMatrix({ 
+  data, 
+  reviewData,
+  standardizedData,
+  useStandardizedData = false
+}: UseCaseSentimentMatrixProps) {
   const { openPanel } = useReviewPanel()
   const [sortField, setSortField] = useState<SortField>('totalMentions')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
+
+  // Use standardized data if available and enabled, otherwise use traditional data
+  const processedData = useStandardizedData && standardizedData 
+    ? transformStandardizedDataForUseCases(standardizedData) 
+    : data
 
   // 处理排序
   const handleSort = (field: SortField) => {
@@ -43,9 +85,9 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
 
   // 获取排序后的数据
   const sortedData = useMemo(() => {
-    if (!data || data.length === 0) return []
+    if (!processedData || processedData.length === 0) return []
 
-    const dataWithPositiveShare = data.map(item => ({
+    const dataWithPositiveShare = processedData.map(item => ({
       ...item,
       positiveShare: item.totalMentions > 0 ? (item.positiveCount / item.totalMentions) * 100 : 0
     }))
@@ -81,7 +123,7 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
         return bValue - aValue
       }
     })
-  }, [data, sortField, sortDirection])
+  }, [processedData, sortField, sortDirection])
 
   // 处理行点击
   const handleRowClick = (useCase: string) => {
