@@ -114,6 +114,15 @@ export function DynamicExtendFieldsFilter({
       newFilters[fieldName] = value
     }
     
+    // 🔧 调试：记录字段变化和状态传递
+    console.log('🔧 [EXTEND-FIELDS] Field change:', {
+      fieldName,
+      value,
+      oldFilters: extendFields,
+      newFilters,
+      hasKeys: Object.keys(newFilters).length > 0
+    })
+    
     onFilterChange(newFilters)
     
     // 重置选择器

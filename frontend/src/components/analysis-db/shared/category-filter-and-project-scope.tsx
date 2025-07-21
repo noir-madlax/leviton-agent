@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
@@ -121,6 +121,17 @@ export function CategoryFilterAndProjectScope({
   const [appliedSegments, setAppliedSegments] = useState<string[]>(initialFilters.segments)
   const [pendingExtendFields, setPendingExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
   const [appliedExtendFields, setAppliedExtendFields] = useState<Record<string, any>>(initialFilters.extend_fields)
+
+  // 🔧 修复：追踪用户手动操作，避免被系统重置覆盖
+  const userModifiedExtendFields = useRef<boolean>(false)
+  
+  // 🔧 包装用户的 extend_fields 操作
+  const handleExtendFieldsChange = useCallback((newFields: Record<string, any>) => {
+    userModifiedExtendFields.current = true
+    console.log('🔧 [USER-OPERATION] User modified extend_fields:', newFields)
+    setPendingExtendFields(newFields)
+  }, [])
+  
   const [pendingTimePeriod, setPendingTimePeriod] = useState<string>(initialFilters.time_period)
   const [appliedTimePeriod, setAppliedTimePeriod] = useState<string>(initialFilters.time_period)
   const [filterLoading, setFilterLoading] = useState(false)
@@ -237,7 +248,15 @@ export function CategoryFilterAndProjectScope({
       setAppliedBrands(initialFilters.brands || [])
       setPendingSegments(initialFilters.segments || [])
       setAppliedSegments(initialFilters.segments || [])
-      setPendingExtendFields(initialFilters.extend_fields || {})
+      
+      // 🔧 修复：只有在用户没有手动修改时才同步 extend_fields
+      if (!userModifiedExtendFields.current) {
+        console.log('🔧 [FILTER-SYNC] Syncing extend_fields from initialFilters (user has not modified)')
+        setPendingExtendFields(initialFilters.extend_fields || {})
+      } else {
+        console.log('🔧 [FILTER-SYNC] Skipping extend_fields sync - user has modified')
+      }
+      
       setAppliedExtendFields(initialFilters.extend_fields || {})
       setPendingTimePeriod(initialFilters.time_period || "30 days")
       setAppliedTimePeriod(initialFilters.time_period || "30 days")
@@ -457,6 +476,8 @@ export function CategoryFilterAndProjectScope({
     setAppliedSegments([])
     setPendingExtendFields({})
     setAppliedExtendFields({})
+    // 🔧 重置用户修改标志
+    userModifiedExtendFields.current = false
     setPendingTimePeriod("30 days")
     setAppliedTimePeriod("30 days")
     
@@ -506,6 +527,22 @@ export function CategoryFilterAndProjectScope({
                           JSON.stringify(pendingExtendFields) !== JSON.stringify(appliedExtendFields) ||
                           pendingTimePeriod !== appliedTimePeriod
   const hasActiveFilters = appliedCategories.length > 0 || appliedBrands.length > 0 || appliedSegments.length > 0 || Object.keys(appliedExtendFields).length > 0 || appliedTimePeriod !== "30 days"
+
+  // 🔧 实时监控pendingExtendFields状态变化
+  console.log('🔧 [PENDING-EXTEND-FIELDS-MONITOR]', {
+    pendingExtendFields,
+    pendingExtendFieldsKeys: Object.keys(pendingExtendFields),
+    pendingExtendFieldsLength: Object.keys(pendingExtendFields).length,
+    hasPendingChanges,
+    hasActiveFilters,
+    shouldShowAppliedFilters: (
+      pendingCategories.length > 0 || 
+      pendingBrands.length > 0 || 
+      pendingSegments.length > 0 || 
+      Object.keys(pendingExtendFields).length > 0 || 
+      pendingTimePeriod !== "30 days"
+    )
+  })
 
   if (!projectId) {
     return null
@@ -717,7 +754,7 @@ export function CategoryFilterAndProjectScope({
               <DynamicExtendFieldsFilter
                 projectId={projectId}
                 extendFields={pendingExtendFields}
-                onFilterChange={setPendingExtendFields}
+                onFilterChange={handleExtendFieldsChange}
                 className="flex-wrap"
                 projectData={projectData}
                 filterConfig={filterConfig}
@@ -766,7 +803,28 @@ export function CategoryFilterAndProjectScope({
             </div>
 
             {/* Pending filters display */}
-            {(pendingCategories.length > 0 || pendingBrands.length > 0 || pendingSegments.length > 0 || Object.keys(pendingExtendFields).length > 0 || pendingTimePeriod !== "30 days") && (
+            {(() => {
+              // 🔧 调试：检查显示条件的详细状态
+              const showCondition = (
+                pendingCategories.length > 0 || 
+                pendingBrands.length > 0 || 
+                pendingSegments.length > 0 || 
+                Object.keys(pendingExtendFields).length > 0 || 
+                pendingTimePeriod !== "30 days"
+              )
+              
+              console.log('🔧 [APPLIED-FILTER-DISPLAY] Display condition check:', {
+                pendingCategories: pendingCategories.length,
+                pendingBrands: pendingBrands.length,
+                pendingSegments: pendingSegments.length,
+                pendingExtendFields: Object.keys(pendingExtendFields),
+                pendingExtendFieldsLength: Object.keys(pendingExtendFields).length,
+                pendingTimePeriod,
+                showCondition
+              })
+              
+              return showCondition
+            })() && (
               <div className="pt-2 border-t border-gray-100">
                 <div className="flex items-center gap-2 flex-wrap">
                   <span className="text-xs text-gray-600">
