@@ -402,9 +402,10 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
+        <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">
           📊 Customer Pain Points by Category
         </h2>
+       
         
         <ChartWithFilters
           chartId="customer-pain-points"
@@ -414,6 +415,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >
+           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+            </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
               <div className="text-gray-500">正在更新数据...</div>
@@ -441,6 +445,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+            </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
               <div className="text-gray-500">Loading...</div>

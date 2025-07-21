@@ -31,18 +31,13 @@ class CompetitorAnalysisService(BaseDashboardService):
 
     # Default core products for competitor analysis when no specific ASINs are provided
     DEFAULT_COMPETITOR_ASINS = [
-       # 'B08PKMT2DV',  # Philips Hue - Smart home brand representative
         'B00NG0ELL0',  # Leviton DSL06 - Mid-tier brand representative
         'B0BVKZLT3B',  # Leviton D215S - Mid-tier brand representative
         'B0BVKYKKRK',  # Leviton D26HD - Mid-tier brand representative
         'B0BSHKS26L',  # Lutron Caseta Diva - Mid-tier brand representative
         'B085D8M2MR',  # Lutron Diva - Mid-tier brand representative
-        'B0BTMWZH3K'  # Kasa HomeKit - Mid-tier brand representative
-     #   'B0771BC2YH',  # CLOUDY BAY - Mid-tier brand representative
-     #   'B004DZONXI',  # Lutron - Lutron brand representative
-     #   'B07SXDFH38',  # Feit Electric - Amazon/Smart brand representative
-     #   'B073H9Y7SH',  # Leviton - Leviton brand representative
-     #   'B0BTMWZH3K'   # Kasa - TP-Link/Kasa brand representative
+        'B01EZV35QU'  # Kasa HomeKit - Mid-tier brand representative
+    
     ]
 
     # ASIN to display name mapping (consistent with frontend)
@@ -216,20 +211,14 @@ class CompetitorAnalysisService(BaseDashboardService):
                 aspect_pk = aspect['aspect_pk']
                 category_pk = aspect['category_pk']
                 
-                # Get category info (handle NULL category_pk)
-                if category_pk and category_pk in categories_data:
-                    category_info = categories_data[category_pk]
-                    category_name = self._capitalize_words(category_info['name'])
-                    aspect_type = category_info['aspect_type']
-                else:
-                    # Fallback mapping when category_pk is NULL
-                    aspect_type = aspect['aspect_type']
-                    if aspect['parent_group_name']:
-                        category_name = self._capitalize_words(aspect['parent_group_name'])
-                    else:
-                        # Generate category name from detail_text
-                        detail_text = aspect['detail_text'] or 'unknown'
-                        category_name = self._capitalize_words(detail_text.split(' ')[0]) if detail_text else 'Unknown'
+                # Skip aspects without proper category classification
+                if not category_pk or category_pk not in categories_data:
+                    continue  # Only use properly categorized aspects
+                
+                # Get category info
+                category_info = categories_data[category_pk]
+                category_name = self._capitalize_words(category_info['name'])
+                aspect_type = category_info['aspect_type']
                 
                 # Map aspect_type to old format
                 if aspect_type == 'use':
@@ -247,7 +236,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                     combined_data.append({
                         'product_id': aspect['product_id'],
                         'aspect_category': aspect_category,
-                        'standardized_aspect': self._capitalize_words(aspect['detail_text']),
+                        'standardized_aspect': category_name,  # Use category name for proper aggregation
                         'category_name': category_name,  # Add category name for proper use case aggregation
                         'review_id': occurrence['review_id'],
                         'sentiment': occurrence['sentiment']  # Direct sentiment from new table

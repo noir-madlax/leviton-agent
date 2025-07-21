@@ -239,36 +239,87 @@ class BaseDashboardService(ABC):
                 return query
             
             # 应用extend_fields过滤
-            extend_query = self.supabase.table('project_extend_data')\
-                .select('asins')\
-                .eq('project_id', self.project_id)
+            # 收集所有符合条件的ASINs，每个字段过滤后求交集
+            valid_asins_sets = []
             
-            # 添加扩展字段过滤条件
             for field_name, field_value in active_filters.items():
-                # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
-                if isinstance(field_value, bool):
-                    field_value = str(field_value).lower()  # true/false
-                elif field_value == 'true':
-                    field_value = 'true'
-                elif field_value == 'false':
-                    field_value = 'false'
+                field_valid_asins = set()
                 
-                # 使用正确的JSON文本提取语法 ->> 而不是 ->
-                extend_query = extend_query.eq(f'extend->>{field_name}', field_value)
-            
-            extend_result = extend_query.execute()
-            
-            if extend_result.data:
-                valid_asins = [row['asins'] for row in extend_result.data]
-                if valid_asins:
-                    query = query.in_('platform_id', valid_asins)
-                    logger.info(f"Applied extend fields filter: {active_filters}, found {len(valid_asins)} matching ASINs")
+                # 处理数组值：需要为每个值分别查询并合并结果（OR逻辑）
+                if isinstance(field_value, list):
+                    logger.info(f"Processing array filter for {field_name}: {field_value}")
+                    
+                    for value in field_value:
+                        # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
+                        if isinstance(value, bool):
+                            value = str(value).lower()  # true/false
+                        elif value == 'true':
+                            value = 'true'
+                        elif value == 'false':
+                            value = 'false'
+                        
+                        # 为每个值查询匹配的ASINs
+                        value_query = self.supabase.table('project_extend_data')\
+                            .select('asins')\
+                            .eq('project_id', self.project_id)\
+                            .eq(f'extend->>{field_name}', value)
+                        
+                        value_result = value_query.execute()
+                        if value_result.data:
+                            value_asins = {row['asins'] for row in value_result.data}
+                            field_valid_asins.update(value_asins)
+                            logger.info(f"Found {len(value_asins)} ASINs for {field_name}={value}")
+                
                 else:
-                    # 如果没有符合条件的产品，返回空结果
-                    query = query.eq('id', -1)
-                    logger.info(f"No products found for extend fields filter: {active_filters}")
+                    # 处理单个值
+                    logger.info(f"Processing single value filter for {field_name}: {field_value}")
+                    
+                    # 处理布尔值：JavaScript的boolean需要转换为JSON中存储的字符串格式
+                    if isinstance(field_value, bool):
+                        field_value = str(field_value).lower()  # true/false
+                    elif field_value == 'true':
+                        field_value = 'true'
+                    elif field_value == 'false':
+                        field_value = 'false'
+                    
+                    # 查询匹配的ASINs
+                    single_query = self.supabase.table('project_extend_data')\
+                        .select('asins')\
+                        .eq('project_id', self.project_id)\
+                        .eq(f'extend->>{field_name}', field_value)
+                    
+                    single_result = single_query.execute()
+                    if single_result.data:
+                        field_valid_asins = {row['asins'] for row in single_result.data}
+                        logger.info(f"Found {len(field_valid_asins)} ASINs for {field_name}={field_value}")
+                
+                # 只有当字段有匹配结果时才加入交集计算
+                if field_valid_asins:
+                    valid_asins_sets.append(field_valid_asins)
+                else:
+                    # 如果任何字段没有匹配，整个筛选应该返回空结果
+                    logger.info(f"No ASINs found for {field_name}, returning empty result")
+                    valid_asins_sets = []
+                    break
+            
+            # 计算所有字段的交集（AND逻辑）
+            if valid_asins_sets:
+                # 从第一个集合开始，与后续集合求交集
+                final_valid_asins = valid_asins_sets[0]
+                for asin_set in valid_asins_sets[1:]:
+                    final_valid_asins = final_valid_asins.intersection(asin_set)
+                
+                valid_asins = list(final_valid_asins)
+                logger.info(f"Final intersection result: {len(valid_asins)} ASINs match all extend field filters")
             else:
-                # 如果没有找到符合条件的产品，返回空结果
+                valid_asins = []
+            
+            # 应用最终的ASIN筛选结果
+            if valid_asins:
+                query = query.in_('platform_id', valid_asins)
+                logger.info(f"Applied extend fields filter: {active_filters}, found {len(valid_asins)} matching ASINs")
+            else:
+                # 如果没有符合条件的产品，返回空结果
                 query = query.eq('id', -1)
                 logger.info(f"No products found for extend fields filter: {active_filters}")
                 

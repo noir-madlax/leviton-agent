@@ -24,6 +24,6 @@ LABELS = {
 # UI configuration for field
 UI_CONFIG = {
     "default": "All",
-    "placeholder": "Select smart capability",
+    "placeholder": "Select",
     "options": LABELS
 } 

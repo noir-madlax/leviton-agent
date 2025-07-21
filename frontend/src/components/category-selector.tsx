@@ -260,7 +260,7 @@ export function CategorySelector({
     <div className="w-full">
       {/* Header */}
       <div className="flex items-center justify-between p-3 border-b bg-gray-50">
-        <h3 className="font-medium text-gray-900">Select Category</h3>
+        <h3 className="font-medium text-gray-900">Select</h3>
         {selectedCategoryId && (
           <Button 
             onClick={clearSelection} 

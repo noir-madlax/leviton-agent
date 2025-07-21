@@ -12,6 +12,7 @@ import { Tooltip } from "@/components/ui/tooltip"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
+import { supabase } from "@/lib/supabase"
 
 interface CompetitorAnalysisProps {
   projectId: string | null;
@@ -56,6 +57,16 @@ interface CompetitorAnalysisProps {
   }
 }
 
+// Fixed default competitor ASINs for Customer satisfaction overview
+const DEFAULT_COMPETITOR_ASINS = [
+  'B00NG0ELL0', // Leviton DSL06 - Mid-tier brand representative
+  'B0BVKZLT3B', // Leviton D215S - Mid-tier brand representative  
+  'B0BVKYKKRK', // Leviton D26HD - Mid-tier brand representative
+  'B0BSHKS26L', // Lutron Caseta Diva - Mid-tier brand representative
+  'B085D8M2MR', // Lutron Diva - Mid-tier brand representative
+  'B0BTMWZH3K'  // Kasa HomeKit - Mid-tier brand representative
+];
+
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
   const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
@@ -78,7 +89,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
   // 添加数据准备状态管理
   const [isDataReady, setIsDataReady] = useState(false);
 
-  // Load default top 6 products by analysis review count on component mount
+  // Load fixed default products for Customer satisfaction overview
   useEffect(() => {
     const loadDefaultProducts = async () => {
       if (!projectId) return;
@@ -86,33 +97,55 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       // 重置数据准备状态
       setIsDataReady(false);
       
-      try {
-        // Get products ranked by analysis review count from current project
-        const projectProducts = await databaseService.getProjectProductsByReviewCount(projectId);
-        
-        // Take top 6 products by analysis review count
-        const topProducts = projectProducts.slice(0, 6);
-        
-        // Convert to the expected format
-        const formattedProducts = topProducts.map(product => ({
-          platform_id: product.platform_id,
-          title: product.title,
-          brand: product.brand,
-          price_usd: product.price_usd,
-          reviews_count: product.actual_review_count,
-          category: product.category,
-          product_url: product.product_url,
-          rating: product.rating
-        }));
+              try {
+          // Direct query for fixed DEFAULT_COMPETITOR_ASINS (bypass project logic)
+          const { data: products, error: productsError } = await supabase
+            .from('product_wide_table')
+            .select('platform_id, title, brand, price_usd, reviews_count, category, product_url, rating')
+            .in('platform_id', DEFAULT_COMPETITOR_ASINS)
+          
+          if (productsError) {
+            console.error('Error fetching fixed competitor products:', productsError);
+            setIsDataReady(true);
+            return;
+          }
+          
+          // Convert to the expected format, preserving the order of DEFAULT_COMPETITOR_ASINS  
+          const formattedProducts = DEFAULT_COMPETITOR_ASINS.map(asin => {
+            const product = products?.find((p: any) => p.platform_id === asin);
+            if (product) {
+              return {
+                platform_id: product.platform_id,
+                title: product.title,
+                brand: product.brand,
+                price_usd: product.price_usd,
+                reviews_count: product.reviews_count, // Use regular reviews_count for fixed products
+                category: product.category,
+                product_url: product.product_url,
+                rating: product.rating
+              };
+            }
+            return null;
+          }).filter(Boolean) as Array<{
+            platform_id: string
+            title: string
+            brand: string
+            price_usd: number
+            reviews_count: number
+            category: string
+            product_url?: string
+            monthly_sales_volume?: number
+            rating?: number | null
+          }>;
         
         setDefaultProducts(formattedProducts);
         
-        // If no custom selection, use these default products for analysis
+        // If no custom selection, use these fixed default products for analysis
         if (selectedAsins.length === 0) {
-          const defaultAsins = topProducts.map(p => p.platform_id);
+          const defaultAsins = DEFAULT_COMPETITOR_ASINS;
           setSelectedAsins(defaultAsins);
           
-          // Load competitor data for default products
+          // Load competitor data for fixed default products
           if (defaultAsins.length > 0) {
             setLoading(true);
             try {
@@ -342,20 +375,18 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
 
       {/* Product Data Overview */}
       <section data-chart-id="customer-satisfaction-overview">
-        <h2 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-4">
+        <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
           📊 Customer satisfaction overview
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
-            </div>
-
-
+         
           {selectedAsins.length > 0 && (
             <span className="ml-2 text-sm font-normal text-gray-600">
               ({selectedAsins.length} Focal products selected)
             </span>
           )}
         </h2>
-        
+        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+          How to read this table: review is based on 200 top
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {productStats.map((stat: any) => (
             <Card 

@@ -500,6 +500,8 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       {/* Sales Trend Chart - New Addition */}
       <div className="mt-15">
         <div data-chart-id="sales-trend-analysis">
+      
+       
         <ChartWithFilters
           chartId="sales-trend-analysis"
           chartType="area"
@@ -507,14 +509,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           title="Sales Trend of Top 10 brands"
           projectFilters={initialFilters}
         >
-            {/* Chart Description 类似summary*/}
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-              <p className="text-sm text-blue-700">
-                <strong>Chart Definition:</strong> Stacked area chart showing monthly {metricType} trends for top 10 brands. 
-                Height of each colored band represents {metricType === "revenue" ? "Revenue = SKU Price × Units sold" : "Volume = Units sold"} within the selected time period. 
-                Hover to display percentage of {metricType} for each brand at that time slice.
-              </p>
-            </div>
+           {/* 
           <Card className="p-6 bg-gray-50">
             <MetricTypeSelector onChange={setMetricType} value={metricType} />
             
@@ -527,17 +522,15 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <p className="text-sm text-amber-700">
-                    <strong>Only placeholder in this Demo version - blocked by the sales history API</strong>
-                  </p>
+               
                   <p className="text-xs text-amber-600 mt-1">
-                    This feature is under development. Sales trend data will be available once the sales history API integration is complete.
+                    Coming Soon.
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Mock Sales Trend Chart */}
+            {/* Mock Sales Trend Chart 
             <div className="bg-gray-50 p-4 ">
               <div className="h-[500px] w-full">
                 <StackedAreaChart
@@ -551,6 +544,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
 
           
           </Card>
+            */}
         </ChartWithFilters>
         </div>
       </div>

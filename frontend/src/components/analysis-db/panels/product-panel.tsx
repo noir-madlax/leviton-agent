@@ -172,7 +172,7 @@ export function ProductPanel() {
                   onChange={(e) => setSelectedCategory(e.target.value)}
                   className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 >
-                  <option value="all">All Amazon Categories</option>
+                  <option value="all">Select</option>
                   {uniqueCategories.map(category => (
                     <option key={category} value={category}>{category}</option>
                   ))}

@@ -198,7 +198,7 @@ export function CompetitorAsinSelector({
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
-                              <option value="">All Amazon Categories</option>
+                              <option value="">Select</option>
               {uniqueCategories.map(category => (
                 <option key={category} value={category}>{category}</option>
               ))}

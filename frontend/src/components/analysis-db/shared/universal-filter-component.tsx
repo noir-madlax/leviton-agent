@@ -68,6 +68,7 @@ export function UniversalFilterComponent({
     brand: 0,  // 改：packaging -> brand
     segment: 0
   })
+  const [applyingFilters, setApplyingFilters] = useState(false)
 
   // 新增：过滤器配置状态
   const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
@@ -146,6 +147,23 @@ export function UniversalFilterComponent({
         ...prev,
         extend_fields: newExtendFields
       }
+    })
+  }
+
+  // 新增：处理extend_fields数组中单个元素的删除
+  const handleRemoveExtendFieldItem = (fieldName: string, item: string) => {
+    setPendingFilters(prev => {
+      const newExtendFields = { ...prev.extend_fields }
+      const currentArray = Array.isArray(newExtendFields[fieldName]) ? newExtendFields[fieldName] : []
+      const updatedArray = currentArray.filter((i: any) => i !== item)
+      
+      if (updatedArray.length === 0) {
+        delete newExtendFields[fieldName]
+      } else {
+        newExtendFields[fieldName] = updatedArray
+      }
+      
+      return { ...prev, extend_fields: newExtendFields }
     })
   }
 
@@ -285,8 +303,15 @@ export function UniversalFilterComponent({
     }))
   }
 
-  const handleApplyFilters = () => {
+  const handleApplyFilters = async () => {
+    setApplyingFilters(true)
+    
+    // 模拟短暂延迟，让用户看到loading效果
+    await new Promise(resolve => setTimeout(resolve, 300))
+    
     onFiltersChange(pendingFilters)
+    
+    setApplyingFilters(false)
   }
 
   // 检查是否有待处理的变化
@@ -438,10 +463,9 @@ export function UniversalFilterComponent({
                 disabled={finalLoading || configLoading}
               >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="All Amazon Categories" />
+                <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent className="max-h-80">
-                <SelectItem value="all">All Amazon Categories</SelectItem>
                 {/* 调试日志 */}
                 {(() => {
                   console.log('🔍 [UNIVERSAL-FILTER] Available category options:', {
@@ -529,10 +553,9 @@ export function UniversalFilterComponent({
                 disabled={finalLoading || configLoading}
               >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="All Brands" />  {/* 改：All Packaging Types -> All Brands */}
+                <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Brands</SelectItem>  {/* 改：All Packaging Types -> All Brands */}
                 {/* 优先使用统一数据源的brands，fallback到projectData */}
                 {finalAvailableOptions?.brands && finalAvailableOptions.brands.length > 0 ? (
                   finalAvailableOptions.brands
@@ -610,10 +633,9 @@ export function UniversalFilterComponent({
                 disabled={finalLoading || configLoading}
               >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="All Segments" />
+                <SelectValue placeholder="Select" />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Segments</SelectItem>
                 {finalAvailableOptions.segments
                   .map((segment) => {
                     // 从distributions数据中查找对应的计数信息
@@ -681,13 +703,26 @@ export function UniversalFilterComponent({
                 // 获取字段的显示名称
                 const displayName = fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
                 
+                // 如果是数组，为每个值创建单独的Badge
+                if (Array.isArray(value)) {
+                  return value.map((item, index) => 
+                    renderExtendFieldBadge(
+                      `${fieldName}-${index}`,  // 唯一key
+                      item,  // 传递单个item而不是整个数组
+                      displayName, 
+                      () => handleRemoveExtendFieldItem(fieldName, item)  // 删除单个元素
+                    )
+                  )
+                }
+                
+                // 单个值的情况
                 return renderExtendFieldBadge(
                   fieldName, 
                   value, 
                   displayName, 
                   () => handleRemoveExtendField(fieldName)
                 )
-              })}
+              }).flat()}
             </div>
           </div>
         )}
@@ -707,9 +742,16 @@ export function UniversalFilterComponent({
           <Button 
             size="sm" 
             onClick={handleApplyFilters}
-            disabled={!hasPendingChanges || finalLoading}
+            disabled={!hasPendingChanges || finalLoading || applyingFilters}
           >
-            Apply Filters
+            {applyingFilters ? (
+              <>
+                <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                Applying...
+              </>
+            ) : (
+              'Apply Filters'
+            )}
           </Button>
         </div>
 

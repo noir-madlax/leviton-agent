@@ -124,6 +124,7 @@ export function CategoryFilterAndProjectScope({
   const [pendingTimePeriod, setPendingTimePeriod] = useState<string>(initialFilters.time_period)
   const [appliedTimePeriod, setAppliedTimePeriod] = useState<string>(initialFilters.time_period)
   const [filterLoading, setFilterLoading] = useState(false)
+  const [applyingFilters, setApplyingFilters] = useState(false)
 
   // 添加Select状态控制
   const [categorySelectKey, setCategorySelectKey] = useState(0)
@@ -371,12 +372,49 @@ export function CategoryFilterAndProjectScope({
     setPendingTimePeriod(timePeriod)
   }
 
-  const handleApplyFilters = () => {
+  const handleApplyFilters = async () => {
+    setApplyingFilters(true)
+    
+    // 先更新状态
     setAppliedCategories(pendingCategories)
     setAppliedBrands(pendingBrands)
     setAppliedSegments(pendingSegments)
     setAppliedExtendFields(pendingExtendFields)
     setAppliedTimePeriod(pendingTimePeriod)
+    
+    // 立即触发数据重新加载
+    try {
+      // 检查 projectId 是否为 null
+      if (!projectId) {
+        console.warn('ProjectId is null, skipping data reload')
+        setApplyingFilters(false)
+        return
+      }
+      
+      const categoryFilters = pendingCategories.length > 0 ? pendingCategories : undefined
+      const brandFilters = pendingBrands.length > 0 ? pendingBrands : undefined
+      const segmentFilters = pendingSegments.length > 0 ? pendingSegments : undefined
+      const extendFields = Object.keys(pendingExtendFields).length > 0 ? pendingExtendFields : undefined
+      
+      // 使用当前的pending值立即重新加载数据
+      const overview = await databaseService.getProjectOverview(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
+      
+      const completeOverview: ProjectOverviewData = {
+        ...overview,
+        distributions: {
+          ...overview.distributions,
+          brands: (overview.distributions as any).brands || [],
+          segments: (overview.distributions as any).segments || [],
+          extend_fields: (overview.distributions as any).extend_fields || {},
+          packaging_types: (overview.distributions as any).packaging_types || []
+        }
+      }
+      
+      setProjectData(completeOverview)
+    } catch (error) {
+      console.error('Failed to reload project data:', error)
+    }
+    
     if (onFiltersChange) {
       onFiltersChange({
         categories: pendingCategories,
@@ -387,6 +425,8 @@ export function CategoryFilterAndProjectScope({
         time_period: pendingTimePeriod
       })
     }
+    
+    setApplyingFilters(false)
   }
 
   const handleReset = () => {
@@ -473,10 +513,9 @@ export function CategoryFilterAndProjectScope({
                   <span className="text-sm text-gray-600">Amazon Category:</span>
                   <Select key={categorySelectKey} onValueChange={handleCategorySelect} disabled={filterLoading || configLoading}>
                     <SelectTrigger className="w-48 h-8">
-                      <SelectValue placeholder="All Amazon Categories" />
+                      <SelectValue placeholder="Select" />
                     </SelectTrigger>
                   <SelectContent className="max-h-80">
-                    <SelectItem value="all">All Amazon Categories (No Filter)</SelectItem>
                     {/* 调试日志 */}
                     {(() => {
                       console.log('🔍 [CATEGORY-FILTER-SCOPE] Available category options:', {
@@ -548,11 +587,10 @@ export function CategoryFilterAndProjectScope({
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-600">Brand:</span>
                   <Select key={brandSelectKey} onValueChange={handleBrandSelect} disabled={filterLoading || configLoading}>
-                    <SelectTrigger className="w-48 h-8">
-                      <SelectValue placeholder="All Brands" />
+                                        <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="Select" />
                     </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Brands</SelectItem>
+                    <SelectContent>
                     {/* 显示从project数据中获取的brands */}
                     {projectData?.distributions?.brands && projectData.distributions.brands.length > 0 ? (
                       projectData.distributions.brands
@@ -600,11 +638,10 @@ export function CategoryFilterAndProjectScope({
                 <div className="flex items-center gap-2">
                   <span className="text-sm text-gray-600">Product Segment:</span>
                   <Select key={segmentSelectKey} onValueChange={handleSegmentSelect} disabled={filterLoading || configLoading}>
-                    <SelectTrigger className="w-48 h-8">
-                      <SelectValue placeholder="All Segments" />
+                                        <SelectTrigger className="w-48 h-8">
+                      <SelectValue placeholder="Select" />
                     </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Segments</SelectItem>
+                    <SelectContent>
                     {availableSegments
                       .map((segment) => {
                         // 从distributions数据中查找对应的计数信息
@@ -645,11 +682,18 @@ export function CategoryFilterAndProjectScope({
               {/* Apply button */}
               <Button
                 onClick={handleApplyFilters}
-                disabled={!hasPendingChanges}
+                disabled={!hasPendingChanges || applyingFilters}
                 size="sm"
                 className="h-8"
               >
-                Apply Filters
+                {applyingFilters ? (
+                  <>
+                    <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                    Applying...
+                  </>
+                ) : (
+                  'Apply Filters'
+                )}
               </Button>
 
               {/* Reset button */}
@@ -754,28 +798,63 @@ export function CategoryFilterAndProjectScope({
                       />
                     </Badge>
                   ))}
-                  {Object.entries(pendingExtendFields).map(([fieldName, value]) => (
-                    <Badge
-                      key={`extend-${fieldName}`}
-                      variant={hasPendingChanges ? "outline" : "secondary"}
-                      className={`text-xs flex items-center gap-1 ${
-                        hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
-                      }`}
-                    >
-                      ⚙️ {fieldName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
-                      <X
-                        className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
-                        onClick={(e) => {
-                          console.log('[FILTER-REMOVE] Clicking X for extend field badge:', fieldName)
-                          e.stopPropagation()
-                          e.preventDefault()
-                          const newFields = { ...pendingExtendFields }
-                          delete newFields[fieldName]
-                          setPendingExtendFields(newFields)
-                        }}
-                      />
-                    </Badge>
-                  ))}
+                  {Object.entries(pendingExtendFields).map(([fieldName, value]) => {
+                    // 如果是数组类型（多选），为每个值创建单独的Badge
+                    if (Array.isArray(value)) {
+                      return value.map((item, index) => (
+                        <Badge
+                          key={`extend-${fieldName}-${index}`}
+                          variant={hasPendingChanges ? "outline" : "secondary"}
+                          className={`text-xs flex items-center gap-1 ${
+                            hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                          }`}
+                        >
+                          ⚙️ {fieldName === 'smart_capability' ? 'Smart Capability' : fieldName}: {item}
+                          <X
+                            className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                            onClick={(e) => {
+                              console.log('[FILTER-REMOVE] Clicking X for extend field array item:', fieldName, item)
+                              e.stopPropagation()
+                              e.preventDefault()
+                              const newFields = { ...pendingExtendFields }
+                              const currentArray = Array.isArray(newFields[fieldName]) ? newFields[fieldName] : []
+                              const updatedArray = currentArray.filter((i: any) => i !== item)
+                              if (updatedArray.length === 0) {
+                                delete newFields[fieldName]
+                              } else {
+                                newFields[fieldName] = updatedArray
+                              }
+                              setPendingExtendFields(newFields)
+                            }}
+                          />
+                        </Badge>
+                      ))
+                    } else {
+                      // 单个值的情况
+                      return (
+                        <Badge
+                          key={`extend-${fieldName}`}
+                          variant={hasPendingChanges ? "outline" : "secondary"}
+                          className={`text-xs flex items-center gap-1 ${
+                            hasPendingChanges ? 'border-orange-300 text-orange-700' : ''
+                          }`}
+                        >
+                          ⚙️ {fieldName === 'smart_capability' ? 'Smart Capability' : fieldName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
+                          <X
+                            className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto"
+                            onClick={(e) => {
+                              console.log('[FILTER-REMOVE] Clicking X for extend field badge:', fieldName)
+                              e.stopPropagation()
+                              e.preventDefault()
+                              const newFields = { ...pendingExtendFields }
+                              delete newFields[fieldName]
+                              setPendingExtendFields(newFields)
+                            }}
+                          />
+                        </Badge>
+                      )
+                    }
+                  }).flat()}
                 </div>
               </div>
             )}
@@ -795,10 +874,12 @@ export function CategoryFilterAndProjectScope({
 
           {/* Project Data Scope Section */}
           <div className="pt-3 border-t border-gray-100">
-            {overviewLoading ? (
+            {(overviewLoading || applyingFilters) ? (
               <div className="flex items-center justify-center py-4">
                 <Loader2 className="w-4 h-4 animate-spin text-blue-500 mr-2" />
-                <span className="text-sm text-gray-600">Loading project data...</span>
+                <span className="text-sm text-gray-600">
+                  {applyingFilters ? 'Updating project data...' : 'Loading project data...'}
+                </span>
               </div>
             ) : projectData ? (
               <>

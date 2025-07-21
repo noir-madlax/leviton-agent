@@ -186,7 +186,7 @@ export function IntegratedLayout({
         ⏰ Time Period: Last 30 days
       </Badge>
     );
-
+  /*
     // Category filters
     filters.categories.forEach(category => {
       badges.push(
@@ -225,7 +225,7 @@ export function IntegratedLayout({
         );
       }
     });
-
+*/
     return badges;
   };
 

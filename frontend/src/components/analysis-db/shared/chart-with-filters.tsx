@@ -211,10 +211,9 @@ export function ChartWithFilters({
           <label className="text-xs text-gray-500 mb-1">Brand</label>
           <Select value={displayValue} onValueChange={(value) => handleFilterChange('brands', value)}>
             <SelectTrigger className="w-32 h-8 text-xs">
-              <SelectValue placeholder="All Brands" />
+            <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Brands</SelectItem>
               {filterOptions.brands.map((brand) => (
                 <SelectItem key={brand} value={brand}>
                   {brand}
@@ -238,10 +237,9 @@ export function ChartWithFilters({
           <label className="text-xs text-gray-500 mb-1">Segment</label>
           <Select value={displayValue} onValueChange={(value) => handleFilterChange('segments', value)}>
             <SelectTrigger className="w-36 h-8 text-xs">
-              <SelectValue placeholder="All Segments" />
+              <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="all">All Segments</SelectItem>
               {filterOptions.segments.map((segment) => (
                 <SelectItem key={segment} value={segment}>
                   {segment}
@@ -365,10 +363,9 @@ export function ChartWithFilters({
                 onValueChange={(value) => handleExtendFieldChange(fieldName, value)}
               >
                 <SelectTrigger className="w-32 h-8 text-xs">
-                  <SelectValue placeholder={`All ${displayName}`} />
+                  <SelectValue placeholder="Select" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="all">All {displayName}</SelectItem>
                   {options.map((option) => (
                     <SelectItem key={option} value={option}>
                       {fieldName === 'smart_capability' 
