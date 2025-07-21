@@ -479,7 +479,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           )}
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+          Analysis uses up to 200 most recent reviews per product (all-time data)
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {productStats.map((stat: any) => (

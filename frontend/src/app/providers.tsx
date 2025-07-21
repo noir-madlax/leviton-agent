@@ -6,9 +6,10 @@ import { useEffect, Suspense } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
+import { isLocalhostEnvironment } from '@/lib/posthog-utils'
 
-// PostHog 初始化
-if (typeof window !== 'undefined') {
+// PostHog 初始化 - 只在非localhost环境初始化
+if (typeof window !== 'undefined' && !isLocalhostEnvironment()) {
   posthog.init(process.env.NEXT_PUBLIC_POSTHOG_KEY!, {
     api_host: "/ingest",
     ui_host: "https://us.posthog.com",
@@ -26,6 +27,9 @@ function PostHogPageView() {
   const searchParams = useSearchParams()
 
   useEffect(() => {
+    // 在localhost环境下跳过埋点
+    if (isLocalhostEnvironment()) return
+    
     if (pathname) {
       let url = window.origin + pathname
       if (searchParams.toString()) {
@@ -45,6 +49,9 @@ function PostHogUserIdentify() {
   useEffect(() => {
     // 仅在客户端运行
     if (typeof window === 'undefined') return
+    
+    // 在localhost环境下跳过埋点
+    if (isLocalhostEnvironment()) return
 
     // 监听 auth 状态变化
     const handleAuthChange = () => {
@@ -86,6 +93,15 @@ function PostHogUserIdentify() {
 
 // 主要的 PostHog Provider 组件
 export function PostHogAppProvider({ children }: { children: React.ReactNode }) {
+  // 在localhost环境下直接返回children，不包装PostHog Provider
+  if (typeof window !== 'undefined' && isLocalhostEnvironment()) {
+    return (
+      <>
+        {children}
+      </>
+    )
+  }
+
   return (
     <PostHogProvider client={posthog}>
       <Suspense fallback={null}>

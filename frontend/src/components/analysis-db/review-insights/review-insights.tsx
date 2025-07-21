@@ -106,24 +106,26 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   )
 
   // Fetch standardized insights data
-  const fetchStandardizedData = async () => {
-    if (!projectId) return
+  const fetchStandardizedData = async (): Promise<boolean> => {
+    if (!projectId) return false
     
     try {
-      const response = await fetch(`/api/dashboard/insights/all/${projectId}`)
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/insights/all/${projectId}`)
       if (!response.ok) {
         throw new Error(`Failed to fetch standardized data: ${response.statusText}`)
       }
       
       const result: AllInsightsResponse = await response.json()
-      if (result.success) {
+      if (result.success && result.data) {
         setStandardizedInsights(result.data)
         console.log('Standardized insights loaded:', result.data)
+        return true
       }
+      return false
     } catch (error) {
       console.error('Error fetching standardized insights:', error)
-      // Fallback to traditional data if standardized data fails
-      setUseStandardizedData(false)
+      return false
     }
   }
 
@@ -170,15 +172,19 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       if (newValue) {
         // Switching to standardized data - force refresh standardized data
         console.log('Switching to standardized data, refreshing...')
-        await fetchStandardizedData()
+        const success = await fetchStandardizedData()
+        if (success) {
+          setUseStandardizedData(true)
+        } else {
+          console.log('Standardized data loading failed, staying with traditional data')
+          // Keep using traditional data if standardized fails
+        }
       } else {
         // Switching to traditional data - force refresh traditional data  
         console.log('Switching to traditional data, refreshing...')
         await fetchTraditionalData()
+        setUseStandardizedData(false)
       }
-      
-      // Only set the new value after successful data fetch
-      setUseStandardizedData(newValue)
     } catch (error) {
       console.error('Error during data source switch:', error)
     } finally {
@@ -189,8 +195,13 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   // Load standardized data on component mount and when projectId changes
   useEffect(() => {
     if (projectId) {
-      fetchStandardizedData()
-      setUseStandardizedData(true) // Enable standardized data by default
+      fetchStandardizedData().then((success) => {
+        // Only enable standardized data if it was successfully loaded
+        setUseStandardizedData(success)
+        if (!success) {
+          console.log('Standardized data loading failed, falling back to traditional data')
+        }
+      })
     }
   }, [projectId])
 
@@ -570,7 +581,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+          Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -602,7 +613,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+          Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
           {isLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -625,7 +636,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          How to read this table: review is based on 200 top
+          Analysis uses up to 200 most recent reviews per product (all-time data)
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
           <UseCaseSentimentMatrix 

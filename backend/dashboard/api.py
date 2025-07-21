@@ -1039,3 +1039,27 @@ async def get_all_insights_data(
     except Exception as e:
         logger.error(f"Error getting all insights data: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/insights/health")
+async def insights_health_check():
+    """
+    Health check for insights API to verify module imports and basic functionality.
+    """
+    try:
+        from .review_insights_api import ANALYSIS_TYPES
+        
+        return {
+            "success": True,
+            "message": "Insights API is healthy",
+            "available_analysis_types": list(ANALYSIS_TYPES.keys()),
+            "module_imported": True
+        }
+        
+    except Exception as e:
+        logger.error(f"Health check failed: {e}", exc_info=True)
+        return {
+            "success": False,
+            "message": f"Health check failed: {str(e)}",
+            "module_imported": False
+        }
