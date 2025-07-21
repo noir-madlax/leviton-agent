@@ -122,6 +122,10 @@ class PricingAnalysisService(BaseDashboardService):
         selected_categories = self.filters.categories
         selected_extend_fields = self.filters.extend_fields or {}
         smart_filter = selected_extend_fields.get('smart_capability')
+
+        # 确保 smart_filter 是一个列表，以便统一处理
+        if smart_filter and not isinstance(smart_filter, list):
+            smart_filter = [smart_filter]
         
         # 如果没有任何筛选条件，返回所有组合
         if not selected_categories and not smart_filter:
@@ -133,28 +137,20 @@ class PricingAnalysisService(BaseDashboardService):
         
         # 遍历所有组合，检查是否匹配筛选条件
         for combination_name, products in all_combinations.items():
-            should_include = True
-            
-            # 解析组合名称: "Light Switches + Smart" -> ["Light Switches", "Smart"]
             parts = combination_name.split(' + ')
             if len(parts) != 2:
                 continue  # 跳过格式不正确的组合名称
                 
-            combo_category = parts[0].strip()
-            combo_smart_capability = parts[1].strip()
+            combo_category, combo_smart_capability = parts[0].strip(), parts[1].strip()
             
-            # 检查 category 筛选条件
-            if selected_categories:
-                if combo_category not in selected_categories:
-                    should_include = False
+            # 检查 category (保持不变)
+            category_match = not selected_categories or combo_category in selected_categories
             
-            # 检查 smart_capability 筛选条件
-            if smart_filter:
-                if combo_smart_capability != smart_filter:
-                    should_include = False
+            # 检查 smart_capability (修改后的逻辑)
+            smart_match = not smart_filter or combo_smart_capability in smart_filter
             
             # 如果同时满足所有条件，包含这个组合
-            if should_include:
+            if category_match and smart_match:
                 filtered_results[combination_name] = products
                 logger.info(f"Including combination: {combination_name} with {len(products)} products")
         
