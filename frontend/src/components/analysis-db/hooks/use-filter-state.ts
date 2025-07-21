@@ -31,24 +31,31 @@ export function useFilterState(projectId: string, initialProjectFilters?: Projec
         const oldProjectFilters = newState.projectFilters
         newState.projectFilters = initialProjectFilters
 
-        // 同步到所有chart
-        newState.chartFilters.forEach((chartFilters, chartId) => {
-          const syncedChartFilters = filterSynchronizer.syncProjectToChart(
-            chartFilters, 
-            oldProjectFilters, 
-            initialProjectFilters
-          )
-          newState.chartFilters.set(chartId, syncedChartFilters)
-        })
+              // 创建新的Map引用以确保React能检测到变化
+      const newChartFilters = new Map(newState.chartFilters)
+      const newFinalFilters = new Map()
 
-        // 重新计算所有final filters
-        newState.finalFilters.clear()
-        newState.chartFilters.forEach((chartFilters, chartId) => {
-          const finalFilters = filterMerger.mergeFilters(newState.projectFilters, chartFilters)
-          newState.finalFilters.set(chartId, finalFilters)
-        })
+      // 同步到所有chart
+      prevState.chartFilters.forEach((chartFilters, chartId) => {
+        const syncedChartFilters = filterSynchronizer.syncProjectToChart(
+          chartFilters, 
+          oldProjectFilters, 
+          initialProjectFilters
+        )
+        newChartFilters.set(chartId, syncedChartFilters)
+      })
 
-        return newState
+      // 重新计算所有final filters
+      newChartFilters.forEach((chartFilters, chartId) => {
+        const finalFilters = filterMerger.mergeFilters(initialProjectFilters, chartFilters)
+        newFinalFilters.set(chartId, finalFilters)
+      })
+
+      return {
+        ...newState,
+        chartFilters: newChartFilters,
+        finalFilters: newFinalFilters
+      }
       })
     }
   }, [initialProjectFilters, filterMerger, filterSynchronizer])
@@ -58,29 +65,39 @@ export function useFilterState(projectId: string, initialProjectFilters?: Projec
    * @param newFilters 新的project筛选器
    */
   const updateProjectFilters = useCallback((newFilters: ProjectFilters) => {
+    console.log(`🔄 [useFilterState] Updating project filters`, newFilters)
+    
     setState(prevState => {
-      const newState = { ...prevState }
-      const oldProjectFilters = newState.projectFilters
-      newState.projectFilters = newFilters
+      const oldProjectFilters = prevState.projectFilters
+      
+      // 创建新的Map引用以确保React能检测到变化
+      const newChartFilters = new Map(prevState.chartFilters)
+      const newFinalFilters = new Map()
 
       // 同步到所有chart
-      newState.chartFilters.forEach((chartFilters, chartId) => {
+      prevState.chartFilters.forEach((chartFilters, chartId) => {
         const syncedChartFilters = filterSynchronizer.syncProjectToChart(
           chartFilters, 
           oldProjectFilters, 
           newFilters
         )
-        newState.chartFilters.set(chartId, syncedChartFilters)
+        newChartFilters.set(chartId, syncedChartFilters)
       })
 
       // 重新计算所有final filters
-      newState.finalFilters.clear()
-      newState.chartFilters.forEach((chartFilters, chartId) => {
-        const finalFilters = filterMerger.mergeFilters(newState.projectFilters, chartFilters)
-        newState.finalFilters.set(chartId, finalFilters)
+      newChartFilters.forEach((chartFilters, chartId) => {
+        const finalFilters = filterMerger.mergeFilters(newFilters, chartFilters)
+        newFinalFilters.set(chartId, finalFilters)
       })
 
-      return newState
+      console.log(`✅ [useFilterState] Updated project filters, affected ${newFinalFilters.size} charts`)
+
+      return {
+        ...prevState,
+        projectFilters: newFilters,
+        chartFilters: newChartFilters,
+        finalFilters: newFinalFilters
+      }
     })
   }, [filterMerger, filterSynchronizer])
 
@@ -90,15 +107,26 @@ export function useFilterState(projectId: string, initialProjectFilters?: Projec
    * @param newFilters 新的chart筛选器
    */
   const updateChartFilters = useCallback((chartId: string, newFilters: ProjectFilters) => {
+    console.log(`🔄 [useFilterState] Updating chart filters for ${chartId}`, newFilters)
+    
     setState(prevState => {
-      const newState = { ...prevState }
-      newState.chartFilters.set(chartId, newFilters)
+      // 创建新的Map引用以确保React能检测到变化
+      const newChartFilters = new Map(prevState.chartFilters)
+      const newFinalFilters = new Map(prevState.finalFilters)
+      
+      newChartFilters.set(chartId, newFilters)
       
       // 重新计算该chart的final filters
-      const finalFilters = filterMerger.mergeFilters(newState.projectFilters, newFilters)
-      newState.finalFilters.set(chartId, finalFilters)
+      const finalFilters = filterMerger.mergeFilters(prevState.projectFilters, newFilters)
+      newFinalFilters.set(chartId, finalFilters)
       
-      return newState
+      console.log(`✅ [useFilterState] Updated final filters for ${chartId}:`, finalFilters)
+      
+      return {
+        ...prevState,
+        chartFilters: newChartFilters,
+        finalFilters: newFinalFilters
+      }
     })
   }, [filterMerger])
 
@@ -110,16 +138,27 @@ export function useFilterState(projectId: string, initialProjectFilters?: Projec
     setState(prevState => {
       if (prevState.chartFilters.has(chartId)) return prevState
       
-      const newState = { ...prevState }
+      console.log(`🔄 [useFilterState] Initializing chart filter for ${chartId}`)
+      
+      // 创建新的Map引用以确保React能检测到变化
+      const newChartFilters = new Map(prevState.chartFilters)
+      const newFinalFilters = new Map(prevState.finalFilters)
+      
       // 新chart默认继承project筛选器
-      const initialChartFilters = { ...newState.projectFilters }
-      newState.chartFilters.set(chartId, initialChartFilters)
+      const initialChartFilters = { ...prevState.projectFilters }
+      newChartFilters.set(chartId, initialChartFilters)
       
       // 计算final filters
-      const finalFilters = filterMerger.mergeFilters(newState.projectFilters, initialChartFilters)
-      newState.finalFilters.set(chartId, finalFilters)
+      const finalFilters = filterMerger.mergeFilters(prevState.projectFilters, initialChartFilters)
+      newFinalFilters.set(chartId, finalFilters)
       
-      return newState
+      console.log(`✅ [useFilterState] Initialized chart filter for ${chartId}:`, finalFilters)
+      
+      return {
+        ...prevState,
+        chartFilters: newChartFilters,
+        finalFilters: newFinalFilters
+      }
     })
   }, [filterMerger])
 

@@ -13,34 +13,36 @@ import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
+interface CompetitorAnalysisData {
+  targetProducts: string[]
+  matrixData: Array<{
+    product: string
+    category: string
+    categoryType: 'Physical' | 'Performance'
+    mentions: number
+    satisfactionRate: number
+    positiveCount: number
+    negativeCount: number
+    totalReviews: number
+  }>
+  productTotalReviews: Record<string, number>
+  useCaseData: {
+    targetProducts: string[]
+    matrixData: Array<{
+      product: string
+      useCase: string
+      mentions: number
+      satisfactionRate: number
+      gapLevel: number
+    }>
+  }
+}
+
 interface CompetitorAnalysisProps {
   projectId: string | null;
   initialFilters?: ProjectFilters;
   data: {
-    competitorAnalysis: {
-      targetProducts: string[]
-      matrixData: Array<{
-        product: string
-        category: string
-        categoryType: 'Physical' | 'Performance'
-        mentions: number
-        satisfactionRate: number
-        positiveCount: number
-        negativeCount: number
-        totalReviews: number
-      }>
-      productTotalReviews: Record<string, number>
-      useCaseData: {
-        targetProducts: string[]
-        matrixData: Array<{
-          product: string
-          useCase: string
-          mentions: number
-          satisfactionRate: number
-          gapLevel: number
-        }>
-      }
-    }
+    competitorAnalysis: CompetitorAnalysisData
     allReviewData: Record<string, Array<{
       id: string
       productId: string
@@ -54,11 +56,42 @@ interface CompetitorAnalysisProps {
       brand: string
     }>>
   }
+  // 动态数据参数（可选）
+  dynamicData?: {
+    competitorAnalysis: CompetitorAnalysisData
+    allReviewData: Record<string, Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+    }>>
+  }
+  loading?: boolean
+  error?: string | null
+  finalFilters?: ProjectFilters
 }
 
-export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
+export function CompetitorAnalysis({ 
+  projectId, 
+  data: initialData, 
+  initialFilters,
+  // 动态数据参数
+  dynamicData,
+  loading: dynamicLoading,
+  error: dynamicError,
+  finalFilters
+}: CompetitorAnalysisProps) {
+  // 🔧 修复：动态数据优先，只有当动态数据明确为null/undefined时才使用静态数据
+  const data = (dynamicData !== undefined && dynamicData !== null) ? dynamicData : initialData
+  
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
-  const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
+  const [customCompetitorData, setCustomCompetitorData] = useState<CompetitorAnalysisData | null>(null);
   const [loading, setLoading] = useState(false);
   // 添加专门的Apply loading状态
   const [applyLoading, setApplyLoading] = useState(false);
@@ -74,6 +107,14 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     monthly_sales_volume?: number
     rating?: number | null
   }>>([]);
+
+  // 添加调试日志
+  console.log(`🎯 [CompetitorAnalysis] Data source selection:`, {
+    hasDynamicData: dynamicData !== undefined && dynamicData !== null,
+    hasInitialData: initialData !== undefined && initialData !== null,
+    usingDynamicData: (dynamicData !== undefined && dynamicData !== null),
+    loading: dynamicLoading ?? false
+  })
 
   // 添加数据准备状态管理
   const [isDataReady, setIsDataReady] = useState(false);
@@ -209,7 +250,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
   const realMatrixData = competitorData.matrixData
 
   // Use the pre-calculated use case data from DatabaseService and add missing fields
-  const realUseCaseData = useCaseData.matrixData.map((item: any) => ({
+  const realUseCaseData = useCaseData.matrixData.map((item) => ({
     ...item,
     positiveCount: Math.floor(item.mentions * item.satisfactionRate / 100),
     negativeCount: Math.floor(item.mentions * (100 - item.satisfactionRate) / 100),
@@ -231,12 +272,12 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
 
   // Calculate statistics for each product - including all selected products
   const productStats = competitorData.targetProducts.map((productAsin: string) => {
-    const productData = competitorData.matrixData.filter((item: any) => item.product === productAsin)
+    const productData = competitorData.matrixData.filter((item) => item.product === productAsin)
     const actualTotalReviews = competitorData.productTotalReviews[productAsin] || 0  // Use actual total review count
-    const totalMentions = productData.reduce((sum: number, item: any) => sum + item.mentions, 0)
+    const totalMentions = productData.reduce((sum: number, item) => sum + item.mentions, 0)
     const categoriesCount = productData.length
     const avgSatisfaction = productData.length > 0 
-      ? productData.reduce((sum: number, item: any) => sum + item.satisfactionRate, 0) / productData.length 
+      ? productData.reduce((sum: number, item) => sum + item.satisfactionRate, 0) / productData.length 
       : 0
     
     // Find the product info to get the title
@@ -286,13 +327,18 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     return map;
   }, [defaultProducts]);
 
-  // 如果数据还没有准备好，显示loading状态
-  if (!isDataReady) {
+  // 如果数据还没有准备好或动态数据正在加载，显示loading状态
+  if (!isDataReady || (dynamicData !== undefined && dynamicLoading)) {
     return (
       <div className="space-y-10 max-w-7xl mx-auto px-4">
         <div className="flex justify-center items-center h-64">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-          <span className="ml-2">Loading competitor analysis data...</span>
+          <span className="ml-2">
+            {dynamicData !== undefined && dynamicLoading 
+              ? "Updating competitor analysis with new filters..." 
+              : "Loading competitor analysis data..."
+            }
+          </span>
         </div>
       </div>
     );
@@ -352,7 +398,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         </h2>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {productStats.map((stat: any) => (
+          {productStats.map((stat) => (
             <Card 
               key={stat.asin} 
               className="interactive-card p-4"
@@ -403,6 +449,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           title="🏆 Product Comparison by Key Dimensions"
           projectFilters={initialFilters}
           chartType="matrix"
+          enableDynamicData={true}  // 启用动态数据
         >
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
             <strong>How to read this table:</strong> Each cell shows the number of unique analyzed customer reviews (large number) for that product-category combination, 
@@ -433,6 +480,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           title="🎯 Product Comparison by Main Use Cases"
           projectFilters={initialFilters}
           chartType="matrix"
+          enableDynamicData={true}  // 启用动态数据
         >
           <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
             <strong>How to read this table:</strong> Number refers to the count of reviews; Percentage: refers to the % of positive reviews)

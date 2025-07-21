@@ -187,6 +187,7 @@ export function PackagePreferenceAnalysis({
           extend_fields: extendFields || {},
           asins: []
         }}
+        enableDynamicData={true}  // 启用动态数据
       >
        
 

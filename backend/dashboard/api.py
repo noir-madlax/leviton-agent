@@ -161,7 +161,7 @@ async def get_chart_data(
             service.set_project_filters(project_filters)
         
         # 获取数据
-        data = await service.get_data()
+        data = service.get_data()
         
         return {
             "data": data,
@@ -177,19 +177,35 @@ async def get_chart_data(
 def get_chart_service_class(chart_type: str):
     """根据chart类型获取对应的服务类"""
     service_map = {
+        # 现有的（无需修改）
         'brand-analysis': BrandAnalysisService,
-        'product-analysis': ProductAnalysisService,
+        'product-analysis': ProductAnalysisService, 
         'pricing-analysis': PricingAnalysisService,
         'market-insights': MarketInsightsService,
         'package-preference': PackagePreferenceService,
         'review-insights': ReviewInsightsService,
         'competitor-analysis': CompetitorAnalysisService,
-        'all-review-data': AllReviewDataService
+        'all-review-data': AllReviewDataService,
+      
+        # 新增具体chart别名（复用现有Service）
+        'brand-revenue-chart': BrandAnalysisService,
+        'market-share-chart': MarketInsightsService,
+        'market-share-analysis': BrandAnalysisService,
+        'sales-trend-analysis': BrandAnalysisService,
+        'price-distribution-chart': PricingAnalysisService,
+        'price-distribution-by-type': PricingAnalysisService,
+        'price-distribution-by-brands': PricingAnalysisService,
+        'product-scatter-chart': ProductAnalysisService,
+        'price-vs-revenue': ProductAnalysisService,
+        'customer-pain-points': ReviewInsightsService,
+        'customer-delights': ReviewInsightsService,
+        'product-comparison-dimensions': CompetitorAnalysisService,
+        'product-comparison-use-cases': CompetitorAnalysisService,
     }
-    
+  
     if chart_type not in service_map:
         raise ValueError(f"Unknown chart type: {chart_type}")
-    
+  
     return service_map[chart_type]
 
 

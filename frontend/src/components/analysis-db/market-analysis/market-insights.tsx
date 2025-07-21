@@ -32,14 +32,37 @@ interface MarketInsightsProps {
   }
   projectId?: string
   initialFilters?: ProjectFilters
+  // 新增动态数据参数（可选）
+  dynamicData?: any
+  loading?: boolean
+  error?: string | null
+  finalFilters?: ProjectFilters
 }
 
-export function MarketInsights({ data: initialData, projectId, initialFilters }: MarketInsightsProps) {
+export function MarketInsights({ 
+  data: initialData, 
+  projectId, 
+  initialFilters,
+  // 新增动态数据参数
+  dynamicData,
+  loading: dynamicLoading,
+  error: dynamicError,
+  finalFilters
+}: MarketInsightsProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
-  const [data] = useState(initialData)
-  const [loading] = useState(false)
+  
+  // 🔧 修复：动态数据优先，只有当动态数据明确为null/undefined时才使用静态数据
+  const data = (dynamicData !== undefined && dynamicData !== null) ? dynamicData : initialData
+  const loading = dynamicLoading ?? false
   const { openPanel } = useProductPanel()
 
+  // 添加调试日志
+  console.log(`🎯 [MarketInsights] Data source selection:`, {
+    hasDynamicData: dynamicData !== undefined && dynamicData !== null,
+    hasInitialData: initialData !== undefined && initialData !== null,
+    usingDynamicData: (dynamicData !== undefined && dynamicData !== null),
+    loading: loading
+  })
 
 
   // 检测是否使用新格式
@@ -115,47 +138,35 @@ export function MarketInsights({ data: initialData, projectId, initialFilters }:
   const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : metricType === "volume" ? "Volume" : "Products"
 
   return (
-    <section className="mb-10">
-    
-      
-      <ChartWithFilters
-        chartId="market-insights"
-        chartType="bar"
-        projectId={projectId || ''}
-        title="Top 10 Segments by Revenue"
-        projectFilters={initialFilters}
-      >
-        <Card className="p-6 bg-gray-50 pb-0">
-          <MetricTypeSelector onChange={setMetricType} value={metricType} />
+    <Card className="p-6 bg-gray-50 pb-0">
+      <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
-          {/* Segment Revenue Chart */}
-          <div className="mb-8">
-            <div className="bg-gray-50 p-4 ">
-              <div className="h-[600px] w-full">
-                {loading ? (
-                  <div className="flex items-center justify-center h-full">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                    <span className="ml-2">Loading chart data...</span>
-                  </div>
-                ) : (
-                  <GroupedBarChart
-                    data={chartData}
-                    index="name"
-                    categories={[metricType]}
-                    colors={chartColors}
-                    yAxisLabel={yAxisLabel}
-                    metricType={metricType}
-                    onBarClick={handleBarClick}
-                  />
-                )}
+      {/* Segment Revenue Chart */}
+      <div className="mb-8">
+        <div className="bg-gray-50 p-4 ">
+          <div className="h-[600px] w-full">
+            {loading ? (
+              <div className="flex items-center justify-center h-full">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                <span className="ml-2">Loading chart data...</span>
               </div>
-            </div>
+            ) : (
+              <GroupedBarChart
+                data={chartData}
+                index="name"
+                categories={[metricType]}
+                colors={chartColors}
+                yAxisLabel={yAxisLabel}
+                metricType={metricType}
+                onBarClick={handleBarClick}
+              />
+            )}
           </div>
+        </div>
+      </div>
 
-          {/* 统计摘要 */}
-         
-        </Card>
-      </ChartWithFilters>
-    </section>
+      {/* 统计摘要 */}
+     
+    </Card>
   )
 }

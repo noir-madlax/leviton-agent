@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback, useMemo } from 'react'
+import React, { useState, useEffect, useCallback, useMemo } from 'react'
 import { Button } from "@/components/ui/button"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Filter, ChevronUp, ChevronDown, BarChart3 } from "lucide-react"
@@ -9,6 +9,7 @@ import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
+import { useChartData } from '../hooks/use-chart-data'
 
 interface ChartFilterConfig {
   visible_filters: Record<string, boolean>
@@ -30,6 +31,8 @@ interface ChartWithFiltersProps {
   projectFilters?: ProjectFilters
   onFilterChange?: (filters: ProjectFilters) => void
   chartType?: string // eslint-disable-line @typescript-eslint/no-unused-vars
+  // 新增：是否启用动态数据获取
+  enableDynamicData?: boolean
 }
 
 export function ChartWithFilters({ 
@@ -39,13 +42,15 @@ export function ChartWithFilters({
   children,
   projectFilters,
   onFilterChange,
-  chartType // eslint-disable-line @typescript-eslint/no-unused-vars
+  chartType, // eslint-disable-line @typescript-eslint/no-unused-vars
+  enableDynamicData = false  // 默认false，保持现有行为
 }: ChartWithFiltersProps) {
   const filterState = useFilterState(projectId, projectFilters)
   const [showFilters, setShowFilters] = useState(false)
   const [chartFilterConfig, setChartFilterConfig] = useState<ChartFilterConfig | null>(null)
   const [configLoading, setConfigLoading] = useState(true)
   const [defaultsApplied, setDefaultsApplied] = useState(false)
+  const [filterChangeLoading, setFilterChangeLoading] = useState(false)
   
   // 使用统一数据源hook获取筛选器选项，fallback到原有缓存逻辑
   const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
@@ -91,14 +96,46 @@ export function ChartWithFilters({
     loadChartFilterConfig()
   }, [projectId, chartId])
 
-  // 初始化chart筛选器
+  // 初始化chart筛选器 - 确保继承project筛选器
   useEffect(() => {
+    console.log(`🔧 [ChartWithFilters] Initializing chart filter for ${chartId}`, {
+      projectFilters,
+      currentChartFilters: filterState.getChartFilters(chartId)
+    })
+    
     filterState.initializeChartFilter(chartId)
-  }, [chartId, filterState])
+    
+    // 如果有project筛选器，确保chart能正确继承
+    if (projectFilters && Object.keys(projectFilters).length > 0) {
+      const currentChart = filterState.getChartFilters(chartId)
+      if (currentChart) {
+        // 检查是否需要同步project筛选器到chart
+        const needsSync = ['categories', 'brands', 'segments'].some(key => {
+          const projectValue = projectFilters[key as keyof typeof projectFilters] as string[]
+          const chartValue = currentChart[key as keyof typeof currentChart] as string[]
+          return JSON.stringify(projectValue) !== JSON.stringify(chartValue)
+        })
+        
+        if (needsSync) {
+          console.log(`🔄 [ChartWithFilters] Syncing project filters to chart ${chartId}`)
+          filterState.updateChartFilters(chartId, {
+            ...currentChart,
+            ...projectFilters
+          })
+        }
+      }
+    }
+  }, [chartId, filterState, projectFilters])
 
   // 应用chart配置的默认值和预载数据的默认值 - 移除filterState依赖，添加防重复应用标志
   useEffect(() => {
     if (!chartFilterConfig || configLoading || dataLoading || !filterOptions || defaultsApplied) return
+
+    console.log(`🔧 [ChartWithFilters] Applying default filters for ${chartId}`, {
+      chartFilterConfig,
+      filterOptions,
+      projectFilters
+    })
 
     const defaultExtendFields: Record<string, string> = {}
     let hasDefaults = false
@@ -109,6 +146,7 @@ export function ChartWithFilters({
       if (value && value !== 'all') {
         defaultExtendFields[fieldName] = value
         hasDefaults = true
+        console.log(`📋 [ChartWithFilters] Found configured default for ${fieldName}: ${value}`)
       }
     })
 
@@ -124,6 +162,7 @@ export function ChartWithFilters({
             // 使用第一个预载选项作为默认值
             defaultExtendFields[fieldName] = preloadedOptions[0]
             hasDefaults = true
+            console.log(`📋 [ChartWithFilters] Found preloaded default for ${fieldName}: ${preloadedOptions[0]}`)
           }
         }
       })
@@ -146,15 +185,79 @@ export function ChartWithFilters({
             ...defaultExtendFields
           }
         }
+        
+        console.log(`✅ [ChartWithFilters] Applying default filters for ${chartId}:`, updatedFilters)
         filterState.updateChartFilters(chartId, updatedFilters)
       }
       
       setDefaultsApplied(true)
     }
-  }, [chartFilterConfig, configLoading, dataLoading, filterOptions, chartId, defaultsApplied]) // 移除filterState依赖
+    
+    // 确保即使没有默认值也要标记为已处理，避免无限循环
+    if (!hasDefaults) {
+      console.log(`📝 [ChartWithFilters] No defaults to apply for ${chartId}`)
+      setDefaultsApplied(true)
+    }
+  }, [chartFilterConfig, configLoading, dataLoading, filterOptions, chartId, defaultsApplied, filterState, projectFilters]) // 添加必要的依赖
 
   const currentChartFilters = filterState.getChartFilters(chartId) || { ...DEFAULT_FILTERS }
   const finalFilters = filterState.getFinalFilters(chartId) || { ...DEFAULT_FILTERS }
+
+  // 新增：动态数据获取（可选开启） - 等待筛选器配置就绪后再开始
+  const isFilterReady = !configLoading && !dataLoading && defaultsApplied
+  const { data: dynamicData, loading: dynamicDataLoading, error: dynamicDataError } = useChartData(
+    chartId,
+    projectId,
+    finalFilters,
+    { 
+      enabled: enableDynamicData && isFilterReady,
+      refetchOnFilterChange: true
+    }
+  )
+  
+  // 添加筛选器就绪状态调试日志
+  useEffect(() => {
+    console.log(`⏰ [ChartWithFilters] Filter readiness check for ${chartId}:`, {
+      configLoading,
+      dataLoading,
+      defaultsApplied,
+      isFilterReady,
+      enableDynamicData,
+      finalFiltersReady: !!finalFilters
+    })
+  }, [chartId, configLoading, dataLoading, defaultsApplied, isFilterReady, enableDynamicData, finalFilters])
+
+  // 监听数据获取完成，重置筛选器变化loading状态
+  useEffect(() => {
+    if (!dynamicDataLoading && filterChangeLoading) {
+      console.log(`✅ [ChartWithFilters] Data loading completed for ${chartId}, resetting filter change loading`)
+      setFilterChangeLoading(false)
+    }
+  }, [dynamicDataLoading, filterChangeLoading, chartId])
+  
+  // Debug日志 - 监控finalFilters变化
+  useEffect(() => {
+    console.log(`🎯 [ChartWithFilters] Final filters updated for ${chartId}:`, {
+      finalFilters,
+      currentChartFilters,
+      enableDynamicData,
+      filterChangeLoading,
+      dynamicDataLoading
+    })
+  }, [chartId, finalFilters, currentChartFilters, enableDynamicData, filterChangeLoading, dynamicDataLoading])
+
+  // Debug日志
+  useEffect(() => {
+    if (enableDynamicData) {
+      console.log(`🔧 [ChartWithFilters] Chart ${chartId} - Dynamic data enabled`, {
+        projectId,
+        finalFilters,
+        dynamicData: dynamicData ? 'Data loaded' : 'No data',
+        loading: dynamicDataLoading,
+        error: dynamicDataError
+      })
+    }
+  }, [chartId, projectId, finalFilters, dynamicData, dynamicDataLoading, dynamicDataError, enableDynamicData])
 
   const handleChartFiltersChange = useCallback((newFilters: ProjectFilters) => {
     filterState.updateChartFilters(chartId, newFilters)
@@ -163,6 +266,15 @@ export function ChartWithFilters({
 
   // 处理单个筛选器变化
   const handleFilterChange = useCallback((filterType: 'categories' | 'brands' | 'segments', value: string) => {
+    console.log(`🎯 [ChartWithFilters] Filter change triggered for ${chartId}`, {
+      filterType,
+      value,
+      currentChartFilters
+    })
+    
+    // 设置筛选器变化loading状态
+    setFilterChangeLoading(true)
+    
     const newFilters = { ...currentChartFilters }
     
     if (value === 'all' || value === '') {
@@ -173,11 +285,21 @@ export function ChartWithFilters({
       newFilters[filterType] = [value]
     }
     
+    console.log(`🔄 [ChartWithFilters] Applying new filters for ${chartId}:`, newFilters)
     handleChartFiltersChange(newFilters)
-  }, [currentChartFilters, handleChartFiltersChange])
+  }, [currentChartFilters, handleChartFiltersChange, chartId])
 
   // 处理extend_fields变化
   const handleExtendFieldChange = useCallback((fieldName: string, value: string) => {
+    console.log(`🎯 [ChartWithFilters] Extend field change triggered for ${chartId}`, {
+      fieldName,
+      value,
+      currentChartFilters
+    })
+    
+    // 设置筛选器变化loading状态
+    setFilterChangeLoading(true)
+    
     const newFilters = { ...currentChartFilters }
     const newExtendFields = { ...newFilters.extend_fields }
     
@@ -188,8 +310,9 @@ export function ChartWithFilters({
     }
     
     newFilters.extend_fields = newExtendFields
+    console.log(`🔄 [ChartWithFilters] Applying new extend fields for ${chartId}:`, newFilters)
     handleChartFiltersChange(newFilters)
-  }, [currentChartFilters, handleChartFiltersChange])
+  }, [currentChartFilters, handleChartFiltersChange, chartId])
 
   // 渲染inline筛选器选择框 - 使用useMemo优化性能
   const inlineFilters = useMemo(() => {
@@ -432,7 +555,56 @@ export function ChartWithFilters({
       )}
 
       <div className="chart-content">
-        {children}
+        {/* 修改：传递动态数据给children */}
+        {enableDynamicData 
+          ? React.Children.map(children, (child) => {
+              // 只对特定的图表组件传递动态数据
+              if (React.isValidElement(child)) {
+                try {
+                  // 检查组件是否需要动态数据 - 更宽松的检查逻辑
+                  const componentType = child.type
+                  let componentName = ''
+                  
+                  // 安全获取组件名称
+                  if (typeof componentType === 'function') {
+                    const funcType = componentType as React.ComponentType
+                    componentName = funcType.displayName || funcType.name || ''
+                  } else if (typeof componentType === 'string') {
+                    componentName = componentType
+                  }
+                  
+                  // 检查是否为已知的图表组件
+                  const isKnownChartComponent = (
+                    componentName.includes('MarketInsights') ||
+                    componentName.includes('PricingAnalysis') || 
+                    componentName.includes('CompetitorAnalysis') ||
+                    componentName.includes('ReviewInsights') ||
+                    componentName.includes('PackagePreferenceAnalysis') ||
+                    // 或者检查是否已经有动态数据属性定义
+                    (child.props && typeof child.props === 'object' && 
+                     ('dynamicData' in child.props || 'loading' in child.props || 'finalFilters' in child.props))
+                  )
+                  
+                  if (isKnownChartComponent) {
+                    const dynamicProps = {
+                      dynamicData: dynamicData || undefined,
+                      loading: dynamicDataLoading || filterChangeLoading,
+                      error: dynamicDataError || null,
+                      finalFilters: finalFilters || undefined
+                    }
+                    
+                    console.log(`🔄 [ChartWithFilters] Passing dynamic props to chart component:`, componentName || 'Unknown', dynamicProps)
+                    
+                    return React.cloneElement(child, dynamicProps)
+                  }
+                } catch (error) {
+                  console.warn('ChartWithFilters: Error cloning element:', error)
+                }
+              }
+              return child // 返回未修改的元素
+            })
+          : children  // 保持现有行为
+        }
       </div>
     </div>
   )

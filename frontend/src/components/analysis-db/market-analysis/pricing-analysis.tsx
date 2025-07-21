@@ -123,10 +123,34 @@ interface PricingAnalysisProps {
 
   projectId?: string
   initialFilters?: ProjectFilters
+  // 新增动态数据参数（可选）
+  dynamicData?: any
+  loading?: boolean
+  error?: string | null
+  finalFilters?: ProjectFilters
 }
 
-export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnalysisProps) {
+export function PricingAnalysis({ 
+  data: initialData, 
+  projectId, 
+  initialFilters,
+  // 新增动态数据参数
+  dynamicData,
+  loading: dynamicLoading,
+  error: dynamicError,
+  finalFilters
+}: PricingAnalysisProps) {
+  // 🔧 修复：动态数据优先，只有当动态数据明确为null/undefined时才使用静态数据
+  const data = (dynamicData !== undefined && dynamicData !== null) ? dynamicData : initialData
   const [priceType, setPriceType] = useState<PriceType>('unit')
+
+  // 添加调试日志
+  console.log(`🎯 [PricingAnalysis] Data source selection:`, {
+    hasDynamicData: dynamicData !== undefined && dynamicData !== null,
+    hasInitialData: initialData !== undefined && initialData !== null,
+    usingDynamicData: (dynamicData !== undefined && dynamicData !== null),
+    loading: dynamicLoading ?? false
+  })
 
   // 获取所有分类数据
   const allCategories = useMemo(() => 
@@ -136,7 +160,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
 
   // 生成Multi-Segment Violin Chart数据
   const violinSegments = useMemo(() => {
-    return allCategories.map((category, index) => ({
+    return allCategories.map((category: any, index: number) => ({
       name: category.category,
       prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
       color: getChartColor(index),
@@ -156,9 +180,9 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
     
     // 收集segments中的产品
     if (data.topProducts.segments && data.segmentNames) {
-      data.segmentNames.forEach((segment) => {
+      data.segmentNames.forEach((segment: string) => {
         const products = data.topProducts!.segments[segment] || []
-        products.forEach(product => {
+        products.forEach((product: any) => {
           allProducts.push({
             ...product,
             segment: segment,
@@ -171,7 +195,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
     
     // 收集dimmerSwitches中的产品
     if (data.topProducts.dimmerSwitches) {
-      data.topProducts.dimmerSwitches.forEach(product => {
+      data.topProducts.dimmerSwitches.forEach((product: any) => {
         allProducts.push({
           ...product,
           segment: 'Dimmer Switches',
@@ -183,7 +207,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
     
     // 收集lightSwitches中的产品
     if (data.topProducts.lightSwitches) {
-      data.topProducts.lightSwitches.forEach(product => {
+      data.topProducts.lightSwitches.forEach((product: any) => {
         allProducts.push({
           ...product,
           segment: 'Light Switches',
@@ -288,7 +312,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
                 </tr>
               </thead>
               <tbody>
-                {allCategories.map((category, index) => {
+                {allCategories.map((category: any, index: number) => {
                   const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
                   const segmentName = category.category
                   // 通过价格数组的长度计算产品数量
@@ -330,6 +354,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           projectId={projectId || ''}
           title="Price vs Revenue Distribution of Top Selling 20 Products"
           projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
         >
           <Card className="p-6 bg-gray-50">
             {hasScatterData ? (
@@ -402,6 +427,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           projectId={projectId || ''}
           title="All Segments Price Distribution Comparison"
           projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
         >
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
@@ -430,6 +456,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           projectId={projectId || ''}
           title="Brand Price Distribution"
           projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
         >
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
@@ -440,7 +467,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
             </div>
             
             <div className="space-y-8">
-              {data.brandPriceDistribution.map((categoryData, index) => (
+              {data.brandPriceDistribution.map((categoryData: any, index: number) => (
                 <div key={index}>
                   <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
                   <div className="h-[400px]">

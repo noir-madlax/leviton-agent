@@ -377,6 +377,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           projectId={projectId || ''}
           title="Total addressable market (TAM) and Market Share by brands"
           projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
         >
           {/* 第二层：单一的Summary区域 */}
           <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
@@ -467,6 +468,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
         projectId={projectId || ''}
         title="Top 10 Brand Revenue by Category"
         projectFilters={initialFilters}
+        enableDynamicData={true}  // 启用动态数据
       >
         <Card className="p-6 bg-gray-50">
           <MetricTypeSelector onChange={setMetricType} value={metricType} />
@@ -506,6 +508,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           projectId={projectId || ''}
           title="Sales Trend of Top 10 brands"
           projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
         >
             {/* Chart Description 类似summary*/}
             <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
@@ -557,20 +560,29 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
 
       {/* Market Insights - New Addition */}
       <div className="mt-15" data-chart-id="market-insights">
-        {marketInsights ? (
+        <ChartWithFilters
+          chartId="market-insights"
+          chartType="bar"
+          projectId={projectId || ''}
+          title="Top 10 Segments by Revenue"
+          projectFilters={initialFilters}
+          enableDynamicData={true}  // 启用动态数据
+        >
           <MarketInsights 
-            data={marketInsights}
+            data={marketInsights || { 
+              segmentRevenue: { 
+                segments: [], 
+                segmentNames: [],
+                dimmerSwitches: [], 
+                lightSwitches: [] 
+              } 
+            }}  // 提供完整的默认数据结构
             productLists={productLists}
             projectId={projectId}
             initialFilters={initialFilters}
+            // 动态数据将通过 cloneElement 自动传递
           />
-        ) : (
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-            <p className="text-sm text-yellow-700">
-              <strong>Top 10 Segments by Revenue</strong> - Loading market insights data...
-            </p>
-          </div>
-        )}
+        </ChartWithFilters>
       </div>
 
       {/* Package Preference Analysis - New Addition */}
