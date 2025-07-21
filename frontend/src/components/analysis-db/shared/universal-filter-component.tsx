@@ -334,7 +334,7 @@ export function UniversalFilterComponent({
   }
 
   // 检查是否有活动的筛选器
-  const hasActiveFilters = pendingFilters.categories.length > 0 || pendingFilters.brands.length > 0 || pendingFilters.segments.length > 0
+  const hasActiveFilters = pendingFilters.categories.length > 0 || pendingFilters.brands.length > 0 || pendingFilters.segments.length > 0 || Object.keys(pendingFilters.extend_fields).length > 0
 
   // 如果配置还在加载中，显示加载状态
   if (configLoading && !filterConfig) {
