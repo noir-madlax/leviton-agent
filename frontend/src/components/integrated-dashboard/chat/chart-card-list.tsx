@@ -16,7 +16,7 @@ const CHART_DETAILS = {
     title: 'Market Analysis',
     charts: [
       {
-        name: 'Total addressable market (TAM) and Market Share by Brands/Product Segments',
+        name: 'Total addressable market (TAM) and Market Share',
         id: 'market-share-analysis'
       },
       {
