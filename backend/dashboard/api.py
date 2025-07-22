@@ -625,20 +625,62 @@ async def get_competitor_analysis(
     }
 
     Enhanced version: Returns complete competitor analysis with segment support.
+    Uses materialized view for improved performance and review content.
     """
-    raw_data = service.get_data()
+    # Use the new materialized view method for enhanced performance
+    raw_data = service.get_data_with_materialized_view(include_review_content=True)
 
     response = CompetitorAnalysisResponse(
         targetProducts=raw_data.get('targetProducts', []),
         matrixData=raw_data.get('matrixData', []),
         productTotalReviews=raw_data.get('productTotalReviews', {}),
         useCaseData=raw_data.get('useCaseData', {'targetProducts': [], 'matrixData': []}),
+        reviewContent=raw_data.get('reviewContent', {}),  # Include review content for cell clicks
         project_id=request.project_id,
         filtered_asin_count=len(service.project_asins)
     )
 
-    logger.info(f"Competitor analysis API returned data for project {request.project_id}")
+    logger.info(f"Competitor analysis API returned data for project {request.project_id} using materialized view")
     return response
+
+
+@router.get("/competitor-analysis/{project_id}/cell-reviews")
+@log_request_response
+async def get_competitor_cell_reviews(
+    project_id: str,
+    product_asin: str = Query(..., description="Product ASIN"),
+    category_name: str = Query(..., description="Category name"),
+    limit: int = Query(50, description="Maximum number of reviews to return"),
+    offset: int = Query(0, description="Offset for pagination")
+):
+    """Get reviews for a specific matrix cell (product-category combination).
+    
+    GET请求，用于获取矩阵单元格的详细评论数据：
+    /competitor-analysis/{project_id}/cell-reviews?product_asin=B00NG0ELL0&category_name=Installation Process&limit=50&offset=0
+    
+    Returns:
+        List of review objects for the specified cell
+    """
+    try:
+        # Create service instance for the project
+        service = CompetitorAnalysisService(project_id)
+        
+        # Get reviews for the specific cell
+        reviews = service.get_reviews_for_cell(product_asin, category_name, limit, offset)
+        
+        logger.info(f"Cell reviews API returned {len(reviews)} reviews for {product_asin}-{category_name}")
+        return {
+            "reviews": reviews,
+            "product_asin": product_asin,
+            "category_name": category_name,
+            "total_returned": len(reviews),
+            "limit": limit,
+            "offset": offset
+        }
+        
+    except Exception as e:
+        logger.error(f"Error getting cell reviews for {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get cell reviews: {str(e)}")
 
 
 @router.post("/all-review-data", response_model=AllReviewDataResponse)

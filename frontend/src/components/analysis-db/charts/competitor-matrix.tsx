@@ -32,29 +32,63 @@ interface CompetitorMatrixProps {
     date: string
     brand: string
   }>>
+  reviewContent?: Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
+  }>>
   asinToProductNameMap?: Record<string, string>;
   asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function CompetitorMatrix({ data, targetProducts, allReviewData, asinToProductNameMap, asinToFullProductNameMap }: CompetitorMatrixProps) {
+export function CompetitorMatrix({ data, targetProducts, allReviewData, reviewContent, asinToProductNameMap, asinToFullProductNameMap }: CompetitorMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   const handleCellClick = (category: string, productAsin: string, cellData: MatrixData | null) => {
     if (!cellData || cellData.mentions === 0) return
     
-    // Add null check for allReviewData and the specific category
-    if (!allReviewData || !allReviewData[category]) {
-      console.warn(`No review data found for category: ${category}`)
+    // Try to get reviews from the new materialized view review content first
+    const reviewKey = `${productAsin}_${category}`
+    let reviewsToShow: Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+    }> = []
+    
+    if (reviewContent && reviewContent[reviewKey]) {
+      // Use the new materialized view review content
+      reviewsToShow = reviewContent[reviewKey]
+      console.log(`Using materialized view reviews for ${reviewKey}: ${reviewsToShow.length} reviews`)
+    } else if (allReviewData && allReviewData[category]) {
+      // Fallback to the old allReviewData method
+      const categoryReviews = allReviewData[category] || []
+      if (categoryReviews.length > 0) {
+        // Filter reviews by specific product using ASIN directly
+        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
+        reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
+        console.log(`Using fallback allReviewData for ${category}: ${reviewsToShow.length} reviews`)
+      }
+    }
+    
+    if (reviewsToShow.length === 0) {
+      console.warn(`No review data found for ${productAsin}-${category}`)
       return
     }
     
-    const categoryReviews = allReviewData[category] || []
-    if (categoryReviews.length === 0) return
-    
-    // Filter reviews by specific product using ASIN directly
-    const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-    
-    const reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
     const productName = asinToProductNameMap?.[productAsin] || productAsin
     
     openPanel(

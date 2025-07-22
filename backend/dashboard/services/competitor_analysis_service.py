@@ -383,8 +383,7 @@ class CompetitorAnalysisService(BaseDashboardService):
             else:
                 # Fallback to rating-based sentiment
                 rating_key = f"{product_asin}_{item['review_id']}"
-                rating_str = rating_map.get(rating_key, '3.0')
-                rating = self._parse_rating(rating_str)
+                rating = self._parse_rating(rating_map.get(rating_key, '3.0'))
                 sentiment = self._get_sentiment(rating)
 
             # Process non-use_case categories
@@ -487,7 +486,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                     matrix_data.append({
                         'product': product_asin,
                         'category': display_category,
-                        'categoryType': product_data['categoryType'],
+                        'categoryType': category_data['categoryType'],
                         'mentions': product_data['total'],
                         'satisfactionRate': round(satisfaction_rate, 1),
                         'positiveCount': positive_count,
@@ -571,4 +570,375 @@ class CompetitorAnalysisService(BaseDashboardService):
             'Construction Quality': 'Construction Quality'
         }
         
-        return category_mapping.get(category, category) 
+        return category_mapping.get(category, category)
+
+    # ============================================================================
+    # NEW METHODS FOR MATERIALIZED VIEW INTEGRATION
+    # ============================================================================
+
+    def get_data_with_materialized_view(self, include_review_content: bool = True) -> Dict[str, Any]:
+        """Get competitor analysis data using the materialized view for enhanced performance.
+        
+        Args:
+            include_review_content: Whether to include full review content for cell clicks
+            
+        Returns:
+            Dict containing competitor analysis data with enhanced review content
+        """
+        try:
+            # Get product information for target products
+            product_info = self._get_product_info()
+            
+            # Get analysis data from materialized view
+            analysis_data = self._get_analysis_data_from_view(include_review_content)
+            
+            # Get rating data for sentiment analysis
+            rating_data = self._get_rating_data()
+            
+            # Process data and generate matrices with review content
+            return self._process_competitor_data_with_reviews(
+                product_info, analysis_data, rating_data, include_review_content
+            )
+            
+        except Exception as e:
+            logger.error(f"Error in CompetitorAnalysisService with materialized view for project {self.project_id}: {e}")
+            return {
+                'targetProducts': [],
+                'matrixData': [],
+                'productTotalReviews': {},
+                'useCaseData': {
+                    'targetProducts': [],
+                    'matrixData': []
+                },
+                'reviewContent': {} if include_review_content else None
+            }
+
+    def _get_analysis_data_from_view(self, include_review_content: bool = True) -> List[Dict[str, Any]]:
+        """Get analysis data from the materialized view for enhanced performance.
+        
+        Args:
+            include_review_content: Whether to include full review content
+            
+        Returns:
+            List of analysis data records with review content if requested
+        """
+        try:
+            # Build the query based on whether we need review content
+            if include_review_content:
+                query = """
+                    SELECT 
+                        mrd.category_pk,
+                        mrd.category_name,
+                        mrd.category_definition,
+                        mrd.aspect_type,
+                        mrd.aspect_pk,
+                        mrd.product_id,
+                        mrd.detail_text,
+                        mrd.parent_group_name,
+                        mrd.sentiment,
+                        mrd.review_id,
+                        mrd.review_text,
+                        mrd.review_rating,
+                        mrd.review_verified,
+                        mrd.review_date,
+                        mrd.review_brand,
+                        mrd.occurrence_count
+                    FROM matrix_review_data mrd
+                    WHERE mrd.product_id = ANY($1)
+                    ORDER BY mrd.category_name, mrd.product_id, mrd.occurrence_count DESC
+                """
+            else:
+                query = """
+                    SELECT 
+                        mrd.category_pk,
+                        mrd.category_name,
+                        mrd.category_definition,
+                        mrd.aspect_type,
+                        mrd.aspect_pk,
+                        mrd.product_id,
+                        mrd.detail_text,
+                        mrd.parent_group_name,
+                        mrd.sentiment,
+                        mrd.occurrence_count
+                    FROM matrix_review_data mrd
+                    WHERE mrd.product_id = ANY($1)
+                    ORDER BY mrd.category_name, mrd.product_id, mrd.occurrence_count DESC
+                """
+            
+            # Use direct query instead of RPC for materialized view
+            result = self.supabase.from_('matrix_review_data').select('*').in_('product_id', self.selected_asins).execute()
+            
+            if result.data is None:
+                logger.error(f"Error querying materialized view: No data returned")
+                return []
+            
+            return result.data
+            
+        except Exception as e:
+            logger.error(f"Error getting analysis data from materialized view: {e}")
+            return []
+
+    def _process_competitor_data_with_reviews(
+        self, 
+        product_info: List[Dict], 
+        analysis_data: List[Dict], 
+        rating_data: List[Dict],
+        include_review_content: bool = True
+    ) -> Dict[str, Any]:
+        """Process competitor data with enhanced review content support.
+        
+        Args:
+            product_info: Product information
+            analysis_data: Analysis data from materialized view
+            rating_data: Rating data for sentiment analysis
+            include_review_content: Whether to include review content
+            
+        Returns:
+            Processed competitor data with review content
+        """
+        try:
+            # Create ASIN to product name mapping
+            asin_to_product = {}
+            for product in product_info:
+                asin_to_product[product['platform_id']] = self._get_display_name(product['title'])
+            
+            # Also create mapping for the selected ASINs that might not be in product_info
+            for asin in self.selected_asins:
+                if asin not in asin_to_product:
+                    asin_to_product[asin] = self.ASIN_TO_DISPLAY_NAME.get(asin, asin)
+            
+            # Create rating map
+            rating_map = {}
+            for rating in rating_data:
+                # Use product_id to match the materialized view field name
+                rating_map[rating['product_id']] = self._parse_rating(rating['rating'])
+            
+            # Aggregate analysis data with review content
+            category_stats, use_case_stats, review_content = self._aggregate_analysis_data_with_reviews(
+                analysis_data, asin_to_product, rating_map, include_review_content
+            )
+            
+            # Build matrix data
+            matrix_data = self._build_matrix_data(category_stats, asin_to_product)
+            
+            # Build use case data
+            use_case_matrix_data = self._build_use_case_data(use_case_stats, asin_to_product)
+            
+            # Get total reviews per product
+            product_total_reviews = {}
+            for product in product_info:
+                product_total_reviews[product['platform_id']] = product.get('reviews_count', 0)
+            
+            return {
+                'targetProducts': self.selected_asins,
+                'matrixData': matrix_data,
+                'productTotalReviews': product_total_reviews,
+                'useCaseData': {
+                    'targetProducts': self.selected_asins,
+                    'matrixData': use_case_matrix_data
+                },
+                'reviewContent': review_content if include_review_content else None
+            }
+            
+        except Exception as e:
+            logger.error(f"Error processing competitor data with reviews: {e}")
+            return {
+                'targetProducts': [],
+                'matrixData': [],
+                'productTotalReviews': {},
+                'useCaseData': {
+                    'targetProducts': [],
+                    'matrixData': []
+                },
+                'reviewContent': {} if include_review_content else None
+            }
+
+    def _aggregate_analysis_data_with_reviews(
+        self, 
+        analysis_data: List[Dict], 
+        asin_to_product: Dict, 
+        rating_map: Dict,
+        include_review_content: bool = True
+    ) -> tuple:
+        """Aggregate analysis data with review content support.
+        
+        Args:
+            analysis_data: Analysis data from materialized view
+            asin_to_product: ASIN to product name mapping
+            rating_map: Rating mapping
+            include_review_content: Whether to include review content
+            
+        Returns:
+            Tuple of (category_stats, use_case_stats, review_content)
+        """
+        category_stats = {}
+        use_case_stats = {}
+        review_content = {} if include_review_content else {}
+        
+        for record in analysis_data:
+            product_asin = record['product_id']
+            category_name = record['category_name']
+            aspect_type = record['aspect_type']
+            sentiment_raw = record['sentiment']
+            occurrence_count = record.get('occurrence_count', 1)
+            
+            # Map sentiment values from materialized view to expected format
+            if sentiment_raw == '+':
+                sentiment = 'positive'
+            elif sentiment_raw == '-':
+                sentiment = 'negative'
+            else:
+                sentiment = 'neutral'  # Default fallback
+            
+            # Skip if product not in our target list
+            if product_asin not in asin_to_product:
+                continue
+            
+            product_name = asin_to_product[product_asin]
+            
+            # Initialize category stats
+            if category_name not in category_stats:
+                # Map aspect_type to expected categoryType values
+                if aspect_type == 'perf':
+                    category_type = 'Performance'
+                elif aspect_type == 'phys':
+                    category_type = 'Physical'
+                else:
+                    category_type = 'Performance'  # Default fallback
+                
+                category_stats[category_name] = {
+                    'totalMentions': 0,
+                    'productData': {},
+                    'categoryType': category_type
+                }
+            
+            # Initialize product data in category
+            if product_name not in category_stats[category_name]['productData']:
+                category_stats[category_name]['productData'][product_name] = {
+                    'total': 0,
+                    'positive': 0,
+                    'negative': 0,
+                    'neutral': 0
+                }
+            
+            # Update category stats
+            category_stats[category_name]['totalMentions'] += occurrence_count
+            category_stats[category_name]['productData'][product_name]['total'] += occurrence_count
+            
+            # Update sentiment counts
+            if sentiment == 'positive':
+                category_stats[category_name]['productData'][product_name]['positive'] += occurrence_count
+            elif sentiment == 'negative':
+                category_stats[category_name]['productData'][product_name]['negative'] += occurrence_count
+            else:
+                category_stats[category_name]['productData'][product_name]['neutral'] += occurrence_count
+            
+            # Handle use cases (aspect_type == 'use')
+            if aspect_type == 'use':
+                if category_name not in use_case_stats:
+                    use_case_stats[category_name] = {
+                        'totalMentions': 0,
+                        'productData': {}
+                    }
+                
+                if product_name not in use_case_stats[category_name]['productData']:
+                    use_case_stats[category_name]['productData'][product_name] = {
+                        'total': 0,
+                        'positive': 0,
+                        'negative': 0,
+                        'neutral': 0
+                    }
+                
+                use_case_stats[category_name]['totalMentions'] += occurrence_count
+                use_case_stats[category_name]['productData'][product_name]['total'] += occurrence_count
+                
+                if sentiment == 'positive':
+                    use_case_stats[category_name]['productData'][product_name]['positive'] += occurrence_count
+                elif sentiment == 'negative':
+                    use_case_stats[category_name]['productData'][product_name]['negative'] += occurrence_count
+                else:
+                    use_case_stats[category_name]['productData'][product_name]['neutral'] += occurrence_count
+            
+            # Store review content if requested
+            if include_review_content and 'review_id' in record:
+                review_id = record['review_id']
+                if review_id:
+                    # Create review content key
+                    review_key = f"{product_asin}_{category_name}"
+                    
+                    if review_key not in review_content:
+                        review_content[review_key] = []
+                    
+                    # Add review if not already present
+                    review_exists = any(r['id'] == review_id for r in review_content[review_key])
+                    if not review_exists:
+                        review_content[review_key].append({
+                            'id': review_id,
+                            'productId': product_asin,
+                            'text': record.get('review_text', ''),
+                            'sentiment': sentiment,
+                            'category': category_name,
+                            'aspect': record.get('detail_text', ''),
+                            'rating': record.get('rating', 0),
+                            'verified': record.get('verified', False),
+                            'date': record.get('review_date', ''),
+                            'brand': record.get('brand', '')
+                        })
+        
+        return category_stats, use_case_stats, review_content
+
+    def get_reviews_for_cell(
+        self, 
+        product_asin: str, 
+        category_name: str, 
+        limit: int = 50,
+        offset: int = 0
+    ) -> List[Dict[str, Any]]:
+        """Get reviews for a specific matrix cell (product-category combination).
+        
+        Args:
+            product_asin: The product ASIN
+            category_name: The category name
+            limit: Maximum number of reviews to return
+            offset: Offset for pagination
+            
+        Returns:
+            List of review objects for the cell
+        """
+        try:
+            # Use direct query instead of RPC for materialized view
+            result = self.supabase.from_('matrix_review_data').select('''
+                review_id,
+                review_text,
+                rating,
+                verified,
+                review_date,
+                brand,
+                sentiment,
+                detail_text
+            ''').eq('product_id', product_asin).eq('category_name', category_name).order('review_date', desc=True).range(offset, offset + limit - 1).execute()
+            
+            if result.data is None:
+                logger.error(f"Error getting reviews for cell: No data returned")
+                return []
+            
+            reviews = []
+            for record in result.data:
+                reviews.append({
+                    'id': record['review_id'],
+                    'productId': product_asin,
+                    'text': record['review_text'],
+                    'sentiment': record['sentiment'],
+                    'category': category_name,
+                    'aspect': record['detail_text'],
+                    'rating': record['rating'],
+                    'verified': record['verified'],
+                    'date': record['review_date'],
+                    'brand': record['brand']
+                })
+            
+            return reviews
+            
+        except Exception as e:
+            logger.error(f"Error getting reviews for cell {product_asin}-{category_name}: {e}")
+            return [] 

@@ -331,6 +331,10 @@ class CompetitorAnalysisResponse(BaseModel):
     matrixData: List[CompetitorMatrixData]
     productTotalReviews: Dict[str, int]
     useCaseData: UseCaseData
+    reviewContent: Optional[Dict[str, List[Dict[str, Any]]]] = Field(
+        default=None, 
+        description="Review content for matrix cell clicks, keyed by 'product_asin_category_name'"
+    )
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 

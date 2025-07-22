@@ -515,6 +515,18 @@ export class DatabaseService {
         gapLevel: number
       }>
     }
+    reviewContent?: Record<string, Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+    }>>
   }> {
     try {
       const result = await callDashboardAPI('competitor-analysis', projectId, {
@@ -528,6 +540,47 @@ export class DatabaseService {
       return result
     } catch (error) {
       console.error('Error fetching competitor analysis data by project:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get reviews for a specific matrix cell (product-category combination)
+  async getCompetitorCellReviews(
+    projectId: string, 
+    productAsin: string, 
+    categoryName: string, 
+    limit: number = 50, 
+    offset: number = 0
+  ): Promise<{
+    reviews: Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+    }>
+    product_asin: string
+    category_name: string
+    total_returned: number
+    limit: number
+    offset: number
+  }> {
+    try {
+      const response = await fetch(`/api/dashboard/competitor-analysis/${projectId}/cell-reviews?product_asin=${encodeURIComponent(productAsin)}&category_name=${encodeURIComponent(categoryName)}&limit=${limit}&offset=${offset}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching competitor cell reviews:', error)
       throw error
     }
   }
