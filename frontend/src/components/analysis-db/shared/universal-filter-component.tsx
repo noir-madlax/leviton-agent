@@ -385,7 +385,7 @@ export function UniversalFilterComponent({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter options...</span>
+          <span className="text-gray-500">Loading filter option2s...</span>
         </div>
       </div>
     )
@@ -594,20 +594,7 @@ export function UniversalFilterComponent({
             </div>
           )}
 
-          {/* Time Period Filter */}
-          {filterConfig?.visible_filters?.["Time Period"] && (
-            <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Time Period:</span>
-              <Select defaultValue="recent-month" disabled>
-                <SelectTrigger className="w-48 h-8">
-                  <SelectValue placeholder="Since Last Month" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="recent-month">Since Last Month</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          )}
+         
 
           {/* Segments Filter */}
           {filterConfig?.visible_filters?.segments && (

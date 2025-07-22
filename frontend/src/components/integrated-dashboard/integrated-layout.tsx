@@ -164,7 +164,7 @@ export function IntegratedLayout({
 
   const getFilterButtonText = () => {
     if (cacheLoading) {
-      return 'Loading filter options...'
+      return 'Loading filter option4s...'
     }
     return isFilterExpanded ? 'Hide filters' : 'View Project Data Scope'
   }

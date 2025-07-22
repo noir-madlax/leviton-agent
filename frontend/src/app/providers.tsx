@@ -2,7 +2,7 @@
 
 'use client'
 
-import { useEffect, Suspense } from 'react'
+import { useEffect, Suspense, useState } from 'react'
 import { usePathname, useSearchParams } from 'next/navigation'
 import posthog from 'posthog-js'
 import { PostHogProvider } from 'posthog-js/react'
@@ -93,13 +93,22 @@ function PostHogUserIdentify() {
 
 // 主要的 PostHog Provider 组件
 export function PostHogAppProvider({ children }: { children: React.ReactNode }) {
+  const [mounted, setMounted] = useState(false)
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   // 在localhost环境下直接返回children，不包装PostHog Provider
-  if (typeof window !== 'undefined' && isLocalhostEnvironment()) {
+  if (mounted && isLocalhostEnvironment()) {
     return (
       <>
         {children}
       </>
     )
+  }
+
+  if (!mounted) {
+    return null;
   }
 
   return (

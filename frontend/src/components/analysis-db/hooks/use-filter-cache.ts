@@ -144,7 +144,7 @@ export function preloadFilterOptions(projectId: string, existingOverview?: any):
           }
         }
 
-        console.log(`Preloading filter options for project ${projectId}`)
+        console.log(`Preloading filter opti5ons for project ${projectId}`)
 
         // 如果已经有 overview 数据，就不需要重新获取
         const [overview, segments] = await Promise.all([

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, Suspense } from "react"
 import { useRouter } from "next/navigation"
 
 import { ChartRenderer } from "@/components/charts/chart-renderer"
@@ -9,7 +9,6 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Separator } from "@/components/ui/separator"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
-import { DatabaseService } from "@/components/analysis-db/data/database-service"
 import { ArrowLeft, MessageSquare, TrendingUp, BarChart3, PieChart, Lightbulb, Send, Loader2, ChevronDown, ChevronUp } from "lucide-react"
 import { ChartProvider, useChart } from "@/contexts/chart-context"
 import { config } from "@/lib/config"
@@ -19,18 +18,7 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
 
-import { CategoryFilterAndProjectScope } from '@/components/analysis-db/shared/category-filter-and-project-scope'
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
-
-// 使用现有的Project接口
-interface Project {
-  id: string
-  project_name: string
-  description?: string
-  created_at: string
-  updated_at: string
-  status: string
-}
 
 // Agent API 请求接口定义
 interface AgentFilters {
@@ -362,7 +350,7 @@ function ContentPartRenderer({ part }: { part: ContentPart }) {
 // 内部组件，使用useChart hook
 function ChatPageContent({ projectId }: { projectId: string }) {
   const router = useRouter()
-  const [project, setProject] = useState<Project | null>(null)
+ 
   const [loading, setLoading] = useState(true)
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState("")
@@ -371,7 +359,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
   const [showFilters, setShowFilters] = useState(false) // 默认折叠
   const [currentStage, setCurrentStage] = useState("")
   const [currentProgress, setCurrentProgress] = useState(0)
-  const [categoryFilters, setCategoryFilters] = useState<string[]>([])
+  const [categoryFilters] = useState<string[]>([])
   const messagesEndRef = useRef<HTMLDivElement | null>(null)
   const { permissions } = usePermissions()
   const { updateChart, setCompiling, setError } = useChart()
@@ -401,9 +389,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
       
       try {
         setLoading(true)
-        const databaseService = new DatabaseService()
-        const projectData = await databaseService.getProject(projectId)
-        setProject(projectData)
+       
       } catch (error) {
         console.error('Failed to load project:', error)
       } finally {
@@ -764,23 +750,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
     }, 100)
   }
 
-  const handleCategoryFiltersChange = (filters: { categories: string[]; asins: string[] }) => {
-    setCategoryFilters(filters.categories)
-    
-    // 增强的过滤器变更日志
-    console.log('🔍 [CHAT] Category filters updated:')
-    console.log('  📝 Categories:', filters.categories)
-    console.log('  🔢 Count:', filters.categories.length)
-    console.log('  📊 Project ID:', projectId)
-    console.log('  ⏰ Timestamp:', new Date().toISOString())
-    
-    // 警告形式确保可见
-    console.warn('🔥 FILTER UPDATE:', {
-      newCategories: filters.categories,
-      oldCategories: categoryFilters,
-      projectId: projectId
-    })
-  }
+
 
   if (loading) {
     return (
@@ -788,18 +758,6 @@ function ChatPageContent({ projectId }: { projectId: string }) {
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
           <p className="text-gray-600">Loading project...</p>
-        </div>
-      </div>
-    )
-  }
-
-  if (!project) {
-    return (
-      <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
-        <div className="text-center">
-          <h2 className="text-lg font-medium text-gray-900 mb-2">Project not found</h2>
-          <p className="text-gray-600 mb-4">The project you're looking for doesn't exist.</p>
-          <Button onClick={() => router.push("/")}>Back to Home</Button>
         </div>
       </div>
     )
@@ -869,8 +827,6 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                 </Button>
                 <Separator orientation="vertical" className="h-4" />
                 <div>
-                  <h1 className="text-lg font-semibold">{project.project_name}</h1>
-                  <p className="text-sm text-gray-600">Smart Home &gt; Dimmer &amp; Light Switches</p>
                 </div>
               </div>
             </div>
@@ -889,14 +845,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                 </Button>
               </CollapsibleTrigger>
               <CollapsibleContent className="px-6 py-4 border-t border-gray-100">
-                <div className="max-w-6xl mx-auto">
-                  {/* Category Filter & Project Scope */}
-                  <CategoryFilterAndProjectScope 
-                    projectId={projectId} 
-                    onFiltersChange={handleCategoryFiltersChange}
-                    initialFilters={{ categories: categoryFilters, asins: [], brands: [], segments: [], extend_fields: {}, time_period: "30 days" }}
-                  />
-                </div>
+             
               </CollapsibleContent>
             </Collapsible>
           </div>
@@ -1133,8 +1082,17 @@ export default function ChatPage({ params }: { params: Promise<{ id: string }> }
   }
 
   return (
-    <ChartProvider>
-      <ChatPageContent projectId={projectId} />
-    </ChartProvider>
+    <Suspense fallback={
+      <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    }>
+      <ChartProvider>
+        <ChatPageContent projectId={projectId} />
+      </ChartProvider>
+    </Suspense>
   )
 }

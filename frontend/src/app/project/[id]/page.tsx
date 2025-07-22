@@ -76,6 +76,8 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   const [project, setProject] = useState<Project | null>(null)
   const [loading, setLoading] = useState(true)
   const [projectId, setProjectId] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
+  
   // 添加过滤器展开状态
   const [isFilterExpanded, setIsFilterExpanded] = useState(false)
   // 添加过滤器变更处理
@@ -84,11 +86,20 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   const [projectOverviewData, setProjectOverviewData] = useState<ProjectOverviewData | null>(null)
   const [overviewLoading, setOverviewLoading] = useState(false)
 
+  // 确保组件已挂载
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   // 解析异步params
   useEffect(() => {
     const resolveParams = async () => {
-      const resolvedParams = await params
-      setProjectId(resolvedParams.id)
+      try {
+        const resolvedParams = await params
+        setProjectId(resolvedParams.id)
+      } catch (error) {
+        console.error('Failed to resolve params:', error)
+      }
     }
     resolveParams()
   }, [params])
@@ -96,7 +107,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   // 加载项目信息
   useEffect(() => {
     const loadProject = async () => {
-      if (!projectId) return
+      if (!projectId || !mounted) return
       
       try {
         setLoading(true)
@@ -129,7 +140,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     }
 
     loadProject()
-  }, [projectId])
+  }, [projectId, mounted])
 
   // 预加载项目概览数据
   const loadProjectOverview = async (filters?: ProjectFilters) => {
@@ -151,8 +162,11 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         ...overview,
         distributions: {
           ...overview.distributions,
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           brands: (overview.distributions as any).brands || [],
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any  
           segments: (overview.distributions as any).segments || [],
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
           extend_fields: (overview.distributions as any).extend_fields || {}
         }
       };
@@ -178,6 +192,18 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   // 切换过滤器展开状态
   const toggleFilterExpanded = () => {
     setIsFilterExpanded(!isFilterExpanded)
+  }
+
+  // 在组件未挂载或参数未解析时显示加载状态
+  if (!mounted || !projectId) {
+    return (
+      <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading...</p>
+        </div>
+      </div>
+    )
   }
 
   if (loading) {
@@ -209,7 +235,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     <ProtectedRoute>
       <ChartProvider>
         <IntegratedLayout
-          projectId={projectId!}
+          projectId={projectId}
           project={project}
           projectOverviewData={projectOverviewData}
           overviewLoading={overviewLoading}

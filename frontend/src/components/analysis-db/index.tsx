@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
-import { DashboardHeader } from "@/components/analysis-db/shared/dashboard-header"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
 import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
 import { PricingAnalysis } from "@/components/analysis-db/market-analysis/pricing-analysis"
@@ -17,6 +16,7 @@ import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
 import { databaseService, type ProductAnalysisData } from '@/components/analysis-db/data/database-service'
 import { PageDivider } from '@/components/ui/page-divider'
 import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
+import { ProjectFilterWrapper } from '@/components/integrated-dashboard/components/project-filter-wrapper'
 
 interface DashboardData {
   brandAnalysis: {
@@ -827,10 +827,16 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
           
           <div className="flex-1 overflow-auto">
             <div className="p-6">
-              <DashboardHeader 
-                onProjectChange={handleProjectChange} 
-                selectedProjectId={selectedProjectId}
-              />
+              {selectedProjectId && (
+                <ProjectFilterWrapper
+                  projectId={selectedProjectId}
+                  initialFilters={DEFAULT_FILTERS}
+                  onFiltersChange={(filters) => {
+                    // 暂时保留空处理器，因为这个页面可能需要重构
+                    console.log('Filters changed:', filters)
+                  }}
+                />
+              )}
               
               <div className="mt-12 text-center">
                 <div className="w-full h-2 bg-blue-200 rounded-full mb-4 mx-auto max-w-md">
@@ -978,11 +984,6 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
           
           <div className="flex-1 overflow-y-auto">
             <div className="p-6 pt-0">
-                <DashboardHeader 
-                  onProjectChange={handleProjectChange} 
-                  selectedProjectId={selectedProjectId}
-                />
-                
                 <Tabs value={mainTabValue} className="mt-6" onValueChange={(value) => handleTabChange(value)}>
                   {/* 隐藏主要的Tab导航 */}
                   {/* <TabsList className="grid w-full grid-cols-3">

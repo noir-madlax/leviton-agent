@@ -30,7 +30,7 @@ export function ChartFilterButton({
 
   const getButtonText = () => {
     if (isLoading) {
-      return 'Loading filter options...'
+      return 'L3s...'
     }
     return isExpanded ? 'Hide filters' : `Click to filter ${title}`
   }

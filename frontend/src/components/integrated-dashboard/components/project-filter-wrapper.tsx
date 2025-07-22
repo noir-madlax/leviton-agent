@@ -1,10 +1,7 @@
 "use client"
 
-import { useState, useEffect } from 'react'
 import { UniversalFilterComponent } from '@/components/analysis-db/shared/universal-filter-component'
-import { FilterOptions } from '@/components/analysis-db/types/filters'
 import { ProjectFilters } from '@/components/analysis-db/types/filters'
-import { databaseService } from '@/components/analysis-db/data/database-service'
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
 
 interface ProjectFilterWrapperProps {

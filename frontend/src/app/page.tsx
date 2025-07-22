@@ -31,8 +31,14 @@ export default function HomePage() {
   const [projects, setProjects] = useState<Project[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [mounted, setMounted] = useState(false)
   const { isAuthenticated, user } = useAuth()
   const { permissions } = usePermissions()
+
+  // 确保组件已挂载
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
   // Get the most recent project as Current Project
   const mostRecentProject = projects.length > 0 ? projects[0] : null
@@ -44,8 +50,8 @@ export default function HomePage() {
   // Load projects list
   useEffect(() => {
     const loadProjects = async () => {
-      if (!isAuthenticated) {
-        console.log('User not authenticated, skipping project load')
+      if (!isAuthenticated || !mounted) {
+        console.log('User not authenticated or not mounted, skipping project load')
         setLoading(false)
         return
       }
@@ -76,7 +82,21 @@ export default function HomePage() {
     }
 
     loadProjects()
-  }, [isAuthenticated])
+  }, [isAuthenticated, mounted, user?.id])
+
+  // 在组件未挂载时显示加载状态
+  if (!mounted) {
+    return (
+      <div className="flex h-screen bg-gray-50">
+        <div className="flex-1 flex items-center justify-center">
+          <div className="text-center">
+            <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
+            <p className="text-gray-600">Loading...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (loading) {
     return (
@@ -108,49 +128,31 @@ export default function HomePage() {
             </div>
 
             <div className="flex items-center space-x-4">
+              {/* Create Project Button */}
+              <Link href="/onboarding">
+                <Button 
+                  disabled={!permissions?.can_create_project}
+                  title={!permissions?.can_create_project ? "Currently in internal testing" : ""}
+                >
+                  <Plus className="w-4 h-4 mr-2" />
+                  Create Project
+                </Button>
+              </Link>
+              
               {/* Import Data Button */}
-              <div className="relative">
-                {permissions?.can_import_data ? (
-                  <Link href="/import-data">
-                    <Button variant="outline">
-                      <Upload className="w-4 h-4 mr-1" />
-                      Import Data
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button 
-                    variant="outline" 
-                    disabled={true}
-                    title="Currently in internal testing"
-                  >
-                    <Upload className="w-4 h-4 mr-1" />
-                    Import Data
-                  </Button>
-                )}
-              </div>
-              {/* New Project Button */}
-              <div className="relative">
-                {permissions?.can_create_project ? (
-                  <Link href="/onboarding">
-                    <Button>
-                      <Plus className="w-4 h-4 mr-1" />
-                      New Project
-                    </Button>
-                  </Link>
-                ) : (
-                  <Button 
-                    disabled={true}
-                    title="Currently in internal testing"
-                  >
-                    <Plus className="w-4 h-4 mr-1" />
-                    New Project
-                  </Button>
-                )}
-              </div>
+              <Link href="/import-data">
+                <Button 
+                  variant="outline"
+                  disabled={!permissions?.can_import_data}
+                  title={!permissions?.can_import_data ? "Currently in internal testing" : ""}
+                >
+                  <Upload className="w-4 h-4 mr-2" />
+                  Import Data
+                </Button>
+              </Link>
             </div>
           </header>
-
-        {/* Main Content */}
+        
         <main className="flex-1 p-6 overflow-auto">
           <div className="max-w-6xl mx-auto space-y-6">
             {error && (

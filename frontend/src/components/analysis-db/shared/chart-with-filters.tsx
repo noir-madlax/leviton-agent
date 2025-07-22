@@ -256,8 +256,8 @@ export function ChartWithFilters({
     if (chartFilterConfig.visible_filters.brands && filterOptions.brands?.length > 0) {
       const currentValue = finalFilters.brands?.[0] || ''
       const brandsDefault = chartFilterConfig.default_values.brands as string[]
-      const defaultValue = brandsDefault?.[0] || ''
-      const displayValue = currentValue || defaultValue || 'all'
+      const defaultValue = Array.isArray(brandsDefault) ? (brandsDefault[0] || '') : (String(brandsDefault || ''))
+      const displayValue = String(currentValue || defaultValue || 'all')
       
       filters.push(
         <div key="brands" className="flex flex-col items-end">
@@ -282,8 +282,8 @@ export function ChartWithFilters({
     if (chartFilterConfig.visible_filters.segments && filterOptions.segments?.length > 0) {
       const currentValue = finalFilters.segments?.[0] || ''
       const segmentsDefault = chartFilterConfig.default_values.segments as string[]
-      const defaultValue = segmentsDefault?.[0] || ''
-      const displayValue = currentValue || defaultValue || 'all'
+      const defaultValue = Array.isArray(segmentsDefault) ? (segmentsDefault[0] || '') : (String(segmentsDefault || ''))
+      const displayValue = String(currentValue || defaultValue || 'all')
       
       filters.push(
         <div key="segments" className="flex flex-col items-end">
@@ -309,7 +309,7 @@ export function ChartWithFilters({
       const timeOptions = ['Last 30 days']
       const currentValue = finalFilters.extend_fields.time_period || ''
       const defaultValue = 'Last 30 days'
-      const displayValue = currentValue || defaultValue
+      const displayValue = String(currentValue || defaultValue)
       
       filters.push(
         <div key="time_period" className="flex flex-col items-end">
@@ -358,17 +358,17 @@ export function ChartWithFilters({
         const currentValue = finalFilters.extend_fields[fieldName] || ''
         
         // 优先级：当前值 > chart配置默认值 > field定义默认值 > 'all'
-        let defaultValue = configuredDefaultValues[fieldName] || String(fieldDef.filter_options?.default || 'all')
+        let defaultValue = String(configuredDefaultValues[fieldName] || String(fieldDef.filter_options?.default || 'all'))
         
         // 如果没有当前值且没有配置默认值，对于boolean类型尝试从预载的filterOptions获取默认值
         if (!currentValue && !configuredDefaultValues[fieldName] && fieldDef.field_type === 'boolean') {
           // 对于Smart Capability等boolean字段，如果预载数据中有值，使用第一个值作为默认值
           if (preloadedOptions && preloadedOptions.length > 0) {
-            defaultValue = preloadedOptions[0]
+            defaultValue = String(preloadedOptions[0])
           }
         }
         
-        const displayValue = currentValue || defaultValue || 'all'
+        const displayValue = String(currentValue || defaultValue || 'all')
 
         if (fieldDef.field_type === 'select' || fieldDef.field_type === 'boolean') {
           let options: string[] = []
