@@ -1,0 +1,49 @@
+{
+  "basic_request": {
+    "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+    "asin": "B08SJ3Z8XD",
+    "metric_type": "sales",
+    "aggregation": "daily"
+  },
+  "filtered_request": {
+    "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+    "filters": {
+      "categories": ["Light Switches"],
+      "brands": ["Leviton"],
+      "segments": ["Premium"],
+      "extend_fields": {
+        "is_bestseller": true,
+        "price_range": "mid"
+      }
+    },
+    "date_range": {
+      "start_date": "2024-07-01",
+      "end_date": "2024-12-31"
+    },
+    "asin": "B08SJ3Z8XD",
+    "metric_type": "revenue",
+    "aggregation": "daily"
+  },
+  "project_summary_request": {
+    "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+    "filters": {
+      "categories": ["Light Switches"]
+    },
+    "date_range": {
+      "start_date": "2024-01-01",
+      "end_date": "2024-12-31"
+    },
+    "metric_type": "sales",
+    "aggregation": "monthly"
+  },
+  "price_analysis_request": {
+    "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+    "asin": "B08SJ3Z8XD",
+    "date_range": {
+      "start_date": "2024-07-19",
+      "end_date": "2025-07-19"
+    },
+    "metric_type": "price",
+    "aggregation": "daily"
+  }
+} 
