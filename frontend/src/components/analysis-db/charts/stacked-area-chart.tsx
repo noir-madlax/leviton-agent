@@ -106,7 +106,7 @@ export function StackedAreaChart({
   return (
     <div className="relative">
       {/* 假数据遮罩层 */}
-      <div className="absolute inset-0 bg-gray-500 bg-opacity-20 z-10 rounded-lg pointer-events-none" />
+      <div className="  bg-gray-500  z-10 rounded-lg pointer-events-none" />
       
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart

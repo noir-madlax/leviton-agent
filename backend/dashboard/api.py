@@ -19,6 +19,8 @@ from .models import (
     AllReviewDataResponse, ReviewData,
     DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest
 )
+from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
+from .charts.sales_trend.services import SalesTrendService
 from .decorators import with_dashboard_service, log_request_response
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
@@ -260,6 +262,97 @@ async def get_brand_analysis(
 
     logger.info(f"Brand analysis API returned all {len(brand_category_data)} brands with {len(category_names)} categories for project {request.project_id}")
     return response
+
+
+@router.post("/sales-trend", response_model=SalesTrendResponse)
+async def get_sales_trend(request: SalesTrendRequest):
+    """获取品牌销售趋势数据
+    
+    提供Top 10品牌的月度销售趋势数据，支持revenue和volume双指标展示。
+    用于前端StackedAreaChart组件的数据源。
+    
+    请求格式：
+    {
+        "project_id": "项目ID",
+        "filters": {
+            "categories": ["Light Switches"],
+            "brands": [],
+            "segments": [],
+            "extend_fields": {"smart_capability": "Smart"}
+        },
+        "date_range": {
+            "start_date": "2024-01-01",
+            "end_date": "2024-06-30"
+        }
+    }
+    
+    返回格式：
+    {
+        "trend_data": [
+            {
+                "month": "2024-01",
+                "Leviton": {"revenue": 850000, "volume": 12000},
+                "Lutron": {"revenue": 720000, "volume": 9000}
+            }
+        ],
+        "brands": ["Leviton", "Lutron", "GE"],
+        "summary": {
+            "total_brands": 3,
+            "date_range": {"start": "2024-01", "end": "2024-06"},
+            "total_revenue": 15230000,
+            "total_volume": 89400
+        }
+    }
+    """
+    try:
+        logger.info(f"Sales trend analysis request for project {request.project_id}")
+        
+        # 获取时间范围参数
+        date_range = request.get_date_range_filter()
+        
+        # 创建服务实例
+        service = SalesTrendService(
+            project_id=request.project_id,
+            filters=request.filters,
+            date_range=date_range
+        )
+        
+        # 获取分析数据
+        trend_data = service.get_data()
+        
+        # 验证数据结构
+        if not isinstance(trend_data, dict):
+            raise ValueError("Service returned invalid data format")
+        
+        # 构建响应
+        response = SalesTrendResponse(
+            trend_data=trend_data.get("trend_data", []),
+            brands=trend_data.get("brands", []),
+            summary=trend_data.get("summary", {
+                "total_brands": 0,
+                "date_range": {"start": "", "end": ""},
+                "total_revenue": 0.0,
+                "total_volume": 0
+            })
+        )
+        
+        logger.info(
+            f"Sales trend analysis completed for project {request.project_id}: "
+            f"{len(response.brands)} brands, {len(response.trend_data)} months"
+        )
+        
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Validation error in sales trend analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+        
+    except Exception as e:
+        logger.error(f"Unexpected error in sales trend analysis: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Internal server error during sales trend analysis: {str(e)}"
+        )
 
 
 @router.post("/product-analysis", response_model=ProductAnalysisResponse)

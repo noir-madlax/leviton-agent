@@ -517,28 +517,12 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           title="Sales Trend of Top 10 brands"
           projectFilters={initialFilters}
         >
-           {/* 
+           
           <Card className="p-6 bg-gray-50">
             <MetricTypeSelector onChange={setMetricType} value={metricType} />
             
-            {/* Development Status Banner */}
-            <div className="bg-amber-50 border-l-4 border-amber-400 p-4 mb-6">
-              <div className="flex items-center">
-                <div className="flex-shrink-0">
-                  <svg className="w-5 h-5 text-amber-400" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                  </svg>
-                </div>
-                <div className="ml-3">
-               
-                  <p className="text-xs text-amber-600 mt-1">
-                    Coming Soon.
-                  </p>
-                </div>
-              </div>
-            </div>
 
-            {/* Mock Sales Trend Chart 
+            {/* Mock Sales Trend Chart */}
             <div className="bg-gray-50 p-4 ">
               <div className="h-[500px] w-full">
                 <StackedAreaChart
@@ -552,7 +536,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
 
           
           </Card>
-            */}
+            
         </ChartWithFilters>
         </div>
       </div>
