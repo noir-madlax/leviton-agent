@@ -329,7 +329,8 @@ async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[
     }
     
     // 使用现有的 sales trend API
-    const response = await fetch('/api/v1/dashboard/sales-trend', {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+    const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/sales-trend`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

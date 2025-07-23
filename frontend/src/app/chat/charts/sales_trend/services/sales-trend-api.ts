@@ -8,6 +8,11 @@ import type {
 } from '../types/sales-trend.types'
 
 class SalesTrendApi extends ChartApiBase {
+  constructor() {
+    const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    super(baseUrl)
+  }
+
   /**
    * 获取销售趋势数据
    * @param projectId 项目ID
