@@ -5,10 +5,11 @@ A comprehensive service for scraping, storing, and retrieving sales history data
 ## Features
 
 - **Smart Scraping Logic**: Avoids duplicate scraping by checking existing data coverage
-- **Dual Data Storage**: Daily and monthly aggregated data tables
+- **Triple Data Storage**: Daily, monthly, and yearly aggregated data tables
 - **Comprehensive API**: Full CRUD operations with proper error handling
 - **Date Constraints**: Enforces 365-day limit for historical data
 - **Automatic Aggregation**: Monthly data automatically aggregated from daily data
+- **Yearly Aggregation**: Yearly data automatically aggregated from monthly data (rolling year from latest scraping date)
 - **Project Integration**: Works with existing product database structure
 - **Multi-Platform Support**: Supports different platform sources (amazon, walmart, etc.)
 - **Multi-API Support**: Supports different data source APIs (jungle_scout, etc.)
@@ -25,7 +26,8 @@ sales_history/
 ├── repositories/
 │   ├── __init__.py
 │   ├── sales_history_repository.py           # Daily data operations
-│   └── sales_history_monthly_repository.py   # Monthly data operations
+│   ├── sales_history_monthly_repository.py   # Monthly data operations
+│   └── sales_history_yearly_repository.py    # Yearly data operations
 ├── services/
 │   ├── __init__.py
 │   ├── sales_history_service.py              # Main business logic
@@ -74,6 +76,38 @@ CREATE TABLE product_sales_history_monthly (
     CONSTRAINT fk_product_sales_history_monthly_platform_id FOREIGN KEY (platform_id) 
         REFERENCES product_wide_table(platform_id) ON DELETE CASCADE
 );
+```
+
+### Yearly Aggregated Product Sales History Table (`product_sales_history_yearly`)
+
+```sql
+CREATE TABLE product_sales_history_yearly (
+    id BIGSERIAL PRIMARY KEY,
+    platform_id VARCHAR(20) NOT NULL,                    -- ASIN from product_wide_table
+    platform_source VARCHAR(50) NOT NULL DEFAULT 'amazon', -- Platform source (amazon, walmart, etc.)
+    api_source VARCHAR(50) NOT NULL DEFAULT 'jungle_scout', -- Data source API (jungle_scout, etc.)
+    year_start_date DATE NOT NULL,                        -- First day of the year period (YYYY-MM-DD)
+    year_end_date DATE NOT NULL,                          -- Last day of the year period (YYYY-MM-DD)
+    total_units_sold INTEGER NOT NULL CHECK (total_units_sold >= 0),
+    average_price DECIMAL(10,2) NOT NULL CHECK (average_price >= 0),
+    total_revenue DECIMAL(12,2) NOT NULL DEFAULT 0 CHECK (total_revenue >= 0),
+    months_in_year INTEGER NOT NULL CHECK (months_in_year >= 1),
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP,
+    
+    CONSTRAINT unique_platform_year UNIQUE (platform_id, platform_source, year_start_date),
+    CONSTRAINT fk_product_sales_history_yearly_platform_id FOREIGN KEY (platform_id) 
+        REFERENCES product_wide_table(platform_id) ON DELETE CASCADE,
+    CONSTRAINT valid_year_dates CHECK (year_end_date >= year_start_date)
+);
+```
+
+**Note**: The yearly table represents a rolling year period from the latest available scraping date, not a natural calendar year.
+
+**Revenue Calculation**: All revenue calculations are handled by application code:
+- Daily revenue = last_known_price × estimated_units_sold
+- Monthly total_revenue = sum of daily revenues for the month
+- Yearly total_revenue = sum of monthly revenues for the year
 ```
 
 ## Data Contracts
@@ -139,6 +173,18 @@ Get daily sales history data for multiple ASINs.
 
 Get monthly aggregated sales history data for multiple ASINs.
 
+**GET** `/api/v1/sales-history/yearly`
+
+Get yearly aggregated sales history data for multiple ASINs (rolling year from latest scraping date).
+
+**GET** `/api/v1/sales-history/project/{project_id}/monthly`
+
+Get monthly sales history for all ASINs in a project.
+
+**GET** `/api/v1/sales-history/project/{project_id}/yearly`
+
+Get yearly sales history for all ASINs in a project (rolling year from latest scraping date).
+
 ### Statistics and Management
 
 **GET** `/api/v1/sales-history/stats/{asin}`
@@ -172,6 +218,15 @@ curl "http://localhost:8000/api/v1/sales-history/daily?asins=B00NG0ELL0,B01EZV35
 
 # Get monthly data
 curl "http://localhost:8000/api/v1/sales-history/monthly?asins=B00NG0ELL0,B01EZV35QU&platform_source=amazon&api_source=jungle_scout"
+
+# Get yearly data (rolling year from latest scraping date)
+curl "http://localhost:8000/api/v1/sales-history/yearly?asins=B00NG0ELL0,B01EZV35QU&platform_source=amazon&api_source=jungle_scout"
+
+# Get monthly data for all products in a project
+curl "http://localhost:8000/api/v1/sales-history/project/your-project-id/monthly?start_date=2024-01-01&end_date=2024-12-31&platform_source=amazon&api_source=jungle_scout"
+
+# Get yearly data for all products in a project (rolling year from latest scraping date)
+curl "http://localhost:8000/api/v1/sales-history/project/your-project-id/yearly?platform_source=amazon&api_source=jungle_scout"
 ```
 
 ## Key Features
@@ -186,6 +241,7 @@ curl "http://localhost:8000/api/v1/sales-history/monthly?asins=B00NG0ELL0,B01EZV
 ### Data Management
 
 - **Automatic Aggregation**: Monthly data automatically aggregated from daily data
+- **Yearly Aggregation**: Yearly data automatically aggregated from monthly data (rolling year from latest scraping date)
 - **Conflict Resolution**: Uses upsert operations to handle duplicates
 - **Cascade Deletion**: Automatically deletes related data when products are removed
 - **Multi-Source Support**: Supports different platform sources and API sources

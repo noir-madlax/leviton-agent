@@ -69,6 +69,7 @@ class SalesHistoryDataPoint(BaseModel):
     sales_date: date = Field(..., description="Sales date")
     estimated_units_sold: int = Field(..., description="Estimated units sold on this date", ge=0)
     last_known_price: Decimal = Field(..., description="Last known price on this date (USD)", ge=0)
+    revenue: Decimal = Field(..., description="Calculated revenue (price * units) in USD", ge=0)
     
     class Config:
         json_encoders = {
@@ -80,7 +81,22 @@ class SalesHistoryMonthlyDataPoint(BaseModel):
     year_month_date: date = Field(..., description="First day of the month (YYYY-MM-01)")
     total_units_sold: int = Field(..., description="Total units sold in the month", ge=0)
     average_price: Decimal = Field(..., description="Average price in the month (USD)", ge=0)
+    total_revenue: Decimal = Field(..., description="Total revenue in the month (USD)", ge=0)
     days_in_month: int = Field(..., description="Number of days with data in the month", ge=1)
+    
+    class Config:
+        json_encoders = {
+            Decimal: lambda v: float(v)
+        }
+
+class SalesHistoryYearlyDataPoint(BaseModel):
+    """Individual yearly sales history data point (rolling year from latest scraping date)."""
+    year_start_date: date = Field(..., description="First day of the year period (YYYY-MM-DD)")
+    year_end_date: date = Field(..., description="Last day of the year period (YYYY-MM-DD) - latest scraping date")
+    total_units_sold: int = Field(..., description="Total units sold in the year", ge=0)
+    average_price: Decimal = Field(..., description="Average price in the year (USD)", ge=0)
+    total_revenue: Decimal = Field(..., description="Total revenue in the year (USD)", ge=0)
+    months_in_year: int = Field(..., description="Number of months with data in the year", ge=1)
     
     class Config:
         json_encoders = {
@@ -120,6 +136,14 @@ class SalesHistoryMonthlyQueryResponse(BaseModel):
     warnings: List[str] = Field(default_factory=list, description="Warning messages")
     query_summary: Dict[str, Any] = Field(..., description="Query execution summary")
 
+class SalesHistoryYearlyQueryResponse(BaseModel):
+    """Response for yearly sales history query operation."""
+    success: bool = Field(..., description="Whether the query operation was successful")
+    message: str = Field(..., description="Human-readable message about the operation")
+    data: Dict[str, List[SalesHistoryYearlyDataPoint]] = Field(..., description="Yearly sales data by ASIN (rolling year from latest scraping date)")
+    warnings: List[str] = Field(default_factory=list, description="Warning messages")
+    query_summary: Dict[str, Any] = Field(..., description="Query execution summary")
+
 class DateRange(BaseModel):
     """Date range for coverage checking."""
     start_date: date
@@ -147,6 +171,7 @@ class SalesHistoryStats(BaseModel):
     total_records: int = Field(..., description="Total number of records")
     date_range: Optional[DateRange] = Field(None, description="Date range of the data")
     total_units_sold: int = Field(..., description="Total units sold across all records")
+    total_revenue: Decimal = Field(..., description="Total revenue across all records")
     average_price: Decimal = Field(..., description="Average price across all records")
     min_price: Decimal = Field(..., description="Minimum price")
     max_price: Decimal = Field(..., description="Maximum price")

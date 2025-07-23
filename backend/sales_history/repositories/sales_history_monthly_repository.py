@@ -53,11 +53,13 @@ class SalesHistoryMonthlyRepository:
                     monthly_groups[month_key] = {
                         'units': [],
                         'prices': [],
+                        'revenues': [],
                         'dates': []
                     }
                 
                 monthly_groups[month_key]['units'].append(record.estimated_units_sold)
                 monthly_groups[month_key]['prices'].append(float(record.last_known_price))
+                monthly_groups[month_key]['revenues'].append(float(record.revenue))
                 monthly_groups[month_key]['dates'].append(record.sales_date)
             
             # Create monthly records
@@ -65,6 +67,7 @@ class SalesHistoryMonthlyRepository:
             for month_key, data in monthly_groups.items():
                 total_units = sum(data['units'])
                 avg_price = sum(data['prices']) / len(data['prices'])
+                total_revenue = sum(data['revenues'])
                 days_count = len(data['dates'])
                 
                 monthly_records.append({
@@ -74,6 +77,7 @@ class SalesHistoryMonthlyRepository:
                     'year_month': month_key,
                     'total_units_sold': total_units,
                     'average_price': round(avg_price, 2),
+                    'total_revenue': round(total_revenue, 2),
                     'days_in_month': days_count
                 })
             
@@ -105,7 +109,7 @@ class SalesHistoryMonthlyRepository:
         """Get monthly sales data for multiple ASINs with optional date filtering."""
         try:
             query = self.supabase.table('product_sales_history_monthly').select(
-                'platform_id, year_month, total_units_sold, average_price, days_in_month'
+                'platform_id, year_month, total_units_sold, average_price, total_revenue, days_in_month'
             ).in_('platform_id', asins)
             
             # Apply date filters
@@ -136,6 +140,7 @@ class SalesHistoryMonthlyRepository:
                     year_month_date=date.fromisoformat(row['year_month']),
                     total_units_sold=row['total_units_sold'],
                     average_price=Decimal(str(row['average_price'])),
+                    total_revenue=Decimal(str(row['total_revenue'])),
                     days_in_month=row['days_in_month']
                 ))
             
@@ -162,7 +167,7 @@ class SalesHistoryMonthlyRepository:
         try:
             # Get all monthly data for the ASIN and calculate stats manually
             query = self.supabase.table('product_sales_history_monthly').select(
-                'year_month, total_units_sold, average_price, days_in_month'
+                'year_month, total_units_sold, average_price, total_revenue, days_in_month'
             ).eq('platform_id', asin)
             
             if start_date:
@@ -181,12 +186,14 @@ class SalesHistoryMonthlyRepository:
                 months = []
                 units_sold = []
                 prices = []
+                revenues = []
                 days = []
                 
                 for row in result.data:
                     months.append(date.fromisoformat(row['year_month']))
                     units_sold.append(row['total_units_sold'])
                     prices.append(float(row['average_price']))
+                    revenues.append(float(row['total_revenue']))
                     days.append(row['days_in_month'])
                 
                 return {
@@ -194,6 +201,7 @@ class SalesHistoryMonthlyRepository:
                     'min_month': min(months),
                     'max_month': max(months),
                     'total_units_sold': sum(units_sold),
+                    'total_revenue': sum(revenues),
                     'average_price': sum(prices) / len(prices),
                     'min_price': min(prices),
                     'max_price': max(prices),
@@ -205,6 +213,7 @@ class SalesHistoryMonthlyRepository:
                 'min_month': None,
                 'max_month': None,
                 'total_units_sold': 0,
+                'total_revenue': 0.0,
                 'average_price': 0.0,
                 'min_price': 0.0,
                 'max_price': 0.0,

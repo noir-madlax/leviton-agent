@@ -14,6 +14,7 @@ from ..models import (
 )
 from ..repositories.sales_history_repository import SalesHistoryRepository
 from ..repositories.sales_history_monthly_repository import SalesHistoryMonthlyRepository
+from ..repositories.sales_history_yearly_repository import SalesHistoryYearlyRepository
 
 logger = logging.getLogger(__name__)
 
@@ -24,6 +25,7 @@ class SalesHistoryScraperService:
         """Initialize the scraper service."""
         self.daily_repo = SalesHistoryRepository()
         self.monthly_repo = SalesHistoryMonthlyRepository()
+        self.yearly_repo = SalesHistoryYearlyRepository()
     
     async def should_scrape_asin(
         self, 
@@ -215,10 +217,13 @@ class SalesHistoryScraperService:
                         # Validate data
                         if all(v is not None for v in [record_date, units_sold, price]):
                             try:
+                                # Calculate revenue
+                                revenue = Decimal(str(price)) * int(units_sold)
                                 sales_records.append(SalesHistoryDataPoint(
                                     sales_date=date.fromisoformat(record_date),
                                     estimated_units_sold=int(units_sold),
-                                    last_known_price=Decimal(str(price))
+                                    last_known_price=Decimal(str(price)),
+                                    revenue=revenue
                                 ))
                             except (ValueError, TypeError) as e:
                                 logger.warning(f"Invalid data in API response: {record}, error: {e}")
@@ -337,10 +342,13 @@ class SalesHistoryScraperService:
                 sales_records = attributes.get('data', [])
                 
                 for record in sales_records:
+                    # Calculate revenue
+                    revenue = Decimal(str(record['last_known_price'])) * record['estimated_units_sold']
                     data_points.append(SalesHistoryDataPoint(
                         sales_date=record['date'],
                         estimated_units_sold=record['estimated_units_sold'],
-                        last_known_price=Decimal(str(record['last_known_price']))
+                        last_known_price=Decimal(str(record['last_known_price'])),
+                        revenue=revenue
                     ))
             
             # Insert into database
@@ -352,6 +360,11 @@ class SalesHistoryScraperService:
                 
                 # Aggregate to monthly data
                 await self.monthly_repo.aggregate_daily_to_monthly(
+                    asin, platform_source, api_source
+                )
+                
+                # Aggregate to yearly data
+                await self.yearly_repo.aggregate_monthly_to_yearly(
                     asin, platform_source, api_source
                 )
             

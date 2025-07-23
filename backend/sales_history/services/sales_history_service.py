@@ -10,11 +10,13 @@ from ..models import (
     SalesHistoryScrapingResponse,
     SalesHistoryQueryResponse,
     SalesHistoryMonthlyQueryResponse,
+    SalesHistoryYearlyQueryResponse,
     SalesHistoryScrapingSummary,
     ScrapingResult
 )
 from ..repositories.sales_history_repository import SalesHistoryRepository
 from ..repositories.sales_history_monthly_repository import SalesHistoryMonthlyRepository
+from ..repositories.sales_history_yearly_repository import SalesHistoryYearlyRepository
 from .sales_history_scraper_service import SalesHistoryScraperService
 
 logger = logging.getLogger(__name__)
@@ -26,6 +28,7 @@ class SalesHistoryService:
         """Initialize the sales history service."""
         self.daily_repo = SalesHistoryRepository()
         self.monthly_repo = SalesHistoryMonthlyRepository()
+        self.yearly_repo = SalesHistoryYearlyRepository()
         self.scraper_service = SalesHistoryScraperService()
     
     async def scrape_sales_history(self, request: SalesHistoryScrapingRequest) -> SalesHistoryScrapingResponse:
@@ -253,6 +256,57 @@ class SalesHistoryService:
         except Exception as e:
             logger.error(f"Error in get_monthly_sales_history: {e}")
             return SalesHistoryMonthlyQueryResponse(
+                success=False,
+                message=f"Query failed: {str(e)}",
+                data={},
+                warnings=[f"Unexpected error: {str(e)}"],
+                query_summary={}
+            )
+    
+    async def get_yearly_sales_history(self, request: SalesHistoryQueryRequest) -> SalesHistoryYearlyQueryResponse:
+        """
+        Get yearly sales history for multiple ASINs (rolling year from latest scraping date).
+        
+        Args:
+            request: Query request with ASINs and filters
+            
+        Returns:
+            SalesHistoryYearlyQueryResponse: Response with yearly sales data
+        """
+        try:
+            logger.info(f"Getting yearly sales history for {len(request.asins)} ASINs")
+            
+            # Get yearly data
+            data = await self.yearly_repo.get_yearly_data(
+                request.asins,
+                platform_source=request.platform_source,
+                api_source=request.api_source
+            )
+            
+            # Create query summary
+            total_asins = len(request.asins)
+            asins_with_data = sum(1 for asin_data in data.values() if asin_data)
+            total_yearly_records = sum(len(asin_data) for asin_data in data.values())
+            
+            query_summary = {
+                "total_asins_requested": total_asins,
+                "asins_with_data": asins_with_data,
+                "total_yearly_records": total_yearly_records,
+                "platform_source": request.platform_source,
+                "api_source": request.api_source
+            }
+            
+            return SalesHistoryYearlyQueryResponse(
+                success=True,
+                message=f"Successfully retrieved yearly sales data for {asins_with_data}/{total_asins} ASINs",
+                data=data,
+                warnings=[],
+                query_summary=query_summary
+            )
+            
+        except Exception as e:
+            logger.error(f"Error getting yearly sales history: {e}")
+            return SalesHistoryYearlyQueryResponse(
                 success=False,
                 message=f"Query failed: {str(e)}",
                 data={},

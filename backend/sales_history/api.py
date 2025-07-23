@@ -10,7 +10,8 @@ from .models import (
     SalesHistoryQueryRequest,
     SalesHistoryScrapingResponse,
     SalesHistoryQueryResponse,
-    SalesHistoryMonthlyQueryResponse
+    SalesHistoryMonthlyQueryResponse,
+    SalesHistoryYearlyQueryResponse
 )
 from .services.sales_history_service import SalesHistoryService
 
@@ -320,6 +321,228 @@ async def get_monthly_sales_history(
         raise HTTPException(status_code=400, detail=f"Invalid date format: {str(e)}")
     except Exception as e:
         logger.error(f"Error in get_monthly_sales_history endpoint: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+@router.get("/yearly", response_model=SalesHistoryYearlyQueryResponse)
+async def get_yearly_sales_history(
+    asins: List[str] = Query(..., description="List of product ASINs to query"),
+    platform_source: Optional[str] = Query(None, description="Filter by platform source"),
+    api_source: Optional[str] = Query(None, description="Filter by data source API"),
+    service: SalesHistoryService = Depends(get_sales_history_service)
+):
+    """
+    Get yearly sales history for multiple ASINs (rolling year from latest scraping date).
+    
+    This endpoint returns yearly aggregated data that represents a rolling year period
+    from the latest available scraping date. This is NOT a natural calendar year,
+    but rather a 365-day period ending on the most recent date with data.
+    
+    **Yearly Aggregation:**
+    - Year end date: Latest scraping date available
+    - Year start date: 365 days before the year end date
+    - Data includes: Total units sold, average price, total revenue, months covered
+    
+    **Response includes:**
+    - Yearly data by ASIN with start and end dates
+    - Query execution summary
+    - Warnings for any issues
+    """
+    try:
+        logger.info(f"Getting yearly sales history for {len(asins)} ASINs")
+        
+        # Create query request
+        request = SalesHistoryQueryRequest(
+            asins=asins,
+            platform_source=platform_source,
+            api_source=api_source
+        )
+        
+        response = await service.get_yearly_sales_history(request)
+        
+        # Return appropriate HTTP status based on success
+        if response.success:
+            return response
+        else:
+            return JSONResponse(
+                status_code=500,
+                content=response.dict()
+            )
+            
+    except Exception as e:
+        logger.error(f"Error in get_yearly_sales_history endpoint: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+@router.get("/project/{project_id}/monthly", response_model=SalesHistoryMonthlyQueryResponse)
+async def get_project_monthly_sales_history(
+    project_id: str,
+    start_date: Optional[str] = Query(None, description="Start date filter (YYYY-MM-DD)"),
+    end_date: Optional[str] = Query(None, description="End date filter (YYYY-MM-DD)"),
+    platform_source: Optional[str] = Query(None, description="Filter by platform source"),
+    api_source: Optional[str] = Query(None, description="Filter by data source API"),
+    service: SalesHistoryService = Depends(get_sales_history_service)
+):
+    """
+    Get monthly sales history for all ASINs in a project.
+    
+    This endpoint automatically retrieves the selected_product_asins from the project
+    and returns monthly aggregated sales history for all those products.
+    
+    **Project-based Query:**
+    - Automatically gets ASINs from project.selected_product_asins
+    - Returns monthly data for all project products
+    - Supports date filtering and source filtering
+    
+    **Response includes:**
+    - Monthly data by ASIN for all project products
+    - Query execution summary
+    - Warnings for any issues
+    """
+    try:
+        logger.info(f"Getting monthly sales history for project: {project_id}")
+        
+        # Get project ASINs
+        supabase = get_supabase_client()
+        project_result = supabase.table('projects').select(
+            'selected_product_asins'
+        ).eq('id', project_id).execute()
+        
+        if not project_result.data:
+            raise HTTPException(status_code=404, detail=f"Project {project_id} not found")
+        
+        project_asins = project_result.data[0].get('selected_product_asins', [])
+        
+        if not project_asins:
+            return SalesHistoryMonthlyQueryResponse(
+                success=True,
+                message=f"Project {project_id} has no selected products",
+                data={},
+                warnings=["No ASINs found in project"],
+                query_summary={
+                    "project_id": project_id,
+                    "total_asins_requested": 0,
+                    "asins_with_data": 0,
+                    "total_monthly_records": 0
+                }
+            )
+        
+        # Convert date strings to date objects
+        from datetime import date
+        start_date_obj = date.fromisoformat(start_date) if start_date else None
+        end_date_obj = date.fromisoformat(end_date) if end_date else None
+        
+        # Create query request
+        request = SalesHistoryQueryRequest(
+            asins=project_asins,
+            start_date=start_date_obj,
+            end_date=end_date_obj,
+            platform_source=platform_source,
+            api_source=api_source
+        )
+        
+        response = await service.get_monthly_sales_history(request)
+        
+        # Add project context to response
+        response.query_summary["project_id"] = project_id
+        
+        # Return appropriate HTTP status based on success
+        if response.success:
+            return response
+        else:
+            return JSONResponse(
+                status_code=500,
+                content=response.dict()
+            )
+            
+    except ValueError as e:
+        logger.error(f"Invalid date format in get_project_monthly_sales_history: {e}")
+        raise HTTPException(status_code=400, detail=f"Invalid date format: {str(e)}")
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in get_project_monthly_sales_history endpoint: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+@router.get("/project/{project_id}/yearly", response_model=SalesHistoryYearlyQueryResponse)
+async def get_project_yearly_sales_history(
+    project_id: str,
+    platform_source: Optional[str] = Query(None, description="Filter by platform source"),
+    api_source: Optional[str] = Query(None, description="Filter by data source API"),
+    service: SalesHistoryService = Depends(get_sales_history_service)
+):
+    """
+    Get yearly sales history for all ASINs in a project (rolling year from latest scraping date).
+    
+    This endpoint automatically retrieves the selected_product_asins from the project
+    and returns yearly aggregated sales history for all those products.
+    
+    **Project-based Query:**
+    - Automatically gets ASINs from project.selected_product_asins
+    - Returns yearly data for all project products (rolling year from latest date)
+    - Supports source filtering
+    
+    **Yearly Aggregation:**
+    - Year end date: Latest scraping date available
+    - Year start date: 365 days before the year end date
+    - Data includes: Total units sold, average price, total revenue, months covered
+    
+    **Response includes:**
+    - Yearly data by ASIN for all project products
+    - Query execution summary
+    - Warnings for any issues
+    """
+    try:
+        logger.info(f"Getting yearly sales history for project: {project_id}")
+        
+        # Get project ASINs
+        supabase = get_supabase_client()
+        project_result = supabase.table('projects').select(
+            'selected_product_asins'
+        ).eq('id', project_id).execute()
+        
+        if not project_result.data:
+            raise HTTPException(status_code=404, detail=f"Project {project_id} not found")
+        
+        project_asins = project_result.data[0].get('selected_product_asins', [])
+        
+        if not project_asins:
+            return SalesHistoryYearlyQueryResponse(
+                success=True,
+                message=f"Project {project_id} has no selected products",
+                data={},
+                warnings=["No ASINs found in project"],
+                query_summary={
+                    "project_id": project_id,
+                    "total_asins_requested": 0,
+                    "asins_with_data": 0,
+                    "total_yearly_records": 0
+                }
+            )
+        
+        # Create query request
+        request = SalesHistoryQueryRequest(
+            asins=project_asins,
+            platform_source=platform_source,
+            api_source=api_source
+        )
+        
+        response = await service.get_yearly_sales_history(request)
+        
+        # Add project context to response
+        response.query_summary["project_id"] = project_id
+        
+        # Return appropriate HTTP status based on success
+        if response.success:
+            return response
+        else:
+            return JSONResponse(
+                status_code=500,
+                content=response.dict()
+            )
+            
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in get_project_yearly_sales_history endpoint: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 
 @router.get("/stats/{asin}")

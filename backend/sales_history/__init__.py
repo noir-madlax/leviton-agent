@@ -23,7 +23,8 @@ from .models import (
     SalesHistoryQueryRequest,
     SalesHistoryScrapingResponse,
     SalesHistoryQueryResponse,
-    SalesHistoryMonthlyQueryResponse
+    SalesHistoryMonthlyQueryResponse,
+    SalesHistoryYearlyQueryResponse
 )
 
 __all__ = [
@@ -33,5 +34,6 @@ __all__ = [
     "SalesHistoryQueryRequest", 
     "SalesHistoryScrapingResponse",
     "SalesHistoryQueryResponse",
-    "SalesHistoryMonthlyQueryResponse"
+    "SalesHistoryMonthlyQueryResponse",
+    "SalesHistoryYearlyQueryResponse"
 ] 

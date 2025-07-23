@@ -142,13 +142,17 @@ class SalesHistoryRepository:
             # Convert to database format
             records = []
             for data_point in sales_data:
+                # Calculate revenue
+                revenue = float(data_point.last_known_price) * data_point.estimated_units_sold
+                
                 records.append({
                     'platform_id': asin,
                     'platform_source': platform_source,
                     'api_source': api_source,
                     'date': data_point.sales_date.isoformat(),
                     'estimated_units_sold': data_point.estimated_units_sold,
-                    'last_known_price': float(data_point.last_known_price)
+                    'last_known_price': float(data_point.last_known_price),
+                    'revenue': revenue
                 })
             
             # Insert with conflict resolution (ignore duplicates)
@@ -176,7 +180,7 @@ class SalesHistoryRepository:
         """Get sales data for multiple ASINs with optional date filtering."""
         try:
             query = self.supabase.table('product_sales_history_daily').select(
-                'platform_id, date, estimated_units_sold, last_known_price'
+                'platform_id, date, estimated_units_sold, last_known_price, revenue'
             ).in_('platform_id', asins)
             
             # Apply date filters
@@ -206,7 +210,8 @@ class SalesHistoryRepository:
                 data_by_asin[asin].append(SalesHistoryDataPoint(
                     sales_date=date.fromisoformat(row['date']),
                     estimated_units_sold=row['estimated_units_sold'],
-                    last_known_price=Decimal(str(row['last_known_price']))
+                    last_known_price=Decimal(str(row['last_known_price'])),
+                    revenue=Decimal(str(row['revenue']))
                 ))
             
             # Add empty lists for ASINs with no data
@@ -264,7 +269,7 @@ class SalesHistoryRepository:
         try:
             # Get all data for the ASIN and calculate stats manually
             query = self.supabase.table('product_sales_history_daily').select(
-                'date, estimated_units_sold, last_known_price'
+                'date, estimated_units_sold, last_known_price, revenue'
             ).eq('platform_id', asin)
             
             if start_date:
@@ -283,17 +288,20 @@ class SalesHistoryRepository:
                 dates = []
                 units_sold = []
                 prices = []
+                revenues = []
                 
                 for row in result.data:
                     dates.append(date.fromisoformat(row['date']))
                     units_sold.append(row['estimated_units_sold'])
                     prices.append(float(row['last_known_price']))
+                    revenues.append(float(row['revenue']))
                 
                 return {
                     'total_records': len(dates),
                     'min_date': min(dates),
                     'max_date': max(dates),
                     'total_units_sold': sum(units_sold),
+                    'total_revenue': sum(revenues),
                     'average_price': sum(prices) / len(prices),
                     'min_price': min(prices),
                     'max_price': max(prices)
@@ -304,6 +312,7 @@ class SalesHistoryRepository:
                 'min_date': None,
                 'max_date': None,
                 'total_units_sold': 0,
+                'total_revenue': 0.0,
                 'average_price': 0.0,
                 'min_price': 0.0,
                 'max_price': 0.0
