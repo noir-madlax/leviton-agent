@@ -238,6 +238,19 @@ interface DashboardData {
     date: string
     brand: string
   }>>
+  salesTrend: {
+    trend_data: Array<{
+      month: string
+      [brandName: string]: { revenue: number; volume: number } | string
+    }>
+    brands: string[]
+    summary: {
+      total_brands: number
+      date_range: { start: string; end: string }
+      total_revenue: number
+      total_volume: number
+    }
+  }
 }
 
 // 获取品牌分析数据的async函数
@@ -280,6 +293,82 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
       ],
       categoryNames: ['Dimmer Switches', 'Light Switches'],  // 修复这里也使用categoryNames
       categoryColors: ["#FF6B6B", "#4ECDC4"]
+    };
+  }
+}
+
+// 获取销售趋势数据的async函数
+async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Sales Trend waiting for project selection...');
+      return {
+        trend_data: [],
+        brands: [],
+        summary: {
+          total_brands: 0,
+          date_range: { start: "2025-01-01", end: "2025-06-30" },
+          total_revenue: 0,
+          total_volume: 0
+        }
+      };
+    }
+    
+    console.log(`📊 Fetching Sales Trend data for project: ${projectId}`);
+    if (categoryFilters && categoryFilters.length > 0) {
+      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
+    }
+    if (brandFilters && brandFilters.length > 0) {
+      console.log(`📦 Applying brand filters: ${brandFilters.join(', ')}`);
+    }
+    if (segmentFilters && segmentFilters.length > 0) {
+      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
+    }
+    if (extendFields && Object.keys(extendFields).length > 0) {
+      console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
+    }
+    
+    // 使用现有的 sales trend API
+    const response = await fetch('/api/v1/dashboard/sales-trend', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        project_id: projectId,
+        filters: {
+          categories: categoryFilters,
+          brands: brandFilters,
+          segments: segmentFilters,
+          extend_fields: extendFields
+        },
+        date_range: {
+          start_date: "2025-01-01",
+          end_date: "2025-06-30"
+        },
+        aggregation: "monthly"
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Failed to fetch sales trend data: ${response.statusText}`);
+    }
+    
+    const data = await response.json();
+    console.log(`📈 Sales Trend data received: ${data.brands?.length || 0} brands, ${data.trend_data?.length || 0} months`);
+    
+    return data;
+  } catch (error) {
+    console.error('Error fetching sales trend data:', error);
+    return {
+      trend_data: [],
+      brands: [],
+      summary: {
+        total_brands: 0,
+        date_range: { start: "2025-01-01", end: "2025-06-30" },
+        total_revenue: 0,
+        total_volume: 0
+      }
     };
   }
 }
@@ -570,7 +659,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     packagePreference: false,
     reviewInsights: false,
     competitorAnalysis: false,
-    allReviewData: false
+    allReviewData: false,
+    salesTrend: false
   })
 
   // 跟踪已加载的数据
@@ -622,6 +712,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
           const reviewData = await fetchAllReviewData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           result.allReviewData = reviewData.allReviewData
           break
+        case 'salesTrend':
+          result.salesTrend = await fetchSalesTrendData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
+          break
       }
       
       setData(prevData => ({ ...prevData, ...result }))
@@ -649,13 +742,15 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       packagePreference: false,
       reviewInsights: false,
       competitorAnalysis: false,
-      allReviewData: false
+      allReviewData: false,
+      salesTrend: false
     })
     // 预加载所有 chart card 数据（移除allReviewData预载）
     console.log(`🚀 Preloading chart data for new project...`)
     loadSpecificData('brandAnalysis', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('marketInsights', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('packagePreference', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificData('salesTrend', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('pricingAnalysis', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('productAnalysis', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('reviewInsights', projectId, undefined, undefined, undefined, undefined, false)
@@ -682,9 +777,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     switch (tabValue) {
       case 'brand-analysis':
         loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
-        // 同时加载marketInsights和packagePreference数据以在Market Analysis中显示
+        // 同时加载marketInsights、packagePreference和salesTrend数据以在Market Analysis中显示
         loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
+        loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
         break
       case 'product-analysis':
         loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload)
@@ -731,6 +827,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       loadSpecificData('brandAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
       loadSpecificData('marketInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
       loadSpecificData('packagePreference', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      loadSpecificData('salesTrend', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
       
       // 预加载其他 Chart Card 数据（移除allReviewData预载）
       console.log(`📊 Preloading additional chart data...`);
@@ -761,6 +858,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
       loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
@@ -1012,6 +1110,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             initialFilters={appliedFilters}
                             marketInsights={data.marketInsights}
                             packagePreference={data.packagePreference}
+                            salesTrend={data.salesTrend}
                           />
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">

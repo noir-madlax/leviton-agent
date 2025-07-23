@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
-import { StackedAreaChart } from "@/components/analysis-db/charts/stacked-area-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
@@ -13,6 +12,9 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
 import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
+// 导入 Sales Trend 组件
+import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
+import type { SalesTrendData } from '@/app/chat/charts/sales_trend/types/sales-trend.types'
 
 interface BrandAnalysisProps {
   data: {
@@ -70,6 +72,7 @@ interface BrandAnalysisProps {
     }>>
     segmentNames: string[]
   }
+  salesTrend?: SalesTrendData
   productLists: {
     byBrand: Record<string, Array<{
       id: string
@@ -106,7 +109,7 @@ interface BrandAnalysisProps {
   initialFilters?: ProjectFilters
 }
 
-export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const { openPanel, loading } = useProductPanel()
@@ -191,93 +194,9 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
   }
 
   const handleSalesTrendClick = (data: unknown) => {
-    // Mock handler for sales trend chart clicks
+    // Handler for sales trend chart clicks
     console.log('Sales trend area clicked:', data)
   }
-
-  // Mock data for Sales Trend Chart
-  const mockTopBrands = ['Leviton', 'Lutron', 'GE', 'Philips', 'Legrand', 'Eaton', 'Honeywell', 'Schneider', 'Hubbell', 'Pass & Seymour']
-  
-  const mockSalesTrendData = [
-    {
-      month: 'Jan 2024',
-      'Leviton': metricType === 'revenue' ? 850000 : 12500,
-      'Lutron': metricType === 'revenue' ? 720000 : 9800,
-      'GE': metricType === 'revenue' ? 680000 : 11200,
-      'Philips': metricType === 'revenue' ? 580000 : 8900,
-      'Legrand': metricType === 'revenue' ? 520000 : 7800,
-      'Eaton': metricType === 'revenue' ? 450000 : 7200,
-      'Honeywell': metricType === 'revenue' ? 380000 : 6100,
-      'Schneider': metricType === 'revenue' ? 320000 : 5400,
-      'Hubbell': metricType === 'revenue' ? 280000 : 4700,
-      'Pass & Seymour': metricType === 'revenue' ? 240000 : 3900,
-    },
-    {
-      month: 'Feb 2024',
-      'Leviton': metricType === 'revenue' ? 780000 : 11800,
-      'Lutron': metricType === 'revenue' ? 890000 : 12100,
-      'GE': metricType === 'revenue' ? 720000 : 11800,
-      'Philips': metricType === 'revenue' ? 610000 : 9300,
-      'Legrand': metricType === 'revenue' ? 480000 : 7200,
-      'Eaton': metricType === 'revenue' ? 520000 : 8100,
-      'Honeywell': metricType === 'revenue' ? 420000 : 6800,
-      'Schneider': metricType === 'revenue' ? 350000 : 5900,
-      'Hubbell': metricType === 'revenue' ? 290000 : 4900,
-      'Pass & Seymour': metricType === 'revenue' ? 260000 : 4200,
-    },
-    {
-      month: 'Mar 2024',
-      'Leviton': metricType === 'revenue' ? 920000 : 13800,
-      'Lutron': metricType === 'revenue' ? 760000 : 10300,
-      'GE': metricType === 'revenue' ? 640000 : 10500,
-      'Philips': metricType === 'revenue' ? 650000 : 9900,
-      'Legrand': metricType === 'revenue' ? 580000 : 8700,
-      'Eaton': metricType === 'revenue' ? 490000 : 7600,
-      'Honeywell': metricType === 'revenue' ? 360000 : 5800,
-      'Schneider': metricType === 'revenue' ? 380000 : 6400,
-      'Hubbell': metricType === 'revenue' ? 310000 : 5200,
-      'Pass & Seymour': metricType === 'revenue' ? 280000 : 4500,
-    },
-    {
-      month: 'Apr 2024',
-      'Leviton': metricType === 'revenue' ? 880000 : 13200,
-      'Lutron': metricType === 'revenue' ? 820000 : 11100,
-      'GE': metricType === 'revenue' ? 700000 : 11500,
-      'Philips': metricType === 'revenue' ? 590000 : 9000,
-      'Legrand': metricType === 'revenue' ? 540000 : 8100,
-      'Eaton': metricType === 'revenue' ? 510000 : 7900,
-      'Honeywell': metricType === 'revenue' ? 400000 : 6400,
-      'Schneider': metricType === 'revenue' ? 340000 : 5700,
-      'Hubbell': metricType === 'revenue' ? 300000 : 5000,
-      'Pass & Seymour': metricType === 'revenue' ? 270000 : 4300,
-    },
-    {
-      month: 'May 2024',
-      'Leviton': metricType === 'revenue' ? 950000 : 14200,
-      'Lutron': metricType === 'revenue' ? 780000 : 10600,
-      'GE': metricType === 'revenue' ? 660000 : 10800,
-      'Philips': metricType === 'revenue' ? 620000 : 9500,
-      'Legrand': metricType === 'revenue' ? 560000 : 8400,
-      'Eaton': metricType === 'revenue' ? 480000 : 7400,
-      'Honeywell': metricType === 'revenue' ? 410000 : 6600,
-      'Schneider': metricType === 'revenue' ? 360000 : 6000,
-      'Hubbell': metricType === 'revenue' ? 320000 : 5300,
-      'Pass & Seymour': metricType === 'revenue' ? 290000 : 4700,
-    },
-    {
-      month: 'Jun 2024',
-      'Leviton': metricType === 'revenue' ? 870000 : 13000,
-      'Lutron': metricType === 'revenue' ? 840000 : 11400,
-      'GE': metricType === 'revenue' ? 710000 : 11600,
-      'Philips': metricType === 'revenue' ? 580000 : 8800,
-      'Legrand': metricType === 'revenue' ? 520000 : 7800,
-      'Eaton': metricType === 'revenue' ? 530000 : 8200,
-      'Honeywell': metricType === 'revenue' ? 390000 : 6200,
-      'Schneider': metricType === 'revenue' ? 370000 : 6200,
-      'Hubbell': metricType === 'revenue' ? 310000 : 5100,
-      'Pass & Seymour': metricType === 'revenue' ? 250000 : 4000,
-    }
-  ]
 
   // 处理饼图数据
   const processCategoryPieData = () => {
@@ -505,39 +424,49 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </div>
       </div>
 
-      {/* Sales Trend Chart - New Addition */}
+      {/* Sales Trend Chart - Integrated Real Component */}
       <div className="mt-15">
         <div data-chart-id="sales-trend-analysis">
-      
-       
-        <ChartWithFilters
-          chartId="sales-trend-analysis"
-          chartType="area"
-          projectId={projectId || ''}
-          title="Sales Trend of Top 10 brands"
-          projectFilters={initialFilters}
-        >
-           
-          <Card className="p-6 bg-gray-50">
-            <MetricTypeSelector onChange={setMetricType} value={metricType} />
-            
-
-            {/* Mock Sales Trend Chart */}
-            <div className="bg-gray-50 p-4 ">
-              <div className="h-[500px] w-full">
-                <StackedAreaChart
-                  data={mockSalesTrendData}
-                  brands={mockTopBrands}
-                  yAxisLabel={metricType === "revenue" ? "Revenue ($)" : "Volume (Units)"}
+          <ChartWithFilters
+            chartId="sales-trend-analysis"
+            chartType="area"
+            projectId={projectId || ''}
+            title="Sales Trend of Top 10 brands"
+            projectFilters={initialFilters}
+          >
+            {salesTrend ? (
+              <div>
+                {/* Sales Trend Summary */}
+                <SalesTrendSummary 
+                  data={salesTrend} 
+                  metricType={metricType} 
+                />
+                
+                {/* Sales Trend Chart */}
+                <SalesTrendChart
+                  projectId={projectId || ''}
+                  filters={{
+                    categories: initialFilters?.categories,
+                    brands: initialFilters?.brands,
+                    segments: initialFilters?.segments,
+                    extend_fields: initialFilters?.extend_fields
+                  }}
+                  metricType={metricType}
+                  dateRange={{
+                    start_date: "2025-01-01",
+                    end_date: "2025-06-30"
+                  }}
                   onAreaClick={handleSalesTrendClick}
                 />
               </div>
-            </div>
-
-          
-          </Card>
-            
-        </ChartWithFilters>
+            ) : (
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+                <p className="text-sm text-yellow-700">
+                  <strong>Sales Trend of Top 10 brands</strong> - Loading sales trend data...
+                </p>
+              </div>
+            )}
+          </ChartWithFilters>
         </div>
       </div>
 
