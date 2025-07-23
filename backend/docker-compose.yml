@@ -47,7 +47,7 @@ services:
       - leviton-network
     depends_on:
       - leviton-agent-backend
-    command: caddy reverse-proxy --from 3po-agent.duckdns.org --to leviton-agent-backend:8000
+    command: caddy reverse-proxy --from ${DOMAIN_NAME} --to leviton-agent-backend:8000
 
 volumes:
   agent-data:
