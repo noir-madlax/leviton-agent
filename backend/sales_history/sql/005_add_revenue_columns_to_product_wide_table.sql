@@ -19,6 +19,18 @@ ADD COLUMN IF NOT EXISTS past_6_month_revenue DECIMAL(12,2) DEFAULT 0 CHECK (pas
 ALTER TABLE product_wide_table 
 ADD COLUMN IF NOT EXISTS past_year_revenue DECIMAL(12,2) DEFAULT 0 CHECK (past_year_revenue >= 0);
 
+-- Add past_month_volume column
+ALTER TABLE product_wide_table 
+ADD COLUMN IF NOT EXISTS past_month_volume INTEGER DEFAULT 0 CHECK (past_month_volume >= 0);
+
+-- Add past_6_month_volume column
+ALTER TABLE product_wide_table 
+ADD COLUMN IF NOT EXISTS past_6_month_volume INTEGER DEFAULT 0 CHECK (past_6_month_volume >= 0);
+
+-- Add past_year_volume column
+ALTER TABLE product_wide_table 
+ADD COLUMN IF NOT EXISTS past_year_volume INTEGER DEFAULT 0 CHECK (past_year_volume >= 0);
+
 -- =====================================================
 -- Create Indexes for Performance
 -- =====================================================
@@ -27,6 +39,11 @@ ADD COLUMN IF NOT EXISTS past_year_revenue DECIMAL(12,2) DEFAULT 0 CHECK (past_y
 CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_month_revenue ON product_wide_table (past_month_revenue DESC);
 CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_6_month_revenue ON product_wide_table (past_6_month_revenue DESC);
 CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_year_revenue ON product_wide_table (past_year_revenue DESC);
+
+-- Create indexes for the new volume columns
+CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_month_volume ON product_wide_table (past_month_volume DESC);
+CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_6_month_volume ON product_wide_table (past_6_month_volume DESC);
+CREATE INDEX IF NOT EXISTS idx_product_wide_table_past_year_volume ON product_wide_table (past_year_volume DESC);
 
 -- =====================================================
 -- Populate Revenue Data from Sales History Tables
@@ -58,15 +75,25 @@ WHERE EXISTS (
     WHERE product_sales_history_daily.platform_id = product_wide_table.platform_id
 );
 
--- Update past_6_month_revenue from monthly sales history (last 6 months)
+-- Update past_6_month_revenue from monthly sales history (rolling 6 months from latest date)
 UPDATE product_wide_table 
 SET past_6_month_revenue = COALESCE(
     (SELECT SUM(total_revenue)
      FROM product_sales_history_monthly 
      WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
      AND product_sales_history_monthly.platform_source = 'amazon'
-     AND product_sales_history_monthly.year_month >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 months')
-     AND product_sales_history_monthly.year_month < DATE_TRUNC('month', CURRENT_DATE)), 0
+     AND product_sales_history_monthly.year_month >= (
+         SELECT DATE_TRUNC('month', MAX(year_month) - INTERVAL '5 months')
+         FROM product_sales_history_monthly
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )
+     AND product_sales_history_monthly.year_month <= (
+         SELECT MAX(year_month)
+         FROM product_sales_history_monthly
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )), 0
 )
 WHERE EXISTS (
     SELECT 1 
@@ -74,14 +101,82 @@ WHERE EXISTS (
     WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
 );
 
--- Update past_year_revenue from yearly sales history
+-- Update past_year_revenue from yearly sales history (rolling year from latest date)
 UPDATE product_wide_table 
 SET past_year_revenue = COALESCE(
     (SELECT total_revenue 
      FROM product_sales_history_yearly 
      WHERE product_sales_history_yearly.platform_id = product_wide_table.platform_id
      AND product_sales_history_yearly.platform_source = 'amazon'
-     AND product_sales_history_yearly.year_start_date = DATE_TRUNC('year', CURRENT_DATE - INTERVAL '1 year')
+     ORDER BY product_sales_history_yearly.year_end_date DESC
+     LIMIT 1), 0
+)
+WHERE EXISTS (
+    SELECT 1 
+    FROM product_sales_history_yearly 
+    WHERE product_sales_history_yearly.platform_id = product_wide_table.platform_id
+);
+
+-- Update past_month_volume from daily sales history (most recent 30 days)
+UPDATE product_wide_table 
+SET past_month_volume = COALESCE(
+    (SELECT SUM(estimated_units_sold)
+     FROM product_sales_history_daily 
+     WHERE product_sales_history_daily.platform_id = product_wide_table.platform_id
+     AND product_sales_history_daily.platform_source = 'amazon'
+     AND product_sales_history_daily.date >= (
+         SELECT MAX(date) - INTERVAL '29 days'
+         FROM product_sales_history_daily
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )
+     AND product_sales_history_daily.date <= (
+         SELECT MAX(date)
+         FROM product_sales_history_daily
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )), 0
+)
+WHERE EXISTS (
+    SELECT 1 
+    FROM product_sales_history_daily 
+    WHERE product_sales_history_daily.platform_id = product_wide_table.platform_id
+);
+
+-- Update past_6_month_volume from monthly sales history (rolling 6 months from latest date)
+UPDATE product_wide_table 
+SET past_6_month_volume = COALESCE(
+    (SELECT SUM(total_units_sold)
+     FROM product_sales_history_monthly 
+     WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
+     AND product_sales_history_monthly.platform_source = 'amazon'
+     AND product_sales_history_monthly.year_month >= (
+         SELECT DATE_TRUNC('month', MAX(year_month) - INTERVAL '5 months')
+         FROM product_sales_history_monthly
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )
+     AND product_sales_history_monthly.year_month <= (
+         SELECT MAX(year_month)
+         FROM product_sales_history_monthly
+         WHERE platform_id = product_wide_table.platform_id
+         AND platform_source = 'amazon'
+     )), 0
+)
+WHERE EXISTS (
+    SELECT 1 
+    FROM product_sales_history_monthly 
+    WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
+);
+
+-- Update past_year_volume from yearly sales history (rolling year from latest date)
+UPDATE product_wide_table 
+SET past_year_volume = COALESCE(
+    (SELECT total_units_sold 
+     FROM product_sales_history_yearly 
+     WHERE product_sales_history_yearly.platform_id = product_wide_table.platform_id
+     AND product_sales_history_yearly.platform_source = 'amazon'
+     ORDER BY product_sales_history_yearly.year_end_date DESC
      LIMIT 1), 0
 )
 WHERE EXISTS (
@@ -97,6 +192,9 @@ WHERE EXISTS (
 COMMENT ON COLUMN product_wide_table.past_month_revenue IS 'Total revenue from the most recent 30 days (USD)';
 COMMENT ON COLUMN product_wide_table.past_6_month_revenue IS 'Total revenue from the last 6 months (USD)';
 COMMENT ON COLUMN product_wide_table.past_year_revenue IS 'Total revenue from the previous year (USD)';
+COMMENT ON COLUMN product_wide_table.past_month_volume IS 'Total units sold in the most recent 30 days';
+COMMENT ON COLUMN product_wide_table.past_6_month_volume IS 'Total units sold in the last 6 months';
+COMMENT ON COLUMN product_wide_table.past_year_volume IS 'Total units sold in the previous year';
 
 -- =====================================================
 -- Create Function to Update Revenue Columns
@@ -128,26 +226,92 @@ BEGIN
     )
     WHERE platform_id = product_asin;
 
-    -- Update past_6_month_revenue
+    -- Update past_6_month_revenue (rolling 6 months from latest date)
     UPDATE product_wide_table 
     SET past_6_month_revenue = COALESCE(
         (SELECT SUM(total_revenue)
          FROM product_sales_history_monthly 
          WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
          AND product_sales_history_monthly.platform_source = 'amazon'
-         AND product_sales_history_monthly.year_month >= DATE_TRUNC('month', CURRENT_DATE - INTERVAL '6 months')
-         AND product_sales_history_monthly.year_month < DATE_TRUNC('month', CURRENT_DATE)), 0
+         AND product_sales_history_monthly.year_month >= (
+             SELECT DATE_TRUNC('month', MAX(year_month) - INTERVAL '5 months')
+             FROM product_sales_history_monthly
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )
+         AND product_sales_history_monthly.year_month <= (
+             SELECT MAX(year_month)
+             FROM product_sales_history_monthly
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )), 0
     )
     WHERE platform_id = product_asin;
 
-    -- Update past_year_revenue
+    -- Update past_year_revenue (rolling year from latest date)
     UPDATE product_wide_table 
     SET past_year_revenue = COALESCE(
         (SELECT total_revenue 
          FROM product_sales_history_yearly 
          WHERE product_sales_history_yearly.platform_id = product_wide_table.platform_id
          AND product_sales_history_yearly.platform_source = 'amazon'
-         AND product_sales_history_yearly.year_start_date = DATE_TRUNC('year', CURRENT_DATE - INTERVAL '1 year')
+         ORDER BY product_sales_history_yearly.year_end_date DESC
+         LIMIT 1), 0
+    )
+    WHERE platform_id = product_asin;
+
+    -- Update past_month_volume (most recent 30 days from daily sales)
+    UPDATE product_wide_table 
+    SET past_month_volume = COALESCE(
+        (SELECT SUM(estimated_units_sold)
+         FROM product_sales_history_daily 
+         WHERE product_sales_history_daily.platform_id = product_wide_table.platform_id
+         AND product_sales_history_daily.platform_source = 'amazon'
+         AND product_sales_history_daily.date >= (
+             SELECT MAX(date) - INTERVAL '29 days'
+             FROM product_sales_history_daily
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )
+         AND product_sales_history_daily.date <= (
+             SELECT MAX(date)
+             FROM product_sales_history_daily
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )), 0
+    )
+    WHERE platform_id = product_asin;
+
+    -- Update past_6_month_volume (rolling 6 months from latest date)
+    UPDATE product_wide_table 
+    SET past_6_month_volume = COALESCE(
+        (SELECT SUM(total_units_sold)
+         FROM product_sales_history_monthly 
+         WHERE product_sales_history_monthly.platform_id = product_wide_table.platform_id
+         AND product_sales_history_monthly.platform_source = 'amazon'
+         AND product_sales_history_monthly.year_month >= (
+             SELECT DATE_TRUNC('month', MAX(year_month) - INTERVAL '5 months')
+             FROM product_sales_history_monthly
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )
+         AND product_sales_history_monthly.year_month <= (
+             SELECT MAX(year_month)
+             FROM product_sales_history_monthly
+             WHERE platform_id = product_wide_table.platform_id
+             AND platform_source = 'amazon'
+         )), 0
+    )
+    WHERE platform_id = product_asin;
+
+    -- Update past_year_volume (rolling year from latest date)
+    UPDATE product_wide_table 
+    SET past_year_volume = COALESCE(
+        (SELECT total_units_sold 
+         FROM product_sales_history_yearly 
+         WHERE product_sales_history_yearly.platform_id = product_wide_table.platform_id
+         AND product_sales_history_yearly.platform_source = 'amazon'
+         ORDER BY product_sales_history_yearly.year_end_date DESC
          LIMIT 1), 0
     )
     WHERE platform_id = product_asin;
