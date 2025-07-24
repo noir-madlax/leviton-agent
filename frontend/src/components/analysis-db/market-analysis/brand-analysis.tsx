@@ -215,7 +215,6 @@ function SalesTrendByCategoryComponent({
         metricType={metricType}
         dateRange={SALES_TREND_DATE_RANGE}
         onAreaClick={onAreaClick}
-        data={salesTrendData}
       />
     </div>
   )
