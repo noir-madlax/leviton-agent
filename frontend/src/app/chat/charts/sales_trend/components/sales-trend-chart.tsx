@@ -16,31 +16,44 @@ import { useSalesTrendData } from '../hooks/use-sales-trend-data'
 import { transformSalesTrendData } from '../utils/data-transformer'
 import { getChartColor } from '../../shared/utils/chart-colors'
 import { formatMetricValue } from '../../shared/utils/number-formatter'
-import type { SalesTrendChartProps } from '../types/sales-trend.types'
+import type { SalesTrendChartProps, SalesTrendData } from '../types/sales-trend.types'
 
 export function SalesTrendChart({ 
   projectId, 
   filters, 
   metricType = 'revenue',
   dateRange,
-  onAreaClick 
-}: SalesTrendChartProps) {
-  const { data, loading, error } = useSalesTrendData(projectId, filters, dateRange)
+  onAreaClick,
+  data: preloadedData
+}: SalesTrendChartProps & { data?: SalesTrendData }) {
+  const { data: fetchedData, loading, error } = useSalesTrendData(projectId, filters, dateRange, !preloadedData)
   
-  if (loading || error || !data) {
+  const data = preloadedData || fetchedData
+  
+  if (loading && !preloadedData) {
     return (
       <ChartContainer 
-        title="Sales Trend of Top 10 Brands"
-        loading={loading}
+        title=""
+        loading={true}
+        error={null}
+      />
+    )
+  }
+
+  if (error) {
+    return (
+      <ChartContainer 
+        title=""
+        loading={false}
         error={error}
       />
     )
   }
 
   // 检查是否有数据
-  if (!data.trend_data || data.trend_data.length === 0) {
+  if (!data || !data.trend_data || data.trend_data.length === 0) {
     return (
-      <ChartContainer title="Sales Trend of Top 10 Brands">
+      <ChartContainer title="">
         <div className="flex items-center justify-center h-64 text-gray-500">
           <div className="text-center">
             <p className="text-lg font-medium">No sales trend data available</p>
@@ -57,14 +70,14 @@ export function SalesTrendChart({
   const colors = data.brands.map((_, index) => getChartColor(index))
 
   // 自定义Tooltip
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: { color: string; dataKey: string; value: number }[]; label?: string }) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-800 mb-2">{label}</p>
           {payload
-            .sort((a: any, b: any) => a.value - b.value)
-            .map((entry: any, index: number) => (
+            .sort((a, b) => b.value - a.value)
+            .map((entry, index) => (
               <div key={index} className="flex items-center gap-2 text-sm">
                 <div 
                   className="w-3 h-3 rounded-full" 

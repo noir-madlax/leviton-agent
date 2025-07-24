@@ -133,35 +133,56 @@ class SalesTrendService(BaseDashboardService):
             List of monthly sales records
         """
         try:
-            # 构建基础查询
-            query = self.supabase.table('product_sales_history_monthly').select(
-                'platform_id, year_month, total_units_sold, average_price'
-            ).in_('platform_id', asins).eq('platform_source', 'amazon')
-            
-            # 应用时间范围过滤
-            start_date = self.date_range.get('start_date')
-            end_date = self.date_range.get('end_date') 
-            
-            if start_date:
-                # 转换为月份第一天格式
-                start_month = datetime.strptime(start_date, '%Y-%m-%d').replace(day=1).date()
-                query = query.gte('year_month', start_month.isoformat())
-            
-            if end_date:
-                # 转换为月份第一天格式
-                end_month = datetime.strptime(end_date, '%Y-%m-%d').replace(day=1).date()
-                query = query.lte('year_month', end_month.isoformat())
-            
-            # 按时间排序
-            query = query.order('year_month', desc=False)
-            
-            result = query.execute()
-            
-            logger.info(f"Monthly sales data: {len(result.data) if result.data else 0} records found")
-            return result.data or []
+            all_sales_data = []
+            page = 0
+            page_size = 1000  # Supabase's default limit
+
+            while True:
+                range_from = page * page_size
+                range_to = range_from + page_size - 1
+                
+                # 构建基础查询
+                query = self.supabase.table('product_sales_history_monthly').select(
+                    'platform_id, year_month, total_units_sold, average_price'
+                ).in_('platform_id', asins).eq('platform_source', 'amazon')
+                
+                # 应用时间范围过滤
+                start_date = self.date_range.get('start_date')
+                end_date = self.date_range.get('end_date') 
+                
+                if start_date:
+                    # 转换为月份第一天格式
+                    start_month = datetime.strptime(start_date, '%Y-%m-%d').replace(day=1).date()
+                    query = query.gte('year_month', start_month.isoformat())
+                
+                if end_date:
+                    # 转换为月份第一天格式
+                    end_month = datetime.strptime(end_date, '%Y-%m-%d').replace(day=1).date()
+                    query = query.lte('year_month', end_month.isoformat())
+                
+                # 按时间排序
+                query = query.order('year_month', desc=False)
+                
+                # 使用 .range() 进行分页
+                query = query.range(range_from, range_to)
+
+                result = query.execute()
+
+                if not result.data:
+                    break
+
+                all_sales_data.extend(result.data)
+
+                if len(result.data) < page_size:
+                    break
+                
+                page += 1
+
+            logger.info(f"Monthly sales data: {len(all_sales_data)} records found after pagination")
+            return all_sales_data
             
         except Exception as e:
-            logger.error(f"Error querying monthly sales: {e}")
+            logger.error(f"Error querying monthly sales with pagination: {e}")
             return []
     
     def _aggregate_by_brand_month(self, sales_data: List[Dict[str, Any]], asin_brand_mapping: Dict[str, str]) -> Dict[str, Dict[str, Dict[str, float]]]:

@@ -770,8 +770,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined
     const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined
     const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined
-    // 如果有filters，强制重新加载数据
-    const forceReload = categoryFilters !== undefined || brandFilters !== undefined || segmentFilters !== undefined || extendFields !== undefined
+    // Tab切换时不强制重新加载，让缓存机制决定是否需要加载
+    const forceReload = false
     
     switch (tabValue) {
       case 'brand-analysis':

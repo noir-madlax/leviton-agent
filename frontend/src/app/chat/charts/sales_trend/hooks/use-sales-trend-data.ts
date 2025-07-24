@@ -7,16 +7,18 @@ import type { SalesTrendData, SalesTrendFilters } from '../types/sales-trend.typ
 export function useSalesTrendData(
   projectId: string,
   filters?: SalesTrendFilters,
-  dateRange?: { start_date: string; end_date: string }
+  dateRange?: { start_date: string; end_date: string },
+  enabled = true
 ) {
   const [data, setData] = useState<SalesTrendData | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!projectId) {
+    if (!projectId || !enabled) {
       setData(null)
       setError(null)
+      setLoading(false)
       return
     }
 
@@ -37,7 +39,7 @@ export function useSalesTrendData(
     }
 
     fetchData()
-  }, [projectId, JSON.stringify(filters), JSON.stringify(dateRange)])
+  }, [projectId, JSON.stringify(filters), JSON.stringify(dateRange), enabled])
 
   return { 
     data, 

@@ -455,6 +455,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                   metricType={metricType}
                   dateRange={SALES_TREND_DATE_RANGE}
                   onAreaClick={handleSalesTrendClick}
+                  data={salesTrend}
                 />
               </div>
             ) : (
