@@ -34,8 +34,8 @@ class MarketInsightsService(BaseDashboardService):
                 platform_id,
                 category,
                 price_usd,
-                monthly_sales_volume,
-                estimated_revenue
+                past_year_volume,
+                past_year_revenue
             ''')
             
             # Apply base filters and combined filtering (ASIN + category)
@@ -53,22 +53,17 @@ class MarketInsightsService(BaseDashboardService):
             # 第三步：获取segment assignments
             segment_assignments = self._get_segment_assignments()
             
-            if not segment_assignments:
-                logger.warning(f"No segment assignments found for project {self.project_id}")
-                return self._get_empty_response()
+            logger.info(f"📊 Segment assignments loaded: {len(segment_assignments)} products mapped")
             
-            # 第四步：将产品数据按segment分组和聚合
-            segment_data = self._aggregate_data_by_segments(result.data, segment_assignments, project_segments)
+            # 第四步：按segment和category聚合数据
+            segment_data = self._aggregate_by_segment_category(result.data, segment_assignments, project_segments)
             
-            # 第五步：生成通用化的响应格式
-            response = self._format_response(segment_data, project_segments)
-            
-            logger.info(f"📈 Market insights completed: {len(segment_data)} segments processed")
-            return response
+            # 第五步：格式化为API期望的格式
+            return self._format_market_response(segment_data, project_segments)
             
         except Exception as e:
-            logger.error(f"Error in market insights for project {self.project_id}: {e}")
-            raise
+            logger.error(f"Error in MarketInsightsService.get_data(): {e}", exc_info=True)
+            return self._get_empty_response()
     
     def _get_segment_assignments(self) -> Dict[str, str]:
         """获取项目的segment分配（platform_id到segment_name的映射）
@@ -151,46 +146,42 @@ class MarketInsightsService(BaseDashboardService):
             logger.error(f"Error getting direct segment assignments: {e}")
             return {}
     
-    def _aggregate_data_by_segments(self, products: List[Dict[str, Any]], 
-                                  segment_assignments: Dict[str, str], 
-                                  project_segments: List[str]) -> Dict[str, List[Dict[str, Any]]]:
-        """按segment聚合产品数据"""
+    def _aggregate_by_segment_category(self, products: List[Dict[str, Any]], 
+                                     segment_assignments: Dict[str, str], 
+                                     project_segments: List[str]) -> Dict[str, Dict[str, Dict[str, Any]]]:
+        """按segment和category聚合数据"""
         
-        # 初始化segment数据结构
-        segment_data = {segment: {} for segment in project_segments}
+        # 初始化数据结构：segment -> category -> {revenue, volume, product_count}
+        segment_data = {}
+        for segment in project_segments:
+            segment_data[segment] = {}
         
         for product in products:
             platform_id = product.get('platform_id')
+            category = product.get('category', 'Unknown Category')
+            
+            # 获取product的segment
             segment = segment_assignments.get(platform_id)
-            category = product.get('category', 'Unknown')
             
-            if not segment or segment not in segment_data:
-                continue
+            if not segment or segment not in project_segments:
+                continue  # 跳过不在项目segments中的产品
             
-            # 为每个segment内的category创建聚合数据
+            # 初始化category数据
             if category not in segment_data[segment]:
                 segment_data[segment][category] = {
-                    'segment': f"{segment} - {category}",
                     'revenue': 0,
                     'volume': 0,
-                    'products': 0
+                    'product_count': 0
                 }
             
             # 聚合数据
-            segment_data[segment][category]['revenue'] += product.get('estimated_revenue', 0) or 0
-            segment_data[segment][category]['volume'] += product.get('monthly_sales_volume', 0) or 0
-            segment_data[segment][category]['products'] += 1
+            segment_data[segment][category]['revenue'] += product.get('past_year_revenue', 0) or 0
+            segment_data[segment][category]['volume'] += product.get('past_year_volume', 0) or 0
+            segment_data[segment][category]['product_count'] += 1
         
-        # 转换为列表格式并排序
-        formatted_segment_data = {}
-        for segment, categories in segment_data.items():
-            segment_list = list(categories.values())
-            segment_list.sort(key=lambda x: x['revenue'], reverse=True)
-            formatted_segment_data[segment] = segment_list
-        
-        return formatted_segment_data
+        return segment_data
     
-    def _format_response(self, segment_data: Dict[str, List[Dict[str, Any]]], 
+    def _format_market_response(self, segment_data: Dict[str, Dict[str, Dict[str, Any]]], 
                         project_segments: List[str]) -> Dict[str, Any]:
         """格式化响应数据，返回真实的segment数据而不是强制的两分法
         
@@ -199,14 +190,14 @@ class MarketInsightsService(BaseDashboardService):
         # 为每个segment创建汇总数据
         segment_summaries = {}
         
-        for segment_name, segment_items in segment_data.items():
-            if not segment_items:
+        for segment_name, categories in segment_data.items():
+            if not categories:
                 continue
                 
             # 计算该segment的汇总数据
-            total_revenue = sum(item.get('revenue', 0) for item in segment_items)
-            total_volume = sum(item.get('volume', 0) for item in segment_items) 
-            total_products = sum(item.get('products', 0) for item in segment_items)
+            total_revenue = sum(item.get('revenue', 0) for item in categories.values())
+            total_volume = sum(item.get('volume', 0) for item in categories.values()) 
+            total_products = sum(item.get('product_count', 0) for item in categories.values())
             
             segment_summaries[segment_name] = {
                 'segment': segment_name,

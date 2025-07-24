@@ -49,8 +49,8 @@ class ProductTransformationData:
     
     # Calculated fields (will be computed)
     list_price_usd: Optional[Decimal] = None
-    monthly_sales_volume: Optional[int] = None
-    estimated_revenue: Optional[Decimal] = None
+    past_year_volume: Optional[int] = None
+    past_year_revenue: Optional[Decimal] = None
     pack_count: int = 1
     unit_price_calculated: Optional[Decimal] = None
     unit_price_numeric: Optional[Decimal] = None

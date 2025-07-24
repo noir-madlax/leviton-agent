@@ -63,7 +63,7 @@ export function SalesTrendChart({
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-800 mb-2">{label}</p>
           {payload
-            .sort((a: any, b: any) => b.value - a.value)
+            .sort((a: any, b: any) => a.value - b.value)
             .map((entry: any, index: number) => (
               <div key={index} className="flex items-center gap-2 text-sm">
                 <div 
@@ -91,7 +91,7 @@ export function SalesTrendChart({
   const yAxisLabel = metricType === 'revenue' ? 'Revenue ($)' : 'Volume (Units)'
 
   return (
-    <ChartContainer title="Sales Trend of Top 10 Brands">
+    <ChartContainer title="">
       <div className="h-[500px] w-full">
         <ResponsiveContainer width="100%" height="100%">
           <AreaChart

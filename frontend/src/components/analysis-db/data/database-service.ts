@@ -6,8 +6,8 @@ export interface ProductData {
   title: string
   brand: string
   price_usd: number
-  monthly_sales_volume: number | null
-  estimated_revenue: number | null
+  past_year_volume: number | null
+  past_year_revenue: number | null
   category: string
   product_segment: string
   pack_count: number
@@ -74,12 +74,17 @@ export interface DataConfirmationProduct {
   platform_id: string
   title: string
   brand: string
-  category: string
-  source: string
-  monthly_sales_volume: number | null
-  estimated_revenue: number | null
-  reviews_count: number
   price_usd: number
+  past_year_volume: number | null
+  past_year_revenue: number | null
+  category: string
+  product_segment: string
+  pack_count: number
+  unit_price_calculated: number
+  reviews_count: number
+  rating: number | null
+  product_url: string | null
+  source: string
 }
 
 export interface DataConfirmationData {
@@ -625,13 +630,19 @@ export class DatabaseService {
           brand,
           category,
           source,
-          monthly_sales_volume,
-          estimated_revenue,
+          past_year_volume,
+          past_year_revenue,
           reviews_count,
-          price_usd
+          price_usd,
+          product_segment,
+          pack_count,
+          unit_price_calculated,
+          rating,
+          product_url
         `)
-        .not('category', 'is', null)
-        .not('brand', 'is', null)
+        .eq('source', 'amazon')
+        .neq('category', null)
+        .neq('brand', null)
 
       // 应用筛选条件
       if (filters?.categories && filters.categories.length > 0) {
@@ -670,8 +681,8 @@ export class DatabaseService {
 
       // 按销量排序
       const sortedProducts = (data as DataConfirmationProduct[])
-        .filter((item: DataConfirmationProduct) => item.monthly_sales_volume !== null)
-        .sort((a: DataConfirmationProduct, b: DataConfirmationProduct) => (b.monthly_sales_volume || 0) - (a.monthly_sales_volume || 0))
+        .filter((item: DataConfirmationProduct) => item.past_year_volume !== null)
+        .sort((a: DataConfirmationProduct, b: DataConfirmationProduct) => (b.past_year_volume || 0) - (a.past_year_volume || 0))
 
       // 应用topSalesCount筛选到实际统计数据中
       const finalProducts = filters?.topSalesCount && filters.topSalesCount < data.length
@@ -683,8 +694,8 @@ export class DatabaseService {
       const totalBrands = new Set(finalProducts.map((item: DataConfirmationProduct) => item.brand)).size
       const totalReviews = finalProducts.reduce((sum: number, item: DataConfirmationProduct) => sum + (item.reviews_count || 0), 0)
       const avgMonthlySales = finalProducts
-        .filter((item: DataConfirmationProduct) => item.monthly_sales_volume !== null)
-        .reduce((sum: number, item: DataConfirmationProduct, _, arr: DataConfirmationProduct[]) => sum + (item.monthly_sales_volume || 0) / arr.length, 0)
+        .filter((item: DataConfirmationProduct) => item.past_year_volume !== null)
+        .reduce((sum: number, item: DataConfirmationProduct, _, arr: DataConfirmationProduct[]) => sum + (item.past_year_volume || 0) / arr.length, 0)
 
       // 按来源统计 - 基于最终筛选结果
       const sourceStats = availableSources.map(source => {

@@ -46,8 +46,8 @@ class ProductItem(BaseModel):
     unitPrice: float = Field(description="单位价格")  # 保持与前端一致的命名
     
     # 销售数据
-    revenue: float = Field(description="估算收入")
-    volume: int = Field(description="月销量")
+    revenue: float = Field(description="年度预估收入")
+    volume: int = Field(description="年度销量")
     
     # 评价信息
     rating: Optional[float] = Field(description="评分")

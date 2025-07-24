@@ -1724,7 +1724,7 @@ export function DataConfirmationTab({
               <Badge variant="outline" className="text-xs">{data.topProducts?.length || 0} items</Badge>
             </CardTitle>
             <CardDescription className="text-xs">
-              Preview of the filtered dataset for analysis (Top {filters.topSalesCount || 'All'} by sales volume)
+              Preview of the filtered dataset for analysis (Top {filters.topSalesCount || 'All'} by annual sales volume)
             </CardDescription>
           </CardHeader>
           <CardContent className="pt-0">
@@ -1744,7 +1744,7 @@ export function DataConfirmationTab({
                   <div className="text-right ml-2">
                     <p className="text-xs font-medium">${product.price_usd}</p>
                     <p className="text-xs text-muted-foreground">
-                      {product.monthly_sales_volume?.toLocaleString() || 0}/mo
+                      {product.past_year_volume?.toLocaleString() || 0}/year
                     </p>
                   </div>
                 </div>

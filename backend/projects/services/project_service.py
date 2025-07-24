@@ -639,7 +639,7 @@ class ProjectService:
             category_id = filters.category_id
             
             # 策略1：使用统一的多层级category ID查询
-            query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
+            query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
             query = query.neq('category', None).neq('brand', None)
             
             # Apply multi-level category filter
@@ -661,7 +661,7 @@ class ProjectService:
             # 策略2：通过category_id获取名称，然后用名称查询category字段
             category_name = await self._get_category_name(category_id)
             if category_name:
-                query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
+                query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
                 query = query.neq('category', None).neq('brand', None)
                 query = query.eq('category', category_name)
                 
@@ -805,7 +805,7 @@ class ProjectService:
             
             # Query product data for statistics
             result = self.supabase.table('product_wide_table').select(
-                'platform_id, brand, reviews_count, monthly_sales_volume'
+                'platform_id, brand, reviews_count, past_year_volume'
             ).in_('platform_id', asins).execute()
             
             if not result.data:
@@ -835,13 +835,9 @@ class ProjectService:
             # Calculate average monthly sales
             sales_volumes = []
             for p in products:
-                sales_vol = p.get('monthly_sales_volume', 0) or 0
-                if isinstance(sales_vol, str):
-                    try:
-                        sales_vol = float(sales_vol)
-                    except (ValueError, TypeError):
-                        sales_vol = 0
-                sales_volumes.append(sales_vol)
+                sales_vol = p.get('past_year_volume', 0) or 0
+                if sales_vol > 0:
+                    sales_volumes.append(sales_vol)
             
             avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0.0
             
@@ -989,21 +985,21 @@ class ProjectService:
             
             # Convert and clean data
             for row in filtered_data:
-                if row.get('monthly_sales_volume'):
+                if row.get('past_year_volume'):
                     try:
-                        row['monthly_sales_volume'] = int(float(row['monthly_sales_volume']))
+                        row['past_year_volume'] = int(float(row['past_year_volume']))
                     except (ValueError, TypeError):
-                        row['monthly_sales_volume'] = 0
+                        row['past_year_volume'] = 0
                 if row.get('reviews_count'):
                     try:
                         row['reviews_count'] = int(float(row['reviews_count']))
                     except (ValueError, TypeError):
                         row['reviews_count'] = 0
-                if row.get('estimated_revenue'):
+                if row.get('past_year_revenue'):
                     try:
-                        row['estimated_revenue'] = float(row['estimated_revenue'])
+                        row['past_year_revenue'] = float(row['past_year_revenue'])
                     except (ValueError, TypeError):
-                        row['estimated_revenue'] = 0.0
+                        row['past_year_revenue'] = 0.0
                 if row.get('price_usd'):
                     try:
                         row['price_usd'] = float(row['price_usd'])

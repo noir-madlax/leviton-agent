@@ -30,11 +30,11 @@ export function MetricTypeSelector({ onChange, value = "revenue" }: MetricTypeSe
       <div className="text-sm text-gray-600 ml-4">
         <div className="flex items-center space-x-1">
           <span className="font-semibold">Revenue:</span>
-          <span>Total sales value in dollars</span>
+          <span>Total annual sales value in dollars</span>
         </div>
         <div className="flex items-center space-x-1 mt-1">
           <span className="font-semibold">Volume:</span>
-          <span>Total number of SKUs sold</span>
+          <span>Total annual number of SKUs sold</span>
         </div>
       </div>
     </div>

@@ -28,8 +28,9 @@ class SalesTrendApi extends ChartApiBase {
     const requestBody: SalesTrendRequest = {
       project_id: projectId,
       filters: filters || {},
+      // 默认时间范围为2024-07-01到2025-06-30,目前写死销售趋势数据的12个月的范围
       date_range: dateRange || {
-        start_date: "2025-01-01",
+        start_date: "2024-07-01",
         end_date: "2025-06-30"
       },
       aggregation: "monthly"

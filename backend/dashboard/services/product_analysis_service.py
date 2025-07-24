@@ -34,8 +34,8 @@ class ProductAnalysisService(BaseDashboardService):
                 brand,
                 category,
                 price_usd,
-                estimated_revenue,
-                monthly_sales_volume
+                past_year_revenue,
+                past_year_volume
             ''')
             
             # Apply filters
@@ -54,15 +54,105 @@ class ProductAnalysisService(BaseDashboardService):
             # 按segment聚合和排序产品
             segment_products = self._categorize_and_rank_products(result.data, segment_assignments, project_segments)
             
-            # 格式化响应
-            response = self._format_product_response(segment_products, project_segments)
+            # 按收入排序segments并构建响应数据
+            price_vs_revenue = []
+            segments_dict = {}
+            segment_summary = {}
             
-            logger.info(f"📈 Product analysis completed: {len(segment_products)} segments processed")
-            return response
+            # 按segment总收入排序
+            segment_revenue_list = []
+            for segment in project_segments:
+                products = segment_products.get(segment, [])
+                total_revenue = sum(p['revenue'] for p in products) if products else 0
+                segment_revenue_list.append((segment, total_revenue, products))
+            
+            # 按收入从高到低排序
+            segment_revenue_list.sort(key=lambda x: x[1], reverse=True)
+            
+            for segment, total_revenue, products in segment_revenue_list:
+                if not products:
+                    # 即使没有产品，也要为segment创建空的summary
+                    segment_summary[segment] = {
+                        'totalRevenue': 0,
+                        'totalVolume': 0,
+                        'productCount': 0,
+                        'avgPrice': 0,
+                        'topBrand': 'N/A'
+                    }
+                    segments_dict[segment] = []
+                    continue
+                    
+                # 格式化产品数据为API期望的格式
+                formatted_products = []
+                for product in products[:10]:  # 每个类别最多10个产品
+                    formatted_product = {
+                        'id': product.get('platform_id', ''),
+                        'name': product.get('title', 'Unknown Product'),
+                        'brand': product.get('brand', 'Unknown Brand'),
+                        'price': product.get('price', 0),
+                        'unitPrice': product.get('price', 0),  # 简化处理，使用相同值
+                        'revenue': product.get('revenue', 0),
+                        'volume': product.get('volume', 0),
+                        'url': f"https://amazon.com/dp/{product.get('platform_id', '')}"
+                    }
+                    formatted_products.append(formatted_product)
+                
+                # 构建price vs revenue数据
+                category_data = {
+                    'category': segment,
+                    'products': formatted_products
+                }
+                price_vs_revenue.append(category_data)
+                
+                # 构建segments字典
+                segments_dict[segment] = formatted_products
+                
+                # 计算segment summary
+                total_volume = sum(p['volume'] for p in products)
+                avg_price = sum(p['price'] for p in products) / len(products) if products else 0
+                
+                # 找到该segment的top brand
+                brand_counts = {}
+                for p in products:
+                    brand = p.get('brand', 'Unknown')
+                    brand_counts[brand] = brand_counts.get(brand, 0) + 1
+                top_brand = max(brand_counts.items(), key=lambda x: x[1])[0] if brand_counts else 'N/A'
+                
+                segment_summary[segment] = {
+                    'totalRevenue': total_revenue,
+                    'totalVolume': total_volume,
+                    'productCount': len(products),
+                    'avgPrice': avg_price,
+                    'topBrand': top_brand
+                }
+            
+            # 获取排序后的segment names（按收入从高到低）
+            sorted_segment_names = [segment for segment, _, _ in segment_revenue_list]
+            
+            # 生成segment colors - 增加到15个颜色
+            colors = [
+                "#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", 
+                "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C",
+                "#3498DB", "#9B59B6", "#F39C12", "#1ABC9C", "#E67E22"
+            ]
+            segment_colors = colors[:len(sorted_segment_names)]
+            
+            return {
+                'priceVsRevenue': price_vs_revenue,
+                'topProducts': {
+                    'segments': segments_dict,
+                    'dimmerSwitches': segments_dict.get('Dimmer Switches', []),  # Legacy compatibility
+                    'lightSwitches': segments_dict.get('Light Switches', [])     # Legacy compatibility
+                },
+                'segmentSummary': segment_summary,
+                'segmentNames': sorted_segment_names,  # 使用排序后的segment names
+                'segmentColors': segment_colors,
+                'totalProducts': sum(len(products) for products in segments_dict.values())
+            }
             
         except Exception as e:
-            logger.error(f"Error in product analysis for project {self.project_id}: {e}")
-            raise
+            logger.error(f"Error in ProductAnalysisService.get_data(): {e}", exc_info=True)
+            return self._get_empty_response()
     
     def _get_segment_assignments(self) -> Dict[str, str]:
         """获取segment分配（platform_id到segment_name的映射）
@@ -71,29 +161,38 @@ class ProductAnalysisService(BaseDashboardService):
         """
         return self._get_segment_assignments_shared()
     
-    def _categorize_and_rank_products(self, products: List[Dict[str, Any]], 
-                                    segment_assignments: Dict[str, str], 
-                                    project_segments: List[str]) -> Dict[str, List[Dict[str, Any]]]:
-        """按segment分类产品并排序"""
-        
+    def _categorize_and_rank_products(self, products: List[Dict], segment_assignments: Dict[str, str], 
+                                    project_segments: List[str]) -> Dict[str, List[Dict]]:
+        """按segment分类和排序产品"""
+        # 初始化segment字典
         segment_products = {segment: [] for segment in project_segments}
         
         for product in products:
-            platform_id = product.get('platform_id')
-            segment = segment_assignments.get(platform_id)
+            # 计算衍生字段
+            product_data = {
+                'platform_id': product.get('platform_id', ''),
+                'title': product.get('title', ''),
+                'brand': product.get('brand', ''),
+                'category': product.get('category', ''),
+                'price': product.get('price_usd', 0) or 0,
+                'revenue': product.get('past_year_revenue', 0) or 0,
+                'volume': product.get('past_year_volume', 0) or 0,
+            }
+            
+            segment = segment_assignments.get(product_data['platform_id'])
             
             if not segment or segment not in project_segments:
                 continue
             
             # 格式化产品数据
             formatted_product = {
-                'title': product.get('title', 'Unknown Product'),
-                'brand': product.get('brand', 'Unknown Brand'),
-                'category': product.get('category', 'Unknown Category'),
-                'price': product.get('price_usd', 0) or 0,
-                'revenue': product.get('estimated_revenue', 0) or 0,
-                'volume': product.get('monthly_sales_volume', 0) or 0,
-                'platform_id': platform_id,
+                'title': product_data['title'],
+                'brand': product_data['brand'],
+                'category': product_data['category'],
+                'price': product_data['price'],
+                'revenue': product_data['revenue'],
+                'volume': product_data['volume'],
+                'platform_id': product_data['platform_id'],
                 'segment': segment
             }
             

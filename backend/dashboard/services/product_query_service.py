@@ -124,8 +124,8 @@ class ProductQueryService(BaseDashboardService):
                 # 基于segment assignments查询产品
                 query = self.supabase.table('product_wide_table').select(
                     'id, platform_id, title, brand, category, '
-                    'price_usd, unit_price_calculated, estimated_revenue, '
-                    'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
+                    'price_usd, unit_price_calculated, past_year_revenue, '
+                    'past_year_volume, rating, reviews_count, product_url, pack_count'
                 ).in_('id', list(project_product_ids))
             else:
                 # 不需要segment筛选时，直接基于项目ASINs查询
@@ -133,8 +133,8 @@ class ProductQueryService(BaseDashboardService):
                 self._segment_map = {}  # 设置为空，表示没有segment信息
                 query = self.supabase.table('product_wide_table').select(
                     'id, platform_id, title, brand, category, '
-                    'price_usd, unit_price_calculated, estimated_revenue, '
-                    'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
+                    'price_usd, unit_price_calculated, past_year_revenue, '
+                    'past_year_volume, rating, reviews_count, product_url, pack_count'
                 )
 
         except Exception as e:
@@ -143,8 +143,8 @@ class ProductQueryService(BaseDashboardService):
             self._segment_map = {}
             query = self.supabase.table('product_wide_table').select(
                 'id, platform_id, title, brand, category, '
-                'price_usd, unit_price_calculated, estimated_revenue, '
-                'monthly_sales_volume, rating, reviews_count, product_url, pack_count'
+                'price_usd, unit_price_calculated, past_year_revenue, '
+                'past_year_volume, rating, reviews_count, product_url, pack_count'
             )
 
         # 应用项目ASIN过滤（安全边界）
@@ -157,44 +157,36 @@ class ProductQueryService(BaseDashboardService):
         query = self._apply_project_filters(query)
 
         return query
-
+    
     def _apply_project_filters(self, query):
-        """应用项目级筛选器，适配新的segment表结构"""
+        """应用项目级筛选器"""
         if not self.project_filters:
             return query
 
         filters = self.project_filters
 
-        # 类别筛选
+        # Category过滤
         if filters.categories:
             query = query.in_('category', filters.categories)
-            logger.info(f"Applied category filter: {filters.categories}")
 
-        # 品牌筛选
+        # Brand过滤
         if filters.brands:
             query = query.in_('brand', filters.brands)
-            logger.info(f"Applied brand filter: {filters.brands}")
 
-        # 段筛选 - 只有当有segment映射数据时才应用segment筛选
+        # Segment过滤 - 需要使用内存映射
         if filters.segments and hasattr(self, '_segment_map') and self._segment_map:
-            # 找到匹配指定segment的产品ID
-            filtered_product_ids = []
-
-            for product_id, segment_name in self._segment_map.items():
-                # 检查segment_name是否匹配
-                if segment_name and segment_name in filters.segments:
-                    filtered_product_ids.append(product_id)
-                elif not segment_name and None in filters.segments:
-                    # 如果筛选条件包含None，也包含segment_name为空的产品
-                    filtered_product_ids.append(product_id)
-
-            if filtered_product_ids:
-                query = query.in_('id', filtered_product_ids)
-                logger.info(f"Applied segments filter: {filters.segments}, found {len(filtered_product_ids)} matching products")
+            # 筛选出匹配segments的product IDs
+            matching_product_ids = [
+                product_id for product_id, segment_name in self._segment_map.items()
+                if segment_name in filters.segments
+            ]
+            
+            if matching_product_ids:
+                query = query.in_('id', matching_product_ids)
             else:
-                # 如果没有匹配的产品，返回空结果
-                query = query.eq('id', -1)
-                logger.info(f"Applied segments filter: {filters.segments}, no matching products found")
+                # 如果没有找到匹配的产品，返回空结果
+                logger.warning(f"No products found for segments {filters.segments}")
+                query = query.eq('id', -1)  # 这会返回空结果
         elif filters.segments and not (hasattr(self, '_segment_map') and self._segment_map):
             # 如果需要segment筛选但没有segment映射数据，说明配置有误，记录警告但不阻断查询
             logger.warning(f"Segment filter requested {filters.segments} but no segment mapping available, skipping segment filter")
@@ -221,17 +213,17 @@ class ProductQueryService(BaseDashboardService):
     def _apply_sorting(self, query, options: DashboardQueryOptions):
         """应用排序"""
         if not options.sort_by:
-            return query.order('estimated_revenue', desc=True)
+            return query.order('past_year_revenue', desc=True)
         
         sort_field_map = {
             'price': 'price_usd',
-            'revenue': 'estimated_revenue',
-            'volume': 'monthly_sales_volume',
+            'revenue': 'past_year_revenue',
+            'volume': 'past_year_volume',
             'rating': 'rating',
             'reviews_count': 'reviews_count'
         }
         
-        field = sort_field_map.get(options.sort_by, 'estimated_revenue')
+        field = sort_field_map.get(options.sort_by, 'past_year_revenue')
         ascending = options.sort_order == 'asc'
         
         return query.order(field, desc=not ascending)
@@ -246,20 +238,20 @@ class ProductQueryService(BaseDashboardService):
         except Exception as e:
             logger.warning(f"Failed to get total count: {e}")
             return 0
-    
+
     def _process_products(self, raw_data: List[Dict]) -> List[Dict]:
-        """处理产品数据，保持与前端期望格式一致"""
+        """处理产品数据并添加segment信息"""
         products = []
 
         for item in raw_data:
-            # 安全的数值转换函数
-            def safe_float(value, default=0.0):
+            # 安全地处理数值字段
+            def safe_float(value):
                 if value is None:
-                    return default
+                    return 0.0
                 try:
                     return float(value)
                 except (ValueError, TypeError):
-                    return default
+                    return 0.0
 
             def safe_int(value, default=0):
                 if value is None:
@@ -269,13 +261,13 @@ class ProductQueryService(BaseDashboardService):
                 except (ValueError, TypeError):
                     return default
 
-            # 从内存中的segment映射获取 segment_name（可能为空）
-            # 注意：segment映射使用的是 wide 表的 id，而不是 platform_id
-            wide_table_id = item.get('id', '')
             platform_id = item.get('platform_id', '')
+
+            # 获取segment信息（如果可用）
             segment_name = None
-            if hasattr(self, '_segment_map') and wide_table_id in self._segment_map:
-                segment_name = self._segment_map[wide_table_id]  # 可能为None或空字符串
+            if hasattr(self, '_segment_map') and self._segment_map:
+                product_id = item.get('id')
+                segment_name = self._segment_map.get(product_id, 'Unknown Segment')
 
             product = {
                 'id': platform_id,  # API返回使用 platform_id 作为产品ID
@@ -285,8 +277,8 @@ class ProductQueryService(BaseDashboardService):
                 'segment': segment_name,  # 使用内存映射的 segment_name
                 'price': safe_float(item.get('price_usd')),
                 'unitPrice': safe_float(item.get('unit_price_calculated')) or safe_float(item.get('price_usd')),
-                'revenue': safe_float(item.get('estimated_revenue')),
-                'volume': safe_int(item.get('monthly_sales_volume')),
+                'revenue': safe_float(item.get('past_year_revenue')),
+                'volume': safe_int(item.get('past_year_volume')),
                 'rating': safe_float(item.get('rating')) if item.get('rating') is not None else None,
                 'reviews_count': safe_int(item.get('reviews_count')) if item.get('reviews_count') is not None else None,
                 'url': item.get('product_url', ''),
@@ -326,8 +318,8 @@ class ProductQueryService(BaseDashboardService):
             return result
 
         prices = safe_float_list(data, 'price_usd')
-        revenues = safe_float_list(data, 'estimated_revenue')
-        volumes = safe_int_list(data, 'monthly_sales_volume')
+        revenues = safe_float_list(data, 'past_year_revenue')
+        volumes = safe_int_list(data, 'past_year_volume')
 
         stats = {
             'total_products': len(data)
@@ -392,67 +384,67 @@ class ProductQueryService(BaseDashboardService):
         unit_prices = safe_float_list(data, 'unit_price_calculated')
 
         # 销售统计
-        revenues = safe_float_list(data, 'estimated_revenue')
-        volumes = safe_int_list(data, 'monthly_sales_volume')
+        revenues = safe_float_list(data, 'past_year_revenue')
+        volumes = safe_int_list(data, 'past_year_volume')
 
         # 分类统计
         categories = {}
         brands = {}
         segments = {}
-
+        
         for item in data:
-            category = item.get('category')
-            if category:
-                categories[category] = categories.get(category, 0) + 1
+            # 类别统计
+            category = item.get('category', 'Unknown')
+            categories[category] = categories.get(category, 0) + 1
+            
+            # 品牌统计
+            brand = item.get('brand', 'Unknown')
+            brands[brand] = brands.get(brand, 0) + 1
+            
+            # 细分统计
+            segment = item.get('product_segment', 'Unknown')
+            segments[segment] = segments.get(segment, 0) + 1
 
-            brand = item.get('brand')
-            if brand:
-                brands[brand] = brands.get(brand, 0) + 1
-
-            # 从内存映射中获取 segment_name（处理空值）
-            # 注意：segment映射使用的是 wide 表的 id，而不是 platform_id
-            wide_table_id = item.get('id', '')
-            if hasattr(self, '_segment_map') and wide_table_id in self._segment_map:
-                segment = self._segment_map[wide_table_id]
-                if segment:  # 只统计非空的segment
-                    segments[segment] = segments.get(segment, 0) + 1
-                else:
-                    # 可选：统计没有segment的产品
-                    segments['Unassigned'] = segments.get('Unassigned', 0) + 1
-
-        return {
+        # 构建统计结果
+        stats = {
             'total_count': total_count,
-            'price_stats': {
-                'sku_price': {
-                    'min': min(prices) if prices else 0,
-                    'max': max(prices) if prices else 0,
-                    'avg': sum(prices) / len(prices) if prices else 0,
-                    'count': len(prices)
-                },
-                'unit_price': {
-                    'min': min(unit_prices) if unit_prices else 0,
-                    'max': max(unit_prices) if unit_prices else 0,
-                    'avg': sum(unit_prices) / len(unit_prices) if unit_prices else 0,
-                    'count': len(unit_prices)
-                }
-            },
-            'sales_stats': {
-                'revenue': {
-                    'min': min(revenues) if revenues else 0,
-                    'max': max(revenues) if revenues else 0,
-                    'total': sum(revenues) if revenues else 0,
-                    'avg': sum(revenues) / len(revenues) if revenues else 0
-                },
-                'volume': {
-                    'min': min(volumes) if volumes else 0,
-                    'max': max(volumes) if volumes else 0,
-                    'total': sum(volumes) if volumes else 0,
-                    'avg': sum(volumes) / len(volumes) if volumes else 0
-                }
-            },
-            'distribution': {
-                'categories': dict(sorted(categories.items(), key=lambda x: x[1], reverse=True)),
-                'brands': dict(sorted(brands.items(), key=lambda x: x[1], reverse=True)),
-                'segments': dict(sorted(segments.items(), key=lambda x: x[1], reverse=True))
-            }
+            'categories': dict(sorted(categories.items(), key=lambda x: x[1], reverse=True)),
+            'brands': dict(sorted(brands.items(), key=lambda x: x[1], reverse=True)),
+            'segments': dict(sorted(segments.items(), key=lambda x: x[1], reverse=True)),
         }
+
+        # 价格统计
+        if prices:
+            stats['price'] = {
+                'min': min(prices),
+                'max': max(prices),
+                'avg': sum(prices) / len(prices),
+                'total': sum(prices)
+            }
+
+        if unit_prices:
+            stats['unit_price'] = {
+                'min': min(unit_prices),
+                'max': max(unit_prices),
+                'avg': sum(unit_prices) / len(unit_prices)
+            }
+
+        # 收入统计
+        if revenues:
+            stats['revenue'] = {
+                'min': min(revenues),
+                'max': max(revenues),
+                'total': sum(revenues),
+                'avg': sum(revenues) / len(volumes) if volumes else 0
+            }
+
+        # 销量统计
+        if volumes:
+            stats['volume'] = {
+                'min': min(volumes) if volumes else 0,
+                'max': max(volumes) if volumes else 0,
+                'total': sum(volumes) if volumes else 0,
+                'avg': sum(volumes) / len(volumes) if volumes else 0
+            }
+
+        return stats

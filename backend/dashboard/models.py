@@ -84,8 +84,8 @@ class ProductInfo(BaseModel):
     brand: str = Field(description="Brand name")
     price: float = Field(description="Product price")
     unitPrice: float = Field(description="Unit price")
-    revenue: float = Field(description="Estimated revenue")
-    volume: float = Field(description="Sales volume")
+    revenue: float = Field(description="Annual revenue")
+    volume: float = Field(description="Annual sales volume")
     url: str = Field(description="Product URL")
 
 

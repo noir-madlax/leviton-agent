@@ -183,7 +183,7 @@ export function IntegratedLayout({
     // Time Period filter (always show, including default)
     badges.push(
       <Badge key="time-period" variant="secondary" className="text-xs flex items-center gap-1">
-        ⏰ Time Period: Last 30 days
+        ⏰ Time Period: Past Year
       </Badge>
     );
   /*

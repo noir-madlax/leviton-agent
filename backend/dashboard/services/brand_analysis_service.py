@@ -23,8 +23,8 @@ class BrandAnalysisService(BaseDashboardService):
                 platform_id,
                 brand,
                 category,
-                estimated_revenue,
-                monthly_sales_volume
+                past_year_revenue,
+                past_year_volume
             ''')
             
             # Apply filters
@@ -54,10 +54,10 @@ class BrandAnalysisService(BaseDashboardService):
             
             logger.info(f"📈 Brand analysis completed: {len(brand_category_data)} brands processed")
             return response
-            
+
         except Exception as e:
-            logger.error(f"Error in brand analysis for project {self.project_id}: {e}")
-            raise
+            logger.error(f"Error in BrandAnalysisService.get_data(): {e}", exc_info=True)
+            return self._get_empty_response()
     
     def _get_project_categories(self, products: List[Dict[str, Any]]) -> List[str]:
         """获取项目中存在的所有categories"""
@@ -75,29 +75,23 @@ class BrandAnalysisService(BaseDashboardService):
         # 按字母顺序排序
         return sorted(list(categories))
     
-    def _aggregate_brand_data(self, products: List[Dict[str, Any]], 
-                            project_categories: List[str]) -> Dict[str, Dict[str, Any]]:
-        """按品牌和category聚合数据"""
-        
+    def _aggregate_brand_data(self, data: List[Dict[str, Any]], project_categories: List[str]) -> Dict[str, Dict[str, Dict[str, Any]]]:
+        """按品牌和类别聚合数据"""
+        # 初始化数据结构：brand -> category -> {revenue, volume, product_count}
         brand_data = defaultdict(lambda: {category: {'revenue': 0, 'volume': 0, 'product_count': 0} for category in project_categories})
         
-        for product in products:
-            brand = product.get('brand')
-            category = product.get('category')
+        for product in data:
+            brand = product.get('brand', 'Unknown Brand')
+            category = product.get('category', 'Unknown Category')
             
-            if not brand or not category:
-                continue
-            
-            category = category.strip()
-            if category not in project_categories:
-                continue
-            
-            # 聚合数据
-            brand_data[brand][category]['revenue'] += product.get('estimated_revenue', 0) or 0
-            brand_data[brand][category]['volume'] += product.get('monthly_sales_volume', 0) or 0
-            brand_data[brand][category]['product_count'] += 1  # 每个产品（ASIN）计数加1
+            # 只处理项目中存在的categories
+            if category in project_categories:
+                # 聚合数据
+                brand_data[brand][category]['revenue'] += product.get('past_year_revenue', 0) or 0
+                brand_data[brand][category]['volume'] += product.get('past_year_volume', 0) or 0
+                brand_data[brand][category]['product_count'] += 1
         
-        return dict(brand_data)
+        return brand_data
     
     def _format_brand_response(self, brand_data: Dict[str, Dict[str, Any]], 
                              project_categories: List[str]) -> Dict[str, Any]:
