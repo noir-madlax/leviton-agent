@@ -225,6 +225,24 @@ interface DashboardData {
         gapLevel: number
       }>
     }
+    reviewContent: Record<string, Array<{
+      id: string
+      productId: string
+      text: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
+      aspect_details: Array<{
+        text: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        parent_group_name: string
+        detail_text: string
+      }>
+    }>>
   }
   allReviewData: Record<string, Array<{
     id: string
@@ -591,6 +609,12 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
     
     const data = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters, undefined, brandFilters, segmentFilters, extendFields);
     console.log(`📈 Competitor Analysis data received: ${data.targetProducts.length} target products, ${data.matrixData.length} matrix items`);
+    console.log(`🔍 [DEBUG] Full competitor analysis data:`, {
+      targetProducts: data.targetProducts,
+      matrixDataLength: data.matrixData.length,
+      useCaseDataLength: data.useCaseData?.matrixData?.length || 0,
+      reviewContentKeys: Object.keys(data.reviewContent || {})
+    });
     
     return data;
   } catch (error) {
@@ -1221,20 +1245,33 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                   </TabsContent>
 
                   <TabsContent value="competitor-analysis">
-                    {data.competitorAnalysis && data.allReviewData ? (
-                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} initialFilters={appliedFilters} />
-                    ) : (loadingStates.competitorAnalysis || loadingStates.allReviewData) ? (
-                      <div className="flex items-center justify-center py-8">
-                        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                        <span className="ml-2">
-                          Loading Competitor Analysis{loadingStates.allReviewData ? ' and Review Data' : ''}...
-                        </span>
-                      </div>
-                    ) : (
-                      <div className="text-center py-8 text-gray-500">
-                        Click to load Competitor Analysis data
-                      </div>
-                    )}
+                    {(() => {
+                      console.log('🔍 [DASHBOARD] Competitor Analysis Tab Check:', {
+                        hasCompetitorAnalysis: !!data.competitorAnalysis,
+                        loadingState: loadingStates.competitorAnalysis,
+                        dataKeys: Object.keys(data),
+                        competitorAnalysisKeys: data.competitorAnalysis ? Object.keys(data.competitorAnalysis) : []
+                      });
+                      
+                      if (data.competitorAnalysis) {
+                        return <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} initialFilters={appliedFilters} />;
+                      } else if (loadingStates.competitorAnalysis) {
+                        return (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">
+                              Loading Competitor Analysis...
+                            </span>
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Competitor Analysis data
+                          </div>
+                        );
+                      }
+                    })()}
                   </TabsContent>
                 </Tabs>
               </div>

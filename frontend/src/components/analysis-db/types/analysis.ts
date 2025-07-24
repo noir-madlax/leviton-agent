@@ -74,6 +74,12 @@ export interface Review {
   verified: boolean
   date: string
   brand: string
+  aspect_details?: Array<{
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    parent_group_name: string
+    detail_text: string
+  }>
 }
 
 // Helper functions moved from deleted static data files

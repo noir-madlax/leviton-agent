@@ -515,7 +515,7 @@ export class DatabaseService {
         gapLevel: number
       }>
     }
-    reviewContent?: Record<string, Array<{
+    reviewContent: Record<string, Array<{
       id: string
       productId: string
       text: string
@@ -526,6 +526,12 @@ export class DatabaseService {
       verified: boolean
       date: string
       brand: string
+      aspect_details: Array<{
+        text: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        parent_group_name: string
+        detail_text: string
+      }>
     }>>
   }> {
     try {
@@ -563,6 +569,12 @@ export class DatabaseService {
       verified: boolean
       date: string
       brand: string
+      aspect_details: Array<{
+        text: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        parent_group_name: string
+        detail_text: string
+      }>
     }>
     product_asin: string
     category_name: string

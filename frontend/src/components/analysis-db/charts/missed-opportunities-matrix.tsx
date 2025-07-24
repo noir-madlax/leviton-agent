@@ -20,19 +20,7 @@ interface UseCaseData {
 interface UseCaseMatrixProps {
   data: UseCaseData[];
   targetProducts: string[];
-  allReviewData?: Record<string, Array<{
-    id: string
-    productId: string
-    text: string
-    sentiment: 'positive' | 'negative' | 'neutral'
-    category: string
-    aspect: string
-    rating: number
-    verified: boolean
-    date: string
-    brand: string
-  }>>
-  reviewContent?: Record<string, Array<{
+  reviewContent: Record<string, Array<{
     id: string
     productId: string
     text: string
@@ -48,41 +36,15 @@ interface UseCaseMatrixProps {
   asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData, reviewContent, asinToProductNameMap, asinToFullProductNameMap }: UseCaseMatrixProps) {
+export function MissedOpportunitiesMatrix({ data, targetProducts, reviewContent, asinToProductNameMap, asinToFullProductNameMap }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   const handleCellClick = (useCase: string, productAsin: string, cellData: UseCaseData | null) => {
     if (!cellData || cellData.mentions === 0) return
     
-    // Try to get reviews from the new materialized view review content first
+    // Get reviews from materialized view review content
     const reviewKey = `${productAsin}_${useCase}`
-    let reviewsToShow: Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }> = []
-    
-    if (reviewContent && reviewContent[reviewKey]) {
-      // Use the new materialized view review content
-      reviewsToShow = reviewContent[reviewKey]
-      console.log(`Using materialized view reviews for ${reviewKey}: ${reviewsToShow.length} reviews`)
-    } else if (allReviewData && allReviewData[useCase]) {
-      // Fallback to the old allReviewData method
-      const categoryReviews = allReviewData[useCase] || []
-      if (categoryReviews.length > 0) {
-        // Filter reviews by specific product using ASIN directly
-        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-        reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
-        console.log(`Using fallback allReviewData for ${useCase}: ${reviewsToShow.length} reviews`)
-      }
-    }
+    const reviewsToShow = reviewContent?.[reviewKey] || []
     
     if (reviewsToShow.length === 0) {
       console.warn(`No review data found for ${productAsin}-${useCase}`)

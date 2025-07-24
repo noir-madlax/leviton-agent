@@ -61,19 +61,25 @@ interface CompetitorAnalysisProps {
           gapLevel: number
         }>
       }
+      reviewContent: Record<string, Array<{
+        id: string
+        productId: string
+        text: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        category: string
+        aspect: string
+        rating: number
+        verified: boolean
+        date: string
+        brand: string
+        aspect_details: Array<{
+          text: string
+          sentiment: 'positive' | 'negative' | 'neutral'
+          parent_group_name: string
+          detail_text: string
+        }>
+      }>>
     }
-    allReviewData: Record<string, Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }>>
   }
 }
 
@@ -111,6 +117,14 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
 
   // 检查是否有预载数据，如果有则立即设置为ready
   useEffect(() => {
+    console.log('🔍 [COMPETITOR-ANALYSIS] Checking data:', {
+      hasData: !!data,
+      hasCompetitorAnalysis: !!(data && data.competitorAnalysis),
+      targetProductsLength: data?.competitorAnalysis?.targetProducts?.length || 0,
+      matrixDataLength: data?.competitorAnalysis?.matrixData?.length || 0,
+      useCaseDataLength: data?.competitorAnalysis?.useCaseData?.matrixData?.length || 0
+    });
+    
     if (data && data.competitorAnalysis && data.competitorAnalysis.targetProducts.length > 0) {
       console.log('🏆 [COMPETITOR-ANALYSIS] Using preloaded competitorAnalysis data');
       setIsDataReady(true);
@@ -546,7 +560,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           <CompetitorMatrix 
             data={realMatrixData}
             targetProducts={competitorData.targetProducts}
-            allReviewData={data.allReviewData}
+            reviewContent={data.competitorAnalysis.reviewContent}
             asinToProductNameMap={asinToProductNameMap}
             asinToFullProductNameMap={asinToFullProductNameMap}
           />
@@ -574,7 +588,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           <MissedOpportunitiesMatrix 
             data={realUseCaseData}
             targetProducts={useCaseData.targetProducts}
-            allReviewData={data.allReviewData}
+            reviewContent={data.competitorAnalysis.reviewContent}
             asinToProductNameMap={asinToProductNameMap}
             asinToFullProductNameMap={asinToFullProductNameMap}
           />

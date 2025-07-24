@@ -337,10 +337,39 @@ export function ReviewPanel({
                               </div>
                             )}
                             
-                            {/* Sentiment Badge */}
-                            <Badge variant="outline" className={getSentimentBadgeColor(review.sentiment)}>
-                              {review.sentiment}
-                            </Badge>
+                            {/* Aspect Details Badges */}
+                            {review.aspect_details && review.aspect_details.length > 0 ? (
+                              review.aspect_details.map((aspect, aspectIndex) => {
+                                // Determine sentiment symbol and color
+                                const sentimentSymbol = aspect.sentiment === 'positive' ? '+' : aspect.sentiment === 'negative' ? '-' : '~'
+                                const sentimentColor = aspect.sentiment === 'positive' 
+                                  ? 'bg-green-100 text-green-800 border-green-300' 
+                                  : aspect.sentiment === 'negative'
+                                  ? 'bg-red-100 text-red-800 border-red-300'
+                                  : 'bg-yellow-100 text-yellow-800 border-yellow-300'
+                                
+                                // Format the aspect text
+                                let aspectText = aspect.detail_text
+                                if (aspect.parent_group_name && aspect.parent_group_name !== aspect.detail_text) {
+                                  aspectText = `${aspect.parent_group_name}: ${aspect.detail_text}`
+                                }
+                                
+                                return (
+                                  <Badge 
+                                    key={aspectIndex}
+                                    variant="outline" 
+                                    className={sentimentColor}
+                                  >
+                                    {sentimentSymbol} {aspectText}
+                                  </Badge>
+                                )
+                              })
+                            ) : (
+                              // Fallback to old sentiment badge if no aspect_details
+                              <Badge variant="outline" className={getSentimentBadgeColor(review.sentiment)}>
+                                {review.sentiment}
+                              </Badge>
+                            )}
                             
                             {/* Brand */}
                             {review.brand && (
@@ -349,12 +378,7 @@ export function ReviewPanel({
                               </Badge>
                             )}
                             
-                            {/* Category */}
-                            {review.category && (
-                              <Badge variant="outline" className="bg-purple-50 text-purple-700">
-                                {review.category}
-                              </Badge>
-                            )}
+
                           </div>
                         </div>
                       </div>
