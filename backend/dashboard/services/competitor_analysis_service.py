@@ -955,20 +955,55 @@ class CompetitorAnalysisService(BaseDashboardService):
             if not product_ids:
                 return {}
                 
-            # Query all products at once and group by product_id
-            result = self.supabase.table('product_review_analysis').select(
-                'product_id, review_id'
-            ).in_('product_id', product_ids).execute()
+            # Use the same query logic as matrix data to ensure consistency
+            # Query aspects filtered by project and products
+            aspects_query = self.supabase.from_('review_analysis_aspects').select('''
+                aspect_pk,
+                product_id
+            ''').eq('project_id', self.project_id).in_('product_id', product_ids)
+            
+            aspects_result = aspects_query.execute()
+            
+            if not aspects_result.data:
+                return {product_id: 0 for product_id in product_ids}
+            
+            # Get aspect_pks for these products
+            aspect_pks = [item['aspect_pk'] for item in aspects_result.data]
+            
+            if not aspect_pks:
+                return {product_id: 0 for product_id in product_ids}
+            
+            # Get occurrences data in batches to avoid query length limits
+            batch_size = 100
+            all_occurrences = []
+            
+            for i in range(0, len(aspect_pks), batch_size):
+                batch_pks = aspect_pks[i:i + batch_size]
+                occurrences_query = self.supabase.from_('review_analysis_aspect_occurrences').select('''
+                    aspect_pk,
+                    review_id
+                ''').in_('aspect_pk', batch_pks)
+                
+                occurrences_result = occurrences_query.execute()
+                if occurrences_result.data:
+                    all_occurrences.extend(occurrences_result.data)
+            
+            # Create mapping from aspect_pk to product_id
+            aspect_to_product = {}
+            for aspect in aspects_result.data:
+                aspect_to_product[aspect['aspect_pk']] = aspect['product_id']
             
             # Count unique review_ids per product
             product_review_sets = {}
             for product_id in product_ids:
                 product_review_sets[product_id] = set()
                 
-            for row in result.data or []:
-                product_id = row['product_id']
-                review_id = row['review_id']
-                if product_id in product_review_sets:
+            for occurrence in all_occurrences:
+                aspect_pk = occurrence['aspect_pk']
+                review_id = occurrence['review_id']
+                product_id = aspect_to_product.get(aspect_pk)
+                
+                if product_id and product_id in product_review_sets:
                     product_review_sets[product_id].add(review_id)
             
             # Convert sets to counts

@@ -14,8 +14,8 @@ import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
-import type { SalesTrendData } from '@/app/chat/charts/sales_trend/types/sales-trend.types'
-import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api';
+import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api'
+// import { useSalesTrendData } from '@/app/chat/charts/sales_trend/hooks/use-sales-trend-data'
 
 interface BrandAnalysisProps {
   data: {
@@ -73,7 +73,20 @@ interface BrandAnalysisProps {
     }>>
     segmentNames: string[]
   }
-  salesTrend?: SalesTrendData
+  salesTrend?: {
+    trend_data: Array<{
+      month: string
+      [brandName: string]: { revenue: number; volume: number } | string
+    }>
+    brands: string[]
+    summary: {
+      total_brands: number
+      date_range: { start: string; end: string }
+      total_revenue: number
+      total_volume: number
+    }
+  }
+
   productLists: {
     byBrand: Record<string, Array<{
       id: string
@@ -108,6 +121,104 @@ interface BrandAnalysisProps {
   }
   projectId?: string
   initialFilters?: ProjectFilters
+}
+
+// Sales Trend Component for Individual Category
+interface SalesTrendByCategoryProps {
+  category: string
+  projectId: string
+  initialFilters?: ProjectFilters
+  metricType: MetricType
+  onAreaClick: (data: unknown) => void
+  salesTrendData?: BrandAnalysisProps['salesTrend'] // Use optional chaining
+  loading?: boolean
+  error?: string | null
+}
+
+function SalesTrendByCategoryComponent({ 
+  category, 
+  projectId, 
+  initialFilters, 
+  metricType, 
+  onAreaClick,
+  salesTrendData,
+  loading,
+  error
+}: SalesTrendByCategoryProps) {
+
+  if (loading) {
+    return (
+      <div className="bg-gray-50 p-6 rounded-lg">
+        <h4 className="text-lg font-medium mb-4 text-center">
+          📈 {category} - Sales Trend of Top 10 Brands
+        </h4>
+        <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
+          <p className="text-sm text-yellow-700">
+            Loading sales trend data for {category}...
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className="bg-gray-50 p-6 rounded-lg">
+        <h4 className="text-lg font-medium mb-4 text-center">
+          📈 {category} - Sales Trend of Top 10 Brands
+        </h4>
+        <div className="bg-red-50 border-l-4 border-red-400 p-4">
+          <p className="text-sm text-red-700">
+            Error loading sales trend data for {category}: {error}
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!salesTrendData || !salesTrendData.trend_data || salesTrendData.trend_data.length === 0) {
+    return (
+      <div className="bg-gray-50 p-6 rounded-lg">
+        <h4 className="text-lg font-medium mb-4 text-center">
+          📈 {category} - Sales Trend of Top 10 Brands
+        </h4>
+        <div className="bg-gray-100 p-4 rounded">
+          <p className="text-sm text-gray-600 text-center">
+            No sales trend data available for {category}
+          </p>
+        </div>
+      </div>
+    )
+  }
+
+  return (
+    <div className="bg-gray-50 p-6 rounded-lg">
+      <h4 className="text-lg font-medium mb-4 text-center">
+        📈 {category} - Sales Trend of Top 10 Brands
+      </h4>
+      
+      {/* Sales Trend Summary */}
+      <SalesTrendSummary 
+        data={salesTrendData} 
+        metricType={metricType} 
+      />
+      
+      {/* Sales Trend Chart */}
+      <SalesTrendChart
+        projectId={projectId}
+        filters={{
+          categories: [category],
+          brands: initialFilters?.brands,
+          segments: initialFilters?.segments,
+          extend_fields: initialFilters?.extend_fields
+        }}
+        metricType={metricType}
+        dateRange={SALES_TREND_DATE_RANGE}
+        onAreaClick={onAreaClick}
+        data={salesTrendData}
+      />
+    </div>
+  )
 }
 
 export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
@@ -425,7 +536,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </div>
       </div>
 
-      {/* Sales Trend Chart - Integrated Real Component */}
+      {/* Sales Trend Charts - By Category */}
       <div className="mt-15">
         <div data-chart-id="sales-trend-analysis">
           <ChartWithFilters
@@ -435,33 +546,33 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
             title="Sales Trend of Top 10 brands"
             projectFilters={initialFilters}
           >
-            {salesTrend ? (
-              <div>
-                {/* Sales Trend Summary */}
-                <SalesTrendSummary 
-                  data={salesTrend} 
-                  metricType={metricType} 
-                />
-                
-                {/* Sales Trend Chart */}
-                <SalesTrendChart
-                  projectId={projectId || ''}
-                  filters={{
-                    categories: initialFilters?.categories,
-                    brands: initialFilters?.brands,
-                    segments: initialFilters?.segments,
-                    extend_fields: initialFilters?.extend_fields
-                  }}
-                  metricType={metricType}
-                  dateRange={SALES_TREND_DATE_RANGE}
-                  onAreaClick={handleSalesTrendClick}
-                  data={salesTrend}
-                />
+            {/* Summary for all categories */}
+            <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+              <p className="text-sm text-blue-700">
+                <strong>Sales Trend Analysis:</strong> Showing top 10 brands by revenue for each category. 
+                Data aggregated yearly and ranked by total revenue.
+              </p>
+            </div>
+            
+            {categoryNames.length > 0 ? (
+              <div className="space-y-8">
+                {categoryNames.map((category) => (
+                  <SalesTrendByCategoryComponent
+                    key={category}
+                    category={category}
+                    projectId={projectId || ''}
+                    initialFilters={initialFilters}
+                    metricType={metricType}
+                    onAreaClick={handleSalesTrendClick}
+                    salesTrendData={salesTrend}
+                    loading={!salesTrend}
+                  />
+                ))}
               </div>
             ) : (
               <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
                 <p className="text-sm text-yellow-700">
-                  <strong>Sales Trend of Top 10 brands</strong> - Loading sales trend data...
+                  <strong>Sales Trend of Top 10 brands</strong> - No categories available...
                 </p>
               </div>
             )}

@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
 import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
@@ -255,7 +255,7 @@ interface DashboardData {
 }
 
 // 获取品牌分析数据的async函数
-async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Brand Analysis waiting for project selection...');
@@ -299,7 +299,7 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
 }
 
 // 获取销售趋势数据的async函数
-async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Sales Trend waiting for project selection...');
@@ -372,7 +372,7 @@ async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[
   }
 }
 
-async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchProductAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Product Analysis waiting for project selection...');
@@ -412,15 +412,19 @@ async function fetchProductAnalysisData(projectId?: string, categoryFilters?: st
         { category: 'Dimmer Switches', products: [] },
         { category: 'Light Switches', products: [] }
       ],
-      topProducts: [
-        { category: 'Dimmer Switches', products: [] },
-        { category: 'Light Switches', products: [] }
-      ]
+      topProducts: {
+        segments: {},
+        dimmerSwitches: [],
+        lightSwitches: []
+      },
+      segmentSummary: {},
+      segmentNames: [],
+      segmentColors: []
     };
   }
 }
 
-async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Pricing Analysis waiting for project selection...');
@@ -451,7 +455,7 @@ async function fetchPricingAnalysisData(projectId?: string, categoryFilters?: st
   }
 }
 
-async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchMarketInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Market Insights waiting for project selection...');
@@ -483,7 +487,7 @@ async function fetchMarketInsightsData(projectId?: string, categoryFilters?: str
   }
 }
 
-async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, metricType?: string) {
+async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>, metricType?: string) {
   try {
     if (!projectId) {
       console.log('⏳ Package Preference waiting for project selection...');
@@ -530,11 +534,17 @@ async function fetchPackagePreferenceData(projectId?: string, categoryFilters?: 
   }
 }
 
-async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchReviewInsightsData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Review Insights waiting for project selection...');
-      return { painPoints: [], customerLikes: [], allUseCases: [], underservedUseCases: [] };
+      return { 
+        painPoints: [], 
+        customerLikes: [], 
+        allUseCases: [], 
+        underservedUseCases: [],
+        totalUseMentions: 0
+      };
     }
     
     console.log(`📊 Fetching Review Insights data for project: ${projectId}`);
@@ -557,11 +567,17 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
     return data;
   } catch (error) {
     console.error('Error fetching review insights data:', error);
-    return { painPoints: [], customerLikes: [], allUseCases: [], underservedUseCases: [] };
+    return { 
+      painPoints: [], 
+      customerLikes: [], 
+      allUseCases: [], 
+      underservedUseCases: [],
+      totalUseMentions: 0
+    };
   }
 }
 
-async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>) {
+async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Competitor Analysis waiting for project selection...');
@@ -602,7 +618,7 @@ async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?:
   }
 }
 
-async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<Pick<DashboardData, 'allReviewData'>> {
+async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>): Promise<Pick<DashboardData, 'allReviewData'>> {
   try {
     if (!projectId) {
       console.log('⏳ All Review Data waiting for project selection...');
@@ -645,8 +661,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   const [error, setError] = useState<string | null>(null)
   const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
   const [currentActiveTab, setCurrentActiveTab] = useState<string>('brand-analysis')
-  // 使用传入的filters，提供默认值，并确保引用稳定性
-  const appliedFilters = useMemo(() => filters || DEFAULT_FILTERS, [filters]);
+  // Use state for filters to allow for async update from DB defaults
+  const [currentFilters, setCurrentFilters] = useState<ProjectFilters>(filters || DEFAULT_FILTERS);
 
   
   // 为每个数据部分单独管理加载状态
@@ -671,7 +687,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     loadedDataRef.current = loadedData
   }, [loadedData])
 
-  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>, forceReload = false) => {
+  const loadSpecificData = useCallback(async (dataType: keyof typeof loadingStates, projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>, forceReload = false) => {
     if (!projectId) return
     
     // 使用 ref 来检查已加载数据，避免依赖 state
@@ -682,8 +698,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       setLoadingStates(prev => ({ ...prev, [dataType]: true }))
       setError(null)
       
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const result: any = {}
+      const result: Partial<DashboardData> = {}
       
       switch (dataType) {
         case 'brandAnalysis':
@@ -726,6 +741,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   }, [])
 
   // 项目变更回调
+  /*
   const handleProjectChange = (projectId: string) => {
     console.log(`🔄 Project changed to: ${projectId}`)
     console.log(`📊 Starting data load for project: ${projectId}`)
@@ -751,10 +767,11 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     loadSpecificData('packagePreference', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('salesTrend', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('pricingAnalysis', projectId, undefined, undefined, undefined, undefined, false)
-    loadSpecificData('productAnalysis', projectId, undefined, undefined, undefined, undefined, false)
+    loadSpecificDadata('productAnalysis', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('reviewInsights', projectId, undefined, undefined, undefined, undefined, false)
     loadSpecificData('competitorAnalysis', projectId, undefined, undefined, undefined, undefined, false)
   }
+  */
 
 
 
@@ -766,10 +783,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     setCurrentActiveTab(tabValue)
     
     // 🔑 传递当前的filters到loadSpecificData
-    const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined
-    const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined
-    const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined
-    const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined
+    const categoryFilters = currentFilters.categories.length > 0 ? currentFilters.categories : undefined
+    const brandFilters = ('brands' in currentFilters) ? currentFilters.brands : undefined
+    const segmentFilters = ('segments' in currentFilters) ? currentFilters.segments : undefined
+    const extendFields = ('extend_fields' in currentFilters) ? currentFilters.extend_fields : undefined
     // Tab切换时不强制重新加载，让缓存机制决定是否需要加载
     const forceReload = false
     
@@ -808,62 +825,60 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
     }
   }
 
-  // 初始化effect - 只在项目ID变化时执行
+  // Initialization effect - fetches project defaults and sets up initial state
   useEffect(() => {
+    const initializeDashboard = async (projectId: string) => {
+      setSelectedProjectId(projectId);
+      
+      try {
+        console.log(`Fetching filter defaults for project: ${projectId}`);
+        const defaultFilters = await databaseService.getProjectFilterDefaults(projectId);
+        
+        // Use provided filters from props if they exist, otherwise use fetched defaults, otherwise use hardcoded defaults.
+        const resolvedInitialFilters = filters || defaultFilters || DEFAULT_FILTERS;
+        
+        console.log('Resolved initial filters:', resolvedInitialFilters);
+        setCurrentFilters(resolvedInitialFilters);
+      } catch (e) {
+        console.error("Failed to fetch project filter defaults, using base filters.", e);
+        setCurrentFilters(filters || DEFAULT_FILTERS);
+      }
+    };
+
     if (initialProjectId) {
-      console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
-      console.log(`🔍 Dashboard initial filters:`, appliedFilters);
-      setSelectedProjectId(initialProjectId);
-      
-      // 🔧 FIX: 初始化时也使用传入的筛选器，而不是默认空值
-      const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
-      const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined;
-      const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
-      const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
-      
-      console.log(`🚀 Loading initial brand analysis with filters:`, { categoryFilters, brandFilters, segmentFilters, extendFields });
-      // 预加载 Market Analysis 数据 (保持优先级)
-      loadSpecificData('brandAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('marketInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('packagePreference', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('salesTrend', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      
-      // 预加载其他 Chart Card 数据（移除allReviewData预载）
-      console.log(`📊 Preloading additional chart data...`);
-      loadSpecificData('pricingAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('productAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('reviewInsights', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
-      loadSpecificData('competitorAnalysis', initialProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, false);
+      initializeDashboard(initialProjectId);
     } else {
       console.log('🏠 Dashboard initialized, waiting for project selection...');
     }
-  }, [initialProjectId, appliedFilters, loadSpecificData])
+  }, [initialProjectId, filters]);
 
-  // 监听filters变化，重新加载数据
+  // Data loading effect - runs when project or filters change
   useEffect(() => {
     if (selectedProjectId) {
-      console.log(`🔄 Filters changed:`, appliedFilters);
-      // 清空已加载的数据缓存，强制重新加载
+      console.log(`🔄 Data loading triggered for project ${selectedProjectId} with filters:`, currentFilters);
+      
+      // Reset data to show loading state and prevent showing stale data
       setLoadedData(new Set());
       setData({});
       
-      // 重新加载当前数据
-      const categoryFilters = appliedFilters.categories.length > 0 ? appliedFilters.categories : undefined;
-      const brandFilters = ('brands' in appliedFilters) ? appliedFilters.brands : undefined;
-      const segmentFilters = ('segments' in appliedFilters) ? appliedFilters.segments : undefined;
-      const extendFields = ('extend_fields' in appliedFilters) ? appliedFilters.extend_fields : undefined;
-      
-      // 重新加载所有预加载的数据（移除allReviewData重载）
-      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
-      loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, true);
+      const categoryFilters = currentFilters.categories.length > 0 ? currentFilters.categories : undefined;
+      const brandFilters = currentFilters.brands?.length ? currentFilters.brands : undefined;
+      const segmentFilters = currentFilters.segments?.length ? currentFilters.segments : undefined;
+      const extendFields = currentFilters.extend_fields;
+
+      // Reload all data with the new filters
+      const forceReload = true;
+      loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
     }
-  }, [appliedFilters, selectedProjectId, loadSpecificData])
+  }, [selectedProjectId, currentFilters, loadSpecificData]);
+
 
   // 监听外部传入的activeTab变化
   useEffect(() => {
@@ -1106,7 +1121,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             data={data.brandAnalysis} 
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
-                            initialFilters={appliedFilters}
+                            initialFilters={currentFilters}
                             marketInsights={data.marketInsights}
                             packagePreference={data.packagePreference}
                             salesTrend={data.salesTrend}
@@ -1138,7 +1153,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                               segmentNames: data.productAnalysis?.segmentNames
                             }}
                             projectId={selectedProjectId || undefined}
-                            initialFilters={appliedFilters}
+                            initialFilters={currentFilters}
                           />
                         ) : (loadingStates.pricingAnalysis || loadingStates.productAnalysis) ? (
                           <div className="flex items-center justify-center py-8">
@@ -1158,7 +1173,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             data={data.marketInsights}
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
-                            initialFilters={appliedFilters}
+                            initialFilters={currentFilters}
                           />
                         ) : loadingStates.marketInsights ? (
                           <div className="flex items-center justify-center py-8">
@@ -1178,10 +1193,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             data={data.packagePreference}
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
-                            categoryFilters={appliedFilters.categories}
-                            brandFilters={appliedFilters.brands || []}
-                            segmentFilters={appliedFilters.segments || []}
-                            extendFields={appliedFilters.extend_fields || {}}
+                            categoryFilters={currentFilters.categories}
+                            brandFilters={currentFilters.brands || []}
+                            segmentFilters={currentFilters.segments || []}
+                            extendFields={currentFilters.extend_fields || {}}
                           />
                         ) : loadingStates.packagePreference ? (
                           <div className="flex items-center justify-center py-8">
@@ -1202,7 +1217,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                       <ReviewInsights 
                         data={data as DashboardData} 
                         projectId={selectedProjectId || undefined}
-                        initialFilters={appliedFilters}
+                        initialFilters={currentFilters}
                       />
                     ) : (loadingStates.reviewInsights || loadingStates.allReviewData) ? (
                       <div className="flex items-center justify-center py-8">
@@ -1220,7 +1235,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
 
                   <TabsContent value="competitor-analysis">
                     {data.competitorAnalysis && data.allReviewData ? (
-                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} initialFilters={appliedFilters} />
+                      <CompetitorAnalysis projectId={selectedProjectId} data={data as DashboardData} initialFilters={currentFilters} />
                     ) : (loadingStates.competitorAnalysis || loadingStates.allReviewData) ? (
                       <div className="flex items-center justify-center py-8">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>

@@ -16,7 +16,7 @@ export function SalesTrendSummary({ data, metricType }: SalesTrendSummaryProps) 
 
   return (
 
-   <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6">
+   <div className="">
          {/* 总指标值
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* 总指标值 *
@@ -52,12 +52,6 @@ export function SalesTrendSummary({ data, metricType }: SalesTrendSummaryProps) 
         </div>
       </div>
  */}
-      <div className="mt-0 pt-0 ">
-        <p className="text-xs text-blue-600">
-          <strong>Sales Trend Analysis:</strong> Showing top {summary.totalBrands} brands by {summary.metricLabel.toLowerCase()} 
-          for the period {summary.dateRange}. Data aggregated yearly and ranked by total {summary.metricLabel.toLowerCase()}.
-        </p>
-      </div>
-    </div>
+     </div>
   )
 } 
