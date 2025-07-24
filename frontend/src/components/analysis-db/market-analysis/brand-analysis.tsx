@@ -74,17 +74,20 @@ interface BrandAnalysisProps {
     segmentNames: string[]
   }
   salesTrend?: {
-    trend_data: Array<{
-      month: string
-      [brandName: string]: { revenue: number; volume: number } | string
+    byCategory: Record<string, {
+      trend_data: Array<{
+        month: string
+        [brandName: string]: { revenue: number; volume: number } | string
+      }>
+      brands: string[]
+      summary: {
+        total_brands: number
+        date_range: { start: string; end: string }
+        total_revenue: number
+        total_volume: number
+      }
     }>
-    brands: string[]
-    summary: {
-      total_brands: number
-      date_range: { start: string; end: string }
-      total_revenue: number
-      total_volume: number
-    }
+    categories: string[]
   }
 
   productLists: {
@@ -176,7 +179,10 @@ function SalesTrendByCategoryComponent({
     )
   }
 
-  if (!salesTrendData || !salesTrendData.trend_data || salesTrendData.trend_data.length === 0) {
+  // 从预加载的分类数据中提取当前category的数据
+  const categoryData = salesTrendData?.byCategory?.[category]
+  
+  if (!categoryData || !categoryData.trend_data || categoryData.trend_data.length === 0) {
     return (
       <div className="bg-gray-50 p-6 rounded-lg">
         <h4 className="text-lg font-medium mb-4 text-center">
@@ -199,7 +205,7 @@ function SalesTrendByCategoryComponent({
       
       {/* Sales Trend Summary */}
       <SalesTrendSummary 
-        data={salesTrendData} 
+        data={categoryData} 
         metricType={metricType} 
       />
       
@@ -215,6 +221,7 @@ function SalesTrendByCategoryComponent({
         metricType={metricType}
         dateRange={SALES_TREND_DATE_RANGE}
         onAreaClick={onAreaClick}
+        data={categoryData}
       />
     </div>
   )

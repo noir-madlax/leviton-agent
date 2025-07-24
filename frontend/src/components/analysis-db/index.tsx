@@ -240,17 +240,20 @@ interface DashboardData {
     brand: string
   }>>
   salesTrend: {
-    trend_data: Array<{
-      month: string
-      [brandName: string]: { revenue: number; volume: number } | string
+    byCategory: Record<string, {
+      trend_data: Array<{
+        month: string
+        [brandName: string]: { revenue: number; volume: number } | string
+      }>
+      brands: string[]
+      summary: {
+        total_brands: number
+        date_range: { start: string; end: string }
+        total_revenue: number
+        total_volume: number
+      }
     }>
-    brands: string[]
-    summary: {
-      total_brands: number
-      date_range: { start: string; end: string }
-      total_revenue: number
-      total_volume: number
-    }
+    categories: string[]
   }
 }
 
@@ -298,76 +301,117 @@ async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: stri
   }
 }
 
-// 获取销售趋势数据的async函数
+// 获取销售趋势数据的async函数 - 为每个category分别获取数据
 async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
       console.log('⏳ Sales Trend waiting for project selection...');
       return {
-        trend_data: [],
-        brands: [],
-        summary: {
-          total_brands: 0,
-          date_range: { start: "2025-01-01", end: "2025-06-30" },
-          total_revenue: 0,
-          total_volume: 0
-        }
+        byCategory: {},
+        categories: []
       };
     }
     
     console.log(`📊 Fetching Sales Trend data for project: ${projectId}`);
+    
+    // 获取项目的所有categories（从brandAnalysis或直接获取）
+    let availableCategories: string[] = [];
     if (categoryFilters && categoryFilters.length > 0) {
-      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
-    }
-    if (brandFilters && brandFilters.length > 0) {
-      console.log(`📦 Applying brand filters: ${brandFilters.join(', ')}`);
-    }
-    if (segmentFilters && segmentFilters.length > 0) {
-      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
-    }
-    if (extendFields && Object.keys(extendFields).length > 0) {
-      console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
+      availableCategories = categoryFilters;
+    } else {
+      // 如果没有指定categories，获取项目的所有categories
+      try {
+        const brandData = await databaseService.getBrandCategoryRevenueByProject(projectId);
+        availableCategories = brandData.segmentNames || [];
+             } catch {
+         console.warn('Failed to get categories, using fallback');
+         availableCategories = ['Dimmer Switches', 'Light Switches'];
+       }
     }
     
-    // 使用现有的 sales trend API
+    console.log(`🔍 Will fetch sales trend for categories: ${availableCategories.join(', ')}`);
+    
+    // 为每个category分别获取数据
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-    const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/sales-trend`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        project_id: projectId,
-        filters: {
-          categories: categoryFilters,
-          brands: brandFilters,
-          segments: segmentFilters,
-          extend_fields: extendFields
-        },
-        date_range: SALES_TREND_DATE_RANGE,
-        aggregation: "monthly"
-      })
+    const categoryDataPromises = availableCategories.map(async (category) => {
+      try {
+        console.log(`📊 Fetching sales trend for category: ${category}`);
+        const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/sales-trend`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            project_id: projectId,
+            filters: {
+              categories: [category], // 为每个category单独请求
+              brands: brandFilters,
+              segments: segmentFilters,
+              extend_fields: extendFields
+            },
+            date_range: SALES_TREND_DATE_RANGE,
+            aggregation: "monthly"
+          })
+        });
+        
+        if (!response.ok) {
+          throw new Error(`Failed to fetch sales trend data for ${category}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        console.log(`📈 Sales Trend data received for ${category}: ${data.brands?.length || 0} brands, ${data.trend_data?.length || 0} months`);
+        
+        return { category, data };
+      } catch (error) {
+        console.error(`Error fetching sales trend data for category ${category}:`, error);
+        return {
+          category,
+          data: {
+            trend_data: [],
+            brands: [],
+            summary: {
+              total_brands: 0,
+              date_range: { start: "2025-01-01", end: "2025-06-30" },
+              total_revenue: 0,
+              total_volume: 0
+            }
+          }
+        };
+      }
     });
     
-    if (!response.ok) {
-      throw new Error(`Failed to fetch sales trend data: ${response.statusText}`);
-    }
+    // 等待所有category的数据
+    const categoryResults = await Promise.all(categoryDataPromises);
     
-    const data = await response.json();
-    console.log(`📈 Sales Trend data received: ${data.brands?.length || 0} brands, ${data.trend_data?.length || 0} months`);
+    // 组织成按category分组的数据结构
+    const byCategory: Record<string, {
+      trend_data: Array<{
+        month: string
+        [brandName: string]: { revenue: number; volume: number } | string
+      }>
+      brands: string[]
+      summary: {
+        total_brands: number
+        date_range: { start: string; end: string }
+        total_revenue: number
+        total_volume: number
+      }
+    }> = {};
+    categoryResults.forEach(({ category, data }) => {
+      byCategory[category] = data;
+    });
     
-    return data;
+    console.log(`📈 Sales Trend data fetching completed for ${availableCategories.length} categories`);
+    
+    return {
+      byCategory,
+      categories: availableCategories
+    };
   } catch (error) {
     console.error('Error fetching sales trend data:', error);
     return {
-      trend_data: [],
-      brands: [],
-      summary: {
-        total_brands: 0,
-        date_range: { start: "2025-01-01", end: "2025-06-30" },
-        total_revenue: 0,
-        total_volume: 0
-      }
+      byCategory: {},
+      categories: []
     };
   }
 }
