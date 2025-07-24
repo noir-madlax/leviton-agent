@@ -170,7 +170,65 @@ npm run dev
 - 可维护的文件组织 ✅
 - 完整的错误处理机制 ✅
 
+## ⚠️ **重要注意事项**
+
+### **API路径配置问题**
+在集成过程中发现了一个关键问题，**必须注意**：
+
+**❌ 错误的API调用方式**:
+```javascript
+// 使用相对路径 - 会导致404错误
+fetch('/api/v1/dashboard/sales-trend', {...})  // → localhost:3000 ❌
+```
+
+**✅ 正确的API调用方式**:
+```javascript
+// 必须使用完整的后端URL
+const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+fetch(`${API_BASE_URL}/api/v1/dashboard/sales-trend`, {...})  // → localhost:8000 ✅
+```
+
+### **修复位置**
+1. **主数据管理系统**: `frontend/src/components/analysis-db/index.tsx`
+   - 在 `fetchSalesTrendData` 函数中添加 `API_BASE_URL` 前缀
+
+2. **销售趋势API服务**: `frontend/src/app/chat/charts/sales_trend/services/sales-trend-api.ts`
+   - 在 `SalesTrendApi` 构造函数中设置正确的 `baseUrl`
+
+### **环境变量配置**
+确保设置正确的环境变量：
+```bash
+# .env.local (前端)
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+```
+
+### **故障排查**
+如果遇到404错误：
+1. 检查浏览器网络面板，确认请求发送到 `localhost:8000` 而不是 `localhost:3000`
+2. 确认后端服务运行在 `localhost:8000`
+3. 验证API路径是否正确: `/api/v1/dashboard/sales-trend`
+
 ## 🌟 **集成成功！** 
 Sales Trend 图表已成功集成到市场分析页面的"Sales Trend of Top 10 brands"位置，与现有图表系统完美融合！🎉
 
 **立即可用**: 访问 `http://localhost:3000/project/[project-id]` 在Market Analysis页面查看实时销售趋势数据。
+
+## 📚 **相关文档**
+
+### **故障排查和技术支持**
+- 🚨 [**图表组件故障排查指南**](../TROUBLESHOOTING.md) - **遇到问题必看**
+- 📋 [API测试结果和验证](../../../backend/dashboard/charts/sales_trend/test/api_test_results.md)
+
+### **技术实现文档**
+- 🛠️ [后端销售趋势API文档](../../../backend/dashboard/charts/sales_trend/readme.md)
+- 🔧 [Chart API Base基础服务](./shared/services/chart-api-base.ts)
+- 📊 [销售趋势数据类型定义](./sales_trend/types/sales-trend.types.ts)
+
+### **集成和配置**
+- ⚙️ [环境变量配置要求](../TROUBLESHOOTING.md#环境变量配置)
+- 🔗 [API路径配置最佳实践](../TROUBLESHOOTING.md#api-404错误---最常见问题)
+- 🎯 [市场分析页面集成说明](../../../components/analysis-db/market-analysis/brand-analysis.tsx)
+
+---
+
+**💡 提示**: 如果遇到任何问题，请首先查看[故障排查指南](../TROUBLESHOOTING.md)，其中包含了常见问题的详细解决方案。
