@@ -15,6 +15,7 @@ import { PackagePreferenceAnalysis } from './package-preference-analysis'
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import type { SalesTrendData } from '@/app/chat/charts/sales_trend/types/sales-trend.types'
+import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api';
 
 interface BrandAnalysisProps {
   data: {
@@ -452,10 +453,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                     extend_fields: initialFilters?.extend_fields
                   }}
                   metricType={metricType}
-                  dateRange={{
-                    start_date: "2024-07-01",
-                    end_date: "2025-06-30"
-                  }}
+                  dateRange={SALES_TREND_DATE_RANGE}
                   onAreaClick={handleSalesTrendClick}
                 />
               </div>

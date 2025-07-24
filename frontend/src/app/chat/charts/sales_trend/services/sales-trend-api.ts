@@ -7,6 +7,11 @@ import type {
   SalesTrendRequest 
 } from '../types/sales-trend.types'
 
+export const SALES_TREND_DATE_RANGE = {
+  start_date: '2024-08-01',
+  end_date: '2025-06-30',
+};
+
 class SalesTrendApi extends ChartApiBase {
   constructor() {
     const baseUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
@@ -29,10 +34,7 @@ class SalesTrendApi extends ChartApiBase {
       project_id: projectId,
       filters: filters || {},
       // 默认时间范围为2024-07-01到2025-06-30,目前写死销售趋势数据的12个月的范围
-      date_range: dateRange || {
-        start_date: "2024-07-01",
-        end_date: "2025-06-30"
-      },
+      date_range: dateRange || SALES_TREND_DATE_RANGE,
       aggregation: "monthly"
     }
 

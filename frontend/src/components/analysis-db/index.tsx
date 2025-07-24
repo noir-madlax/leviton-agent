@@ -17,6 +17,7 @@ import { databaseService, type ProductAnalysisData } from '@/components/analysis
 import { PageDivider } from '@/components/ui/page-divider'
 import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
 import { ProjectFilterWrapper } from '@/components/integrated-dashboard/components/project-filter-wrapper'
+import { SALES_TREND_DATE_RANGE } from "@/app/chat/charts/sales_trend/services/sales-trend-api";
 
 interface DashboardData {
   brandAnalysis: {
@@ -343,10 +344,7 @@ async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[
           segments: segmentFilters,
           extend_fields: extendFields
         },
-        date_range: {
-          start_date: "2024-07-01",
-          end_date: "2025-06-30"
-        },
+        date_range: SALES_TREND_DATE_RANGE,
         aggregation: "monthly"
       })
     });
