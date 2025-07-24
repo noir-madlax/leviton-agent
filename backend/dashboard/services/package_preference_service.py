@@ -185,9 +185,9 @@ class PackagePreferenceService(BaseDashboardService):
             
             # 第三步：获取产品收入数据并应用筛选器
             product_revenue_query = self.supabase.table('product_wide_table')\
-                .select('platform_id, estimated_revenue, category, brand')\
+                .select('platform_id, past_year_revenue, category, brand')\
                 .in_('platform_id', valid_asins)\
-                .not_.is_('estimated_revenue', 'null')
+                .not_.is_('past_year_revenue', 'null')
             
             # 应用筛选器（但不包括extend fields过滤，因为已在第一步应用）
             product_revenue_query = self._apply_asin_filter(product_revenue_query)
@@ -206,7 +206,7 @@ class PackagePreferenceService(BaseDashboardService):
             asin_to_data = {}
             for product in product_result.data:
                 asin = product['platform_id']
-                revenue = product.get('estimated_revenue', 0)
+                revenue = product.get('past_year_revenue', 0)
                 category = product.get('category', 'Unknown')
                 brand = product.get('brand', 'Unknown')
                 

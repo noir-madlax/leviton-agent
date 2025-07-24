@@ -724,10 +724,9 @@ class CompetitorAnalysisService(BaseDashboardService):
             # Build use case data
             use_case_matrix_data = self._build_use_case_data(use_case_stats, asin_to_product)
             
-            # Get total reviews per product
-            product_total_reviews = {}
-            for product in product_info:
-                product_total_reviews[product['platform_id']] = product.get('reviews_count', 0)
+            # Get actual analyzed reviews per product (batch query for efficiency)
+            product_ids = [product['platform_id'] for product in product_info]
+            product_total_reviews = self._get_actual_analyzed_review_counts_batch(product_ids)
             
             return {
                 'targetProducts': self.selected_asins,
@@ -941,4 +940,45 @@ class CompetitorAnalysisService(BaseDashboardService):
             
         except Exception as e:
             logger.error(f"Error getting reviews for cell {product_asin}-{category_name}: {e}")
-            return [] 
+            return []
+
+    def _get_actual_analyzed_review_counts_batch(self, product_ids: List[str]) -> Dict[str, int]:
+        """Get the actual number of reviews that were analyzed for multiple products.
+        
+        Args:
+            product_ids: List of product ASINs
+            
+        Returns:
+            Dictionary mapping product_id to count of analyzed reviews
+        """
+        try:
+            if not product_ids:
+                return {}
+                
+            # Query all products at once and group by product_id
+            result = self.supabase.table('product_review_analysis').select(
+                'product_id, review_id'
+            ).in_('product_id', product_ids).execute()
+            
+            # Count unique review_ids per product
+            product_review_sets = {}
+            for product_id in product_ids:
+                product_review_sets[product_id] = set()
+                
+            for row in result.data or []:
+                product_id = row['product_id']
+                review_id = row['review_id']
+                if product_id in product_review_sets:
+                    product_review_sets[product_id].add(review_id)
+            
+            # Convert sets to counts
+            product_counts = {
+                product_id: len(review_set) 
+                for product_id, review_set in product_review_sets.items()
+            }
+            
+            return product_counts
+            
+        except Exception as e:
+            logger.error(f"Error getting analyzed review counts for products {product_ids}: {e}")
+            return {product_id: 0 for product_id in product_ids} 

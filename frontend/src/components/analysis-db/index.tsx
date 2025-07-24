@@ -344,7 +344,7 @@ async function fetchSalesTrendData(projectId?: string, categoryFilters?: string[
           extend_fields: extendFields
         },
         date_range: {
-          start_date: "2025-01-01",
+          start_date: "2024-07-01",
           end_date: "2025-06-30"
         },
         aggregation: "monthly"

@@ -453,7 +453,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
                   }}
                   metricType={metricType}
                   dateRange={{
-                    start_date: "2025-01-01",
+                    start_date: "2024-07-01",
                     end_date: "2025-06-30"
                   }}
                   onAreaClick={handleSalesTrendClick}
