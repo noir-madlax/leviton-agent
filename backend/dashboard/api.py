@@ -24,8 +24,6 @@ from .models import (
 )
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
 from .charts.sales_trend.services import SalesTrendService
-from .charts.customerSatisfaction.models import CustomerSatisfactionRequest, CustomerSatisfactionResponse
-from .charts.customerSatisfaction.services import CustomerSatisfactionService
 from .decorators import with_dashboard_service, log_request_response
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
