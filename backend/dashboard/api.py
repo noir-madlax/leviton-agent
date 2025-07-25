@@ -3,6 +3,7 @@
 import logging
 import json
 from typing import List, Optional, Dict, Any
+from datetime import datetime
 from fastapi import APIRouter, HTTPException, Query, Depends
 
 from core.models.filters import ProjectFilters, FilterOptions
@@ -21,6 +22,8 @@ from .models import (
 )
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
 from .charts.sales_trend.services import SalesTrendService
+from .charts.customerSatisfaction.models import CustomerSatisfactionRequest, CustomerSatisfactionResponse
+from .charts.customerSatisfaction.services import CustomerSatisfactionService
 from .decorators import with_dashboard_service, log_request_response
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
@@ -32,10 +35,12 @@ from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
+from .charts.api import router as charts_router
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+router.include_router(charts_router, prefix="/charts")
 
 # 公共的 filter 处理函数
 def parse_filters(
@@ -350,7 +355,7 @@ async def get_sales_trend(request: SalesTrendRequest):
     except Exception as e:
         logger.error(f"Unexpected error in sales trend analysis: {e}", exc_info=True)
         raise HTTPException(
-            status_code=500, 
+            status_code=500,
             detail=f"Internal server error during sales trend analysis: {str(e)}"
         )
 

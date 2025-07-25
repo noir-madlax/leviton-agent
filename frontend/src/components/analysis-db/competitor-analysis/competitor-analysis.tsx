@@ -8,6 +8,7 @@ import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-mat
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 // import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
+import { CustomerSatisfactionChart } from "@/app/chat/charts/customer_satisfaction"
 import { Tooltip } from "@/components/ui/tooltip"
 import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
@@ -467,62 +468,30 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
             </div>
           )}
 
-      {/* Product Data Overview */}
+      {/* Customer Satisfaction Overview - New Implementation */}
       <section data-chart-id="customer-satisfaction-overview">
         <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
           📊 Customer satisfaction overview
-         
-          {selectedAsins.length > 0 && (
-            <span className="ml-2 text-sm font-normal text-gray-600">
-              ({selectedAsins.length} Focal products selected)
-            </span>
-          )}
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-        Calculated from the latest 200 reviews per product.
+          Calculated from the latest 200 reviews per product using our new satisfaction analysis algorithm.
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
-          {productStats.map((stat: any) => (
-            <Card 
-              key={stat.asin} 
-              className="interactive-card p-4"
-              onClick={() => handleProductClick(stat.asin)}
-              onKeyDown={(e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                  e.preventDefault()
-                  handleProductClick(stat.asin)
-                }
-              }}
-              tabIndex={0}
-              role="button"
-              aria-label={`View ${stat.name} on Amazon`}
-              title={`Click to view ${stat.name} on Amazon`}
-            >
-              <h4 className="font-medium text-gray-900 mb-3 text-sm flex items-center justify-between">
-                <Tooltip content={stat.fullTitle}>
-                  <span>{stat.name}</span>
-                </Tooltip>
-                <ExternalLink className="w-3 h-3 text-blue-500" />
-              </h4>
-              <div className="text-xs text-gray-600 space-y-2">
-                <div className="flex justify-between">
-                  <span>📝 Analyzed review count:</span>
-                  <span className="font-medium">{stat.totalReviews}</span>
-                </div>
-               
-                {stat.rating && (
-                  <div className="flex justify-between">
-                    <span>⭐ Average star rating:</span>
-                    <span className="font-medium text-yellow-600">
-                      {stat.rating.toFixed(1)}
-                    </span>
-                  </div>
-                )}
 
-              </div>
-            </Card>
-          ))}
-        </div>
+        <CustomerSatisfactionChart
+          projectId={projectId || ''}
+          filters={{
+            categories: initialFilters?.categories || [],
+            brands: initialFilters?.brands || [],
+            segments: initialFilters?.segments || [],
+            extend_fields: initialFilters?.extend_fields || {}
+          }}
+          onProductClick={(product) => {
+            // Handle product click - open Amazon link
+            if (product.product_url) {
+              window.open(product.product_url, '_blank', 'noopener,noreferrer')
+            }
+          }}
+        />
       </section>
 
       {/* Competitor Delights and Pain Points Matrix */}
