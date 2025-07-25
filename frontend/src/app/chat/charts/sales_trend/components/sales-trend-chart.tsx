@@ -76,7 +76,7 @@ export function SalesTrendChart({
         <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-800 mb-2">{label}</p>
           {payload
-            .sort((a, b) => b.value - a.value)
+            .sort((a, b) => a.value - b.value)
             .map((entry, index) => (
               <div key={index} className="flex items-center gap-2 text-sm">
                 <div 
