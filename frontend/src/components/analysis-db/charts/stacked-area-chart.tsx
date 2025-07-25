@@ -59,7 +59,7 @@ export function StackedAreaChart({
           <p className="font-semibold text-gray-900 mb-2">{label}</p>
           <div className="space-y-1">
             {payload
-              .sort((a: any, b: any) => (b.value || 0) - (a.value || 0))
+              .sort((a: any, b: any) => (a.value || 0) - (b.value || 0))
               .map((item: any, index: number) => {
                 const percentage = total > 0 ? ((item.value || 0) / total * 100) : 0
                 return (
