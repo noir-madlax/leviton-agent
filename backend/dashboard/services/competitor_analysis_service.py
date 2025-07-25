@@ -643,7 +643,7 @@ class CompetitorAnalysisService(BaseDashboardService):
                         mrd.review_date,
                         mrd.review_brand,
                         mrd.occurrence_count
-                    FROM matrix_review_data mrd
+                    FROM review_aspect_data_view mrd
                     WHERE mrd.product_id = ANY($1)
                     ORDER BY mrd.category_name, mrd.product_id, mrd.occurrence_count DESC
                 """
@@ -660,13 +660,13 @@ class CompetitorAnalysisService(BaseDashboardService):
                         mrd.parent_group_name,
                         mrd.sentiment,
                         mrd.occurrence_count
-                    FROM matrix_review_data mrd
+                    FROM review_aspect_data_view mrd
                     WHERE mrd.product_id = ANY($1)
                     ORDER BY mrd.category_name, mrd.product_id, mrd.occurrence_count DESC
                 """
             
             # Use direct query instead of RPC for materialized view
-            result = self.supabase.from_('matrix_review_data').select('*').in_('product_id', self.selected_asins).execute()
+            result = self.supabase.from_('review_aspect_data_view').select('*').in_('product_id', self.selected_asins).execute()
             
             if result.data is None:
                 logger.error(f"Error querying materialized view: No data returned")
@@ -906,7 +906,7 @@ class CompetitorAnalysisService(BaseDashboardService):
         """
         try:
             # Use direct query instead of RPC for materialized view
-            result = self.supabase.from_('matrix_review_data').select('''
+            result = self.supabase.from_('review_aspect_data_view').select('''
                 review_id,
                 review_text,
                 rating,

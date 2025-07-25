@@ -18,7 +18,9 @@ from .models import (
     ReviewInsightsResponse,
     CompetitorAnalysisResponse,
     AllReviewDataResponse, ReviewData,
-    DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest
+    DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
+    CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
+    CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData
 )
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
 from .charts.sales_trend.services import SalesTrendService
@@ -34,6 +36,7 @@ from .services.review_insights_service import ReviewInsightsService
 from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
+from .services.competitor_summary_service import CompetitorSummaryService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
 
@@ -779,6 +782,120 @@ async def get_competitor_cell_reviews(
     except Exception as e:
         logger.error(f"Error getting cell reviews for {project_id}: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to get cell reviews: {str(e)}")
+
+
+
+
+
+@router.post("/competitor-analysis/summary", response_model=CompetitorSummaryResponse)
+@log_request_response
+async def get_competitor_summary(request: CompetitorSummaryRequest):
+    """Get competitor analysis summary for selected ASINs.
+    
+    POST请求，获取选中ASINs的竞争对手分析摘要：
+    {
+        "project_id": "project-uuid",
+        "selected_asins": ["ASIN1", "ASIN2", "ASIN3"]
+    }
+    
+    Returns:
+        Summary data including product info, review counts, and additional metrics
+    """
+    try:
+        logger.info(f"Competitor summary request for ASINs: {request.selected_asins}")
+        
+        # Use the service to get competitor summary data
+        service = CompetitorSummaryService()
+        summary_data = await service.get_competitor_summary(request.project_id, request.selected_asins)
+        
+        # Convert to response model
+        products = []
+        for product_data in summary_data['products']:
+            products.append(CompetitorSummaryProduct(
+                asin=product_data['asin'],
+                product_title=product_data['product_title'],
+                rating=product_data['rating'],
+                brand=product_data['brand'],
+                product_url=product_data['product_url'],
+                list_price=product_data['list_price'],
+                unique_reviews_count=product_data['unique_reviews_count'],
+                additional_metrics=product_data['additional_metrics']
+            ))
+        
+        response = CompetitorSummaryResponse(
+            products=products,
+            total_products=summary_data['total_products'],
+            selected_asins=summary_data['selected_asins']
+        )
+        
+        logger.info(f"Competitor summary API returned data for {len(products)} products")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error in competitor summary API: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Failed to get competitor summary: {str(e)}")
+
+
+@router.post("/competitor-analysis/matrix-view", response_model=CompetitorMatrixViewResponse)
+@log_request_response
+async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
+    """Get competitor analysis matrix view data.
+    
+    POST请求，获取选中ASINs的矩阵视图数据：
+    {
+        "project_id": "project-uuid",
+        "selected_asins": ["ASIN1", "ASIN2", "ASIN3"],
+        "aspect_type": "phy_perf",
+        "filter": {
+            "top_n": 10
+        }
+    }
+    
+    Returns:
+        Matrix view data with top aspect categories and product-category statistics
+    """
+    try:
+        logger.info(f"Competitor matrix view request for ASINs: {request.selected_asins}, aspect_type: {request.aspect_type}")
+        
+        # Use the service to get matrix view data
+        service = CompetitorSummaryService()
+        matrix_data = await service.get_matrix_view_data(
+            request.project_id,
+            request.selected_asins,
+            request.aspect_type,
+            request.filter.top_n
+        )
+        
+        # Convert to response model
+        aspect_categories = []
+        for category_data in matrix_data['aspect_categories']:
+            aspect_categories.append(AspectCategoryInfo(
+                category_id=category_data['category_id'],
+                category_name=category_data['category_name'],
+                definition=category_data['definition']
+            ))
+        
+        product_aspect_data = []
+        for aspect_data in matrix_data['product_aspect_data']:
+            product_aspect_data.append(ProductAspectData(
+                asin=aspect_data['asin'],
+                aspect_data=aspect_data['aspect_data']
+            ))
+        
+        response = CompetitorMatrixViewResponse(
+            aspect_categories=aspect_categories,
+            product_aspect_data=product_aspect_data,
+            selected_asins=matrix_data['selected_asins'],
+            aspect_type=matrix_data['aspect_type'],
+            total_categories=matrix_data['total_categories']
+        )
+        
+        logger.info(f"Competitor matrix view API returned data for {len(aspect_categories)} categories")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error in competitor matrix view API: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Failed to get competitor matrix view: {str(e)}")
 
 
 @router.post("/all-review-data", response_model=AllReviewDataResponse)

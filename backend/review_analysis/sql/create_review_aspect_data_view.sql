@@ -1,5 +1,5 @@
 -- Materialized view for matrix review data with proper type casting
-CREATE MATERIALIZED VIEW matrix_review_data AS
+CREATE MATERIALIZED VIEW review_aspect_data_view AS
 SELECT 
     -- Category information
     rac.category_pk,
