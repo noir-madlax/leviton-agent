@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { useProjectT, useFiltersT } from '@/i18n/hooks';
 
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
@@ -519,6 +520,18 @@ export function DataConfirmationTab({
   }) => void;
   projectName?: string;
 }) {
+  const [isClient, setIsClient] = useState(false);
+  
+  // 翻译hooks
+  const projectTRaw = useProjectT();
+  const filtersTRaw = useFiltersT();
+  const t = (key: string) => isClient ? projectTRaw(key) : key;
+  const filtersT = (key: string) => isClient ? filtersTRaw(key) : key;
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // 暂时不使用onNavigateToAnalysis，让用户看到进度后手动跳转
   console.log('Navigation callback available:', !!onNavigateToAnalysis);
   const { user } = useAuth();
@@ -1160,12 +1173,12 @@ export function DataConfirmationTab({
       <div className="h-full overflow-auto">
         <div className="max-w-7xl mx-auto space-y-6 p-6">
           <div>
-            <h1 className="text-3xl font-bold tracking-tight">Create New Project</h1>
+            <h1 className="text-3xl font-bold tracking-tight">{t('createNewProject')}</h1>
             <p className="text-muted-foreground mt-2">
-              Failed to load product data. Please try again.
+              {t('failedLoadData')}
             </p>
           </div>
-          <Button onClick={loadInitialData}>Retry</Button>
+          <Button onClick={loadInitialData}>{t('retry')}</Button>
         </div>
       </div>
     );
@@ -1185,11 +1198,9 @@ export function DataConfirmationTab({
                   <span className="text-white text-xs font-bold">i</span>
                 </div>
                 <div className="flex-1">
-                  <h4 className="text-sm font-medium text-blue-900 mb-1">Category-Based Analysis</h4>
+                  <h4 className="text-sm font-medium text-blue-900 mb-1">{t('categoryBasedAnalysis')}</h4>
                   <p className="text-sm text-blue-800 leading-relaxed">
-                    Your project analysis is based on Amazon product category. We compare brand performance, 
-                    competitive analysis, and user-preferred product features<strong> across products of different brands within Selected Category</strong> . 
-                    This comprehensive approach ensures you get complete market insights for strategic decision making.
+                    {t('categoryAnalysisDescription')}
                   </p>
                 </div>
               </div>
@@ -1204,7 +1215,7 @@ export function DataConfirmationTab({
           <div className="p-3 bg-green-50 border border-green-200 rounded-lg">
             <div className="flex items-center gap-2">
               <Check className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-medium text-green-800">Selected Category:</span>
+              <span className="text-sm font-medium text-green-800">{t('selectedCategory')}</span>
               <span className="text-sm text-green-700 font-medium">{selectedCategoryPath}</span>
             </div>
           </div>
@@ -1230,24 +1241,24 @@ export function DataConfirmationTab({
           <CardHeader className="pb-3">
             <CardTitle className="flex items-center gap-2 text-lg">
               <Filter className="w-5 h-5" />
-              Data Selection
+              {t('dataSelection')}
             </CardTitle>
             <CardDescription className="text-sm">
-              Input which <strong>product category</strong> and <strong>number of products</strong> to include in your project
+              {t('dataSelectionDescription')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="grid grid-cols-2 gap-6">
               {/* Amazon Category Selector - 新版本：URL/Node ID输入 */}
               <div>
-                <Label className="text-sm font-medium mb-3 block">Amazon Category Selection</Label>
+                <Label className="text-sm font-medium mb-3 block">{t('amazonCategorySelection')}</Label>
                 
                 {/* 示例说明 */}
                 <div className="mb-3 p-3 bg-blue-50 border border-blue-200 rounded-lg">
-                  <p className="text-xs text-blue-800 font-medium mb-1">Supported Input Types:</p>
+                  <p className="text-xs text-blue-800 font-medium mb-1">{t('supportedInputTypes')}</p>
                   <div className="space-y-1 text-xs text-blue-700">
-                    <div><strong>Category URLs:</strong> <code className="bg-blue-100 px-1 rounded">https://amazon.com/b?node=495324</code></div>
-                    <div><strong>Node IDs:</strong> <code className="bg-blue-100 px-1 rounded">495324</code> or <code className="bg-blue-100 px-1 rounded">node=495324</code></div>
+                    <div><strong>{t('categoryUrls')}</strong> <code className="bg-blue-100 px-1 rounded">https://amazon.com/b?node=495324</code></div>
+                    <div><strong>{t('nodeIds')}</strong> <code className="bg-blue-100 px-1 rounded">495324</code> or <code className="bg-blue-100 px-1 rounded">node=495324</code></div>
                   
                    
                   </div>
@@ -1255,7 +1266,7 @@ export function DataConfirmationTab({
 
                 {/* 输入框 */}
                 <Input
-                  placeholder="Enter category URL or node ID"
+                  placeholder={t('enterCategoryUrl')}
                   value={categoryInput}
                   onChange={(e) => handleCategoryInputChange(e.target.value)}
                   onKeyDown={(e) => {
@@ -1399,7 +1410,7 @@ export function DataConfirmationTab({
                 
                 {/* 销量排名筛选 */}
                 <div>
-                  <Label className="text-sm font-medium">Number of products</Label>
+                  <Label className="text-sm font-medium">{t('numberOfProducts')}</Label>
                   <Select
                     value={filters.topSalesCount?.toString() || 'all'}
                     onValueChange={handleTopSalesCountChange}
@@ -1415,7 +1426,7 @@ export function DataConfirmationTab({
                         </div>
                       </SelectItem>
                       <SelectItem value="50">Top 50 Products</SelectItem>
-                      <SelectItem value="100">Top 100 Products</SelectItem>
+                      <SelectItem value="100">{t('top100Products')}</SelectItem>
                       <SelectItem value="200">
                         <div className="flex items-center justify-between w-full">
                           <span>Top 200 Products</span>
@@ -1437,7 +1448,7 @@ export function DataConfirmationTab({
                     </SelectContent>
                   </Select>
                   <p className="text-xs text-muted-foreground mt-1">
-                    Based on monthly sales volume
+                    {t('basedOnMonthlySales')}
                   </p>
                 </div>
               </div>
@@ -1451,7 +1462,7 @@ export function DataConfirmationTab({
                 onClick={resetFilters}
                 className="h-8 text-xs text-gray-500 hover:text-gray-700"
               >
-                Reset Filters
+                {filtersT('resetFilters')}
               </Button>
               <Button
                 onClick={handleFilterData}
@@ -1466,7 +1477,7 @@ export function DataConfirmationTab({
                 ) : (
                   <>
                     <RefreshCw className="w-3 h-3 mr-1" />
-                    Apply Filters
+                    {filtersT('applyFilters')}
                   </>
                 )}
               </Button>
@@ -1479,7 +1490,7 @@ export function DataConfirmationTab({
           <CardHeader className="pb-3">
             <CardTitle className="text-lg flex items-center justify-between">
               <div className="flex items-center gap-2">
-                Preview of Project Data Scope
+                {t('previewDataScope')}
                 {filterLoading && (
                   <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />
                 )}
@@ -1497,10 +1508,10 @@ export function DataConfirmationTab({
                   {isConfirmed ? (
                     <>
                       <CheckCircle className="w-4 h-4 mr-2" />
-                      Project Created
+                      {t('projectCreated')}
                     </>
                   ) : (
-                    'Create  Project'
+                    t('createProject')
                   )}
                 </Button>
                 
@@ -1531,7 +1542,7 @@ export function DataConfirmationTab({
                     </a>
                   </span>
                 )
-                : "Apply filters above to see your data scope preview."
+                : t('applyFiltersPreview')
               }
             </CardDescription>
           </CardHeader>
@@ -1548,7 +1559,7 @@ export function DataConfirmationTab({
                         <Database className="w-4 h-4 text-blue-500" />
                         <div>
                           <p className="text-xl font-bold">{filteredStats?.totalProducts.toLocaleString()}</p>
-                          <p className="text-xs text-muted-foreground">Products</p>
+                          <p className="text-xs text-muted-foreground">{t('products')}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -1560,7 +1571,7 @@ export function DataConfirmationTab({
                         <Users className="w-4 h-4 text-green-500" />
                         <div>
                           <p className="text-xl font-bold">{filteredStats?.totalBrands}</p>
-                          <p className="text-xs text-muted-foreground">Brands</p>
+                          <p className="text-xs text-muted-foreground">{t('brands')}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -1572,7 +1583,7 @@ export function DataConfirmationTab({
                         <MessageSquare className="w-4 h-4 text-purple-500" />
                         <div>
                           <p className="text-xl font-bold">{filteredStats?.totalReviews.toLocaleString()}</p>
-                          <p className="text-xs text-muted-foreground">Reviews</p>
+                          <p className="text-xs text-muted-foreground">{t('reviews')}</p>
                         </div>
                       </div>
                     </CardContent>
@@ -1584,7 +1595,7 @@ export function DataConfirmationTab({
                   {/* 按来源分布 */}
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm">Data Sources</CardTitle>
+                      <CardTitle className="text-sm">{t('dataSources')}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
                       <div className="space-y-1">
@@ -1604,7 +1615,7 @@ export function DataConfirmationTab({
                   {/* 按类别分布 */}
                   <Card>
                     <CardHeader className="pb-2">
-                      <CardTitle className="text-sm">Amazon Category</CardTitle>
+                      <CardTitle className="text-sm">{t('amazonCategory')}</CardTitle>
                     </CardHeader>
                     <CardContent className="pt-0">
                       <div className="space-y-1">

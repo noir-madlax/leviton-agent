@@ -8,9 +8,11 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { ProtectedRoute } from "@/components/auth/protected-route"
 import { useState, useEffect } from "react"
+import { useProjectT, useCommonT } from "@/i18n/hooks"
 
 export default function OnboardingPage() {
   const router = useRouter()
+  const [isClient, setIsClient] = useState(false)
   const [createProjectRef, setCreateProjectRef] = useState<{
     handleConfirmSelection: () => void;
     isConfirmed: boolean;
@@ -20,10 +22,20 @@ export default function OnboardingPage() {
     estimatedTime: string;
   } | null>(null)
   
+  // 翻译hooks
+  const projectTRaw = useProjectT()
+  const commonTRaw = useCommonT()
+  const t = (key: string) => isClient ? projectTRaw(key) : key
+  const commonT = (key: string) => isClient ? commonTRaw(key) : key
+  
   // 项目名状态管理
   const [projectName, setProjectName] = useState('New Project 1')
   const [isEditingName, setIsEditingName] = useState(false)
   const [tempProjectName, setTempProjectName] = useState('')
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   // Handle navigation after project creation is complete
   const handleNavigateToAnalysis = (projectId: string) => {
@@ -39,6 +51,13 @@ export default function OnboardingPage() {
       setProjectName(smartName)
     }
   }, [createProjectRef?.isFilterApplied, isEditingName])
+
+  // 初始化项目名的翻译
+  useEffect(() => {
+    if (isClient && projectName === 'New Project 1') {
+      setProjectName(t('newProject1'))
+    }
+  }, [isClient, t])
 
   const handleEditName = () => {
     setTempProjectName(projectName)
@@ -66,16 +85,16 @@ export default function OnboardingPage() {
                 <Link href="/">
                   <Button variant="ghost" size="sm">
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Back to Home
+                    {commonT('backToHome')}
                   </Button>
                 </Link>
                 
                 {/* 项目创建区域 */}
                 <div className="flex items-center gap-4">
                   <div className="flex flex-col">
-                    <h1 className="text-xl font-semibold">Create New Project</h1>
+                    <h1 className="text-xl font-semibold">{t('createNewProject')}</h1>
                     <p className="text-sm text-muted-foreground">
-                      Select project data scope
+                      {t('selectProjectScope')}
                     </p>
                   </div>
                   

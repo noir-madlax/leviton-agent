@@ -1,5 +1,6 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import {
   DropdownMenu,
@@ -12,9 +13,19 @@ import {
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { User, Settings, LogOut, CreditCard } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
+import { useNavT } from "@/i18n/hooks"
 
 export function UserMenu() {
   const { user, signOut } = useAuth()
+  const [isClient, setIsClient] = useState(false)
+  
+  // 总是调用hooks，但在客户端渲染前返回fallback
+  const navTRaw = useNavT()
+  const t = (key: string) => isClient ? navTRaw(key) : key
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const handleLogout = async () => {
     try {
@@ -51,20 +62,20 @@ export function UserMenu() {
         <DropdownMenuSeparator />
         <DropdownMenuItem>
           <User className="mr-2 h-4 w-4" />
-          <span>Profile</span>
+          <span>{t('profile')}</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <CreditCard className="mr-2 h-4 w-4" />
-          <span>Billing</span>
+          <span>{t('billing')}</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Settings className="mr-2 h-4 w-4" />
-          <span>Settings</span>
+          <span>{t('settings')}</span>
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem onClick={handleLogout}>
           <LogOut className="mr-2 h-4 w-4" />
-          <span>Log out</span>
+          <span>{t('logout')}</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

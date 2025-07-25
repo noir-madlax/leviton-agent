@@ -54,6 +54,12 @@ export function useMetaT() {
   return (key: string) => t(`meta.${key}`);
 }
 
+// 数据抓取翻译Hook
+export function useScrapingT() {
+  const { t } = useTranslation();
+  return (key: string) => t(`scraping.${key}`);
+}
+
 // 通用翻译Hook - 完整版本
 export function useT() {
   const { t } = useTranslation();

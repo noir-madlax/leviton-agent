@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -12,6 +12,7 @@ import { config } from '@/lib/config';
 import { usePermissions } from '@/hooks/use-permissions';
 import { useAuth } from '@/contexts/auth-context';
 import { usePostHog } from 'posthog-js/react';
+import { useScrapingT } from '@/i18n/hooks';
 
 interface ScrapingResult {
   task_id?: string;
@@ -85,9 +86,19 @@ export function DataImportTab() {
   const [maxReviews, setMaxReviews] = useState<number | string>(15);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
+  const [isClient, setIsClient] = useState(false);
+  
   const { permissions } = usePermissions();
   const { user } = useAuth();
   const posthog = usePostHog();
+  
+  // 翻译hook
+  const scrapingTRaw = useScrapingT();
+  const t = (key: string) => isClient ? scrapingTRaw(key) : key;
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
   
   // 🔥 新增：实时进度状态管理
   const [isScrapingStarted, setIsScrapingStarted] = useState(false);
@@ -276,26 +287,26 @@ export function DataImportTab() {
         {/* URL输入区域 */}
         <Card>
           <CardHeader>
-            <CardTitle>Data Source </CardTitle>
+            <CardTitle>{t('dataSource')}</CardTitle>
             <CardDescription>
              
               <div className="text-sm text-muted-foreground space-y-2">
                 <div>
-                  <strong>Category URL</strong> (collects <strong>top products</strong> from this category): https://www.amazon.com/b?node=629135801
+                  <strong>{t('categoryUrl')}</strong> ({t('collectsTopProducts')}): https://www.amazon.com/b?node=629135801
                 </div>
                 <div>
-                  <strong>Product URL</strong> (collects data for <strong>specific product</strong>): https://www.amazon.com/dp/B00NG0ELL0
+                  <strong>{t('productUrl')}</strong> ({t('collectsDataFor')} <strong>{t('specificProduct')}</strong>): https://www.amazon.com/dp/B00NG0ELL0
                 </div>
               </div>
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="url">Amazon URL</Label>
+              <Label htmlFor="url">{t('amazonUrl')}</Label>
               <div className="flex gap-2">
                 <Input
                   id="url"
-                  placeholder="Paste Amazon category or product URL here"
+                  placeholder={t('pasteAmazonUrl')}
                   value={url}
                   onChange={(e) => setUrl(e.target.value)}
                   className="flex-1"
@@ -309,10 +320,10 @@ export function DataImportTab() {
                   {isLoading ? (
                     <>
                       <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                      Collecting...
+                      {t('collecting')}
                     </>
                   ) : (
-                    'Start Collection'
+                    t('startCollection')
                   )}
                 </Button>
               </div>
@@ -324,15 +335,15 @@ export function DataImportTab() {
         {/* 参数设置 */}
         <Card>
           <CardHeader>
-            <CardTitle>Collection Parameters</CardTitle>
+            <CardTitle>{t('collectionParameters')}</CardTitle>
             <CardDescription>
-              Configure how much data to collect from Amazon.
+              {t('configureDataCollection')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="maxProducts">Max Products in Selected Category</Label>
+                <Label htmlFor="maxProducts">{t('maxProductsCategory')}</Label>
                 <Input
                   id="maxProducts"
                   type="text"
@@ -346,11 +357,11 @@ export function DataImportTab() {
                   }}
                 />
                 <p className="text-sm text-muted-foreground">
-                  Maximum number of products to scrape (1-500)
+                  {t('maxProductsScrape')}
                 </p>
               </div>
               <div className="space-y-2">
-                <Label htmlFor="maxReviews">Max Reviews</Label>
+                <Label htmlFor="maxReviews">{t('maxReviews')}</Label>
                 <Input
                   id="maxReviews"
                   type="text"
@@ -364,7 +375,7 @@ export function DataImportTab() {
                   }}
                 />
                 <p className="text-sm text-muted-foreground">
-                  Maximum number of reviews to scrape <strong>per product</strong> (0-200)
+                  {t('maxReviewsPerProduct')}
                 </p>
               </div>
             </div>
@@ -376,12 +387,12 @@ export function DataImportTab() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                Scraping Results
+                {t('scrapingResults')}
                 {result?.overall_status && getStatusBadge(result.overall_status)}
                 {isScrapingStarted && !result && (
                   <Badge variant="secondary">
                     <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                    Starting...
+                    {t('starting')}
                   </Badge>
                 )}
               </CardTitle>
@@ -390,13 +401,13 @@ export function DataImportTab() {
               {/* 基本信息 */}
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
-                  <Label>URL</Label>
+                  <Label>{t('url')}</Label>
                   <div className="font-mono text-xs bg-muted p-2 rounded break-all">
                     {result?.url || url || 'N/A'}
                   </div>
                 </div>
                 <div>
-                  <Label>Batch ID</Label>
+                  <Label>{t('batchId')}</Label>
                   <div className="font-mono text-xs bg-muted p-2 rounded">
                     {result?.batch_id || currentBatchId || 'Pending...'}
                   </div>
@@ -405,19 +416,19 @@ export function DataImportTab() {
 
               {/* 🔥 修改：立即显示步骤进度 */}
               <div className="space-y-4">
-                <Label className="text-base font-medium">Processing Steps</Label>
+                <Label className="text-base font-medium">{t('processingSteps')}</Label>
                 
                 {/* Step 1: 产品爬取 */}
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">1</div>
-                    <span className="font-medium">Product Scraping (API → JSON)</span>
+                    <span className="font-medium">{t('productScraping')}</span>
                     {result?.products_phase?.scraping ? (
                       getStepStatus(result.products_phase.scraping.status)
                     ) : isScrapingStarted ? (
                       <Badge variant="secondary">
                         <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                        In Progress
+                        {t('inProgress')}
                       </Badge>
                     ) : (
                       <Badge variant="outline">Pending</Badge>
@@ -427,15 +438,15 @@ export function DataImportTab() {
                     {result?.products_phase?.scraping ? (
                       result.products_phase.scraping.status === 'success' ? (
                         <div className="flex items-center gap-4">
-                          <span>✅ {result.products_phase.scraping.products_scraped || 0} products scraped</span>
+                          <span>✅ {result.products_phase.scraping.products_scraped || 0} {t('productsScrapped')}</span>
                           {result.products_phase.scraping.file_path && (
                             <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
-                              Data saved
+                              {t('dataSaved')}
                             </span>
                           )}
                         </div>
                       ) : result.products_phase.scraping.status === 'failed' ? (
-                        <span className="text-red-600">❌ Failed: {result.products_phase.scraping.error || 'Unknown error'}</span>
+                        <span className="text-red-600">❌ {t('failed')}: {result.products_phase.scraping.error || t('unknownError')}</span>
                       ) : (
                         <span>🔄 In progress...</span>
                       )
