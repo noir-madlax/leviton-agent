@@ -1,8 +1,10 @@
+import { useState, useEffect } from "react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Calendar, ArrowRight, BarChart3, TrendingUp, MessageSquare, Clock, CheckCircle, AlertCircle, Loader2 } from "lucide-react"
 import Link from "next/link"
+import { useProjectT } from "@/i18n/hooks"
 
 // Updated Project interface with overall_status
 interface Project {
@@ -24,6 +26,16 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project, featured = false }: ProjectCardProps) {
+  const [isClient, setIsClient] = useState(false)
+  
+  // 总是调用hooks，但在客户端渲染前返回fallback
+  const projectTRaw = useProjectT()
+  const t = (key: string) => isClient ? projectTRaw(key) : key
+  
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
+  
   // Determine the correct link based on project status
   const getLinkHref = () => {
     if (project.overall_status === 'creating') {
@@ -46,18 +58,18 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             <CardTitle className={`${featured ? "text-lg" : "text-base"} line-clamp-2`}>{project.project_name}</CardTitle>
             <div className="flex items-center gap-2">
               <Badge variant="outline" className="text-xs w-fit">
-                {project.description || "Analysis Project"}
+                {project.description || t('analysisProject')}
               </Badge>
               {/* Only show processing badge when project is being created */}
               {showProcessingBadge && (
                 <Badge variant="secondary" className="text-xs bg-blue-100 text-blue-700 border-blue-200">
                   <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                  Processing
+                  {t('processing')}
                 </Badge>
               )}
             </div>
           </div>
-          {featured && <Badge className="bg-blue-100 text-blue-700 border-blue-200">Current</Badge>}
+          {featured && <Badge className="bg-blue-100 text-blue-700 border-blue-200">{t('current')}</Badge>}
         </div>
       </CardHeader>
 
@@ -66,11 +78,11 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Calendar className="w-3 h-3" />
-              <span>Created {new Date(project.created_at).toLocaleDateString()}</span>
+              <span>{t('created')} {new Date(project.created_at).toLocaleDateString()}</span>
             </div>
             <div className="flex items-center space-x-1">
               <TrendingUp className="w-3 h-3" />
-              <span>Updated {new Date(project.updated_at).toLocaleDateString()}</span>
+              <span>{t('updated')} {new Date(project.updated_at).toLocaleDateString()}</span>
             </div>
           </div>
         </div>
@@ -79,13 +91,13 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
         {(project.total_products || project.total_brands || project.total_reviews) && (
           <div className="flex items-center space-x-4 text-sm text-gray-600 mb-4">
             {project.total_products && (
-              <span>{project.total_products} products</span>
+              <span>{project.total_products} {t('products')}</span>
             )}
             {project.total_brands && (
-              <span>{project.total_brands} brands</span>
+              <span>{project.total_brands} {t('brands')}</span>
             )}
             {project.total_reviews && (
-              <span>{project.total_reviews} reviews</span>
+              <span>{project.total_reviews} {t('reviews')}</span>
             )}
           </div>
         )}
@@ -96,19 +108,19 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
             {project.overall_status === 'ready' ? (
               <>
                 <CheckCircle className="w-4 h-4 text-green-500" />
-                <span className="text-sm text-green-700">Ready for Analysis</span>
+                <span className="text-sm text-green-700">{t('readyForAnalysis')}</span>
               </>
             ) : project.overall_status === 'failed' ? (
               <>
                 <AlertCircle className="w-4 h-4 text-red-500" />
-                <span className="text-sm text-red-700">Failed</span>
+                <span className="text-sm text-red-700">{t('failed')}</span>
               </>
             ) : project.overall_status === 'creating' ? (
               <></>
             ) : (
               <>
                 <BarChart3 className="w-4 h-4 text-gray-400" />
-                <span className="text-sm text-gray-600">Ready</span>
+                <span className="text-sm text-gray-600">{t('ready')}</span>
               </>
             )}
           </div>
@@ -121,16 +133,16 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
                 {project.overall_status === 'creating' ? (
                   <>
                     <Clock className="w-3 h-3 mr-1" />
-                    View Progress
+                    {t('viewProgress')}
                   </>
                 ) : featured ? (
                   <>
-                    Continue
+                    {t('continue')}
                     <ArrowRight className="w-3 h-3 ml-1" />
                   </>
                 ) : (
                   <>
-                    View Project
+                    {t('viewProject')}
                     <ArrowRight className="w-3 h-3 ml-1" />
                   </>
                 )}

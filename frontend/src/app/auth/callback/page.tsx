@@ -1,12 +1,22 @@
 "use client"
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 import { Loader2 } from 'lucide-react'
+import { useAuthT } from '@/i18n/hooks'
 
 export default function AuthCallback() {
   const router = useRouter()
+  const [isClient, setIsClient] = useState(false)
+  
+  // 总是调用hooks，但在客户端渲染前返回fallback
+  const authTRaw = useAuthT()
+  const t = (key: string) => isClient ? authTRaw(key) : key
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   useEffect(() => {
     const handleAuthCallback = async () => {
@@ -39,7 +49,7 @@ export default function AuthCallback() {
     <div className="flex items-center justify-center min-h-screen">
       <div className="text-center">
         <Loader2 className="h-8 w-8 animate-spin mx-auto mb-4" />
-        <p className="text-gray-600">Completing authentication...</p>
+        <p className="text-gray-600">{t('completingAuth')}</p>
       </div>
     </div>
   )

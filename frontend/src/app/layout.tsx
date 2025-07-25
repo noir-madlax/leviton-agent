@@ -4,6 +4,7 @@ import "./globals.css";
 import { AuthProvider } from "@/contexts/auth-context";
 import { Toaster } from "@/components/ui/toaster";
 import { PostHogAppProvider } from "./providers";
+import { I18nProvider } from "@/components/i18n-provider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,10 +41,12 @@ export default function RootLayout({
         className={`${inter.variable} font-sans antialiased`}
       >
         <PostHogAppProvider>
-          <AuthProvider>
-            {children}
-          </AuthProvider>
-          <Toaster />
+          <I18nProvider>
+            <AuthProvider>
+              {children}
+            </AuthProvider>
+            <Toaster />
+          </I18nProvider>
         </PostHogAppProvider>
       </body>
     </html>

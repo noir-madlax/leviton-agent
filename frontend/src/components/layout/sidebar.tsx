@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -16,6 +16,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { UserMenu } from "./user-menu"
+import { useProjectT } from "@/i18n/hooks"
 
 // 使用现有的Project接口
 interface Project {
@@ -47,6 +48,15 @@ interface SidebarProps {
 export function Sidebar({ projects, charts = [], collapsed, onToggle }: SidebarProps) {
   const [projectsExpanded, setProjectsExpanded] = useState(true)
   const [chartsExpanded, setChartsExpanded] = useState(true)
+  const [isClient, setIsClient] = useState(false)
+  
+  // 总是调用hooks，但在客户端渲染前返回fallback
+  const projectTRaw = useProjectT()
+  const t = (key: string) => isClient ? projectTRaw(key) : key
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   if (collapsed) {
     return (
@@ -83,7 +93,7 @@ export function Sidebar({ projects, charts = [], collapsed, onToggle }: SidebarP
             <Button variant="ghost" className="w-full justify-between p-2 h-auto">
               <div className="flex items-center space-x-2">
                 <FolderOpen className="w-4 h-4" />
-                <span className="font-medium">Projects</span>
+                <span className="font-medium">{t('projects')}</span>
                 <Badge variant="secondary" className="text-xs">
                   {projects.length}
                 </Badge>
@@ -97,10 +107,10 @@ export function Sidebar({ projects, charts = [], collapsed, onToggle }: SidebarP
               <Link key={project.id} href={`/project/${project.id}`}>
                 <div className="p-3 rounded-lg hover:bg-gray-50 cursor-pointer border border-transparent hover:border-gray-200 transition-colors">
                   <div className="font-medium text-sm text-gray-900 mb-1 line-clamp-2">{project.project_name}</div>
-                  <div className="text-xs text-gray-500 mb-2">{project.description || 'No description'}</div>
+                  <div className="text-xs text-gray-500 mb-2">{project.description || t('noDescription')}</div>
                   <div className="flex items-center space-x-1 text-xs text-gray-400">
                     <Calendar className="w-3 h-3" />
-                    <span>Created {new Date(project.created_at).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}</span>
+                    <span>{t('created')} {new Date(project.created_at).toLocaleDateString('en-US', { month: 'numeric', day: 'numeric', year: 'numeric' })}</span>
                   </div>
                 </div>
               </Link>
@@ -115,7 +125,7 @@ export function Sidebar({ projects, charts = [], collapsed, onToggle }: SidebarP
               <Button variant="ghost" className="w-full justify-between p-2 h-auto">
                 <div className="flex items-center space-x-2">
                   <BarChart3 className="w-4 h-4" />
-                  <span className="font-medium">Recent Charts</span>
+                  <span className="font-medium">{t('recentCharts')}</span>
                   <Badge variant="secondary" className="text-xs">
                     {charts.length}
                   </Badge>

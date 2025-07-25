@@ -8,6 +8,7 @@ import { Input } from '@/components/ui/input'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Eye, EyeOff, Loader2 } from 'lucide-react'
 import { useToast } from '@/hooks/use-toast'
+import { useAuthT, useCommonT } from '@/i18n/hooks'
 
 function ResetPasswordForm() {
   const [password, setPassword] = useState('')
@@ -19,6 +20,8 @@ function ResetPasswordForm() {
   
   const router = useRouter()
   const { toast } = useToast()
+  const t = useAuthT()
+  const commonT = useCommonT()
 
   useEffect(() => {
     const checkSession = async () => {
@@ -108,9 +111,9 @@ function ResetPasswordForm() {
     <div className="flex items-center justify-center min-h-screen bg-gray-50 px-4">
       <Card className="w-full max-w-md">
         <CardHeader>
-          <CardTitle className="text-2xl font-bold text-center">Reset Password</CardTitle>
+          <CardTitle className="text-2xl font-bold text-center">{t('resetPassword')}</CardTitle>
           <CardDescription className="text-center">
-            Enter your new password below
+            {t('enterNewPassword')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -119,7 +122,7 @@ function ResetPasswordForm() {
               <div className="relative">
                 <Input
                   type={showPassword ? 'text' : 'password'}
-                  placeholder="New Password"
+                  placeholder={t('password')}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
@@ -147,7 +150,7 @@ function ResetPasswordForm() {
               <div className="relative">
                 <Input
                   type={showConfirmPassword ? 'text' : 'password'}
-                  placeholder="Confirm New Password"
+                  placeholder={t('confirmPassword')}
                   value={confirmPassword}
                   onChange={(e) => setConfirmPassword(e.target.value)}
                   required
