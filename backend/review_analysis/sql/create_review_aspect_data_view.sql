@@ -10,6 +10,7 @@ SELECT
     -- Aspect information
     raa.aspect_pk,
     raa.product_id,
+    raa.project_id,  -- Add missing project_id field
     raa.detail_text,
     raa.parent_group_name,
     
@@ -26,6 +27,10 @@ SELECT
     
     -- Product information
     pwt.brand,
+    pwt.title,  -- Add product title
+    pwt.product_url,  -- Add product URL
+    pwt.list_price_usd,  -- Add missing price fields
+    pwt.price_usd,
     
     -- Computed fields
     CASE 
@@ -52,8 +57,8 @@ WHERE rac.stage = 'final'
   AND rac.name != 'OUT_OF_SCOPE'
   AND pr.review_text IS NOT NULL;
 
--- Indexes for performance
-CREATE INDEX idx_matrix_review_category ON matrix_review_data(category_name, aspect_type);
-CREATE INDEX idx_matrix_review_product ON matrix_review_data(product_id);
-CREATE INDEX idx_matrix_review_sentiment ON matrix_review_data(sentiment_label);
-CREATE INDEX idx_matrix_review_project ON matrix_review_data(product_id, category_name);
+-- Indexes for performance (fixed to use correct view name)
+CREATE INDEX idx_review_aspect_data_category ON review_aspect_data_view(category_name, aspect_type);
+CREATE INDEX idx_review_aspect_data_product ON review_aspect_data_view(product_id);
+CREATE INDEX idx_review_aspect_data_sentiment ON review_aspect_data_view(sentiment_label);
+CREATE INDEX idx_review_aspect_data_project ON review_aspect_data_view(project_id, category_name);
