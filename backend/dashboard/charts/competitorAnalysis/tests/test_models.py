@@ -6,7 +6,7 @@ from pydantic import ValidationError
 from ..models import (
     CompetitorSummaryRequest, CompetitorSummaryResponse,
     CompetitorMatrixViewRequest, CompetitorMatrixViewResponse,
-    CompetitorMatrixViewOptions
+    ReviewRetrievalRequest, ReviewRetrievalResponse
 )
 
 
@@ -38,62 +38,87 @@ class TestCompetitorMatrixViewRequest:
     
     def test_valid_request(self):
         """Test valid request creation."""
-        options = CompetitorMatrixViewOptions(
-            sort_by="mentions",
-            max_categories=5
-        )
+        filter_options = {
+            "sort_by": "mentions",
+            "max_categories": 5
+        }
         request = CompetitorMatrixViewRequest(
             project_id="test-project-id",
             selected_asins=["B00NG0ELL0"],
             aspect_type="phy_perf",
-            options=options
+            filter=filter_options
         )
         assert request.project_id == "test-project-id"
         assert request.selected_asins == ["B00NG0ELL0"]
         assert request.aspect_type == "phy_perf"
-        assert request.options.sort_by == "mentions"
+        assert request.filter["sort_by"] == "mentions"
     
     def test_invalid_aspect_type(self):
         """Test validation error for invalid aspect_type."""
-        options = CompetitorMatrixViewOptions()
+        filter_options = {}
         with pytest.raises(ValidationError):
             CompetitorMatrixViewRequest(
                 project_id="test-project-id",
                 selected_asins=["B00NG0ELL0"],
                 aspect_type="invalid",
-                options=options
+                filter=filter_options
             )
 
 
-class TestCompetitorMatrixViewOptions:
-    """Test CompetitorMatrixViewOptions model."""
+class TestReviewRetrievalRequest:
+    """Test ReviewRetrievalRequest model."""
     
-    def test_default_values(self):
-        """Test default option values."""
-        options = CompetitorMatrixViewOptions()
-        assert options.sort_by == "mentions"
-        assert options.sort_direction == "desc"
-        assert options.max_categories == 10
-    
-    def test_custom_values(self):
-        """Test custom option values."""
-        options = CompetitorMatrixViewOptions(
-            sort_by="reviews",
-            sort_direction="asc",
-            max_categories=5,
-            min_mentions=10,
-            sentiment_filter="positive_only"
+    def test_valid_request(self):
+        """Test valid request creation."""
+        request = ReviewRetrievalRequest(
+            project_id="test-project-id",
+            category_id=1,
+            product_id="B00NG0ELL0",
+            limit=10,
+            offset=0,
+            sort_by="date",
+            sort_order="desc"
         )
-        assert options.sort_by == "reviews"
-        assert options.sort_direction == "asc"
-        assert options.max_categories == 5
-        assert options.min_mentions == 10
-        assert options.sentiment_filter == "positive_only"
+        assert request.project_id == "test-project-id"
+        assert request.category_id == 1
+        assert request.product_id == "B00NG0ELL0"
+        assert request.limit == 10
+        assert request.offset == 0
+        assert request.sort_by == "date"
+        assert request.sort_order == "desc"
     
-    def test_max_categories_validation(self):
-        """Test max_categories validation."""
+    def test_missing_required_fields(self):
+        """Test validation error for missing required fields."""
         with pytest.raises(ValidationError):
-            CompetitorMatrixViewOptions(max_categories=0)
+            ReviewRetrievalRequest(
+                project_id="test-project-id",
+                category_id=1
+                # Missing product_id
+            )
         
         with pytest.raises(ValidationError):
-            CompetitorMatrixViewOptions(max_categories=51) 
+            ReviewRetrievalRequest(
+                project_id="test-project-id",
+                product_id="B00NG0ELL0"
+                # Missing category_id
+            )
+    
+    def test_invalid_sort_by(self):
+        """Test validation error for invalid sort_by."""
+        with pytest.raises(ValidationError):
+            ReviewRetrievalRequest(
+                project_id="test-project-id",
+                category_id=1,
+                product_id="B00NG0ELL0",
+                sort_by="invalid"
+            )
+    
+    def test_invalid_sort_order(self):
+        """Test validation error for invalid sort_order."""
+        with pytest.raises(ValidationError):
+            ReviewRetrievalRequest(
+                project_id="test-project-id",
+                category_id=1,
+                product_id="B00NG0ELL0",
+                sort_order="invalid"
+            ) 

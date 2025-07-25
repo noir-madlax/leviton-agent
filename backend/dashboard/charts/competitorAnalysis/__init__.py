@@ -11,7 +11,8 @@ from .models import (
     CompetitorSummaryResponse,
     CompetitorMatrixViewRequest,
     CompetitorMatrixViewResponse,
-    CompetitorMatrixViewOptions
+    ReviewRetrievalRequest,
+    ReviewRetrievalResponse
 )
 from .service import CompetitorAnalysisChartService
 
@@ -20,6 +21,7 @@ __all__ = [
     'CompetitorSummaryResponse', 
     'CompetitorMatrixViewRequest',
     'CompetitorMatrixViewResponse',
-    'CompetitorMatrixViewOptions',
+    'ReviewRetrievalRequest',
+    'ReviewRetrievalResponse',
     'CompetitorAnalysisChartService'
 ] 

@@ -5,6 +5,7 @@ This service handles competitor analysis data retrieval with efficient database 
 
 import logging
 from typing import Dict, List, Any, Optional
+from collections import defaultdict
 
 from dashboard.services.base_service import BaseDashboardService, FilterConfig, FilterService
 from core.models.filters import ProjectFilters
@@ -82,10 +83,19 @@ class CompetitorAnalysisChartService(BaseDashboardService):
             for asin in selected_asins:
                 asin_data = all_data.get(asin, {})
                 
+                # Transform rating from string to float if needed
+                rating = asin_data.get('rating')
+                if isinstance(rating, str) and 'out of' in rating:
+                    # Extract numeric rating from "5.0 out of 5 stars" format
+                    try:
+                        rating = float(rating.split(' out of')[0])
+                    except (ValueError, IndexError):
+                        rating = None
+                
                 products.append({
                     'asin': asin,
                     'product_title': asin_data.get('title', 'Unknown Product'),
-                    'rating': asin_data.get('rating'),
+                    'rating': rating,
                     'brand': asin_data.get('brand'),
                     'product_url': asin_data.get('product_url'),
                     'list_price': asin_data.get('list_price_usd') if asin_data.get('list_price_usd') is not None else None,
@@ -112,6 +122,244 @@ class CompetitorAnalysisChartService(BaseDashboardService):
                 'total_products': 0,
                 'selected_asins': selected_asins
             }
+
+    async def get_reviews_by_category_product(
+        self, 
+        category_id: int, 
+        product_id: str,
+        limit: int = 100,
+        offset: int = 0,
+        sort_by: str = "review_id",
+        sort_order: str = "desc"
+    ) -> Dict[str, Any]:
+        """Get reviews for a specific category and product with deduplication and aspect aggregation.
+        
+        Args:
+            category_id: Category ID to filter by
+            product_id: Product ID (ASIN) to filter by
+            limit: Number of reviews to return (default: 100)
+            offset: Offset for pagination (default: 0)
+            sort_by: Sort field (review_id, date, rating, sentiment)
+            sort_order: Sort direction (asc, desc)
+            
+        Returns:
+            Dict containing deduplicated reviews with aggregated aspects
+        """
+        try:
+            logger.info(f"Getting reviews for project {self.project_id}, category {category_id}, product {product_id}")
+            
+            # Get category information first
+            category_info = await self._get_category_info(category_id)
+            
+            # Get all review data for this category and product
+            all_reviews_data = await self._get_all_reviews_data(category_id, product_id, sort_by, sort_order)
+            
+            # Deduplicate reviews and aggregate aspects
+            deduplicated_reviews = self._deduplicate_and_aggregate_reviews(all_reviews_data)
+            
+            # Apply pagination
+            total_reviews = len(deduplicated_reviews)
+            paginated_reviews = deduplicated_reviews[offset:offset + limit]
+            
+            # Convert to response format
+            reviews = []
+            for review_data in paginated_reviews:
+                review = {
+                    'review_id': review_data['review_id'],
+                    'review_title': review_data.get('review_title'),
+                    'review_text': review_data['review_text'],
+                    'rating': review_data.get('rating'),
+                    'verified': review_data.get('verified'),
+                    'review_date': review_data.get('review_date'),
+                    'aspects': review_data['aspects'],  # Aggregated aspects with sentiments
+                    'category_name': review_data['category_name'],
+                    'category_definition': review_data.get('category_definition'),
+                    'aspect_type': review_data['aspect_type']
+                }
+                reviews.append(review)
+            
+            response = {
+                'reviews': reviews,
+                'total_reviews': total_reviews,
+                'project_id': self.project_id,
+                'category_id': category_id,
+                'product_id': product_id,
+                'category_info': category_info,
+                'pagination': {
+                    'limit': limit,
+                    'offset': offset,
+                    'has_more': offset + limit < total_reviews
+                }
+            }
+            
+            logger.info(f"Review retrieval service returned {len(reviews)} reviews out of {total_reviews} total")
+            return response
+            
+        except Exception as e:
+            logger.error(f"Error in get_reviews_by_category_product: {e}", exc_info=True)
+            return {
+                'reviews': [],
+                'total_reviews': 0,
+                'project_id': self.project_id,
+                'category_id': category_id,
+                'product_id': product_id,
+                'category_info': None,
+                'pagination': {
+                    'limit': limit,
+                    'offset': offset,
+                    'has_more': False
+                }
+            }
+
+    def _deduplicate_and_aggregate_reviews(self, reviews_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+        """Deduplicate reviews and aggregate aspects for each review.
+        
+        Args:
+            reviews_data: Raw review data from database
+            
+        Returns:
+            List of deduplicated reviews with aggregated aspects
+        """
+        # Group by review_id to deduplicate
+        review_groups = defaultdict(list)
+        for review in reviews_data:
+            review_id = review['review_id']
+            review_groups[review_id].append(review)
+        
+        # Process each unique review
+        deduplicated_reviews = []
+        for review_id, review_occurrences in review_groups.items():
+            # Use the first occurrence for basic review info
+            base_review = review_occurrences[0]
+            
+            # Aggregate aspects from all occurrences
+            aspects = []
+            for occurrence in review_occurrences:
+                # Format aspect description based on parent_group_name and detail_text
+                parent_group = occurrence.get('parent_group_name', '')
+                detail_text = occurrence.get('detail_text', '')
+                
+                if parent_group and detail_text and parent_group != detail_text:
+                    aspect_description = f"{parent_group}: {detail_text}"
+                else:
+                    aspect_description = detail_text or parent_group
+                
+                aspect = {
+                    'aspect_description': aspect_description,
+                    'sentiment': occurrence['sentiment'],
+                    'aspect_type': occurrence['aspect_type']
+                }
+                aspects.append(aspect)
+            
+            # Transform rating from string to integer if needed
+            rating = base_review.get('rating')
+            if isinstance(rating, str) and 'out of' in rating:
+                # Extract numeric rating from "5.0 out of 5 stars" format
+                try:
+                    rating = int(float(rating.split(' out of')[0]))
+                except (ValueError, IndexError):
+                    rating = None
+            
+            # Create deduplicated review with aggregated aspects
+            deduplicated_review = {
+                'review_id': review_id,
+                'review_title': base_review.get('review_title'),
+                'review_text': base_review['review_text'],
+                'rating': rating,
+                'verified': base_review.get('verified'),
+                'review_date': base_review.get('review_date'),
+                'aspects': aspects,  # All aspects mentioned in this review
+                'category_name': base_review['category_name'],
+                'category_definition': base_review.get('category_definition'),
+                'aspect_type': base_review['aspect_type']
+            }
+            
+            deduplicated_reviews.append(deduplicated_review)
+        
+        logger.info(f"Deduplicated {len(reviews_data)} review occurrences into {len(deduplicated_reviews)} unique reviews")
+        return deduplicated_reviews
+
+    async def _get_all_reviews_data(
+        self, 
+        category_id: int, 
+        product_id: str,
+        sort_by: str = "review_id",
+        sort_order: str = "desc"
+    ) -> List[Dict[str, Any]]:
+        """Get all review data for a category and product with sorting.
+        
+        Args:
+            category_id: Category ID to filter by
+            product_id: Product ID to filter by
+            sort_by: Sort field
+            sort_order: Sort direction
+            
+        Returns:
+            List of review data dictionaries
+        """
+        try:
+            # Build the base query
+            query = self.supabase.table('review_aspect_data_view').select(
+                'review_id, review_title, review_text, rating, verified, review_date, '
+                'sentiment, sentiment_label, aspect_description, category_name, '
+                'category_definition, aspect_type, parent_group_name, detail_text'
+            ).eq('project_id', self.project_id).eq('category_pk', category_id).eq('product_id', product_id)
+            
+            # Apply sorting
+            if sort_by == 'date':
+                query = query.order('review_date', desc=(sort_order == 'desc'))
+            elif sort_by == 'rating':
+                query = query.order('rating', desc=(sort_order == 'desc'))
+            elif sort_by == 'sentiment':
+                query = query.order('sentiment', desc=(sort_order == 'desc'))
+            else:
+                # Default sort by review_id
+                query = query.order('review_id', desc=(sort_order == 'desc'))
+            
+            # Get all data (no pagination at this level since we need to deduplicate)
+            result = query.execute()
+            
+            if not result.data:
+                logger.info(f"No reviews found for project {self.project_id}, category {category_id}, product {product_id}")
+                return []
+            
+            logger.info(f"Retrieved {len(result.data)} review occurrences from database")
+            return result.data
+            
+        except Exception as e:
+            logger.error(f"Error getting all reviews data: {e}", exc_info=True)
+            return []
+
+    async def _get_category_info(self, category_id: int) -> Optional[Dict[str, Any]]:
+        """Get category information for the specified category ID.
+        
+        Args:
+            category_id: Category ID to get info for
+            
+        Returns:
+            Category information dict or None if not found
+        """
+        try:
+            result = self.supabase.table('review_analysis_aspect_categories').select(
+                'category_pk, name, definition, aspect_type, stage'
+            ).eq('category_pk', category_id).eq('project_id', self.project_id).execute()
+            
+            if result.data:
+                category_data = result.data[0]
+                return {
+                    'category_pk': category_data['category_pk'],
+                    'name': category_data['name'],
+                    'definition': category_data['definition'],
+                    'aspect_type': category_data['aspect_type'],
+                    'stage': category_data['stage']
+                }
+            
+            logger.warning(f"Category {category_id} not found for project {self.project_id}")
+            return None
+            
+        except Exception as e:
+            logger.error(f"Error getting category info: {e}", exc_info=True)
+            return None
 
     async def _get_all_competitor_data(self, selected_asins: List[str]) -> Dict[str, Dict[str, Any]]:
         """Get all competitor data from review_aspect_data_view in a single query.
@@ -241,7 +489,7 @@ class CompetitorAnalysisChartService(BaseDashboardService):
             
             # Get category information
             category_pks = [cat['category_pk'] for cat in categories]
-            category_info = await self._get_category_info(category_pks)
+            category_info = await self._get_category_info_for_matrix(category_pks)
             
             # Get product aspect data
             product_aspect_data = await self._get_product_aspect_data(
@@ -422,7 +670,7 @@ class CompetitorAnalysisChartService(BaseDashboardService):
         
         return categories
 
-    async def _get_category_info(self, category_pks: List[int]) -> Dict[int, Dict[str, Any]]:
+    async def _get_category_info_for_matrix(self, category_pks: List[int]) -> Dict[int, Dict[str, Any]]:
         """Get category information for given category PKs.
         
         Args:

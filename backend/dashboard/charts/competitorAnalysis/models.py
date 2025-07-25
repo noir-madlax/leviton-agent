@@ -1,7 +1,8 @@
-"""Competitor Analysis Chart Models for Dashboard module."""
+"""Models for Competitor Analysis Chart."""
 
-from typing import Dict, List, Any, Literal, Optional
+from typing import List, Dict, Any, Optional, Literal
 from pydantic import BaseModel, Field
+from datetime import datetime
 
 from ..base_models import BaseRequestModel, BaseResponseModel
 
@@ -9,34 +10,29 @@ from ..base_models import BaseRequestModel, BaseResponseModel
 # ==================== Request Models ====================
 
 class CompetitorSummaryRequest(BaseRequestModel):
-    """Competitor analysis summary request model."""
+    """Request model for competitor analysis summary."""
     selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
-
-
-class CompetitorMatrixViewOptions(BaseModel):
-    """Options for competitor matrix view."""
-    # Sorting
-    sort_by: Literal["mentions", "reviews", "sentiment"] = Field(default="mentions", description="Field to sort by")
-    sort_direction: Literal["asc", "desc"] = Field(default="desc", description="Sort direction")
-    
-    # Limiting
-    max_categories: int = Field(default=10, ge=1, le=50, description="Maximum number of categories to return")
-    
-    # Filtering
-    min_mentions: Optional[int] = Field(default=None, description="Minimum total mentions to include")
-    min_reviews: Optional[int] = Field(default=None, description="Minimum unique reviews to include")
-    include_categories: Optional[List[str]] = Field(default=None, description="Specific categories to include")
-    exclude_categories: Optional[List[str]] = Field(default=None, description="Categories to exclude")
-    
-    # Advanced
-    sentiment_filter: Optional[Literal["positive_only", "negative_only", "mixed_only"]] = Field(default=None, description="Filter by sentiment type")
 
 
 class CompetitorMatrixViewRequest(BaseRequestModel):
-    """Request model for competitor analysis matrix view API."""
+    """Request model for competitor analysis matrix view."""
     selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
     aspect_type: Literal["phy_perf", "use"] = Field(..., description="Aspect type filter")
-    options: CompetitorMatrixViewOptions = Field(..., description="View options")
+    filter: Dict[str, Any] = Field(..., description="Filter configuration")
+
+
+class ReviewRetrievalRequest(BaseRequestModel):
+    """Request model for retrieving reviews by category and product."""
+    category_id: int = Field(..., description="Aspect category ID to filter by")
+    product_id: str = Field(..., description="Product ID (ASIN) to filter by")
+    limit: int = Field(default=100, description="Number of reviews to return")
+    offset: int = Field(default=0, description="Offset for pagination")
+    sort_by: Literal["review_id", "date", "rating", "sentiment"] = Field(
+        default="review_id", description="Sort field"
+    )
+    sort_order: Literal["asc", "desc"] = Field(
+        default="desc", description="Sort direction"
+    )
 
 
 # ==================== Response Models ====================
@@ -45,17 +41,19 @@ class CompetitorSummaryProduct(BaseModel):
     """Individual competitor product summary model."""
     asin: str = Field(description="Product ASIN")
     product_title: str = Field(description="Product title")
-    rating: float = Field(description="Product rating")
-    brand: str = Field(description="Product brand")
-    product_url: str = Field(description="Product URL")
+    rating: Optional[float] = Field(description="Product rating")
+    brand: Optional[str] = Field(description="Product brand")
+    product_url: Optional[str] = Field(description="Product URL")
     list_price: Optional[float] = Field(description="List price in USD")
-    unique_reviews_count: int = Field(description="Number of unique reviews from review_aspect_data_view")
-    additional_metrics: Dict[str, Any] = Field(description="Additional metrics including sentiment distribution and category counts")
+    unique_reviews_count: int = Field(description="Number of unique reviews")
+    additional_metrics: Optional[Dict[str, Any]] = Field(
+        default=None, description="Additional metrics including sentiment distribution and category counts"
+    )
 
 
 class CompetitorSummaryData(BaseModel):
     """Competitor summary data model."""
-    products: List[CompetitorSummaryProduct] = Field(description="List of competitor products with summary data")
+    products: List[CompetitorSummaryProduct] = Field(description="List of competitor products")
     total_products: int = Field(description="Total number of products returned")
     selected_asins: List[str] = Field(description="List of ASINs that were requested")
 
@@ -79,12 +77,68 @@ class ProductAspectData(BaseModel):
 
 class CompetitorMatrixViewData(BaseModel):
     """Competitor matrix view data model."""
-    aspect_categories: List[AspectCategoryInfo] = Field(description="List of aspect categories sorted by total mentions")
-    product_aspect_data: List[ProductAspectData] = Field(description="Aspect data for each product")
+    aspect_categories: List[AspectCategoryInfo] = Field(
+        description="List of aspect categories sorted by total mentions"
+    )
+    product_aspect_data: List[ProductAspectData] = Field(
+        description="Aspect data for each product"
+    )
     selected_asins: List[str] = Field(description="List of ASINs that were requested")
     aspect_type: str = Field(description="Aspect type that was filtered")
     total_categories: int = Field(description="Total number of categories returned")
 
 
 class CompetitorMatrixViewResponse(BaseResponseModel[CompetitorMatrixViewData]):
-    """Response model for competitor analysis matrix view API.""" 
+    """Response model for competitor analysis matrix view API."""
+
+
+class ReviewAspect(BaseModel):
+    """Individual aspect mentioned in a review."""
+    aspect_description: str = Field(description="Aspect description from the review")
+    sentiment: str = Field(description="Sentiment (+ for positive, - for negative, neutral)")
+    aspect_type: str = Field(description="Aspect type (phy, perf, use)")
+
+
+class ReviewDetail(BaseModel):
+    """Individual review detail model with aggregated aspects."""
+    review_id: str = Field(description="Unique review identifier")
+    review_title: Optional[str] = Field(description="Review title")
+    review_text: str = Field(description="Review content text")
+    rating: Optional[int] = Field(description="Review rating (1-5)")
+    verified: Optional[bool] = Field(description="Whether review is verified")
+    review_date: Optional[str] = Field(description="Review date")
+    aspects: List[ReviewAspect] = Field(description="All aspects mentioned in this review with sentiments")
+    category_name: str = Field(description="Aspect category name")
+    category_definition: Optional[str] = Field(description="Category definition")
+    aspect_type: str = Field(description="Aspect type (phy, perf, use)")
+
+
+class PaginationInfo(BaseModel):
+    """Pagination information."""
+    limit: int = Field(description="Number of items per page")
+    offset: int = Field(description="Current offset")
+    has_more: bool = Field(description="Whether there are more items available")
+
+
+class CategoryInfo(BaseModel):
+    """Category information."""
+    category_pk: int = Field(description="Category primary key")
+    name: str = Field(description="Category name")
+    definition: str = Field(description="Category definition")
+    aspect_type: str = Field(description="Aspect type")
+    stage: str = Field(description="Category stage")
+
+
+class ReviewRetrievalData(BaseModel):
+    """Review retrieval data model."""
+    reviews: List[ReviewDetail] = Field(description="List of review details with aggregated aspects")
+    total_reviews: int = Field(description="Total number of reviews found")
+    project_id: str = Field(description="Project ID used for filtering")
+    category_id: int = Field(description="Category ID used for filtering")
+    product_id: str = Field(description="Product ID used for filtering")
+    category_info: Optional[CategoryInfo] = Field(description="Category information")
+    pagination: PaginationInfo = Field(description="Pagination information")
+
+
+class ReviewRetrievalResponse(BaseResponseModel[ReviewRetrievalData]):
+    """Response model for review retrieval API.""" 
