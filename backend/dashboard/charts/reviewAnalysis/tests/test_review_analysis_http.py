@@ -23,8 +23,6 @@ def test_top_categories_api():
             "name": "phy_perf - sorted by mentions",
             "data": {
                 "project_id": PROJECT_ID,
-                "filters": {},
-                "date_range": None,
                 "options": {
                     "aspect_type": "phy_perf",
                     "sort_by": "mentions",
@@ -38,8 +36,6 @@ def test_top_categories_api():
             "name": "phy_perf - sorted by positive mentions",
             "data": {
                 "project_id": PROJECT_ID,
-                "filters": {},
-                "date_range": None,
                 "options": {
                     "aspect_type": "phy_perf",
                     "sort_by": "positive_mentions",
@@ -53,8 +49,6 @@ def test_top_categories_api():
             "name": "use - sorted by positive ratio",
             "data": {
                 "project_id": PROJECT_ID,
-                "filters": {},
-                "date_range": None,
                 "options": {
                     "aspect_type": "use",
                     "sort_by": "positive_ratio",
@@ -112,8 +106,6 @@ def test_reviews_by_category_api():
         top_categories_url = f"{BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories"
         top_categories_data = {
             "project_id": PROJECT_ID,
-            "filters": {},
-            "date_range": None,
             "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "mentions",
@@ -147,8 +139,6 @@ def test_reviews_by_category_api():
                 "name": "sorted by date (desc)",
                 "data": {
                     "project_id": PROJECT_ID,
-                    "filters": {},
-                    "date_range": None,
                     "category_id": category_id,
                     "limit": 3,
                     "offset": 0,
@@ -160,8 +150,6 @@ def test_reviews_by_category_api():
                 "name": "sorted by rating (desc)",
                 "data": {
                     "project_id": PROJECT_ID,
-                    "filters": {},
-                    "date_range": None,
                     "category_id": category_id,
                     "limit": 3,
                     "offset": 0,
