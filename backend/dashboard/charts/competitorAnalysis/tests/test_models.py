@@ -27,10 +27,13 @@ class TestCompetitorSummaryRequest:
         with pytest.raises(ValidationError):
             CompetitorSummaryRequest(selected_asins=["B00NG0ELL0"])
     
-    def test_missing_selected_asins(self):
-        """Test validation error for missing selected_asins."""
-        with pytest.raises(ValidationError):
-            CompetitorSummaryRequest(project_id="test-project-id")
+    def test_optional_selected_asins(self):
+        """Test that selected_asins is optional."""
+        request = CompetitorSummaryRequest(
+            project_id="test-project-id"
+        )
+        assert request.project_id == "test-project-id"
+        assert request.selected_asins is None
 
 
 class TestCompetitorMatrixViewRequest:
@@ -46,12 +49,12 @@ class TestCompetitorMatrixViewRequest:
             project_id="test-project-id",
             selected_asins=["B00NG0ELL0"],
             aspect_type="phy_perf",
-            filter=filter_options
+            options=filter_options
         )
         assert request.project_id == "test-project-id"
         assert request.selected_asins == ["B00NG0ELL0"]
         assert request.aspect_type == "phy_perf"
-        assert request.filter["sort_by"] == "mentions"
+        assert request.options["sort_by"] == "mentions"
     
     def test_invalid_aspect_type(self):
         """Test validation error for invalid aspect_type."""
@@ -61,7 +64,7 @@ class TestCompetitorMatrixViewRequest:
                 project_id="test-project-id",
                 selected_asins=["B00NG0ELL0"],
                 aspect_type="invalid",
-                filter=filter_options
+                options=filter_options
             )
 
 

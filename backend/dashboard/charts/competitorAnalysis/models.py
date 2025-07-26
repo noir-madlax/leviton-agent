@@ -11,14 +11,14 @@ from ..base_models import BaseRequestModel, BaseResponseModel
 
 class CompetitorSummaryRequest(BaseRequestModel):
     """Request model for competitor analysis summary."""
-    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
+    # selected_asins is now inherited from BaseRequestModel
 
 
 class CompetitorMatrixViewRequest(BaseRequestModel):
     """Request model for competitor analysis matrix view."""
-    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
+    # selected_asins is now inherited from BaseRequestModel
     aspect_type: Literal["phy_perf", "use"] = Field(..., description="Aspect type filter")
-    options: Dict[str, Any] = Field(..., description="Matrix view options for sorting and filtering")
+    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories (sort_by, sort_direction, max_categories, min_mentions, etc.)")
 
 
 class ReviewRetrievalRequest(BaseRequestModel):

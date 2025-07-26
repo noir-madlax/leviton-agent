@@ -43,7 +43,7 @@ The review analysis module consists of:
         "segments": ["Smart"],
         "extend_fields": {"smart_capability": "Smart"}
     },
-    "additional_conditions": {
+    "options": {
         "aspect_type": "phy_perf",
         "sort_by": "positive_mentions",
         "sort_direction": "desc",
@@ -174,7 +174,7 @@ The review analysis module consists of:
 - **Focus**: Product-to-product comparison
 - **Data**: Uses selected_asins parameter
 
-## Additional Conditions for Top Categories
+## Options for Top Categories
 
 ### Aspect Type Filtering
 - `"aspect_type": "phy_perf"` - Physical and performance aspects
@@ -255,7 +255,7 @@ const response = await fetch('/api/v1/dashboard/charts/review-analysis/top-categ
             categories: ['Light Switches'],
             brands: ['Leviton']
         },
-        additional_conditions: {
+        options: {
             aspect_type: 'phy_perf',
             sort_by: 'positive_mentions',
             max_categories: 10
@@ -269,6 +269,10 @@ const reviewsResponse = await fetch('/api/v1/dashboard/charts/review-analysis/re
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
         project_id: 'project-uuid',
+        filters: {
+            categories: ['Light Switches'],
+            brands: ['Leviton']
+        },
         category_id: 12499,
         limit: 20,
         offset: 0,
@@ -282,7 +286,13 @@ const reviewsResponse = await fetch('/api/v1/dashboard/charts/review-analysis/re
 ```python
 from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
 
-service = ReviewAnalysisChartService(project_id="project-uuid")
+service = ReviewAnalysisChartService(
+    project_id="project-uuid",
+    filters={
+        "categories": ["Light Switches"],
+        "brands": ["Leviton"]
+    }
+)
 top_categories = await service.get_top_categories({
     'aspect_type': 'phy_perf',
     'sort_by': 'positive_mentions',

@@ -11,7 +11,7 @@ from ..reviewCore.models import ReviewAspectBase, CategoryInfoBase, PaginationBa
 
 class TopCategoriesRequest(BaseRequestModel):
     """Request model for top categories analysis."""
-    additional_conditions: Dict[str, Any] = Field(..., description="Additional filtering conditions")
+    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories (aspect_type, sort_by, sort_direction, max_categories, min_mentions, etc.)")
 
 
 class ReviewsByCategoryRequest(BaseRequestModel):

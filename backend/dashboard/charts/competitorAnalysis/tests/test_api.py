@@ -33,10 +33,13 @@ async def test_competitor_summary_api():
     
     try:
         # Create service
-        service = CompetitorAnalysisChartService(project_id=project_id)
+        service = CompetitorAnalysisChartService(
+            project_id=project_id,
+            selected_asins=test_asins
+        )
         
         # Get competitor summary
-        result = await service.get_competitor_summary(test_asins)
+        result = await service.get_competitor_summary()
         
         # Print results
         print(f"✅ Success! Found {result['total_products']} products")
@@ -116,11 +119,13 @@ async def test_matrix_view_api():
         
         try:
             # Create service
-            service = CompetitorAnalysisChartService(project_id=project_id)
+            service = CompetitorAnalysisChartService(
+                project_id=project_id,
+                selected_asins=test_asins
+            )
             
             # Get matrix view data
             result = await service.get_matrix_view_data(
-                test_asins, 
                 test_case['aspect_type'], 
                 test_case['options']
             )
@@ -164,11 +169,13 @@ async def test_review_retrieval_api():
     # Get a category ID for testing
     print("🔍 Getting category IDs for testing...")
     try:
-        service = CompetitorAnalysisChartService(project_id=project_id)
+        service = CompetitorAnalysisChartService(
+            project_id=project_id,
+            selected_asins=["B00NG0ELL0"]
+        )
         
         # Get some test data to find a valid category
         test_result = await service.get_matrix_view_data(
-            ["B00NG0ELL0"], 
             "phy_perf", 
             {"max_categories": 1, "min_mentions": 1}
         )

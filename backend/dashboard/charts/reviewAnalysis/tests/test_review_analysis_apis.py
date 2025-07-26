@@ -29,7 +29,7 @@ async def test_top_categories_api():
     test_cases = [
         {
             "name": "phy_perf - sorted by mentions",
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "mentions",
                 "sort_direction": "desc",
@@ -39,7 +39,7 @@ async def test_top_categories_api():
         },
         {
             "name": "phy_perf - sorted by positive mentions",
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "positive_mentions",
                 "sort_direction": "desc",
@@ -49,7 +49,7 @@ async def test_top_categories_api():
         },
         {
             "name": "phy_perf - sorted by negative mentions",
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "negative_mentions",
                 "sort_direction": "desc",
@@ -59,7 +59,7 @@ async def test_top_categories_api():
         },
         {
             "name": "use - sorted by positive ratio",
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "use",
                 "sort_by": "positive_ratio",
                 "sort_direction": "desc",
@@ -78,7 +78,7 @@ async def test_top_categories_api():
             service = ReviewAnalysisChartService(project_id=project_id)
             
             # Get top categories
-            result = await service.get_top_categories(test_case['additional_conditions'])
+            result = await service.get_top_categories(test_case['options'])
             
             # Print results
             print(f"✅ Success! Found {result['total_categories']} categories")
@@ -232,7 +232,7 @@ async def test_api_endpoints_directly():
             "project_id": project_id,
             "filters": {},
             "date_range": None,
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "mentions",
                 "sort_direction": "desc",

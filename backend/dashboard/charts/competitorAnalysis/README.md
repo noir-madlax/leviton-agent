@@ -15,11 +15,13 @@ The competitor analysis module consists of:
 - Product information and metrics
 - Review counts and sentiment distribution
 - Brand and pricing data
+- **Supports both selected_asins and filters** for flexible ASIN selection
 
 ### 2. Matrix View Analysis
 - Flexible sorting and filtering options
 - Aspect category analysis
 - Product comparison data
+- **Supports both selected_asins and filters** for flexible ASIN selection
 
 ### 3. Review Retrieval with Deduplication ⭐ **NEW**
 - Retrieves reviews for specific project, category, and product combinations
@@ -30,17 +32,38 @@ The competitor analysis module consists of:
 
 ## API Endpoints
 
+### Unified Parameter Approach
+
+Both review-analysis and competitor-analysis APIs now support a unified parameter structure:
+
+- **`filters`**: Use project filters to determine which ASINs to analyze
+- **`selected_asins`**: Explicitly specify which ASINs to analyze (takes precedence over filters)
+- **`options`**: Configure aspect category filtering and sorting
+
+**Priority**: `selected_asins` takes precedence over `filters` when both are provided.
+
 ### 1. Competitor Summary API
 
 **Endpoint:** `POST /api/v1/dashboard/charts/competitor-analysis/summary`
 
 **Purpose:** Get comprehensive competitor summary for selected ASINs including product information, review counts, and sentiment metrics.
 
-**Request:**
+**Request (using selected_asins):**
 ```json
 {
     "project_id": "project-uuid",
     "selected_asins": ["B00004YUO0", "B00NG0ELL0", "B0BVKZLT3B"]
+}
+```
+
+**Request (using filters):**
+```json
+{
+    "project_id": "project-uuid",
+    "filters": {
+        "categories": ["Light Switches"],
+        "brands": ["Leviton", "Lutron"]
+    }
 }
 ```
 
@@ -77,11 +100,29 @@ The competitor analysis module consists of:
 
 **Purpose:** Get detailed matrix view data with flexible sorting, filtering, and limiting options.
 
-**Request:**
+**Request (using selected_asins):**
 ```json
 {
     "project_id": "project-uuid",
     "selected_asins": ["B00004YUO0", "B00NG0ELL0"],
+    "aspect_type": "phy_perf",
+    "options": {
+        "sort_by": "mentions",
+        "sort_direction": "desc",
+        "max_categories": 10,
+        "min_mentions": 5
+    }
+}
+```
+
+**Request (using filters):**
+```json
+{
+    "project_id": "project-uuid",
+    "filters": {
+        "categories": ["Light Switches"],
+        "brands": ["Leviton", "Lutron"]
+    },
     "aspect_type": "phy_perf",
     "options": {
         "sort_by": "mentions",

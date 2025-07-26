@@ -16,21 +16,33 @@ class TestTopCategoriesRequest:
     def test_valid_request(self):
         """Test valid request creation."""
         request = TopCategoriesRequest(
-            project_id="test-project-id",
-            additional_conditions={
+            project_id="test-project",
+            filters={},
+            date_range=None,
+            options={
                 "aspect_type": "phy_perf",
-                "sort_by": "positive_mentions",
+                "sort_by": "mentions",
                 "max_categories": 10
             }
         )
-        assert request.project_id == "test-project-id"
-        assert request.additional_conditions["aspect_type"] == "phy_perf"
+        
+        assert request.project_id == "test-project"
+        assert request.options["aspect_type"] == "phy_perf"
+        assert request.options["sort_by"] == "mentions"
+        
+        # Test with empty options
+        request = TopCategoriesRequest(
+            project_id="test-project",
+            filters={},
+            date_range=None,
+            options={}
+        )
     
     def test_missing_project_id(self):
         """Test validation error for missing project_id."""
         with pytest.raises(ValidationError):
             TopCategoriesRequest(
-                additional_conditions={}
+                options={}
             )
 
 
@@ -91,7 +103,7 @@ class TestReviewWithProductInfo:
     
     def test_valid_review_with_product_info(self):
         """Test valid review with product info creation."""
-        from ..reviewCore.models import ReviewAspectBase
+        from ...reviewCore.models import ReviewAspectBase
         
         aspects = [
             ReviewAspectBase(

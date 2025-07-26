@@ -19,23 +19,41 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
     under a project, including top categories and reviews by category.
     """
 
-    def __init__(self, project_id: str, filters: Optional[Dict[str, Any]] = None, date_range: Optional[Dict[str, str]] = None):
+    def __init__(self, project_id: str, filters: Optional[Dict[str, Any]] = None, 
+                 selected_asins: Optional[List[str]] = None, date_range: Optional[Dict[str, str]] = None):
         """Initialize ReviewAnalysisChartService.
         
         Args:
             project_id: Project ID for filtering
             filters: Optional filters (categories, brands, segments, extend_fields)
+            selected_asins: Optional list of ASINs to analyze (takes precedence over filters)
             date_range: Optional date range (not used for review analysis)
         """
         super().__init__(project_id)
         
-        # Set filters if provided
-        if filters:
+        # Store selected_asins for later use
+        self.selected_asins = selected_asins
+        
+        # Set filters if provided and no selected_asins
+        if filters and not selected_asins:
             from core.models.filters import ProjectFilters
             project_filters = ProjectFilters.from_dict(filters)
             self.set_project_filters(project_filters)
         
         logger.info(f"ReviewAnalysisChartService initialized for project {project_id}")
+
+    def _get_asins_to_analyze(self) -> List[str]:
+        """Get ASINs to analyze based on selected_asins or filters.
+        
+        Returns:
+            List of ASINs to analyze
+        """
+        if self.selected_asins:
+            logger.info(f"Using selected_asins: {len(self.selected_asins)} ASINs")
+            return self.selected_asins
+        else:
+            logger.info("Using project filters to get ASINs")
+            return self._get_filtered_asins()
 
     def get_data(self) -> List[Dict[str, Any]]:
         """Get data - required by BaseDashboardService but not used for review analysis.
@@ -45,11 +63,11 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         """
         return []
 
-    async def get_top_categories(self, additional_conditions: Dict[str, Any]) -> Dict[str, Any]:
+    async def get_top_categories(self, options: Dict[str, Any]) -> Dict[str, Any]:
         """Get top aspect categories with comprehensive statistics.
         
         Args:
-            additional_conditions: Additional filtering and sorting conditions
+            options: Options for filtering and selecting aspect categories
             
         Returns:
             Dict containing top categories data with statistics
@@ -58,12 +76,12 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             logger.info(f"Getting top categories for project {self.project_id}")
             
             # Get filtered ASINs based on project filters
-            filtered_asins = self._get_filtered_asins()
+            filtered_asins = self._get_asins_to_analyze()
             if not filtered_asins:
                 return self._get_empty_top_categories_response()
             
             # Extract aspect type filter
-            aspect_type = additional_conditions.get('aspect_type', 'phy_perf')
+            aspect_type = options.get('aspect_type', 'phy_perf')
             db_aspect_types = ReviewAnalysisConfig.ASPECT_TYPE_MAP.get(aspect_type, [aspect_type])
             
             # Get category statistics with filtering and sorting
@@ -71,7 +89,7 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 project_id=self.project_id,
                 asins=filtered_asins,
                 aspect_types=db_aspect_types,
-                options=additional_conditions
+                options=options
             )
             
             if not categories_data:
@@ -134,7 +152,7 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             logger.info(f"Getting reviews for project {self.project_id}, category {category_id}")
             
             # Get filtered ASINs based on project filters
-            filtered_asins = self._get_filtered_asins()
+            filtered_asins = self._get_asins_to_analyze()
             if not filtered_asins:
                 return self._get_empty_reviews_response(category_id)
             

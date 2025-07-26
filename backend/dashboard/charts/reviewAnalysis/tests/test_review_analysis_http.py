@@ -25,7 +25,7 @@ def test_top_categories_api():
                 "project_id": PROJECT_ID,
                 "filters": {},
                 "date_range": None,
-                "additional_conditions": {
+                "options": {
                     "aspect_type": "phy_perf",
                     "sort_by": "mentions",
                     "sort_direction": "desc",
@@ -40,7 +40,7 @@ def test_top_categories_api():
                 "project_id": PROJECT_ID,
                 "filters": {},
                 "date_range": None,
-                "additional_conditions": {
+                "options": {
                     "aspect_type": "phy_perf",
                     "sort_by": "positive_mentions",
                     "sort_direction": "desc",
@@ -55,7 +55,7 @@ def test_top_categories_api():
                 "project_id": PROJECT_ID,
                 "filters": {},
                 "date_range": None,
-                "additional_conditions": {
+                "options": {
                     "aspect_type": "use",
                     "sort_by": "positive_ratio",
                     "sort_direction": "desc",
@@ -114,7 +114,7 @@ def test_reviews_by_category_api():
             "project_id": PROJECT_ID,
             "filters": {},
             "date_range": None,
-            "additional_conditions": {
+            "options": {
                 "aspect_type": "phy_perf",
                 "sort_by": "mentions",
                 "sort_direction": "desc",

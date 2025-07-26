@@ -28,16 +28,20 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
     """
 
     def __init__(self, project_id: str, filters: Optional[FiltersModel] = None,
-                 date_range: Optional[DateRangeModel] = None):
+                 selected_asins: Optional[List[str]] = None, date_range: Optional[DateRangeModel] = None):
         """Initialize CompetitorAnalysisChartService.
         
         Args:
             project_id: Project ID (used for review data filtering)
             filters: Optional filters (not used for competitor analysis)
+            selected_asins: Optional list of ASINs to analyze
             date_range: Optional date range (not used for competitor analysis)
         """
         # Initialize base service but override project ASIN validation for competitor analysis
         super().__init__(project_id)
+        
+        # Store selected_asins for later use
+        self.selected_asins = selected_asins or []
         
         # For competitor analysis, we don't need project ASIN filtering
         # since we use selected_asins from the request
@@ -61,24 +65,35 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
         """
         return []
 
-    async def get_competitor_summary(self, selected_asins: List[str]) -> Dict[str, Any]:
+    async def get_competitor_summary(self, selected_asins: Optional[List[str]] = None) -> Dict[str, Any]:
         """Get comprehensive competitor summary for selected ASINs.
         
         Args:
-            selected_asins: List of ASINs to analyze
+            selected_asins: Optional list of ASINs to analyze (uses instance selected_asins if not provided)
             
         Returns:
             Dict containing competitor summary data
         """
+        # Use provided selected_asins or fall back to instance selected_asins
+        asins_to_analyze = selected_asins or self.selected_asins
+        
+        if not asins_to_analyze:
+            logger.warning("No selected_asins provided for competitor summary")
+            return {
+                'products': [],
+                'total_products': 0,
+                'selected_asins': []
+            }
+        
         try:
-            logger.info(f"Getting competitor summary for project {self.project_id}, {len(selected_asins)} ASINs")
+            logger.info(f"Getting competitor summary for project {self.project_id}, {len(asins_to_analyze)} ASINs")
             
             # Get all data from review_aspect_data_view in a single query
-            all_data = await self._get_all_competitor_data(selected_asins)
+            all_data = await self._get_all_competitor_data(asins_to_analyze)
             
             # Process the data to create the response
             products = []
-            for asin in selected_asins:
+            for asin in asins_to_analyze:
                 asin_data = all_data.get(asin, {})
                 
                 # Transform rating from string to float if needed
@@ -107,7 +122,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             result = {
                 'products': products,
                 'total_products': len(products),
-                'selected_asins': selected_asins
+                'selected_asins': asins_to_analyze
             }
             
             logger.info(f"Competitor summary service returned data for {len(products)} products")
@@ -118,7 +133,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             return {
                 'products': [],
                 'total_products': 0,
-                'selected_asins': selected_asins
+                'selected_asins': asins_to_analyze
             }
 
     async def get_reviews_by_category_product(
@@ -351,53 +366,65 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
 
     async def get_matrix_view_data(
         self, 
-        selected_asins: List[str], 
         aspect_type: str, 
-        options: Dict[str, Any]
+        options: Dict[str, Any],
+        selected_asins: Optional[List[str]] = None
     ) -> Dict[str, Any]:
         """Get competitor matrix view data with flexible options.
         
         Args:
-            selected_asins: List of ASINs to analyze
             aspect_type: Aspect type filter ('phy_perf' or 'use')
             options: Matrix view options for sorting and filtering
+            selected_asins: Optional list of ASINs to analyze (uses instance selected_asins if not provided)
             
         Returns:
             Dict containing matrix view data
         """
+        # Use provided selected_asins or fall back to instance selected_asins
+        asins_to_analyze = selected_asins or self.selected_asins
+        
+        if not asins_to_analyze:
+            logger.warning("No selected_asins provided for matrix view")
+            return {
+                'aspect_categories': [],
+                'product_aspect_data': [],
+                'selected_asins': [],
+                'aspect_type': aspect_type,
+                'total_categories': 0
+            }
+        
         try:
-            logger.info(f"Getting matrix view data for project {self.project_id}, {len(selected_asins)} ASINs, aspect_type: {aspect_type}")
+            logger.info(f"Getting matrix view data for project {self.project_id}, {len(asins_to_analyze)} ASINs, aspect_type: {aspect_type}")
             
             # Map aspect_type to database values
             aspect_type_map = {
-                'phy_perf': ['phy', 'perf'],  # phy_perf maps to both phy and perf
+                'phy_perf': ['phy', 'perf'],
                 'use': ['use']
             }
             db_aspect_types = aspect_type_map.get(aspect_type, [aspect_type])
             
             # Get aspect categories with options
             categories = await self._get_aspect_categories_with_options(
-                selected_asins, db_aspect_types, options
+                asins_to_analyze, db_aspect_types, options
             )
             
             if not categories:
-                logger.warning("No aspect categories found for matrix view")
                 return {
                     'aspect_categories': [],
                     'product_aspect_data': [],
-                    'selected_asins': selected_asins,
+                    'selected_asins': asins_to_analyze,
                     'aspect_type': aspect_type,
                     'total_categories': 0
                 }
             
-            # Get category information
+            # Get category PKs for product aspect data
             category_pks = [cat['category_pk'] for cat in categories]
+            
+            # Get category information including definitions
             category_info = await self._get_category_info_for_matrix(category_pks)
             
             # Get product aspect data
-            product_aspect_data = await self._get_product_aspect_data(
-                selected_asins, category_pks
-            )
+            product_aspect_data = await self._get_product_aspect_data(asins_to_analyze, category_pks)
             
             # Format response
             aspect_categories = []
@@ -412,7 +439,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             result = {
                 'aspect_categories': aspect_categories,
                 'product_aspect_data': product_aspect_data,
-                'selected_asins': selected_asins,
+                'selected_asins': asins_to_analyze,
                 'aspect_type': aspect_type,
                 'total_categories': len(aspect_categories)
             }
@@ -425,7 +452,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             return {
                 'aspect_categories': [],
                 'product_aspect_data': [],
-                'selected_asins': selected_asins,
+                'selected_asins': asins_to_analyze,
                 'aspect_type': aspect_type,
                 'total_categories': 0
             }
