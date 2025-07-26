@@ -3,6 +3,7 @@
 import { UniversalFilterComponent } from '@/components/analysis-db/shared/universal-filter-component'
 import { ProjectFilters } from '@/components/analysis-db/types/filters'
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
+import { useCommonT, useProjectT } from '@/i18n/hooks'
 
 interface ProjectFilterWrapperProps {
   projectId: string
@@ -19,6 +20,10 @@ export function ProjectFilterWrapper({
   preloadedData,
   isDataLoading
 }: ProjectFilterWrapperProps) {
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  
   // 使用缓存系统获取筛选器选项
   const { filterOptions, isLoading: cacheLoading, error: cacheError } = useFilterCache(projectId)
 
@@ -27,7 +32,7 @@ export function ProjectFilterWrapper({
     return (
       <div className="p-4 text-center">
         <div className="text-red-500">
-          Failed to load filter options: {cacheError}
+          {commonT('error')}: {cacheError}
         </div>
       </div>
     )
@@ -39,7 +44,7 @@ export function ProjectFilterWrapper({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter options...</span>
+          <span className="text-gray-500">{projectT('loadingFilterOptions')}</span>
         </div>
       </div>
     )

@@ -11,7 +11,13 @@
     "filter": "Filter",
     "export": "Export",
     "import": "Import",
-    "backToHome": "Back to Home"
+    "backToHome": "Back to Home",
+    "backToDashboard": "Back to Dashboard",
+    "hideFilters": "Hide filters",
+    "showFilters": "Show filters",
+    "timePeriod": "Time Period",
+    "pastYear": "Past Year",
+    "viewProjectDataScope": "View Project Data Scope"
   },
   "auth": {
     "login": "Login",
@@ -98,7 +104,31 @@
     "projectCreated": "Project Created",
     "retry": "Retry",
     "failedLoadData": "Failed to load product data. Please try again.",
-    "createNewProject": "Create New Project"
+    "createNewProject": "Create New Project",
+    "projectScopeAndFilters": "Project Scope & Filters",
+    "filtersApplyToWholeProject": "Filters will apply to the whole project",
+    "projectDataScope": "Project Data Scope",
+    "products": "Products",
+    "brands": "Brands",
+    "filters": "Filters",
+    "amazonCategory": "Amazon Category",
+    "smartCapability": "Smart Capability",
+    "nonSmart": "Non-Smart",
+    "smart": "Smart",
+    "appliedFilters": "Applied filters",
+    "loadingFilterOptions": "Loading filter options...",
+    "loadingProjectData": "Loading project data...",
+    "chartFilters": "Chart Filters",
+    "chartFiltersDescription": "📌 indicates filters inherited from project level. Chart-specific filters will be applied in addition to project filters.",
+    "dimmerSwitches": "Dimmer Switches",
+    "lightSwitches": "Light Switches",
+    "motionActivatedSwitches": "Motion-Activated Switches",
+    "timerSwitches": "Timer Switches",
+    "monitoringResearchProject": "Monitoring research project creation and analysis",
+    "topics": "Topics",
+    "dataFiltersAndScope": "Data Filters & Scope",
+    "projectNotFound": "Project not found",
+    "projectNotFoundDescription": "The project you're looking for doesn't exist."
   },
   "dashboard": {
     "marketAnalysis": "Market Analysis",
@@ -128,7 +158,11 @@
     "priceRange": "Price Range",
     "dateRange": "Date Range",
     "showMore": "Show More",
-    "showLess": "Show Less"
+    "showLess": "Show Less",
+    "reset": "Reset",
+    "brand": "Brand",
+    "segment": "Segment",
+    "category": "Category"
   },
   "scraping": {
     "dataScraping": "Data Scraping",

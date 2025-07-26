@@ -14,6 +14,7 @@ import { useChartManagement } from './hooks/use-chart-management'
 import { ProjectFilters, DEFAULT_FILTERS } from '@/components/analysis-db/types/filters'
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
 import { ChartData } from './shared/types'
+import { useCommonT, useProjectT } from '@/i18n/hooks'
 
 // 使用现有的Project接口
 interface Project {
@@ -104,6 +105,10 @@ export function IntegratedLayout({
   // 获取缓存loading状态
   const { isLoading: cacheLoading } = useFilterCache(projectId)
   
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  
   const {
     chartContainerState,
     activeChartId,
@@ -164,9 +169,9 @@ export function IntegratedLayout({
 
   const getFilterButtonText = () => {
     if (cacheLoading) {
-      return 'Loading filter option4s...'
+      return projectT('loadingFilterOptions')
     }
-    return isFilterExpanded ? 'Hide filters' : 'View Project Data Scope'
+    return isFilterExpanded ? commonT('hideFilters') : commonT('viewProjectDataScope')
   }
 
   const getFilterButtonIcon = () => {
@@ -183,7 +188,7 @@ export function IntegratedLayout({
     // Time Period filter (always show, including default)
     badges.push(
       <Badge key="time-period" variant="secondary" className="text-xs flex items-center gap-1">
-        ⏰ Time Period: Past Year
+        ⏰ {commonT('timePeriod')}: {commonT('pastYear')}
       </Badge>
     );
   /*
@@ -239,7 +244,7 @@ export function IntegratedLayout({
               <Link href="/">
                 <Button variant="ghost" size="sm">
                   <ArrowLeft className="h-4 w-4 mr-2" />
-                  Back to Home
+                  {commonT('backToHome')}
                 </Button>
               </Link>
               <div className="flex items-center gap-3 whitespace-nowrap overflow-hidden">

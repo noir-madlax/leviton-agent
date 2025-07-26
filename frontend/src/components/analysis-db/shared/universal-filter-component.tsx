@@ -11,6 +11,7 @@ import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
+import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 
 // 新增：过滤器配置接口
 interface FilterConfig {
@@ -74,6 +75,11 @@ export function UniversalFilterComponent({
   // 新增：过滤器配置状态
   const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
   const [configLoading, setConfigLoading] = useState(false)
+  
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  const filtersT = useFiltersT()
 
   // 使用统一数据源，优先使用统一filter数据，fallback到原有逻辑
   const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
@@ -373,7 +379,7 @@ export function UniversalFilterComponent({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter configuration...</span>
+          <span className="text-gray-500">{commonT('loading')}</span>
         </div>
       </div>
     )
@@ -385,7 +391,7 @@ export function UniversalFilterComponent({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter option2s...</span>
+          <span className="text-gray-500">{projectT('loadingFilterOptions')}</span>
         </div>
       </div>
     )
@@ -398,7 +404,7 @@ export function UniversalFilterComponent({
       <CardHeader className="pb-2">
         <CardTitle className="text-lg flex items-center gap-2">
           <Filter className="w-5 h-5" />
-          {level === 'project' ? 'Project Scope & Filters' : 'Chart Filters'}
+          {level === 'project' ? projectT('projectScopeAndFilters') : projectT('chartFilters')}
           {level === 'chart' && chartId && (
             <Badge variant="outline" className="ml-2 text-xs">
               {chartId}
@@ -407,11 +413,10 @@ export function UniversalFilterComponent({
         </CardTitle>
         <div className="text-sm text-gray-600">
           {level === 'project' 
-            ? 'Filters will apply to the whole project' 
+            ? projectT('filtersApplyToWholeProject')
             : (
               <span>
-                📌 indicates filters inherited from project level. 
-                Chart-specific filters will be applied in addition to project filters.
+                {projectT('chartFiltersDescription')}
               </span>
             )
           }
@@ -423,14 +428,14 @@ export function UniversalFilterComponent({
         {level === 'project' && projectData?.stats && (
           <div className="mb-4">
             <div className="mb-2">
-              <h3 className="text-sm font-medium text-gray-700">Project Data Scope：</h3>
+              <h3 className="text-sm font-medium text-gray-700">{projectT('projectDataScope')}：</h3>
             </div>
             <div className="grid grid-cols-4 gap-3 mb-3">
               <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
                 <Database className="w-4 h-4 text-blue-500" />
                 <div>
                   <p className="text-lg font-bold text-blue-900">{projectData.stats.total_products.toLocaleString()}</p>
-                  <p className="text-xs text-blue-600">Products</p>
+                  <p className="text-xs text-blue-600">{projectT('products')}</p>
                 </div>
               </div>
 
@@ -438,7 +443,7 @@ export function UniversalFilterComponent({
                 <Users className="w-4 h-4 text-green-500" />
                 <div>
                   <p className="text-lg font-bold text-green-900">{projectData.stats.total_brands}</p>
-                  <p className="text-xs text-green-600">Brands</p>
+                  <p className="text-xs text-green-600">{projectT('brands')}</p>
                 </div>
               </div>
           {/* 暂时隐藏，project data scope 中的review数据 和 segment数据
@@ -467,18 +472,18 @@ export function UniversalFilterComponent({
           <div className="mb-4">
             <div className="flex items-center justify-center py-4">
               <Loader2 className="w-4 h-4 animate-spin text-blue-500 mr-2" />
-              <span className="text-sm text-gray-600">Loading project data...</span>
+              <span className="text-sm text-gray-600">{projectT('loadingProjectData')}</span>
             </div>
           </div>
         )}
-  <h3 className="text-sm font-medium text-gray-700">Filters：</h3>
+  <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
         {/* 筛选器控件 */}
         <div className="flex items-center gap-4 flex-wrap">
       
           {/* Category Filter */}
           {filterConfig?.visible_filters?.categories && (
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-gray-600">Amazon Category:</span>
+              <span className="text-sm text-gray-600">{projectT('amazonCategory')}:</span>
               <div className="flex items-center gap-4 flex-wrap">
                 {finalAvailableOptions.hierarchical_categories && 
                  finalAvailableOptions.hierarchical_categories.length > 0 && 
@@ -495,7 +500,7 @@ export function UniversalFilterComponent({
                             disabled={finalLoading || configLoading}
                           />
                           <label className="text-sm cursor-pointer">
-                            {child.category} ({child.count} products)
+                            {child.category} ({child.count} {projectT('products')})
                           </label>
                         </div>
                       )
@@ -510,7 +515,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${category} (${distributionData.count} products)`
+                      ? `${category} (${distributionData.count} ${projectT('products')})`
                       : category
                     
                     const isSelected = pendingFilters.categories.includes(category)
@@ -536,7 +541,7 @@ export function UniversalFilterComponent({
           {/* Brand Filter */}
           {filterConfig?.visible_filters?.brands && (
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-gray-600">Brand:</span>
+              <span className="text-sm text-gray-600">{filtersT('brand')}:</span>
               <div className="flex items-center gap-4 flex-wrap">
                 {finalAvailableOptions?.brands && finalAvailableOptions.brands.length > 0 ? (
                   finalAvailableOptions.brands.map((brandName) => {
@@ -546,7 +551,7 @@ export function UniversalFilterComponent({
                       (item: any) => item.name === brandName
                     )
                     const displayLabel = distributionData 
-                      ? `${brandName} (${distributionData.count} products)`
+                      ? `${brandName} (${distributionData.count} ${projectT('products')})`
                       : brandName
                     
                     return (
@@ -571,7 +576,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${brand} (${distributionData.count} products)`
+                      ? `${brand} (${distributionData.count} ${projectT('products')})`
                       : brand
                     
                     const isSelected = pendingFilters.brands.includes(brand)
@@ -599,7 +604,7 @@ export function UniversalFilterComponent({
           {/* Segments Filter */}
           {filterConfig?.visible_filters?.segments && (
             <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Product Segment:</span>
+              <span className="text-sm text-gray-600">{projectT('segments')}:</span>
               <Select 
                 key={selectKeys.segment}
                 onValueChange={handleSegmentSelect}
@@ -617,7 +622,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${segment} (${distributionData.count} products)`
+                      ? `${segment} (${distributionData.count} ${projectT('products')})`
                       : segment
                     
                     const isSelected = pendingFilters.segments.includes(segment)
@@ -659,7 +664,7 @@ export function UniversalFilterComponent({
         {hasActiveFilters && (
           <div className="pt-2 border-t border-gray-100">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs text-gray-600">Applied filters:</span>
+              <span className="text-xs text-gray-600">{projectT('appliedFilters')}:</span>
               {pendingFilters.categories.map(category => 
                 renderFilterBadge('categories', category, () => handleRemoveCategory(category))
               )}
@@ -710,7 +715,7 @@ export function UniversalFilterComponent({
             className="flex items-center gap-2"
           >
             <RotateCcw className="w-4 h-4" />
-            Reset
+            {filtersT('reset')}
           </Button>
           <Button 
             size="sm" 
@@ -720,10 +725,10 @@ export function UniversalFilterComponent({
             {applyingFilters ? (
               <>
                 <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                Applying...
+                {commonT('loading')}
               </>
             ) : (
-              'Apply Filters'
+              filtersT('applyFilters')
             )}
           </Button>
         </div>

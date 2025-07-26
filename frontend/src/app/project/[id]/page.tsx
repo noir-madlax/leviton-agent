@@ -9,6 +9,7 @@ import { ProtectedRoute } from "@/components/auth/protected-route"
 import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
 import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
 import { preloadUnifiedFilterData } from "@/components/analysis-db/hooks/use-unified-filter-data"
+import { useCommonT, useProjectT } from "@/i18n/hooks"
 
 // 使用现有的Project接口
 interface Project {
@@ -77,6 +78,10 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   const [loading, setLoading] = useState(true)
   const [projectId, setProjectId] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
+  
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
   
   // 添加过滤器展开状态
   const [isFilterExpanded, setIsFilterExpanded] = useState(false)
@@ -221,10 +226,10 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     return (
       <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
         <div className="text-center">
-          <h2 className="text-lg font-medium text-gray-900 mb-2">Project not found</h2>
-          <p className="text-gray-600 mb-4">The project you&apos;re looking for doesn&apos;t exist.</p>
+          <h2 className="text-lg font-medium text-gray-900 mb-2">{projectT('projectNotFound')}</h2>
+          <p className="text-gray-600 mb-4">{projectT('projectNotFoundDescription')}</p>
           <Link href="/">
-            <Button>Back to Home</Button>
+            <Button>{commonT('backToHome')}</Button>
           </Link>
         </div>
       </div>

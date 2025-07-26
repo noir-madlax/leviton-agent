@@ -6,6 +6,7 @@ import { Slider } from '@/components/ui/slider'
 import { Checkbox } from '@/components/ui/checkbox'
 import { ExtendFieldDefinition } from '../types/filters'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
+import { useCommonT, useProjectT } from '@/i18n/hooks'
 
 interface DynamicExtendFieldsFilterProps {
   projectId: string
@@ -45,6 +46,20 @@ export function DynamicExtendFieldsFilter({
   const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
   const [loading, setLoading] = useState(false)
   const [selectKeys, setSelectKeys] = useState<Record<string, number>>({})
+
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  
+  // 翻译字段显示名称
+  const translateFieldName = (displayName: string) => {
+    switch (displayName) {
+      case 'Smart Capability':
+        return projectT('smartCapability')
+      default:
+        return displayName
+    }
+  }
 
   // 使用统一筛选器数据源获取原始extend_fields选项（不受当前筛选条件影响）
   const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
@@ -172,7 +187,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex flex-col gap-2">
             <label className="text-sm text-gray-600">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
               {availableSelectOptions.map((item) => {
@@ -214,7 +229,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex items-center gap-2">
             <label className="text-sm text-gray-600 min-w-fit">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <Select
               key={selectKeys[field.field_name] || 0}
@@ -285,7 +300,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex flex-col gap-2">
             <label className="text-sm text-gray-600">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
               {availableOptions.map((item) => {
@@ -325,7 +340,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex items-center gap-2">
             <label className="text-sm text-gray-600 min-w-fit">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-2 w-48">
               <Slider
@@ -354,7 +369,7 @@ export function DynamicExtendFieldsFilter({
   if (loading) {
     return (
       <div className={`text-sm text-gray-500 ${className}`}>
-        Loading extend fields...
+        {commonT('loading')}
       </div>
     )
   }

@@ -19,6 +19,7 @@ import React from 'react'
 import { compileChartCode, validateChartCode } from '@/lib/chart-compiler'
 
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible'
+import { useCommonT, useProjectT } from '@/i18n/hooks'
 
 // Agent API 请求接口定义
 interface AgentFilters {
@@ -350,6 +351,10 @@ function ContentPartRenderer({ part }: { part: ContentPart }) {
 // 内部组件，使用useChart hook
 function ChatPageContent({ projectId }: { projectId: string }) {
   const router = useRouter()
+  
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
  
   const [loading, setLoading] = useState(true)
   const [messages, setMessages] = useState<Message[]>([])
@@ -813,7 +818,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   className="text-gray-600"
                 >
                   <ArrowLeft className="h-4 w-4" />
-                  {fromHome ? 'Back to Home' : 'Back to Dashboard'}
+                  {fromHome ? commonT('backToHome') : commonT('backToDashboard')}
                 </Button>
                 <Separator orientation="vertical" className="h-4" />
                 <Button
@@ -823,7 +828,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   className="text-gray-600"
                 >
                   <MessageSquare className="h-4 w-4" />
-                  Topics
+                  {projectT('topics')}
                 </Button>
                 <Separator orientation="vertical" className="h-4" />
                 <div>
@@ -840,7 +845,7 @@ function ChatPageContent({ projectId }: { projectId: string }) {
                   variant="ghost"
                   className="w-full justify-between px-6 py-4 hover:bg-gray-50"
                 >
-                  <span className="text-sm font-medium">Data Filters & Scope</span>
+                  <span className="text-sm font-medium">{projectT('dataFiltersAndScope')}</span>
                   {showFilters ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
                 </Button>
               </CollapsibleTrigger>
