@@ -10,6 +10,12 @@ from .competitorAnalysis.models import (
 )
 from .competitorAnalysis.service import CompetitorAnalysisChartService
 
+from .reviewAnalysis.models import (
+    TopCategoriesRequest, TopCategoriesResponse,
+    ReviewsByCategoryRequest, ReviewsByCategoryResponse
+)
+from .reviewAnalysis.service import ReviewAnalysisChartService
+
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
@@ -31,9 +37,10 @@ async def get_competitor_summary(request: CompetitorSummaryRequest):
         service = CompetitorAnalysisChartService(
             project_id=request.project_id,
             filters=request.filters,
+            selected_asins=request.selected_asins,
             date_range=request.date_range
         )
-        data = await service.get_competitor_summary(request.selected_asins)
+        data = await service.get_competitor_summary()
         response = CompetitorSummaryResponse(data=data)
         
         logger.info(f"Competitor summary analysis completed for project {request.project_id}: {len(response.data.products)} products")
@@ -65,12 +72,12 @@ async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
         service = CompetitorAnalysisChartService(
             project_id=request.project_id,
             filters=request.filters,
+            selected_asins=request.selected_asins,
             date_range=request.date_range
         )
         data = await service.get_matrix_view_data(
-            selected_asins=request.selected_asins,
             aspect_type=request.aspect_type,
-            options=request.filter
+            options=request.options
         )
         response = CompetitorMatrixViewResponse(data=data)
         
@@ -110,6 +117,7 @@ async def get_reviews_by_category_product(request: ReviewRetrievalRequest):
         service = CompetitorAnalysisChartService(
             project_id=request.project_id,
             filters=request.filters,
+            selected_asins=request.selected_asins,
             date_range=request.date_range
         )
         
@@ -196,4 +204,158 @@ async def get_reviews_by_category_product(request: ReviewRetrievalRequest):
         
     except Exception as e:
         logger.error(f"System error in review retrieval: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/review-analysis/top-categories", response_model=TopCategoriesResponse)
+async def get_top_categories(request: TopCategoriesRequest):
+    """Get top aspect categories with comprehensive statistics.
+    
+    This endpoint retrieves the top aspect categories for all filtered products
+    under a project, with detailed statistics including mentions, sentiments,
+    and review counts. Supports filtering by aspect type and various sorting options.
+    
+    Args:
+        request: TopCategoriesRequest containing project_id, filters, and additional conditions
+        
+    Returns:
+        TopCategoriesResponse: Top categories data with comprehensive statistics
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"Getting top categories for project {request.project_id}")
+        
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters,
+            selected_asins=request.selected_asins,
+            date_range=request.date_range
+        )
+        
+        data = await service.get_top_categories(request.options)
+        response = TopCategoriesResponse(data=data)
+        
+        logger.info(f"Top categories analysis completed for project {request.project_id}: {len(response.data.categories)} categories")
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Validation error in top categories: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+        
+    except Exception as e:
+        logger.error(f"System error in top categories: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/review-analysis/reviews-by-category", response_model=ReviewsByCategoryResponse)
+async def get_reviews_by_category(request: ReviewsByCategoryRequest):
+    """Get reviews for a specific category with product information.
+    
+    This endpoint retrieves all reviews that mention a specific aspect category
+    across all filtered products under a project. It provides detailed review information
+    including product details, sentiment, aspect descriptions, and review metadata.
+    Reviews are deduplicated and aspects are aggregated per review.
+    
+    Args:
+        request: ReviewsByCategoryRequest containing project_id, category_id, and pagination options
+        
+    Returns:
+        ReviewsByCategoryResponse: Detailed review data with product information and pagination
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"Getting reviews by category for project {request.project_id}, category {request.category_id}")
+        
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters,
+            selected_asins=request.selected_asins,
+            date_range=request.date_range
+        )
+        
+        # Get reviews with deduplication and aspect aggregation
+        raw_data = await service.get_reviews_by_category(
+            category_id=request.category_id,
+            limit=request.limit,
+            offset=request.offset,
+            sort_by=request.sort_by,
+            sort_order=request.sort_order
+        )
+        
+        # Convert raw data to response format
+        from .reviewAnalysis.models import (
+            ReviewAspectBase, ReviewWithProductInfo, CategoryInfoBase, PaginationBase, ReviewsByCategoryData
+        )
+        
+        # Convert reviews
+        reviews = []
+        for review_data in raw_data['reviews']:
+            # Convert aspects
+            aspects = []
+            for aspect_data in review_data['aspects']:
+                aspect = ReviewAspectBase(
+                    aspect_description=aspect_data['aspect_description'],
+                    sentiment=aspect_data['sentiment'],
+                    aspect_type=aspect_data['aspect_type']
+                )
+                aspects.append(aspect)
+            
+            # Create review with product information
+            review = ReviewWithProductInfo(
+                review_id=review_data['review_id'],
+                review_title=review_data.get('review_title'),
+                review_text=review_data['review_text'],
+                rating=review_data.get('rating'),
+                verified=review_data.get('verified'),
+                review_date=review_data.get('review_date'),
+                aspects=aspects,
+                product_id=review_data['product_id'],
+                product_title=review_data.get('product_title'),
+                product_brand=review_data.get('product_brand'),
+                product_url=review_data.get('product_url')
+            )
+            reviews.append(review)
+        
+        # Convert category info
+        category_info = None
+        if raw_data['category_info']:
+            category_info = CategoryInfoBase(
+                category_id=raw_data['category_info']['category_pk'],
+                category_name=raw_data['category_info']['name'],
+                definition=raw_data['category_info']['definition'],
+                aspect_type=raw_data['category_info']['aspect_type']
+            )
+        
+        # Create pagination info
+        pagination = PaginationBase(
+            limit=raw_data['pagination']['limit'],
+            offset=raw_data['pagination']['offset'],
+            has_more=raw_data['pagination']['has_more']
+        )
+        
+        # Create response data
+        response_data = ReviewsByCategoryData(
+            reviews=reviews,
+            total_reviews=raw_data['total_reviews'],
+            project_id=raw_data['project_id'],
+            category_id=raw_data['category_id'],
+            category_info=category_info,
+            pagination=pagination
+        )
+        
+        response = ReviewsByCategoryResponse(data=response_data)
+        
+        logger.info(f"Reviews by category completed for project {request.project_id}: {len(reviews)} reviews returned out of {raw_data['total_reviews']} total")
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Validation error in reviews by category: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+        
+    except Exception as e:
+        logger.error(f"System error in reviews by category: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

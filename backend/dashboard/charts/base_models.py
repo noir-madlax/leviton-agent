@@ -41,6 +41,7 @@ class BaseRequestModel(BaseModel):
     """Dashboard charts 基础请求模型"""
     project_id: str = Field(..., description="项目ID，用于ASIN过滤")
     filters: Optional[FiltersModel] = Field(default=None, description="过滤条件对象")
+    selected_asins: Optional[List[str]] = Field(default=None, description="指定要分析的ASIN列表，如果提供则优先使用此列表而不是filters")
     date_range: Optional[DateRangeModel] = Field(default=None, description="时间范围对象")
 
 class BaseResponseModel(BaseModel, Generic[T]):
