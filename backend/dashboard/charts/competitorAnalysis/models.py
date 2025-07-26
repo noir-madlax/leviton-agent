@@ -18,7 +18,7 @@ class CompetitorMatrixViewRequest(BaseRequestModel):
     """Request model for competitor analysis matrix view."""
     selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
     aspect_type: Literal["phy_perf", "use"] = Field(..., description="Aspect type filter")
-    filter: Dict[str, Any] = Field(..., description="Filter configuration")
+    options: Dict[str, Any] = Field(..., description="Matrix view options for sorting and filtering")
 
 
 class ReviewRetrievalRequest(BaseRequestModel):

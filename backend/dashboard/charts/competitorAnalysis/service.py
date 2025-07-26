@@ -11,12 +11,13 @@ from dashboard.services.base_service import BaseDashboardService, FilterConfig, 
 from core.models.filters import ProjectFilters
 from core.database.connection import get_supabase_client
 from ..base_models import FiltersModel, DateRangeModel
+from ..reviewCore import ReviewAnalysisBaseService
 
 
 logger = logging.getLogger(__name__)
 
 
-class CompetitorAnalysisChartService(BaseDashboardService):
+class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
     """Service for competitor analysis data retrieval.
     
     Provides efficient access to competitor product information and review metrics
@@ -36,10 +37,7 @@ class CompetitorAnalysisChartService(BaseDashboardService):
             date_range: Optional date range (not used for competitor analysis)
         """
         # Initialize base service but override project ASIN validation for competitor analysis
-        self.project_id = project_id
-        self.supabase = get_supabase_client()
-        self.filters = FilterConfig()
-        self.category_filters = None
+        super().__init__(project_id)
         
         # For competitor analysis, we don't need project ASIN filtering
         # since we use selected_asins from the request
@@ -211,73 +209,7 @@ class CompetitorAnalysisChartService(BaseDashboardService):
                 }
             }
 
-    def _deduplicate_and_aggregate_reviews(self, reviews_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """Deduplicate reviews and aggregate aspects for each review.
-        
-        Args:
-            reviews_data: Raw review data from database
-            
-        Returns:
-            List of deduplicated reviews with aggregated aspects
-        """
-        # Group by review_id to deduplicate
-        review_groups = defaultdict(list)
-        for review in reviews_data:
-            review_id = review['review_id']
-            review_groups[review_id].append(review)
-        
-        # Process each unique review
-        deduplicated_reviews = []
-        for review_id, review_occurrences in review_groups.items():
-            # Use the first occurrence for basic review info
-            base_review = review_occurrences[0]
-            
-            # Aggregate aspects from all occurrences
-            aspects = []
-            for occurrence in review_occurrences:
-                # Format aspect description based on parent_group_name and detail_text
-                parent_group = occurrence.get('parent_group_name', '')
-                detail_text = occurrence.get('detail_text', '')
-                
-                if parent_group and detail_text and parent_group != detail_text:
-                    aspect_description = f"{parent_group}: {detail_text}"
-                else:
-                    aspect_description = detail_text or parent_group
-                
-                aspect = {
-                    'aspect_description': aspect_description,
-                    'sentiment': occurrence['sentiment'],
-                    'aspect_type': occurrence['aspect_type']
-                }
-                aspects.append(aspect)
-            
-            # Transform rating from string to integer if needed
-            rating = base_review.get('rating')
-            if isinstance(rating, str) and 'out of' in rating:
-                # Extract numeric rating from "5.0 out of 5 stars" format
-                try:
-                    rating = int(float(rating.split(' out of')[0]))
-                except (ValueError, IndexError):
-                    rating = None
-            
-            # Create deduplicated review with aggregated aspects
-            deduplicated_review = {
-                'review_id': review_id,
-                'review_title': base_review.get('review_title'),
-                'review_text': base_review['review_text'],
-                'rating': rating,
-                'verified': base_review.get('verified'),
-                'review_date': base_review.get('review_date'),
-                'aspects': aspects,  # All aspects mentioned in this review
-                'category_name': base_review['category_name'],
-                'category_definition': base_review.get('category_definition'),
-                'aspect_type': base_review['aspect_type']
-            }
-            
-            deduplicated_reviews.append(deduplicated_review)
-        
-        logger.info(f"Deduplicated {len(reviews_data)} review occurrences into {len(deduplicated_reviews)} unique reviews")
-        return deduplicated_reviews
+
 
     async def _get_all_reviews_data(
         self, 
@@ -330,36 +262,7 @@ class CompetitorAnalysisChartService(BaseDashboardService):
             logger.error(f"Error getting all reviews data: {e}", exc_info=True)
             return []
 
-    async def _get_category_info(self, category_id: int) -> Optional[Dict[str, Any]]:
-        """Get category information for the specified category ID.
-        
-        Args:
-            category_id: Category ID to get info for
-            
-        Returns:
-            Category information dict or None if not found
-        """
-        try:
-            result = self.supabase.table('review_analysis_aspect_categories').select(
-                'category_pk, name, definition, aspect_type, stage'
-            ).eq('category_pk', category_id).eq('project_id', self.project_id).execute()
-            
-            if result.data:
-                category_data = result.data[0]
-                return {
-                    'category_pk': category_data['category_pk'],
-                    'name': category_data['name'],
-                    'definition': category_data['definition'],
-                    'aspect_type': category_data['aspect_type'],
-                    'stage': category_data['stage']
-                }
-            
-            logger.warning(f"Category {category_id} not found for project {self.project_id}")
-            return None
-            
-        except Exception as e:
-            logger.error(f"Error getting category info: {e}", exc_info=True)
-            return None
+
 
     async def _get_all_competitor_data(self, selected_asins: List[str]) -> Dict[str, Dict[str, Any]]:
         """Get all competitor data from review_aspect_data_view in a single query.

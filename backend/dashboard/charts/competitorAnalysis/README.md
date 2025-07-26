@@ -83,7 +83,7 @@ The competitor analysis module consists of:
     "project_id": "project-uuid",
     "selected_asins": ["B00004YUO0", "B00NG0ELL0"],
     "aspect_type": "phy_perf",
-    "filter": {
+    "options": {
         "sort_by": "mentions",
         "sort_direction": "desc",
         "max_categories": 10,
