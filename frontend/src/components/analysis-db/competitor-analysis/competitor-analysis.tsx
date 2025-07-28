@@ -287,7 +287,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           📊 Customer satisfaction overview
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Calculated from the latest 200 reviews per product using our new satisfaction analysis algorithm.
+          Calculated from the latest 200 reviews per product.
         </div>
 
         <CustomerSatisfactionChart
