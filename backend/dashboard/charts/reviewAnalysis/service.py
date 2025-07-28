@@ -37,7 +37,14 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         # Set filters if provided and no selected_asins
         if filters and not selected_asins:
             from core.models.filters import ProjectFilters
-            project_filters = ProjectFilters.from_dict(filters)
+            # Handle both dict and FiltersModel objects
+            if hasattr(filters, 'dict'):
+                # FiltersModel object - convert to dict
+                filters_dict = filters.dict()
+            else:
+                # Already a dict
+                filters_dict = filters
+            project_filters = ProjectFilters.from_dict(filters_dict)
             self.set_project_filters(project_filters)
         
         logger.info(f"ReviewAnalysisChartService initialized for project {project_id}")
