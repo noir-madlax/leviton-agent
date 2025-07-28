@@ -767,7 +767,154 @@ export class DatabaseService {
     }
   }
 
-  // 📋 Data Confirmation 功能 - 保留直接Supabase访问
+  // 🔑 Get top categories data for review analysis
+  async getTopCategoriesData(
+    projectId: string,
+    aspectType: 'phy_perf' | 'use' = 'phy_perf',
+    options?: {
+      sortBy?: 'negative_mentions' | 'positive_mentions' | 'total_mentions' | 'positive_ratio'
+      sortDirection?: 'desc' | 'asc'
+      maxCategories?: number
+      minMentions?: number
+      minPositiveMentions?: number
+    }
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      categories: Array<{
+        category_id: number
+        category_name: string
+        definition: string
+        aspect_type: string
+        total_mentions: number
+        positive_mentions: number
+        negative_mentions: number
+        neutral_mentions: number
+        unique_reviews: number
+        positive_ratio: number
+      }>
+      total_categories: number
+      summary_stats: {
+        total_categories: number
+        total_mentions: number
+        total_reviews: number
+        total_positive_mentions: number
+        total_negative_mentions: number
+        overall_positive_ratio: number
+      }
+    }
+  }> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        options: {
+          aspect_type: aspectType,
+          sort_by: options?.sortBy || 'negative_mentions',
+          sort_direction: options?.sortDirection || 'desc',
+          max_categories: options?.maxCategories || 10,
+          min_mentions: options?.minMentions || 5,
+          min_positive_mentions: options?.minPositiveMentions || 2,
+          ...options
+        }
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching top categories data:', error)
+      throw error
+    }
+  }
+
+  // � Get reviews by category for detailed view
+  async getReviewsByCategory(
+    projectId: string,
+    categoryId: number,
+    options?: {
+      limit?: number
+      offset?: number
+      sortBy?: 'review_id' | 'rating' | 'review_date'
+      sortOrder?: 'desc' | 'asc'
+    }
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      reviews: Array<{
+        review_id: number
+        product_id: string
+        review_text: string
+        rating: number
+        verified: boolean
+        review_date: string
+        brand: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        category_name: string
+        category_definition: string
+      }>
+      total_count: number
+      category_info: {
+        category_id: number
+        category_name: string
+        definition: string
+      }
+      pagination: {
+        limit: number
+        offset: number
+        has_more: boolean
+      }
+    }
+  }> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        category_id: categoryId,
+        limit: options?.limit || 10,
+        offset: options?.offset || 0,
+        sort_by: options?.sortBy || 'review_id',
+        sort_order: options?.sortOrder || 'desc'
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching reviews by category:', error)
+      throw error
+    }
+  }
+
+  // �📋 Data Confirmation 功能 - 保留直接Supabase访问
   async getDataConfirmationData(filters?: DataConfirmationFilters): Promise<DataConfirmationData> {
     try {
       // 构建查询条件

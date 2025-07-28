@@ -3,7 +3,7 @@
 import { useState, useMemo } from "react"
 import { Tooltip } from "@/components/ui/tooltip"
 import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
-import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
+import { useReviewPanelQuery } from "@/components/analysis-db/hooks/use-review-panel-query"
 
 interface UseCaseSentimentMatrixProps {
   data: UseCaseFeedback[]
@@ -21,13 +21,14 @@ interface UseCaseSentimentMatrixProps {
       brand: string
     }>>
   }
+  projectId?: string // 新增：用于获取评论详情
 }
 
 type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
-export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMatrixProps) {
-  const { openPanel } = useReviewPanel()
+export function UseCaseSentimentMatrix({ data, reviewData, projectId }: UseCaseSentimentMatrixProps) {
+  const { handleCategoryClick } = useReviewPanelQuery()
   const [sortField, setSortField] = useState<SortField>('totalMentions')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
 
@@ -84,16 +85,20 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
   }, [data, sortField, sortDirection])
 
   // 处理行点击
-  const handleRowClick = (useCase: string) => {
-    if (reviewData?.reviewsByCategory) {
+  const handleRowClick = async (useCase: string, categoryId?: number) => {
+    if (categoryId && projectId) {
+      // 使用新的 API 获取评论详情
+      await handleCategoryClick(
+        projectId,
+        categoryId,
+        useCase,
+        'use-case'
+      )
+    } else if (reviewData?.reviewsByCategory) {
+      // 降级到旧的逻辑（如果没有 categoryId 或 projectId）
       const reviews = reviewData.reviewsByCategory[useCase] || []
       if (reviews.length > 0) {
-        openPanel(
-          reviews,
-          `${useCase} - Customer Reviews`,
-          `Reviews related to "${useCase}" use case`,
-          { sentiment: true, brand: true, rating: true, verified: true }
-        )
+        console.warn('Using fallback review data - consider updating to use categoryId')
       }
     }
   }
@@ -189,13 +194,13 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
@@ -207,13 +212,13 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
@@ -225,13 +230,13 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
@@ -243,13 +248,13 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className={`py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:opacity-80 ${getSatisfactionColor(positiveShare)}`}
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >

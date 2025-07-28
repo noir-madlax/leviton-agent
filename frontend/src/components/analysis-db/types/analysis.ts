@@ -35,6 +35,8 @@ export interface CategoryFeedback {
   // Enhanced fields for tooltips and better UX
   categoryDefinition?: string
   impactedProducts?: number
+  // New field for review detail fetching
+  categoryId?: number
 }
 
 export interface UseCaseFeedback {
@@ -50,6 +52,8 @@ export interface UseCaseFeedback {
   // Enhanced fields for better analysis
   categoryDefinition?: string
   productCount?: number
+  // New field for review detail fetching
+  categoryId?: number
 }
 
 export interface ProductPainPoint {
