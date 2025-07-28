@@ -135,6 +135,15 @@ export function ReviewPanel({
     }
   }
 
+  // 🆕 工具函数：获取aspect badge的颜色
+  const getAspectBadgeColor = (sentiment: string): string => {
+    switch (sentiment) {
+      case 'positive': return 'bg-green-100 text-green-800 border-green-200'
+      case 'negative': return 'bg-red-100 text-red-800 border-red-200'
+      default: return 'bg-yellow-100 text-yellow-800 border-yellow-200'
+    }
+  }
+
   const clearFilters = () => {
     setSearchTerm('')
     setSentimentFilter('all')
@@ -337,12 +346,12 @@ export function ReviewPanel({
                               </div>
                             )}
                             
-                            {/* Sentiment Badge */}
+                            {/* Sentiment Badge
                             <Badge variant="outline" className={getSentimentBadgeColor(review.sentiment)}>
                               {review.sentiment}
                             </Badge>
                             
-                            {/* Brand */}
+                            {/* Brand *
                             {review.brand && (
                               <Badge variant="outline" className="bg-blue-50 text-blue-700">
                                 {review.brand}
@@ -363,6 +372,24 @@ export function ReviewPanel({
                       <p className="text-gray-700 leading-relaxed">
                         {review.text || 'No content available'}
                       </p>
+                      
+                      {/* 🆕 新增：显示aspects列表 */}
+                      {review.aspects && review.aspects.length > 0 && (
+                        <div className="mt-3 pt-3 border-t border-gray-100">
+                          <div className="text-sm text-gray-600 mb-2">Mentioned aspects:</div>
+                          <div className="flex flex-wrap gap-2">
+                            {review.aspects.map((aspect, index) => (
+                              <Badge 
+                                key={index} 
+                                variant="outline" 
+                                className={getAspectBadgeColor(aspect.sentiment)}
+                              >
+                                {aspect.description}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}

@@ -114,6 +114,24 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     return matrix
   }, [matrixViewData, orderedProducts])
 
+  // 🆕 工具函数：将后端sentiment格式映射到frontend格式
+  const mapSentiment = (backendSentiment: string): 'positive' | 'negative' | 'neutral' => {
+    if (backendSentiment === '+') return 'positive'
+    if (backendSentiment === '-') return 'negative'
+    return 'neutral'
+  }
+
+  // 🆕 工具函数：基于aspects计算总体sentiment
+  const calculateOverallSentiment = (aspects: Array<{ sentiment: string }>): 'positive' | 'negative' | 'neutral' => {
+    if (!aspects.length) return 'neutral'
+    const positiveCount = aspects.filter(a => a.sentiment === '+').length
+    const negativeCount = aspects.filter(a => a.sentiment === '-').length
+    
+    if (positiveCount > negativeCount) return 'positive'
+    if (negativeCount > positiveCount) return 'negative'
+    return 'neutral'
+  }
+
   // 如果没有数据，显示加载状态
   if (!matrixViewData) {
     return (
@@ -161,13 +179,19 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
         id: review.review_id,
         productId: cellData.productAsin,
         text: review.review_text,
-        sentiment: review.aspects.length > 0 ? review.aspects[0].sentiment as 'positive' | 'negative' | 'neutral' : 'neutral',
+        sentiment: calculateOverallSentiment(review.aspects),
         category: cellData.categoryName,
         aspect: review.aspects.map(a => a.aspect_description).join(', '),
         rating: review.rating,
         verified: review.verified,
         date: review.review_date,
-        brand: productName // 使用产品名称作为品牌
+        brand: productName, // 使用产品名称作为品牌
+        // 🆕 新增：完整的aspects信息
+        aspects: review.aspects.map(aspect => ({
+          description: aspect.aspect_description,
+          sentiment: mapSentiment(aspect.sentiment),
+          aspect_type: aspect.aspect_type
+        }))
       }))
 
       console.log(`Found ${reviewsToShow.length} reviews`)
@@ -207,15 +231,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     else return 'bg-red-100 text-red-800'
   }
 
-  const getHeaderColor = (productAsin: string) => {
-    // Simple color scheme for differentiation
-    const productName = asinToProductNameMap?.[productAsin] || productAsin
-    if (productName.toLowerCase().includes('leviton')) {
-      return 'bg-slate-100 text-slate-800' // Very light greyish blue for Leviton
-    } else {
-      return 'bg-amber-50 text-amber-800' // Light greyish yellow for other brands
-    }
-  }
+
 
   return (
     <div className="relative">
