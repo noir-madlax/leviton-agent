@@ -35,7 +35,7 @@ type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positive
 type SortDirection = 'asc' | 'desc'
 
 export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }: UseCaseSentimentMatrixProps) {
-  const { handleCategoryClick } = useReviewPanelQuery()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   const [sortField, setSortField] = useState<SortField>('totalMentions')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
 
@@ -134,7 +134,16 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="relative">
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+          <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            <span className="text-gray-700 font-medium">Loading review details...</span>
+          </div>
+        </div>
+      )}
+      <div className="overflow-x-auto">
       <div className="min-w-full ">
         <table className="w-full ">
           <thead>
@@ -277,6 +286,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   )
 } 

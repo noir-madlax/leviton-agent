@@ -57,7 +57,7 @@ const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: 
 
 export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId, filters }: CategoryPositiveFeedbackBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
-  const { handleCategoryClick } = useReviewPanelQuery()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
 
   // 同步外部的productType变化
   useEffect(() => {
@@ -96,7 +96,16 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
   }
 
   return (
-    <Card className="w-full">
+    <div className="relative">
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+          <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            <span className="text-gray-700 font-medium">Loading review details...</span>
+          </div>
+        </div>
+      )}
+      <Card className="w-full">
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
       
@@ -162,5 +171,6 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 } 

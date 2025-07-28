@@ -883,6 +883,11 @@ export class DatabaseService {
         sentiment: 'positive' | 'negative' | 'neutral'
         category_name: string
         category_definition: string
+        aspects?: Array<{
+          aspect_description: string
+          sentiment: string
+          aspect_type: string
+        }>
       }>
       total_count: number
       category_info: {

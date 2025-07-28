@@ -1,6 +1,6 @@
 "use client"
 
-import { useCallback } from 'react'
+import { useCallback, useState } from 'react'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 import { databaseService } from '@/components/analysis-db/data/database-service'
 import { Review } from '@/components/analysis-db/types/analysis'
@@ -35,10 +35,32 @@ export interface UseReviewPanelQueryReturn {
       asins?: string[]
     }
   ) => Promise<void>
+  
+  // Loading状态
+  isLoading: boolean
 }
 
 export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
   const { openPanel } = useReviewPanel()
+  const [isLoading, setIsLoading] = useState(false)
+
+  // 🆕 工具函数：将后端sentiment格式映射到frontend格式 (完全复用竞品分析)
+  const mapSentiment = (backendSentiment: string): 'positive' | 'negative' | 'neutral' => {
+    if (backendSentiment === '+') return 'positive'
+    if (backendSentiment === '-') return 'negative'
+    return 'neutral'
+  }
+
+  // 🆕 工具函数：基于aspects计算总体sentiment (完全复用竞品分析)
+  const calculateOverallSentiment = (aspects: Array<{ sentiment: string }>): 'positive' | 'negative' | 'neutral' => {
+    if (!aspects.length) return 'neutral'
+    const positiveCount = aspects.filter(a => a.sentiment === '+').length
+    const negativeCount = aspects.filter(a => a.sentiment === '-').length
+    
+    if (positiveCount > negativeCount) return 'positive'
+    if (negativeCount > positiveCount) return 'negative'
+    return 'neutral'
+  }
 
   const openPanelWithCategoryId = useCallback(async (
     projectId: string,
@@ -61,6 +83,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
     }
   ) => {
     try {
+      setIsLoading(true)
       // 获取第一页数据
       const result = await databaseService.getReviewsByCategory(
         projectId,
@@ -74,7 +97,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         filters // 传递过滤器参数
       )
 
-      // 转换数据格式为 Review 接口
+      // 转换数据格式为 Review 接口 (完全参考竞品分析的数据转换逻辑)
       const reviews: Review[] = result.data.reviews.map(item => ({
         id: item.review_id.toString(),
         productId: item.product_id,
@@ -85,7 +108,13 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         rating: item.rating,
         verified: item.verified,
         date: item.review_date,
-        brand: item.brand
+        brand: item.brand,
+        // 🆕 新增：完整的aspects信息转换 (完全复用竞品分析的实现)
+        aspects: item.aspects?.map(aspect => ({
+          description: aspect.aspect_description,
+          sentiment: mapSentiment(aspect.sentiment),
+          aspect_type: aspect.aspect_type
+        })) || []
       }))
 
       // 打开面板
@@ -104,6 +133,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         'Failed to load reviews. Please try again.',
         showFilters || { sentiment: true, brand: true, rating: true, verified: true }
       )
+    } finally {
+      setIsLoading(false)
     }
   }, [openPanel])
 
@@ -145,6 +176,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
 
   return {
     openPanelWithCategoryId,
-    handleCategoryClick
+    handleCategoryClick,
+    isLoading
   }
 }
