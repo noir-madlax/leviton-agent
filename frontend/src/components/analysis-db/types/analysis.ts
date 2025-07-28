@@ -78,6 +78,12 @@ export interface Review {
   verified: boolean
   date: string
   brand: string
+  // 🆕 新增字段，向后兼容 - 用于显示每个aspect的详细信息和sentiment
+  aspects?: Array<{
+    description: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    aspect_type?: string
+  }>
 }
 
 // Helper functions moved from deleted static data files
