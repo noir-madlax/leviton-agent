@@ -26,7 +26,14 @@ export interface UseReviewPanelQueryReturn {
     projectId: string,
     categoryId: number,
     categoryName: string,
-    chartType?: 'pain-points' | 'delights' | 'use-case'
+    chartType?: 'pain-points' | 'delights' | 'use-case',
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
+    }
   ) => Promise<void>
 }
 
@@ -44,6 +51,13 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       brand?: boolean
       rating?: boolean
       verified?: boolean
+    },
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
     }
   ) => {
     try {
@@ -56,7 +70,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
           offset: 0,
           sortBy: 'review_id',
           sortOrder: 'desc'
-        }
+        },
+        filters // 传递过滤器参数
       )
 
       // 转换数据格式为 Review 接口
@@ -96,14 +111,21 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
     projectId: string,
     categoryId: number,
     categoryName: string,
-    chartType: 'pain-points' | 'delights' | 'use-case' = 'pain-points'
+    chartType: 'pain-points' | 'delights' | 'use-case' = 'pain-points',
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
+    }
   ) => {
     const titles = {
       'pain-points': `${categoryName} - Pain Points`,
       'delights': `${categoryName} - Customer Delights`,
       'use-case': `${categoryName} - Use Case Reviews`
     }
-    
+
     const subtitles = {
       'pain-points': `Customer feedback about "${categoryName}" issues and concerns`,
       'delights': `Positive customer feedback about "${categoryName}"`,
@@ -115,7 +137,9 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       categoryId,
       categoryName,
       titles[chartType],
-      subtitles[chartType]
+      subtitles[chartType],
+      undefined, // showFilters 使用默认值
+      filters // 传递过滤器参数
     )
   }, [openPanelWithCategoryId])
 

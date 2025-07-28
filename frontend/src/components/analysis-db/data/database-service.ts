@@ -777,6 +777,13 @@ export class DatabaseService {
       maxCategories?: number
       minMentions?: number
       minPositiveMentions?: number
+    },
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
     }
   ): Promise<{
     status: string
@@ -811,6 +818,7 @@ export class DatabaseService {
 
       const requestBody = {
         project_id: projectId,
+        filters: filters || {},
         options: {
           aspect_type: aspectType,
           sort_by: options?.sortBy || 'negative_mentions',
@@ -851,6 +859,13 @@ export class DatabaseService {
       offset?: number
       sortBy?: 'review_id' | 'rating' | 'review_date'
       sortOrder?: 'desc' | 'asc'
+    },
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
     }
   ): Promise<{
     status: string
@@ -888,6 +903,7 @@ export class DatabaseService {
       const requestBody = {
         project_id: projectId,
         category_id: categoryId,
+        filters: filters || {},
         limit: options?.limit || 10,
         offset: options?.offset || 0,
         sort_by: options?.sortBy || 'review_id',

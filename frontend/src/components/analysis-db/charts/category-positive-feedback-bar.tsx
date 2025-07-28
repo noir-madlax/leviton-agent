@@ -15,6 +15,13 @@ interface CategoryPositiveFeedbackBarProps {
     reviewsByCategory?: Record<string, any[]>
   }
   projectId?: string // 新增：用于获取评论详情
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // 新增：过滤器参数
 }
 
 const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: any[], label?: string}) => {
@@ -48,7 +55,7 @@ const CustomTooltip = ({ active, payload, label }: {active?: boolean, payload?: 
   return null
 }
 
-export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId }: CategoryPositiveFeedbackBarProps) {
+export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId, filters }: CategoryPositiveFeedbackBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
   const { handleCategoryClick } = useReviewPanelQuery()
 
@@ -74,7 +81,8 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
         projectId,
         data.categoryId,
         data.category,
-        'delights'
+        'delights',
+        filters // 传递过滤器参数
       )
     } else if (data && data.category && reviewData?.reviewsByCategory) {
       // 降级到旧的逻辑（如果没有 categoryId 或 projectId）

@@ -15,6 +15,13 @@ interface CategoryPainPointsBarProps {
     reviewsByCategory?: Record<string, any[]>
   }
   projectId?: string // 新增：用于获取评论详情
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // 新增：过滤器参数
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -48,7 +55,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId }: CategoryPainPointsBarProps) {
+export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId, filters }: CategoryPainPointsBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
   const { handleCategoryClick } = useReviewPanelQuery()
 
@@ -74,7 +81,8 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
         projectId,
         data.categoryId,
         data.category,
-        'pain-points'
+        'pain-points',
+        filters // 传递过滤器参数
       )
     } else if (data && data.category && reviewData?.reviewsByCategory) {
       // 降级到旧的逻辑（如果没有 categoryId 或 projectId）

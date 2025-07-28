@@ -22,12 +22,19 @@ interface UseCaseSentimentMatrixProps {
     }>>
   }
   projectId?: string // 新增：用于获取评论详情
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // 新增：过滤器参数
 }
 
 type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
-export function UseCaseSentimentMatrix({ data, reviewData, projectId }: UseCaseSentimentMatrixProps) {
+export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }: UseCaseSentimentMatrixProps) {
   const { handleCategoryClick } = useReviewPanelQuery()
   const [sortField, setSortField] = useState<SortField>('totalMentions')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
@@ -92,7 +99,8 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId }: UseCaseS
         projectId,
         categoryId,
         useCase,
-        'use-case'
+        'use-case',
+        filters // 传递过滤器参数
       )
     } else if (reviewData?.reviewsByCategory) {
       // 降级到旧的逻辑（如果没有 categoryId 或 projectId）

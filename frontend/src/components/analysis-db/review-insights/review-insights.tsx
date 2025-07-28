@@ -98,7 +98,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   const [useCaseLoading, setUseCaseLoading] = useState(false)
 
   // 新增：获取痛点数据的方法
-  const fetchPainPointsData = async () => {
+  const fetchPainPointsData = async (filters?: ProjectFilters) => {
     if (!projectId) return
 
     setPainPointsLoading(true)
@@ -112,7 +112,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           maxCategories: 10,
           minMentions: 5,
           minPositiveMentions: 2
-        }
+        },
+        filters // 传递过滤器参数
       )
 
       // 转换数据格式为 CategoryFeedback，添加 category_id 用于点击时获取评论详情
@@ -147,7 +148,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   }
 
   // 新增：获取亮点数据的方法
-  const fetchDelightsData = async () => {
+  const fetchDelightsData = async (filters?: ProjectFilters) => {
     if (!projectId) return
 
     setDelightsLoading(true)
@@ -161,7 +162,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           maxCategories: 10,
           minMentions: 5,
           minPositiveMentions: 2
-        }
+        },
+        filters // 传递过滤器参数
       )
 
       // 转换数据格式为 CategoryFeedback，但重点关注正面数据，添加 category_id
@@ -196,7 +198,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   }
 
   // 新增：获取使用场景数据的方法
-  const fetchUseCaseData = async () => {
+  const fetchUseCaseData = async (filters?: ProjectFilters) => {
     if (!projectId) return
 
     setUseCaseLoading(true)
@@ -210,7 +212,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           maxCategories: 15, // 使用场景可以显示更多
           minMentions: 3,
           minPositiveMentions: 1
-        }
+        },
+        filters // 传递过滤器参数
       )
 
       // 转换数据格式为 UseCaseFeedback，添加 category_id
@@ -273,11 +276,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         allReviewData
       })
 
-      // 同时更新三个图表的数据
+      // 同时更新三个图表的数据，传递过滤器参数
       await Promise.all([
-        fetchPainPointsData(),
-        fetchDelightsData(),
-        fetchUseCaseData()
+        fetchPainPointsData(filters),
+        fetchDelightsData(filters),
+        fetchUseCaseData(filters)
       ])
     } catch (error) {
       console.error('Error fetching filtered data:', error)
@@ -289,11 +292,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   // 初始化时获取三个图表的数据
   useEffect(() => {
     if (projectId) {
-      fetchPainPointsData()
-      fetchDelightsData()
-      fetchUseCaseData()
+      fetchPainPointsData(initialFilters)
+      fetchDelightsData(initialFilters)
+      fetchUseCaseData(initialFilters)
     }
-  }, [projectId])
+  }, [projectId, initialFilters])
 
   useEffect(() => {
     // Create the structure that charts expect using database data
@@ -527,6 +530,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
               projectId={projectId}
+              filters={initialFilters}
             />
           )}
         </ChartWithFilters>
@@ -559,6 +563,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
               projectId={projectId}
+              filters={initialFilters}
             />
           )}
         </ChartWithFilters>
@@ -592,6 +597,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
                 brand: string
               }>> }}
               projectId={projectId}
+              filters={initialFilters}
             />
           )}
         </div>
