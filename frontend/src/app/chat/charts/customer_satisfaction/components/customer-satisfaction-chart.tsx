@@ -78,8 +78,9 @@ export function CustomerSatisfactionChart({
   }
 
   return (
+     
     <div className="space-y-4">
-      {/* Summary Stats */}
+     {/*  Summary Stats 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <Card className="p-4 text-center">
           <div className="text-2xl font-bold text-blue-600">{data.data.length}</div>
@@ -104,7 +105,7 @@ export function CustomerSatisfactionChart({
           <div className="text-sm text-gray-500">Top Performer</div>
         </Card>
       </div>
-
+    */}
       {/* Product Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {data.data.map((product, index) => (
@@ -138,13 +139,14 @@ export function CustomerSatisfactionChart({
             </div>
 
             <div className="space-y-2">
+              {/* 
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-500">Satisfaction Score</span>
                 <span className={`text-sm font-bold px-2 py-1 rounded ${getSatisfactionColor(product.satisfaction_score)}`}>
                   {product.satisfaction_score.toFixed(1)}%
                 </span>
               </div>
-
+              */}
               <div className="flex justify-between items-center">
                 <span className="text-xs text-gray-500">Reviews Analyzed</span>
                 <span className="text-sm font-medium">{product.total_reviews.toLocaleString()}</span>
@@ -164,20 +166,18 @@ export function CustomerSatisfactionChart({
                 <span className="text-sm font-medium">{formatPrice(product.price_usd)}</span>
               </div>
             </div>
-
+            {/* 
             <div className="mt-3 pt-2 border-t border-gray-100">
               <div className="text-xs text-gray-400">
                 Rank #{index + 1} by satisfaction
               </div>
             </div>
+            */}
           </Card>
         ))}
       </div>
 
-      {/* Metadata */}
-      <div className="mt-4 text-xs text-gray-400 text-center">
-        Data generated at {new Date(data.timestamp).toLocaleString()}
-      </div>
+     
     </div>
   )
 }

@@ -226,7 +226,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                 const productName = asinToProductNameMap?.[productAsin] || productAsin
                 const fullProductName = asinToFullProductNameMap?.[productAsin] || productName
                 return (
-                  <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
+                  <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] `}>
                     <Tooltip content={fullProductName}>
                       <div className="text-sm">{productName}</div>
                     </Tooltip>
