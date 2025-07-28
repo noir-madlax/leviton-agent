@@ -97,13 +97,16 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         filters // 传递过滤器参数
       )
 
+      // 从API返回结果的顶层获取category name (参考图1的实现方式)
+      const categoryNameFromApi = result.data.category_info?.category_name || categoryName;
+
       // 转换数据格式为 Review 接口 (完全参考竞品分析的数据转换逻辑)
       const reviews: Review[] = result.data.reviews.map(item => ({
         id: item.review_id.toString(),
         productId: item.product_id,
         text: item.review_text,
         sentiment: item.sentiment,
-        category: item.category_name,
+        category: categoryNameFromApi, // ✅ 修复：使用从顶层获取的category name
         aspect: item.category_name, // 使用 category_name 作为 aspect
         rating: item.rating,
         verified: item.verified,

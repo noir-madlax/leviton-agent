@@ -504,7 +504,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
         <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">
-          📊 Customer Pain Points
+          📊 Customer Reviews
         </h2>
        
         

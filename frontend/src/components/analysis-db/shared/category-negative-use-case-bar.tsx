@@ -129,8 +129,19 @@ export default function CategoryNegativeUseCaseBar({
         const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
         
         if (reviews.length > 0) {
+          // 🆕 为现有数据添加aspects字段并设置正确的category (参考图1实现)
+          const reviewsWithAspects = reviews.map(review => ({
+            ...review,
+            category: useCaseItem.useCase, // ✅ 设置为useCase名称作为category显示
+            aspects: review.aspect ? [{
+              description: review.aspect,
+              sentiment: review.sentiment,
+              aspect_type: review.category || 'use'
+            }] : []
+          }))
+          
           openPanel(
-            reviews,
+            reviewsWithAspects,
             `${useCaseItem.useCase} - Customer Reviews`,
             `Reviews related to "${useCaseItem.useCase}" use case`,
             { sentiment: true, brand: true, rating: true, verified: true }

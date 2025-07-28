@@ -284,7 +284,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       {/* Customer Satisfaction Overview - New Implementation */}
       <section data-chart-id="customer-satisfaction-overview">
         <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
-          📊 Customer satisfaction overview
+          📊 Competitive Analysis
         </h2>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
           Calculated from the latest 200 reviews per product.
