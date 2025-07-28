@@ -8,7 +8,7 @@ from config import settings
 from agent.validators.chart_validator import check_reasoning_and_plot
 from agent.core.bi_agent import BiAgent
 
-from agent.core.extend_fields_agent import ExtendFieldsAgent
+# from agent.core.extend_fields_agent import ExtendFieldsAgent  # 暂时注释掉，不启用扩展字段 Agent
 
 # 导入HTTP请求拦截器（导入时自动激活网络请求监控）
 from agent.monitor.http_interceptor import create_interceptor
@@ -27,7 +27,7 @@ class AgentManager:
         self.manager_agent = None  # 管理 Agent
         self.bi_agent = None  # BI 分析 Agent
         # 注意：chart_generation_agent 现在是 BI Agent 的子 Agent
-        self.extend_fields_agent = None  # 扩展字段管理 Agent
+        # self.extend_fields_agent = None  # 扩展字段管理 Agent - 暂时注释掉，不启用
         self.init_error = None
     
     async def initialize_agent(self) -> bool:
@@ -54,13 +54,13 @@ class AgentManager:
             if not bi_init_success:
                 raise Exception(f"BI 分析 Agent 初始化失败: {self.bi_agent.get_init_error()}")
             
-            # 步骤2: 初始化扩展字段管理 Agent
-            logger.info("初始化扩展字段管理 Agent...")
-            self.extend_fields_agent = ExtendFieldsAgent(agent_manager=self)  # 传递自身引用
-            extend_fields_init_success = await self.extend_fields_agent.initialize()
-            
-            if not extend_fields_init_success:
-                raise Exception(f"扩展字段管理 Agent 初始化失败: {self.extend_fields_agent.get_init_error()}")
+            # 步骤2: 初始化扩展字段管理 Agent - 暂时注释掉，不启用
+            # logger.info("初始化扩展字段管理 Agent...")
+            # self.extend_fields_agent = ExtendFieldsAgent(agent_manager=self)  # 传递自身引用
+            # extend_fields_init_success = await self.extend_fields_agent.initialize()
+            # 
+            # if not extend_fields_init_success:
+            #     raise Exception(f"扩展字段管理 Agent 初始化失败: {self.extend_fields_agent.get_init_error()}")
             
             # 步骤3: 创建管理 Agent（类似 HuggingFace demo 中的 manager_agent）
 
@@ -73,7 +73,7 @@ class AgentManager:
                 # stream_outputs=True,
                 managed_agents=[
                     self.bi_agent.get_agent(),  # 管理 BI 分析 Agent（包含图表生成子 Agent）
-                    self.extend_fields_agent.get_agent()  # 管理扩展字段管理 Agent
+                    # self.extend_fields_agent.get_agent()  # 管理扩展字段管理 Agent - 暂时注释掉，不启用
                 ],
                 max_steps=settings.MAX_ITERATIONS,
                 # additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
@@ -92,7 +92,7 @@ class AgentManager:
             logger.info(f"- 管理 Agent: {type(self.manager_agent).__name__}")
             logger.info(f"- BI 分析 Agent: {type(self.bi_agent.get_agent()).__name__}")
             logger.info(f"  └── 图表代码生成子 Agent: {type(self.bi_agent.get_chart_generation_agent().get_agent()).__name__}")
-            logger.info(f"- 扩展字段管理 Agent: {type(self.extend_fields_agent.get_agent()).__name__}")
+            # logger.info(f"- 扩展字段管理 Agent: {type(self.extend_fields_agent.get_agent()).__name__}")  # 暂时注释掉，不启用
             
             # 打印整体 Agent 结构
             logger.info("多 Agent 系统结构:")
@@ -183,20 +183,22 @@ class AgentManager:
         
         # 注意：chart_generation_agent 现在由 BI Agent 管理，会在 BI Agent cleanup 中释放
         
-        if self.extend_fields_agent:
-            try:
-                self.extend_fields_agent.cleanup()
-                logger.info("扩展字段管理 Agent 资源已释放")
-            except Exception as e:
-                logger.error(f"释放扩展字段管理 Agent 资源时出错: {e}", exc_info=True)
+        # 扩展字段管理 Agent 清理 - 暂时注释掉，不启用
+        # if self.extend_fields_agent:
+        #     try:
+        #         self.extend_fields_agent.cleanup()
+        #         logger.info("扩展字段管理 Agent 资源已释放")
+        #     except Exception as e:
+        #         logger.error(f"释放扩展字段管理 Agent 资源时出错: {e}", exc_info=True)
     
     def is_ready(self) -> bool:
         """检查多 Agent 系统是否准备就绪"""
         return (self.manager_agent is not None and 
                 self.bi_agent is not None and 
-                self.bi_agent.is_ready() and
-                self.extend_fields_agent is not None and
-                self.extend_fields_agent.is_ready())
+                self.bi_agent.is_ready())
+                # 扩展字段管理 Agent 检查 - 暂时注释掉，不启用
+                # and self.extend_fields_agent is not None and
+                # self.extend_fields_agent.is_ready())
     
     def get_agent(self):
         """获取管理 Agent 实例（对外接口保持兼容）"""
@@ -216,9 +218,10 @@ class AgentManager:
             return self.bi_agent.get_chart_generation_agent()
         return None
     
-    def get_extend_fields_agent(self):
-        """获取扩展字段管理 Agent 实例"""
-        return self.extend_fields_agent
+    # 扩展字段管理 Agent 相关方法 - 暂时注释掉，不启用
+    # def get_extend_fields_agent(self):
+    #     """获取扩展字段管理 Agent 实例"""
+    #     return self.extend_fields_agent
     
     def get_init_error(self) -> Optional[str]:
         """获取初始化错误信息"""
