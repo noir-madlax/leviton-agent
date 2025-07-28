@@ -6,141 +6,188 @@ import { Tooltip } from "@/components/ui/tooltip"
 import { DetailedTooltip } from "@/components/ui/detailed-tooltip"
 // allReviewData now passed as prop instead of imported
 
-interface UseCaseData {
-  product: string;
-  useCase: string;
-  mentions: number;
-  satisfactionRate: number;
-  positiveCount: number;
-  negativeCount: number;
-  totalReviews: number;
-  gapLevel: number;
+// 新的数据结构接口 (与 CompetitorMatrix 相同)
+interface MatrixViewData {
+  status: string
+  message?: string
+  timestamp: string
+  data: {
+    aspect_categories: Array<{
+      category_id: number
+      category_name: string
+      definition: string
+    }>
+    product_aspect_data: Array<{
+      asin: string
+      aspect_data: Array<{
+        category_pk: number
+        mentions: number
+        reviews: number
+        sentiment_counts: {
+          positive: number
+          negative: number
+          neutral: number
+        }
+      }>
+    }>
+    selected_asins: string[]
+    aspect_type: string
+    total_categories: number
+  }
 }
 
 interface UseCaseMatrixProps {
-  data: UseCaseData[];
-  targetProducts: string[];
-  allReviewData?: Record<string, Array<{
-    id: string
-    productId: string
-    text: string
-    sentiment: 'positive' | 'negative' | 'neutral'
-    category: string
-    aspect: string
-    rating: number
-    verified: boolean
-    date: string
-    brand: string
-  }>>
-  reviewContent?: Record<string, Array<{
-    id: string
-    productId: string
-    text: string
-    sentiment: 'positive' | 'negative' | 'neutral'
-    category: string
-    aspect: string
-    rating: number
-    verified: boolean
-    date: string
-    brand: string
-  }>>
+  matrixViewData: MatrixViewData | null;
+  projectId: string;
   asinToProductNameMap?: Record<string, string>;
   asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData, reviewContent, asinToProductNameMap, asinToFullProductNameMap }: UseCaseMatrixProps) {
+export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToProductNameMap, asinToFullProductNameMap }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
-  
-  const handleCellClick = (useCase: string, productAsin: string, cellData: UseCaseData | null) => {
-    if (!cellData || cellData.mentions === 0) return
-    
-    // Try to get reviews from the new materialized view review content first
-    const reviewKey = `${productAsin}_${useCase}`
-    let reviewsToShow: Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }> = []
-    
-    if (reviewContent && reviewContent[reviewKey]) {
-      // Use the new materialized view review content
-      reviewsToShow = reviewContent[reviewKey]
-      console.log(`Using materialized view reviews for ${reviewKey}: ${reviewsToShow.length} reviews`)
-    } else if (allReviewData && allReviewData[useCase]) {
-      // Fallback to the old allReviewData method
-      const categoryReviews = allReviewData[useCase] || []
-      if (categoryReviews.length > 0) {
-        // Filter reviews by specific product using ASIN directly
-        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-        reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
-        console.log(`Using fallback allReviewData for ${useCase}: ${reviewsToShow.length} reviews`)
-      }
-    }
-    
-    if (reviewsToShow.length === 0) {
-      console.warn(`No review data found for ${productAsin}-${useCase}`)
-      return
-    }
-    
-    const productName = asinToProductNameMap?.[productAsin] || productAsin
-    
-    openPanel(
-      reviewsToShow, 
-      `${useCase} Reviews`, 
-      `${productName} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
-      { sentiment: true, brand: true, rating: true, verified: true }
+
+  // 如果没有数据，显示加载状态
+  if (!matrixViewData) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-gray-500">Loading use case matrix data...</div>
+      </div>
     )
   }
-  
-  const orderedProducts = useMemo(() => {
-    // Keep original order from targetProducts
-    return targetProducts
-  }, [targetProducts])
 
+  const handleCellClick = async (cellData: {
+    mentions: number
+    reviews: number
+    satisfactionRate: number
+    positiveCount: number
+    negativeCount: number
+    neutralCount: number
+    productAsin: string
+    categoryId: number
+    categoryName: string
+  }) => {
+    if (cellData.mentions === 0) return
+
+    const productName = asinToProductNameMap?.[cellData.productAsin] || cellData.productAsin
+
+    try {
+      console.log(`Fetching reviews for use case ${cellData.categoryName} (ID: ${cellData.categoryId}) and product ${cellData.productAsin}`)
+
+      // 导入 databaseService
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+
+      // 调用新的评论获取 API
+      const reviewsResponse = await databaseService.getCompetitorReviews(
+        projectId,
+        cellData.categoryId,
+        cellData.productAsin,
+        100, // limit
+        0,   // offset
+        'review_id', // sort_by
+        'desc' // sort_order
+      )
+
+      // 转换数据格式以适配 ReviewPanel
+      const reviewsToShow = reviewsResponse.data.reviews.map(review => ({
+        id: review.review_id,
+        productId: cellData.productAsin,
+        text: review.review_text,
+        sentiment: review.aspects.length > 0 ? review.aspects[0].sentiment as 'positive' | 'negative' | 'neutral' : 'neutral',
+        category: cellData.categoryName,
+        aspect: review.aspects.map(a => a.aspect_description).join(', '),
+        rating: review.rating,
+        verified: review.verified,
+        date: review.review_date,
+        brand: productName // 使用产品名称作为品牌
+      }))
+
+      console.log(`Found ${reviewsToShow.length} reviews`)
+
+      openPanel(
+        reviewsToShow,
+        `${cellData.categoryName} Reviews`,
+        `${productName} • ${cellData.mentions} mentions • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
+        { sentiment: true, brand: true, rating: true, verified: true }
+      )
+    } catch (error) {
+      console.error('Error fetching reviews:', error)
+
+      // 如果出错，显示错误信息
+      openPanel(
+        [],
+        `${cellData.categoryName} Reviews`,
+        `${productName} • Error loading reviews`,
+        { sentiment: true, brand: true, rating: true, verified: true }
+      )
+    }
+  }
+  
+  // 从新数据结构中提取产品列表
+  const orderedProducts = useMemo(() => {
+    if (!matrixViewData?.data?.selected_asins) return []
+    return matrixViewData.data.selected_asins
+  }, [matrixViewData])
+
+  // 从新数据结构中构建矩阵数据 (用例矩阵)
   const useCaseMatrixData = useMemo(() => {
-    // Get use cases in the order they appear in the data (already ranked by backend)
-    const useCaseOrder: string[] = []
-    const seenUseCases = new Set<string>()
-    
-    // Preserve the order from the first product (use cases are ranked by average mention ratio)
-    const firstProduct = orderedProducts[0]
-    data.filter(item => item.product === firstProduct).forEach(item => {
-      if (!seenUseCases.has(item.useCase)) {
-        useCaseOrder.push(item.useCase)
-        seenUseCases.add(item.useCase)
+    if (!matrixViewData?.data) return []
+
+    const { aspect_categories, product_aspect_data } = matrixViewData.data
+
+    // 创建矩阵结构，每个用例作为一行
+    const matrix = aspect_categories.map(category => {
+      const row = {
+        useCase: category.category_name,
+        categoryId: category.category_id,
+        definition: category.definition,
+        cells: {} as Record<string, {
+          // 数据字段
+          mentions: number
+          reviews: number
+          satisfactionRate: number
+          positiveCount: number
+          negativeCount: number
+          neutralCount: number
+          // 坐标信息，用于后续查询评论明细
+          productAsin: string
+          categoryId: number
+          categoryName: string
+        } | null>
       }
-    })
-    
-    // Add any remaining use cases that might not be in the first product
-    data.forEach(item => {
-      if (!seenUseCases.has(item.useCase)) {
-        useCaseOrder.push(item.useCase)
-        seenUseCases.add(item.useCase)
-      }
-    })
-    
-    // Create matrix structure preserving the ranked order
-    const matrix = useCaseOrder.map(useCase => {
-      const row = { useCase, cells: {} as Record<string, UseCaseData | null> }
-      
-      // Fill cells for each product in the ordered list
-      orderedProducts.forEach(product => {
-        const cellData = data.find(item => item.product === product && item.useCase === useCase)
-        row.cells[product] = cellData || null
+
+      // 为每个产品填充单元格数据
+      orderedProducts.forEach(productAsin => {
+        const productData = product_aspect_data.find(p => p.asin === productAsin)
+        const aspectData = productData?.aspect_data.find(a => a.category_pk === category.category_id)
+
+        if (aspectData) {
+          const { positive, negative, neutral } = aspectData.sentiment_counts
+          const totalSentiments = positive + negative + neutral
+          const satisfactionRate = totalSentiments > 0 ? (positive / totalSentiments) * 100 : 0
+
+          row.cells[productAsin] = {
+            // 数据字段
+            mentions: aspectData.mentions,
+            reviews: aspectData.reviews,
+            satisfactionRate: Math.round(satisfactionRate * 10) / 10,
+            positiveCount: positive,
+            negativeCount: negative,
+            neutralCount: neutral,
+            // 坐标信息，用于后续查询评论明细
+            productAsin: productAsin,
+            categoryId: category.category_id,
+            categoryName: category.category_name
+          }
+        } else {
+          row.cells[productAsin] = null
+        }
       })
-      
+
       return row
     })
-    
+
     return matrix
-  }, [data, orderedProducts])
+  }, [matrixViewData, orderedProducts])
 
   const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, mentions: number) => {
     // If no mentions at all, show gray
@@ -223,18 +270,17 @@ export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData,
                           satisfactionRate: cellData.satisfactionRate,
                           additionalInfo: [
                             `Product: ${productName}`,
-                            `Total reviews analyzed: ${cellData.totalReviews}`,
-                            `Gap Level: ${cellData.gapLevel}`
+                            `Total reviews analyzed: ${cellData.reviews}`
                           ]
                         }}
                       >
-                        <div 
-                          className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)} cursor-pointer`}
-                          onClick={() => handleCellClick(row.useCase, productAsin, cellData)}
+                        <div
+                          className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.mentions)} cursor-pointer`}
+                          onClick={() => handleCellClick(cellData)}
                           onKeyDown={(e) => {
                             if (e.key === 'Enter' || e.key === ' ') {
                               e.preventDefault()
-                              handleCellClick(row.useCase, productAsin, cellData)
+                              handleCellClick(cellData)
                             }
                           }}
                           tabIndex={0}

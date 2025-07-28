@@ -496,6 +496,155 @@ export class DatabaseService {
     }
   }
 
+  // 🔑 Get competitor matrix view data via new API
+  async getCompetitorMatrixViewData(
+    projectId: string,
+    selectedAsins: string[],
+    aspectType: 'phy_perf' | 'use' = 'phy_perf'
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      aspect_categories: Array<{
+        category_id: number
+        category_name: string
+        definition: string
+      }>
+      product_aspect_data: Array<{
+        asin: string
+        aspect_data: Array<{
+          category_pk: number
+          mentions: number
+          reviews: number
+          sentiment_counts: {
+            positive: number
+            negative: number
+            neutral: number
+          }
+        }>
+      }>
+      selected_asins: string[]
+      aspect_type: string
+      total_categories: number
+    }
+  }> {
+    try {
+      const requestBody = {
+        project_id: projectId,
+        selected_asins: selectedAsins,
+        aspect_type: aspectType,
+        options: {
+          sort_by: "mentions",
+          sort_direction: "desc",
+          max_categories: 10
+        }
+      }
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/matrix-view`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching competitor matrix view data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get reviews for specific category and product
+  async getCompetitorReviews(
+    projectId: string,
+    categoryId: number,
+    productId: string,
+    limit: number = 100,
+    offset: number = 0,
+    sortBy: 'review_id' | 'date' | 'rating' | 'sentiment' = 'review_id',
+    sortOrder: 'asc' | 'desc' = 'desc'
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      reviews: Array<{
+        review_id: string
+        review_title: string
+        review_text: string
+        rating: number
+        verified: boolean
+        review_date: string
+        aspects: Array<{
+          aspect_description: string
+          sentiment: string
+          aspect_type: string
+        }>
+        category_name: string
+        category_definition: string
+        aspect_type: string
+      }>
+      total_reviews: number
+      project_id: string
+      category_id: number
+      product_id: string
+      category_info: {
+        category_pk: number
+        name: string
+        definition: string
+        aspect_type: string
+        stage: string
+      }
+      pagination: {
+        limit: number
+        offset: number
+        has_more: boolean
+      }
+    }
+  }> {
+    try {
+      const requestBody = {
+        project_id: projectId,
+        selected_asins: [productId], // 包装成数组格式
+        category_id: categoryId,
+        product_id: productId,
+        limit: limit,
+        offset: offset,
+        sort_by: sortBy,
+        sort_order: sortOrder
+      }
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/reviews`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching competitor reviews:', error)
+      throw error
+    }
+  }
+
   // 🔑 Get competitor analysis data with project filtering via backend API
   async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string, packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     targetProducts: string[]

@@ -15,25 +15,7 @@ import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-fil
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { supabase } from "@/lib/supabase"
 
-// 全局默认产品数据缓存
-interface DefaultProductsCacheState {
-  data: Array<{
-    platform_id: string
-    title: string
-    brand: string
-    price_usd: number
-    reviews_count: number
-    category: string
-    product_url?: string
-    monthly_sales_volume?: number
-    rating?: number | null
-  }> | null
-  loading: boolean
-  error: string | null
-  lastUpdated: number | null
-}
 
-const defaultProductsCacheStore = new Map<string, DefaultProductsCacheState>()
 
 interface CompetitorAnalysisProps {
   projectId: string | null;
@@ -89,10 +71,11 @@ const DEFAULT_COMPETITOR_ASINS = [
 ];
 
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
+  // 状态管理
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
-  const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
+  const [matrixViewData, setMatrixViewData] = useState<any>(null);
+  const [useCaseMatrixViewData, setUseCaseMatrixViewData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
-  // 添加专门的Apply loading状态
   const [applyLoading, setApplyLoading] = useState(false);
   const [showAsinSelector, setShowAsinSelector] = useState(false);
   const [defaultProducts, setDefaultProducts] = useState<Array<{
@@ -107,88 +90,64 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     rating?: number | null
   }>>([]);
 
-  // 添加数据准备状态管理
-  const [isDataReady, setIsDataReady] = useState(false);
+  // 统一的数据加载函数
+  const loadMatrixData = async (asins: string[]) => {
+    if (!projectId || asins.length === 0) return;
 
-  // 检查是否有预载数据，如果有则立即设置为ready
-  useEffect(() => {
-    if (data && data.competitorAnalysis && data.competitorAnalysis.targetProducts.length > 0) {
-      console.log('🏆 [COMPETITOR-ANALYSIS] Using preloaded competitorAnalysis data');
-      setIsDataReady(true);
+    console.log(`🔄 Loading matrix data for ASINs: ${asins.join(', ')}`);
+    setLoading(true);
+
+    try {
+      // 并行获取两种矩阵数据
+      const [matrixResponse, useCaseMatrixResponse] = await Promise.all([
+        databaseService.getCompetitorMatrixViewData(projectId, asins, 'phy_perf'),
+        databaseService.getCompetitorMatrixViewData(projectId, asins, 'use')
+      ]);
+
+      setMatrixViewData(matrixResponse);
+      setUseCaseMatrixViewData(useCaseMatrixResponse);
+      console.log('✅ Matrix data loaded successfully');
+    } catch (error) {
+      console.error('Error fetching matrix data:', error);
+    } finally {
+      setLoading(false);
     }
-  }, [data]);
+  };
 
-  // Load fixed default products for Customer satisfaction overview - 使用缓存机制
+
+
+  // 加载默认产品信息
   useEffect(() => {
     const loadDefaultProducts = async () => {
       if (!projectId) return;
 
-      const cacheKey = `default-products-${projectId}`;
-      const cached = defaultProductsCacheStore.get(cacheKey);
-
-      // 如果缓存存在且有效（30分钟内），直接使用缓存
-      if (cached && cached.data && cached.lastUpdated) {
-        const cacheAge = Date.now() - cached.lastUpdated;
-        if (cacheAge < 30 * 60 * 1000) { // 30分钟缓存有效
-          setDefaultProducts(cached.data);
-          
-          // 如果没有自定义选择，使用缓存的默认产品
-          if (selectedAsins.length === 0) {
-            setSelectedAsins(DEFAULT_COMPETITOR_ASINS);
-          }
-          
-          // 只有在没有预载数据时才设置为ready（避免覆盖预载逻辑）
-          if (!data || !data.competitorAnalysis || data.competitorAnalysis.targetProducts.length === 0) {
-            setIsDataReady(true);
-          }
-          console.log('🏆 [COMPETITOR-ANALYSIS] Using cached default products data');
-          return;
-        }
-      }
-      
-      // 只有在没有预载数据时才重置数据准备状态
-      if (!data || !data.competitorAnalysis || data.competitorAnalysis.targetProducts.length === 0) {
-        setIsDataReady(false);
-      }
-      
-      // 更新缓存状态
-      const newCacheState: DefaultProductsCacheState = {
-        data: cached?.data || null,
-        loading: true,
-        error: null,
-        lastUpdated: cached?.lastUpdated || null
-      };
-      defaultProductsCacheStore.set(cacheKey, newCacheState);
-      
       try {
-        // Direct query for fixed DEFAULT_COMPETITOR_ASINS (bypass project logic)
+        console.log('🔄 Loading default products...');
+
+        // 直接查询固定的默认产品
         const { data: products, error: productsError } = await supabase
           .from('product_wide_table')
           .select('platform_id, title, brand, price_usd, reviews_count, category, product_url, rating')
-          .in('platform_id', DEFAULT_COMPETITOR_ASINS)
-        
+          .in('platform_id', DEFAULT_COMPETITOR_ASINS);
+
         if (productsError) {
-          console.error('Error fetching fixed competitor products:', productsError);
-          setIsDataReady(true);
+          console.error('Error fetching default products:', productsError);
           return;
         }
-        
-        // Convert to the expected format, preserving the order of DEFAULT_COMPETITOR_ASINS  
+
+        // 按照 DEFAULT_COMPETITOR_ASINS 的顺序格式化产品数据
         const formattedProducts = DEFAULT_COMPETITOR_ASINS.map(asin => {
           const product = products?.find((p: any) => p.platform_id === asin);
-          if (product) {
-            return {
-              platform_id: product.platform_id,
-              title: product.title,
-              brand: product.brand,
-              price_usd: product.price_usd,
-              reviews_count: product.reviews_count, // Use regular reviews_count for fixed products
-              category: product.category,
-              product_url: product.product_url,
-              rating: product.rating
-            };
-          }
-          return null;
+          return product ? {
+            platform_id: product.platform_id,
+            title: product.title,
+            brand: product.brand,
+            price_usd: product.price_usd,
+            reviews_count: product.reviews_count,
+            category: product.category,
+            product_url: product.product_url,
+            rating: product.rating
+          } : null;
         }).filter(Boolean) as Array<{
           platform_id: string
           title: string
@@ -200,189 +159,60 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           monthly_sales_volume?: number
           rating?: number | null
         }>;
-      
-        // 更新缓存和组件状态
-        const successCacheState: DefaultProductsCacheState = {
-          data: formattedProducts,
-          loading: false,
-          error: null,
-          lastUpdated: Date.now()
-        };
-        defaultProductsCacheStore.set(cacheKey, successCacheState);
-        
+
         setDefaultProducts(formattedProducts);
-        
-        // If no custom selection, use these fixed default products for analysis
+
+        // 如果没有选择产品，设置默认选择并加载矩阵数据
         if (selectedAsins.length === 0) {
-          const defaultAsins = DEFAULT_COMPETITOR_ASINS;
-          setSelectedAsins(defaultAsins);
-          
-          // Load competitor data for fixed default products
-          if (defaultAsins.length > 0) {
-            setLoading(true);
-            try {
-              const response = await databaseService.getCompetitorAnalysisDataByProject(
-                projectId,
-                undefined, // No category filters
-                defaultAsins.join(',') // Selected ASINs as string
-              );
-              setCustomCompetitorData(response);
-              // 数据加载完成，设置为ready（如果还没有ready的话）
-              if (!isDataReady) {
-                setIsDataReady(true);
-              }
-            } catch (error) {
-              console.error('Error fetching default competitor data:', error);
-              // 即使出错也要设置为ready，避免无限loading（如果还没有ready的话）
-              if (!isDataReady) {
-                setIsDataReady(true);
-              }
-            } finally {
-              setLoading(false);
-            }
-          } else {
-            // 没有默认产品时也设置为ready（如果还没有ready的话）
-            if (!isDataReady) {
-              setIsDataReady(true);
-            }
-          }
-        } else {
-          // 已有自定义选择时设置为ready（如果还没有ready的话）
-          if (!isDataReady) {
-            setIsDataReady(true);
-          }
+          setSelectedAsins(DEFAULT_COMPETITOR_ASINS);
+          await loadMatrixData(DEFAULT_COMPETITOR_ASINS);
         }
-        
-        console.log('🏆 [COMPETITOR-ANALYSIS] Loaded and cached default products data');
+
+        console.log('✅ Default products loaded successfully');
       } catch (error) {
         console.error('Error loading default products:', error);
-        
-        // 错误缓存状态
-        const errorCacheState: DefaultProductsCacheState = {
-          data: cached?.data || null,
-          loading: false,
-          error: error instanceof Error ? error.message : 'Failed to load default products',
-          lastUpdated: cached?.lastUpdated || null
-        };
-        defaultProductsCacheStore.set(cacheKey, errorCacheState);
-        
-        // Fallback to original logic if new method fails
-        try {
-          const availableProducts = await databaseService.getAvailableAsins();
-          const topProducts = availableProducts
-            .sort((a, b) => b.reviews_count - a.reviews_count)
-            .slice(0, 6);
-          setDefaultProducts(topProducts);
-          // 设置为ready（如果还没有ready的话）
-          if (!isDataReady) {
-            setIsDataReady(true);
-          }
-        } catch (fallbackError) {
-          console.error('Fallback also failed:', fallbackError);
-          // 最终设置为ready（如果还没有ready的话）
-          if (!isDataReady) {
-            setIsDataReady(true);
-          }
-        }
       }
     };
 
     loadDefaultProducts();
   }, [projectId]);
 
-  // Default to using the original data
-  const competitorData = customCompetitorData || {
-    targetProducts: data.competitorAnalysis.targetProducts,
-    matrixData: data.competitorAnalysis.matrixData,
-    productTotalReviews: data.competitorAnalysis.productTotalReviews
-  }
-  const useCaseData = customCompetitorData?.useCaseData || data.competitorAnalysis.useCaseData
+  // 检测 tab 切换时的数据加载
+  useEffect(() => {
+    // 如果有 projectId 和 selectedAsins，但没有矩阵数据，则加载数据
+    if (projectId && selectedAsins.length > 0 && (!matrixViewData || !useCaseMatrixViewData)) {
+      console.log('🔄 Tab switch detected, loading matrix data...');
+      loadMatrixData(selectedAsins);
+    }
+  }, [projectId, selectedAsins, matrixViewData, useCaseMatrixViewData]);
 
-  // Handle ASIN selection change - 修改为支持Apply loading状态
+  // 处理产品选择变化
   const handleAsinSelectionChange = async (asins: string[]) => {
+    console.log(`🔄 Product selection changed: ${asins.join(', ')}`);
+
     setSelectedAsins(asins);
-    
+
     if (asins.length === 0) {
-      setCustomCompetitorData(null);
-      setApplyLoading(false); // 确保重置loading状态
+      setMatrixViewData(null);
+      setUseCaseMatrixViewData(null);
       return;
     }
 
     if (!projectId) return;
 
+    // 使用统一的加载函数
+    setApplyLoading(true);
     try {
-      // 使用Apply loading状态，提供更好的用户体验
-      setApplyLoading(true);
-      console.log('🔄 Applying product selection changes, loading new analysis data...');
-      
-      const response = await databaseService.getCompetitorAnalysisDataByProject(
-        projectId,
-        undefined, // No category filters
-        asins.join(',') // Selected ASINs as string
-      );
-      
-      // 模拟一个短暂延迟确保用户能看到loading状态
-      await new Promise(resolve => setTimeout(resolve, 500));
-      
-      setCustomCompetitorData(response);
-      console.log('✅ Analysis data updated successfully');
+      await loadMatrixData(asins);
+      console.log('✅ Product selection applied successfully');
     } catch (error) {
-      console.error('Error fetching custom competitor data:', error);
+      console.error('Error applying product selection:', error);
     } finally {
       setApplyLoading(false);
     }
   };
 
-  // Use the pre-calculated matrix data from DatabaseService
-  const realMatrixData = competitorData.matrixData
 
-  // Use the pre-calculated use case data from DatabaseService and add missing fields
-  const realUseCaseData = useCaseData.matrixData.map((item: any) => ({
-    ...item,
-    positiveCount: Math.floor(item.mentions * item.satisfactionRate / 100),
-    negativeCount: Math.floor(item.mentions * (100 - item.satisfactionRate) / 100),
-    totalReviews: item.mentions
-  }))
-
-  const handleProductClick = (productAsin: string) => {
-    // Find the product info by ASIN
-    const defaultProduct = defaultProducts.find(p => p.platform_id === productAsin);
-    
-    if (defaultProduct?.product_url) {
-      window.open(defaultProduct.product_url, '_blank', 'noopener,noreferrer');
-    } else {
-      // Fallback: construct Amazon URL from ASIN
-      const amazonUrl = `https://www.amazon.com/dp/${productAsin}`;
-      window.open(amazonUrl, '_blank', 'noopener,noreferrer');
-    }
-  }
-
-  // Calculate statistics for each product - including all selected products
-  const productStats = competitorData.targetProducts.map((productAsin: string) => {
-    const productData = competitorData.matrixData.filter((item: any) => item.product === productAsin)
-    const actualTotalReviews = competitorData.productTotalReviews[productAsin] || 0  // Use actual total review count
-    const totalMentions = productData.reduce((sum: number, item: any) => sum + item.mentions, 0)
-    const categoriesCount = productData.length
-    const avgSatisfaction = productData.length > 0 
-      ? productData.reduce((sum: number, item: any) => sum + item.satisfactionRate, 0) / productData.length 
-      : 0
-    
-    // Find the product info to get the title
-    const productInfo = defaultProducts.find(p => p.platform_id === productAsin);
-    const productTitle = productInfo?.title || productAsin;
-    const shortTitle = productTitle.length > 50 ? `${productTitle.substring(0, 50)}...` : productTitle;
-    
-    return {
-      asin: productAsin,
-      name: shortTitle,
-      fullTitle: productTitle,
-      totalReviews: actualTotalReviews,  // Use actual total review count
-      totalMentions,
-      categoriesCount,
-      avgSatisfaction: Math.round(avgSatisfaction * 10) / 10,
-      rating: productInfo?.rating || null
-    }
-  }) // Show all selected products, including those without data
 
   // Create ASIN to product name mapping for child components
   const asinToProductNameMap = useMemo(() => {
@@ -405,26 +235,9 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     return map;
   }, [defaultProducts]);
 
-  // Create ASIN to brand mapping for child components
-  const asinToBrandMap = useMemo(() => {
-    const map: Record<string, string> = {};
-    defaultProducts.forEach(product => {
-      map[product.platform_id] = product.brand;
-    });
-    return map;
-  }, [defaultProducts]);
 
-  // 如果数据还没有准备好，显示loading状态
-  if (!isDataReady) {
-    return (
-      <div className="space-y-10 max-w-7xl mx-auto px-4">
-        <div className="flex justify-center items-center h-64">
-          <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
-          <span className="ml-2">Loading competitor analysis data...</span>
-        </div>
-      </div>
-    );
-  }
+
+
 
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">
@@ -512,10 +325,9 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
             <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
           </div>
 
-          <CompetitorMatrix 
-            data={realMatrixData}
-            targetProducts={competitorData.targetProducts}
-            allReviewData={data.allReviewData}
+          <CompetitorMatrix
+            matrixViewData={matrixViewData}
+            projectId={projectId || ''}
             asinToProductNameMap={asinToProductNameMap}
             asinToFullProductNameMap={asinToFullProductNameMap}
           />
@@ -540,10 +352,9 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
             <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
           </div>
 
-          <MissedOpportunitiesMatrix 
-            data={realUseCaseData}
-            targetProducts={useCaseData.targetProducts}
-            allReviewData={data.allReviewData}
+          <MissedOpportunitiesMatrix
+            matrixViewData={useCaseMatrixViewData}
+            projectId={projectId || ''}
             asinToProductNameMap={asinToProductNameMap}
             asinToFullProductNameMap={asinToFullProductNameMap}
           />
