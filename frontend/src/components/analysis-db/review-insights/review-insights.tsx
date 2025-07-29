@@ -549,7 +549,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Bars are sorted by descending positive mentions left to right, calculated from the ~50 most recent reviews per product in selected categories.
+            Bars are sorted by descending positive mentions left to right, calculated from the latest 40 reviews per product in selected categories.
+
 
             </div>
           {delightsLoading ? (
