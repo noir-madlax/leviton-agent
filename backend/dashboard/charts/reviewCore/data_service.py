@@ -130,7 +130,10 @@ class ReviewDataService:
                     'title': base_review.get('title'),
                     'brand': base_review.get('brand'),
                     'product_url': base_review.get('product_url'),
-                    'aspects': aspects
+                    'aspects': aspects,
+                    'category_name': base_review.get('category_name'),
+                    'category_definition': base_review.get('category_definition'),
+                    'aspect_type': base_review.get('aspect_type')
                 }
                 deduplicated_reviews.append(deduplicated_review)
             
