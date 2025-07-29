@@ -31,12 +31,12 @@ interface UseCaseSentimentMatrixProps {
   } // 新增：过滤器参数
 }
 
-type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positiveShare'
+type SortField = 'totalReviews' | 'positiveReviews' | 'negativeReviews' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
 export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }: UseCaseSentimentMatrixProps) {
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
-  const [sortField, setSortField] = useState<SortField>('totalMentions')
+  const [sortField, setSortField] = useState<SortField>('totalReviews')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
 
   // 处理排序
@@ -55,32 +55,32 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
 
     const dataWithPositiveShare = data.map(item => ({
       ...item,
-      positiveShare: item.totalMentions > 0 ? (item.positiveCount / item.totalMentions) * 100 : 0
+      positiveShare: item.totalReviews > 0 ? (item.positiveReviews / item.totalReviews) * 100 : 0
     }))
 
     return [...dataWithPositiveShare].sort((a, b) => {
       let aValue: number, bValue: number
 
       switch (sortField) {
-        case 'totalMentions':
-          aValue = a.totalMentions
-          bValue = b.totalMentions
+        case 'totalReviews':
+          aValue = a.totalReviews
+          bValue = b.totalReviews
           break
-        case 'positiveCount':
-          aValue = a.positiveCount
-          bValue = b.positiveCount
+        case 'positiveReviews':
+          aValue = a.positiveReviews
+          bValue = b.positiveReviews
           break
-        case 'negativeCount':
-          aValue = a.negativeCount
-          bValue = b.negativeCount
+        case 'negativeReviews':
+          aValue = a.negativeReviews
+          bValue = b.negativeReviews
           break
         case 'positiveShare':
           aValue = a.positiveShare
           bValue = b.positiveShare
           break
         default:
-          aValue = a.totalMentions
-          bValue = b.totalMentions
+          aValue = a.totalReviews
+          bValue = b.totalReviews
       }
 
       if (sortDirection === 'asc') {
@@ -155,34 +155,34 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
               </th>
               <th 
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('totalMentions')}
+                onClick={() => handleSort('totalReviews')}
               >
                 <Tooltip content="Total number of reviews that mention this use case">
                   <div className="flex items-center justify-center gap-1">
-                    Total Mentions
-                    <span className="text-xs">{getSortIcon('totalMentions')}</span>
+                    Total Reviews
+                    <span className="text-xs">{getSortIcon('totalReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
               <th 
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('positiveCount')}
+                onClick={() => handleSort('positiveReviews')}
               >
                 <Tooltip content="Number of reviews that mention this use case with positive sentiment">
                   <div className="flex items-center justify-center gap-1">
-                    Positive Mentions
-                    <span className="text-xs">{getSortIcon('positiveCount')}</span>
+                    Positive Reviews
+                    <span className="text-xs">{getSortIcon('positiveReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
               <th 
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('negativeCount')}
+                onClick={() => handleSort('negativeReviews')}
               >
                 <Tooltip content="Number of reviews that mention this use case with negative sentiment">
                   <div className="flex items-center justify-center gap-1">
-                    Negative Mentions
-                    <span className="text-xs">{getSortIcon('negativeCount')}</span>
+                    Negative Reviews
+                    <span className="text-xs">{getSortIcon('negativeReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
@@ -190,7 +190,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveShare')}
               >
-                <Tooltip content="Positive Mentions / Total Mentions">
+                <Tooltip content="Positive Reviews / Total Reviews">
                   <div className="flex items-center justify-center gap-1">
                   Satisfaction Rate (%)
                     <span className="text-xs">{getSortIcon('positiveShare')}</span>
@@ -201,7 +201,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
           </thead>
           <tbody>
             {sortedData.map((row, index) => {
-              const positiveShare = row.totalMentions > 0 ? (row.positiveCount / row.totalMentions) * 100 : 0
+              const positiveShare = row.totalReviews > 0 ? (row.positiveReviews / row.totalReviews) * 100 : 0
               
               return (
                 <tr key={index} className="hover:bg-gray-50">
@@ -222,7 +222,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                       }}
                     >
                       <div className="text-lg font-bold text-blue-600">
-                        {row.totalMentions}
+                        {row.totalReviews}
                       </div>
                     </div>
                   </td>
@@ -240,7 +240,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                       }}
                     >
                       <div className="text-lg font-bold text-green-600">
-                        {row.positiveCount}
+                        {row.positiveReviews}
                       </div>
                     </div>
                   </td>
@@ -258,7 +258,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                       }}
                     >
                       <div className="text-lg font-bold text-red-600">
-                        {row.negativeCount}
+                        {row.negativeReviews}
                       </div>
                     </div>
                   </td>

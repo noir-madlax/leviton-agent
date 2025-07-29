@@ -113,11 +113,13 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                     'category_name': cat_data['category_name'],
                     'definition': cat_data['definition'],
                     'aspect_type': cat_data['aspect_type'],
-                    'total_mentions': cat_data['mentions'],
+                    'total_mentions': cat_data['total_mentions'],
                     'positive_mentions': cat_data['positive_mentions'],
                     'negative_mentions': cat_data['negative_mentions'],
                     'neutral_mentions': cat_data['neutral_mentions'],
-                    'unique_reviews': cat_data['reviews'],
+                    'total_reviews': cat_data['total_reviews'],
+                    'positive_reviews': cat_data['positive_reviews'],
+                    'negative_reviews': cat_data['negative_reviews'],
                     'positive_ratio': cat_data['positive_ratio']
                 }
                 categories.append(category)
@@ -163,11 +165,8 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             if not filtered_asins:
                 return self._get_empty_reviews_response(category_id)
             
-            # Get category information first
-            category_info = await self._get_category_info(category_id)
-            
-            # Get all review data for this category
-            all_reviews_data = await self.review_data_service.get_reviews_by_category(
+            # Get all review data for this category using centralized service
+            result = await self.review_data_service.get_reviews_by_category(
                 project_id=self.project_id,
                 category_id=category_id,
                 asins=filtered_asins,
@@ -175,30 +174,23 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 sort_order=sort_order
             )
             
-            if not all_reviews_data:
+            # Get category information from centralized service
+            category_info = result.get('category_info')
+            
+            if not result or not result.get('reviews'):
                 return self._get_empty_reviews_response(category_id, category_info)
             
-            # Deduplicate reviews and aggregate aspects
-            deduplicated_reviews = self._deduplicate_and_aggregate_reviews(all_reviews_data)
+            # Use the already deduplicated reviews from the centralized service
+            deduplicated_reviews = result['reviews']
             
             # Apply pagination
             total_reviews = len(deduplicated_reviews)
             paginated_reviews = deduplicated_reviews[offset:offset + limit]
             
-            # Convert to response format
+            # Convert to response format (centralized service already provides the correct structure)
             reviews = []
             for review_data in paginated_reviews:
-                # Convert aspects
-                aspects = []
-                for aspect_data in review_data['aspects']:
-                    aspect = {
-                        'aspect_description': aspect_data['aspect_description'],
-                        'sentiment': aspect_data['sentiment'],
-                        'aspect_type': aspect_data['aspect_type']
-                    }
-                    aspects.append(aspect)
-                
-                # Create review with product information
+                # Create review with product information (centralized service already has correct structure)
                 review = {
                     'review_id': review_data['review_id'],
                     'review_title': review_data.get('review_title'),
@@ -206,11 +198,11 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                     'rating': review_data.get('rating'),
                     'verified': review_data.get('verified'),
                     'review_date': review_data.get('review_date'),
-                    'aspects': aspects,
+                    'aspects': review_data['aspects'],  # Already in correct format from centralized service
                     # Product information (required for review analysis)
                     'product_id': review_data['product_id'],
-                    'product_title': review_data.get('product_title'),
-                    'product_brand': review_data.get('product_brand'),
+                    'product_title': review_data.get('title'),  # Centralized service uses 'title'
+                    'product_brand': review_data.get('brand'),  # Centralized service uses 'brand'
                     'product_url': review_data.get('product_url')
                 }
                 reviews.append(review)

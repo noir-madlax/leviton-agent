@@ -23,7 +23,9 @@ interface ReviewInsightsProps {
         impactedProducts: number
         type: 'Physical' | 'Performance' | 'Usability'
         categoryDefinition?: string
-        totalMentions?: number
+        totalReviews?: number
+        positiveReviews?: number
+        negativeReviews?: number
         negativeRate?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
@@ -33,7 +35,9 @@ interface ReviewInsightsProps {
         frequency: number
         satisfactionLevel: 'High' | 'Medium' | 'Low'
         categoryDefinition?: string
-        totalMentions?: number
+        totalReviews?: number
+        positiveReviews?: number
+        negativeReviews?: number
         positiveRate?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
@@ -41,7 +45,7 @@ interface ReviewInsightsProps {
         useCase: string
         productAttribute: string
         satisfactionRate: number
-        mentionCount: number
+        totalReviews?: number
         positiveCount: number
         negativeCount: number
         categoryDefinition?: string
@@ -52,12 +56,14 @@ interface ReviewInsightsProps {
         useCase: string
         productAttribute: string
         gapLevel: number
-        mentionCount: number
+        totalReviews?: number
+        positiveCount?: number
+        negativeCount?: number
         categoryDefinition?: string
         productCount?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
-      totalUseMentions: number
+      totalUseReviews?: number
     }
     allReviewData: Record<string, Array<{
       id: string
@@ -121,21 +127,21 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         category: item.category_name,
         categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
         mentions: item.total_mentions,
-        satisfactionRate: item.positive_ratio,
-        negativeRate: 100 - item.positive_ratio,
-        positiveCount: item.positive_mentions,
-        negativeCount: item.negative_mentions,
-        totalReviews: item.unique_reviews,
-        averageRating: Math.max(1, 5 - ((100 - item.positive_ratio) / 20)), // 基于正面率计算平均评分
+        satisfactionRate: item.positive_ratio * 100,
+        negativeRate: 100 - (item.positive_ratio * 100),
+        positiveCount: item.positive_reviews || item.positive_mentions,  // Use unique positive reviews, fallback to mentions
+        negativeCount: item.negative_reviews || item.negative_mentions,  // Use unique negative reviews, fallback to mentions
+        totalReviews: item.total_reviews,        // Use total unique reviews
+        averageRating: Math.max(1, 5 - ((100 - (item.positive_ratio * 100)) / 20)), // 基于正面率计算平均评分
         topNegativeAspects: [item.category_name],
         topPositiveAspects: [],
         topNegativeReasons: [
-          `${Math.round(100 - item.positive_ratio)}% negative sentiment`,
+          `${Math.round(100 - (item.positive_ratio * 100))}% negative sentiment`,
           ...(item.definition ? [`Context: ${item.definition}`] : [])
         ],
         topPositiveReasons: [],
         categoryDefinition: item.definition,
-        impactedProducts: item.unique_reviews, // 使用 unique_reviews 作为影响产品数
+        impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
         categoryId: item.category_id // 新增：存储 category_id 用于点击时获取评论详情
       }))
 
@@ -171,21 +177,21 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         category: item.category_name,
         categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
         mentions: item.total_mentions,
-        satisfactionRate: item.positive_ratio,
-        negativeRate: 100 - item.positive_ratio,
+        satisfactionRate: item.positive_ratio * 100,
+        negativeRate: 100 - (item.positive_ratio * 100),
         positiveCount: item.positive_mentions,
         negativeCount: item.negative_mentions,
-        totalReviews: item.unique_reviews,
-        averageRating: 3 + (item.positive_ratio / 50), // 基于正面率计算评分
+        totalReviews: item.total_reviews,
+        averageRating: 3 + ((item.positive_ratio * 100) / 50), // 基于正面率计算评分
         topNegativeAspects: [],
         topPositiveAspects: [item.category_name],
         topNegativeReasons: [],
         topPositiveReasons: [
-          `${Math.round(item.positive_ratio)}% positive sentiment`,
+          `${Math.round(item.positive_ratio * 100)}% positive sentiment`,
           ...(item.definition ? [`Context: ${item.definition}`] : [])
         ],
         categoryDefinition: item.definition,
-        impactedProducts: item.unique_reviews, // 使用 unique_reviews 作为影响产品数
+        impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
         categoryId: item.category_id // 新增：存储 category_id 用于点击时获取评论详情
       }))
 
@@ -219,25 +225,25 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       // 转换数据格式为 UseCaseFeedback，添加 category_id
       const transformedData: UseCaseFeedback[] = result.data.categories.map(item => ({
         useCase: item.category_name,
-        totalMentions: item.total_mentions,
-        positiveCount: item.positive_mentions,
-        negativeCount: item.negative_mentions,
-        satisfactionRate: item.positive_ratio,
-        categoryType: 'Performance' as const, // 使用场景通常归类为性能
-        topSatisfactionReasons: item.positive_ratio > 50 ? [
-          `${Math.round(item.positive_ratio)}% positive sentiment`,
-          `${item.positive_mentions} positive mentions`,
+        totalReviews: item.total_reviews,
+        positiveReviews: item.positive_reviews,
+        negativeReviews: item.negative_reviews,
+        satisfactionRate: item.positive_ratio * 100,
+        categoryType: 'Performance' as const,
+        topSatisfactionReasons: (item.positive_ratio * 100) > 50 ? [
+          `${Math.round(item.positive_ratio * 100)}% positive sentiment`,
+          `${item.positive_reviews} positive reviews`,
           ...(item.definition ? [`Context: ${item.definition}`] : [])
         ] : [],
-        topGapReasons: item.positive_ratio <= 50 ? [
-          `${item.negative_mentions} negative mentions`,
-          `${item.positive_ratio.toFixed(1)}% satisfaction rate`,
+        topGapReasons: (item.positive_ratio * 100) <= 50 ? [
+          `${item.negative_reviews} negative reviews`,
+          `${(item.positive_ratio * 100).toFixed(1)}% satisfaction rate`,
           ...(item.definition ? [`Context: ${item.definition}`] : [])
         ] : [],
         relatedCategories: [item.category_name],
         categoryDefinition: item.definition,
-        productCount: item.unique_reviews, // 使用 unique_reviews 作为产品数量
-        categoryId: item.category_id // 新增：存储 category_id 用于点击时获取评论详情
+        productCount: item.total_reviews,
+        categoryId: item.category_id
       }))
 
       setUseCaseData(transformedData)
@@ -517,7 +523,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-           Bars are sorted by descending negative mentions left to right, calculated from the latest 40 reviews per product in selected categories.
+           Bars are sorted by descending negative reviews left to right, calculated from the latest 40 reviews per product in selected categories.
             </div>
           {painPointsLoading ? (
             <div className="flex items-center justify-center p-8">
@@ -549,8 +555,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
           onFilterChange={handleFilterChange}
         >
             <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Bars are sorted by descending positive mentions left to right, calculated from the latest 40 reviews per product in selected categories.
-
+            Bars are sorted by descending positive reviews left to right, calculated from the ~50 most recent reviews per product in selected categories.
 
             </div>
           {delightsLoading ? (

@@ -31,10 +31,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg max-w-xs">
         <p className="font-semibold text-gray-800">{label}</p>
         <p className="text-sm text-gray-600">Type: {data.categoryType}</p>
-        <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
-        <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
-        <p className="text-sm text-blue-600">Total Mentions: {data.positiveCount + data.negativeCount}</p>
-        <p className="text-sm text-gray-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
+        <p className="text-sm text-gray-600">Total Reviews: {data.totalReviews}</p>
+        <p className="text-sm text-blue-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
           <p className="text-xs text-gray-500">Top Pain Details:</p>
           {data.topNegativeAspects && data.topNegativeAspects.slice(0, 3).map((aspect: string, index: number) => (
@@ -114,7 +112,7 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
          
         </CardTitle>
         <CardDescription>
-          Bars are sorted by negative mentions from left to right in descending order
+          Bars are sorted by negative reviews from left to right in descending order
         </CardDescription>
       </CardHeader>
       <CardContent>

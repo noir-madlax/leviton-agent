@@ -317,7 +317,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           chartType="matrix"
         >
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          The number represents total mentions. Color indicates satisfaction rate (positive mentions / total mentions):
+          The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
             <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
             <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
             <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
@@ -344,7 +344,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           chartType="matrix"
         >
           <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-          The number represents total mentions. Color indicates satisfaction rate (positive mentions / total mentions):
+          The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
             <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
             <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
             <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 

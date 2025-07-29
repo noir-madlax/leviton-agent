@@ -799,7 +799,9 @@ export class DatabaseService {
         positive_mentions: number
         negative_mentions: number
         neutral_mentions: number
-        unique_reviews: number
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
         positive_ratio: number
       }>
       total_categories: number

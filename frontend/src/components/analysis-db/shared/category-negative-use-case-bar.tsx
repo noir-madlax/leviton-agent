@@ -30,8 +30,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 基本统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.totalMentions}</p>
+            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
           <div>
             <p className="text-sm text-gray-600">Satisfaction Rate:</p>
@@ -50,13 +50,15 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* 正负面统计 */}
+        {/* 统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
+            <p className="text-sm text-gray-600">Total Mentions:</p>
+            <p className="font-semibold">{data.positiveCount + data.negativeCount}</p>
           </div>
           <div>
-            <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
+            <p className="text-sm text-gray-600">Unique Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>
 
@@ -87,7 +89,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export default function CategoryNegativeUseCaseBar({ 
   data, 
-  description = "Bars are sorted by negative mentions from left to right in descending order",
+  description = "Bars are sorted by negative reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
   reviewData,

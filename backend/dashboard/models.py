@@ -250,8 +250,10 @@ class PainPoint(BaseModel):
     type: Literal["Physical", "Performance", "Usability"]
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
-    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
-    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative mentions")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative reviews")
     # New field for frontend mapping
     relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
@@ -263,8 +265,10 @@ class CustomerLike(BaseModel):
     satisfactionLevel: Literal["High", "Medium", "Low"]
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
-    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
-    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive mentions")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive reviews")
     # New field for frontend mapping
     relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
@@ -273,7 +277,7 @@ class AllUseCase(BaseModel):
     useCase: str
     productAttribute: str
     satisfactionRate: float
-    mentionCount: int
+    totalReviews: int
     positiveCount: int
     negativeCount: int
     # Enhanced fields for frontend optimization
@@ -287,7 +291,9 @@ class UnderservedUseCase(BaseModel):
     useCase: str
     productAttribute: str
     gapLevel: float
-    mentionCount: int
+    totalReviews: int
+    positiveCount: int
+    negativeCount: int
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
     productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
@@ -300,7 +306,7 @@ class ReviewInsightsResponse(BaseModel):
     customerLikes: List[CustomerLike]
     allUseCases: List[AllUseCase]
     underservedUseCases: List[UnderservedUseCase]
-    totalUseMentions: int = Field(description="Total mentions across all use cases")
+    totalUseReviews: int = Field(description="Total reviews across all use cases")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 

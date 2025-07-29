@@ -81,7 +81,7 @@ class TestCompetitorAnalysisChartService:
         options = {'min_mentions': 8}
         filtered = service._apply_category_filters(categories, options)
         assert len(filtered) == 2
-        assert all(cat['mentions'] >= 8 for cat in filtered)
+        assert all(cat['total_mentions'] >= 8 for cat in filtered)
         
         # Test include_categories filter
         options = {'include_categories': ['Quality', 'Performance']}

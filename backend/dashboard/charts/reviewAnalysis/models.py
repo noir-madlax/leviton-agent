@@ -39,8 +39,10 @@ class CategorySummary(BaseModel):
     positive_mentions: int = Field(description="Number of positive mentions")
     negative_mentions: int = Field(description="Number of negative mentions")
     neutral_mentions: int = Field(description="Number of neutral mentions")
-    unique_reviews: int = Field(description="Number of unique reviews")
-    positive_ratio: float = Field(description="Ratio of positive mentions to total mentions")
+    total_reviews: int = Field(description="Number of unique reviews")
+    positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
+    negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")
+    positive_ratio: float = Field(description="Ratio of positive reviews to total sentiment reviews")
 
 
 class TopCategoriesData(BaseModel):

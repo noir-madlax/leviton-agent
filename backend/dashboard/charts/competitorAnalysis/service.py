@@ -5,14 +5,13 @@ This service handles competitor analysis data retrieval with efficient database 
 
 import logging
 from typing import Dict, List, Any, Optional
-from collections import defaultdict
 
-from dashboard.services.base_service import BaseDashboardService, FilterConfig, FilterService
+from dashboard.services.base_service import FilterService
 from core.models.filters import ProjectFilters
 from core.database.connection import get_supabase_client
 from ..base_models import FiltersModel, DateRangeModel
 from ..reviewCore import ReviewAnalysisBaseService
-
+from ..reviewCore.data_service import ReviewDataService
 
 logger = logging.getLogger(__name__)
 
@@ -164,14 +163,21 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             # Get category information first
             category_info = await self._get_category_info(category_id)
             
-            # Get all review data for this category and product
-            all_reviews_data = await self._get_all_reviews_data(category_id, product_id, sort_by, sort_order)
+            data_service = ReviewDataService(get_supabase_client())
+            result = await data_service.get_reviews_by_category(
+                project_id=self.project_id,
+                category_id=category_id,
+                asins=self.selected_asins,  # All products for clicked view
+                sort_by=sort_by,
+                sort_order=sort_order,
+                aspect_types=['phy_perf']  # Use mapped aspect type that includes both phy and perf
+            )
             
-            # Deduplicate reviews and aggregate aspects
-            deduplicated_reviews = self._deduplicate_and_aggregate_reviews(all_reviews_data)
+            # The centralized service now returns deduplicated reviews
+            deduplicated_reviews = result['reviews']
             
             # Apply pagination
-            total_reviews = len(deduplicated_reviews)
+            total_reviews = result['total_count']
             paginated_reviews = deduplicated_reviews[offset:offset + limit]
             
             # Convert to response format
@@ -488,15 +494,15 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             for item in result.data:
                 category_pk = item['category_pk']
                 if category_pk not in category_metrics:
-                    category_metrics[category_pk] = {
-                        'category_pk': category_pk,
-                        'category_name': item['category_name'],
-                        'mentions': 0,
-                        'reviews': set(),
-                        'sentiment_counts': {'positive': 0, 'negative': 0, 'neutral': 0}
-                    }
+                                    category_metrics[category_pk] = {
+                    'category_pk': category_pk,
+                    'category_name': item['category_name'],
+                    'total_mentions': 0,
+                    'reviews': set(),
+                    'sentiment_counts': {'positive': 0, 'negative': 0, 'neutral': 0}
+                }
                 
-                category_metrics[category_pk]['mentions'] += 1
+                category_metrics[category_pk]['total_mentions'] += 1
                 category_metrics[category_pk]['reviews'].add(item['review_id'])
                 
                 # Count sentiment
@@ -511,7 +517,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             # Convert to list and add review counts
             categories = []
             for cat_data in category_metrics.values():
-                cat_data['reviews'] = len(cat_data['reviews'])
+                cat_data['total_reviews'] = len(cat_data['reviews'])
                 categories.append(cat_data)
             
             # Apply filters
@@ -546,7 +552,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
         # Filter by minimum mentions
         min_mentions = options.get('min_mentions')
         if min_mentions is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['mentions'] >= min_mentions]
+            filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
         
         # Filter by minimum reviews
         min_reviews = options.get('min_reviews')
@@ -590,13 +596,13 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
         
         reverse = sort_direction == 'desc'
         
-        if sort_by == 'mentions':
-            categories.sort(key=lambda x: x['mentions'], reverse=reverse)
+        if sort_by == 'mentions' or sort_by == 'total_mentions':
+            categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
         elif sort_by == 'reviews':
             categories.sort(key=lambda x: x['reviews'], reverse=reverse)
         elif sort_by == 'sentiment':
             # Sort by positive sentiment ratio
-            categories.sort(key=lambda x: x['sentiment_counts']['positive'] / max(x['mentions'], 1), reverse=reverse)
+            categories.sort(key=lambda x: x['sentiment_counts']['positive'] / max(x['total_mentions'], 1), reverse=reverse)
         
         return categories
 

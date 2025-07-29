@@ -21,12 +21,11 @@ export type ProductType = 'dimmer' | 'light'
 export interface CategoryFeedback {
   category: string
   categoryType: 'Physical' | 'Performance'
-  mentions: number
+  totalReviews: number
   satisfactionRate: number
   negativeRate: number
   positiveCount: number
   negativeCount: number
-  totalReviews: number
   averageRating: number
   topNegativeAspects: string[]
   topPositiveAspects: string[]
@@ -41,7 +40,7 @@ export interface CategoryFeedback {
 
 export interface UseCaseFeedback {
   useCase: string
-  totalMentions: number
+  totalReviews: number
   positiveCount: number
   negativeCount: number
   satisfactionRate: number
@@ -60,11 +59,10 @@ export interface ProductPainPoint {
   product: string
   category: string
   categoryType: 'Physical' | 'Performance'
-  mentions: number
+  totalReviews: number
   satisfactionRate: number
   positiveCount: number
   negativeCount: number
-  totalReviews: number
 }
 
 export interface Review {

@@ -218,11 +218,11 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
   }
 
   const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, mentions: number) => {
-    // If no mentions at all, show gray
-    if (mentions === 0) return 'bg-gray-100 text-gray-400'
+    // If no reviews at all, show gray
+    if (totalReviews === 0) return 'bg-gray-100 text-gray-400'
     
-    // If mentions but no detailed reviews, show light blue
-    if (totalReviews === 0) return 'bg-blue-50 text-blue-700'
+    // If reviews but no detailed mentions, show light blue
+    if (mentions === 0) return 'bg-blue-50 text-blue-700'
     
     // If we have detailed reviews, use satisfaction-based colors
     if (satisfactionRate >= 85) return 'bg-green-100 text-green-800'
@@ -278,8 +278,8 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                   {orderedProducts.map(productAsin => {
                     const cellData = row.cells[productAsin]
                     
-                    // Show N/A only if no data exists or no mentions at all
-                    if (!cellData || cellData.mentions === 0) {
+                    // Show N/A only if no data exists or no reviews at all
+                    if (!cellData || cellData.reviews === 0) {
                       return (
                         <td key={productAsin} className="border border-gray-300 p-3 text-center">
                           <div className="bg-gray-100 text-gray-400 py-2 px-3 rounded text-sm">
@@ -299,7 +299,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                             type: 'Physical/Performance',
                             positiveCount: cellData.positiveCount,
                             negativeCount: cellData.negativeCount,
-                            totalMentions: cellData.mentions,
+                            totalMentions: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
                             additionalInfo: [
                               `Product: ${productName}`,
@@ -318,10 +318,10 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                             }}
                             tabIndex={0}
                             role="button"
-                            aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
+                            aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.reviews} reviews, ${cellData.satisfactionRate}% satisfaction`}
                           >
                             <div className="text-lg font-bold">
-                              {cellData.mentions}
+                              {cellData.reviews}
                             </div>
                           </div>
                         </DetailedTooltip>
