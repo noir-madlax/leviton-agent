@@ -111,7 +111,7 @@ export default function CategoryUseCaseBar({
   
   // 按正面提及数排序，并取前10个
   const sortedData = [...data]
-    .sort((a, b) => b.positiveCount - a.positiveCount)
+    .sort((a, b) => b.positiveReviews - a.positiveReviews)
     .slice(0, 10);
   
   const chartData = sortedData.map(item => ({
@@ -188,7 +188,7 @@ export default function CategoryUseCaseBar({
             {sortedData.slice(0, 4).map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg font-bold text-green-600">
-                  {item.positiveCount}
+                  {item.positiveReviews}
                 </div>
                 <div className="text-sm text-gray-600 truncate" title={item.useCase}>
                   {item.useCase}
@@ -217,13 +217,13 @@ export default function CategoryUseCaseBar({
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Positive</p>
               <p className="text-lg font-semibold text-green-600">
-                {data.reduce((sum, item) => sum + item.positiveCount, 0)}
+                {data.reduce((sum, item) => sum + item.positiveReviews, 0)}
               </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Negative</p>
               <p className="text-lg font-semibold text-red-600">
-                {data.reduce((sum, item) => sum + item.negativeCount, 0)}
+                {data.reduce((sum, item) => sum + item.negativeReviews, 0)}
               </p>
             </div>
           </div>

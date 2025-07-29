@@ -41,8 +41,8 @@ export interface CategoryFeedback {
 export interface UseCaseFeedback {
   useCase: string
   totalReviews: number
-  positiveCount: number
-  negativeCount: number
+  positiveReviews: number
+  negativeReviews: number
   satisfactionRate: number
   categoryType: 'Physical' | 'Performance'
   topSatisfactionReasons: string[]
