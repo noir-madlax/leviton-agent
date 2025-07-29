@@ -6,6 +6,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { ChartCardList } from './chat/chart-card-list'
+import ChatTemplate from './chat/chat-template'
 import { UnifiedChartCard, ChartData, ChatConfig } from './shared/types'
 import { useChart } from '@/contexts/chart-context'
 import { config } from '@/lib/config'
@@ -357,40 +358,14 @@ export function ChatWithNavigation({
             </div>
           )}
           
-          {/* AI Introduction with Chart Cards */}
-          <div className="space-y-3">
-            <div className="flex items-start gap-2">
-              <Avatar className="h-6 w-2 mt-0.5">
-               
-              </Avatar>
-              <div className="flex-1">
-                <div className="p-3  mb-3">
-                  <div className="ai-text">
-                  The data is ready for further analysis.<br/>
-                  Based on your questions, these charts present the key information:
-                  </div>
-                </div>
-                <ChartCardList 
-                  cards={chartCards}
-                  activeChartId={activeChartId}
-                  onCardClick={onChartSelect}
-                  chartItems={chatConfig?.chart_items}
-                />
-              </div>
-            </div>
-          </div>
-          
-          {/* Additional AI Introduction */}
-          <div className="flex items-start gap-2">
-            <Avatar className="h-6 w-2 mt-0.5">
-           
-            </Avatar>
-            <div className="p-3">
-              <div className="ai-text">
-              Let me know if you&apos;d like to explore anything further.
-              </div>
-            </div>
-          </div>
+          {/* Chat Template with Messages and Chart Cards */}
+          <ChatTemplate 
+            chatMessages={chatConfig?.chat_messages || []}
+            chartCards={chartCards}
+            activeChartId={activeChartId}
+            onCardClick={onChartSelect}
+            chartItems={chatConfig?.chart_items}
+          />
           
           {/* Chat Messages */}
           {messages.slice(1).map((message) => (
