@@ -20,7 +20,8 @@ from .models import (
     AllReviewDataResponse, ReviewData,
     DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
     CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
-    CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData
+    CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData,
+    ChatConfigResponse
 )
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
 from .charts.sales_trend.services import SalesTrendService
@@ -35,6 +36,7 @@ from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
 from .services.competitor_summary_service import CompetitorSummaryService
+from .services.chat_config_service import ChatConfigService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
 
@@ -1206,4 +1208,67 @@ async def get_chart_filter_config(project_id: str, chart_type: str):
             },
             "project_id": project_id,
             "chart_type": chart_type
-        } 
+        }
+
+
+@router.get("/projects/{project_id}/chat-config", response_model=ChatConfigResponse)
+@log_request_response
+async def get_chat_config(project_id: str):
+    """Get chat configuration for a specific project.
+    
+    Returns the complete chat configuration including:
+    - Chart cards (preset cards that appear in chat navigation)
+    - Chart items (specific charts available for each card)
+    - Chat messages (future feature for templating chat messages)
+    
+    Implements priority logic: project-specific config > default config
+    
+    GET /api/v1/dashboard/projects/{project_id}/chat-config
+    
+    Response format:
+    {
+        "chat_messages": [],
+        "chart_cards": [
+            {
+                "card_order": 1,
+                "card_id": "brand-analysis",
+                "card_config": {
+                    "title": "Market Analysis",
+                    "description": "Market share and brand positioning analysis",
+                    "icon": "Building",
+                    "tabKey": "market-analysis",
+                    "aiIntroduction": "Market Analysis"
+                }
+            }
+        ],
+        "chart_items": {
+            "brand-analysis": [
+                {
+                    "chart_order": 1,
+                    "chart_name": "Total addressable market (TAM) and Market Share",
+                    "chart_id": "market-share-analysis",
+                    "chart_component": null
+                }
+            ]
+        },
+        "project_id": "project-uuid"
+    }
+    """
+    try:
+        logger.info(f"Chat config request for project: {project_id}")
+        
+        # Create service instance
+        service = ChatConfigService(project_id)
+        
+        # Get complete chat configuration
+        config = service.get_chat_config()
+        
+        logger.info(f"Chat config API returned {len(config.chart_cards)} cards with {sum(len(items) for items in config.chart_items.values())} total items for project {project_id}")
+        return config
+        
+    except Exception as e:
+        logger.error(f"Error getting chat config for project {project_id}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to get chat configuration: {str(e)}"
+        ) 

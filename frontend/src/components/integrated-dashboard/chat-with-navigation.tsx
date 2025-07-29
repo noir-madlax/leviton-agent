@@ -6,7 +6,7 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { ChartCardList } from './chat/chart-card-list'
-import { UnifiedChartCard, ChartData } from './shared/types'
+import { UnifiedChartCard, ChartData, ChatConfig } from './shared/types'
 import { useChart } from '@/contexts/chart-context'
 import { config } from '@/lib/config'
 import { usePermissions } from '@/hooks/use-permissions'
@@ -34,6 +34,7 @@ interface ChatWithNavigationProps {
   activeChartId: string | null
   onChartSelect: (chartId: string) => void
   onAddDynamicChart: (chart: ChartData) => void
+  chatConfig?: ChatConfig // New prop for configuration
 }
 
 export function ChatWithNavigation({ 
@@ -41,7 +42,8 @@ export function ChatWithNavigation({
   chartCards,
   activeChartId,
   onChartSelect,
-  onAddDynamicChart
+  onAddDynamicChart,
+  chatConfig
 }: ChatWithNavigationProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -372,6 +374,7 @@ export function ChatWithNavigation({
                   cards={chartCards}
                   activeChartId={activeChartId}
                   onCardClick={onChartSelect}
+                  chartItems={chatConfig?.chart_items}
                 />
               </div>
             </div>
@@ -395,9 +398,7 @@ export function ChatWithNavigation({
               <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
                 {!message.isUser && (
                   <Avatar className="h-6 w-6 mr-2 mt-0.5">
-                    <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
-                      Xe
-                    </AvatarFallback>
+                 
                   </Avatar>
                 )}
                 <div className={`max-w-[85%] p-3 rounded-lg ${

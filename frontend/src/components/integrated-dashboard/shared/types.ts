@@ -75,4 +75,55 @@ export interface ChatWithNavigationProps {
   onChartSelect: (chartId: string) => void
   chartCards: UnifiedChartCard[]
   activeChartId: string | null
+}
+
+// ==================== Chat Config Types ====================
+
+export interface ChatMessage {
+  message_order: number
+  message_type: 'opening' | 'chart_cards' | 'closing'
+  message_content: string
+}
+
+export interface ChartCardConfig {
+  card_order: number
+  card_id: string
+  card_config: {
+    title: string
+    description: string
+    icon: string
+    tabKey: string
+    aiIntroduction: string
+  }
+}
+
+export interface ChartItemConfig {
+  chart_order: number
+  chart_name: string
+  chart_id: string
+  chart_component?: string
+}
+
+export interface ChatConfig {
+  chat_messages: ChatMessage[]
+  chart_cards: ChartCardConfig[]
+  chart_items: Record<string, ChartItemConfig[]>
+  project_id?: string
+}
+
+// Updated props interface to support new configuration
+export interface ChatWithNavigationPropsV2 {
+  projectId: string
+  chartCards: UnifiedChartCard[]
+  activeChartId: string | null
+  onChartSelect: (chartId: string) => void
+  onAddDynamicChart: (chart: ChartData) => void
+  chatConfig?: ChatConfig // New configuration data
+}
+
+export interface ChartCardListProps {
+  cards: UnifiedChartCard[]
+  activeChartId: string | null
+  onCardClick: (chartId: string) => void
+  chartItems?: Record<string, ChartItemConfig[]> // New chart items configuration
 } 
