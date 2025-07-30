@@ -209,12 +209,65 @@ export class ChatConfigService {
   }
 
   /**
-   * Preload configuration for multiple projects
+   * Check if configuration is already cached and not expired
    */
-  async preloadConfigurations(projectIds: string[]): Promise<void> {
-    const promises = projectIds.map(id => this.getChatConfig(id))
+  isConfigCached(projectId: string): boolean {
+    const cached = configCache.get(projectId)
+    if (!cached) return false
+
+    const now = Date.now()
+    return now - cached.timestamp <= CACHE_DURATION
+  }
+
+  /**
+   * Preload configuration for multiple projects
+   * Returns statistics about the preload operation
+   */
+  async preloadConfigurations(projectIds: string[]): Promise<{
+    total: number
+    cached: number
+    loaded: number
+    failed: number
+  }> {
+    const stats = {
+      total: projectIds.length,
+      cached: 0,
+      loaded: 0,
+      failed: 0
+    }
+
+    // Skip already cached configs
+    const projectsToLoad = projectIds.filter(id => {
+      if (this.isConfigCached(id)) {
+        stats.cached++
+        return false
+      }
+      return true
+    })
+
+    console.log(`📋 Preloading ${projectsToLoad.length} configs (${stats.cached} already cached)`)
+
+    if (projectsToLoad.length === 0) {
+      console.log(`✅ All ${projectIds.length} configurations already cached`)
+      return stats
+    }
+
+    // Load configurations in parallel
+    const promises = projectsToLoad.map(async (id) => {
+      try {
+        await this.getChatConfig(id)
+        stats.loaded++
+        console.log(`✅ Config loaded for project: ${id}`)
+      } catch (error) {
+        stats.failed++
+        console.warn(`❌ Failed to preload config for project ${id}:`, error)
+      }
+    })
+
     await Promise.allSettled(promises)
-    console.log(`📋 Preloaded chat configurations for ${projectIds.length} projects`)
+    
+    console.log(`📋 Preload completed:`, stats)
+    return stats
   }
 }
 
