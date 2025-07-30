@@ -450,9 +450,18 @@ class ChartItemConfig(BaseModel):
     chart_component: Optional[str] = Field(default=None, description="Corresponding component name")
 
 
+class ChartSectionConfig(BaseModel):
+    """Chart section configuration model for controlling chart visibility within components."""
+    chart_order: int = Field(description="Chart section display order within parent card")
+    chart_id: str = Field(description="Unique chart section ID matching data-chart-id")
+    chart_name: str = Field(description="Chart section display name")
+    is_active: bool = Field(description="Whether this chart section should be displayed")
+
+
 class ChatConfigResponse(BaseModel):
     """Response model for chat configuration API."""
     chat_messages: List[ChatMessage] = Field(description="List of chat messages in order")
     chart_cards: List[ChartCardConfig] = Field(description="List of chart cards in order")
     chart_items: Dict[str, List[ChartItemConfig]] = Field(description="Chart items grouped by parent card ID")
+    chart_sections: Dict[str, List[ChartSectionConfig]] = Field(description="Chart sections grouped by parent card ID for controlling visibility")
     project_id: Optional[str] = Field(description="Project ID if project-specific config") 

@@ -4,7 +4,7 @@ import logging
 from typing import Dict, List, Optional, Any
 from supabase import Client
 from core.database.connection import get_supabase_client
-from dashboard.models import ChatMessage, ChartCardConfig, ChartItemConfig, ChatConfigResponse
+from dashboard.models import ChatMessage, ChartCardConfig, ChartItemConfig, ChartSectionConfig, ChatConfigResponse
 
 logger = logging.getLogger(__name__)
 
@@ -30,6 +30,9 @@ class ChatConfigService:
             # Get chart items grouped by parent card
             chart_items = self._get_chart_items()
             
+            # Get chart sections grouped by parent card
+            chart_sections = self._get_chart_sections()
+            
             # Get chat messages (for future use, currently empty)
             chat_messages = self._get_chat_messages()
             
@@ -38,12 +41,13 @@ class ChatConfigService:
                 logger.warning(f"No configuration found for project {self.project_id}, using default config")
                 return self._get_default_config()
             
-            logger.info(f"Chat config fetched successfully: {len(chart_cards)} cards, {sum(len(items) for items in chart_items.values())} items")
+            logger.info(f"Chat config fetched successfully: {len(chart_cards)} cards, {sum(len(items) for items in chart_items.values())} items, {sum(len(sections) for sections in chart_sections.values())} sections")
             
             return ChatConfigResponse(
                 chat_messages=chat_messages,
                 chart_cards=chart_cards,
                 chart_items=chart_items,
+                chart_sections=chart_sections,
                 project_id=self.project_id
             )
             
@@ -162,6 +166,47 @@ class ChatConfigService:
             logger.error(f"Error fetching chat messages: {e}")
             return []
 
+    def _get_chart_sections(self) -> Dict[str, List[ChartSectionConfig]]:
+        """Get chart sections grouped by parent card ID with project priority logic.
+        Now uses chart_item instead of chart_section for unified configuration."""
+        try:
+            # First try to get project-specific config
+            result = self.supabase.table('chart_configs').select(
+                'parent_card_id, chart_order, chart_id, chart_name, is_active'
+            ).eq('config_type', 'chart_item').eq(
+                'project_id', self.project_id
+            ).order('parent_card_id, chart_order').execute()
+            
+            # If no project-specific config found, use default
+            if not result.data:
+                logger.info(f"No project-specific chart sections found for {self.project_id}, using default")
+                result = self.supabase.table('chart_configs').select(
+                    'parent_card_id, chart_order, chart_id, chart_name, is_active'
+                ).eq('config_type', 'chart_item').is_(
+                    'project_id', 'null'
+                ).order('parent_card_id, chart_order').execute()
+            
+            # Group by parent card ID
+            chart_sections: Dict[str, List[ChartSectionConfig]] = {}
+            for row in result.data:
+                parent_card_id = row['parent_card_id']
+                if parent_card_id not in chart_sections:
+                    chart_sections[parent_card_id] = []
+                
+                chart_sections[parent_card_id].append(ChartSectionConfig(
+                    chart_order=row['chart_order'],
+                    chart_id=row['chart_id'],
+                    chart_name=row['chart_name'],
+                    is_active=row['is_active']
+                ))
+            
+            logger.info(f"Loaded chart sections for {len(chart_sections)} parent cards")
+            return chart_sections
+            
+        except Exception as e:
+            logger.error(f"Error fetching chart sections: {e}")
+            return {}
+
     def _get_default_config(self) -> ChatConfigResponse:
         """Fallback method to return hardcoded default config if database fails."""
         logger.warning("Using fallback default config due to database error")
@@ -240,9 +285,31 @@ class ChatConfigService:
             ]
         }
         
+        # Default chart sections for controlling chart visibility within components
+        default_sections = {
+            "brand-analysis": [
+                ChartSectionConfig(chart_order=1, chart_id="market-share-analysis", chart_name="Market Share Analysis", is_active=True),
+                ChartSectionConfig(chart_order=2, chart_id="brand-analysis", chart_name="Sales Trend Analysis", is_active=True),
+                ChartSectionConfig(chart_order=3, chart_id="market-insights", chart_name="Market Insights", is_active=True),
+                ChartSectionConfig(chart_order=4, chart_id="package-preference", chart_name="Package Preference", is_active=True)
+            ],
+            "pricing-analysis": [
+                ChartSectionConfig(chart_order=1, chart_id="price-distribution-overview", chart_name="Price Distribution Overview", is_active=True),
+                ChartSectionConfig(chart_order=2, chart_id="price-vs-revenue", chart_name="Price vs Revenue Analysis", is_active=True),
+                ChartSectionConfig(chart_order=3, chart_id="price-distribution-by-type", chart_name="Price Distribution by Type", is_active=True),
+                ChartSectionConfig(chart_order=4, chart_id="price-distribution-by-brands", chart_name="Price Distribution by Brands", is_active=True)
+            ],
+            "competitor-analysis": [
+                ChartSectionConfig(chart_order=1, chart_id="customer-satisfaction-overview", chart_name="Customer Satisfaction Overview", is_active=True),
+                ChartSectionConfig(chart_order=2, chart_id="product-comparison-dimensions", chart_name="Product Comparison Dimensions", is_active=True),
+                ChartSectionConfig(chart_order=3, chart_id="product-comparison-use-cases", chart_name="Product Comparison Use Cases", is_active=True)
+            ]
+        }
+        
         return ChatConfigResponse(
             chat_messages=[],
             chart_cards=default_cards,
             chart_items=default_items,
+            chart_sections=default_sections,
             project_id=self.project_id
         ) 

@@ -185,6 +185,25 @@ export class ChatConfigService {
           { chart_order: 3, chart_name: 'Product Comparison by Main Use Cases', chart_id: 'product-comparison-use-cases' }
         ]
       },
+      chart_sections: {
+        'brand-analysis': [
+          { chart_order: 1, chart_id: 'market-share-analysis', chart_name: 'Market Share Analysis', is_active: true },
+          { chart_order: 2, chart_id: 'brand-analysis', chart_name: 'Sales Trend Analysis', is_active: true },
+          { chart_order: 3, chart_id: 'market-insights', chart_name: 'Market Insights', is_active: true },
+          { chart_order: 4, chart_id: 'package-preference', chart_name: 'Package Preference', is_active: true }
+        ],
+        'pricing-analysis': [
+          { chart_order: 1, chart_id: 'price-distribution-overview', chart_name: 'Price Distribution Overview', is_active: true },
+          { chart_order: 2, chart_id: 'price-vs-revenue', chart_name: 'Price vs Revenue Analysis', is_active: true },
+          { chart_order: 3, chart_id: 'price-distribution-by-type', chart_name: 'Price Distribution by Type', is_active: true },
+          { chart_order: 4, chart_id: 'price-distribution-by-brands', chart_name: 'Price Distribution by Brands', is_active: true }
+        ],
+        'competitor-analysis': [
+          { chart_order: 1, chart_id: 'customer-satisfaction-overview', chart_name: 'Customer Satisfaction Overview', is_active: true },
+          { chart_order: 2, chart_id: 'product-comparison-dimensions', chart_name: 'Product Comparison Dimensions', is_active: true },
+          { chart_order: 3, chart_id: 'product-comparison-use-cases', chart_name: 'Product Comparison Use Cases', is_active: true }
+        ]
+      },
       project_id: projectId
     }
   }

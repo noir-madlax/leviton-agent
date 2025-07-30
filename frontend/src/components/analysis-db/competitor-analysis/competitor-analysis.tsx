@@ -14,6 +14,7 @@ import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { supabase } from "@/lib/supabase"
+import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 
 // 全局默认产品数据缓存
 interface DefaultProductsCacheState {
@@ -89,6 +90,9 @@ const DEFAULT_COMPETITOR_ASINS = [
 ];
 
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
+  // Get chart sections configuration for conditional rendering
+  const { shouldShowChart } = useChartSections('competitor-analysis', projectId || '')
+  
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
   const [customCompetitorData, setCustomCompetitorData] = useState<any>(null);
   const [loading, setLoading] = useState(false);
@@ -469,6 +473,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           )}
 
       {/* Customer Satisfaction Overview - New Implementation */}
+      {shouldShowChart('customer-satisfaction-overview') && (
       <section data-chart-id="customer-satisfaction-overview">
         <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
           📊 Customer satisfaction overview
@@ -493,8 +498,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           }}
         />
       </section>
+      )}
 
       {/* Competitor Delights and Pain Points Matrix */}
+      {shouldShowChart('product-comparison-dimensions') && (
       <section data-chart-id="product-comparison-dimensions">
         <ChartWithFilters
           chartId="product-comparison-dimensions"
@@ -521,8 +528,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           />
         </ChartWithFilters>
       </section>
+      )}
 
       {/* Use Case Matrix */}
+      {shouldShowChart('product-comparison-use-cases') && (
       <section data-chart-id="product-comparison-use-cases">
         <ChartWithFilters
           chartId="product-comparison-use-cases"
@@ -549,6 +558,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           />
         </ChartWithFilters>
       </section>
+      )}
 
       {/* Customer Sentiment Analysis 
       <section>

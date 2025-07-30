@@ -104,10 +104,18 @@ export interface ChartItemConfig {
   chart_component?: string
 }
 
+export interface ChartSectionConfig {
+  chart_order: number
+  chart_id: string
+  chart_name: string
+  is_active: boolean
+}
+
 export interface ChatConfig {
   chat_messages: ChatMessage[]
   chart_cards: ChartCardConfig[]
   chart_items: Record<string, ChartItemConfig[]>
+  chart_sections: Record<string, ChartSectionConfig[]>
   project_id?: string
 }
 
