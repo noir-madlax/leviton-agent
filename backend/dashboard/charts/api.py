@@ -17,7 +17,12 @@ from .reviewAnalysis.models import (
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
 from .filters.models import AsinFilterRequest, AsinFilterResponse
-from dashboard.services.base_service import BaseDashboardService
+from .filters.asin_filter_service import get_filtered_asins as filter_asins
+
+from .market_analysis.models import (
+    TAMMarketShareRequest, TAMMarketShareResponse
+)
+from .market_analysis.service import TAMMarketShareService
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -391,15 +396,13 @@ async def get_filtered_asins(request: AsinFilterRequest):
         HTTPException: 当请求处理失败时
     """
     try:
-        # 创建临时服务实例来使用execute_filtered_query方法
-        class TempFilterService(BaseDashboardService):
-            def get_data(self):
-                return []
+        from core.database.connection import get_supabase_client
 
-        service = TempFilterService(project_id=request.project_id)
+        # 获取Supabase客户端
+        supabase_client = get_supabase_client()
 
-        # 使用链式过滤器获取ASIN列表
-        filtered_asins = service.execute_filtered_query(request)
+        # 使用公共的ASIN过滤服务
+        filtered_asins = filter_asins(supabase_client, request)
 
         # 创建响应对象
         response = AsinFilterResponse(data=filtered_asins)
@@ -414,4 +417,97 @@ async def get_filtered_asins(request: AsinFilterRequest):
 
     except Exception as e:
         logger.error(f"System error in ASIN filtering: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/tam-market-share", response_model=TAMMarketShareResponse)
+async def get_tam_market_share(request: TAMMarketShareRequest):
+    """Get Total Addressable Market (TAM) and Market Share analysis.
+
+    This endpoint calculates the total addressable market and detailed market share
+    analysis by category and brand. All calculations are performed on the backend
+    using filtered product data.
+
+    **Example Request:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "segments": ["Premium", "Standard"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        }
+    }
+    ```
+
+    **Example Response:**
+    ```json
+    {
+        "tam_data": {
+            "total_market_revenue": 15000000.50,
+            "total_market_volume": 25000,
+            "total_products": 1250,
+            "currency": "USD"
+        },
+        "market_share_by_category": [
+            {
+                "category": "Dimmer Switches",
+                "total_revenue": 8000000.25,
+                "total_volume": 12000,
+                "total_products": 600,
+                "brand_shares": [
+                    {
+                        "brand": "Leviton",
+                        "revenue": 3200000.10,
+                        "volume": 4800,
+                        "product_count": 240,
+                        "market_share_percentage": 40.0,
+                        "rank": 1
+                    }
+                ]
+            }
+        ],
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "total_categories": 2,
+            "total_brands": 15,
+            "calculation_timestamp": "2024-01-15T10:30:00Z"
+        }
+    }
+    ```
+
+    Args:
+        request: TAM Market Share request with project_id and filters
+
+    Returns:
+        TAMMarketShareResponse: Complete TAM and market share analysis
+
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = TAMMarketShareService(supabase_client)
+
+        # Get TAM and market share data
+        response = service.get_tam_market_share_data(request)
+
+        logger.info(f"TAM Market Share analysis completed for project {request.project_id}: "
+                   f"${response.tam_data.total_market_revenue:,.2f} TAM with "
+                   f"{len(response.market_share_by_category)} categories")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in TAM Market Share analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in TAM Market Share analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

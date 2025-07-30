@@ -11,6 +11,11 @@ from .chain_filter import (
     build_filtered_sql
 )
 
+from .asin_filter_service import (
+    FilteredDataService,
+    get_filtered_asins
+)
+
 __all__ = [
     'FilterChain',
     'BaseFilter',
@@ -19,5 +24,7 @@ __all__ = [
     'CategoryFilter',
     'ExtendFieldsFilter',
     'SQLQueryBuilder',
-    'build_filtered_sql'
+    'build_filtered_sql',
+    'FilteredDataService',
+    'get_filtered_asins'
 ]
