@@ -256,7 +256,19 @@ class ReviewDataService:
         """
         if rating is None:
             return 0
+        
+        # Handle "X.X out of 5 stars" format
+        if isinstance(rating, str) and 'out of' in rating:
+            try:
+                rating_value = float(rating.split(' out of')[0])
+                return int(round(rating_value))
+            except (ValueError, IndexError):
+                return 0
+        
+        # Handle simple numeric conversion
         try:
+            if isinstance(rating, str):
+                return int(round(float(rating)))
             return int(rating)
         except (ValueError, TypeError):
             return 0
