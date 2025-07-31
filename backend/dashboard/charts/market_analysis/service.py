@@ -30,7 +30,7 @@ class TAMMarketShareService:
         """Get TAM and Market Share data with filtering.
         
         Args:
-            request: TAM Market Share request with project_id and filters
+            request: TAM Market Share request with project_id, filters, and timeframe
             
         Returns:
             TAMMarketShareResponse: Complete TAM and market share analysis
@@ -39,11 +39,7 @@ class TAMMarketShareService:
             logger.info(f"🏢 Starting TAM Market Share analysis for project {request.project_id}")
             
             # Step 1: Use public get_filtered_asins method
-            base_request = BaseRequestModel(
-                project_id=request.project_id,
-                filters=request.filters
-            )
-            filtered_asins = get_filtered_asins(self.supabase, base_request)
+            filtered_asins = get_filtered_asins(self.supabase, request)
             
             if not filtered_asins:
                 logger.warning(f"No ASINs found after filtering for project {request.project_id}")
@@ -51,8 +47,8 @@ class TAMMarketShareService:
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: Get product data from wide table
-            product_data = self._get_product_data_from_wide_table(filtered_asins)
+            # Step 2: Get product data from wide table with timeframe support
+            product_data = self._get_product_data_from_wide_table(filtered_asins, request.timeframe)
             
             if not product_data:
                 logger.warning(f"No product data found for filtered ASINs")
@@ -79,20 +75,41 @@ class TAMMarketShareService:
             logger.error(f"❌ Error in TAM Market Share analysis: {e}", exc_info=True)
             return self._get_empty_response()
 
-    def _get_product_data_from_wide_table(self, asins: List[str]) -> List[Dict[str, Any]]:
+    def _get_product_data_from_wide_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
         """Get product data from product_wide_table.
         
         Args:
             asins: List of ASINs to query
+            timeframe: Optional TimeframeModel to determine which fields to query
             
         Returns:
             List of product data dictionaries
         """
         try:
+            # Determine which revenue and volume fields to query based on timeframe
+            revenue_field = "past_year_revenue"  # default
+            volume_field = "past_year_volume"    # default
+            
+            if timeframe and timeframe.period:
+                if timeframe.period == "month":
+                    revenue_field = "past_month_revenue"
+                    volume_field = "past_month_volume"  
+                elif timeframe.period == "6months":
+                    revenue_field = "past_6_month_revenue"
+                    volume_field = "past_6_month_volume"  
+                else:  # year (default)
+                    revenue_field = "past_year_revenue"
+                    volume_field = "past_year_volume"
+            
+            # Build select fields
+            select_fields = f'platform_id, brand, category, {revenue_field}'
+            if volume_field:
+                select_fields += f', {volume_field}'
+            
+            logger.info(f"📊 Querying fields: {select_fields}")
+            
             # Query product_wide_table for required fields
-            query = self.supabase.table('product_wide_table').select(
-                'platform_id, brand, category, past_year_revenue, past_year_volume'
-            ).in_('platform_id', asins)
+            query = self.supabase.table('product_wide_table').select(select_fields).in_('platform_id', asins)
             
             result = query.execute()
             
@@ -100,15 +117,24 @@ class TAMMarketShareService:
                 logger.warning("No data found in product_wide_table")
                 return []
             
-            # Filter out products with missing essential data
+            # Filter out products with missing essential data and normalize field names
             valid_products = []
             for product in result.data:
                 if (product.get('brand') and 
                     product.get('category') and 
-                    product.get('past_year_revenue') is not None):
-                    valid_products.append(product)
+                    product.get(revenue_field) is not None):
+                    
+                    # Normalize field names for consistent processing
+                    normalized_product = {
+                        'platform_id': product.get('platform_id'),
+                        'brand': product.get('brand'),
+                        'category': product.get('category'),
+                        'revenue': product.get(revenue_field, 0),
+                        'volume': product.get(volume_field, 0) if volume_field else 0
+                    }
+                    valid_products.append(normalized_product)
             
-            logger.info(f"📈 Retrieved {len(valid_products)} valid products from wide table")
+            logger.info(f"📈 Retrieved {len(valid_products)} valid products from wide table using {revenue_field}")
             return valid_products
             
         except Exception as e:
@@ -138,8 +164,8 @@ class TAMMarketShareService:
         for product in product_data:
             category = product.get('category', 'Unknown')
             brand = product.get('brand', 'Unknown')
-            revenue = float(product.get('past_year_revenue', 0) or 0)
-            volume = int(product.get('past_year_volume', 0) or 0)
+            revenue = float(product.get('revenue', 0) or 0)
+            volume = int(product.get('volume', 0) or 0)
             
             # Aggregate by category and brand
             category_brand_data[category][brand]['revenue'] += revenue

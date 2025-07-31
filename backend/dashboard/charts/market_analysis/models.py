@@ -2,24 +2,29 @@
 
 from typing import List, Dict, Any, Optional
 from pydantic import BaseModel, Field
+from ..base_models import BaseRequestModel
 
 
-class TAMMarketShareRequest(BaseModel):
+class TAMMarketShareRequest(BaseRequestModel):
     """Request model for TAM and Market Share analysis."""
-
-    project_id: str = Field(..., description="Project ID for filtering", example="d2c02b80-4c82-44cc-8093-56708a7883f7")
-    filters: Optional[Dict[str, Any]] = Field(
-        default_factory=dict,
-        description="Filters to apply (categories, brands, segments, extend_fields)",
-        example={
-            "categories": ["Dimmer Switches", "Light Switches"],
-            "brands": ["Leviton", "Lutron"],
-            "segments": ["Premium", "Standard"],
-            "extend_fields": {
-                "smart_capability": "Smart"
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "filters": {
+                    "categories": ["Dimmer Switches", "Light Switches"],
+                    "brands": ["Leviton", "Lutron"],
+                    "segments": ["Premium", "Standard"],
+                    "extend_fields": {
+                        "smart_capability": "Smart"
+                    }
+                },
+                "timeframe": {
+                    "period": "year"
+                }
             }
         }
-    )
 
 
 class BrandShareData(BaseModel):

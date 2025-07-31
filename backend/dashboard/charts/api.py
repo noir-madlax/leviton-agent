@@ -439,9 +439,17 @@ async def get_tam_market_share(request: TAMMarketShareRequest):
             "extend_fields": {
                 "smart_capability": "Smart"
             }
+        },
+        "timeframe": {
+            "period": "year"
         }
     }
     ```
+    
+    **Timeframe Options:**
+    - `"month"`: Use past_month_revenue for analysis (过去1个月收入)
+    - `"6months"`: Use past_6_month_revenue for analysis (过去6个月收入)
+    - `"year"`: Use past_year_revenue and past_year_volume for analysis (过去1年收入和销量)
 
     **Example Response:**
     ```json
