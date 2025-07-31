@@ -20,9 +20,10 @@ from .filters.models import AsinFilterRequest, AsinFilterResponse
 from .filters.asin_filter_service import get_filtered_asins as filter_asins
 
 from .market_analysis.models import (
-    TAMMarketShareRequest, TAMMarketShareResponse
+    TAMMarketShareRequest, TAMMarketShareResponse,
+    TopSegmentsByRevenueRequest, TopSegmentsByRevenueResponse
 )
-from .market_analysis.service import TAMMarketShareService
+from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -518,4 +519,107 @@ async def get_tam_market_share(request: TAMMarketShareRequest):
 
     except Exception as e:
         logger.error(f"System error in TAM Market Share analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/top-segments-by-revenue", response_model=TopSegmentsByRevenueResponse)
+async def get_top_segments_by_revenue(request: TopSegmentsByRevenueRequest):
+    """获取按收入排名的 Top Segments 数据.
+
+    这个端点专门为 "Top 10 Segments by Revenue" 图表提供数据，
+    在后端完成所有数据处理和排序逻辑，简化前端实现。
+
+    **示例请求:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "segments": ["Premium", "Standard"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "limit": 10,
+        "metric_type": "revenue"
+    }
+    ```
+    
+    **参数说明:**
+    - `limit`: 返回的 segment 数量限制 (1-50，默认 10)
+    - `metric_type`: 排序指标类型
+      - `"revenue"`: 按收入排序 (默认)
+      - `"volume"`: 按销量排序
+      - `"products"`: 按产品数量排序
+    - `timeframe.period`: 时间周期
+      - `"month"`: 过去1个月数据
+      - `"6months"`: 过去6个月数据
+      - `"year"`: 过去1年数据 (默认)
+
+    **示例响应:**
+    ```json
+    {
+        "data": {
+            "segments": [
+                {
+                    "segment": "Premium Smart Dimmer",
+                    "revenue": 2500000.50,
+                    "volume": 15000,
+                    "products": 120,
+                    "market_share_percentage": 35.2,
+                    "rank": 1,
+                    "avg_price": 166.67,
+                    "top_brand": "Leviton"
+                }
+            ],
+            "total_market_revenue": 7100000.00,
+            "total_market_volume": 45000,
+            "total_products": 350,
+            "currency": "USD"
+        },
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "total_segments": 25,
+            "returned_segments": 10,
+            "metric_type": "revenue",
+            "calculation_timestamp": "2024-01-15T10:30:00Z"
+        }
+    }
+    ```
+
+    Args:
+        request: Top Segments 请求参数
+
+    Returns:
+        TopSegmentsByRevenueResponse: 完整的 Top Segments 分析数据
+
+    Raises:
+        HTTPException: 参数验证或系统错误的响应
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = TopSegmentsByRevenueService(supabase_client)
+
+        # Get Top Segments data
+        response = service.get_top_segments_data(request)
+
+        logger.info(f"Top Segments analysis completed for project {request.project_id}: "
+                   f"returned {response.metadata.returned_segments}/{response.metadata.total_segments} segments, "
+                   f"sorted by {response.metadata.metric_type}")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Top Segments analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Top Segments analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
