@@ -7,6 +7,7 @@ from collections import defaultdict
 
 from dashboard.charts.filters.asin_filter_service import get_filtered_asins
 from dashboard.charts.base_models import BaseRequestModel
+from dashboard.utils import TimeframeFieldMapper
 from .models import (
     TAMMarketShareRequest,
     TAMMarketShareResponse,
@@ -86,25 +87,11 @@ class TAMMarketShareService:
             List of product data dictionaries
         """
         try:
-            # Determine which revenue and volume fields to query based on timeframe
-            revenue_field = "past_year_revenue"  # default
-            volume_field = "past_year_volume"    # default
-            
-            if timeframe and timeframe.period:
-                if timeframe.period == "month":
-                    revenue_field = "past_month_revenue"
-                    volume_field = "past_month_volume"  
-                elif timeframe.period == "6months":
-                    revenue_field = "past_6_month_revenue"
-                    volume_field = "past_6_month_volume"  
-                else:  # year (default)
-                    revenue_field = "past_year_revenue"
-                    volume_field = "past_year_volume"
+            # 使用工具类获取字段名
+            revenue_field, volume_field = TimeframeFieldMapper.get_fields(timeframe)
             
             # Build select fields
-            select_fields = f'platform_id, brand, category, {revenue_field}'
-            if volume_field:
-                select_fields += f', {volume_field}'
+            select_fields = f'platform_id, brand, category, {revenue_field}, {volume_field}'
             
             logger.info(f"📊 Querying fields: {select_fields}")
             
@@ -130,7 +117,7 @@ class TAMMarketShareService:
                         'brand': product.get('brand'),
                         'category': product.get('category'),
                         'revenue': product.get(revenue_field, 0),
-                        'volume': product.get(volume_field, 0) if volume_field else 0
+                        'volume': product.get(volume_field, 0)
                     }
                     valid_products.append(normalized_product)
             
