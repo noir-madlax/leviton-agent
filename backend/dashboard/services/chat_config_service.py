@@ -16,22 +16,55 @@ class ChatConfigService:
         self.project_id = project_id
         self.supabase: Client = get_supabase_client()
 
-    def get_chat_config(self) -> ChatConfigResponse:
+    def _extract_i18n_text(self, i18n_field: Any, lang: str = "en") -> str:
+        """Extract text from i18n JSONB field with fallback to English."""
+        if not i18n_field:
+            return ""
+        
+        if isinstance(i18n_field, dict):
+            # Try to get the requested language
+            if lang in i18n_field:
+                return i18n_field[lang]
+            # Fallback to English
+            if 'en' in i18n_field:
+                return i18n_field['en']
+            # If no English, return first available value
+            if i18n_field:
+                return next(iter(i18n_field.values()))
+        
+        # If it's a string (legacy format), return as is
+        return str(i18n_field) if i18n_field else ""
+
+    def _localize_card_config(self, card_config: Dict[str, Any], lang: str = "en") -> Dict[str, Any]:
+        """Localize card_config fields based on language."""
+        if not card_config:
+            return card_config
+            
+        localized_config = card_config.copy()
+        
+        # Process multi-language fields
+        for field in ['title', 'description', 'aiIntroduction']:
+            if field in card_config:
+                localized_config[field] = self._extract_i18n_text(card_config[field], lang)
+                
+        return localized_config
+
+    def get_chat_config(self, lang: str = "en") -> ChatConfigResponse:
         """
         Get complete chat configuration for a project.
         Implements priority logic: project-specific config > default config
         """
         try:
-            logger.info(f"Fetching chat config for project: {self.project_id}")
+            logger.info(f"Fetching chat config for project: {self.project_id}, lang: {lang}")
             
             # Get chart cards with project priority
-            chart_cards = self._get_chart_cards()
+            chart_cards = self._get_chart_cards(lang)
             
             # Get chart items grouped by parent card
-            chart_items = self._get_chart_items()
+            chart_items = self._get_chart_items(lang)
             
             # Get chart sections grouped by parent card
-            chart_sections = self._get_chart_sections()
+            chart_sections = self._get_chart_sections(lang)
             
             # Get chat messages (for future use, currently empty)
             chat_messages = self._get_chat_messages()
@@ -56,7 +89,7 @@ class ChatConfigService:
             # Return default config as fallback
             return self._get_default_config()
 
-    def _get_chart_cards(self) -> List[ChartCardConfig]:
+    def _get_chart_cards(self, lang: str = "en") -> List[ChartCardConfig]:
         """Get chart cards with project priority logic."""
         try:
             # First try to get project-specific config
@@ -75,23 +108,26 @@ class ChatConfigService:
                     'project_id', 'null'
                 ).eq('is_active', True).order('card_order').execute()
             
-            # Convert to ChartCardConfig objects
+            # Convert to ChartCardConfig objects with localization
             chart_cards = []
             for row in result.data:
+                # Localize card_config fields
+                localized_config = self._localize_card_config(row['card_config'], lang)
+                
                 chart_cards.append(ChartCardConfig(
                     card_order=row['card_order'],
                     card_id=row['card_id'],
-                    card_config=row['card_config']
+                    card_config=localized_config
                 ))
             
-            logger.info(f"Loaded {len(chart_cards)} chart cards")
+            logger.info(f"Loaded {len(chart_cards)} chart cards for lang {lang}")
             return chart_cards
             
         except Exception as e:
             logger.error(f"Error fetching chart cards: {e}")
             return []
 
-    def _get_chart_items(self) -> Dict[str, List[ChartItemConfig]]:
+    def _get_chart_items(self, lang: str = "en") -> Dict[str, List[ChartItemConfig]]:
         """Get chart items grouped by parent card ID with project priority logic."""
         try:
             # First try to get project-specific config
@@ -110,22 +146,25 @@ class ChatConfigService:
                     'project_id', 'null'
                 ).eq('is_active', True).order('parent_card_id, chart_order').execute()
             
-            # Group by parent card ID
+            # Group by parent card ID with localization
             chart_items: Dict[str, List[ChartItemConfig]] = {}
             for row in result.data:
                 parent_card_id = row['parent_card_id']
                 if parent_card_id not in chart_items:
                     chart_items[parent_card_id] = []
                 
+                # Localize chart_name
+                localized_chart_name = self._extract_i18n_text(row['chart_name'], lang)
+                
                 chart_items[parent_card_id].append(ChartItemConfig(
                     chart_order=row['chart_order'],
-                    chart_name=row['chart_name'],
+                    chart_name=localized_chart_name,
                     chart_id=row['chart_id'],
                     chart_component=row['chart_component']
                 ))
             
             total_items = sum(len(items) for items in chart_items.values())
-            logger.info(f"Loaded {total_items} chart items for {len(chart_items)} cards")
+            logger.info(f"Loaded {total_items} chart items for {len(chart_items)} cards, lang: {lang}")
             return chart_items
             
         except Exception as e:
@@ -166,7 +205,7 @@ class ChatConfigService:
             logger.error(f"Error fetching chat messages: {e}")
             return []
 
-    def _get_chart_sections(self) -> Dict[str, List[ChartSectionConfig]]:
+    def _get_chart_sections(self, lang: str = "en") -> Dict[str, List[ChartSectionConfig]]:
         """Get chart sections grouped by parent card ID with project priority logic.
         Now uses chart_item instead of chart_section for unified configuration."""
         try:
@@ -186,21 +225,24 @@ class ChatConfigService:
                     'project_id', 'null'
                 ).order('parent_card_id, chart_order').execute()
             
-            # Group by parent card ID
+            # Group by parent card ID with localization
             chart_sections: Dict[str, List[ChartSectionConfig]] = {}
             for row in result.data:
                 parent_card_id = row['parent_card_id']
                 if parent_card_id not in chart_sections:
                     chart_sections[parent_card_id] = []
                 
+                # Localize chart_name
+                localized_chart_name = self._extract_i18n_text(row['chart_name'], lang)
+                
                 chart_sections[parent_card_id].append(ChartSectionConfig(
                     chart_order=row['chart_order'],
                     chart_id=row['chart_id'],
-                    chart_name=row['chart_name'],
+                    chart_name=localized_chart_name,
                     is_active=row['is_active']
                 ))
             
-            logger.info(f"Loaded chart sections for {len(chart_sections)} parent cards")
+            logger.info(f"Loaded chart sections for {len(chart_sections)} parent cards, lang: {lang}")
             return chart_sections
             
         except Exception as e:

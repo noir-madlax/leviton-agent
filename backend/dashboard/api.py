@@ -1213,7 +1213,10 @@ async def get_chart_filter_config(project_id: str, chart_type: str):
 
 @router.get("/projects/{project_id}/chat-config", response_model=ChatConfigResponse)
 @log_request_response
-async def get_chat_config(project_id: str):
+async def get_chat_config(
+    project_id: str,
+    lang: str = Query(default="en", description="Language code: en or zh")
+):
     """Get chat configuration for a specific project.
     
     Returns the complete chat configuration including:
@@ -1261,7 +1264,7 @@ async def get_chat_config(project_id: str):
         service = ChatConfigService(project_id)
         
         # Get complete chat configuration
-        config = service.get_chat_config()
+        config = service.get_chat_config(lang=lang)
         
         logger.info(f"Chat config API returned {len(config.chart_cards)} cards with {sum(len(items) for items in config.chart_items.values())} total items for project {project_id}")
         return config

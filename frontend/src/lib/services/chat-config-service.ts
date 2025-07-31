@@ -30,16 +30,20 @@ export class ChatConfigService {
    */
   async getChatConfig(projectId: string): Promise<ChatConfig> {
     try {
+      // Get current language setting
+      const currentLang = (typeof window !== 'undefined' && window.localStorage.getItem('i18nextLng')) || 'en'
+      const cacheKey = `${projectId}_${currentLang}`
+      
       // Check cache first
-      const cached = this.getCachedConfig(projectId)
+      const cached = this.getCachedConfig(cacheKey)
       if (cached) {
-        console.log(`📋 Using cached chat config for project: ${projectId}`)
+        console.log(`📋 Using cached chat config for project: ${projectId}, lang: ${currentLang}`)
         return cached
       }
 
-      console.log(`📋 Fetching chat config for project: ${projectId}`)
+      console.log(`📋 Fetching chat config for project: ${projectId}, lang: ${currentLang}`)
       
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/chat-config`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/chat-config?lang=${currentLang}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
@@ -52,8 +56,8 @@ export class ChatConfigService {
 
       const config: ChatConfig = await response.json()
       
-      // Cache the result
-      this.setCachedConfig(projectId, config)
+      // Cache the result with language-specific key
+      this.setCachedConfig(cacheKey, config)
       
       console.log(`✅ Chat config loaded: ${config.chart_cards.length} cards, ${Object.keys(config.chart_items).length} item groups`)
       return config
@@ -97,8 +101,12 @@ export class ChatConfigService {
    */
   clearCache(projectId?: string): void {
     if (projectId) {
-      configCache.delete(projectId)
-      console.log(`🗑️ Cleared chat config cache for project: ${projectId}`)
+      // Clear cache for all languages of this project
+      const keysToDelete = Array.from(configCache.keys()).filter(key => 
+        key.startsWith(`${projectId}_`) || key === projectId
+      )
+      keysToDelete.forEach(key => configCache.delete(key))
+      console.log(`🗑️ Cleared chat config cache for project: ${projectId} (${keysToDelete.length} keys)`)
     } else {
       configCache.clear()
       console.log('🗑️ Cleared all chat config cache')
