@@ -23,7 +23,9 @@ class ReviewDataService:
         asins: List[str],
         sort_by: str = "review_id",
         sort_order: str = "desc",
-        aspect_types: Optional[List[str]] = None
+        aspect_types: Optional[List[str]] = None,
+        sentiment_filter: Optional[str] = None,
+        rating_filter: Optional[str] = None
     ) -> Dict[str, Any]:
         """Get deduplicated reviews for a category with sorting and aspect aggregation.
         
@@ -136,6 +138,33 @@ class ReviewDataService:
                     'aspect_type': base_review.get('aspect_type')
                 }
                 deduplicated_reviews.append(deduplicated_review)
+            
+            # Apply sentiment and rating filters
+            filtered_reviews = []
+            for review in deduplicated_reviews:
+                # Apply sentiment filter
+                if sentiment_filter:
+                    # Check if any aspect has the required sentiment
+                    review_sentiments = {aspect['sentiment'] for aspect in review['aspects']}
+                    if sentiment_filter == 'positive' and 'positive' not in review_sentiments:
+                        continue
+                    elif sentiment_filter == 'negative' and 'negative' not in review_sentiments:
+                        continue
+                
+                # Apply rating filter
+                if rating_filter and review.get('rating'):
+                    rating = review['rating']
+                    if rating_filter == 'high' and rating < 4:
+                        continue
+                    elif rating_filter == 'mid' and rating != 3:
+                        continue
+                    elif rating_filter == 'low' and rating > 2:
+                        continue
+                
+                filtered_reviews.append(review)
+            
+            # Use filtered reviews instead of all deduplicated reviews
+            deduplicated_reviews = filtered_reviews
             
             # Get category info
             category_info = await self.get_category_info(project_id, category_id)

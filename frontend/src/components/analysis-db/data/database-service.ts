@@ -861,6 +861,8 @@ export class DatabaseService {
       offset?: number
       sortBy?: 'review_id' | 'rating' | 'review_date'
       sortOrder?: 'desc' | 'asc'
+      sentimentFilter?: 'positive' | 'negative'
+      ratingFilter?: 'high' | 'mid' | 'low'
     },
     filters?: {
       categories?: string[]
@@ -914,7 +916,9 @@ export class DatabaseService {
         limit: options?.limit || 10,
         offset: options?.offset || 0,
         sort_by: options?.sortBy || 'review_id',
-        sort_order: options?.sortOrder || 'desc'
+        sort_order: options?.sortOrder || 'desc',
+        sentiment_filter: options?.sentimentFilter || null,
+        rating_filter: options?.ratingFilter || null
       }
 
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {

@@ -143,7 +143,9 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         limit: int = 100,
         offset: int = 0,
         sort_by: str = "review_id",
-        sort_order: str = "desc"
+        sort_order: str = "desc",
+        sentiment_filter: Optional[str] = None,
+        rating_filter: Optional[str] = None
     ) -> Dict[str, Any]:
         """Get reviews for a specific category with product information.
         
@@ -153,6 +155,8 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             offset: Offset for pagination (default: 0)
             sort_by: Sort field (review_id, date, rating, sentiment)
             sort_order: Sort direction (asc, desc)
+            sentiment_filter: Filter by sentiment (positive, negative). If None, returns all sentiments.
+            rating_filter: Filter by rating (high: 4-5 stars, mid: 3 stars, low: 1-2 stars). If None, returns all ratings.
             
         Returns:
             Dict containing reviews with product information and pagination
@@ -171,7 +175,9 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 category_id=category_id,
                 asins=filtered_asins,
                 sort_by=sort_by,
-                sort_order=sort_order
+                sort_order=sort_order,
+                sentiment_filter=sentiment_filter,
+                rating_filter=rating_filter
             )
             
             # Get category information from centralized service

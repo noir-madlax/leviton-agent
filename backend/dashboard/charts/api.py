@@ -286,7 +286,9 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
             limit=request.limit,
             offset=request.offset,
             sort_by=request.sort_by,
-            sort_order=request.sort_order
+            sort_order=request.sort_order,
+            sentiment_filter=request.sentiment_filter,
+            rating_filter=request.rating_filter
         )
         
         # Convert raw data to response format
