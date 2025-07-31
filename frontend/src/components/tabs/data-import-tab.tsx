@@ -136,7 +136,7 @@ export function DataImportTab() {
   // 🔥 修改：支持实时进度的启动逻辑
   const handleStartScraping = async () => {
     if (!url.trim()) {
-      alert('Please enter a URL first');
+      alert(t('pasteAmazonUrl'));
       return;
     }
 
@@ -224,11 +224,11 @@ export function DataImportTab() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'completed':
-        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Completed</Badge>;
+        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('completed')}</Badge>;
       case 'failed':
-        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>;
       case 'running':
-        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
+        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />{t('running')}</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -237,11 +237,11 @@ export function DataImportTab() {
   const getStepStatus = (status: string) => {
     switch (status) {
       case 'success':
-        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Success</Badge>;
+        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('success')}</Badge>;
       case 'failed':
-        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>;
       case 'running':
-        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
+        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />{t('running')}</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -250,11 +250,11 @@ export function DataImportTab() {
   const getTransformationStatus = (phase: any) => {
     if (phase.success) {
       return (
-        <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Success</Badge>
+        <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('success')}</Badge>
       );
     } else {
       return (
-        <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>
+        <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>
       );
     }
   };
@@ -262,18 +262,18 @@ export function DataImportTab() {
   const getOverallStatusBadge = (status: string) => {
     switch (status) {
       case 'completed':
-        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />Completed</Badge>;
+        return <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('completed')}</Badge>;
       case 'products_only_completed':
-        return <Badge variant="default" className="bg-blue-500"><CheckCircle className="w-3 h-3 mr-1" />Products Only</Badge>;
+        return <Badge variant="default" className="bg-blue-500"><CheckCircle className="w-3 h-3 mr-1" />{t('products')} Only</Badge>;
       case 'failed':
       case 'product_scraping_failed':
       case 'product_importing_failed':
       case 'transformation_failed':
       case 'review_scraping_failed':
       case 'review_importing_failed':
-        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />Failed</Badge>;
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>;
       case 'running':
-        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />Running</Badge>;
+        return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />{t('running')}</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
     }
@@ -315,7 +315,7 @@ export function DataImportTab() {
                   onClick={handleStartScraping} 
                   disabled={isLoading || !url.trim() || !permissions?.can_import_data}
                   className="min-w-[120px]"
-                  title={!permissions?.can_import_data ? "Currently in internal testing" : ""}
+                  title={!permissions?.can_import_data ? t('internalTesting') : ""}
                 >
                   {isLoading ? (
                     <>
@@ -431,7 +431,7 @@ export function DataImportTab() {
                         {t('inProgress')}
                       </Badge>
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
@@ -448,12 +448,12 @@ export function DataImportTab() {
                       ) : result.products_phase.scraping.status === 'failed' ? (
                         <span className="text-red-600">❌ {t('failed')}: {result.products_phase.scraping.error || t('unknownError')}</span>
                       ) : (
-                        <span>🔄 In progress...</span>
+                        <span>🔄 {t('inProgress')}...</span>
                       )
                     ) : isScrapingStarted ? (
-                      <span>🔄 Starting product scraping...</span>
+                      <span>🔄 {t('startingProductScraping')}</span>
                     ) : (
-                      <span>⏳ Waiting to start...</span>
+                      <span>⏳ {t('waitingToStart')}</span>
                     )}
                   </div>
                 </div>
@@ -462,29 +462,29 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center text-sm font-bold text-blue-600">2</div>
-                    <span className="font-medium">Product Import (JSON → amazon_products)</span>
+                    <span className="font-medium">{t('productImport')}</span>
                     {result?.products_phase?.importing ? (
                       getStepStatus(result.products_phase.importing.status)
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
                     {result?.products_phase?.importing ? (
                       result.products_phase.importing.status === 'success' ? (
                         <div className="flex items-center gap-4">
-                          <span>✅ {result.products_phase.importing.products_imported || 0} products imported</span>
+                          <span>✅ {result.products_phase.importing.products_imported || 0} {t('productsImported')}</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
-                            Batch ID: {result.batch_id}
+                            {t('batchId')}: {result.batch_id}
                           </span>
                         </div>
                       ) : result.products_phase.importing.status === 'failed' ? (
-                        <span className="text-red-600">❌ Failed: {result.products_phase.importing.error || 'Import failed'}</span>
+                        <span className="text-red-600">❌ {t('failed')}: {result.products_phase.importing.error || t('importFailed')}</span>
                       ) : (
-                        <span>🔄 In progress...</span>
+                        <span>🔄 {t('inProgress')}...</span>
                       )
                     ) : (
-                      <span>⏳ Waiting for product scraping to complete...</span>
+                      <span>⏳ {t('waitingProductScraping')}</span>
                     )}
                   </div>
                 </div>
@@ -493,11 +493,11 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">3</div>
-                    <span className="font-medium">Product Transformation (amazon_products → product_wide_table)</span>
+                    <span className="font-medium">{t('productTransformation')}</span>
                     {result?.transformation_phase ? (
                       getTransformationStatus(result.transformation_phase)
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
@@ -505,20 +505,20 @@ export function DataImportTab() {
                       result.transformation_phase.success ? (
                         <div className="space-y-1">
                           <div className="flex items-center gap-4">
-                            <span>✅ {result.transformation_phase.processed_count || 0} products transformed</span>
+                            <span>✅ {result.transformation_phase.processed_count || 0} {t('productsTransformed')}</span>
                             <span className="text-xs font-mono bg-purple-50 px-2 py-1 rounded">
                               {result.transformation_phase.duration_seconds ? `${result.transformation_phase.duration_seconds.toFixed(1)}s` : 'N/A'}
                             </span>
                           </div>
                           {(result.transformation_phase.error_count || 0) > 0 && (
                             <div className="text-amber-600">
-                              ⚠️ {result.transformation_phase.error_count || 0} errors occurred
+                              ⚠️ {result.transformation_phase.error_count || 0} {t('errorsOccurred')}
                             </div>
                           )}
                         </div>
                       ) : (
                         <div className="space-y-1">
-                          <span className="text-red-600">❌ Transformation failed</span>
+                          <span className="text-red-600">❌ {t('transformationFailed')}</span>
                           {result.transformation_phase.errors && result.transformation_phase.errors.length > 0 && (
                             <div className="text-xs bg-red-50 p-2 rounded mt-1">
                               {result.transformation_phase.errors[0]}
@@ -527,7 +527,7 @@ export function DataImportTab() {
                         </div>
                       )
                     ) : (
-                      <span>⏳ Waiting for product import to complete...</span>
+                      <span>⏳ {t('waitingProductImport')}</span>
                     )}
                   </div>
                 </div>
@@ -536,29 +536,29 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">4</div>
-                    <span className="font-medium">Review Scraping (API → JSON)</span>
+                    <span className="font-medium">{t('reviewScraping')}</span>
                     {result?.reviews_phase?.scraping ? (
                       getStepStatus(result.reviews_phase.scraping.status)
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
                     {result?.reviews_phase?.scraping ? (
                       result.reviews_phase.scraping.status === 'success' || result.reviews_phase.scraping.status === 'partial_success' ? (
                         <div className="flex items-center gap-4">
-                          <span>✅ Reviews scraped for {result.reviews_phase.scraping.products_processed || 0} products</span>
+                          <span>✅ {t('reviewsScrapedFor')} {result.reviews_phase.scraping.products_processed || 0} {t('products')}</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
-                            {result.reviews_phase.scraping.total_reviews_scraped || 0} reviews
+                            {result.reviews_phase.scraping.total_reviews_scraped || 0} {t('reviews')}
                           </span>
                         </div>
                       ) : result.reviews_phase.scraping.status === 'failed' ? (
-                        <span className="text-red-600">❌ Failed: {result.reviews_phase.scraping.error || 'Review scraping failed'}</span>
+                        <span className="text-red-600">❌ {t('failed')}: {result.reviews_phase.scraping.error || t('reviewScrapingFailed')}</span>
                       ) : (
-                        <span>🔄 In progress...</span>
+                        <span>🔄 {t('inProgress')}...</span>
                       )
                     ) : (
-                      <span>⏳ Waiting for data transformation to complete...</span>
+                      <span>⏳ {t('waitingDataTransformation')}</span>
                     )}
                   </div>
                 </div>
@@ -567,29 +567,29 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center text-sm font-bold text-green-600">5</div>
-                    <span className="font-medium">Review Import (JSON → amazon_reviews)</span>
+                    <span className="font-medium">{t('reviewImport')}</span>
                     {result?.reviews_phase?.importing ? (
                       getStepStatus(result.reviews_phase.importing.status)
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
                     {result?.reviews_phase?.importing ? (
                       result.reviews_phase.importing.status === 'success' ? (
                         <div className="flex items-center gap-4">
-                          <span>✅ {result.reviews_phase.importing.reviews_imported || 0} reviews imported</span>
+                          <span>✅ {result.reviews_phase.importing.reviews_imported || 0} {t('reviewsImported')}</span>
                           <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
-                            {result.reviews_phase.importing.files_processed || 0} files processed
+                            {result.reviews_phase.importing.files_processed || 0} {t('filesProcessed')}
                           </span>
                         </div>
                       ) : result.reviews_phase.importing.status === 'failed' ? (
-                        <span className="text-red-600">❌ Failed: {result.reviews_phase.importing.error || 'Review import failed'}</span>
+                        <span className="text-red-600">❌ {t('failed')}: {result.reviews_phase.importing.error || t('reviewImportFailed')}</span>
                       ) : (
-                        <span>🔄 In progress...</span>
+                        <span>🔄 {t('inProgress')}...</span>
                       )
                     ) : (
-                      <span>⏳ Waiting for review scraping to complete...</span>
+                      <span>⏳ {t('waitingReviewScraping')}</span>
                     )}
                   </div>
                 </div>
@@ -598,11 +598,11 @@ export function DataImportTab() {
                 <div className="border rounded-lg p-4 space-y-3">
                   <div className="flex items-center gap-2">
                     <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-sm font-bold text-orange-600">6</div>
-                    <span className="font-medium">Review Transformation (amazon_reviews → product_reviews)</span>
+                    <span className="font-medium">{t('reviewTransformation')}</span>
                     {result?.reviews_phase?.transformation ? (
                       getTransformationStatus(result.reviews_phase.transformation)
                     ) : (
-                      <Badge variant="outline">Pending</Badge>
+                      <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
@@ -610,20 +610,20 @@ export function DataImportTab() {
                       result.reviews_phase.transformation.success ? (
                         <div className="space-y-1">
                           <div className="flex items-center gap-4">
-                            <span>✅ {result.reviews_phase.transformation.processed_count || 0} reviews transformed</span>
+                            <span>✅ {result.reviews_phase.transformation.processed_count || 0} {t('reviewsTransformed')}</span>
                             <span className="text-xs font-mono bg-orange-50 px-2 py-1 rounded">
                               {result.reviews_phase.transformation.duration_seconds ? `${result.reviews_phase.transformation.duration_seconds.toFixed(1)}s` : 'N/A'}
                             </span>
                           </div>
                           {(result.reviews_phase.transformation.error_count || 0) > 0 && (
                             <div className="text-amber-600">
-                              ⚠️ {result.reviews_phase.transformation.error_count || 0} errors occurred
+                              ⚠️ {result.reviews_phase.transformation.error_count || 0} {t('errorsOccurred')}
                             </div>
                           )}
                         </div>
                       ) : (
                         <div className="space-y-1">
-                          <span className="text-red-600">❌ Review transformation failed</span>
+                          <span className="text-red-600">❌ {t('reviewTransformationFailed')}</span>
                           {result.reviews_phase.transformation.errors && result.reviews_phase.transformation.errors.length > 0 && (
                             <div className="text-xs bg-red-50 p-2 rounded mt-1">
                               {result.reviews_phase.transformation.errors[0]}
@@ -632,7 +632,7 @@ export function DataImportTab() {
                         </div>
                       )
                     ) : (
-                      <span>⏳ Waiting for review import to complete...</span>
+                      <span>⏳ {t('waitingReviewImport')}</span>
                     )}
                   </div>
                 </div>
@@ -642,14 +642,14 @@ export function DataImportTab() {
               {result?.overall_status && (
                 <div className="pt-4 border-t">
                   <div className="flex items-center justify-between">
-                    <Label className="text-base font-medium">Overall Status</Label>
+                    <Label className="text-base font-medium">{t('overallStatus')}</Label>
                     {getOverallStatusBadge(result.overall_status)}
                   </div>
                   {result.error && (
                     <Alert variant="destructive" className="mt-2">
                       <AlertCircle className="h-4 w-4" />
                       <AlertDescription>
-                        <div className="font-medium">Error occurred</div>
+                        <div className="font-medium">{t('errorOccurred')}</div>
                         <div className="text-sm mt-1">{result.error}</div>
                       </AlertDescription>
                     </Alert>
@@ -660,15 +660,15 @@ export function DataImportTab() {
               {/* 执行统计和数据质量报告 */}
               {(result?.execution_stats || result?.data_quality) && (
                 <div className="space-y-4 pt-4 border-t">
-                  <Label className="text-base font-medium">Execution Statistics & Data Quality</Label>
+                  <Label className="text-base font-medium">{t('executionStatsDataQuality')}</Label>
                   
                   {/* 执行时间统计 */}
                   {result?.execution_stats && (
                     <div className="space-y-3">
-                      <div className="font-medium text-sm">⏱️ Execution Times</div>
+                      <div className="font-medium text-sm">{t('executionTimes')}</div>
                       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm">
                         <div className="bg-blue-50 p-3 rounded-lg">
-                          <div className="font-medium text-blue-900">Total Duration</div>
+                          <div className="font-medium text-blue-900">{t('totalDuration')}</div>
                           <div className="text-lg font-bold text-blue-600">
                             {result.execution_stats.total_duration?.toFixed(1)}s
                           </div>
@@ -690,28 +690,28 @@ export function DataImportTab() {
                   {/* API调用统计 */}
                   {result?.execution_stats?.api_calls && (
                     <div className="space-y-3">
-                      <div className="font-medium text-sm">🔗 API Calls</div>
+                      <div className="font-medium text-sm">{t('apiCalls')}</div>
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
                         <div className="bg-purple-50 p-3 rounded-lg">
-                          <div className="font-medium text-purple-900">Total Calls</div>
+                          <div className="font-medium text-purple-900">{t('totalCalls')}</div>
                           <div className="text-lg font-bold text-purple-600">
                             {result.execution_stats.api_calls.total || 0}
                           </div>
                         </div>
                         <div className="bg-indigo-50 p-3 rounded-lg">
-                          <div className="font-medium text-indigo-900">Category API</div>
+                          <div className="font-medium text-indigo-900">{t('categoryApi')}</div>
                           <div className="text-sm font-bold text-indigo-600">
                             {result.execution_stats.api_calls.category_api || 0}
                           </div>
                         </div>
                         <div className="bg-cyan-50 p-3 rounded-lg">
-                          <div className="font-medium text-cyan-900">Product Details</div>
+                          <div className="font-medium text-cyan-900">{t('productDetails')}</div>
                           <div className="text-sm font-bold text-cyan-600">
                             {result.execution_stats.api_calls.product_details_api || 0}
                           </div>
                         </div>
                         <div className="bg-teal-50 p-3 rounded-lg">
-                          <div className="font-medium text-teal-900">Reviews API</div>
+                          <div className="font-medium text-teal-900">{t('reviewsApi')}</div>
                           <div className="text-sm font-bold text-teal-600">
                             {result.execution_stats.api_calls.reviews_api || 0}
                           </div>
@@ -723,20 +723,20 @@ export function DataImportTab() {
                   {/* 数据质量报告 */}
                   {result?.data_quality && (
                     <div className="space-y-3">
-                      <div className="font-medium text-sm">📊 Data Quality Report</div>
+                      <div className="font-medium text-sm">{t('dataQualityReport')}</div>
                       
                       {/* 总体评分 */}
                       <div className="bg-gradient-to-r from-emerald-50 to-green-50 p-4 rounded-lg">
                         <div className="flex items-center justify-between">
                           <div>
-                            <div className="font-medium text-emerald-900">Overall Quality Score</div>
+                            <div className="font-medium text-emerald-900">{t('overallQualityScore')}</div>
                             <div className="text-2xl font-bold text-emerald-600">
                               {result.data_quality.overall_quality_score}/100
                             </div>
                           </div>
                           <div className="text-right">
                             <div className="text-sm text-emerald-700">
-                              {result.data_quality.total_products} products analyzed
+                              {result.data_quality.total_products} {t('productsAnalyzed')}
                             </div>
                           </div>
                         </div>
@@ -745,7 +745,7 @@ export function DataImportTab() {
                       {/* 关键字段覆盖率 */}
                       {result.data_quality.field_coverage && (
                         <div className="space-y-2">
-                          <div className="text-sm font-medium">Key Field Coverage</div>
+                          <div className="text-sm font-medium">{t('keyFieldCoverage')}</div>
                           <div className="grid grid-cols-2 md:grid-cols-4 gap-2 text-xs">
                             {['platform_id', 'brand', 'recent_sales', 'unit_price', 'list_price_usd', 'is_bestseller'].map((field) => {
                               const coverage = result.data_quality?.field_coverage?.[field];
@@ -773,7 +773,7 @@ export function DataImportTab() {
                       {/* 改进建议 */}
                       {result.data_quality.quality_summary?.recommendations && (
                         <div className="bg-amber-50 p-3 rounded-lg">
-                          <div className="font-medium text-amber-900 mb-2">💡 Recommendations</div>
+                          <div className="font-medium text-amber-900 mb-2">{t('recommendations')}</div>
                           <ul className="text-sm text-amber-800 space-y-1">
                             {result.data_quality.quality_summary.recommendations.map((rec, index) => (
                               <li key={index} className="flex items-start gap-2">
@@ -792,22 +792,22 @@ export function DataImportTab() {
               {/* 兼容旧格式的结果显示 */}
               {result?.results && (
                 <div className="space-y-2 pt-4 border-t">
-                  <Label>Legacy Results Summary</Label>
+                  <Label>{t('legacyResultsSummary')}</Label>
                   <div className="grid grid-cols-3 gap-4 text-sm">
                     <div className="bg-blue-50 p-3 rounded-lg">
-                      <div className="font-medium text-blue-900">Products Scraped</div>
+                      <div className="font-medium text-blue-900">{t('productsScraped')}</div>
                       <div className="text-2xl font-bold text-blue-600">
                         {result.results.products_scraped}
                       </div>
                     </div>
                     <div className="bg-green-50 p-3 rounded-lg">
-                      <div className="font-medium text-green-900">Reviews Scraped</div>
+                      <div className="font-medium text-green-900">{t('reviewsScraped')}</div>
                       <div className="text-2xl font-bold text-green-600">
                         {result.results.reviews_scraped}
                       </div>
                     </div>
                     <div className="bg-purple-50 p-3 rounded-lg">
-                      <div className="font-medium text-purple-900">Data Location</div>
+                      <div className="font-medium text-purple-900">{t('dataLocation')}</div>
                       <div className="text-xs font-mono text-purple-600 break-all">
                         {result.results.data_saved_to}
                       </div>

@@ -118,6 +118,12 @@ class ScrapingOrchestrator:
                 result["execution_stats"]["api_calls"]["product_details_api"] = products_count
                 result["execution_stats"]["api_calls"]["total"] += (1 + products_count)
             
+            # 记录跳过的详细信息到日志
+            if product_scrape_result.get("status") == "skipped":
+                skip_details = product_scrape_result.get("skip_details", {})
+                logger.info(f"🔄 产品爬取已智能跳过 - {skip_details.get('data_source', '未知来源')}: "
+                           f"{skip_details.get('existing_products_count', 0)}/{skip_details.get('target_products', 0)} 产品")
+            
             # Only exit early if product scraping actually failed (not just skipped)
             # When products are skipped, we should still attempt review scraping for individual ASIN requests
             if product_scrape_result.get("status") not in ["success", "skipped"]:
@@ -130,24 +136,11 @@ class ScrapingOrchestrator:
             logger.info("Phase 2: 开始导入商品数据...")
             phase2_start = time.time()
             
-            # Check if we have any products to import
-            products_count = product_scrape_result.get("products_scraped", 0)
-            existing_batch_id = product_scrape_result.get("batch_id")
-            
-            if products_count == 0 and not force_import and not existing_batch_id:
-                logger.warning("Phase 1未获取到任何产品，且没有现有批次数据，跳过后续阶段")
-                result["products_phase"]["importing"] = {
-                    "status": "skipped",
-                    "message": "No products found in Phase 1, import skipped",
-                    "products_imported": 0
-                }
-                result["overall_status"] = "no_products_found"
-                result["execution_stats"]["end_time"] = datetime.now().isoformat()
-                result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
-                return result
-            
             json_file_path = product_scrape_result.get("file_path")
             should_import = force_import or product_scrape_result.get("status") == "success"
+            
+            # Handle force import scenario - get existing batch_id if available
+            existing_batch_id = product_scrape_result.get("batch_id")
             
             if not json_file_path and not force_import:
                 result["overall_status"] = "no_product_file"
@@ -175,10 +168,18 @@ class ScrapingOrchestrator:
                 }
                 result["products_phase"]["importing"] = product_import_result
             else:
-                logger.info("跳过商品导入 (没有文件或未强制导入)")
+                # 提供更详细的跳过信息
+                if product_scrape_result.get("status") == "skipped":
+                    skip_details = product_scrape_result.get("skip_details", {})
+                    logger.info(f"🔄 智能跳过商品导入 - 数据已存在: {skip_details.get('data_source', '')}中已有{skip_details.get('existing_products_count', 0)}个产品")
+                    import_message = f"Smart skip - data exists ({skip_details.get('data_source', 'unknown source')})"
+                else:
+                    logger.info("跳过商品导入 (没有文件或未强制导入)")
+                    import_message = "Import skipped - no file or force_import not set"
+                
                 product_import_result = {
                     "status": "skipped",
-                    "message": "Import skipped - no file or force_import not set",
+                    "message": import_message,
                     "batch_id": existing_batch_id,  # Preserve existing batch_id if available
                     "request_id": existing_batch_id
                 }
@@ -197,7 +198,32 @@ class ScrapingOrchestrator:
             
             if not should_continue_transformation and not should_continue_to_reviews:
                 if not force_transformation:
-                    result["overall_status"] = "product_importing_failed"
+                    # 检查是否是智能跳过的情况
+                    if (product_scrape_result.get("status") == "skipped" and 
+                        product_import_result.get("status") == "skipped"):
+                        logger.info("🔄 完整流程智能跳过 - 数据已存在，无需重复处理")
+                        
+                        # 构建详细的跳过状态信息
+                        skip_details = product_scrape_result.get("skip_details", {})
+                        skip_type = product_scrape_result.get("skip_type", "unknown")
+                        data_source = skip_details.get("data_source", "unknown")
+                        existing_count = skip_details.get("existing_products_count", 0)
+                        target_count = skip_details.get("target_products", 0)
+                        
+                        if skip_type == "local_file":
+                            result["overall_status"] = f"Smart Skip - Local File Exists ({existing_count}/{target_count} products)"
+                        elif skip_type == "database":
+                            batch_id = skip_details.get("batch_id", "N/A")
+                            result["overall_status"] = f"Smart Skip - Database Exists (batch {batch_id}: {existing_count}/{target_count} products)"
+                        else:
+                            result["overall_status"] = f"Smart Skip - Data Exists ({existing_count} products)"
+                            
+                        result["skip_reason"] = {
+                            "scraping": product_scrape_result.get("skip_details", {}),
+                            "importing": "Data exists in database"
+                        }
+                    else:
+                        result["overall_status"] = "product_importing_failed"
                     result["execution_stats"]["end_time"] = datetime.now().isoformat()
                     result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
                     return result
@@ -282,6 +308,13 @@ class ScrapingOrchestrator:
                         result["execution_stats"]["phase_durations"]["review_importing"] = round(phase4_duration, 2)
                         result["review_importing_result"] = review_import_result
                         
+                        # 🔥 修复：更新数据库状态 - 无论导入成功还是失败都要更新
+                        request_id = await self._get_request_id_by_batch_id(review_batch_id)
+                        if request_id:
+                            await self._update_review_status_in_db(request_id, review_scrape_result, review_import_result)
+                        else:
+                            logger.warning(f"⚠️ 无法找到批次 {review_batch_id} 对应的请求ID，跳过状态更新")
+                        
                         logger.info(f"✅ 评论导入完成: {review_import_result}")
                     else:
                         logger.warning(f"⚠️ 评论爬取状态不成功，跳过导入: {review_scrape_result.get('status')}")
@@ -289,6 +322,12 @@ class ScrapingOrchestrator:
                             "status": "skipped",
                             "reason": "review_scraping_failed"
                         }
+                        
+                        # 🔥 修复：爬取失败时也要更新状态
+                        request_id = await self._get_request_id_by_batch_id(review_batch_id)
+                        if request_id:
+                            failed_import_result = {"status": "skipped", "reason": "review_scraping_failed"}
+                            await self._update_review_status_in_db(request_id, review_scrape_result, failed_import_result)
                 else:
                     logger.warning("⚠️ 无法确定批次ID，跳过评论爬取")
                     result["review_scraping_result"] = {

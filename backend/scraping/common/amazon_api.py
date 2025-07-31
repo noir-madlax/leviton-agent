@@ -279,11 +279,7 @@ def get_product_details_rainforest(asin: str, amazon_domain: str = "amazon.com")
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        if "402" in str(e) or "Payment Required" in str(e):
-            print(f"RainForest API支付问题: {e}")
-            print("请检查RainForest API账户余额和支付设置")
-        else:
-            print(f"Error fetching product details: {e}")
+        print(f"Error fetching product details: {e}")
         return None
 
 def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: str = None, url: str = None, page: int = 1):
@@ -323,11 +319,7 @@ def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: s
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        if "402" in str(e) or "Payment Required" in str(e):
-            print(f"RainForest API支付问题: {e}")
-            print("请检查RainForest API账户余额和支付设置")
-        else:
-            print(f"Error fetching bestsellers: {e}")
+        print(f"Error fetching bestsellers: {e}")
         return None
 
 def amazon_search(search_term: str, category_id: str = None, amazon_domain: str = "amazon.com", 
@@ -439,9 +431,5 @@ def get_products_from_category_rainforest(category_id: str, amazon_domain: str =
         response.raise_for_status()
         return response.json()
     except requests.exceptions.RequestException as e:
-        if "402" in str(e) or "Payment Required" in str(e):
-            print(f"RainForest API支付问题: {e}")
-            print("请检查RainForest API账户余额和支付设置")
-        else:
-            print(f"Error fetching category products: {e}")
+        print(f"Error fetching category products: {e}")
         return None 

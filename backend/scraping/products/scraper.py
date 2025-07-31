@@ -71,13 +71,33 @@ class ProductScraper:
                 )
                 
                 if skip_action["should_skip"]:
-                    logger.info(f"⏩ 跳过商品爬取: {skip_action['reason']}")
+                    # 详细的跳过原因日志
+                    skip_type = skip_action.get("skip_type", "unknown")
+                    existing_count = skip_action.get("existing_products_count", 0)
+                    
+                    if skip_type == "local_file":
+                        logger.info(f"🔄 智能跳过商品爬取 - 本地文件已存在: 发现 {existing_count} 个产品 (≥{max_products} 目标), 文件: {skip_action.get('existing_file_path', 'N/A')}")
+                    elif skip_type == "database":
+                        batch_id = skip_action.get("batch_id", "N/A")
+                        logger.info(f"🔄 智能跳过商品爬取 - 数据库已有数据: 批次 {batch_id} 包含 {existing_count} 个产品 (≥{max_products} 目标), 时间: 24小时内")
+                    else:
+                        logger.info(f"🔄 智能跳过商品爬取: {skip_action['reason']}")
+                    
+                    logger.info(f"💡 节省API调用成本，如需强制重新爬取请使用 force_scrape=True")
                     
                     # Return skip result with additional info for potential force import/transformation
                     result = {
                         "status": "skipped",
                         "reason": skip_action["reason"],
-                        "products_scraped": skip_action.get("existing_products_count", 0),
+                        "skip_type": skip_type,
+                        "skip_details": {
+                            "existing_products_count": existing_count,
+                            "target_products": max_products,
+                            "data_source": "Local File" if skip_type == "local_file" else "Database",
+                            "file_path": skip_action.get("existing_file_path"),
+                            "batch_id": skip_action.get("batch_id")
+                        },
+                        "products_scraped": existing_count,
                         "file_path": skip_action.get("existing_file_path"),
                         "existing_file_path": skip_action.get("existing_file_path"),  # Explicit field for force import
                         "category_info": category_info,
@@ -598,6 +618,7 @@ class ProductScraper:
                                 logger.info(f"找到现有产品文件: {file_path.name}, {len(existing_products)} 个产品 ({unique_count} 个唯一)")
                                 return {
                                     "should_skip": True,
+                                    "skip_type": "local_file",
                                     "reason": f"sufficient_local_unique_products ({unique_count} unique >= {max_products})",
                                     "existing_products_count": unique_count,
                                     "existing_file_path": str(file_path),
@@ -639,6 +660,7 @@ class ProductScraper:
                 
                 return {
                     "should_skip": True,
+                    "skip_type": "database",
                     "reason": f"recent_db_batch ({recent_check.get('reason')})",
                     "existing_products_count": recent_check.get("product_count", 0),
                     "batch_id": recent_check.get("batch_id"),
