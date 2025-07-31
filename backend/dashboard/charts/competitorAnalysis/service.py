@@ -103,6 +103,12 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                         rating = float(rating.split(' out of')[0])
                     except (ValueError, IndexError):
                         rating = None
+                elif isinstance(rating, str):
+                    try:
+                        # Convert simple string rating to float if needed
+                        rating = float(rating)
+                    except (ValueError, TypeError):
+                        rating = None
                 
                 products.append({
                     'asin': asin,
@@ -163,14 +169,31 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             # Get category information first
             category_info = await self._get_category_info(category_id)
             
+            # Determine aspect_types based on category's aspect_type
+            if category_info and 'aspect_type' in category_info:
+                category_aspect_type = category_info['aspect_type']
+                # Map category aspect_type to request aspect_types
+                if category_aspect_type in ['phy', 'perf']:
+                    aspect_types = ['phy_perf']  # Both 'phy' and 'perf' categories use 'phy_perf' mapping
+                elif category_aspect_type == 'use':
+                    aspect_types = ['use']  # 'use' categories use 'use' mapping
+                else:
+                    logger.warning(f"Unknown aspect_type '{category_aspect_type}' for category {category_id}, defaulting to phy_perf")
+                    aspect_types = ['phy_perf']  # Default fallback
+            else:
+                logger.warning(f"Could not determine aspect_type for category {category_id}, defaulting to phy_perf")
+                aspect_types = ['phy_perf']  # Default fallback
+            
+            logger.info(f"Using aspect_types {aspect_types} for category {category_id} (category aspect_type: {category_info.get('aspect_type', 'unknown') if category_info else 'none'})")
+            
             data_service = ReviewDataService(get_supabase_client())
             result = await data_service.get_reviews_by_category(
                 project_id=self.project_id,
                 category_id=category_id,
-                asins=self.selected_asins,  # All products for clicked view
+                asins=[product_id],  # Only the specific product for clicked view
                 sort_by=sort_by,
                 sort_order=sort_order,
-                aspect_types=['phy_perf']  # Use mapped aspect type that includes both phy and perf
+                aspect_types=aspect_types  # Use dynamic aspect types based on category
             )
             
             # The centralized service now returns deduplicated reviews
@@ -286,7 +309,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
 
 
     async def _get_all_competitor_data(self, selected_asins: List[str]) -> Dict[str, Dict[str, Any]]:
-        """Get all competitor data from review_aspect_data_view in a single query.
+        """Get all competitor data with correct ratings from product_wide_table and review data from review_aspect_data_view.
         
         Args:
             selected_asins: List of ASINs to get data for
@@ -295,75 +318,83 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             Dict mapping ASIN to all product and review data
         """
         try:
-            # Get all data from review_aspect_data_view
-            result = self.supabase.table('review_aspect_data_view').select(
-                'product_id, brand, title, product_url, list_price_usd, price_usd, sentiment, category_name, review_id, rating'
-            ).eq('project_id', self.project_id).in_('product_id', selected_asins).execute()
+            # Get product information with correct average ratings from product_wide_table
+            product_result = self.supabase.table('product_wide_table').select(
+                'platform_id, brand, title, product_url, list_price_usd, price_usd, rating'
+            ).in_('platform_id', selected_asins).execute()
             
-            if not result.data:
-                logger.warning("No data found for selected ASINs")
+            if not product_result.data:
+                logger.warning("No product data found for selected ASINs")
                 return {}
             
-            # First, deduplicate by product_id to get unique product records
-            unique_products = {}
-            review_data = []
+            # Get review data from review_aspect_data_view for sentiment and category analysis
+            review_result = self.supabase.table('review_aspect_data_view').select(
+                'product_id, sentiment, category_name, review_id'
+            ).eq('project_id', self.project_id).in_('product_id', selected_asins).execute()
             
-            for item in result.data:
-                asin = item['product_id']
-                
-                # Store unique product information (first occurrence)
-                if asin not in unique_products:
-                    unique_products[asin] = {
-                        'brand': item['brand'],
-                        'title': item['title'],
-                        'product_url': item['product_url'],
-                        'list_price_usd': item['list_price_usd'],
-                        'price_usd': item['price_usd'],
-                        'rating': item['rating'],
-                        'unique_reviews_count': 0,
-                        'sentiment_distribution': {'positive': 0, 'negative': 0, 'neutral': 0},
-                        'category_counts': {},
-                        'review_ids': set()
-                    }
-                
-                # Collect review data for processing
-                review_data.append({
-                    'asin': asin,
-                    'sentiment': item['sentiment'],
-                    'category_name': item['category_name'],
-                    'review_id': item['review_id']
-                })
+            # Initialize product data with correct ratings
+            unique_products = {}
+            for item in product_result.data:
+                asin = item['platform_id']
+                rating_value = item['rating']
+                logger.info(f"DEBUG: ASIN {asin} rating from product_wide_table: {rating_value} (type: {type(rating_value)})")
+                unique_products[asin] = {
+                    'brand': item['brand'],
+                    'title': item['title'],
+                    'product_url': item['product_url'],
+                    'list_price_usd': item['list_price_usd'],
+                    'price_usd': item['price_usd'],
+                    'rating': rating_value,  # This is the correct average rating from product_wide_table
+                    'unique_reviews_count': 0,
+                    'sentiment_distribution': {'positive': 0, 'negative': 0, 'neutral': 0},
+                    'category_counts': {},
+                    'review_ids': set()
+                }
+            
+            # Process review data if available
+            review_data = []
+            if review_result.data:
+                for item in review_result.data:
+                    review_data.append({
+                        'asin': item['product_id'],
+                        'sentiment': item['sentiment'],
+                        'category_name': item['category_name'],
+                        'review_id': item['review_id']
+                    })
             
             # Process review data to calculate metrics
             for review_item in review_data:
                 asin = review_item['asin']
-                product_data = unique_products[asin]
-                
-                # Count unique reviews
-                product_data['review_ids'].add(review_item['review_id'])
-                
-                # Count sentiment
-                sentiment = review_item['sentiment']
-                if sentiment == '+':
-                    product_data['sentiment_distribution']['positive'] += 1
-                elif sentiment == '-':
-                    product_data['sentiment_distribution']['negative'] += 1
-                else:
-                    product_data['sentiment_distribution']['neutral'] += 1
-                
-                # Count categories
-                category = review_item['category_name']
-                if category:
-                    if category not in product_data['category_counts']:
-                        product_data['category_counts'][category] = 0
-                    product_data['category_counts'][category] += 1
+                # Only process if the ASIN exists in our product data
+                if asin in unique_products:
+                    product_data = unique_products[asin]
+                    
+                    # Count unique reviews
+                    if review_item['review_id']:
+                        product_data['review_ids'].add(review_item['review_id'])
+                    
+                    # Count sentiment
+                    sentiment = review_item['sentiment']
+                    if sentiment == '+':
+                        product_data['sentiment_distribution']['positive'] += 1
+                    elif sentiment == '-':
+                        product_data['sentiment_distribution']['negative'] += 1
+                    else:
+                        product_data['sentiment_distribution']['neutral'] += 1
+                    
+                    # Count categories
+                    category = review_item['category_name']
+                    if category:
+                        if category not in product_data['category_counts']:
+                            product_data['category_counts'][category] = 0
+                        product_data['category_counts'][category] += 1
             
             # Convert review_ids sets to counts
             for asin, data in unique_products.items():
                 data['unique_reviews_count'] = len(data['review_ids'])
                 del data['review_ids']  # Remove the set, keep only the count
             
-            logger.info(f"Retrieved all competitor data for {len(unique_products)} ASINs")
+            logger.info(f"Retrieved all competitor data for {len(unique_products)} ASINs with correct ratings from product_wide_table")
             return unique_products
             
         except Exception as e:
