@@ -13,6 +13,30 @@ This directory contains comprehensive tests for the Competitor Analysis module.
   - Direct HTTP API endpoint testing
 - **Run**: `python test_api.py`
 
+### `test_competitor_filters.py`
+- **Purpose**: Comprehensive testing of sentiment and rating filters for competitor analysis reviews
+- **Tests**:
+  - No filters (all reviews)
+  - Positive sentiment only
+  - Negative sentiment only
+  - High rating only (4-5 stars)
+  - Mid rating only (3 stars)
+  - Low rating only (1-2 stars)
+  - Combined filters (sentiment + rating)
+  - Direct API endpoint testing with filters
+- **Features**:
+  - Service method testing with all filter combinations
+  - API endpoint testing with HTTP requests
+  - Detailed result analysis and logging
+  - Sample review data inspection
+  - **Comprehensive assertions** for response structure, data types, and filter correctness
+  - **Baseline statistics analysis** to validate filter behavior
+  - **Pydantic model validation** testing for request/response models
+  - **Rating range validation** (ensures filtered reviews match expected rating ranges)
+  - **Sentiment validation** (ensures filtered reviews contain expected sentiment aspects)
+  - **Review structure validation** (ensures all required fields are present)
+- **Run**: `python test_competitor_filters.py`
+
 ## Running Tests
 
 ### From the tests directory:
@@ -66,6 +90,9 @@ python dashboard/charts/competitorAnalysis/tests/test_api.py
 - ✅ Pagination support
 - ✅ Multiple sorting options (date, rating, review_id)
 - ✅ Category information included
+- ✅ Sentiment filtering (positive, negative)
+- ✅ Rating filtering (high: 4-5 stars, mid: 3 stars, low: 1-2 stars)
+- ✅ Combined filter support (sentiment + rating)
 
 ## Key Features Tested
 

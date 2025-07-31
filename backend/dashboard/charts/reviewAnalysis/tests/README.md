@@ -25,6 +25,21 @@ This directory contains comprehensive tests for the Review Analysis module.
 - **Run**: `python test_review_analysis_http.py`
 - **Note**: Requires running FastAPI server on localhost:8000
 
+### `test_review_filters.py`
+- **Purpose**: Comprehensive testing of sentiment and rating filters
+- **Tests**: 
+  - Sentiment filtering (positive/negative)
+  - Rating filtering (high/mid/low)
+  - Combined filter combinations
+  - Model validation for filter parameters
+  - Statistical analysis of filtered results
+- **Run**: `python test_review_filters.py`
+- **Features**:
+  - Assertion-based validation of filter results
+  - Baseline statistics comparison
+  - Data structure validation
+  - Error handling for invalid filter values
+
 ## Running Tests
 
 ### From the tests directory:
@@ -50,6 +65,7 @@ python -m pytest dashboard/charts/reviewAnalysis/tests/
 
 # Run specific test file
 python dashboard/charts/reviewAnalysis/tests/test_models.py
+python dashboard/charts/reviewAnalysis/tests/test_review_filters.py
 ```
 
 ## Test Data
@@ -72,6 +88,9 @@ python dashboard/charts/reviewAnalysis/tests/test_models.py
 - ✅ Product information included
 - ✅ Pagination support
 - ✅ Multiple sorting options
+- ✅ Sentiment filtering (positive/negative)
+- ✅ Rating filtering (high/mid/low)
+- ✅ Combined filter combinations
 
 ## Troubleshooting
 

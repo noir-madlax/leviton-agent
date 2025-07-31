@@ -571,7 +571,9 @@ export class DatabaseService {
     limit: number = 100,
     offset: number = 0,
     sortBy: 'review_id' | 'date' | 'rating' | 'sentiment' = 'review_id',
-    sortOrder: 'asc' | 'desc' = 'desc'
+    sortOrder: 'asc' | 'desc' = 'desc',
+    sentimentFilter?: 'positive' | 'negative',
+    ratingFilter?: 'high' | 'mid' | 'low'
   ): Promise<{
     status: string
     message?: string
@@ -614,13 +616,14 @@ export class DatabaseService {
     try {
       const requestBody = {
         project_id: projectId,
-        selected_asins: [productId], // 包装成数组格式
         category_id: categoryId,
         product_id: productId,
         limit: limit,
         offset: offset,
         sort_by: sortBy,
-        sort_order: sortOrder
+        sort_order: sortOrder,
+        sentiment_filter: sentimentFilter || null,
+        rating_filter: ratingFilter || null
       }
 
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'

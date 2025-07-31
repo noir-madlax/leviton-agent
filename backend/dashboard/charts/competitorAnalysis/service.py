@@ -148,7 +148,9 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
         limit: int = 100,
         offset: int = 0,
         sort_by: str = "review_id",
-        sort_order: str = "desc"
+        sort_order: str = "desc",
+        sentiment_filter: Optional[str] = None,
+        rating_filter: Optional[str] = None
     ) -> Dict[str, Any]:
         """Get reviews for a specific category and product with deduplication and aspect aggregation.
         
@@ -159,6 +161,8 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             offset: Offset for pagination (default: 0)
             sort_by: Sort field (review_id, date, rating, sentiment)
             sort_order: Sort direction (asc, desc)
+            sentiment_filter: Filter by sentiment (positive, negative). If None, returns all sentiments.
+            rating_filter: Filter by rating (high: 4-5 stars, mid: 3 stars, low: 1-2 stars). If None, returns all ratings.
             
         Returns:
             Dict containing deduplicated reviews with aggregated aspects
@@ -193,7 +197,9 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                 asins=[product_id],  # Only the specific product for clicked view
                 sort_by=sort_by,
                 sort_order=sort_order,
-                aspect_types=aspect_types  # Use dynamic aspect types based on category
+                aspect_types=aspect_types,  # Use dynamic aspect types based on category
+                sentiment_filter=sentiment_filter,
+                rating_filter=rating_filter
             )
             
             # The centralized service now returns deduplicated reviews

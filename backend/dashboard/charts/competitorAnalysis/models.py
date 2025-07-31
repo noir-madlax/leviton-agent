@@ -33,6 +33,12 @@ class ReviewRetrievalRequest(BaseRequestModel):
     sort_order: Literal["asc", "desc"] = Field(
         default="desc", description="Sort direction"
     )
+    sentiment_filter: Optional[Literal["positive", "negative"]] = Field(
+        default=None, description="Filter by sentiment (positive, negative). If None, returns all sentiments."
+    )
+    rating_filter: Optional[Literal["high", "mid", "low"]] = Field(
+        default=None, description="Filter by rating (high: 4-5 stars, mid: 3 stars, low: 1-2 stars). If None, returns all ratings."
+    )
 
 
 # ==================== Response Models ====================
