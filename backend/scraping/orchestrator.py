@@ -130,11 +130,24 @@ class ScrapingOrchestrator:
             logger.info("Phase 2: 开始导入商品数据...")
             phase2_start = time.time()
             
+            # Check if we have any products to import
+            products_count = product_scrape_result.get("products_scraped", 0)
+            existing_batch_id = product_scrape_result.get("batch_id")
+            
+            if products_count == 0 and not force_import and not existing_batch_id:
+                logger.warning("Phase 1未获取到任何产品，且没有现有批次数据，跳过后续阶段")
+                result["products_phase"]["importing"] = {
+                    "status": "skipped",
+                    "message": "No products found in Phase 1, import skipped",
+                    "products_imported": 0
+                }
+                result["overall_status"] = "no_products_found"
+                result["execution_stats"]["end_time"] = datetime.now().isoformat()
+                result["execution_stats"]["total_duration"] = round(time.time() - start_time, 2)
+                return result
+            
             json_file_path = product_scrape_result.get("file_path")
             should_import = force_import or product_scrape_result.get("status") == "success"
-            
-            # Handle force import scenario - get existing batch_id if available
-            existing_batch_id = product_scrape_result.get("batch_id")
             
             if not json_file_path and not force_import:
                 result["overall_status"] = "no_product_file"
