@@ -21,9 +21,10 @@ from .filters.asin_filter_service import get_filtered_asins as filter_asins
 
 from .market_analysis.models import (
     TAMMarketShareRequest, TAMMarketShareResponse,
-    TopSegmentsByRevenueRequest, TopSegmentsByRevenueResponse
+    TopSegmentsByRevenueRequest, TopSegmentsByRevenueResponse,
+    PackageTypeDistributionRequest, PackageTypeDistributionResponse
 )
-from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService
+from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService, PackageTypeDistributionService
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -622,4 +623,90 @@ async def get_top_segments_by_revenue(request: TopSegmentsByRevenueRequest):
 
     except Exception as e:
         logger.error(f"System error in Top Segments analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/package-type-distribution", response_model=PackageTypeDistributionResponse)
+async def get_package_type_distribution(request: PackageTypeDistributionRequest):
+    """Get Package Type Distribution analysis.
+
+    This endpoint calculates package type distribution analysis with support for 
+    both revenue and product count metrics. All calculations are performed on 
+    the backend using filtered product data.
+
+    **Example Request:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "metric_type": "revenue"
+    }
+    ```
+
+    **Metric Types:**
+    - `"revenue"`: Analyze by revenue distribution
+    - `"products"`: Analyze by product count distribution
+
+    **Example Response:**
+    ```json
+    {
+        "data": {
+            "overall_distribution": [
+                {
+                    "package_type": "Single",
+                    "revenue": 5000000.0,
+                    "product_count": 1200,
+                    "percentage": 65.5,
+                    "rank": 1
+                }
+            ],
+            "distribution_by_category": [
+                {
+                    "category": "Dimmer Switches",
+                    "total_revenue": 3000000.0,
+                    "total_products": 800,
+                    "package_types": [...]
+                }
+            ],
+            "metric_type": "revenue"
+        },
+        "metadata": {
+            "filtered_asins_count": 2500,
+            "total_package_types": 4,
+            "calculation_timestamp": "2024-01-01T00:00:00Z"
+        }
+    }
+    ```
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = PackageTypeDistributionService(supabase_client)
+
+        # Get package type distribution data
+        response = service.get_package_type_distribution_data(request)
+
+        logger.info(f"Package Type Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.data.overall_distribution)} package types with "
+                   f"{response.data.total_products} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Package Type Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Package Type Distribution analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

@@ -19,7 +19,13 @@ from .models import (
     TopSegmentsByRevenueResponse,
     TopSegmentsByRevenueData,
     TopSegmentsByRevenueMetadata,
-    SegmentRevenueData
+    SegmentRevenueData,
+    PackageTypeDistributionRequest,
+    PackageTypeDistributionResponse,
+    PackageTypeDistributionData,
+    PackageTypeDistributionMetadata,
+    PackageTypeData,
+    CategoryPackageDistribution
 )
 
 logger = logging.getLogger(__name__)
@@ -593,6 +599,421 @@ class TopSegmentsByRevenueService:
                 total_segments=0,
                 returned_segments=0,
                 metric_type=metric_type,
+                calculation_timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        )
+
+
+class PackageTypeDistributionService:
+    """Service for Package Type Distribution analysis."""
+
+    def __init__(self, supabase_client):
+        """Initialize the service with Supabase client."""
+        self.supabase = supabase_client
+    
+    def get_package_type_distribution_data(
+        self, 
+        request: PackageTypeDistributionRequest
+    ) -> PackageTypeDistributionResponse:
+        """Get Package Type Distribution data with filtering.
+        
+        Args:
+            request: Package Type Distribution request with project_id, filters, and parameters
+            
+        Returns:
+            PackageTypeDistributionResponse: Complete Package Type Distribution analysis
+        """
+        try:
+            logger.info(f"📦 Starting Package Type Distribution analysis for project {request.project_id}")
+            
+            # Step 1: Use public get_filtered_asins method
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            
+            if not filtered_asins:
+                logger.warning(f"No ASINs found after filtering for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
+            
+            # Step 2: Get package type data from project_extend_data
+            package_type_assignments = self._get_package_type_assignments(
+                request.project_id, 
+                filtered_asins, 
+                request.filters
+            )
+            
+            if not package_type_assignments:
+                logger.warning(f"No package type data found for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            # Step 3: Get product data from wide table with timeframe support
+            product_data = self._get_product_data_from_wide_table(
+                list(package_type_assignments.keys()), 
+                request.timeframe
+            )
+            
+            if not product_data:
+                logger.warning(f"No product data found for filtered ASINs")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            # Step 4: Calculate package type distributions
+            distribution_data = self._calculate_package_distributions(
+                product_data, 
+                package_type_assignments, 
+                request.metric_type
+            )
+            
+            # Step 5: Generate metadata
+            metadata = self._generate_metadata(
+                filtered_asins_count=len(filtered_asins),
+                distribution_data=distribution_data,
+                metric_type=request.metric_type,
+                timeframe=request.timeframe
+            )
+            
+            logger.info(f"✅ Package Type Distribution analysis completed successfully")
+            
+            return PackageTypeDistributionResponse(
+                data=distribution_data,
+                metadata=metadata
+            )
+            
+        except Exception as e:
+            logger.error(f"❌ Error in Package Type Distribution analysis: {e}", exc_info=True)
+            return self._get_empty_response(request.metric_type, request.timeframe)
+
+    def _get_package_type_assignments(
+        self, 
+        project_id: str, 
+        asins: List[str], 
+        filters
+    ) -> Dict[str, str]:
+        """Get package type assignments mapping.
+        
+        Args:
+            project_id: Project ID
+            asins: List of ASINs to get package type assignments for
+            filters: Additional filters
+            
+        Returns:
+            Dict mapping platform_id to package_type
+        """
+        try:
+            if not asins:
+                return {}
+                
+            # 从project_extend_data表获取package_type数据
+            extend_data_query = self.supabase.table('project_extend_data')\
+                .select('asins, extend')\
+                .eq('project_id', project_id)\
+                .in_('asins', asins)
+            
+            # 应用extend fields过滤（如果有的话）
+            if filters and filters.extend_fields:
+                for field_name, field_value in filters.extend_fields.items():
+                    if field_value is not None:
+                        # 处理布尔值转换
+                        if isinstance(field_value, bool):
+                            field_value = str(field_value).lower()
+                        elif field_value == 'true':
+                            field_value = 'true'
+                        elif field_value == 'false':
+                            field_value = 'false'
+                        
+                        extend_data_query = extend_data_query.eq(f'extend->>{field_name}', field_value)
+                        logger.info(f"Applied extend field filter: {field_name} = {field_value}")
+            
+            extend_result = extend_data_query.execute()
+            
+            if not extend_result.data:
+                logger.warning(f"No extend data found for project {project_id}")
+                return {}
+            
+            # 提取package_type映射
+            package_assignments = {}
+            for row in extend_result.data:
+                asin = row.get('asins')
+                extend = row.get('extend', {})
+                package_type = extend.get('package_type')
+                
+                if package_type and asin:
+                    # 将Multiple-X格式统一为Multiple
+                    if package_type.startswith('Multiple-'):
+                        package_type = 'Multiple'
+                    
+                    package_assignments[asin] = package_type
+            
+            logger.info(f"📋 Successfully mapped {len(package_assignments)} products to package types")
+            return package_assignments
+                
+        except Exception as e:
+            logger.error(f"Error getting package type assignments: {e}")
+            return {}
+
+    def _get_product_data_from_wide_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """Get product data from product_wide_table.
+        
+        Args:
+            asins: List of ASINs to query
+            timeframe: Optional TimeframeModel to determine which fields to query
+            
+        Returns:
+            List of product data dictionaries
+        """
+        try:
+            # 使用工具类获取字段名
+            revenue_field, volume_field = TimeframeFieldMapper.get_fields(timeframe)
+            
+            # Build select fields
+            select_fields = f'platform_id, brand, category, {revenue_field}, {volume_field}'
+            
+            logger.info(f"📊 Querying fields: {select_fields}")
+            
+            # Query product_wide_table for required fields
+            query = self.supabase.table('product_wide_table').select(select_fields).in_('platform_id', asins)
+            
+            result = query.execute()
+            
+            if not result.data:
+                logger.warning("No data found in product_wide_table")
+                return []
+            
+            # Filter out products with missing essential data and normalize field names
+            valid_products = []
+            for product in result.data:
+                if (product.get('brand') and 
+                    product.get('category') and 
+                    product.get(revenue_field) is not None):
+                    
+                    # Normalize field names for consistent processing
+                    normalized_product = {
+                        'platform_id': product.get('platform_id'),
+                        'brand': product.get('brand'),
+                        'category': product.get('category'),
+                        'revenue': float(product.get(revenue_field, 0) or 0),
+                        'volume': int(product.get(volume_field, 0) or 0)
+                    }
+                    valid_products.append(normalized_product)
+            
+            logger.info(f"📈 Retrieved {len(valid_products)} valid products from wide table using {revenue_field}")
+            return valid_products
+            
+        except Exception as e:
+            logger.error(f"Error querying product_wide_table: {e}")
+            return []
+
+    def _calculate_package_distributions(
+        self,
+        product_data: List[Dict],
+        package_assignments: Dict[str, str],
+        metric_type: str
+    ) -> PackageTypeDistributionData:
+        """Calculate package type distributions.
+        
+        Args:
+            product_data: List of product data from wide table
+            package_assignments: Dict mapping platform_id to package_type
+            metric_type: Metric type for calculations ('revenue' or 'products')
+            
+        Returns:
+            PackageTypeDistributionData
+        """
+        from collections import defaultdict
+        
+        # Aggregate data by package type and category
+        package_category_data = defaultdict(lambda: defaultdict(lambda: {
+            'revenue': 0.0,
+            'volume': 0,
+            'product_count': 0
+        }))
+        
+        # Overall aggregation
+        overall_package_data = defaultdict(lambda: {
+            'revenue': 0.0,
+            'volume': 0,
+            'product_count': 0
+        })
+        
+        total_revenue = 0.0
+        total_volume = 0
+        total_products = 0
+        
+        for product in product_data:
+            platform_id = product['platform_id']
+            package_type = package_assignments.get(platform_id)
+            
+            if not package_type:
+                continue  # Skip products without package type assignment
+            
+            category = product.get('category', 'Unknown')
+            revenue = float(product.get('revenue', 0) or 0)
+            volume = int(product.get('volume', 0) or 0)
+            
+            # Aggregate by package type and category
+            package_category_data[category][package_type]['revenue'] += revenue
+            package_category_data[category][package_type]['volume'] += volume
+            package_category_data[category][package_type]['product_count'] += 1
+            
+            # Aggregate overall
+            overall_package_data[package_type]['revenue'] += revenue
+            overall_package_data[package_type]['volume'] += volume
+            overall_package_data[package_type]['product_count'] += 1
+            
+            # Total aggregation
+            total_revenue += revenue
+            total_volume += volume
+            total_products += 1
+        
+        # Calculate overall distribution
+        overall_distribution = self._format_package_type_data(
+            overall_package_data, metric_type
+        )
+        
+        # Calculate distribution by category
+        distribution_by_category = []
+        for category, package_types in package_category_data.items():
+            category_total_revenue = sum(data['revenue'] for data in package_types.values())
+            category_total_volume = sum(data['volume'] for data in package_types.values())
+            category_total_products = sum(data['product_count'] for data in package_types.values())
+            
+            package_types_formatted = self._format_package_type_data(
+                package_types, metric_type
+            )
+            
+            distribution_by_category.append(CategoryPackageDistribution(
+                category=category,
+                total_revenue=category_total_revenue,
+                total_volume=category_total_volume,
+                total_products=category_total_products,
+                package_types=package_types_formatted
+            ))
+        
+        # Sort categories by total revenue (descending)
+        distribution_by_category.sort(key=lambda x: x.total_revenue, reverse=True)
+        
+        return PackageTypeDistributionData(
+            overall_distribution=overall_distribution,
+            distribution_by_category=distribution_by_category,
+            total_market_revenue=total_revenue,
+            total_market_volume=total_volume,
+            total_products=total_products,
+            metric_type=metric_type,
+            currency="USD"
+        )
+
+    def _format_package_type_data(
+        self, 
+        package_data: Dict[str, Dict], 
+        metric_type: str
+    ) -> List[PackageTypeData]:
+        """Format package type data with percentages and ranking.
+        
+        Args:
+            package_data: Dict of package type data
+            metric_type: Metric type for calculations
+            
+        Returns:
+            List of formatted PackageTypeData
+        """
+        if not package_data:
+            return []
+        
+        # Calculate total for percentage calculation
+        if metric_type == "products":
+            total_metric_value = sum(data['product_count'] for data in package_data.values())
+        else:  # revenue
+            total_metric_value = sum(data['revenue'] for data in package_data.values())
+        
+        # Create formatted data
+        formatted_data = []
+        for package_type, data in package_data.items():
+            if metric_type == "products":
+                percentage = (data['product_count'] / total_metric_value * 100) if total_metric_value > 0 else 0
+            else:  # revenue
+                percentage = (data['revenue'] / total_metric_value * 100) if total_metric_value > 0 else 0
+            
+            formatted_data.append({
+                'package_type': package_type,
+                'revenue': data['revenue'],
+                'volume': data['volume'],
+                'product_count': data['product_count'],
+                'percentage': round(percentage, 2),
+                'sort_value': data['product_count'] if metric_type == "products" else data['revenue']
+            })
+        
+        # Sort by metric type and assign ranks
+        formatted_data.sort(key=lambda x: x['sort_value'], reverse=True)
+        
+        result = []
+        for rank, item in enumerate(formatted_data, 1):
+            result.append(PackageTypeData(
+                package_type=item['package_type'],
+                revenue=item['revenue'],
+                volume=item['volume'],
+                product_count=item['product_count'],
+                percentage=item['percentage'],
+                rank=rank
+            ))
+        
+        return result
+
+    def _generate_metadata(
+        self, 
+        filtered_asins_count: int, 
+        distribution_data: PackageTypeDistributionData,
+        metric_type: str,
+        timeframe
+    ) -> PackageTypeDistributionMetadata:
+        """Generate metadata for the analysis.
+        
+        Args:
+            filtered_asins_count: Number of ASINs after filtering
+            distribution_data: Package distribution data
+            metric_type: Metric type used
+            timeframe: Timeframe used
+            
+        Returns:
+            PackageTypeDistributionMetadata
+        """
+        timeframe_used = "year"  # default
+        if timeframe and timeframe.period:
+            timeframe_used = timeframe.period
+        
+        return PackageTypeDistributionMetadata(
+            filtered_asins_count=filtered_asins_count,
+            total_categories=len(distribution_data.distribution_by_category),
+            total_package_types=len(distribution_data.overall_distribution),
+            metric_type=metric_type,
+            timeframe_used=timeframe_used,
+            calculation_timestamp=datetime.now(timezone.utc).isoformat()
+        )
+    
+    def _get_empty_response(
+        self, 
+        metric_type: str, 
+        timeframe=None
+    ) -> PackageTypeDistributionResponse:
+        """Return empty response when no data is available."""
+        timeframe_used = "year"  # default
+        if timeframe and timeframe.period:
+            timeframe_used = timeframe.period
+            
+        return PackageTypeDistributionResponse(
+            data=PackageTypeDistributionData(
+                overall_distribution=[],
+                distribution_by_category=[],
+                total_market_revenue=0.0,
+                total_market_volume=0,
+                total_products=0,
+                metric_type=metric_type,
+                currency="USD"
+            ),
+            metadata=PackageTypeDistributionMetadata(
+                filtered_asins_count=0,
+                total_categories=0,
+                total_package_types=0,
+                metric_type=metric_type,
+                timeframe_used=timeframe_used,
                 calculation_timestamp=datetime.now(timezone.utc).isoformat()
             )
         )
