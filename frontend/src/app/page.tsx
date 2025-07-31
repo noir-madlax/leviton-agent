@@ -12,6 +12,7 @@ import { Sidebar } from "@/components/layout/sidebar"
 import { useAuth } from "@/contexts/auth-context"
 import { usePermissions } from "@/hooks/use-permissions"
 import { useProjectT, useCommonT } from "@/i18n/hooks"
+import { chatConfigService } from "@/lib/services/chat-config-service"
 
 // Updated Project interface with overall_status
 interface Project {
@@ -83,6 +84,20 @@ export default function HomePage() {
         
         setProjects(sortedProjects)
         setError(null)
+
+        // 预载所有项目的 chart configs，提升后续访问速度
+        if (sortedProjects.length > 0) {
+          console.log('🚀 [HOMEPAGE] Preloading chart configs for', sortedProjects.length, 'projects...')
+          const projectIds = sortedProjects.map(p => p.id)
+          // 异步预载，不阻塞页面渲染
+          chatConfigService.preloadConfigurations(projectIds)
+            .then(stats => {
+              console.log('✅ [HOMEPAGE] Chart config preload completed:', stats)
+            })
+            .catch(error => {
+              console.warn('📋 [HOMEPAGE] Chart config preload failed:', error)
+            })
+        }
       } catch (err) {
         console.error('Failed to load projects:', err)
         setError(`Failed to load projects: ${err instanceof Error ? err.message : 'Unknown error'}`)

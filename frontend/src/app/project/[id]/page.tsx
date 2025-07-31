@@ -10,6 +10,7 @@ import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-l
 import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
 import { preloadUnifiedFilterData } from "@/components/analysis-db/hooks/use-unified-filter-data"
 import { useCommonT, useProjectT } from "@/i18n/hooks"
+import { chatConfigService } from "@/lib/services/chat-config-service"
 
 // 使用现有的Project接口
 interface Project {
@@ -90,6 +91,8 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   // 添加预加载的项目概览数据
   const [projectOverviewData, setProjectOverviewData] = useState<ProjectOverviewData | null>(null)
   const [overviewLoading, setOverviewLoading] = useState(false)
+  // 添加配置就绪状态
+  const [configReady, setConfigReady] = useState(false)
 
   // 确保组件已挂载
   useEffect(() => {
@@ -137,6 +140,12 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
         setProject(projectData)
         console.log(`🎉 [ProjectPage] Project loaded successfully with pre-applied filters`)
 
+        // 检查 chart config 是否已预载，如果没有则等待
+        console.log(`🔍 [ProjectPage] Checking chart config readiness...`)
+        await ensureConfigReady(projectId)
+        setConfigReady(true)
+        console.log(`✅ [ProjectPage] Chart config ready`)
+
       } catch (error) {
         console.error('❌ [ProjectPage] Failed to load project:', error)
       } finally {
@@ -146,6 +155,18 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
     loadProject()
   }, [projectId, mounted])
+
+  // 确保配置就绪的函数
+  const ensureConfigReady = async (projectId: string): Promise<void> => {
+    try {
+      // 尝试获取配置，如果缓存中有则立即返回，否则会触发加载
+      await chatConfigService.getChatConfig(projectId)
+      console.log(`📋 [ProjectPage] Chart config ensured for project: ${projectId}`)
+    } catch (error) {
+      console.warn(`⚠️ [ProjectPage] Failed to ensure config ready:`, error)
+      // 即使配置加载失败，也继续渲染（使用 fallback 配置）
+    }
+  }
 
   // 预加载项目概览数据
   const loadProjectOverview = async (filters?: ProjectFilters) => {
@@ -211,12 +232,14 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
     )
   }
 
-  if (loading) {
+  if (loading || !configReady) {
     return (
       <div className="min-h-screen bg-gray-50/50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading project...</p>
+          <p className="text-gray-600">
+            {loading ? 'Loading project...' : 'Preparing dashboard...'}
+          </p>
         </div>
       </div>
     )

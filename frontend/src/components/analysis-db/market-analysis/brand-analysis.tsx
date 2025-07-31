@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
@@ -231,6 +232,9 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const { openPanel, loading } = useProductPanel()
+  
+  // Get chart sections configuration for conditional rendering
+  const { shouldShowChart } = useChartSections('brand-analysis', projectId || '')
 
   // 获取category信息
   const categoryNames = data.categoryNames || []
@@ -411,6 +415,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
 
       {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
+      {shouldShowChart('market-share-analysis') && (
       <div className="mt-5">
  
         {/* 第一层：ChartWithFilters包装整个Market Share section */}
@@ -502,7 +507,9 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
 
      
       </div>
+      )}
 
+      {shouldShowChart('brand-analysis') && (
       <div className="mt-0">
       <div data-chart-id="brand-analysis">
       <ChartWithFilters
@@ -541,6 +548,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </ChartWithFilters>
       </div>
       </div>
+      )}
 
       {/* Sales Trend Charts - By Category */}
       <div className="mt-15">
@@ -587,6 +595,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       </div>
 
       {/* Market Insights - New Addition */}
+      {shouldShowChart('market-insights') && (
       <div className="mt-15" data-chart-id="market-insights">
         {marketInsights ? (
           <MarketInsights 
@@ -603,8 +612,10 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           </div>
         )}
       </div>
+      )}
 
       {/* Package Preference Analysis - New Addition */}
+      {shouldShowChart('package-preference') && (
       <div className="mt-15" data-chart-id="package-preference">
         {packagePreference ? (
           <PackagePreferenceAnalysis 
@@ -624,6 +635,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
           </div>
         )}
       </div>
+      )}
 
     </section>
   )

@@ -11,6 +11,7 @@ import { BarChart3, Target } from "lucide-react"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
+import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 
 // 定义散点图数据类型
 interface ScatterPlotProduct {
@@ -127,6 +128,9 @@ interface PricingAnalysisProps {
 
 export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnalysisProps) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
+  
+  // Get chart sections configuration for conditional rendering
+  const { shouldShowChart } = useChartSections('pricing-analysis', projectId || '')
 
   // 获取所有分类数据
   const allCategories = useMemo(() => 
@@ -263,6 +267,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       <div className="mt-6"></div>
 
       {/* Price Distribution by Segment - 移至最上方 */}
+      {shouldShowChart('price-distribution-overview') && (
       <div className="mb-8" data-chart-id="price-distribution-overview">
       <ChartHeader title=" Price Distribution by Segment" icon={BarChart3} />
       
@@ -321,8 +326,10 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           </div>
         </Card>
       </div>
+      )}
 
       {/* Price vs Revenue Distribution of Top Selling 20 Products */}
+      {shouldShowChart('price-vs-revenue') && (
       <div className="mb-8" data-chart-id="price-vs-revenue">
         <ChartWithFilters
           chartId="price-vs-revenue"
@@ -393,8 +400,10 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           </Card>
         </ChartWithFilters>
       </div>
+      )}
 
       {/* All Segments Price Distribution Comparison */}
+      {shouldShowChart('price-distribution-by-type') && (
       <div className="mb-8" data-chart-id="price-distribution-by-type">
         <ChartWithFilters
           chartId="price-distribution-by-type"
@@ -421,8 +430,10 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           </Card>
         </ChartWithFilters>
       </div>
+      )}
 
       {/* Brand Price Distribution */}
+      {shouldShowChart('price-distribution-by-brands') && (
       <div className="mb-8" data-chart-id="price-distribution-by-brands">
         <ChartWithFilters
           chartId="price-distribution-by-brands"
@@ -480,6 +491,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           </Card>
         </ChartWithFilters>
       </div>
+      )}
     </section>
   )
 }
