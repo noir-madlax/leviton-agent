@@ -22,8 +22,8 @@ from .models import (
     CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
     CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData
 )
-from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
-from .charts.sales_trend.services import SalesTrendService
+from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse, BrandSalesTrendRequest, BrandSalesTrendResponse
+from .charts.sales_trend.services import SalesTrendService, BrandSalesTrendService
 from .decorators import with_dashboard_service, log_request_response
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
@@ -358,6 +358,99 @@ async def get_sales_trend(request: SalesTrendRequest):
         raise HTTPException(
             status_code=500,
             detail=f"Internal server error during sales trend analysis: {str(e)}"
+        )
+
+
+@router.post("/market-analysis/brand-sales-trend", response_model=BrandSalesTrendResponse)
+async def get_brand_sales_trend(request: BrandSalesTrendRequest):
+    """获取品牌销售趋势数据 - 新版本支持timeframe
+    
+    新版本的品牌销售趋势分析，使用timeframe替代date_range，
+    提供Top N品牌的月度销售趋势数据，支持revenue和volume双指标展示。
+    
+    **Timeframe Options:**
+    - `"month"`: 使用过去1个月的数据进行分析
+    - `"6months"`: 使用过去6个月的数据进行分析  
+    - `"year"`: 使用过去1年的数据进行分析（默认）
+    
+    **请求格式：**
+    ```json
+    {
+        "project_id": "项目ID",
+        "filters": {
+            "categories": ["Light Switches","Dimmer Switches"],
+            "brands": [],
+            "segments": [],
+            "extend_fields": {"smart_capability": "Smart"}
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "limit": 10,
+        "metric_type": "revenue",
+        "aggregation": "monthly"
+    }
+    ```
+    
+    **返回格式：**
+    ```json
+    {
+        "trend_data": [
+            {
+                "month": "2024-01",
+                "Leviton": {"revenue": 850000, "volume": 12000},
+                "Lutron": {"revenue": 720000, "volume": 9000}
+            }
+        ],
+        "brands": ["Leviton", "Lutron", "GE"],
+        "summary": {
+            "total_brands": 3,
+            "date_range": {"start": "2024-01", "end": "2024-06"},
+            "total_revenue": 15230000,
+            "total_volume": 89400,
+            "timeframe_period": "year"
+        },
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "calculation_timestamp": "2024-01-15T10:30:00Z",
+            "timeframe_used": "year",
+            "data_source": "product_sales_history_monthly"
+        }
+    }
+    ```
+    """
+    try:
+        from core.database.connection import get_supabase_client
+        
+        logger.info(f"Brand Sales Trend analysis request for project {request.project_id}")
+        
+        # 获取Supabase客户端
+        supabase_client = get_supabase_client()
+        
+        # 创建服务实例
+        service = BrandSalesTrendService(supabase_client)
+        
+        # 获取分析数据
+        response = service.get_brand_sales_trend_data(request)
+        
+        logger.info(
+            f"Brand Sales Trend analysis completed for project {request.project_id}: "
+            f"{response.overall_summary.total_categories} categories, "
+            f"{len(response.overall_summary.all_brands)} unique brands, "
+            f"timeframe: {request.timeframe.period if request.timeframe else 'default'}"
+        )
+        
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Validation error in Brand Sales Trend analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+        
+    except Exception as e:
+        logger.error(f"System error in Brand Sales Trend analysis: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Internal server error during Brand Sales Trend analysis: {str(e)}"
         )
 
 

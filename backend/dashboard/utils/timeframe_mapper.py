@@ -1,6 +1,7 @@
 """Timeframe field mapping utilities for dashboard."""
 
 from typing import Optional, Tuple
+from datetime import datetime, timedelta
 from dashboard.charts.base_models import TimeframeModel
 
 
@@ -41,3 +42,48 @@ class TimeframeFieldMapper:
             
         mapping = cls.FIELD_MAPPING.get(period, cls.FIELD_MAPPING[cls.DEFAULT_PERIOD])
         return mapping["revenue"], mapping["volume"]
+    
+    @classmethod
+    def get_date_range(cls, timeframe: Optional[TimeframeModel]) -> Tuple[str, str]:
+        """根据timeframe计算实际的开始和结束日期
+        
+        Args:
+            timeframe: 时间维度模型
+            
+        Returns:
+            Tuple[str, str]: (start_date, end_date) in YYYY-MM-DD format
+        """
+        end_date = datetime.now().date()
+        
+        period = cls.DEFAULT_PERIOD
+        if timeframe and timeframe.period:
+            period = timeframe.period
+        
+        if period == "month":
+            start_date = end_date - timedelta(days=30)
+        elif period == "6months":
+            start_date = end_date - timedelta(days=180)
+        elif period == "year":
+            start_date = end_date - timedelta(days=365)
+        else:
+            start_date = end_date - timedelta(days=365)  # 默认1年
+        
+        return start_date.isoformat(), end_date.isoformat()
+    
+    @classmethod
+    def get_month_range(cls, timeframe: Optional[TimeframeModel]) -> Tuple[str, str]:
+        """根据timeframe计算月份范围（用于月度销售数据查询）
+        
+        Args:
+            timeframe: 时间维度模型
+            
+        Returns:
+            Tuple[str, str]: (start_month, end_month) in YYYY-MM-01 format
+        """
+        start_date, end_date = cls.get_date_range(timeframe)
+        
+        # 转换为月份第一天格式
+        start_datetime = datetime.strptime(start_date, '%Y-%m-%d').replace(day=1)
+        end_datetime = datetime.strptime(end_date, '%Y-%m-%d').replace(day=1)
+        
+        return start_datetime.date().isoformat(), end_datetime.date().isoformat()
