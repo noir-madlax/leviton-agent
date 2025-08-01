@@ -9,6 +9,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Filter, RotateCcw, X, Database, Users, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
+import { CategoryFilter } from '../filters'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
@@ -16,12 +17,12 @@ import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 // 新增：过滤器配置接口
 interface FilterConfig {
   visible_filters: Record<string, boolean>
-  default_values: Record<string, any>
+  default_values: Record<string, string[] | Record<string, string>>
   extend_fields: Array<{
     field_name: string
     display_name: string
     field_type: string
-    filter_options: Record<string, any>
+    filter_options: Record<string, string[] | string | boolean>
   }>
 }
 
@@ -162,7 +163,7 @@ export function UniversalFilterComponent({
     setPendingFilters(prev => {
       const newExtendFields = { ...prev.extend_fields }
       const currentArray = Array.isArray(newExtendFields[fieldName]) ? newExtendFields[fieldName] : []
-      const updatedArray = currentArray.filter((i: any) => i !== item)
+      const updatedArray = currentArray.filter((i: string) => i !== item)
       
       if (updatedArray.length === 0) {
         delete newExtendFields[fieldName]
@@ -240,48 +241,23 @@ export function UniversalFilterComponent({
         className="text-xs flex items-center gap-1 mr-2 mb-2"
       >
         🔧 {displayName}: {displayValue}
-       
+        <X 
+          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto ml-1" 
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            onRemove()
+          }}
+        />
       </Badge>
     )
   }
 
-  const handleCategorySelect = (category: string) => {
-    if (category === 'all') {
-      setPendingFilters(prev => ({ ...prev, categories: [] }))
-    } else if (!pendingFilters.categories.includes(category)) {
-      setPendingFilters(prev => ({ 
-        ...prev, 
-        categories: [...prev.categories, category] 
-      }))
-    }
-  }
 
-  const handleBrandSelect = (brand: string) => {
-    if (brand === 'all') {
-      setPendingFilters(prev => ({ ...prev, brands: [] }))
-    } else if (!pendingFilters.brands.includes(brand)) {
-      setPendingFilters(prev => ({ 
-        ...prev, 
-        brands: [...prev.brands, brand] 
-      }))
-    }
-  }
 
-  const handleCategoryToggle = (category: string, checked: boolean) => {
-    if (checked) {
-      if (!pendingFilters.categories.includes(category)) {
-        setPendingFilters(prev => ({ 
-          ...prev, 
-          categories: [...prev.categories, category] 
-        }))
-      }
-    } else {
-      setPendingFilters(prev => ({
-        ...prev,
-        categories: prev.categories.filter(c => c !== category)
-      }))
-    }
-  }
+
+
+  // Category filter logic moved to CategoryFilter component
 
   const handleBrandToggle = (brand: string, checked: boolean) => {
     if (checked) {
@@ -311,12 +287,7 @@ export function UniversalFilterComponent({
     setSelectKeys(prev => ({ ...prev, segment: prev.segment + 1 }))
   }
 
-  const handleRemoveCategory = (category: string) => {
-    setPendingFilters(prev => ({
-      ...prev,
-      categories: prev.categories.filter(c => c !== category)
-    }))
-  }
+  // Category removal logic moved to CategoryFilter component
 
   const handleRemoveBrand = (brand: string) => {
     setPendingFilters(prev => ({
@@ -480,62 +451,16 @@ export function UniversalFilterComponent({
         {/* 筛选器控件 */}
         <div className="flex items-center gap-4 flex-wrap">
       
-          {/* Category Filter */}
+          {/* Category Filter - 使用新的独立组件 */}
           {filterConfig?.visible_filters?.categories && (
-            <div className="flex flex-col gap-2">
-              <span className="text-sm text-gray-600">{projectT('amazonCategory')}:</span>
-              <div className="flex items-center gap-4 flex-wrap">
-                {finalAvailableOptions.hierarchical_categories && 
-                 finalAvailableOptions.hierarchical_categories.length > 0 && 
-                 finalAvailableOptions.hierarchical_categories.some(group => group.children.length > 0) ? (
-                  // 显示层次结构的复选框
-                  finalAvailableOptions.hierarchical_categories.map((parentGroup) =>
-                    parentGroup.children.map((child) => {
-                      const isSelected = pendingFilters.categories.includes(child.category)
-                      return (
-                        <div key={child.category} className="flex items-center gap-2">
-                          <Checkbox
-                            checked={isSelected}
-                            onCheckedChange={(checked) => handleCategoryToggle(child.category, checked as boolean)}
-                            disabled={finalLoading || configLoading}
-                          />
-                          <label className="text-sm cursor-pointer">
-                            {child.category} ({child.count} {projectT('products')})
-                          </label>
-                        </div>
-                      )
-                    })
-                  ).flat()
-                ) : (
-                  // Fallback: 显示扁平分类结构的复选框
-                  finalAvailableOptions.categories.map(category => {
-                    // 从projectData中查找对应的计数信息
-                    const distributionData = projectData?.distributions?.categories?.find(
-                      (item: { name: string; count: number; percentage: number }) => item.name === category
-                    )
-                    
-                    const displayLabel = distributionData 
-                      ? `${category} (${distributionData.count} ${projectT('products')})`
-                      : category
-                    
-                    const isSelected = pendingFilters.categories.includes(category)
-                    
-                    return (
-                      <div key={category} className="flex items-center gap-2">
-                        <Checkbox
-                          checked={isSelected}
-                          onCheckedChange={(checked) => handleCategoryToggle(category, checked as boolean)}
-                          disabled={finalLoading || configLoading}
-                        />
-                        <label className="text-sm cursor-pointer">
-                          {displayLabel}
-                        </label>
-                      </div>
-                    )
-                  })
-                )}
-              </div>
-            </div>
+            <CategoryFilter
+              value={pendingFilters.categories}
+              onChange={(categories) => setPendingFilters(prev => ({ ...prev, categories }))}
+              availableOptions={finalAvailableOptions}
+              projectData={projectData}
+              disabled={finalLoading || configLoading}
+              loading={finalLoading || configLoading}
+            />
           )}
 
           {/* Brand Filter */}
@@ -548,7 +473,7 @@ export function UniversalFilterComponent({
                     const isSelected = pendingFilters.brands.includes(brandName)
                     // 尝试从projectData获取计数信息（如果有的话）
                     const distributionData = projectData?.distributions?.brands?.find(
-                      (item: any) => item.name === brandName
+                      (item: { name: string; count: number; percentage: number }) => item.name === brandName
                     )
                     const displayLabel = distributionData 
                       ? `${brandName} (${distributionData.count} ${projectT('products')})`
@@ -665,9 +590,7 @@ export function UniversalFilterComponent({
           <div className="pt-2 border-t border-gray-100">
             <div className="flex items-center gap-2 flex-wrap">
               <span className="text-xs text-gray-600">{projectT('appliedFilters')}:</span>
-              {pendingFilters.categories.map(category => 
-                renderFilterBadge('categories', category, () => handleRemoveCategory(category))
-              )}
+              {/* Category badges moved to CategoryFilter component */}
               {pendingFilters.brands.map(brand => 
                 renderFilterBadge('brands', brand, () => handleRemoveBrand(brand))
               )}
