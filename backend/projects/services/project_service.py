@@ -71,6 +71,11 @@ class ProjectService:
         try:
             # 1. Extract ASINs based on filters
             filtered_asins = await self._extract_asins_from_filters(request.filters)
+
+            # Abort if no products are found or if all are filtered out
+            if not filtered_asins:
+                logger.warning("Project creation aborted: No products found for the selected criteria or all were filtered out due to no sales data.")
+                raise ValueError("No products found for the selected criteria. Project creation cannot continue.")
             
             # 2. Calculate statistics
             stats = await self._calculate_project_stats(filtered_asins, request.filters)
@@ -639,7 +644,7 @@ class ProjectService:
             category_id = filters.category_id
             
             # 策略1：使用统一的多层级category ID查询
-            query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
+            query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
             query = query.neq('category', None).neq('brand', None)
             
             # Apply multi-level category filter
@@ -661,7 +666,7 @@ class ProjectService:
             # 策略2：通过category_id获取名称，然后用名称查询category字段
             category_name = await self._get_category_name(category_id)
             if category_name:
-                query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
+                query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
                 query = query.neq('category', None).neq('brand', None)
                 query = query.eq('category', category_name)
                 
