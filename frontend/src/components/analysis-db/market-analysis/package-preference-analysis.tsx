@@ -182,7 +182,7 @@ export function PackagePreferenceAnalysis({
         chartId="package-preference"
         chartType="pie"
         projectId={projectId || ''}
-        title={`Package Type Distribution by ${titleSuffix}`}
+        title="Market Share by Sales Unit"
         projectFilters={{
           categories: categoryFilters || [],
           brands: brandFilters || [],

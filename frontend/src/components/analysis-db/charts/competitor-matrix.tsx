@@ -225,9 +225,9 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     if (mentions === 0) return 'bg-blue-50 text-blue-700'
     
     // If we have detailed reviews, use satisfaction-based colors
-    if (satisfactionRate >= 85) return 'bg-green-100 text-green-800'
-    else if (satisfactionRate >= 70) return 'bg-yellow-100 text-yellow-800'
-    else if (satisfactionRate >= 60) return 'bg-orange-100 text-orange-800'
+    if (satisfactionRate >= 75) return 'bg-green-100 text-green-800'
+    else if (satisfactionRate >= 50) return 'bg-yellow-100 text-yellow-800'
+    else if (satisfactionRate >= 25) return 'bg-orange-100 text-orange-800'
     else return 'bg-red-100 text-red-800'
   }
 

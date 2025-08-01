@@ -822,7 +822,8 @@ class ScrapingOrchestrator:
                                 request_id, None,
                                 additional_data={
                                     'reviews_transformed': review_transformation_result.get('processed_count', 0),
-                                    'review_transformation_duration_seconds': int(review_transformation_result.get('duration_seconds', 0))
+                                    # 暂时注释掉这个字段更新，避免数据库字段不存在的错误
+                                    # 'review_transformation_duration_seconds': int(review_transformation_result.get('duration_seconds', 0))
                                 }
                             )
                         
@@ -974,8 +975,24 @@ class ScrapingOrchestrator:
                 }
                 status["overall_status"] = "completed"
 
-                # 完整执行统计
-                total_duration = (request_data.get('updated_at') - request_data.get('created_at')).total_seconds() if request_data.get('updated_at') and request_data.get('created_at') else 0
+                # 完整执行统计 - 兜底处理时间计算，避免字符串减法错误
+                try:
+                    updated_at = request_data.get('updated_at')
+                    created_at = request_data.get('created_at')
+                    if updated_at and created_at:
+                        # 如果是字符串，尝试转换为datetime对象
+                        if isinstance(updated_at, str):
+                            from datetime import datetime
+                            updated_at = datetime.fromisoformat(updated_at.replace('Z', '+00:00'))
+                        if isinstance(created_at, str):
+                            from datetime import datetime  
+                            created_at = datetime.fromisoformat(created_at.replace('Z', '+00:00'))
+                        total_duration = (updated_at - created_at).total_seconds()
+                    else:
+                        total_duration = 0
+                except Exception:
+                    # 兜底：如果时间计算失败，设为0，不影响主流程
+                    total_duration = 0
                 
                 # 安全地获取阶段耗时
                 def get_duration(key):
@@ -990,7 +1007,7 @@ class ScrapingOrchestrator:
                         'data_transformation': get_duration('transformation_duration_seconds'),
                         'review_scraping': get_duration('review_scraping_duration_seconds'),
                         'review_importing': get_duration('review_importing_duration_seconds'),
-                        'review_transformation': get_duration('review_transformation_duration_seconds'),
+                        'review_transformation': 0,  # 暂时设为0，避免引用不存在的数据库字段
                     },
                     'api_calls': status.get('execution_stats', {}).get('api_calls', {})
                 }

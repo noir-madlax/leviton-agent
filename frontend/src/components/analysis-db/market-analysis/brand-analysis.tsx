@@ -418,7 +418,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
         <ChartWithFilters
           chartId="market-share-analysis"
           projectId={projectId || ''}
-          title="Total addressable market (TAM) and Market Share by brands"
+          title="Total addressable market (TAM) and Market Share"
           projectFilters={initialFilters}
         >
           {/* 第二层：单一的Summary区域 */}
@@ -508,7 +508,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       <ChartWithFilters
         chartId="brand-analysis"
         projectId={projectId || ''}
-        title="Top 10 Brand Revenue by Category"
+                  title="Top 10 Best-Selling Brands"
         projectFilters={initialFilters}
       >
         <Card className="p-6 bg-gray-50">
@@ -549,7 +549,7 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
             chartId="sales-trend-analysis"
             chartType="area"
             projectId={projectId || ''}
-            title="Sales Trend of Top 10 brands"
+            title="Sales Trend of Top 10 Brands"
             projectFilters={initialFilters}
           >
             {/* Summary for all categories */}

@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Filter } from "lucide-react"
+import { ExternalLink, Filter, BarChart, BarChart3 } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 // import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
@@ -286,6 +286,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
           📊 Competitive Analysis
         </h2>
+        <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 pb-5">
+          <BarChart3 className="w-5 h-5" />
+          Customer satisfaction overview
+        </h3>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
           Calculated from the latest 200 reviews per product.
         </div>
@@ -318,10 +322,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         >
           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
           The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
-            <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
-            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
-            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
-            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
+            <span className="bg-green-100 text-green-800 px-1 rounded">Green (75%+ satisfaction)</span>, 
+            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (50-74%)</span>, 
+            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (25-49%)</span>, 
+            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;25%)</span>, 
             <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
           </div>
 
@@ -345,10 +349,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         >
           <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
           The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
-            <span className="bg-green-100 text-green-800 px-1 rounded">Green (85%+ satisfaction)</span>, 
-            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (70-84%)</span>, 
-            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (60-69%)</span>, 
-            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;60%)</span>, 
+            <span className="bg-green-100 text-green-800 px-1 rounded">Green (75%+ satisfaction)</span>, 
+            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (50-74%)</span>, 
+            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (25-49%)</span>, 
+            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;25%)</span>, 
             <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
           </div>
 

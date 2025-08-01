@@ -6,7 +6,7 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scat
 import { BrandViolinChart } from "../charts/brand-violin-chart"
 import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
-import { BarChart3, Target } from "lucide-react"
+import { BarChart3 } from "lucide-react"
 
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
@@ -264,7 +264,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
 
       {/* Price Distribution by Segment - 移至最上方 */}
       <div className="mb-8" data-chart-id="price-distribution-overview">
-      <ChartHeader title=" Price Distribution by Segment" icon={BarChart3} />
+              <ChartHeader title="Price Distribution Overview" icon={BarChart3} />
       
        
         <Card className="p-6 bg-gray-50">
@@ -321,6 +321,91 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
           </div>
         </Card>
       </div>
+
+      {/* All Segments Price Distribution Comparison */}
+      <div className="mb-8" data-chart-id="price-distribution-by-type">
+        <ChartWithFilters
+          chartId="price-distribution-by-type"
+          chartType="violin"
+          projectId={projectId || ''}
+          title="Price Distribution by Product Type"
+          projectFilters={initialFilters}
+        >
+          <Card className="p-6 bg-gray-50">
+            <div className="mb-4">
+              <PriceTypeSelector 
+                onChange={setPriceType} 
+                defaultValue={priceType}
+              />
+            </div>
+            
+            <div className="h-[350px]">
+              <MultiSegmentViolinChart
+                segments={violinSegments}
+                priceType={priceType}
+                projectId={projectId || ''}
+              />
+            </div>
+          </Card>
+        </ChartWithFilters>
+      </div>
+
+      {/* Brand Price Distribution */}
+      <div className="mb-8" data-chart-id="price-distribution-by-brands">
+        <ChartWithFilters
+          chartId="price-distribution-by-brands"
+          chartType="violin"
+          projectId={projectId || ''}
+          title="Price distribution by Brands"
+          projectFilters={initialFilters}
+        >
+          <Card className="p-6 bg-gray-50">
+            <div className="mb-4">
+              <PriceTypeSelector 
+                onChange={setPriceType} 
+                defaultValue={priceType}
+              />
+            </div>
+            
+            <div className="space-y-8">
+              {data.brandPriceDistribution.map((categoryData) => {
+                const categoryName = categoryData.category
+                const isCombinedCategory = categoryName.includes(' + ')
+
+                let filterMode = 'category'
+                let extendFieldsConfig
+
+                if (isCombinedCategory) {
+                  const parts = categoryName.split(' + ')
+                  const smartCapability = parts.length > 1 ? parts[1].trim() : null
+
+                  if (smartCapability && (smartCapability === 'Smart' || smartCapability === 'Non-Smart')) {
+                    filterMode = 'extend_fields'
+                    extendFieldsConfig = {
+                      field: 'smart_capability',
+                      value: smartCapability,
+                    }
+                  }
+                }
+
+                return (
+                  <div key={categoryName}>
+                    <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
+                    <div className="h-[320px]">
+                      <BrandViolinChart
+                        brands={categoryData.brands}
+                        priceType={priceType}
+                        category={categoryData.category}
+                        projectId={projectId || ''}
+                        filterMode={filterMode as 'category' | 'extend_fields'}
+                        extendFieldsConfig={extendFieldsConfig}
+                      />
+                    </div>
+                  </div>
+                )
+              })}
+            </div>
+
 
       {/* Price vs Revenue Distribution of Top Selling 20 Products */}
       <div className="mb-8" data-chart-id="price-vs-revenue">
@@ -394,89 +479,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
         </ChartWithFilters>
       </div>
 
-      {/* All Segments Price Distribution Comparison */}
-      <div className="mb-8" data-chart-id="price-distribution-by-type">
-        <ChartWithFilters
-          chartId="price-distribution-by-type"
-          chartType="violin"
-          projectId={projectId || ''}
-          title="All Segments Price Distribution Comparison"
-          projectFilters={initialFilters}
-        >
-          <Card className="p-6 bg-gray-50">
-            <div className="mb-4">
-              <PriceTypeSelector 
-                onChange={setPriceType} 
-                defaultValue={priceType}
-              />
-            </div>
-            
-            <div className="h-[350px]">
-              <MultiSegmentViolinChart
-                segments={violinSegments}
-                priceType={priceType}
-                projectId={projectId || ''}
-              />
-            </div>
-          </Card>
-        </ChartWithFilters>
-      </div>
 
-      {/* Brand Price Distribution */}
-      <div className="mb-8" data-chart-id="price-distribution-by-brands">
-        <ChartWithFilters
-          chartId="price-distribution-by-brands"
-          chartType="violin"
-          projectId={projectId || ''}
-          title="Brand Price Distribution"
-          projectFilters={initialFilters}
-        >
-          <Card className="p-6 bg-gray-50">
-            <div className="mb-4">
-              <PriceTypeSelector 
-                onChange={setPriceType} 
-                defaultValue={priceType}
-              />
-            </div>
-            
-            <div className="space-y-8">
-              {data.brandPriceDistribution.map((categoryData) => {
-                const categoryName = categoryData.category
-                const isCombinedCategory = categoryName.includes(' + ')
-
-                let filterMode = 'category'
-                let extendFieldsConfig
-
-                if (isCombinedCategory) {
-                  const parts = categoryName.split(' + ')
-                  const smartCapability = parts.length > 1 ? parts[1].trim() : null
-
-                  if (smartCapability && (smartCapability === 'Smart' || smartCapability === 'Non-Smart')) {
-                    filterMode = 'extend_fields'
-                    extendFieldsConfig = {
-                      field: 'smart_capability',
-                      value: smartCapability,
-                    }
-                  }
-                }
-
-                return (
-                  <div key={categoryName}>
-                    <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
-                    <div className="h-[320px]">
-                      <BrandViolinChart
-                        brands={categoryData.brands}
-                        priceType={priceType}
-                        category={categoryData.category}
-                        projectId={projectId || ''}
-                        filterMode={filterMode as 'category' | 'extend_fields'}
-                        extendFieldsConfig={extendFieldsConfig}
-                      />
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
           </Card>
         </ChartWithFilters>
       </div>
