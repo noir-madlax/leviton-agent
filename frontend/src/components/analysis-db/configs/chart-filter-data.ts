@@ -88,6 +88,17 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
         sort_order: 1
       },
       {
+        field_name: 'dfasdfasdf',
+        display_name: 'Smart asdfasdfa',
+        field_type: 'select',
+        filter_options: {
+          options: ['111', '2222'], // 这个chart不显示All选项
+          default: '111'
+        },
+        is_required: true, // 这个chart必须选择
+        sort_order: 2
+      },
+      {
         field_name: 'market_segment',
         display_name: 'Market Segment',
         field_type: 'multi_select',
@@ -97,7 +108,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
           placeholder: '选择市场细分'
         },
         is_required: false,
-        sort_order: 2
+        sort_order: 3
       }
     ],
     

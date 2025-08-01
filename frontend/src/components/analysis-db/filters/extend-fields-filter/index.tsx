@@ -44,6 +44,7 @@ export function ExtendFieldsFilter({
       
       // 如果有过滤器配置，优先使用配置中的extend_fields
       if (filterConfig?.extend_fields) {
+        console.log('🔧 [EXTEND-FIELDS] Using filterConfig extend_fields:', filterConfig.extend_fields)
         const fields = filterConfig.extend_fields.map(field => ({
           ...field,
           sort_order: 1,
@@ -400,18 +401,14 @@ export function ExtendFieldsFilter({
     return null
   }
 
-  // 根据filterConfig.visible_filters过滤要显示的字段
-  const visibleFields = fieldDefinitions.filter(field => {
-    // 如果没有filterConfig或visible_filters，显示所有字段
-    if (!filterConfig?.visible_filters) {
-      return true
-    }
-    
-    // 检查字段是否在visible_filters中被标记为true
-    const fieldVisible = filterConfig.visible_filters[field.display_name] || 
-                        filterConfig.visible_filters[field.field_name]
-    
-    return fieldVisible === true
+  // 显示所有在filterConfig中定义的扩展字段
+  // 因为在FilterRenderer层面已经通过visibleFilters.extend_fields控制了整个区域的显示
+  const visibleFields = fieldDefinitions
+
+  console.log('🔧 [EXTEND-FIELDS] Rendering fields:', {
+    fieldDefinitions: fieldDefinitions.length,
+    visibleFields: visibleFields.length,
+    fields: visibleFields.map(f => f.field_name)
   })
 
   if (visibleFields.length === 0) {
