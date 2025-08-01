@@ -58,21 +58,26 @@ class ScrapingRequestRepository:
                 
             return None
     
-    async def update_request_status(self, request_id: int, status: str, 
-                                   additional_data: Optional[Dict[str, Any]] = None) -> bool:
+    async def update_request_status(self, request_id: int, status: Optional[str], 
+                                      additional_data: Optional[Dict[str, Any]] = None) -> bool:
         """
         更新爬取请求状态
         
         Args:
             request_id: 请求ID
-            status: 新状态
+            status: 新状态（可以为None，表示不更新状态字段）
             additional_data: 额外更新的数据
             
         Returns:
             bool: 更新成功返回True，失败返回False
         """
         try:
-            update_data = {"status": status, "updated_at": "NOW()"}
+            update_data = {"updated_at": "NOW()"}
+            
+            # 🔥 修复：只有当status不为None时才更新status字段
+            if status is not None:
+                update_data["status"] = status
+                
             if additional_data:
                 update_data.update(additional_data)
             

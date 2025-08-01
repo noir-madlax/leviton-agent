@@ -20,20 +20,21 @@ class ProductImporter:
         self.product_repository = AmazonProductRepository(self.supabase_client)
     
     async def import_products(self, json_file_path: str, 
-                            task_info: Optional[Dict[str, Any]] = None,
+                            request_id: Optional[int] = None,
                             force_import: bool = False) -> Dict[str, Any]:
         """
         导入商品数据到数据库
         
         Args:
             json_file_path: JSON文件路径
-            task_info: 任务信息（可选）
+            request_id: (可选) 已存在的请求ID，如果提供，将更新此记录而非创建新记录
+            force_import: 是否强制导入
             
         Returns:
             Dict[str, Any]: 导入结果
         """
         try:
-            logger.info(f"开始导入商品数据: {json_file_path}")
+            logger.info(f"开始导入商品数据: {json_file_path}, request_id: {request_id}")
             
             # 步骤1: 处理JSON文件，转换为数据库格式
             request_data, products_data = await self.processor.process_scraping_result(json_file_path)
@@ -46,47 +47,49 @@ class ProductImporter:
                     "products_imported": 0
                 }
             
-            # 步骤2: 保存爬取请求记录
-            logger.info("保存爬取请求记录到数据库...")
-            request_id = await self.request_repository.create_scraping_request(request_data)
-            
-            if not request_id:
-                logger.error("创建爬取请求记录失败")
+            # 步骤2: 保存或更新爬取请求记录
+            if request_id:
+                logger.info(f"更新现有的爬取请求记录: {request_id}")
+                # 从JSON文件解析出的数据只更新元数据，不更新主状态
+                request_data.pop('status', None)  # 移除状态字段，避免覆盖
+                # 这里不需要更新状态，只是确保记录存在
+                final_request_id = request_id
+            else:
+                logger.info("创建新的爬取请求记录...")
+                final_request_id = await self.request_repository.create_scraping_request(request_data)
+
+            if not final_request_id:
+                logger.error("创建或获取爬取请求记录失败")
                 return {
                     "status": "error",
-                    "message": "创建爬取请求记录失败",
+                    "message": "创建或获取爬取请求记录失败",
                     "products_imported": 0
                 }
             
             # 步骤3: 批量保存产品数据 (with deduplication)
             logger.info(f"批量保存 {len(products_data)} 个产品到数据库（启用去重）...")
-            success = await self.product_repository.batch_upsert_products(products_data, request_id)
+            success = await self.product_repository.batch_upsert_products(products_data, final_request_id)
             
             if not success:
                 # 如果产品保存失败，更新请求状态为失败
-                await self.request_repository.update_request_status(request_id, 'failed')
+                await self.request_repository.update_request_status(final_request_id, 'failed')
                 logger.error("批量保存产品数据失败")
                 return {
                     "status": "error",
                     "message": "批量保存产品数据失败",
                     "products_imported": 0,
-                    "request_id": request_id
+                    "request_id": final_request_id
                 }
             
-            # 步骤4: 更新请求状态为导入完成
-            await self.request_repository.update_request_status(
-                request_id, 
-                'imported'
-            )
-            
-            logger.info(f"成功导入商品数据: {len(products_data)} 个产品，请求ID: {request_id}")
+            # 步骤4: 不更新主状态，让orchestrator控制状态流转
+            logger.info(f"成功导入商品数据: {len(products_data)} 个产品，请求ID: {final_request_id}")
             
             return {
                 "status": "success",
-                "message": f"成功导入 {len(products_data)} 个产品到批次 {request_id}",
+                "message": f"成功导入 {len(products_data)} 个产品到批次 {final_request_id}",
                 "products_imported": len(products_data),
-                "request_id": request_id,
-                "batch_id": request_id,  # 批次ID与请求ID相同
+                "request_id": final_request_id,
+                "batch_id": final_request_id,  # 批次ID与请求ID相同
                 "request_type": request_data.get('request_type'),
                 "search_term": request_data.get('search_term'),
                 "category_id": request_data.get('category_id')

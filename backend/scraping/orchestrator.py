@@ -154,7 +154,7 @@ class ScrapingOrchestrator:
             
             if should_import and json_file_path:
                 product_import_result = await self.product_importer.import_products(
-                    json_file_path, force_import=force_import
+                    json_file_path, request_id=None, force_import=force_import
                 )
                 result["products_phase"]["importing"] = product_import_result
             elif force_import and existing_batch_id:
@@ -388,7 +388,7 @@ class ScrapingOrchestrator:
             json_file_path = scrape_result.get("file_path") or scrape_result.get("existing_file_path")
             if json_file_path:
                 import_result = await self.product_importer.import_products(
-                    json_file_path, force_import=force_import
+                    json_file_path, request_id=None, force_import=force_import
                 )
             else:
                 import_result = {
@@ -560,38 +560,478 @@ class ScrapingOrchestrator:
         """
         return await self.review_importer.retry_import(batch_id, max_retries)
     
+    async def create_async_task(self, url: str, max_products: int = 100,
+                              scrape_reviews: bool = True,
+                              review_coverage_months: int = 6,
+                              max_reviews: int = 30) -> Optional[int]:
+        """
+        创建异步爬取任务
+        
+        Args:
+            url: Amazon URL
+            max_products: 最大商品数量
+            scrape_reviews: 是否爬取评论
+            review_coverage_months: 评论覆盖月数
+            max_reviews: 最大评论数量
+            
+        Returns:
+            Optional[int]: 任务ID（request_id），失败返回None
+        """
+        try:
+            logger.info(f"创建异步爬取任务: {url}")
+            
+            # 🔥 从URL推断请求类型 - 使用数据库约束允许的值
+            request_type = 'search'  # 默认使用已知有效的类型
+            search_term = None
+            category_id = None
+            
+            if '/dp/' in url or '/gp/product/' in url:
+                request_type = 'product'
+            elif '/s?' in url:
+                request_type = 'search'
+                # 尝试从URL提取搜索词
+                if 'k=' in url:
+                    import urllib.parse
+                    parsed_url = urllib.parse.urlparse(url)
+                    query_params = urllib.parse.parse_qs(parsed_url.query)
+                    search_term = query_params.get('k', [None])[0]
+            elif 'node=' in url or '/b?' in url:
+                # 🔥 临时使用 'search' 类型避免约束错误
+                request_type = 'search'
+                # 从URL提取category_id
+                import re
+                node_match = re.search(r'node=(\d+)', url)
+                if node_match:
+                    category_id = node_match.group(1)
+            
+            # 创建初始的爬取请求记录
+            request_data = {
+                'request_type': request_type,
+                'search_term': search_term,
+                'category_id': category_id,
+                'amazon_domain': 'amazon.com',
+                'products_scraped': 0,
+                'request_metadata': {
+                    'url': url,
+                    'max_products': max_products,
+                    'scrape_reviews': scrape_reviews,
+                    'review_coverage_months': review_coverage_months,
+                    'max_reviews': max_reviews
+                },
+                'status': 'pending',  # 🔥 修复：初始状态必须是 pending
+                'workflow_stage': 'pending'
+            }
+            
+            # 创建请求记录
+            request_id = await self.request_repository.create_scraping_request(request_data)
+            
+            if not request_id:
+                logger.error("创建爬取请求记录失败")
+                return None
+            
+            # 🔥 在后台启动异步任务
+            asyncio.create_task(self._execute_background_task(
+                request_id, url, max_products, scrape_reviews, 
+                review_coverage_months, max_reviews
+            ))
+            
+            logger.info(f"异步爬取任务已创建，task_id: {request_id}")
+            return request_id
+            
+        except Exception as e:
+            logger.error(f"创建异步爬取任务失败: {e}")
+            return None
+    
+    async def _execute_background_task(self, request_id: int, url: str, 
+                                     max_products: int, scrape_reviews: bool,
+                                     review_coverage_months: int, max_reviews: int):
+        """
+        在后台执行爬取任务（带实时状态更新）
+        
+        Args:
+            request_id: 任务ID
+            url: Amazon URL
+            max_products: 最大商品数量
+            scrape_reviews: 是否爬取评论
+            review_coverage_months: 评论覆盖月数
+            max_reviews: 最大评论数量
+        """
+        try:
+            logger.info(f"开始执行后台爬取任务 {request_id}: {url}")
+            
+            # Phase 1: 爬取商品
+            # 在后台任务开始时，将状态从 'pending' 更新为 'processing'（数据库约束允许的状态）
+            await self.request_repository.update_request_status(
+                request_id, 'processing', 
+                additional_data={'workflow_stage': 'product_scraping'}
+            )
+            
+            product_scrape_result = await self.product_scraper.scrape_from_url(
+                url, max_products
+            )
+            
+            if product_scrape_result.get("status") not in ["success", "skipped"]:
+                await self.request_repository.update_request_status(
+                    request_id, 'failed',
+                    additional_data={
+                        'workflow_stage': 'failed',
+                        'error_message': '产品爬取失败'
+                    }
+                )
+                return
+            
+            # Phase 2: 导入商品数据
+            # 只更新 workflow_stage，不更新主状态
+            await self.request_repository.update_request_status(
+                request_id, None,
+                additional_data={'workflow_stage': 'product_importing'}
+            )
+            
+            json_file_path = product_scrape_result.get("file_path")
+            product_import_result = None
+            
+            if json_file_path and product_scrape_result.get("status") == "success":
+                # 🔥 修复：传入 request_id 以更新现有记录，避免重复创建
+                product_import_result = await self.product_importer.import_products(json_file_path, request_id)
+                
+                if product_import_result.get("status") != "success":
+                    await self.request_repository.update_request_status(
+                        request_id, 'failed',
+                        additional_data={
+                            'workflow_stage': 'failed',
+                            'error_message': f'产品导入失败: {product_import_result.get("message", "未知错误")}'
+                        }
+                    )
+                    return
+            elif product_scrape_result.get("status") == "skipped":
+                # 🔥 修复：处理跳过的情况，确保有有效的batch_id
+                batch_id = product_scrape_result.get("batch_id")
+                existing_file_path = product_scrape_result.get("existing_file_path")
+                
+                if batch_id:
+                    # 如果有batch_id（数据库跳过），直接使用
+                    product_import_result = {
+                        "status": "success", 
+                        "batch_id": batch_id,
+                        "message": "使用现有数据库产品数据"
+                    }
+                elif existing_file_path:
+                    # 如果有文件路径（本地文件跳过），执行导入获取batch_id
+                    logger.info(f"🔄 智能跳过检测到本地文件，执行导入以获取batch_id: {existing_file_path}")
+                    product_import_result = await self.product_importer.import_products(existing_file_path, request_id)
+                else:
+                    # 兜底方案：无batch_id也无文件，记录为智能跳过完成
+                    logger.warning(f"⚠️  智能跳过但无有效batch_id或文件路径，将标记为完成")
+                    await self.request_repository.update_request_status(
+                        request_id, 'completed',
+                        additional_data={
+                            'workflow_stage': 'completed',
+                            'products_scraped': product_scrape_result.get("products_scraped", 0),
+                            'skip_reason': product_scrape_result.get("reason", "智能跳过")
+                        }
+                    )
+                    return
+            
+            if not product_import_result or not product_import_result.get("batch_id"):
+                await self.request_repository.update_request_status(
+                    request_id, 'failed',
+                    additional_data={
+                        'workflow_stage': 'failed',
+                        'error_message': '无法获取有效的batch_id'
+                    }
+                )
+                return
+            
+            # 更新产品数量信息（🔥 移除无效字段）
+            products_scraped = product_scrape_result.get("products_scraped", 0)
+            await self.request_repository.update_request_status(
+                request_id, None,
+                additional_data={
+                    'workflow_stage': 'transforming',
+                    'products_scraped': products_scraped
+                }
+            )
+            
+            # Phase 3: 数据转换
+            batch_id = product_import_result.get("batch_id")
+            if batch_id:
+                transform_result = await self._transform_batch_data(batch_id, request_id)
+                
+                if not transform_result.get("success", False):
+                    await self.request_repository.update_request_status(
+                        request_id, 'failed',
+                        additional_data={
+                            'workflow_stage': 'failed',
+                            'error_message': '数据转换失败'
+                        }
+                    )
+                    return
+                
+                # 🔥 修复：转换时间为整数类型，避免数据类型错误
+                duration_seconds = transform_result.get("duration_seconds", 0)
+                if isinstance(duration_seconds, float):
+                    duration_seconds = int(round(duration_seconds))
+                
+                await self.request_repository.update_request_status(
+                    request_id, None,
+                    additional_data={
+                        'workflow_stage': 'review_scraping' if scrape_reviews else 'completed',
+                        'products_transformed': transform_result.get("processed_count", 0),
+                        'transformation_duration_seconds': duration_seconds
+                    }
+                )
+            
+            # Phase 4: 爬取评论（如果需要）
+            if scrape_reviews:
+                await self.request_repository.update_request_status(
+                    request_id, None,
+                    additional_data={'workflow_stage': 'review_scraping'}
+                )
+                
+                review_scrape_result = await self.review_scraper.scrape_for_batch(
+                    product_import_result.get("batch_id"), 
+                    review_coverage_months,
+                    max_reviews=max_reviews
+                )
+                
+                if review_scrape_result.get("status") in ["success", "partial_success"]:
+                    # Phase 5: 导入评论数据
+                    await self.request_repository.update_request_status(
+                        request_id, None,
+                        additional_data={'workflow_stage': 'review_importing'}
+                    )
+                    
+                    review_import_result = await self.review_importer.import_batch_reviews(
+                        product_import_result.get("batch_id")
+                    )
+                    
+                    # Phase 6: 转换评论数据
+                    if review_import_result.get("status") == "success":
+                        await self.request_repository.update_request_status(
+                            request_id, None,
+                            additional_data={'workflow_stage': 'review_transformation'}
+                        )
+                        
+                        review_transformation_result = await self._transform_review_data(
+                            product_import_result.get("batch_id"), request_id
+                        )
+                        
+                        # 🔥 新增：在数据库中保存评论转换的数量和耗时
+                        if review_transformation_result.get("success"):
+                            await self.request_repository.update_request_status(
+                                request_id, None,
+                                additional_data={
+                                    'reviews_transformed': review_transformation_result.get('processed_count', 0),
+                                    'review_transformation_duration_seconds': int(review_transformation_result.get('duration_seconds', 0))
+                                }
+                            )
+                        
+                        logger.info(f"✅ 评论转换完成: {review_transformation_result}")
+                    
+                    # 更新评论统计（🔥 移除无效字段）
+                    reviews_scraped = review_scrape_result.get("total_reviews_scraped", 0)
+                    await self.request_repository.update_request_status(
+                        request_id, None,
+                        additional_data={
+                            'workflow_stage': 'review_transformation' if review_import_result.get("status") == "success" else 'review_importing',
+                            'reviews_scraped': reviews_scraped,
+                            'review_status': 'completed' if review_scrape_result.get("status") == "success" else 'partial'
+                        }
+                    )
+            
+            # 🔥 最终状态更新：只有在这里才更新主状态为 'completed'
+            await self.request_repository.update_request_status(
+                request_id, 'completed',
+                additional_data={'workflow_stage': 'completed'}
+            )
+            
+            logger.info(f"后台爬取任务 {request_id} 执行完成")
+            
+        except Exception as e:
+            logger.error(f"后台爬取任务 {request_id} 执行失败: {e}")
+            
+            # 更新失败状态
+            await self.request_repository.update_request_status(
+                request_id, 'failed',
+                additional_data={
+                    'workflow_stage': 'failed',
+                    'error_message': str(e)
+                }
+            )
+    
     async def get_process_status(self, batch_id: Optional[int] = None, 
                                request_id: Optional[int] = None) -> Dict[str, Any]:
         """
-        获取处理状态
+        获取处理状态（增强版，支持实时进度查询）
         
         Args:
             batch_id: 批次ID
             request_id: 请求ID
             
         Returns:
-            Dict[str, Any]: 状态信息
+            Dict[str, Any]: 详细状态信息
         """
         try:
-            status = {}
+            task_id = batch_id or request_id
+            if not task_id:
+                return {"error": "batch_id 或 request_id 必须提供一个"}
             
-            if batch_id or request_id:
-                # 获取商品导入状态
-                product_status = await self.product_importer.get_import_status(batch_id or request_id)
-                if product_status:
-                    status["products"] = product_status
+            # 从数据库获取任务详细状态
+            request_data = await self.request_repository.get_request_by_id(task_id)
+            if not request_data:
+                return {"error": f"任务 {task_id} 不存在"}
+            
+            # 构建状态响应
+            status = {
+                "task_id": str(task_id),
+                "batch_id": task_id,
+                "url": request_data.get('request_metadata', {}).get('url', ''),
+                "overall_status": request_data.get('status', 'unknown'),
+                "workflow_stage": request_data.get('workflow_stage', 'unknown'),
+                "created_at": request_data.get('created_at', ''),
+                "updated_at": request_data.get('updated_at', ''),
+            }
+            
+            # 根据workflow_stage构建阶段状态
+            current_stage = request_data.get('workflow_stage', 'unknown')
+            
+            # 产品阶段状态
+            if current_stage == 'product_scraping':
+                status["products_phase"] = {
+                    "scraping": {"status": "running", "message": "正在爬取产品数据..."},
+                    "importing": {"status": "pending", "message": "等待中"},
+                }
+            elif current_stage == 'product_importing':
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "running", "message": "正在导入产品数据..."},
+                }
+            elif current_stage in ['product_transformation', 'transforming']:
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "success", "message": "产品导入完成"},
+                }
+                status["transformation_phase"] = {
+                    "status": "running", 
+                    "message": "正在转换产品数据..."
+                }
+            elif current_stage == 'review_scraping':
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "success", "message": "产品处理完成"},
+                }
+                status["transformation_phase"] = {
+                    "status": "success",
+                    "processed_count": request_data.get('products_transformed', 0)
+                }
+                status["reviews_phase"] = {
+                    "scraping": {"status": "running", "message": "正在爬取评论数据..."},
+                    "importing": {"status": "pending", "message": "等待中"},
+                }
+            elif current_stage == 'review_importing':
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "success", "message": "产品处理完成"},
+                }
+                status["transformation_phase"] = {
+                    "status": "success",
+                    "processed_count": request_data.get('products_transformed', 0)
+                }
+                status["reviews_phase"] = {
+                    "scraping": {"status": "success", "reviews_scraped": request_data.get('reviews_scraped', 0)},
+                    "importing": {"status": "running", "message": "正在导入评论数据..."},
+                }
+            elif current_stage == 'review_transformation':
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "success", "message": "产品处理完成"},
+                }
+                status["transformation_phase"] = {
+                    "status": "success",
+                    "processed_count": request_data.get('products_transformed', 0)
+                }
+                status["reviews_phase"] = {
+                    "scraping": {"status": "success", "reviews_scraped": request_data.get('reviews_scraped', 0)},
+                    "importing": {"status": "success", "message": "评论导入完成"},
+                    "transformation": {"status": "running", "message": "正在转换评论数据..."}
+                }
+            
+            # 当任务完成时，构建一个包含所有统计数据的最终报告
+            if current_stage == 'completed':
+                # 基础信息
+                status["products_phase"] = {
+                    "scraping": {"status": "success", "products_scraped": request_data.get('products_scraped', 0)},
+                    "importing": {"status": "success", "message": "产品处理完成", "products_imported": request_data.get('products_scraped', 0)},
+                }
+                status["transformation_phase"] = {
+                    "status": "success",
+                    "processed_count": request_data.get('products_transformed', 0)
+                }
+                status["reviews_phase"] = {
+                    "scraping": {"status": "success", "reviews_scraped": request_data.get('reviews_scraped', 0)},
+                    "importing": {"status": "success", "message": "评论处理完成", "reviews_imported": request_data.get('reviews_scraped', 0)},
+                    "transformation": {"status": "success", "message": "评论转换完成", "processed_count": request_data.get('reviews_transformed', 0)}
+                }
+                status["overall_status"] = "completed"
+
+                # 完整执行统计
+                total_duration = (request_data.get('updated_at') - request_data.get('created_at')).total_seconds() if request_data.get('updated_at') and request_data.get('created_at') else 0
                 
-                # 获取评论导入状态
-                if batch_id:
-                    review_status = await self.review_importer.get_import_status(batch_id)
-                    if review_status:
-                        status["reviews"] = review_status
+                # 安全地获取阶段耗时
+                def get_duration(key):
+                    val = request_data.get(key)
+                    return val if isinstance(val, (int, float)) else 0
+
+                status['execution_stats'] = {
+                    'total_duration': total_duration,
+                    'phase_durations': {
+                        'product_scraping': get_duration('product_scraping_duration_seconds'),
+                        'product_importing': get_duration('product_importing_duration_seconds'),
+                        'data_transformation': get_duration('transformation_duration_seconds'),
+                        'review_scraping': get_duration('review_scraping_duration_seconds'),
+                        'review_importing': get_duration('review_importing_duration_seconds'),
+                        'review_transformation': get_duration('review_transformation_duration_seconds'),
+                    },
+                    'api_calls': status.get('execution_stats', {}).get('api_calls', {})
+                }
+                
+                # 数据质量报告
+                if request_data.get('data_quality_report'):
+                    status['data_quality'] = request_data['data_quality_report']
+
+            elif current_stage == 'failed':
+                status["overall_status"] = "failed"
+                status["error"] = request_data.get('error_message', '任务执行失败')
+            
+            # API 调用统计 (对所有状态通用)
+            products_scraped = request_data.get('products_scraped', 0)
+            reviews_scraped = request_data.get('reviews_scraped', 0)
+            category_api_calls = 1 if products_scraped > 0 else 0
+            product_details_api_calls = products_scraped
+            reviews_api_calls = reviews_scraped // 20 + (1 if reviews_scraped % 20 > 0 else 0) if reviews_scraped > 0 else 0
+            
+            if 'execution_stats' not in status:
+                 status['execution_stats'] = {}
+            status['execution_stats']['api_calls'] = {
+                "category_api": category_api_calls,
+                "product_details_api": product_details_api_calls,
+                "reviews_api": reviews_api_calls,
+                "total": category_api_calls + product_details_api_calls + reviews_api_calls
+            }
+            
+            # 元数据信息
+            if request_data.get('request_metadata'):
+                metadata = request_data['request_metadata']
+                status["max_products"] = metadata.get('max_products', 0)
+                status["max_reviews"] = metadata.get('max_reviews', 0)
             
             return status
             
         except Exception as e:
             logger.error(f"获取处理状态时出错: {e}")
             return {"error": str(e)}
+    
+
     
     async def _transform_batch_data(self, batch_id: int, request_id: Optional[int] = None) -> Dict[str, Any]:
         """调用数据转换服务处理批次数据"""

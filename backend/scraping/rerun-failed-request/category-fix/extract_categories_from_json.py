@@ -91,6 +91,49 @@ class CategoryExtractor:
             categories_to_insert = []
             products_processed = 0
             
+            # 🔥 新增：从category_information中提取类别信息
+            if 'category_information' in data and isinstance(data['category_information'], dict):
+                logger.info(f"📋 发现 category_information 字段")
+                category_info = data['category_information']
+                
+                # 提取当前类别和父类别信息
+                current_category = category_info.get('current_category', {})
+                parent_category = category_info.get('parent_category', {})
+                
+                if isinstance(current_category, dict) and current_category.get('id') and current_category.get('name'):
+                    logger.info(f"  处理当前类别: {current_category['name']} (ID: {current_category['id']})")
+                    
+                    # 构建类别层级：父类别 -> 当前类别
+                    hierarchy = []
+                    
+                    # 如果有父类别信息，先添加父类别
+                    if isinstance(parent_category, dict) and parent_category.get('id') and parent_category.get('name'):
+                        hierarchy.append({
+                            'name': parent_category['name'],
+                            'category_id': parent_category['id'],
+                            'link': parent_category.get('link', '')
+                        })
+                        logger.debug(f"    添加父类别: {parent_category['name']} (ID: {parent_category['id']})")
+                    
+                                         # 清理名称中的 (Current) 后缀
+                    current_category_name = current_category['name'].replace('(Current)', '').strip()
+                    
+                    # 添加当前类别
+                    hierarchy.append({
+                        'name': current_category_name,
+                         'category_id': current_category['id'],
+                         'link': current_category.get('link', '')
+                     })
+                    
+                    # 提取类别层级
+                    if hierarchy:
+                        extracted = self._extract_category_hierarchy(hierarchy, "category_information")
+                        categories_to_insert.extend(extracted)
+                        logger.info(f"  从 category_information 提取了 {len(extracted)} 个类别")
+                else:
+                    logger.warning("  ⚠️ category_information 中的 current_category 信息不完整")
+                    logger.debug(f"    current_category: {current_category}")
+            
             # 从category_results中提取
             if 'category_results' in data and isinstance(data['category_results'], list):
                 logger.info(f"📊 发现 category_results，包含 {len(data['category_results'])} 个产品")
@@ -118,7 +161,9 @@ class CategoryExtractor:
                         products_processed += 1
                     else:
                         logger.debug(f"  产品 {i+1} 没有有效的categories字段")
-            else:
+            
+            # 如果既没有category_results也没有search_results，给出警告
+            if 'category_results' not in data and 'search_results' not in data:
                 logger.warning("⚠️ 未找到 category_results 或 search_results 字段")
                 logger.debug(f"可用的顶级字段: {list(data.keys())}")
             
@@ -155,6 +200,7 @@ class CategoryExtractor:
                 logger.debug(f"    name={category.get('name', 'N/A')}, category_id={category.get('category_id', 'N/A')}")
         
         category_records = []
+        valid_categories = []  # 用于构建层级关系的有效类别列表
         
         for i, category in enumerate(categories):
             try:
@@ -164,46 +210,51 @@ class CategoryExtractor:
                 if not isinstance(category, dict):
                     logger.warning(f"  ⚠️ 类别 {i+1} 不是字典类型: {type(category)} ({context})")
                     continue
-                
-                # 检查必要字段
-                if 'category_id' not in category:
-                    logger.warning(f"  ⚠️ 类别 {i+1} 缺少 category_id 字段 ({context})")
-                    logger.debug(f"    可用字段: {list(category.keys())}")
-                    continue
                     
                 if 'name' not in category:
                     logger.warning(f"  ⚠️ 类别 {i+1} 缺少 name 字段 ({context})")
                     logger.debug(f"    可用字段: {list(category.keys())}")
                     continue
                 
-                level = i + 1
+                # 🔥 修改：允许没有category_id的顶级类别
+                category_id = category.get('category_id')
+                if not category_id:
+                    # 如果是第一级类别且没有category_id，跳过但记录到valid_categories用于构建路径
+                    if i == 0:
+                        logger.info(f"  📌 顶级类别 '{category['name']}' 没有category_id，跳过插入但保留用于路径构建 ({context})")
+                        valid_categories.append(category)
+                        continue
+                    else:
+                        logger.warning(f"  ⚠️ 非顶级类别 {i+1} 缺少 category_id 字段，跳过 ({context})")
+                        logger.debug(f"    可用字段: {list(category.keys())}")
+                        continue
+                
+                # 添加到有效类别列表
+                valid_categories.append(category)
+                
+                # 计算层级和父类别ID
+                level = len(valid_categories)
                 parent_id = None
                 
-                # 安全地获取parent_id
-                if i > 0:
-                    previous_category = categories[i-1]
-                    if isinstance(previous_category, dict) and 'category_id' in previous_category:
-                        parent_id = previous_category['category_id']
-                        logger.debug(f"  ✅ 找到父类别ID: {parent_id}")
-                    else:
-                        logger.warning(f"  ⚠️ 前一个类别 ({i}) 没有有效的 category_id 字段 ({context})")
-                        if isinstance(previous_category, dict):
-                            logger.debug(f"    前一个类别字段: {list(previous_category.keys())}")
-                        else:
-                            logger.debug(f"    前一个类别类型: {type(previous_category)}")
+                # 查找最近的有category_id的父类别
+                if len(valid_categories) > 1:
+                    for j in range(len(valid_categories) - 2, -1, -1):
+                        parent_category = valid_categories[j]
+                        if isinstance(parent_category, dict) and 'category_id' in parent_category:
+                            parent_id = parent_category['category_id']
+                            logger.debug(f"  ✅ 找到父类别ID: {parent_id}")
+                            break
                 
-                # 构建完整路径
+                # 构建完整路径（包括没有category_id的顶级类别）
                 path_parts = []
-                for j in range(i + 1):
-                    if j < len(categories) and isinstance(categories[j], dict) and 'name' in categories[j]:
-                        path_parts.append(categories[j]['name'])
-                    else:
-                        logger.warning(f"  ⚠️ 路径构建时，索引 {j} 的类别无效 ({context})")
+                for valid_cat in valid_categories:
+                    if isinstance(valid_cat, dict) and 'name' in valid_cat:
+                        path_parts.append(valid_cat['name'])
                 
                 full_path = ' > '.join(path_parts)
                 
                 category_record = {
-                    'category_id': str(category['category_id']),
+                    'category_id': str(category_id),
                     'name': category['name'],
                     'parent_category_id': str(parent_id) if parent_id else None,
                     'level': level,

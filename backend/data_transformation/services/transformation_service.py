@@ -331,6 +331,7 @@ class DataTransformationService:
                 
                 # Additional fields from amazon_products
                 'batch_id': record.get('batch_id'),
+                'category_id': record.get('category_id'),  # 🔥 新增：与category字段对应的类别ID
                 'leaf_category_id': record.get('leaf_category_id'),
                 'leaf_category_name': record.get('leaf_category_name'),
                 'categories_flat': record.get('categories_flat'),

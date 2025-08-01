@@ -32,7 +32,7 @@ interface ScrapingResult {
     importing?: any;
   };
   transformation_phase?: {
-    success?: boolean;
+    status?: 'success' | 'failed' | 'running' | 'pending'; // 🔥 修复
     processed_count?: number;
     error_count?: number;
     duration_seconds?: number;
@@ -103,7 +103,7 @@ export function DataImportTab() {
   // 🔥 新增：实时进度状态管理
   const [isScrapingStarted, setIsScrapingStarted] = useState(false);
   const [currentBatchId, setCurrentBatchId] = useState<number | null>(null);
-  const [currentRequestId, setCurrentRequestId] = useState<number | null>(null);
+
   
   // 使用统一配置
   const backendUrl = config.backendUrl;
@@ -111,11 +111,21 @@ export function DataImportTab() {
   // 🔥 新增：轮询实时状态
   const pollScrapingStatus = async (batchId: number) => {
     try {
+      console.log(`📡 Polling scraping status for batch_id: ${batchId}`);
       const response = await fetch(`${backendUrl}/api/scraping/status/${batchId}`);
       if (!response.ok) {
+        console.error(`❌ Polling failed: HTTP ${response.status}`);
         throw new Error(`HTTP ${response.status}`);
       }
       const statusData = await response.json();
+      
+      console.log(`📊 Received status update:`, {
+        batch_id: batchId,
+        overall_status: statusData.overall_status,
+        workflow_stage: statusData.workflow_stage,
+        products_scraped: statusData.products_scraped || 0,
+        reviews_scraped: statusData.reviews_scraped || 0
+      });
       
       // 更新结果状态
       if (statusData) {
@@ -128,9 +138,106 @@ export function DataImportTab() {
       
       return statusData;
     } catch (error) {
-      console.error('Failed to poll scraping status:', error);
+      console.error(`❌ Failed to poll scraping status for batch_id ${batchId}:`, error);
       return null;
     }
+  };
+
+  // 🔥 新增：启动轮询状态
+  const startPollingStatus = (taskId: number) => {
+    const pollInterval = setInterval(async () => {
+      try {
+        const statusData = await pollScrapingStatus(taskId);
+        
+        if (statusData) {
+          // 检查是否完成或失败 - 改进状态判断逻辑
+          const isCompleted = statusData.overall_status === 'completed' || 
+                             statusData.workflow_stage === 'completed';
+          
+          const isFailed = statusData.overall_status === 'failed' || 
+                          statusData.workflow_stage === 'failed' ||
+                          statusData.error;
+          
+          // 🔥 新增：检查智能跳过状态
+          const isSmartSkipped = statusData.overall_status && 
+                                (statusData.overall_status.includes('Smart Skip') ||
+                                 statusData.overall_status.includes('skip'));
+          
+          const isFinished = isCompleted || isFailed || isSmartSkipped;
+          
+          if (isFinished) {
+            console.log(`✅ Task finished for batch_id ${taskId}:`, {
+              overall_status: statusData.overall_status,
+              workflow_stage: statusData.workflow_stage,
+              is_completed: isCompleted,
+              is_failed: isFailed,
+              is_smart_skipped: isSmartSkipped
+            });
+            
+            clearInterval(pollInterval);
+            setIsLoading(false);
+            
+            // 记录最终结果
+            if (isCompleted || isSmartSkipped) {
+              posthog.capture('data_import_success', {
+                url: url.trim(),
+                max_products: maxProducts === '' ? 5 : maxProducts,
+                max_reviews: maxReviews === '' ? 15 : maxReviews,
+                batch_id: taskId,
+                products_scraped: statusData.products_scraped || 0,
+                reviews_scraped: statusData.reviews_scraped || 0,
+                overall_status: statusData.overall_status,
+                user_id: user?.id,
+                user_email: user?.email,
+              });
+            } else {
+              posthog.capture('data_import_failed', {
+                url: url.trim(),
+                max_products: maxProducts === '' ? 5 : maxProducts,
+                max_reviews: maxReviews === '' ? 15 : maxReviews,
+                error: statusData.error || 'Task failed',
+                batch_id: taskId,
+                user_id: user?.id,
+                user_email: user?.email,
+              });
+            }
+          }
+        } else {
+          console.warn(`⚠️  No status data received for batch_id ${taskId}`);
+        }
+      } catch (error) {
+        console.error(`❌ Polling error for batch_id ${taskId}:`, error);
+        clearInterval(pollInterval);
+        setIsLoading(false);
+        
+        // 设置错误状态
+        setResult(prev => ({
+          ...prev,
+          overall_status: 'failed',
+          error: error instanceof Error ? error.message : 'Polling failed'
+        }));
+      }
+    }, 10000); // 每10秒轮询一次
+    
+    // 设置最大轮询时间（10分钟）
+    const timeoutId = setTimeout(() => {
+      console.warn(`⏰ Polling timeout for batch_id ${taskId}, stopping polling after 10 minutes`);
+      clearInterval(pollInterval);
+      setIsLoading(false);
+      
+      // 设置超时状态
+      setResult(prev => ({
+        ...prev,
+        overall_status: 'timeout',
+        error: 'Task execution timeout (10 minutes)'
+      }));
+    }, 10 * 60 * 1000);
+    
+    // 返回清理函数
+    return () => {
+      clearInterval(pollInterval);
+      clearTimeout(timeoutId);
+    };
   };
 
   // 🔥 修改：支持实时进度的启动逻辑
@@ -153,7 +260,6 @@ export function DataImportTab() {
     setResult(null);
     setIsScrapingStarted(true); // 🔥 立即显示进度界面
     setCurrentBatchId(null);
-    setCurrentRequestId(null);
 
     try {
       // 🔥 修改：使用异步启动方式
@@ -177,25 +283,41 @@ export function DataImportTab() {
       const data = await response.json();
       setResult(data);
       
-      // PostHog 埋点：数据导入成功
-      posthog.capture('data_import_success', {
-        url: url.trim(),
-        max_products: maxProducts === '' ? 5 : maxProducts,
-        max_reviews: maxReviews === '' ? 15 : maxReviews,
-        batch_id: data.batch_id,
-        products_scraped: data.results?.products_scraped || 0,
-        reviews_scraped: data.results?.reviews_scraped || 0,
-        overall_status: data.overall_status,
-        user_id: user?.id,
-        user_email: user?.email,
-      });
+      // 🔥 检查是否为错误状态
+      if (data.status === 'failed' || data.overall_status === 'failed' || data.task_id === 'error') {
+        console.error('任务创建失败:', data.error);
+        // 抛出错误，让catch块处理
+        throw new Error(data.error || '任务创建失败');
+      }
       
-      // 🔥 新增：如果获得了batch_id，开始轮询状态
-      if (data.batch_id) {
-        setCurrentBatchId(data.batch_id);
+      // 🔥 立即开始轮询状态
+      if (data.batch_id || (data.task_id && data.task_id !== 'error')) {
+        const taskId = data.batch_id || data.task_id;
+        setCurrentBatchId(taskId);
         
-        // 开始轮询（但现在API是同步的，所以这里主要是为了兼容未来的异步API）
-        // 暂时显示完整结果
+        console.log(`🚀 Starting polling for task_id: ${taskId}`);
+        
+        // 启动轮询
+        const cleanupPolling = startPollingStatus(taskId);
+        
+        // 保存清理函数以备后用
+        if (cleanupPolling) {
+          // 在组件卸载时清理
+          return () => cleanupPolling();
+        }
+      } else {
+        // 如果没有task_id，说明是旧的同步模式，记录成功
+        posthog.capture('data_import_success', {
+          url: url.trim(),
+          max_products: maxProducts === '' ? 5 : maxProducts,
+          max_reviews: maxReviews === '' ? 15 : maxReviews,
+          batch_id: data.batch_id,
+          products_scraped: data.results?.products_scraped || 0,
+          reviews_scraped: data.results?.reviews_scraped || 0,
+          overall_status: data.overall_status,
+          user_id: user?.id,
+          user_email: user?.email,
+        });
       }
       
     } catch (error) {
@@ -217,7 +339,8 @@ export function DataImportTab() {
         error: error instanceof Error ? error.message : 'Failed to start scraping task',
       });
     } finally {
-      setIsLoading(false);
+      // Note: We don't set setIsLoading to false here for async tasks, 
+      // it will be handled by the poller.
     }
   };
 
@@ -229,7 +352,12 @@ export function DataImportTab() {
         return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>;
       case 'running':
         return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />{t('running')}</Badge>;
+      case 'timeout':
+        return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('timeout')}</Badge>;
       default:
+        if (status && (status.includes('Smart Skip') || status.includes('skip'))) {
+          return <Badge variant="default" className="bg-sky-500"><CheckCircle className="w-3 h-3 mr-1" />{t('smartSkip')}</Badge>;
+        }
         return <Badge variant="outline">{status}</Badge>;
     }
   };
@@ -242,20 +370,10 @@ export function DataImportTab() {
         return <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>;
       case 'running':
         return <Badge variant="secondary"><Loader2 className="w-3 h-3 mr-1 animate-spin" />{t('running')}</Badge>;
+      case 'pending':
+        return <Badge variant="outline">{t('pending')}</Badge>;
       default:
         return <Badge variant="outline">{status}</Badge>;
-    }
-  };
-
-  const getTransformationStatus = (phase: any) => {
-    if (phase.success) {
-      return (
-        <Badge variant="default" className="bg-green-500"><CheckCircle className="w-3 h-3 mr-1" />{t('success')}</Badge>
-      );
-    } else {
-      return (
-        <Badge variant="destructive"><AlertCircle className="w-3 h-3 mr-1" />{t('failed')}</Badge>
-      );
     }
   };
 
@@ -495,39 +613,26 @@ export function DataImportTab() {
                     <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center text-sm font-bold text-purple-600">3</div>
                     <span className="font-medium">{t('productTransformation')}</span>
                     {result?.transformation_phase ? (
-                      getTransformationStatus(result.transformation_phase)
+                      getStepStatus(result.transformation_phase.status || 'pending')
                     ) : (
                       <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
                     {result?.transformation_phase ? (
-                      result.transformation_phase.success ? (
-                        <div className="space-y-1">
-                          <div className="flex items-center gap-4">
-                            <span>✅ {result.transformation_phase.processed_count || 0} {t('productsTransformed')}</span>
-                            <span className="text-xs font-mono bg-purple-50 px-2 py-1 rounded">
-                              {result.transformation_phase.duration_seconds ? `${result.transformation_phase.duration_seconds.toFixed(1)}s` : 'N/A'}
-                            </span>
-                          </div>
-                          {(result.transformation_phase.error_count || 0) > 0 && (
-                            <div className="text-amber-600">
-                              ⚠️ {result.transformation_phase.error_count || 0} {t('errorsOccurred')}
-                            </div>
-                          )}
+                      result.transformation_phase.status === 'success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ {result.transformation_phase.processed_count || 0} {t('productsTransformed')}</span>
                         </div>
+                      ) : result.transformation_phase.status === 'failed' ? (
+                        <span className="text-red-600">❌ {t('transformationFailed')}</span>
+                      ) : result.transformation_phase.status === 'running' ? (
+                        <span>🔄 {t('inProgress')}...</span>
                       ) : (
-                        <div className="space-y-1">
-                          <span className="text-red-600">❌ {t('transformationFailed')}</span>
-                          {result.transformation_phase.errors && result.transformation_phase.errors.length > 0 && (
-                            <div className="text-xs bg-red-50 p-2 rounded mt-1">
-                              {result.transformation_phase.errors[0]}
-                            </div>
-                          )}
-                        </div>
+                        <span>⏳ {t('waitingForProductImport')}</span>
                       )
                     ) : (
-                      <span>⏳ {t('waitingProductImport')}</span>
+                      <span>⏳ {t('waitingForProductImport')}</span>
                     )}
                   </div>
                 </div>
@@ -547,10 +652,7 @@ export function DataImportTab() {
                     {result?.reviews_phase?.scraping ? (
                       result.reviews_phase.scraping.status === 'success' || result.reviews_phase.scraping.status === 'partial_success' ? (
                         <div className="flex items-center gap-4">
-                          <span>✅ {t('reviewsScrapedFor')} {result.reviews_phase.scraping.products_processed || 0} {t('products')}</span>
-                          <span className="text-xs font-mono bg-green-50 px-2 py-1 rounded">
-                            {result.reviews_phase.scraping.total_reviews_scraped || 0} {t('reviews')}
-                          </span>
+                          <span>✅ {t('reviewsScrapedFor')} {result.reviews_phase.scraping.reviews_scraped || 0} {t('reviews')}</span>
                         </div>
                       ) : result.reviews_phase.scraping.status === 'failed' ? (
                         <span className="text-red-600">❌ {t('failed')}: {result.reviews_phase.scraping.error || t('reviewScrapingFailed')}</span>
@@ -600,36 +702,23 @@ export function DataImportTab() {
                     <div className="w-6 h-6 rounded-full bg-orange-100 flex items-center justify-center text-sm font-bold text-orange-600">6</div>
                     <span className="font-medium">{t('reviewTransformation')}</span>
                     {result?.reviews_phase?.transformation ? (
-                      getTransformationStatus(result.reviews_phase.transformation)
+                      getStepStatus(result.reviews_phase.transformation.status || 'pending')
                     ) : (
                       <Badge variant="outline">{t('pending')}</Badge>
                     )}
                   </div>
                   <div className="ml-8 text-sm text-muted-foreground">
                     {result?.reviews_phase?.transformation ? (
-                      result.reviews_phase.transformation.success ? (
-                        <div className="space-y-1">
-                          <div className="flex items-center gap-4">
-                            <span>✅ {result.reviews_phase.transformation.processed_count || 0} {t('reviewsTransformed')}</span>
-                            <span className="text-xs font-mono bg-orange-50 px-2 py-1 rounded">
-                              {result.reviews_phase.transformation.duration_seconds ? `${result.reviews_phase.transformation.duration_seconds.toFixed(1)}s` : 'N/A'}
-                            </span>
-                          </div>
-                          {(result.reviews_phase.transformation.error_count || 0) > 0 && (
-                            <div className="text-amber-600">
-                              ⚠️ {result.reviews_phase.transformation.error_count || 0} {t('errorsOccurred')}
-                            </div>
-                          )}
+                      result.reviews_phase.transformation.status === 'success' ? (
+                        <div className="flex items-center gap-4">
+                          <span>✅ {result.reviews_phase.transformation.processed_count || 0} {t('reviewsTransformed')}</span>
                         </div>
+                      ) : result.reviews_phase.transformation.status === 'failed' ? (
+                        <span className="text-red-600">❌ {t('reviewTransformationFailed')}</span>
+                      ) : result.reviews_phase.transformation.status === 'running' ? (
+                        <span>🔄 {t('inProgress')}...</span>
                       ) : (
-                        <div className="space-y-1">
-                          <span className="text-red-600">❌ {t('reviewTransformationFailed')}</span>
-                          {result.reviews_phase.transformation.errors && result.reviews_phase.transformation.errors.length > 0 && (
-                            <div className="text-xs bg-red-50 p-2 rounded mt-1">
-                              {result.reviews_phase.transformation.errors[0]}
-                            </div>
-                          )}
-                        </div>
+                        <span>⏳ {t('waitingReviewImport')}</span>
                       )
                     ) : (
                       <span>⏳ {t('waitingReviewImport')}</span>
@@ -822,4 +911,4 @@ export function DataImportTab() {
       </div>
     </div>
   );
-} 
+}
