@@ -1,6 +1,44 @@
 import { supabase } from '@/lib/supabase'
 import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS } from '../types/filters'
 
+// TAM Market Share API 相关接口
+export interface TAMData {
+  total_market_revenue: number
+  total_market_volume: number
+  total_products: number
+  currency: string
+}
+
+export interface BrandShareData {
+  brand: string
+  revenue: number
+  volume: number
+  product_count: number
+  market_share_percentage: number
+  rank: number
+}
+
+export interface CategoryMarketShare {
+  category: string
+  total_revenue: number
+  total_volume: number
+  total_products: number
+  brand_shares: BrandShareData[]
+}
+
+export interface TAMMarketShareMetadata {
+  filtered_asins_count: number
+  total_categories: number
+  total_brands: number
+  calculation_timestamp: string
+}
+
+export interface TAMMarketShareResponse {
+  tam_data: TAMData
+  market_share_by_category: CategoryMarketShare[]
+  metadata: TAMMarketShareMetadata
+}
+
 export interface ProductData {
   platform_id: string
   title: string
@@ -180,6 +218,52 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 
 export class DatabaseService {
   
+  // 🔑 Get TAM Market Share data with new dedicated API
+  async getTAMMarketShareData(projectId: string, options: {
+    categoryFilters?: string[]
+    brandFilters?: string[]
+    segmentFilters?: string[]
+    extendFields?: Record<string, any>
+    timeframe?: { period: 'month' | '6months' | 'year' }
+  } = {}): Promise<TAMMarketShareResponse> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        filters: {
+          ...(options.categoryFilters && options.categoryFilters.length > 0 && { categories: options.categoryFilters }),
+          ...(options.brandFilters && options.brandFilters.length > 0 && { brands: options.brandFilters }),
+          ...(options.segmentFilters && options.segmentFilters.length > 0 && { segments: options.segmentFilters }),
+          ...(options.extendFields && Object.keys(options.extendFields).length > 0 && { extend_fields: options.extendFields })
+        },
+        ...(options.timeframe && { timeframe: options.timeframe })
+      }
+
+      console.log('🔍 Calling TAM Market Share API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/tam-market-share`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`TAM Market Share API call failed: ${response.status}`)
+      }
+
+      const result: TAMMarketShareResponse = await response.json()
+      console.log('📊 TAM Market Share API response:', result)
+      
+      return result
+    } catch (error) {
+      console.error('Error fetching TAM Market Share data:', error)
+      throw error
+    }
+  }
+
   // 🔑 Get brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     brandCategoryRevenue: BrandCategoryData[]

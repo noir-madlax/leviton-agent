@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import React, { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
@@ -13,6 +13,11 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
 import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
+// 导入新的过滤器组件
+import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
+import { getChartFilterConfig } from "@/components/analysis-db/configs/chart-filter-data"
+import { type ChartFilterConfig } from "@/components/analysis-db/configs/filter-config"
+import { useTAMDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api'
@@ -30,6 +35,34 @@ interface BrandAnalysisProps {
     }[]
     categoryNames: string[]
     categoryColors: string[]
+  }
+  tamMarketShare?: {
+    tam_data: {
+      total_market_revenue: number
+      total_market_volume: number
+      total_products: number
+      currency: string
+    }
+    market_share_by_category: Array<{
+      category: string
+      total_revenue: number
+      total_volume: number
+      total_products: number
+      brand_shares: Array<{
+        brand: string
+        revenue: number
+        volume: number
+        product_count: number
+        market_share_percentage: number
+        rank: number
+      }>
+    }>
+    metadata: {
+      filtered_asins_count: number
+      total_categories: number
+      total_brands: number
+      calculation_timestamp: string
+    }
   }
   // 添加新的数据字段
   marketInsights?: {
@@ -228,13 +261,69 @@ function SalesTrendByCategoryComponent({
   )
 }
 
-export function BrandAnalysis({ data: initialData, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const { openPanel, loading } = useProductPanel()
   
   // Get chart sections configuration for conditional rendering
   const { shouldShowChart } = useChartSections('brand-analysis', projectId || '')
+
+  // TAM图表数据状态管理 - 使用新的hook
+  const { 
+    data: tamMarketShare, 
+    loading: tamDataLoading, 
+    error: tamDataError, 
+    refreshData: refreshTamData 
+  } = useTAMDataRefresh(projectId || '', initialTamMarketShare)
+
+  // TAM图表过滤器状态管理
+  const [tamFilters, setTamFilters] = useState<ProjectFilters>(initialFilters || {
+    categories: [],
+    asins: [],
+    brands: [],
+    segments: [],
+    extend_fields: {},
+    time_period: "30 days"
+  })
+  const [tamFilterConfig, setTamFilterConfig] = useState<ChartFilterConfig | null>(null)
+  const [tamConfigLoading, setTamConfigLoading] = useState(true)
+
+  // 加载TAM图表过滤器配置
+  React.useEffect(() => {
+    const loadTamFilterConfig = async () => {
+      if (!projectId) return
+      
+      try {
+        setTamConfigLoading(true)
+        const config = await getChartFilterConfig(projectId, 'market-share-analysis')
+        setTamFilterConfig(config)
+        
+        // 应用默认值
+        if (config?.default_values) {
+          setTamFilters(prev => ({
+            ...prev,
+            categories: config.default_values.categories || prev.categories,
+            brands: config.default_values.brands || prev.brands,
+            segments: config.default_values.segments || prev.segments,
+            extend_fields: config.default_values.extend_fields || prev.extend_fields,
+          }))
+        }
+      } catch (error) {
+        console.error('Error loading TAM filter config:', error)
+      } finally {
+        setTamConfigLoading(false)
+      }
+    }
+
+    loadTamFilterConfig()
+  }, [projectId])
+
+  // TAM过滤器变更处理函数
+  const handleTamFiltersChange = async (newFilters: ProjectFilters) => {
+    setTamFilters(newFilters)
+    await refreshTamData(newFilters)
+  }
 
   // 获取category信息
   const categoryNames = data.categoryNames || []
@@ -403,12 +492,20 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
     return null
   }
 
-  const categoryPieData = processCategoryPieData()
-  const pieColors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
+  // 使用新的TAM数据，如果没有则回退到旧的计算方式
+  const useTAMData = tamMarketShare && tamMarketShare.tam_data;
+  
+  // 新的TAM数据
+  const totalMarketRevenue = useTAMData ? tamMarketShare.tam_data.total_market_revenue : 0;
+  const totalMarketProducts = useTAMData ? tamMarketShare.tam_data.total_products : 0;
+  const categoryPieData = useTAMData ? tamMarketShare.market_share_by_category : [];
 
-  // 计算总的市场数据
-  const totalMarketRevenue = categoryPieData.reduce((sum, category) => sum + category.totalRevenue, 0)
-  const totalMarketProducts = categoryPieData.reduce((sum, category) => sum + category.totalProducts, 0)
+  // 旧的处理方式（作为fallback）
+  const fallbackCategoryPieData = !useTAMData ? processCategoryPieData() : [];
+  const fallbackTotalMarketRevenue = !useTAMData ? fallbackCategoryPieData.reduce((sum, category) => sum + category.totalRevenue, 0) : 0;
+  const fallbackTotalMarketProducts = !useTAMData ? fallbackCategoryPieData.reduce((sum, category) => sum + category.totalProducts, 0) : 0;
+
+  const pieColors = Array.from({ length: 20 }, (_, i) => getChartColor(i))
 
   return (
     <section className="mb-10">
@@ -418,91 +515,258 @@ export function BrandAnalysis({ data: initialData, productLists, projectId, init
       {shouldShowChart('market-share-analysis') && (
       <div className="mt-5">
  
-        {/* 第一层：ChartWithFilters包装整个Market Share section */}
+        {/* 第一层：包装整个Market Share section - 使用新的过滤器组件 */}
         <div data-chart-id="market-share-analysis">
-        <ChartWithFilters
-          chartId="market-share-analysis"
-          projectId={projectId || ''}
-          title="Total addressable market (TAM) and Market Share by brands"
-          projectFilters={initialFilters}
-        >
+          <Card className="p-6">
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                Total addressable market (TAM) and Market Share by brands
+              </h3>
+              
+              {/* 新的过滤器组件 */}
+              <FilterRenderer
+                currentFilters={tamFilters}
+                onChange={handleTamFiltersChange}
+                availableOptions={{
+                  categories: ['Dimmer Switches', 'Light Switches', 'Smart Switches', 'GFCI Outlets'],
+                  brands: ['Leviton', 'Lutron', 'GE', 'Cooper Wiring', 'Pass & Seymour'],
+                  segments: ['Premium', 'Mid-range', 'Budget'],
+                  extend_fields: {}
+                }}
+                projectId={projectId || ''}
+                projectData={{
+                  stats: {
+                    total_products: useTAMData ? totalMarketProducts : fallbackTotalMarketProducts,
+                    total_brands: tamMarketShare?.metadata?.total_brands || 10,
+                    total_reviews: 50000,
+                    segment_count: tamMarketShare?.metadata?.total_categories || 2
+                  },
+                  distributions: {
+                    categories: [
+                      { name: 'Dimmer Switches', count: 450, percentage: 60 },
+                      { name: 'Light Switches', count: 300, percentage: 40 }
+                    ],
+                    brands: [
+                      { name: 'Leviton', count: 200, percentage: 27 },
+                      { name: 'Lutron', count: 180, percentage: 24 },
+                      { name: 'GE', count: 150, percentage: 20 }
+                    ]
+                  }
+                }}
+                filterConfig={tamFilterConfig as any} // eslint-disable-line @typescript-eslint/no-explicit-any
+                loading={tamConfigLoading || tamDataLoading}
+                className="mb-6"
+                visibleFilters={{
+                  categories: tamFilterConfig?.visible_filters?.categories !== false,
+                  brands: tamFilterConfig?.visible_filters?.brands !== false,
+                  segments: tamFilterConfig?.visible_filters?.segments !== false,
+                  extend_fields: tamFilterConfig?.visible_filters?.extend_fields !== false
+                }}
+              />
+            </div>
           {/* 第二层：单一的Summary区域 */}
           <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-            <p className="text-sm text-blue-700">
-              <strong>Total addressable market (TAM): </strong>
-              ${totalMarketRevenue.toLocaleString()} with {totalMarketProducts} products
-            </p>
+            {tamDataLoading ? (
+              <div className="flex items-center gap-2">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
+                <p className="text-sm text-blue-700">正在更新TAM数据...</p>
+              </div>
+            ) : tamDataError ? (
+              <div className="flex items-center gap-2">
+                <p className="text-sm text-red-700">
+                  <strong>数据加载失败: </strong>{tamDataError}
+                </p>
+                <button 
+                  onClick={() => refreshTamData(tamFilters)}
+                  className="text-xs text-blue-600 hover:text-blue-800 underline"
+                >
+                  重试
+                </button>
+              </div>
+            ) : (
+              <p className="text-sm text-blue-700">
+                <strong>Total addressable market (TAM): </strong>
+                ${(useTAMData ? totalMarketRevenue : fallbackTotalMarketRevenue).toLocaleString()} with {useTAMData ? totalMarketProducts : fallbackTotalMarketProducts} products
+              </p>
+            )}
            
             
-            {/* 分类别明细 */}
-            {categoryPieData.length > 0 && (
-              <div className="mt-0 pt-0 ">
-                {categoryPieData.map((categoryData) => (
+            {/* 分类别明细 - 使用新的数据结构 */}
+            {useTAMData ? (
+              categoryPieData.length > 0 && (
+                <div className="mt-0 pt-0 ">
+                                  {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
                   <p key={categoryData.category} className="text-sm text-blue-600 mt-1">
-                    <strong>{categoryData.category}:</strong> ${categoryData.totalRevenue.toLocaleString()} with {categoryData.totalProducts} products
+                    <strong>{categoryData.category}:</strong> ${categoryData.total_revenue.toLocaleString()} with {categoryData.total_products} products
                   </p>
                 ))}
-              </div>
+                </div>
+              )
+            ) : (
+              fallbackCategoryPieData.length > 0 && (
+                <div className="mt-0 pt-0 ">
+                  {fallbackCategoryPieData.map((categoryData) => (
+                    <p key={categoryData.category} className="text-sm text-blue-600 mt-1">
+                      <strong>{categoryData.category}:</strong> ${categoryData.totalRevenue.toLocaleString()} with {categoryData.totalProducts} products
+                    </p>
+                  ))}
+                </div>
+              )
             )}
              <p className="text-sm pt-0 text-blue-700 mt-3">
              Approximated by the total Revenue of all products in the selected categories and time period.
             </p>
           </div>
-          <Card className="p-6 bg-gray-50 mb-15">
+          <div className="p-6 bg-gray-50 mb-15 rounded-lg border">
           {/* 第三层：多个饼图区域 */}
-          {categoryPieData.length > 0 ? (
-            <div className="space-y-8">
-              {categoryPieData.map((categoryData) => (
-                <div key={categoryData.category} className="bg-gray-50 p-6 mb-0 rounded-lg">
-                  <h4 className="text-lg font-medium mb-0 text-center">
-                    📊 {categoryData.category} - Market Share by Brand
-                  </h4>
-                  <div className="h-[600px]">
-                    <ResponsiveContainer width="100%" height="100%">
-                      <PieChart>
-                        <Pie
-                          data={categoryData.brandShares}
-                          cx="50%"
-                          cy="50%"
-                          labelLine={false}
-                          label={renderCustomizedLabel}
-                          outerRadius={160}
-                          fill="#8884d8"
-                          dataKey="revenue"
-                        >
-                          {categoryData.brandShares.map((entry, brandIndex) => (
-                            <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
-                          ))}
-                        </Pie>
-                        <Tooltip content={<CustomTooltip />} />
-                        <Legend 
-                          verticalAlign="bottom" 
-                          height={250}
-                          wrapperStyle={{
-                            paddingTop: 20,
-                            maxHeight: 200,
-                          }}
-                          formatter={(value) => {
-                            // value现在是brand名称（因为我们设置了name属性）
-                            const item = categoryData.brandShares.find(d => d.brand === value)
-                            return `${value} (${item?.marketShare.toFixed(1) || '0.0'}%)`
-                          }}
-                        />
-                      </PieChart>
-                    </ResponsiveContainer>
+          {tamDataLoading ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                <p className="text-sm text-gray-600">正在更新图表数据...</p>
+              </div>
+            </div>
+          ) : tamDataError ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <p className="text-sm text-red-600 mb-3">图表数据加载失败: {tamDataError}</p>
+                <button 
+                  onClick={() => refreshTamData(tamFilters)}
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+                >
+                  重新加载
+                </button>
+              </div>
+            </div>
+          ) : useTAMData ? (
+            // 新的TAM数据渲染
+            categoryPieData.length > 0 ? (
+              <div className="space-y-8">
+                {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
+                  <div key={categoryData.category} className="bg-gray-50 p-6 mb-0 rounded-lg">
+                    <h4 className="text-lg font-medium mb-0 text-center">
+                      📊 {categoryData.category} - Market Share by Brand
+                    </h4>
+                    <div className="h-[600px]">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
+                          <Pie
+                            data={categoryData.brand_shares.map((brand) => ({
+                              brand: brand.brand,
+                              revenue: brand.revenue,
+                              product_count: brand.product_count,
+                              market_share_percentage: brand.market_share_percentage,
+                              name: brand.brand // 为Legend组件添加name字段
+                            }))}
+                            cx="50%"
+                            cy="50%"
+                            labelLine={false}
+                            label={({ market_share_percentage }: { market_share_percentage: number }) => 
+                              market_share_percentage >= 5 ? `${market_share_percentage.toFixed(1)}%` : null
+                            }
+                            outerRadius={160}
+                            fill="#8884d8"
+                            dataKey="revenue"
+                          >
+                            {categoryData.brand_shares.map((entry, brandIndex: number) => (
+                              <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
+                            ))}
+                          </Pie>
+                          <Tooltip content={(props) => {
+                            if (props.active && props.payload && props.payload.length) {
+                              const data = props.payload[0].payload as {
+                                brand: string;
+                                revenue: number;
+                                market_share_percentage: number;
+                                product_count: number;
+                              }
+                              return (
+                                <div className="bg-gray-50 p-3">
+                                  <p className="font-medium">{`Brand: ${data.brand}`}</p>
+                                  <p className="text-blue-600">{`Revenue: $${data.revenue.toLocaleString()}`}</p>
+                                  <p className="text-green-600">{`Total number of products: ${data.product_count}`}</p>
+                                  <p className="text-gray-600">{`Market Share: ${data.market_share_percentage.toFixed(1)}%`}</p>
+                                </div>
+                              )
+                            }
+                            return null
+                          }} />
+                          <Legend 
+                            verticalAlign="bottom" 
+                            height={250}
+                            wrapperStyle={{
+                              paddingTop: 20,
+                              maxHeight: 200,
+                            }}
+                            formatter={(value) => {
+                              const item = categoryData.brand_shares.find((d: {brand: string, market_share_percentage: number}) => d.brand === value)
+                              return `${value} (${item?.market_share_percentage.toFixed(1) || '0.0'}%)`
+                            }}
+                          />
+                        </PieChart>
+                      </ResponsiveContainer>
+                    </div>
                   </div>
-                </div>
-              ))}
-           
-            </div>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-center text-gray-500">No TAM market share data available</p>
+              </div>
+            )
           ) : (
-       
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <p className="text-center text-gray-500">No market share data available</p>
-            </div>
+            // 回退到旧的数据渲染
+            fallbackCategoryPieData.length > 0 ? (
+              <div className="space-y-8">
+                {fallbackCategoryPieData.map((categoryData) => (
+                  <div key={categoryData.category} className="bg-gray-50 p-6 mb-0 rounded-lg">
+                    <h4 className="text-lg font-medium mb-0 text-center">
+                      📊 {categoryData.category} - Market Share by Brand
+                    </h4>
+                    <div className="h-[600px]">
+                      <ResponsiveContainer width="100%" height="100%">
+                        <PieChart>
+                          <Pie
+                            data={categoryData.brandShares}
+                            cx="50%"
+                            cy="50%"
+                            labelLine={false}
+                            label={renderCustomizedLabel}
+                            outerRadius={160}
+                            fill="#8884d8"
+                            dataKey="revenue"
+                          >
+                            {categoryData.brandShares.map((entry, brandIndex) => (
+                              <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
+                            ))}
+                          </Pie>
+                          <Tooltip content={<CustomTooltip />} />
+                          <Legend 
+                            verticalAlign="bottom" 
+                            height={250}
+                            wrapperStyle={{
+                              paddingTop: 20,
+                              maxHeight: 200,
+                            }}
+                            formatter={(value) => {
+                              const item = categoryData.brandShares.find(d => d.brand === value)
+                              return `${value} (${item?.marketShare.toFixed(1) || '0.0'}%)`
+                            }}
+                          />
+                        </PieChart>
+                      </ResponsiveContainer>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-center text-gray-500">No market share data available</p>
+              </div>
+            )
           )}
+          </div>
           </Card>
-        </ChartWithFilters>
         </div>
 
      

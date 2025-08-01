@@ -87,7 +87,7 @@ export function FilterRenderer({
     setApplyingFilters(true)
     
     // 模拟短暂延迟，让用户看到loading效果
-    await new Promise(resolve => setTimeout(resolve, 300))
+    await new Promise(resolve => setTimeout(resolve, 10))
     
     onChange(pendingFilters)
     
