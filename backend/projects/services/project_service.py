@@ -137,10 +137,13 @@ class ProjectService:
                     logger.error(f"Error creating user project access: {e}")
                     # Continue with project creation even if access creation fails
             
-            # 6. Broadcast initial project creation status
+            # 6. Initialize project_extend_data for all ASINs
+            await self._initialize_project_extend_data(created_project["id"], filtered_asins)
+            
+            # 7. Broadcast initial project creation status
             await self._broadcast_progress_update(created_project["id"])
             
-            # 7. Schedule segmentation processing as a background task
+            # 8. Schedule segmentation processing as a background task
             if filtered_asins and request.filters.categories:
                 background_tasks.add_task(
                     self._process_project_segmentation,
@@ -149,7 +152,7 @@ class ProjectService:
                     category=request.filters.categories[0]
                 )
             
-            # 8. Return response immediately
+            # 9. Return response immediately
             return ProjectCreateResponse(
                 id=created_project["id"],
                 project_name=created_project["project_name"],
@@ -166,6 +169,38 @@ class ProjectService:
         except Exception as e:
             logger.error(f"Error creating project: {e}")
             raise
+    
+    async def _initialize_project_extend_data(self, project_id: str, filtered_asins: List[str]) -> None:
+        """Initialize project_extend_data table with empty records for all project ASINs"""
+        try:
+            logger.info(f"Initializing project_extend_data for project {project_id} with {len(filtered_asins)} ASINs")
+            
+            # Prepare upsert data for all ASINs with empty extend field
+            upsert_data = []
+            for asin in filtered_asins:
+                upsert_data.append({
+                    'project_id': project_id,
+                    'asins': asin,
+                    'extend': {},  # Initialize with empty JSONB object
+                    'computed_at': datetime.utcnow().isoformat()
+                })
+            
+            # Batch upsert to avoid conflicts if records already exist
+            if upsert_data:
+                result = self.supabase.table('project_extend_data').upsert(
+                    upsert_data,
+                    on_conflict='project_id,asins'  # Avoid duplicates
+                ).execute()
+                
+                if result.data:
+                    logger.info(f"Successfully initialized {len(result.data)} project_extend_data records for project {project_id}")
+                else:
+                    logger.warning(f"No data returned from project_extend_data initialization for project {project_id}")
+                    
+        except Exception as e:
+            logger.error(f"Error initializing project_extend_data for project {project_id}: {e}")
+            # Don't raise - this is not critical enough to fail project creation
+            logger.warning("Continuing with project creation despite extend_data initialization failure")
     
     async def _process_project_segmentation(self, project_id: str, product_ids: List[str], category: str):
         """处理项目的产品细分（异步）"""
