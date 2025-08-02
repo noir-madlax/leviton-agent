@@ -45,16 +45,15 @@ async def test_optimized_methods_with_real_data():
             aspect_types=['phy_perf'],
             options={
                 'max_categories': 5,
-                'sort_by': 'total_mentions',
+                'sort_by': 'total_reviews',
                 'sort_direction': 'desc',
-                'min_mentions': 1
+                'min_reviews': 1
             }
         )
         
         print(f"✅ Success! Found {len(result)} categories")
         if result:
             print(f"📊 Top category: {result[0]['category_name']}")
-            print(f"   - Total mentions: {result[0]['total_mentions']}")
             print(f"   - Total reviews: {result[0]['total_reviews']}")
             print(f"   - Positive ratio: {result[0]['positive_ratio']:.3f}")
         
@@ -72,12 +71,15 @@ async def test_optimized_methods_with_real_data():
                 limit=3
             )
             
-            print(f"✅ Success! Found cause analysis for {len(cause_result)} categories")
-            for category_id, causes in cause_result.items():
-                category_name = next((cat['category_name'] for cat in result if cat['category_pk'] == category_id), 'Unknown')
-                print(f"📊 Category: {category_name}")
-                for cause in causes:
-                    print(f"   - {cause['category_name']}: {cause['count']} mentions")
+            print(f"✅ Success! Found cause analysis for {len(cause_result)} cause categories")
+            for cause in cause_result:
+                print(f"📊 Cause: {cause['category_name']}")
+                print(f"   - Total reviews: {cause['total_reviews']}")
+                print(f"   - Positive reviews: {cause['total_positive_reviews']}")
+                print(f"   - Negative reviews: {cause['total_negative_reviews']}")
+                print(f"   - Aspects: {len(cause['aspects'])}")
+                for aspect in cause['aspects'][:2]:  # Show first 2 aspects
+                    print(f"     * {aspect['aspect_description']}: {aspect['total_reviews']} reviews")
         
         # Test 3: Integrated method with cause analysis
         print("\n🧪 Test 3: get_aspect_categories_with_metrics with cause analysis")
@@ -89,9 +91,9 @@ async def test_optimized_methods_with_real_data():
             aspect_types=['phy_perf'],
             options={
                 'max_categories': 3,
-                'sort_by': 'total_mentions',
+                'sort_by': 'total_reviews',
                 'sort_direction': 'desc',
-                'min_mentions': 1,
+                'min_reviews': 1,
                 'return_top_cause_categories': {
                     'sentiment': '+',
                     'limit': 2
@@ -102,13 +104,47 @@ async def test_optimized_methods_with_real_data():
         print(f"✅ Success! Found {len(integrated_result)} categories with cause analysis")
         for category in integrated_result:
             print(f"📊 Category: {category['category_name']}")
-            print(f"   - Total mentions: {category['total_mentions']}")
+            print(f"   - Total reviews: {category['total_reviews']}")
             print(f"   - Top causes: {len(category.get('top_cause_categories', []))}")
             for cause in category.get('top_cause_categories', [])[:2]:
-                print(f"     * {cause['category_name']}: {cause['count']} mentions")
+                print(f"     * {cause['category_name']}: {cause['total_reviews']} reviews")
         
-        # Test 4: Backward compatibility
-        print("\n🧪 Test 4: Backward compatibility - old method")
+        # Test 4: Cause matrix view data
+        print("\n🧪 Test 4: get_cause_matrix_view_data")
+        print("-" * 60)
+        
+        if result:
+            top_aspect_category_ids = [cat['category_pk'] for cat in result[:3]]  # Top 3 aspect categories
+            # Use the same IDs as cause categories for testing (in real scenario these would be different)
+            top_cause_category_ids = top_aspect_category_ids[:2]  # Top 2 cause categories
+            
+            matrix_result = await data_service.get_cause_matrix_view_data(
+                project_id=project_id,
+                asins=project_asins,
+                top_aspect_category_ids=top_aspect_category_ids,
+                top_cause_category_ids=top_cause_category_ids,
+                sentiment_filter='+'  # Only positive sentiment
+            )
+            
+            print(f"✅ Success! Matrix view data:")
+            print(f"   - Aspect categories (columns): {len(matrix_result['aspect_categories'])}")
+            print(f"   - Cause categories (rows): {len(matrix_result['cause_aspect_data'])}")
+            print(f"   - Total aspect categories: {matrix_result['total_aspect_categories']}")
+            print(f"   - Total cause categories: {matrix_result['total_cause_categories']}")
+            
+            if matrix_result['cause_aspect_data']:
+                first_cause = matrix_result['cause_aspect_data'][0]
+                print(f"📊 Sample cause category: {first_cause['cause_category_name']}")
+                print(f"   - Aspect data points: {len(first_cause['aspect_data'])}")
+                if first_cause['aspect_data']:
+                    first_aspect = first_cause['aspect_data'][0]
+                    print(f"   - Sample cell: {first_aspect['category_name']}")
+                    print(f"     * Total reviews: {first_aspect['total_reviews']}")
+                    print(f"     * Positive reviews: {first_aspect['positive_reviews']}")
+                    print(f"     * Negative reviews: {first_aspect['negative_reviews']}")
+        
+        # Test 5: Backward compatibility
+        print("\n🧪 Test 5: Backward compatibility - old method")
         print("-" * 60)
         
         old_result = await data_service.get_category_statistics(
@@ -120,10 +156,10 @@ async def test_optimized_methods_with_real_data():
         print(f"✅ Success! Old method found {len(old_result)} categories")
         if old_result:
             print(f"📊 Sample category: {old_result[0]['category_name']}")
-            print(f"   - Total mentions: {old_result[0]['total_mentions']}")
+            print(f"   - Total reviews: {old_result[0]['total_reviews']}")
         
-        # Test 5: Performance comparison
-        print("\n🧪 Test 5: Performance comparison")
+        # Test 6: Performance comparison
+        print("\n🧪 Test 6: Performance comparison")
         print("-" * 60)
         
         import time
@@ -154,12 +190,12 @@ async def test_optimized_methods_with_real_data():
         
         # Verify results are consistent
         if len(old_result) > 0 and len(optimized_result) > 0:
-            old_total_mentions = sum(cat['total_mentions'] for cat in old_result)
-            optimized_total_mentions = sum(cat['total_mentions'] for cat in optimized_result)
+            old_total_reviews = sum(cat['total_reviews'] for cat in old_result)
+            optimized_total_reviews = sum(cat['total_reviews'] for cat in optimized_result)
             print(f"📊 Data consistency:")
-            print(f"   - Old method total mentions: {old_total_mentions}")
-            print(f"   - Optimized method total mentions: {optimized_total_mentions}")
-            print(f"   - Consistent: {old_total_mentions == optimized_total_mentions}")
+            print(f"   - Old method total reviews: {old_total_reviews}")
+            print(f"   - Optimized method total reviews: {optimized_total_reviews}")
+            print(f"   - Consistent: {old_total_reviews == optimized_total_reviews}")
         
     except Exception as e:
         print(f"❌ Error during testing: {e}")
