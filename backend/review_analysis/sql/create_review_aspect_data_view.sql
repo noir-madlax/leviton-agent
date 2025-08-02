@@ -18,6 +18,26 @@ SELECT
     rao.sentiment,
     rao.review_id,
     
+    -- Causes data - convert aspect IDs to JSON with aspect details
+    CASE 
+        WHEN rao.causes IS NOT NULL AND array_length(rao.causes, 1) > 0 THEN
+            (
+                SELECT json_agg(
+                    json_build_object(
+                        'aspect_id', cause_aspect.aspect_pk,
+                        'category_pk', cause_aspect.category_pk,
+                        'category_name', cause_category.name,
+                        'detail_text', cause_aspect.detail_text,
+                        'parent_group_name', cause_aspect.parent_group_name
+                    )
+                )
+                FROM unnest(rao.causes) AS cause_id
+                LEFT JOIN review_analysis_aspects cause_aspect ON cause_aspect.aspect_pk = cause_id
+                LEFT JOIN review_analysis_aspect_categories cause_category ON cause_aspect.category_pk = cause_category.category_pk
+            )
+        ELSE NULL
+    END as causes,
+    
     -- Review content
     pr.review_title,
     pr.review_text,

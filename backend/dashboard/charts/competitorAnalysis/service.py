@@ -557,15 +557,55 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                 cat_data['total_reviews'] = len(cat_data['reviews'])
                 categories.append(cat_data)
             
-            # Apply filters
-            categories = self._apply_category_filters(categories, options)
+            # Apply filters and sorting in one pass
+            filtered_categories = categories
+            
+            # Filter by minimum mentions
+            min_mentions = options.get('min_mentions')
+            if min_mentions is not None:
+                filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
+            
+            # Filter by minimum reviews
+            min_reviews = options.get('min_reviews')
+            if min_reviews is not None:
+                filtered_categories = [cat for cat in filtered_categories if cat['reviews'] >= min_reviews]
+            
+            # Filter by include categories
+            include_categories = options.get('include_categories')
+            if include_categories:
+                filtered_categories = [cat for cat in filtered_categories if cat['category_name'] in include_categories]
+            
+            # Filter by exclude categories
+            exclude_categories = options.get('exclude_categories')
+            if exclude_categories:
+                filtered_categories = [cat for cat in filtered_categories if cat['category_name'] not in exclude_categories]
+            
+            # Filter by sentiment
+            sentiment_filter = options.get('sentiment_filter')
+            if sentiment_filter:
+                if sentiment_filter == 'positive_only':
+                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] == 0]
+                elif sentiment_filter == 'negative_only':
+                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['negative'] > 0 and cat['sentiment_counts']['positive'] == 0]
+                elif sentiment_filter == 'mixed_only':
+                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] > 0]
             
             # Apply sorting
-            categories = self._apply_category_sorting(categories, options)
+            sort_by = options.get('sort_by', 'mentions')
+            sort_direction = options.get('sort_direction', 'desc')
+            reverse = sort_direction == 'desc'
+            
+            if sort_by == 'mentions' or sort_by == 'total_mentions':
+                filtered_categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
+            elif sort_by == 'reviews':
+                filtered_categories.sort(key=lambda x: x['reviews'], reverse=reverse)
+            elif sort_by == 'sentiment':
+                # Sort by positive sentiment ratio
+                filtered_categories.sort(key=lambda x: x['sentiment_counts']['positive'] / max(x['total_mentions'], 1), reverse=reverse)
             
             # Apply limit
             max_categories = options.get('max_categories', 10)
-            categories = categories[:max_categories]
+            categories = filtered_categories[:max_categories]
             
             logger.info(f"Retrieved {len(categories)} aspect categories after filtering and sorting")
             return categories
@@ -574,74 +614,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             logger.error(f"Error getting aspect categories with options: {e}", exc_info=True)
             return []
 
-    def _apply_category_filters(self, categories: List[Dict[str, Any]], options: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Apply category filters based on options.
-        
-        Args:
-            categories: List of category data
-            options: Filter options
-            
-        Returns:
-            Filtered list of categories
-        """
-        filtered_categories = categories
-        
-        # Filter by minimum mentions
-        min_mentions = options.get('min_mentions')
-        if min_mentions is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
-        
-        # Filter by minimum reviews
-        min_reviews = options.get('min_reviews')
-        if min_reviews is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['reviews'] >= min_reviews]
-        
-        # Filter by include categories
-        include_categories = options.get('include_categories')
-        if include_categories:
-            filtered_categories = [cat for cat in filtered_categories if cat['category_name'] in include_categories]
-        
-        # Filter by exclude categories
-        exclude_categories = options.get('exclude_categories')
-        if exclude_categories:
-            filtered_categories = [cat for cat in filtered_categories if cat['category_name'] not in exclude_categories]
-        
-        # Filter by sentiment
-        sentiment_filter = options.get('sentiment_filter')
-        if sentiment_filter:
-            if sentiment_filter == 'positive_only':
-                filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] == 0]
-            elif sentiment_filter == 'negative_only':
-                filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['negative'] > 0 and cat['sentiment_counts']['positive'] == 0]
-            elif sentiment_filter == 'mixed_only':
-                filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] > 0]
-        
-        return filtered_categories
 
-    def _apply_category_sorting(self, categories: List[Dict[str, Any]], options: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Apply category sorting based on options.
-        
-        Args:
-            categories: List of category data
-            options: Sort options
-            
-        Returns:
-            Sorted list of categories
-        """
-        sort_by = options.get('sort_by', 'mentions')
-        sort_direction = options.get('sort_direction', 'desc')
-        
-        reverse = sort_direction == 'desc'
-        
-        if sort_by == 'mentions' or sort_by == 'total_mentions':
-            categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
-        elif sort_by == 'reviews':
-            categories.sort(key=lambda x: x['reviews'], reverse=reverse)
-        elif sort_by == 'sentiment':
-            # Sort by positive sentiment ratio
-            categories.sort(key=lambda x: x['sentiment_counts']['positive'] / max(x['total_mentions'], 1), reverse=reverse)
-        
-        return categories
 
     async def _get_category_info_for_matrix(self, category_pks: List[int]) -> Dict[int, Dict[str, Any]]:
         """Get category information for given category PKs.

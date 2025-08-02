@@ -65,8 +65,9 @@ Base service class that provides:
 ### ReviewDataService
 Shared data service for database operations:
 - `get_reviews_by_category()` - Retrieve reviews for a category
-- `get_category_statistics()` - Calculate category metrics
-- `get_aspect_categories_with_metrics()` - Get categories with filtering/sorting
+- `get_category_statistics()` - Optimized category statistics with SQL-level filtering/sorting
+- `get_aspect_categories_with_metrics()` - Get categories with filtering/sorting and optional cause analysis
+- `get_cause_analysis()` - Analyze cause categories for top categories
 
 ## Shared Utilities
 
@@ -157,7 +158,29 @@ The module includes comprehensive error handling:
 - **Efficient Queries**: Uses indexed fields for filtering
 - **Pagination**: Limits data transfer with offset/limit
 - **Deduplication**: Performed in memory for better performance
-- **Caching**: Leverages materialized view for fast access
+- **Optimized Methods**: New optimized methods reduce database queries from N+1 to 2 total
+- **Cause Analysis**: Only analyzes causes for top N categories, not all categories
+
+## New Features
+
+### Cause Analysis
+The `get_aspect_categories_with_metrics()` method now supports cause analysis through the `return_top_cause_categories` option:
+
+```python
+options = {
+    'max_categories': 5,
+    'sort_by': 'total_mentions',
+    'return_top_cause_categories': {
+        'sentiment': '+',  # Optional: '+', '-', or None for both
+        'limit': 3
+    }
+}
+```
+
+### Performance Improvements
+- **`get_category_statistics()`**: Single query approach instead of N+1 queries
+- **Integrated filtering/sorting**: Applied during data processing, not as separate steps
+- **Cause analysis**: Only processes top N categories for efficiency
 
 ## Future Enhancements
 

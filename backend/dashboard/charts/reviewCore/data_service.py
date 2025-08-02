@@ -270,9 +270,15 @@ class ReviewDataService:
         Returns:
             Formatted aspect description
         """
-        if detail_text and detail_text.strip():
-            return f"{parent_group}: {detail_text.strip()}"
-        return parent_group
+        parent_group_stripped = parent_group.strip() if parent_group else ''
+        detail_text_stripped = detail_text.strip() if detail_text else ''
+        if parent_group_stripped and detail_text_stripped:
+            if parent_group_stripped == detail_text_stripped:
+                return detail_text_stripped
+            return f"{parent_group_stripped}: {detail_text_stripped}"
+        elif detail_text_stripped:
+            return detail_text_stripped
+        return parent_group_stripped
 
     def _transform_rating(self, rating) -> int:
         """Transform rating to integer.
@@ -340,7 +346,8 @@ class ReviewDataService:
         self, 
         project_id: str, 
         asins: List[str],
-        aspect_types: Optional[List[str]] = None
+        aspect_types: Optional[List[str]] = None,
+        options: Optional[Dict[str, Any]] = None
     ) -> List[Dict[str, Any]]:
         """Get category statistics with mentions, sentiments, etc.
         
@@ -348,14 +355,15 @@ class ReviewDataService:
             project_id: Project ID for filtering
             asins: List of ASINs to filter by
             aspect_types: Optional list of aspect types to filter by
+            options: Options for filtering and sorting
             
         Returns:
             List of category statistics dictionaries
         """
         try:
-            # First, get all unique categories for this project and aspect types
-            category_query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
-                'category_pk, category_name, category_definition, aspect_type'
+            # Build the base query - get all data in one go
+            query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
+                'category_pk, category_name, category_definition, aspect_type, sentiment, review_id, product_id'
             ).eq('project_id', project_id).in_('product_id', asins)
             
             # Apply aspect type filter if provided
@@ -370,141 +378,225 @@ class ReviewDataService:
                 
                 # Remove duplicates
                 expanded_aspect_types = list(set(expanded_aspect_types))
-                category_query = category_query.in_('aspect_type', expanded_aspect_types)
+                query = query.in_('aspect_type', expanded_aspect_types)
             
-            # Get unique categories
-            category_result = category_query.execute()
+            # Get all data in one query (much more efficient than individual category queries)
+            result = query.execute()
             
-            if not category_result.data:
+            if not result.data:
                 logger.info(f"No categories found for project {project_id}")
                 return []
             
-            # Get unique categories (remove duplicates)
-            unique_categories = {}
-            for item in category_result.data:
-                category_pk = item['category_pk']
-                if category_pk not in unique_categories:
-                    unique_categories[category_pk] = {
-                        'category_pk': category_pk,
-                        'category_name': item['category_name'],
-                        'definition': item['category_definition'],
-                        'aspect_type': item['aspect_type']
-                    }
+            logger.info(f"Retrieved {len(result.data)} review records for aggregation")
             
-            logger.info(f"Found {len(unique_categories)} unique categories")
+            # Group by category and apply business logic
+            category_stats = defaultdict(lambda: {
+                'mentions': defaultdict(int),
+                'reviews': set(),
+                'review_sentiments': defaultdict(set)
+            })
             
-            # Process each category individually (same logic as get_reviews_by_category)
+            # Process all records
+            for record in result.data:
+                category_pk = record['category_pk']
+                review_key = (record.get('product_id', 'unknown'), record['review_id'])
+                sentiment = record['sentiment']
+                
+                # Count mentions
+                category_stats[category_pk]['mentions']['total'] += 1
+                category_stats[category_pk]['mentions'][sentiment] += 1
+                
+                # Track reviews and their sentiments
+                category_stats[category_pk]['reviews'].add(review_key)
+                category_stats[category_pk]['review_sentiments'][review_key].add(sentiment)
+            
+            # Apply business logic and create category data
             categories = []
-            for category_pk, category_info in unique_categories.items():
-                # Build the same query as get_reviews_by_category for this specific category
-                query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
-                    'category_pk, category_name, category_definition, aspect_type, sentiment, review_id, product_id'
-                ).eq('project_id', project_id).eq('category_pk', category_pk).in_('product_id', asins)
+            for category_pk, stats in category_stats.items():
+                # Get category info from first record
+                first_record = next(r for r in result.data if r['category_pk'] == category_pk)
                 
-                # Apply aspect type filter if provided
-                if aspect_types:
-                    # Expand mapped aspect types
-                    expanded_aspect_types = []
-                    for aspect_type in aspect_types:
-                        if aspect_type in ReviewAnalysisConfig.ASPECT_TYPE_MAP:
-                            expanded_aspect_types.extend(ReviewAnalysisConfig.ASPECT_TYPE_MAP[aspect_type])
-                        else:
-                            expanded_aspect_types.append(aspect_type)
-                    
-                    # Remove duplicates
-                    expanded_aspect_types = list(set(expanded_aspect_types))
-                    query = query.in_('aspect_type', expanded_aspect_types)
-                
-                result = query.execute()
-                
-                if not result.data:
-                    continue
-                
-                # Group by review to analyze sentiment patterns
-                review_sentiments = defaultdict(set)
-                total_mentions = 0
-                positive_mentions = 0
-                negative_mentions = 0
-                neutral_mentions = 0
-                
-                for record in result.data:
-                    review_key = (record.get('product_id', 'unknown'), record['review_id'])
-                    sentiment = record['sentiment']
-                    review_sentiments[review_key].add(sentiment)
-                    
-                    # Count mentions
-                    total_mentions += 1
-                    if sentiment == '+':
-                        positive_mentions += 1
-                    elif sentiment == '-':
-                        negative_mentions += 1
-                    else:
-                        neutral_mentions += 1
-                
-                # Apply the same business logic as get_reviews_by_category
-                valid_review_keys = set()
-                positive_reviews = set()
+                # Apply business logic for review sentiment classification
+                positive_only_reviews = set()
                 negative_reviews = set()
-                neutral_reviews = set()
+                neutral_only_reviews = set()
                 
-                for review_key, sentiments in review_sentiments.items():
-                    # Include review if it has any sentiment (positive, negative, or neutral)
-                    if sentiments:  # Any sentiment means the review is valid
-                        valid_review_keys.add(review_key)
-                        
-                        # Add to sentiment-specific sets
-                        if '+' in sentiments:
-                            positive_reviews.add(review_key)
-                        if '-' in sentiments:
-                            negative_reviews.add(review_key)
-                        if not ('+' in sentiments or '-' in sentiments):
-                            neutral_reviews.add(review_key)
+                for review_key, sentiments in stats['review_sentiments'].items():
+                    if '+' in sentiments and '-' not in sentiments:
+                        positive_only_reviews.add(review_key)
+                    elif '-' in sentiments:
+                        negative_reviews.add(review_key)
+                    elif not ('+' in sentiments or '-' in sentiments):
+                        neutral_only_reviews.add(review_key)
                 
-                # Calculate final counts with business logic:
-                # - If a review has both positive and negative sentiment, count it only as negative
-                # - Total reviews = unique reviews (no double counting)
-                positive_only_reviews = positive_reviews - negative_reviews
-                negative_reviews_final = negative_reviews  # Includes mixed sentiment reviews
-                neutral_only_reviews = neutral_reviews - (positive_reviews | negative_reviews)
+                # Calculate metrics
+                total_mentions = stats['mentions']['total']
+                positive_mentions = stats['mentions'].get('+', 0)
+                negative_mentions = stats['mentions'].get('-', 0)
+                neutral_mentions = total_mentions - positive_mentions - negative_mentions
+                total_reviews = len(stats['reviews'])
+                positive_reviews = len(positive_only_reviews)
+                negative_reviews = len(negative_reviews)
+                neutral_reviews = len(neutral_only_reviews)
                 
-                positive_count = len(positive_only_reviews)
-                negative_count = len(negative_reviews_final)
-                neutral_count = len(neutral_only_reviews)
-                total_count = len(valid_review_keys)  # Total unique reviews
+                # Calculate positive ratio
+                total_sentiment_reviews = positive_reviews + negative_reviews
+                positive_ratio = positive_reviews / total_sentiment_reviews if total_sentiment_reviews > 0 else 0.0
                 
-                # Calculate positive ratio based on unique reviews
-                total_sentiment_reviews = positive_count + negative_count
-                if total_sentiment_reviews > 0:
-                    positive_ratio = positive_count / total_sentiment_reviews
-                else:
-                    positive_ratio = 0.0
-                
-                # Create category data
                 cat_data = {
                     'category_pk': category_pk,
                     'category_id': category_pk,
-                    'category_name': category_info['category_name'],
-                    'definition': category_info['definition'],
-                    'aspect_type': category_info['aspect_type'],
+                    'category_name': first_record['category_name'],
+                    'definition': first_record['category_definition'],
+                    'aspect_type': first_record['aspect_type'],
                     'total_mentions': total_mentions,
                     'positive_mentions': positive_mentions,
                     'negative_mentions': negative_mentions,
                     'neutral_mentions': neutral_mentions,
-                    'total_reviews': total_count,
-                    'positive_reviews': positive_count,
-                    'negative_reviews': negative_count,
-                    'neutral_reviews': neutral_count,
-                    'positive_ratio': positive_ratio
+                    'total_reviews': total_reviews,
+                    'positive_reviews': positive_reviews,
+                    'negative_reviews': negative_reviews,
+                    'neutral_reviews': neutral_reviews,
+                    'positive_ratio': round(positive_ratio, 4)
                 }
-                
                 categories.append(cat_data)
             
-            logger.info(f"Retrieved statistics for {len(categories)} categories")
+            # Apply filters and sorting inline
+            if options:
+                # Apply filters
+                filtered_categories = categories
+                
+                min_mentions = options.get('min_mentions')
+                if min_mentions is not None:
+                    filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
+                
+                min_reviews = options.get('min_reviews')
+                if min_reviews is not None:
+                    filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
+                
+                min_positive = options.get('min_positive_mentions')
+                if min_positive is not None:
+                    filtered_categories = [cat for cat in filtered_categories if cat['positive_mentions'] >= min_positive]
+                
+                min_negative = options.get('min_negative_mentions')
+                if min_negative is not None:
+                    filtered_categories = [cat for cat in filtered_categories if cat['negative_mentions'] >= min_negative]
+                
+                # Apply sorting
+                sort_by = options.get('sort_by', 'total_mentions')
+                sort_direction = options.get('sort_direction', 'desc')
+                reverse = sort_direction == 'desc'
+                
+                if sort_by == 'mentions' or sort_by == 'total_mentions':
+                    filtered_categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
+                elif sort_by == 'reviews' or sort_by == 'total_reviews':
+                    filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
+                elif sort_by == 'positive_mentions':
+                    filtered_categories.sort(key=lambda x: x['positive_mentions'], reverse=reverse)
+                elif sort_by == 'negative_mentions':
+                    filtered_categories.sort(key=lambda x: x['negative_mentions'], reverse=reverse)
+                elif sort_by == 'positive_ratio':
+                    filtered_categories.sort(key=lambda x: x['positive_ratio'], reverse=reverse)
+                
+                categories = filtered_categories
+            
+            # Apply limit
+            max_categories = options.get('max_categories', ReviewAnalysisConfig.DEFAULT_TOP_CATEGORIES) if options else ReviewAnalysisConfig.DEFAULT_TOP_CATEGORIES
+            categories = categories[:max_categories]
+            
+            logger.info(f"Retrieved statistics for {len(categories)} categories using optimized approach")
             return categories
             
         except Exception as e:
-            logger.error(f"Error getting category statistics: {e}", exc_info=True)
+            logger.error(f"Error getting category statistics (optimized): {e}", exc_info=True)
             return []
+
+    async def get_cause_analysis(
+        self,
+        project_id: str,
+        asins: List[str],
+        top_category_ids: List[int],
+        sentiment_filter: Optional[str] = None,
+        limit: int = 10
+    ) -> Dict[int, List[Dict[str, Any]]]:
+        """Get cause analysis for top categories.
+        
+        Args:
+            project_id: Project ID for filtering
+            asins: List of ASINs to filter by
+            top_category_ids: List of category IDs to analyze causes for
+            sentiment_filter: Optional sentiment filter ('+', '-', or None for both)
+            limit: Maximum number of cause categories to return per category
+            
+        Returns:
+            Dictionary mapping category_id to list of cause statistics
+        """
+        try:
+            if not top_category_ids:
+                return {}
+            
+            # Build the query to get cause data
+            query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
+                'category_pk, causes, sentiment'
+            ).eq('project_id', project_id).in_('product_id', asins).in_('category_pk', top_category_ids).not_.is_('causes', 'null')
+            
+            # Add sentiment filter if provided
+            if sentiment_filter:
+                query = query.eq('sentiment', sentiment_filter)
+            
+            # Execute the query
+            result = query.execute()
+            
+            if not result.data:
+                logger.info(f"No cause data found for top categories")
+                return {}
+            
+            # Process cause data
+            cause_stats = defaultdict(lambda: defaultdict(int))
+            
+            for record in result.data:
+                category_pk = record['category_pk']
+                causes = record.get('causes', [])
+                
+                if not causes:
+                    continue
+                
+                # Process each cause in the causes array
+                for cause in causes:
+                    if isinstance(cause, dict):
+                        cause_category_name = cause.get('category_name', 'Unknown')
+                        cause_detail_text = cause.get('detail_text', '')
+                        cause_parent_group = cause.get('parent_group_name', '')
+                        sentiment = record['sentiment']
+                        
+                        # Create a unique key for this cause
+                        cause_key = (cause_category_name, cause_detail_text, cause_parent_group, sentiment)
+                        cause_stats[category_pk][cause_key] += 1
+            
+            # Convert to final format and apply ranking
+            cause_analysis = {}
+            for category_pk, causes in cause_stats.items():
+                # Sort causes by count (descending) and take top N
+                sorted_causes = sorted(causes.items(), key=lambda x: x[1], reverse=True)[:limit]
+                
+                cause_analysis[category_pk] = []
+                for rank, ((category_name, detail_text, parent_group, sentiment), count) in enumerate(sorted_causes, 1):
+                    cause_info = {
+                        'category_name': category_name,
+                        'detail_text': detail_text,
+                        'parent_group_name': parent_group,
+                        'sentiment': sentiment,
+                        'count': count,
+                        'rank': rank
+                    }
+                    cause_analysis[category_pk].append(cause_info)
+            
+            logger.info(f"Retrieved cause analysis for {len(cause_analysis)} categories")
+            return cause_analysis
+            
+        except Exception as e:
+            logger.error(f"Error getting cause analysis: {e}", exc_info=True)
+            return {}
     
     async def get_aspect_categories_with_metrics(
         self,
@@ -519,93 +611,50 @@ class ReviewDataService:
             project_id: Project ID for filtering
             asins: List of ASINs to filter by
             aspect_types: List of aspect types to filter by
-            options: Options for sorting and filtering
+            options: Options for sorting and filtering, including return_top_cause_categories
             
         Returns:
-            List of aspect categories with metrics
+            List of aspect categories with metrics and optional cause analysis
         """
         try:
-            # Get category statistics
-            categories = await self.get_category_statistics(project_id, asins, aspect_types)
+            # Get category statistics using optimized method (already includes filtering, sorting, and limit)
+            categories = await self.get_category_statistics(project_id, asins, aspect_types, options)
             
             if not categories:
                 return []
             
-            # Apply filters
-            categories = self._apply_category_filters(categories, options)
+            # Check if cause analysis is requested
+            cause_options = options.get('return_top_cause_categories')
+            if cause_options:
+                # Extract top category IDs for cause analysis
+                top_category_ids = [cat['category_pk'] for cat in categories]
+                
+                # Get cause analysis parameters
+                sentiment_filter = cause_options.get('sentiment')  # Optional: '+', '-', or None for both
+                limit = cause_options.get('limit', 10)
+                
+                # Get cause analysis for top categories only
+                cause_analysis = await self.get_cause_analysis(
+                    project_id=project_id,
+                    asins=asins,
+                    top_category_ids=top_category_ids,
+                    sentiment_filter=sentiment_filter,
+                    limit=limit
+                )
+                
+                # Add cause analysis to each category
+                for category in categories:
+                    category_pk = category['category_pk']
+                    if category_pk in cause_analysis:
+                        category['top_cause_categories'] = cause_analysis[category_pk]
+                    else:
+                        category['top_cause_categories'] = []
             
-            # Apply sorting
-            categories = self._apply_category_sorting(categories, options)
-            
-            # Apply limit
-            max_categories = options.get('max_categories', ReviewAnalysisConfig.DEFAULT_TOP_CATEGORIES)
-            categories = categories[:max_categories]
-            
-            logger.info(f"Retrieved {len(categories)} aspect categories after filtering and sorting")
+            logger.info(f"Retrieved {len(categories)} aspect categories with metrics")
             return categories
             
         except Exception as e:
             logger.error(f"Error getting aspect categories with metrics: {e}", exc_info=True)
             return []
     
-    def _apply_category_filters(self, categories: List[Dict[str, Any]], options: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Apply category filters based on options.
-        
-        Args:
-            categories: List of category data
-            options: Filter options
-            
-        Returns:
-            Filtered list of categories
-        """
-        filtered_categories = categories
-        
-        # Filter by minimum mentions
-        min_mentions = options.get('min_mentions')
-        if min_mentions is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
-        
-        # Filter by minimum reviews
-        min_reviews = options.get('min_reviews')
-        if min_reviews is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
-        
-        # Filter by minimum positive mentions
-        min_positive = options.get('min_positive_mentions')
-        if min_positive is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['positive_mentions'] >= min_positive]
-        
-        # Filter by minimum negative mentions
-        min_negative = options.get('min_negative_mentions')
-        if min_negative is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['negative_mentions'] >= min_negative]
-        
-        return filtered_categories
-    
-    def _apply_category_sorting(self, categories: List[Dict[str, Any]], options: Dict[str, Any]) -> List[Dict[str, Any]]:
-        """Apply category sorting based on options.
-        
-        Args:
-            categories: List of category data
-            options: Sort options
-            
-        Returns:
-            Sorted list of categories
-        """
-        sort_by = options.get('sort_by', 'total_mentions')
-        sort_direction = options.get('sort_direction', 'desc')
-        
-        reverse = sort_direction == 'desc'
-        
-        if sort_by == 'mentions' or sort_by == 'total_mentions':
-            categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
-        elif sort_by == 'reviews' or sort_by == 'total_reviews':
-            categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
-        elif sort_by == 'positive_mentions':
-            categories.sort(key=lambda x: x['positive_mentions'], reverse=reverse)
-        elif sort_by == 'negative_mentions':
-            categories.sort(key=lambda x: x['negative_mentions'], reverse=reverse)
-        elif sort_by == 'positive_ratio':
-            categories.sort(key=lambda x: x['positive_ratio'], reverse=reverse)
-        
-        return categories 
+ 
