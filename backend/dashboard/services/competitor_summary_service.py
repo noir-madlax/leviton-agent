@@ -253,7 +253,7 @@ class CompetitorSummaryService:
                     'category_pk': category['category_pk'],
                     'category_name': cat_info.get('name', 'Unknown Category'),
                     'definition': cat_info.get('definition', ''),
-                    'total_reviews': category['total_mentions']  # This is now actually total_reviews count
+                    'total_reviews': category['total_reviews']  # Use consistent field name
                 })
             
             # Group product aspect data by ASIN
@@ -353,9 +353,9 @@ class CompetitorSummaryService:
             
             # Convert sets to counts for the final result
             for category in sorted_categories:
-                category['total_mentions'] = len(category['total_reviews'])  # Keep field name for compatibility
+                category['total_reviews'] = len(category['total_reviews'])  # Use consistent field name
             
-            logger.info(f"Found {len(sorted_categories)} top categories with unique reviews ranging from {sorted_categories[-1]['total_mentions'] if sorted_categories else 0} to {sorted_categories[0]['total_mentions'] if sorted_categories else 0}")
+            logger.info(f"Found {len(sorted_categories)} top categories with unique reviews ranging from {sorted_categories[-1]['total_reviews'] if sorted_categories else 0} to {sorted_categories[0]['total_reviews'] if sorted_categories else 0}")
             return sorted_categories
             
         except Exception as e:

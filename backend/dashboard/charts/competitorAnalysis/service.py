@@ -530,45 +530,45 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             category_metrics = {}
             for item in result.data:
                 category_pk = item['category_pk']
-                if category_pk not in category_metrics:
-                                    category_metrics[category_pk] = {
-                    'category_pk': category_pk,
-                    'category_name': item['category_name'],
-                    'total_mentions': 0,
-                    'reviews': set(),
-                    'sentiment_counts': {'positive': 0, 'negative': 0, 'neutral': 0}
-                }
-                
-                category_metrics[category_pk]['total_mentions'] += 1
-                category_metrics[category_pk]['reviews'].add(item['review_id'])
-                
-                # Count sentiment
+                product_id = item['product_id']
+                review_id = item['review_id']
                 sentiment = item['sentiment']
+                
+                if category_pk not in category_metrics:
+                    category_metrics[category_pk] = {
+                        'category_pk': category_pk,
+                        'category_name': item['category_name'],
+                        'total_reviews': set(),  # Use set for unique review counting
+                        'positive_reviews': set(),
+                        'negative_reviews': set()
+                    }
+                
+                # Create unique review key using (product_id, review_id)
+                unique_review_key = (product_id, review_id)
+                category_metrics[category_pk]['total_reviews'].add(unique_review_key)
+                
+                # Track sentiment-specific reviews
                 if sentiment == '+':
-                    category_metrics[category_pk]['sentiment_counts']['positive'] += 1
+                    category_metrics[category_pk]['positive_reviews'].add(unique_review_key)
                 elif sentiment == '-':
-                    category_metrics[category_pk]['sentiment_counts']['negative'] += 1
-                else:
-                    category_metrics[category_pk]['sentiment_counts']['neutral'] += 1
+                    category_metrics[category_pk]['negative_reviews'].add(unique_review_key)
             
             # Convert to list and add review counts
             categories = []
             for cat_data in category_metrics.values():
-                cat_data['total_reviews'] = len(cat_data['reviews'])
+                # Convert sets to counts
+                cat_data['total_reviews'] = len(cat_data['total_reviews'])
+                cat_data['positive_reviews'] = len(cat_data['positive_reviews'])
+                cat_data['negative_reviews'] = len(cat_data['negative_reviews'])
                 categories.append(cat_data)
             
             # Apply filters and sorting in one pass
             filtered_categories = categories
             
-            # Filter by minimum mentions
-            min_mentions = options.get('min_mentions')
-            if min_mentions is not None:
-                filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
-            
             # Filter by minimum reviews
             min_reviews = options.get('min_reviews')
             if min_reviews is not None:
-                filtered_categories = [cat for cat in filtered_categories if cat['reviews'] >= min_reviews]
+                filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
             
             # Filter by include categories
             include_categories = options.get('include_categories')
@@ -584,24 +584,26 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             sentiment_filter = options.get('sentiment_filter')
             if sentiment_filter:
                 if sentiment_filter == 'positive_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] == 0]
+                    filtered_categories = [cat for cat in filtered_categories if cat['positive_reviews'] > 0 and cat['negative_reviews'] == 0]
                 elif sentiment_filter == 'negative_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['negative'] > 0 and cat['sentiment_counts']['positive'] == 0]
+                    filtered_categories = [cat for cat in filtered_categories if cat['negative_reviews'] > 0 and cat['positive_reviews'] == 0]
                 elif sentiment_filter == 'mixed_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['sentiment_counts']['positive'] > 0 and cat['sentiment_counts']['negative'] > 0]
+                    filtered_categories = [cat for cat in filtered_categories if cat['positive_reviews'] > 0 and cat['negative_reviews'] > 0]
             
             # Apply sorting
-            sort_by = options.get('sort_by', 'mentions')
+            sort_by = options.get('sort_by', 'total_reviews')
             sort_direction = options.get('sort_direction', 'desc')
             reverse = sort_direction == 'desc'
             
-            if sort_by == 'mentions' or sort_by == 'total_mentions':
-                filtered_categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
-            elif sort_by == 'reviews':
-                filtered_categories.sort(key=lambda x: x['reviews'], reverse=reverse)
-            elif sort_by == 'sentiment':
+            if sort_by == 'total_reviews':
+                filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
+            elif sort_by == 'positive_reviews':
+                filtered_categories.sort(key=lambda x: x['positive_reviews'], reverse=reverse)
+            elif sort_by == 'negative_reviews':
+                filtered_categories.sort(key=lambda x: x['negative_reviews'], reverse=reverse)
+            elif sort_by == 'positive_ratio':
                 # Sort by positive sentiment ratio
-                filtered_categories.sort(key=lambda x: x['sentiment_counts']['positive'] / max(x['total_mentions'], 1), reverse=reverse)
+                filtered_categories.sort(key=lambda x: x['positive_reviews'] / max(x['total_reviews'], 1), reverse=reverse)
             
             # Apply limit
             max_categories = options.get('max_categories', 10)
