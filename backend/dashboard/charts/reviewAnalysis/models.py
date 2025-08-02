@@ -33,6 +33,15 @@ class ReviewsByCategoryRequest(BaseRequestModel):
     )
 
 
+class CauseMatrixViewRequest(BaseRequestModel):
+    """Request model for cause analysis matrix view."""
+    top_aspect_category_ids: List[int] = Field(..., description="List of top aspect category IDs (columns)")
+    top_cause_category_ids: List[int] = Field(..., description="List of top cause category IDs (rows)")
+    sentiment_filter: Optional[Literal["+", "-"]] = Field(
+        default=None, description="Filter by sentiment (+ for positive, - for negative). If None, returns all sentiments."
+    )
+
+
 # ==================== Response Models ====================
 
 class CategorySummary(BaseModel):
@@ -89,4 +98,32 @@ class ReviewsByCategoryData(BaseModel):
 
 
 class ReviewsByCategoryResponse(BaseResponseModel[ReviewsByCategoryData]):
-    """Response model for reviews by category API.""" 
+    """Response model for reviews by category API."""
+
+
+class CauseMatrixCell(BaseModel):
+    """Individual cell data in the cause matrix."""
+    category_pk: int = Field(description="Aspect category primary key")
+    category_name: str = Field(description="Aspect category name")
+    total_reviews: int = Field(description="Total unique reviews mentioning both aspect and cause")
+    positive_reviews: int = Field(description="Positive reviews mentioning both aspect and cause")
+    negative_reviews: int = Field(description="Negative reviews mentioning both aspect and cause")
+
+
+class CauseMatrixRow(BaseModel):
+    """Row data in the cause matrix (one cause category)."""
+    cause_category_id: int = Field(description="Cause category ID")
+    cause_category_name: str = Field(description="Cause category name")
+    aspect_data: List[CauseMatrixCell] = Field(description="Cell data for each aspect category")
+
+
+class CauseMatrixViewData(BaseModel):
+    """Cause matrix view data model."""
+    aspect_categories: List[Dict[str, Any]] = Field(description="List of aspect categories (columns)")
+    cause_aspect_data: List[CauseMatrixRow] = Field(description="Matrix data with cause categories as rows")
+    total_aspect_categories: int = Field(description="Total number of aspect categories")
+    total_cause_categories: int = Field(description="Total number of cause categories")
+
+
+class CauseMatrixViewResponse(BaseResponseModel[CauseMatrixViewData]):
+    """Response model for cause matrix view API.""" 

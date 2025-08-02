@@ -12,7 +12,8 @@ from .competitorAnalysis.service import CompetitorAnalysisChartService
 
 from .reviewAnalysis.models import (
     TopCategoriesRequest, TopCategoriesResponse,
-    ReviewsByCategoryRequest, ReviewsByCategoryResponse
+    ReviewsByCategoryRequest, ReviewsByCategoryResponse,
+    CauseMatrixViewRequest, CauseMatrixViewResponse
 )
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
@@ -365,6 +366,93 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
         
     except Exception as e:
         logger.error(f"System error in reviews by category: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/review-analysis/cause-matrix-view", response_model=CauseMatrixViewResponse)
+async def get_cause_matrix_view(request: CauseMatrixViewRequest):
+    """Get cause analysis matrix view data.
+    
+    This endpoint retrieves a matrix view showing the relationship between aspect categories (columns)
+    and cause categories (rows). Each cell contains the count of unique reviews that mention both
+    the aspect category (column) and cause category (row).
+    
+    Args:
+        request: CauseMatrixViewRequest containing:
+                - top_aspect_category_ids: List of aspect category IDs for columns
+                - top_cause_category_ids: List of cause category IDs for rows
+                - sentiment_filter: Optional sentiment filter (+ for positive, - for negative)
+        
+    Returns:
+        CauseMatrixViewResponse: Matrix data with aspect categories as columns and cause categories as rows
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"Getting cause matrix view for project {request.project_id}, {len(request.top_aspect_category_ids)} aspect categories, {len(request.top_cause_category_ids)} cause categories")
+        
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters,
+            selected_asins=request.selected_asins,
+            date_range=request.date_range
+        )
+        
+        # Get cause matrix view data
+        raw_data = await service.get_cause_matrix_view_data(
+            top_aspect_category_ids=request.top_aspect_category_ids,
+            top_cause_category_ids=request.top_cause_category_ids,
+            sentiment_filter=request.sentiment_filter
+        )
+        
+        # Convert raw data to response format
+        from .reviewAnalysis.models import (
+            CauseMatrixCell, CauseMatrixRow, CauseMatrixViewData
+        )
+        
+        # Convert cause aspect data
+        cause_aspect_data = []
+        for cause_data in raw_data['cause_aspect_data']:
+            # Convert aspect data cells
+            aspect_data = []
+            for cell_data in cause_data['aspect_data']:
+                cell = CauseMatrixCell(
+                    category_pk=cell_data['category_pk'],
+                    category_name=cell_data['category_name'],
+                    total_reviews=cell_data['total_reviews'],
+                    positive_reviews=cell_data['positive_reviews'],
+                    negative_reviews=cell_data['negative_reviews']
+                )
+                aspect_data.append(cell)
+            
+            # Create cause matrix row
+            cause_row = CauseMatrixRow(
+                cause_category_id=cause_data['cause_category_id'],
+                cause_category_name=cause_data['cause_category_name'],
+                aspect_data=aspect_data
+            )
+            cause_aspect_data.append(cause_row)
+        
+        # Create response data
+        response_data = CauseMatrixViewData(
+            aspect_categories=raw_data['aspect_categories'],
+            cause_aspect_data=cause_aspect_data,
+            total_aspect_categories=raw_data['total_aspect_categories'],
+            total_cause_categories=raw_data['total_cause_categories']
+        )
+        
+        response = CauseMatrixViewResponse(data=response_data)
+        
+        logger.info(f"Cause matrix view completed for project {request.project_id}: {len(raw_data['aspect_categories'])} aspect categories, {len(cause_aspect_data)} cause categories")
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Validation error in cause matrix view: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+        
+    except Exception as e:
+        logger.error(f"System error in cause matrix view: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
 
 

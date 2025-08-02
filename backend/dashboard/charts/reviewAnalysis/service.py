@@ -247,6 +247,46 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             logger.error(f"Error in get_reviews_by_category: {e}", exc_info=True)
             return self._get_empty_reviews_response(category_id)
 
+    async def get_cause_matrix_view_data(
+        self,
+        top_aspect_category_ids: List[int],
+        top_cause_category_ids: List[int],
+        sentiment_filter: Optional[str] = None
+    ) -> Dict[str, Any]:
+        """Get cause analysis matrix view data.
+        
+        Args:
+            top_aspect_category_ids: List of top aspect category IDs (columns)
+            top_cause_category_ids: List of top cause category IDs (rows)
+            sentiment_filter: Optional sentiment filter ('+', '-', or None for both)
+            
+        Returns:
+            Dict containing matrix view data with aspect categories as columns and cause categories as rows
+        """
+        try:
+            logger.info(f"Getting cause matrix view data for project {self.project_id}")
+            
+            # Get filtered ASINs based on project filters
+            filtered_asins = self._get_asins_to_analyze()
+            if not filtered_asins:
+                return self._get_empty_cause_matrix_response()
+            
+            # Get cause matrix view data from the data service
+            matrix_data = await self.review_data_service.get_cause_matrix_view_data(
+                project_id=self.project_id,
+                asins=filtered_asins,
+                top_aspect_category_ids=top_aspect_category_ids,
+                top_cause_category_ids=top_cause_category_ids,
+                sentiment_filter=sentiment_filter
+            )
+            
+            logger.info(f"Cause matrix view data completed for project {self.project_id}: {len(matrix_data.get('aspect_categories', []))} aspect categories, {len(matrix_data.get('cause_aspect_data', []))} cause categories")
+            return matrix_data
+            
+        except Exception as e:
+            logger.error(f"Error in get_cause_matrix_view_data: {e}", exc_info=True)
+            return self._get_empty_cause_matrix_response()
+
     def _get_empty_top_categories_response(self) -> Dict[str, Any]:
         """Return empty top categories response."""
         return {
@@ -285,4 +325,13 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 'offset': 0,
                 'has_more': False
             }
+        }
+
+    def _get_empty_cause_matrix_response(self) -> Dict[str, Any]:
+        """Return empty cause matrix response."""
+        return {
+            'aspect_categories': [],
+            'cause_aspect_data': [],
+            'total_aspect_categories': 0,
+            'total_cause_categories': 0
         } 
