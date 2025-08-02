@@ -250,10 +250,10 @@ class CompetitorSummaryService:
             for category in top_categories:
                 cat_info = category_info.get(category['category_pk'], {})
                 aspect_categories.append({
-                    'category_id': category['category_pk'],
+                    'category_pk': category['category_pk'],
                     'category_name': cat_info.get('name', 'Unknown Category'),
                     'definition': cat_info.get('definition', ''),
-                    'total_mentions': category['total_mentions']
+                    'total_reviews': category['total_mentions']  # This is now actually total_reviews count
                 })
             
             # Group product aspect data by ASIN
@@ -267,11 +267,10 @@ class CompetitorSummaryService:
                     }
                 
                 grouped_product_data[asin]['aspect_data'].append({
-                    'category_id': data['category_id'],
-                    'total_mentions': data['total_mentions'],
-                    'positive_mentions': data['positive_mentions'],
-                    'negative_mentions': data['negative_mentions'],
-                    'unique_reviews': data['unique_reviews']
+                    'category_pk': data['category_pk'],
+                    'total_reviews': data['total_reviews'],
+                    'positive_reviews': data['positive_reviews'],
+                    'negative_reviews': data['negative_reviews']
                 })
             
             # Convert to list format
@@ -319,33 +318,44 @@ class CompetitorSummaryService:
         try:
             # Query review_aspect_data_view to get category statistics
             result = self.supabase.table('review_aspect_data_view').select(
-                'category_pk, category_name, aspect_type'
+                'category_pk, category_name, aspect_type, review_id'
             ).eq('project_id', project_id).in_('product_id', selected_asins).in_('aspect_type', aspect_types).execute()
             
             if not result.data:
                 logger.warning("No matrix review data found for the given criteria")
                 return []
             
-            # Calculate total mentions per category
-            category_mentions = {}
+            # Calculate total unique reviews per category
+            category_reviews = {}
             for record in result.data:
                 category_pk = record['category_pk']
-                if category_pk not in category_mentions:
-                    category_mentions[category_pk] = {
+                product_id = record['product_id']
+                review_id = record['review_id']
+                
+                if category_pk not in category_reviews:
+                    category_reviews[category_pk] = {
                         'category_pk': category_pk,
                         'category_name': record['category_name'],
-                        'total_mentions': 0
+                        'total_reviews': set()  # Renamed from total_mentions
                     }
-                category_mentions[category_pk]['total_mentions'] += 1
+                
+                if review_id:
+                    # Create unique review key using product_id + review_id
+                    unique_review_key = (product_id, review_id)
+                    category_reviews[category_pk]['total_reviews'].add(unique_review_key)
             
-            # Sort by total mentions and get top N
+            # Sort by total unique reviews and get top N
             sorted_categories = sorted(
-                category_mentions.values(),
-                key=lambda x: x['total_mentions'],
+                category_reviews.values(),
+                key=lambda x: len(x['total_reviews']),
                 reverse=True
             )[:top_n]
             
-            logger.info(f"Found {len(sorted_categories)} top categories with mentions ranging from {sorted_categories[-1]['total_mentions'] if sorted_categories else 0} to {sorted_categories[0]['total_mentions'] if sorted_categories else 0}")
+            # Convert sets to counts for the final result
+            for category in sorted_categories:
+                category['total_mentions'] = len(category['total_reviews'])  # Keep field name for compatibility
+            
+            logger.info(f"Found {len(sorted_categories)} top categories with unique reviews ranging from {sorted_categories[-1]['total_mentions'] if sorted_categories else 0} to {sorted_categories[0]['total_mentions'] if sorted_categories else 0}")
             return sorted_categories
             
         except Exception as e:
@@ -422,32 +432,30 @@ class CompetitorSummaryService:
                 if key not in product_category_data:
                     product_category_data[key] = {
                         'asin': asin,
-                        'category_id': category_pk,
-                        'total_mentions': 0,
-                        'positive_mentions': 0,
-                        'negative_mentions': 0,
-                        'unique_reviews': set()
+                        'category_pk': category_pk,
+                        'total_reviews': set(),
+                        'positive_reviews': set(),
+                        'negative_reviews': set()
                     }
                 
-                product_category_data[key]['total_mentions'] += 1
-                if sentiment == '+':
-                    product_category_data[key]['positive_mentions'] += 1
-                elif sentiment == '-':
-                    product_category_data[key]['negative_mentions'] += 1
-                
                 if review_id:
-                    product_category_data[key]['unique_reviews'].add(review_id)
+                    # Create unique review key using product_id + review_id
+                    unique_review_key = (asin, review_id)
+                    product_category_data[key]['total_reviews'].add(unique_review_key)
+                    if sentiment == '+':
+                        product_category_data[key]['positive_reviews'].add(unique_review_key)
+                    elif sentiment == '-':
+                        product_category_data[key]['negative_reviews'].add(unique_review_key)
             
             # Convert to list format
             product_aspect_data = []
             for data in product_category_data.values():
                 product_aspect_data.append({
                     'asin': data['asin'],
-                    'category_id': data['category_id'],
-                    'total_mentions': data['total_mentions'],
-                    'positive_mentions': data['positive_mentions'],
-                    'negative_mentions': data['negative_mentions'],
-                    'unique_reviews': len(data['unique_reviews'])
+                    'category_pk': data['category_pk'],
+                    'total_reviews': len(data['total_reviews']),
+                    'positive_reviews': len(data['positive_reviews']),
+                    'negative_reviews': len(data['negative_reviews'])
                 })
             
             logger.info(f"Generated product aspect data for {len(product_aspect_data)} product-category combinations")

@@ -113,11 +113,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         projectId,
         'phy_perf', // 使用 phy_perf 类型获取痛点数据
         {
-          sortBy: 'negative_mentions',
+          sortBy: 'negative_reviews',
           sortDirection: 'desc',
           maxCategories: 10,
-          minMentions: 5,
-          minPositiveMentions: 2
+          minReviews: 5,
+          minPositiveReviews: 2
         },
         filters // 传递过滤器参数
       )
@@ -126,12 +126,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       const transformedData: CategoryFeedback[] = result.data.categories.map(item => ({
         category: item.category_name,
         categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
-        mentions: item.total_mentions,
+        mentions: item.total_reviews,
         satisfactionRate: item.positive_ratio * 100,
         negativeRate: 100 - (item.positive_ratio * 100),
-        positiveCount: item.positive_reviews || item.positive_mentions,  // Use unique positive reviews, fallback to mentions
-        negativeCount: item.negative_reviews || item.negative_mentions,  // Use unique negative reviews, fallback to mentions
-        totalReviews: item.total_reviews,        // Use total unique reviews
+        positiveCount: item.positive_reviews,
+        negativeCount: item.negative_reviews,
+        totalReviews: item.total_reviews,
         averageRating: Math.max(1, 5 - ((100 - (item.positive_ratio * 100)) / 20)), // 基于正面率计算平均评分
         topNegativeAspects: [item.category_name],
         topPositiveAspects: [],
@@ -142,7 +142,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         topPositiveReasons: [],
         categoryDefinition: item.definition,
         impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
-        categoryId: item.category_id // 新增：存储 category_id 用于点击时获取评论详情
+        categoryId: item.category_pk // 新增：存储 category_pk 用于点击时获取评论详情
       }))
 
       setPainPointsData(transformedData)
@@ -163,11 +163,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         projectId,
         'phy_perf', // 使用 phy_perf 类型获取亮点数据
         {
-          sortBy: 'positive_mentions', // 按照你的要求，第二个图表也使用 negative_mentions 排序
+          sortBy: 'positive_reviews', // 按照你的要求，第二个图表也使用 negative_reviews 排序
           sortDirection: 'desc',
           maxCategories: 10,
-          minMentions: 5,
-          minPositiveMentions: 2
+          minReviews: 5,
+          minPositiveReviews: 2
         },
         filters // 传递过滤器参数
       )
@@ -176,11 +176,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       const transformedData: CategoryFeedback[] = result.data.categories.map(item => ({
         category: item.category_name,
         categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
-        mentions: item.total_mentions,
+        mentions: item.total_reviews,
         satisfactionRate: item.positive_ratio * 100,
         negativeRate: 100 - (item.positive_ratio * 100),
-        positiveCount: item.positive_mentions,
-        negativeCount: item.negative_mentions,
+        positiveCount: item.positive_reviews,
+        negativeCount: item.negative_reviews,
         totalReviews: item.total_reviews,
         averageRating: 3 + ((item.positive_ratio * 100) / 50), // 基于正面率计算评分
         topNegativeAspects: [],
@@ -192,7 +192,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         ],
         categoryDefinition: item.definition,
         impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
-        categoryId: item.category_id // 新增：存储 category_id 用于点击时获取评论详情
+        categoryId: item.category_pk // 新增：存储 category_pk 用于点击时获取评论详情
       }))
 
       setDelightsData(transformedData)
@@ -213,11 +213,11 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         projectId,
         'use', // 使用 use 类型获取使用场景数据
         {
-          sortBy: 'positive_mentions', // 按正面提及排序
+          sortBy: 'positive_reviews', // 按正面提及排序
           sortDirection: 'desc',
           maxCategories: 15, // 使用场景可以显示更多
-          minMentions: 3,
-          minPositiveMentions: 1
+          minReviews: 3,
+          minPositiveReviews: 1
         },
         filters // 传递过滤器参数
       )
@@ -243,7 +243,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         relatedCategories: [item.category_name],
         categoryDefinition: item.definition,
         productCount: item.total_reviews,
-        categoryId: item.category_id
+        categoryId: item.category_pk
       }))
 
       setUseCaseData(transformedData)

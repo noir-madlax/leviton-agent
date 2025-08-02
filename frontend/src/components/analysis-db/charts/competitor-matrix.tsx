@@ -13,22 +13,18 @@ interface MatrixViewData {
   timestamp: string
   data: {
     aspect_categories: Array<{
-      category_id: number
+      category_pk: number
       category_name: string
       definition: string
     }>
     product_aspect_data: Array<{
       asin: string
-      aspect_data: Array<{
-        category_pk: number
-        mentions: number
-        reviews: number
-        sentiment_counts: {
-          positive: number
-          negative: number
-          neutral: number
-        }
-      }>
+              aspect_data: Array<{
+          category_pk: number
+          total_reviews: number
+          positive_reviews: number
+          negative_reviews: number
+        }>
     }>
     selected_asins: string[]
     aspect_type: string
@@ -63,7 +59,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     const matrix = aspect_categories.map(category => {
       const row = {
         category: category.category_name,
-        categoryId: category.category_id,
+        categoryId: category.category_pk,
         definition: category.definition,
         cells: {} as Record<string, {
           // 数据字段
@@ -83,24 +79,25 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
       // 为每个产品填充单元格数据
       orderedProducts.forEach(productAsin => {
         const productData = product_aspect_data.find(p => p.asin === productAsin)
-        const aspectData = productData?.aspect_data.find(a => a.category_pk === category.category_id)
+        const aspectData = productData?.aspect_data.find(a => a.category_pk === category.category_pk)
 
         if (aspectData) {
-          const { positive, negative, neutral } = aspectData.sentiment_counts
-          const totalSentiments = positive + negative + neutral
-          const satisfactionRate = totalSentiments > 0 ? (positive / totalSentiments) * 100 : 0
+          const positive = aspectData.positive_reviews
+          const negative = aspectData.negative_reviews
+          const totalReviews = aspectData.total_reviews
+          const satisfactionRate = totalReviews > 0 ? (positive / totalReviews) * 100 : 0
 
           row.cells[productAsin] = {
             // 数据字段
-            mentions: aspectData.mentions,
-            reviews: aspectData.reviews,
+            mentions: totalReviews, // Use total_reviews as mentions for display
+            reviews: totalReviews,
             satisfactionRate: Math.round(satisfactionRate * 10) / 10,
             positiveCount: positive,
             negativeCount: negative,
-            neutralCount: neutral,
+            neutralCount: 0, // No neutral sentiment
             // 坐标信息，用于后续查询评论明细
             productAsin: productAsin,
-            categoryId: category.category_id,
+            categoryId: category.category_pk,
             categoryName: category.category_name
           }
         } else {

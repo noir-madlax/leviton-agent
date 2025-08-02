@@ -507,7 +507,7 @@ export class DatabaseService {
     timestamp: string
     data: {
       aspect_categories: Array<{
-        category_id: number
+        category_pk: number
         category_name: string
         definition: string
       }>
@@ -515,13 +515,9 @@ export class DatabaseService {
         asin: string
         aspect_data: Array<{
           category_pk: number
-          mentions: number
-          reviews: number
-          sentiment_counts: {
-            positive: number
-            negative: number
-            neutral: number
-          }
+          total_reviews: number
+          positive_reviews: number
+          negative_reviews: number
         }>
       }>
       selected_asins: string[]
@@ -775,11 +771,11 @@ export class DatabaseService {
     projectId: string,
     aspectType: 'phy_perf' | 'use' = 'phy_perf',
     options?: {
-      sortBy?: 'negative_mentions' | 'positive_mentions' | 'total_mentions' | 'positive_ratio'
+      sortBy?: 'negative_reviews' | 'positive_reviews' | 'total_reviews' | 'positive_ratio'
       sortDirection?: 'desc' | 'asc'
       maxCategories?: number
-      minMentions?: number
-      minPositiveMentions?: number
+      minReviews?: number
+      minPositiveReviews?: number
     },
     filters?: {
       categories?: string[]
@@ -794,14 +790,10 @@ export class DatabaseService {
     timestamp: string
     data: {
       categories: Array<{
-        category_id: number
+        category_pk: number
         category_name: string
         definition: string
         aspect_type: string
-        total_mentions: number
-        positive_mentions: number
-        negative_mentions: number
-        neutral_mentions: number
         total_reviews: number
         positive_reviews: number
         negative_reviews: number
@@ -810,10 +802,9 @@ export class DatabaseService {
       total_categories: number
       summary_stats: {
         total_categories: number
-        total_mentions: number
         total_reviews: number
-        total_positive_mentions: number
-        total_negative_mentions: number
+        total_positive_reviews: number
+        total_negative_reviews: number
         overall_positive_ratio: number
       }
     }
@@ -826,11 +817,11 @@ export class DatabaseService {
         filters: filters || {},
         options: {
           aspect_type: aspectType,
-          sort_by: options?.sortBy || 'negative_mentions',
+          sort_by: options?.sortBy || 'negative_reviews',
           sort_direction: options?.sortDirection || 'desc',
           max_categories: options?.maxCategories || 10,
-          min_mentions: options?.minMentions || 5,
-          min_positive_mentions: options?.minPositiveMentions || 2,
+          min_reviews: options?.minReviews || 5,
+          min_positive_reviews: options?.minPositiveReviews || 2,
           ...options
         }
       }

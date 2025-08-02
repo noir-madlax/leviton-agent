@@ -89,49 +89,49 @@ class TestCompetitorAnalysisChartService:
         """Test category filtering and sorting logic integrated in _get_aspect_categories_with_options."""
         # Mock the data processing part of _get_aspect_categories_with_options
         categories = [
-            {'total_mentions': 10, 'reviews': 5, 'category_name': 'Quality', 'sentiment_counts': {'positive': 8, 'negative': 2, 'neutral': 0}},
-            {'total_mentions': 5, 'reviews': 3, 'category_name': 'Installation', 'sentiment_counts': {'positive': 3, 'negative': 2, 'neutral': 0}},
-            {'total_mentions': 15, 'reviews': 8, 'category_name': 'Performance', 'sentiment_counts': {'positive': 12, 'negative': 3, 'neutral': 0}}
+            {'total_reviews': 10, 'category_name': 'Quality', 'positive_reviews': 8, 'negative_reviews': 2},
+            {'total_reviews': 5, 'category_name': 'Installation', 'positive_reviews': 3, 'negative_reviews': 2},
+            {'total_reviews': 15, 'category_name': 'Performance', 'positive_reviews': 12, 'negative_reviews': 3}
         ]
         
         # Test that filtering and sorting work correctly when integrated
         # This test verifies the logic is preserved even though the methods are removed
-        options = {'min_mentions': 8, 'sort_by': 'mentions', 'sort_direction': 'desc'}
+        options = {'min_reviews': 8, 'sort_by': 'total_reviews', 'sort_direction': 'desc'}
         
         # Apply the same logic that's now in the method
         filtered_categories = categories
-        min_mentions = options.get('min_mentions')
-        if min_mentions is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
+        min_reviews = options.get('min_reviews')
+        if min_reviews is not None:
+            filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
         
-        sort_by = options.get('sort_by', 'mentions')
+        sort_by = options.get('sort_by', 'total_reviews')
         sort_direction = options.get('sort_direction', 'desc')
         reverse = sort_direction == 'desc'
         
-        if sort_by == 'mentions' or sort_by == 'total_mentions':
-            filtered_categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
+        if sort_by == 'total_reviews':
+            filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
         
         assert len(filtered_categories) == 2
-        assert filtered_categories[0]['total_mentions'] == 15
-        assert filtered_categories[1]['total_mentions'] == 10
+        assert filtered_categories[0]['total_reviews'] == 15
+        assert filtered_categories[1]['total_reviews'] == 10
     
     def test_filtering_logic_preserved(self, service):
         """Test that all filtering logic is preserved after removing helper methods."""
         categories = [
-            {'total_mentions': 10, 'reviews': 5, 'category_name': 'Quality', 'sentiment_counts': {'positive': 8, 'negative': 2, 'neutral': 0}},
-            {'total_mentions': 5, 'reviews': 3, 'category_name': 'Installation', 'sentiment_counts': {'positive': 3, 'negative': 2, 'neutral': 0}},
-            {'total_mentions': 15, 'reviews': 8, 'category_name': 'Performance', 'sentiment_counts': {'positive': 12, 'negative': 3, 'neutral': 0}}
+            {'total_reviews': 10, 'category_name': 'Quality', 'positive_reviews': 8, 'negative_reviews': 2},
+            {'total_reviews': 5, 'category_name': 'Installation', 'positive_reviews': 3, 'negative_reviews': 2},
+            {'total_reviews': 15, 'category_name': 'Performance', 'positive_reviews': 12, 'negative_reviews': 3}
         ]
         
-        # Test min_mentions filter
-        options = {'min_mentions': 8}
+        # Test min_reviews filter
+        options = {'min_reviews': 8}
         filtered_categories = categories
-        min_mentions = options.get('min_mentions')
-        if min_mentions is not None:
-            filtered_categories = [cat for cat in filtered_categories if cat['total_mentions'] >= min_mentions]
+        min_reviews = options.get('min_reviews')
+        if min_reviews is not None:
+            filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
         
         assert len(filtered_categories) == 2
-        assert all(cat['total_mentions'] >= 8 for cat in filtered_categories)
+        assert all(cat['total_reviews'] >= 8 for cat in filtered_categories)
         
         # Test include_categories filter
         options = {'include_categories': ['Quality', 'Performance']}
@@ -146,39 +146,39 @@ class TestCompetitorAnalysisChartService:
     def test_sorting_logic_preserved(self, service):
         """Test that all sorting logic is preserved after removing helper methods."""
         categories = [
-            {'total_mentions': 10, 'reviews': 5, 'category_name': 'Quality'},
-            {'total_mentions': 5, 'reviews': 8, 'category_name': 'Installation'},
-            {'total_mentions': 15, 'reviews': 3, 'category_name': 'Performance'}
+            {'total_reviews': 10, 'category_name': 'Quality'},
+            {'total_reviews': 5, 'category_name': 'Installation'},
+            {'total_reviews': 15, 'category_name': 'Performance'}
         ]
         
-        # Test sorting by mentions descending
-        options = {'sort_by': 'mentions', 'sort_direction': 'desc'}
+        # Test sorting by total_reviews descending
+        options = {'sort_by': 'total_reviews', 'sort_direction': 'desc'}
         filtered_categories = categories.copy()
-        sort_by = options.get('sort_by', 'mentions')
+        sort_by = options.get('sort_by', 'total_reviews')
         sort_direction = options.get('sort_direction', 'desc')
         reverse = sort_direction == 'desc'
         
-        if sort_by == 'mentions' or sort_by == 'total_mentions':
-            filtered_categories.sort(key=lambda x: x['total_mentions'], reverse=reverse)
+        if sort_by == 'total_reviews':
+            filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
         
-        assert filtered_categories[0]['total_mentions'] == 15
-        assert filtered_categories[1]['total_mentions'] == 10
-        assert filtered_categories[2]['total_mentions'] == 5
+        assert filtered_categories[0]['total_reviews'] == 15
+        assert filtered_categories[1]['total_reviews'] == 10
+        assert filtered_categories[2]['total_reviews'] == 5
         
-        # Test sorting by reviews ascending
-        options = {'sort_by': 'reviews', 'sort_direction': 'asc'}
+        # Test sorting by total_reviews ascending
+        options = {'sort_by': 'total_reviews', 'sort_direction': 'asc'}
         filtered_categories = categories.copy()
-        sort_by = options.get('sort_by', 'mentions')
+        sort_by = options.get('sort_by', 'total_reviews')
         sort_direction = options.get('sort_direction', 'desc')
         reverse = sort_direction == 'desc'
         
-        if sort_by == 'reviews':
-            filtered_categories.sort(key=lambda x: x['reviews'], reverse=reverse)
+        if sort_by == 'total_reviews':
+            filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
         
         # For ascending, reverse should be False
         if options.get('sort_direction') == 'asc':
-            filtered_categories.sort(key=lambda x: x['reviews'], reverse=False)
+            filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=False)
         
-        assert filtered_categories[0]['reviews'] == 3
-        assert filtered_categories[1]['reviews'] == 5
-        assert filtered_categories[2]['reviews'] == 8 
+        assert filtered_categories[0]['total_reviews'] == 5
+        assert filtered_categories[1]['total_reviews'] == 10
+        assert filtered_categories[2]['total_reviews'] == 15 
