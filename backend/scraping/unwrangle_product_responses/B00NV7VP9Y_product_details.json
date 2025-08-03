@@ -1,0 +1,305 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B00NV7VP9Y",
+  "result_count": 1,
+  "detail": {
+    "name": "12 Ga. Black 392° F High-Temperature Wire (SRML) - (Price per 10 feet)",
+    "brand": "Crimp Supply",
+    "url": "https://www.amazon.com/product/dp/B00NV7VP9Y",
+    "asin": "B00NV7VP9Y",
+    "deal_badge": null,
+    "listing_id": "B00NV7VP9Y",
+    "price": 24.94,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "One-time purchase:",
+        "offer_description": "24.94 24.94FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:AmazonSold by:Crimp Supply Inc",
+        "price": 24.94,
+        "seller": "Crimp Supply Inc"
+      },
+      {
+        "offer_type": "Subscribe & Save",
+        "offer_description": "24.94 24.94 23.69 with 5 percent savings 23.69First delivery on Aug 8FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships fromAmazonSold byCrimp Supply Inc",
+        "price": 24.94
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      }
+    ],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B00NV7VP9Y/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.8,
+    "total_ratings": 45,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or fastest delivery Monday, August 4. Order within 10 hrs 41 mins"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/31ir6yuR7jL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/31ir6yuR7jL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31e7MAJw44L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31ir6yuR7jL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "CrimpSupply"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "SingleStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "12.0"
+      }
+    ],
+    "features": [
+      "600 max voltage",
+      "10 ft. spool",
+      "Tin-Plated Copper",
+      "Woven Fiberglass insulation"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "6.3x5.83x0.63inches;4.97ounces"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "20A13004"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "September24,2014"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "CrimpSupply"
+      },
+      {
+        "name": "ASIN",
+        "value": "B00NV7VP9Y"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#398,351inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#1,869inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.84.8outof5stars45ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 398351
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 1869
+      }
+    ],
+    "seller_name": "Crimp Supply Inc",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A6AY1HFZHO49U&asin=B00NV7VP9Y&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "85%",
+      "4 star": "15%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "P. Bradley",
+        "review_title": "Essential for commercial cooking devices",
+        "rating": 5,
+        "review_text": "Thick heat proof outer layer protects substantial well insulated power wire suppling heat elements.  Red/black/white/blue maintain integrity of 2-3 phase devices.\nRead more",
+        "date": "2023-07-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dad",
+        "review_title": "High quality wire.",
+        "rating": 5,
+        "review_text": "The manufacturing quality of this wire is excellent.\nRead more",
+        "date": "2022-09-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Mark Reinhart",
+        "review_title": "Cool running",
+        "rating": 5,
+        "review_text": "Used wire to redo industrial popcorn machine wire is holding up with no meltdown\nRead more",
+        "date": "2022-03-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Understudy",
+        "review_title": "Nice high temp wire",
+        "rating": 5,
+        "review_text": "Using it for heat lamps. Should come in more colors.\nRead more",
+        "date": "2019-02-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jessica",
+        "review_title": "Good and reasonable cost",
+        "rating": 5,
+        "review_text": "Good\nRead more",
+        "date": "2019-09-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Bob B",
+        "review_title": "High temp Wire",
+        "rating": 5,
+        "review_text": "worked very well shielding heat from surrounding work area\nRead more",
+        "date": "2021-08-13",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 37.0
+}

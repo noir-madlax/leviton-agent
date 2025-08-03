@@ -1,0 +1,168 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0D1H6K1X1",
+  "result_count": 1,
+  "detail": {
+    "name": "Wirenco 6/3 NM-B, Non-Metallic, Sheathed Cable, Residential Indoor Wire, Used for Wiring Swiches, Outlets and Other Loads with Dry Applications (70Ft Cut)…",
+    "brand": "wirenco",
+    "url": "https://www.amazon.com/product/dp/B0D1H6K1X1",
+    "asin": "B0D1H6K1X1",
+    "deal_badge": null,
+    "listing_id": "B0D1H6K1X1",
+    "price": 304.33,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 5,
+    "total_ratings": 1,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Monday, August 11. Order within 23 hrs 40 mins. Details"
+    ],
+    "delivery_zipcode": "90001",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/41OqDRdcNcL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41OqDRdcNcL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21xgCEK+6HL._SX342_SY445_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/214adetXLuL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21pxOSHkGYL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21xgCEK+6HL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "wirenco"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "19"
+      },
+      {
+        "name": "Voltage",
+        "value": "600Volts"
+      }
+    ],
+    "features": [
+      "#6 AWG Residential Wire for Outlets, Switches and Other Loads",
+      "Copper (Cu) Conductors",
+      "For Dry Locations up to 90 Degrees Celsius or 194 Degrees Farenheit. For Exposed and Concealed Applications",
+      "600-Volt Maximum with an Allowable Ampacity of 55 Amps",
+      "Used for Wiring Swiches, Outlets and other Loads with Dry Applications"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Itemmodelnumber",
+        "value": "21592-#"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "December23,2020"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "wirenco"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0D1H6K1X1"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#552,306inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#2,503inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "5.05.0outof5stars1rating"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 552306
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 2503
+      }
+    ],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B0D1H6K1X1&ref_=dp_merchant_link",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "100%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "Jake",
+        "review_title": "6/3 wire",
+        "rating": 5,
+        "review_text": "Worked out fine just what i needed fo welder, compressor, and car lift thanks\nRead more",
+        "date": "2024-05-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "Wire"
+    ],
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 30.0
+}

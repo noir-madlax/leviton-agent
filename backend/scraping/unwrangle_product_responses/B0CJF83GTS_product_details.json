@@ -1,0 +1,457 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0CJF83GTS",
+  "result_count": 1,
+  "detail": {
+    "name": "Electric 10/3 SOOW Bulk Cable-10 Gauge 3 Conductor-Rated for 600V, 30A -Water & Oil Resistant Cable for Industrial & Residential Use-Ideal for Generators,Circuits,Data Centers(150 Foot)",
+    "brand": "energeaster",
+    "url": "https://www.amazon.com/product/dp/B0CJF83GTS",
+    "asin": "B0CJF83GTS",
+    "deal_badge": null,
+    "listing_id": "B0CJF83GTS",
+    "price": 289.99,
+    "price_reduced": 199.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "Prime Member Price",
+        "offer_description": "199.99 199.99Ships from:AmazonSold by:chuangyue energeaster",
+        "price": 199.99,
+        "seller": "chuangyue energeaster",
+        "description": "Prime Member Price"
+      },
+      {
+        "offer_type": "Regular Price",
+        "offer_description": "308.99 308.99FREE deliveryTuesday, August 5Ships from:AmazonSold by:chuangyue energeaster",
+        "price": 308.99,
+        "seller": "chuangyue energeaster"
+      }
+    ],
+    "other_sellers": {},
+    "rating": 4.7,
+    "total_ratings": 111,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": null,
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "25FT",
+        "asin": "B0CJF8YZLS",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0CJF8YZLS"
+      },
+      "style_name": {
+        "name": "3x10AWG",
+        "in_stock": true,
+        "asin": "B0CJF83GTS",
+        "url": "https://www.amazon.com/dp/B0CJF83GTS",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/812VWe8YIWL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/812VWe8YIWL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51d9c8ZjJWL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51VhGNqnTUL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51FF3qLrg4L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51xer-v9YKL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41X-USkGnAL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51yqylHKnZL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/515rcELOaUL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51d9c8ZjJWL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "3X10AWG"
+      },
+      {
+        "name": "Brand",
+        "value": "energeaster"
+      },
+      {
+        "name": "Material",
+        "value": "lead"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "3"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      }
+    ],
+    "features": [
+      "Robust Electrical Cable: Heavy Duty 10 AWG 600V SOOW (Service, Oil, and Water Resistant) cable is a type of electrical wire that is commonly used in industrial; commercial, and outdoor applications; It is insulated; and is covered by a durable rubber jacket that provides resistance to oils, acids, water, and chemicals ; making it a durable and long-lasting option for harsh environments (-40C to 90 Celcius)",
+      "Enhanced Conductivity: The 10 Gauge 3-Conductor OFC cable is constructed with stranded pure copper conductors; OFC wiring delivers superior conductivity; allowing it to handle larger currents with ease; Additionally OFC cable exhibits significantly higher corrosion resistance and improved heat dissipation; Flame retardant grade V0",
+      "Versatile Applications: SOOW electrical wire is widely employed in industrial settings; as well as outdoor and marine applications; Thanks to its rubber insulation and jacket; this cable is well-suited for environments where exposure to these elements is common; Typical applications include power generation, mining operations, oil and gas exploration; Construction Equipment and Power Extension Cord",
+      "Simplicity and Reliability: Energeaster's cables is extremely flexible oxygen free copper strands; durable and abrasion resistant outer insulation CPE insulation jacket; Internal conducters insulated with cotored coded extremely flexible FPDM insulation",
+      "Quality Assurance: Insulation resistant to abrasion, battery acid,diesel fuel, engine coolant, engine oil, ethanol,extreme temperatures, flame, gasoline, power-steering ituid, transmission fluid, and water; Rated for outdoor use; Meets or exceeds 720 hours UV resistant aging test"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "16.5x16x5.5inches;44Pounds"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "September20,2023"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "energeaster"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0CJF83GTS"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#72,140inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#380inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars111ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 72140
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 380
+      }
+    ],
+    "seller_name": "chuangyue energeaster",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A2BBNYFE8EFFGJ&asin=B0CJF83GTS&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "25FT",
+          "in_stock": true,
+          "asin": "B0CJF8YZLS",
+          "url": "https://www.amazon.com/dp/B0CJF8YZLS",
+          "selected": true
+        },
+        {
+          "name": "35FT",
+          "in_stock": true,
+          "asin": "B0CJF8D957",
+          "url": "https://www.amazon.com/dp/B0CJF8D957",
+          "selected": true
+        },
+        {
+          "name": "50FT",
+          "in_stock": true,
+          "asin": "B0CJF8DV26",
+          "url": "https://www.amazon.com/dp/B0CJF8DV26",
+          "selected": true
+        },
+        {
+          "name": "75FT",
+          "in_stock": true,
+          "asin": "B0CJF6MS9V",
+          "url": "https://www.amazon.com/dp/B0CJF6MS9V",
+          "selected": true
+        },
+        {
+          "name": "100FT",
+          "in_stock": true,
+          "asin": "B0CJFBS99N",
+          "url": "https://www.amazon.com/dp/B0CJFBS99N",
+          "selected": true
+        },
+        {
+          "name": "150FT",
+          "in_stock": true,
+          "asin": "B0CJF83GTS",
+          "url": "https://www.amazon.com/dp/B0CJF83GTS",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "3x6AWG",
+          "in_stock": true,
+          "asin": "B0D2SJV1Y2",
+          "url": "https://www.amazon.com/dp/B0D2SJV1Y2",
+          "selected": true
+        },
+        {
+          "name": "3x10AWG",
+          "in_stock": true,
+          "asin": "B0CJF83GTS",
+          "url": "https://www.amazon.com/dp/B0CJF83GTS",
+          "selected": true
+        },
+        {
+          "name": "4x10AWG",
+          "in_stock": true,
+          "asin": "B0CJF8WS3N",
+          "url": "https://www.amazon.com/dp/B0CJF8WS3N",
+          "selected": true
+        },
+        {
+          "name": "4x10SOOW",
+          "in_stock": true,
+          "asin": "B0CJF9B9HB",
+          "url": "https://www.amazon.com/dp/B0CJF9B9HB",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "83%",
+      "4 star": "10%",
+      "3 star": "5%",
+      "2 star": "1%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the cable works great and is well-made, with one mentioning it's a heavy 100ft quality cable. They appreciate its durability, ease of use, and consider it good value for money. One customer specifically mentions it's excellent for 240v 20a extension cord applications.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Cord quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Durability",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Maria Wallace",
+        "review_title": "Heavy as expected, absolutely worth it",
+        "rating": 5,
+        "review_text": "Heavy duty and well made. Works as intended and will certainly last a very long time.\nRead more",
+        "date": "2025-07-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25FT",
+          "Style: 3x6AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Get Rich",
+        "review_title": "Very high quality. It was a very excellent choice and the price was fair.",
+        "rating": 5,
+        "review_text": "I am using this cable for a split system air conditioner. The cable is very easy to work with. It is flexible and seems very waterproof. The jacket was easy to cut and strip.\nRead more",
+        "date": "2025-06-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 35FT",
+          "Style: 3x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "DIY life",
+        "review_title": "Great price",
+        "rating": 5,
+        "review_text": "Easy to work with\nRead more",
+        "date": "2025-06-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 75FT",
+          "Style: 3x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Garrett",
+        "review_title": "Excellent quality for the price !!",
+        "rating": 5,
+        "review_text": "Heavy 100ft quality cable. Excellent for 240v 20a extension cord for welding !!!Excellent quality and durable. Install terminations of your choice and save big !!!Highly recommended bulk power cable. Get it before the tariffs kick in 😊\nRead more",
+        "date": "2025-04-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 3x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Richard F",
+        "review_title": "Good, durable jacket.",
+        "rating": 4,
+        "review_text": "Looks to be good quality. The only thing I can fault it for is that the white and green wires are next to each other, not opposite like every other 4 conductor cable I have seen. This makes it a little tricky when putting on a connector like L14-30 because you have to swap two of the wires so they line up with the proper terminals. Other than that, I'm satisfied.\nRead more",
+        "date": "2025-04-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25FT",
+          "Style: 4x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Donnell Schweitzer",
+        "review_title": "Very good",
+        "rating": 5,
+        "review_text": "Very good\nRead more",
+        "date": "2025-03-24",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25FT",
+          "Style: 4x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jonny",
+        "review_title": "10/3 wire that is easy to work with.",
+        "rating": 5,
+        "review_text": "My hot water required 10/3 wire and it worked with this.\nRead more",
+        "date": "2025-03-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 35FT",
+          "Style: 3x10AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "lightbulb",
+        "review_title": "Great price great merchant fast shipping",
+        "rating": 5,
+        "review_text": "Great price fast shipping\nRead more",
+        "date": "2025-03-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50FT",
+          "Style: 4x10SOOW"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/438fd602-e50a-4a0c-bda2-98b8216c820f.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A1"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/438fd602-e50a-4a0c-bda2-98b8216c820f.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A1"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d81fc9ab-2dd8-4d50-8d02-8db30b0a3628.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "耐性"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d81fc9ab-2dd8-4d50-8d02-8db30b0a3628.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "耐性"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7690757e-f083-40c2-8802-c09ead7f4047.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A3"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/7690757e-f083-40c2-8802-c09ead7f4047.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A3"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/794fbd89-c940-48d0-9f66-09a5f111ac08.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A4"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/794fbd89-c940-48d0-9f66-09a5f111ac08.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A4"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ce8f11fb-446c-4e20-823b-eca6b5bab6f0.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ce8f11fb-446c-4e20-823b-eca6b5bab6f0.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "A5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2ca65260-0fee-4b68-bdaf-2dc89983c9b6.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "场景"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2ca65260-0fee-4b68-bdaf-2dc89983c9b6.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "场景"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 42.0
+}

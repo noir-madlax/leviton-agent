@@ -10,8 +10,8 @@ from ..reviewCore.models import ReviewAspectBase, CategoryInfoBase, PaginationBa
 # ==================== Request Models ====================
 
 class TopCategoriesRequest(BaseRequestModel):
-    """Request model for top categories analysis."""
-    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories (aspect_type, sort_by, sort_direction, max_categories, min_mentions, etc.)")
+    """Request model for top categories analysis with embedded cause analysis."""
+    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories. Can include 'return_top_cause_categories' for cause analysis with options: sentiment, aggregated_limit, per_aspect_limit, include_aspect_details")
 
 
 class ReviewsByCategoryRequest(BaseRequestModel):
@@ -33,19 +33,37 @@ class ReviewsByCategoryRequest(BaseRequestModel):
     )
 
 
-class CauseMatrixViewRequest(BaseRequestModel):
-    """Request model for cause analysis matrix view."""
-    top_aspect_category_ids: List[int] = Field(..., description="List of top aspect category IDs (columns)")
-    top_cause_category_ids: List[int] = Field(..., description="List of top cause category IDs (rows)")
-    sentiment_filter: Optional[Literal["+", "-"]] = Field(
-        default=None, description="Filter by sentiment (+ for positive, - for negative). If None, returns all sentiments."
-    )
-
-
 # ==================== Response Models ====================
 
+class CauseAspect(BaseModel):
+    """Simplified cause aspect with sentiment."""
+    aspect_description: str = Field(description="Formatted aspect description")
+    sentiment: str = Field(description="Sentiment: '+' for positive, '-' for negative")
+
+
+class CauseData(BaseModel):
+    """Cause data embedded in each category."""
+    cause_category_pk: int = Field(description="Cause category primary key")
+    cause_category_name: str = Field(description="Cause category name")
+    total_reviews: int = Field(description="Number of unique reviews mentioning this cause")
+    positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
+    negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")
+    aspects: List[CauseAspect] = Field(description="List of aspects mentioning this cause with sentiments")
+
+
+class AggregatedCauseSummary(BaseModel):
+    """Aggregated cause summary across all aspects."""
+    cause_category_pk: int = Field(description="Cause category primary key")
+    cause_category_name: str = Field(description="Cause category name")
+    total_reviews: int = Field(description="Total unique reviews across all aspects")
+    total_positive_reviews: int = Field(description="Total positive reviews across all aspects")
+    total_negative_reviews: int = Field(description="Total negative reviews across all aspects")
+    rank: int = Field(description="Rank based on total reviews")
+    aspects: List[CauseAspect] = Field(description="All aspects mentioning this cause with sentiments")
+
+
 class CategorySummary(BaseModel):
-    """Category summary with statistics."""
+    """Category summary with statistics and embedded cause data."""
     category_id: int = Field(description="Category ID")
     category_name: str = Field(description="Category name")
     definition: str = Field(description="Category definition")
@@ -58,13 +76,15 @@ class CategorySummary(BaseModel):
     positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
     negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")
     positive_ratio: float = Field(description="Ratio of positive reviews to total sentiment reviews")
+    cause_data: List[CauseData] = Field(default=[], description="Embedded cause data for this category")
 
 
 class TopCategoriesData(BaseModel):
-    """Top categories data model."""
-    categories: List[CategorySummary] = Field(description="List of top categories with statistics")
+    """Top categories data model with embedded cause analysis."""
+    categories: List[CategorySummary] = Field(description="List of top categories with statistics and embedded cause data")
     total_categories: int = Field(description="Total number of categories returned")
     summary_stats: Dict[str, Any] = Field(description="Summary statistics across all categories")
+    aggregated_cause_summary: List[AggregatedCauseSummary] = Field(default=[], description="Aggregated cause summary across all aspects")
 
 
 class TopCategoriesResponse(BaseResponseModel[TopCategoriesData]):
@@ -98,32 +118,4 @@ class ReviewsByCategoryData(BaseModel):
 
 
 class ReviewsByCategoryResponse(BaseResponseModel[ReviewsByCategoryData]):
-    """Response model for reviews by category API."""
-
-
-class CauseMatrixCell(BaseModel):
-    """Individual cell data in the cause matrix."""
-    category_pk: int = Field(description="Aspect category primary key")
-    category_name: str = Field(description="Aspect category name")
-    total_reviews: int = Field(description="Total unique reviews mentioning both aspect and cause")
-    positive_reviews: int = Field(description="Positive reviews mentioning both aspect and cause")
-    negative_reviews: int = Field(description="Negative reviews mentioning both aspect and cause")
-
-
-class CauseMatrixRow(BaseModel):
-    """Row data in the cause matrix (one cause category)."""
-    cause_category_id: int = Field(description="Cause category ID")
-    cause_category_name: str = Field(description="Cause category name")
-    aspect_data: List[CauseMatrixCell] = Field(description="Cell data for each aspect category")
-
-
-class CauseMatrixViewData(BaseModel):
-    """Cause matrix view data model."""
-    aspect_categories: List[Dict[str, Any]] = Field(description="List of aspect categories (columns)")
-    cause_aspect_data: List[CauseMatrixRow] = Field(description="Matrix data with cause categories as rows")
-    total_aspect_categories: int = Field(description="Total number of aspect categories")
-    total_cause_categories: int = Field(description="Total number of cause categories")
-
-
-class CauseMatrixViewResponse(BaseResponseModel[CauseMatrixViewData]):
-    """Response model for cause matrix view API.""" 
+    """Response model for reviews by category API.""" 

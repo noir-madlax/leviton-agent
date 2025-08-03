@@ -1,0 +1,11 @@
+{
+  "extraction_timestamp": "2025-07-31T14:49:08.180005",
+  "files_processed": 48,
+  "total_columns": 95,
+  "data_columns": 51,
+  "origin_columns": 44,
+  "total_rows": 48,
+  "conflicts_found": 49,
+  "columns_merged": 50,
+  "semantic_matches": 50
+}

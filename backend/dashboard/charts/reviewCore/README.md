@@ -163,24 +163,72 @@ The module includes comprehensive error handling:
 
 ## New Features
 
-### Cause Analysis
-The `get_aspect_categories_with_metrics()` method now supports cause analysis through the `return_top_cause_categories` option:
+### Enhanced Cause Analysis with Embedded Structure
+The `get_aspect_categories_with_metrics()` method now supports enhanced cause analysis with embedded structure through the `return_top_cause_categories` option:
 
 ```python
 options = {
     'max_categories': 5,
-    'sort_by': 'total_mentions',
+    'sort_by': 'total_reviews',
     'return_top_cause_categories': {
         'sentiment': '+',  # Optional: '+', '-', or None for both
-        'limit': 3
+        'aggregated_limit': 10,  # Number of top causes across all aspects
+        'per_aspect_limit': 5,   # Number of causes per individual aspect
+        'include_aspect_details': True  # Include simplified aspect details
     }
 }
 ```
 
+**New Return Structure:**
+```python
+{
+    'categories': [
+        {
+            'category_pk': 1,
+            'category_name': 'Core Device Functionality',
+            'total_reviews': 101,
+            'cause_data': [  # EMBEDDED: causes for this specific aspect
+                {
+                    'cause_category_pk': 5,
+                    'cause_category_name': 'Electrical Wiring Requirements',
+                    'total_reviews': 5,
+                    'positive_reviews': 5,
+                    'negative_reviews': 0,
+                    'aspects': [  # SIMPLIFIED
+                        {
+                            'aspect_description': 'wiring: no neutral wire required',
+                            'sentiment': '+'
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    'aggregated_cause_summary': [  # GLOBAL: top causes across all aspects
+        {
+            'cause_category_pk': 5,
+            'cause_category_name': 'Electrical Wiring Requirements',
+            'total_reviews': 18,
+            'rank': 1,
+            'aspects': [...]
+        }
+    ]
+}
+```
+
+**Benefits:**
+- **Hierarchical Access**: Direct access to aspect-specific causes via `categories[0].cause_data`
+- **Global Summary**: Overall cause trends via `aggregated_cause_summary`
+- **Simplified Aspects**: Clean `{aspect_description, sentiment}` format
+- **Performance**: Single query builds both structures simultaneously
+- **No Redundancy**: Eliminates duplicate data processing
+
 ### Performance Improvements
 - **`get_category_statistics()`**: Single query approach instead of N+1 queries
 - **Integrated filtering/sorting**: Applied during data processing, not as separate steps
-- **Cause analysis**: Only processes top N categories for efficiency
+- **Enhanced cause analysis**: Single query builds both embedded and aggregated structures
+- **Optimized data structure**: Eliminates redundant `get_cause_matrix_view_data()` method
+- **Simplified aspects**: Reduced data size with `{aspect_description, sentiment}` format
 
 ## Future Enhancements
 

@@ -1,0 +1,509 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0CSPV6WJY",
+  "result_count": 1,
+  "detail": {
+    "name": "18/6 50Ft. NATIONAL Wire&Cable Thermostat Doorbell HVAC Heating Control Professional Cable Wire - Made in USA - 100% Solid Copper Conductors, CL2 ETL Listed, Low Voltage Applications Use",
+    "brand": "NATIONAL Wire&Cable",
+    "url": "https://www.amazon.com/product/dp/B0CSPV6WJY",
+    "asin": "B0CSPV6WJY",
+    "deal_badge": null,
+    "listing_id": "B0CSPV6WJY",
+    "price": 31.99,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.7,
+    "total_ratings": 161,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or fastest delivery Monday, August 4. Order within 10 hrs 42 mins"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "18AWG-2C",
+        "asin": "B0CSPTMJND",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0CSPTMJND"
+      },
+      "style_name": {
+        "name": "50 ft",
+        "in_stock": true,
+        "asin": "B0CSPV6WJY",
+        "url": "https://www.amazon.com/dp/B0CSPV6WJY",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/810euq7qQTL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/810euq7qQTL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51pO34MpPsL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51O0enDWIEL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51+FSCZ9sRL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51R9-S4KU6L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51tgbz5zVJL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51TZmnrgC1L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51pO34MpPsL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Brown"
+      },
+      {
+        "name": "Brand",
+        "value": "NATIONALWire&Cable"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "18"
+      },
+      {
+        "name": "Voltage",
+        "value": "240Volts"
+      }
+    ],
+    "features": [
+      "[MADE IN USA] - Proudly made in New York, USA, our factory produce high quality wires and cables since 1972",
+      "[HIGH CONDUCTIVITY] - Premium Solid Copper wire are inside of each circuit. High technology pure copper wire is perfect for electricity conduction",
+      "[DURABILITY] - Constructed with durability in mind, our thermostat wire is designed to withstand the rigors of installation and operation. The sturdy build ensures a long-lasting and reliable connection.",
+      "[APLICATIONS] - Our thermostat wire features multiple conductors to facilitate the transmission of signals between the thermostat and HVAC equipment. This ensures efficient and accurate temperature regulation.Ideal for residential and commercial HVAC systems, our thermostat wire is the trusted choice for contractors, technicians, and DIY enthusiasts alike. Upgrade your thermostat wiring with confidence.",
+      "[LIFETIME WARRANTY] - All NATIONAL low voltage wires are backed by our best-in-class warranty and lifetime satisfaction"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "8.07x7.99x2.17inches;2.07Pounds"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January18,2024"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "NATIONALWire&Cable"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0CSPV6WJY"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#30,130inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#155inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars161ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 30130
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 155
+      }
+    ],
+    "seller_name": "NATIONAL Wire&Cable",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A24LFDN3EFRMHH&asin=B0CSPV6WJY&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "18AWG-2C",
+          "in_stock": true,
+          "asin": "B0CSPTMJND",
+          "url": "https://www.amazon.com/dp/B0CSPTMJND",
+          "selected": true
+        },
+        {
+          "name": "18AWG-3C",
+          "in_stock": true,
+          "asin": "B0CSPSSRZ2",
+          "url": "https://www.amazon.com/dp/B0CSPSSRZ2",
+          "selected": true
+        },
+        {
+          "name": "18AWG-4C",
+          "in_stock": true,
+          "asin": "B0CSPRFD4J",
+          "url": "https://www.amazon.com/dp/B0CSPRFD4J",
+          "selected": true
+        },
+        {
+          "name": "18AWG-5C",
+          "in_stock": true,
+          "asin": "B0CSPSPN1S",
+          "url": "https://www.amazon.com/dp/B0CSPSPN1S",
+          "selected": true
+        },
+        {
+          "name": "18AWG-6C",
+          "in_stock": true,
+          "asin": "B0CSPV6WJY",
+          "url": "https://www.amazon.com/dp/B0CSPV6WJY",
+          "selected": true
+        },
+        {
+          "name": "18AWG-8C",
+          "in_stock": true,
+          "asin": "B0CSPRFRDX",
+          "url": "https://www.amazon.com/dp/B0CSPRFRDX",
+          "selected": true
+        },
+        {
+          "name": "18AWG-10C",
+          "in_stock": true,
+          "asin": "B0CSQ1KRPZ",
+          "url": "https://www.amazon.com/dp/B0CSQ1KRPZ",
+          "selected": true
+        },
+        {
+          "name": "20AWG-2C",
+          "in_stock": true,
+          "asin": "B0DN1XDHSW",
+          "url": "https://www.amazon.com/dp/B0DN1XDHSW",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "25 ft",
+          "in_stock": true,
+          "asin": "B0CSPRPNX1",
+          "url": "https://www.amazon.com/dp/B0CSPRPNX1",
+          "selected": true
+        },
+        {
+          "name": "50 ft",
+          "in_stock": true,
+          "asin": "B0CSPV6WJY",
+          "url": "https://www.amazon.com/dp/B0CSPV6WJY",
+          "selected": true
+        },
+        {
+          "name": "100 ft",
+          "in_stock": true,
+          "asin": "B0CSPRPCYS",
+          "url": "https://www.amazon.com/dp/B0CSPRPCYS",
+          "selected": true
+        },
+        {
+          "name": "250 ft",
+          "in_stock": true,
+          "asin": "B0CSQ2JBK4",
+          "url": "https://www.amazon.com/dp/B0CSQ2JBK4",
+          "selected": true
+        },
+        {
+          "name": "500 ft",
+          "in_stock": true,
+          "asin": "B0CSPT6W75",
+          "url": "https://www.amazon.com/dp/B0CSPT6W75",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "83%",
+      "4 star": "11%",
+      "3 star": "3%",
+      "2 star": "1%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the wire to be of good quality and functionality, with one mentioning it works well with smart thermostats. The wire receives positive feedback for its construction, with one customer noting it's a solid conductor suitable for thermostat applications.",
+    "review_aspects": [
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Dianna Labrum",
+        "review_title": "American Made. 5 stars",
+        "rating": 5,
+        "review_text": "American Made.\nRead more",
+        "date": "2025-07-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-8C",
+          "Style: 25 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "George Roque",
+        "review_title": "Good Quality",
+        "rating": 5,
+        "review_text": "Good quality\nRead more",
+        "date": "2025-06-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-2C",
+          "Style: 25 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dante",
+        "review_title": "Dual stage heat and AC",
+        "rating": 5,
+        "review_text": "Just what I needed to run dual stage heat and dual stage AC. I needed this after updating a unit and the HVAC guy didn’t update the wiring, leaving me with single stage heat. I found that running reverse staging was more efficient too.\nRead more",
+        "date": "2025-05-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-8C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Louis Fristensky",
+        "review_title": "Stop Twirling Dog Fence Wire",
+        "rating": 5,
+        "review_text": "Instead of wrapping two lengths of dog wire together to negate the transmission, I had the idea of buying something like this and it worked perfectly. Don't waste your time \"twirling\" lengths of dog fence wire.\nRead more",
+        "date": "2025-04-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-2C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Reese Holloway",
+        "review_title": "Recommend",
+        "rating": 4,
+        "review_text": "Recommended and would buy from again\nRead more",
+        "date": "2024-12-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-5C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Common sense guy",
+        "review_title": "Made in USA high quality.",
+        "rating": 5,
+        "review_text": "Worked out great. No issues with the wire. I needed to rewire 2 thermostats in my home to upgrade to 5 wire for 2 new HVAC units installed.This wire worked fine, stiff enough to push it through the existing conduit without a problem.\nRead more",
+        "date": "2025-03-31",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-5C",
+          "Style: 100 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Tbiss",
+        "review_title": "Well Made Thermostat Solid Conductor Wire/Cable",
+        "rating": 5,
+        "review_text": "What can I say?  Its exactly as advertised.  Solid wire for thermostat applications.\nRead more",
+        "date": "2025-04-23",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-3C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Perfect",
+        "rating": 5,
+        "review_text": "Great Product\nRead more",
+        "date": "2025-05-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-4C",
+          "Style: 25 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "It met the expectations",
+        "rating": 5,
+        "review_text": "It’s good\nRead more",
+        "date": "2025-02-09",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-8C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "A-L",
+        "review_title": "Good cable",
+        "rating": 5,
+        "review_text": "I purchased for installation of nest thermostat and worked perfectI recommend it\nRead more",
+        "date": "2024-10-30",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-8C",
+          "Style: 100 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "NA Customer",
+        "review_title": "Below average",
+        "rating": 2,
+        "review_text": "The cable outer jacket quality is not strong as advertised. Inner wire jacket comes off very easy.\nRead more",
+        "date": "2025-06-09",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-8C",
+          "Style: 50 ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Thermostat Cable – Precision Control for Your HVAC System",
+        "Product Features",
+        "Multiple Options",
+        "Choose from 2, 3, 4, 5, 6, 8, or 10 conductors in a variety of spool lengths to fit your exact project needs. Whether you're upgrading a smart thermostat or wiring a complete HVAC system, trust our thermostat cable for efficient and optimal performance.",
+        "Multi-Conductor HVAC Cable",
+        "Reliable Low Voltage Control",
+        "Perfect for residential and commercial HVAC installations, our Thermostat Wire ensures dependable performance for all your low-voltage wiring needs. Whether you're connecting a smart thermostat, zone control system, or HVAC unit, this wire delivers consistent signal transmission and easy installation every time.",
+        "Specifications & Technical Data",
+        "Reliable Thermostat Cable",
+        "Ensure seamless communication between your thermostat and heating/cooling systems with our high-quality Thermostat Cable. Built for long-lasting performance, this cable features durablesolid copper conductors.Perfect forHVAC applications, including thermostats, zone valves, relays, and more."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f77f13a0-350d-4599-b579-358b0dbf8102.__CR0,0,2400,720_PT0_SX600_V1___.jpg",
+          "alt": "electric wire, landscape wire, solar wire, marine wire, pv wire, national wire&amp;amp;cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f77f13a0-350d-4599-b579-358b0dbf8102.__CR0,0,2400,720_PT0_SX600_V1___.jpg",
+          "alt": "electric wire, landscape wire, solar wire, marine wire, pv wire, national wire&amp;amp;cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5b1d6f10-f5a9-454a-8f69-b28171142ac2.__CR0,0,3300,3300_PT0_SX300_V1___.jpg",
+          "alt": "thermostat wire, low voltage thermostat cable, hvac control wire, solid copper wire HVAC"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5b1d6f10-f5a9-454a-8f69-b28171142ac2.__CR0,0,3300,3300_PT0_SX300_V1___.jpg",
+          "alt": "thermostat wire, low voltage thermostat cable, hvac control wire, solid copper wire HVAC"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/03b63f2b-38a4-4f4e-b628-a83a6a16a9dc.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "thermostat wire 18/6, low voltage thermostat cable, hvac control wire, solid copper wire HVAC"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/03b63f2b-38a4-4f4e-b628-a83a6a16a9dc.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "thermostat wire 18/6, low voltage thermostat cable, hvac control wire, solid copper wire HVAC"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51rN%2BNDGqfL.__AC_SR150,300___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51tUXgfbQkL.__AC_SR150,300___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51ijhZ-vRIL.__AC_SR150,300___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51aaztkv6SL.__AC_SR150,300___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51jwveNZB9L.__AC_SR150,300___.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 43.0
+}

@@ -1,0 +1,175 @@
+{
+  "total_conflicts": 128,
+  "columns_merged": 51,
+  "semantic_matches": 51,
+  "name_extractions": 46,
+  "enhanced_extractions": 0,
+  "conflict_details": [
+    {
+      "column": "color",
+      "conflict_count": 15,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CX1J73YB",
+        "B000UECHCA",
+        "B09T6J7M8Y",
+        "B0080404VS",
+        "B0CPPWBGT8",
+        "B07CWPTHYH",
+        "B088RC5ZT3",
+        "B0C6F4LL7W",
+        "B0C4BBZMN6",
+        "B01ANZRXDI",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "conductor_count",
+      "conflict_count": 7,
+      "conflict_asins": [
+        "B000UECHCA",
+        "B07T6LQSM2",
+        "B0CPPWBGT8",
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B0CSPV6WJY",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "gaug",
+      "conflict_count": 32,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CX1J73YB",
+        "B000UECHCA",
+        "B09T6J7M8Y",
+        "B0080404VS",
+        "B0CJF83GTS",
+        "B07T6LQSM2",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B003J63662",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B08V4L3H2H",
+        "B088RC5ZT3",
+        "B0C6F4LL7W",
+        "B0BY7CMNDH",
+        "B0CSD3KPX3",
+        "B000BQT7EI",
+        "B07DGD2PVF",
+        "B0CSPV6WJY",
+        "B07H9DN8SP",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY",
+        "B01AV6QBYG",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0BZ42TFK2",
+        "B0154H7BLE",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "length",
+      "conflict_count": 21,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B0CSW2L7RC",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B08V4L3H2H",
+        "B0C6F4LL7W",
+        "B0CSD3KPX3",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B01ANZRXDI",
+        "B0CBB4JFKY",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0BZ42TFK2",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "materi",
+      "conflict_count": 13,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CPPWBGT8",
+        "B0CSW2L7RC",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B0BY7CMNDH",
+        "B000BQT7EI",
+        "B0C4BBZMN6",
+        "B08J7WKV6W",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "size",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B0B3H27JG2"
+      ]
+    },
+    {
+      "column": "temperatur",
+      "conflict_count": 13,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CJF83GTS",
+        "B0CPPWBGT8",
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B08V4L3H2H",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B0C4P4Z73C",
+        "B0BZ42TFK2",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "termin",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B09XFBRVYX"
+      ]
+    },
+    {
+      "column": "voltag",
+      "conflict_count": 7,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B09T6J7M8Y",
+        "B0B3H27JG2",
+        "B002RL9JAW",
+        "B07H9DN8SP",
+        "B0C4BBZMN6",
+        "B0C4P4Z73C"
+      ]
+    }
+  ]
+}

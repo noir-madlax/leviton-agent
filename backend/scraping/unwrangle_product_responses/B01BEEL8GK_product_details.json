@@ -1,0 +1,333 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B01BEEL8GK",
+  "result_count": 1,
+  "detail": {
+    "name": "10 AWG Bare Copper Wire 50 Ft Coil Single Solid Copper Wire 99.9% Pure",
+    "brand": "Copper wire USA",
+    "url": "https://www.amazon.com/product/dp/B01BEEL8GK",
+    "asin": "B01BEEL8GK",
+    "deal_badge": null,
+    "listing_id": "B01BEEL8GK",
+    "price": 35.5,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (3) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B01BEEL8GK/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.8,
+    "total_ratings": 82,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Thursday, August 7. Details",
+      "Or fastest delivery Monday, August 4. Order within 2 hrs 40 mins. Details"
+    ],
+    "delivery_zipcode": "90001",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61V4hEuGShL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41+nGysbFtL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61V4hEuGShL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "BrightNaturalCopper"
+      },
+      {
+        "name": "Brand",
+        "value": "CopperwireUSA"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "SingleStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      }
+    ],
+    "features": [
+      "10 Ga Pro. Quality Copper wire 50 Ft.",
+      "PKG. Coil",
+      "Bare Solid Copper Wire",
+      "Made In USA",
+      "Round Copper Wire"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "Bright Natural Copper"
+      },
+      {
+        "name": "Brand",
+        "value": "Copper wire USA"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "Single Strand"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      },
+      {
+        "name": "No. of wires",
+        "value": "1"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Modern Findings(TM)"
+      },
+      {
+        "name": "UPC",
+        "value": "619159673753"
+      },
+      {
+        "name": "Part Number",
+        "value": "10G-50F-CPHH"
+      },
+      {
+        "name": "Item Weight",
+        "value": "1.5 pounds"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "5 x 5 x 2 inches"
+      },
+      {
+        "name": "Item model number",
+        "value": "10G-50F-CHH"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      },
+      {
+        "name": "Size",
+        "value": "10 Ga"
+      },
+      {
+        "name": "Style",
+        "value": "Bare Copper Pure Wire"
+      },
+      {
+        "name": "Finish",
+        "value": "Polished"
+      },
+      {
+        "name": "Shape",
+        "value": "Round"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Number Of Pieces",
+        "value": "1"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B01BEEL8GK"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.8  4.8 out of 5 stars    \n    82 ratings   \n\n\n 4.8 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#127,187 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #654 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "February 2, 2016"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 127187
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 654
+      }
+    ],
+    "seller_name": "COPPER WIRE USA",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A18S3MF78QRXA5&asin=B01BEEL8GK&ref_=dp_merchant_link",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "85%",
+      "4 star": "12%",
+      "3 star": "3%"
+    },
+    "reviews_summary": "Customers find the copper wire to be of good quality, with one mentioning it's heavy and pliable. They appreciate its pure copper content, with one customer noting it looks and feels like real copper.",
+    "review_aspects": [
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Copper content",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Jim P.",
+        "review_title": "Good Quality.  Fast Delivery.",
+        "rating": 5,
+        "review_text": "The real stuff.  Perfect for a multitude of uses.  Makes a great high temperature soldering iron tip for the Weller D550.\nRead more",
+        "date": "2024-07-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sharon Cooke",
+        "review_title": "Good quality and packaging",
+        "rating": 5,
+        "review_text": "On time vendor\nRead more",
+        "date": "2024-08-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Matt Godfrey",
+        "review_title": "Great pure copper",
+        "rating": 5,
+        "review_text": "Quality wire\nRead more",
+        "date": "2024-07-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Phillip",
+        "review_title": "Just what I was looking for",
+        "rating": 5,
+        "review_text": "High quality thick guage bare copper wire.\nRead more",
+        "date": "2024-01-24",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "John Shenk",
+        "review_title": "Good copper",
+        "rating": 5,
+        "review_text": "Exactly as described\nRead more",
+        "date": "2021-06-25",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jess in PA",
+        "review_title": "Looks and feels like real copper to me",
+        "rating": 5,
+        "review_text": "Just what I needed... heavy pliable copper wire\nRead more",
+        "date": "2016-05-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Item as advertised",
+        "rating": 5,
+        "review_text": "Item as advertised. Used for arts and crafts\nRead more",
+        "date": "2021-12-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "ballpounder1",
+        "review_title": "10 gauge for grounding fruit trees",
+        "rating": 5,
+        "review_text": "Perfect sized wire for my wife's grounding project.\nRead more",
+        "date": "2023-04-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 31.0
+}

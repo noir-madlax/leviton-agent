@@ -1,0 +1,233 @@
+{
+  "merge_candidates": [],
+  "similar_groups": [
+    {
+      "category": "battery",
+      "pattern": "batteri",
+      "columns": [
+        "batteri_includ",
+        "batteri_includ_origin",
+        "batteri_requir",
+        "batteri_requir_origin"
+      ],
+      "data_columns": [
+        "batteri_includ",
+        "batteri_requir"
+      ],
+      "origin_columns": [
+        "batteri_includ_origin",
+        "batteri_requir_origin"
+      ]
+    },
+    {
+      "category": "best_seller_rank",
+      "pattern": "best.*rank",
+      "columns": [
+        "best_seller_rank",
+        "best_seller_rank_origin",
+        "bestsellersrank",
+        "bestsellersrank_origin"
+      ],
+      "data_columns": [
+        "best_seller_rank",
+        "bestsellersrank"
+      ],
+      "origin_columns": [
+        "best_seller_rank_origin",
+        "bestsellersrank_origin"
+      ]
+    },
+    {
+      "category": "connector",
+      "pattern": "connector",
+      "columns": [
+        "connector_type",
+        "connector_type_origin",
+        "connectorgend",
+        "connectorgend_origin",
+        "connectortyp",
+        "connectortyp_origin"
+      ],
+      "data_columns": [
+        "connector_type",
+        "connectorgend",
+        "connectortyp"
+      ],
+      "origin_columns": [
+        "connector_type_origin",
+        "connectorgend_origin",
+        "connectortyp_origin"
+      ]
+    },
+    {
+      "category": "temperature",
+      "pattern": "temperatur",
+      "columns": [
+        "temperatur_rate",
+        "temperatur_rate_origin",
+        "temperature",
+        "temperature_origin"
+      ],
+      "data_columns": [
+        "temperatur_rate",
+        "temperature"
+      ],
+      "origin_columns": [
+        "temperatur_rate_origin",
+        "temperature_origin"
+      ]
+    },
+    {
+      "category": "voltage",
+      "pattern": "voltage",
+      "columns": [
+        "voltage",
+        "voltage_origin",
+        "voltage_rating",
+        "voltage_rating_origin"
+      ],
+      "data_columns": [
+        "voltage",
+        "voltage_rating"
+      ],
+      "origin_columns": [
+        "voltage_origin",
+        "voltage_rating_origin"
+      ]
+    },
+    {
+      "category": "gauge",
+      "pattern": "gauge",
+      "columns": [
+        "gauge",
+        "gauge_origin"
+      ],
+      "data_columns": [
+        "gauge"
+      ],
+      "origin_columns": [
+        "gauge_origin"
+      ]
+    },
+    {
+      "category": "material",
+      "pattern": "material",
+      "columns": [
+        "contact_material",
+        "contact_material_origin",
+        "insulation_material",
+        "insulation_material_origin",
+        "material",
+        "material_origin"
+      ],
+      "data_columns": [
+        "contact_material",
+        "insulation_material",
+        "material"
+      ],
+      "origin_columns": [
+        "contact_material_origin",
+        "insulation_material_origin",
+        "material_origin"
+      ]
+    },
+    {
+      "category": "color",
+      "pattern": "color",
+      "columns": [
+        "color",
+        "color_origin"
+      ],
+      "data_columns": [
+        "color"
+      ],
+      "origin_columns": [
+        "color_origin"
+      ]
+    },
+    {
+      "category": "length",
+      "pattern": "length",
+      "columns": [
+        "length",
+        "length_origin"
+      ],
+      "data_columns": [
+        "length"
+      ],
+      "origin_columns": [
+        "length_origin"
+      ]
+    },
+    {
+      "category": "weight",
+      "pattern": "weight",
+      "columns": [
+        "package_weight",
+        "package_weight_origin"
+      ],
+      "data_columns": [
+        "package_weight"
+      ],
+      "origin_columns": [
+        "package_weight_origin"
+      ]
+    },
+    {
+      "category": "dimension",
+      "pattern": "dimension",
+      "columns": [
+        "dimensions",
+        "dimensions_origin"
+      ],
+      "data_columns": [
+        "dimensions"
+      ],
+      "origin_columns": [
+        "dimensions_origin"
+      ]
+    },
+    {
+      "category": "manufacturer",
+      "pattern": "manufacturer",
+      "columns": [
+        "manufacturer",
+        "manufacturer_origin"
+      ],
+      "data_columns": [
+        "manufacturer"
+      ],
+      "origin_columns": [
+        "manufacturer_origin"
+      ]
+    },
+    {
+      "category": "model",
+      "pattern": "model",
+      "columns": [
+        "model",
+        "model_origin"
+      ],
+      "data_columns": [
+        "model"
+      ],
+      "origin_columns": [
+        "model_origin"
+      ]
+    },
+    {
+      "category": "upc",
+      "pattern": "upc",
+      "columns": [
+        "upc",
+        "upc_origin"
+      ],
+      "data_columns": [
+        "upc"
+      ],
+      "origin_columns": [
+        "upc_origin"
+      ]
+    }
+  ]
+}

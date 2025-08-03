@@ -1,0 +1,454 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B08R7ZT3C7",
+  "result_count": 1,
+  "detail": {
+    "name": "Wirenco 8/2 Metal Clad (MC) Cable with Ground, Aluminum Armored, Stranded Copper Conductor (25Ft Cut)",
+    "brand": "wirenco",
+    "url": "https://www.amazon.com/product/dp/B08R7ZT3C7",
+    "asin": "B08R7ZT3C7",
+    "deal_badge": null,
+    "listing_id": "B08R7ZT3C7",
+    "price": 65.6,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.8,
+    "total_ratings": 123,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Saturday, August 2. Order within 23 hrs 42 mins. Details"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size": {
+        "name": "25Ft Cut",
+        "asin": "B08R7ZT3C7",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B08R7ZT3C7"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/41r+ymg9OtL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41r+ymg9OtL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/211hb3-DXUL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/214adetXLuL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21a2l7eVOkL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/211hb3-DXUL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Aluminum"
+      },
+      {
+        "name": "Brand",
+        "value": "wirenco"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "19"
+      },
+      {
+        "name": "Gauge",
+        "value": "8.0"
+      }
+    ],
+    "features": [
+      "MULTIPLE APPLICATIONS: MC Cable used for branch, feeder and service for distribution in commercial, industrial and multi-residential construction",
+      "ALUMINUM JACKET: Aluminum armored for protection",
+      "THHN AMPERE RATING: Rated for 55 Amps",
+      "STANDARDS: Meets UL 83, 1569, 1581 and 2256",
+      "STRANDED COPPER: Conductors are made of soft annealed copper"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "17.17x16.61x4.57inches;6.53Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "21272-#"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "December23,2020"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "wirenco"
+      },
+      {
+        "name": "ASIN",
+        "value": "B08R7ZT3C7"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#119,891inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#616inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.84.8outof5stars123ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 119891
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 616
+      }
+    ],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B08R7ZT3C7&ref_=dp_merchant_link",
+    "variants": {
+      "size": [
+        {
+          "name": "25Ft Cut",
+          "in_stock": false,
+          "asin": "B08R7ZT3C7",
+          "url": "https://www.amazon.com/dp/B08R7ZT3C7"
+        },
+        {
+          "name": "30Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F814HR",
+          "url": "https://www.amazon.com/dp/B0D4F814HR"
+        },
+        {
+          "name": "35Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F751MP",
+          "url": "https://www.amazon.com/dp/B0D4F751MP"
+        },
+        {
+          "name": "40Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F7THJB",
+          "url": "https://www.amazon.com/dp/B0D4F7THJB"
+        },
+        {
+          "name": "45Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F5M1ZZ",
+          "url": "https://www.amazon.com/dp/B0D4F5M1ZZ"
+        },
+        {
+          "name": "50Ft Cut",
+          "in_stock": true,
+          "asin": "B08R813T4P",
+          "url": "https://www.amazon.com/dp/B08R813T4P"
+        },
+        {
+          "name": "55Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F6W15K",
+          "url": "https://www.amazon.com/dp/B0D4F6W15K"
+        },
+        {
+          "name": "60Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F65GC8",
+          "url": "https://www.amazon.com/dp/B0D4F65GC8"
+        },
+        {
+          "name": "65Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F7HN6Q",
+          "url": "https://www.amazon.com/dp/B0D4F7HN6Q"
+        },
+        {
+          "name": "70Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F7WHLH",
+          "url": "https://www.amazon.com/dp/B0D4F7WHLH"
+        },
+        {
+          "name": "75Ft Cut",
+          "in_stock": true,
+          "asin": "B08R81GFKR",
+          "url": "https://www.amazon.com/dp/B08R81GFKR"
+        },
+        {
+          "name": "80Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F4P7YR",
+          "url": "https://www.amazon.com/dp/B0D4F4P7YR"
+        },
+        {
+          "name": "85Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F7NRQF",
+          "url": "https://www.amazon.com/dp/B0D4F7NRQF"
+        },
+        {
+          "name": "90Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F74GJC",
+          "url": "https://www.amazon.com/dp/B0D4F74GJC"
+        },
+        {
+          "name": "95Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F6PPNC",
+          "url": "https://www.amazon.com/dp/B0D4F6PPNC"
+        },
+        {
+          "name": "100Ft Cut",
+          "in_stock": true,
+          "asin": "B08R811P79",
+          "url": "https://www.amazon.com/dp/B08R811P79"
+        },
+        {
+          "name": "105Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F6C1NS",
+          "url": "https://www.amazon.com/dp/B0D4F6C1NS"
+        },
+        {
+          "name": "110Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F8VRNL",
+          "url": "https://www.amazon.com/dp/B0D4F8VRNL"
+        },
+        {
+          "name": "115Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F7P61X",
+          "url": "https://www.amazon.com/dp/B0D4F7P61X"
+        },
+        {
+          "name": "120Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F5PJ2M",
+          "url": "https://www.amazon.com/dp/B0D4F5PJ2M"
+        },
+        {
+          "name": "125Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F4SRSX",
+          "url": "https://www.amazon.com/dp/B0D4F4SRSX"
+        },
+        {
+          "name": "130Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F5VSHP",
+          "url": "https://www.amazon.com/dp/B0D4F5VSHP"
+        },
+        {
+          "name": "135Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F4TJ3N",
+          "url": "https://www.amazon.com/dp/B0D4F4TJ3N"
+        },
+        {
+          "name": "140Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F6W1NG",
+          "url": "https://www.amazon.com/dp/B0D4F6W1NG"
+        },
+        {
+          "name": "145Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F6GWL7",
+          "url": "https://www.amazon.com/dp/B0D4F6GWL7"
+        },
+        {
+          "name": "150Ft Cut",
+          "in_stock": true,
+          "asin": "B0D4F5MF9G",
+          "url": "https://www.amazon.com/dp/B0D4F5MF9G"
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "87%",
+      "4 star": "10%",
+      "3 star": "2%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the cable works well and offers good value for money. The wire quality receives positive feedback, with one customer noting that the insulation held up reasonably well during use.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "UniversalMindSpace",
+        "review_title": "Excellent product",
+        "rating": 5,
+        "review_text": "Was the real deal. Excellent. Thank you! Great deal\nRead more",
+        "date": "2025-05-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 20Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jay Mazzoni",
+        "review_title": "Good wire, good price.",
+        "rating": 5,
+        "review_text": "Fast shipping too. Will order from here again.\nRead more",
+        "date": "2024-11-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 30Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ginger",
+        "review_title": "Great vakur",
+        "rating": 5,
+        "review_text": "Very good value for what you purchase.\nRead more",
+        "date": "2024-11-01",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 20Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Tim Blanton",
+        "review_title": "Great",
+        "rating": 5,
+        "review_text": "Great Product\nRead more",
+        "date": "2024-11-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 75Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Courtney Cinnamon",
+        "review_title": "DIY EVSE",
+        "rating": 5,
+        "review_text": "If you need to run wire on surfaces post construction  this is the stuff. Sure electricians like conduit probably because they charge by the hour.  I ran 100 ft from my panel in the basement through my laundry room to my garage for an EVSE.  I'm guessing I saved myself 1.5-2k.\nRead more",
+        "date": "2025-03-23",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "RobCarl08",
+        "review_title": "Small diameter shielded multi strand cable",
+        "rating": 4,
+        "review_text": "The wire quality was good. Easy to work with, and a huge step up from single strand. I used a propane torch to solder the connections, and the insulation held up reasonably well.My only issue with this was the diameter of the aluminum protective shield was smaller than what most boxes and connectors are made for. I had to apply epoxy glue to the end to build up big enough to get a good clamp.\nRead more",
+        "date": "2024-12-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Joe handyman.",
+        "review_title": "Great value",
+        "rating": 5,
+        "review_text": "Good value and arrived quickly.\nRead more",
+        "date": "2024-11-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Kyle",
+        "review_title": "All good",
+        "rating": 5,
+        "review_text": "Works well\nRead more",
+        "date": "2024-11-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25Ft Cut"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "Wire"
+    ],
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 49.0
+}

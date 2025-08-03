@@ -1,0 +1,584 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0C4GXNNBD",
+  "result_count": 1,
+  "detail": {
+    "name": "Firmerst 18 Gauge 200 Feet 4 Conductor Tinned Copper Electrical Wire for Lighting, Speakers, Relays, Controllers",
+    "brand": "FIRMERST",
+    "url": "https://www.amazon.com/product/dp/B0C4GXNNBD",
+    "asin": "B0C4GXNNBD",
+    "deal_badge": null,
+    "listing_id": "B0C4GXNNBD",
+    "price": 73.99,
+    "price_reduced": null,
+    "price_per_unit": 0.37,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "One-time purchase:",
+        "offer_description": "73.99 73.99 0.37 per feet( 0.37 0.37/ feet)FREE deliveryTuesday, August 5Ships from:AmazonSold by:Firmerst",
+        "price": 73.99,
+        "seller": "Firmerst"
+      },
+      {
+        "offer_type": "Subscribe & Save",
+        "offer_description": "70.29 70.29 0.35 per Foot( 0.35 0.35/ Foot) 66.59 with 10 percent savings 66.59 0.33 per Foot( 0.33 0.33/ Foot)First delivery on Aug 8FREE deliveryTuesday, August 5Ships fromAmazonSold byFirmerst",
+        "price": 70.29
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      }
+    ],
+    "other_sellers": {},
+    "rating": 4.7,
+    "total_ratings": 336,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5",
+      "Or Prime members get FREE delivery Saturday, August 2. Order within 11 hrs 43 mins. Join Prime"
+    ],
+    "delivery_zipcode": "60601",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "30FT",
+        "asin": "B0BNPCZZNY",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0BNPCZZNY"
+      },
+      "style_name": {
+        "name": "18AWG-4C",
+        "in_stock": true,
+        "asin": "B0C4GXNNBD",
+        "url": "https://www.amazon.com/dp/B0C4GXNNBD",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/612c8R9aeqL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/612c8R9aeqL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41DEhUNgFCL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41iSjB+u0NL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41uyMGRhHzL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/418w2w0mkSL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41KNkDpNghL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/413KODPdK5L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41DEhUNgFCL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Brand",
+        "value": "FIRMERST"
+      },
+      {
+        "name": "Material",
+        "value": "TinnedCopper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Voltage",
+        "value": "300Volts"
+      },
+      {
+        "name": "No.ofwires",
+        "value": "4"
+      }
+    ],
+    "features": [
+      "Specification: 18 AWG 4 conductor wire, 200 ft (60.96±0.03 m) length, Φ7.0±0.15 mm OD jacket, VW-1 80℃ 300V rated",
+      "Tinned copper wire: Corrosion-resistant, durable, and easier to solder than copper wire",
+      "PVC Jacket: Protects wires from physical damage and environmental factors, reducing the risk of faults in harsh environments",
+      "Tangle-free: With axial packaging is easy to organize and install",
+      "Versatile: Ideal for lighting, speakers, relays, and controllers, ensures efficient and reliable power connections"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "ProductDimensions",
+        "value": "2x1x2inches;11.77Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "MDEW18G200FT4CBK-USA"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "May6,2023"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "FIRMERST"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0C4GXNNBD"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#43,912inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#233inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars336ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 43912
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 233
+      }
+    ],
+    "seller_name": "Firmerst",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3NT8U8ARCQBY1&asin=B0C4GXNNBD&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "30FT",
+          "in_stock": true,
+          "asin": "B0BNPCZZNY",
+          "url": "https://www.amazon.com/dp/B0BNPCZZNY",
+          "selected": true
+        },
+        {
+          "name": "100FT",
+          "in_stock": true,
+          "asin": "B0BNPPYQN1",
+          "url": "https://www.amazon.com/dp/B0BNPPYQN1",
+          "selected": true
+        },
+        {
+          "name": "200FT",
+          "in_stock": true,
+          "asin": "B0C4GXNNBD",
+          "url": "https://www.amazon.com/dp/B0C4GXNNBD",
+          "selected": true
+        },
+        {
+          "name": "500FT",
+          "in_stock": true,
+          "asin": "B0CM3JXD88",
+          "url": "https://www.amazon.com/dp/B0CM3JXD88",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "18AWG-4C",
+          "in_stock": true,
+          "asin": "B0C4GXNNBD",
+          "url": "https://www.amazon.com/dp/B0C4GXNNBD",
+          "selected": true
+        },
+        {
+          "name": "20AWG-4C",
+          "in_stock": true,
+          "asin": "B0C4GYBBZ3",
+          "url": "https://www.amazon.com/dp/B0C4GYBBZ3",
+          "selected": true
+        },
+        {
+          "name": "22AWG-4C",
+          "in_stock": true,
+          "asin": "B0C4H15KVT",
+          "url": "https://www.amazon.com/dp/B0C4H15KVT",
+          "selected": true
+        },
+        {
+          "name": "24AWG-4C",
+          "in_stock": true,
+          "asin": "B0BYDVN2K1",
+          "url": "https://www.amazon.com/dp/B0BYDVN2K1",
+          "selected": true
+        },
+        {
+          "name": "16AWG-2C",
+          "in_stock": true,
+          "asin": "B0CGT4P3S7",
+          "url": "https://www.amazon.com/dp/B0CGT4P3S7",
+          "selected": true
+        },
+        {
+          "name": "22AWG-3C",
+          "in_stock": true,
+          "asin": "B0C5XKZKCZ",
+          "url": "https://www.amazon.com/dp/B0C5XKZKCZ",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "84%",
+      "4 star": "9%",
+      "3 star": "4%",
+      "2 star": "1%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the electrical wire to be well-constructed and functional, particularly noting its suitability for trailer applications. The wire receives positive feedback for its quality, with one customer noting it's superior to cat 5 or jk wire, while another mentions its thick outer insulation. Customers appreciate its ease of use and consider it good value for money.",
+    "review_aspects": [
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Insulating capacity",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Tammy Oldenburg",
+        "review_title": "High quality product I would recommend this",
+        "rating": 5,
+        "review_text": "Very high quality product. And I will be purchasing more of this in the future for my application\nRead more",
+        "date": "2025-07-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 24AWG-4C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dyer Knight",
+        "review_title": "Perfect for 4 pin led strip lighting with a little bit of soldering skills.",
+        "rating": 5,
+        "review_text": "I used this wire to run under cabinet lighting in my kitchen. It's the right gauge and it was easy to work with. I had my fiance help me fish the wire down into the basement and we fished it up another wall quite quickly and easily. I soldered the ends to the connectors provided by the lighting kit and everything turned out as I expected it to. I recently added a motion sensor on one set of lights and bought a second motion sensor for the other set of cabinet lights. The price, the quality and the quantity of the wire was more than enough for my project. I'm sure when one of my customers discovers that I can do this they will want it done in their home as well. I just love the way it makes everything look and I was extremely happy to be able to purchase this product without leaving my home!\nRead more",
+        "date": "2025-04-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 24AWG-4C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Just Drew",
+        "review_title": "Good for making your Vevor shutter fan control panel more accessible",
+        "rating": 5,
+        "review_text": "The media could not be loaded.\n                \n\n\n\nGreat cable. I used it to lengthen my Vevor shutter fans control screen and temperature sensor so I could have the controller screen where I could be able to see and program it. I used 10ft on the box and 10ft on the sensor. Splicing in the new cable didn’t affect how the unit runs. I have videos of me showing you how to do the extensions. I did 3 Fans of mine that day.\nRead more",
+        "date": "2025-06-23",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 24AWG-4C"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71pM33-P82L._SY88.jpg"
+        ],
+        "review_videos": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/dddc5572-923e-4486-ba08-0b3bc5a77336/embedded.cc.default.vertical.jobtemplate.hls.m3u8"
+        ]
+      },
+      {
+        "reviewer_name": "ALLEN",
+        "review_title": "Wire",
+        "rating": 5,
+        "review_text": "Great way to wire your strobe lights\nRead more",
+        "date": "2025-06-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 24AWG-4C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Daniel",
+        "review_title": "Heck of a deal",
+        "rating": 5,
+        "review_text": "Good stuff... Really good price.\nRead more",
+        "date": "2025-04-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 16AWG-2C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hector M. Gonzalez",
+        "review_title": "ME FUNCIONO MUY BIEN, TAL COMO ESPERABA",
+        "rating": 4,
+        "review_text": "ME FUNCIONO MUY BIEN, TAL COMO ESPERABA\nRead more",
+        "date": "2025-04-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Bruce Belligan",
+        "review_title": "Good quality wire",
+        "rating": 5,
+        "review_text": "Good quality wire! Good flexibility.\nRead more",
+        "date": "2025-04-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "mrl",
+        "review_title": "Good value",
+        "rating": 5,
+        "review_text": "Works as design\nRead more",
+        "date": "2025-03-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 24AWG-4C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jorge Ocampo",
+        "review_title": "Cable eléctrico awg 22 100 pies",
+        "rating": 5,
+        "review_text": "REemplazo de cableado de un sistema de riego.\nRead more",
+        "date": "2024-07-13",
+        "location": "Mexico",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 22AWG-4C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Walter Baker",
+        "review_title": "Made for a great Trailer Harness",
+        "rating": 5,
+        "review_text": "Used this to make my own custom trailer harness , putting each light on its own line , no more split or tapped into wiring , made for clean efficient set up , good heavy thick coating , wires are only 14-16 gauge but being fully covered makes for thick barrier against nicks or cuts .\nRead more",
+        "date": "2024-08-06",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 16AWG-2C"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Antonio De la Cruz",
+        "review_title": "Buen producto",
+        "rating": 4,
+        "review_text": "Buen producto el que esté estañado ahorra mucho tiempo a la hora de soldar.\nRead more",
+        "date": "2023-12-10",
+        "location": "Mexico",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/091322466c2b47ef8fecf403aaf63afe?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/03f241b676994a159bdde76db4cb353c?ref=dp_vse_rvc_1"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Experience reliable connectivity",
+        "4 conductor wire provide versatility and enhanced signal transmission capabilities for diverse applications.",
+        "Sturdy Outer Insulation",
+        "PVC: Provides insulation to prevent electrical faults.Tinned copper conductor: High conductivity, aiding in current transmission.",
+        "More Choices for Electrical Wire",
+        "18 Gauge 4 Conductor Wire",
+        "8 Gauge 3 Conductor Wire",
+        "10 Gauge 4 Conductor Wire",
+        "10 Gauge 3 Conductor Wire",
+        "12 Gauge 3 Condutor Wire"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/267bfe9e-b7af-437e-9fa1-c0c128f71e70.__CR0,0,1464,600_PT0_SX1464_V1___.jpeg",
+          "alt": "2 Conductor Power Cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/267bfe9e-b7af-437e-9fa1-c0c128f71e70.__CR0,0,1464,600_PT0_SX1464_V1___.jpeg",
+          "alt": "2 Conductor Power Cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2d8a8c88-9420-47a0-a63f-bf5772deeeed.__CR0,0,800,600_PT0_SX800_V1___.jpeg",
+          "alt": "2 Conductor Power Cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2d8a8c88-9420-47a0-a63f-bf5772deeeed.__CR0,0,800,600_PT0_SX800_V1___.jpeg",
+          "alt": "2 Conductor Power Cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ac5dba5c-cd6a-4780-a8ec-7d8ffdd5325d.__CR0,0,800,600_PT0_SX800_V1___.jpg",
+          "alt": "Weather-resistant and Outdoor Suitability "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ac5dba5c-cd6a-4780-a8ec-7d8ffdd5325d.__CR0,0,800,600_PT0_SX800_V1___.jpg",
+          "alt": "Weather-resistant and Outdoor Suitability "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/46a4579f-e90f-4338-b684-af89b7fb0422.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "Its substantial outer sheath design "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/46a4579f-e90f-4338-b684-af89b7fb0422.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "Its substantial outer sheath design "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/65935cf0-6724-47a5-80d6-d61e848cd16b.__CR0,0,200,225_PT0_SX200_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/31kkrSS9DOL.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/310vvH8P0BL.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/31kldsD8u5L.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/31WoSxsdJvL.__AC_SR200,225___.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 54.0
+}

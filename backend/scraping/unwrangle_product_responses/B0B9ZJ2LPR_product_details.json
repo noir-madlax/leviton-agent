@@ -1,0 +1,392 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0B9ZJ2LPR",
+  "result_count": 1,
+  "detail": {
+    "name": "EZ Guard Single Stud Electrical Wire Protector 5 PK",
+    "brand": "EZ Electrical System Solutions, LLC",
+    "url": "https://www.amazon.com/product/dp/B0B9ZJ2LPR",
+    "asin": "B0B9ZJ2LPR",
+    "deal_badge": null,
+    "listing_id": "B0B9ZJ2LPR",
+    "price": 8.98,
+    "price_reduced": 7.0,
+    "price_per_unit": 1.6,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (5) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0B9ZJ2LPR/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.6,
+    "total_ratings": 198,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Saturday, August 2. Order within 1 hr 58 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "number_of_items": {
+        "name": "5",
+        "asin": "B0B9ZJ2LPR",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0B9ZJ2LPR"
+      }
+    },
+    "categories": [
+      {
+        "name": "Electronics",
+        "url": "https://www.amazon.com/electronics-store/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Accessories & Supplies",
+        "url": "https://www.amazon.com/Accessories-Supplies/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Cord Management",
+        "url": "https://www.amazon.com/Electrical-Cord-Management/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/410gOP2rooL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41VGBqJnMYL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41uRMrBSfiL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51sTCKHMPqL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31PqT+6WQSL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/410gOP2rooL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Brand",
+        "value": "EZElectricalSystemSolutions,LLC"
+      },
+      {
+        "name": "Color",
+        "value": "green,silver"
+      },
+      {
+        "name": "Material",
+        "value": "AlloySteel,Plastic"
+      },
+      {
+        "name": "Style",
+        "value": "Industrial"
+      },
+      {
+        "name": "InstallationType",
+        "value": "Hand-Inserted"
+      }
+    ],
+    "features": [
+      "Prevents Electrical Fires caused by Arc-Fault Conditions by protecting electrical wire from damage.",
+      "360-degree wire protection from screws, nails, bolts, drill-bits, or any other threat of wire damage by penetration.",
+      "Internal plastic has smooth, rounded edges which protects wire from scraping against rigid and abrasive bare stud-holes",
+      "1-1/8 inch diameter stud holes",
+      "Insert by hand",
+      "UL Listed"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Manufacturer",
+        "value": "EZ Electrical System Solutions, LLC"
+      },
+      {
+        "name": "Part Number",
+        "value": "1014-05"
+      },
+      {
+        "name": "Item Weight",
+        "value": "8.4 ounces"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "2.25 x 1.25 x 1.25 inches"
+      },
+      {
+        "name": "Item model number",
+        "value": "1014-05"
+      },
+      {
+        "name": "Color",
+        "value": "green, silver"
+      },
+      {
+        "name": "Style",
+        "value": "Industrial"
+      },
+      {
+        "name": "Material",
+        "value": "Alloy Steel, Plastic"
+      },
+      {
+        "name": "Installation Method",
+        "value": "Hand-Inserted"
+      },
+      {
+        "name": "Included Components",
+        "value": "stud guards"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0B9ZJ2LPR"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.6  4.6 out of 5 stars    \n    198 ratings   \n\n\n 4.6 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#44,579 in Electronics (See Top 100 in Electronics) #3,153 in Electrical Cord Management"
+      },
+      {
+        "name": "Date First Available",
+        "value": "August 21, 2022"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Electronics",
+        "url": "https://www.amazon.com/gp/bestsellers/electronics/ref=pd_zg_ts_electronics",
+        "rank": 44579
+      },
+      {
+        "name": "Electrical Cord Management",
+        "url": "https://www.amazon.com/gp/bestsellers/electronics/11042051/ref=pd_zg_hrsr_electronics",
+        "rank": 3153
+      }
+    ],
+    "seller_name": "Bozactory Factory",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A7WT2D2C2MWCR&asin=B0B9ZJ2LPR&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "number_of_items": [
+        {
+          "name": "5",
+          "in_stock": true,
+          "asin": "B0B9ZJ2LPR",
+          "url": "https://www.amazon.com/dp/B0B9ZJ2LPR",
+          "selected": true
+        },
+        {
+          "name": "25",
+          "in_stock": true,
+          "asin": "B0B9ZNSBMD",
+          "url": "https://www.amazon.com/dp/B0B9ZNSBMD",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "79%",
+      "4 star": "9%",
+      "3 star": "9%",
+      "2 star": "1%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the wire protector to be well-made and effective, providing protection from all sides and reducing the risk of accidental damage. The product is easy to install, with one customer noting it slides right in with finger pressure, and another mentioning it works well with a 1-1/8 Diablo spade. While some customers say it fits perfectly, others report it's too large for 2x4's.",
+    "review_aspects": [
+      {
+        "name": "Product quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of installation",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Works well",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire protection",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Material quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Size",
+        "sentiment": "mixed"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "roy in moses lake",
+        "review_title": "My electrician loved",
+        "rating": 5,
+        "review_text": "My electrician had never seen these.  I purchased and provided him before wiring my shed.  He said they are amazing and functional.  Not to mention made pulling wire a breeze.\nRead more",
+        "date": "2024-11-30",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "ks",
+        "review_title": "Fast, easy, and cheap.",
+        "rating": 5,
+        "review_text": "These tubes are great for new work electrical wiring. Since you need to drill holes in the studs anyway just make the hole slightly larger than normal (1 1/8 inch) and tap the tube into the hole. Then run the conduit through the tube and you're done. There is no need to pound a steel protector plate onto the edge of the stud, the tube will protect the wiring. You could also use these for PEX pipe.\nRead more",
+        "date": "2025-05-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Great product",
+        "rating": 5,
+        "review_text": "These work really well. 360 protection for pipes and wires. Works well with and 1 1/8 Diablo spade bit\nRead more",
+        "date": "2024-12-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "HECTOR D PEREZ",
+        "review_title": "GAME CHANGER!",
+        "rating": 5,
+        "review_text": "This is a game changer. Do yourself a favor and GET THESE!! (and say goodbye to nailing in stud guards)\nRead more",
+        "date": "2025-04-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "nj28sharp",
+        "review_title": "Great product but Wish they made them longer ones for two and three studs",
+        "rating": 4,
+        "review_text": "The quality of the material is top-notch, and I appreciate the thoughtful design that fits perfectly over single studs. This product has significantly reduced the risk of accidental wire damage, giving me peace of mind. I highly recommend the EZ Guard Single Stud Electrical Wire Protector to anyone looking for a reliable and efficient solution to protect their electrical wiring.\nRead more",
+        "date": "2024-08-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sauce",
+        "review_title": "1-1/4in works fine",
+        "rating": 5,
+        "review_text": "I just installed these drilling a 1-1/4in hole in studs with a spade bit. This size works just fine, just don't use any sizes larger than 1-1/4\". I haven't tried the 1-1/8 size after all the neg. reviews.\nRead more",
+        "date": "2025-03-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Joe",
+        "review_title": "They’re kinda fat",
+        "rating": 3,
+        "review_text": "Once I realized you have to drill a 1-1/8” hole in your stud to fit these, I didn’t use them. Maybe ok for a 2x6 but seems too big for a 2x4.  Just an opinion though. I’m not an engineer.\nRead more",
+        "date": "2025-07-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "John Carp",
+        "review_title": "Wire protection",
+        "rating": 5,
+        "review_text": "Product is better then I expected, Product great materials and easy to use\nRead more",
+        "date": "2025-05-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "excellent product",
+        "rating": 5,
+        "review_text": "delivery was a problem but the product was exactly what I was looking for\nRead more",
+        "date": "2025-04-02",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 5"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Patrick",
+        "review_title": "great product",
+        "rating": 5,
+        "review_text": "These are very solid and are very easy to install.\nRead more",
+        "date": "2025-02-04",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Number of Items: 25"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/0589ca1ba62247d1a8fec7dda1b7c27e?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/0b2c7d423371415f95a088086ed76f74?ref=dp_vse_rvc_1",
+      "https://www.amazon.com/vdp/098e2d26bf4a4f7e8a818f0f001bd737?ref=dp_vse_rvc_2",
+      "https://www.amazon.com/vdp/0b568347d58e4dcf956ef72240a53e98?ref=dp_vse_rvc_3"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 55.0
+}

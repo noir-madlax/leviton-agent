@@ -1,0 +1,352 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B01ANZRXDI",
+  "result_count": 1,
+  "detail": {
+    "name": "14-Gauge Automotive Primary Wire Bundle (100ft Each, Red & Black) | Ideal for Car Audio, Automotive, and Trailer | Durable Primary/Remote, Power/Ground Electrical Wiring",
+    "brand": "BEST CONNECTIONS",
+    "url": "https://www.amazon.com/product/dp/B01ANZRXDI",
+    "asin": "B01ANZRXDI",
+    "deal_badge": null,
+    "listing_id": "B01ANZRXDI",
+    "price": 29.95,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (3) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B01ANZRXDI/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.7,
+    "total_ratings": 634,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 6 hrs 28 mins. Join Prime"
+    ],
+    "delivery_zipcode": "20186",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71sHUR7bwdL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71sHUR7bwdL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51Mibhgs9lL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51owZDZCYyL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51SbBD0zgyL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51L1ITta9RL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51yoaRA9bLL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Ne+cPiCbL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51Mibhgs9lL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Brand",
+        "value": "BESTCONNECTIONS"
+      },
+      {
+        "name": "CableType",
+        "value": "flexible"
+      },
+      {
+        "name": "CompatibleDevices",
+        "value": "Speaker"
+      },
+      {
+        "name": "Color",
+        "value": "Red,Black"
+      },
+      {
+        "name": "ConnectorGender",
+        "value": "Genderless"
+      }
+    ],
+    "features": [
+      "HIGH-PERFORMANCE COPPER CLAD ALUMINUM (CCA) - Unleash unmatched performance with our primary wiring cable. Its unique composition boasts higher copper content for exceptional conductivity and electrical prowess. The significantly thicker copper coating, unlike regular CCA wires, combines the advantages of aluminum's resilience with copper's conductivity, ensuring peak performance and cost efficiency. The ultimate market choice!",
+      "100ft ROLL OF INDIVIDUAL SINGLE-CONDUCTOR WIRE - Presented in a convenient roll, this wire extends up to 100ft in length. With one roll featuring red wire and another housing black wire, each individual conductor is meticulously designed to cater to a multitude of applications. Whether for primary wiring, remote connections, turn-on mechanisms, hook-ups, or grounding needs, these wires can be customized to suit your specific project requirements.",
+      "DURABLE PVC JACKET - Crafted with premium materials, our wire features a robust PVC jacket that enhances its strength and resilience. This protective jacket safeguards the wire from impacts and abrasion while retaining flexibility for effortless installation across diverse applications.",
+      "OPTIMAL 14-GAUGE STRANDED DESIGN - Engineered with a stranded configuration and precisely calibrated 14-gauge thickness, our wire guarantees unmatched conductivity and minimal signal interference. This premium wire is exceptionally well-suited for a diverse range of 12-volt applications, solidifying its excellence for any electrical endeavor.",
+      "WIDE COMPATIBILITY - Our wiring solutions exhibit remarkable versatility, catering to various applications like primary/remote, power/ground, trailer/automotive, speaker, and general electrical needs. Choose from 10, 12, 14, 16, and 18 gauge options in diverse colors (black, red, blue, yellow, white, green, brown, orange, purple, pink, and gray). Available in lengths ranging from 25ft to 500ft, perfectly fitting your project requirements."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "ProductDimensions",
+        "value": "8x4x3inches;2.15Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "AP-14-100REDBLACK"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January15,2016"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Audiopipe/BestConnections"
+      },
+      {
+        "name": "ASIN",
+        "value": "B01ANZRXDI"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#386,305inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#1,818inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars634ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 386305
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 1818
+      }
+    ],
+    "seller_name": "Best Connections",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A15TP87GWKFZSB&asin=B01ANZRXDI&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "81%",
+      "4 star": "12%",
+      "3 star": "4%",
+      "2 star": "2%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the wire bundle to be solid 14-gauge wire that works well on a round-the-clock basis. They appreciate its ease of use and consider it good value for money.",
+    "review_aspects": [
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "David Houck",
+        "review_title": "🔌 Reliable and Durable Automotive Wiring! 🚗",
+        "rating": 5,
+        "review_text": "The BEST CONNECTIONS 14-Gauge Automotive Primary Wire Bundle offers 100ft each of red and black wire, perfect for car audio, automotive, and trailer use! 🎶 Whether you're powering your car's audio system or setting up electrical connections for a trailer, this durable wire ensures a secure and long-lasting performance. Designed for primary/remote, power/ground wiring, it’s flexible, easy to work with, and built to withstand the demands of automotive environments. A must-have for any vehicle electrical project! ⚡\nRead more",
+        "date": "2024-11-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Don J",
+        "review_title": "Must have for car add-ons",
+        "rating": 5,
+        "review_text": "If you're adding any electrical components to your car or boat, these are a must have.  Big box stores want $5 or more for a few feet of the same gauge wire and those have thinner insulation.  These come with quality copper wiring surrounded in a thick protective insulation layer.  The wire works great with either quick crimp, screw nut, or soldering connections.  I have used this wire for radio, amp, pa system, cb, fog lights and probably half a dozen other add-ons in my car with no issues.  Using a multi-meter, these have almost no resistance over a 10 feet section so power isn't getting wasted by low quality copper.\nRead more",
+        "date": "2019-03-01",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Mark H",
+        "review_title": "Really good wire",
+        "rating": 5,
+        "review_text": "Great quality wire and insulation. This from a 40-year professional mechanic.\nRead more",
+        "date": "2024-11-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Joseph Bueno",
+        "review_title": "Good price",
+        "rating": 4,
+        "review_text": "Good wire\nRead more",
+        "date": "2019-12-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jeremy",
+        "review_title": "not solid copper but works",
+        "rating": 5,
+        "review_text": "these are copper clad aluminum ,not solid copper. they work out ok for the small jobs, i would not however trust them to major jobs.\nRead more",
+        "date": "2023-10-30",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Big E",
+        "review_title": "Good wire for LED lights.",
+        "rating": 5,
+        "review_text": "Not a bad price for 100ft of wire. Works well for low amperage led lights.\nRead more",
+        "date": "2021-08-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "William K.",
+        "review_title": "Read the description thoroughly!",
+        "rating": 5,
+        "review_text": "The wire was great. I wired in 8 LED light bars for my fire departments squad truck. The wire was easy to work with and cut just the same as the expensive stuff. Don't be a tool and leave a bad review simply because YOU don't know how to properly read the description!! Its not rated as AWG wire, it runs small. I knew I needed 18 AWG to wire in the light bars and ordered this stuff in a 14 GA and it was spot on!! Pay attention to detail and you wont have an issue.\nRead more",
+        "date": "2018-09-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Don't worry be happy",
+        "review_title": "High quality",
+        "rating": 5,
+        "review_text": "Enough wire for my projectLooks and feel good quality\nRead more",
+        "date": "2023-08-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/0fb98f35678740bc9e6c897fc56fa1df?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/00cde21f58044f9da11cc5265eaef919?ref=dp_vse_rvc_1"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "CRAFTED WITH HIGH-GRADE MATERIALS, OUR AUTOMOTIVE PRIMARY WIRE OFFERS EXCELLENT CONDUCTIVITY, FLEXIBILITY, AND RESISTANCE TO HEAT, MOISTURE, AND ABRASION. DESIGNED FOR DURABILITY, IT ENSURES CONSISTENT PERFORMANCE EVEN IN THE HARSHEST CONDITIONS.",
+        "EXPERIENCE ENHANCED RELIABILITY, IMPROVED EFFICIENCY, AND REDUCED RISK OF ELECTRICAL MALFUNCTIONS.",
+        "OUR PRIMARY WIRE PRIORITIZES SAFETY THROUGH SUPERIOR INSULATION PROPERTIES EFFECTIVELY PREVENTING ELECTRICAL SHORTS AND ENSURING PROTECTION AGAINST POTENTIAL HAZARDS. THIS DESIGN SAFEGUARDS BOTH YOUR VEHICLE AND ITS OCCUPANTS",
+        "OUR PRIMARY WIRE IS COMPATIBLE WITH VARIOUS AUTOMOTIVE PROJECTS, REPAIRS, AND VEHICLES, INCLUDING CARS, TRUCKS, MOTORCYCLES, AND TRAILER. IT OFFERS A VERSATILE SOLUTION FOR ALL YOUR ELECTRICAL NEEDS.",
+        "THE COLOR-CODED DESIGN ELIMINATES CONFUSION ALLOWING FOR QUICK IDENTIFICATION AND CONNECTION.",
+        "OUR SELECTIONS CATERS TO DIFFERENT NEEDS WITH A VARIETY OF GAUGE OPTIONS, INCLUDING THICKER WIRES FOR HIGHER CURRENT APPLICATIONS AND THINNER WIRES FOR SMALLER CIRCUITS."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c0371aeb-e2f5-4e64-b844-49be5419da98.__CR0,61,5001,1547_PT0_SX970_V1___.png",
+          "alt": "OUR STORY"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c0371aeb-e2f5-4e64-b844-49be5419da98.__CR0,61,5001,1547_PT0_SX970_V1___.png",
+          "alt": "OUR STORY"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3d064265-9de7-4bcc-9ced-62c7542f5852.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New High Quality AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3d064265-9de7-4bcc-9ced-62c7542f5852.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New High Quality AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1fa70d1f-0256-4a94-a183-3ce092bbf942.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Premium AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1fa70d1f-0256-4a94-a183-3ce092bbf942.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Premium AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/78292191-9751-4483-9517-2407912873ea.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Quality Control AP"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/78292191-9751-4483-9517-2407912873ea.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Quality Control AP"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ea610b2c-39e8-411c-b7f0-626e567a22c6.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Versatile AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ea610b2c-39e8-411c-b7f0-626e567a22c6.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Versatile AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c1141c3c-5782-4715-a911-91ebf54eb273.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Easy Install AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c1141c3c-5782-4715-a911-91ebf54eb273.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Easy Install AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/35a92183-e170-453f-b94a-1c94ccbde3c5.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Various Gauge AP Wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/35a92183-e170-453f-b94a-1c94ccbde3c5.__CR0,0,970,300_PT0_SX970_V1___.png",
+          "alt": "New Various Gauge AP Wire"
+        }
+      ]
+    },
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 60.0
+}

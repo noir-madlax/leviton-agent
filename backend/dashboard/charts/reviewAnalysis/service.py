@@ -99,15 +99,19 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 options=options
             )
             
-            if not categories_data:
+            if not categories_data or not categories_data.get('categories'):
                 return self._get_empty_top_categories_response()
             
+            # Extract categories and aggregated cause summary
+            categories_list = categories_data['categories']
+            aggregated_cause_summary = categories_data.get('aggregated_cause_summary', [])
+            
             # Calculate summary statistics
-            summary_stats = ReviewProcessingUtils.aggregate_category_metrics(categories_data)
+            summary_stats = ReviewProcessingUtils.aggregate_category_metrics(categories_list)
             
             # Format response
             categories = []
-            for cat_data in categories_data:
+            for cat_data in categories_list:
                 category = {
                     'category_id': cat_data['category_pk'],
                     'category_name': cat_data['category_name'],
@@ -120,14 +124,16 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                     'total_reviews': cat_data['total_reviews'],
                     'positive_reviews': cat_data['positive_reviews'],
                     'negative_reviews': cat_data['negative_reviews'],
-                    'positive_ratio': cat_data['positive_ratio']
+                    'positive_ratio': cat_data['positive_ratio'],
+                    'cause_data': cat_data.get('cause_data', [])  # Add embedded cause data
                 }
                 categories.append(category)
             
             result = {
                 'categories': categories,
                 'total_categories': len(categories),
-                'summary_stats': summary_stats
+                'summary_stats': summary_stats,
+                'aggregated_cause_summary': aggregated_cause_summary  # Add aggregated cause summary
             }
             
             logger.info(f"Top categories service returned data for {len(categories)} categories")
@@ -247,46 +253,6 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             logger.error(f"Error in get_reviews_by_category: {e}", exc_info=True)
             return self._get_empty_reviews_response(category_id)
 
-    async def get_cause_matrix_view_data(
-        self,
-        top_aspect_category_ids: List[int],
-        top_cause_category_ids: List[int],
-        sentiment_filter: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Get cause analysis matrix view data.
-        
-        Args:
-            top_aspect_category_ids: List of top aspect category IDs (columns)
-            top_cause_category_ids: List of top cause category IDs (rows)
-            sentiment_filter: Optional sentiment filter ('+', '-', or None for both)
-            
-        Returns:
-            Dict containing matrix view data with aspect categories as columns and cause categories as rows
-        """
-        try:
-            logger.info(f"Getting cause matrix view data for project {self.project_id}")
-            
-            # Get filtered ASINs based on project filters
-            filtered_asins = self._get_asins_to_analyze()
-            if not filtered_asins:
-                return self._get_empty_cause_matrix_response()
-            
-            # Get cause matrix view data from the data service
-            matrix_data = await self.review_data_service.get_cause_matrix_view_data(
-                project_id=self.project_id,
-                asins=filtered_asins,
-                top_aspect_category_ids=top_aspect_category_ids,
-                top_cause_category_ids=top_cause_category_ids,
-                sentiment_filter=sentiment_filter
-            )
-            
-            logger.info(f"Cause matrix view data completed for project {self.project_id}: {len(matrix_data.get('aspect_categories', []))} aspect categories, {len(matrix_data.get('cause_aspect_data', []))} cause categories")
-            return matrix_data
-            
-        except Exception as e:
-            logger.error(f"Error in get_cause_matrix_view_data: {e}", exc_info=True)
-            return self._get_empty_cause_matrix_response()
-
     def _get_empty_top_categories_response(self) -> Dict[str, Any]:
         """Return empty top categories response."""
         return {
@@ -325,13 +291,4 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 'offset': 0,
                 'has_more': False
             }
-        }
-
-    def _get_empty_cause_matrix_response(self) -> Dict[str, Any]:
-        """Return empty cause matrix response."""
-        return {
-            'aspect_categories': [],
-            'cause_aspect_data': [],
-            'total_aspect_categories': 0,
-            'total_cause_categories': 0
         } 

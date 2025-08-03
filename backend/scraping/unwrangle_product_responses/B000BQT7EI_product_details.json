@@ -1,0 +1,323 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B000BQT7EI",
+  "result_count": 1,
+  "detail": {
+    "name": "The Hillman Group 123132 24 Gauge Galvanized Wire, 100-Feet, 1-Pack",
+    "brand": "Hillman",
+    "url": "https://www.amazon.com/product/dp/B000BQT7EI",
+    "asin": "B000BQT7EI",
+    "deal_badge": null,
+    "listing_id": "B000BQT7EI",
+    "price": 7.17,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (11) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B000BQT7EI/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.5,
+    "total_ratings": 93,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 11 hrs 40 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71hCJKpQvKL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71hCJKpQvKL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41vFp13SGyL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Material",
+        "value": "AlloySteel"
+      },
+      {
+        "name": "Color",
+        "value": "Silver"
+      },
+      {
+        "name": "Gauge",
+        "value": "24.0"
+      },
+      {
+        "name": "Brand",
+        "value": "Hillman"
+      },
+      {
+        "name": "FinishType",
+        "value": "Polished"
+      }
+    ],
+    "features": [
+      "The Hillman Group 123132 24 Gauge Galvanized Wire, 100-Feet, 1-Pack"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Material",
+        "value": "Alloy Steel"
+      },
+      {
+        "name": "Color",
+        "value": "Silver"
+      },
+      {
+        "name": "Gauge",
+        "value": "24.0"
+      },
+      {
+        "name": "Brand",
+        "value": "Hillman"
+      },
+      {
+        "name": "Finish Type",
+        "value": "Polished"
+      },
+      {
+        "name": "Cable Length",
+        "value": "100 Feet"
+      },
+      {
+        "name": "UPC",
+        "value": "038902394248"
+      },
+      {
+        "name": "Global Trade Identification Number",
+        "value": "00038902394248"
+      },
+      {
+        "name": "Number of Items",
+        "value": "1"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "The Hillman Group"
+      },
+      {
+        "name": "Item Package Dimensions L x W x H",
+        "value": "4.72 x 3.43 x 0.94 inches"
+      },
+      {
+        "name": "Package Weight",
+        "value": "0.07 Kilograms"
+      },
+      {
+        "name": "Item Dimensions  LxWxH",
+        "value": "0.94 x 3.49 x 4.74 inches"
+      },
+      {
+        "name": "Brand Name",
+        "value": "Hillman"
+      },
+      {
+        "name": "Description",
+        "value": "Warranty"
+      },
+      {
+        "name": "Model Name",
+        "value": "123132"
+      },
+      {
+        "name": "Suggested Users",
+        "value": "unisex-adult"
+      },
+      {
+        "name": "Part Number",
+        "value": "123132"
+      },
+      {
+        "name": "Included Components",
+        "value": "The Hillman Group 123132 24 Gauge Galvanized Wire, 100-Feet, 1-Pack"
+      },
+      {
+        "name": "Size",
+        "value": "Pack of 1"
+      },
+      {
+        "name": "ASIN",
+        "value": "B000BQT7EI"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.5  4.5 out of 5 stars    \n    93 ratings   \n\n\n 4.5 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#298,067 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #1,408 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "July 3, 2006"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 298067
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 1408
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "77%",
+      "4 star": "10%",
+      "3 star": "5%",
+      "2 star": "3%",
+      "1 star": "5%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "A",
+        "review_title": "Nice twine",
+        "rating": 5,
+        "review_text": "Used this for my chicken pen\nRead more",
+        "date": "2025-07-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jamie",
+        "review_title": "Rust Proof- Great for Wire Crafts!",
+        "rating": 5,
+        "review_text": "I used to use \"Craft Wire\", which was mainly copper or aluminum, and winds up rusty. However, Galvanized Steel Wire is better quality than craft wire, costs much less, and doesn't rust!*This brand comes on a roll that stays inside the package. You unwind what you need, and the rest is neatly rolled for the next use...no more tangled wires!\nRead more",
+        "date": "2022-09-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "catherine yeager",
+        "review_title": "Glad I bought this wire.",
+        "rating": 5,
+        "review_text": "Won't rust, easy to cut and bend.\nRead more",
+        "date": "2022-03-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Michael Grobelch",
+        "review_title": "... a snare in a survival course and it worked like a champ",
+        "rating": 5,
+        "review_text": "Used the wire to set a snare in a survival course and it worked like a champ. Also used it in other survival applications without an issue.\nRead more",
+        "date": "2016-02-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Nice",
+        "rating": 4,
+        "review_text": "Good quality\nRead more",
+        "date": "2019-07-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "J. Bowers",
+        "review_title": "The spool does not work",
+        "rating": 1,
+        "review_text": "The spool in the center of the package that is supposed to unwind the wire does not work. The wire catches inside and bends which means you cannot get a straight piece of wire.\nRead more",
+        "date": "2023-11-01",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "jake",
+        "review_title": "Four Stars",
+        "rating": 4,
+        "review_text": "Nice\nRead more",
+        "date": "2015-09-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Marko G.",
+        "review_title": "I don't really like this product",
+        "rating": 2,
+        "review_text": "I don't really like this product. I have used other similar products without difficulty however when I try to use this wire no matter what I do the wire returns to its in package shape in spinal.\nRead more",
+        "date": "2016-03-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "From the manufacturer",
+        "Hillman Solutions is a leading North American provider of hardware products, including home improvement products, protective and job site gear solutions including gloves and storage, and robotic technologies encompassing key duplication and accessories, engraving and knife sharpening. Hillman designs innovative products and merchandising solutions for complex categories. Founded in 1964 in Cincinnati, Ohio, Hillman believes that the building never stops."
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 29.0
+}

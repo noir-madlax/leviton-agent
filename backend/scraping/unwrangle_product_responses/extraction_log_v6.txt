@@ -1,0 +1,84 @@
+2025-07-31 15:09:15,253 - INFO - Starting V6 product details extraction with improved normalization...
+2025-07-31 15:09:15,254 - INFO - Extracting data from all files...
+2025-07-31 15:09:15,254 - INFO - Processing 48 files...
+2025-07-31 15:09:15,254 - INFO - Processing file 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 15:09:15,267 - INFO - Processing file 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 15:09:15,283 - INFO - Processing file 21/48: B08V4L3H2H_product_details.json
+2025-07-31 15:09:15,294 - INFO - Processing file 31/48: B09XFBRVYX_product_details.json
+2025-07-31 15:09:15,307 - INFO - Processing file 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 15:09:15,319 - INFO - Merging similar columns for schema unification...
+2025-07-31 15:09:15,325 - INFO - Semantic match found: materi ~ material (High similarity (1.00) + data overlap (33 rows))
+2025-07-31 15:09:15,326 - INFO - Semantic match found: materi ~ contact_materi (High similarity (0.70) + data overlap (2 rows))
+2025-07-31 15:09:15,326 - INFO - Semantic match found: materi ~ insul_materi (High similarity (0.77) + data overlap (2 rows))
+2025-07-31 15:09:15,328 - INFO - Semantic match found: numberofcablestrand ~ number_of_cabl_strand (High similarity (0.90) + data overlap (7 rows))
+2025-07-31 15:09:15,329 - INFO - Semantic match found: numberofcablestrand ~ part_number (High similarity (0.90) + data overlap (5 rows))
+2025-07-31 15:09:15,329 - INFO - Semantic match found: numberofcablestrand ~ item_weight (High similarity (0.90) + data overlap (7 rows))
+2025-07-31 15:09:15,329 - INFO - Semantic match found: numberofcablestrand ~ item_model_number (High similarity (0.90) + data overlap (6 rows))
+2025-07-31 15:09:15,330 - INFO - Semantic match found: numberofcablestrand ~ length (High similarity (0.90) + data overlap (23 rows))
+2025-07-31 15:09:15,330 - INFO - Semantic match found: numberofcablestrand ~ itemmodelnumb (High similarity (0.90) + data overlap (12 rows))
+2025-07-31 15:09:15,331 - INFO - Semantic match found: numberofcablestrand ~ global_trade_identif_number (High similarity (0.90) + data overlap (2 rows))
+2025-07-31 15:09:15,331 - INFO - Semantic match found: numberofcablestrand ~ item_packag_quantiti (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:09:15,332 - INFO - Semantic match found: numberofcablestrand ~ cabletyp (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,332 - INFO - Semantic match found: numberofcablestrand ~ ethernetcablecategori (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,333 - INFO - Semantic match found: numberofcablestrand ~ number_of_piec (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:09:15,333 - INFO - Semantic match found: numberofcablestrand ~ extens_length (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,333 - INFO - Semantic match found: numberofcablestrand ~ cabl_length (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,334 - INFO - Semantic match found: numberofcablestrand ~ number_of_item (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,334 - INFO - Semantic match found: numberofcablestrand ~ item_packag_dimens_l_x_w_x_h (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,334 - INFO - Semantic match found: numberofcablestrand ~ item_dimens_lxwxh (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,334 - INFO - Semantic match found: numberofcablestrand ~ model_name (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,335 - INFO - Semantic match found: numberofcablestrand ~ itemweight (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:09:15,336 - INFO - Semantic match found: voltag ~ voltage (High similarity (1.00) + data overlap (8 rows))
+2025-07-31 15:09:15,337 - INFO - Semantic match found: voltag ~ voltage_rating (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:09:15,338 - INFO - Semantic match found: voltag ~ maximum_voltag (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,339 - INFO - Semantic match found: no_of_wire ~ gauge (High similarity (0.90) + data overlap (4 rows))
+2025-07-31 15:09:15,339 - INFO - Semantic match found: no_of_wire ~ wire_count (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,340 - INFO - Semantic match found: no_of_wire ~ noofwir (High similarity (0.88) + data overlap (1 rows))
+2025-07-31 15:09:15,346 - INFO - Semantic match found: packag_dimens ~ packagedimens (High similarity (0.92) + complementary data)
+2025-07-31 15:09:15,347 - INFO - Semantic match found: packag_dimens ~ product_dimens (High similarity (0.74) + complementary data)
+2025-07-31 15:09:15,348 - INFO - Semantic match found: packag_dimens ~ packag_weight (High similarity (0.74) + complementary data)
+2025-07-31 15:09:15,349 - INFO - Semantic match found: size ~ variant_size (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:09:15,350 - INFO - Semantic match found: size ~ stud_size (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:09:15,350 - INFO - Semantic match found: size ~ productdimens (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,351 - INFO - Semantic match found: size ~ package_weight (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:09:15,351 - INFO - Semantic match found: size ~ dimensions (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,352 - INFO - Semantic match found: batteri_includ ~ batteri_requir (High similarity (0.90) + data overlap (9 rows))
+2025-07-31 15:09:15,353 - INFO - Semantic match found: batteri_includ ~ includ_compon (High similarity (0.90) + data overlap (5 rows))
+2025-07-31 15:09:15,354 - INFO - Semantic match found: batteri_includ ~ includ_s (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,354 - INFO - Semantic match found: custom_review ~ customerreview (High similarity (0.89) + complementary data)
+2025-07-31 15:09:15,356 - INFO - Semantic match found: best_seller_rank ~ bestsellersrank (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,358 - INFO - Semantic match found: date_first_avail ~ datefirstavail (High similarity (0.93) + complementary data)
+2025-07-31 15:09:15,360 - INFO - Semantic match found: temperature ~ temperatur_rate (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,367 - INFO - Semantic match found: conductor ~ conductor_count (High similarity (0.85) + data overlap (5 rows))
+2025-07-31 15:09:15,369 - INFO - Semantic match found: connectortyp ~ connector_type (High similarity (0.90) + data overlap (2 rows))
+2025-07-31 15:09:15,370 - INFO - Semantic match found: connectortyp ~ installationtyp (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,370 - INFO - Semantic match found: connectortyp ~ connectorgend (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,371 - INFO - Semantic match found: connectortyp ~ finishtyp (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,371 - INFO - Semantic match found: connectortyp ~ finish_type (High similarity (0.90) + complementary data)
+2025-07-31 15:09:15,371 - INFO - Semantic match found: contactmateri ~ insulationmateri (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:09:15,374 - INFO - Semantic match found: is_discontinu_by_manufactur ~ isdiscontinuedbymanufactur (High similarity (0.91) + complementary data)
+2025-07-31 15:09:15,386 - INFO - Merged columns: ['materi', 'material', 'contact_materi', 'insul_materi'] -> materi
+2025-07-31 15:09:15,401 - INFO - Merged columns: ['numberofcablestrand', 'number_of_cabl_strand', 'part_number', 'item_weight', 'item_model_number', 'length', 'itemmodelnumb', 'global_trade_identif_number', 'item_packag_quantiti', 'cabletyp', 'ethernetcablecategori', 'number_of_piec', 'extens_length', 'cabl_length', 'number_of_item', 'item_packag_dimens_l_x_w_x_h', 'item_dimens_lxwxh', 'model_name', 'itemweight'] -> numberofcablestrand
+2025-07-31 15:09:15,404 - INFO - Merged columns: ['voltag', 'voltage', 'voltage_rating', 'maximum_voltag'] -> voltag
+2025-07-31 15:09:15,408 - INFO - Merged columns: ['no_of_wire', 'gauge', 'wire_count', 'noofwir'] -> no_of_wire
+2025-07-31 15:09:15,411 - INFO - Merged columns: ['packag_dimens', 'packagedimens', 'product_dimens', 'packag_weight'] -> packag_dimens
+2025-07-31 15:09:15,416 - INFO - Merged columns: ['size', 'variant_size', 'stud_size', 'productdimens', 'package_weight', 'dimensions'] -> size
+2025-07-31 15:09:15,418 - INFO - Merged columns: ['batteri_includ', 'batteri_requir', 'includ_compon', 'includ_s'] -> batteri_includ
+2025-07-31 15:09:15,420 - INFO - Merged columns: ['custom_review', 'customerreview'] -> custom_review
+2025-07-31 15:09:15,422 - INFO - Merged columns: ['best_seller_rank', 'bestsellersrank'] -> best_seller_rank
+2025-07-31 15:09:15,424 - INFO - Merged columns: ['date_first_avail', 'datefirstavail'] -> date_first_avail
+2025-07-31 15:09:15,424 - INFO - Merged columns: ['temperature', 'temperatur_rate'] -> temperature
+2025-07-31 15:09:15,425 - INFO - Merged columns: ['conductor', 'conductor_count'] -> conductor
+2025-07-31 15:09:15,428 - INFO - Merged columns: ['connectortyp', 'connector_type', 'installationtyp', 'connectorgend', 'finishtyp', 'finish_type'] -> connectortyp
+2025-07-31 15:09:15,429 - INFO - Merged columns: ['contactmateri', 'insulationmateri'] -> contactmateri
+2025-07-31 15:09:15,430 - INFO - Merged columns: ['is_discontinu_by_manufactur', 'isdiscontinuedbymanufactur'] -> is_discontinu_by_manufactur
+2025-07-31 15:09:15,431 - INFO - Generating reports...
+2025-07-31 15:09:15,443 - INFO - Main CSV saved to: ./extracted_product_details_v6.csv
+2025-07-31 15:09:15,449 - INFO - Conflict report saved to: ./conflict_report_v6.json
+2025-07-31 15:09:15,449 - INFO - Extraction statistics saved to: ./extraction_statistics_v6.json
+2025-07-31 15:09:15,449 - INFO - Extraction completed successfully!
+2025-07-31 15:09:15,449 - INFO - Processed 48 files
+2025-07-31 15:09:15,449 - INFO - Found 44 conflicts
+2025-07-31 15:09:15,449 - INFO - Merged 50 columns
+2025-07-31 15:09:15,449 - INFO - Found 50 semantic matches
+2025-07-31 15:09:15,449 - INFO - Generated 95 columns

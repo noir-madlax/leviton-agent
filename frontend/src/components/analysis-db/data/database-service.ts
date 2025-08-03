@@ -776,6 +776,12 @@ export class DatabaseService {
       maxCategories?: number
       minReviews?: number
       minPositiveReviews?: number
+      returnTopCauseCategories?: {
+        sentiment?: '+' | '-'
+        aggregatedLimit?: number
+        perAspectLimit?: number
+        includeAspectDetails?: boolean
+      }
     },
     filters?: {
       categories?: string[]
@@ -798,6 +804,17 @@ export class DatabaseService {
         positive_reviews: number
         negative_reviews: number
         positive_ratio: number
+        cause_data?: Array<{
+          cause_category_pk: number
+          cause_category_name: string
+          total_reviews: number
+          positive_reviews: number
+          negative_reviews: number
+          aspects: Array<{
+            aspect_description: string
+            sentiment: string
+          }>
+        }>
       }>
       total_categories: number
       summary_stats: {
@@ -807,6 +824,18 @@ export class DatabaseService {
         total_negative_reviews: number
         overall_positive_ratio: number
       }
+      aggregated_cause_summary?: Array<{
+        cause_category_pk: number
+        cause_category_name: string
+        total_reviews: number
+        total_positive_reviews: number
+        total_negative_reviews: number
+        rank: number
+        aspects: Array<{
+          aspect_description: string
+          sentiment: string
+        }>
+      }>
     }
   }> {
     try {
@@ -822,7 +851,12 @@ export class DatabaseService {
           max_categories: options?.maxCategories || 10,
           min_reviews: options?.minReviews || 5,
           min_positive_reviews: options?.minPositiveReviews || 2,
-          ...options
+          return_top_cause_categories: options?.returnTopCauseCategories ? {
+            sentiment: options.returnTopCauseCategories.sentiment,
+            aggregated_limit: options.returnTopCauseCategories.aggregatedLimit,
+            per_aspect_limit: options.returnTopCauseCategories.perAspectLimit,
+            include_aspect_details: options.returnTopCauseCategories.includeAspectDetails
+          } : undefined
         }
       }
 
