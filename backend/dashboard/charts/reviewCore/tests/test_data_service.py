@@ -96,52 +96,64 @@ async def test_optimized_methods_with_real_data():
                 'min_reviews': 1,
                 'return_top_cause_categories': {
                     'sentiment': '+',
-                    'limit': 2
+                    'aggregated_limit': 5,
+                    'per_aspect_limit': 3
                 }
             }
         )
         
-        print(f"✅ Success! Found {len(integrated_result)} categories with cause analysis")
-        for category in integrated_result:
-            print(f"📊 Category: {category['category_name']}")
-            print(f"   - Total reviews: {category['total_reviews']}")
-            print(f"   - Top causes: {len(category.get('top_cause_categories', []))}")
-            for cause in category.get('top_cause_categories', [])[:2]:
-                print(f"     * {cause['category_name']}: {cause['total_reviews']} reviews")
+        print(f"✅ Success! Found {len(integrated_result['categories'])} categories with embedded cause analysis")
+        print(f"📊 Aggregated causes: {len(integrated_result['aggregated_cause_summary'])}")
         
-        # Test 4: Cause matrix view data
-        print("\n🧪 Test 4: get_cause_matrix_view_data")
+        # Show aggregated summary
+        for cause in integrated_result['aggregated_cause_summary'][:2]:
+            print(f"🎯 Top cause: {cause.get('cause_category_name', 'Unknown')} (rank {cause.get('rank', 'N/A')})")
+            print(f"   - Total reviews: {cause.get('total_reviews', 0)}")
+            print(f"   - Aspects: {len(cause.get('aspects', []))}")
+            for aspect in cause.get('aspects', [])[:2]:
+                print(f"     * {aspect.get('sentiment', '?')} {aspect.get('aspect_description', 'Unknown')}")
+        
+                    # Show embedded cause data for first category
+            if integrated_result['categories']:
+                first_category = integrated_result['categories'][0]
+                print(f"📊 Category: {first_category.get('category_name', 'Unknown')}")
+                print(f"   - Embedded causes: {len(first_category.get('cause_data', []))}")
+                for cause in first_category.get('cause_data', [])[:2]:
+                    print(f"     * {cause.get('cause_category_name', 'Unknown')}: {cause.get('total_reviews', 0)} reviews")
+                    print(f"       Aspects: {len(cause.get('aspects', []))}")
+                    for aspect in cause.get('aspects', [])[:1]:
+                        print(f"         - {aspect.get('sentiment', '?')} {aspect.get('aspect_description', 'Unknown')}")
+        
+        # Test 4: Enhanced cause analysis functionality
+        print("\n🧪 Test 4: Enhanced cause analysis with embedded structure")
         print("-" * 60)
         
-        if result:
-            top_aspect_category_ids = [cat['category_pk'] for cat in result[:3]]  # Top 3 aspect categories
-            # Use the same IDs as cause categories for testing (in real scenario these would be different)
-            top_cause_category_ids = top_aspect_category_ids[:2]  # Top 2 cause categories
+        # Test the new embedded structure provides both aggregated and per-aspect data
+        if integrated_result['categories']:
+            print(f"✅ Success! Enhanced structure provides:")
+            print(f"   - {len(integrated_result['categories'])} aspect categories with embedded cause data")
+            print(f"   - {len(integrated_result['aggregated_cause_summary'])} aggregated causes")
             
-            matrix_result = await data_service.get_cause_matrix_view_data(
-                project_id=project_id,
-                asins=project_asins,
-                top_aspect_category_ids=top_aspect_category_ids,
-                top_cause_category_ids=top_cause_category_ids,
-                sentiment_filter='+'  # Only positive sentiment
-            )
+            # Verify embedded structure
+            for i, category in enumerate(integrated_result['categories'][:2]):
+                print(f"📊 Category {i+1}: {category.get('category_name', 'Unknown')}")
+                print(f"   - Has embedded cause_data: {'cause_data' in category}")
+                print(f"   - Embedded causes: {len(category.get('cause_data', []))}")
+                
+                # Show sample embedded cause data
+                for cause in category.get('cause_data', [])[:1]:
+                    print(f"     * Embedded cause: {cause.get('cause_category_name', 'Unknown')}")
+                    print(f"       - Reviews: {cause.get('total_reviews', 0)}")
+                    print(f"       - Simplified aspects: {len(cause.get('aspects', []))}")
+                    for aspect in cause.get('aspects', [])[:1]:
+                        print(f"         - {aspect.get('sentiment', '?')} {aspect.get('aspect_description', 'Unknown')}")
             
-            print(f"✅ Success! Matrix view data:")
-            print(f"   - Aspect categories (columns): {len(matrix_result['aspect_categories'])}")
-            print(f"   - Cause categories (rows): {len(matrix_result['cause_aspect_data'])}")
-            print(f"   - Total aspect categories: {matrix_result['total_aspect_categories']}")
-            print(f"   - Total cause categories: {matrix_result['total_cause_categories']}")
-            
-            if matrix_result['cause_aspect_data']:
-                first_cause = matrix_result['cause_aspect_data'][0]
-                print(f"📊 Sample cause category: {first_cause['cause_category_name']}")
-                print(f"   - Aspect data points: {len(first_cause['aspect_data'])}")
-                if first_cause['aspect_data']:
-                    first_aspect = first_cause['aspect_data'][0]
-                    print(f"   - Sample cell: {first_aspect['category_name']}")
-                    print(f"     * Total reviews: {first_aspect['total_reviews']}")
-                    print(f"     * Positive reviews: {first_aspect['positive_reviews']}")
-                    print(f"     * Negative reviews: {first_aspect['negative_reviews']}")
+            # Verify aggregated structure
+            print(f"🎯 Aggregated summary:")
+            for cause in integrated_result['aggregated_cause_summary'][:1]:
+                print(f"   - Top cause: {cause.get('cause_category_name', 'Unknown')} (rank {cause.get('rank', 'N/A')})")
+                print(f"     Total reviews: {cause.get('total_reviews', 0)}")
+                print(f"     Simplified aspects: {len(cause.get('aspects', []))}")
         
         # Test 5: Backward compatibility
         print("\n🧪 Test 5: Backward compatibility - old method")

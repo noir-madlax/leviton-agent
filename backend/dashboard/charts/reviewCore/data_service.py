@@ -653,8 +653,8 @@ class ReviewDataService:
         asins: List[str],
         aspect_types: List[str],
         options: Dict[str, Any]
-    ) -> List[Dict[str, Any]]:
-        """Get aspect categories with filtering and sorting options.
+    ) -> Dict[str, Any]:
+        """Get aspect categories with embedded cause analysis.
         
         Args:
             project_id: Project ID for filtering
@@ -663,14 +663,14 @@ class ReviewDataService:
             options: Options for sorting and filtering, including return_top_cause_categories
             
         Returns:
-            List of aspect categories with metrics and optional cause analysis
+            Dict containing categories with embedded cause data and aggregated cause summary
         """
         try:
             # Get category statistics using optimized method (already includes filtering, sorting, and limit)
             categories = await self.get_category_statistics(project_id, asins, aspect_types, options)
             
             if not categories:
-                return []
+                return {'categories': [], 'aggregated_cause_summary': []}
             
             # Check if cause analysis is requested
             cause_options = options.get('return_top_cause_categories')
@@ -678,64 +678,60 @@ class ReviewDataService:
                 # Extract top category IDs for cause analysis
                 top_category_ids = [cat['category_pk'] for cat in categories]
                 
-                # Get cause analysis parameters
-                sentiment_filter = cause_options.get('sentiment')  # Optional: '+', '-', or None for both
-                limit = cause_options.get('limit', 10)
-                
-                # Get cause analysis for top categories only
-                cause_analysis = await self.get_cause_analysis(
+                # Get enhanced cause analysis with embedded structure
+                embedded_cause_data, aggregated_summary = await self._get_enhanced_cause_analysis(
                     project_id=project_id,
                     asins=asins,
-                    top_category_ids=top_category_ids,
-                    sentiment_filter=sentiment_filter,
-                    limit=limit
+                    top_aspect_category_ids=top_category_ids,
+                    cause_options=cause_options
                 )
                 
-                # Add cause analysis to the response (now a single list for all categories)
-                # We'll add it to the first category as a shared result, or create a separate field
-                if categories:
-                    categories[0]['top_cause_categories'] = cause_analysis
-                else:
-                    # If no categories, create a dummy entry with cause analysis
-                    categories.append({'top_cause_categories': cause_analysis})
+                # Embed cause data into each category
+                for category in categories:
+                    category_pk = category['category_pk']
+                    category['cause_data'] = embedded_cause_data.get(category_pk, [])
+                
+                result = {
+                    'categories': categories,
+                    'aggregated_cause_summary': aggregated_summary
+                }
+            else:
+                result = {'categories': categories, 'aggregated_cause_summary': []}
             
-            logger.info(f"Retrieved {len(categories)} aspect categories with metrics")
-            return categories
+            logger.info(f"Retrieved {len(categories)} aspect categories with embedded cause analysis")
+            return result
             
         except Exception as e:
             logger.error(f"Error getting aspect categories with metrics: {e}", exc_info=True)
-            return []
+            return {'categories': [], 'aggregated_cause_summary': []}
 
-    async def get_cause_matrix_view_data(
+    async def _get_enhanced_cause_analysis(
         self,
         project_id: str,
         asins: List[str],
         top_aspect_category_ids: List[int],
-        top_cause_category_ids: List[int],
-        sentiment_filter: Optional[str] = None
-    ) -> Dict[str, Any]:
-        """Get cause analysis matrix view data.
+        cause_options: Dict[str, Any]
+    ) -> tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+        """Get enhanced cause analysis with embedded structure.
         
         Args:
             project_id: Project ID for filtering
             asins: List of ASINs to filter by
-            top_aspect_category_ids: List of top aspect category IDs (columns)
-            top_cause_category_ids: List of top cause category IDs (rows)
-            sentiment_filter: Optional sentiment filter ('+', '-', or None for both)
+            top_aspect_category_ids: List of aspect category IDs to analyze
+            cause_options: Options for cause analysis including limits and filters
             
         Returns:
-            Dict containing matrix view data with aspect categories as columns and cause categories as rows
+            Tuple of (embedded_cause_data_per_aspect, aggregated_cause_summary)
         """
         try:
-            if not top_aspect_category_ids or not top_cause_category_ids:
-                logger.warning("No aspect categories or cause categories provided for matrix view")
-                return {
-                    'aspect_categories': [],
-                    'cause_categories': [],
-                    'matrix_data': [],
-                    'total_aspect_categories': 0,
-                    'total_cause_categories': 0
-                }
+            if not top_aspect_category_ids:
+                return {}, []
+            
+            # Get cause analysis parameters
+            sentiment_filter = cause_options.get('sentiment')
+            aggregated_limit = cause_options.get('aggregated_limit', 10)
+            per_aspect_limit = cause_options.get('per_aspect_limit', 5)
+            include_aspect_details = cause_options.get('include_aspect_details', True)
             
             # Build the query to get cause data with review_id for deduplication
             query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
@@ -750,28 +746,39 @@ class ReviewDataService:
             result = query.execute()
             
             if not result.data:
-                logger.info(f"No cause data found for matrix view")
-                return {
-                    'aspect_categories': [],
-                    'cause_categories': [],
-                    'matrix_data': [],
-                    'total_aspect_categories': 0,
-                    'total_cause_categories': 0
-                }
+                logger.info(f"No cause data found for enhanced analysis")
+                return {}, []
             
-            # Get category information for both aspect and cause categories
-            all_category_ids = top_aspect_category_ids + top_cause_category_ids
-            category_info = await self.get_category_info_batch(project_id, all_category_ids)
+            # Get category information for all causes found
+            all_cause_pks = set()
+            for record in result.data:
+                causes = record.get('causes', [])
+                for cause in causes:
+                    if isinstance(cause, dict):
+                        cause_pk = cause.get('category_pk')
+                        if cause_pk:
+                            all_cause_pks.add(cause_pk)
             
-            # Process cause data to build matrix
-            matrix_data = defaultdict(lambda: defaultdict(lambda: {
+            category_info = await self.get_category_info_batch(project_id, list(all_cause_pks))
+            
+            # Dual data structures for optimization
+            aspect_cause_matrix = defaultdict(lambda: defaultdict(lambda: {
+                'reviews': set(),
                 'positive_reviews': set(),
                 'negative_reviews': set(),
-                'total_reviews': set()
+                'aspects': set()  # Set of (aspect_description, sentiment) tuples
             }))
             
+            global_cause_stats = defaultdict(lambda: {
+                'reviews': set(),
+                'positive_reviews': set(),
+                'negative_reviews': set(),
+                'aspects': set()  # Set of (aspect_description, sentiment) tuples
+            })
+            
+            # Single processing loop for both structures
             for record in result.data:
-                aspect_category_pk = record['category_pk']  # This is the aspect category (column)
+                aspect_pk = record['category_pk']
                 causes = record.get('causes', [])
                 sentiment = record['sentiment']
                 review_key = (record.get('product_id', 'unknown'), record['review_id'])
@@ -783,86 +790,107 @@ class ReviewDataService:
                 for cause in causes:
                     if isinstance(cause, dict):
                         cause_category_pk = cause.get('category_pk')
+                        cause_detail_text = cause.get('detail_text', '')
+                        cause_parent_group = cause.get('parent_group_name', '')
                         
-                        if not cause_category_pk or cause_category_pk not in top_cause_category_ids:
+                        if not cause_category_pk:
                             continue
                         
-                        # Track unique reviews for this aspect-cause combination
-                        cell_data = matrix_data[aspect_category_pk][cause_category_pk]
-                        cell_data['total_reviews'].add(review_key)
+                        # Format aspect description
+                        aspect_description = self._format_aspect_description(cause_parent_group, cause_detail_text)
+                        
+                        # Update aspect-specific cause data
+                        aspect_cause_matrix[aspect_pk][cause_category_pk]['reviews'].add(review_key)
+                        aspect_cause_matrix[aspect_pk][cause_category_pk]['aspects'].add((aspect_description, sentiment))
                         
                         if sentiment == '+':
-                            cell_data['positive_reviews'].add(review_key)
+                            aspect_cause_matrix[aspect_pk][cause_category_pk]['positive_reviews'].add(review_key)
                         elif sentiment == '-':
-                            cell_data['negative_reviews'].add(review_key)
+                            aspect_cause_matrix[aspect_pk][cause_category_pk]['negative_reviews'].add(review_key)
+                        
+                        # Update global cause aggregation
+                        global_cause_stats[cause_category_pk]['reviews'].add(review_key)
+                        global_cause_stats[cause_category_pk]['aspects'].add((aspect_description, sentiment))
+                        
+                        if sentiment == '+':
+                            global_cause_stats[cause_category_pk]['positive_reviews'].add(review_key)
+                        elif sentiment == '-':
+                            global_cause_stats[cause_category_pk]['negative_reviews'].add(review_key)
             
-            # Build aspect categories (columns)
-            aspect_categories = []
-            for category_pk in top_aspect_category_ids:
-                cat_info = category_info.get(category_pk, {})
-                aspect_categories.append({
-                    'category_pk': category_pk,
-                    'category_name': cat_info.get('name', 'Unknown Category'),
-                    'definition': cat_info.get('definition', '')
-                })
-            
-            # Build cause categories (rows)
-            cause_categories = []
-            for category_pk in top_cause_category_ids:
-                cat_info = category_info.get(category_pk, {})
-                cause_categories.append({
-                    'category_id': category_pk,
-                    'category_name': cat_info.get('name', 'Unknown Category'),
-                    'definition': cat_info.get('definition', '')
-                })
-            
-            # Build matrix data in competitor-style format
-            # Each cause category is a "product" with aspect data for each aspect category
-            cause_aspect_data = []
-            for cause_category_pk in top_cause_category_ids:
-                cause_data = {
-                    'cause_category_id': cause_category_pk,
-                    'cause_category_name': category_info.get(cause_category_pk, {}).get('name', 'Unknown Category'),
-                    'aspect_data': []
-                }
-                
-                for aspect_category_pk in top_aspect_category_ids:
-                    cell_data = matrix_data[aspect_category_pk][cause_category_pk]
+            # Format embedded cause data per aspect
+            embedded_cause_data = {}
+            for aspect_pk, causes in aspect_cause_matrix.items():
+                aspect_causes = []
+                for cause_pk, cause_data in causes.items():
+                    # Calculate review counts
+                    total_reviews = len(cause_data['reviews'])
+                    positive_reviews = len(cause_data['positive_reviews'])
+                    negative_reviews = len(cause_data['negative_reviews'])
                     
-                    # Calculate unique review counts
-                    total_reviews = len(cell_data['total_reviews'])
-                    positive_reviews = len(cell_data['positive_reviews'])
-                    negative_reviews = len(cell_data['negative_reviews'])
+                    # Format aspects as simplified objects
+                    aspects = [
+                        {
+                            'aspect_description': desc,
+                            'sentiment': sentiment
+                        }
+                        for desc, sentiment in cause_data['aspects']
+                    ]
                     
-                    cause_data['aspect_data'].append({
-                        'category_pk': aspect_category_pk,
-                        'category_name': category_info.get(aspect_category_pk, {}).get('name', 'Unknown Category'),
+                    aspect_causes.append({
+                        'cause_category_pk': cause_pk,
+                        'cause_category_name': category_info.get(cause_pk, {}).get('name', 'Unknown'),
                         'total_reviews': total_reviews,
                         'positive_reviews': positive_reviews,
-                        'negative_reviews': negative_reviews
+                        'negative_reviews': negative_reviews,
+                        'aspects': aspects
                     })
                 
-                cause_aspect_data.append(cause_data)
+                # Sort by total reviews and apply per-aspect limit
+                aspect_causes.sort(key=lambda x: x['total_reviews'], reverse=True)
+                embedded_cause_data[aspect_pk] = aspect_causes[:per_aspect_limit]
             
-            result = {
-                'aspect_categories': aspect_categories,
-                'cause_aspect_data': cause_aspect_data,
-                'total_aspect_categories': len(aspect_categories),
-                'total_cause_categories': len(cause_aspect_data)
-            }
+            # Format aggregated cause summary
+            aggregated_summary = []
+            for cause_pk, cause_data in global_cause_stats.items():
+                # Calculate review counts
+                total_reviews = len(cause_data['reviews'])
+                total_positive_reviews = len(cause_data['positive_reviews'])
+                total_negative_reviews = len(cause_data['negative_reviews'])
+                
+                # Format aspects as simplified objects
+                aspects = [
+                    {
+                        'aspect_description': desc,
+                        'sentiment': sentiment
+                    }
+                    for desc, sentiment in cause_data['aspects']
+                ]
+                
+                aggregated_summary.append({
+                    'cause_category_pk': cause_pk,
+                    'cause_category_name': category_info.get(cause_pk, {}).get('name', 'Unknown'),
+                    'total_reviews': total_reviews,
+                    'total_positive_reviews': total_positive_reviews,
+                    'total_negative_reviews': total_negative_reviews,
+                    'aspects': aspects
+                })
             
-            logger.info(f"Cause matrix view returned data for {len(aspect_categories)} aspect categories and {len(cause_categories)} cause categories")
-            return result
+            # Sort by total reviews and apply aggregated limit
+            aggregated_summary.sort(key=lambda x: x['total_reviews'], reverse=True)
+            aggregated_summary = aggregated_summary[:aggregated_limit]
+            
+            # Add rank to aggregated summary
+            for rank, cause in enumerate(aggregated_summary, 1):
+                cause['rank'] = rank
+            
+            logger.info(f"Enhanced cause analysis: {len(embedded_cause_data)} aspects with embedded causes, {len(aggregated_summary)} aggregated causes")
+            return embedded_cause_data, aggregated_summary
             
         except Exception as e:
-            logger.error(f"Error getting cause matrix view data: {e}", exc_info=True)
-            return {
-                'aspect_categories': [],
-                'cause_categories': [],
-                'matrix_data': [],
-                'total_aspect_categories': 0,
-                'total_cause_categories': 0
-            }
+            logger.error(f"Error in enhanced cause analysis: {e}", exc_info=True)
+            return {}, []
+
+
 
     async def get_category_info_batch(self, project_id: str, category_ids: List[int]) -> Dict[int, Dict[str, Any]]:
         """Get category information for multiple categories.
