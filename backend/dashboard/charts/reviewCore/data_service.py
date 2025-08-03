@@ -728,10 +728,8 @@ class ReviewDataService:
                 return {}, []
             
             # Get cause analysis parameters
-            sentiment_filter = cause_options.get('sentiment')
-            aggregated_limit = cause_options.get('aggregated_limit', 10)
-            per_aspect_limit = cause_options.get('per_aspect_limit', 5)
-            include_aspect_details = cause_options.get('include_aspect_details', True)
+            sentiment_filter = cause_options.get('sentiment')  # Optional: '+', '-', or None for all sentiments
+            limit = cause_options.get('limit', 10)  # Single limit for both aggregated and per-aspect causes
             
             # Build the query to get cause data with review_id for deduplication
             query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
@@ -845,9 +843,9 @@ class ReviewDataService:
                         'aspects': aspects
                     })
                 
-                # Sort by total reviews and apply per-aspect limit
+                # Sort by total reviews and apply limit
                 aspect_causes.sort(key=lambda x: x['total_reviews'], reverse=True)
-                embedded_cause_data[aspect_pk] = aspect_causes[:per_aspect_limit]
+                embedded_cause_data[aspect_pk] = aspect_causes[:limit]
             
             # Format aggregated cause summary
             aggregated_summary = []
@@ -875,9 +873,9 @@ class ReviewDataService:
                     'aspects': aspects
                 })
             
-            # Sort by total reviews and apply aggregated limit
+            # Sort by total reviews and apply limit
             aggregated_summary.sort(key=lambda x: x['total_reviews'], reverse=True)
-            aggregated_summary = aggregated_summary[:aggregated_limit]
+            aggregated_summary = aggregated_summary[:limit]
             
             # Add rank to aggregated summary
             for rank, cause in enumerate(aggregated_summary, 1):

@@ -778,9 +778,7 @@ export class DatabaseService {
       minPositiveReviews?: number
       returnTopCauseCategories?: {
         sentiment?: '+' | '-'
-        aggregatedLimit?: number
-        perAspectLimit?: number
-        includeAspectDetails?: boolean
+        limit?: number
       }
     },
     filters?: {
@@ -853,9 +851,7 @@ export class DatabaseService {
           min_positive_reviews: options?.minPositiveReviews || 2,
           return_top_cause_categories: options?.returnTopCauseCategories ? {
             sentiment: options.returnTopCauseCategories.sentiment,
-            aggregated_limit: options.returnTopCauseCategories.aggregatedLimit,
-            per_aspect_limit: options.returnTopCauseCategories.perAspectLimit,
-            include_aspect_details: options.returnTopCauseCategories.includeAspectDetails
+            limit: options.returnTopCauseCategories.limit
           } : undefined
         }
       }

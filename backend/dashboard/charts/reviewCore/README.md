@@ -171,10 +171,8 @@ options = {
     'max_categories': 5,
     'sort_by': 'total_reviews',
     'return_top_cause_categories': {
-        'sentiment': '+',  # Optional: '+', '-', or None for both
-        'aggregated_limit': 10,  # Number of top causes across all aspects
-        'per_aspect_limit': 5,   # Number of causes per individual aspect
-        'include_aspect_details': True  # Include simplified aspect details
+        'sentiment': '+',  # Optional: '+', '-', or None for all sentiments
+        'limit': 10        # Number of causes (applies to both aggregated and per-aspect)
     }
 }
 ```

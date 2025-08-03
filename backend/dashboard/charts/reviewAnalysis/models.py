@@ -11,7 +11,7 @@ from ..reviewCore.models import ReviewAspectBase, CategoryInfoBase, PaginationBa
 
 class TopCategoriesRequest(BaseRequestModel):
     """Request model for top categories analysis with embedded cause analysis."""
-    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories. Can include 'return_top_cause_categories' for cause analysis with options: sentiment, aggregated_limit, per_aspect_limit, include_aspect_details")
+    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories. Can include 'return_top_cause_categories' for cause analysis with options: sentiment (optional), limit (default: 10)")
 
 
 class ReviewsByCategoryRequest(BaseRequestModel):

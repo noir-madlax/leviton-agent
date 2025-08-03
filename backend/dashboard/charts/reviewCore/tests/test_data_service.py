@@ -96,8 +96,7 @@ async def test_optimized_methods_with_real_data():
                 'min_reviews': 1,
                 'return_top_cause_categories': {
                     'sentiment': '+',
-                    'aggregated_limit': 5,
-                    'per_aspect_limit': 3
+                    'limit': 5
                 }
             }
         )
