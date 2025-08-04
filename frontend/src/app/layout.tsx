@@ -39,6 +39,7 @@ export default function RootLayout({
     <html lang="zh-CN">
       <body
         className={`${inter.variable} font-sans antialiased`}
+        suppressHydrationWarning={true}
       >
         <PostHogAppProvider>
           <I18nProvider>
