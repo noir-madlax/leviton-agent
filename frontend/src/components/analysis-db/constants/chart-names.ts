@@ -111,7 +111,7 @@ export function getChartDescription(chartName: ChartName): string {
 // 工具函数：获取图表所属分组
 export function getChartGroup(chartName: ChartName): string | null {
   for (const [groupName, charts] of Object.entries(CHART_GROUPS)) {
-    if (charts.includes(chartName)) {
+    if ((charts as readonly ChartName[]).includes(chartName)) {
       return groupName
     }
   }
@@ -120,7 +120,7 @@ export function getChartGroup(chartName: ChartName): string | null {
 
 // 工具函数：获取分组内的所有图表
 export function getChartsInGroup(groupName: keyof typeof CHART_GROUPS): ChartName[] {
-  return CHART_GROUPS[groupName] || []
+  return [...(CHART_GROUPS[groupName] || [])]
 }
 
 // 导出所有图表名称的数组（用于遍历）

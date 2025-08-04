@@ -259,62 +259,7 @@ interface DashboardData {
   }
 }
 
-// 获取TAM Market Share数据的新函数
-async function fetchTAMMarketShareData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
-  try {
-    if (!projectId) {
-      console.log('⏳ TAM Market Share waiting for project selection...');
-      return {
-        tam_data: { total_market_revenue: 0, total_market_volume: 0, total_products: 0, currency: 'USD' },
-        market_share_by_category: [],
-        metadata: { filtered_asins_count: 0, total_categories: 0, total_brands: 0, calculation_timestamp: new Date().toISOString() }
-      };
-    }
-    
-    console.log(`📊 Fetching TAM Market Share data for project: ${projectId}`);
-    if (categoryFilters && categoryFilters.length > 0) {
-      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
-    }
-    if (brandFilters && brandFilters.length > 0) {
-      console.log(`📦 Applying brand filters: ${brandFilters.join(', ')}`);
-    }
-    if (segmentFilters && segmentFilters.length > 0) {
-      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
-    }
-    if (extendFields && Object.keys(extendFields).length > 0) {
-      console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
-    }
-    
-    const data = await databaseService.getTAMMarketShareData(projectId, {
-      categoryFilters,
-      brandFilters,
-      segmentFilters,
-      extendFields,
-      timeframe: { period: 'year' } // 默认使用年度数据
-    });
-    
-    console.log(`📈 TAM Market Share data received: TAM=${data.tam_data.total_market_revenue}, Categories=${data.market_share_by_category.length}`);
-    
-    return data;
-  } catch (error) {
-    console.error('Error fetching TAM Market Share data:', error);
-    return {
-      tam_data: { 
-        total_market_revenue: 0, 
-        total_market_volume: 0, 
-        total_products: 0, 
-        currency: 'USD' 
-      },
-      market_share_by_category: [],
-      metadata: { 
-        filtered_asins_count: 0, 
-        total_categories: 0, 
-        total_brands: 0, 
-        calculation_timestamp: new Date().toISOString() 
-      }
-    };
-  }
-}
+// 🚫 移除 fetchTAMMarketShareData 函数，TAM 数据现在由 brand-analysis.tsx 组件自己管理
 
 // 获取品牌分析数据的async函数 (保留用于其他图表)
 async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
@@ -811,9 +756,10 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
         case 'brandAnalysis':
           result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
-        case 'tamMarketShare':
-          result.tamMarketShare = await fetchTAMMarketShareData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
-          break
+        // 🚫 移除 tamMarketShare case，让 brand-analysis.tsx 组件自己管理
+        // case 'tamMarketShare':
+        //   result.tamMarketShare = await fetchTAMMarketShareData(projectId)
+        //   break
         case 'productAnalysis':
           result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
@@ -975,7 +921,8 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
       // Reload all data with the new filters
       const forceReload = true;
       loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
-      loadSpecificData('tamMarketShare', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      // 🚫 移除 tamMarketShare 的加载，让 brand-analysis.tsx 组件自己管理
+      // loadSpecificData('tamMarketShare', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
@@ -1224,9 +1171,9 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
 
                       <TabsContent value="brand-analysis">
                         {data.brandAnalysis ? (
-                          <BrandAnalysis 
-                            data={data.brandAnalysis} 
-                            tamMarketShare={data.tamMarketShare}
+                          <BrandAnalysis
+                            data={data.brandAnalysis}
+                            tamMarketShare={undefined}
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
                             initialFilters={currentFilters}
@@ -1235,10 +1182,10 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                             salesTrend={data.salesTrend}
                             unifiedFilterData={unifiedFilterData}
                           />
-                        ) : loadingStates.brandAnalysis || loadingStates.tamMarketShare ? (
+                        ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Brand Analysis & TAM Data...</span>
+                            <span className="ml-2">Loading Brand Analysis Data...</span>
                           </div>
                         ) : (
                           <div className="text-center py-8 text-gray-500">

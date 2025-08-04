@@ -62,13 +62,7 @@ export function useTAMDataRefresh(projectId: string, initialData?: any) {
     refreshFunction: async (projectId: string, filters: ProjectFilters) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       
-      return await databaseService.getTAMMarketShareData(projectId, {
-        categoryFilters: filters.categories.length > 0 ? filters.categories : undefined,
-        brandFilters: filters.brands?.length ? filters.brands : undefined,
-        segmentFilters: filters.segments?.length ? filters.segments : undefined,
-        extendFields: filters.extend_fields,
-        timeframe: { period: 'year' }
-      })
+      return await databaseService.getTAMMarketShareData(projectId)
     }
   })
 }

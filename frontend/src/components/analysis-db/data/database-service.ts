@@ -2,6 +2,7 @@ import { supabase } from '@/lib/supabase'
 import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS, FilterDefaultsResponse } from '../types/filters'
 import { filterStateManager } from '../stores'
 import type { ChartFilterState } from '../stores'
+import { CHART_NAMES } from '../constants'
 
 // TAM Market Share API 相关接口
 export interface TAMData {
@@ -220,33 +221,39 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 
 export class DatabaseService {
 
-  // 🆕 从过滤器状态管理器获取过滤器参数
+  // 🆕 从过滤器状态管理器获取过滤器参数 - 直接返回 API 需要的结构
   private getFiltersFromState(chartName: string): {
-    categories: string[]
-    brands: string[]
-    segments: string[]
-    extend_fields: Record<string, any>
-    timeframe: string
+    filters: {
+      categories: string[]
+      brands: string[]
+      segments: string[]
+      extend_fields: Record<string, any>
+    }
+    timeframe: { period: "year" | "month" | "6months" }
   } {
     const chartState = filterStateManager.getChartFilters(chartName)
 
     if (!chartState) {
       console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using defaults`)
       return {
-        categories: [],
-        brands: [],
-        segments: [],
-        extend_fields: {},
-        timeframe: 'year'
+        filters: {
+          categories: [],
+          brands: [],
+          segments: [],
+          extend_fields: {}
+        },
+        timeframe: { period: 'year' }
       }
     }
 
     const result = {
-      categories: chartState.filters.categories || [],
-      brands: chartState.filters.brands || [],
-      segments: chartState.filters.segments || [],
-      extend_fields: chartState.filters.extend_fields || {},
-      timeframe: chartState.timeframe?.period || 'year'
+      filters: {
+        categories: chartState.filters.categories || [],
+        brands: chartState.filters.brands || [],
+        segments: chartState.filters.segments || [],
+        extend_fields: chartState.filters.extend_fields || {}
+      },
+      timeframe: { period: (chartState.timeframe?.period || 'year') as "year" | "month" | "6months" }
     }
 
     console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)
@@ -288,49 +295,28 @@ export class DatabaseService {
     // 调用现有的 getProjectOverview 方法，使用正确的参数顺序
     return this.getProjectOverview(
       projectId,
-      filters.categories,
-      filters.brands,
-      filters.segments,
-      filters.extend_fields
+      filters.filters.categories,
+      filters.filters.brands,
+      filters.filters.segments,
+      filters.filters.extend_fields
     )
   }
 
-  // 🆕 使用过滤器状态管理器获取 TAM 数据
-  async getTAMMarketShareDataWithFilters(projectId: string, chartName: string = 'market-share-analysis') {
-    const filters = this.getFiltersFromState(chartName)
 
-    console.log(`🔍 [DATABASE-SERVICE] Getting TAM data for ${chartName} with filters:`, filters)
 
-    // 调用现有的 getTAMMarketShareData 方法
-    return this.getTAMMarketShareData(projectId, {
-      categoryFilters: filters.categories,
-      brandFilters: filters.brands,
-      segmentFilters: filters.segments,
-      extendFields: filters.extend_fields,
-      timeframe: { period: filters.timeframe as "year" | "month" | "6months" }
-    })
-  }
-
-  // 🔑 Get TAM Market Share data with new dedicated API
-  async getTAMMarketShareData(projectId: string, options: {
-    categoryFilters?: string[]
-    brandFilters?: string[]
-    segmentFilters?: string[]
-    extendFields?: Record<string, any>
-    timeframe?: { period: 'month' | '6months' | 'year' }
-  } = {}): Promise<TAMMarketShareResponse> {
+  // 🔑 Get TAM Market Share data - 自动从过滤器状态管理器获取过滤器
+  async getTAMMarketShareData(projectId: string): Promise<TAMMarketShareResponse> {
     try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.MARKET_SHARE_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting TAM data with filters from state manager:`, filters)
+
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
       const requestBody = {
         project_id: projectId,
-        filters: {
-          ...(options.categoryFilters && options.categoryFilters.length > 0 && { categories: options.categoryFilters }),
-          ...(options.brandFilters && options.brandFilters.length > 0 && { brands: options.brandFilters }),
-          ...(options.segmentFilters && options.segmentFilters.length > 0 && { segments: options.segmentFilters }),
-          ...(options.extendFields && Object.keys(options.extendFields).length > 0 && { extend_fields: options.extendFields })
-        },
-        ...(options.timeframe && { timeframe: options.timeframe })
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
       }
 
       console.log('🔍 Calling TAM Market Share API:', requestBody)

@@ -21,6 +21,8 @@ interface FilterRendererProps {
   // 🌟 可选参数
   disabled?: boolean
   className?: string
+  // 🆕 过滤器就绪状态回调
+  onFiltersReady?: (isReady: boolean) => void
 }
 
 export function FilterRenderer({
@@ -29,7 +31,8 @@ export function FilterRenderer({
   currentFilters,
   onChange,
   disabled = false,
-  className = ""
+  className = "",
+  onFiltersReady
 }: FilterRendererProps) {
   // 🆕 从 context 获取统一过滤器数据
   const { getChartConfig, isLoading: contextLoading } = useUnifiedFilter()
@@ -76,6 +79,8 @@ export function FilterRenderer({
   const [applyingFilters, setApplyingFilters] = useState(false)
   // 🔧 新增：用于强制重置 ExtendFieldsFilter 的 key
   const [extendFieldsKey, setExtendFieldsKey] = useState(0)
+  // 🆕 过滤器就绪状态
+  const [filtersReady, setFiltersReady] = useState(false)
 
   // 国际化hooks
   const commonT = useCommonT()
@@ -98,6 +103,39 @@ export function FilterRenderer({
       setPendingFilters(newPendingFilters)
     }
   }, [chartFilters, chartName])
+
+  // 🆕 检测过滤器是否就绪
+  useEffect(() => {
+    const checkFiltersReady = () => {
+      // 检查条件：
+      // 1. context 数据已加载
+      // 2. 图表配置已获取
+      // 3. 扩展字段已初始化（如果有的话）
+      const isContextReady = !contextLoading
+      const hasChartConfig = !!chartConfig
+      const hasExtendFields = visibleFilters?.extend_fields ?
+        (chartFilters?.filters.extend_fields && Object.keys(chartFilters.filters.extend_fields).length > 0) :
+        true // 如果不需要扩展字段，则认为已就绪
+
+      const isReady = Boolean(isContextReady && hasChartConfig && hasExtendFields)
+
+      console.log(`🔍 [FILTER-RENDERER] Checking filters ready for ${chartName}:`, {
+        isContextReady,
+        hasChartConfig,
+        hasExtendFields,
+        isReady,
+        previousState: filtersReady
+      })
+
+      if (isReady !== filtersReady) {
+        setFiltersReady(isReady)
+        onFiltersReady?.(isReady)
+        console.log(`🎯 [FILTER-RENDERER] Filters ready state changed for ${chartName}: ${filtersReady} → ${isReady}`)
+      }
+    }
+
+    checkFiltersReady()
+  }, [contextLoading, chartConfig, chartFilters, visibleFilters, chartName, filtersReady, onFiltersReady])
 
   // 应用过滤器
   const handleApplyFilters = async () => {

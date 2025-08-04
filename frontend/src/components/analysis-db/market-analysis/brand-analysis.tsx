@@ -273,12 +273,15 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   const { shouldShowChart } = useChartSections('brand-analysis', projectId || '')
 
   // TAM图表数据状态管理 - 使用新的hook
-  const { 
-    data: tamMarketShare, 
-    loading: tamDataLoading, 
-    error: tamDataError, 
-    refreshData: refreshTamData 
+  const {
+    data: tamMarketShare,
+    loading: tamDataLoading,
+    error: tamDataError,
+    refreshData: refreshTamData
   } = useTAMDataRefresh(projectId || '', initialTamMarketShare)
+
+  // 🆕 过滤器就绪状态
+  const [filtersReady, setFiltersReady] = useState(false)
 
   // TAM图表过滤器状态管理
   const [tamFilters, setTamFilters] = useState<ProjectFilters>(initialFilters || {
@@ -350,6 +353,22 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   const handleTamFiltersChange = async (newFilters: ProjectFilters) => {
     setTamFilters(newFilters)
     await refreshTamData(newFilters)
+  }
+
+  // 🆕 过滤器就绪状态变化处理
+  const handleFiltersReady = async (isReady: boolean) => {
+    console.log(`🎯 [BRAND-ANALYSIS] Filters ready state changed: ${isReady}`)
+    setFiltersReady(isReady)
+
+    if (isReady && projectId) {
+      console.log(`🚀 [BRAND-ANALYSIS] Filters are ready, fetching initial TAM data for project: ${projectId}`)
+      try {
+        await refreshTamData(tamFilters)
+        console.log(`✅ [BRAND-ANALYSIS] Initial TAM data loaded successfully`)
+      } catch (error) {
+        console.error(`❌ [BRAND-ANALYSIS] Failed to load initial TAM data:`, error)
+      }
+    }
   }
 
   // 获取category信息
@@ -468,6 +487,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 chartName="market-share-analysis"
                 currentFilters={tamFilters}
                 onChange={handleTamFiltersChange}
+                onFiltersReady={handleFiltersReady}
                 disabled={tamConfigLoading || tamDataLoading}
                 className="mb-6"
               />
