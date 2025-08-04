@@ -1,5 +1,7 @@
 import { supabase } from '@/lib/supabase'
 import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS, FilterDefaultsResponse } from '../types/filters'
+import { filterStateManager } from '../stores'
+import type { ChartFilterState } from '../stores'
 
 // TAM Market Share API 相关接口
 export interface TAMData {
@@ -217,7 +219,98 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 }
 
 export class DatabaseService {
-  
+
+  // 🆕 从过滤器状态管理器获取过滤器参数
+  private getFiltersFromState(chartName: string): {
+    categories: string[]
+    brands: string[]
+    segments: string[]
+    extend_fields: Record<string, any>
+    timeframe: string
+  } {
+    const chartState = filterStateManager.getChartFilters(chartName)
+
+    if (!chartState) {
+      console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using defaults`)
+      return {
+        categories: [],
+        brands: [],
+        segments: [],
+        extend_fields: {},
+        timeframe: 'year'
+      }
+    }
+
+    const result = {
+      categories: chartState.filters.categories || [],
+      brands: chartState.filters.brands || [],
+      segments: chartState.filters.segments || [],
+      extend_fields: chartState.filters.extend_fields || {},
+      timeframe: chartState.timeframe?.period || 'year'
+    }
+
+    console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)
+    return result
+  }
+
+  // 🆕 将 ProjectFilters 转换为 ChartFilterState 格式
+  private convertProjectFiltersToChartState(filters: ProjectFilters): ChartFilterState {
+    return {
+      filters: {
+        categories: filters.categories || [],
+        brands: filters.brands || [],
+        segments: filters.segments || [],
+        extend_fields: filters.extend_fields || {}
+      },
+      timeframe: {
+        period: filters.time_period || 'year'
+      },
+      metadata: {
+        lastUpdated: Date.now(),
+        appliedAt: Date.now()
+      }
+    }
+  }
+
+  // 🆕 同步 ProjectFilters 到过滤器状态管理器
+  syncProjectFiltersToState(chartName: string, filters: ProjectFilters): void {
+    const chartState = this.convertProjectFiltersToChartState(filters)
+    filterStateManager.updateChartFilters(chartName, chartState)
+    console.log(`🔄 [DATABASE-SERVICE] Synced ProjectFilters to state for ${chartName}`)
+  }
+
+  // 🆕 使用过滤器状态管理器获取项目概览数据
+  async getProjectOverviewWithFilters(projectId: string, chartName: string = 'project') {
+    const filters = this.getFiltersFromState(chartName)
+
+    console.log(`🔍 [DATABASE-SERVICE] Getting project overview for ${chartName} with filters:`, filters)
+
+    // 调用现有的 getProjectOverview 方法，使用正确的参数顺序
+    return this.getProjectOverview(
+      projectId,
+      filters.categories,
+      filters.brands,
+      filters.segments,
+      filters.extend_fields
+    )
+  }
+
+  // 🆕 使用过滤器状态管理器获取 TAM 数据
+  async getTAMMarketShareDataWithFilters(projectId: string, chartName: string = 'market-share-analysis') {
+    const filters = this.getFiltersFromState(chartName)
+
+    console.log(`🔍 [DATABASE-SERVICE] Getting TAM data for ${chartName} with filters:`, filters)
+
+    // 调用现有的 getTAMMarketShareData 方法
+    return this.getTAMMarketShareData(projectId, {
+      categoryFilters: filters.categories,
+      brandFilters: filters.brands,
+      segmentFilters: filters.segments,
+      extendFields: filters.extend_fields,
+      timeframe: { period: filters.timeframe as "year" | "month" | "6months" }
+    })
+  }
+
   // 🔑 Get TAM Market Share data with new dedicated API
   async getTAMMarketShareData(projectId: string, options: {
     categoryFilters?: string[]

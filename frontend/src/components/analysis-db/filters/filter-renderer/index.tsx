@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
 import { RotateCcw, Loader2 } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
@@ -8,6 +8,7 @@ import { CategoryFilter } from '../category-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
+import { useChartFilters } from '../../hooks/use-filter-state-manager' // 🆕 使用过滤器状态管理器
 
 // 🆕 简化后的 FilterRenderer 接口 - 只需要最少参数
 interface FilterRendererProps {
@@ -54,37 +55,87 @@ export function FilterRenderer({
 
   // 🔧 调试：输出可见性配置
   console.log('🔧 [FILTER-RENDERER] Visible filters:', visibleFilters)
-  
+
   // 移除了未使用的 filterConfig，ExtendFieldsFilter 现在自己获取配置
-  
+
   console.log(`🔍 [FilterRenderer] Chart: ${chartName}, Config:`, {
     visibleFilters,
     hasChartConfig: !!chartConfig,
     contextLoading
   })
+
+  // 🆕 使用过滤器状态管理器
+  const {
+    filters: chartFilters,
+    updateCategories,
+    updateExtendFields,
+    resetFilters
+  } = useChartFilters(chartName)
+
   const [pendingFilters, setPendingFilters] = useState<ProjectFilters>(currentFilters)
   const [applyingFilters, setApplyingFilters] = useState(false)
+  // 🔧 新增：用于强制重置 ExtendFieldsFilter 的 key
+  const [extendFieldsKey, setExtendFieldsKey] = useState(0)
 
   // 国际化hooks
   const commonT = useCommonT()
   const projectT = useProjectT()
   const filtersT = useFiltersT()
 
+  // 🔄 同步状态管理器的变化到 pendingFilters
+  useEffect(() => {
+    if (chartFilters) {
+      const newPendingFilters: ProjectFilters = {
+        categories: chartFilters.filters.categories || [],
+        asins: [],
+        brands: chartFilters.filters.brands || [],
+        segments: chartFilters.filters.segments || [],
+        extend_fields: chartFilters.filters.extend_fields || {},
+        time_period: chartFilters.timeframe?.period || "30 days"
+      }
+
+      console.log(`🔄 [FILTER-RENDERER] Syncing chart filters to pending filters for ${chartName}:`, newPendingFilters)
+      setPendingFilters(newPendingFilters)
+    }
+  }, [chartFilters, chartName])
+
   // 应用过滤器
   const handleApplyFilters = async () => {
     setApplyingFilters(true)
-    
+
     // 模拟短暂延迟，让用户看到loading效果
     await new Promise(resolve => setTimeout(resolve, 10))
-    
+
+    // 🆕 同时更新状态管理器和外部回调
+    const chartState = {
+      filters: {
+        categories: pendingFilters.categories || [],
+        brands: pendingFilters.brands || [],
+        segments: pendingFilters.segments || [],
+        extend_fields: pendingFilters.extend_fields || {}
+      },
+      timeframe: {
+        period: pendingFilters.time_period || 'year'
+      }
+    }
+
+    // 更新状态管理器
+    updateCategories(chartState.filters.categories)
+    updateExtendFields(chartState.filters.extend_fields)
+
+    // 调用外部回调
     onChange(pendingFilters)
-    
+
     setApplyingFilters(false)
   }
 
   // 重置过滤器
   const handleReset = () => {
-    const resetFilters = {
+    // 🆕 使用状态管理器的重置方法
+    resetFilters()
+
+    // 重置本地状态
+    const resetFiltersData = {
       categories: [],
       asins: [],
       brands: [],
@@ -92,7 +143,11 @@ export function FilterRenderer({
       extend_fields: {},
       time_period: "30 days"
     }
-    setPendingFilters(resetFilters)
+    setPendingFilters(resetFiltersData)
+
+    // 🔧 强制重置 ExtendFieldsFilter 组件
+    setExtendFieldsKey(prev => prev + 1)
+    console.log('🔧 [FILTER-RENDERER] Reset triggered, new extend fields key:', extendFieldsKey + 1)
   }
 
   // 检查是否有待处理的变化
@@ -114,7 +169,11 @@ export function FilterRenderer({
         {visibleFilters?.categories && (
           <CategoryFilter
             value={pendingFilters.categories}
-            onChange={(categories) => setPendingFilters(prev => ({ ...prev, categories }))}
+            onChange={(categories) => {
+              setPendingFilters(prev => ({ ...prev, categories }))
+              // 🆕 同时更新状态管理器
+              updateCategories(categories)
+            }}
             chartName={chartName} // 🆕 使用 chartName
             disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
             loading={contextLoading}
@@ -128,7 +187,12 @@ export function FilterRenderer({
       {visibleFilters?.extend_fields && (
         <div className="w-full">
           <ExtendFieldsFilter
-            onChange={(extendFields) => setPendingFilters(prev => ({ ...prev, extend_fields: extendFields }))}
+            key={extendFieldsKey} // 🔧 添加 key 属性，当 reset 时强制重新渲染
+            onChange={(extendFields) => {
+              setPendingFilters(prev => ({ ...prev, extend_fields: extendFields }))
+              // 🆕 同时更新状态管理器
+              updateExtendFields(extendFields)
+            }}
             projectId={projectId}
             disabled={disabled || contextLoading}
             loading={contextLoading}

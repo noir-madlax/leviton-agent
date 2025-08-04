@@ -4,13 +4,14 @@
  */
 
 import { ChartFilterConfig } from './filter-config'
+import { CHART_NAMES } from '../constants'
 
 // Chart Filter配置映射
 export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
   // Brand Analysis Chart配置
-  'brand-analysis': {
-    chart_id: 'brand-analysis',
-    chart_type: 'brand-analysis',
+  [CHART_NAMES.BRAND_ANALYSIS]: {
+    chart_id: CHART_NAMES.BRAND_ANALYSIS,
+    chart_type: CHART_NAMES.BRAND_ANALYSIS,
     project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7', // 这个会动态设置
     inherit_from_project: false, // 不完全继承，有自己的定制
     
@@ -52,9 +53,9 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
   },
 
   // Market Share Analysis Chart配置
-  'market-share-analysis': {
-    chart_id: 'market-share-analysis',
-    chart_type: 'market-share-analysis',
+  [CHART_NAMES.MARKET_SHARE_ANALYSIS]: {
+    chart_id: CHART_NAMES.MARKET_SHARE_ANALYSIS,
+    chart_type: CHART_NAMES.MARKET_SHARE_ANALYSIS,
     project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7',
     inherit_from_project: false,
     
@@ -119,9 +120,9 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
   },
 
   // Sales Trend Analysis Chart配置
-  'sales-trend-analysis': {
-    chart_id: 'sales-trend-analysis',
-    chart_type: 'sales-trend-analysis',
+  [CHART_NAMES.SALES_TREND_ANALYSIS]: {
+    chart_id: CHART_NAMES.SALES_TREND_ANALYSIS,
+    chart_type: CHART_NAMES.SALES_TREND_ANALYSIS,
     project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7',
     inherit_from_project: true, // 完全继承Project配置
     
