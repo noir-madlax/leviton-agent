@@ -7,11 +7,22 @@ import { ProjectFilters } from '@/components/analysis-db/types/filters'
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
 import { useCommonT, useProjectT } from '@/i18n/hooks'
 
+// 🆕 定义项目数据接口
+interface ProjectData {
+  stats?: {
+    total_products: number
+    total_brands: number
+    total_reviews: number
+    segment_count: number
+  }
+  // 可以根据需要添加其他字段
+}
+
 interface ProjectFilterWrapperProps {
   projectId: string
   onFiltersChange: (filters: ProjectFilters) => void
   initialFilters: ProjectFilters
-  preloadedData?: any
+  preloadedData?: ProjectData // 🆕 使用具体类型而不是 any
   isDataLoading?: boolean
 }
 
@@ -101,16 +112,13 @@ export function ProjectFilterWrapper({
           </div>
         )}
 
-        {/* 使用新的 FilterRenderer 组件 */}
+        {/* 🆕 简化后的 FilterRenderer 组件 - 只需要最少参数 */}
         <FilterRenderer
+          projectId={projectId}
+          chartName="project" // 项目级别的过滤器
           currentFilters={initialFilters}
           onChange={onFiltersChange}
-          availableOptions={filterOptions}
-          projectId={projectId}
-          projectData={preloadedData}
-          filterConfig={null} // 暂时为 null，后续会从配置中获取
-          loading={cacheLoading || isDataLoading}
-          visibleFilters={{ categories: true, extend_fields: true }}
+          disabled={cacheLoading || isDataLoading}
         />
       </CardContent>
     </Card>

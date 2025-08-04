@@ -94,23 +94,40 @@ export function UniversalFilterComponent({
     ? (unifiedLoading || cacheLoading) 
     : loading
 
-  // 新增：加载过滤器配置
+  // 新增：加载过滤器配置（优化：使用统一数据源，避免重复请求）
   useEffect(() => {
     const loadFilterConfig = async () => {
       if (!projectId) return
+
+      // 优先使用统一过滤器数据源，如果可用的话
+      if (unifiedFilterData) {
+        console.log('🔧 [UNIVERSAL-FILTER] Using unified filter data instead of separate config API')
+        setFilterConfig({
+          visible_filters: {
+            'categories': true,
+            'brands': true,
+            'Time Period': true,
+            'segments': true
+          },
+          default_values: {},
+          extend_fields: []
+        })
+        setConfigLoading(false)
+        return
+      }
 
       setConfigLoading(true)
       try {
         const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
         const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-config`)
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
-        
+
         const result = await response.json()
         setFilterConfig(result.config)
-        
+
         console.log('🔧 [UNIVERSAL-FILTER] Loaded filter configuration:', result.config)
       } catch (error) {
         console.error('Error loading filter config:', error)
@@ -131,7 +148,7 @@ export function UniversalFilterComponent({
     }
 
     loadFilterConfig()
-  }, [projectId])
+  }, [projectId, unifiedFilterData])
 
   // 同步外部传入的筛选器变化
   useEffect(() => {
@@ -307,7 +324,7 @@ export function UniversalFilterComponent({
     setApplyingFilters(true)
     
     // 模拟短暂延迟，让用户看到loading效果
-    await new Promise(resolve => setTimeout(resolve, 300))
+    await new Promise(resolve => setTimeout(resolve, 10))
     
     onFiltersChange(pendingFilters)
     

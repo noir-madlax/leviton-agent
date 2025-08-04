@@ -1,21 +1,56 @@
 "use client"
 
-import { useState } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { useProjectT } from '@/i18n/hooks'
 import { CategoryFilterProps } from '../common/types'
+import { useUnifiedFilter } from '@/components/analysis-db/contexts/unified-filter-context'
 
 export function CategoryFilter({
   value,
   onChange,
-  availableOptions,
-  projectData,
+  chartName,  // 🆕 只需要图表名称
   disabled = false,
   loading = false,
   className = ""
 }: CategoryFilterProps) {
   const projectT = useProjectT()
   const [selectKey, setSelectKey] = useState(0)
+  
+  // 🆕 从 context 获取统一过滤器数据
+  const { getChartConfig } = useUnifiedFilter()
+  const chartConfig = getChartConfig(chartName)
+  
+  // 🆕 从图表配置中提取categories数据
+  const availableOptions = {
+    categories: Array.isArray(chartConfig?.filters.categories?.options) 
+      ? chartConfig.filters.categories.options 
+      : [],
+    hierarchical_categories: [] // TODO: 如果需要层级结构，可以后续添加
+  }
+  
+  // 🆕 从图表配置中获取默认值（使用useMemo避免不必要的重新计算）
+  const defaultValues = useMemo(() => {
+    return Array.isArray(chartConfig?.filters.categories?.values) 
+      ? chartConfig.filters.categories.values 
+      : []
+  }, [chartConfig?.filters.categories?.values])
+  
+  console.log(`🔍 [CategoryFilter] Chart: ${chartName}`, {
+    availableOptions: availableOptions.categories.length,
+    defaultValuesCount: defaultValues.length,
+    currentValue: value.length,
+    defaultValues
+  })
+  
+  // 🆕 在组件初始化时设置默认值（仅在首次渲染时）
+  useEffect(() => {
+    // 只有当前 value 为空且有默认值时才设置
+    if (value.length === 0 && defaultValues.length > 0) {
+      console.log(`🆕 [CategoryFilter] Setting default values for ${chartName}:`, defaultValues)
+      onChange(defaultValues)
+    }
+  }, [chartName, value.length, defaultValues, onChange]) // 📝 使用useMemo后可以安全地包含defaultValues
 
   const handleCategorySelect = (category: string) => {
     // 实现多选逻辑：如果没有选中则添加，如果已选中则移除
@@ -30,30 +65,13 @@ export function CategoryFilter({
     setSelectKey(prev => prev + 1)
   }
 
-  // 获取所有可用的分类选项
+  // 🆕 获取所有可用的分类选项（简化版）
   const getAllCategories = () => {
-    let categories: Array<{ category: string; count?: number }> = []
-    
-    if (availableOptions.hierarchical_categories && 
-        availableOptions.hierarchical_categories.length > 0 && 
-        availableOptions.hierarchical_categories.some(group => group.children.length > 0)) {
-      // 使用层次结构数据
-      availableOptions.hierarchical_categories.forEach((parentGroup) => {
-        parentGroup.children.forEach((child) => {
-          categories.push({ category: child.category, count: child.count })
-        })
-      })
-    } else {
-      // 使用扁平分类结构
-      categories = availableOptions.categories.map(category => {
-        const distributionData = projectData?.distributions?.categories?.find(
-          item => item.name === category
-        )
-        return { category, count: distributionData?.count }
-      })
-    }
-    
-    return categories
+    // 直接使用从 context 获取的 categories options
+    return availableOptions.categories.map(category => ({
+      category,
+      count: undefined // 暂时不显示产品数量，可以后续添加
+    }))
   }
 
   const allCategories = getAllCategories()

@@ -7,7 +7,7 @@ import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/sh
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
-import { ProjectFilters } from "@/components/analysis-db/types/filters"
+import { ProjectFilters, UnifiedFilterData } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
@@ -159,6 +159,8 @@ interface BrandAnalysisProps {
   }
   projectId?: string
   initialFilters?: ProjectFilters
+  // 🆕 统一过滤器数据
+  unifiedFilterData?: UnifiedFilterData | null
 }
 
 // Sales Trend Component for Individual Category
@@ -262,7 +264,7 @@ function SalesTrendByCategoryComponent({
   )
 }
 
-export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend, unifiedFilterData }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
   const [data] = useState(initialData)
   const { openPanel, loading } = useProductPanel()
@@ -321,6 +323,28 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
     loadTamFilterConfig()
   }, [projectId])
+
+  // 🆕 从统一过滤器数据中设置默认值
+  React.useEffect(() => {
+    const tamConfig = unifiedFilterData?.charts['market-share-analysis']
+    
+    if (tamConfig) {
+      console.log('🆕 [TAM-FILTER-DEFAULTS] Setting default values from unified data:', {
+        categories: tamConfig.filters.categories?.values,
+        brands: tamConfig.filters.brands?.values,
+        segments: tamConfig.filters.product_segments?.values,
+        extend_fields: tamConfig.filters.extend_fields?.values
+      })
+      
+      setTamFilters(prev => ({
+        ...prev,
+        categories: Array.isArray(tamConfig.filters.categories?.values) ? tamConfig.filters.categories.values : prev.categories,
+        brands: Array.isArray(tamConfig.filters.brands?.values) ? tamConfig.filters.brands.values : prev.brands,
+        segments: Array.isArray(tamConfig.filters.product_segments?.values) ? tamConfig.filters.product_segments.values : prev.segments,
+        extend_fields: typeof tamConfig.filters.extend_fields?.values === 'object' && !Array.isArray(tamConfig.filters.extend_fields.values) ? tamConfig.filters.extend_fields.values : prev.extend_fields,
+      }))
+    }
+  }, [unifiedFilterData])
 
   // TAM过滤器变更处理函数
   const handleTamFiltersChange = async (newFilters: ProjectFilters) => {
@@ -438,45 +462,14 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 Total addressable market (TAM) and Market Share by brands
               </h3>
               
-              {/* 新的过滤器组件 */}
+              {/* 🆕 简化后的过滤器组件 - 所有数据都从 context 获取 */}
               <FilterRenderer
+                projectId={projectId || ''}
+                chartName="market-share-analysis"
                 currentFilters={tamFilters}
                 onChange={handleTamFiltersChange}
-                availableOptions={{
-                  categories: ['Dimmer Switches', 'Light Switches', 'Smart Switches', 'GFCI Outlets'],
-                  brands: ['Leviton', 'Lutron', 'GE', 'Cooper Wiring', 'Pass & Seymour'],
-                  segments: ['Premium', 'Mid-range', 'Budget'],
-                  extend_fields: {}
-                }}
-                projectId={projectId || ''}
-                projectData={{
-                  stats: {
-                    total_products: totalMarketProducts,
-                    total_brands: tamMarketShare?.metadata?.total_brands || 10,
-                    total_reviews: 50000,
-                    segment_count: tamMarketShare?.metadata?.total_categories || 2
-                  },
-                  distributions: {
-                    categories: [
-                      { name: 'Dimmer Switches', count: 450, percentage: 60 },
-                      { name: 'Light Switches', count: 300, percentage: 40 }
-                    ],
-                    brands: [
-                      { name: 'Leviton', count: 200, percentage: 27 },
-                      { name: 'Lutron', count: 180, percentage: 24 },
-                      { name: 'GE', count: 150, percentage: 20 }
-                    ]
-                  }
-                }}
-                filterConfig={tamFilterConfig as any} // eslint-disable-line @typescript-eslint/no-explicit-any
-                loading={tamConfigLoading || tamDataLoading}
+                disabled={tamConfigLoading || tamDataLoading}
                 className="mb-6"
-                visibleFilters={{
-                  categories: tamFilterConfig?.visible_filters?.categories !== false,
-                  brands: tamFilterConfig?.visible_filters?.brands !== false,
-                  segments: tamFilterConfig?.visible_filters?.segments !== false,
-                  extend_fields: tamFilterConfig?.visible_filters?.extend_fields !== false
-                }}
               />
             </div>
           {/* 第二层：单一的Summary区域 */}

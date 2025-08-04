@@ -1113,14 +1113,14 @@ async def get_project_filter_defaults(project_id: str):
     """获取项目的默认筛选器配置
     
     从 project_filter_defaults 表中读取项目的筛选器配置，
-    返回包含 chartName, filterName, filterValues, isVisible 字段的全量数据列表。
+    返回包含 chartName, filterName, filterValues, isVisible, options 字段的全量数据列表。
     """
     try:
         supabase = get_supabase_client()
         
         # 查询项目筛选器配置，只需要用 project_id 查询
         response = supabase.table('project_filter_defaults').select(
-            'chart_name, filter_name, filter_values, is_visible'
+            'chart_name, filter_name, filter_values, is_visible, options'
         ).eq('project_id', project_id).execute()
         
         logger.info(f"Retrieved filter defaults for project {project_id}: {len(response.data)} records")
@@ -1132,7 +1132,8 @@ async def get_project_filter_defaults(project_id: str):
                 'chartName': record['chart_name'],
                 'filterName': record['filter_name'],
                 'filterValues': record['filter_values'],
-                'isVisible': record['is_visible']
+                'isVisible': record['is_visible'],
+                'options': record['options']
             })
         
         return result

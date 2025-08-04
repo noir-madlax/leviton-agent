@@ -1,5 +1,5 @@
 import { supabase } from '@/lib/supabase'
-import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS } from '../types/filters'
+import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS, FilterDefaultsResponse } from '../types/filters'
 
 // TAM Market Share API 相关接口
 export interface TAMData {
@@ -1577,6 +1577,37 @@ export class DatabaseService {
       defaultFilters.extend_fields.smart_capability = ['Non-Smart', 'Smart']
       console.log(`🔧 [DatabaseService] Set Smart Capability default values in fallback: ['Non-Smart', 'Smart']`)
       return defaultFilters
+    }
+  }
+
+  /**
+   * 🆕 获取项目过滤器默认配置（新版API）
+   */
+  async getProjectFilterDefaultsNew(projectId: string): Promise<FilterDefaultsResponse> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      console.log('🔍 [FILTER-DEFAULTS] Fetching filter defaults for project:', projectId)
+      
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-defaults`, {
+        method: 'GET',
+        headers: {
+          'accept': 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const data: FilterDefaultsResponse = await response.json()
+      
+      console.log('🔍 [FILTER-DEFAULTS] Raw API response:', data)
+      
+      return data
+    } catch (error) {
+      console.error('🚨 [FILTER-DEFAULTS] Error fetching filter defaults:', error)
+      throw error
     }
   }
 }

@@ -18,6 +18,7 @@ import { PageDivider } from '@/components/ui/page-divider'
 import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
 import { ProjectFilterWrapper } from '@/components/integrated-dashboard/components/project-filter-wrapper'
 import { SALES_TREND_DATE_RANGE } from "@/app/chat/charts/sales_trend/services/sales-trend-api";
+import { useUnifiedFilter } from './contexts/unified-filter-context'
 
 interface DashboardData {
   brandAnalysis: {
@@ -757,7 +758,10 @@ interface AnalysisDbContainerProps {
   activeTab?: string;
 }
 
-export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
+// 内部组件：读取Context数据并渲染内容
+function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
+  // 🆕 读取统一过滤器数据
+  const { filterData: unifiedFilterData, isLoading: filterDataLoading } = useUnifiedFilter()
   const [data, setData] = useState<Partial<DashboardData>>({})
   const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -935,20 +939,16 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   useEffect(() => {
     const initializeDashboard = async (projectId: string) => {
       setSelectedProjectId(projectId);
-      
-      try {
-        console.log(`Fetching filter defaults for project: ${projectId}`);
-        const defaultFilters = await databaseService.getProjectFilterDefaults(projectId);
-        
-        // Use provided filters from props if they exist, otherwise use fetched defaults, otherwise use hardcoded defaults.
-        const resolvedInitialFilters = filters || defaultFilters || DEFAULT_FILTERS;
-        
-        console.log('Resolved initial filters:', resolvedInitialFilters);
-        setCurrentFilters(resolvedInitialFilters);
-      } catch (e) {
-        console.error("Failed to fetch project filter defaults, using base filters.", e);
-        setCurrentFilters(filters || DEFAULT_FILTERS);
-      }
+
+      // 优化：不再重复调用filter defaults API，使用UnifiedFilterProvider提供的数据
+      console.log(`Initializing dashboard for project: ${projectId} (using UnifiedFilterProvider data)`);
+
+      // Use provided filters from props, otherwise use hardcoded defaults
+      // UnifiedFilterProvider will handle the actual API calls
+      const resolvedInitialFilters = filters || DEFAULT_FILTERS;
+
+      console.log('Resolved initial filters:', resolvedInitialFilters);
+      setCurrentFilters(resolvedInitialFilters);
     };
 
     if (initialProjectId) {
@@ -1233,6 +1233,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                             marketInsights={data.marketInsights}
                             packagePreference={data.packagePreference}
                             salesTrend={data.salesTrend}
+                            unifiedFilterData={unifiedFilterData}
                           />
                         ) : loadingStates.brandAnalysis || loadingStates.tamMarketShare ? (
                           <div className="flex items-center justify-center py-8">
@@ -1354,4 +1355,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       </ReviewPanelProvider>
     </ProductPanelProvider>
   )
+}
+
+// 🆕 主要导出组件：用Provider包装
+export function AnalysisDbContainer(props: AnalysisDbContainerProps) {
+  // 🆕 移除重复的 UnifiedFilterProvider，直接使用上层的 Provider
+  return <AnalysisDbContent {...props} />
 } 

@@ -88,4 +88,58 @@ export type PackagingType = 'individual' | 'package'
 /**
  * 扩展字段类型定义
  */
-export type ExtendFieldType = 'select' | 'multi_select' | 'range' | 'boolean' 
+export type ExtendFieldType = 'select' | 'multi_select' | 'range' | 'boolean'
+
+/**
+ * 🆕 新的过滤器默认值API响应结构
+ */
+export interface FilterDefaultItem {
+  chartName: string
+  filterName: string
+  filterValues: string[] | Record<string, any>  // 默认值/当前选中值
+  options?: string[] | Record<string, any>     // 🆕 所有可选项
+  isVisible: boolean | null
+}
+
+export type FilterDefaultsResponse = FilterDefaultItem[]
+
+/**
+ * 🆕 单个过滤器配置
+ */
+export interface FilterConfig {
+  values: string[] | Record<string, any>    // 默认值/当前选中值
+  options: string[] | Record<string, any>   // 🆕 所有可选项
+  isVisible: boolean
+}
+
+/**
+ * 🆕 按图表分组的过滤器配置
+ */
+export interface ChartFilterConfiguration {
+  chartName: string
+  filters: {
+    categories?: FilterConfig
+    brands?: FilterConfig
+    product_segments?: FilterConfig
+    time_period?: FilterConfig
+    extend_fields?: FilterConfig
+  }
+}
+
+/**
+ * 🆕 统一过滤器数据（新版本）
+ */
+export interface UnifiedFilterData {
+  // 按图表名称分组的配置
+  charts: Record<string, ChartFilterConfiguration>
+}
+
+/**
+ * 🆕 过滤器缓存状态
+ */
+export interface UnifiedFilterCacheState {
+  data: UnifiedFilterData | null
+  loading: boolean
+  error: string | null
+  lastUpdated: number | null
+} 

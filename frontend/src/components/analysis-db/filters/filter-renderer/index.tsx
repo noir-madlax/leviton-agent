@@ -3,77 +3,62 @@
 import { useState } from 'react'
 import { Button } from "@/components/ui/button"
 import { RotateCcw, Loader2 } from "lucide-react"
-import { ProjectFilters, FilterOptions } from '../../types/filters'
+import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
+import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
 
+// 🆕 简化后的 FilterRenderer 接口 - 只需要最少参数
 interface FilterRendererProps {
-  // 数据和状态
-  currentFilters: ProjectFilters
-  onChange: (filters: ProjectFilters) => void
-  availableOptions: FilterOptions
-  
-  // 上下文信息
+  // 🔥 核心参数
   projectId: string
-  projectData?: {
-    stats?: {
-      total_products: number;
-      total_brands: number;
-      total_reviews: number;
-      segment_count: number;
-    };
-    distributions?: {
-      categories?: Array<{ name: string; count: number; percentage: number }>
-      brands?: Array<{ name: string; count: number; percentage: number }>
-      segments?: Array<{ name: string; count: number; percentage: number }>
-      packaging_types?: Array<{ name: string; count: number; percentage: number }>
-      extend_fields?: Record<string, Array<{
-        name: string
-        count: number
-        percentage: number
-      }>>
-    }
-  }
+  chartName: string  // 图表名称，用于从 context 获取配置
+  currentFilters: ProjectFilters  // 当前过滤器值
+  onChange: (filters: ProjectFilters) => void  // 变化回调
   
-  // 扩展字段配置
-  filterConfig?: {
-    visible_filters?: Record<string, boolean>
-    default_values?: Record<string, string | boolean | number | string[] | number[]>
-    extend_fields?: Array<{
-      field_name: string
-      display_name: string
-      field_type: string
-      filter_options: Record<string, string | boolean | number | string[] | number[]>
-    }>
-  } | null
-  
-  // UI状态
-  loading?: boolean
+  // 🌟 可选参数
   disabled?: boolean
   className?: string
-  
-  // 配置 - 暂时硬编码，后续会从 config 驱动
-  visibleFilters?: {
-    categories?: boolean
-    brands?: boolean
-    segments?: boolean
-    extend_fields?: boolean
-  }
 }
 
 export function FilterRenderer({
+  projectId,
+  chartName,
   currentFilters,
   onChange,
-  availableOptions,
-  projectId,
-  projectData,
-  filterConfig,
-  loading = false,
   disabled = false,
-  className = "",
-  visibleFilters = { categories: true, extend_fields: true } // 默认显示 categories 和 extend_fields
+  className = ""
 }: FilterRendererProps) {
+  // 🆕 从 context 获取统一过滤器数据
+  const { getChartConfig, isLoading: contextLoading } = useUnifiedFilter()
+  const chartConfig = getChartConfig(chartName)
+  
+  // 🆕 从图表配置中提取可见性配置
+  const visibleFilters = {
+    categories: chartConfig?.filters.categories?.isVisible === true,
+    brands: chartConfig?.filters.brands?.isVisible === true,
+    segments: chartConfig?.filters.product_segments?.isVisible === true,
+    extend_fields: chartConfig?.filters.extend_fields?.isVisible === true
+  }
+  
+  // 🆕 从图表配置中提取扩展字段配置
+  const filterConfig = chartConfig ? {
+    visible_filters: {
+      categories: chartConfig.filters.categories?.isVisible === true,
+      brands: chartConfig.filters.brands?.isVisible === true,
+      segments: chartConfig.filters.product_segments?.isVisible === true,
+      extend_fields: chartConfig.filters.extend_fields?.isVisible === true
+    },
+    default_values: {},
+    extend_fields: [] // TODO: 从 chartConfig 中提取扩展字段配置
+  } : null
+  
+  console.log(`🔍 [FilterRenderer] Chart: ${chartName}, Config:`, {
+    visibleFilters,
+    hasChartConfig: !!chartConfig,
+    contextLoading
+  })
   const [pendingFilters, setPendingFilters] = useState<ProjectFilters>(currentFilters)
   const [applyingFilters, setApplyingFilters] = useState(false)
 
@@ -127,10 +112,9 @@ export function FilterRenderer({
           <CategoryFilter
             value={pendingFilters.categories}
             onChange={(categories) => setPendingFilters(prev => ({ ...prev, categories }))}
-            availableOptions={availableOptions}
-            projectData={projectData}
-            disabled={disabled || loading}
-            loading={loading}
+            chartName={chartName} // 🆕 使用 chartName
+            disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
+            loading={contextLoading}
           />
         )}
         
@@ -144,10 +128,10 @@ export function FilterRenderer({
             value={pendingFilters.extend_fields}
             onChange={(extendFields) => setPendingFilters(prev => ({ ...prev, extend_fields: extendFields }))}
             projectId={projectId}
-            projectData={projectData}
+            projectData={undefined} // 🆕 不传递 projectData，让组件内部处理
             filterConfig={filterConfig}
-            disabled={disabled || loading}
-            loading={loading}
+            disabled={disabled || contextLoading}
+            loading={contextLoading}
             className="w-full"
           />
         </div>
@@ -159,7 +143,7 @@ export function FilterRenderer({
           variant="outline" 
           size="sm" 
           onClick={handleReset}
-          disabled={disabled || loading}
+          disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
           className="flex items-center gap-2"
         >
           <RotateCcw className="w-4 h-4" />
@@ -168,7 +152,7 @@ export function FilterRenderer({
         <Button 
           size="sm" 
           onClick={handleApplyFilters}
-          disabled={!hasPendingChanges || disabled || loading || applyingFilters}
+          disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters} // 🆕 使用 context 的 loading 状态
         >
           {applyingFilters ? (
             <>

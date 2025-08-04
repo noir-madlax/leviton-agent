@@ -8,9 +8,9 @@ import { ChartProvider } from "@/contexts/chart-context"
 import { ProtectedRoute } from "@/components/auth/protected-route"
 import { IntegratedLayout } from "@/components/integrated-dashboard/integrated-layout"
 import { ProjectFilters, DEFAULT_FILTERS } from "@/components/analysis-db/types/filters"
-import { preloadUnifiedFilterData } from "@/components/analysis-db/hooks/use-unified-filter-data"
 import { useCommonT, useProjectT } from "@/i18n/hooks"
 import { chatConfigService } from "@/lib/services/chat-config-service"
+import { UnifiedFilterProvider } from "@/components/analysis-db/contexts/unified-filter-context" // 🆕 添加 UnifiedFilterProvider
 
 // 使用现有的Project接口
 interface Project {
@@ -123,18 +123,16 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
         console.log(`🚀 [ProjectPage] Starting project load for ID: ${projectId}`)
         
-        // 1. 先获取筛选器默认配置
-        console.log(`🔍 [ProjectPage] Fetching filter defaults...`)
-        const defaultFilters = await databaseService.getProjectFilterDefaults(projectId)
-        setFilters(defaultFilters) // 设置到状态中
-        console.log(`✅ [ProjectPage] Applied default filters:`, defaultFilters)
+        // 1. 使用默认筛选器配置（UnifiedFilterProvider会处理实际的API调用）
+        console.log(`🔍 [ProjectPage] Using default filters (UnifiedFilterProvider will handle API calls)`)
+        setFilters(DEFAULT_FILTERS) // 先设置默认值，UnifiedFilterProvider会提供实际数据
+        console.log(`✅ [ProjectPage] Applied default filters:`, DEFAULT_FILTERS)
 
-        // 2. 并行加载项目信息和使用配置好的筛选器加载概览数据
-        console.log(`📊 [ProjectPage] Loading project data and overview with filters...`)
+        // 2. 并行加载项目信息和使用默认筛选器加载概览数据
+        console.log(`📊 [ProjectPage] Loading project data and overview with default filters...`)
         const [projectData] = await Promise.all([
           databaseService.getProject(projectId),
-          loadProjectOverview(defaultFilters), // 使用配置好的筛选器
-          preloadUnifiedFilterData(projectId)
+          loadProjectOverview(DEFAULT_FILTERS) // 使用默认筛选器
         ])
 
         setProject(projectData)
@@ -262,16 +260,19 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
   return (
     <ProtectedRoute>
       <ChartProvider>
-        <IntegratedLayout
-          projectId={projectId}
-          project={project}
-          projectOverviewData={projectOverviewData}
-          overviewLoading={overviewLoading}
-          onFiltersChange={handleFiltersChange}
-          filters={filters}
-          isFilterExpanded={isFilterExpanded}
-          onToggleFilter={toggleFilterExpanded}
-        />
+        {/* 🆕 用 UnifiedFilterProvider 包裹 IntegratedLayout 以支持 CategoryFilter */}
+        <UnifiedFilterProvider projectId={projectId}>
+          <IntegratedLayout
+            projectId={projectId}
+            project={project}
+            projectOverviewData={projectOverviewData}
+            overviewLoading={overviewLoading}
+            onFiltersChange={handleFiltersChange}
+            filters={filters}
+            isFilterExpanded={isFilterExpanded}
+            onToggleFilter={toggleFilterExpanded}
+          />
+        </UnifiedFilterProvider>
       </ChartProvider>
     </ProtectedRoute>
   )
