@@ -1,0 +1,134 @@
+2025-07-31 15:33:18,779 - INFO - Starting V7 product details extraction with enhanced data capture...
+2025-07-31 15:33:18,779 - INFO - Extracting data from all files...
+2025-07-31 15:33:18,780 - INFO - Processing 48 files...
+2025-07-31 15:33:18,780 - INFO - Processing file 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 15:33:18,781 - INFO - Extracted 5 specifications from product name: ['gauge', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,787 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,789 - INFO - Extracted 1 specifications from product name: ['gauge']
+2025-07-31 15:33:18,792 - INFO - Extracted 2 specifications from product name: ['gauge', 'conductor_count']
+2025-07-31 15:33:18,794 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'voltage', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,796 - INFO - Extracted 4 specifications from product name: ['gauge', 'length', 'material', 'color']
+2025-07-31 15:33:18,798 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'voltage', 'temperature']
+2025-07-31 15:33:18,801 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,817 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,818 - INFO - Processing file 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 15:33:18,819 - INFO - Extracted 2 specifications from product name: ['gauge', 'temperature']
+2025-07-31 15:33:18,823 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'material']
+2025-07-31 15:33:18,826 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,828 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'temperature', 'color']
+2025-07-31 15:33:18,831 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,833 - INFO - Extracted 4 specifications from product name: ['gauge', 'length', 'material', 'color']
+2025-07-31 15:33:18,835 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,837 - INFO - Extracted 7 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,840 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,844 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,845 - INFO - Processing file 21/48: B08V4L3H2H_product_details.json
+2025-07-31 15:33:18,846 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,847 - INFO - Extracted 3 specifications from product name: ['gauge', 'conductor_count', 'temperature']
+2025-07-31 15:33:18,849 - INFO - Extracted 7 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,851 - INFO - Extracted 5 specifications from product name: ['gauge', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,854 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,856 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,858 - INFO - Extracted 2 specifications from product name: ['gauge', 'material']
+2025-07-31 15:33:18,860 - INFO - Extracted 3 specifications from product name: ['gauge', 'length', 'temperature']
+2025-07-31 15:33:18,862 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,865 - INFO - Extracted 3 specifications from product name: ['gauge', 'conductor_count', 'voltage']
+2025-07-31 15:33:18,866 - INFO - Processing file 31/48: B09XFBRVYX_product_details.json
+2025-07-31 15:33:18,870 - INFO - Extracted 7 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,877 - INFO - Extracted 1 specifications from product name: ['temperature']
+2025-07-31 15:33:18,879 - INFO - Extracted 3 specifications from product name: ['length', 'temperature', 'color']
+2025-07-31 15:33:18,880 - INFO - Extracted 3 specifications from product name: ['length', 'temperature', 'color']
+2025-07-31 15:33:18,883 - INFO - Extracted 5 specifications from product name: ['gauge', 'length', 'temperature', 'material', 'color']
+2025-07-31 15:33:18,886 - INFO - Extracted 3 specifications from product name: ['gauge', 'length', 'temperature']
+2025-07-31 15:33:18,888 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'material']
+2025-07-31 15:33:18,890 - INFO - Extracted 1 specifications from product name: ['color']
+2025-07-31 15:33:18,892 - INFO - Extracted 6 specifications from product name: ['gauge', 'conductor_count', 'length', 'voltage', 'temperature', 'color']
+2025-07-31 15:33:18,894 - INFO - Processing file 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 15:33:18,895 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,897 - INFO - Extracted 1 specifications from product name: ['color']
+2025-07-31 15:33:18,898 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,900 - INFO - Extracted 4 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature']
+2025-07-31 15:33:18,901 - INFO - Extracted 1 specifications from product name: ['material']
+2025-07-31 15:33:18,902 - INFO - Extracted 5 specifications from product name: ['gauge', 'conductor_count', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,906 - INFO - Extracted 4 specifications from product name: ['gauge', 'length', 'temperature', 'material']
+2025-07-31 15:33:18,908 - INFO - Extracted 2 specifications from product name: ['gauge', 'conductor_count']
+2025-07-31 15:33:18,912 - INFO - Merging similar columns for schema unification...
+2025-07-31 15:33:18,915 - INFO - Semantic match found: gaug ~ gauge (High similarity (1.00) + data overlap (32 rows))
+2025-07-31 15:33:18,918 - INFO - Semantic match found: length ~ numberofcablestrand (High similarity (0.90) + data overlap (33 rows))
+2025-07-31 15:33:18,920 - INFO - Semantic match found: length ~ cabletyp (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:33:18,920 - INFO - Semantic match found: length ~ ethernetcablecategori (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,921 - INFO - Semantic match found: length ~ extens_length (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,922 - INFO - Semantic match found: length ~ cabl_length (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,923 - INFO - Semantic match found: temperatur ~ temperature (High similarity (1.00) + data overlap (6 rows))
+2025-07-31 15:33:18,924 - INFO - Semantic match found: temperatur ~ temperatur_rate (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,927 - INFO - Semantic match found: materi ~ material (High similarity (1.00) + data overlap (35 rows))
+2025-07-31 15:33:18,927 - INFO - Semantic match found: materi ~ contact_materi (High similarity (0.70) + data overlap (2 rows))
+2025-07-31 15:33:18,928 - INFO - Semantic match found: materi ~ insul_materi (High similarity (0.77) + data overlap (2 rows))
+2025-07-31 15:33:18,933 - INFO - Semantic match found: voltag ~ voltage (High similarity (1.00) + data overlap (13 rows))
+2025-07-31 15:33:18,935 - INFO - Semantic match found: voltag ~ maximum_voltag (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,936 - INFO - Semantic match found: number_of_cabl_strand ~ part_number (High similarity (0.90) + data overlap (5 rows))
+2025-07-31 15:33:18,936 - INFO - Semantic match found: number_of_cabl_strand ~ item_weight (High similarity (0.90) + data overlap (7 rows))
+2025-07-31 15:33:18,936 - INFO - Semantic match found: number_of_cabl_strand ~ item_model_number (High similarity (0.90) + data overlap (6 rows))
+2025-07-31 15:33:18,938 - INFO - Semantic match found: number_of_cabl_strand ~ itemmodelnumb (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,938 - INFO - Semantic match found: number_of_cabl_strand ~ global_trade_identif_number (High similarity (0.90) + data overlap (2 rows))
+2025-07-31 15:33:18,939 - INFO - Semantic match found: number_of_cabl_strand ~ item_packag_quantiti (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:33:18,940 - INFO - Semantic match found: number_of_cabl_strand ~ number_of_piec (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:33:18,941 - INFO - Semantic match found: number_of_cabl_strand ~ number_of_item (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,941 - INFO - Semantic match found: number_of_cabl_strand ~ item_packag_dimens_l_x_w_x_h (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,941 - INFO - Semantic match found: number_of_cabl_strand ~ item_dimens_lxwxh (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,942 - INFO - Semantic match found: number_of_cabl_strand ~ model_name (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,942 - INFO - Semantic match found: number_of_cabl_strand ~ itemweight (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,943 - INFO - Semantic match found: no_of_wire ~ wire_count (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,944 - INFO - Semantic match found: no_of_wire ~ variant_gauge_conductor (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,944 - INFO - Semantic match found: no_of_wire ~ noofwir (High similarity (0.88) + data overlap (1 rows))
+2025-07-31 15:33:18,952 - INFO - Semantic match found: packag_dimens ~ packagedimens (High similarity (0.92) + complementary data)
+2025-07-31 15:33:18,953 - INFO - Semantic match found: packag_dimens ~ product_dimens (High similarity (0.74) + complementary data)
+2025-07-31 15:33:18,954 - INFO - Semantic match found: packag_dimens ~ packag_weight (High similarity (0.74) + complementary data)
+2025-07-31 15:33:18,955 - INFO - Semantic match found: size ~ variant_size (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:33:18,956 - INFO - Semantic match found: size ~ stud_size (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:33:18,956 - INFO - Semantic match found: size ~ productdimens (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,957 - INFO - Semantic match found: size ~ package_weight (High similarity (0.90) + data overlap (1 rows))
+2025-07-31 15:33:18,958 - INFO - Semantic match found: size ~ dimensions (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,958 - INFO - Semantic match found: batteri_includ ~ batteri_requir (High similarity (0.90) + data overlap (9 rows))
+2025-07-31 15:33:18,959 - INFO - Semantic match found: batteri_includ ~ includ_compon (High similarity (0.90) + data overlap (5 rows))
+2025-07-31 15:33:18,960 - INFO - Semantic match found: batteri_includ ~ includ_s (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,961 - INFO - Semantic match found: custom_review ~ customerreview (High similarity (0.89) + complementary data)
+2025-07-31 15:33:18,963 - INFO - Semantic match found: best_seller_rank ~ bestsellersrank (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,965 - INFO - Semantic match found: date_first_avail ~ datefirstavail (High similarity (0.93) + complementary data)
+2025-07-31 15:33:18,969 - INFO - Semantic match found: conductor_count ~ conductor (High similarity (0.85) + data overlap (14 rows))
+2025-07-31 15:33:18,969 - INFO - Semantic match found: conductor_count ~ unit_count (High similarity (0.74) + data overlap (1 rows))
+2025-07-31 15:33:18,974 - INFO - Semantic match found: connectortyp ~ connector_type (High similarity (0.90) + data overlap (2 rows))
+2025-07-31 15:33:18,977 - INFO - Semantic match found: connectortyp ~ installationtyp (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,978 - INFO - Semantic match found: connectortyp ~ connectorgend (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,979 - INFO - Semantic match found: connectortyp ~ finishtyp (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,979 - INFO - Semantic match found: connectortyp ~ finish_type (High similarity (0.90) + complementary data)
+2025-07-31 15:33:18,979 - INFO - Semantic match found: contactmateri ~ insulationmateri (High similarity (0.90) + data overlap (3 rows))
+2025-07-31 15:33:18,981 - INFO - Semantic match found: is_discontinu_by_manufactur ~ isdiscontinuedbymanufactur (High similarity (0.91) + complementary data)
+2025-07-31 15:33:18,992 - INFO - Merged columns: ['gaug', 'gauge'] -> gaug
+2025-07-31 15:33:18,997 - INFO - Merged columns: ['length', 'numberofcablestrand', 'cabletyp', 'ethernetcablecategori', 'extens_length', 'cabl_length'] -> length
+2025-07-31 15:33:19,001 - INFO - Merged columns: ['temperatur', 'temperature', 'temperatur_rate'] -> temperatur
+2025-07-31 15:33:19,006 - INFO - Merged columns: ['materi', 'material', 'contact_materi', 'insul_materi'] -> materi
+2025-07-31 15:33:19,008 - INFO - Merged columns: ['voltag', 'voltage', 'maximum_voltag'] -> voltag
+2025-07-31 15:33:19,022 - INFO - Merged columns: ['number_of_cabl_strand', 'part_number', 'item_weight', 'item_model_number', 'itemmodelnumb', 'global_trade_identif_number', 'item_packag_quantiti', 'number_of_piec', 'number_of_item', 'item_packag_dimens_l_x_w_x_h', 'item_dimens_lxwxh', 'model_name', 'itemweight'] -> number_of_cabl_strand
+2025-07-31 15:33:19,025 - INFO - Merged columns: ['no_of_wire', 'wire_count', 'variant_gauge_conductor', 'noofwir'] -> no_of_wire
+2025-07-31 15:33:19,028 - INFO - Merged columns: ['packag_dimens', 'packagedimens', 'product_dimens', 'packag_weight'] -> packag_dimens
+2025-07-31 15:33:19,034 - INFO - Merged columns: ['size', 'variant_size', 'stud_size', 'productdimens', 'package_weight', 'dimensions'] -> size
+2025-07-31 15:33:19,038 - INFO - Merged columns: ['batteri_includ', 'batteri_requir', 'includ_compon', 'includ_s'] -> batteri_includ
+2025-07-31 15:33:19,040 - INFO - Merged columns: ['custom_review', 'customerreview'] -> custom_review
+2025-07-31 15:33:19,042 - INFO - Merged columns: ['best_seller_rank', 'bestsellersrank'] -> best_seller_rank
+2025-07-31 15:33:19,044 - INFO - Merged columns: ['date_first_avail', 'datefirstavail'] -> date_first_avail
+2025-07-31 15:33:19,046 - INFO - Merged columns: ['conductor_count', 'conductor', 'unit_count'] -> conductor_count
+2025-07-31 15:33:19,050 - INFO - Merged columns: ['connectortyp', 'connector_type', 'installationtyp', 'connectorgend', 'finishtyp', 'finish_type'] -> connectortyp
+2025-07-31 15:33:19,051 - INFO - Merged columns: ['contactmateri', 'insulationmateri'] -> contactmateri
+2025-07-31 15:33:19,052 - INFO - Merged columns: ['is_discontinu_by_manufactur', 'isdiscontinuedbymanufactur'] -> is_discontinu_by_manufactur
+2025-07-31 15:33:19,052 - INFO - Generating reports...
+2025-07-31 15:33:19,064 - INFO - Main CSV saved to: ./extracted_product_details_v7.csv
+2025-07-31 15:33:19,071 - INFO - Conflict report saved to: ./conflict_report_v7.json
+2025-07-31 15:33:19,071 - INFO - Extraction statistics saved to: ./extraction_statistics_v7.json
+2025-07-31 15:33:19,071 - INFO - Extraction completed successfully!
+2025-07-31 15:33:19,071 - INFO - Processed 48 files
+2025-07-31 15:33:19,071 - INFO - Found 128 conflicts
+2025-07-31 15:33:19,071 - INFO - Merged 51 columns
+2025-07-31 15:33:19,071 - INFO - Found 51 semantic matches
+2025-07-31 15:33:19,071 - INFO - Extracted 46 specifications from product names
+2025-07-31 15:33:19,071 - INFO - Generated 93 columns

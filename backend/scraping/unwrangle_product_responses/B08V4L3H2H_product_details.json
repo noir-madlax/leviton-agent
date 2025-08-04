@@ -1,0 +1,272 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B08V4L3H2H",
+  "result_count": 1,
+  "detail": {
+    "name": "Wirenco 12/2 NM-B, Non-Metallic, Sheathed Cable, Residential Indoor Wire, Equivalent to (100Ft Cut)",
+    "brand": "wirenco",
+    "url": "https://www.amazon.com/product/dp/B08V4L3H2H",
+    "asin": "B08V4L3H2H",
+    "deal_badge": null,
+    "listing_id": "B08V4L3H2H",
+    "price": 82.26,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "One-time purchase:",
+        "offer_description": "82.26 82.26FREE deliverySaturday, August 2Ships from:DE Supply Corp.Sold by:DE Supply Corp.",
+        "price": 82.26,
+        "seller": "DE Supply Corp."
+      },
+      {
+        "offer_type": "Subscribe & Save",
+        "offer_description": "82.26 82.26 82.26 per Count( 82.26 82.26/ Count) 78.15 with 5 percent savings 78.15 78.15 per Count( 78.15 78.15/ Count)First delivery on Aug 8FREE deliverySaturday, August 2Ships fromDE Supply Corp.Sold byDE Supply Corp.",
+        "price": 82.26
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      }
+    ],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B08V4L3H2H/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.7,
+    "total_ratings": 309,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Saturday, August 2. Order within 23 hrs 44 mins. Details"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "50Ft Cut",
+        "asin": "B08V4WD5DX",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B08V4WD5DX"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/41fpMXb-2QL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41fpMXb-2QL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31WlzZ-lPTL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21fvrhzIElL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31WlzZ-lPTL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Yellow"
+      },
+      {
+        "name": "Brand",
+        "value": "wirenco"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "1"
+      },
+      {
+        "name": "Gauge",
+        "value": "6.0"
+      }
+    ],
+    "features": [
+      "#12 AWG Residential Wire for Outlets, Switches and Other Loads",
+      "Equivalent to Romex NM-B - Color of Wire May not be the Same as the Picture Shown.",
+      "600-Volt Maximum with an Allowable Ampacity of 20 Amps",
+      "For Dry Locations up to 90 degrees Celsius or 194 degrees Farenheit. For Exposed and Concealed Applications.",
+      "Copper (Cu) Conductors"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "11.26x10.04x2.48inches;8.3Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "6215-#"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January25,2021"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "wirenco"
+      },
+      {
+        "name": "ASIN",
+        "value": "B08V4L3H2H"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#54,382inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#284inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars309ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 54382
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 284
+      }
+    ],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B08V4L3H2H&ref_=dp_merchant_link",
+    "variants": {
+      "size_name": [
+        {
+          "name": "50Ft Cut",
+          "in_stock": true,
+          "asin": "B08V4WD5DX",
+          "url": "https://www.amazon.com/dp/B08V4WD5DX",
+          "selected": true
+        },
+        {
+          "name": "100Ft Cut",
+          "in_stock": true,
+          "asin": "B08V4L3H2H",
+          "url": "https://www.amazon.com/dp/B08V4L3H2H",
+          "selected": true
+        },
+        {
+          "name": "250Ft Cut",
+          "in_stock": true,
+          "asin": "B08V4Z41RF",
+          "url": "https://www.amazon.com/dp/B08V4Z41RF",
+          "selected": true
+        },
+        {
+          "name": "1000Ft Cut",
+          "in_stock": true,
+          "asin": "B08V582D5B",
+          "url": "https://www.amazon.com/dp/B08V582D5B",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {},
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 62.0
+}

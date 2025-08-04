@@ -10,8 +10,8 @@ from ..reviewCore.models import ReviewAspectBase, CategoryInfoBase, PaginationBa
 # ==================== Request Models ====================
 
 class TopCategoriesRequest(BaseRequestModel):
-    """Request model for top categories analysis."""
-    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories (aspect_type, sort_by, sort_direction, max_categories, min_mentions, etc.)")
+    """Request model for top categories analysis with embedded cause analysis."""
+    options: Dict[str, Any] = Field(..., description="Options for filtering and selecting aspect categories. Can include 'return_top_cause_categories' for cause analysis with options: sentiment (optional), limit (default: 10)")
 
 
 class ReviewsByCategoryRequest(BaseRequestModel):
@@ -25,12 +25,45 @@ class ReviewsByCategoryRequest(BaseRequestModel):
     sort_order: Literal["asc", "desc"] = Field(
         default="desc", description="Sort direction"
     )
+    sentiment_filter: Optional[Literal["positive", "negative"]] = Field(
+        default=None, description="Filter by sentiment (positive, negative). If None, returns all sentiments."
+    )
+    rating_filter: Optional[Literal["high", "mid", "low"]] = Field(
+        default=None, description="Filter by rating: high (4-5 stars), mid (3 stars), low (1-2 stars). If None, returns all ratings."
+    )
 
 
 # ==================== Response Models ====================
 
+class CauseAspect(BaseModel):
+    """Simplified cause aspect with sentiment."""
+    aspect_description: str = Field(description="Formatted aspect description")
+    sentiment: str = Field(description="Sentiment: '+' for positive, '-' for negative")
+
+
+class CauseData(BaseModel):
+    """Cause data embedded in each category."""
+    cause_category_pk: int = Field(description="Cause category primary key")
+    cause_category_name: str = Field(description="Cause category name")
+    total_reviews: int = Field(description="Number of unique reviews mentioning this cause")
+    positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
+    negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")
+    aspects: List[CauseAspect] = Field(description="List of aspects mentioning this cause with sentiments")
+
+
+class AggregatedCauseSummary(BaseModel):
+    """Aggregated cause summary across all aspects."""
+    cause_category_pk: int = Field(description="Cause category primary key")
+    cause_category_name: str = Field(description="Cause category name")
+    total_reviews: int = Field(description="Total unique reviews across all aspects")
+    total_positive_reviews: int = Field(description="Total positive reviews across all aspects")
+    total_negative_reviews: int = Field(description="Total negative reviews across all aspects")
+    rank: int = Field(description="Rank based on total reviews")
+    aspects: List[CauseAspect] = Field(description="All aspects mentioning this cause with sentiments")
+
+
 class CategorySummary(BaseModel):
-    """Category summary with statistics."""
+    """Category summary with statistics and embedded cause data."""
     category_id: int = Field(description="Category ID")
     category_name: str = Field(description="Category name")
     definition: str = Field(description="Category definition")
@@ -39,15 +72,19 @@ class CategorySummary(BaseModel):
     positive_mentions: int = Field(description="Number of positive mentions")
     negative_mentions: int = Field(description="Number of negative mentions")
     neutral_mentions: int = Field(description="Number of neutral mentions")
-    unique_reviews: int = Field(description="Number of unique reviews")
-    positive_ratio: float = Field(description="Ratio of positive mentions to total mentions")
+    total_reviews: int = Field(description="Number of unique reviews")
+    positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
+    negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")
+    positive_ratio: float = Field(description="Ratio of positive reviews to total sentiment reviews")
+    cause_data: List[CauseData] = Field(default=[], description="Embedded cause data for this category")
 
 
 class TopCategoriesData(BaseModel):
-    """Top categories data model."""
-    categories: List[CategorySummary] = Field(description="List of top categories with statistics")
+    """Top categories data model with embedded cause analysis."""
+    categories: List[CategorySummary] = Field(description="List of top categories with statistics and embedded cause data")
     total_categories: int = Field(description="Total number of categories returned")
     summary_stats: Dict[str, Any] = Field(description="Summary statistics across all categories")
+    aggregated_cause_summary: List[AggregatedCauseSummary] = Field(default=[], description="Aggregated cause summary across all aspects")
 
 
 class TopCategoriesResponse(BaseResponseModel[TopCategoriesData]):

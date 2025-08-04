@@ -1,0 +1,457 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0C4P4Z73C",
+  "result_count": 1,
+  "detail": {
+    "name": "18AWG 2 Wire Electrical Cord JACKYLED 2 Conductor 10M/32.8ft Wire Cord 18 Gauge Flexible Cable for LED Strips Electrical Wire 12V/24V DC Cable, 18/2 Wire Black and Red",
+    "brand": "JACKYLED",
+    "url": "https://www.amazon.com/product/dp/B0C4P4Z73C",
+    "asin": "B0C4P4Z73C",
+    "deal_badge": null,
+    "listing_id": "B0C4P4Z73C",
+    "price": 12.59,
+    "price_reduced": 11.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.6,
+    "total_ratings": 8119,
+    "past_month_sales": "100+ boughtin past month",
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 6 hrs 57 mins. Join Prime"
+    ],
+    "delivery_zipcode": "01970",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "style_name": {
+        "name": "18AWG/32.8FT",
+        "asin": "B0C4P4Z73C",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0C4P4Z73C"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71Arc-nB3UL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71Arc-nB3UL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/416CCbnu7kL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51NYvoeP4uL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51xuD3mHWEL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41VHBZJ9PfL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41eigPm6bkL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/419pOyo0jWL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Ot2Vdm5SL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "RedandBlack"
+      },
+      {
+        "name": "Brand",
+        "value": "JACKYLED"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Voltage",
+        "value": "300Volts"
+      }
+    ],
+    "features": [
+      "Specifications: 18 gauge wire, 2 conductor parallel wires (black and red), total length 32.8ft. Temperature range: -22℉~176℉ / -30℃~80℃.",
+      "Premium Quality: Made of pure copper strands and high quality PVC coating, the electrical wire features flame retardant, anti-aging, acid and alkali resistance, and damp-proof characteristics.",
+      "Wide Application: Connection extension cable for linking 3528/5050 single color 12/24V LED strip lights. Suitable for connecting electronics, digital appliances and equipment, USB lamps, direct current motors, toys, batteries, and other ac/dc equipment. (Rated voltage: 300V, max current: 8.5A)",
+      "Easy to Use: It's easy to strip and cut. The wire features high conductivity, low resistance, and good flexibility, which can be twisted and bent freely as you need.",
+      "Superior Safety: The PVC coating is thick and even, which could prevent electrical leakage better than others. The plastic insulation and copper core have a high melting point, which won’t melt down easily even under high circuit load.."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "Red and Black"
+      },
+      {
+        "name": "Brand",
+        "value": "JACKYLED"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "Multi Strand"
+      },
+      {
+        "name": "Voltage",
+        "value": "300 Volts"
+      },
+      {
+        "name": "No. of wires",
+        "value": "2"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "JACKYLED"
+      },
+      {
+        "name": "Package Dimensions",
+        "value": "6.06 x 6.06 x 1.42 inches"
+      },
+      {
+        "name": "Item Weight",
+        "value": "10.8 ounces"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0C4P4Z73C"
+      },
+      {
+        "name": "Item model number",
+        "value": "JACKYLED800"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.6  4.6 out of 5 stars    \n    8,119 ratings   \n\n\n 4.6 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#22,526 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #116 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "May 9, 2023"
+      },
+      {
+        "name": "Country of Origin",
+        "value": "China"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 22526
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 116
+      }
+    ],
+    "seller_name": "JACKYLED Direct",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3UENWQOYWIPH9&asin=B0C4P4Z73C&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "style_name": [
+        {
+          "name": "18AWG/32.8FT",
+          "in_stock": true,
+          "asin": "B0C4P4Z73C",
+          "url": "https://www.amazon.com/dp/B0C4P4Z73C",
+          "selected": true
+        },
+        {
+          "name": "22AWG/65.6FT",
+          "in_stock": true,
+          "asin": "B00QTCBZ4I",
+          "url": "https://www.amazon.com/dp/B00QTCBZ4I",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "79%",
+      "4 star": "13%",
+      "3 star": "6%",
+      "2 star": "1%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the extension cable works well for their projects and is easy to install and solder, with good value for money. The wire is true to size, flexible, and performs well with LED lights, particularly in boat installations. While customers appreciate the quality and flexibility, they note the wire is very thin.",
+    "review_aspects": [
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Led lighting",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Size",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire flexibility",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire thickness",
+        "sentiment": "negative"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Nick",
+        "review_title": "Worked great for the job",
+        "rating": 5,
+        "review_text": "Easy to use. Used this to install from a low voltage driver throughout kitchen for under cabinet lighting. Easy to use and solder.\nRead more",
+        "date": "2025-07-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 18AWG/32.8FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "C N",
+        "review_title": "Good choice of wires for the job",
+        "rating": 5,
+        "review_text": "Good with the connecting block and the light strip\nRead more",
+        "date": "2025-06-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 18AWG/32.8FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "illumaVision",
+        "review_title": "It’s good",
+        "rating": 5,
+        "review_text": "Perfect for running LED lights in interesting places\nRead more",
+        "date": "2025-06-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "RS",
+        "review_title": "2 CONDUCTOR WIRE CABLE",
+        "rating": 4,
+        "review_text": "I used this on an LED project in my garage. Worked with no problems\nRead more",
+        "date": "2025-01-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Shujit",
+        "review_title": "Easy to install, and customize the length",
+        "rating": 5,
+        "review_text": "The media could not be loaded.\n                \n\n\n\nWorks great. Easy to cut and connect to led strip. Long length so you can custom size the led strip. The wires are flexible so easy to turn around and fit through small openings. A little delicate when trying to remove the insulated covering. Thin wire strip, easy to hide it behind the closet walls.\nRead more",
+        "date": "2025-06-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/de64c917-f264-4e29-9edd-51c33456e384/embedded.cc.default.vertical.jobtemplate.hls.m3u8"
+        ]
+      },
+      {
+        "reviewer_name": "Diego sandoval",
+        "review_title": "Good",
+        "rating": 5,
+        "review_text": "An excellent product I recommend For any type electric 12v\nRead more",
+        "date": "2025-03-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dusty Rhoads",
+        "review_title": "PERFECT for low voltage LED applications",
+        "rating": 5,
+        "review_text": "The media could not be loaded.\n                \n\n\n\nI was mostly concerned about the casing, and if it would degrade in outdoor vehicle lighting.This stuff is better than the wiring that comes with most LED lights. I ran it as a harness under the whole perimeter of my truck and still have about 20 ft left for some extras. I do not drive my truck in the rain or snow, but still waterproofed all connections.I didn't use it on all of the lighting pictured, just the light pods that didn't come with their own harnesses. Definitely limit the load to multiple switches & fuse ports for large applications like mine.I will happily stand by anything made in China. They are electronic geniuses 👍\nRead more",
+        "date": "2024-09-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/7195ILics5L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71FvWHM-mTL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71-T5BL++GL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71jwOvENOQL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/611xf9ZUcDL._SY88.jpg"
+        ],
+        "review_videos": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7ca6c0e1-6485-4cbf-9f62-163c78557eff/embedded.cc.default.vertical.jobtemplate.hls.m3u8"
+        ]
+      },
+      {
+        "reviewer_name": "Jose M.",
+        "review_title": "Excelente",
+        "rating": 5,
+        "review_text": "Excelente\nRead more",
+        "date": "2025-03-30",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "francois",
+        "review_title": "Fait de la belle job pour pas chère 👍",
+        "rating": 4,
+        "review_text": "Utilise pour filage dans cabane à pêche 👍\nRead more",
+        "date": "2022-11-10",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 22AWG/65.6FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/02356d17500c43ed800aecd1195af527?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/05919c84da4b46d5b2a58f2ba696a0e8?ref=dp_vse_rvc_1",
+      "https://www.amazon.com/vdp/0afef2ca3d2c4639a0fe5aa4e7e3d48e?ref=dp_vse_rvc_2",
+      "https://www.amazon.com/vdp/0c77b9209b6443a5916ebe91a8d2eec3?ref=dp_vse_rvc_3",
+      "https://www.amazon.com/vdp/09ea29b1cb854d0e84d1431bd96c7cea?ref=dp_vse_rvc_4"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Specification",
+        "Modify Your Car",
+        "18 AWG stranded wire can be used to modify your car.",
+        "Electrical Connections",
+        "The extension cable wire cord can also be used for ac/dc electrical connections.",
+        "Connect Your Light",
+        "18AWG wire can also help connect your lights to a power source.",
+        "Install LED Strip Lights",
+        "This electrical wire is a good helper for you to install LED strip lights.",
+        "Better Life, Choose JACKYLED!",
+        "Made of pure copper with high electrical conductivity, lower resistance, and anti-aging features.Upgraded with high-quality PVC insulation, featuring flame retardant, fray resistance, and excellent anti-corrosion performance.The optimum working temperature range is -22~176℉, protecting your circuit from the most harsh environment.Undergone thousand times of rigorous testing for lifespan and stability."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/89a6f291-6013-49c4-a835-386820402d84.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18 gauge wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/89a6f291-6013-49c4-a835-386820402d84.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18 gauge wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f0056385-f046-4b4f-8359-5279744edad7.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "electrical wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/708102a8-6bb4-4972-abce-b3b7a93dc176.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "red and black wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1f520a57-4a45-44e5-af22-240ad5dbdf2c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "automotive wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c975240b-007b-4d29-8ee5-39c04abb829a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18awg wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9994b822-c97c-4c69-917e-d10d473a41df.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18 gauge wire automotive"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/85e452f0-17de-4522-8af1-fa9a7e106cfc.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "copper wires"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ec605c0d-3b2c-4e40-a9cc-25e05a88e427.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18 gauge speaker wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8cc320f9-e926-4243-9688-04660a72ce3c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "red and black wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dd3c0a3c-d416-43e0-908a-babe98a66a2b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "Extension Cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dd3c0a3c-d416-43e0-908a-babe98a66a2b.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "Extension Cable"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 50.0
+}

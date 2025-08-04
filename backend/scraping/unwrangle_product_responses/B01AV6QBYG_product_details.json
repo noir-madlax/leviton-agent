@@ -1,0 +1,254 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B01AV6QBYG",
+  "result_count": 1,
+  "detail": {
+    "name": "TEMCo Titanium Wire 22 Gauge 25 FT Surgical Grade 1 Resistance AWG ga",
+    "brand": "Temco",
+    "url": "https://www.amazon.com/product/dp/B01AV6QBYG",
+    "asin": "B01AV6QBYG",
+    "deal_badge": null,
+    "listing_id": "B01AV6QBYG",
+    "price": null,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": null,
+    "currency_symbol": null,
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.5,
+    "total_ratings": 72,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": null,
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": null,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71Q4EMVh8iL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71Q4EMVh8iL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41fMxuL9qsL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/4110qvBKsGL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41fMxuL9qsL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Material",
+        "value": "titanium"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "SingleStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "22.0"
+      },
+      {
+        "name": "No.ofwires",
+        "value": "1"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "TEMCo"
+      }
+    ],
+    "features": [
+      "22 AWG, Average wire diameter: 0.0253 in. (0.64262 mm)",
+      "Commercially Pure Titanium, Surgical Grade 1. Rated for temperatures up to 1670°C (3038°F).",
+      "100% MADE IN THE U.S.A. All TEMCo wire is produced and spooled right here in the U.S.A.",
+      "PERFECTLY TENSIONED. Zero elongation, scratches or other flaws ensure quality wire on every spool.",
+      "ZERO CONTAMINANTS. Clean production environment houses the spooling process. Hands-off computerized spooling eliminates skin salts and oils."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "ItemWeight",
+        "value": "0.79ounces"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "RW0485"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January20,2016"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "TEMCo"
+      },
+      {
+        "name": "ASIN",
+        "value": "B01AV6QBYG"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#801,836inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#3,552inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.54.5outof5stars72ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 801836
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 3552
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "75%",
+      "4 star": "11%",
+      "3 star": "5%",
+      "2 star": "6%",
+      "1 star": "3%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "rei",
+        "review_title": "Purchased for anodizing",
+        "rating": 5,
+        "review_text": "Had to order twice because the first one wasn’t right. But that’s Amazon’s fault not the wire company, so that being said I’m extremely happy with my purchase. I love that it’s completely raw surfaced and not polished in any way! 👍⚗️🧪\nRead more",
+        "date": "2021-11-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Good dependable wire for tempature control devices.",
+        "rating": 5,
+        "review_text": "Great quality wire that can be used for T/C . Unlike others I have tried this doesn't have any coating to remove before use. It is also very consistent from spool to spool , I have used grade 1 Titanium for the past few years and have found it varies greatly from brand to brand.\nRead more",
+        "date": "2018-04-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Good value",
+        "rating": 4,
+        "review_text": "As advertised\nRead more",
+        "date": "2019-01-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Tracy Norman",
+        "review_title": "Great value and perfect for anodizing projects",
+        "rating": 5,
+        "review_text": "I recently discovered titanium anodizing and purchased this wire to make jewelry with. So far I am very happy with the product and will be ordering more in the future.\nRead more",
+        "date": "2020-09-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Daniel M",
+        "review_title": "Great Wire!",
+        "rating": 5,
+        "review_text": "Great titanium wire! Definitely “dead soft” hardness and very easy to form and twist.\nRead more",
+        "date": "2019-08-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Alex",
+        "review_title": "RETURN FEES",
+        "rating": 1,
+        "review_text": "Beware\nRead more",
+        "date": "2020-06-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Alicia English",
+        "review_title": "Quality wire",
+        "rating": 5,
+        "review_text": "Great wire, wonderful quality. Thank you again for such a great product!\nRead more",
+        "date": "2019-10-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ethan M.",
+        "review_title": "Fit the need",
+        "rating": 5,
+        "review_text": "Worked great for my anodizatioj project\nRead more",
+        "date": "2020-06-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": false
+  },
+  "credits_used": 1,
+  "remaining_credits": 59.0
+}

@@ -1,0 +1,295 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B07DGD2PVF",
+  "result_count": 1,
+  "detail": {
+    "name": "Mixed 550 Feet of Nichrome 80 Wire 22,24,26,28,30,32,34,36 Gauge Pack",
+    "brand": "Master Wire Supply",
+    "url": "https://www.amazon.com/product/dp/B07DGD2PVF",
+    "asin": "B07DGD2PVF",
+    "deal_badge": null,
+    "listing_id": "B07DGD2PVF",
+    "price": null,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": null,
+    "currency_symbol": null,
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.6,
+    "total_ratings": 272,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": null,
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": null,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/81tdTlmBDhL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/81tdTlmBDhL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/619uhoYdfmL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51C07KhMaSL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51bmDcg9CCL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/5130Ko8WDcL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51HafUDu69L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51SB5EHf0rL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51p8B+sLhbL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/619uhoYdfmL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "MasterWireSupply"
+      },
+      {
+        "name": "Material",
+        "value": "Nichrome"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "SingleStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "36.0"
+      }
+    ],
+    "features": [
+      "Wire for Industrial and hobby hot-wire foam cutters, heaters, hair dryers, kettles, refrigerators, ect…",
+      "Nichrome 80 Wire",
+      "8 Gauges included. 8 spools, 550 feet of wire total",
+      "1 - 50 ft spool of each 22, 24, 26, 28, 30 Gauge wire and",
+      "1 - 100 ft spool of each 32, 34, 36 gauge Nichrome 80 Wire"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "ProductDimensions",
+        "value": "6.8x3.4x3.4inches;10.41ounces"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "CoolerFive"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "June1,2018"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "MasterWireSupply"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07DGD2PVF"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#521,056inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#2,365inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.64.6outof5stars272ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 521056
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 2365
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "75%",
+      "4 star": "14%",
+      "3 star": "8%",
+      "2 star": "1%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the wire to be of good quality and consider it a great value.",
+    "review_aspects": [
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Daniel Wilson",
+        "review_title": "Nichrome wire",
+        "rating": 5,
+        "review_text": "Great quality, reasonably priced. I would buy this product again. It came packaged well and came quick. Amazon never let's me down.....\nRead more",
+        "date": "2023-06-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "dravencrow0",
+        "review_title": "Works",
+        "rating": 5,
+        "review_text": "Works awesome for building coils for vaping.\nRead more",
+        "date": "2024-06-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ernest",
+        "review_title": "Worth every penny!",
+        "rating": 5,
+        "review_text": "Great product, great value. BUY IT!\nRead more",
+        "date": "2020-10-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "MaleficMaster666",
+        "review_title": "99 Problems and I Found One Here",
+        "rating": 4,
+        "review_text": "I’ve had this product before, but this time my only complaint is the 36g spool. I don’t know if it was a machine or a person that wrapped that one, but it was wrapped in on itself so I have to continually unwrap it every few feet. Just because of that the 36g feels unusable to me.\nRead more",
+        "date": "2018-07-24",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Multiple gauge sets along with mfg info, was a god send!",
+        "rating": 5,
+        "review_text": "Cuts production time. Previously used heat guns making 40x60 plex boxes. Multiple gauges/cost = multiple rig configuration! Great!\nRead more",
+        "date": "2023-06-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Kamilla",
+        "review_title": "Resistivity lab",
+        "rating": 5,
+        "review_text": "Used this to calculate resistivity of a wire using vernier and graphical analysis. Good results\nRead more",
+        "date": "2022-07-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Carol",
+        "review_title": "Much Unneeded",
+        "rating": 3,
+        "review_text": "Overall--a good value, but a lot of the wire seems too thing to use.\nRead more",
+        "date": "2024-07-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "james",
+        "review_title": "Is as described and easy to use.",
+        "rating": 5,
+        "review_text": "I want to start by saying that I’ve never made coils before and just recently switched to an RDA from a sub ohm tank. It’s easy to use as far as I can tell. I’ve made a set of twisted coils, a Clapton and fused Clapton all from watching online videos and they all worked great.  I will buy again.\nRead more",
+        "date": "2018-10-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71Q9sgvIODL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71LtqElTUiL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Vlaka455",
+        "review_title": "AWESOME DEAL AND NICHROME IS NOT KANTHAL!",
+        "rating": 5,
+        "review_text": "I was looking to repair a kiln.  I thought nichrome was the right wire.  It worked for a little while but nichrome tarnished more than kanthal.  At least that is what I figured out from the internet.However this nichrome is really nice.  Apparently it is meant for things that heat up fast and for shorter periods of time.The nichrome is good for an incredible amount of heat.  So I got this sample pack to use as tie wire and to fix smaller appliances like hair dryer or heat guns.  The wire appears to be American made and supplied.The company also sells Kanthal wire too!  So I bought a bunch of this to fix my mistake.  To be clear the nichrome wire might have worked.  I had wrapped the broken wires (they were cast in refractory cement) around a stainless steel m3 bolt and nut.  I wrapped the nichrome around that and then cast them into newly repaired refractory.  All of my connections failed by going higher resistance.  I would assume the nichrome might have worked if I had used ONLY nichrome and had no connections to the unknown existing wire.The wire is very consistent and measured out at the resistances I expected.  I will try to use the thinner wires to wire-wrap the connections with plenty of overlap between the old wire and the new Kanthal.  Since I don't care about continuity between the nichrome and anything else the different in material shouldn't matter since it is there for mechanical binding only.\nRead more",
+        "date": "2025-02-15",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Fern Comeau",
+        "review_title": "Product is exactly as described",
+        "rating": 5,
+        "review_text": "This product worked perfect for our project. I would buy it again for sure. It gave us many options to use.\nRead more",
+        "date": "2023-03-27",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": false
+  },
+  "credits_used": 1,
+  "remaining_credits": 40.0
+}

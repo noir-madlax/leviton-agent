@@ -1,0 +1,515 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0B19HVHHZ",
+  "result_count": 1,
+  "detail": {
+    "name": "BINNEKER 24 Gauge PVC 1007 Solid Electric Wire Red and Black Each 50 ft 24 AWG 1007 Hook Up Tinned Copper Wire",
+    "brand": "BINNEKER",
+    "url": "https://www.amazon.com/product/dp/B0B19HVHHZ",
+    "asin": "B0B19HVHHZ",
+    "deal_badge": null,
+    "listing_id": "B0B19HVHHZ",
+    "price": 12.05,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.6,
+    "total_ratings": 142,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery August 5 - 7 on orders shipped by Amazon over $35",
+      "Or fastest delivery Tuesday, August 5"
+    ],
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": null,
+    "variant": {
+      "material_type": {
+        "name": "18 AWG PVC Solid Wire",
+        "asin": "B0BXL55W3P",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0BXL55W3P"
+      },
+      "size_name": {
+        "name": "2 Colors Each 50ft",
+        "in_stock": true,
+        "asin": "B0B19HVHHZ",
+        "url": "https://www.amazon.com/dp/B0B19HVHHZ",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/51Qh34lUHCL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41VRBNcDy3L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31RgUtuiCyL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41fIFSg4oVL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/417ujKlcaBL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51Qh34lUHCL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Red,Black"
+      },
+      {
+        "name": "Brand",
+        "value": "BINNEKER"
+      },
+      {
+        "name": "Material",
+        "value": "24AWGPVCSolidWire"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "SingleStrand"
+      },
+      {
+        "name": "Voltage",
+        "value": "300Volts"
+      }
+    ],
+    "features": [
+      "Solid Single Core Wire 1007 24 AWG Hook-Up Wire: Solid tinned copper conductor with a PVC sheath.",
+      "Good abrasion resistance and resistance to substances such as oil,solvents and chemicals: PVC Insulation that can withstand heats of up to +105°C.",
+      "Easy handling,stripping,and termination: Low-fray design.",
+      "Flame retardant: VW-1.",
+      "This hook-up wire is recommended for internal wiring of electrical or electronic equipment."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "Red, Black"
+      },
+      {
+        "name": "Brand",
+        "value": "BINNEKER"
+      },
+      {
+        "name": "Material",
+        "value": "24 AWG PVC Solid Wire"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "Single Strand"
+      },
+      {
+        "name": "Voltage",
+        "value": "300 Volts"
+      },
+      {
+        "name": "No. of wires",
+        "value": "1"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "binneker.com"
+      },
+      {
+        "name": "UPC",
+        "value": "721678272444"
+      },
+      {
+        "name": "Part Number",
+        "value": "02SO2450C2"
+      },
+      {
+        "name": "Item Weight",
+        "value": "9.1 ounces"
+      },
+      {
+        "name": "Package Dimensions",
+        "value": "3.03 x 2.76 x 2.72 inches"
+      },
+      {
+        "name": "Country of Origin",
+        "value": "China"
+      },
+      {
+        "name": "Item model number",
+        "value": "02SO2450C2"
+      },
+      {
+        "name": "Size",
+        "value": "2 Colors Each 50ft"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0B19HVHHZ"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.6  4.6 out of 5 stars    \n    142 ratings   \n\n\n 4.6 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#79,510 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #417 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "May 14, 2022"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 79510
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 417
+      }
+    ],
+    "seller_name": "BINNEKER",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3KDROP7BWHAFC&asin=B0B19HVHHZ&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "material_type": [
+        {
+          "name": "18 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0BXL55W3P",
+          "url": "https://www.amazon.com/dp/B0BXL55W3P",
+          "selected": true
+        },
+        {
+          "name": "20 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0BXL5XK8J",
+          "url": "https://www.amazon.com/dp/B0BXL5XK8J",
+          "selected": true
+        },
+        {
+          "name": "22 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0BXL7F7RN",
+          "url": "https://www.amazon.com/dp/B0BXL7F7RN",
+          "selected": true
+        },
+        {
+          "name": "24 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0B19HVHHZ",
+          "url": "https://www.amazon.com/dp/B0B19HVHHZ",
+          "selected": true
+        },
+        {
+          "name": "26 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0CC4XJY9S",
+          "url": "https://www.amazon.com/dp/B0CC4XJY9S",
+          "selected": true
+        },
+        {
+          "name": "28 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0B19FQLG9",
+          "url": "https://www.amazon.com/dp/B0B19FQLG9",
+          "selected": true
+        },
+        {
+          "name": "30 AWG PVC Solid Wire",
+          "in_stock": true,
+          "asin": "B0B19F6571",
+          "url": "https://www.amazon.com/dp/B0B19F6571",
+          "selected": true
+        }
+      ],
+      "size_name": [
+        {
+          "name": "2 Colors Each 5ft",
+          "in_stock": true,
+          "asin": "B0BXL6F24V",
+          "url": "https://www.amazon.com/dp/B0BXL6F24V",
+          "selected": true
+        },
+        {
+          "name": "2 Colors Each 10ft",
+          "in_stock": true,
+          "asin": "B0BXL7G15F",
+          "url": "https://www.amazon.com/dp/B0BXL7G15F",
+          "selected": true
+        },
+        {
+          "name": "2 Colors Each 50FT",
+          "in_stock": true,
+          "asin": "B0CC4YJSCB",
+          "url": "https://www.amazon.com/dp/B0CC4YJSCB",
+          "selected": true
+        },
+        {
+          "name": "2 Colors Each 50ft",
+          "in_stock": true,
+          "asin": "B0B19HVHHZ",
+          "url": "https://www.amazon.com/dp/B0B19HVHHZ",
+          "selected": true
+        },
+        {
+          "name": "2 Colors Each 100FT",
+          "in_stock": true,
+          "asin": "B0CC4VF2C1",
+          "url": "https://www.amazon.com/dp/B0CC4VF2C1",
+          "selected": true
+        },
+        {
+          "name": "2 Colors Each 100ft",
+          "in_stock": true,
+          "asin": "B0B19J3FYP",
+          "url": "https://www.amazon.com/dp/B0B19J3FYP",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "76%",
+      "4 star": "13%",
+      "3 star": "6%",
+      "2 star": "2%",
+      "1 star": "3%"
+    },
+    "reviews_summary": "Customers find the wire to be excellent for smaller projects. They appreciate its quality, with one customer specifically noting its solid copper construction.",
+    "review_aspects": [
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Tom Reynolds",
+        "review_title": "wire",
+        "rating": 5,
+        "review_text": "good deal, as described, would order again\nRead more",
+        "date": "2025-04-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Terry Twedt",
+        "review_title": "This wire appears to be good quality.",
+        "rating": 5,
+        "review_text": "This seller ships product quickly and packages the product very well.  I would recommend this seller and will purchase again from them.\nRead more",
+        "date": "2025-01-01",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 18 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 50FT"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "High Quality Wire - 22AWG is not for Power Distribution Use",
+        "rating": 5,
+        "review_text": "This is a great wire, but I caution buyers that 22AWG wire should not be used in power applications (circuit panels) as the imagery suggests. The maximum current rating for solid core 22AWG wire is 5A, while most home circuits exceed this. Even the largest size available on Amazon (18AWG) is rated for less than 10A.\nRead more",
+        "date": "2024-03-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Chris Cherest",
+        "review_title": "22 gauge wire.",
+        "rating": 4,
+        "review_text": "Great value and worked perfectly. Exactly what I wanted. Solid copper wire. As opposed to the strands that break so easily. This was great for my train set up.\nRead more",
+        "date": "2025-03-01",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Danewfixer",
+        "review_title": "Excellent wire for smaller projects",
+        "rating": 5,
+        "review_text": "I used these for an LED project and they worked great: easy to strip, easy to solder, conduct fine. Since they're thin gauge, they're reasonably flexible, even though they're solid core. Not much more you can ask out of wire!\nRead more",
+        "date": "2024-03-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 30 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Thomas S. Tipton",
+        "review_title": "Good wire for projects",
+        "rating": 5,
+        "review_text": "What can I say it is wire and a good product for the price\nRead more",
+        "date": "2024-02-13",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "stephen fredrick",
+        "review_title": "Great wire",
+        "rating": 5,
+        "review_text": "This wire is great. Perfect bus wires for my model railroad\nRead more",
+        "date": "2023-06-23",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dana Heaton",
+        "review_title": "Bend the wire couple times and it breaks off, works other wise",
+        "rating": 3,
+        "review_text": "Allot of fun little radio build and use it often to listen to local music radio stations.  Once stripped, the wire is very brittle, meaning you bend it back and forth a couple times for any reason it will break off.  It will serve my purposes, but need be very careful to not bend too much.  I really didn't expect it to be that way and cannot add the 2 extra stars because of that those reasons.\nRead more",
+        "date": "2025-02-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 24 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Leonard Nelson",
+        "review_title": "Good stuff",
+        "rating": 5,
+        "review_text": "It is what it’s supposed to be.\nRead more",
+        "date": "2025-06-13",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Alain Patry",
+        "review_title": "Parfait",
+        "rating": 5,
+        "review_text": "Parfait\nRead more",
+        "date": "2024-08-08",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Michel",
+        "review_title": "Excellent value.",
+        "rating": 5,
+        "review_text": "Excellent quality at an excellent price.  Very easy to use and in large quantity.\nRead more",
+        "date": "2025-04-29",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Chinasyndrome",
+        "review_title": "quality solid core wire",
+        "rating": 5,
+        "review_text": "so, many people would stick with stranded wire but my experience, in electronic building and proto-typing says use solid core. this stuff is perfectos.\nRead more",
+        "date": "2024-04-20",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 22 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Andrew M",
+        "review_title": "Great",
+        "rating": 5,
+        "review_text": "Just what i ordered\nRead more",
+        "date": "2024-03-27",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Material Type: 20 AWG PVC Solid Wire",
+          "Size: 2 Colors Each 100ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 45.0
+}

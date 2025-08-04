@@ -1,0 +1,432 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B07P6GYHVP",
+  "result_count": 1,
+  "detail": {
+    "name": "25ft Rope Covered Lamp Twisted Wire,PRUNLLA Vintage 18/2 Industrial Electrical Hemp Rope Cord,18-Gauge Antique Style for Retro Lamp,DIY Projects",
+    "brand": "PRUNLLA",
+    "url": "https://www.amazon.com/product/dp/B07P6GYHVP",
+    "asin": "B07P6GYHVP",
+    "deal_badge": null,
+    "listing_id": "B07P6GYHVP",
+    "price": 16.99,
+    "price_reduced": null,
+    "price_per_unit": 0.68,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.6,
+    "total_ratings": 291,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 10 hrs 43 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "25ft",
+        "asin": "B07J4G6C6C",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B07J4G6C6C"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61Z4YdMGi2L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61Z4YdMGi2L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51K-4eXvgPL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/4134WZfJ+YS._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Bt01WAkyL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41ZQ2IZgk4L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/418MLMkPuGS._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51t9nHH3K0L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51K-4eXvgPL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "HempRope"
+      },
+      {
+        "name": "Brand",
+        "value": "PRUNLLA"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "2"
+      },
+      {
+        "name": "Gauge",
+        "value": "18.0"
+      }
+    ],
+    "features": [
+      "MATERIAL: High quality textile braided cord",
+      "WIRE TYPE: 25ft, 18-gauge, 2-conductor, Rated Voltage: 300V; Rated Temperature: 105℃",
+      "SAFETY:18AWG Pure Copper,Semi-rigid PVP Insulation Cotton&Hemp Cloth Covered Twisted 2 Conductor wire",
+      "VINTAGE STYLE:This products not only give us an old-fashioned look, but also to make any pendant lighting, table lamp, floor lamp, or fan more beautiful",
+      "SUITABLE:For pendant lighting or light portable fixtures,replace worn, old or damaged appliance cords"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "PackageDimensions",
+        "value": "8.74x8.07x2.32inches;10.23ounces"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "October8,2018"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "PRUNLLA"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07J4G6C6C"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#173,789inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#870inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.64.6outof5stars291ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 173789
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 870
+      }
+    ],
+    "seller_name": "PRUNLLA",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3CMMDLZRD726T&asin=B07J4G6C6C&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "25ft",
+          "in_stock": true,
+          "asin": "B07J4G6C6C",
+          "url": "https://www.amazon.com/dp/B07J4G6C6C",
+          "selected": true
+        },
+        {
+          "name": "32.8ft",
+          "in_stock": true,
+          "asin": "B07P7K6CW1",
+          "url": "https://www.amazon.com/dp/B07P7K6CW1",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "82%",
+      "4 star": "7%",
+      "3 star": "6%",
+      "2 star": "4%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the wire rope looks authentic, with one noting it feels like real rope. The product functions well and is easy to use, with one customer mentioning it works great for designing fixtures. They appreciate its light quality, with one using it as an outdoor kitchen pulley light.",
+    "review_aspects": [
+      {
+        "name": "Look",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Light quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "PAUL",
+        "review_title": "Excellent cord quality!",
+        "rating": 5,
+        "review_text": "Very realistic old cloth twisted wire cord!\nRead more",
+        "date": "2022-12-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Joseph Rivas",
+        "review_title": "Good for hiding power cords",
+        "rating": 5,
+        "review_text": "Great for hiding power cords to use with grow lights. Looks great and gives it a real clean and artistic look.\nRead more",
+        "date": "2023-08-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/81h3tOpl9TL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "M & L Bullen",
+        "review_title": "Worked great!",
+        "rating": 5,
+        "review_text": "Really happy with it. It work great for the rustic oil lamps my husband converted to electricity for our rustic style basement. At cute way to hind the wiring.\nRead more",
+        "date": "2025-05-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 32.8ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Mike",
+        "review_title": "Wire in rope",
+        "rating": 5,
+        "review_text": "Used to make a nautical light for my lake cottage. Easy to use and can not tell the wire is inside. I would recommend it\nRead more",
+        "date": "2025-01-13",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "BCN",
+        "review_title": "Looks great",
+        "rating": 5,
+        "review_text": "Looks great in our nautical-themed bar, connected to a pair of brass lanterns.  Really looks like rope and allows for a subtle but unmistakable nod to old ships.Cutting the wrap was a bit of a challenge, even with a razor sharp knife — it does tend to fray a little.  But careful persistence paid off and before long I had two equal length cords to power the lights.I don’t see myself needing more, but if that should ever change I won’t hesitate to purchase this again.\nRead more",
+        "date": "2019-11-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Scott R.",
+        "review_title": "As advertised.  Worked and looked great",
+        "rating": 5,
+        "review_text": "Worked great\nRead more",
+        "date": "2023-01-30",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Loved the idea of an electric cord wrapped in rope.",
+        "rating": 5,
+        "review_text": "Used for an outdoor summer kitchen pulley light.Perfect for the look we were trying to achieve.\nRead more",
+        "date": "2020-10-30",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/716jhGlCynL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "gayle",
+        "review_title": "Worked for our application",
+        "rating": 4,
+        "review_text": "We used this to create rustic hanging fixtures.  I love the look, however it was a bit difficult to get through the socket, and had to cut away the rope to insert the wires only.  It's a risk you take trying to be crafty!\nRead more",
+        "date": "2019-05-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 32.8ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sue Rogers",
+        "review_title": "Great product",
+        "rating": 5,
+        "review_text": "Made so many projects with this\nRead more",
+        "date": "2023-08-17",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25ft"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Perfect DIY lighting accessories, with which you can create your own special lamp.",
+        "The appearance of restoring ancient ways to make it suitable for a variety of scenarios, both warm and beautiful.",
+        "Product specification",
+        "AWG Size:18",
+        "No. of Conductor:2",
+        "Appearance:Twisted",
+        "Length (1 Roll) :25 Feet/7.62 Meters",
+        "Conductor Material:Tinned Copper",
+        "Insulation Material:Polyvinylchloride (PVC)",
+        "Max Temp.:105°C",
+        "Voltage Rating:300V",
+        "Braided Jacket:Hemp",
+        "● Indoor Use Only",
+        "Multi-scene applicability",
+        "These twisted wires are delicate for retro-styled table lamps, floor lamps and all kinds of new-material lamps, such as Plumbing Pipe Lamps, Wooden lamps, Wrought iron Lamps, and so on.",
+        "Or you can use it with vintage bulbs or lamp holders, directly to hang in the home or cafe is also a good choice.",
+        "The more bright colour of them can also be used for modern lamps, as long as dare to think, it can bring you a new different design.",
+        "Note:",
+        "Each cord has 2 wires surrounded by a jacket and an insulated cover finished with rayon cloth and then twisted.",
+        "The color of the actual product may vary slightly based on your computer monitor settings.",
+        "Please consider the electrical requirements of your application. If you have any doubts, call a qualified electrician.",
+        "More colors will be listed in the near future."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/2129028b-49f9-4080-a31c-2c23fdbb6b01.__CR0,0,900,270_PT0_SX600_V1___.jpg",
+          "alt": "PRUNLLA"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/2129028b-49f9-4080-a31c-2c23fdbb6b01.__CR0,0,900,270_PT0_SX600_V1___.jpg",
+          "alt": "PRUNLLA"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/622ebb62-8162-481f-af4b-59c5a041b728.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "twisted wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/622ebb62-8162-481f-af4b-59c5a041b728.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "twisted wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/16ee8a42-f3d7-4121-99d0-c057a0b0ec30.__CR0,0,490,490_PT0_SX300_V1___.jpg",
+          "alt": "rope wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/16ee8a42-f3d7-4121-99d0-c057a0b0ec30.__CR0,0,490,490_PT0_SX300_V1___.jpg",
+          "alt": "rope wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/1abd2646-af46-4c99-8ea8-b68008c2a3e4.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "hemp rope"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/1abd2646-af46-4c99-8ea8-b68008c2a3e4.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "hemp rope"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/59e6eab7-32f8-49c3-b083-8b0d94877bfa.__CR0,0,564,564_PT0_SX300_V1___.jpg",
+          "alt": "rope wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/59e6eab7-32f8-49c3-b083-8b0d94877bfa.__CR0,0,564,564_PT0_SX300_V1___.jpg",
+          "alt": "rope wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/db425a02-90e2-4038-89c2-5d796890238f.__CR0,0,200,400_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/f36d9984-f454-4264-95e6-891be0684e81.__CR0,0,200,400_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/534f2792-5537-4589-b0f0-27fbdbdca7e1.__CR0,0,200,400_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/397c5915-7e9a-44d1-9579-9bedc219dd1c.__CR0,0,200,400_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/5fbc0ea6-47eb-4b8e-b6ac-968c2cc02fbc.__CR0,0,300,600_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/84586298-339b-4c3b-883d-b4d875a7a81c.__CR0,0,200,400_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/1ad5e4d0-940e-49dc-add2-443987ffc92b.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "cloth wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/sc/1ad5e4d0-940e-49dc-add2-443987ffc92b.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "cloth wire"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 52.0
+}

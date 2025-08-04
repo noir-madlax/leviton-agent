@@ -37,7 +37,14 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         # Set filters if provided and no selected_asins
         if filters and not selected_asins:
             from core.models.filters import ProjectFilters
-            project_filters = ProjectFilters.from_dict(filters)
+            # Handle both dict and FiltersModel objects
+            if hasattr(filters, 'dict'):
+                # FiltersModel object - convert to dict
+                filters_dict = filters.dict()
+            else:
+                # Already a dict
+                filters_dict = filters
+            project_filters = ProjectFilters.from_dict(filters_dict)
             self.set_project_filters(project_filters)
         
         logger.info(f"ReviewAnalysisChartService initialized for project {project_id}")
@@ -92,33 +99,41 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 options=options
             )
             
-            if not categories_data:
+            if not categories_data or not categories_data.get('categories'):
                 return self._get_empty_top_categories_response()
             
+            # Extract categories and aggregated cause summary
+            categories_list = categories_data['categories']
+            aggregated_cause_summary = categories_data.get('aggregated_cause_summary', [])
+            
             # Calculate summary statistics
-            summary_stats = ReviewProcessingUtils.aggregate_category_metrics(categories_data)
+            summary_stats = ReviewProcessingUtils.aggregate_category_metrics(categories_list)
             
             # Format response
             categories = []
-            for cat_data in categories_data:
+            for cat_data in categories_list:
                 category = {
                     'category_id': cat_data['category_pk'],
                     'category_name': cat_data['category_name'],
                     'definition': cat_data['definition'],
                     'aspect_type': cat_data['aspect_type'],
-                    'total_mentions': cat_data['mentions'],
+                    'total_mentions': cat_data['total_mentions'],
                     'positive_mentions': cat_data['positive_mentions'],
                     'negative_mentions': cat_data['negative_mentions'],
                     'neutral_mentions': cat_data['neutral_mentions'],
-                    'unique_reviews': cat_data['reviews'],
-                    'positive_ratio': cat_data['positive_ratio']
+                    'total_reviews': cat_data['total_reviews'],
+                    'positive_reviews': cat_data['positive_reviews'],
+                    'negative_reviews': cat_data['negative_reviews'],
+                    'positive_ratio': cat_data['positive_ratio'],
+                    'cause_data': cat_data.get('cause_data', [])  # Add embedded cause data
                 }
                 categories.append(category)
             
             result = {
                 'categories': categories,
                 'total_categories': len(categories),
-                'summary_stats': summary_stats
+                'summary_stats': summary_stats,
+                'aggregated_cause_summary': aggregated_cause_summary  # Add aggregated cause summary
             }
             
             logger.info(f"Top categories service returned data for {len(categories)} categories")
@@ -134,7 +149,9 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         limit: int = 100,
         offset: int = 0,
         sort_by: str = "review_id",
-        sort_order: str = "desc"
+        sort_order: str = "desc",
+        sentiment_filter: Optional[str] = None,
+        rating_filter: Optional[str] = None
     ) -> Dict[str, Any]:
         """Get reviews for a specific category with product information.
         
@@ -144,6 +161,8 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             offset: Offset for pagination (default: 0)
             sort_by: Sort field (review_id, date, rating, sentiment)
             sort_order: Sort direction (asc, desc)
+            sentiment_filter: Filter by sentiment (positive, negative). If None, returns all sentiments.
+            rating_filter: Filter by rating (high: 4-5 stars, mid: 3 stars, low: 1-2 stars). If None, returns all ratings.
             
         Returns:
             Dict containing reviews with product information and pagination
@@ -156,42 +175,34 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
             if not filtered_asins:
                 return self._get_empty_reviews_response(category_id)
             
-            # Get category information first
-            category_info = await self._get_category_info(category_id)
-            
-            # Get all review data for this category
-            all_reviews_data = await self.review_data_service.get_reviews_by_category(
+            # Get all review data for this category using centralized service
+            result = await self.review_data_service.get_reviews_by_category(
                 project_id=self.project_id,
                 category_id=category_id,
                 asins=filtered_asins,
                 sort_by=sort_by,
-                sort_order=sort_order
+                sort_order=sort_order,
+                sentiment_filter=sentiment_filter,
+                rating_filter=rating_filter
             )
             
-            if not all_reviews_data:
+            # Get category information from centralized service
+            category_info = result.get('category_info')
+            
+            if not result or not result.get('reviews'):
                 return self._get_empty_reviews_response(category_id, category_info)
             
-            # Deduplicate reviews and aggregate aspects
-            deduplicated_reviews = self._deduplicate_and_aggregate_reviews(all_reviews_data)
+            # Use the already deduplicated reviews from the centralized service
+            deduplicated_reviews = result['reviews']
             
             # Apply pagination
             total_reviews = len(deduplicated_reviews)
             paginated_reviews = deduplicated_reviews[offset:offset + limit]
             
-            # Convert to response format
+            # Convert to response format (centralized service already provides the correct structure)
             reviews = []
             for review_data in paginated_reviews:
-                # Convert aspects
-                aspects = []
-                for aspect_data in review_data['aspects']:
-                    aspect = {
-                        'aspect_description': aspect_data['aspect_description'],
-                        'sentiment': aspect_data['sentiment'],
-                        'aspect_type': aspect_data['aspect_type']
-                    }
-                    aspects.append(aspect)
-                
-                # Create review with product information
+                # Create review with product information (centralized service already has correct structure)
                 review = {
                     'review_id': review_data['review_id'],
                     'review_title': review_data.get('review_title'),
@@ -199,11 +210,11 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                     'rating': review_data.get('rating'),
                     'verified': review_data.get('verified'),
                     'review_date': review_data.get('review_date'),
-                    'aspects': aspects,
+                    'aspects': review_data['aspects'],  # Already in correct format from centralized service
                     # Product information (required for review analysis)
                     'product_id': review_data['product_id'],
-                    'product_title': review_data.get('product_title'),
-                    'product_brand': review_data.get('product_brand'),
+                    'product_title': review_data.get('title'),  # Centralized service uses 'title'
+                    'product_brand': review_data.get('brand'),  # Centralized service uses 'brand'
                     'product_url': review_data.get('product_url')
                 }
                 reviews.append(review)

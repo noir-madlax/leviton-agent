@@ -496,6 +496,154 @@ export class DatabaseService {
     }
   }
 
+  // 🔑 Get competitor matrix view data via new API
+  async getCompetitorMatrixViewData(
+    projectId: string,
+    selectedAsins: string[],
+    aspectType: 'phy_perf' | 'use' = 'phy_perf'
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      aspect_categories: Array<{
+        category_pk: number
+        category_name: string
+        definition: string
+      }>
+      product_aspect_data: Array<{
+        asin: string
+        aspect_data: Array<{
+          category_pk: number
+          total_reviews: number
+          positive_reviews: number
+          negative_reviews: number
+        }>
+      }>
+      selected_asins: string[]
+      aspect_type: string
+      total_categories: number
+    }
+  }> {
+    try {
+      const requestBody = {
+        project_id: projectId,
+        selected_asins: selectedAsins,
+        aspect_type: aspectType,
+        options: {
+          sort_by: "mentions",
+          sort_direction: "desc",
+          max_categories: 10
+        }
+      }
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/matrix-view`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching competitor matrix view data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get reviews for specific category and product
+  async getCompetitorReviews(
+    projectId: string,
+    categoryId: number,
+    productId: string,
+    limit: number = 100,
+    offset: number = 0,
+    sortBy: 'review_id' | 'date' | 'rating' | 'sentiment' = 'review_id',
+    sortOrder: 'asc' | 'desc' = 'desc',
+    sentimentFilter?: 'positive' | 'negative',
+    ratingFilter?: 'high' | 'mid' | 'low'
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      reviews: Array<{
+        review_id: string
+        review_title: string
+        review_text: string
+        rating: number
+        verified: boolean
+        review_date: string
+        aspects: Array<{
+          aspect_description: string
+          sentiment: string
+          aspect_type: string
+        }>
+        category_name: string
+        category_definition: string
+        aspect_type: string
+      }>
+      total_reviews: number
+      project_id: string
+      category_id: number
+      product_id: string
+      category_info: {
+        category_pk: number
+        name: string
+        definition: string
+        aspect_type: string
+        stage: string
+      }
+      pagination: {
+        limit: number
+        offset: number
+        has_more: boolean
+      }
+    }
+  }> {
+    try {
+      const requestBody = {
+        project_id: projectId,
+        category_id: categoryId,
+        product_id: productId,
+        limit: limit,
+        offset: offset,
+        sort_by: sortBy,
+        sort_order: sortOrder,
+        sentiment_filter: sentimentFilter || null,
+        rating_filter: ratingFilter || null
+      }
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/reviews`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching competitor reviews:', error)
+      throw error
+    }
+  }
+
   // 🔑 Get competitor analysis data with project filtering via backend API
   async getCompetitorAnalysisDataByProject(projectId: string, categoryFilters?: string[], selectedAsins?: string, packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     targetProducts: string[]
@@ -618,7 +766,206 @@ export class DatabaseService {
     }
   }
 
-  // 📋 Data Confirmation 功能 - 保留直接Supabase访问
+  // 🔑 Get top categories data for review analysis
+  async getTopCategoriesData(
+    projectId: string,
+    aspectType: 'phy_perf' | 'use' = 'phy_perf',
+    options?: {
+      sortBy?: 'negative_reviews' | 'positive_reviews' | 'total_reviews' | 'positive_ratio'
+      sortDirection?: 'desc' | 'asc'
+      maxCategories?: number
+      minReviews?: number
+      minPositiveReviews?: number
+      returnTopCauseCategories?: {
+        sentiment?: '+' | '-'
+        limit?: number
+      }
+    },
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
+    }
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      categories: Array<{
+        category_pk: number
+        category_name: string
+        definition: string
+        aspect_type: string
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
+        positive_ratio: number
+        cause_data?: Array<{
+          cause_category_pk: number
+          cause_category_name: string
+          total_reviews: number
+          positive_reviews: number
+          negative_reviews: number
+          aspects: Array<{
+            aspect_description: string
+            sentiment: string
+          }>
+        }>
+      }>
+      total_categories: number
+      summary_stats: {
+        total_categories: number
+        total_reviews: number
+        total_positive_reviews: number
+        total_negative_reviews: number
+        overall_positive_ratio: number
+      }
+      aggregated_cause_summary?: Array<{
+        cause_category_pk: number
+        cause_category_name: string
+        total_reviews: number
+        total_positive_reviews: number
+        total_negative_reviews: number
+        rank: number
+        aspects: Array<{
+          aspect_description: string
+          sentiment: string
+        }>
+      }>
+    }
+  }> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        filters: filters || {},
+        options: {
+          aspect_type: aspectType,
+          sort_by: options?.sortBy || 'negative_reviews',
+          sort_direction: options?.sortDirection || 'desc',
+          max_categories: options?.maxCategories || 10,
+          min_reviews: options?.minReviews || 5,
+          min_positive_reviews: options?.minPositiveReviews || 2,
+          return_top_cause_categories: options?.returnTopCauseCategories ? {
+            sentiment: options.returnTopCauseCategories.sentiment,
+            limit: options.returnTopCauseCategories.limit
+          } : undefined
+        }
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching top categories data:', error)
+      throw error
+    }
+  }
+
+  // � Get reviews by category for detailed view
+  async getReviewsByCategory(
+    projectId: string,
+    categoryId: number,
+    options?: {
+      limit?: number
+      offset?: number
+      sortBy?: 'review_id' | 'rating' | 'review_date'
+      sortOrder?: 'desc' | 'asc'
+      sentimentFilter?: 'positive' | 'negative'
+      ratingFilter?: 'high' | 'mid' | 'low'
+    },
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, any>
+      asins?: string[]
+    }
+  ): Promise<{
+    status: string
+    message?: string
+    timestamp: string
+    data: {
+      reviews: Array<{
+        review_id: number
+        product_id: string
+        review_text: string
+        rating: number
+        verified: boolean
+        review_date: string
+        brand: string
+        sentiment: 'positive' | 'negative' | 'neutral'
+        category_name: string
+        category_definition: string
+        aspects?: Array<{
+          aspect_description: string
+          sentiment: string
+          aspect_type: string
+        }>
+      }>
+      total_count: number
+      category_info: {
+        category_id: number
+        category_name: string
+        definition: string
+      }
+      pagination: {
+        limit: number
+        offset: number
+        has_more: boolean
+      }
+    }
+  }> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        category_id: categoryId,
+        filters: filters || {},
+        limit: options?.limit || 10,
+        offset: options?.offset || 0,
+        sort_by: options?.sortBy || 'review_id',
+        sort_order: options?.sortOrder || 'desc',
+        sentiment_filter: options?.sentimentFilter || null,
+        rating_filter: options?.ratingFilter || null
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return result
+    } catch (error) {
+      console.error('Error fetching reviews by category:', error)
+      throw error
+    }
+  }
+
+  // �📋 Data Confirmation 功能 - 保留直接Supabase访问
   async getDataConfirmationData(filters?: DataConfirmationFilters): Promise<DataConfirmationData> {
     try {
       // 构建查询条件

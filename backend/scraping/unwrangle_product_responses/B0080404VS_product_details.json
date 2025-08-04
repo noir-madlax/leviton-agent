@@ -1,0 +1,319 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0080404VS",
+  "result_count": 1,
+  "detail": {
+    "name": "3M Performance Plus Wire Connector R/Y+JUG, Red/Yellow, Flexible Steel Spring Connectors, Copper, CSA Certified, UL Listed, Jug of 500, 22-8 AWG",
+    "brand": "3M",
+    "url": "https://www.amazon.com/product/dp/B0080404VS",
+    "asin": "B0080404VS",
+    "deal_badge": null,
+    "listing_id": "B0080404VS",
+    "price": 87.44,
+    "price_reduced": null,
+    "price_per_unit": 0.17,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (10) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0080404VS/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.8,
+    "total_ratings": 176,
+    "past_month_sales": "50+ boughtin past month",
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Saturday, August 2. Order within 23 hrs 43 mins. Details"
+    ],
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Industrial & Scientific",
+        "url": "https://www.amazon.com/industrial-scientific-supplies/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Industrial Electrical",
+        "url": "https://www.amazon.com/Electronic-Components/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Wiring & Connecting",
+        "url": "https://www.amazon.com/Interconnects/b/ref=dp_bc_3"
+      },
+      {
+        "name": "Terminals",
+        "url": "https://www.amazon.com/Electrical-Terminals/b/ref=dp_bc_4"
+      },
+      {
+        "name": "IDC Electrical",
+        "url": "https://www.amazon.com/IDC-Electrical-Terminals/b/ref=dp_bc_5"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/51jANMSARyL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/51jANMSARyL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31lhHXLTm3L._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41K16EvpdZL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51jOS2hK6mL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/412NgP4EtBL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31ayV8dElWL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41wzQcoc4xL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31lhHXLTm3L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Red/Yellow"
+      },
+      {
+        "name": "Gauge",
+        "value": "22.0"
+      },
+      {
+        "name": "ConnectorType",
+        "value": "Twiston"
+      },
+      {
+        "name": "ContactMaterial",
+        "value": "Copper"
+      },
+      {
+        "name": "StudSize",
+        "value": "6AWG"
+      }
+    ],
+    "features": [
+      "CERTIFIED CONNECTOR: UL 486C Listed and CSA 22.2 Certified as a pressure wire connector",
+      "FLEXIBLE SPRING: Provides expansion room for use with a wider wire range--22-8 AWG solid and stranded copper conductors",
+      "STRONG AND SECURE: Delivers a powerful grip to ensure a reliable connection",
+      "FLAMMABILITY RATING: UL94 V-2 flammability rating",
+      "WIRE RANGE: 22-8 AWG for solid and/or stranded copper conductors",
+      "DUAL COLOR CODED RED/YELLOW: one connector does the job of two traditional connectors in the majority of applications",
+      "For industrial/occupational use only. Not for consumer sale or use."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "ProductDimensions",
+        "value": "20x20x30.5inches;4Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "80611454515"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "October11,2010"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "3M"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0080404VS"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#39,123inIndustrial&Scientific(SeeTop100inIndustrial&Scientific)#21inIDCElectricalTerminals#13,123inElectricalEquipment"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.84.8outof5stars176ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Industrial & Scientific",
+        "url": "https://www.amazon.com/gp/bestsellers/industrial/ref=pd_zg_ts_industrial",
+        "rank": 39123
+      },
+      {
+        "name": "IDC Electrical Terminals",
+        "url": "https://www.amazon.com/gp/bestsellers/industrial/306727011/ref=pd_zg_hrsr_industrial",
+        "rank": 21
+      },
+      {
+        "name": "Electrical Equipment",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495266/ref=pd_zg_hrsr_hi",
+        "rank": 13123
+      }
+    ],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B0080404VS&ref_=dp_merchant_link",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "91%",
+      "4 star": "3%",
+      "3 star": "6%"
+    },
+    "reviews_summary": "Customers find these wire connectors to be high-quality 3M products that offer good value for money. They appreciate the connectors' versatility, with one customer noting they work well with a wide variety of wire sizes.",
+    "review_aspects": [
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire envelopment",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "RuxRox",
+        "review_title": "Good value and work great",
+        "rating": 5,
+        "review_text": "These are great and a good value.\nRead more",
+        "date": "2025-04-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Scott Yarberry",
+        "review_title": "Best wire nut !",
+        "rating": 5,
+        "review_text": "This wire nut is the best wire nut to carry on a van with limited space , can be used on a wide range of wire gauge.\nRead more",
+        "date": "2023-09-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "John Colombo",
+        "review_title": "Dang good nuts!",
+        "rating": 5,
+        "review_text": "I'm a master electrician, and a owner of a electrical contracting company. The 3M nuts are the only ones we use on every single jobsite. I love the feel of them, and they hook in perfectly every single time. Yes they are a little larger than your cheap-o nuts, but the labor cost savings is more than enough to offset the cost of a deep box or a 4 11/16. I won't use anything else!\nRead more",
+        "date": "2016-07-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sharon S Gunning",
+        "review_title": "easy to use and has a wider range of wire envelopment",
+        "rating": 5,
+        "review_text": "Uou can use these instead of blues on the larger wire sizes I like the blue orange ones cause you can fit 3 # 12's in them and not fill up the box. easy on the fingers.\nRead more",
+        "date": "2023-08-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sean Kelly",
+        "review_title": "This item works on such a wide variety of different size wires.",
+        "rating": 5,
+        "review_text": "Always get a good bite on the wires and love the extra rubber skirt on the bottom for that little bit extra protection.\nRead more",
+        "date": "2023-10-13",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Christopher K.",
+        "review_title": "The Best wire nut",
+        "rating": 5,
+        "review_text": "Very high quality,  perfect size for just about everything.\nRead more",
+        "date": "2022-09-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Michael K.",
+        "review_title": "Highly recommended!",
+        "rating": 5,
+        "review_text": "This 3M product is well worth the extra money spent over the common rigid plastic wire nuts commonly sold in most home supply stores.  The soft pliable shoulders make it far easier to tuck into electrical boxes than the cheaper wire nuts that have flooded the market.\nRead more",
+        "date": "2020-02-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Uberguru",
+        "review_title": "The best, a bit big, but work every time",
+        "rating": 5,
+        "review_text": "These are some of the best wire connectors I have used in 50 years of wiring.  A bit large but great to handle both 2-5 (depending on gauge) wires so easily.My go to unless the box is really crowded.\nRead more",
+        "date": "2022-12-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ethan B",
+        "review_title": "Easy to twist on, and don't shear wires coming off.",
+        "rating": 5,
+        "review_text": "These are pretty good marrettes. I've used them up to 8-10awg with success, more often I'm doing 12 and 14 which these are perfect for. They bite very well, and if you have to take them off they still come off without buggering the copper or shearing it off inside the marrette. I'll be using these for the foreseeable future.\nRead more",
+        "date": "2018-12-02",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Pattern Name: Wire Connector, 22-8"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/05e3e6aba5cb455daa0dfe8199abd931?ref=dp_vse_rvc_0"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 58.0
+}

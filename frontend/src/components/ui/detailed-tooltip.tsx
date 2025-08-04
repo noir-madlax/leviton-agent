@@ -7,7 +7,8 @@ interface DetailedTooltipContent {
   type?: string;
   positiveCount: number;
   negativeCount: number;
-  totalMentions: number;
+  totalMentions?: number;
+  totalReviews?: number;
   satisfactionRate: number;
   additionalInfo?: string[];
 }
@@ -91,16 +92,12 @@ export function DetailedTooltip({ content, children, className = '' }: DetailedT
           {/* Statistics */}
           <div className="space-y-1 mb-3">
             <div className="flex justify-between items-center">
-              <span className="text-green-600">Positive Mentions:</span>
-              <span className="font-medium text-green-700">{content.positiveCount}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-red-600">Negative Mentions:</span>
-              <span className="font-medium text-red-700">{content.negativeCount}</span>
-            </div>
-            <div className="flex justify-between items-center">
               <span className="text-gray-700">Total Mentions:</span>
-              <span className="font-medium text-gray-900">{content.totalMentions}</span>
+              <span className="font-medium text-gray-900">{content.totalMentions || (content.positiveCount + content.negativeCount)}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-700">Unique Reviews:</span>
+              <span className="font-medium text-gray-900">{content.totalReviews}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-blue-700">Satisfaction Rate:</span>

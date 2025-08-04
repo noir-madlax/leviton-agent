@@ -21,12 +21,11 @@ export type ProductType = 'dimmer' | 'light'
 export interface CategoryFeedback {
   category: string
   categoryType: 'Physical' | 'Performance'
-  mentions: number
+  totalReviews: number
   satisfactionRate: number
   negativeRate: number
   positiveCount: number
   negativeCount: number
-  totalReviews: number
   averageRating: number
   topNegativeAspects: string[]
   topPositiveAspects: string[]
@@ -35,13 +34,15 @@ export interface CategoryFeedback {
   // Enhanced fields for tooltips and better UX
   categoryDefinition?: string
   impactedProducts?: number
+  // New field for review detail fetching
+  categoryId?: number
 }
 
 export interface UseCaseFeedback {
   useCase: string
-  totalMentions: number
-  positiveCount: number
-  negativeCount: number
+  totalReviews: number
+  positiveReviews: number
+  negativeReviews: number
   satisfactionRate: number
   categoryType: 'Physical' | 'Performance'
   topSatisfactionReasons: string[]
@@ -50,17 +51,18 @@ export interface UseCaseFeedback {
   // Enhanced fields for better analysis
   categoryDefinition?: string
   productCount?: number
+  // New field for review detail fetching
+  categoryId?: number
 }
 
 export interface ProductPainPoint {
   product: string
   category: string
   categoryType: 'Physical' | 'Performance'
-  mentions: number
+  totalReviews: number
   satisfactionRate: number
   positiveCount: number
   negativeCount: number
-  totalReviews: number
 }
 
 export interface Review {
@@ -74,6 +76,12 @@ export interface Review {
   verified: boolean
   date: string
   brand: string
+  // 🆕 新增字段，向后兼容 - 用于显示每个aspect的详细信息和sentiment
+  aspects?: Array<{
+    description: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    aspect_type?: string
+  }>
 }
 
 // Helper functions moved from deleted static data files

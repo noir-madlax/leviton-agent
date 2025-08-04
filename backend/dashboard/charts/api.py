@@ -16,6 +16,9 @@ from .reviewAnalysis.models import (
 )
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
+from .filters.models import AsinFilterRequest, AsinFilterResponse
+from dashboard.services.base_service import BaseDashboardService
+
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
@@ -128,7 +131,9 @@ async def get_reviews_by_category_product(request: ReviewRetrievalRequest):
             limit=request.limit,
             offset=request.offset,
             sort_by=request.sort_by,
-            sort_order=request.sort_order
+            sort_order=request.sort_order,
+            sentiment_filter=request.sentiment_filter,
+            rating_filter=request.rating_filter
         )
         
         # Convert raw data to response format
@@ -283,7 +288,9 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
             limit=request.limit,
             offset=request.offset,
             sort_by=request.sort_by,
-            sort_order=request.sort_order
+            sort_order=request.sort_order,
+            sentiment_filter=request.sentiment_filter,
+            rating_filter=request.rating_filter
         )
         
         # Convert raw data to response format
@@ -358,4 +365,57 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
         
     except Exception as e:
         logger.error(f"System error in reviews by category: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/filters/asins", response_model=AsinFilterResponse)
+async def get_filtered_asins(request: AsinFilterRequest):
+    """获取过滤后的ASIN列表
+
+    使用链式过滤器系统，根据项目ID和过滤条件返回符合条件的ASIN列表。
+    支持品牌、类别、细分市场和扩展字段的组合过滤。
+
+    Args:
+        request: ASIN过滤器请求，包含：
+                - project_id: 项目ID（必传）
+                - filters: 过滤条件对象（可选），包含：
+                  - categories: 产品类别列表
+                  - brands: 品牌列表
+                  - segments: 细分市场列表
+                  - extend_fields: 扩展字段过滤条件
+
+    Returns:
+        AsinFilterResponse: 继承自BaseResponseModel的响应，包含：
+                          - status: 响应状态
+                          - message: 响应消息
+                          - timestamp: 时间戳
+                          - data: 过滤后的ASIN列表
+
+    Raises:
+        HTTPException: 当请求处理失败时
+    """
+    try:
+        # 创建临时服务实例来使用execute_filtered_query方法
+        class TempFilterService(BaseDashboardService):
+            def get_data(self):
+                return []
+
+        service = TempFilterService(project_id=request.project_id)
+
+        # 使用链式过滤器获取ASIN列表
+        filtered_asins = service.execute_filtered_query(request)
+
+        # 创建响应对象
+        response = AsinFilterResponse(data=filtered_asins)
+
+        logger.info(f"ASIN filtering completed for project {request.project_id}: {len(filtered_asins)} ASINs returned")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in ASIN filtering: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in ASIN filtering: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

@@ -109,18 +109,29 @@ export default function CustomerSentimentScatter({
       brand: string
     }> = []
     
-    // Collect all reviews for this specific product from all categories
+        // Collect all reviews for this specific product from all categories
     Object.entries(allReviewData).forEach(([, reviews]) => {
       const productReviews = reviews.filter(review => review.productId === scatterData.product)
       allProductReviews.push(...productReviews)
     })
-    
+
     if (allProductReviews.length === 0) return
-    
+
     const productName = asinToProductNameMap?.[scatterData.product] || scatterData.product
     
+    // 🆕 为现有数据添加aspects字段并设置正确的category (参考图1实现)
+    const reviewsWithAspects = allProductReviews.map(review => ({
+      ...review,
+      category: review.aspect || review.category, // ✅ 设置为具体的aspect名称作为category显示
+      aspects: review.aspect ? [{
+        description: review.aspect,
+        sentiment: review.sentiment,
+        aspect_type: review.category || 'general'
+      }] : []
+    }))
+    
     openPanel(
-      allProductReviews,
+      reviewsWithAspects,
       `${productName} Reviews`,
       `${scatterData.brand} • ${scatterData.reviewCount} reviews • ${scatterData.avgRating.toFixed(1)} avg rating`,
       { sentiment: true, brand: true, rating: true, verified: true }

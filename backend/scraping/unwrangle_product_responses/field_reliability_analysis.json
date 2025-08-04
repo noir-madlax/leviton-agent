@@ -1,0 +1,629 @@
+{
+  "field_reliability_stats": {
+    "overview": {
+      "count": 18,
+      "examples": [
+        {
+          "column": "color",
+          "asin": "B0CN9FNFZC",
+          "value": "black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f black"
+        },
+        {
+          "column": "color",
+          "asin": "B000UECHCA",
+          "value": "NoColor",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No Color"
+        },
+        {
+          "column": "color",
+          "asin": "B0080404VS",
+          "value": "Red/Yellow",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red/Yellow"
+        },
+        {
+          "column": "color",
+          "asin": "B0CPPWBGT8",
+          "value": "2C-22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 2C-22AWG"
+        },
+        {
+          "column": "color",
+          "asin": "B07CWPTHYH",
+          "value": "Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Black"
+        },
+        {
+          "column": "color",
+          "asin": "B088RC5ZT3",
+          "value": "Red&Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red&Black"
+        },
+        {
+          "column": "color",
+          "asin": "B0C4BBZMN6",
+          "value": "12AWG100FT",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG100FT"
+        },
+        {
+          "column": "color",
+          "asin": "B01ANZRXDI",
+          "value": "Red,Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red,Black"
+        },
+        {
+          "column": "color",
+          "asin": "B08J7WKV6W",
+          "value": "White",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f White"
+        },
+        {
+          "column": "color",
+          "asin": "B0C4P4Z73C",
+          "value": "RedandBlack",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red and Black"
+        },
+        {
+          "column": "color",
+          "asin": "B01BEEL8GK",
+          "value": "BrightNaturalCopper",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Bright Natural Copper"
+        },
+        {
+          "column": "materi",
+          "asin": "B0B19HVHHZ",
+          "value": "24AWGPVCSolidWire",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 24 AWG PVC Solid Wire"
+        },
+        {
+          "column": "materi",
+          "asin": "B01MDKIL5N",
+          "value": "Tin-platedCopper",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Tin-plated Copper"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4GXNNBD",
+          "value": "4",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "termin",
+          "asin": "B09XFBRVYX",
+          "value": "ScrewTerminal",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Screw Terminal"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0B19HVHHZ",
+          "value": "300Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts"
+        },
+        {
+          "column": "voltag",
+          "asin": "B002RL9JAW",
+          "value": "250Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 250 Volts"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0C4P4Z73C",
+          "value": "300Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts"
+        }
+      ]
+    },
+    "features": {
+      "count": 25,
+      "examples": [
+        {
+          "column": "color",
+          "asin": "B0CN9FNFZC",
+          "value": "Red",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f black"
+        },
+        {
+          "column": "color",
+          "asin": "B0080404VS",
+          "value": "RED",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red/Yellow"
+        },
+        {
+          "column": "color",
+          "asin": "B0CPPWBGT8",
+          "value": "Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 2C-22AWG"
+        },
+        {
+          "column": "color",
+          "asin": "B088RC5ZT3",
+          "value": "Red",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red&Black"
+        },
+        {
+          "column": "color",
+          "asin": "B0C4BBZMN6",
+          "value": "Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG100FT"
+        },
+        {
+          "column": "color",
+          "asin": "B01ANZRXDI",
+          "value": "red",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red,Black"
+        },
+        {
+          "column": "color",
+          "asin": "B08J7WKV6W",
+          "value": "Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f White"
+        },
+        {
+          "column": "color",
+          "asin": "B0C4P4Z73C",
+          "value": "black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red and Black"
+        },
+        {
+          "column": "conductor",
+          "asin": "B0C7MLQB5L",
+          "value": "5 conductor",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 4 Conductor"
+        },
+        {
+          "column": "materi",
+          "asin": "B0B19HVHHZ",
+          "value": "tinned copper",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 24 AWG PVC Solid Wire"
+        },
+        {
+          "column": "materi",
+          "asin": "B01MDKIL5N",
+          "value": "PVC",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Tin-plated Copper"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CX1J73YB",
+          "value": "14AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CJF83GTS",
+          "value": "10 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 10AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CPPWBGT8",
+          "value": "2 wires",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSW2L7RC",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4GXNNBD",
+          "value": "18 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0B3H27JG2",
+          "value": "20 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4BBZMN6",
+          "value": "12 Gauge",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C7MLQB5L",
+          "value": "5 Wire",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18 AWG"
+        },
+        {
+          "column": "size",
+          "asin": "B0CPPWBGT8",
+          "value": "2.5m",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 100FT"
+        },
+        {
+          "column": "size",
+          "asin": "B07J4G6C6C",
+          "value": "25ft",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 7.62 M"
+        },
+        {
+          "column": "size",
+          "asin": "B0B3H27JG2",
+          "value": "0.16 m",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0.10m"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0B3H27JG2",
+          "value": "300 Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300V"
+        },
+        {
+          "column": "voltag",
+          "asin": "B08J7WKV6W",
+          "value": "300V",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12v"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0C4P4Z73C",
+          "value": "24V",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts"
+        }
+      ]
+    },
+    "details_table": {
+      "count": 9,
+      "examples": [
+        {
+          "column": "color",
+          "asin": "B000UECHCA",
+          "value": "No Color",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No Color"
+        },
+        {
+          "column": "color",
+          "asin": "B0C4P4Z73C",
+          "value": "Red and Black",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Red and Black"
+        },
+        {
+          "column": "color",
+          "asin": "B01BEEL8GK",
+          "value": "Bright Natural Copper",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Bright Natural Copper"
+        },
+        {
+          "column": "materi",
+          "asin": "B0B19HVHHZ",
+          "value": "24 AWG PVC Solid Wire",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 24 AWG PVC Solid Wire"
+        },
+        {
+          "column": "materi",
+          "asin": "B01MDKIL5N",
+          "value": "Tin-plated Copper",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Tin-plated Copper"
+        },
+        {
+          "column": "termin",
+          "asin": "B09XFBRVYX",
+          "value": "Screw Terminal",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Screw Terminal"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0B19HVHHZ",
+          "value": "300 Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts"
+        },
+        {
+          "column": "voltag",
+          "asin": "B002RL9JAW",
+          "value": "250 Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 250 Volts"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0C4P4Z73C",
+          "value": "300 Volts",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts"
+        }
+      ]
+    },
+    "from_the_manufacturer": {
+      "count": 13,
+      "examples": [
+        {
+          "column": "color",
+          "asin": "B07CWPTHYH",
+          "value": "Red",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Black"
+        },
+        {
+          "column": "conductor",
+          "asin": "B0C7MLQB5L",
+          "value": "4 Conductor",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 4 Conductor"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CX1J73YB",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CPPWBGT8",
+          "value": "12AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSW2L7RC",
+          "value": "22 Gauge",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4GXNNBD",
+          "value": "18 Gauge",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4BBZMN6",
+          "value": "12 Gauge",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C7MLQB5L",
+          "value": "22 Gauge",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18 AWG"
+        },
+        {
+          "column": "size",
+          "asin": "B0CPPWBGT8",
+          "value": "100FT",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 100FT"
+        },
+        {
+          "column": "size",
+          "asin": "B07J4G6C6C",
+          "value": "7.62 M",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 7.62 M"
+        },
+        {
+          "column": "size",
+          "asin": "B0B3H27JG2",
+          "value": "0.10m",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0.10m"
+        },
+        {
+          "column": "voltag",
+          "asin": "B0B3H27JG2",
+          "value": "300V",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300V"
+        },
+        {
+          "column": "voltag",
+          "asin": "B08J7WKV6W",
+          "value": "12v",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12v"
+        }
+      ]
+    },
+    "variant_info": {
+      "count": 12,
+      "examples": [
+        {
+          "column": "conductor",
+          "asin": "B0C7MLQB5L",
+          "value": "3C",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 4 Conductor"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B000UECHCA",
+          "value": "0 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0 AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CJF83GTS",
+          "value": "10AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 10AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CPPWBGT8",
+          "value": "16AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSW2L7RC",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4GXNNBD",
+          "value": "16AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0B3H27JG2",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C6F4LL7W",
+          "value": "20AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 20AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSPV6WJY",
+          "value": "18AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4BBZMN6",
+          "value": "12AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CBB4JFKY",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C7MLQB5L",
+          "value": "18 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18 AWG"
+        }
+      ]
+    },
+    "variants": {
+      "count": 10,
+      "examples": [
+        {
+          "column": "no_of_wire",
+          "asin": "B000UECHCA",
+          "value": "6 AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0 AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CJF83GTS",
+          "value": "10AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 10AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CPPWBGT8",
+          "value": "18AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSW2L7RC",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4GXNNBD",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0B3H27JG2",
+          "value": "22AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C6F4LL7W",
+          "value": "30AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 20AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CSPV6WJY",
+          "value": "20AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0C4BBZMN6",
+          "value": "20AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 12AWG"
+        },
+        {
+          "column": "no_of_wire",
+          "asin": "B0CBB4JFKY",
+          "value": "30AWG",
+          "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22AWG"
+        }
+      ]
+    }
+  },
+  "field_quality_metrics": {
+    "overview": {
+      "total_values": 18,
+      "unique_values": 17,
+      "avg_length": 9.38888888888889,
+      "has_numbers": 7,
+      "has_units": 14,
+      "is_detailed": 5
+    },
+    "features": {
+      "total_values": 25,
+      "unique_values": 22,
+      "avg_length": 5.52,
+      "has_numbers": 15,
+      "has_units": 15,
+      "is_detailed": 2
+    },
+    "details_table": {
+      "total_values": 9,
+      "unique_values": 8,
+      "avg_length": 13.444444444444445,
+      "has_numbers": 4,
+      "has_units": 8,
+      "is_detailed": 5
+    },
+    "from_the_manufacturer": {
+      "total_values": 13,
+      "unique_values": 12,
+      "avg_length": 6.076923076923077,
+      "has_numbers": 12,
+      "has_units": 9,
+      "is_detailed": 1
+    },
+    "variant_info": {
+      "total_values": 12,
+      "unique_values": 9,
+      "avg_length": 4.833333333333333,
+      "has_numbers": 12,
+      "has_units": 11,
+      "is_detailed": 0
+    },
+    "variants": {
+      "total_values": 10,
+      "unique_values": 6,
+      "avg_length": 5.0,
+      "has_numbers": 10,
+      "has_units": 10,
+      "is_detailed": 0
+    }
+  },
+  "field_pairs_conflicts": {
+    "features__overview": 12,
+    "details_table__overview": 9,
+    "from_the_manufacturer__overview": 2,
+    "details_table__features": 4,
+    "features__from_the_manufacturer": 12,
+    "from_the_manufacturer__variant_info": 6,
+    "features__variant_info": 8,
+    "variant_info__variants": 10,
+    "features__variants": 6,
+    "from_the_manufacturer__variants": 4,
+    "overview__variant_info": 1,
+    "overview__variants": 1
+  },
+  "recommendations": {
+    "details_table": "HIGH - Structured data, consistent format",
+    "overview": "MEDIUM - Good for basic specs, may have formatting issues",
+    "technical_details": "HIGH - Technical specifications, usually accurate",
+    "features": "MEDIUM - May contain marketing language, less structured",
+    "from_the_manufacturer": "MEDIUM-HIGH - Official info but may be marketing-focused",
+    "variant_info": "MEDIUM - Product variants, may be incomplete",
+    "variants": "LOW-MEDIUM - Limited data, may be incomplete"
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B07H9F7WWZ",
+  "result_count": 1,
+  "detail": {
+    "name": "SOOW 10/3 Bulk Cable - SOOW Jacket, 30 Amps, 3 Wire, 600v - Water and Oil Resistant (10)",
+    "brand": "ACDC",
+    "url": "https://www.amazon.com/product/dp/B07H9F7WWZ",
+    "asin": "B07H9F7WWZ",
+    "deal_badge": null,
+    "listing_id": "B07H9F7WWZ",
+    "price": 31.85,
+    "price_reduced": 27.0,
+    "price_per_unit": 2.78,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (4) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B07H9DN8SP/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.2,
+    "total_ratings": 138,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "$5.99 delivery Saturday, August 2. Order within 23 hrs 40 mins. Details"
+    ],
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "10",
+        "asin": "B07H9DN8SP",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B07H9DN8SP"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/81JMMVMl+-L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41Qh61ME1DL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Qh61ME1DL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/81JMMVMl+-L._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "ACDC"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "104"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      }
+    ],
+    "features": [
+      "up to 30 amps",
+      "600 volts",
+      "Resistant to Water, oil, solvents and flame"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "ACDC"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "104"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      },
+      {
+        "name": "Voltage",
+        "value": "600 Volts"
+      },
+      {
+        "name": "No. of wires",
+        "value": "3"
+      },
+      {
+        "name": "UPC",
+        "value": "681087971157"
+      },
+      {
+        "name": "Package Dimensions",
+        "value": "11.46 x 11.3 x 3.7 inches"
+      },
+      {
+        "name": "Item Weight",
+        "value": "3.53 pounds"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07H9DN8SP"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.2  4.2 out of 5 stars    \n    138 ratings   \n\n\n 4.2 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#231,209 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #1,149 in Electrical Wire"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 231209
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 1149
+      }
+    ],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B07H9DN8SP&ref_=dp_merchant_link",
+    "variants": {
+      "size_name": [
+        {
+          "name": "10",
+          "in_stock": true,
+          "asin": "B07H9DN8SP",
+          "url": "https://www.amazon.com/dp/B07H9DN8SP",
+          "selected": true
+        },
+        {
+          "name": "20",
+          "in_stock": true,
+          "asin": "B07H9F1KJW",
+          "url": "https://www.amazon.com/dp/B07H9F1KJW",
+          "selected": true
+        },
+        {
+          "name": "25",
+          "in_stock": true,
+          "asin": "B07H9CYVGQ",
+          "url": "https://www.amazon.com/dp/B07H9CYVGQ",
+          "selected": true
+        },
+        {
+          "name": "30",
+          "in_stock": true,
+          "asin": "B07H9D8X93",
+          "url": "https://www.amazon.com/dp/B07H9D8X93",
+          "selected": true
+        },
+        {
+          "name": "35",
+          "in_stock": true,
+          "asin": "B07H9C7J9T",
+          "url": "https://www.amazon.com/dp/B07H9C7J9T",
+          "selected": true
+        },
+        {
+          "name": "45",
+          "in_stock": true,
+          "asin": "B07H9FD7RQ",
+          "url": "https://www.amazon.com/dp/B07H9FD7RQ",
+          "selected": true
+        },
+        {
+          "name": "50",
+          "in_stock": true,
+          "asin": "B07H9DKBWN",
+          "url": "https://www.amazon.com/dp/B07H9DKBWN",
+          "selected": true
+        },
+        {
+          "name": "65",
+          "in_stock": true,
+          "asin": "B07H9F3899",
+          "url": "https://www.amazon.com/dp/B07H9F3899",
+          "selected": true
+        },
+        {
+          "name": "75",
+          "in_stock": true,
+          "asin": "B07H9DP51W",
+          "url": "https://www.amazon.com/dp/B07H9DP51W",
+          "selected": true
+        },
+        {
+          "name": "85",
+          "in_stock": true,
+          "asin": "B07H9DJC8K",
+          "url": "https://www.amazon.com/dp/B07H9DJC8K",
+          "selected": true
+        },
+        {
+          "name": "100",
+          "in_stock": true,
+          "asin": "B07H9DR1C4",
+          "url": "https://www.amazon.com/dp/B07H9DR1C4",
+          "selected": true
+        },
+        {
+          "name": "125",
+          "in_stock": true,
+          "asin": "B07H9C2DSY",
+          "url": "https://www.amazon.com/dp/B07H9C2DSY",
+          "selected": true
+        },
+        {
+          "name": "150",
+          "in_stock": true,
+          "asin": "B07H9D49K1",
+          "url": "https://www.amazon.com/dp/B07H9D49K1",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "72%",
+      "4 star": "10%",
+      "3 star": "3%",
+      "1 star": "15%"
+    },
+    "reviews_summary": "Customers find the cable to be of good quality, with one mentioning its high-quality copper construction. The cable works perfectly for their needs, and customers consider it good value for money.",
+    "review_aspects": [
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Sean DeYoung",
+        "review_title": "Great quality",
+        "rating": 5,
+        "review_text": "Tested it on regular 120v and reading were 59.9 hertz and 121.5 watts. Love the flexibility of cord. Easy to strip and if careful and copper strands stay entacked. I recommend this product\nRead more",
+        "date": "2024-04-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/61mXUz+W5dL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jeff Warren",
+        "review_title": "High Quality Product",
+        "rating": 5,
+        "review_text": "I bought some to wire my compressor, I was so impressed by its quality. Extremely flexible, high strand count, and after I tinned the tips and soldered the ends onto the individual wires, the coating never melted. So I have since bought again for my shop heater and hot tub. Also super fast shipping, cross country and delivered in 3 days.\nRead more",
+        "date": "2021-02-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "R. Crowell",
+        "review_title": "Product not as described",
+        "rating": 1,
+        "review_text": "Cable is not SOOW (Service cable, Oil resistant outer, Oil resistant inner, and Weather resistant).  It is 10/3, but it has a thin insulation and sheath, and has a surface that is not smooth as expected but has ribs.  The markings on it are illegible because of the ribs, but does appear to read 300V, not 600V.  This would make it a SJ (Service Junior) prefix.  I put an iron to the end and it melted, so it has an outer sheath that is Thermoplastic (melts in hot environment) which requires a T in its cable type (like STOW or in this case the cable at best is SJTOW Service, Junior, Thermoplastic, Oil resistant outer only maybe, Weather (water & UV?) resistant).  I needed a SOOW, no J, no T, both Os and a W.  This is not it.\nRead more",
+        "date": "2025-05-29",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/61j5VijL8uL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61XqPQXsmZL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Kristopher Michael Lyle",
+        "review_title": "It was exactly what I needed",
+        "rating": 5,
+        "review_text": "I bought this for a generator, so I haven't had the need to use it yet, but it is exactly what I was expected.  Quality seems good for the price paid.  Happy so far!\nRead more",
+        "date": "2021-03-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "jp",
+        "review_title": "Bulk Wire/ Custom Lengths",
+        "rating": 5,
+        "review_text": "Great product.  Very heavy sleeve, I was impressed. Used this to wire my air compressor.\nRead more",
+        "date": "2021-03-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dennis Berger",
+        "review_title": "Not bad",
+        "rating": 4,
+        "review_text": "Arrived really quick only thing I don't care for is it has a very lingering smell\nRead more",
+        "date": "2021-02-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Justin Kerber",
+        "review_title": "Returned but the cable was perfect",
+        "rating": 5,
+        "review_text": "I didn't need it,  but the cable was ideal for the short run I needed it for.\nRead more",
+        "date": "2020-09-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "DOOM",
+        "review_title": "Good stuff",
+        "rating": 5,
+        "review_text": "Looks like decent quality. It worked for me, making a 220v plug for a phase converter\nRead more",
+        "date": "2020-01-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 28.0
+}

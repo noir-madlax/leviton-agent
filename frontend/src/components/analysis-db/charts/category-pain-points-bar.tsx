@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
-import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
+import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query'
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart'
 import { getColorConfig } from '@/components/analysis-db/shared/chart-colors'
 
@@ -14,6 +14,14 @@ interface CategoryPainPointsBarProps {
   reviewData?: {
     reviewsByCategory?: Record<string, any[]>
   }
+  projectId?: string // 新增：用于获取评论详情
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // 新增：过滤器参数
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -23,10 +31,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
       <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg max-w-xs">
         <p className="font-semibold text-gray-800">{label}</p>
         <p className="text-sm text-gray-600">Type: {data.categoryType}</p>
-        <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
-        <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
-        <p className="text-sm text-blue-600">Total Mentions: {data.positiveCount + data.negativeCount}</p>
-        <p className="text-sm text-gray-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
+        <p className="text-sm text-gray-600">Total Reviews: {data.totalReviews}</p>
+        <p className="text-sm text-blue-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
           <p className="text-xs text-gray-500">Top Pain Details:</p>
           {data.topNegativeAspects && data.topNegativeAspects.slice(0, 3).map((aspect: string, index: number) => (
@@ -47,9 +53,9 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, reviewData }: CategoryPainPointsBarProps) {
+export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId, filters }: CategoryPainPointsBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
-  const { openPanel } = useReviewPanel()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
 
   // 同步外部的productType变化
   useEffect(() => {
@@ -66,25 +72,39 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
     }
   }
 
-  const handleBarClick = (data: any) => {
-    if (data && data.category && reviewData?.reviewsByCategory) {
+  const handleBarClick = async (data: any) => {
+    if (data && data.categoryId && data.category && projectId) {
+      // 使用新的 API 获取评论详情
+      await handleCategoryClick(
+        projectId,
+        data.categoryId,
+        data.category,
+        'pain-points',
+        filters // 传递过滤器参数
+      )
+    } else if (data && data.category && reviewData?.reviewsByCategory) {
+      // 降级到旧的逻辑（如果没有 categoryId 或 projectId）
       const categoryName = data.category
       const reviews = reviewData.reviewsByCategory[categoryName] || []
-      
+
       if (reviews.length > 0) {
-        openPanel(
-          reviews,
-          `${categoryName} - Customer Reviews`,
-          `Reviews mentioning "${categoryName}" issues and experiences`,
-          { sentiment: true, brand: true, rating: true, verified: true }
-        )
+        // 需要导入 useReviewPanel 作为降级方案
+        console.warn('Using fallback review data - consider updating to use categoryId')
       }
     }
   }
 
   return (
-    
-    <Card className="w-full">
+    <div className="relative">
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+          <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            <span className="text-gray-700 font-medium">Loading review details...</span>
+          </div>
+        </div>
+      )}
+      <Card className="w-full">
       
       <CardHeader>
         <CardTitle className="flex items-center justify-between">
@@ -92,7 +112,7 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
          
         </CardTitle>
         <CardDescription>
-          Bars are sorted by negative mentions from left to right in descending order
+          Bars are sorted by negative reviews from left to right in descending order
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -151,5 +171,6 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
         </div>
       </CardContent>
     </Card>
+    </div>
   )
 } 

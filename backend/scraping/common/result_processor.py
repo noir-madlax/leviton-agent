@@ -250,6 +250,7 @@ class ScrapingResultProcessor:
                 'features': self._extract_features_as_text(raw_product),  # 数据库字段是text类型
                 'description': self._safe_strip(raw_product.get('description', '')),
                 'category': self._extract_category_as_text(raw_product),  # 数据库字段：category (text)
+                'category_id': self._extract_category_id(raw_product),  # 🔥 新增：与category对应的最下级类别ID
                 'categories_flat': self._extract_categories_flat_as_text(raw_product),  # 数据库字段：categories_flat (text)
                 'category_hierarchy': self._extract_categories_original(raw_product),  # 🔥 新增：保存完整的原始categories数据
                 'extract_date': datetime.now().strftime('%Y-%m-%d')  # 数据库字段：extract_date
@@ -446,6 +447,22 @@ class ScrapingResultProcessor:
         except:
             return ''
     
+    def _extract_category_id(self, product: Dict[str, Any]) -> Optional[str]:
+        """提取产品类别ID（与category字段对应的最下级类别ID）"""
+        try:
+            if 'categories' in product:
+                cat_data = product['categories']
+                if isinstance(cat_data, list) and cat_data:
+                    # 取最后一个元素（最下级类别）的category_id
+                    last_category = cat_data[-1]
+                    if isinstance(last_category, dict) and 'category_id' in last_category:
+                        return str(last_category['category_id'])
+            return None
+        except Exception as e:
+            logger.debug(f"提取category_id时出错: {e}")
+            return None
+    
+
     def _extract_categories_flat_as_text(self, product: Dict[str, Any]) -> str:
         """提取产品类别完整路径（返回文本，用于数据库存储）"""
         try:

@@ -1,0 +1,42 @@
+{
+  "regex_patterns": {
+    "voltage": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:V|Volts?|volts?)\\b",
+    "current": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:A|Amps?|amps?)\\b",
+    "temperature": "\\b(-?\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|\u00b0F|Celsius|Fahrenheit)\\b",
+    "length": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:ft|feet|m|meters?|cm|centimeters?)\\b",
+    "gauge": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:AWG|awg|gauge)\\b",
+    "strands": "\\b(\\d+)\\s*(?:strands?|strand)\\b",
+    "conductor": "\\b(\\d+)\\s*(?:conductor|conductors?)\\b",
+    "wire_count": "\\b(\\d+)\\s*(?:wire|wires?)\\b",
+    "package_weight": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:oz|ounces?|g|grams?|kg|kilograms?)\\b",
+    "dimensions": "\\b(\\d+(?:\\.\\d+)?)\\s*x\\s*(\\d+(?:\\.\\d+)?)\\s*x\\s*(\\d+(?:\\.\\d+)?)\\s*(?:inches?|cm|mm)\\b",
+    "material": "\\b(Copper|Aluminum|Steel|PVC|Silicone|Tinned\\s+Copper|Galvanized)\\b",
+    "color": "\\b(Black|Red|Yellow|White|Green|Blue|Brown|Orange|Purple|Gray|Silver|Gold)\\b",
+    "certification": "\\b(UL|CSA|CE|RoHS|VW-1|FT1|Flame\\s+Retardant)\\b",
+    "temperature_range": "\\b(-?\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|\u00b0F)\\s*to\\s*(-?\\d+(?:\\.\\d+)?)\\s*(?:\u00b0C|\u00b0F)\\b",
+    "voltage_rating": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:V|Volts?)\\s*(?:rated?|rating)\\b",
+    "max_voltage": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:V|Volts?)\\s*(?:max|maximum)\\b",
+    "max_current": "\\b(\\d+(?:\\.\\d+)?)\\s*(?:A|Amps?)\\s*(?:max|maximum)\\b",
+    "variant_gauge_conductor": "(\\d+)\\s*AWG-(\\d+)C",
+    "variant_size": "(\\d+(?:\\.\\d+)?)\\s*(?:FT|ft|M|m)"
+  },
+  "field_priority": {
+    "details_table": 1,
+    "overview": 2,
+    "technical_details": 3,
+    "variant_info": 4,
+    "from_the_manufacturer": 5,
+    "features": 6
+  },
+  "target_fields": [
+    "overview",
+    "details_table",
+    "technical_details",
+    "features"
+  ],
+  "additional_fields": [
+    "variant_info",
+    "from_the_manufacturer",
+    "variants"
+  ]
+}

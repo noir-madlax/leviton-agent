@@ -114,13 +114,13 @@ export function UnifiedStackedBarChart({
         firstBar: {
           dataKey: positiveDataKey,
           fill: colors.positive,
-          name: "Positive Mentions",
+          name: "Positive Reviews",
           radius: [0, 0, 0, 0] as [number, number, number, number]
         },
         secondBar: {
           dataKey: negativeDataKey,
           fill: colors.negative,
-          name: "Negative Mentions", 
+          name: "Negative Reviews", 
           radius: [4, 4, 0, 0] as [number, number, number, number],
           fillOpacity: colors.upperBarOpacity
         }
@@ -131,13 +131,13 @@ export function UnifiedStackedBarChart({
         firstBar: {
           dataKey: negativeDataKey,
           fill: colors.negative,
-          name: "Negative Mentions",
+          name: "Negative Reviews",
           radius: [0, 0, 0, 0] as [number, number, number, number]
         },
         secondBar: {
           dataKey: positiveDataKey,
           fill: colors.positive,
-          name: "Positive Mentions",
+          name: "Positive Reviews",
           radius: [4, 4, 0, 0] as [number, number, number, number],
           fillOpacity: colors.upperBarOpacity
         }
@@ -176,7 +176,7 @@ export function UnifiedStackedBarChart({
           />
           <YAxis
             label={{ 
-              value: 'Number of mentions', 
+              value: 'Number of reviews', 
               angle: -90, 
               position: 'insideLeft',
               offset: 20, // 增加偏移量让标签更往下
@@ -199,7 +199,7 @@ export function UnifiedStackedBarChart({
           />
           <Bar 
             dataKey={barConfig.firstBar.dataKey}
-            stackId="mentions"
+            stackId="reviews"
             fill={barConfig.firstBar.fill}
             name={barConfig.firstBar.name}
             radius={barConfig.firstBar.radius}
@@ -208,7 +208,7 @@ export function UnifiedStackedBarChart({
           />
           <Bar 
             dataKey={barConfig.secondBar.dataKey}
-            stackId="mentions"
+            stackId="reviews"
             fill={barConfig.secondBar.fill}
             name={barConfig.secondBar.name}
             radius={barConfig.secondBar.radius}

@@ -1,0 +1,344 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B00DIRTYSG",
+  "result_count": 1,
+  "detail": {
+    "name": "AMERICAN POWER PULL CORP Pp7008 Fence and Wire Grip",
+    "brand": "American Power Pull",
+    "url": "https://www.amazon.com/product/dp/B00DIRTYSG",
+    "asin": "B00DIRTYSG",
+    "deal_badge": null,
+    "listing_id": "B00DIRTYSG",
+    "price": 23.83,
+    "price_reduced": 18.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (23) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B00DIRTYSG/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.3,
+    "total_ratings": 400,
+    "past_month_sales": "100+ boughtin past month",
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Saturday, August 2. Order within 11 hrs 42 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Tools & Hardware",
+        "url": "https://www.amazon.com/Electrical-Tools-26-Hardware/b/ref=dp_bc_3"
+      },
+      {
+        "name": "Cable Insertion & Extraction Tools",
+        "url": "https://www.amazon.com/cable-insertion-extraction-tools/b/ref=dp_bc_4"
+      },
+      {
+        "name": "Pulling Grips",
+        "url": "https://www.amazon.com/pulling-grips/b/ref=dp_bc_5"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71PGLuM9DQL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71PGLuM9DQL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/418oxYNexvL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41-wVnaVFnL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41LnActr6AL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/314WpLMyzQL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/318DdXVW-JL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/418oxYNexvL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [],
+    "features": [
+      "For Stretching Smooth or Barbed Wire Fence",
+      "Can Be Used For Pulling Wire Through Conduit",
+      "Spring Loaded Grip With 500 lb Maximum Capacity",
+      "Cable Capacity Up To ¼” Cable"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "ProductDimensions",
+        "value": "3x1x7inches;6.4ounces"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "PP7008"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January16,2007"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "AmericanPowerPull"
+      },
+      {
+        "name": "ASIN",
+        "value": "B00DIRTYSG"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "China"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#110,134inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#20inElectricalPullingGrips"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.34.3outof5stars400ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 110134
+      },
+      {
+        "name": "Electrical Pulling Grips",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/6396134011/ref=pd_zg_hrsr_hi",
+        "rank": 20
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "71%",
+      "4 star": "13%",
+      "3 star": "6%",
+      "2 star": "1%",
+      "1 star": "9%"
+    },
+    "reviews_summary": "Customers find the fence grip works well, particularly for family zip lines, and appreciate its ease of use for quick fence repair. The tool effectively stretches wire, with one customer noting it beats a full wire stretcher. Build quality receives mixed feedback - while some find it well-made, others report it breaking after 6 pulls. The grip's effectiveness is also mixed, with several customers reporting that it slips off occasionally. Customers disagree on the tool's usefulness, with some finding it great while others consider it a waste of time. The product is not suitable for barbed wire.",
+    "review_aspects": [
+      {
+        "name": "Works well",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire stretching",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Build quality",
+        "sentiment": "mixed"
+      },
+      {
+        "name": "Tool usefulness",
+        "sentiment": "mixed"
+      },
+      {
+        "name": "Grip",
+        "sentiment": "negative"
+      },
+      {
+        "name": "Wire safety",
+        "sentiment": "negative"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Pat",
+        "review_title": "It's perfect for the next job I have. I'm going to be stretching barbed wire with it!",
+        "rating": 5,
+        "review_text": "The media could not be loaded.\n                \n\n\n\nIt work great and easy to use and connect to wire!\nRead more",
+        "date": "2024-12-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71fuIhPx03L._SY88.jpg"
+        ],
+        "review_videos": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4759f72e-3ce4-4605-b591-5f583c9aeeb6/embedded.cc.default.jobtemplate.hls.m3u8"
+        ]
+      },
+      {
+        "reviewer_name": "mike rhoads",
+        "review_title": "good",
+        "rating": 5,
+        "review_text": "simplistic yet a functional design. Worked as expected\nRead more",
+        "date": "2024-11-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jabler",
+        "review_title": "Typical cattle fencing would work fine without the added struggle",
+        "rating": 5,
+        "review_text": "Grabbed tight on farm fencing but when using the no-climb horse fence, you need to make room for it. Typical cattle fencing would work fine without the added struggle.\nRead more",
+        "date": "2017-07-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Matt R",
+        "review_title": "Great tool with limits. Beats a full wire stretcher when using an ATV or UTV",
+        "rating": 4,
+        "review_text": "I have uses this for several fences and it works great for small applications. I used my Ranger and winch to tighten barbed wire with it. My only complaint is that for barbed wire, the slot while open is too narrow to easily insert.  Also, it could use a small protrusion to help you pull back on the lever. Overall it's a good tool for the job.\nRead more",
+        "date": "2019-10-23",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Glenn Lawrence",
+        "review_title": "It worked very well",
+        "rating": 5,
+        "review_text": "I used this wire fence puller to pull the wire fence tight\nRead more",
+        "date": "2024-05-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "AB",
+        "review_title": "Not Durable",
+        "rating": 1,
+        "review_text": "Bought device to stretch barbed wire, worked fine for a few pulls then it quit gripping, allowing the wire to slip out which was annoying, disappointing and dangerous.  By the time I got to use it the return time frame had expired so I'm stuck with it.  DO NOT BUY\nRead more",
+        "date": "2024-09-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "OMAR CAVAZOS",
+        "review_title": "As advertised",
+        "rating": 5,
+        "review_text": "This product is heavy duty and will be around for a long time at our ranch\nRead more",
+        "date": "2023-08-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jill",
+        "review_title": "Great tool",
+        "rating": 5,
+        "review_text": "This is a great tool to add on to your come a-long. Makes fence stretching much easier.\nRead more",
+        "date": "2024-07-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/0a46f49ce97b4e19b2b3a1ceee1d5dbc?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/08715e2d339241208220779d1990bb01?ref=dp_vse_rvc_1"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "American Power Pull - Fence & Wire Grip (PP7008)"
+    ],
+    "from_the_manufacturer": {
+      "text_content": [
+        "From the manufacturer",
+        "American Power Pull: Exceptional Quality Construction, Superior Product Designs, and Unrivaled Performance Guaranteed",
+        "Since its establishment in 1919, American Power Pull Corp. has been dedicated to delivering top-quality equipment to our valued customers. Our extensive range of products is designed for pulling, lifting, stretching, lowering, and moving tasks, providing reliable solutions for a variety of applications. Crafted from premium materials and components, our products are built to last and perform at the highest standards.  At American Power Pull Corp., we are committed to creating and promoting product lines that cater to the unique requirements of our consumers and their respective industries. With a strong focus on the consumer, we strive to exceed expectations and deliver exceptional value with every purchase.  With a rich history of dependability, American Power Pull Corp. has earned a reputation for excellence that our customers have come to trust and appreciate. Join us in experiencing the reliability and quality that have made us a leader in the industry for over a century."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fb2d24e3-49d1-430b-bda3-f367817331b8.__CR0,0,1200,360_PT0_SX600_V1___.jpg",
+          "alt": "American Power Pull"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fb2d24e3-49d1-430b-bda3-f367817331b8.__CR0,0,1200,360_PT0_SX600_V1___.jpg",
+          "alt": "American Power Pull"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/49cd7d23-1655-4369-84e4-36e99b8f1a32.__CR0,0,600,600_PT0_SX300_V1___.png",
+          "alt": "Top Quality since 1919"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/49cd7d23-1655-4369-84e4-36e99b8f1a32.__CR0,0,600,600_PT0_SX300_V1___.png",
+          "alt": "Top Quality since 1919"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/43495ee4-757a-4805-b0a3-648a1936f1ec.__CR0,0,600,1200_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3b953bcc-fbb7-4d95-a864-be327c159aa1.__CR0,0,600,1200_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1b51771e-958d-4c8d-bb4b-d8c4150c3ad9.__CR0,0,600,1200_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a7ba759b-fa05-4a44-a703-54fe942b9702.__CR0,0,600,1200_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/085fd9c6-fdf1-4a4f-b316-c8dd5cf77f48.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "Power Pull with Fence"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/085fd9c6-fdf1-4a4f-b316-c8dd5cf77f48.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "Power Pull with Fence"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/406d22c6-5099-4018-92b2-8c6eb5dc7ce4.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "Power Pull with ATV"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/406d22c6-5099-4018-92b2-8c6eb5dc7ce4.__CR0,0,1940,1200_PT0_SX970_V1___.jpg",
+          "alt": "Power Pull with ATV"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 44.0
+}

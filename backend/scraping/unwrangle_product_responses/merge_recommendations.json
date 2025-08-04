@@ -1,0 +1,32 @@
+[
+  {
+    "column1": "best_seller_rank",
+    "column2": "bestsellersrank",
+    "should_merge": true,
+    "reason": "Both appear to be seller rank information"
+  },
+  {
+    "column1": "batteri_includ",
+    "column2": "batteri_requir",
+    "should_merge": true,
+    "reason": "Overlapping data found in 9 rows"
+  },
+  {
+    "column1": "connector_type",
+    "column2": "connectortyp",
+    "should_merge": true,
+    "reason": "Overlapping data found in 2 rows"
+  },
+  {
+    "column1": "temperatur_rate",
+    "column2": "temperature",
+    "should_merge": true,
+    "reason": "Both appear to be temperature information"
+  },
+  {
+    "column1": "voltage",
+    "column2": "voltage_rating",
+    "should_merge": true,
+    "reason": "Overlapping data found in 1 rows"
+  }
+]

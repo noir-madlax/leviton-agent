@@ -121,7 +121,7 @@ export function MarketInsights({ data: initialData, projectId, initialFilters }:
         chartId="market-insights"
         chartType="bar"
         projectId={projectId || ''}
-        title="Top 10 Segments by Revenue"
+                  title="Top 10 Product Segments by Revenue/Volume"
         projectFilters={initialFilters}
       >
         <Card className="p-6 bg-gray-50 pb-0">

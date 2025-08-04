@@ -1,0 +1,914 @@
+[
+  {
+    "column": "batteri_includ",
+    "total_conflicts": 6,
+    "conflict_details": [
+      {
+        "asin": "B000UECHCA",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": "{'details_table': 'No'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0B9ZJ2LPR",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": "{'details_table': 'No'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B003J63662",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": "{'details_table': 'No'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B002RL9JAW",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": "{'details_table': 'No'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09XFBRVYX",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B00D49VGFM",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f No",
+        "actual_value": "No",
+        "origin": "{'details_table': 'No'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "conductor",
+    "total_conflicts": 4,
+    "conflict_details": [
+      {
+        "asin": "B0CSW2L7RC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 8 Conductor",
+        "actual_value": "8 Conductor",
+        "origin": "{'from_the_manufacturer': '8 Conductor', 'features': '8 Conductor'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4GXNNBD",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 4 conductor",
+        "actual_value": "4 conductor",
+        "origin": "{'from_the_manufacturer': '4 conductor', 'features': '4 conductor'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSPV6WJY",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 10 conductors",
+        "actual_value": "10 conductors",
+        "origin": "{'from_the_manufacturer': '10 conductors'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C7MLQB5L",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 4 Conductor",
+        "actual_value": "4 Conductor",
+        "origin": "{'from_the_manufacturer': '4 Conductor', 'features': '5 conductor'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "contactmateri",
+    "total_conflicts": 3,
+    "conflict_details": [
+      {
+        "asin": "B0CX1J73YB",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B000UECHCA",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09XFBRVYX",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "materi",
+    "total_conflicts": 20,
+    "conflict_details": [
+      {
+        "asin": "B0B19HVHHZ",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 24 AWG PVC Solid Wire",
+        "actual_value": "24 AWG PVC Solid Wire",
+        "origin": "{'overview': '24AWGPVCSolidWire', 'details_table': '24 AWG PVC Solid Wire'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CN9FNFZC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f PolyvinylChloride,Copper",
+        "actual_value": "PolyvinylChloride,Copper",
+        "origin": "{'overview': 'PolyvinylChloride,Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B000UECHCA",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f Steel",
+        "actual_value": "Steel",
+        "origin": "{'details_table': 'Steel'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09T6J7M8Y",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CJF83GTS",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f lead",
+        "actual_value": "lead",
+        "origin": "{'overview': 'lead'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07J4G6C6C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSW2L7RC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01MDKIL5N",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Tin-plated Copper",
+        "actual_value": "Tin-plated Copper",
+        "origin": "{'overview': 'Tin-platedCopper', 'details_table': 'Tin-plated Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4GXNNBD",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f TinnedCopper",
+        "actual_value": "TinnedCopper",
+        "origin": "{'overview': 'TinnedCopper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07CWPTHYH",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0B3H27JG2",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08R7ZT3C7",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B002RL9JAW",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Blend",
+        "actual_value": "Blend",
+        "origin": "{'details_table': 'Blend'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0BY7CMNDH",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f PolyvinylChloride",
+        "actual_value": "PolyvinylChloride",
+        "origin": "{'overview': 'PolyvinylChloride'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSD3KPX3",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B000BQT7EI",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Alloy Steel",
+        "actual_value": "Alloy Steel",
+        "origin": "{'overview': 'AlloySteel', 'details_table': 'Alloy Steel'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09XFBRVYX",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'details_table': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4BBZMN6",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f AluminumwithCopperCladding",
+        "actual_value": "AluminumwithCopperCladding",
+        "origin": "{'overview': 'AluminumwithCopperCladding'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08J7WKV6W",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B00D49VGFM",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f Copper",
+        "actual_value": "Copper",
+        "origin": "{'overview': 'Copper', 'details_table': 'Copper'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "no_of_wire",
+    "total_conflicts": 12,
+    "conflict_details": [
+      {
+        "asin": "B0B19HVHHZ",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'details_table': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CN9FNFZC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18 Gauge",
+        "actual_value": "18 Gauge",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CPPWBGT8",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG",
+        "actual_value": "16AWG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07J4G6C6C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18AWG",
+        "actual_value": "18AWG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B003J63662",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 2",
+        "actual_value": "2",
+        "origin": "{'details_table': '2'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01MDKIL5N",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'details_table': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4GXNNBD",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 16AWG",
+        "actual_value": "16AWG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07DGD2PVF",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 30 Gauge",
+        "actual_value": "30 Gauge",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01AV6QBYG",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22 AWG",
+        "actual_value": "22 AWG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08J7WKV6W",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 22 GAUGE",
+        "actual_value": "22 GAUGE",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4P4Z73C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 2",
+        "actual_value": "2",
+        "origin": "{'details_table': '2'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C7MLQB5L",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 18 AWG",
+        "actual_value": "18 AWG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "numberofcablestrand",
+    "total_conflicts": 40,
+    "conflict_details": [
+      {
+        "asin": "B0B19HVHHZ",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f SingleStrand",
+        "actual_value": "SingleStrand",
+        "origin": "{'overview': 'SingleStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CN9FNFZC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'overview': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B000UECHCA",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f AML-200",
+        "actual_value": "AML-200",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09T6J7M8Y",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07T6LQSM2",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0B9ZJ2LPR",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 1014-05",
+        "actual_value": "1014-05",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0D1RKT3JK",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 19",
+        "actual_value": "19",
+        "origin": "{'overview': '19'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C1H1B4P4",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f truePLUG",
+        "actual_value": "truePLUG",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CPPWBGT8",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07J4G6C6C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 2",
+        "actual_value": "2",
+        "origin": "{'overview': '2'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B003J63662",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 12strands",
+        "actual_value": "12strands",
+        "origin": "{'overview': '12strands'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSW2L7RC",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 8",
+        "actual_value": "8",
+        "origin": "{'overview': '8'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01MDKIL5N",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'overview': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4GXNNBD",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07CWPTHYH",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 2",
+        "actual_value": "2",
+        "origin": "{'overview': '2'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0B3H27JG2",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 26",
+        "actual_value": "26",
+        "origin": "{'overview': '26'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08R7ZT3C7",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 19",
+        "actual_value": "19",
+        "origin": "{'overview': '19'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08V4L3H2H",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'overview': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B002RL9JAW",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 9044SW8808",
+        "actual_value": "9044SW8808",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B088RC5ZT3",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 25",
+        "actual_value": "25",
+        "origin": "{'overview': '25'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C6F4LL7W",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0BY7CMNDH",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 7",
+        "actual_value": "7",
+        "origin": "{'overview': '7'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSD3KPX3",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B000BQT7EI",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 123132",
+        "actual_value": "123132",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07DGD2PVF",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f SingleStrand",
+        "actual_value": "SingleStrand",
+        "origin": "{'overview': 'SingleStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07H9DN8SP",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 104",
+        "actual_value": "104",
+        "origin": "{'overview': '104'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B09XFBRVYX",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 65180440",
+        "actual_value": "65180440",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4BBZMN6",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B00NV7VP9Y",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f SingleStrand",
+        "actual_value": "SingleStrand",
+        "origin": "{'overview': 'SingleStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01ANZRXDI",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 100ft",
+        "actual_value": "100ft",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CBB4JFKY",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01AV6QBYG",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f SingleStrand",
+        "actual_value": "SingleStrand",
+        "origin": "{'overview': 'SingleStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B08J7WKV6W",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 17",
+        "actual_value": "17",
+        "origin": "{'overview': '17'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B00D49VGFM",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 1",
+        "actual_value": "1",
+        "origin": "{'overview': '1'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4P4Z73C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0154H7BLE",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0D1H6K1X1",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 19",
+        "actual_value": "19",
+        "origin": "{'overview': '19'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C7MLQB5L",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f MultiStrand",
+        "actual_value": "MultiStrand",
+        "origin": "{'overview': 'MultiStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01BEEL8GK",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f SingleStrand",
+        "actual_value": "SingleStrand",
+        "origin": "{'overview': 'SingleStrand'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B004ZQ5P64",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 11572",
+        "actual_value": "11572",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "size",
+    "total_conflicts": 10,
+    "conflict_details": [
+      {
+        "asin": "B000UECHCA",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 1/4-Inch",
+        "actual_value": "1/4-Inch",
+        "origin": "{'details_table': '1/4-Inch'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07T6LQSM2",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 60 m",
+        "actual_value": "60 m",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01MDKIL5N",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f \u26a0\ufe0fCONFLICT\u26a0\ufe0f 1000 Feet",
+        "actual_value": "1000 Feet",
+        "origin": "{'details_table': '1000 Feet'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0C4GXNNBD",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 200 ft",
+        "actual_value": "200 ft",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07CWPTHYH",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0.85 m",
+        "actual_value": "0.85 m",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B088RC5ZT3",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 0.13M",
+        "actual_value": "0.13M",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B0CSD3KPX3",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 100FT",
+        "actual_value": "100FT",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B07DGD2PVF",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 50 ft",
+        "actual_value": "50 ft",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01ANZRXDI",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 100ft",
+        "actual_value": "100ft",
+        "origin": NaN,
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      },
+      {
+        "asin": "B01BEEL8GK",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 10 Ga",
+        "actual_value": "10 Ga",
+        "origin": "{'details_table': '10 Ga'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  },
+  {
+    "column": "voltag",
+    "total_conflicts": 1,
+    "conflict_details": [
+      {
+        "asin": "B0C4P4Z73C",
+        "conflict_value": "\u26a0\ufe0fCONFLICT\u26a0\ufe0f 300 Volts",
+        "actual_value": "300 Volts",
+        "origin": "{'overview': '300Volts', 'details_table': '300 Volts'}",
+        "origin_count": 0,
+        "is_single_origin": false,
+        "origin_fields": []
+      }
+    ]
+  }
+]

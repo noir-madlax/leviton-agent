@@ -8,6 +8,7 @@ from supabase import Client
 from core.database.connection import get_supabase_client
 from core.models.filters import ProjectFilters
 from dashboard.services.filter_service import FilterService
+from dashboard.charts.base_models import BaseRequestModel
 
 logger = logging.getLogger(__name__)
 
@@ -338,6 +339,73 @@ class BaseDashboardService(ABC):
         query = self._apply_segments_filter(query)
         query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query
+
+    def execute_filtered_query(self, request: BaseRequestModel) -> List[str]:
+        """使用链式过滤器执行查询，返回过滤后的ASIN列表
+
+        Args:
+            request: 基础请求模型，包含project_id和filters
+
+        Returns:
+            List[str]: 过滤后的ASIN列表
+
+        Raises:
+            ValueError: 当project_id为空时
+            Exception: 当SQL执行失败时
+        """
+        try:
+            from dashboard.charts.filters import build_filtered_sql
+
+            # 验证project_id
+            if not request.project_id:
+                raise ValueError("project_id is required")
+
+            # 构建SQL查询
+            sql = build_filtered_sql(request.project_id, request.filters)
+
+            logger.info(f"Executing filtered query for project {request.project_id}")
+            logger.debug(f"SQL: {sql}")
+
+            # 执行查询
+            result = self.supabase.rpc('execute_safe_query', {
+                'query_text': sql
+            }).execute()
+
+            if result.data is None:
+                logger.warning("Query returned None data")
+                return []
+
+            # 调试：打印返回的数据结构
+            if result.data:
+                logger.info(f"Query returned {len(result.data)} rows")
+                logger.info(f"First row keys: {list(result.data[0].keys()) if result.data else 'No data'}")
+                logger.info(f"First row sample: {result.data[0] if result.data else 'No data'}")
+            else:
+                logger.info("Query returned empty result")
+                return []
+
+            # 提取ASIN列表 - 处理Supabase RPC返回的数据结构
+            asins = []
+            for row in result.data:
+                # Supabase execute_safe_query 返回的数据结构是 {"result": {...}}
+                if 'result' in row and isinstance(row['result'], dict):
+                    result_data = row['result']
+                    if 'platform_id' in result_data:
+                        asins.append(result_data['platform_id'])
+                    else:
+                        logger.error(f"platform_id field not found in result data. Available fields: {list(result_data.keys())}")
+                        raise KeyError(f"platform_id field not found in result data. Available fields: {list(result_data.keys())}")
+                else:
+                    # 如果不是预期的结构，打印调试信息
+                    logger.error(f"Unexpected row structure. Row: {row}")
+                    raise KeyError(f"Unexpected row structure. Expected 'result' field but got: {list(row.keys())}")
+
+            logger.info(f"Query executed successfully, returned {len(asins)} ASINs")
+            return asins
+
+        except Exception as e:
+            logger.error(f"Error executing filtered query: {e}")
+            raise Exception(f"Failed to execute filtered query: {str(e)}")
     
     def _get_base_product_table(self):
         """Get base product table reference."""

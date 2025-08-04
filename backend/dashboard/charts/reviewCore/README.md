@@ -65,8 +65,9 @@ Base service class that provides:
 ### ReviewDataService
 Shared data service for database operations:
 - `get_reviews_by_category()` - Retrieve reviews for a category
-- `get_category_statistics()` - Calculate category metrics
-- `get_aspect_categories_with_metrics()` - Get categories with filtering/sorting
+- `get_category_statistics()` - Optimized category statistics with SQL-level filtering/sorting
+- `get_aspect_categories_with_metrics()` - Get categories with filtering/sorting and optional cause analysis
+- `get_cause_analysis()` - Analyze cause categories for top categories
 
 ## Shared Utilities
 
@@ -157,7 +158,75 @@ The module includes comprehensive error handling:
 - **Efficient Queries**: Uses indexed fields for filtering
 - **Pagination**: Limits data transfer with offset/limit
 - **Deduplication**: Performed in memory for better performance
-- **Caching**: Leverages materialized view for fast access
+- **Optimized Methods**: New optimized methods reduce database queries from N+1 to 2 total
+- **Cause Analysis**: Only analyzes causes for top N categories, not all categories
+
+## New Features
+
+### Enhanced Cause Analysis with Embedded Structure
+The `get_aspect_categories_with_metrics()` method now supports enhanced cause analysis with embedded structure through the `return_top_cause_categories` option:
+
+```python
+options = {
+    'max_categories': 5,
+    'sort_by': 'total_reviews',
+    'return_top_cause_categories': {
+        'sentiment': '+',  # Optional: '+', '-', or None for all sentiments
+        'limit': 10        # Number of causes (applies to both aggregated and per-aspect)
+    }
+}
+```
+
+**New Return Structure:**
+```python
+{
+    'categories': [
+        {
+            'category_pk': 1,
+            'category_name': 'Core Device Functionality',
+            'total_reviews': 101,
+            'cause_data': [  # EMBEDDED: causes for this specific aspect
+                {
+                    'cause_category_pk': 5,
+                    'cause_category_name': 'Electrical Wiring Requirements',
+                    'total_reviews': 5,
+                    'positive_reviews': 5,
+                    'negative_reviews': 0,
+                    'aspects': [  # SIMPLIFIED
+                        {
+                            'aspect_description': 'wiring: no neutral wire required',
+                            'sentiment': '+'
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    'aggregated_cause_summary': [  # GLOBAL: top causes across all aspects
+        {
+            'cause_category_pk': 5,
+            'cause_category_name': 'Electrical Wiring Requirements',
+            'total_reviews': 18,
+            'rank': 1,
+            'aspects': [...]
+        }
+    ]
+}
+```
+
+**Benefits:**
+- **Hierarchical Access**: Direct access to aspect-specific causes via `categories[0].cause_data`
+- **Global Summary**: Overall cause trends via `aggregated_cause_summary`
+- **Simplified Aspects**: Clean `{aspect_description, sentiment}` format
+- **Performance**: Single query builds both structures simultaneously
+- **No Redundancy**: Eliminates duplicate data processing
+
+### Performance Improvements
+- **`get_category_statistics()`**: Single query approach instead of N+1 queries
+- **Integrated filtering/sorting**: Applied during data processing, not as separate steps
+- **Enhanced cause analysis**: Single query builds both embedded and aggregated structures
+- **Optimized data structure**: Eliminates redundant `get_cause_matrix_view_data()` method
+- **Simplified aspects**: Reduced data size with `{aspect_description, sentiment}` format
 
 ## Future Enhancements
 

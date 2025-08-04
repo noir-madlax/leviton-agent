@@ -30,8 +30,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 基本统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.totalMentions}</p>
+            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
           <div>
             <p className="text-sm text-gray-600">Satisfaction Rate:</p>
@@ -50,13 +50,15 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* 正负面统计 */}
+        {/* 统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
+            <p className="text-sm text-gray-600">Total Mentions:</p>
+            <p className="font-semibold">{data.positiveCount + data.negativeCount}</p>
           </div>
           <div>
-            <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
+            <p className="text-sm text-gray-600">Unique Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>
 
@@ -87,7 +89,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export default function CategoryNegativeUseCaseBar({ 
   data, 
-  description = "Bars are sorted by negative mentions from left to right in descending order",
+  description = "Bars are sorted by negative reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
   reviewData,
@@ -108,7 +110,7 @@ export default function CategoryNegativeUseCaseBar({
   
   // 按负面提及数排序，并取前10个
   const sortedData = [...data]
-    .sort((a, b) => b.negativeCount - a.negativeCount)
+    .sort((a, b) => b.negativeReviews - a.negativeReviews)
     .slice(0, 10);
   
   const chartData = sortedData.map(item => ({
@@ -129,8 +131,19 @@ export default function CategoryNegativeUseCaseBar({
         const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
         
         if (reviews.length > 0) {
+          // 🆕 为现有数据添加aspects字段并设置正确的category (参考图1实现)
+          const reviewsWithAspects = reviews.map(review => ({
+            ...review,
+            category: useCaseItem.useCase, // ✅ 设置为useCase名称作为category显示
+            aspects: review.aspect ? [{
+              description: review.aspect,
+              sentiment: review.sentiment,
+              aspect_type: review.category || 'use'
+            }] : []
+          }))
+          
           openPanel(
-            reviews,
+            reviewsWithAspects,
             `${useCaseItem.useCase} - Customer Reviews`,
             `Reviews related to "${useCaseItem.useCase}" use case`,
             { sentiment: true, brand: true, rating: true, verified: true }
@@ -174,7 +187,7 @@ export default function CategoryNegativeUseCaseBar({
             {sortedData.slice(0, 4).map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg font-bold text-red-600">
-                  {item.negativeCount}
+                  {item.negativeReviews}
                 </div>
                 <div className="text-sm text-gray-600 truncate" title={item.useCase}>
                   {item.useCase}
@@ -203,13 +216,13 @@ export default function CategoryNegativeUseCaseBar({
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Positive</p>
               <p className="text-lg font-semibold text-green-600">
-                {data.reduce((sum, item) => sum + item.positiveCount, 0)}
+                {data.reduce((sum, item) => sum + item.positiveReviews, 0)}
               </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Negative</p>
               <p className="text-lg font-semibold text-red-600">
-                {data.reduce((sum, item) => sum + item.negativeCount, 0)}
+                {data.reduce((sum, item) => sum + item.negativeReviews, 0)}
               </p>
             </div>
           </div>
