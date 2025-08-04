@@ -148,10 +148,17 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
     project_id: projectId,
     filters: {
       ...(options.categoryFilters && options.categoryFilters.length > 0 && { categories: options.categoryFilters }),
-      ...(options.packagingTypeFilters && options.packagingTypeFilters.length > 0 && { brands: options.packagingTypeFilters }),
       ...(options.segmentFilters && options.segmentFilters.length > 0 && { segments: options.segmentFilters }),
       ...(options.extendFields && Object.keys(options.extendFields).length > 0 && { extend_fields: options.extendFields })
     }
+  }
+
+  // Handle packaging type filters through extend_fields
+  if (options.packagingTypeFilters && options.packagingTypeFilters.length > 0) {
+    if (!requestBody.filters.extend_fields) {
+      requestBody.filters.extend_fields = {}
+    }
+    requestBody.filters.extend_fields.package_type = options.packagingTypeFilters
   }
 
   // 添加特殊参数
