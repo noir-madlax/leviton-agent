@@ -9,39 +9,19 @@ export interface ExtendFieldDefinition {
     max?: number
     step?: number
     default?: string | boolean | number | string[] | number[]
+    description?: string
+    placeholder?: string
   }
 }
 
 export type ExtendFieldValue = string | boolean | number | string[] | number[] | undefined
 
 export interface ExtendFieldsFilterProps {
-  value: Record<string, ExtendFieldValue>
   onChange: (extendFields: Record<string, ExtendFieldValue>) => void
-  
-  // 上下文信息
+
+  // 只需要 projectId 即可获取所有必要数据
   projectId: string
-  projectData?: {
-    distributions?: {
-      extend_fields?: Record<string, Array<{
-        name: string
-        count: number
-        percentage: number
-      }>>
-    }
-  }
-  
-  // 配置
-  filterConfig?: {
-    visible_filters?: Record<string, boolean>
-    default_values?: Record<string, any>
-    extend_fields?: Array<{
-      field_name: string
-      display_name: string
-      field_type: string
-      filter_options: Record<string, any>
-    }>
-  } | null
-  
+
   // UI状态
   loading?: boolean
   disabled?: boolean

@@ -33,26 +33,29 @@ export function FilterRenderer({
   // 🆕 从 context 获取统一过滤器数据
   const { getChartConfig, isLoading: contextLoading } = useUnifiedFilter()
   const chartConfig = getChartConfig(chartName)
-  
+
+  // 🔧 调试：输出图表配置信息
+  console.log('🔧 [FILTER-RENDERER] Chart config debug:', {
+    chartName,
+    chartConfig,
+    hasExtendFields: !!chartConfig?.filters.extend_fields,
+    extendFieldsVisible: chartConfig?.filters.extend_fields?.isVisible,
+    allFilters: chartConfig?.filters
+  })
+
   // 🆕 从图表配置中提取可见性配置
   const visibleFilters = {
     categories: chartConfig?.filters.categories?.isVisible === true,
     brands: chartConfig?.filters.brands?.isVisible === true,
     segments: chartConfig?.filters.product_segments?.isVisible === true,
-    extend_fields: chartConfig?.filters.extend_fields?.isVisible === true
+    // 🔧 修复：如果没有配置 extend_fields，默认显示为 true
+    extend_fields: chartConfig?.filters.extend_fields?.isVisible !== false
   }
+
+  // 🔧 调试：输出可见性配置
+  console.log('🔧 [FILTER-RENDERER] Visible filters:', visibleFilters)
   
-  // 🆕 从图表配置中提取扩展字段配置
-  const filterConfig = chartConfig ? {
-    visible_filters: {
-      categories: chartConfig.filters.categories?.isVisible === true,
-      brands: chartConfig.filters.brands?.isVisible === true,
-      segments: chartConfig.filters.product_segments?.isVisible === true,
-      extend_fields: chartConfig.filters.extend_fields?.isVisible === true
-    },
-    default_values: {},
-    extend_fields: [] // TODO: 从 chartConfig 中提取扩展字段配置
-  } : null
+  // 移除了未使用的 filterConfig，ExtendFieldsFilter 现在自己获取配置
   
   console.log(`🔍 [FilterRenderer] Chart: ${chartName}, Config:`, {
     visibleFilters,
@@ -125,11 +128,8 @@ export function FilterRenderer({
       {visibleFilters?.extend_fields && (
         <div className="w-full">
           <ExtendFieldsFilter
-            value={pendingFilters.extend_fields}
             onChange={(extendFields) => setPendingFilters(prev => ({ ...prev, extend_fields: extendFields }))}
             projectId={projectId}
-            projectData={undefined} // 🆕 不传递 projectData，让组件内部处理
-            filterConfig={filterConfig}
             disabled={disabled || contextLoading}
             loading={contextLoading}
             className="w-full"

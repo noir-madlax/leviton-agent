@@ -3,124 +3,137 @@
 import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
-import { useUnifiedFilterData } from '../../hooks/use-unified-filter-data'
-import { useCommonT, useProjectT } from '@/i18n/hooks'
+import { useCommonT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
+import { useExtendFieldsData } from './hooks/useExtendFieldsData'
 
 export function ExtendFieldsFilter({
-  value,
   onChange,
   projectId,
-  projectData,
-  filterConfig,
   loading = false,
   disabled = false,
   className = ""
 }: ExtendFieldsFilterProps) {
-  const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
-  const [internalLoading, setInternalLoading] = useState(false)
   const [selectKeys, setSelectKeys] = useState<Record<string, number>>({})
+  const [currentValues, setCurrentValues] = useState<Record<string, ExtendFieldValue>>({})
 
   // 国际化hooks
   const commonT = useCommonT()
-  const projectT = useProjectT()
-  
-  // 翻译字段显示名称
+
+  // 翻译字段显示名称 - 暂时不支持国际化，直接显示原始名称
   const translateFieldName = (displayName: string) => {
-    switch (displayName) {
-      case 'Smart Capability':
-        return projectT('smartCapability')
-      default:
-        return displayName
-    }
+    // 直接返回原始显示名称，不进行国际化处理
+    return displayName
   }
 
-  // 使用统一筛选器数据源获取原始extend_fields选项
-  const { filterData: unifiedFilterData } = useUnifiedFilterData(projectId)
+  // 使用新的 hook 获取 extend fields 数据，确保只调用一次接口
+  const { fieldDefinitions, projectData, loading: fieldsLoading, error } = useExtendFieldsData(projectId)
 
+  // 调试日志
+  console.log('🔧 [EXTEND-FIELDS] Component render:', {
+    projectId,
+    fieldDefinitionsCount: fieldDefinitions.length,
+    fieldsLoading,
+    error,
+    currentValuesCount: Object.keys(currentValues).length,
+    hasProjectData: !!projectData
+  })
+
+  // 初始化 selectKeys
   useEffect(() => {
-    const loadExtendFields = async () => {
-      if (!projectId) return
-      
-      // 如果有过滤器配置，优先使用配置中的extend_fields
-      if (filterConfig?.extend_fields) {
-        console.log('🔧 [EXTEND-FIELDS] Using filterConfig extend_fields:', filterConfig.extend_fields)
-        const fields = filterConfig.extend_fields.map(field => ({
-          ...field,
-          sort_order: 1,
-          field_type: field.field_type as 'boolean' | 'select' | 'multi_select' | 'range'
-        })) as ExtendFieldDefinition[]
-        setFieldDefinitions(fields)
-        
-        // 初始化selectKeys
-        const initialKeys: Record<string, number> = {}
-        fields.forEach((field) => {
-          initialKeys[field.field_name] = 0
-        })
-        setSelectKeys(initialKeys)
-        
-        console.log('🔧 [EXTEND-FIELDS] Using filterConfig extend_fields:', fields.map(f => f.field_name))
-        return
-      }
-      
-      // Fallback: 从API获取
-      setInternalLoading(true)
-      try {
-        const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-        const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/extend-fields`)
-        
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
+    if (fieldDefinitions.length > 0) {
+      const initialKeys: Record<string, number> = {}
+      fieldDefinitions.forEach((field) => {
+        initialKeys[field.field_name] = 0
+      })
+      setSelectKeys(initialKeys)
+    }
+  }, [fieldDefinitions])
+
+  // 初始化默认值 - 分离到独立的 useEffect 避免循环依赖
+  useEffect(() => {
+    if (fieldDefinitions.length > 0 && Object.keys(currentValues).length === 0) {
+      console.log('🔧 [EXTEND-FIELDS] Initializing default selections (all options selected)')
+      const defaultSelections: Record<string, ExtendFieldValue> = {}
+
+      fieldDefinitions.forEach(field => {
+        if (field.field_type === 'select' || field.field_type === 'multi_select' || field.field_type === 'boolean') {
+          // 获取所有可用选项
+          const availableOptions = getAvailableOptions(field)
+          if (availableOptions.length > 0) {
+            defaultSelections[field.field_name] = availableOptions.map(option => option.name)
+          }
+        } else if (field.field_type === 'range') {
+          // 对于范围类型，使用最大范围
+          const min = field.filter_options.min || 0
+          const max = field.filter_options.max || 100
+          defaultSelections[field.field_name] = [min, max]
         }
-        
-        const result = await response.json()
-        const fields = result.extend_fields || []
-        setFieldDefinitions(fields)
-        
-        // 初始化selectKeys
-        const initialKeys: Record<string, number> = {}
-        fields.forEach((field: ExtendFieldDefinition) => {
-          initialKeys[field.field_name] = 0
-        })
-        setSelectKeys(initialKeys)
-        
-        console.log('🔧 [EXTEND-FIELDS] Loaded from API:', fields.map((f: ExtendFieldDefinition) => f.field_name))
-      } catch (error) {
-        console.error('Error loading extend fields:', error)
-        setFieldDefinitions([])
-      } finally {
-        setInternalLoading(false)
+      })
+
+      if (Object.keys(defaultSelections).length > 0) {
+        setCurrentValues(defaultSelections)
+        onChange(defaultSelections)
       }
     }
+  }, [fieldDefinitions, projectData]) // 依赖 projectData 而不是 currentValues，避免循环
 
-    loadExtendFields()
-  }, [projectId, filterConfig])
+  // 获取字段的可用选项
+  const getAvailableOptions = (field: ExtendFieldDefinition) => {
+    let availableOptions: Array<{ name: string; count: number }> = []
+
+    // 优先使用定义中的选项（按照API返回的顺序）
+    if (field.filter_options.options) {
+      availableOptions = Object.keys(field.filter_options.options).map(option => {
+        const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
+          (item: any) => item.name === option
+        )
+
+        return {
+          name: option,
+          count: countInfo?.count || 0
+        }
+      })
+    }
+
+    // 如果定义中没有选项，fallback到projectData
+    if (availableOptions.length === 0) {
+      const projectDataOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
+      availableOptions = projectDataOptions.map((item: any) => ({
+        name: item.name,
+        count: item.count || 0
+      }))
+    }
+
+    return availableOptions
+  }
 
   const handleFieldChange = (fieldName: string, newValue: ExtendFieldValue) => {
-    const newFilters = { ...value }
-    
+    const newFilters = { ...currentValues }
+
     if (newValue === undefined || newValue === null || newValue === '') {
       delete newFilters[fieldName]
     } else {
       newFilters[fieldName] = newValue
     }
-    
+
     console.log('🔧 [EXTEND-FIELDS] Field change:', {
       fieldName,
       value: newValue,
-      oldFilters: value,
+      oldFilters: currentValues,
       newFilters,
       hasKeys: Object.keys(newFilters).length > 0
     })
-    
+
+    setCurrentValues(newFilters)
     onChange(newFilters)
-    
+
     // 重置选择器
     setSelectKeys(prev => ({ ...prev, [fieldName]: prev[fieldName] + 1 }))
   }
 
   const renderFieldComponent = (field: ExtendFieldDefinition) => {
-    const currentValue = value[field.field_name]
+    const currentValue = currentValues[field.field_name]
 
     switch (field.field_type) {
       case 'select':
@@ -134,35 +147,8 @@ export function ExtendFieldsFilter({
           selectCurrentValue = [String(currentValue)]
         }
         
-        // 获取可用选项列表，优先使用统一数据源
-        const selectStableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
-        let availableSelectOptions: Array<{ name: string; count: number }> = selectStableOptions.map(optionName => {
-          const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
-            (item: any) => item.name === optionName
-          )
-          
-          return {
-            name: optionName,
-            count: countInfo?.count || 0
-          }
-        })
-        
-        // 如果统一数据源没有数据，fallback到定义中的选项
-        if (availableSelectOptions.length === 0 && field.filter_options.options) {
-          availableSelectOptions = Object.keys(field.filter_options.options).map(option => ({
-            name: option,
-            count: 0
-          }))
-        }
-        
-        // 最后fallback到projectData
-        if (availableSelectOptions.length === 0) {
-          const projectDataOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
-          availableSelectOptions = projectDataOptions.map((item: any) => ({
-            name: item.name,
-            count: item.count || 0
-          }))
-        }
+        // 获取可用选项列表
+        const availableSelectOptions = getAvailableOptions(field)
         
         const handleSelectChange = (optionName: string) => {
           if (selectCurrentValue.includes(optionName)) {
@@ -183,7 +169,7 @@ export function ExtendFieldsFilter({
               key={selectKeys[field.field_name] || 0}
               value=""
               onValueChange={handleSelectChange}
-              disabled={disabled || loading || internalLoading}
+              disabled={disabled || loading || fieldsLoading}
             >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
@@ -243,7 +229,7 @@ export function ExtendFieldsFilter({
               key={selectKeys[field.field_name] || 0}
               value=""
               onValueChange={handleMultiSelectChange}
-              disabled={disabled || loading || internalLoading}
+              disabled={disabled || loading || fieldsLoading}
             >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
@@ -282,27 +268,7 @@ export function ExtendFieldsFilter({
         }
         
         // 获取所有可用选项
-        const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
-        
-        let availableOptions: Array<{ name: string; count: number }> = stableOptions.map(optionName => {
-          const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
-            (item: any) => item.name === optionName
-          )
-          
-          return {
-            name: optionName,
-            count: countInfo?.count || 0
-          }
-        })
-        
-        // Fallback到projectData
-        if (availableOptions.length === 0) {
-          const projectDataOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
-          availableOptions = projectDataOptions.map((item: any) => ({
-            name: item.name,
-            count: item.count || 0
-          }))
-        }
+        const availableOptions = getAvailableOptions(field)
         
         const handleBooleanChange = (optionName: string) => {
           if (booleanSelectValues.includes(optionName)) {
@@ -323,7 +289,7 @@ export function ExtendFieldsFilter({
               key={selectKeys[field.field_name] || 0}
               value=""
               onValueChange={handleBooleanChange}
-              disabled={disabled || loading || internalLoading}
+              disabled={disabled || loading || fieldsLoading}
             >
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
@@ -375,7 +341,7 @@ export function ExtendFieldsFilter({
                 max={max}
                 step={step}
                 className="flex-1"
-                disabled={disabled || loading || internalLoading}
+                disabled={disabled || loading || fieldsLoading}
               />
               <span className="text-xs text-gray-500 min-w-fit">
                 {(currentRange as number[])[0]} - {(currentRange as number[])[1]}
@@ -389,10 +355,18 @@ export function ExtendFieldsFilter({
     }
   }
 
-  if (internalLoading) {
+  if (fieldsLoading) {
     return (
       <div className={`text-sm text-gray-500 ${className}`}>
         {commonT('loading')}
+      </div>
+    )
+  }
+
+  if (error) {
+    return (
+      <div className={`text-sm text-red-500 ${className}`}>
+        {error}
       </div>
     )
   }
