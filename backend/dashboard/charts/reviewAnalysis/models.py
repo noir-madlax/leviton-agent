@@ -31,6 +31,9 @@ class ReviewsByCategoryRequest(BaseRequestModel):
     rating_filter: Optional[Literal["high", "mid", "low"]] = Field(
         default=None, description="Filter by rating: high (4-5 stars), mid (3 stars), low (1-2 stars). If None, returns all ratings."
     )
+    chart_type: Optional[Literal["pain-points", "delights", "use-case"]] = Field(
+        default=None, description="Chart type to determine aspect type filtering"
+    )
 
 
 # ==================== Response Models ====================
@@ -71,7 +74,7 @@ class CategorySummary(BaseModel):
     total_mentions: int = Field(description="Total mentions across all sentiments")
     positive_mentions: int = Field(description="Number of positive mentions")
     negative_mentions: int = Field(description="Number of negative mentions")
-    neutral_mentions: int = Field(description="Number of neutral mentions")
+
     total_reviews: int = Field(description="Number of unique reviews")
     positive_reviews: int = Field(description="Number of unique reviews with positive sentiment")
     negative_reviews: int = Field(description="Number of unique reviews with negative sentiment")

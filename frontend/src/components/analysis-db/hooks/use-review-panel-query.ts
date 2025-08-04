@@ -80,7 +80,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       segments?: string[]
       extend_fields?: Record<string, any>
       asins?: string[]
-    }
+    },
+    chartType?: 'pain-points' | 'delights' | 'use-case'
   ) => {
     try {
       setIsLoading(true)
@@ -92,7 +93,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
           limit: 500, // 初始加载500条评论
           offset: 0,
           sortBy: 'review_id',
-          sortOrder: 'desc'
+          sortOrder: 'desc',
+          chartType: chartType // 传递图表类型
         },
         filters // 传递过滤器参数
       )
@@ -173,7 +175,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       titles[chartType],
       subtitles[chartType],
       undefined, // showFilters 使用默认值
-      filters // 传递过滤器参数
+      filters, // 传递过滤器参数
+      chartType // 传递图表类型
     )
   }, [openPanelWithCategoryId])
 

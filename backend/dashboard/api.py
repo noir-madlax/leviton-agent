@@ -34,6 +34,7 @@ from .services.package_preference_service import PackagePreferenceService
 from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
+from .utils.data_transformers import CompetitorAnalysisTransformer
 from .services.competitor_summary_service import CompetitorSummaryService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
@@ -135,16 +136,18 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
         
         if negative_reviews > 0:
             negative_rate = (negative_reviews / total_reviews) * 100
-            severity = min(100, max(10, negative_rate))
             
             # Map aspect type to display type
             aspect_type = cat.get('aspect_type', 'phy')
             display_type = map_aspect_type_to_display(aspect_type)
             
+            # Get category_id with fallback to category_pk
+            category_id = cat.get('category_id') or cat.get('category_pk')
+            
             pain_point = {
                 'category_name': capitalize_words(cat['category_name']),
                 'example_details': get_example_details_for_category(cat),
-                'severity': severity,
+                'satisfaction_rate': 100 - negative_rate,  # Convert to satisfaction rate
                 'impacted_products': count_impacted_products(cat),
                 'type': display_type,
                 'total_reviews': total_reviews,
@@ -152,7 +155,8 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
                 'negative_reviews': negative_reviews,
                 'negative_rate': negative_rate,
                 'category_definition': cat.get('definition', ''),
-                'related_detail_texts': get_related_detail_texts(cat)
+                'related_detail_texts': get_related_detail_texts(cat),
+                'category_id': category_id  # Add category_id for review panel
             }
             pain_points.append(pain_point)
     
@@ -176,6 +180,9 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
                 else:
                     satisfaction_level = 'Low'
                 
+                # Get category_id with fallback to category_pk
+                category_id = cat.get('category_id') or cat.get('category_pk')
+                
                 customer_like = {
                     'category_name': capitalize_words(cat['category_name']),
                     'example_details': get_example_details_for_category(cat),
@@ -185,7 +192,8 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
                     'negative_reviews': cat.get('negative_reviews', 0),
                     'positive_rate': positive_rate,
                     'category_definition': cat.get('definition', ''),
-                    'related_detail_texts': get_related_detail_texts(cat)
+                    'related_detail_texts': get_related_detail_texts(cat),
+                    'category_id': category_id  # Add category_id for review panel
                 }
                 customer_likes.append(customer_like)
     
@@ -207,6 +215,9 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
             else:
                 satisfaction_rate = 50.0
             
+            # Get category_id with fallback to category_pk
+            category_id = cat.get('category_id') or cat.get('category_pk')
+            
             use_case = {
                 'use_case': capitalize_words(cat['category_name']),
                 'product_attribute': get_product_attributes_for_category(cat),
@@ -216,7 +227,8 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
                 'negative_reviews': negative_reviews,
                 'category_definition': cat.get('definition', ''),
                 'product_count': count_impacted_products(cat),
-                'related_detail_texts': get_related_detail_texts(cat)
+                'related_detail_texts': get_related_detail_texts(cat),
+                'category_id': category_id  # Add category_id for review panel
             }
             all_use_cases.append(use_case)
     
@@ -232,12 +244,17 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
         
         if (product_count > 0):
             
-            gap_level = max(30, 100 - (total_reviews * 10))
+            # Calculate satisfaction rate for underserved use cases
+            total_sentiment_reviews = cat.get('positive_reviews', 0) + cat.get('negative_reviews', 0)
+            if total_sentiment_reviews > 0:
+                satisfaction_rate = (cat.get('positive_reviews', 0) / total_sentiment_reviews) * 100
+            else:
+                satisfaction_rate = 50.0
             
             underserved_use_case = {
                 'use_case': capitalize_words(cat['category_name']),
                 'product_attribute': get_product_attributes_for_category(cat),
-                'gap_level': gap_level,
+                'satisfaction_rate': satisfaction_rate,
                 'total_reviews': total_reviews,
                 'positive_reviews': cat.get('positive_reviews', 0),
                 'negative_reviews': cat.get('negative_reviews', 0),
@@ -247,8 +264,8 @@ def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf
             }
             underserved_use_cases.append(underserved_use_case)
     
-    # Sort by gap level and take top max_underserved_use_cases
-    underserved_use_cases.sort(key=lambda x: x['gap_level'], reverse=True)
+    # Sort by satisfaction rate (ascending) and take top max_underserved_use_cases
+    underserved_use_cases.sort(key=lambda x: x['satisfaction_rate'], reverse=False)
     underserved_use_cases = underserved_use_cases[:max_underserved_use_cases]
     
     # Calculate total use case reviews
@@ -849,7 +866,7 @@ async def get_review_insights_data(request: ReviewInsightsRequest):
         # Initialize the ReviewAnalysisChartService directly
         service = ReviewAnalysisChartService(
             project_id=request.project_id,
-            filters=request.get_project_filters().dict() if request.filters else None
+            filters=request.get_project_filters().to_dict() if request.filters else None
         )
         
         # Get phy_perf data sorted by negative reviews for pain points
@@ -985,12 +1002,15 @@ async def get_competitor_analysis(
     # Use the new materialized view method for enhanced performance
     raw_data = service.get_data_with_materialized_view(include_review_content=True)
 
+    # Use standardized transformer to convert service data to API format
+    transformed_data = CompetitorAnalysisTransformer.service_to_api(raw_data)
+
     response = CompetitorAnalysisResponse(
-        targetProducts=raw_data.get('targetProducts', []),
-        matrixData=raw_data.get('matrixData', []),
-        productTotalReviews=raw_data.get('productTotalReviews', {}),
-        useCaseData=raw_data.get('useCaseData', {'targetProducts': [], 'matrixData': []}),
-        reviewContent=raw_data.get('reviewContent', {}),  # Include review content for cell clicks
+        target_products=transformed_data['target_products'],
+        matrix_data=transformed_data['matrix_data'],
+        product_total_reviews=transformed_data['product_total_reviews'],
+        use_case_data=transformed_data['use_case_data'],
+        review_content=transformed_data['review_content'],
         project_id=request.project_id,
         filtered_asin_count=len(service.project_asins)
     )

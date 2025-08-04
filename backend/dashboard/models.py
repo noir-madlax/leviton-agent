@@ -256,13 +256,14 @@ class ReviewCountMixin(BaseModel):
     # Optional enhanced fields for frontend optimization
     category_definition: Optional[str] = Field(default="", description="Category definition for tooltips")
     related_detail_texts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
+    category_id: Optional[int] = Field(default=None, description="Category ID for review panel integration")
 
 
 class PainPoint(ReviewCountMixin):
     """Pain point data model with standardized review count fields."""
     category_name: str = Field(description="Pain point category name")
     example_details: str = Field(description="Example details from reviews") 
-    severity: float = Field(description="Severity level")
+    satisfaction_rate: float = Field(description="Satisfaction rate (100 - negative_rate)")
     impacted_products: int = Field(description="Number of products impacted")
     type: Literal["Physical", "Performance", "Usability"] = Field(description="Pain point type")
     negative_rate: Optional[float] = Field(default=0, description="Percentage of negative reviews")
@@ -288,7 +289,7 @@ class UnderservedUseCase(ReviewCountMixin):
     """Underserved use case data model with standardized review count fields."""
     use_case: str = Field(description="Use case description")
     product_attribute: str = Field(description="Product attribute")
-    gap_level: float = Field(description="Gap level")
+    satisfaction_rate: float = Field(description="Satisfaction rate")
     product_count: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
 
 

@@ -161,9 +161,12 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
     requestBody.filters.extend_fields.package_type = options.packagingTypeFilters
   }
 
-  // 添加特殊参数
+  // Add special parameters
   if (options.selectedAsins) {
     requestBody.selected_asins = options.selectedAsins
+  } else {
+    // Always include selected_asins field, even if it's null/undefined
+    requestBody.selected_asins = null
   }
   if (options.metricType) {
     requestBody.metric_type = options.metricType
@@ -754,7 +757,32 @@ export class DatabaseService {
         selectedAsins: selectedAsins ? selectedAsins.split(',') : undefined
       })
 
-      return result
+      // Transform snake_case backend response to camelCase frontend format
+      return {
+        targetProducts: result.target_products || [],
+        matrixData: (result.matrix_data || []).map((item: any) => ({
+          product: item.product || '',
+          category: item.category || '',
+          categoryType: item.category_type || 'Performance',
+          mentions: item.total_reviews || 0,
+          satisfactionRate: item.satisfaction_rate || 0,
+          positiveCount: item.positive_reviews || 0,
+          negativeCount: item.negative_reviews || 0,
+          totalReviews: item.total_reviews || 0
+        })),
+        productTotalReviews: result.product_total_reviews || {},
+        useCaseData: {
+          targetProducts: result.use_case_data?.target_products || [],
+          matrixData: (result.use_case_data?.matrix_data || []).map((item: any) => ({
+            product: item.product || '',
+            useCase: item.use_case || '',
+            mentions: item.mentions || 0,
+            satisfactionRate: item.satisfaction_rate || 0,
+            gapLevel: item.gap_level || 0
+          }))
+        },
+        reviewContent: result.review_content || {}
+      }
     } catch (error) {
       console.error('Error fetching competitor analysis data by project:', error)
       throw error
@@ -858,7 +886,7 @@ export class DatabaseService {
     timestamp: string
     data: {
       categories: Array<{
-        category_pk: number
+        category_id: number
         category_name: string
         definition: string
         aspect_type: string
@@ -970,6 +998,7 @@ export class DatabaseService {
       sortOrder?: 'desc' | 'asc'
       sentimentFilter?: 'positive' | 'negative'
       ratingFilter?: 'high' | 'mid' | 'low'
+      chartType?: 'pain-points' | 'delights' | 'use-case'
     },
     filters?: {
       categories?: string[]
@@ -1025,7 +1054,8 @@ export class DatabaseService {
         sort_by: options?.sortBy || 'review_id',
         sort_order: options?.sortOrder || 'desc',
         sentiment_filter: options?.sentimentFilter || null,
-        rating_filter: options?.ratingFilter || null
+        rating_filter: options?.ratingFilter || null,
+        chart_type: options?.chartType || null
       }
 
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {

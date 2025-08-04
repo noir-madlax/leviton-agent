@@ -120,7 +120,6 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                     'total_mentions': cat_data['total_mentions'],
                     'positive_mentions': cat_data['positive_mentions'],
                     'negative_mentions': cat_data['negative_mentions'],
-                    'neutral_mentions': cat_data['neutral_mentions'],
                     'total_reviews': cat_data['total_reviews'],
                     'positive_reviews': cat_data['positive_reviews'],
                     'negative_reviews': cat_data['negative_reviews'],
@@ -151,7 +150,8 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         sort_by: str = "review_id",
         sort_order: str = "desc",
         sentiment_filter: Optional[str] = None,
-        rating_filter: Optional[str] = None
+        rating_filter: Optional[str] = None,
+        chart_type: Optional[str] = None
     ) -> Dict[str, Any]:
         """Get reviews for a specific category with product information.
         
@@ -176,12 +176,20 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 return self._get_empty_reviews_response(category_id)
             
             # Get all review data for this category using centralized service
+            # Apply the same aspect type filtering as the bar chart based on chart type
+            if chart_type == 'use-case':
+                aspect_types = ReviewAnalysisConfig.ASPECT_TYPE_MAP.get('use', ['use'])
+            else:
+                # pain-points and delights both use phy_perf
+                aspect_types = ReviewAnalysisConfig.ASPECT_TYPE_MAP.get('phy_perf', ['phy_perf'])
+            
             result = await self.review_data_service.get_reviews_by_category(
                 project_id=self.project_id,
                 category_id=category_id,
                 asins=filtered_asins,
                 sort_by=sort_by,
                 sort_order=sort_order,
+                aspect_types=aspect_types,
                 sentiment_filter=sentiment_filter,
                 rating_filter=rating_filter
             )

@@ -58,6 +58,7 @@ export function UnifiedStackedBarChart({
 }: UnifiedStackedBarChartProps) {
   const handleBarClick = (data: any, index: number) => {
     if (onBarClick) {
+      // In Recharts Bar onClick, the data parameter should be the original data object
       onBarClick(data, index);
     }
   };
@@ -146,6 +147,8 @@ export function UnifiedStackedBarChart({
   };
 
   const barConfig = getBarConfig();
+
+
 
   return (
     <div className="h-[450px] w-full">

@@ -91,204 +91,69 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     allReviewData: typeof data.allReviewData
   }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
 
-  // 新增：存储第一个图表的数据
-  const [painPointsData, setPainPointsData] = useState<CategoryFeedback[]>([])
-  const [painPointsLoading, setPainPointsLoading] = useState(false)
+  // Use data from the main dashboard container instead of making duplicate API calls
 
-  // 新增：存储第二个图表的数据
-  const [delightsData, setDelightsData] = useState<CategoryFeedback[]>([])
-  const [delightsLoading, setDelightsLoading] = useState(false)
-
-  // 新增：存储第三个图表的数据
-  const [useCaseData, setUseCaseData] = useState<UseCaseFeedback[]>([])
-  const [useCaseLoading, setUseCaseLoading] = useState(false)
-
-  // 新增：获取痛点数据的方法
-  const fetchPainPointsData = async (filters?: ProjectFilters) => {
-    if (!projectId) return
-
-    setPainPointsLoading(true)
-    try {
-      const result = await databaseService.getTopCategoriesData(
-        projectId,
-        'phy_perf', // 使用 phy_perf 类型获取痛点数据
-        {
-          sortBy: 'negative_reviews',
-          sortDirection: 'desc',
-          maxCategories: 10,
-          minReviews: 5,
-          minPositiveReviews: 2
-        },
-        filters // 传递过滤器参数
-      )
-
-      // 转换数据格式为 CategoryFeedback，添加 category_id 用于点击时获取评论详情
-      const transformedData: CategoryFeedback[] = result.data.categories.map(item => ({
-        category: item.category_name,
-        categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
-        mentions: item.total_reviews,
-        satisfactionRate: item.positive_ratio * 100,
-        negativeRate: 100 - (item.positive_ratio * 100),
-        positiveCount: item.positive_reviews,
-        negativeCount: item.negative_reviews,
-        totalReviews: item.total_reviews,
-        averageRating: Math.max(1, 5 - ((100 - (item.positive_ratio * 100)) / 20)), // 基于正面率计算平均评分
-        topNegativeAspects: [item.category_name],
-        topPositiveAspects: [],
-        topNegativeReasons: [
-          `${Math.round(100 - (item.positive_ratio * 100))}% negative sentiment`,
-          ...(item.definition ? [`Context: ${item.definition}`] : [])
-        ],
-        topPositiveReasons: [],
-        categoryDefinition: item.definition,
-        impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
-        categoryId: item.category_pk // 新增：存储 category_pk 用于点击时获取评论详情
-      }))
-
-      setPainPointsData(transformedData)
-    } catch (error) {
-      console.error('Error fetching pain points data:', error)
-      console.error('Error details:', {
-        projectId,
-        aspectType: 'phy_perf',
-        options: {
-          sortBy: 'negative_reviews',
-          sortDirection: 'desc',
-          maxCategories: 10,
-          minReviews: 5,
-          minPositiveReviews: 2
-        },
-        filters
-      })
-    } finally {
-      setPainPointsLoading(false)
-    }
+  // Transform dashboard data to chart format
+  const transformPainPointsData = (rawData: any[]): CategoryFeedback[] => {
+    return rawData.map(item => ({
+      category: item.category_name,
+      categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
+      totalReviews: item.total_reviews,
+      satisfactionRate: item.satisfaction_rate,
+      negativeRate: item.negative_rate,
+      positiveCount: item.positive_reviews || 0,
+      negativeCount: item.negative_reviews || 0,
+      averageRating: Math.max(1, 5 - (item.negative_rate / 20)),
+      topNegativeAspects: [item.category_name],
+      topPositiveAspects: [],
+      topNegativeReasons: [`${item.negative_rate}% negative sentiment`],
+      topPositiveReasons: [],
+      categoryDefinition: item.category_definition,
+      impactedProducts: item.impacted_products,
+      categoryId: item.category_id
+    }))
   }
 
-  // 新增：获取亮点数据的方法
-  const fetchDelightsData = async (filters?: ProjectFilters) => {
-    if (!projectId) return
-
-    setDelightsLoading(true)
-    try {
-      const result = await databaseService.getTopCategoriesData(
-        projectId,
-        'phy_perf', // 使用 phy_perf 类型获取亮点数据
-        {
-          sortBy: 'positive_reviews', // 按照你的要求，第二个图表也使用 negative_reviews 排序
-          sortDirection: 'desc',
-          maxCategories: 10,
-          minReviews: 5,
-          minPositiveReviews: 2
-        },
-        filters // 传递过滤器参数
-      )
-
-      // 转换数据格式为 CategoryFeedback，但重点关注正面数据，添加 category_id
-      const transformedData: CategoryFeedback[] = result.data.categories.map(item => ({
-        category: item.category_name,
-        categoryType: item.aspect_type === 'phy_perf' ? 'Physical' : 'Performance',
-        mentions: item.total_reviews,
-        satisfactionRate: item.positive_ratio * 100,
-        negativeRate: 100 - (item.positive_ratio * 100),
-        positiveCount: item.positive_reviews,
-        negativeCount: item.negative_reviews,
-        totalReviews: item.total_reviews,
-        averageRating: 3 + ((item.positive_ratio * 100) / 50), // 基于正面率计算评分
-        topNegativeAspects: [],
-        topPositiveAspects: [item.category_name],
-        topNegativeReasons: [],
-        topPositiveReasons: [
-          `${Math.round(item.positive_ratio * 100)}% positive sentiment`,
-          ...(item.definition ? [`Context: ${item.definition}`] : [])
-        ],
-        categoryDefinition: item.definition,
-        impactedProducts: item.total_reviews, // 使用 total_reviews 作为影响产品数
-        categoryId: item.category_pk // 新增：存储 category_pk 用于点击时获取评论详情
-      }))
-
-      setDelightsData(transformedData)
-    } catch (error) {
-      console.error('Error fetching delights data:', error)
-      console.error('Error details:', {
-        projectId,
-        aspectType: 'phy_perf',
-        options: {
-          sortBy: 'positive_reviews',
-          sortDirection: 'desc',
-          maxCategories: 10,
-          minReviews: 5,
-          minPositiveReviews: 2
-        },
-        filters
-      })
-    } finally {
-      setDelightsLoading(false)
-    }
+  const transformDelightsData = (rawData: any[]): CategoryFeedback[] => {
+    return rawData.map(item => ({
+      category: item.category_name,
+      categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
+      totalReviews: item.total_reviews,
+      satisfactionRate: item.positive_rate || 70,
+      negativeRate: 100 - (item.positive_rate || 70),
+      positiveCount: item.positive_reviews || 0,
+      negativeCount: item.negative_reviews || 0,
+      averageRating: 3 + ((item.positive_rate || 70) / 50),
+      topNegativeAspects: [],
+      topPositiveAspects: [item.category_name],
+      topNegativeReasons: [],
+      topPositiveReasons: [`${item.positive_rate || 70}% positive sentiment`],
+      categoryDefinition: item.category_definition,
+      impactedProducts: item.impacted_products,
+      categoryId: item.category_id
+    }))
   }
 
-  // 新增：获取使用场景数据的方法
-  const fetchUseCaseData = async (filters?: ProjectFilters) => {
-    if (!projectId) return
-
-    setUseCaseLoading(true)
-    try {
-      const result = await databaseService.getTopCategoriesData(
-        projectId,
-        'use', // 使用 use 类型获取使用场景数据
-        {
-          sortBy: 'positive_reviews', // 按正面提及排序
-          sortDirection: 'desc',
-          maxCategories: 15, // 使用场景可以显示更多
-          minReviews: 3,
-          minPositiveReviews: 1
-        },
-        filters // 传递过滤器参数
-      )
-
-      // 转换数据格式为 UseCaseFeedback，添加 category_id
-      const transformedData: UseCaseFeedback[] = result.data.categories.map(item => ({
-        useCase: item.category_name,
-        totalReviews: item.total_reviews,
-        positiveReviews: item.positive_reviews,
-        negativeReviews: item.negative_reviews,
-        satisfactionRate: item.positive_ratio * 100,
-        categoryType: 'Performance' as const,
-        topSatisfactionReasons: (item.positive_ratio * 100) > 50 ? [
-          `${Math.round(item.positive_ratio * 100)}% positive sentiment`,
-          `${item.positive_reviews} positive reviews`,
-          ...(item.definition ? [`Context: ${item.definition}`] : [])
-        ] : [],
-        topGapReasons: (item.positive_ratio * 100) <= 50 ? [
-          `${item.negative_reviews} negative reviews`,
-          `${(item.positive_ratio * 100).toFixed(1)}% satisfaction rate`,
-          ...(item.definition ? [`Context: ${item.definition}`] : [])
-        ] : [],
-        relatedCategories: [item.category_name],
-        categoryDefinition: item.definition,
-        productCount: item.total_reviews,
-        categoryId: item.category_pk
-      }))
-
-      setUseCaseData(transformedData)
-    } catch (error) {
-      console.error('Error fetching use case data:', error)
-      console.error('Error details:', {
-        projectId,
-        aspectType: 'use',
-        options: {
-          sortBy: 'positive_reviews',
-          sortDirection: 'desc',
-          maxCategories: 15,
-          minReviews: 3,
-          minPositiveReviews: 1
-        },
-        filters
-      })
-    } finally {
-      setUseCaseLoading(false)
-    }
+  const transformUseCaseData = (rawData: any[]): UseCaseFeedback[] => {
+    return rawData.map(item => ({
+      useCase: item.use_case,
+      totalReviews: item.total_reviews,
+      positiveReviews: item.positive_reviews,
+      negativeReviews: item.negative_reviews,
+      satisfactionRate: item.satisfaction_rate,
+      categoryType: 'Performance' as const,
+      topSatisfactionReasons: item.satisfaction_rate > 50 ? [`${item.satisfaction_rate}% satisfaction`] : [],
+      topGapReasons: item.satisfaction_rate <= 50 ? [`${item.satisfaction_rate}% satisfaction`] : [],
+      relatedCategories: [item.use_case],
+      categoryDefinition: item.category_definition,
+      productCount: item.product_count,
+      categoryId: item.category_id
+    }))
   }
+
+
+
+
 
   // 处理过滤器变化
   const handleFilterChange = async (filters: ProjectFilters) => {
@@ -318,12 +183,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         allReviewData
       })
 
-      // 同时更新三个图表的数据，传递过滤器参数
-      await Promise.all([
-        fetchPainPointsData(filters),
-        fetchDelightsData(filters),
-        fetchUseCaseData(filters)
-      ])
+      // Data is already loaded from the main dashboard container
+      // No need to fetch duplicate data
     } catch (error) {
       console.error('Error fetching filtered data:', error)
     } finally {
@@ -331,14 +192,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     }
   }
 
-  // 初始化时获取三个图表的数据
-  useEffect(() => {
-    if (projectId) {
-      fetchPainPointsData(initialFilters)
-      fetchDelightsData(initialFilters)
-      fetchUseCaseData(initialFilters)
-    }
-  }, [projectId, initialFilters])
+  // Data is already loaded from the main dashboard container
+  // No need to fetch duplicate data on initialization
 
   useEffect(() => {
     // Create the structure that charts expect using database data
@@ -561,20 +416,14 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
            Bars are sorted by descending negative reviews left to right, calculated from the latest 40 reviews per product in selected categories.
             </div>
-          {painPointsLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">loading...</div>
-            </div>
-          ) : (
             <CategoryPainPointsBar
-              data={painPointsData}
+              data={transformPainPointsData(filteredData.reviewInsights.painPoints)}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
               projectId={projectId}
               filters={initialFilters}
             />
-          )}
         </ChartWithFilters>
       </section>
 
@@ -594,20 +443,14 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
             Bars are sorted by descending positive reviews left to right, calculated from the ~50 most recent reviews per product in selected categories.
 
             </div>
-          {delightsLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">loading...</div>
-            </div>
-          ) : (
             <CategoryPositiveFeedbackBar
-              data={delightsData}
+              data={transformDelightsData(filteredData.reviewInsights.customerLikes)}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
               projectId={projectId}
               filters={initialFilters}
             />
-          )}
         </ChartWithFilters>
       </section>
 
@@ -620,13 +463,8 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-          {useCaseLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">loading...</div>
-            </div>
-          ) : (
             <UseCaseSentimentMatrix
-              data={useCaseData}
+              data={transformUseCaseData(filteredData.reviewInsights.allUseCases)}
               reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
                 id: string
                 productId: string
@@ -642,7 +480,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               projectId={projectId}
               filters={initialFilters}
             />
-          )}
         </div>
       </section>
 
