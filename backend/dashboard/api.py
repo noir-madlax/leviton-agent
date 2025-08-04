@@ -15,7 +15,7 @@ from .models import (
     PricingAnalysisResponse, PriceDistribution, BrandPriceDistribution, PriceStats, PriceStatsGroup, BrandPrices,
     MarketInsightsResponse, SegmentRevenue, SegmentData,
     PackagePreferenceResponse, SameProductComparison, PackageDistributionItem,
-    ReviewInsightsResponse,
+    ReviewInsightsResponse, ReviewInsightsRequest,
     CompetitorAnalysisResponse,
     AllReviewDataResponse, ReviewData,
     DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
@@ -30,7 +30,7 @@ from .services.product_analysis_service import ProductAnalysisService
 from .services.pricing_analysis_service import PricingAnalysisService
 from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
-from .services.review_insights_service import ReviewInsightsService
+
 from .services.competitor_analysis_service import CompetitorAnalysisService
 from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
@@ -103,6 +103,221 @@ def apply_filters_to_service(service, filters: Dict[str, Any]):
             segments=filters['segments'],
             extend_fields=filters['extend_fields']
         )
+
+
+def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf_positive_data: Dict[str, Any], 
+                               use_data: Dict[str, Any], max_pain_points: int = 15, max_customer_likes: int = 10, 
+                               max_use_cases: int = 15, max_underserved_use_cases: int = 10) -> Dict[str, Any]:
+    """Format ReviewAnalysis data into review insights format.
+    
+    Args:
+        phy_perf_negative_data: Physical/performance categories data sorted by negative reviews for pain points
+        phy_perf_positive_data: Physical/performance categories data sorted by positive reviews for customer likes
+        use_data: Use case categories data from ReviewAnalysis
+        max_pain_points: Maximum number of pain points to return (default: 15)
+        max_customer_likes: Maximum number of customer likes to return (default: 10)
+        max_use_cases: Maximum number of use cases to return (default: 15)
+        max_underserved_use_cases: Maximum number of underserved use cases to return (default: 10)
+        
+    Returns:
+        Dict containing pain_points, customer_likes, all_use_cases, underserved_use_cases, and totals
+    """
+    # Constants for data processing (moved from ReviewInsightsServiceV2)    
+    phy_perf_negative_categories = phy_perf_negative_data.get('categories', [])
+    phy_perf_positive_categories = phy_perf_positive_data.get('categories', [])
+    use_categories = use_data.get('categories', [])
+    
+    # Generate pain points from physical/performance categories (sorted by negative reviews)
+    pain_points = []
+    for cat in phy_perf_negative_categories:
+        negative_reviews = cat.get('negative_reviews', 0)
+        total_reviews = cat.get('total_reviews', 0)
+        
+        if negative_reviews > 0:
+            negative_rate = (negative_reviews / total_reviews) * 100
+            severity = min(100, max(10, negative_rate))
+            
+            # Map aspect type to display type
+            aspect_type = cat.get('aspect_type', 'phy')
+            display_type = map_aspect_type_to_display(aspect_type)
+            
+            pain_point = {
+                'category_name': capitalize_words(cat['category_name']),
+                'example_details': get_example_details_for_category(cat),
+                'severity': severity,
+                'impacted_products': count_impacted_products(cat),
+                'type': display_type,
+                'total_reviews': total_reviews,
+                'positive_reviews': cat.get('positive_reviews', 0),
+                'negative_reviews': negative_reviews,
+                'negative_rate': negative_rate,
+                'category_definition': cat.get('definition', ''),
+                'related_detail_texts': get_related_detail_texts(cat)
+            }
+            pain_points.append(pain_point)
+    
+    # Take top max_pain_points (already sorted by negative reviews from database)
+    pain_points = pain_points[:max_pain_points]
+    
+    # Generate customer likes from physical/performance categories (sorted by positive reviews)
+    customer_likes = []
+    for cat in phy_perf_positive_categories:
+        positive_reviews = cat.get('positive_reviews', 0)
+        total_reviews = cat.get('total_reviews', 0)
+        
+        if positive_reviews > 0:
+            positive_rate = (positive_reviews / total_reviews) * 100
+            
+            if positive_rate >= 40:
+                if positive_rate >= 70:
+                    satisfaction_level = 'High'
+                elif positive_rate >= 40:
+                    satisfaction_level = 'Medium'
+                else:
+                    satisfaction_level = 'Low'
+                
+                customer_like = {
+                    'category_name': capitalize_words(cat['category_name']),
+                    'example_details': get_example_details_for_category(cat),
+                    'satisfaction_level': satisfaction_level,
+                    'total_reviews': total_reviews,
+                    'positive_reviews': positive_reviews,
+                    'negative_reviews': cat.get('negative_reviews', 0),
+                    'positive_rate': positive_rate,
+                    'category_definition': cat.get('definition', ''),
+                    'related_detail_texts': get_related_detail_texts(cat)
+                }
+                customer_likes.append(customer_like)
+    
+    # Take top max_customer_likes (already sorted by positive reviews from database)
+    customer_likes = customer_likes[:max_customer_likes]
+    
+    # Generate all use cases from use case categories
+    all_use_cases = []
+    for cat in use_categories:
+        total_reviews = cat.get('total_reviews', 0)
+        
+        if total_reviews > 0:
+            positive_reviews = cat.get('positive_reviews', 0)
+            negative_reviews = cat.get('negative_reviews', 0)
+            
+            total_sentiment_reviews = positive_reviews + negative_reviews
+            if total_sentiment_reviews > 0:
+                satisfaction_rate = (positive_reviews / total_sentiment_reviews) * 100
+            else:
+                satisfaction_rate = 50.0
+            
+            use_case = {
+                'use_case': capitalize_words(cat['category_name']),
+                'product_attribute': get_product_attributes_for_category(cat),
+                'satisfaction_rate': satisfaction_rate,
+                'total_reviews': total_reviews,
+                'positive_reviews': positive_reviews,
+                'negative_reviews': negative_reviews,
+                'category_definition': cat.get('definition', ''),
+                'product_count': count_impacted_products(cat),
+                'related_detail_texts': get_related_detail_texts(cat)
+            }
+            all_use_cases.append(use_case)
+    
+    # Sort by total reviews and take top max_use_cases
+    all_use_cases.sort(key=lambda x: x['total_reviews'], reverse=True)
+    all_use_cases = all_use_cases[:max_use_cases]
+    
+    # Generate underserved use cases from use case categories
+    underserved_use_cases = []
+    for cat in use_categories:
+        total_reviews = cat.get('total_reviews', 0)
+        product_count = count_impacted_products(cat)
+        
+        if (product_count > 0):
+            
+            gap_level = max(30, 100 - (total_reviews * 10))
+            
+            underserved_use_case = {
+                'use_case': capitalize_words(cat['category_name']),
+                'product_attribute': get_product_attributes_for_category(cat),
+                'gap_level': gap_level,
+                'total_reviews': total_reviews,
+                'positive_reviews': cat.get('positive_reviews', 0),
+                'negative_reviews': cat.get('negative_reviews', 0),
+                'category_definition': cat.get('definition', ''),
+                'product_count': product_count,
+                'related_detail_texts': get_related_detail_texts(cat)
+            }
+            underserved_use_cases.append(underserved_use_case)
+    
+    # Sort by gap level and take top max_underserved_use_cases
+    underserved_use_cases.sort(key=lambda x: x['gap_level'], reverse=True)
+    underserved_use_cases = underserved_use_cases[:max_underserved_use_cases]
+    
+    # Calculate total use case reviews
+    total_use_reviews = sum(cat.get('total_reviews', 0) for cat in use_categories)
+    
+    return {
+        'pain_points': pain_points,
+        'customer_likes': customer_likes,
+        'all_use_cases': all_use_cases,
+        'underserved_use_cases': underserved_use_cases,
+        'total_use_reviews': total_use_reviews
+    }
+
+
+def map_aspect_type_to_display(aspect_type: str) -> str:
+    """Map database aspect type to display type."""
+    type_map = {
+        'phy': 'Physical',
+        'perf': 'Performance',
+        'use': 'Usability'
+    }
+    return type_map.get(aspect_type, 'Physical')
+
+
+def capitalize_words(text: str) -> str:
+    """Capitalize words in text for display."""
+    if not text:
+        return ""
+    
+    import re
+    words = re.split(r'[\s_-]+', text.strip())
+    capitalized_words = []
+    
+    for word in words:
+        if word:
+            word_lower = word.lower()
+            if word_lower in ['and', 'or', 'of', 'in', 'on', 'at', 'to', 'for', 'with']:
+                capitalized_words.append(word_lower)
+            else:
+                capitalized_words.append(word.capitalize())
+    
+    return ' '.join(capitalized_words)
+
+
+def get_example_details_for_category(category: Dict[str, Any]) -> str:
+    """Get example details for a category (simplified version)."""
+    # For now, return a simplified version based on category name
+    # In a full implementation, this would query the database for actual examples
+    category_name = category.get('category_name', '')
+    return f"Various {category_name.lower()} related examples"
+
+
+def get_product_attributes_for_category(category: Dict[str, Any]) -> str:
+    """Get product attributes for a use case category (simplified version)."""
+    # For use cases, typically return "USE" as the product attribute
+    return "USE"
+
+
+def get_related_detail_texts(category: Dict[str, Any]) -> List[str]:
+    """Get related detail texts for a category (simplified version)."""
+    # For now, return empty list - this would be populated from database queries
+    return []
+
+
+def count_impacted_products(category: Dict[str, Any]) -> int:
+    """Count the number of products impacted by this category (simplified version)."""
+    # For now, return a reasonable default
+    # In a full implementation, this would query the database
+    return 1
 
 # 筛选器相关端点
 @router.get("/projects/{project_id}/filter-options")
@@ -190,7 +405,7 @@ def get_chart_service_class(chart_type: str):
         'pricing-analysis': PricingAnalysisService,
         'market-insights': MarketInsightsService,
         'package-preference': PackagePreferenceService,
-        'review-insights': ReviewInsightsService,
+
         'competitor-analysis': CompetitorAnalysisService,
         'all-review-data': AllReviewDataService
     }
@@ -612,13 +827,8 @@ async def get_package_preference(
 
 
 @router.post("/review-insights", response_model=ReviewInsightsResponse)
-@with_dashboard_service(ReviewInsightsService)
-@log_request_response
-async def get_review_insights_data(
-    service: ReviewInsightsService,
-    request: DashboardRequest
-):
-    """Get review insights data for a specific project.
+async def get_review_insights_data(request: ReviewInsightsRequest):
+    """Get review insights data for a specific project using ReviewAnalysisChartService directly.
 
     POST请求，使用JSON格式传递过滤条件：
     {
@@ -631,18 +841,64 @@ async def get_review_insights_data(
         }
     }
 
-    Enhanced version: Returns complete review insights with segment support.
+    Direct implementation using ReviewAnalysisChartService for maximum efficiency.
     """
-    raw_data = service.get_data()
+    from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
+    
+    try:
+        # Initialize the ReviewAnalysisChartService directly
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.get_project_filters().dict() if request.filters else None
+        )
+        
+        # Get phy_perf data sorted by negative reviews for pain points
+        phy_perf_negative_data = await service.get_top_categories({
+            'aspect_type': 'phy_perf',
+            'sortBy': 'negative_reviews',
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+        
+        # Get phy_perf data sorted by positive reviews for customer likes
+        phy_perf_positive_data = await service.get_top_categories({
+            'aspect_type': 'phy_perf',
+            'sortBy': 'positive_reviews',
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+        
+        # Get use case data
+        use_data = await service.get_top_categories({
+            'aspect_type': 'use',
+            'sortBy': 'total_reviews', 
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+        
+        # Format the data into review insights format
+        raw_data = format_review_insights_data(
+            phy_perf_negative_data, 
+            phy_perf_positive_data,
+            use_data,
+            max_pain_points=request.max_pain_points,
+            max_customer_likes=request.max_customer_likes,
+            max_use_cases=request.max_use_cases,
+            max_underserved_use_cases=request.max_underserved_use_cases
+        )
 
-    response = ReviewInsightsResponse(
-        **raw_data,
-        project_id=request.project_id,
-        filtered_asin_count=len(service.project_asins)
-    )
+        response = ReviewInsightsResponse(
+            **raw_data,
+            project_id=request.project_id,
+            filtered_asin_count=len(service.project_asins)
+        )
 
-    logger.info(f"Review insights API returned data for project {request.project_id}")
-    return response
+        logger.info(f"Review insights API returned data for project {request.project_id} - {len(raw_data.get('pain_points', []))} pain points, {len(raw_data.get('customer_likes', []))} likes")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error in review insights API: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @router.get("/review-analysis/{project_id}/final-category-assignments")

@@ -489,12 +489,69 @@ export class DatabaseService {
     totalUseMentions: number
   }> {
     try {
-      const result = await callDashboardAPI('review-insights', projectId, {
+      const rawResult = await callDashboardAPI('review-insights', projectId, {
         categoryFilters,
         packagingTypeFilters,
         segmentFilters,
         extendFields
       })
+
+      // Map backend standardized field names to frontend display names
+      const result = {
+        painPoints: rawResult.pain_points?.map((item: any) => ({
+          aspect: item.category_name,        // Map category_name → aspect (display)
+          category: item.example_details,    // Map example_details → category (display)
+          severity: item.severity,
+          frequency: item.total_reviews,     // Map total_reviews → frequency (legacy compatibility)
+          impactedProducts: item.impacted_products,
+          type: item.type,
+          categoryDefinition: item.category_definition,
+          totalMentions: item.total_reviews,
+          negativeRate: item.negative_rate,
+          totalReviews: item.total_reviews,
+          positiveReviews: item.positive_reviews,
+          negativeReviews: item.negative_reviews,
+          relatedDetailTexts: item.related_detail_texts
+        })) || [],
+        customerLikes: rawResult.customer_likes?.map((item: any) => ({
+          feature: item.category_name,       // Map category_name → feature (display)
+          category: item.example_details,    // Map example_details → category (display)
+          frequency: item.total_reviews,     // Map total_reviews → frequency (legacy compatibility)
+          satisfactionLevel: item.satisfaction_level,
+          categoryDefinition: item.category_definition,
+          totalMentions: item.total_reviews,
+          positiveRate: item.positive_rate,
+          totalReviews: item.total_reviews,
+          positiveReviews: item.positive_reviews,
+          negativeReviews: item.negative_reviews,
+          relatedDetailTexts: item.related_detail_texts
+        })) || [],
+        allUseCases: rawResult.all_use_cases?.map((item: any) => ({
+          useCase: item.use_case,
+          productAttribute: item.product_attribute,
+          satisfactionRate: item.satisfaction_rate,
+          mentionCount: item.total_reviews,  // Map total_reviews → mentionCount (legacy compatibility)
+          positiveCount: item.positive_reviews,
+          negativeCount: item.negative_reviews,
+          categoryDefinition: item.category_definition,
+          productCount: item.product_count,
+          totalReviews: item.total_reviews,
+          relatedDetailTexts: item.related_detail_texts
+        })) || [],
+        underservedUseCases: rawResult.underserved_use_cases?.map((item: any) => ({
+          useCase: item.use_case,
+          productAttribute: item.product_attribute,
+          gapLevel: item.gap_level,
+          mentionCount: item.total_reviews,  // Map total_reviews → mentionCount (legacy compatibility)
+          positiveCount: item.positive_reviews,
+          negativeCount: item.negative_reviews,
+          categoryDefinition: item.category_definition,
+          productCount: item.product_count,
+          totalReviews: item.total_reviews,
+          relatedDetailTexts: item.related_detail_texts
+        })) || [],
+        totalUseMentions: rawResult.total_use_reviews || 0
+      }
 
       return result
     } catch (error) {
@@ -843,9 +900,9 @@ export class DatabaseService {
       }>
     }
   }> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-
       const requestBody = {
         project_id: projectId,
         filters: filters || {},
@@ -879,6 +936,25 @@ export class DatabaseService {
       return result
     } catch (error) {
       console.error('Error fetching top categories data:', error)
+      console.error('Request details:', {
+        url: `${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories`,
+        requestBody: {
+          project_id: projectId,
+          filters: filters || {},
+          options: {
+            aspect_type: aspectType,
+            sort_by: options?.sortBy || 'negative_reviews',
+            sort_direction: options?.sortDirection || 'desc',
+            max_categories: options?.maxCategories || 10,
+            min_reviews: options?.minReviews || 5,
+            min_positive_reviews: options?.minPositiveReviews || 2
+          }
+        },
+        projectId,
+        aspectType,
+        options,
+        filters
+      })
       throw error
     }
   }

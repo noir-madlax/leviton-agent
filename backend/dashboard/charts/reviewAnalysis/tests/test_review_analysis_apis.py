@@ -38,20 +38,20 @@ async def test_top_categories_api():
             }
         },
         {
-            "name": "phy_perf - sorted by positive mentions",
+            "name": "phy_perf - sorted by positive reviews",
             "options": {
                 "aspect_type": "phy_perf",
-                "sort_by": "positive_mentions",
+                "sort_by": "positive_reviews",
                 "sort_direction": "desc",
                 "max_categories": 5,
                 "min_mentions": 3
             }
         },
         {
-            "name": "phy_perf - sorted by negative mentions",
+            "name": "phy_perf - sorted by negative reviews",
             "options": {
                 "aspect_type": "phy_perf",
-                "sort_by": "negative_mentions",
+                "sort_by": "negative_reviews",
                 "sort_direction": "desc",
                 "max_categories": 5,
                 "min_mentions": 3

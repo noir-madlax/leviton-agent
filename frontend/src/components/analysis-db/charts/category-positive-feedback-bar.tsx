@@ -127,46 +127,6 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
           colorConfig={getColorConfig('delights')}
         />
         
-        {/* 统计摘要 */}
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t">
-          {filteredData.slice(0, 4).map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="text-lg font-bold text-green-600">
-                {item.positiveCount}
-              </div>
-              <div className="text-sm text-gray-600 truncate" title={item.category}>
-                {item.category}
-              </div>
-              <div className="text-xs text-gray-600">
-                {Math.round(item.satisfactionRate)}% satisfaction
-              </div>
-            </div>
-          ))}
-          <div className="text-center">
-                          <p className="text-sm text-gray-600">Total Amazon Categories</p>
-            <p className="text-lg font-semibold">{data.length}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">Avg Satisfaction</p>
-            <p className="text-lg font-semibold text-green-600">
-              {data.length > 0 ? 
-                Math.round(data.reduce((sum, item) => sum + item.satisfactionRate, 0) / data.length) : 0
-              }%
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">Total Positive</p>
-            <p className="text-lg font-semibold text-green-600">
-              {data.reduce((sum, item) => sum + item.positiveCount, 0)}
-            </p>
-          </div>
-          <div className="text-center">
-                          <p className="text-sm text-gray-600">Excellent Amazon Categories</p>
-            <p className="text-lg font-semibold text-green-600">
-              {data.filter(item => item.positiveCount >= 100).length}
-            </p>
-          </div>
-        </div>
       </CardContent>
     </Card>
     </div>

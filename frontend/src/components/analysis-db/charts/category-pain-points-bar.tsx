@@ -129,46 +129,6 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
           colorConfig={getColorConfig('painPoints')}
         />
         
-        {/* 统计摘要 */}
-        <div className="mt-4 grid grid-cols-2 md:grid-cols-4 gap-4 pt-4 border-t">
-          {filteredData.slice(0, 4).map((item, index) => (
-            <div key={index} className="text-center">
-              <div className="text-lg font-bold text-red-600">
-                {item.negativeCount}
-              </div>
-              <div className="text-sm text-gray-600 truncate" title={item.category}>
-                {item.category}
-              </div>
-              <div className="text-xs text-gray-600">
-                {Math.round(item.satisfactionRate)}% satisfaction
-              </div>
-            </div>
-          ))}
-          <div className="text-center">
-                          <p className="text-sm text-gray-600">Total Amazon Categories</p>
-            <p className="text-lg font-semibold">{data.length}</p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">Avg Negative Rate</p>
-            <p className="text-lg font-semibold">
-              {data.length > 0 ? 
-                Math.round(data.reduce((sum, item) => sum + item.negativeRate, 0) / data.length) : 0
-              }%
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">Total Negative</p>
-            <p className="text-lg font-semibold text-red-600">
-              {data.reduce((sum, item) => sum + item.negativeCount, 0)}
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-sm text-gray-600">Critical Issues</p>
-            <p className="text-lg font-semibold text-red-600">
-              {data.filter(item => item.negativeCount >= 30).length}
-            </p>
-          </div>
-        </div>
       </CardContent>
     </Card>
     </div>

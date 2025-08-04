@@ -483,7 +483,7 @@ class ReviewDataService:
                     filtered_categories = [cat for cat in filtered_categories if cat['negative_mentions'] >= min_negative]
                 
                 # Apply sorting
-                sort_by = options.get('sort_by', 'total_mentions')
+                sort_by = options.get('sort_by', 'total_reviews')
                 sort_direction = options.get('sort_direction', 'desc')
                 reverse = sort_direction == 'desc'
                 
@@ -495,6 +495,10 @@ class ReviewDataService:
                     filtered_categories.sort(key=lambda x: x['positive_mentions'], reverse=reverse)
                 elif sort_by == 'negative_mentions':
                     filtered_categories.sort(key=lambda x: x['negative_mentions'], reverse=reverse)
+                elif sort_by == 'positive_reviews':
+                    filtered_categories.sort(key=lambda x: x['positive_reviews'], reverse=reverse)
+                elif sort_by == 'negative_reviews':
+                    filtered_categories.sort(key=lambda x: x['negative_reviews'], reverse=reverse)
                 elif sort_by == 'positive_ratio':
                     filtered_categories.sort(key=lambda x: x['positive_ratio'], reverse=reverse)
                 

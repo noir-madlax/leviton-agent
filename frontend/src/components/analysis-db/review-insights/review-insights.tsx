@@ -148,6 +148,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       setPainPointsData(transformedData)
     } catch (error) {
       console.error('Error fetching pain points data:', error)
+      console.error('Error details:', {
+        projectId,
+        aspectType: 'phy_perf',
+        options: {
+          sortBy: 'negative_reviews',
+          sortDirection: 'desc',
+          maxCategories: 10,
+          minReviews: 5,
+          minPositiveReviews: 2
+        },
+        filters
+      })
     } finally {
       setPainPointsLoading(false)
     }
@@ -198,6 +210,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       setDelightsData(transformedData)
     } catch (error) {
       console.error('Error fetching delights data:', error)
+      console.error('Error details:', {
+        projectId,
+        aspectType: 'phy_perf',
+        options: {
+          sortBy: 'positive_reviews',
+          sortDirection: 'desc',
+          maxCategories: 10,
+          minReviews: 5,
+          minPositiveReviews: 2
+        },
+        filters
+      })
     } finally {
       setDelightsLoading(false)
     }
@@ -249,6 +273,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       setUseCaseData(transformedData)
     } catch (error) {
       console.error('Error fetching use case data:', error)
+      console.error('Error details:', {
+        projectId,
+        aspectType: 'use',
+        options: {
+          sortBy: 'positive_reviews',
+          sortDirection: 'desc',
+          maxCategories: 15,
+          minReviews: 3,
+          minPositiveReviews: 1
+        },
+        filters
+      })
     } finally {
       setUseCaseLoading(false)
     }

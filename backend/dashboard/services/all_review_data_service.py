@@ -307,7 +307,7 @@ class AllReviewDataService(BaseDashboardService):
             
             review_item = {
                 'id': f"{item['review_id']}_{len(grouped_data[category])}",
-                'productId': item['product_id'],
+                'product_id': item['product_id'],
                 'text': item['review_content'] or '',
                 'sentiment': sentiment,
                 'category': category,

@@ -90,7 +90,9 @@ class TestCategorySummary:
             positive_mentions=70,
             negative_mentions=20,
             neutral_mentions=10,
-            unique_reviews=50,
+            total_reviews=50,
+            positive_reviews=35,
+            negative_reviews=10,
             positive_ratio=0.7
         )
         assert category.category_id == 12345

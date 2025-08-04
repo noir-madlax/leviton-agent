@@ -430,7 +430,7 @@ async def test_use_aspect_type():
         
         use_top_categories = await service.get_top_categories({
             'aspect_type': 'use',
-            'sort_by': 'total_mentions',
+            'sort_by': 'total_reviews',
             'sort_direction': 'desc',
             'max_categories': 5,
             'min_mentions': 1
@@ -485,7 +485,7 @@ async def test_review_analysis_api():
         "filters": {},
         "options": {
             "aspect_type": aspect_type,
-            "sort_by": "positive_mentions",
+            "sort_by": "positive_reviews",
             "sort_direction": "desc",
             "max_categories": 15,
             "min_mentions": 3,
