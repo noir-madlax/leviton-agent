@@ -276,7 +276,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'type': get_category_type(agg['aspect_type']),
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
-                    'totalMentions': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
                     'negativeRate': negative_rate,
                     # New field for frontend mapping
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
@@ -306,7 +306,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'satisfactionLevel': satisfaction_level,
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
-                    'totalMentions': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
                     'positiveRate': positive_rate,
                     # New field for frontend mapping
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
@@ -335,7 +335,7 @@ class ReviewInsightsService(BaseDashboardService):
                     'useCase': self._capitalize_words(agg['category_name']),
                     'productAttribute': ', '.join([self._capitalize_words(pg) for pg in list(agg['parent_groups'])]),
                     'satisfactionRate': satisfaction_rate,
-                    'mentionCount': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
                     'positiveCount': agg['positive_mentions'],
                     'negativeCount': agg['negative_mentions'],
                     # Enhanced fields for frontend optimization
@@ -345,8 +345,8 @@ class ReviewInsightsService(BaseDashboardService):
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
                 })
         
-        # Sort by total mentions and take top 15
-        all_use_cases.sort(key=lambda x: x['mentionCount'], reverse=True)
+        # Sort by total reviews and take top 15
+        all_use_cases.sort(key=lambda x: x['totalReviews'], reverse=True)
         all_use_cases = all_use_cases[:15]
         
         # Generate underserved use cases (categories with low overall mentions but presence across products)
@@ -364,7 +364,9 @@ class ReviewInsightsService(BaseDashboardService):
                     'useCase': self._capitalize_words(agg['category_name']),
                     'productAttribute': ', '.join([self._capitalize_words(pg) for pg in list(agg['parent_groups'])]),
                     'gapLevel': gap_level,
-                    'mentionCount': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
+                    'positiveCount': agg['positive_mentions'],
+                    'negativeCount': agg['negative_mentions'],
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
                     'productCount': len(agg['products']),
@@ -383,5 +385,5 @@ class ReviewInsightsService(BaseDashboardService):
             'customerLikes': customer_likes,
             'allUseCases': all_use_cases,
             'underservedUseCases': underserved_use_cases,
-            'totalUseMentions': total_use_mentions
+            'totalUseReviews': total_use_mentions
         } 
