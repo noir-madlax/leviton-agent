@@ -7,7 +7,7 @@ import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/sh
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
-import { ProjectFilters, UnifiedFilterData } from "@/components/analysis-db/types/filters"
+import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
@@ -19,7 +19,7 @@ import { useTAMDataRefresh } from "@/components/analysis-db/hooks/use-chart-data
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api'
-// import { useSalesTrendData } from '@/app/chat/charts/sales_trend/hooks/use-sales-trend-data'
+
 // 🆕 导入统一的过滤器 Hook
 import { useMarketShareFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
 
@@ -28,11 +28,7 @@ interface BrandAnalysisProps {
     brandCategoryRevenue: {
       brand: string
       categories: Record<string, { revenue: number; volume: number; product_count: number }>
-      // 以下字段为历史遗留，不再使用，现在使用通用的 categories 对象
-      dimmerRevenue: number
-      switchRevenue: number
-      dimmerVolume: number
-      switchVolume: number
+
     }[]
     categoryNames: string[]
     categoryColors: string[]
@@ -159,8 +155,6 @@ interface BrandAnalysisProps {
   }
   projectId?: string
   initialFilters?: ProjectFilters
-  // 🆕 统一过滤器数据
-  unifiedFilterData?: UnifiedFilterData | null
 }
 
 // Sales Trend Component for Individual Category
@@ -264,9 +258,9 @@ function SalesTrendByCategoryComponent({
   )
 }
 
-export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend, unifiedFilterData }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
-  const [data] = useState(initialData)
+
   const { openPanel, loading } = useProductPanel()
   
   // Get chart sections configuration for conditional rendering
@@ -291,19 +285,14 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     projectId,
     { initialFilters: initialFilters || undefined }
   )
-  // 🚫 移除原来的配置加载逻辑，现在由 Hook 和 FilterRenderer 内部处理
-  const [tamConfigLoading] = useState(false) // 保留这个状态用于兼容性
 
-  // 🚫 移除原来的处理函数，现在由 Hook 统一处理
-
-  // 🚫 移除原来的全局同步监听，现在由 Hook 统一处理
 
   // 获取category信息
-  const categoryNames = data.categoryNames || []
-  const categoryColors = data.categoryColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
-  
+  const categoryNames = initialData.categoryNames || []
+  const categoryColors = initialData.categoryColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+
   // 如果没有数据，显示空状态
-  if (!categoryNames.length || !data.brandCategoryRevenue.length) {
+  if (!categoryNames.length || !initialData.brandCategoryRevenue.length) {
     return (
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
@@ -322,7 +311,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   }
 
   // 构建grouped bar chart数据 - 限制为Top 10品牌
-  const chartData = data.brandCategoryRevenue
+  const chartData = initialData.brandCategoryRevenue
     .map(item => {
       const brandData: { name: string; [key: string]: number | string } = { name: item.brand }
       
@@ -378,7 +367,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   }
 
   const handleSalesTrendClick = (data: unknown) => {
-    // Handler for sales trend chart clicks
+    // TODO: 实现销售趋势图点击处理逻辑
     console.log('Sales trend area clicked:', data)
   }
 
@@ -415,7 +404,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 currentFilters={tamFilters}
                 onChange={handleFiltersChange}
                 onFiltersReady={handleFiltersReady}
-                disabled={tamConfigLoading || tamDataLoading}
+                disabled={tamDataLoading}
                 className="mb-6"
               />
             </div>
@@ -469,11 +458,18 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 <p className="text-sm text-gray-600">正在更新图表数据...</p>
               </div>
             </div>
+          ) : !filtersReady ? (
+            <div className="flex items-center justify-center py-20">
+              <div className="text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                <p className="text-sm text-gray-600">正在更新图表数据...</p>
+              </div>
+            </div>
           ) : tamDataError ? (
             <div className="flex items-center justify-center py-20">
               <div className="text-center">
                 <p className="text-sm text-red-600 mb-3">图表数据加载失败: {tamDataError}</p>
-                <button 
+                <button
                   onClick={() => refreshTamData(tamFilters)}
                   className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                 >
@@ -511,7 +507,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                             fill="#8884d8"
                             dataKey="revenue"
                           >
-                            {categoryData.brand_shares.map((entry, brandIndex: number) => (
+                            {categoryData.brand_shares.map((_, brandIndex: number) => (
                               <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
                             ))}
                           </Pie>
