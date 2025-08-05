@@ -4,6 +4,7 @@ This service handles competitor analysis data retrieval with efficient database 
 """
 
 import logging
+import traceback
 from typing import Dict, List, Any, Optional
 
 from dashboard.services.base_service import FilterService
@@ -343,7 +344,6 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             for item in product_result.data:
                 asin = item['platform_id']
                 rating_value = item['rating']
-                logger.info(f"DEBUG: ASIN {asin} rating from product_wide_table: {rating_value} (type: {type(rating_value)})")
                 unique_products[asin] = {
                     'brand': item['brand'],
                     'title': item['title'],
@@ -413,7 +413,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
         options: Dict[str, Any],
         selected_asins: Optional[List[str]] = None
     ) -> Dict[str, Any]:
-        """Get competitor matrix view data with flexible options.
+        """Get competitor matrix view data with standardized format.
         
         Args:
             aspect_type: Aspect type filter ('phy_perf' or 'use')
@@ -421,7 +421,7 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             selected_asins: Optional list of ASINs to analyze (uses instance selected_asins if not provided)
             
         Returns:
-            Dict containing matrix view data
+            Dict containing matrix view data with standardized field names
         """
         # Use provided selected_asins or fall back to instance selected_asins
         asins_to_analyze = selected_asins or self.selected_asins
@@ -446,9 +446,15 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             }
             db_aspect_types = aspect_type_map.get(aspect_type, [aspect_type])
             
-            # Get aspect categories with options
-            categories = await self._get_aspect_categories_with_options(
-                asins_to_analyze, db_aspect_types, options
+            # 🔄 REUSE: Use ReviewDataService.get_categories() for efficient category retrieval
+            top_n = options.get('top_n', 10)
+            categories = self.review_data_service.get_categories(
+                project_id=self.project_id,
+                asins=asins_to_analyze,
+                aspect_types=db_aspect_types,
+                sort_by='total_reviews',
+                sort_direction='desc',
+                limit=top_n
             )
             
             if not categories:
@@ -461,22 +467,21 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                 }
             
             # Get category PKs for product aspect data
-            category_pks = [cat['category_pk'] for cat in categories]
+            category_ids = [cat['category_pk'] for cat in categories]
             
-            # Get category information including definitions
-            category_info = await self._get_category_info_for_matrix(category_pks)
+            # 🔄 REUSE: Get product aspect data using standardized method
+            product_aspect_data = await self._get_product_aspect_data(
+                selected_asins=asins_to_analyze,
+                category_ids=category_ids
+            )
             
-            # Get product aspect data
-            product_aspect_data = await self._get_product_aspect_data(asins_to_analyze, category_pks)
-            
-            # Format response
+            # Format response with standardized field names
             aspect_categories = []
             for cat in categories:
-                cat_info = category_info.get(cat['category_pk'], {})
                 aspect_categories.append({
                     'category_id': cat['category_pk'],
                     'category_name': cat['category_name'],
-                    'definition': cat_info.get('definition', '')
+                    'definition': cat['definition']
                 })
             
             result = {
@@ -500,222 +505,79 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                 'total_categories': 0
             }
 
-    async def _get_aspect_categories_with_options(
-        self, 
-        selected_asins: List[str], 
-        aspect_types: List[str], 
-        options: Dict[str, Any]
-    ) -> List[Dict[str, Any]]:
-        """Get aspect categories with sorting and filtering options.
-        
-        Args:
-            selected_asins: List of ASINs to analyze
-            aspect_types: List of aspect types to filter by
-            options: Options for sorting and filtering
-            
-        Returns:
-            List of aspect categories with metrics
-        """
-        try:
-            # Get all aspect categories for the selected ASINs and aspect types
-            result = self.supabase.table('review_aspect_data_view').select(
-                'category_pk, category_name, aspect_type, sentiment, review_id, product_id'
-            ).eq('project_id', self.project_id).in_('product_id', selected_asins).in_('aspect_type', aspect_types).execute()
-            
-            if not result.data:
-                logger.warning("No aspect data found for selected ASINs and aspect types")
-                return []
-            
-            # Calculate metrics per category
-            category_metrics = {}
-            for item in result.data:
-                category_pk = item['category_pk']
-                product_id = item['product_id']
-                review_id = item['review_id']
-                sentiment = item['sentiment']
-                
-                if category_pk not in category_metrics:
-                    category_metrics[category_pk] = {
-                        'category_pk': category_pk,
-                        'category_name': item['category_name'],
-                        'total_reviews': set(),  # Use set for unique review counting
-                        'positive_reviews': set(),
-                        'negative_reviews': set()
-                    }
-                
-                # Create unique review key using (product_id, review_id)
-                unique_review_key = (product_id, review_id)
-                category_metrics[category_pk]['total_reviews'].add(unique_review_key)
-                
-                # Track sentiment-specific reviews
-                if sentiment == '+':
-                    category_metrics[category_pk]['positive_reviews'].add(unique_review_key)
-                elif sentiment == '-':
-                    category_metrics[category_pk]['negative_reviews'].add(unique_review_key)
-            
-            # Convert to list and add review counts
-            categories = []
-            for cat_data in category_metrics.values():
-                # Convert sets to counts
-                cat_data['total_reviews'] = len(cat_data['total_reviews'])
-                cat_data['positive_reviews'] = len(cat_data['positive_reviews'])
-                cat_data['negative_reviews'] = len(cat_data['negative_reviews'])
-                categories.append(cat_data)
-            
-            # Apply filters and sorting in one pass
-            filtered_categories = categories
-            
-            # Filter by minimum reviews
-            min_reviews = options.get('min_reviews')
-            if min_reviews is not None:
-                filtered_categories = [cat for cat in filtered_categories if cat['total_reviews'] >= min_reviews]
-            
-            # Filter by include categories
-            include_categories = options.get('include_categories')
-            if include_categories:
-                filtered_categories = [cat for cat in filtered_categories if cat['category_name'] in include_categories]
-            
-            # Filter by exclude categories
-            exclude_categories = options.get('exclude_categories')
-            if exclude_categories:
-                filtered_categories = [cat for cat in filtered_categories if cat['category_name'] not in exclude_categories]
-            
-            # Filter by sentiment
-            sentiment_filter = options.get('sentiment_filter')
-            if sentiment_filter:
-                if sentiment_filter == 'positive_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['positive_reviews'] > 0 and cat['negative_reviews'] == 0]
-                elif sentiment_filter == 'negative_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['negative_reviews'] > 0 and cat['positive_reviews'] == 0]
-                elif sentiment_filter == 'mixed_only':
-                    filtered_categories = [cat for cat in filtered_categories if cat['positive_reviews'] > 0 and cat['negative_reviews'] > 0]
-            
-            # Apply sorting
-            sort_by = options.get('sort_by', 'total_reviews')
-            sort_direction = options.get('sort_direction', 'desc')
-            reverse = sort_direction == 'desc'
-            
-            if sort_by == 'total_reviews':
-                filtered_categories.sort(key=lambda x: x['total_reviews'], reverse=reverse)
-            elif sort_by == 'positive_reviews':
-                filtered_categories.sort(key=lambda x: x['positive_reviews'], reverse=reverse)
-            elif sort_by == 'negative_reviews':
-                filtered_categories.sort(key=lambda x: x['negative_reviews'], reverse=reverse)
-            elif sort_by == 'positive_ratio':
-                # Sort by positive sentiment ratio
-                filtered_categories.sort(key=lambda x: x['positive_reviews'] / max(x['total_reviews'], 1), reverse=reverse)
-            
-            # Apply limit
-            max_categories = options.get('max_categories', 10)
-            categories = filtered_categories[:max_categories]
-            
-            logger.info(f"Retrieved {len(categories)} aspect categories after filtering and sorting")
-            return categories
-            
-        except Exception as e:
-            logger.error(f"Error getting aspect categories with options: {e}", exc_info=True)
-            return []
-
-
-
-    async def _get_category_info_for_matrix(self, category_pks: List[int]) -> Dict[int, Dict[str, Any]]:
-        """Get category information for given category PKs.
-        
-        Args:
-            category_pks: List of category PKs
-            
-        Returns:
-            Dict mapping category PK to category info
-        """
-        try:
-            if not category_pks:
-                return {}
-            
-            result = self.supabase.table('review_analysis_aspect_categories').select(
-                'category_pk, definition'
-            ).in_('category_pk', category_pks).execute()
-            
-            category_info = {}
-            for item in result.data:
-                category_info[item['category_pk']] = item
-            
-            return category_info
-            
-        except Exception as e:
-            logger.error(f"Error getting category info: {e}", exc_info=True)
-            return {}
-
     async def _get_product_aspect_data(
         self, 
         selected_asins: List[str], 
-        category_pks: List[int]
+        category_ids: List[int]
     ) -> List[Dict[str, Any]]:
-        """Get product aspect data for matrix view.
+        """Get product aspect data for matrix view using standardized format.
         
         Args:
             selected_asins: List of ASINs to analyze
-            category_pks: List of category PKs to include
+            category_ids: List of category IDs to include
             
         Returns:
-            List of product aspect data
+            List of product aspect data with standardized field names and complete matrix coverage
         """
         try:
-            if not category_pks:
+            if not category_ids:
                 return []
             
-            result = self.supabase.table('review_aspect_data_view').select(
-                'product_id, category_pk, sentiment, review_id'
-            ).eq('project_id', self.project_id).in_('product_id', selected_asins).in_('category_pk', category_pks).execute()
+            # Initialize complete matrix with zero counts for all product-category combinations
+            product_aspect_data = []
             
-            if not result.data:
-                return []
-            
-            # Group by product and category
-            product_aspect_data = {}
-            for item in result.data:
-                asin = item['product_id']
-                category_pk = item['category_pk']
-                
-                if asin not in product_aspect_data:
-                    product_aspect_data[asin] = {}
-                
-                if category_pk not in product_aspect_data[asin]:
-                    product_aspect_data[asin][category_pk] = {
-                        'mentions': 0,
-                        'reviews': set(),
-                        'sentiment_counts': {'positive': 0, 'negative': 0, 'neutral': 0}
-                    }
-                
-                product_aspect_data[asin][category_pk]['mentions'] += 1
-                product_aspect_data[asin][category_pk]['reviews'].add(item['review_id'])
-                
-                # Count sentiment
-                sentiment = item['sentiment']
-                if sentiment == '+':
-                    product_aspect_data[asin][category_pk]['sentiment_counts']['positive'] += 1
-                elif sentiment == '-':
-                    product_aspect_data[asin][category_pk]['sentiment_counts']['negative'] += 1
-                else:
-                    product_aspect_data[asin][category_pk]['sentiment_counts']['neutral'] += 1
-            
-            # Convert to response format
-            response_data = []
-            for asin, categories in product_aspect_data.items():
+            for asin in selected_asins:
+                # Initialize aspect data for all categories with zero counts
                 aspect_data = []
-                for category_pk, metrics in categories.items():
-                    metrics['reviews'] = len(metrics['reviews'])
+                for category_id in category_ids:
                     aspect_data.append({
-                        'category_pk': category_pk,
-                        **metrics
+                        'category_id': category_id,  # Standardized field name
+                        'total_reviews': 0,
+                        'positive_reviews': 0,
+                        'negative_reviews': 0
                     })
                 
-                response_data.append({
+                product_aspect_data.append({
                     'asin': asin,
                     'aspect_data': aspect_data
                 })
             
-            return response_data
+            # Get actual data from database
+            result = self.supabase.table('review_aspect_data_view').select(
+                'product_id, category_pk, sentiment, review_id'
+            ).eq('project_id', self.project_id).in_('product_id', selected_asins).in_('category_pk', category_ids).execute()
+            
+            if not result.data:
+                return product_aspect_data
+            
+            # Process the data and update the initialized matrix
+            for record in result.data:
+                product_id = record['product_id']
+                category_id = record['category_pk']  # Database field name
+                sentiment = record['sentiment']
+                
+                # Find the product in our matrix
+                product_entry = next((p for p in product_aspect_data if p['asin'] == product_id), None)
+                if not product_entry:
+                    continue
+                
+                # Find the category in this product's aspect data
+                aspect_entry = next((a for a in product_entry['aspect_data'] if a['category_id'] == category_id), None)
+                if not aspect_entry:
+                    continue
+                
+                # Update counts
+                aspect_entry['total_reviews'] += 1
+                
+                # Handle sentiment values - database uses '+' and '-' 
+                if sentiment == '+':
+                    aspect_entry['positive_reviews'] += 1
+                elif sentiment == '-':
+                    aspect_entry['negative_reviews'] += 1
+            
+            return product_aspect_data
             
         except Exception as e:
-            logger.error(f"Error getting product aspect data: {e}", exc_info=True)
+            logger.error(f"Error getting product aspect data: {str(e)}")
+            logger.error(f"Full traceback: {traceback.format_exc()}")
             return [] 

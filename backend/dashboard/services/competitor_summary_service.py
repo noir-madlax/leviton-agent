@@ -318,7 +318,7 @@ class CompetitorSummaryService:
         try:
             # Query review_aspect_data_view to get category statistics
             result = self.supabase.table('review_aspect_data_view').select(
-                'category_pk, category_name, aspect_type, review_id'
+                'category_pk, category_name, aspect_type, review_id, product_id'
             ).eq('project_id', project_id).in_('product_id', selected_asins).in_('aspect_type', aspect_types).execute()
             
             if not result.data:

@@ -20,14 +20,10 @@ interface MatrixViewData {
     product_aspect_data: Array<{
       asin: string
       aspect_data: Array<{
-        category_pk: number
-        mentions: number
-        reviews: number
-        sentiment_counts: {
-          positive: number
-          negative: number
-          neutral: number
-        }
+        category_id: number  // Standardized field name
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
       }>
     }>
     selected_asins: string[]
@@ -66,13 +62,11 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
         categoryId: category.category_id,
         definition: category.definition,
         cells: {} as Record<string, {
-          // 数据字段
-          mentions: number
+          // 数据字段 - standardized to match CompetitorMatrix
           reviews: number
           satisfactionRate: number
-          positiveCount: number
-          negativeCount: number
-          neutralCount: number
+          positiveReviews: number
+          negativeReviews: number
           // 坐标信息，用于后续查询评论明细
           productAsin: string
           categoryId: number
@@ -83,21 +77,23 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
       // 为每个产品填充单元格数据
       orderedProducts.forEach(productAsin => {
         const productData = product_aspect_data.find(p => p.asin === productAsin)
-        const aspectData = productData?.aspect_data.find(a => a.category_pk === category.category_id)
+        const aspectData = productData?.aspect_data.find(a => a.category_id === category.category_id)
 
         if (aspectData) {
-          const { positive, negative, neutral } = aspectData.sentiment_counts
-          const totalSentiments = positive + negative + neutral
-          const satisfactionRate = totalSentiments > 0 ? (positive / totalSentiments) * 100 : 0
+          // Use standardized field names - same as CompetitorMatrix
+          const totalReviews = aspectData.total_reviews || 0
+          const positive = aspectData.positive_reviews || 0
+          const negative = aspectData.negative_reviews || 0
+          
+          // Calculate satisfaction rate based on total reviews
+          const satisfactionRate = totalReviews > 0 ? (positive / totalReviews) * 100 : 0
 
           row.cells[productAsin] = {
-            // 数据字段
-            mentions: aspectData.mentions,
-            reviews: aspectData.reviews,
+            // 数据字段 - standardized
+            reviews: totalReviews,
             satisfactionRate: Math.round(satisfactionRate * 10) / 10,
-            positiveCount: positive,
-            negativeCount: negative,
-            neutralCount: neutral,
+            positiveReviews: positive,
+            negativeReviews: negative,
             // 坐标信息，用于后续查询评论明细
             productAsin: productAsin,
             categoryId: category.category_id,
@@ -124,17 +120,15 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
   }
 
   const handleCellClick = async (cellData: {
-    mentions: number
     reviews: number
     satisfactionRate: number
-    positiveCount: number
-    negativeCount: number
-    neutralCount: number
+    positiveReviews: number
+    negativeReviews: number
     productAsin: string
     categoryId: number
     categoryName: string
   }) => {
-    if (cellData.mentions === 0) return
+    if (cellData.reviews === 0) return
 
     const productName = asinToProductNameMap?.[cellData.productAsin] || cellData.productAsin
 
@@ -199,7 +193,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
       openPanel(
         reviewsToShow,
         `${cellData.categoryName} Reviews`,
-        `${productName} • ${cellData.mentions} mentions • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
+        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
         { sentiment: true, brand: true, rating: true, verified: true }
       )
     } catch (error) {
@@ -218,18 +212,12 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
   }
 
 
-  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, mentions: number) => {
-    // If no reviews at all, show gray
-    if (totalReviews === 0) return 'bg-gray-100 text-gray-400'
-    
-    // If reviews but no detailed mentions, show light blue
-    if (mentions === 0) return 'bg-blue-50 text-blue-700'
-    
-    // If we have detailed reviews, use satisfaction-based colors
-    if (satisfactionRate >= 75) return 'bg-green-100 text-green-800'
-    else if (satisfactionRate >= 50) return 'bg-yellow-100 text-yellow-800'
-    else if (satisfactionRate >= 25) return 'bg-orange-100 text-orange-800'
-    else return 'bg-red-100 text-red-800'
+  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, reviews: number) => {
+    if (reviews === 0) return 'bg-gray-100 text-gray-400'
+    if (satisfactionRate >= 80) return 'bg-green-100 text-green-800'
+    if (satisfactionRate >= 60) return 'bg-yellow-100 text-yellow-800'
+    if (satisfactionRate >= 40) return 'bg-orange-100 text-orange-800'
+    return 'bg-red-100 text-red-800'
   }
 
   const getHeaderColor = (productAsin: string) => {
@@ -302,18 +290,14 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
                         <DetailedTooltip
                           content={{
                             title: row.useCase,
-                            positiveCount: cellData.positiveCount,
-                            negativeCount: cellData.negativeCount,
-                            totalMentions: cellData.reviews,
+                            positiveReviews: cellData.positiveReviews,
+                            negativeReviews: cellData.negativeReviews,
+                            totalReviews: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
-                            additionalInfo: [
-                              `Product: ${productName}`,
-                              `Total reviews analyzed: ${cellData.reviews}`
-                            ]
                           }}
                         >
                           <div
-                            className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.mentions)} cursor-pointer`}
+                            className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.reviews)} cursor-pointer`}
                             onClick={() => handleCellClick(cellData)}
                             onKeyDown={(e) => {
                               if (e.key === 'Enter' || e.key === ' ') {
@@ -341,4 +325,4 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
       </div>
     </div>
   )
-} 
+}

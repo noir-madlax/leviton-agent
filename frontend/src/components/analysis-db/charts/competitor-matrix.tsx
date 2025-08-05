@@ -20,19 +20,10 @@ interface MatrixViewData {
     product_aspect_data: Array<{
       asin: string
       aspect_data: Array<{
-        category_pk: number
-        // CompetitorSummaryService fields
-        total_reviews?: number
-        positive_reviews?: number
-        negative_reviews?: number
-        // CompetitorAnalysisChartService fields
-        mentions?: number
-        reviews?: number
-        sentiment_counts?: {
-          positive: number
-          negative: number
-          neutral: number
-        }
+        category_id: number  // Standardized field name
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
       }>
     }>
     selected_asins: string[]
@@ -64,19 +55,18 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
 
     const { aspect_categories, product_aspect_data } = matrixViewData.data
 
-    // 创建矩阵结构，每个类别作为一行
+    // 为每个产品创建矩阵行
     const matrix = aspect_categories.map(category => {
       const row = {
-        category: category.category_name,
+        dimension: category.category_name,
         categoryId: category.category_id,
         definition: category.definition,
         cells: {} as Record<string, {
-          // 数据字段
+          // 数据字段 - standardized
           reviews: number
           satisfactionRate: number
           positiveReviews: number
           negativeReviews: number
-          neutralReviews: number
           // 坐标信息，用于后续查询评论明细
           productAsin: string
           categoryId: number
@@ -84,53 +74,26 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
         } | null>
       }
 
-      // 为每个产品填充单元格数据
-      orderedProducts.forEach(productAsin => {
-        const productData = product_aspect_data.find(p => p.asin === productAsin)
+      // 为每个产品填充数据
+      product_aspect_data.forEach(productData => {
+        const productAsin = productData.asin
+        const aspectData = productData?.aspect_data.find(a => a.category_id === category.category_id)
         
-        // Debug logging for aspect data matching
-        if (productAsin === orderedProducts[0]) { // Only log for first product to avoid spam
-          console.log('🔍 [DEBUG-ASPECT-MATCHING] For category:', category.category_name, 'ID:', category.category_id)
-          console.log('🔍 [DEBUG-ASPECT-MATCHING] Product data:', productData)
-          console.log('🔍 [DEBUG-ASPECT-MATCHING] Available aspect_data category_pks:', productData?.aspect_data?.map(a => a.category_pk))
-        }
-        
-        const aspectData = productData?.aspect_data.find(a => a.category_pk === category.category_id)
-
-        // Debug logging for aspect data structure
-        if (productAsin === orderedProducts[0] && category.category_name === 'Physical Installation Process') {
-          console.log('🔍 [DEBUG-ASPECT-DATA] Found aspectData:', aspectData)
-          console.log('🔍 [DEBUG-ASPECT-DATA] aspectData keys:', aspectData ? Object.keys(aspectData) : 'null')
-        }
-
         if (aspectData) {
-          // Handle both data structures: CompetitorSummaryService (total_reviews, positive_reviews, negative_reviews)
-          // and CompetitorAnalysisChartService (mentions, reviews, sentiment_counts)
-          const totalReviews = aspectData.total_reviews || aspectData.reviews || 0
-          const positive = aspectData.positive_reviews || aspectData.sentiment_counts?.positive || 0
-          const negative = aspectData.negative_reviews || aspectData.sentiment_counts?.negative || 0
-          const neutral = aspectData.sentiment_counts?.neutral || 0
+          // Use standardized field names
+          const totalReviews = aspectData.total_reviews || 0
+          const positive = aspectData.positive_reviews || 0
+          const negative = aspectData.negative_reviews || 0
           
-          // Calculate satisfaction rate based on available data
-          let satisfactionRate = 0
-          if (totalReviews > 0) {
-            if (aspectData.positive_reviews !== undefined && aspectData.negative_reviews !== undefined) {
-              // Use direct positive/negative counts
-              satisfactionRate = (positive / totalReviews) * 100
-            } else if (aspectData.sentiment_counts) {
-              // Use sentiment counts
-              const totalSentiment = positive + negative + neutral
-              satisfactionRate = totalSentiment > 0 ? (positive / totalSentiment) * 100 : 0
-            }
-          }
+          // Calculate satisfaction rate based on total reviews
+          const satisfactionRate = totalReviews > 0 ? (positive / totalReviews) * 100 : 0
 
           row.cells[productAsin] = {
-            // 数据字段
+            // 数据字段 - standardized
             reviews: totalReviews,
             satisfactionRate: Math.round(satisfactionRate * 10) / 10,
             positiveReviews: positive,
             negativeReviews: negative,
-            neutralReviews: neutral,
             // 坐标信息，用于后续查询评论明细
             productAsin: productAsin,
             categoryId: category.category_id,
@@ -197,7 +160,6 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     satisfactionRate: number
     positiveReviews: number
     negativeReviews: number
-    neutralReviews: number
     productAsin: string
     categoryId: number
     categoryName: string
@@ -316,10 +278,10 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
             </thead>
             <tbody>
               {matrixData.map((row) => (
-                <tr key={row.category}>
+                <tr key={row.categoryId}>
                   <td className="border border-gray-300 p-3 bg-gray-50 font-medium text-gray-900">
                     <div className="flex flex-col">
-                      <span className="text-sm">{row.category}</span>
+                      <span className="text-sm">{row.dimension}</span>
                       <span className="text-xs text-gray-500 mt-1">
                         Physical/Performance
                       </span>
@@ -345,7 +307,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                       <td key={productAsin} className="border border-gray-300 p-3 text-center">
                         <DetailedTooltip
                           content={{
-                            title: row.category,
+                            title: row.dimension,
                             type: 'Physical/Performance',
                                     positiveReviews: cellData.positiveReviews,
         negativeReviews: cellData.negativeReviews,
@@ -368,7 +330,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                             }}
                             tabIndex={0}
                             role="button"
-                            aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.reviews} reviews, ${cellData.satisfactionRate}% satisfaction`}
+                            aria-label={`View reviews for ${row.dimension} - ${productName}: ${cellData.reviews} reviews, ${cellData.satisfactionRate}% satisfaction`}
                           >
                             <div className="text-lg font-bold">
                               {cellData.reviews}

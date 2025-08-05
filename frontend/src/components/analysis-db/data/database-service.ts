@@ -549,14 +549,14 @@ export class DatabaseService {
     timestamp: string
     data: {
       aspect_categories: Array<{
-        category_pk: number
+        category_id: number
         category_name: string
         definition: string
       }>
       product_aspect_data: Array<{
         asin: string
         aspect_data: Array<{
-          category_pk: number
+          category_id: number
           total_reviews: number
           positive_reviews: number
           negative_reviews: number
@@ -572,16 +572,14 @@ export class DatabaseService {
         project_id: projectId,
         selected_asins: selectedAsins,
         aspect_type: aspectType,
-        options: {
-          sort_by: "mentions",
-          sort_direction: "desc",
-          max_categories: 10
+        filter: {
+          top_n: 10
         }
       }
 
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
-      const response = await fetch(`${API_BASE_URL}/competitor-analysis/matrix-view`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/competitor-analysis/matrix-view`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

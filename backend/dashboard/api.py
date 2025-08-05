@@ -20,8 +20,9 @@ from .models import (
     AllReviewDataResponse, ReviewData,
     DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
     CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
-    CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData
+    CompetitorMatrixViewRequest
 )
+from .charts.competitorAnalysis.models import CompetitorMatrixViewResponse
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
 from .charts.sales_trend.services import SalesTrendService
 from .decorators import with_dashboard_service, log_request_response
@@ -38,6 +39,7 @@ from .utils.data_transformers import CompetitorAnalysisTransformer
 from .services.competitor_summary_service import CompetitorSummaryService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
+from .charts.competitorAnalysis.service import CompetitorAnalysisChartService
 
 logger = logging.getLogger(__name__)
 
@@ -1131,40 +1133,26 @@ async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
     try:
         logger.info(f"Competitor matrix view request for ASINs: {request.selected_asins}, aspect_type: {request.aspect_type}")
         
-        # Use the service to get matrix view data
-        service = CompetitorSummaryService()
+        # Use the new CompetitorAnalysisChartService instead of CompetitorSummaryService
+        service = CompetitorAnalysisChartService(
+            project_id=request.project_id,
+            selected_asins=request.selected_asins
+        )
+        
+        # Convert filter options to the expected format
+        options = {
+            'top_n': request.filter.top_n if request.filter else 10
+        }
+        
         matrix_data = await service.get_matrix_view_data(
-            request.project_id,
-            request.selected_asins,
-            request.aspect_type,
-            request.filter.top_n
+            aspect_type=request.aspect_type,
+            options=options
         )
         
-        # Convert to response model
-        aspect_categories = []
-        for category_data in matrix_data['aspect_categories']:
-            aspect_categories.append(AspectCategoryInfo(
-                category_id=category_data['category_pk'],
-                category_name=category_data['category_name'],
-                definition=category_data['definition']
-            ))
+        # Convert service data to proper response model format (with data wrapper)
+        response = CompetitorMatrixViewResponse(data=matrix_data)
         
-        product_aspect_data = []
-        for aspect_data in matrix_data['product_aspect_data']:
-            product_aspect_data.append(ProductAspectData(
-                asin=aspect_data['asin'],
-                aspect_data=aspect_data['aspect_data']
-            ))
-        
-        response = CompetitorMatrixViewResponse(
-            aspect_categories=aspect_categories,
-            product_aspect_data=product_aspect_data,
-            selected_asins=matrix_data['selected_asins'],
-            aspect_type=matrix_data['aspect_type'],
-            total_categories=matrix_data['total_categories']
-        )
-        
-        logger.info(f"Competitor matrix view API returned data for {len(aspect_categories)} categories")
+        logger.info(f"Competitor matrix view API returned data for {len(matrix_data['aspect_categories'])} categories")
         return response
         
     except Exception as e:
