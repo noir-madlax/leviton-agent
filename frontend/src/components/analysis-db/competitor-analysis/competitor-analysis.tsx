@@ -104,6 +104,16 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         databaseService.getCompetitorMatrixViewData(projectId, asins, 'use')
       ]);
 
+      console.log('🔍 [DEBUG-COMPETITOR] Physical/Performance matrix response:', matrixResponse);
+      console.log('🔍 [DEBUG-COMPETITOR] Use case matrix response:', useCaseMatrixResponse);
+      console.log('🔍 [DEBUG-COMPETITOR] Physical matrix data structure:', {
+        status: matrixResponse?.status,
+        aspectCategoriesCount: matrixResponse?.data?.aspect_categories?.length,
+        productAspectDataCount: matrixResponse?.data?.product_aspect_data?.length,
+        selectedAsins: matrixResponse?.data?.selected_asins,
+        totalCategories: matrixResponse?.data?.total_categories
+      });
+
       setMatrixViewData(matrixResponse);
       setUseCaseMatrixViewData(useCaseMatrixResponse);
       console.log('✅ Matrix data loaded successfully');
@@ -233,10 +243,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       map[product.platform_id] = product.title;
     });
     return map;
-  }, [defaultProducts]);
-
-
-
+    }, [defaultProducts]);
 
 
   return (

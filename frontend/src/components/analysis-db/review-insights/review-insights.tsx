@@ -72,6 +72,17 @@ interface ReviewInsightsProps {
 }
 
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
+  // Debug logging for incoming data
+  console.log('🔍 [DEBUG-REVIEW-INSIGHTS] Incoming data:', {
+    hasReviewInsights: !!data.reviewInsights,
+    painPointsLength: data.reviewInsights?.painPoints?.length,
+    customerLikesLength: data.reviewInsights?.customerLikes?.length,
+    allUseCasesLength: data.reviewInsights?.allUseCases?.length,
+    samplePainPoint: data.reviewInsights?.painPoints?.[0],
+    sampleCustomerLike: data.reviewInsights?.customerLikes?.[0],
+    sampleUseCase: data.reviewInsights?.allUseCases?.[0]
+  })
+  
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -84,60 +95,72 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
   // Transform dashboard data to chart format
   const transformPainPointsData = (rawData: any[]): CategoryFeedback[] => {
-    return rawData.map(item => ({
-      category: item.category_name,
-      categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
-      totalReviews: item.total_reviews,
-      satisfactionRate: item.satisfaction_rate,
-      negativeRate: item.negative_rate,
-      positiveCount: item.positive_reviews || 0,
-      negativeCount: item.negative_reviews || 0,
-      averageRating: Math.max(1, 5 - (item.negative_rate / 20)),
-      topNegativeAspects: [item.category_name],
+    console.log('🔍 [DEBUG-PAIN-POINTS] Raw data received:', rawData)
+    const transformed = rawData.map(item => ({
+      category: item.category, // Use frontend field name
+      categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+      totalReviews: item.totalReviews || item.frequency, // Use frontend field name with fallback
+      satisfactionRate: item.satisfactionRate || (100 - (item.negativeRate || 0)), // Calculate from negative rate
+      negativeRate: item.negativeRate || 0, // Use frontend field name
+      positiveReviews: item.positiveReviews || 0, // Use frontend field name
+      negativeReviews: item.negativeReviews || 0, // Use frontend field name
+
+      topNegativeAspects: [item.category], // Use frontend field name
       topPositiveAspects: [],
-      topNegativeReasons: [`${item.negative_rate}% negative sentiment`],
+      topNegativeReasons: [`${item.negativeRate || 0}% negative sentiment`], // Use frontend field name
       topPositiveReasons: [],
-      categoryDefinition: item.category_definition,
-      impactedProducts: item.impacted_products,
-      categoryId: item.category_id
+      categoryDefinition: item.categoryDefinition, // Use frontend field name
+      impactedProducts: item.impactedProducts || 1, // Use frontend field name
+      categoryId: item.categoryId // Use frontend field name
     }))
+    console.log('🔍 [DEBUG-PAIN-POINTS] Transformed data:', transformed)
+    console.log('🔍 [DEBUG-PAIN-POINTS] Data length:', transformed.length)
+    return transformed
   }
 
   const transformDelightsData = (rawData: any[]): CategoryFeedback[] => {
-    return rawData.map(item => ({
-      category: item.category_name,
-      categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
-      totalReviews: item.total_reviews,
-      satisfactionRate: item.positive_rate || 70,
-      negativeRate: 100 - (item.positive_rate || 70),
-      positiveCount: item.positive_reviews || 0,
-      negativeCount: item.negative_reviews || 0,
-      averageRating: 3 + ((item.positive_rate || 70) / 50),
+    console.log('🔍 [DEBUG-DELIGHTS] Raw data received:', rawData)
+    const transformed = rawData.map(item => ({
+      category: item.category, // Use frontend field name
+      categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+      totalReviews: item.totalReviews || item.frequency, // Use frontend field name with fallback
+      satisfactionRate: item.positiveRate || 70, // Use frontend field name with fallback
+      negativeRate: 100 - (item.positiveRate || 70), // Calculate from positive rate
+      positiveReviews: item.positiveReviews || 0, // Use frontend field name
+      negativeReviews: item.negativeReviews || 0, // Use frontend field name
+
       topNegativeAspects: [],
-      topPositiveAspects: [item.category_name],
+      topPositiveAspects: [item.category], // Use frontend field name
       topNegativeReasons: [],
-      topPositiveReasons: [`${item.positive_rate || 70}% positive sentiment`],
-      categoryDefinition: item.category_definition,
-      impactedProducts: item.impacted_products,
-      categoryId: item.category_id
+      topPositiveReasons: [`${item.positiveRate || 70}% positive sentiment`], // Use frontend field name
+      categoryDefinition: item.categoryDefinition, // Use frontend field name
+      impactedProducts: item.impactedProducts || 1, // Use frontend field name
+      categoryId: item.categoryId // Use frontend field name
     }))
+    console.log('🔍 [DEBUG-DELIGHTS] Transformed data:', transformed)
+    console.log('🔍 [DEBUG-DELIGHTS] Data length:', transformed.length)
+    return transformed
   }
 
   const transformUseCaseData = (rawData: any[]): UseCaseFeedback[] => {
-    return rawData.map(item => ({
-      useCase: item.use_case,
-      totalReviews: item.total_reviews,
-      positiveReviews: item.positive_reviews,
-      negativeReviews: item.negative_reviews,
-      satisfactionRate: item.satisfaction_rate,
+    console.log('🔍 [DEBUG-USE-CASE] Raw data received:', rawData)
+    const transformed = rawData.map(item => ({
+      useCase: item.useCase, // Use frontend field name
+      totalReviews: item.totalReviews || 0, // Use frontend field name
+      positiveReviews: item.positiveReviews || 0, // Use frontend field name
+      negativeReviews: item.negativeReviews || 0, // Use frontend field name
+      satisfactionRate: item.satisfactionRate || 0, // Use frontend field name
       categoryType: 'Performance' as const,
-      topSatisfactionReasons: item.satisfaction_rate > 50 ? [`${item.satisfaction_rate}% satisfaction`] : [],
-      topGapReasons: item.satisfaction_rate <= 50 ? [`${item.satisfaction_rate}% satisfaction`] : [],
-      relatedCategories: [item.use_case],
-      categoryDefinition: item.category_definition,
-      productCount: item.product_count,
-      categoryId: item.category_id
+      topSatisfactionReasons: (item.satisfactionRate || 0) > 50 ? [`${item.satisfactionRate || 0}% satisfaction`] : [],
+      topGapReasons: (item.satisfactionRate || 0) <= 50 ? [`${item.satisfactionRate || 0}% satisfaction`] : [],
+      relatedCategories: [item.useCase], // Use frontend field name
+      categoryDefinition: item.categoryDefinition, // Use frontend field name
+      productCount: item.productCount || 1, // Use frontend field name
+      categoryId: item.categoryId // Use frontend field name
     }))
+    console.log('🔍 [DEBUG-USE-CASE] Transformed data:', transformed)
+    console.log('🔍 [DEBUG-USE-CASE] Data length:', transformed.length)
+    return transformed
   }
 
 

@@ -176,22 +176,47 @@ interface DashboardData {
       frequency: number
       impactedProducts: number
       type: 'Physical' | 'Performance' | 'Usability'
+      // Enhanced fields from backend
+      category_name?: string
+      total_reviews?: number
+      positive_reviews?: number
+      negative_reviews?: number
+      negative_rate?: number
+      satisfaction_rate?: number
+      category_definition?: string
+      category_id?: number
+      related_detail_texts?: string[]
     }>
     customerLikes: Array<{
       feature: string
       category: string
       frequency: number
       satisfactionLevel: 'High' | 'Medium' | 'Low'
+      // Enhanced fields from backend
+      category_name?: string
+      total_reviews?: number
+      positive_reviews?: number
+      negative_reviews?: number
+      positive_rate?: number
+      category_definition?: string
+      category_id?: number
+      related_detail_texts?: string[]
     }>
-          allUseCases: Array<{
-        useCase: string
-        productAttribute: string
-        satisfactionRate: number
-        positiveReviews: number
-        negativeReviews: number
-        categoryDefinition?: string
-        productCount?: number
-      }>
+    allUseCases: Array<{
+      useCase: string
+      productAttribute: string
+      satisfactionRate: number
+      positiveReviews: number
+      negativeReviews: number
+      categoryDefinition?: string
+      productCount?: number
+      // Enhanced fields from backend
+      use_case?: string
+      total_reviews?: number
+      category_definition?: string
+      category_id?: number
+      related_detail_texts?: string[]
+    }>
   }
   competitorAnalysis: {
     targetProducts: string[]

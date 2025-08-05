@@ -24,9 +24,9 @@ export interface CategoryFeedback {
   totalReviews: number
   satisfactionRate: number
   negativeRate: number
-  positiveCount: number
-  negativeCount: number
-  averageRating: number
+  positiveReviews: number
+  negativeReviews: number
+
   topNegativeAspects: string[]
   topPositiveAspects: string[]
   topNegativeReasons: string[]

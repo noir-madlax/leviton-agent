@@ -240,7 +240,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                       }}
                     >
                       <div className="text-lg font-bold text-green-600">
-                        {row.positiveReviews}
+                        {row.positiveReviews || 0}
                       </div>
                     </div>
                   </td>
@@ -258,7 +258,7 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
                       }}
                     >
                       <div className="text-lg font-bold text-red-600">
-                        {row.negativeReviews}
+                        {row.negativeReviews || 0}
                       </div>
                     </div>
                   </td>

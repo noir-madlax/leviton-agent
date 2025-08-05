@@ -1144,7 +1144,7 @@ async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
         aspect_categories = []
         for category_data in matrix_data['aspect_categories']:
             aspect_categories.append(AspectCategoryInfo(
-                category_id=category_data['category_id'],
+                category_id=category_data['category_pk'],
                 category_name=category_data['category_name'],
                 definition=category_data['definition']
             ))

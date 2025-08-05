@@ -56,6 +56,20 @@ export function UnifiedStackedBarChart({
   bottomBarType = 'negative', // 默认负面bar在底部
   colorConfig
 }: UnifiedStackedBarChartProps) {
+  
+  // Debug logging
+  console.log('🔍 [DEBUG-BAR-CHART] UnifiedStackedBarChart props:', {
+    dataLength: data?.length,
+    xAxisDataKey,
+    positiveDataKey,
+    negativeDataKey,
+    sampleData: data?.slice(0, 3),
+    isEmpty: !data || data.length === 0,
+    sampleDataKeys: data?.length > 0 ? Object.keys(data[0]) : [],
+    hasPositiveKey: data?.length > 0 ? data[0].hasOwnProperty(positiveDataKey) : false,
+    hasNegativeKey: data?.length > 0 ? data[0].hasOwnProperty(negativeDataKey) : false
+  })
+  
   const handleBarClick = (data: any, index: number) => {
     if (onBarClick) {
       // In Recharts Bar onClick, the data parameter should be the original data object

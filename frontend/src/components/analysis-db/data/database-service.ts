@@ -581,7 +581,7 @@ export class DatabaseService {
 
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/matrix-view`, {
+      const response = await fetch(`${API_BASE_URL}/competitor-analysis/matrix-view`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
