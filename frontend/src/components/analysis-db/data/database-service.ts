@@ -229,12 +229,12 @@ export class DatabaseService {
       segments: string[]
       extend_fields: Record<string, any>
     }
-    timeframe: { period: "year" | "month" | "6months" }
+    timeframe: { period: string }
   } {
     const chartState = filterStateManager.getChartFilters(chartName)
 
     if (!chartState) {
-      console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using defaults`)
+      console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using empty defaults`)
       return {
         filters: {
           categories: [],
@@ -242,7 +242,7 @@ export class DatabaseService {
           segments: [],
           extend_fields: {}
         },
-        timeframe: { period: 'year' }
+          timeframe: { period: '' } // 🔧 不设置硬编码默认值
       }
     }
 
@@ -253,7 +253,7 @@ export class DatabaseService {
         segments: chartState.filters.segments || [],
         extend_fields: chartState.filters.extend_fields || {}
       },
-      timeframe: { period: (chartState.timeframe?.period || 'year') as "year" | "month" | "6months" }
+      timeframe: { period: chartState.timeframe?.period || '' } // 🔧 移除硬编码的 'year' 默认值
     }
 
     console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)

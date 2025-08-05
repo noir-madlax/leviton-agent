@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { RotateCcw, Loader2 } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
+import { TimeframeFilter } from '../timeframe-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
@@ -54,6 +55,7 @@ export function FilterRenderer({
     categories: chartConfig?.filters.categories?.isVisible === true,
     brands: chartConfig?.filters.brands?.isVisible === true,
     segments: chartConfig?.filters.product_segments?.isVisible === true,
+    timeframe: chartConfig?.filters.time_period?.isVisible === true,
     // 🔧 修复：如果没有配置 extend_fields，默认显示为 true
     extend_fields: chartConfig?.filters.extend_fields?.isVisible !== false
   }
@@ -74,6 +76,7 @@ export function FilterRenderer({
     filters: chartFilters,
     updateCategories,
     updateExtendFields,
+    updateTimeframe,
     resetFilters
   } = useChartFilters(chartName)
 
@@ -92,22 +95,28 @@ export function FilterRenderer({
   const projectT = useProjectT()
   const filtersT = useFiltersT()
 
-  // 🔄 同步状态管理器的变化到 pendingFilters
+  // 🔄 同步 currentFilters 的变化到 pendingFilters（优先级最高）
   useEffect(() => {
-    if (chartFilters) {
+    console.log(`🔄 [FILTER-RENDERER] Syncing currentFilters to pendingFilters for ${chartName}:`, currentFilters)
+    setPendingFilters(currentFilters)
+  }, [currentFilters, chartName])
+
+  // 🔄 同步状态管理器的变化到 pendingFilters（仅在没有 currentFilters 时使用）
+  useEffect(() => {
+    if (chartFilters && (!currentFilters.time_period && !currentFilters.categories.length)) {
       const newPendingFilters: ProjectFilters = {
         categories: chartFilters.filters.categories || [],
         asins: [],
         brands: chartFilters.filters.brands || [],
         segments: chartFilters.filters.segments || [],
         extend_fields: chartFilters.filters.extend_fields || {},
-        time_period: chartFilters.timeframe?.period || "30 days"
+        time_period: chartFilters.timeframe?.period || "" // 🔧 不设置前端默认值
       }
 
       console.log(`🔄 [FILTER-RENDERER] Syncing chart filters to pending filters for ${chartName}:`, newPendingFilters)
       setPendingFilters(newPendingFilters)
     }
-  }, [chartFilters, chartName])
+  }, [chartFilters, chartName, currentFilters])
 
   // 🆕 检测过滤器是否就绪
   useEffect(() => {
@@ -158,7 +167,7 @@ export function FilterRenderer({
         extend_fields: pendingFilters.extend_fields || {}
       },
       timeframe: {
-        period: pendingFilters.time_period || 'year'
+        period: pendingFilters.time_period || ''
       },
       metadata: {
         lastUpdated: Date.now(),
@@ -169,6 +178,7 @@ export function FilterRenderer({
     // 更新状态管理器
     updateCategories(chartState.filters.categories)
     updateExtendFields(chartState.filters.extend_fields)
+    updateTimeframe(chartState.timeframe)
 
     // 🆕 项目级过滤器的特殊处理
     if (isProjectFilter) {
@@ -209,7 +219,7 @@ export function FilterRenderer({
       brands: [],
       segments: [],
       extend_fields: {},
-      time_period: "30 days"
+      time_period: "" // 🔧 重置时不设置默认值
     }
     setPendingFilters(resetFiltersData)
 
@@ -223,7 +233,8 @@ export function FilterRenderer({
     JSON.stringify(pendingFilters.categories) !== JSON.stringify(currentFilters.categories) ||
     JSON.stringify(pendingFilters.brands) !== JSON.stringify(currentFilters.brands) ||
     JSON.stringify(pendingFilters.segments) !== JSON.stringify(currentFilters.segments) ||
-    JSON.stringify(pendingFilters.extend_fields) !== JSON.stringify(currentFilters.extend_fields)
+    JSON.stringify(pendingFilters.extend_fields) !== JSON.stringify(currentFilters.extend_fields) ||
+    pendingFilters.time_period !== currentFilters.time_period
   )
 
   return (
@@ -247,7 +258,22 @@ export function FilterRenderer({
             loading={contextLoading}
           />
         )}
-        
+
+        {/* Timeframe Filter */}
+        {visibleFilters?.timeframe && (
+          <TimeframeFilter
+            value={pendingFilters.time_period || ""}
+            onChange={(period) => {
+              setPendingFilters(prev => ({ ...prev, time_period: period }))
+              // 🆕 同时更新状态管理器
+              updateTimeframe({ period })
+            }}
+            chartName={chartName}
+            disabled={disabled || contextLoading}
+            loading={contextLoading}
+          />
+        )}
+
         {/* 其他基础过滤器组件将在后续添加 */}
       </div>
 

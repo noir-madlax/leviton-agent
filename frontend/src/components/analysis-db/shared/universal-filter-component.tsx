@@ -347,7 +347,7 @@ export function UniversalFilterComponent({
       brands: [],  // 改：packaging_types -> brands
       segments: [],
       extend_fields: {},
-      time_period: "30 days"
+      time_period: "" // 🔧 不设置前端默认值
     }
     setPendingFilters(resetFilters)
     setSelectKeys(prev => ({

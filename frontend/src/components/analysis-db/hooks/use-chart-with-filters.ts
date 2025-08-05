@@ -55,7 +55,7 @@ export function useChartWithFilters(
       brands: [],
       segments: [],
       extend_fields: {},
-      time_period: "30 days"
+      time_period: "" // 🔧 不设置前端默认值
     }
   } = options
 
@@ -93,7 +93,7 @@ export function useChartWithFilters(
           brands: event.projectFilters.filters.brands || [],
           segments: event.projectFilters.filters.segments || [],
           extend_fields: event.projectFilters.filters.extend_fields || {},
-          time_period: event.projectFilters.timeframe?.period || "30 days"
+          time_period: event.projectFilters.timeframe?.period || "" // 🔧 不设置默认值
         }
         
         console.log(`🔄 [USE-CHART-WITH-FILTERS] Updating filters from global sync for ${chartName}:`, syncedFilters)

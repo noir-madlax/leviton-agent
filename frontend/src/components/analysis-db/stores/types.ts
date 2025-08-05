@@ -12,8 +12,6 @@ export interface ChartFilterState {
   }
   timeframe?: {
     period?: string
-    start_date?: string
-    end_date?: string
   }
   // 预留扩展字段
   metadata?: {
@@ -88,7 +86,7 @@ export const DEFAULT_CHART_FILTER_STATE: ChartFilterState = {
     extend_fields: {}
   },
   timeframe: {
-    period: "year"
+    period: "" // 🔧 移除硬编码默认值，完全依赖后端
   },
   metadata: {
     lastUpdated: Date.now(),

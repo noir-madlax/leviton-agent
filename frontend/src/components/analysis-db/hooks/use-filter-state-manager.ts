@@ -5,7 +5,7 @@
 
 import { useState, useEffect, useCallback, useMemo } from 'react'
 import { filterStateManager } from '../stores'
-import type { ChartFilterState, FilterUpdateEvent } from '../stores'
+import type { ChartFilterState } from '../stores'
 
 interface UseFilterStateManagerReturn {
   // 获取指定图表的过滤器状态
@@ -43,7 +43,7 @@ export function useFilterStateManager(): UseFilterStateManagerReturn {
 
   // 订阅状态变化
   useEffect(() => {
-    const unsubscribe = filterStateManager.subscribe((event: FilterUpdateEvent) => {
+    const unsubscribe = filterStateManager.subscribe((event) => {
       console.log('🔔 [USE-FILTER-STATE-MANAGER] State changed:', event)
       triggerUpdate()
     })
@@ -124,7 +124,7 @@ interface UseChartFiltersReturn {
   updateExtendFields: (extendFields: Record<string, any>) => void
   
   // 便捷方法：更新 timeframe
-  updateTimeframe: (timeframe: { period?: string; start_date?: string; end_date?: string }) => void
+  updateTimeframe: (timeframe: { period?: string }) => void
 }
 
 export function useChartFilters(chartName: string): UseChartFiltersReturn {
@@ -171,8 +171,11 @@ export function useChartFilters(chartName: string): UseChartFiltersReturn {
     updateFilter('filters.extend_fields', extendFields)
   }, [updateFilter])
 
-  const updateTimeframe = useCallback((timeframe: { period?: string; start_date?: string; end_date?: string }) => {
-    updateFilter('timeframe', timeframe)
+  const updateTimeframe = useCallback((timeframe: { period?: string }) => {
+    // 🔧 修复：只更新 period 字段
+    if (timeframe.period !== undefined) {
+      updateFilter('timeframe.period', timeframe.period)
+    }
   }, [updateFilter])
 
   return {

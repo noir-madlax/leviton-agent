@@ -69,7 +69,7 @@ export const DEFAULT_FILTERS: ProjectFilters = {
   brands: [],  // 改：packaging_types -> brands
   segments: [],
   extend_fields: {},
-  time_period: "30 days"  // 新增: 默认30天
+  time_period: ""  // 🔧 不设置前端默认值，完全依赖后端
 }
 
 /**

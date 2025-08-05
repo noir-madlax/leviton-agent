@@ -18,3 +18,9 @@ export interface CategoryFilterProps extends BaseFilterProps {
   chartName: string  // 🆕 只需要图表名称，组件内部从context获取数据
   // 🗑️ 移除了 availableOptions 和 projectData，简化参数传递
 }
+
+export interface TimeframeFilterProps extends BaseFilterProps {
+  value: string
+  onChange: (period: string) => void
+  chartName: string  // 🆕 只需要图表名称，组件内部从context获取数据
+}
