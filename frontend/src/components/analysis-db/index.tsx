@@ -187,21 +187,11 @@ interface DashboardData {
       useCase: string
       productAttribute: string
       satisfactionRate: number
-      mentionCount: number
       positiveCount: number
       negativeCount: number
       categoryDefinition?: string
       productCount?: number
     }>
-    underservedUseCases: Array<{
-      useCase: string
-      productAttribute: string
-      gapLevel: number
-      mentionCount: number
-      categoryDefinition?: string
-      productCount?: number
-    }>
-    totalUseMentions: number
   }
   competitorAnalysis: {
     targetProducts: string[]
@@ -606,7 +596,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
     }
     
     const data = await databaseService.getReviewInsightsDataByProject(projectId, categoryFilters, brandFilters, segmentFilters, extendFields);
-    console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.allUseCases.length} all use cases, ${data.underservedUseCases.length} underserved use cases`);
+    console.log(`📈 Review Insights data received: ${data.painPoints.length} pain points, ${data.customerLikes.length} likes, ${data.allUseCases.length} all use cases`);
     
     return data;
   } catch (error) {
@@ -614,9 +604,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
     return { 
       painPoints: [], 
       customerLikes: [], 
-      allUseCases: [], 
-      underservedUseCases: [],
-      totalUseMentions: 0
+      allUseCases: []
     };
   }
 }

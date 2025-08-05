@@ -473,23 +473,12 @@ export class DatabaseService {
       useCase: string
       productAttribute: string
       satisfactionRate: number
-      mentionCount: number
       positiveCount: number
       negativeCount: number
       // Enhanced fields from new table structure
       categoryDefinition?: string
       productCount?: number
     }>
-    underservedUseCases: Array<{
-      useCase: string
-      productAttribute: string
-      gapLevel: number
-      mentionCount: number
-      // Enhanced fields from new table structure
-      categoryDefinition?: string
-      productCount?: number
-    }>
-    totalUseMentions: number
   }> {
     try {
       const rawResult = await callDashboardAPI('review-insights', projectId, {
@@ -503,57 +492,43 @@ export class DatabaseService {
       const result = {
         painPoints: rawResult.pain_points?.map((item: any) => ({
           aspect: item.category_name,        // Map category_name → aspect (display)
-          category: item.example_details,    // Map example_details → category (display)
-          severity: item.severity,
+          category: item.category_name,      // Use category_name directly for category
+          severity: item.negative_rate || 0, // Use negative_rate as severity
           frequency: item.total_reviews,     // Map total_reviews → frequency (legacy compatibility)
-          impactedProducts: item.impacted_products,
-          type: item.type,
+          impactedProducts: item.impacted_products || 1,
+          type: item.type || 'Performance',
           categoryDefinition: item.category_definition,
           totalMentions: item.total_reviews,
           negativeRate: item.negative_rate,
           totalReviews: item.total_reviews,
           positiveReviews: item.positive_reviews,
           negativeReviews: item.negative_reviews,
-          relatedDetailTexts: item.related_detail_texts
+          relatedDetailTexts: item.related_detail_texts || []
         })) || [],
         customerLikes: rawResult.customer_likes?.map((item: any) => ({
           feature: item.category_name,       // Map category_name → feature (display)
-          category: item.example_details,    // Map example_details → category (display)
+          category: item.category_name,      // Use category_name directly for category
           frequency: item.total_reviews,     // Map total_reviews → frequency (legacy compatibility)
-          satisfactionLevel: item.satisfaction_level,
+          satisfactionLevel: item.satisfaction_level || 'Medium',
           categoryDefinition: item.category_definition,
           totalMentions: item.total_reviews,
           positiveRate: item.positive_rate,
           totalReviews: item.total_reviews,
           positiveReviews: item.positive_reviews,
           negativeReviews: item.negative_reviews,
-          relatedDetailTexts: item.related_detail_texts
+          relatedDetailTexts: item.related_detail_texts || []
         })) || [],
         allUseCases: rawResult.all_use_cases?.map((item: any) => ({
           useCase: item.use_case,
-          productAttribute: item.product_attribute,
+          productAttribute: item.product_attribute || 'USE',
           satisfactionRate: item.satisfaction_rate,
-          mentionCount: item.total_reviews,  // Map total_reviews → mentionCount (legacy compatibility)
           positiveCount: item.positive_reviews,
           negativeCount: item.negative_reviews,
           categoryDefinition: item.category_definition,
-          productCount: item.product_count,
+          productCount: item.product_count || 1,
           totalReviews: item.total_reviews,
-          relatedDetailTexts: item.related_detail_texts
-        })) || [],
-        underservedUseCases: rawResult.underserved_use_cases?.map((item: any) => ({
-          useCase: item.use_case,
-          productAttribute: item.product_attribute,
-          gapLevel: item.gap_level,
-          mentionCount: item.total_reviews,  // Map total_reviews → mentionCount (legacy compatibility)
-          positiveCount: item.positive_reviews,
-          negativeCount: item.negative_reviews,
-          categoryDefinition: item.category_definition,
-          productCount: item.product_count,
-          totalReviews: item.total_reviews,
-          relatedDetailTexts: item.related_detail_texts
-        })) || [],
-        totalUseMentions: rawResult.total_use_reviews || 0
+          relatedDetailTexts: item.related_detail_texts || []
+        })) || []
       }
 
       return result

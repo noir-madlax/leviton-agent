@@ -52,18 +52,7 @@ interface ReviewInsightsProps {
         productCount?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
-      underservedUseCases: Array<{
-        useCase: string
-        productAttribute: string
-        gapLevel: number
-        totalReviews?: number
-        positiveCount?: number
-        negativeCount?: number
-        categoryDefinition?: string
-        productCount?: number
-        relatedDetailTexts?: string[] // Added for new mapping logic
-      }>
-      totalUseReviews?: number
+
     }
     allReviewData: Record<string, Array<{
       id: string
@@ -305,41 +294,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         }
       })
       
-      // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
-        const useCaseName = useCaseItem.useCase
-        
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-          }
-        }
-      })
+
     }
     
     setReviewData(reviewDataForCharts)
@@ -355,37 +310,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   //   // 旧的转换逻辑已被新的 fetchDelightsData 方法替代
   // }
 
-  // const transformUseCaseData = (): UseCaseFeedback[] => {
-  //   // 使用新的allUseCases数据而不是underservedUseCases
-  //   return filteredData.reviewInsights.allUseCases
-  //     .sort((a, b) => b.mentionCount - a.mentionCount)
-  //     .slice(0, 15) // 取前15个
-  //     .map(item => {
-  //       return {
-  //         useCase: item.useCase,
-  //         totalMentions: item.mentionCount,
-  //         positiveCount: item.positiveCount,
-  //         negativeCount: item.negativeCount,
-  //         satisfactionRate: item.satisfactionRate,
-  //         categoryType: 'Performance', // 默认为Performance
-  //         topSatisfactionReasons: item.satisfactionRate > 50 ? [
-  //           `Good coverage for ${item.useCase}`,
-  //           `${item.positiveCount} positive mentions`,
-  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-  //         ] : [],
-  //         topGapReasons: item.satisfactionRate <= 50 ? [
-  //           `${item.negativeCount} negative mentions`,
-  //           `${item.satisfactionRate.toFixed(1)}% satisfaction rate`,
-  //           ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
-  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-  //         ] : [],
-  //         relatedCategories: [item.productAttribute],
-  //         // Enhanced information
-  //         categoryDefinition: item.categoryDefinition,
-  //         productCount: item.productCount
-  //       }
-  //     })
-  // }
+
 
   // const categoryPainPoints = transformPainPointsData() // 注释掉旧的数据转换
   // const categoryPositiveFeedback = transformPositiveFeedbackData() // 注释掉旧的数据转换
@@ -417,7 +342,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
            Bars are sorted by descending negative reviews left to right, calculated from the latest 40 reviews per product in selected categories.
             </div>
             <CategoryPainPointsBar
-              data={transformPainPointsData(filteredData.reviewInsights.painPoints)}
+              data={transformPainPointsData(filteredData.reviewInsights?.painPoints || [])}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
@@ -444,7 +369,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
             </div>
             <CategoryPositiveFeedbackBar
-              data={transformDelightsData(filteredData.reviewInsights.customerLikes)}
+              data={transformDelightsData(filteredData.reviewInsights?.customerLikes || [])}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
               reviewData={reviewData || undefined}
@@ -464,7 +389,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
             </div>
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
             <UseCaseSentimentMatrix
-              data={transformUseCaseData(filteredData.reviewInsights.allUseCases)}
+              data={transformUseCaseData(filteredData.reviewInsights?.allUseCases || [])}
               reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
                 id: string
                 productId: string
