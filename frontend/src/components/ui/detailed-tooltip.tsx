@@ -5,8 +5,8 @@ import { useState, useRef, useEffect, ReactNode } from 'react';
 interface DetailedTooltipContent {
   title: string;
   type?: string;
-  positiveCount: number;
-  negativeCount: number;
+  positiveReviews: number;
+  negativeReviews: number;
   totalMentions?: number;
   totalReviews?: number;
   satisfactionRate: number;
@@ -93,7 +93,7 @@ export function DetailedTooltip({ content, children, className = '' }: DetailedT
           <div className="space-y-1 mb-3">
             <div className="flex justify-between items-center">
               <span className="text-gray-700">Total Mentions:</span>
-              <span className="font-medium text-gray-900">{content.totalMentions || (content.positiveCount + content.negativeCount)}</span>
+              <span className="font-medium text-gray-900">{content.totalMentions || (content.positiveReviews + content.negativeReviews)}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-700">Unique Reviews:</span>

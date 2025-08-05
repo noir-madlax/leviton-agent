@@ -473,8 +473,8 @@ export class DatabaseService {
       useCase: string
       productAttribute: string
       satisfactionRate: number
-      positiveCount: number
-      negativeCount: number
+      positiveReviews: number
+      negativeReviews: number
       // Enhanced fields from new table structure
       categoryDefinition?: string
       productCount?: number
@@ -522,8 +522,8 @@ export class DatabaseService {
           useCase: item.use_case,
           productAttribute: item.product_attribute || 'USE',
           satisfactionRate: item.satisfaction_rate,
-          positiveCount: item.positive_reviews,
-          negativeCount: item.negative_reviews,
+          positiveReviews: item.positive_reviews,
+          negativeReviews: item.negative_reviews,
           categoryDefinition: item.category_definition,
           productCount: item.product_count || 1,
           totalReviews: item.total_reviews,
@@ -693,10 +693,10 @@ export class DatabaseService {
       product: string
       category: string
       categoryType: 'Physical' | 'Performance'
-      mentions: number
+      reviews: number
       satisfactionRate: number
-      positiveCount: number
-      negativeCount: number
+      positiveReviews: number
+      negativeReviews: number
       totalReviews: number
     }>
     productTotalReviews: Record<string, number>
@@ -705,7 +705,7 @@ export class DatabaseService {
       matrixData: Array<{
         product: string
         useCase: string
-        mentions: number
+        reviews: number
         satisfactionRate: number
         gapLevel: number
       }>
@@ -739,10 +739,10 @@ export class DatabaseService {
           product: item.product || '',
           category: item.category || '',
           categoryType: item.category_type || 'Performance',
-          mentions: item.total_reviews || 0,
+          reviews: item.total_reviews || 0,
           satisfactionRate: item.satisfaction_rate || 0,
-          positiveCount: item.positive_reviews || 0,
-          negativeCount: item.negative_reviews || 0,
+          positiveReviews: item.positive_reviews || 0,
+          negativeReviews: item.negative_reviews || 0,
           totalReviews: item.total_reviews || 0
         })),
         productTotalReviews: result.product_total_reviews || {},
@@ -751,7 +751,7 @@ export class DatabaseService {
           matrixData: (result.use_case_data?.matrix_data || []).map((item: any) => ({
             product: item.product || '',
             useCase: item.use_case || '',
-            mentions: item.mentions || 0,
+            reviews: item.mentions || 0,
             satisfactionRate: item.satisfaction_rate || 0,
             gapLevel: item.gap_level || 0
           }))

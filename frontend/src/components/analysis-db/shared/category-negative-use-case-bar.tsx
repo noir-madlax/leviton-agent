@@ -54,7 +54,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
             <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.positiveCount + data.negativeCount}</p>
+            <p className="font-semibold">{data.positiveReviews + data.negativeReviews}</p>
           </div>
           <div>
             <p className="text-sm text-gray-600">Unique Reviews:</p>
@@ -174,8 +174,8 @@ export default function CategoryNegativeUseCaseBar({
         <UnifiedStackedBarChart
           data={chartData}
           xAxisDataKey="displayName"
-          positiveDataKey="positiveCount"
-          negativeDataKey="negativeCount"
+          positiveDataKey="positiveReviews"
+          negativeDataKey="negativeReviews"
           onBarClick={handleBarClick}
           CustomTooltip={CustomTooltip}
         />

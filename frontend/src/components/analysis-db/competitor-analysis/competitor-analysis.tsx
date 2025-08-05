@@ -27,10 +27,10 @@ interface CompetitorAnalysisProps {
         product: string
         category: string
         categoryType: 'Physical' | 'Performance'
-        mentions: number
+        reviews: number
         satisfactionRate: number
-        positiveCount: number
-        negativeCount: number
+        positiveReviews: number
+        negativeReviews: number
         totalReviews: number
       }>
       productTotalReviews: Record<string, number>
@@ -39,7 +39,7 @@ interface CompetitorAnalysisProps {
         matrixData: Array<{
           product: string
           useCase: string
-          mentions: number
+          reviews: number
           satisfactionRate: number
           gapLevel: number
         }>

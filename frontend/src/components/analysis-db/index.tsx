@@ -183,15 +183,15 @@ interface DashboardData {
       frequency: number
       satisfactionLevel: 'High' | 'Medium' | 'Low'
     }>
-    allUseCases: Array<{
-      useCase: string
-      productAttribute: string
-      satisfactionRate: number
-      positiveCount: number
-      negativeCount: number
-      categoryDefinition?: string
-      productCount?: number
-    }>
+          allUseCases: Array<{
+        useCase: string
+        productAttribute: string
+        satisfactionRate: number
+        positiveReviews: number
+        negativeReviews: number
+        categoryDefinition?: string
+        productCount?: number
+      }>
   }
   competitorAnalysis: {
     targetProducts: string[]
@@ -199,10 +199,10 @@ interface DashboardData {
       product: string
       category: string
       categoryType: 'Physical' | 'Performance'
-      mentions: number
+      reviews: number
       satisfactionRate: number
-      positiveCount: number
-      negativeCount: number
+      positiveReviews: number
+      negativeReviews: number
       totalReviews: number
     }>
     productTotalReviews: Record<string, number>
@@ -211,7 +211,7 @@ interface DashboardData {
       matrixData: Array<{
         product: string
         useCase: string
-        mentions: number
+        reviews: number
         satisfactionRate: number
         gapLevel: number
       }>

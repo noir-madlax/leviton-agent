@@ -46,8 +46,8 @@ interface ReviewInsightsProps {
         productAttribute: string
         satisfactionRate: number
         totalReviews?: number
-        positiveCount: number
-        negativeCount: number
+        positiveReviews: number
+        negativeReviews: number
         categoryDefinition?: string
         productCount?: number
         relatedDetailTexts?: string[] // Added for new mapping logic

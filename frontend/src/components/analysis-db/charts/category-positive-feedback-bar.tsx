@@ -117,8 +117,8 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', onPr
         <UnifiedStackedBarChart
           data={filteredData}
           xAxisDataKey="category"
-          positiveDataKey="positiveCount"
-          negativeDataKey="negativeCount"
+          positiveDataKey="positiveReviews"
+          negativeDataKey="negativeReviews"
           onBarClick={handleBarClick}
           CustomTooltip={CustomTooltip}
           maxLabelLength={25} // 设置最大标签长度

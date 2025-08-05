@@ -63,12 +63,11 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
         definition: category.definition,
         cells: {} as Record<string, {
           // 数据字段
-          mentions: number
           reviews: number
           satisfactionRate: number
-          positiveCount: number
-          negativeCount: number
-          neutralCount: number
+          positiveReviews: number
+          negativeReviews: number
+          neutralReviews: number
           // 坐标信息，用于后续查询评论明细
           productAsin: string
           categoryId: number
@@ -89,12 +88,11 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
 
           row.cells[productAsin] = {
             // 数据字段
-            mentions: totalReviews, // Use total_reviews as mentions for display
             reviews: totalReviews,
             satisfactionRate: Math.round(satisfactionRate * 10) / 10,
-            positiveCount: positive,
-            negativeCount: negative,
-            neutralCount: 0, // No neutral sentiment
+            positiveReviews: positive,
+            negativeReviews: negative,
+            neutralReviews: 0, // No neutral sentiment
             // 坐标信息，用于后续查询评论明细
             productAsin: productAsin,
             categoryId: category.category_pk,
@@ -139,17 +137,16 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
   }
 
   const handleCellClick = async (cellData: {
-    mentions: number
     reviews: number
     satisfactionRate: number
-    positiveCount: number
-    negativeCount: number
-    neutralCount: number
+    positiveReviews: number
+    negativeReviews: number
+    neutralReviews: number
     productAsin: string
     categoryId: number
     categoryName: string
   }) => {
-    if (cellData.mentions === 0) return
+    if (cellData.reviews === 0) return
 
     const productName = asinToProductNameMap?.[cellData.productAsin] || cellData.productAsin
 
@@ -196,7 +193,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
       openPanel(
         reviewsToShow,
         `${cellData.categoryName} Reviews`,
-        `${productName} • ${cellData.mentions} mentions • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
+        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
         { sentiment: true, brand: true, rating: true, verified: true }
       )
     } catch (error) {
@@ -214,12 +211,12 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
     }
   }
 
-  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, mentions: number) => {
+  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, reviews: number) => {
     // If no reviews at all, show gray
     if (totalReviews === 0) return 'bg-gray-100 text-gray-400'
     
-    // If reviews but no detailed mentions, show light blue
-    if (mentions === 0) return 'bg-blue-50 text-blue-700'
+    // If reviews but no detailed reviews, show light blue
+    if (reviews === 0) return 'bg-blue-50 text-blue-700'
     
     // If we have detailed reviews, use satisfaction-based colors
     if (satisfactionRate >= 75) return 'bg-green-100 text-green-800'
@@ -294,8 +291,8 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                           content={{
                             title: row.category,
                             type: 'Physical/Performance',
-                            positiveCount: cellData.positiveCount,
-                            negativeCount: cellData.negativeCount,
+                                    positiveReviews: cellData.positiveReviews,
+        negativeReviews: cellData.negativeReviews,
                             totalMentions: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
                             additionalInfo: [
@@ -305,7 +302,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                           }}
                         >
                           <div
-                            className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.mentions)} cursor-pointer`}
+                            className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.reviews)} cursor-pointer`}
                             onClick={() => handleCellClick(cellData)}
                             onKeyDown={(e) => {
                               if (e.key === 'Enter' || e.key === ' ') {
