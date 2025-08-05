@@ -1,15 +1,17 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { useCommonT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
 import { useExtendFieldsData } from './hooks/useExtendFieldsData'
+import { useUnifiedFilter } from '../../contexts/unified-filter-context'
 
 export function ExtendFieldsFilter({
   onChange,
   projectId,
+  chartName,
   loading = false,
   disabled = false,
   className = ""
@@ -29,34 +31,62 @@ export function ExtendFieldsFilter({
   // 使用新的 hook 获取 extend fields 数据，确保只调用一次接口
   const { fieldDefinitions, projectData, loading: fieldsLoading, error } = useExtendFieldsData(projectId)
 
+  // 🆕 获取配置
+  const { getChartConfig } = useUnifiedFilter()
+  const chartConfig = getChartConfig(chartName)
+  const extendFieldsConfig = chartConfig?.filters?.extend_fields
+
+  // 🆕 根据配置过滤要显示的字段
+  const visibleFields = useMemo(() => {
+    if (!fieldDefinitions.length) return []
+
+    // 获取配置中允许显示的字段名列表
+    const allowedFieldNames = extendFieldsConfig?.options as string[] || []
+
+    if (allowedFieldNames.length === 0) {
+      // 如果没有配置，则不显示任何字段
+      return []
+    }
+
+    // 过滤出配置中指定的字段，保持原有排序
+    return fieldDefinitions.filter(field =>
+      allowedFieldNames.includes(field.field_name)
+    ).sort((a, b) => a.sort_order - b.sort_order)
+  }, [fieldDefinitions, extendFieldsConfig?.options])
+
   // 调试日志
   console.log('🔧 [EXTEND-FIELDS] Component render:', {
+    chartName,
     projectId,
     fieldDefinitionsCount: fieldDefinitions.length,
+    configuredFields: extendFieldsConfig?.options || [],
+    visibleFieldsCount: visibleFields.length,
+    visibleFields: visibleFields.map(f => f.field_name),
     fieldsLoading,
     error,
     currentValuesCount: Object.keys(currentValues).length,
-    hasProjectData: !!projectData
+    hasProjectData: !!projectData,
+    hasConfig: !!extendFieldsConfig
   })
 
-  // 初始化 selectKeys
+  // 初始化 selectKeys - 基于可见字段
   useEffect(() => {
-    if (fieldDefinitions.length > 0) {
+    if (visibleFields.length > 0) {
       const initialKeys: Record<string, number> = {}
-      fieldDefinitions.forEach((field) => {
+      visibleFields.forEach((field) => {
         initialKeys[field.field_name] = 0
       })
       setSelectKeys(initialKeys)
     }
-  }, [fieldDefinitions])
+  }, [visibleFields])
 
-  // 初始化默认值 - 分离到独立的 useEffect 避免循环依赖
+  // 初始化默认值 - 基于可见字段，分离到独立的 useEffect 避免循环依赖
   useEffect(() => {
-    if (fieldDefinitions.length > 0 && Object.keys(currentValues).length === 0) {
-      console.log('🔧 [EXTEND-FIELDS] Initializing default selections (all options selected)')
+    if (visibleFields.length > 0 && Object.keys(currentValues).length === 0) {
+      console.log('🔧 [EXTEND-FIELDS] Initializing default selections for visible fields (all options selected)')
       const defaultSelections: Record<string, ExtendFieldValue> = {}
 
-      fieldDefinitions.forEach(field => {
+      visibleFields.forEach(field => {
         if (field.field_type === 'select' || field.field_type === 'multi_select' || field.field_type === 'boolean') {
           // 获取所有可用选项
           const availableOptions = getAvailableOptions(field)
@@ -76,7 +106,7 @@ export function ExtendFieldsFilter({
         onChange(defaultSelections)
       }
     }
-  }, [fieldDefinitions, projectData]) // 依赖 projectData 而不是 currentValues，避免循环
+  }, [visibleFields, projectData]) // 依赖 visibleFields 和 projectData
 
   // 获取字段的可用选项
   const getAvailableOptions = (field: ExtendFieldDefinition) => {
@@ -375,11 +405,8 @@ export function ExtendFieldsFilter({
     return null
   }
 
-  // 显示所有在filterConfig中定义的扩展字段
-  // 因为在FilterRenderer层面已经通过visibleFilters.extend_fields控制了整个区域的显示
-  const visibleFields = fieldDefinitions
-
-  console.log('🔧 [EXTEND-FIELDS] Rendering fields:', {
+  console.log('🔧 [EXTEND-FIELDS] Final rendering fields:', {
+    chartName,
     fieldDefinitions: fieldDefinitions.length,
     visibleFields: visibleFields.length,
     fields: visibleFields.map(f => f.field_name)

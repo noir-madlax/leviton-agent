@@ -282,6 +282,7 @@ export function FilterRenderer({
         <div className="w-full">
           <ExtendFieldsFilter
             key={extendFieldsKey} // 🔧 添加 key 属性，当 reset 时强制重新渲染
+            chartName={chartName} // 🆕 传递 chartName
             onChange={(extendFields) => {
               setPendingFilters(prev => ({ ...prev, extend_fields: extendFields }))
               // 🆕 同时更新状态管理器

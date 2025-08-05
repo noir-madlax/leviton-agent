@@ -22,6 +22,9 @@ export interface ExtendFieldsFilterProps {
   // 只需要 projectId 即可获取所有必要数据
   projectId: string
 
+  // 🆕 图表名称，用于获取对应的配置
+  chartName: string
+
   // UI状态
   loading?: boolean
   disabled?: boolean
