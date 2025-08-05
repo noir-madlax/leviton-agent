@@ -7,34 +7,20 @@ import { useReviewPanelQuery } from "@/components/analysis-db/hooks/use-review-p
 
 interface UseCaseSentimentMatrixProps {
   data: UseCaseFeedback[]
-  reviewData?: {
-    reviewsByCategory?: Record<string, Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }>>
-  }
-  projectId?: string // 新增：用于获取评论详情
+  projectId?: string // Required: for getting review details
   filters?: {
     categories?: string[]
     brands?: string[]
     segments?: string[]
     extend_fields?: Record<string, any>
     asins?: string[]
-  } // 新增：过滤器参数
+  } // Required: filter parameters
 }
 
 type SortField = 'totalReviews' | 'positiveReviews' | 'negativeReviews' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
-export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }: UseCaseSentimentMatrixProps) {
+export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSentimentMatrixProps) {
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   const [sortField, setSortField] = useState<SortField>('totalReviews')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
@@ -94,20 +80,14 @@ export function UseCaseSentimentMatrix({ data, reviewData, projectId, filters }:
   // 处理行点击
   const handleRowClick = async (useCase: string, categoryId?: number) => {
     if (categoryId && projectId) {
-      // 使用新的 API 获取评论详情
+      // Use the new API to get review details
       await handleCategoryClick(
         projectId,
         categoryId,
         useCase,
-        'use-case',
-        filters // 传递过滤器参数
+        ['use'], // use cases use usability aspects
+        filters
       )
-    } else if (reviewData?.reviewsByCategory) {
-      // 降级到旧的逻辑（如果没有 categoryId 或 projectId）
-      const reviews = reviewData.reviewsByCategory[useCase] || []
-      if (reviews.length > 0) {
-        console.warn('Using fallback review data - consider updating to use categoryId')
-      }
     }
   }
 

@@ -368,7 +368,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               data={transformPainPointsData(filteredData.reviewInsights?.painPoints || [])}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
               projectId={projectId}
               filters={initialFilters}
             />
@@ -395,7 +394,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
               data={transformDelightsData(filteredData.reviewInsights?.customerLikes || [])}
               productType={selectedProductType}
               onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
               projectId={projectId}
               filters={initialFilters}
             />
@@ -413,18 +411,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
             <UseCaseSentimentMatrix
               data={transformUseCaseData(filteredData.reviewInsights?.allUseCases || [])}
-              reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
-                id: string
-                productId: string
-                text: string
-                sentiment: 'positive' | 'negative' | 'neutral'
-                category: string
-                aspect: string
-                rating: number
-                verified: boolean
-                date: string
-                brand: string
-              }>> }}
               projectId={projectId}
               filters={initialFilters}
             />

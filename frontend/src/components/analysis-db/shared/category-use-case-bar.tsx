@@ -7,6 +7,7 @@ import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/ana
 import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart';
+import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query';
 
 interface CategoryUseCaseBarProps {
   data: UseCaseFeedback[];
@@ -14,9 +15,14 @@ interface CategoryUseCaseBarProps {
   description?: string;
   productType?: ProductType;
   onProductTypeChange?: (productType: ProductType) => void;
-  reviewData?: {
-    reviewsByCategory?: Record<string, any[]>
-  }
+  projectId?: string // Required: for getting review details
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // Required: filter parameters
   totalUseMentions?: number;
 }
 
@@ -93,10 +99,12 @@ export default function CategoryUseCaseBar({
   description = "Bars are sorted by positive reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
-  reviewData,
+  projectId,
+  filters,
   totalUseMentions
 }: CategoryUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   
   // 添加数据安全检查，防止预渲染时 data 为 undefined
   if (!data || !Array.isArray(data) || data.length === 0) {
@@ -123,35 +131,9 @@ export default function CategoryUseCaseBar({
   }));
 
   const handleBarClick = (data: any, index: number) => {
-    if (data && data.displayName && reviewData?.reviewsByCategory) {
-      // Find the full use case name from the display name
-      const displayName = data.displayName
-      const useCaseItem = chartData.find(item => item.displayName === displayName)
-      
-      if (useCaseItem) {
-        const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
-        
-        if (reviews.length > 0) {
-          // 🆕 为现有数据添加aspects字段并设置正确的category (参考图1实现)
-          const reviewsWithAspects = reviews.map(review => ({
-            ...review,
-            category: useCaseItem.useCase, // ✅ 设置为useCase名称作为category显示
-            aspects: review.aspect ? [{
-              description: review.aspect,
-              sentiment: review.sentiment,
-              aspect_type: review.category || 'use'
-            }] : []
-          }))
-          
-          openPanel(
-            reviewsWithAspects,
-            `${useCaseItem.useCase} - Customer Reviews`,
-            `Reviews related to "${useCaseItem.useCase}" use case`,
-            { sentiment: true, brand: true, rating: true, verified: true }
-          )
-        }
-      }
-    }
+    // Note: This component doesn't have category IDs, so we can't use the new API
+    // The click functionality is disabled until we have proper category mapping
+    console.log('Click functionality not available for use case bars without category IDs')
   }
 
   const handleProductTypeChange = (value: ProductType) => {

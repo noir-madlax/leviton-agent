@@ -18,7 +18,8 @@ export interface UseReviewPanelQueryReturn {
       brand?: boolean
       rating?: boolean
       verified?: boolean
-    }
+    },
+    aspectTypes?: string[]
   ) => Promise<void>
   
   // 图表点击处理器
@@ -26,7 +27,7 @@ export interface UseReviewPanelQueryReturn {
     projectId: string,
     categoryId: number,
     categoryName: string,
-    chartType?: 'pain-points' | 'delights' | 'use-case',
+    aspectTypes?: string[],
     filters?: {
       categories?: string[]
       brands?: string[]
@@ -74,14 +75,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       rating?: boolean
       verified?: boolean
     },
-    filters?: {
-      categories?: string[]
-      brands?: string[]
-      segments?: string[]
-      extend_fields?: Record<string, any>
-      asins?: string[]
-    },
-    chartType?: 'pain-points' | 'delights' | 'use-case'
+    aspectTypes?: string[]
   ) => {
     try {
       setIsLoading(true)
@@ -94,9 +88,9 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
           offset: 0,
           sortBy: 'review_id',
           sortOrder: 'desc',
-          chartType: chartType // 传递图表类型
+          aspectTypes: aspectTypes // 传递aspectTypes参数
         },
-        filters // 传递过滤器参数
+        {} // 传递过滤器参数
       )
 
       // 从API返回结果的顶层获取category name (参考图1的实现方式)
@@ -147,7 +141,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
     projectId: string,
     categoryId: number,
     categoryName: string,
-    chartType: 'pain-points' | 'delights' | 'use-case' = 'pain-points',
+    aspectTypes: string[] = ['phy', 'perf'],
     filters?: {
       categories?: string[]
       brands?: string[]
@@ -156,27 +150,28 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       asins?: string[]
     }
   ) => {
-    const titles = {
-      'pain-points': `${categoryName} - Pain Points`,
-      'delights': `${categoryName} - Customer Delights`,
-      'use-case': `${categoryName} - Use Case Reviews`
-    }
+    // Generate title and subtitle based on aspect types
+    const aspectTypeNames = aspectTypes.map(type => {
+      switch(type) {
+        case 'use': return 'Use Cases'
+        case 'phy': return 'Physical Features'
+        case 'perf': return 'Performance'
+        default: return type
+      }
+    }).join(', ')
 
-    const subtitles = {
-      'pain-points': `Customer feedback about "${categoryName}" issues and concerns`,
-      'delights': `Positive customer feedback about "${categoryName}"`,
-      'use-case': `Customer reviews related to "${categoryName}" use cases`
-    }
+    const title = `${categoryName} - ${aspectTypeNames}`
+    const subtitle = `Customer reviews related to "${categoryName}" ${aspectTypeNames.toLowerCase()}`
 
     await openPanelWithCategoryId(
       projectId,
       categoryId,
       categoryName,
-      titles[chartType],
-      subtitles[chartType],
+      title,
+      subtitle,
       undefined, // showFilters 使用默认值
-      filters, // 传递过滤器参数
-      chartType // 传递图表类型
+      aspectTypes, // 传递aspectTypes
+      filters // 传递过滤器参数
     )
   }, [openPanelWithCategoryId])
 

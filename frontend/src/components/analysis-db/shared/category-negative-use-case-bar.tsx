@@ -14,9 +14,6 @@ interface CategoryNegativeUseCaseBarProps {
   description?: string;
   productType?: ProductType;
   onProductTypeChange?: (productType: ProductType) => void;
-  reviewData?: {
-    reviewsByCategory?: Record<string, any[]>
-  }
   totalUseMentions?: number;
 }
 
@@ -92,7 +89,6 @@ export default function CategoryNegativeUseCaseBar({
   description = "Bars are sorted by negative reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
-  reviewData,
   totalUseMentions
 }: CategoryNegativeUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
@@ -122,33 +118,18 @@ export default function CategoryNegativeUseCaseBar({
   }));
 
   const handleBarClick = (data: any, index: number) => {
-    if (data && data.displayName && reviewData?.reviewsByCategory) {
+    if (data && data.displayName) {
       // Find the full use case name from the display name
       const displayName = data.displayName
       const useCaseItem = chartData.find(item => item.displayName === displayName)
       
       if (useCaseItem) {
-        const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
-        
-        if (reviews.length > 0) {
-          // 🆕 为现有数据添加aspects字段并设置正确的category (参考图1实现)
-          const reviewsWithAspects = reviews.map(review => ({
-            ...review,
-            category: useCaseItem.useCase, // ✅ 设置为useCase名称作为category显示
-            aspects: review.aspect ? [{
-              description: review.aspect,
-              sentiment: review.sentiment,
-              aspect_type: review.category || 'use'
-            }] : []
-          }))
-          
-          openPanel(
-            reviewsWithAspects,
-            `${useCaseItem.useCase} - Customer Reviews`,
-            `Reviews related to "${useCaseItem.useCase}" use case`,
-            { sentiment: true, brand: true, rating: true, verified: true }
-          )
-        }
+        openPanel(
+          [], // No review data provided, so pass an empty array
+          `${useCaseItem.useCase} - Customer Reviews`,
+          `Reviews related to "${useCaseItem.useCase}" use case`,
+          { sentiment: true, brand: true, rating: true, verified: true }
+        )
       }
     }
   }

@@ -28,7 +28,6 @@ from .services.pricing_analysis_service import PricingAnalysisService
 from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
 
-from .services.all_review_data_service import AllReviewDataService
 from .services.project_overview_service import ProjectOverviewService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
@@ -417,9 +416,7 @@ def get_chart_service_class(chart_type: str):
         'pricing-analysis': PricingAnalysisService,
         'market-insights': MarketInsightsService,
         'package-preference': PackagePreferenceService,
-
-
-        'all-review-data': AllReviewDataService
+        'project-overview': ProjectOverviewService
     }
     
     if chart_type not in service_map:
@@ -1019,13 +1016,9 @@ async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
 
 
 @router.post("/all-review-data", response_model=AllReviewDataResponse)
-@with_dashboard_service(AllReviewDataService)
 @log_request_response
-async def get_all_review_data(
-    service: AllReviewDataService,
-    request: DashboardRequest
-):
-    """Get all review data for a specific project.
+async def get_all_review_data(request: DashboardRequest):
+    """Get all review data for a specific project using enhanced ReviewDataService.
 
     POST请求，使用JSON格式传递过滤条件：
     {
@@ -1038,25 +1031,67 @@ async def get_all_review_data(
         }
     }
 
-    Enhanced version: Returns complete review data with segment support.
+    Enhanced version: Uses ReviewDataService for efficient single-query data retrieval.
     """
-    raw_data = service.get_data()
+    try:
+        # Initialize ReviewDataService with project filters
+        from dashboard.charts.reviewCore.data_service import ReviewDataService
+        from core.models.filters import ProjectFilters
+        
+        # Parse filters
+        project_filters = ProjectFilters.from_dict(request.filters) if request.filters else ProjectFilters()
+        
+        # Get filtered ASINs
+        from dashboard.services.base_service import BaseDashboardService
+        base_service = BaseDashboardService(request.project_id)
+        base_service.set_project_filters(project_filters)
+        filtered_asins = base_service._get_filtered_asins()
+        
+        if not filtered_asins:
+            logger.warning(f"No ASINs found for project {request.project_id}")
+            return AllReviewDataResponse(
+                data={},
+                project_id=request.project_id,
+                filtered_asin_count=0,
+                total_aspects=0,
+                total_reviews=0
+            )
+        
+        # Use enhanced ReviewDataService to get grouped reviews
+        review_data_service = ReviewDataService(base_service.supabase)
+        raw_data = await review_data_service.get_reviews_by_category(
+            project_id=request.project_id,
+            asins=filtered_asins,
+            category_id=None,  # Get all categories
+            group_by='detail_text'  # Group by detail_text for Review Insights mapping
+        )
+        
+        # Convert grouped review data to ReviewData objects
+        converted_data = {}
+        if 'grouped_reviews' in raw_data:
+            for detail_text, reviews in raw_data['grouped_reviews'].items():
+                converted_data[detail_text] = [ReviewData(**review) for review in reviews]
+        
+        response = AllReviewDataResponse(
+            data=converted_data,
+            project_id=request.project_id,
+            filtered_asin_count=len(filtered_asins),
+            total_aspects=len(converted_data),
+            total_reviews=raw_data.get('total_count', 0)
+        )
 
-    # Convert grouped review data to ReviewData objects
-    converted_data = {}
-    for aspect, reviews in raw_data['data'].items():
-        converted_data[aspect] = [ReviewData(**review) for review in reviews]
-
-    response = AllReviewDataResponse(
-        data=converted_data,
-        project_id=request.project_id,
-        filtered_asin_count=len(service.project_asins),
-        total_aspects=raw_data.get('total_aspects', 0),
-        total_reviews=raw_data.get('total_reviews', 0)
-    )
-
-    logger.info(f"All review data API returned {len(raw_data['data'])} aspects with {response.total_reviews} reviews for project {request.project_id}")
-    return response
+        logger.info(f"All review data API returned {len(converted_data)} aspects with {response.total_reviews} reviews for project {request.project_id}")
+        return response
+        
+    except Exception as e:
+        logger.error(f"Error in get_all_review_data for project {request.project_id}: {e}", exc_info=True)
+        return AllReviewDataResponse(
+            data={},
+            project_id=request.project_id,
+            filtered_asin_count=0,
+            total_aspects=0,
+            total_reviews=0
+        )
 
 
 @router.post("/project-overview")

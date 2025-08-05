@@ -11,17 +11,14 @@ interface CategoryPainPointsBarProps {
   data: CategoryFeedback[]
   productType?: ProductType
   onProductTypeChange?: (productType: ProductType) => void
-  reviewData?: {
-    reviewsByCategory?: Record<string, any[]>
-  }
-  projectId?: string // 新增：用于获取评论详情
+  projectId?: string // Required: for getting review details
   filters?: {
     categories?: string[]
     brands?: string[]
     segments?: string[]
     extend_fields?: Record<string, any>
     asins?: string[]
-  } // 新增：过滤器参数
+  } // Required: filter parameters
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -53,7 +50,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, reviewData, projectId, filters }: CategoryPainPointsBarProps) {
+export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, projectId, filters }: CategoryPainPointsBarProps) {
   const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
 
@@ -74,23 +71,14 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductT
 
   const handleBarClick = async (data: any) => {
     if (data && data.categoryId && data.category && projectId) {
-      // 使用新的 API 获取评论详情
+      // Use the new API to get review details
       await handleCategoryClick(
         projectId,
         data.categoryId,
         data.category,
-        'pain-points',
-        filters // 传递过滤器参数
+        ['phy', 'perf'], // pain points use physical and performance aspects
+        filters
       )
-    } else if (data && data.category && reviewData?.reviewsByCategory) {
-      // 降级到旧的逻辑（如果没有 categoryId 或 projectId）
-      const categoryName = data.category
-      const reviews = reviewData.reviewsByCategory[categoryName] || []
-
-      if (reviews.length > 0) {
-        // 需要导入 useReviewPanel 作为降级方案
-        console.warn('Using fallback review data - consider updating to use categoryId')
-      }
     }
   }
 

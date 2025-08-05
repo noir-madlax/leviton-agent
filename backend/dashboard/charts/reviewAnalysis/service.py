@@ -151,21 +151,20 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         sort_order: str = "desc",
         sentiment_filter: Optional[str] = None,
         rating_filter: Optional[str] = None,
-        chart_type: Optional[str] = None
+        aspect_types: Optional[List[str]] = None
     ) -> Dict[str, Any]:
-        """Get reviews for a specific category with product information.
+        """Get reviews for a specific category with optional aspect type filtering.
         
         Args:
-            category_id: Category ID to filter by
-            limit: Number of reviews to return (default: 100)
-            offset: Offset for pagination (default: 0)
+            category_id: Category ID to get reviews for
+            limit: Number of reviews to return
+            offset: Number of reviews to skip
             sort_by: Sort field (review_id, date, rating, sentiment)
             sort_order: Sort direction (asc, desc)
-            sentiment_filter: Filter by sentiment (positive, negative). If None, returns all sentiments.
-            rating_filter: Filter by rating (high: 4-5 stars, mid: 3 stars, low: 1-2 stars). If None, returns all ratings.
-            
-        Returns:
-            Dict containing reviews with product information and pagination
+            sentiment_filter: Optional sentiment filter (positive, negative)
+            rating_filter: Optional rating filter (high, mid, low)
+            aspect_types: Optional list of aspect types to filter by (e.g., ['phy', 'perf', 'use'])
+                         If None, returns all aspect types for the category
         """
         try:
             logger.info(f"Getting reviews for project {self.project_id}, category {category_id}")
@@ -176,13 +175,7 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
                 return self._get_empty_reviews_response(category_id)
             
             # Get all review data for this category using centralized service
-            # Apply the same aspect type filtering as the bar chart based on chart type
-            if chart_type == 'use-case':
-                aspect_types = ReviewAnalysisConfig.ASPECT_TYPE_MAP.get('use', ['use'])
-            else:
-                # pain-points and delights both use phy_perf
-                aspect_types = ReviewAnalysisConfig.ASPECT_TYPE_MAP.get('phy_perf', ['phy_perf'])
-            
+            # Use aspect_types parameter directly - no need for chart_type logic
             result = await self.review_data_service.get_reviews_by_category(
                 project_id=self.project_id,
                 category_id=category_id,

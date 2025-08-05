@@ -19,34 +19,53 @@ class ReviewDataService:
     async def get_reviews_by_category(
         self, 
         project_id: str, 
-        category_id: int, 
         asins: List[str],
+        category_id: Optional[int] = None, 
         sort_by: str = "review_id",
         sort_order: str = "desc",
         aspect_types: Optional[List[str]] = None,
         sentiment_filter: Optional[str] = None,
-        rating_filter: Optional[str] = None
+        rating_filter: Optional[str] = None,
+        group_by: Optional[str] = None
     ) -> Dict[str, Any]:
-        """Get deduplicated reviews for a category with sorting and aspect aggregation.
+        """Get deduplicated reviews with flexible filtering and grouping options.
+        
+        This method can be used in two modes:
+        1. Single category mode: When category_id is provided, returns reviews for that specific category
+        2. All categories mode: When category_id is None, returns all reviews grouped by specified criteria
         
         Args:
             project_id: Project ID for filtering
-            category_id: Category ID to filter by
+            category_id: Optional category ID to filter by. If None, returns reviews for all categories
             asins: List of ASINs to filter by
-            sort_by: Sort field
-            sort_order: Sort direction
+            sort_by: Sort field (review_id, date, rating, sentiment)
+            sort_order: Sort direction (asc, desc)
+            aspect_types: Optional list of aspect types to filter by
+            sentiment_filter: Optional sentiment filter (positive, negative)
+            rating_filter: Optional rating filter (high, mid, low)
+            group_by: Optional grouping field when category_id is None:
+                      - 'detail_text': Group by aspect detail_text (for Review Insights mapping)
+                      - 'category_name': Group by category name (for chart fallbacks)
+                      - 'product_id': Group by product ID (for Customer Sentiment calculations)
+                      - None: Return flat list of reviews (default)
             
         Returns:
-            Dictionary containing deduplicated reviews with aspect aggregation
+            Dictionary containing:
+            - For single category mode: {'reviews': [...], 'total_count': int, 'category_info': {...}}
+            - For all categories mode: {'grouped_reviews': {...}, 'total_count': int, 'category_info': None}
         """
         try:
-            # Build the base query - use the same query as get_category_statistics
+            # Build the base query
             query = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
                 'review_id, review_title, review_text, rating, verified, review_date, '
                 'sentiment, sentiment_label, aspect_description, category_name, '
                 'category_definition, aspect_type, parent_group_name, detail_text, '
                 'product_id, title, brand, product_url'
-            ).eq('project_id', project_id).eq('category_pk', category_id).in_('product_id', asins)
+            ).eq('project_id', project_id).in_('product_id', asins)
+            
+            # Apply category filter only if provided (backward compatibility)
+            if category_id is not None:
+                query = query.eq('category_pk', category_id)
             
             # Apply aspect type filter if provided
             if aspect_types:
@@ -76,12 +95,11 @@ class ReviewDataService:
             # Get all data (no pagination at this level since we need to deduplicate)
             result = query.execute()     
             if not result.data:
-                logger.info(f"No reviews found for project {project_id}, category {category_id}")
-                return {
-                    'reviews': [],
-                    'total_count': 0,
-                    'category_info': None
-                }
+                if category_id is not None:
+                    logger.info(f"No reviews found for project {project_id}, category {category_id}")
+                else:
+                    logger.info(f"No reviews found for project {project_id}")
+                return self._get_empty_response(category_id)
             
             logger.info(f"Retrieved {len(result.data)} review records from database")
             
@@ -105,6 +123,7 @@ class ReviewDataService:
                 # This matches the business logic in get_category_statistics
                 if sentiments:  # Any sentiment means the review is valid
                     valid_review_keys.add(review_key)
+            
             # Create deduplicated reviews only for valid reviews
             deduplicated_reviews = []
             for review_key in valid_review_keys:
@@ -122,11 +141,24 @@ class ReviewDataService:
                         'aspect_type': occurrence['aspect_type']
                     }
                     aspects.append(aspect)
+                
+                # Transform rating
+                rating = self._transform_rating(base_review.get('rating'))
+                
+                # Convert sentiment from new format to old format
+                sentiment = base_review['sentiment']
+                if sentiment == '+':
+                    sentiment_label = 'positive'
+                elif sentiment == '-':
+                    sentiment_label = 'negative'
+                else:
+                    sentiment_label = 'neutral'
+                
                 deduplicated_review = {
                     'review_id': base_review['review_id'],
                     'review_title': base_review.get('review_title'),
                     'review_text': base_review['review_text'],
-                    'rating': self._transform_rating(base_review.get('rating')),
+                    'rating': rating,
                     'verified': base_review.get('verified'),
                     'review_date': base_review.get('review_date'),
                     'product_id': base_review.get('product_id'),
@@ -136,7 +168,10 @@ class ReviewDataService:
                     'aspects': aspects,
                     'category_name': base_review.get('category_name'),
                     'category_definition': base_review.get('category_definition'),
-                    'aspect_type': base_review.get('aspect_type')
+                    'aspect_type': base_review.get('aspect_type'),
+                    'detail_text': base_review.get('detail_text'),
+                    'parent_group_name': base_review.get('parent_group_name'),
+                    'sentiment': sentiment_label
                 }
                 deduplicated_reviews.append(deduplicated_review)
             
@@ -167,22 +202,35 @@ class ReviewDataService:
                 
                 filtered_reviews.append(review)
             
-            # Get category info
-            category_info = await self.get_category_info(project_id, category_id)
-            
-            return {
-                'reviews': filtered_reviews,
-                'total_count': total_reviews_before_filtering,  # Use total count before filtering to match bar chart
-                'category_info': category_info
-            }
+            # Handle different return formats based on mode
+            if category_id is not None:
+                # Single category mode - return existing format for backward compatibility
+                category_info = await self.get_category_info(project_id, category_id)
+                return {
+                    'reviews': filtered_reviews,
+                    'total_count': total_reviews_before_filtering,
+                    'category_info': category_info
+                }
+            else:
+                # All categories mode - return grouped format
+                if group_by:
+                    grouped_reviews = self._group_reviews_by_field(filtered_reviews, group_by)
+                    return {
+                        'grouped_reviews': grouped_reviews,
+                        'total_count': total_reviews_before_filtering,
+                        'category_info': None
+                    }
+                else:
+                    # Return flat list when no grouping specified
+                    return {
+                        'reviews': filtered_reviews,
+                        'total_count': total_reviews_before_filtering,
+                        'category_info': None
+                    }
             
         except Exception as e:
             logger.error(f"Error getting reviews by category: {e}", exc_info=True)
-            return {
-                'reviews': [],
-                'total_count': 0,
-                'category_info': None
-            }
+            return self._get_empty_response(category_id)
 
     def _deduplicate_and_aggregate_reviews(self, reviews_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Deduplicate reviews and aggregate aspects for each review.
@@ -1046,5 +1094,67 @@ class ReviewDataService:
         except Exception as e:
             logger.error(f"Error getting category info batch: {e}", exc_info=True)
             return {}
+    
+    def _group_reviews_by_field(self, reviews: List[Dict[str, Any]], group_by: str) -> Dict[str, List[Dict[str, Any]]]:
+        """Group reviews by specified field.
+        
+        Args:
+            reviews: List of review dictionaries
+            group_by: Field to group by ('detail_text', 'category_name', 'product_id')
+            
+        Returns:
+            Dictionary with grouped reviews
+        """
+        grouped = defaultdict(list)
+        
+        for review in reviews:
+            if group_by == 'detail_text':
+                key = review.get('detail_text', 'Unknown')
+            elif group_by == 'category_name':
+                key = review.get('category_name', 'Unknown')
+            elif group_by == 'product_id':
+                key = review.get('product_id', 'Unknown')
+            else:
+                key = 'Unknown'
+            
+            # Convert to frontend-expected format
+            frontend_review = {
+                'id': f"{review['review_id']}_{len(grouped[key])}",
+                'productId': review['product_id'],
+                'text': review['review_text'],
+                'sentiment': review['sentiment'],
+                'category': review.get('category_name', 'Unknown'),
+                'aspect': review.get('detail_text', 'Unknown'),
+                'rating': review['rating'],
+                'verified': review.get('verified', False),
+                'date': review.get('review_date', ''),
+                'brand': review.get('brand', 'Unknown')
+            }
+            
+            grouped[key].append(frontend_review)
+        
+        return dict(grouped)
+
+    def _get_empty_response(self, category_id: Optional[int]) -> Dict[str, Any]:
+        """Get empty response based on mode.
+        
+        Args:
+            category_id: Category ID or None for all categories mode
+            
+        Returns:
+            Empty response dictionary
+        """
+        if category_id is not None:
+            return {
+                'reviews': [],
+                'total_count': 0,
+                'category_info': None
+            }
+        else:
+            return {
+                'grouped_reviews': {},
+                'total_count': 0,
+                'category_info': None
+            }
     
  

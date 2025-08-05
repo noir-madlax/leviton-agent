@@ -896,7 +896,7 @@ export class DatabaseService {
       sortOrder?: 'desc' | 'asc'
       sentimentFilter?: 'positive' | 'negative'
       ratingFilter?: 'high' | 'mid' | 'low'
-      chartType?: 'pain-points' | 'delights' | 'use-case'
+      aspectTypes?: string[]
     },
     filters?: {
       categories?: string[]
@@ -953,7 +953,7 @@ export class DatabaseService {
         sort_order: options?.sortOrder || 'desc',
         sentiment_filter: options?.sentimentFilter || null,
         rating_filter: options?.ratingFilter || null,
-        chart_type: options?.chartType || null
+        aspect_types: options?.aspectTypes || null
       }
 
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {
