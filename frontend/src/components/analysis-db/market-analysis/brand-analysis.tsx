@@ -15,13 +15,13 @@ import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
 // 导入新的过滤器组件
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
-import { getChartFilterConfig } from "@/components/analysis-db/configs/chart-filter-data"
-import { type ChartFilterConfig } from "@/components/analysis-db/configs/filter-config"
 import { useTAMDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api'
 // import { useSalesTrendData } from '@/app/chat/charts/sales_trend/hooks/use-sales-trend-data'
+// 🆕 导入统一的过滤器 Hook
+import { useMarketShareFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
 
 interface BrandAnalysisProps {
   data: {
@@ -280,96 +280,23 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     refreshData: refreshTamData
   } = useTAMDataRefresh(projectId || '', initialTamMarketShare)
 
-  // 🆕 过滤器就绪状态
-  const [filtersReady, setFiltersReady] = useState(false)
+  // 🆕 使用统一的过滤器 Hook - 大大简化代码！
+  const {
+    filters: tamFilters,
+    filtersReady,
+    handleFiltersReady,
+    handleFiltersChange
+  } = useMarketShareFilters(
+    refreshTamData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
+  )
+  // 🚫 移除原来的配置加载逻辑，现在由 Hook 和 FilterRenderer 内部处理
+  const [tamConfigLoading] = useState(false) // 保留这个状态用于兼容性
 
-  // TAM图表过滤器状态管理
-  const [tamFilters, setTamFilters] = useState<ProjectFilters>(initialFilters || {
-    categories: [],
-    asins: [],
-    brands: [],
-    segments: [],
-    extend_fields: {},
-    time_period: "30 days"
-  })
-  const [tamFilterConfig, setTamFilterConfig] = useState<ChartFilterConfig | null>(null)
-  const [tamConfigLoading, setTamConfigLoading] = useState(true)
+  // 🚫 移除原来的处理函数，现在由 Hook 统一处理
 
-  // 加载TAM图表过滤器配置
-  React.useEffect(() => {
-    const loadTamFilterConfig = async () => {
-      if (!projectId) return
-      
-      try {
-        setTamConfigLoading(true)
-        const config = await getChartFilterConfig(projectId, 'market-share-analysis')
-        console.log('🔧 [TAM-FILTER-CONFIG] Loaded config:', config)
-        console.log('🔧 [TAM-FILTER-CONFIG] Extend fields:', config?.extend_fields)
-        setTamFilterConfig(config)
-        
-        // 应用默认值
-        if (config?.default_values) {
-          setTamFilters(prev => ({
-            ...prev,
-            categories: config.default_values.categories || prev.categories,
-            brands: config.default_values.brands || prev.brands,
-            segments: config.default_values.segments || prev.segments,
-            extend_fields: config.default_values.extend_fields || prev.extend_fields,
-          }))
-        }
-      } catch (error) {
-        console.error('Error loading TAM filter config:', error)
-      } finally {
-        setTamConfigLoading(false)
-      }
-    }
-
-    loadTamFilterConfig()
-  }, [projectId])
-
-  // 🆕 从统一过滤器数据中设置默认值
-  React.useEffect(() => {
-    const tamConfig = unifiedFilterData?.charts['market-share-analysis']
-    
-    if (tamConfig) {
-      console.log('🆕 [TAM-FILTER-DEFAULTS] Setting default values from unified data:', {
-        categories: tamConfig.filters.categories?.values,
-        brands: tamConfig.filters.brands?.values,
-        segments: tamConfig.filters.product_segments?.values,
-        extend_fields: tamConfig.filters.extend_fields?.values
-      })
-      
-      setTamFilters(prev => ({
-        ...prev,
-        categories: Array.isArray(tamConfig.filters.categories?.values) ? tamConfig.filters.categories.values : prev.categories,
-        brands: Array.isArray(tamConfig.filters.brands?.values) ? tamConfig.filters.brands.values : prev.brands,
-        segments: Array.isArray(tamConfig.filters.product_segments?.values) ? tamConfig.filters.product_segments.values : prev.segments,
-        extend_fields: typeof tamConfig.filters.extend_fields?.values === 'object' && !Array.isArray(tamConfig.filters.extend_fields.values) ? tamConfig.filters.extend_fields.values : prev.extend_fields,
-      }))
-    }
-  }, [unifiedFilterData])
-
-  // TAM过滤器变更处理函数
-  const handleTamFiltersChange = async (newFilters: ProjectFilters) => {
-    setTamFilters(newFilters)
-    await refreshTamData(newFilters)
-  }
-
-  // 🆕 过滤器就绪状态变化处理
-  const handleFiltersReady = async (isReady: boolean) => {
-    console.log(`🎯 [BRAND-ANALYSIS] Filters ready state changed: ${isReady}`)
-    setFiltersReady(isReady)
-
-    if (isReady && projectId) {
-      console.log(`🚀 [BRAND-ANALYSIS] Filters are ready, fetching initial TAM data for project: ${projectId}`)
-      try {
-        await refreshTamData(tamFilters)
-        console.log(`✅ [BRAND-ANALYSIS] Initial TAM data loaded successfully`)
-      } catch (error) {
-        console.error(`❌ [BRAND-ANALYSIS] Failed to load initial TAM data:`, error)
-      }
-    }
-  }
+  // 🚫 移除原来的全局同步监听，现在由 Hook 统一处理
 
   // 获取category信息
   const categoryNames = data.categoryNames || []
@@ -481,12 +408,12 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 Total addressable market (TAM) and Market Share by brands
               </h3>
               
-              {/* 🆕 简化后的过滤器组件 - 所有数据都从 context 获取 */}
+              {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
               <FilterRenderer
                 projectId={projectId || ''}
                 chartName="market-share-analysis"
                 currentFilters={tamFilters}
-                onChange={handleTamFiltersChange}
+                onChange={handleFiltersChange}
                 onFiltersReady={handleFiltersReady}
                 disabled={tamConfigLoading || tamDataLoading}
                 className="mb-6"

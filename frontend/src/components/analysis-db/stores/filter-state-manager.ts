@@ -3,17 +3,18 @@
  * 统一管理所有图表的过滤器状态
  */
 
-import { 
-  ChartFilterState, 
-  GlobalFilterState, 
-  FilterUpdateEvent, 
+import {
+  ChartFilterState,
+  GlobalFilterState,
+  FilterEvent,
   IFilterStateManager,
-  DEFAULT_CHART_FILTER_STATE 
+  DEFAULT_CHART_FILTER_STATE
 } from './types'
+import { CHART_NAMES } from '../constants'
 
 class FilterStateManager implements IFilterStateManager {
   private state: GlobalFilterState = {}
-  private subscribers: Array<(event: FilterUpdateEvent) => void> = []
+  private subscribers: Array<(event: FilterEvent) => void> = []
 
   constructor() {
     console.log('🔧 [FILTER-STATE-MANAGER] Initialized')
@@ -62,6 +63,7 @@ class FilterStateManager implements IFilterStateManager {
 
     // 触发订阅者
     this.notifySubscribers({
+      type: 'FILTER_UPDATE',
       chartName,
       oldState,
       newState,
@@ -90,6 +92,7 @@ class FilterStateManager implements IFilterStateManager {
 
     // 触发订阅者
     this.notifySubscribers({
+      type: 'FILTER_UPDATE',
       chartName,
       oldState,
       newState,
@@ -111,7 +114,7 @@ class FilterStateManager implements IFilterStateManager {
   /**
    * 订阅过滤器状态变化
    */
-  subscribe(callback: (event: FilterUpdateEvent) => void): () => void {
+  subscribe(callback: (event: FilterEvent) => void): () => void {
     this.subscribers.push(callback)
     console.log(`🔔 [FILTER-STATE-MANAGER] New subscriber added, total: ${this.subscribers.length}`)
     
@@ -180,7 +183,7 @@ class FilterStateManager implements IFilterStateManager {
   /**
    * 通知所有订阅者
    */
-  private notifySubscribers(event: FilterUpdateEvent): void {
+  private notifySubscribers(event: FilterEvent): void {
     this.subscribers.forEach(callback => {
       try {
         callback(event)
@@ -207,6 +210,62 @@ class FilterStateManager implements IFilterStateManager {
     this.state = {}
     console.log('🧹 [FILTER-STATE-MANAGER] All state cleared')
   }
+
+  /**
+   * 🆕 项目级过滤器同步到所有图表
+   */
+  syncProjectFiltersToAllCharts(projectFilters: ChartFilterState): void {
+    // 目前只有一个非 project 的图表需要同步
+    const targetCharts = [CHART_NAMES.MARKET_SHARE_ANALYSIS]
+
+    console.log('🌍 [FILTER-STATE-MANAGER] Syncing project filters to all charts:', {
+      projectFilters,
+      targetCharts
+    })
+
+    // 直接覆盖所有目标图表的过滤器数据
+    targetCharts.forEach(chartName => {
+      const oldState = this.state[chartName] || null
+
+      this.state[chartName] = {
+        ...projectFilters,  // 🎯 直接覆盖，不合并
+        metadata: {
+          ...projectFilters.metadata,
+          syncedFromProject: true,
+          syncTimestamp: Date.now()
+        }
+      }
+
+      console.log(`🔄 [FILTER-STATE-MANAGER] Synced project filters to ${chartName}`)
+    })
+
+    // 触发全局同步事件
+    this.notifyGlobalSync(projectFilters, targetCharts)
+  }
+
+  /**
+   * 🆕 全局同步事件通知
+   */
+  private notifyGlobalSync(projectFilters: ChartFilterState, affectedCharts: string[]): void {
+    const globalSyncEvent = {
+      type: 'GLOBAL_SYNC' as const,
+      sourceChart: 'project' as const,
+      projectFilters,
+      affectedCharts,
+      timestamp: Date.now()
+    }
+
+    console.log('🌍 [FILTER-STATE-MANAGER] Triggering global sync event:', globalSyncEvent)
+
+    // 通知所有订阅者发生了全局同步
+    this.subscribers.forEach(callback => {
+      try {
+        callback(globalSyncEvent)
+      } catch (error) {
+        console.error('🚨 [FILTER-STATE-MANAGER] Error in global sync callback:', error)
+      }
+    })
+  }
 }
 
 // 创建全局单例实例
@@ -214,4 +273,4 @@ export const filterStateManager = new FilterStateManager()
 
 // 导出类型和实例
 export { FilterStateManager }
-export type { ChartFilterState, GlobalFilterState, FilterUpdateEvent }
+export type { ChartFilterState, GlobalFilterState, FilterEvent }

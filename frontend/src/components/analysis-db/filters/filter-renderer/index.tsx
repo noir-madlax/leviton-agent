@@ -9,6 +9,8 @@ import { ExtendFieldsFilter } from '../extend-fields-filter'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
 import { useChartFilters } from '../../hooks/use-filter-state-manager' // 🆕 使用过滤器状态管理器
+import { filterStateManager } from '../../stores' // 🆕 导入状态管理器
+import { CHART_NAMES } from '../../constants' // 🆕 导入图表名称常量
 
 // 🆕 简化后的 FilterRenderer 接口 - 只需要最少参数
 interface FilterRendererProps {
@@ -82,6 +84,9 @@ export function FilterRenderer({
   // 🆕 过滤器就绪状态
   const [filtersReady, setFiltersReady] = useState(false)
 
+  // 🆕 检测是否为项目级过滤器
+  const isProjectFilter = chartName === CHART_NAMES.PROJECT
+
   // 国际化hooks
   const commonT = useCommonT()
   const projectT = useProjectT()
@@ -154,6 +159,10 @@ export function FilterRenderer({
       },
       timeframe: {
         period: pendingFilters.time_period || 'year'
+      },
+      metadata: {
+        lastUpdated: Date.now(),
+        appliedAt: Date.now()
       }
     }
 
@@ -161,10 +170,31 @@ export function FilterRenderer({
     updateCategories(chartState.filters.categories)
     updateExtendFields(chartState.filters.extend_fields)
 
+    // 🆕 项目级过滤器的特殊处理
+    if (isProjectFilter) {
+      console.log('🌍 [FILTER-RENDERER] Project filter detected, syncing to all charts')
+
+      // 同步到所有其他图表
+      filterStateManager.syncProjectFiltersToAllCharts(chartState)
+
+      // 触发全局刷新信号
+      triggerGlobalRefresh()
+    }
+
     // 调用外部回调
     onChange(pendingFilters)
 
     setApplyingFilters(false)
+  }
+
+  // 🆕 触发全局刷新
+  const triggerGlobalRefresh = () => {
+    console.log('🚀 [FILTER-RENDERER] Triggering global refresh')
+    // 通过重置和重新设置就绪状态来触发所有图表刷新
+    onFiltersReady?.(false)
+    setTimeout(() => {
+      onFiltersReady?.(true)
+    }, 100)
   }
 
   // 重置过滤器

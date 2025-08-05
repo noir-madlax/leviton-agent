@@ -20,6 +20,9 @@ export interface ChartFilterState {
     lastUpdated?: number
     appliedAt?: number
     version?: string
+    // 🆕 全局同步相关字段
+    syncedFromProject?: boolean
+    syncTimestamp?: number
   }
 }
 
@@ -30,11 +33,24 @@ export interface GlobalFilterState {
 
 // 过滤器更新事件
 export interface FilterUpdateEvent {
+  type: 'FILTER_UPDATE'
   chartName: string
   oldState: ChartFilterState | null
   newState: ChartFilterState
   timestamp: number
 }
+
+// 🆕 全局同步事件
+export interface GlobalSyncEvent {
+  type: 'GLOBAL_SYNC'
+  sourceChart: 'project'
+  projectFilters: ChartFilterState
+  affectedCharts: string[]
+  timestamp: number
+}
+
+// 🆕 联合事件类型
+export type FilterEvent = FilterUpdateEvent | GlobalSyncEvent
 
 // 过滤器状态管理器接口
 export interface IFilterStateManager {
@@ -54,7 +70,7 @@ export interface IFilterStateManager {
   batchUpdateFilters(updates: Record<string, Partial<ChartFilterState>>): void
   
   // 订阅过滤器状态变化
-  subscribe(callback: (event: FilterUpdateEvent) => void): () => void
+  subscribe(callback: (event: FilterEvent) => void): () => void
   
   // 获取指定图表的特定过滤器
   getSpecificFilter<T = any>(chartName: string, filterPath: string): T | null
