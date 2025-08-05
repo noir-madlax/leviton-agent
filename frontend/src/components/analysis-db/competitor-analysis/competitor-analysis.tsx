@@ -21,30 +21,6 @@ interface CompetitorAnalysisProps {
   projectId: string | null;
   initialFilters?: ProjectFilters;
   data: {
-    competitorAnalysis: {
-      targetProducts: string[]
-      matrixData: Array<{
-        product: string
-        category: string
-        categoryType: 'Physical' | 'Performance'
-        reviews: number
-        satisfactionRate: number
-        positiveReviews: number
-        negativeReviews: number
-        totalReviews: number
-      }>
-      productTotalReviews: Record<string, number>
-      useCaseData: {
-        targetProducts: string[]
-        matrixData: Array<{
-          product: string
-          useCase: string
-          reviews: number
-          satisfactionRate: number
-          gapLevel: number
-        }>
-      }
-    }
     allReviewData: Record<string, Array<{
       id: string
       productId: string

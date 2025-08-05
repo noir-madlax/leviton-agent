@@ -55,10 +55,7 @@ class ReviewInsightsRequest(DashboardRequest):
     max_underserved_use_cases: Optional[int] = Field(default=10, description="Maximum number of underserved use cases to return")
 
 
-class CompetitorSummaryRequest(BaseModel):
-    """Competitor analysis summary request model."""
-    project_id: str = Field(..., description="Project ID for filtering")
-    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
+
 
 
 # ==================== 响应模型 ====================
@@ -328,18 +325,7 @@ class UseCaseData(BaseModel):
     matrix_data: List[UseCaseMatrixData] = Field(description="Matrix data for use cases")
 
 
-class CompetitorAnalysisResponse(BaseModel):
-    """Response model for competitor analysis API."""
-    target_products: List[str] = Field(description="List of target products")
-    matrix_data: List[CompetitorMatrixData] = Field(description="Matrix data for competitor analysis")
-    product_total_reviews: Dict[str, int] = Field(description="Total reviews per product")
-    use_case_data: UseCaseData = Field(description="Use case analysis data")
-    review_content: Optional[Dict[str, List[Dict[str, Any]]]] = Field(
-        default=None, 
-        description="Review content for matrix cell clicks, keyed by 'product_asin_category_name'"
-    )
-    project_id: str = Field(description="Project ID used for filtering")
-    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
+
 
 
 # ==================== All Review Data Models ====================
@@ -367,25 +353,12 @@ class AllReviewDataResponse(BaseModel):
     total_reviews: int = Field(description="Total number of reviews") 
 
 
-# ==================== Competitor Analysis Summary Models ====================
-
-class CompetitorSummaryProduct(BaseModel):
-    """Individual competitor product summary model."""
-    asin: str = Field(description="Product ASIN")
-    product_title: str = Field(description="Product title")
-    rating: Optional[float] = Field(description="Product rating")
-    brand: Optional[str] = Field(description="Product brand")
-    product_url: Optional[str] = Field(description="Product URL")
-    list_price: Optional[float] = Field(description="List price in USD")
-    unique_reviews_count: int = Field(description="Number of unique reviews from review_aspect_data_view")
-    additional_metrics: Optional[Dict[str, Any]] = Field(default=None, description="Additional metrics including sentiment distribution and category counts")
 
 
-class CompetitorSummaryResponse(BaseModel):
-    """Response model for competitor analysis summary API."""
-    products: List[CompetitorSummaryProduct] = Field(description="List of competitor products with summary data")
-    total_products: int = Field(description="Total number of products returned")
-    selected_asins: List[str] = Field(description="List of ASINs that were requested")
+
+
+
+
 
 
 # ==================== Competitor Analysis Matrix View Models ====================

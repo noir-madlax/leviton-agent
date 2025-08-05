@@ -218,30 +218,7 @@ interface DashboardData {
       related_detail_texts?: string[]
     }>
   }
-  competitorAnalysis: {
-    targetProducts: string[]
-    matrixData: Array<{
-      product: string
-      category: string
-      categoryType: 'Physical' | 'Performance'
-      reviews: number
-      satisfactionRate: number
-      positiveReviews: number
-      negativeReviews: number
-      totalReviews: number
-    }>
-    productTotalReviews: Record<string, number>
-    useCaseData: {
-      targetProducts: string[]
-      matrixData: Array<{
-        product: string
-        useCase: string
-        reviews: number
-        satisfactionRate: number
-        gapLevel: number
-      }>
-    }
-  }
+
   allReviewData: Record<string, Array<{
     id: string
     productId: string
@@ -634,46 +611,7 @@ async function fetchReviewInsightsData(projectId?: string, categoryFilters?: str
   }
 }
 
-async function fetchCompetitorAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
-  try {
-    if (!projectId) {
-      console.log('⏳ Competitor Analysis waiting for project selection...');
-      return { 
-        targetProducts: [], 
-        matrixData: [], 
-        productTotalReviews: {},
-        useCaseData: { targetProducts: [], matrixData: [] }
-      };
-    }
-    
-    console.log(`📊 Fetching Competitor Analysis data for project: ${projectId}`);
-    if (categoryFilters && categoryFilters.length > 0) {
-      console.log(`🔍 Applying category filters: ${categoryFilters.join(', ')}`);
-    }
-    if (brandFilters && brandFilters.length > 0) {
-      console.log(`📦 Applying packaging filters: ${brandFilters.join(', ')}`);
-    }
-    if (segmentFilters && segmentFilters.length > 0) {
-      console.log(`🎯 Applying segment filters: ${segmentFilters.join(', ')}`);
-    }
-    if (extendFields && Object.keys(extendFields).length > 0) {
-      console.log(`🔧 Applying extend fields: ${JSON.stringify(extendFields)}`);
-    }
-    
-    const data = await databaseService.getCompetitorAnalysisDataByProject(projectId, categoryFilters, undefined, brandFilters, segmentFilters, extendFields);
-    console.log(`📈 Competitor Analysis data received: ${data.targetProducts.length} target products, ${data.matrixData.length} matrix items`);
-    
-    return data;
-  } catch (error) {
-    console.error('Error fetching competitor analysis data:', error);
-    return {
-      targetProducts: [],
-      matrixData: [],
-      productTotalReviews: {},
-      useCaseData: { targetProducts: [], matrixData: [] }
-    };
-  }
-}
+
 
 async function fetchAllReviewData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>): Promise<Pick<DashboardData, 'allReviewData'>> {
   try {
@@ -776,9 +714,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
         case 'reviewInsights':
           result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
-        case 'competitorAnalysis':
-          result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
-          break
+
         case 'allReviewData':
           const reviewData = await fetchAllReviewData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           result.allReviewData = reviewData.allReviewData
@@ -932,7 +868,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
-      loadSpecificData('competitorAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+
     }
   }, [selectedProjectId, currentFilters, loadSpecificData]);
 
