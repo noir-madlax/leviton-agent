@@ -84,6 +84,29 @@ export interface Review {
   }>
 }
 
+// 🆕 Cause Category interface for new filter functionality
+export interface CauseCategory {
+  category_id: number
+  category_name: string
+  total_reviews: number
+  positive_reviews: number
+  negative_reviews: number
+  satisfaction_rate: number
+  negative_rate: number
+  type: 'Physical' | 'Performance' | 'Usability'
+  category_definition?: string
+}
+
+// 🆕 Review Panel Filter interface
+export interface ReviewPanelFilters {
+  search: string
+  causeAnalysisFilter: string // 'all' | 'positive' | 'negative' | specific_category_id
+  aspectTypeFilter: string // 'all' | 'phy_perf' | 'use'
+  ratingFilter: string // 'all' | 'high' | 'mid' | 'low'
+  verifiedFilter: string // 'all' | 'verified' | 'unverified'
+  brandFilter: string // 'all' | brand_name (hidden UI but preserved logic)
+}
+
 // Helper functions moved from deleted static data files
 export const getSatisfactionColor = (rate: number): string => {
   if (rate >= 85) return 'rgb(34, 197, 94)' // Green

@@ -212,7 +212,15 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
         reviewsToShow,
         `${cellData.categoryName} Reviews`,
         `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction`,
-        { sentiment: true, brand: true, rating: true, verified: true }
+        { 
+          showFilters: { 
+            causeAnalysis: true, 
+            aspectType: true, 
+            rating: true, 
+            verified: true, 
+            brand: false 
+          } 
+        }
       )
     } catch (error) {
       console.error('Error fetching reviews:', error)
@@ -222,7 +230,15 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
         [],
         `${cellData.categoryName} Reviews`,
         `${productName} • Error loading reviews`,
-        { sentiment: true, brand: true, rating: true, verified: true }
+        { 
+          showFilters: { 
+            causeAnalysis: true, 
+            aspectType: true, 
+            rating: true, 
+            verified: true, 
+            brand: false 
+          } 
+        }
       )
     } finally {
       setCellClickLoading(false)

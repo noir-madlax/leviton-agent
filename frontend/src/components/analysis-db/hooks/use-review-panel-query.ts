@@ -14,10 +14,11 @@ export interface UseReviewPanelQueryReturn {
     title?: string,
     subtitle?: string,
     showFilters?: {
-      sentiment?: boolean
-      brand?: boolean
+      causeAnalysis?: boolean
+      aspectType?: boolean
       rating?: boolean
       verified?: boolean
+      brand?: boolean
     },
     aspectTypes?: string[]
   ) => Promise<void>
@@ -70,10 +71,11 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
     title?: string,
     subtitle?: string,
     showFilters?: {
-      sentiment?: boolean
-      brand?: boolean
+      causeAnalysis?: boolean
+      aspectType?: boolean
       rating?: boolean
       verified?: boolean
+      brand?: boolean
     },
     aspectTypes?: string[]
   ) => {
@@ -101,7 +103,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         id: item.review_id.toString(),
         productId: item.product_id,
         text: item.review_text,
-        sentiment: item.sentiment,
+        sentiment: calculateOverallSentiment(item.aspects || []),
         category: categoryNameFromApi, // ✅ 修复：使用从顶层获取的category name
         aspect: item.category_name, // 使用 category_name 作为 aspect
         rating: item.rating,
@@ -121,7 +123,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         reviews,
         title || `${categoryName} - Customer Reviews`,
         subtitle || `${result.data.total_count} reviews found for "${categoryName}"`,
-        showFilters || { sentiment: true, brand: true, rating: true, verified: true }
+        { showFilters: showFilters || { causeAnalysis: true, aspectType: true, rating: true, verified: true, brand: false } }
       )
     } catch (error) {
       console.error('Error fetching reviews by category:', error)
@@ -130,7 +132,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
         [],
         title || `${categoryName} - Customer Reviews`,
         'Failed to load reviews. Please try again.',
-        showFilters || { sentiment: true, brand: true, rating: true, verified: true }
+        { showFilters: showFilters || { causeAnalysis: true, aspectType: true, rating: true, verified: true, brand: false } }
       )
     } finally {
       setIsLoading(false)
@@ -170,8 +172,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       title,
       subtitle,
       undefined, // showFilters 使用默认值
-      aspectTypes, // 传递aspectTypes
-      filters // 传递过滤器参数
+      aspectTypes // 传递aspectTypes
     )
   }, [openPanelWithCategoryId])
 

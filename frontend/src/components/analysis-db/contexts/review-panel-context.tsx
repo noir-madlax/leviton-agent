@@ -1,6 +1,6 @@
 "use client"
 
-import { createContext, useContext, useState, ReactNode } from 'react'
+import { createContext, useContext, useState } from 'react'
 import { Review } from '@/components/analysis-db/types/analysis'
 
 interface ReviewPanelContextType {
@@ -8,18 +8,31 @@ interface ReviewPanelContextType {
   reviews: Review[]
   title: string
   subtitle?: string
+  projectId?: string // 🆕 Added for API calls
+  categoryId?: number // 🆕 Added for API calls
   showFilters?: {
-    sentiment?: boolean
-    brand?: boolean
+    causeAnalysis?: boolean // 🆕 Replaced sentiment
+    aspectType?: boolean    // 🆕 New filter
     rating?: boolean
     verified?: boolean
+    brand?: boolean // 🔄 Keep logic but hide by default
   }
-  openPanel: (reviews: Review[], title: string, subtitle?: string, showFilters?: {
-    sentiment?: boolean
-    brand?: boolean
-    rating?: boolean
-    verified?: boolean
-  }) => void
+  openPanel: (
+    reviews: Review[], 
+    title: string, 
+    subtitle?: string,
+    options?: {
+      projectId?: string
+      categoryId?: number
+      showFilters?: {
+        causeAnalysis?: boolean
+        aspectType?: boolean
+        rating?: boolean
+        verified?: boolean
+        brand?: boolean
+      }
+    }
+  ) => void
   closePanel: () => void
 }
 
@@ -30,28 +43,38 @@ export function ReviewPanelProvider({ children }: { children: React.ReactNode })
   const [reviews, setReviews] = useState<Review[]>([])
   const [title, setTitle] = useState('')
   const [subtitle, setSubtitle] = useState<string | undefined>()
+  const [projectId, setProjectId] = useState<string | undefined>()
+  const [categoryId, setCategoryId] = useState<number | undefined>()
   const [showFilters, setShowFilters] = useState<{
-    sentiment?: boolean
-    brand?: boolean
+    causeAnalysis?: boolean
+    aspectType?: boolean
     rating?: boolean
     verified?: boolean
-  }>({ sentiment: true, brand: true, rating: true, verified: true })
+    brand?: boolean
+  }>({ causeAnalysis: true, aspectType: true, rating: true, verified: true, brand: false })
 
   const openPanel = (
     newReviews: Review[], 
     newTitle: string, 
     newSubtitle?: string,
-    newShowFilters?: {
-      sentiment?: boolean
-      brand?: boolean
-      rating?: boolean
-      verified?: boolean
+    options?: {
+      projectId?: string
+      categoryId?: number
+      showFilters?: {
+        causeAnalysis?: boolean
+        aspectType?: boolean
+        rating?: boolean
+        verified?: boolean
+        brand?: boolean
+      }
     }
   ) => {
     setReviews(newReviews)
     setTitle(newTitle)
     setSubtitle(newSubtitle)
-    setShowFilters(newShowFilters || { sentiment: true, brand: true, rating: true, verified: true })
+    setProjectId(options?.projectId)
+    setCategoryId(options?.categoryId)
+    setShowFilters(options?.showFilters || { causeAnalysis: true, aspectType: true, rating: true, verified: true, brand: false })
     setIsOpen(true)
   }
 
@@ -65,6 +88,8 @@ export function ReviewPanelProvider({ children }: { children: React.ReactNode })
       reviews,
       title,
       subtitle,
+      projectId,
+      categoryId,
       showFilters,
       openPanel,
       closePanel

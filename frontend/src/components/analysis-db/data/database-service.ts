@@ -1413,6 +1413,162 @@ export class DatabaseService {
       return defaultFilters
     }
   }
+
+  // 🆕 Get cause categories from review insights for filter options
+  async getCauseCategories(
+    projectId: string,
+    options?: {
+      type?: 'pain_points' | 'customer_likes' | 'all'
+      limit?: number
+    }
+  ): Promise<Array<{
+    category_id: number
+    category_name: string
+    total_reviews: number
+    positive_reviews: number
+    negative_reviews: number
+    satisfaction_rate: number
+    negative_rate: number
+    type: 'Physical' | 'Performance' | 'Usability'
+    category_definition?: string
+  }>> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/review-insights`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          project_id: projectId,
+          filters: {}
+        })
+      })
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch review insights: ${response.status}`)
+      }
+
+      const result = await response.json()
+      let categories: any[] = []
+
+      // Combine pain points and customer likes based on options
+      if (!options?.type || options.type === 'all' || options.type === 'pain_points') {
+        categories = categories.concat(result.pain_points || [])
+      }
+      if (!options?.type || options.type === 'all' || options.type === 'customer_likes') {
+        categories = categories.concat(result.customer_likes || [])
+      }
+
+      // Transform and limit results
+      const transformed = categories.map(item => ({
+        category_id: item.category_id,
+        category_name: item.category_name,
+        total_reviews: item.total_reviews,
+        positive_reviews: item.positive_reviews,
+        negative_reviews: item.negative_reviews,
+        satisfaction_rate: item.satisfaction_rate,
+        negative_rate: item.negative_rate,
+        type: item.type,
+        category_definition: item.category_definition
+      }))
+
+      // Apply limit if specified
+      if (options?.limit) {
+        return transformed.slice(0, options.limit)
+      }
+
+      return transformed
+    } catch (error) {
+      console.error('Error fetching cause categories:', error)
+      return []
+    }
+  }
+
+  // 🆕 Get filtered reviews with enhanced filter support
+  async getFilteredReviews(
+    projectId: string,
+    categoryId: number,
+    filters: {
+      causeAnalysisFilter?: string
+      aspectTypeFilter?: string
+      ratingFilter?: string
+      sentimentFilter?: string
+      sortBy?: string
+      sortOrder?: string
+      limit?: number
+      offset?: number
+    }
+  ): Promise<{
+    reviews: Array<{
+      review_id: string
+      product_id: string
+      review_text: string
+      rating: number
+      verified: boolean
+      review_date: string
+      brand: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category_name: string
+      category_definition: string
+      aspects?: Array<{
+        aspect_description: string
+        sentiment: string
+        aspect_type: string
+      }>
+      product_title?: string
+      product_brand?: string
+      product_url?: string
+    }>
+    total_reviews: number
+    pagination: { has_more: boolean }
+  }> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      
+      const requestBody: any = {
+        project_id: projectId,
+        category_id: categoryId,
+        limit: filters.limit || 100,
+        offset: filters.offset || 0,
+        sort_by: filters.sortBy || 'review_id',
+        sort_order: filters.sortOrder || 'desc'
+      }
+
+      // Add sentiment filter if specified
+      if (filters.sentimentFilter && filters.sentimentFilter !== 'all') {
+        requestBody.sentiment_filter = filters.sentimentFilter
+      }
+
+      // Add rating filter if specified
+      if (filters.ratingFilter && filters.ratingFilter !== 'all') {
+        requestBody.rating_filter = filters.ratingFilter
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/reviews-by-category`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch filtered reviews: ${response.status}`)
+      }
+
+      const result = await response.json()
+      return {
+        reviews: result.data.reviews || [],
+        total_reviews: result.data.total_reviews || 0,
+        pagination: result.data.pagination || { has_more: false }
+      }
+    } catch (error) {
+      console.error('Error fetching filtered reviews:', error)
+      return {
+        reviews: [],
+        total_reviews: 0,
+        pagination: { has_more: false }
+      }
+    }
+  }
 }
 
 export const databaseService = new DatabaseService() 

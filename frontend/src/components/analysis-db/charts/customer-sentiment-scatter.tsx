@@ -134,7 +134,15 @@ export default function CustomerSentimentScatter({
       reviewsWithAspects,
       `${productName} Reviews`,
       `${scatterData.brand} • ${scatterData.reviewCount} reviews • ${scatterData.avgRating.toFixed(1)} avg rating`,
-      { sentiment: true, brand: true, rating: true, verified: true }
+      { 
+        showFilters: { 
+          causeAnalysis: true, 
+          aspectType: true, 
+          rating: true, 
+          verified: true, 
+          brand: false 
+        } 
+      }
     )
   }
   
