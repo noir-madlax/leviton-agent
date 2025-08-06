@@ -15,13 +15,14 @@ import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
 // 导入新的过滤器组件
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
-import { useTAMDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
+import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
 // 导入 Sales Trend 组件
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/sales-trend-api'
 
 // 🆕 导入统一的过滤器 Hook
-import { useMarketShareFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
+import { useChartWithFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
+import { CHART_NAMES } from '@/components/analysis-db/constants'
 
 interface BrandAnalysisProps {
   data: {
@@ -266,13 +267,21 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   // Get chart sections configuration for conditional rendering
   const { shouldShowChart } = useChartSections('brand-analysis', projectId || '')
 
-  // TAM图表数据状态管理 - 使用新的hook
+  // TAM图表数据状态管理 - 使用通用的hook
   const {
     data: tamMarketShare,
     loading: tamDataLoading,
     error: tamDataError,
     refreshData: refreshTamData
-  } = useTAMDataRefresh(projectId || '', initialTamMarketShare)
+  } = useChartDataRefresh({
+    chartId: 'tam-market-share',
+    projectId: projectId || '',
+    initialData: initialTamMarketShare,
+    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      return await databaseService.getTAMMarketShareData(projectId)
+    }
+  })
 
   // 🆕 使用统一的过滤器 Hook - 大大简化代码！
   const {
@@ -280,7 +289,8 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     filtersReady,
     handleFiltersReady,
     handleFiltersChange
-  } = useMarketShareFilters(
+  } = useChartWithFilters(
+    CHART_NAMES.MARKET_SHARE_ANALYSIS,
     refreshTamData,
     projectId,
     { initialFilters: initialFilters || undefined }

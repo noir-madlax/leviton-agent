@@ -5,7 +5,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { filterStateManager } from '../stores'
-import { CHART_NAMES } from '../constants'
 import type { ProjectFilters } from '../types/filters'
 
 interface UseChartWithFiltersOptions {
@@ -152,50 +151,4 @@ export function useChartWithFilters(
   }
 }
 
-/**
- * 预设的图表 Hook - 市场份额分析
- */
-export function useMarketShareFilters(
-  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
-  projectId?: string,
-  options?: UseChartWithFiltersOptions
-) {
-  return useChartWithFilters(
-    CHART_NAMES.MARKET_SHARE_ANALYSIS,
-    refreshDataFn,
-    projectId,
-    options
-  )
-}
 
-/**
- * 预设的图表 Hook - 品牌分析
- */
-export function useBrandAnalysisFilters(
-  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
-  projectId?: string,
-  options?: UseChartWithFiltersOptions
-) {
-  return useChartWithFilters(
-    CHART_NAMES.BRAND_ANALYSIS,
-    refreshDataFn,
-    projectId,
-    options
-  )
-}
-
-/**
- * 预设的图表 Hook - 销售趋势分析
- */
-export function useSalesTrendFilters(
-  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
-  projectId?: string,
-  options?: UseChartWithFiltersOptions
-) {
-  return useChartWithFilters(
-    CHART_NAMES.SALES_TREND_ANALYSIS,
-    refreshDataFn,
-    projectId,
-    options
-  )
-}

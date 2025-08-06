@@ -53,36 +53,3 @@ export function useChartDataRefresh<T>({
   }
 }
 
-// TAM Market Share 专用的数据刷新hook
-export function useTAMDataRefresh(projectId: string, initialData?: any) {
-  return useChartDataRefresh({
-    chartId: 'tam-market-share',
-    projectId,
-    initialData,
-    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
-      const { databaseService } = await import('@/components/analysis-db/data/database-service')
-      
-      return await databaseService.getTAMMarketShareData(projectId)
-    }
-  })
-}
-
-// Brand Analysis 专用的数据刷新hook  
-export function useBrandAnalysisDataRefresh(projectId: string, initialData?: any) {
-  return useChartDataRefresh({
-    chartId: 'brand-analysis',
-    projectId,
-    initialData,
-    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
-      const { databaseService } = await import('@/components/analysis-db/data/database-service')
-      
-      return await databaseService.getBrandCategoryRevenueByProject(
-        projectId,
-        filters.categories.length > 0 ? filters.categories : undefined,
-        filters.brands?.length ? filters.brands : undefined,
-        filters.segments?.length ? filters.segments : undefined,
-        filters.extend_fields
-      )
-    }
-  })
-}
