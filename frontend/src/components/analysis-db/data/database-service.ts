@@ -53,7 +53,7 @@ export interface BrandSalesTrendDataPoint {
   [brandName: string]: string | BrandMetrics  // 动态品牌字段
 }
 
-export interface BrandSalesTrendSummary {
+export interface CategorySalesTrendSummary {
   total_brands: number
   date_range: {
     start: string
@@ -64,17 +64,37 @@ export interface BrandSalesTrendSummary {
   timeframe_period: string
 }
 
+export interface CategorySalesTrendData {
+  trend_data: BrandSalesTrendDataPoint[]
+  brands: string[]
+  summary: CategorySalesTrendSummary
+}
+
+export interface OverallSummary {
+  total_categories: number
+  all_brands: string[]
+  total_revenue: number
+  total_volume: number
+  date_range: {
+    start: string
+    end: string
+  }
+  timeframe_period: string
+}
+
 export interface BrandSalesTrendMetadata {
   filtered_asins_count: number
   calculation_timestamp: string
   timeframe_used: string
   data_source: string
+  categories_processed: string[]
 }
 
 export interface BrandSalesTrendResponse {
-  trend_data: BrandSalesTrendDataPoint[]
-  brands: string[]
-  summary: BrandSalesTrendSummary
+  categories_data: {
+    [categoryName: string]: CategorySalesTrendData
+  }
+  overall_summary: OverallSummary
   metadata: BrandSalesTrendMetadata
 }
 
@@ -474,7 +494,7 @@ export class DatabaseService {
       })
 
       if (!response.ok) {
-        throw new Error(`Brand Sales Trend API call failed: ${response.status}`)
+        throw new Error(`Brand Sales Trend API call failed: ${response}`)
       }
 
       const result: BrandSalesTrendResponse = await response.json()

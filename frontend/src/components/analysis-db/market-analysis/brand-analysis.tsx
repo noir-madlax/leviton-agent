@@ -24,6 +24,9 @@ import { SALES_TREND_DATE_RANGE } from '@/app/chat/charts/sales_trend/services/s
 import { useChartWithFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
 import { CHART_NAMES } from '@/components/analysis-db/constants'
 
+// 🆕 导入新的品牌销售趋势图表组件
+import { BrandSalesTrendChart } from './brand-sales-trend-chart'
+
 interface BrandAnalysisProps {
   data: {
     brandCategoryRevenue: {
@@ -825,6 +828,16 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
       </ChartWithFilters>
       </div>
       </div>
+      )}
+
+      {/* 🆕 Brand Sales Trend Chart - New Addition */}
+      {shouldShowChart('market-share-analysis') && (
+        <div className="mt-15">
+          <BrandSalesTrendChart
+            projectId={projectId}
+            initialFilters={initialFilters}
+          />
+        </div>
       )}
 
       {/* Sales Trend Charts - By Category */}

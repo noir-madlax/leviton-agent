@@ -68,6 +68,7 @@ export function ChartWithFilters({
   // 加载chart专用筛选器配置 - 使用缓存机制
   useEffect(() => {
     const loadChartFilterConfig = async () => {
+      return
       if (!projectId || !chartId) return
 
       const cacheKey = `${projectId}-${chartId}`
@@ -100,7 +101,7 @@ export function ChartWithFilters({
         const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/charts/${chartId}/filter-config`)
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
+          // throw new Error(`HTTP error! status: ${response.status}`)
         }
         
         const result = await response.json()

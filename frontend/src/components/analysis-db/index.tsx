@@ -773,7 +773,7 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
           result.packagePreference = await fetchPackagePreferenceData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'reviewInsights':
-          result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
+          // result.reviewInsights = await fetchReviewInsightsData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
         case 'competitorAnalysis':
           result.competitorAnalysis = await fetchCompetitorAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
