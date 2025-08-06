@@ -172,7 +172,7 @@ export function ChartWithFilters({
         
         // 如果还没有设置默认值，且是boolean类型字段
         if (!defaultExtendFields[fieldName] && fieldDef.field_type === 'boolean') {
-          const preloadedOptions = filterOptions.extend_fields?.[fieldName]
+          const preloadedOptions = (filterOptions as any).extend_fields?.[fieldName]
           if (preloadedOptions && preloadedOptions.length > 0) {
             // 使用第一个预载选项作为默认值
             defaultExtendFields[fieldName] = preloadedOptions[0]
@@ -253,7 +253,7 @@ export function ChartWithFilters({
     const filters = []
 
     // Brand筛选器
-    if (chartFilterConfig.visible_filters.brands && filterOptions.brands?.length > 0) {
+    if (chartFilterConfig.visible_filters.brands && (filterOptions as any).brands?.length > 0) {
       const currentValue = finalFilters.brands?.[0] || ''
       const brandsDefault = chartFilterConfig.default_values.brands as string[]
       const defaultValue = Array.isArray(brandsDefault) ? (brandsDefault[0] || '') : (String(brandsDefault || ''))
@@ -267,7 +267,7 @@ export function ChartWithFilters({
             <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.brands.map((brand) => (
+              {(filterOptions as any).brands?.map((brand: string) => (
                 <SelectItem key={brand} value={brand}>
                   {brand}
                 </SelectItem>
@@ -279,7 +279,7 @@ export function ChartWithFilters({
     }
 
     // Segments筛选器
-    if (chartFilterConfig.visible_filters.segments && filterOptions.segments?.length > 0) {
+    if (chartFilterConfig.visible_filters.segments && (filterOptions as any).segments?.length > 0) {
       const currentValue = finalFilters.segments?.[0] || ''
       const segmentsDefault = chartFilterConfig.default_values.segments as string[]
       const defaultValue = Array.isArray(segmentsDefault) ? (segmentsDefault[0] || '') : (String(segmentsDefault || ''))
@@ -293,7 +293,7 @@ export function ChartWithFilters({
               <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.segments.map((segment) => (
+              {(filterOptions as any).segments?.map((segment: string) => (
                 <SelectItem key={segment} value={segment}>
                   {segment}
                 </SelectItem>
@@ -337,7 +337,7 @@ export function ChartWithFilters({
         const displayName = fieldDef.display_name
         
         // 检查该字段是否有可用的数据选项 - 关键修复！
-        const preloadedOptions = filterOptions?.extend_fields?.[fieldName]
+        const preloadedOptions = (filterOptions as any)?.extend_fields?.[fieldName]
         let hasValidOptions = false
         
         if (fieldDef.field_type === 'boolean') {

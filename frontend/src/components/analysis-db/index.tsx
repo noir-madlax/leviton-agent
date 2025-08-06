@@ -1180,7 +1180,6 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                             marketInsights={data.marketInsights}
                             packagePreference={data.packagePreference}
                             salesTrend={data.salesTrend}
-                            unifiedFilterData={unifiedFilterData}
                           />
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">

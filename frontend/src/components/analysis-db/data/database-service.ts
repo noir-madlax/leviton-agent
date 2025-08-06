@@ -343,6 +343,45 @@ export class DatabaseService {
     }
   }
 
+  // 💰 Get Price Distribution data with filters
+  async getPriceDistributionData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Price Distribution data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Price Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/price-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
   // 🔑 Get brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     brandCategoryRevenue: BrandCategoryData[]

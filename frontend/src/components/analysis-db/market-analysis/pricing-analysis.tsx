@@ -6,12 +6,39 @@ import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, Scat
 import { BrandViolinChart } from "../charts/brand-violin-chart"
 import { MultiSegmentViolinChart } from "../charts/multi-segment-violin-chart"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
-import { BarChart3, Target } from "lucide-react"
+import { BarChart3 } from "lucide-react"
 
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
-import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
+import { FilterRenderer } from "@/components/analysis-db/filters"
+import { ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
+import { usePriceDistributionDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
+import { useMarketShareFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
+import { CHART_NAMES } from "@/components/analysis-db/constants"
+
+// 定义价格统计数据类型
+interface PriceStats {
+  min: number
+  max: number
+  mean: number
+  median?: number
+  q1?: number
+  q3?: number
+}
+
+// 定义产品数据类型
+interface ProductData {
+  id?: string
+  name?: string
+  brand?: string
+  price?: number
+  unitPrice?: number
+  revenue?: number
+  volume?: number
+  url?: string
+  [key: string]: unknown
+}
 
 // 定义散点图数据类型
 interface ScatterPlotProduct {
@@ -126,26 +153,56 @@ interface PricingAnalysisProps {
   initialFilters?: ProjectFilters
 }
 
-export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnalysisProps) {
+export function PricingAnalysis({ data: initialData, projectId, initialFilters }: PricingAnalysisProps) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
   
   // Get chart sections configuration for conditional rendering
   const { shouldShowChart } = useChartSections('pricing-analysis', projectId || '')
 
-  // 获取所有分类数据
+  // Price Distribution数据状态管理 - 使用新的hook
+  const {
+    data: priceDistributionData,
+    loading: priceDataLoading,
+    error: priceDataError,
+    refreshData: refreshPriceData
+  } = usePriceDistributionDataRefresh(projectId || '', initialData)
+
+  // 🆕 使用统一的过滤器 Hook
+  const {
+    handleFiltersReady,
+    handleFiltersChange
+  } = useMarketShareFilters(
+    refreshPriceData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
+  )
+
+  // FilterRenderer 需要的当前过滤器状态
+  const [currentFilters, setCurrentFilters] = useState<ProjectFilters>(
+    initialFilters || {
+      categories: [],
+      asins: [],
+      brands: [],
+      segments: [],
+      time_period: '1_year',
+      extend_fields: {}
+    }
+  )
+
+  // 获取所有分类数据 - 使用新的数据源
   const allCategories = useMemo(() => 
-    data?.priceDistribution || [],
-    [data]
+    priceDistributionData?.priceDistribution || initialData?.priceDistribution || [],
+    [priceDistributionData, initialData]
   )
 
   // 生成Multi-Segment Violin Chart数据
   const violinSegments = useMemo(() => {
-    return allCategories.map((category, index) => ({
+    return allCategories.map((category: { category: string; unitPrices: number[]; skuPrices: number[]; productCount?: number; stats?: { unit?: PriceStats; sku?: PriceStats } }, index: number) => ({
       name: category.category,
       prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
       color: getChartColor(index),
       productCount: category.productCount,
-      stats: priceType === 'unit' ? category.stats.unit : category.stats.sku
+      stats: priceType === 'unit' ? category.stats?.unit : category.stats?.sku
     }))
   }, [allCategories, priceType])
 
@@ -153,18 +210,29 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
   const getPriceVsRevenueData = (): ScatterPlotProduct[] => {
     const allProducts: ScatterPlotProduct[] = []
     
+    // 使用新的数据源或fallback到原始数据
+    const topProductsData = priceDistributionData?.topProducts || initialData?.topProducts
+    const segmentNamesData = priceDistributionData?.segmentNames || initialData?.segmentNames
+    
     // 检查是否有散点图所需的数据
-    if (!data?.topProducts) {
+    if (!topProductsData) {
       return []
     }
     
     // 收集segments中的产品
-    if (data.topProducts.segments && data.segmentNames) {
-      data.segmentNames.forEach((segment) => {
-        const products = data.topProducts!.segments[segment] || []
-        products.forEach(product => {
+    if (topProductsData.segments && segmentNamesData) {
+      segmentNamesData.forEach((segment: string) => {
+        const products = topProductsData!.segments[segment] || []
+        products.forEach((product: ProductData) => {
           allProducts.push({
-            ...product,
+            id: product.id || '',
+            name: product.name || '',
+            brand: product.brand || '',
+            price: product.price || 0,
+            unitPrice: product.unitPrice || product.price || 0,
+            revenue: product.revenue || 0,
+            volume: product.volume || 0,
+            url: product.url || '',
             segment: segment,
             x: product.price || 0,
             y: product.revenue || 0
@@ -174,10 +242,17 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
     }
     
     // 收集dimmerSwitches中的产品
-    if (data.topProducts.dimmerSwitches) {
-      data.topProducts.dimmerSwitches.forEach(product => {
+    if (topProductsData.dimmerSwitches) {
+      topProductsData.dimmerSwitches.forEach((product: ProductData) => {
         allProducts.push({
-          ...product,
+          id: product.id || '',
+          name: product.name || '',
+          brand: product.brand || '',
+          price: product.price || 0,
+          unitPrice: product.unitPrice || product.price || 0,
+          revenue: product.revenue || 0,
+          volume: product.volume || 0,
+          url: product.url || '',
           segment: 'Dimmer Switches',
           x: product.price || 0,
           y: product.revenue || 0
@@ -186,10 +261,17 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
     }
     
     // 收集lightSwitches中的产品
-    if (data.topProducts.lightSwitches) {
-      data.topProducts.lightSwitches.forEach(product => {
+    if (topProductsData.lightSwitches) {
+      topProductsData.lightSwitches.forEach((product: ProductData) => {
         allProducts.push({
-          ...product,
+          id: product.id || '',
+          name: product.name || '',
+          brand: product.brand || '',
+          price: product.price || 0,
+          unitPrice: product.unitPrice || product.price || 0,
+          revenue: product.revenue || 0,
+          volume: product.volume || 0,
+          url: product.url || '',
           segment: 'Light Switches',
           x: product.price || 0,
           y: product.revenue || 0
@@ -238,12 +320,13 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
 
 
 
-  // 检查是否有基础数据
-  const hasBaseData = data?.priceDistribution && data.priceDistribution.length > 0
-  const hasScatterData = data?.topProducts && (
-    (data.topProducts.segments && data.segmentNames) ||
-    data.topProducts.dimmerSwitches ||
-    data.topProducts.lightSwitches
+  // 检查是否有基础数据 - 使用新的数据源
+  const currentData = priceDistributionData || initialData
+  const hasBaseData = currentData?.priceDistribution && currentData.priceDistribution.length > 0
+  const hasScatterData = currentData?.topProducts && (
+    (currentData.topProducts.segments && currentData.segmentNames) ||
+    currentData.topProducts.dimmerSwitches ||
+    currentData.topProducts.lightSwitches
   )
   
   if (!hasBaseData) {
@@ -251,8 +334,19 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
         <Card className="p-6 bg-gray-50">
-          <p className="text-center text-gray-500">Price distribution data is not available.</p>
-          <p className="text-center text-gray-400 text-sm mt-2">Waiting for valid product data...</p>
+          {priceDataLoading ? (
+            <div className="flex items-center justify-center py-8">
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+              <span className="ml-2">Loading pricing analysis data...</span>
+            </div>
+          ) : priceDataError ? (
+            <p className="text-red-500 text-center">Error loading data: {priceDataError}</p>
+          ) : (
+            <>
+              <p className="text-center text-gray-500">Price distribution data is not available.</p>
+              <p className="text-center text-gray-400 text-sm mt-2">Waiting for valid product data...</p>
+            </>
+          )}
         </Card>
       </section>
     )
@@ -263,6 +357,19 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
           💰 Pricing Analysis
         </h2>
+
+      {/* 🆕 统一的过滤器组件 */}
+      <FilterRenderer
+        chartName={CHART_NAMES.PRICE_ANALYSIS}
+        projectId={projectId || ''}
+        currentFilters={currentFilters}
+        onChange={(newFilters) => {
+          setCurrentFilters(newFilters)
+          handleFiltersChange(newFilters)
+        }}
+        onFiltersReady={handleFiltersReady}
+        className="mb-6"
+      />
     
       <div className="mt-6"></div>
 
@@ -293,7 +400,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
                 </tr>
               </thead>
               <tbody>
-                {allCategories.map((category, index) => {
+                {allCategories.map((category: { category: string; stats: { unit?: PriceStats; sku?: PriceStats }; unitPrices: number[]; skuPrices: number[] }, index: number) => {
                   const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
                   const segmentName = category.category
                   // 通过价格数组的长度计算产品数量
@@ -307,16 +414,16 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
                       </td>
                       <td className="text-right py-2">{productCount}</td>
                       <td className="text-right py-2">
-                        <span className="text-green-600 font-medium">${stats.min.toFixed(2)}</span>
+                        <span className="text-green-600 font-medium">${stats?.min?.toFixed(2) || 'N/A'}</span>
                       </td>
                       <td className="text-right py-2">
-                        <span className="text-blue-600 font-medium">${stats.median.toFixed(2)}</span>
+                        <span className="text-blue-600 font-medium">${stats?.median?.toFixed(2) || 'N/A'}</span>
                       </td>
                       <td className="text-right py-2">
-                        <span className="text-red-600 font-medium">${stats.max.toFixed(2)}</span>
+                        <span className="text-red-600 font-medium">${stats?.max?.toFixed(2) || 'N/A'}</span>
                       </td>
                       <td className="text-right py-2">
-                        <span className="text-purple-600 font-medium">${stats.mean.toFixed(2)}</span>
+                        <span className="text-purple-600 font-medium">${stats?.mean?.toFixed(2) || 'N/A'}</span>
                       </td>
                     </tr>
                   )
@@ -329,15 +436,9 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
       )}
 
       {/* Price vs Revenue Distribution of Top Selling 20 Products */}
-      {shouldShowChart('price-vs-revenue') && (
+      {true && (
       <div className="mb-8" data-chart-id="price-vs-revenue">
-        <ChartWithFilters
-          chartId="price-vs-revenue"
-          chartType="scatter"
-          projectId={projectId || ''}
-          title="Price vs Revenue Distribution of Top Selling 20 Products"
-          projectFilters={initialFilters}
-        >
+        <ChartHeader title="Price vs Revenue Distribution of Top Selling 20 Products" icon={BarChart3} />
           <Card className="p-6 bg-gray-50">
             {hasScatterData ? (
               <div className="h-[400px]">
@@ -398,50 +499,36 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
               </div>
             )}
           </Card>
-        </ChartWithFilters>
       </div>
       )}
 
-      {/* All Segments Price Distribution Comparison */}
-      {shouldShowChart('price-distribution-by-type') && (
+      {/* Price Distribution by Product Type */}
+      {true && (
       <div className="mb-8" data-chart-id="price-distribution-by-type">
-        <ChartWithFilters
-          chartId="price-distribution-by-type"
-          chartType="violin"
-          projectId={projectId || ''}
-          title="All Segments Price Distribution Comparison"
-          projectFilters={initialFilters}
-        >
-          <Card className="p-6 bg-gray-50">
-            <div className="mb-4">
-              <PriceTypeSelector 
-                onChange={setPriceType} 
-                defaultValue={priceType}
-              />
-            </div>
-            
-            <div className="h-[350px]">
-              <MultiSegmentViolinChart
-                segments={violinSegments}
-                priceType={priceType}
-                projectId={projectId || ''}
-              />
-            </div>
-          </Card>
-        </ChartWithFilters>
+        <ChartHeader title="Price Distribution by Product Type" icon={BarChart3} />
+        <Card className="p-6 bg-gray-50">
+          <div className="mb-4">
+            <PriceTypeSelector 
+              onChange={setPriceType} 
+              defaultValue={priceType}
+            />
+          </div>
+          
+          <div className="h-[350px]">
+            <MultiSegmentViolinChart
+              segments={violinSegments}
+              priceType={priceType}
+              projectId={projectId || ''}
+            />
+          </div>
+        </Card>
       </div>
       )}
 
       {/* Brand Price Distribution */}
-      {shouldShowChart('price-distribution-by-brands') && (
+      {true && (
       <div className="mb-8" data-chart-id="price-distribution-by-brands">
-        <ChartWithFilters
-          chartId="price-distribution-by-brands"
-          chartType="violin"
-          projectId={projectId || ''}
-          title="Brand Price Distribution"
-          projectFilters={initialFilters}
-        >
+        <ChartHeader title="Brand Price Distribution" icon={BarChart3} />
           <Card className="p-6 bg-gray-50">
             <div className="mb-4">
               <PriceTypeSelector 
@@ -451,7 +538,7 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
             </div>
             
             <div className="space-y-8">
-              {data.brandPriceDistribution.map((categoryData) => {
+              {currentData?.brandPriceDistribution?.map((categoryData: { category: string; brands: { name: string; skuPrices: number[]; unitPrices: number[] }[] }) => {
                 const categoryName = categoryData.category
                 const isCombinedCategory = categoryName.includes(' + ')
 
@@ -489,7 +576,6 @@ export function PricingAnalysis({ data, projectId, initialFilters }: PricingAnal
               })}
             </div>
           </Card>
-        </ChartWithFilters>
       </div>
       )}
     </section>

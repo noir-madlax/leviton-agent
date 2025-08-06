@@ -145,6 +145,53 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       name: 'Sales Trend Analysis Filter',
       description: '销售趋势分析图表的筛选器配置'
     }
+  },
+
+  // Price Analysis Chart配置
+  [CHART_NAMES.PRICE_ANALYSIS]: {
+    chart_id: CHART_NAMES.PRICE_ANALYSIS,
+    chart_type: CHART_NAMES.PRICE_ANALYSIS,
+    project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7', // 动态设置，与TAM一致
+    inherit_from_project: false, // 不完全继承，有自己的定制
+    
+    visible_filters: {
+      categories: true,
+      brands: true,
+      segments: false,
+      timeframe: true,
+      extend_fields: true
+    },
+    
+    default_values: {
+      categories: [],
+      brands: [], // 默认看所有品牌
+      timeframe: '1_year',
+      extend_fields: {
+        smart_capability: 'All'
+      }
+    },
+    
+    extend_fields: [
+      {
+        field_name: 'smart_capability',
+        display_name: 'Smart Capability',
+        field_type: 'select',
+        filter_options: {
+          options: ['All', 'Smart', 'Non-Smart'],
+          default: 'All'
+        },
+        is_required: false,
+        sort_order: 1
+      }
+    ],
+    
+    metadata: {
+      name: 'Price Analysis Filter',
+      description: '价格分布分析专用筛选器',
+      version: '1.0.0',
+      created_at: '2024-01-15',
+      updated_at: '2024-01-15'
+    }
   }
 }
 

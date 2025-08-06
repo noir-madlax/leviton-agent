@@ -26,6 +26,11 @@ from .market_analysis.models import (
 )
 from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService, PackageTypeDistributionService
 
+from .pricing_analysis.models import (
+    PriceDistributionRequest, PriceDistributionResponse
+)
+from .pricing_analysis.services import PriceDistributionService
+
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
@@ -709,4 +714,45 @@ async def get_package_type_distribution(request: PackageTypeDistributionRequest)
 
     except Exception as e:
         logger.error(f"System error in Package Type Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/price-distribution", response_model=PriceDistributionResponse)
+async def get_price_distribution(request: PriceDistributionRequest):
+    """Get price distribution analysis data.
+    
+    Args:
+        request: Price distribution request with project_id, filters, and timeframe
+        
+    Returns:
+        PriceDistributionResponse: Price distribution data including category and brand distributions
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"💰 Starting Price Distribution analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceDistributionService(supabase)
+        
+        # Get price distribution data
+        response = service.get_price_distribution_data(request)
+        
+        logger.info(f"Price Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.priceDistribution)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price Distribution analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

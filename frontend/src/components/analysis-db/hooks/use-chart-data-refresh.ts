@@ -67,6 +67,20 @@ export function useTAMDataRefresh(projectId: string, initialData?: any) {
   })
 }
 
+// Price Distribution 专用的数据刷新hook
+export function usePriceDistributionDataRefresh(projectId: string, initialData?: any) {
+  return useChartDataRefresh({
+    chartId: 'price-distribution',
+    projectId,
+    initialData,
+    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      
+      return await databaseService.getPriceDistributionData(projectId)
+    }
+  })
+}
+
 // Brand Analysis 专用的数据刷新hook  
 export function useBrandAnalysisDataRefresh(projectId: string, initialData?: any) {
   return useChartDataRefresh({
