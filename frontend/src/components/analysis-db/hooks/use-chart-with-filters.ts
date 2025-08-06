@@ -185,6 +185,23 @@ export function useBrandAnalysisFilters(
 }
 
 /**
+ * 预设的图表 Hook - 定价分析
+ */
+export function usePricingAnalysisFilters(
+  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
+  projectId?: string,
+  options?: UseChartWithFiltersOptions
+) {
+  return useChartWithFilters(
+    CHART_NAMES.PRICE_ANALYSIS,
+    refreshDataFn,
+    projectId,
+    options
+  )
+}
+
+
+/**
  * 预设的图表 Hook - 销售趋势分析
  */
 export function useSalesTrendFilters(

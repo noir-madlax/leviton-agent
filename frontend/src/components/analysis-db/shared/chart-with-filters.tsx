@@ -9,18 +9,7 @@ import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
-
-interface ChartFilterConfig {
-  visible_filters: Record<string, boolean>
-  default_values: Record<string, string[] | Record<string, string>>
-  extend_fields: Array<{
-    field_name: string
-    display_name: string
-    field_type: string
-    filter_options: Record<string, string[] | string | boolean>
-  }>
-  chart_type: string
-}
+import { getChartFilterConfig, ChartFilterConfig } from '../configs/chart-filter-data'
 
 // 全局 filter-config 缓存
 interface FilterConfigCacheState {
@@ -117,25 +106,70 @@ export function ChartWithFilters({
         setChartFilterConfig(result.config)
         console.log('🔧 [CHART-FILTER] Loaded and cached chart filter configuration:', chartId, result.config)
       } catch (error) {
-        console.error('Error loading chart filter config:', error)
+        console.error('Error loading chart filter config from API:', error)
+        console.log('🔧 [CHART-FILTER] Falling back to local configuration for:', chartId)
         
-        // 错误时的默认配置
-        const defaultConfig: ChartFilterConfig = {
-          visible_filters: {},
-          default_values: {},
-          extend_fields: [],
-          chart_type: chartId
+        try {
+          // 使用本地配置作为fallback
+          console.log('🔧 [CHART-FILTER] Attempting to load local config for:', { projectId, chartId })
+          const localConfig = await getChartFilterConfig(projectId, chartId)
+          
+          if (localConfig) {
+            const successCacheState: FilterConfigCacheState = {
+              data: localConfig,
+              loading: false,
+              error: null,
+              lastUpdated: Date.now()
+            }
+            filterConfigCacheStore.set(cacheKey, successCacheState)
+            
+            setChartFilterConfig(localConfig)
+            console.log('🔧 [CHART-FILTER] Successfully loaded local chart filter configuration:', chartId, localConfig)
+          } else {
+            // 如果本地配置也没有，才使用默认配置
+            const defaultConfig: ChartFilterConfig = {
+              chart_id: chartId,
+              chart_type: chartId,
+              project_id: projectId || '',
+              visible_filters: {},
+              default_values: {},
+              extend_fields: []
+            }
+            
+            const errorCacheState: FilterConfigCacheState = {
+              data: defaultConfig,
+              loading: false,
+              error: 'No configuration found for chart: ' + chartId,
+              lastUpdated: Date.now()
+            }
+            filterConfigCacheStore.set(cacheKey, errorCacheState)
+            
+            setChartFilterConfig(defaultConfig)
+            console.warn('🔧 [CHART-FILTER] No configuration found, using default for:', chartId)
+          }
+        } catch (localError) {
+          console.error('Error loading local chart filter config:', localError)
+          
+          // 完全失败时的默认配置
+          const defaultConfig: ChartFilterConfig = {
+            chart_id: chartId,
+            chart_type: chartId,
+            project_id: projectId || '',
+            visible_filters: {},
+            default_values: {},
+            extend_fields: []
+          }
+          
+          const errorCacheState: FilterConfigCacheState = {
+            data: defaultConfig,
+            loading: false,
+            error: error instanceof Error ? error.message : 'Failed to load chart filter config',
+            lastUpdated: Date.now()
+          }
+          filterConfigCacheStore.set(cacheKey, errorCacheState)
+          
+          setChartFilterConfig(defaultConfig)
         }
-        
-        const errorCacheState: FilterConfigCacheState = {
-          data: defaultConfig,
-          loading: false,
-          error: error instanceof Error ? error.message : 'Failed to load chart filter config',
-          lastUpdated: Date.now()
-        }
-        filterConfigCacheStore.set(cacheKey, errorCacheState)
-        
-        setChartFilterConfig(defaultConfig)
       } finally {
         setConfigLoading(false)
       }

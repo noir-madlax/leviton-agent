@@ -19,7 +19,7 @@ export const CHART_NAMES = {
   PACKAGE_PREFERENCE: 'package-preference',
   
   // 其他分析
-  PRICE_ANALYSIS: 'price-analysis',
+  PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
   SEGMENT_ANALYSIS: 'segment-analysis',
   CATEGORY_ANALYSIS: 'category-analysis',
   

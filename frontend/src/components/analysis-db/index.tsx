@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
 import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
-import { PricingAnalysis } from "@/components/analysis-db/market-analysis/pricing-analysis"
+import { PricingAnalysis } from "@/components/analysis-db/pricing-analysis"
 import { MarketInsights } from "@/components/analysis-db/market-analysis/market-insights"
 import { PackagePreferenceAnalysis } from "@/components/analysis-db/market-analysis/package-preference-analysis"
 import { ReviewInsights } from "@/components/analysis-db/review-insights/review-insights"
@@ -1307,4 +1307,4 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
 export function AnalysisDbContainer(props: AnalysisDbContainerProps) {
   // 🆕 移除重复的 UnifiedFilterProvider，直接使用上层的 Provider
   return <AnalysisDbContent {...props} />
-} 
+}

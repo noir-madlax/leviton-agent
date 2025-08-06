@@ -7,6 +7,7 @@ import { useCommonT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
 import { useExtendFieldsData } from './hooks/useExtendFieldsData'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context'
+import { CHART_FILTER_CONFIGS } from '../../configs/chart-filter-data'
 
 export function ExtendFieldsFilter({
   onChange,
@@ -31,7 +32,7 @@ export function ExtendFieldsFilter({
   // 使用新的 hook 获取 extend fields 数据，确保只调用一次接口
   const { fieldDefinitions, projectData, loading: fieldsLoading, error } = useExtendFieldsData(projectId)
 
-  // 🆕 获取配置
+  // 🆕 获取配置 - 先尝试从统一过滤器获取，失败则使用本地配置
   const { getChartConfig } = useUnifiedFilter()
   const chartConfig = getChartConfig(chartName)
   const extendFieldsConfig = chartConfig?.filters?.extend_fields
@@ -41,7 +42,35 @@ export function ExtendFieldsFilter({
     if (!fieldDefinitions.length) return []
 
     // 获取配置中允许显示的字段名列表
-    const allowedFieldNames = extendFieldsConfig?.options as string[] || []
+    let allowedFieldNames: string[] = []
+    
+    if (extendFieldsConfig?.options) {
+      // 如果统一过滤器有配置，使用它
+      allowedFieldNames = extendFieldsConfig.options as string[] || []
+      console.log('🔧 [EXTEND-FIELDS] Using unified filter config:', allowedFieldNames)
+    } else {
+      // 如果没有，使用本地配置作为fallback
+      console.log('🔧 [EXTEND-FIELDS] No config from unified filter, using local config for:', chartName)
+      
+      const localConfig = CHART_FILTER_CONFIGS[chartName]
+      if (localConfig && localConfig.visible_filters.extend_fields) {
+        const localAllowedFields = localConfig.visible_filters.extend_fields
+        if (Array.isArray(localAllowedFields)) {
+          allowedFieldNames = localAllowedFields
+          console.log('🔧 [EXTEND-FIELDS] Found local config:', allowedFieldNames)
+        } else {
+          console.warn('🔧 [EXTEND-FIELDS] Local extend_fields is not an array:', typeof localAllowedFields, localAllowedFields)
+        }
+      } else {
+        console.warn('🔧 [EXTEND-FIELDS] No local config found for:', chartName)
+      }
+    }
+
+    // 如果仍然没有配置或不是数组，返回空数组
+    if (!Array.isArray(allowedFieldNames)) {
+      console.warn('🔧 [EXTEND-FIELDS] allowedFieldNames is not an array:', typeof allowedFieldNames, allowedFieldNames)
+      return []
+    }
 
     if (allowedFieldNames.length === 0) {
       // 如果没有配置，则不显示任何字段

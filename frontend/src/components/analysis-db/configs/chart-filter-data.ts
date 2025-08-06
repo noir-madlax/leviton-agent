@@ -6,6 +6,9 @@
 import { ChartFilterConfig } from './filter-config'
 import { CHART_NAMES } from '../constants'
 
+// 重新导出类型，方便其他文件使用
+export type { ChartFilterConfig } from './filter-config'
+
 // Chart Filter配置映射
 export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
   // Brand Analysis Chart配置
@@ -20,7 +23,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: true,
       segments: false,
       timeframe: true,
-      extend_fields: true
+      extend_fields: ['smart_capability'] // 明确指定可见的扩展字段
     },
     
     default_values: {
@@ -64,7 +67,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: false,  // 这个chart不显示brand筛选
       segments: true, // 但显示segments筛选
       timeframe: true,
-      extend_fields: true
+      extend_fields: ['smart_capability', 'dfasdfasdf', 'market_segment'] // 明确指定可见的扩展字段
     },
     
     default_values: {
@@ -131,7 +134,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: true,
       segments: false,
       timeframe: true,
-      extend_fields: true
+      extend_fields: true // true表示显示所有继承的扩展字段
     },
     
     default_values: {
@@ -159,7 +162,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: true,
       segments: false,
       timeframe: true,
-      extend_fields: true
+      extend_fields: ['smart_capability'] // 修复：明确指定可见的扩展字段
     },
     
     default_values: {

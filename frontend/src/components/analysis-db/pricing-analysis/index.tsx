@@ -10,11 +10,10 @@ import { BarChart3 } from "lucide-react"
 
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { FilterRenderer } from "@/components/analysis-db/filters"
-import { ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 import { usePriceDistributionDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
-import { useMarketShareFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
+import { usePricingAnalysisFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
 import { CHART_NAMES } from "@/components/analysis-db/constants"
 
 // 定义价格统计数据类型
@@ -153,6 +152,92 @@ interface PricingAnalysisProps {
   initialFilters?: ProjectFilters
 }
 
+// 价格分布图表封装 (包含自己的过滤器)
+function PriceDistributionByTypeChart({
+  initialData,
+  priceDistributionData,
+  projectId,
+  initialFilters,
+  priceDataLoading,
+  refreshPriceData
+}: {
+  initialData: PricingAnalysisProps['data'],
+  priceDistributionData: any,
+  projectId?: string,
+  initialFilters?: ProjectFilters,
+  priceDataLoading: boolean,
+  refreshPriceData: (filters: ProjectFilters) => Promise<any>
+}) {
+  const [priceType, setPriceType] = useState<PriceType>('unit')
+
+  // 过滤器 Hook
+  const {
+    filters,
+    handleFiltersReady,
+    handleFiltersChange
+  } = usePricingAnalysisFilters(
+    refreshPriceData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
+  )
+
+  // 从刷新后的数据或初始数据中获取分类
+  const allCategories = useMemo(() => 
+    priceDistributionData?.priceDistribution || initialData?.priceDistribution || [],
+    [priceDistributionData, initialData]
+  )
+
+  // 生成小提琴图数据
+  const violinSegments = useMemo(() => {
+    return allCategories.map((category: { category: string; unitPrices: number[]; skuPrices: number[]; productCount?: number; stats?: { unit?: PriceStats; sku?: PriceStats } }, index: number) => ({
+      name: category.category,
+      prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
+      color: getChartColor(index),
+      productCount: category.productCount,
+      stats: priceType === 'unit' ? category.stats?.unit : category.stats?.sku
+    }))
+  }, [allCategories, priceType])
+
+
+  return (
+    <div className="mb-8" data-chart-id={CHART_NAMES.PRICE_ANALYSIS}>
+      <Card className="p-6">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+            Price Distribution by Product Type
+          </h3>
+          <FilterRenderer
+            chartName={CHART_NAMES.PRICE_ANALYSIS}
+            projectId={projectId || ''}
+            currentFilters={filters}
+            onChange={handleFiltersChange}
+            onFiltersReady={handleFiltersReady}
+            disabled={priceDataLoading}
+            className="mb-6"
+          />
+        </div>
+        
+        <div className="mb-4">
+          <PriceTypeSelector 
+            onChange={setPriceType} 
+            defaultValue={priceType}
+          />
+        </div>
+        
+        <div className="h-[350px]">
+          <MultiSegmentViolinChart
+            segments={violinSegments}
+            priceType={priceType}
+            projectId={projectId || ''}
+          />
+        </div>
+      </Card>
+    </div>
+  )
+}
+
+
 export function PricingAnalysis({ data: initialData, projectId, initialFilters }: PricingAnalysisProps) {
   const [priceType, setPriceType] = useState<PriceType>('unit')
   
@@ -167,44 +252,11 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
     refreshData: refreshPriceData
   } = usePriceDistributionDataRefresh(projectId || '', initialData)
 
-  // 🆕 使用统一的过滤器 Hook
-  const {
-    handleFiltersReady,
-    handleFiltersChange
-  } = useMarketShareFilters(
-    refreshPriceData,
-    projectId,
-    { initialFilters: initialFilters || undefined }
-  )
-
-  // FilterRenderer 需要的当前过滤器状态
-  const [currentFilters, setCurrentFilters] = useState<ProjectFilters>(
-    initialFilters || {
-      categories: [],
-      asins: [],
-      brands: [],
-      segments: [],
-      time_period: '1_year',
-      extend_fields: {}
-    }
-  )
-
   // 获取所有分类数据 - 使用新的数据源
   const allCategories = useMemo(() => 
     priceDistributionData?.priceDistribution || initialData?.priceDistribution || [],
     [priceDistributionData, initialData]
   )
-
-  // 生成Multi-Segment Violin Chart数据
-  const violinSegments = useMemo(() => {
-    return allCategories.map((category: { category: string; unitPrices: number[]; skuPrices: number[]; productCount?: number; stats?: { unit?: PriceStats; sku?: PriceStats } }, index: number) => ({
-      name: category.category,
-      prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
-      color: getChartColor(index),
-      productCount: category.productCount,
-      stats: priceType === 'unit' ? category.stats?.unit : category.stats?.sku
-    }))
-  }, [allCategories, priceType])
 
   // 散点图相关的数据处理函数
   const getPriceVsRevenueData = (): ScatterPlotProduct[] => {
@@ -302,8 +354,6 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
     }))
   }
 
-
-
   // 添加散点图点击事件处理器
   const handleScatterClick = (data: ScatterClickData) => {
     if (data && data.payload) {
@@ -317,8 +367,6 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
       }
     }
   }
-
-
 
   // 检查是否有基础数据 - 使用新的数据源
   const currentData = priceDistributionData || initialData
@@ -358,35 +406,20 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
           💰 Pricing Analysis
         </h2>
 
-      {/* 🆕 统一的过滤器组件 */}
-      <FilterRenderer
-        chartName={CHART_NAMES.PRICE_ANALYSIS}
-        projectId={projectId || ''}
-        currentFilters={currentFilters}
-        onChange={(newFilters) => {
-          setCurrentFilters(newFilters)
-          handleFiltersChange(newFilters)
-        }}
-        onFiltersReady={handleFiltersReady}
-        className="mb-6"
-      />
-    
-      <div className="mt-6"></div>
-
       {/* Price Distribution by Segment - 移至最上方 */}
       {shouldShowChart('price-distribution-overview') && (
       <div className="mb-8" data-chart-id="price-distribution-overview">
-      <ChartHeader title=" Price Distribution by Segment" icon={BarChart3} />
-      
-       
         <Card className="p-6 bg-gray-50">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+            Price Distribution by Segment
+          </h3>
           <div className="mb-4">
             <PriceTypeSelector 
               onChange={setPriceType} 
               defaultValue={priceType}
             />
           </div>
-          
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
@@ -436,10 +469,13 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
       )}
 
       {/* Price vs Revenue Distribution of Top Selling 20 Products */}
-      {true && (
+      {shouldShowChart('price-vs-revenue') && (
       <div className="mb-8" data-chart-id="price-vs-revenue">
-        <ChartHeader title="Price vs Revenue Distribution of Top Selling 20 Products" icon={BarChart3} />
           <Card className="p-6 bg-gray-50">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+              Price vs Revenue Distribution of Top Selling 20 Products
+            </h3>
             {hasScatterData ? (
               <div className="h-[400px]">
                 <ResponsiveContainer width="100%" height="100%">
@@ -502,34 +538,26 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
       </div>
       )}
 
-      {/* Price Distribution by Product Type */}
-      {true && (
-      <div className="mb-8" data-chart-id="price-distribution-by-type">
-        <ChartHeader title="Price Distribution by Product Type" icon={BarChart3} />
-        <Card className="p-6 bg-gray-50">
-          <div className="mb-4">
-            <PriceTypeSelector 
-              onChange={setPriceType} 
-              defaultValue={priceType}
-            />
-          </div>
-          
-          <div className="h-[350px]">
-            <MultiSegmentViolinChart
-              segments={violinSegments}
-              priceType={priceType}
-              projectId={projectId || ''}
-            />
-          </div>
-        </Card>
-      </div>
+      {/* Price Distribution by Product Type - with its own filter */}
+      {shouldShowChart('price-distribution-by-type') && (
+        <PriceDistributionByTypeChart
+          initialData={initialData}
+          priceDistributionData={priceDistributionData}
+          projectId={projectId}
+          initialFilters={initialFilters}
+          priceDataLoading={priceDataLoading}
+          refreshPriceData={refreshPriceData}
+        />
       )}
 
       {/* Brand Price Distribution */}
-      {true && (
+      {shouldShowChart('price-distribution-by-brands') && (
       <div className="mb-8" data-chart-id="price-distribution-by-brands">
-        <ChartHeader title="Brand Price Distribution" icon={BarChart3} />
           <Card className="p-6 bg-gray-50">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+              Brand Price Distribution
+            </h3>
             <div className="mb-4">
               <PriceTypeSelector 
                 onChange={setPriceType} 
