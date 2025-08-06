@@ -9,20 +9,20 @@ export const CHART_NAMES = {
   PROJECT: 'project',
   
   // 市场分析相关
-  BRAND_ANALYSIS: 'brand-analysis',
+  BRAND_ANALYSIS: 'brand-analysis',// 没用
   MARKET_SHARE_ANALYSIS: 'market-share-analysis',
   BEST_SELLING_BRANDS: 'best-selling-brands',
   SALES_TREND_ANALYSIS: 'sales-trend-analysis',
-  COMPETITOR_ANALYSIS: 'competitor-analysis',
-  
+  SEGMENT_ANALYSIS: 'segment-analysis',
+  PACKAGE_PREFERENCE: 'package-preference',
+
   // 洞察分析相关
   MARKET_INSIGHTS: 'market-insights',
-  PACKAGE_PREFERENCE: 'package-preference',
-  
+
   // 其他分析
   PRICE_ANALYSIS: 'price-analysis',
-  SEGMENT_ANALYSIS: 'segment-analysis',
   CATEGORY_ANALYSIS: 'category-analysis',
+  COMPETITOR_ANALYSIS: 'competitor-analysis',
   
   // 预留扩展
   CUSTOM_ANALYSIS_1: 'custom-analysis-1',

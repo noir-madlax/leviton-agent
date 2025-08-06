@@ -42,6 +42,108 @@ export interface TAMMarketShareResponse {
   metadata: TAMMarketShareMetadata
 }
 
+// Brand Sales Trend API 相关接口
+export interface BrandMetrics {
+  revenue: number
+  volume: number
+}
+
+export interface BrandSalesTrendDataPoint {
+  month: string
+  [brandName: string]: string | BrandMetrics  // 动态品牌字段
+}
+
+export interface BrandSalesTrendSummary {
+  total_brands: number
+  date_range: {
+    start: string
+    end: string
+  }
+  total_revenue: number
+  total_volume: number
+  timeframe_period: string
+}
+
+export interface BrandSalesTrendMetadata {
+  filtered_asins_count: number
+  calculation_timestamp: string
+  timeframe_used: string
+  data_source: string
+}
+
+export interface BrandSalesTrendResponse {
+  trend_data: BrandSalesTrendDataPoint[]
+  brands: string[]
+  summary: BrandSalesTrendSummary
+  metadata: BrandSalesTrendMetadata
+}
+
+// Top Segments by Revenue API 相关接口
+export interface SegmentRevenueData {
+  segment: string
+  revenue: number
+  volume: number
+  products: number
+  market_share_percentage: number
+  rank: number
+  avg_price: number
+  top_brand: string
+}
+
+export interface TopSegmentsData {
+  segments: SegmentRevenueData[]
+  total_market_revenue: number
+  total_market_volume: number
+  total_products: number
+  currency: string
+}
+
+export interface TopSegmentsMetadata {
+  filtered_asins_count: number
+  total_segments: number
+  returned_segments: number
+  metric_type: string
+  calculation_timestamp: string
+}
+
+export interface TopSegmentsByRevenueResponse {
+  data: TopSegmentsData
+  metadata: TopSegmentsMetadata
+}
+
+// Package Type Distribution API 相关接口
+export interface PackageTypeData {
+  package_type: string
+  revenue: number
+  product_count: number
+  percentage: number
+  rank: number
+}
+
+export interface CategoryPackageDistribution {
+  category: string
+  total_revenue: number
+  total_products: number
+  package_types: PackageTypeData[]
+}
+
+export interface PackageTypeDistributionData {
+  overall_distribution: PackageTypeData[]
+  distribution_by_category: CategoryPackageDistribution[]
+  metric_type: string
+}
+
+export interface PackageTypeDistributionMetadata {
+  filtered_asins_count: number
+  total_package_types: number
+  calculation_timestamp: string
+}
+
+export interface PackageTypeDistributionResponse {
+  data: PackageTypeDistributionData
+  metadata: PackageTypeDistributionMetadata
+}
+
 export interface ProductData {
   platform_id: string
   title: string
@@ -339,6 +441,129 @@ export class DatabaseService {
       return result
     } catch (error) {
       console.error('Error fetching TAM Market Share data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Brand Sales Trend data - 自动从过滤器状态管理器获取过滤器
+  async getBrandSalesTrendData(projectId: string): Promise<BrandSalesTrendResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.SALES_TREND_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Brand Sales Trend data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        aggregation: 'monthly',
+        limit: 10,
+        metric_type: 'revenue',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Brand Sales Trend API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/market-analysis/brand-sales-trend`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Sales Trend API call failed: ${response.status}`)
+      }
+
+      const result: BrandSalesTrendResponse = await response.json()
+      console.log('📊 Brand Sales Trend API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Brand Sales Trend data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Top Segments by Revenue data - 自动从过滤器状态管理器获取过滤器
+  async getTopSegmentsByRevenueData(projectId: string): Promise<TopSegmentsByRevenueResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.SEGMENT_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Top Segments by Revenue data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        limit: 10,
+        metric_type: 'revenue',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Top Segments by Revenue API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/top-segments-by-revenue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Top Segments by Revenue API call failed: ${response.status}`)
+      }
+
+      const result: TopSegmentsByRevenueResponse = await response.json()
+      console.log('📊 Top Segments by Revenue API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Top Segments by Revenue data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Package Type Distribution data - 自动从过滤器状态管理器获取过滤器
+  async getPackageTypeDistributionData(projectId: string): Promise<PackageTypeDistributionResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.PACKAGE_PREFERENCE)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Package Type Distribution data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        metric_type: 'products',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Package Type Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/package-type-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Package Type Distribution API call failed: ${response.status}`)
+      }
+
+      const result: PackageTypeDistributionResponse = await response.json()
+      console.log('📊 Package Type Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Package Type Distribution data:', error)
       throw error
     }
   }
