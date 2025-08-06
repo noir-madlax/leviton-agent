@@ -211,7 +211,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
       openPanel(
         reviewsToShow,
         `${cellData.categoryName} Reviews`,
-        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
+        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction`,
         { sentiment: true, brand: true, rating: true, verified: true }
       )
     } catch (error) {
@@ -309,9 +309,9 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                           content={{
                             title: row.dimension,
                             type: 'Physical/Performance',
-                                    positiveReviews: cellData.positiveReviews,
-        negativeReviews: cellData.negativeReviews,
-                            totalMentions: cellData.reviews,
+                            positiveReviews: cellData.positiveReviews,
+                            negativeReviews: cellData.negativeReviews,
+                            totalReviews: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
                             additionalInfo: [
                               `Product: ${productName}`,

@@ -73,12 +73,14 @@ class TestCompetitorAnalysisChartService:
     @pytest.mark.asyncio
     async def test_get_matrix_view_data_empty_categories(self, service):
         """Test matrix view data with no categories found."""
-        service._get_aspect_categories_with_options = AsyncMock(return_value=[])
-        service._get_category_info = AsyncMock(return_value={})
-        service._get_product_aspect_data = AsyncMock(return_value=[])
+        # Mock the review_data_service.get_categories method to return empty result
+        service.review_data_service.get_categories = Mock(return_value={
+            'categories': [],
+            'product_breakdown': []
+        })
         
         result = await service.get_matrix_view_data(
-            ['B00NG0ELL0'], 'phy_perf', {}
+            'phy_perf', {}, ['B00NG0ELL0']
         )
         
         assert result['aspect_categories'] == []

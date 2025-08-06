@@ -57,13 +57,9 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         </div>
 
         {/* 统计信息 */}
-        <div className="grid grid-cols-2 gap-2 mb-3">
+        <div className="grid grid-cols-1 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.positiveReviews + data.negativeReviews}</p>
-          </div>
-          <div>
-            <p className="text-sm text-gray-600">Unique Reviews:</p>
+            <p className="text-sm text-gray-600">Total Reviews:</p>
             <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>

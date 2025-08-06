@@ -92,11 +92,7 @@ export function DetailedTooltip({ content, children, className = '' }: DetailedT
           {/* Statistics */}
           <div className="space-y-1 mb-3">
             <div className="flex justify-between items-center">
-              <span className="text-gray-700">Total Mentions:</span>
-              <span className="font-medium text-gray-900">{content.totalMentions || (content.positiveReviews + content.negativeReviews)}</span>
-            </div>
-            <div className="flex justify-between items-center">
-              <span className="text-gray-700">Unique Reviews:</span>
+              <span className="text-gray-700">Total Reviews:</span>
               <span className="font-medium text-gray-900">{content.totalReviews}</span>
             </div>
             <div className="flex justify-between items-center">

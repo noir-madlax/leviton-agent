@@ -1,7 +1,7 @@
 """Shared data service for review analysis database operations."""
 
 import logging
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Union
 from supabase import Client
 
 from .constants import ReviewAnalysisConfig
@@ -398,9 +398,13 @@ class ReviewDataService:
         aspect_types: List[str],
         sort_by: str = 'total_reviews',
         sort_direction: str = 'desc',
-        limit: int = 50
-    ) -> List[Dict[str, Any]]:
+        limit: int = 50,
+        include_product_breakdown: bool = False
+    ) -> Union[List[Dict[str, Any]], Dict[str, Any]]:
         """Get categories with efficient SQL aggregation, sorting, and limiting.
+        
+        This method provides consistent review count calculations across all components
+        using proper deduplication logic with COUNT(DISTINCT (product_id, review_id)).
         
         Args:
             project_id: Project ID for filtering
@@ -409,9 +413,24 @@ class ReviewDataService:
             sort_by: Field to sort by (total_reviews, positive_reviews, negative_reviews, etc.)
             sort_direction: Sort direction (asc, desc)
             limit: Maximum number of categories to return
+            include_product_breakdown: bool = False. If True, returns detailed breakdown
+                by product for matrix view components. This ensures consistency between
+                matrix cells and review panels by using the same deduplication logic.
             
         Returns:
-            List of category statistics dictionaries
+            If include_product_breakdown=False (default, backward compatible):
+                List of category statistics dictionaries
+            If include_product_breakdown=True (for matrix components):
+                Dict containing:
+                - 'categories': List of category statistics dictionaries  
+                - 'product_breakdown': List of product-category matrix data with proper
+                  deduplication using COUNT(DISTINCT (product_id, review_id))
+                  
+        Note:
+            The product_breakdown data structure matches the format expected by matrix
+            components (CompetitorMatrix, MissedOpportunitiesMatrix) and ensures that
+            the numbers displayed in matrix cells exactly match the review counts shown
+            in review panels when users click on those cells.
         """
         try:
             # Expand mapped aspect types
@@ -439,6 +458,8 @@ class ReviewDataService:
             
             if not result.data:
                 logger.info(f"No categories found for project {project_id}")
+                if include_product_breakdown:
+                    return {'categories': [], 'product_breakdown': []}
                 return []
             
             # Process results - RPC returns JSONB format
@@ -475,10 +496,141 @@ class ReviewDataService:
                 categories.append(category_data)
             
             logger.info(f"Retrieved {len(categories)} categories using efficient SQL query")
-            return categories
+            
+            # If product breakdown is not requested, return categories only (backward compatible)
+            if not include_product_breakdown:
+                return categories
+                
+            # If product breakdown is requested, generate matrix data with same deduplication logic
+            product_breakdown = self._get_product_breakdown(
+                project_id, asins, expanded_aspect_types, 
+                [cat['category_pk'] for cat in categories]
+            )
+            
+            return {
+                'categories': categories,
+                'product_breakdown': product_breakdown
+            }
             
         except Exception as e:
             logger.error(f"Error getting categories efficiently: {e}", exc_info=True)
+            if include_product_breakdown:
+                return {'categories': [], 'product_breakdown': []}
+            return []
+
+    def _get_product_breakdown(
+        self, 
+        project_id: str, 
+        asins: List[str], 
+        expanded_aspect_types: List[str], 
+        category_ids: List[int]
+    ) -> List[Dict[str, Any]]:
+        """Get product-category breakdown with proper deduplication for matrix views.
+        
+        This helper method uses the same deduplication logic as get_categories() to ensure
+        consistency between matrix cells and review panels.
+        
+        Args:
+            project_id: Project ID for filtering
+            asins: List of ASINs to analyze
+            expanded_aspect_types: Already expanded aspect types
+            category_ids: List of category IDs from get_categories result
+            
+        Returns:
+            List of product aspect data with standardized field names and proper deduplication
+        """
+        try:
+            if not category_ids or not asins:
+                return []
+            
+            # Build SQL query with proper deduplication - same logic as get_categories()
+            asins_str = "', '".join(asins)
+            category_ids_str = ", ".join(map(str, category_ids))
+            aspect_types_str = "', '".join(expanded_aspect_types)
+            
+            # Use direct table query instead of RPC to avoid CTE restrictions
+            result = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
+                'product_id, category_pk, sentiment'
+            ).eq('project_id', project_id).in_('product_id', asins).in_('category_pk', category_ids).in_('aspect_type', expanded_aspect_types).execute()
+            
+            # Initialize complete matrix with zero counts for all product-category combinations
+            product_aspect_data = []
+            
+            for asin in asins:
+                aspect_data = []
+                for category_id in category_ids:
+                    aspect_data.append({
+                        'category_id': category_id,  # Standardized field name
+                        'total_reviews': 0,
+                        'positive_reviews': 0,
+                        'negative_reviews': 0
+                    })
+                
+                product_aspect_data.append({
+                    'asin': asin,
+                    'aspect_data': aspect_data
+                })
+            
+            # Process raw data and perform aggregation in Python using same logic as get_reviews_by_category
+            if result.data:
+                # Group by product_id and category_pk for deduplication - same logic as get_reviews_by_category
+                from collections import defaultdict
+                
+                # First, we need to get review_id for proper deduplication
+                # Query again to get review_id for proper deduplication
+                detailed_result = self.supabase.table(ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW).select(
+                    'product_id, category_pk, sentiment, review_id'
+                ).eq('project_id', project_id).in_('product_id', asins).in_('category_pk', category_ids).in_('aspect_type', expanded_aspect_types).execute()
+                
+                if not detailed_result.data:
+                    logger.info(f"No detailed data found for product breakdown")
+                    return []
+                
+                # Use same deduplication logic as get_reviews_by_category
+                # Instead of mapping review to single category, process each product-category-review combination
+                review_category_sentiments = defaultdict(set)  # Maps (product_id, review_id, category_id) to sentiments
+                
+                for record in detailed_result.data:
+                    review_key = (record['product_id'], record['review_id'])
+                    category_id = record['category_pk']
+                    sentiment = record['sentiment']
+                    
+                    # Create a unique key for each product-category-review combination
+                    review_category_key = (record['product_id'], record['review_id'], category_id)
+                    review_category_sentiments[review_category_key].add(sentiment)
+                
+                # Count reviews per product-category combination using same logic as review panel
+                product_category_data = defaultdict(lambda: defaultdict(lambda: {'reviews': set(), 'positive': set(), 'negative': set()}))
+                
+                for (product_id, review_id, category_id), sentiments in review_category_sentiments.items():
+                    if sentiments:  # Same validation as get_reviews_by_category line 124
+                        review_key = (product_id, review_id)  # Standard review key for deduplication
+                        
+                        # Add this review to the count for this specific product-category combination
+                        product_category_data[product_id][category_id]['reviews'].add(review_key)
+                        
+                        # Count positive/negative based on sentiments for this category
+                        if '+' in sentiments:
+                            product_category_data[product_id][category_id]['positive'].add(review_key)
+                        if '-' in sentiments:
+                            product_category_data[product_id][category_id]['negative'].add(review_key)
+                
+                # Update matrix with aggregated data
+                for product_id, categories in product_category_data.items():
+                    product_entry = next((p for p in product_aspect_data if p['asin'] == product_id), None)
+                    if product_entry:
+                        for category_id, data in categories.items():
+                            aspect_entry = next((a for a in product_entry['aspect_data'] if a['category_id'] == category_id), None)
+                            if aspect_entry:
+                                aspect_entry['total_reviews'] = len(data['reviews'])
+                                aspect_entry['positive_reviews'] = len(data['positive'])
+                                aspect_entry['negative_reviews'] = len(data['negative'])
+            
+            logger.info(f"Generated product breakdown for {len(asins)} products and {len(category_ids)} categories")
+            return product_aspect_data
+            
+        except Exception as e:
+            logger.error(f"Error getting product breakdown: {e}", exc_info=True)
             return []
 
     async def get_category_statistics(
@@ -710,7 +862,7 @@ class ReviewDataService:
             result = query.execute()
             
             if not result.data:
-                logger.info(f"No cause data found for top categories")
+                logger.info("No cause data found for top categories")
                 return []
             
             # Process cause data - aggregate unique reviews across all top aspect categories
@@ -918,7 +1070,7 @@ class ReviewDataService:
             result = query.execute()
             
             if not result.data:
-                logger.info(f"No cause data found for enhanced analysis")
+                logger.info("No cause data found for enhanced analysis")
                 return {}, []
             
             # Get category information for all causes found

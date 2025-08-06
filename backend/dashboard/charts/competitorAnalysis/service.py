@@ -4,7 +4,7 @@ This service handles competitor analysis data retrieval with efficient database 
 """
 
 import logging
-import traceback
+
 from typing import Dict, List, Any, Optional
 
 from dashboard.services.base_service import FilterService
@@ -446,18 +446,19 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
             }
             db_aspect_types = aspect_type_map.get(aspect_type, [aspect_type])
             
-            # 🔄 REUSE: Use ReviewDataService.get_categories() for efficient category retrieval
+            # 🔄 REUSE: Use ReviewDataService.get_categories() with product breakdown for consistent deduplication
             top_n = options.get('top_n', 10)
-            categories = self.review_data_service.get_categories(
+            categories_result = self.review_data_service.get_categories(
                 project_id=self.project_id,
                 asins=asins_to_analyze,
                 aspect_types=db_aspect_types,
                 sort_by='total_reviews',
                 sort_direction='desc',
-                limit=top_n
+                limit=top_n,
+                include_product_breakdown=True  # 🔑 NEW: Request product breakdown for matrix consistency
             )
             
-            if not categories:
+            if not categories_result or not categories_result.get('categories'):
                 return {
                     'aspect_categories': [],
                     'product_aspect_data': [],
@@ -466,14 +467,9 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                     'total_categories': 0
                 }
             
-            # Get category PKs for product aspect data
-            category_ids = [cat['category_pk'] for cat in categories]
-            
-            # 🔄 REUSE: Get product aspect data using standardized method
-            product_aspect_data = await self._get_product_aspect_data(
-                selected_asins=asins_to_analyze,
-                category_ids=category_ids
-            )
+            # Extract categories and product breakdown from the result
+            categories = categories_result['categories']
+            product_aspect_data = categories_result['product_breakdown']
             
             # Format response with standardized field names
             aspect_categories = []
@@ -503,81 +499,4 @@ class CompetitorAnalysisChartService(ReviewAnalysisBaseService):
                 'selected_asins': asins_to_analyze,
                 'aspect_type': aspect_type,
                 'total_categories': 0
-            }
-
-    async def _get_product_aspect_data(
-        self, 
-        selected_asins: List[str], 
-        category_ids: List[int]
-    ) -> List[Dict[str, Any]]:
-        """Get product aspect data for matrix view using standardized format.
-        
-        Args:
-            selected_asins: List of ASINs to analyze
-            category_ids: List of category IDs to include
-            
-        Returns:
-            List of product aspect data with standardized field names and complete matrix coverage
-        """
-        try:
-            if not category_ids:
-                return []
-            
-            # Initialize complete matrix with zero counts for all product-category combinations
-            product_aspect_data = []
-            
-            for asin in selected_asins:
-                # Initialize aspect data for all categories with zero counts
-                aspect_data = []
-                for category_id in category_ids:
-                    aspect_data.append({
-                        'category_id': category_id,  # Standardized field name
-                        'total_reviews': 0,
-                        'positive_reviews': 0,
-                        'negative_reviews': 0
-                    })
-                
-                product_aspect_data.append({
-                    'asin': asin,
-                    'aspect_data': aspect_data
-                })
-            
-            # Get actual data from database
-            result = self.supabase.table('review_aspect_data_view').select(
-                'product_id, category_pk, sentiment, review_id'
-            ).eq('project_id', self.project_id).in_('product_id', selected_asins).in_('category_pk', category_ids).execute()
-            
-            if not result.data:
-                return product_aspect_data
-            
-            # Process the data and update the initialized matrix
-            for record in result.data:
-                product_id = record['product_id']
-                category_id = record['category_pk']  # Database field name
-                sentiment = record['sentiment']
-                
-                # Find the product in our matrix
-                product_entry = next((p for p in product_aspect_data if p['asin'] == product_id), None)
-                if not product_entry:
-                    continue
-                
-                # Find the category in this product's aspect data
-                aspect_entry = next((a for a in product_entry['aspect_data'] if a['category_id'] == category_id), None)
-                if not aspect_entry:
-                    continue
-                
-                # Update counts
-                aspect_entry['total_reviews'] += 1
-                
-                # Handle sentiment values - database uses '+' and '-' 
-                if sentiment == '+':
-                    aspect_entry['positive_reviews'] += 1
-                elif sentiment == '-':
-                    aspect_entry['negative_reviews'] += 1
-            
-            return product_aspect_data
-            
-        except Exception as e:
-            logger.error(f"Error getting product aspect data: {str(e)}")
-            logger.error(f"Full traceback: {traceback.format_exc()}")
-            return [] 
+            } 

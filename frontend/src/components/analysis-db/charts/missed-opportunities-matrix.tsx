@@ -193,7 +193,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
       openPanel(
         reviewsToShow,
         `${cellData.categoryName} Reviews`,
-        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction • ${reviewsResponse.data.total_reviews} total reviews`,
+        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction`,
         { sentiment: true, brand: true, rating: true, verified: true }
       )
     } catch (error) {
@@ -290,6 +290,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
                         <DetailedTooltip
                           content={{
                             title: row.useCase,
+                            type: 'Use Case',
                             positiveReviews: cellData.positiveReviews,
                             negativeReviews: cellData.negativeReviews,
                             totalReviews: cellData.reviews,
