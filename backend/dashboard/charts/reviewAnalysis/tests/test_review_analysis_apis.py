@@ -75,7 +75,10 @@ async def test_top_categories_api():
         
         try:
             # Create service
-            service = ReviewAnalysisChartService(project_id=project_id)
+            service = ReviewAnalysisChartService(
+                project_id=project_id,
+                filters={}
+            )
             
             # Get top categories
             result = await service.get_top_categories(test_case['options'])
@@ -116,7 +119,10 @@ async def test_reviews_by_category_api():
     print("🔍 Getting category IDs for testing...")
     
     try:
-        service = ReviewAnalysisChartService(project_id=project_id)
+        service = ReviewAnalysisChartService(
+            project_id=project_id,
+            filters={}
+        )
         
         # Get top categories to find category IDs
         categories_result = await service.get_top_categories({

@@ -85,7 +85,10 @@ async def test_sentiment_and_rating_filters():
     print("🔍 Getting category IDs for testing...")
     
     try:
-        service = ReviewAnalysisChartService(project_id=project_id)
+        service = ReviewAnalysisChartService(
+            project_id=project_id,
+            filters={}
+        )
         
         # Get top categories to find category IDs
         categories_result = await service.get_top_categories({

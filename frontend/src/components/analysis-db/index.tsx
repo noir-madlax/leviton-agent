@@ -185,6 +185,7 @@ interface DashboardData {
       satisfaction_rate?: number
       category_definition?: string
       category_id?: number
+      categoryId?: number // Add categoryId for review panel functionality
       related_detail_texts?: string[]
     }>
     customerLikes: Array<{
@@ -200,6 +201,7 @@ interface DashboardData {
       positive_rate?: number
       category_definition?: string
       category_id?: number
+      categoryId?: number // Add categoryId for review panel functionality
       related_detail_texts?: string[]
     }>
     allUseCases: Array<{
@@ -215,6 +217,7 @@ interface DashboardData {
       total_reviews?: number
       category_definition?: string
       category_id?: number
+      categoryId?: number // Add categoryId for review panel functionality
       related_detail_texts?: string[]
     }>
   }

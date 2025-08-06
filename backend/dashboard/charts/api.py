@@ -11,7 +11,6 @@ from .competitorAnalysis.models import (
 from .competitorAnalysis.service import CompetitorAnalysisChartService
 
 from .reviewAnalysis.models import (
-    TopCategoriesRequest, TopCategoriesResponse,
     ReviewsByCategoryRequest, ReviewsByCategoryResponse
 )
 from .reviewAnalysis.service import ReviewAnalysisChartService
@@ -212,46 +211,7 @@ async def get_reviews_by_category_product(request: ReviewRetrievalRequest):
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
-@router.post("/review-analysis/top-categories", response_model=TopCategoriesResponse)
-async def get_top_categories(request: TopCategoriesRequest):
-    """Get top aspect categories with comprehensive statistics.
-    
-    This endpoint retrieves the top aspect categories for all filtered products
-    under a project, with detailed statistics including mentions, sentiments,
-    and review counts. Supports filtering by aspect type and various sorting options.
-    
-    Args:
-        request: TopCategoriesRequest containing project_id, filters, and additional conditions
-        
-    Returns:
-        TopCategoriesResponse: Top categories data with comprehensive statistics
-        
-    Raises:
-        HTTPException: Error response for validation or system errors
-    """
-    try:
-        logger.info(f"Getting top categories for project {request.project_id}")
-        
-        service = ReviewAnalysisChartService(
-            project_id=request.project_id,
-            filters=request.filters,
-            selected_asins=request.selected_asins,
-            date_range=request.date_range
-        )
-        
-        data = await service.get_top_categories(request.options)
-        response = TopCategoriesResponse(data=data)
-        
-        logger.info(f"Top categories analysis completed for project {request.project_id}: {len(response.data.categories)} categories")
-        return response
-        
-    except ValueError as e:
-        logger.error(f"Validation error in top categories: {e}")
-        raise HTTPException(status_code=400, detail=str(e))
-        
-    except Exception as e:
-        logger.error(f"System error in top categories: {e}", exc_info=True)
-        raise HTTPException(status_code=500, detail="Internal server error")
+
 
 
 @router.post("/review-analysis/reviews-by-category", response_model=ReviewsByCategoryResponse)
@@ -277,9 +237,9 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
         
         service = ReviewAnalysisChartService(
             project_id=request.project_id,
-            filters=request.filters,
+            filters=request.filters.dict() if request.filters else {},
             selected_asins=request.selected_asins,
-            date_range=request.date_range
+            date_range=request.date_range.dict() if request.date_range else None
         )
         
         # Get reviews with deduplication and aspect aggregation
@@ -290,8 +250,7 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
             sort_by=request.sort_by,
             sort_order=request.sort_order,
             sentiment_filter=request.sentiment_filter,
-            rating_filter=request.rating_filter,
-            chart_type=request.chart_type
+            rating_filter=request.rating_filter
         )
         
         # Convert raw data to response format

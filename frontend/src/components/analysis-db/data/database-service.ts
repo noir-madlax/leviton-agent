@@ -458,6 +458,7 @@ export class DatabaseService {
       categoryDefinition?: string
       totalMentions?: number
       negativeRate?: number
+      categoryId?: number // Add categoryId for review panel functionality
     }>
     customerLikes: Array<{
       feature: string
@@ -468,6 +469,7 @@ export class DatabaseService {
       categoryDefinition?: string
       totalMentions?: number
       positiveRate?: number
+      categoryId?: number // Add categoryId for review panel functionality
     }>
     allUseCases: Array<{
       useCase: string
@@ -478,6 +480,7 @@ export class DatabaseService {
       // Enhanced fields from new table structure
       categoryDefinition?: string
       productCount?: number
+      categoryId?: number // Add categoryId for review panel functionality
     }>
   }> {
     try {
@@ -503,7 +506,8 @@ export class DatabaseService {
           totalReviews: item.total_reviews,
           positiveReviews: item.positive_reviews,
           negativeReviews: item.negative_reviews,
-          relatedDetailTexts: item.related_detail_texts || []
+          relatedDetailTexts: item.related_detail_texts || [],
+          categoryId: item.category_id // Add categoryId for review panel functionality
         })) || [],
         customerLikes: rawResult.customer_likes?.map((item: any) => ({
           feature: item.category_name,       // Map category_name → feature (display)
@@ -516,7 +520,8 @@ export class DatabaseService {
           totalReviews: item.total_reviews,
           positiveReviews: item.positive_reviews,
           negativeReviews: item.negative_reviews,
-          relatedDetailTexts: item.related_detail_texts || []
+          relatedDetailTexts: item.related_detail_texts || [],
+          categoryId: item.category_id // Add categoryId for review panel functionality
         })) || [],
         allUseCases: rawResult.all_use_cases?.map((item: any) => ({
           useCase: item.use_case,
@@ -527,7 +532,8 @@ export class DatabaseService {
           categoryDefinition: item.category_definition,
           productCount: item.product_count || 1,
           totalReviews: item.total_reviews,
-          relatedDetailTexts: item.related_detail_texts || []
+          relatedDetailTexts: item.related_detail_texts || [],
+          categoryId: item.category_id // Add categoryId for review panel functionality
         })) || []
       }
 
@@ -756,134 +762,7 @@ export class DatabaseService {
     }
   }
 
-  // 🔑 Get top categories data for review analysis
-  async getTopCategoriesData(
-    projectId: string,
-    aspectType: 'phy_perf' | 'use' = 'phy_perf',
-    options?: {
-      sortBy?: 'negative_reviews' | 'positive_reviews' | 'total_reviews' | 'positive_ratio'
-      sortDirection?: 'desc' | 'asc'
-      maxCategories?: number
-      minReviews?: number
-      minPositiveReviews?: number
-      returnTopCauseCategories?: {
-        sentiment?: '+' | '-'
-        limit?: number
-      }
-    },
-    filters?: {
-      categories?: string[]
-      brands?: string[]
-      segments?: string[]
-      extend_fields?: Record<string, any>
-      asins?: string[]
-    }
-  ): Promise<{
-    status: string
-    message?: string
-    timestamp: string
-    data: {
-      categories: Array<{
-        category_id: number
-        category_name: string
-        definition: string
-        aspect_type: string
-        total_reviews: number
-        positive_reviews: number
-        negative_reviews: number
-        positive_ratio: number
-        cause_data?: Array<{
-          cause_category_pk: number
-          cause_category_name: string
-          total_reviews: number
-          positive_reviews: number
-          negative_reviews: number
-          aspects: Array<{
-            aspect_description: string
-            sentiment: string
-          }>
-        }>
-      }>
-      total_categories: number
-      summary_stats: {
-        total_categories: number
-        total_reviews: number
-        total_positive_reviews: number
-        total_negative_reviews: number
-        overall_positive_ratio: number
-      }
-      aggregated_cause_summary?: Array<{
-        cause_category_pk: number
-        cause_category_name: string
-        total_reviews: number
-        total_positive_reviews: number
-        total_negative_reviews: number
-        rank: number
-        aspects: Array<{
-          aspect_description: string
-          sentiment: string
-        }>
-      }>
-    }
-  }> {
-    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
-    try {
-      const requestBody = {
-        project_id: projectId,
-        filters: filters || {},
-        options: {
-          aspect_type: aspectType,
-          sort_by: options?.sortBy || 'negative_reviews',
-          sort_direction: options?.sortDirection || 'desc',
-          max_categories: options?.maxCategories || 10,
-          min_reviews: options?.minReviews || 5,
-          min_positive_reviews: options?.minPositiveReviews || 2,
-          return_top_cause_categories: options?.returnTopCauseCategories ? {
-            sentiment: options.returnTopCauseCategories.sentiment,
-            limit: options.returnTopCauseCategories.limit
-          } : undefined
-        }
-      }
 
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody)
-      })
-
-      if (!response.ok) {
-        throw new Error(`API call failed: ${response.status}`)
-      }
-
-      const result = await response.json()
-      return result
-    } catch (error) {
-      console.error('Error fetching top categories data:', error)
-      console.error('Request details:', {
-        url: `${API_BASE_URL}/api/v1/dashboard/charts/review-analysis/top-categories`,
-        requestBody: {
-          project_id: projectId,
-          filters: filters || {},
-          options: {
-            aspect_type: aspectType,
-            sort_by: options?.sortBy || 'negative_reviews',
-            sort_direction: options?.sortDirection || 'desc',
-            max_categories: options?.maxCategories || 10,
-            min_reviews: options?.minReviews || 5,
-            min_positive_reviews: options?.minPositiveReviews || 2
-          }
-        },
-        projectId,
-        aspectType,
-        options,
-        filters
-      })
-      throw error
-    }
-  }
 
   // � Get reviews by category for detailed view
   async getReviewsByCategory(

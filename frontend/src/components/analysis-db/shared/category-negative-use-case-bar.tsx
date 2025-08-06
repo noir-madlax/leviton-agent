@@ -6,6 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/analysis';
 import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
+import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query';
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart';
 
 interface CategoryNegativeUseCaseBarProps {
@@ -14,6 +15,14 @@ interface CategoryNegativeUseCaseBarProps {
   description?: string;
   productType?: ProductType;
   onProductTypeChange?: (productType: ProductType) => void;
+  projectId?: string // Required: for getting review details
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // Required: filter parameters
   totalUseMentions?: number;
 }
 
@@ -89,9 +98,12 @@ export default function CategoryNegativeUseCaseBar({
   description = "Bars are sorted by negative reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
+  projectId,
+  filters,
   totalUseMentions
 }: CategoryNegativeUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   
   // 添加数据安全检查，防止预渲染时 data 为 undefined
   if (!data || !Array.isArray(data) || data.length === 0) {
@@ -117,18 +129,20 @@ export default function CategoryNegativeUseCaseBar({
       item.useCase
   }));
 
-  const handleBarClick = (data: any, index: number) => {
+  const handleBarClick = async (data: any) => {
     if (data && data.displayName) {
       // Find the full use case name from the display name
       const displayName = data.displayName
       const useCaseItem = chartData.find(item => item.displayName === displayName)
       
-      if (useCaseItem) {
-        openPanel(
-          [], // No review data provided, so pass an empty array
-          `${useCaseItem.useCase} - Customer Reviews`,
-          `Reviews related to "${useCaseItem.useCase}" use case`,
-          { sentiment: true, brand: true, rating: true, verified: true }
+      if (useCaseItem && useCaseItem.categoryId && projectId) {
+        // Use the new API to get review details for use cases
+        await handleCategoryClick(
+          projectId,
+          useCaseItem.categoryId,
+          useCaseItem.useCase,
+          ['use'], // use cases use 'use' aspect type
+          filters
         )
       }
     }

@@ -130,10 +130,17 @@ export default function CategoryUseCaseBar({
       item.useCase
   }));
 
-  const handleBarClick = (data: any, index: number) => {
-    // Note: This component doesn't have category IDs, so we can't use the new API
-    // The click functionality is disabled until we have proper category mapping
-    console.log('Click functionality not available for use case bars without category IDs')
+  const handleBarClick = async (data: any) => {
+    if (data && data.categoryId && data.useCase && projectId) {
+      // Use the new API to get review details for use cases
+      await handleCategoryClick(
+        projectId,
+        data.categoryId,
+        data.useCase,
+        ['use'], // use cases use 'use' aspect type
+        filters
+      )
+    }
   }
 
   const handleProductTypeChange = (value: ProductType) => {

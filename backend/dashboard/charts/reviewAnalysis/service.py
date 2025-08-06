@@ -21,7 +21,7 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
 
     def __init__(self, project_id: str, filters: Optional[Dict[str, Any]] = None, 
                  selected_asins: Optional[List[str]] = None, date_range: Optional[Dict[str, str]] = None):
-        """Initialize ReviewAnalysisChartService.
+        """Initialize ReviewAnalysisChartService with cache isolation.
         
         Args:
             project_id: Project ID for filtering
@@ -33,24 +33,100 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         
         # Store selected_asins for later use
         self.selected_asins = selected_asins
+        self.original_filters = filters.copy() if filters else None
+        
+        # Cache management with isolation
+        self._asin_cache: Dict[str, List[str]] = {}  # cache_key -> asins
+        self._current_cache_key: Optional[str] = None
         
         # Set filters if provided and no selected_asins
         if filters and not selected_asins:
-            from core.models.filters import ProjectFilters
-            # Handle both dict and FiltersModel objects
-            if hasattr(filters, 'dict'):
-                # FiltersModel object - convert to dict
-                filters_dict = filters.dict()
-            else:
-                # Already a dict
-                filters_dict = filters
-            project_filters = ProjectFilters.from_dict(filters_dict)
-            self.set_project_filters(project_filters)
+            self._apply_filters(filters)
         
         logger.info(f"ReviewAnalysisChartService initialized for project {project_id}")
 
+    def _create_cache_key(self, project_id: str, filters: Optional[Dict[str, Any]], 
+                         selected_asins: Optional[List[str]]) -> str:
+        """Create a unique cache key for the given parameters.
+        
+        Args:
+            project_id: Project ID
+            filters: Filter dictionary
+            selected_asins: Selected ASINs list
+            
+        Returns:
+            Unique cache key string
+        """
+        import hashlib
+        import json
+        
+        # Create a deterministic cache key
+        cache_data = {
+            'project_id': project_id,
+            'filters': self._normalize_filters(filters) if filters else None,
+            'selected_asins': sorted(selected_asins) if selected_asins else None
+        }
+        
+        # Create hash from sorted JSON representation
+        cache_str = json.dumps(cache_data, sort_keys=True, default=str)
+        cache_key = hashlib.sha256(cache_str.encode()).hexdigest()[:16]  # Short hash
+        
+        logger.debug(f"Created cache key {cache_key} for project {project_id}")
+        return cache_key
+    
+    def _normalize_filters(self, filters: Dict[str, Any]) -> Dict[str, Any]:
+        """Normalize filters for consistent cache key generation.
+        
+        Args:
+            filters: Raw filters dictionary
+            
+        Returns:
+            Normalized filters dictionary
+        """
+        if not filters:
+            return {}
+        
+        normalized = {}
+        for key, value in filters.items():
+            if isinstance(value, list):
+                # Sort lists for consistent ordering
+                normalized[key] = sorted(value)
+            elif isinstance(value, dict):
+                # Recursively normalize nested dictionaries
+                normalized[key] = self._normalize_filters(value)
+            else:
+                normalized[key] = value
+        
+        return normalized
+
+    def _apply_filters(self, filters: Dict[str, Any]):
+        """Apply filters and update current cache key.
+        
+        Args:
+            filters: Filters to apply
+        """
+        from core.models.filters import ProjectFilters
+        
+        # Handle both dict and FiltersModel objects
+        if hasattr(filters, 'dict'):
+            filters_dict = filters.dict()
+        else:
+            filters_dict = filters
+            
+        project_filters = ProjectFilters.from_dict(filters_dict)
+        self.set_project_filters(project_filters)
+        
+        # Update current cache key
+        self._current_cache_key = self._create_cache_key(
+            self.project_id, 
+            filters_dict, 
+            self.selected_asins
+        )
+        
+        logger.info(f"Applied filters, cache key: {self._current_cache_key}")
+
     def _get_asins_to_analyze(self) -> List[str]:
-        """Get ASINs to analyze based on selected_asins or filters.
+        """Get ASINs to analyze based on selected_asins or filters, with isolated caching.
         
         Returns:
             List of ASINs to analyze
@@ -58,9 +134,72 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         if self.selected_asins:
             logger.info(f"Using selected_asins: {len(self.selected_asins)} ASINs")
             return self.selected_asins
-        else:
-            logger.info("Using project filters to get ASINs")
-            return self._get_filtered_asins()
+        
+        # Ensure we have a cache key for filter-based ASINs
+        if self._current_cache_key is None:
+            self._current_cache_key = self._create_cache_key(
+                self.project_id, 
+                self.original_filters, 
+                self.selected_asins
+            )
+        
+        # Check cache first
+        if self._current_cache_key in self._asin_cache:
+            cached_asins = self._asin_cache[self._current_cache_key]
+            logger.info(f"Using cached ASINs for key {self._current_cache_key}: {len(cached_asins)} ASINs")
+            return cached_asins
+        
+        # Compute ASINs and cache them
+        logger.info(f"Computing ASINs for cache key {self._current_cache_key}")
+        filtered_asins = self._get_filtered_asins()
+        
+        # Store in cache
+        self._asin_cache[self._current_cache_key] = filtered_asins
+        logger.info(f"Cached {len(filtered_asins)} ASINs for key {self._current_cache_key}")
+        
+        return filtered_asins
+
+    def clear_cache(self):
+        """Clear all cached ASINs.
+        
+        Useful for testing or when data changes require cache invalidation.
+        """
+        cache_count = len(self._asin_cache)
+        self._asin_cache.clear()
+        logger.info(f"Cleared {cache_count} cached ASIN entries")
+
+    def clear_cache_for_key(self, cache_key: str):
+        """Clear cached ASINs for a specific cache key.
+        
+        Args:
+            cache_key: Cache key to invalidate
+        """
+        if cache_key in self._asin_cache:
+            del self._asin_cache[cache_key]
+            logger.info(f"Cleared cache for key {cache_key}")
+
+    def get_cache_info(self) -> Dict[str, Any]:
+        """Get information about the current cache state.
+        
+        Returns:
+            Dictionary with cache statistics
+        """
+        return {
+            'current_cache_key': self._current_cache_key,
+            'cached_entries': len(self._asin_cache),
+            'cache_keys': list(self._asin_cache.keys()),
+            'cache_sizes': {k: len(v) for k, v in self._asin_cache.items()}
+        }
+
+    def update_filters(self, filters: Dict[str, Any]):
+        """Update filters and ensure proper cache isolation.
+        
+        Args:
+            filters: New filters to apply
+        """
+        logger.info("Updating filters and recalculating cache key")
+        self.original_filters = filters.copy() if filters else None
+        self._apply_filters(filters)
 
     def get_data(self) -> List[Dict[str, Any]]:
         """Get data - required by BaseDashboardService but not used for review analysis.

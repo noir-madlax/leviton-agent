@@ -22,8 +22,7 @@ async def debug_review_analysis():
         print("\n1️⃣ Testing service initialization...")
         service = ReviewAnalysisChartService(
             project_id=project_id,
-            filters={},
-            selected_asins=None
+            filters={}
         )
         print("✅ Service initialized successfully")
         

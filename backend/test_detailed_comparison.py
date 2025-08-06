@@ -3,7 +3,6 @@
 
 import asyncio
 import logging
-from typing import Dict, Any
 from collections import defaultdict
 
 from dashboard.charts.reviewCore.data_service import ReviewDataService
@@ -82,7 +81,7 @@ async def test_detailed_comparison():
             else:
                 neutral_only.add(review_key)
         
-        logger.info(f"📊 Review categorization:")
+        logger.info("📊 Review categorization:")
         logger.info(f"   - Positive only: {len(positive_only)}")
         logger.info(f"   - Negative only: {len(negative_only)}")
         logger.info(f"   - Mixed sentiment: {len(mixed_sentiment)}")
@@ -90,7 +89,7 @@ async def test_detailed_comparison():
         logger.info(f"   - Total: {len(positive_only) + len(negative_only) + len(mixed_sentiment) + len(neutral_only)}")
         
         # 🔍 NEW: Detailed analysis of what the tooltip is actually doing
-        logger.info(f"\n🔍 NEW: Detailed tooltip analysis")
+        logger.info("\n🔍 NEW: Detailed tooltip analysis")
         
         # Simulate the exact tooltip logic step by step
         tooltip_reviews = set()
@@ -113,7 +112,7 @@ async def test_detailed_comparison():
             else:
                 tooltip_neutral.add(review_key)
         
-        logger.info(f"📊 Tooltip simulation results:")
+        logger.info("📊 Tooltip simulation results:")
         logger.info(f"   - All reviews (total_reviews): {len(tooltip_reviews)}")
         logger.info(f"   - Positive reviews: {len(tooltip_positive)}")
         logger.info(f"   - Negative reviews: {len(tooltip_negative)}")
@@ -134,7 +133,7 @@ async def test_detailed_comparison():
             logger.info(f"   - Missing review keys: {list(missing_reviews)[:5]}...")  # Show first 5
         
         # 🔍 NEW: Direct examination of the actual method
-        logger.info(f"\n🔍 NEW: Direct examination of actual get_category_statistics")
+        logger.info("\n🔍 NEW: Direct examination of actual get_category_statistics")
         
         # Get the raw data that the actual method processes
         actual_query = supabase.table('review_aspect_data_view').select(
@@ -203,7 +202,7 @@ async def test_detailed_comparison():
             logger.error(f"❌ Category {CATEGORY_ID} not found in actual method results")
         
         # Test the actual methods
-        logger.info(f"\n🔍 Testing actual methods")
+        logger.info("\n🔍 Testing actual methods")
         
         # Get category statistics (tooltip data)
         category_stats = await data_service.get_category_statistics(
@@ -219,14 +218,14 @@ async def test_detailed_comparison():
                 break
         
         if tooltip_category:
-            logger.info(f"📊 Tooltip results:")
+            logger.info("📊 Tooltip results:")
             logger.info(f"   - Total Reviews: {tooltip_category['total_reviews']}")
             logger.info(f"   - Positive Reviews: {tooltip_category['positive_reviews']}")
             logger.info(f"   - Negative Reviews: {tooltip_category['negative_reviews']}")
             logger.info(f"   - Neutral Reviews: {tooltip_category['neutral_reviews']}")
             
             # 🔍 DEBUG: Check the raw data that went into the calculation
-            logger.info(f"🔍 DEBUG: Raw data analysis for tooltip:")
+            logger.info("🔍 DEBUG: Raw data analysis for tooltip:")
             logger.info(f"   - Raw positive_reviews set size: {len(tooltip_category.get('_debug_positive_reviews', set()))}")
             logger.info(f"   - Raw negative_reviews set size: {len(tooltip_category.get('_debug_negative_reviews', set()))}")
             logger.info(f"   - Raw neutral_reviews set size: {len(tooltip_category.get('_debug_neutral_reviews', set()))}")
@@ -240,7 +239,7 @@ async def test_detailed_comparison():
             aspect_types=['phy_perf']
         )
         
-        logger.info(f"📊 Clicked view results:")
+        logger.info("📊 Clicked view results:")
         logger.info(f"   - Total Reviews: {clicked_result['total_count']}")
         logger.info(f"   - Reviews Returned: {len(clicked_result['reviews'])}")
         
@@ -268,7 +267,7 @@ async def test_detailed_comparison():
             else:
                 clicked_neutral_only.add(review_key)
         
-        logger.info(f"📊 Clicked view categorization:")
+        logger.info("📊 Clicked view categorization:")
         logger.info(f"   - Positive only: {len(clicked_positive_only)}")
         logger.info(f"   - Negative only: {len(clicked_negative_only)}")
         logger.info(f"   - Mixed sentiment: {len(clicked_mixed_sentiment)}")
@@ -276,13 +275,13 @@ async def test_detailed_comparison():
         logger.info(f"   - Total: {len(clicked_positive_only) + len(clicked_negative_only) + len(clicked_mixed_sentiment) + len(clicked_neutral_only)}")
         
         # Compare the differences
-        logger.info(f"\n🔍 Comparison analysis:")
+        logger.info("\n🔍 Comparison analysis:")
         
         if tooltip_category:
             tooltip_total = tooltip_category['total_reviews']
             clicked_total = clicked_result['total_count']
             
-            logger.info(f"📊 Total counts:")
+            logger.info("📊 Total counts:")
             logger.info(f"   - Tooltip: {tooltip_total}")
             logger.info(f"   - Clicked: {clicked_total}")
             logger.info(f"   - Difference: {clicked_total - tooltip_total}")
@@ -292,15 +291,15 @@ async def test_detailed_comparison():
             logger.info(f"📊 Expected tooltip (excluding mixed): {expected_tooltip}")
             
             if expected_tooltip == tooltip_total:
-                logger.info(f"✅ Tooltip count matches expected business logic")
+                logger.info("✅ Tooltip count matches expected business logic")
             else:
-                logger.warning(f"⚠️  Tooltip count doesn't match expected business logic")
+                logger.warning("⚠️  Tooltip count doesn't match expected business logic")
                 logger.info(f"   - Expected: {expected_tooltip}")
                 logger.info(f"   - Actual: {tooltip_total}")
                 logger.info(f"   - Difference: {tooltip_total - expected_tooltip}")
         
         # 🔍 NEW: Detailed business logic analysis
-        logger.info(f"\n🔍 Detailed business logic analysis:")
+        logger.info("\n🔍 Detailed business logic analysis:")
         
         # Simulate the exact business logic from get_category_statistics
         positive_reviews_set = positive_only | mixed_sentiment  # All reviews with positive sentiment
@@ -314,14 +313,14 @@ async def test_detailed_comparison():
         
         simulated_total = len(positive_only_reviews) + len(negative_reviews) + len(neutral_only_reviews)
         
-        logger.info(f"📊 Simulated business logic:")
+        logger.info("📊 Simulated business logic:")
         logger.info(f"   - Positive only reviews: {len(positive_only_reviews)}")
         logger.info(f"   - Negative reviews (including mixed): {len(negative_reviews)}")
         logger.info(f"   - Neutral only reviews: {len(neutral_only_reviews)}")
         logger.info(f"   - Simulated total: {simulated_total}")
         
         if tooltip_category:
-            logger.info(f"📊 Comparison with actual tooltip:")
+            logger.info("📊 Comparison with actual tooltip:")
             logger.info(f"   - Simulated positive: {len(positive_only_reviews)} vs Actual: {tooltip_category['positive_reviews']}")
             logger.info(f"   - Simulated negative: {len(negative_reviews)} vs Actual: {tooltip_category['negative_reviews']}")
             logger.info(f"   - Simulated neutral: {len(neutral_only_reviews)} vs Actual: {tooltip_category['neutral_reviews']}")
@@ -341,7 +340,7 @@ async def test_use_aspect_type():
         project_result = supabase.table('projects').select('selected_product_asins').eq('id', PROJECT_ID).execute()
         project_asins = project_result.data[0]['selected_product_asins']
         
-        logger.info(f"\n🔍 Testing USE aspect type for Use Case Sentiment Analysis")
+        logger.info("\n🔍 Testing USE aspect type for Use Case Sentiment Analysis")
         
         # Get raw data for use aspect type
         use_query = supabase.table('review_aspect_data_view').select(
@@ -408,23 +407,24 @@ async def test_use_aspect_type():
             use_tooltip_total = use_tooltip_category['total_reviews']
             use_clicked_total = use_clicked_result['total_count']
             
-            logger.info(f"📊 USE Comparison:")
+            logger.info("📊 USE Comparison:")
             logger.info(f"   - Tooltip: {use_tooltip_total}")
             logger.info(f"   - Clicked: {use_clicked_total}")
             logger.info(f"   - Difference: {use_clicked_total - use_tooltip_total}")
             
             if use_tooltip_total == use_clicked_total:
-                logger.info(f"✅ USE aspect type: Tooltip and clicked view match")
+                logger.info("✅ USE aspect type: Tooltip and clicked view match")
             else:
-                logger.warning(f"⚠️  USE aspect type: Tooltip and clicked view don't match")
+                logger.warning("⚠️  USE aspect type: Tooltip and clicked view don't match")
         
         # Test the ReviewAnalysisChartService for use aspect type
-        logger.info(f"\n🔍 Testing ReviewAnalysisChartService for USE aspect type")
+        logger.info("\n🔍 Testing ReviewAnalysisChartService for USE aspect type")
         
         from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
         
         service = ReviewAnalysisChartService(
             project_id=PROJECT_ID,
+            filters={},
             selected_asins=project_asins
         )
         
@@ -436,7 +436,7 @@ async def test_use_aspect_type():
             'min_mentions': 1
         })
         
-        logger.info(f"📊 USE Top Categories from ReviewAnalysisChartService:")
+        logger.info("📊 USE Top Categories from ReviewAnalysisChartService:")
         logger.info(f"   - Total Categories: {use_top_categories['total_categories']}")
         
         for i, cat in enumerate(use_top_categories['categories'][:3]):  # Show first 3
@@ -448,16 +448,16 @@ async def test_use_aspect_type():
         # Verify that the ReviewAnalysisChartService uses the same business logic
         if use_top_categories['categories']:
             first_cat = use_top_categories['categories'][0]
-            logger.info(f"📊 Business Logic Verification for USE aspect type:")
+            logger.info("📊 Business Logic Verification for USE aspect type:")
             logger.info(f"   - Category: {first_cat['category_name']}")
             logger.info(f"   - Total Reviews: {first_cat['total_reviews']}")
             logger.info(f"   - Positive + Negative: {first_cat['positive_reviews'] + first_cat['negative_reviews']}")
             
             # Check if total_reviews equals positive + negative (business logic)
             if first_cat['total_reviews'] == first_cat['positive_reviews'] + first_cat['negative_reviews']:
-                logger.info(f"✅ USE aspect type: Business logic applied correctly")
+                logger.info("✅ USE aspect type: Business logic applied correctly")
             else:
-                logger.warning(f"⚠️  USE aspect type: Business logic not applied correctly")
+                logger.warning("⚠️  USE aspect type: Business logic not applied correctly")
         
     except Exception as e:
         logger.error(f"❌ Error during USE aspect type test: {e}", exc_info=True)
@@ -466,9 +466,8 @@ async def test_review_analysis_api():
     """Test the ReviewAnalysisChartService API endpoint directly."""
     
     import requests
-    import json
     
-    logger.info(f"\n🔍 Testing ReviewAnalysisChartService API endpoint directly")
+    logger.info("\n🔍 Testing ReviewAnalysisChartService API endpoint directly")
     
     # Test parameters
     project_id = PROJECT_ID
@@ -504,7 +503,7 @@ async def test_review_analysis_api():
         
         if response.status_code == 200:
             result = response.json()
-            logger.info(f"✅ API call successful")
+            logger.info("✅ API call successful")
             logger.info(f"📊 Response status: {result.get('status')}")
             logger.info(f"📊 Total categories: {result.get('data', {}).get('total_categories', 0)}")
             
@@ -521,9 +520,9 @@ async def test_review_analysis_api():
                 
                 # Check if business logic is applied correctly
                 if cat['total_reviews'] == cat['positive_reviews'] + cat['negative_reviews']:
-                    logger.info(f"   ✅ Business logic applied correctly")
+                    logger.info("   ✅ Business logic applied correctly")
                 else:
-                    logger.warning(f"   ⚠️  Business logic NOT applied correctly")
+                    logger.warning("   ⚠️  Business logic NOT applied correctly")
                     logger.info(f"   - Expected: {cat['positive_reviews'] + cat['negative_reviews']}")
                     logger.info(f"   - Actual: {cat['total_reviews']}")
                     logger.info(f"   - Difference: {cat['total_reviews'] - (cat['positive_reviews'] + cat['negative_reviews'])}")

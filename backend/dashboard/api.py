@@ -858,7 +858,7 @@ async def get_review_insights_data(request: ReviewInsightsRequest):
         # Initialize the ReviewAnalysisChartService directly
         service = ReviewAnalysisChartService(
             project_id=request.project_id,
-            filters=request.get_project_filters().to_dict() if request.filters else None
+            filters=request.filters
         )
         
         # Get phy_perf data sorted by negative reviews for pain points
@@ -1041,11 +1041,15 @@ async def get_all_review_data(request: DashboardRequest):
         # Parse filters
         project_filters = ProjectFilters.from_dict(request.filters) if request.filters else ProjectFilters()
         
-        # Get filtered ASINs
-        from dashboard.services.base_service import BaseDashboardService
-        base_service = BaseDashboardService(request.project_id)
-        base_service.set_project_filters(project_filters)
-        filtered_asins = base_service._get_filtered_asins()
+        # Use ReviewAnalysisChartService to get all review data directly
+        from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters
+        )
+        
+        # Get filtered ASINs first to check if we have any data
+        filtered_asins = service._get_asins_to_analyze()
         
         if not filtered_asins:
             logger.warning(f"No ASINs found for project {request.project_id}")
@@ -1057,9 +1061,8 @@ async def get_all_review_data(request: DashboardRequest):
                 total_reviews=0
             )
         
-        # Use enhanced ReviewDataService to get grouped reviews
-        review_data_service = ReviewDataService(base_service.supabase)
-        raw_data = await review_data_service.get_reviews_by_category(
+        # Use the service's review data service to get grouped reviews
+        raw_data = await service.review_data_service.get_reviews_by_category(
             project_id=request.project_id,
             asins=filtered_asins,
             category_id=None,  # Get all categories
@@ -1070,7 +1073,23 @@ async def get_all_review_data(request: DashboardRequest):
         converted_data = {}
         if 'grouped_reviews' in raw_data:
             for detail_text, reviews in raw_data['grouped_reviews'].items():
-                converted_data[detail_text] = [ReviewData(**review) for review in reviews]
+                # Transform review data to match ReviewData model fields
+                transformed_reviews = []
+                for review in reviews:
+                    transformed_review = {
+                        'id': review.get('review_id', ''),
+                        'product_id': review.get('productId', review.get('product_id', '')),
+                        'text': review.get('review_text', ''),
+                        'sentiment': review.get('sentiment', 'neutral'),
+                        'category': review.get('category_name', ''),
+                        'aspect': review.get('aspect_description', ''),
+                        'rating': review.get('rating', 0),
+                        'verified': review.get('verified', False),
+                        'date': review.get('review_date', ''),
+                        'brand': review.get('brand', '')
+                    }
+                    transformed_reviews.append(ReviewData(**transformed_review))
+                converted_data[detail_text] = transformed_reviews
         
         response = AllReviewDataResponse(
             data=converted_data,
