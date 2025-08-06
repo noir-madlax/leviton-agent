@@ -242,7 +242,7 @@ export class DatabaseService {
           segments: [],
           extend_fields: {}
         },
-          timeframe: { period: '' } // 🔧 不设置硬编码默认值
+          timeframe: { period: 'year' } // 🔧 设置默认时间周期
       }
     }
 
@@ -253,7 +253,7 @@ export class DatabaseService {
         segments: chartState.filters.segments || [],
         extend_fields: chartState.filters.extend_fields || {}
       },
-      timeframe: { period: chartState.timeframe?.period || '' } // 🔧 移除硬编码的 'year' 默认值
+      timeframe: { period: chartState.timeframe?.period || 'year' } // 🔧 设置默认时间周期
     }
 
     console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)
@@ -344,23 +344,23 @@ export class DatabaseService {
   }
 
   // 💰 Get Price Distribution data with filters
-  async getPriceDistributionData(projectId: string): Promise<any> {
+  async getPriceDistributionData(projectId: string, filters?: ProjectFilters): Promise<any> {
     try {
-      // 🆕 从过滤器状态管理器获取过滤器数据
-      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
 
-      console.log(`🔍 [DATABASE-SERVICE] Getting Price Distribution data with filters from state manager:`, filters)
+      console.log(`🔍 [DATABASE-SERVICE] Getting Price Distribution data with filters:`, filtersToUse)
 
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
       const requestBody = {
         project_id: projectId,
-        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+        ...filtersToUse  // 🎯 直接展开过滤器结果
       }
 
       console.log('🔍 Calling Price Distribution API:', requestBody)
 
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/price-distribution`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -378,6 +378,84 @@ export class DatabaseService {
       return result
     } catch (error) {
       console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Price vs Revenue scatter chart data with independent filtering
+  async getPriceVsRevenueData(projectId: string, filters?: ProjectFilters): Promise<any> {
+    try {
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.PRICE_VS_REVENUE)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Price vs Revenue data with filters:`, filtersToUse)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filtersToUse  // 直接展开过滤器结果
+      }
+
+      console.log('🔍 Calling Price vs Revenue API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-vs-revenue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price vs Revenue API call failed: ${response.status}`)
+      }
+
+      const data = await response.json()
+      console.log('✅ Price vs Revenue API response received:', data)
+      
+      return data
+    } catch (error) {
+      console.error('Error fetching Price vs Revenue data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Brand Price Distribution data with independent filtering
+  async getBrandPriceDistributionData(projectId: string, filters?: ProjectFilters): Promise<any> {
+    try {
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.BRAND_PRICE_DISTRIBUTION)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Brand Price Distribution data with filters:`, filtersToUse)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filtersToUse  // 直接展开过滤器结果
+      }
+
+      console.log('🔍 Calling Brand Price Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/brand-price-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Price Distribution API call failed: ${response.status}`)
+      }
+
+      const data = await response.json()
+      console.log('✅ Brand Price Distribution API response received:', data)
+      
+      return data
+    } catch (error) {
+      console.error('Error fetching Brand Price Distribution data:', error)
       throw error
     }
   }

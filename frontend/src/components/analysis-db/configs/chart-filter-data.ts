@@ -23,7 +23,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: true,
       segments: false,
       timeframe: true,
-      extend_fields: ['smart_capability'] // 明确指定可见的扩展字段
+      extend_fields: true // 明确指定可见的扩展字段
     },
     
     default_values: {
@@ -67,7 +67,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: false,  // 这个chart不显示brand筛选
       segments: true, // 但显示segments筛选
       timeframe: true,
-      extend_fields: ['smart_capability', 'dfasdfasdf', 'market_segment'] // 明确指定可见的扩展字段
+      extend_fields: true // 明确指定可见的扩展字段
     },
     
     default_values: {
@@ -162,7 +162,7 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
       brands: true,
       segments: false,
       timeframe: true,
-      extend_fields: ['smart_capability'] // 修复：明确指定可见的扩展字段
+      extend_fields: true // 修复：明确指定可见的扩展字段
     },
     
     default_values: {
@@ -191,6 +191,101 @@ export const CHART_FILTER_CONFIGS: Record<string, ChartFilterConfig> = {
     metadata: {
       name: 'Price Analysis Filter',
       description: '价格分布分析专用筛选器',
+      version: '1.0.0',
+      created_at: '2024-01-15',
+      updated_at: '2024-01-15'
+    }
+  },
+
+  // Price vs Revenue散点图配置
+  [CHART_NAMES.PRICE_VS_REVENUE]: {
+    chart_id: CHART_NAMES.PRICE_VS_REVENUE,
+    chart_type: CHART_NAMES.PRICE_VS_REVENUE,
+    project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7',
+    inherit_from_project: false,
+    
+    visible_filters: {
+      categories: true,
+      brands: true,
+      segments: true,
+      timeframe: true,
+      extend_fields: true
+    },
+    
+    default_values: {
+      categories: [],
+      brands: [],
+      segments: [],
+      timeframe: '1_year',
+      extend_fields: {
+        smart_capability: 'All'
+      }
+    },
+    
+    extend_fields: [
+      {
+        field_name: 'smart_capability',
+        display_name: 'Smart Capability',
+        field_type: 'select',
+        filter_options: {
+          options: ['All', 'Smart', 'Non-Smart'],
+          default: 'All'
+        },
+        is_required: false,
+        sort_order: 1
+      }
+    ],
+    
+    metadata: {
+      name: 'Price vs Revenue Scatter Filter',
+      description: '价格收入散点图专用筛选器',
+      version: '1.0.0',
+      created_at: '2024-01-15',
+      updated_at: '2024-01-15'
+    }
+  },
+
+  // Brand Price Distribution配置
+  [CHART_NAMES.BRAND_PRICE_DISTRIBUTION]: {
+    chart_id: CHART_NAMES.BRAND_PRICE_DISTRIBUTION,
+    chart_type: CHART_NAMES.BRAND_PRICE_DISTRIBUTION,
+    project_id: 'd2c02b80-4c82-44cc-8093-56708a7883f7',
+    inherit_from_project: false,
+    
+    visible_filters: {
+      categories: true,
+      brands: true,
+      segments: false, // 品牌分布不需要segments筛选
+      timeframe: true,
+      extend_fields: true
+    },
+    
+    default_values: {
+      categories: [],
+      brands: [],
+      timeframe: '1_year',
+      extend_fields: {
+        smart_capability: 'All'
+      }
+    },
+    
+    extend_fields: [
+      {
+        field_name: 'smart_capability',
+        display_name: 'Smart Capability',
+        field_type: 'select',
+        filter_options: {
+          options: ['All', 'Smart', 'Non-Smart'],
+          default: 'All'
+        },
+        is_required: false,
+        sort_order: 1
+      }
+    ],
+    
+    metadata: {
+      name: 'Brand Price Distribution Filter',
+      description: '品牌价格分布专用筛选器',
       version: '1.0.0',
       created_at: '2024-01-15',
       updated_at: '2024-01-15'

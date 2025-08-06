@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useMemo } from 'react'
+import React, { useState, useMemo, useEffect } from 'react'
 import { Card } from "@/components/ui/card"
 import { XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, ScatterChart, Scatter } from 'recharts'
 import { BrandViolinChart } from "../charts/brand-violin-chart"
@@ -12,9 +12,10 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { FilterRenderer } from "@/components/analysis-db/filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
-import { usePriceDistributionDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
-import { usePricingAnalysisFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
+import { usePriceDistributionDataRefresh, usePriceVsRevenueDataRefresh, useBrandPriceDistributionDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
+import { usePricingAnalysisFilters, usePriceVsRevenueFilters, useBrandPriceDistributionFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
 import { CHART_NAMES } from "@/components/analysis-db/constants"
+import { useChartsT } from "@/i18n/hooks"
 
 // 定义价格统计数据类型
 interface PriceStats {
@@ -168,6 +169,7 @@ function PriceDistributionByTypeChart({
   priceDataLoading: boolean,
   refreshPriceData: (filters: ProjectFilters) => Promise<any>
 }) {
+  const chartsT = useChartsT()
   const [priceType, setPriceType] = useState<PriceType>('unit')
 
   // 过滤器 Hook
@@ -205,7 +207,7 @@ function PriceDistributionByTypeChart({
         <div className="mb-4">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-            Price Distribution by Product Type
+            {chartsT('priceDistributionByProductType')}
           </h3>
           <FilterRenderer
             chartName={CHART_NAMES.PRICE_ANALYSIS}
@@ -237,44 +239,65 @@ function PriceDistributionByTypeChart({
   )
 }
 
-
-export function PricingAnalysis({ data: initialData, projectId, initialFilters }: PricingAnalysisProps) {
-  const [priceType, setPriceType] = useState<PriceType>('unit')
-  
-  // Get chart sections configuration for conditional rendering
-  const { shouldShowChart } = useChartSections('pricing-analysis', projectId || '')
-
-  // Price Distribution数据状态管理 - 使用新的hook
+// Price vs Revenue 散点图独立组件
+function PriceVsRevenueChart({
+  projectId,
+  initialFilters
+}: {
+  projectId?: string,
+  initialFilters?: ProjectFilters
+}) {
+  const chartsT = useChartsT()
+  // 使用独立的数据刷新hook
   const {
-    data: priceDistributionData,
-    loading: priceDataLoading,
-    error: priceDataError,
-    refreshData: refreshPriceData
-  } = usePriceDistributionDataRefresh(projectId || '', initialData)
+    data: priceVsRevenueData,
+    loading: priceVsRevenueLoading,
+    error: priceVsRevenueError,
+    refreshData: refreshPriceVsRevenueData
+  } = usePriceVsRevenueDataRefresh(projectId || '', undefined)
 
-  // 获取所有分类数据 - 使用新的数据源
-  const allCategories = useMemo(() => 
-    priceDistributionData?.priceDistribution || initialData?.priceDistribution || [],
-    [priceDistributionData, initialData]
+  // 使用独立的过滤器hook
+  const {
+    filters,
+    handleFiltersReady,
+    handleFiltersChange
+  } = usePriceVsRevenueFilters(
+    refreshPriceVsRevenueData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
   )
 
-  // 散点图相关的数据处理函数
+  // 🔧 修复：在组件挂载时触发初始数据加载（只执行一次）
+  useEffect(() => {
+    if (projectId) {
+      console.log("🚀 Triggering initial data fetch for PriceVsRevenueChart...");
+      const defaultFilters: ProjectFilters = {
+        categories: [],
+        asins: [],
+        brands: [],
+        segments: [],
+        extend_fields: {},
+        time_period: ""
+      };
+      refreshPriceVsRevenueData(initialFilters || defaultFilters);
+    }
+  }, [projectId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // 散点图数据处理函数
   const getPriceVsRevenueData = (): ScatterPlotProduct[] => {
     const allProducts: ScatterPlotProduct[] = []
     
-    // 使用新的数据源或fallback到原始数据
-    const topProductsData = priceDistributionData?.topProducts || initialData?.topProducts
-    const segmentNamesData = priceDistributionData?.segmentNames || initialData?.segmentNames
-    
-    // 检查是否有散点图所需的数据
-    if (!topProductsData) {
+    if (!priceVsRevenueData?.topProducts) {
       return []
     }
+    
+    const topProductsData = priceVsRevenueData.topProducts
+    const segmentNamesData = priceVsRevenueData.segmentNames
     
     // 收集segments中的产品
     if (topProductsData.segments && segmentNamesData) {
       segmentNamesData.forEach((segment: string) => {
-        const products = topProductsData!.segments[segment] || []
+        const products = topProductsData.segments[segment] || []
         products.forEach((product: ProductData) => {
           allProducts.push({
             id: product.id || '',
@@ -331,10 +354,7 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
       })
     }
     
-    // 按revenue排序，取前20
     return allProducts
-      .sort((a, b) => b.revenue - a.revenue)
-      .slice(0, 20)
   }
 
   const getBrandDataForScatterChart = () => {
@@ -354,10 +374,10 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
     }))
   }
 
-  // 添加散点图点击事件处理器
+  // 散点图点击事件处理器
   const handleScatterClick = (data: ScatterClickData) => {
     if (data && data.payload) {
-      // 直接跳转Amazon链接，参考竞品分析的实现
+      // 直接跳转Amazon链接
       if (data.payload.url) {
         window.open(data.payload.url, '_blank', 'noopener,noreferrer')
       } else if (data.payload.id) {
@@ -368,31 +388,254 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
     }
   }
 
+  const hasScatterData = priceVsRevenueData?.topProducts && (
+    (priceVsRevenueData.topProducts.segments && priceVsRevenueData.segmentNames) ||
+    priceVsRevenueData.topProducts.dimmerSwitches ||
+    priceVsRevenueData.topProducts.lightSwitches
+  )
+
+  return (
+    <div className="mb-8" data-chart-id={CHART_NAMES.PRICE_VS_REVENUE}>
+      <Card className="p-6 bg-gray-50">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+            {chartsT('priceVsRevenueDistribution')}
+          </h3>
+          
+          <FilterRenderer
+            chartName={CHART_NAMES.PRICE_VS_REVENUE}
+            projectId={projectId || ''}
+            currentFilters={filters}
+            onChange={handleFiltersChange}
+            onFiltersReady={handleFiltersReady}
+            disabled={priceVsRevenueLoading}
+            className="mb-6"
+          />
+        </div>
+
+        {priceVsRevenueLoading ? (
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <span className="ml-2">{chartsT('loadingScatterData')}</span>
+          </div>
+        ) : priceVsRevenueError ? (
+          <div className="text-red-600 text-center py-8">
+            {chartsT('errorLoadingScatterChart')}: {priceVsRevenueError}
+          </div>
+        ) : hasScatterData ? (
+          <div className="h-[400px]">
+            <ResponsiveContainer width="100%" height="100%">
+              <ScatterChart data={getPriceVsRevenueData()}>
+                <CartesianGrid strokeDasharray="3,3" />
+                <XAxis 
+                  type="number" 
+                  dataKey="x" 
+                  name="Price"
+                  label={{ value: chartsT('priceUSD'), position: 'insideBottom', offset: -5 }}
+                />
+                <YAxis 
+                  type="number" 
+                  dataKey="y" 
+                  name="Revenue"
+                  label={{ value: chartsT('revenue'), angle: -90, position: 'insideLeft' }}
+                />
+                <Tooltip 
+                  cursor={{ strokeDasharray: '3,3' }}
+                  content={({ active, payload }) => {
+                    if (active && payload && payload.length) {
+                      const data = payload[0].payload
+                      return (
+                        <div className="bg-white p-3 border rounded shadow">
+                          <p className="font-medium">{data.name}</p>
+                          <p className="text-sm text-gray-600">{chartsT('brand')}: {data.brand}</p>
+                          <p className="text-sm text-gray-600">{chartsT('segment')}: {data.segment}</p>
+                          <p className="text-sm text-gray-600">{chartsT('price')}: ${data.price}</p>
+                          <p className="text-sm text-gray-600">{chartsT('revenue')}: ${data.revenue.toLocaleString()}</p>
+                        </div>
+                      )
+                    }
+                    return null
+                  }}
+                />
+                <Legend />
+                {getBrandDataForScatterChart().map((brandData, index) => (
+                  <Scatter
+                    key={brandData.brand}
+                    name={brandData.brand}
+                    data={brandData.products}
+                    fill={getChartColor(index)}
+                    onClick={handleScatterClick}
+                    style={{ cursor: 'pointer' }}
+                  />
+                ))}
+              </ScatterChart>
+            </ResponsiveContainer>
+          </div>
+        ) : (
+          <div className="text-gray-500 text-center py-8">
+            {chartsT('noScatterData')}
+          </div>
+        )}
+      </Card>
+    </div>
+  )
+}
+
+// Brand Price Distribution 独立组件
+function BrandPriceDistributionChart({
+  projectId,
+  initialFilters
+}: {
+  projectId?: string,
+  initialFilters?: ProjectFilters
+}) {
+  const chartsT = useChartsT()
+  const [priceType, setPriceType] = useState<PriceType>('unit')
+
+  // 使用独立的数据刷新hook
+  const {
+    data: brandPriceDistributionData,
+    loading: brandPriceDistributionLoading,
+    error: brandPriceDistributionError,
+    refreshData: refreshBrandPriceDistributionData
+  } = useBrandPriceDistributionDataRefresh(projectId || '', undefined)
+
+  // 使用独立的过滤器hook
+  const {
+    filters,
+    handleFiltersReady,
+    handleFiltersChange
+  } = useBrandPriceDistributionFilters(
+    refreshBrandPriceDistributionData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
+  )
+
+  // 🔧 修复：在组件挂载时触发初始数据加载（只执行一次）
+  useEffect(() => {
+    if (projectId) {
+      console.log("🚀 Triggering initial data fetch for BrandPriceDistributionChart...");
+      const defaultFilters: ProjectFilters = {
+        categories: [],
+        asins: [],
+        brands: [],
+        segments: [],
+        extend_fields: {},
+        time_period: ""
+      };
+      refreshBrandPriceDistributionData(initialFilters || defaultFilters);
+    }
+  }, [projectId]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  return (
+    <div className="mb-8" data-chart-id={CHART_NAMES.BRAND_PRICE_DISTRIBUTION}>
+      <Card className="p-6 bg-gray-50">
+        <div className="mb-4">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+            <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
+            {chartsT('brandPriceDistribution')}
+          </h3>
+          
+          <FilterRenderer
+            chartName={CHART_NAMES.BRAND_PRICE_DISTRIBUTION}
+            projectId={projectId || ''}
+            currentFilters={filters}
+            onChange={handleFiltersChange}
+            onFiltersReady={handleFiltersReady}
+            disabled={brandPriceDistributionLoading}
+            className="mb-6"
+          />
+          
+          <div className="mb-4">
+            <PriceTypeSelector 
+              onChange={setPriceType} 
+              defaultValue={priceType}
+            />
+          </div>
+        </div>
+
+        {brandPriceDistributionLoading ? (
+          <div className="flex items-center justify-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <span className="ml-2">{chartsT('loadingBrandPriceData')}</span>
+          </div>
+        ) : brandPriceDistributionError ? (
+          <div className="text-red-600 text-center py-8">
+            {chartsT('errorLoadingBrandPrice')}: {brandPriceDistributionError}
+          </div>
+        ) : brandPriceDistributionData?.brandPriceDistribution ? (
+          <div className="space-y-8">
+            {brandPriceDistributionData.brandPriceDistribution.map((categoryData: { category: string; brands: { name: string; skuPrices: number[]; unitPrices: number[] }[] }) => {
+              return (
+                <div key={categoryData.category}>
+                  <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
+                  <div className="h-[320px]">
+                    <BrandViolinChart
+                      brands={categoryData.brands}
+                      priceType={priceType}
+                      category={categoryData.category}
+                      projectId={projectId || ''}
+                    />
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        ) : (
+          <div className="text-gray-500 text-center py-8">
+            {chartsT('noBrandPriceData')}
+          </div>
+        )}
+      </Card>
+    </div>
+  )
+}
+
+
+export function PricingAnalysis({ data: initialData, projectId, initialFilters }: PricingAnalysisProps) {
+  const chartsT = useChartsT()
+  const [priceType, setPriceType] = useState<PriceType>('unit')
+  
+  // Get chart sections configuration for conditional rendering
+  const { shouldShowChart } = useChartSections('pricing-analysis', projectId || '')
+
+  // Price Distribution数据状态管理 - 使用新的hook
+  const {
+    data: priceDistributionData,
+    loading: priceDataLoading,
+    error: priceDataError,
+    refreshData: refreshPriceData
+  } = usePriceDistributionDataRefresh(projectId || '', initialData)
+
+  // 获取所有分类数据 - 使用新的数据源
+  const allCategories = useMemo(() => 
+    priceDistributionData?.priceDistribution || initialData?.priceDistribution || [],
+    [priceDistributionData, initialData]
+  )
+
+
+
   // 检查是否有基础数据 - 使用新的数据源
   const currentData = priceDistributionData || initialData
   const hasBaseData = currentData?.priceDistribution && currentData.priceDistribution.length > 0
-  const hasScatterData = currentData?.topProducts && (
-    (currentData.topProducts.segments && currentData.segmentNames) ||
-    currentData.topProducts.dimmerSwitches ||
-    currentData.topProducts.lightSwitches
-  )
   
   if (!hasBaseData) {
     return (
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 Pricing Analysis</h2>
+        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">💰 {chartsT('pricingAnalysis')}</h2>
         <Card className="p-6 bg-gray-50">
           {priceDataLoading ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-2">Loading pricing analysis data...</span>
+              <span className="ml-2">{chartsT('loadingPricingData')}</span>
             </div>
           ) : priceDataError ? (
-            <p className="text-red-500 text-center">Error loading data: {priceDataError}</p>
+            <p className="text-red-500 text-center">{chartsT('errorLoadingData')}: {priceDataError}</p>
           ) : (
             <>
-              <p className="text-center text-gray-500">Price distribution data is not available.</p>
-              <p className="text-center text-gray-400 text-sm mt-2">Waiting for valid product data...</p>
+              <p className="text-center text-gray-500">{chartsT('noPriceDistributionData')}</p>
+              <p className="text-center text-gray-400 text-sm mt-2">{chartsT('waitingForValidData')}</p>
             </>
           )}
         </Card>
@@ -403,7 +646,7 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
   return (
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-red-500 pl-4 mb-6">
-          💰 Pricing Analysis
+          💰 {chartsT('pricingAnalysis')}
         </h2>
 
       {/* Price Distribution by Segment - 移至最上方 */}
@@ -412,7 +655,7 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
         <Card className="p-6 bg-gray-50">
           <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
             <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-            Price Distribution by Segment
+            {chartsT('priceDistributionBySegment')}
           </h3>
           <div className="mb-4">
             <PriceTypeSelector 
@@ -424,12 +667,12 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
             <table className="w-full">
               <thead>
                 <tr className="border-b">
-                  <th className="text-left pb-2">Segment</th>
-                  <th className="text-right pb-2">Products</th>
-                  <th className="text-right pb-2">Min</th>
-                  <th className="text-right pb-2">Median</th>
-                  <th className="text-right pb-2">Max</th>
-                  <th className="text-right pb-2">Average</th>
+                  <th className="text-left pb-2">{chartsT('segment')}</th>
+                  <th className="text-right pb-2">{chartsT('productsText')}</th>
+                  <th className="text-right pb-2">{chartsT('min')}</th>
+                  <th className="text-right pb-2">{chartsT('median')}</th>
+                  <th className="text-right pb-2">{chartsT('max')}</th>
+                  <th className="text-right pb-2">{chartsT('average')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -468,74 +711,12 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
       </div>
       )}
 
-      {/* Price vs Revenue Distribution of Top Selling 20 Products */}
+      {/* Price vs Revenue Distribution of Top Selling 20 Products - Independent Component */}
       {shouldShowChart('price-vs-revenue') && (
-      <div className="mb-8" data-chart-id="price-vs-revenue">
-          <Card className="p-6 bg-gray-50">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-              Price vs Revenue Distribution of Top Selling 20 Products
-            </h3>
-            {hasScatterData ? (
-              <div className="h-[400px]">
-                <ResponsiveContainer width="100%" height="100%">
-                  <ScatterChart data={getPriceVsRevenueData()}>
-                    <CartesianGrid strokeDasharray="3,3" />
-                    <XAxis 
-                      type="number" 
-                      dataKey="x" 
-                      name="Price"
-                      label={{ value: 'Price (USD)', position: 'insideBottom', offset: -5 }}
-                    />
-                    <YAxis 
-                      type="number" 
-                      dataKey="y" 
-                      name="Revenue"
-                      label={{ value: 'Revenue', angle: -90, position: 'insideLeft' }}
-                    />
-                    <Tooltip 
-                      cursor={{ strokeDasharray: '3,3' }}
-                      content={({ active, payload }) => {
-                        if (active && payload && payload.length) {
-                          const data = payload[0].payload
-                          return (
-                            <div className="bg-white p-3 border rounded shadow">
-                              <p className="font-medium">{data.name}</p>
-                              <p className="text-sm text-gray-600">Brand: {data.brand}</p>
-                              <p className="text-sm text-gray-600">Segment: {data.segment}</p>
-                              <p className="text-sm text-gray-600">Price: ${data.price}</p>
-                              <p className="text-sm text-gray-600">Revenue: ${data.revenue.toLocaleString()}</p>
-                            </div>
-                          )
-                        }
-                        return null
-                      }}
-                    />
-                    <Legend />
-                    {getBrandDataForScatterChart().map((brandData, index) => (
-                      <Scatter
-                        key={brandData.brand}
-                        name={brandData.brand}
-                        data={brandData.products}
-                        fill={getChartColor(index)}
-                        onClick={handleScatterClick}
-                        style={{ cursor: 'pointer' }}
-                      />
-                    ))}
-                  </ScatterChart>
-                </ResponsiveContainer>
-              </div>
-            ) : (
-              <div className="h-[400px] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4"></div>
-                  <p className="text-gray-500">Loading scatter chart data...</p>
-                  <p className="text-sm text-gray-400 mt-2">Waiting for product analysis data</p>
-                </div>
-              </div>
-            )}
-          </Card>
-      </div>
+        <PriceVsRevenueChart
+          projectId={projectId}
+          initialFilters={initialFilters}
+        />
       )}
 
       {/* Price Distribution by Product Type - with its own filter */}
@@ -550,61 +731,12 @@ export function PricingAnalysis({ data: initialData, projectId, initialFilters }
         />
       )}
 
-      {/* Brand Price Distribution */}
+      {/* Brand Price Distribution - Independent Component */}
       {shouldShowChart('price-distribution-by-brands') && (
-      <div className="mb-8" data-chart-id="price-distribution-by-brands">
-          <Card className="p-6 bg-gray-50">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-              Brand Price Distribution
-            </h3>
-            <div className="mb-4">
-              <PriceTypeSelector 
-                onChange={setPriceType} 
-                defaultValue={priceType}
-              />
-            </div>
-            
-            <div className="space-y-8">
-              {currentData?.brandPriceDistribution?.map((categoryData: { category: string; brands: { name: string; skuPrices: number[]; unitPrices: number[] }[] }) => {
-                const categoryName = categoryData.category
-                const isCombinedCategory = categoryName.includes(' + ')
-
-                let filterMode = 'category'
-                let extendFieldsConfig
-
-                if (isCombinedCategory) {
-                  const parts = categoryName.split(' + ')
-                  const smartCapability = parts.length > 1 ? parts[1].trim() : null
-
-                  if (smartCapability && (smartCapability === 'Smart' || smartCapability === 'Non-Smart')) {
-                    filterMode = 'extend_fields'
-                    extendFieldsConfig = {
-                      field: 'smart_capability',
-                      value: smartCapability,
-                    }
-                  }
-                }
-
-                return (
-                  <div key={categoryName}>
-                    <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
-                    <div className="h-[320px]">
-                      <BrandViolinChart
-                        brands={categoryData.brands}
-                        priceType={priceType}
-                        category={categoryData.category}
-                        projectId={projectId || ''}
-                        filterMode={filterMode as 'category' | 'extend_fields'}
-                        extendFieldsConfig={extendFieldsConfig}
-                      />
-                    </div>
-                  </div>
-                )
-              })}
-            </div>
-          </Card>
-      </div>
+        <BrandPriceDistributionChart
+          projectId={projectId}
+          initialFilters={initialFilters}
+        />
       )}
     </section>
   )

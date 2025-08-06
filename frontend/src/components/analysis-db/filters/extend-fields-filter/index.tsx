@@ -3,7 +3,7 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
-import { useCommonT } from '@/i18n/hooks'
+import { useCommonT, useProjectT, useFiltersT, useT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
 import { useExtendFieldsData } from './hooks/useExtendFieldsData'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context'
@@ -22,11 +22,18 @@ export function ExtendFieldsFilter({
 
   // 国际化hooks
   const commonT = useCommonT()
+  const projectT = useProjectT()
+  const filtersT = useFiltersT()
+  const t = useT()
 
-  // 翻译字段显示名称 - 暂时不支持国际化，直接显示原始名称
+  // 翻译字段显示名称
   const translateFieldName = (displayName: string) => {
-    // 直接返回原始显示名称，不进行国际化处理
-    return displayName
+    switch (displayName) {
+      case 'Smart Capability':
+        return projectT('smartCapability')
+      default:
+        return displayName
+    }
   }
 
   // 使用新的 hook 获取 extend fields 数据，确保只调用一次接口
@@ -233,8 +240,8 @@ export function ExtendFieldsFilter({
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   selectCurrentValue.length > 0 
-                    ? `已选择 ${selectCurrentValue.length} 项` 
-                    : "选择选项"
+                    ? t('filters.selectedItems', { count: selectCurrentValue.length })
+                    : filtersT('selectOption')
                 } />
               </SelectTrigger>
               <SelectContent>

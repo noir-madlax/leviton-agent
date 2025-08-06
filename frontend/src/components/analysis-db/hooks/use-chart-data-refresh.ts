@@ -76,7 +76,35 @@ export function usePriceDistributionDataRefresh(projectId: string, initialData?:
     refreshFunction: async (projectId: string, filters: ProjectFilters) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       
-      return await databaseService.getPriceDistributionData(projectId)
+      return await databaseService.getPriceDistributionData(projectId, filters)
+    }
+  })
+}
+
+// Price vs Revenue散点图专用的数据刷新hook
+export function usePriceVsRevenueDataRefresh(projectId: string, initialData?: any) {
+  return useChartDataRefresh({
+    chartId: 'price-vs-revenue',
+    projectId,
+    initialData,
+    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      
+      return await databaseService.getPriceVsRevenueData(projectId, filters)
+    }
+  })
+}
+
+// Brand Price Distribution专用的数据刷新hook
+export function useBrandPriceDistributionDataRefresh(projectId: string, initialData?: any) {
+  return useChartDataRefresh({
+    chartId: 'price-distribution-by-brands',
+    projectId,
+    initialData,
+    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      
+      return await databaseService.getBrandPriceDistributionData(projectId, filters)
     }
   })
 }

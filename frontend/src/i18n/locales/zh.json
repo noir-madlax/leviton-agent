@@ -46,7 +46,7 @@
     "billing": "账单"
   },
   "project": {
-    "createProject": "创建项目",
+    "amazonCategory": "亚马逊类别",
     "createNewProject": "创建新项目",
     "projectName": "项目名称",
     "description": "项目描述",
@@ -96,22 +96,15 @@
     "categoryAnalysisDescription": "您的项目分析基于亚马逊产品类别。我们比较品牌表现、竞争分析以及用户偏好的产品特性，涵盖所选类别内不同品牌的产品。这种全面的方法确保您获得完整的市场洞察，以便做出战略决策。",
     "dataSelectionDescription": "输入要包含在项目中的产品类别和产品数量",
     "createProject": "创建项目",
-    "brands": "品牌",
-    "totalBrands": "品牌总数",
     "dataSources": "数据源",
-    "amazonCategory": "亚马逊类别",
     "selectedCategory": "已选类别：",
     "projectCreated": "项目已创建",
     "retry": "重试",
     "failedLoadData": "加载产品数据失败，请重试。",
-    "createNewProject": "创建新项目",
     "projectScopeAndFilters": "项目范围和筛选器",
     "filtersApplyToWholeProject": "筛选器将应用于整个项目",
     "projectDataScope": "项目数据范围",
-    "products": "产品",
-    "brands": "品牌",
     "filters": "筛选器",
-    "amazonCategory": "亚马逊类别",
     "smartCapability": "智能功能",
     "nonSmart": "非智能",
     "smart": "智能",
@@ -148,7 +141,47 @@
     "clickToExpand": "点击展开",
     "downloadChart": "下载图表",
     "shareChart": "分享图表",
-    "salesAnalyticsChat": "销售分析对话"
+    "salesAnalyticsChat": "销售分析对话",
+    
+    "pricingAnalysis": "价格分析",
+    "priceDistributionBySegment": "按细分市场的价格分布",
+    "priceDistributionByProductType": "按产品类型的价格分布",
+    "priceVsRevenueDistribution": "畅销前20产品的价格与收入分布",
+    "brandPriceDistribution": "品牌价格分布",
+    
+    "segment": "细分",
+    "min": "最低",
+    "median": "中位数",
+    "max": "最高",
+    "average": "平均",
+    "mean": "均值",
+    
+    "priceType": "价格类型",
+    "fullPackPrice": "整包价格",
+    "unitPrice": "单价",
+    "priceUSD": "价格 (美元)",
+    "price": "价格",
+    "priceRange": "价格区间",
+    
+    "loadingPricingData": "加载价格分析数据中...",
+    "loadingScatterData": "加载散点图数据中...",
+    "loadingBrandPriceData": "加载品牌价格分布数据中...",
+    "loadingProducts": "加载产品中...",
+    
+    "errorLoadingData": "数据加载失败",
+    "errorLoadingScatterChart": "散点图加载失败",
+    "errorLoadingBrandPrice": "品牌价格分布加载失败",
+    
+    "noPriceDistributionData": "价格分布数据不可用。",
+    "waitingForValidData": "等待有效产品数据...",
+    "noScatterData": "散点图数据不可用",
+    "noBrandPriceData": "品牌价格分布数据不可用",
+    "noPricingDataAvailable": "价格数据不可用",
+    "waitingForBrandData": "等待有效品牌数据...",
+    
+    "brand": "品牌",
+    "totalInBrand": "品牌总计",
+    "productsText": "产品"
   },
   "filters": {
     "applyFilters": "应用筛选",
@@ -162,7 +195,9 @@
     "reset": "重置",
     "brand": "品牌",
     "segment": "细分",
-    "category": "类别"
+    "category": "类别",
+    "selectedItems": "已选择 {{count}} 项",
+    "selectOption": "选择选项"
   },
   "scraping": {
     "dataScraping": "数据抓取",

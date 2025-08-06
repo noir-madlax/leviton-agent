@@ -7,7 +7,7 @@ from ..base_models import BaseRequestModel
 # ==================== 请求模型 ====================
 
 class PriceDistributionRequest(BaseRequestModel):
-    """价格分布分析请求模型"""
+    """价格分布分析请求模型 - 按产品类型的价格分布"""
     
     class Config:
         json_schema_extra = {
@@ -16,6 +16,44 @@ class PriceDistributionRequest(BaseRequestModel):
                 "filters": {
                     "categories": ["Light Switches", "Dimmer Switches"],
                     "brands": [],
+                    "segments": [],
+                    "extend_fields": {"smart_capability": "Smart"}
+                },
+                "timeframe": {
+                    "period": "year"
+                }
+            }
+        }
+
+class PriceVsRevenueRequest(BaseRequestModel):
+    """价格收入散点图分析请求模型"""
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "filters": {
+                    "categories": ["Light Switches", "Dimmer Switches"],
+                    "brands": ["Leviton", "Lutron"],
+                    "segments": [],
+                    "extend_fields": {"smart_capability": "Smart"}
+                },
+                "timeframe": {
+                    "period": "year"
+                }
+            }
+        }
+
+class BrandPriceDistributionRequest(BaseRequestModel):
+    """品牌价格分布分析请求模型"""
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "filters": {
+                    "categories": ["Light Switches", "Dimmer Switches"],
+                    "brands": ["Leviton", "Lutron"],
                     "segments": [],
                     "extend_fields": {"smart_capability": "Smart"}
                 },
@@ -83,6 +121,23 @@ class CategoryBrandDistribution(BaseModel):
     category: str = Field(..., description="分类名称")
     brands: List[BrandPriceData] = Field(..., description="品牌价格数据列表")
 
+class ProductDetail(BaseModel):
+    """产品详细信息（用于散点图）"""
+    id: str = Field(..., description="产品ID")
+    name: str = Field(..., description="产品名称")
+    brand: str = Field(..., description="品牌名称")
+    price: float = Field(..., description="SKU价格")
+    unitPrice: float = Field(..., description="单位价格")
+    revenue: float = Field(..., description="收入")
+    volume: float = Field(..., description="销量")
+    url: str = Field(..., description="产品URL")
+
+class TopProductsData(BaseModel):
+    """Top产品数据（用于散点图）"""
+    segments: Dict[str, List[ProductDetail]] = Field(..., description="按segment分组的产品")
+    dimmerSwitches: List[ProductDetail] = Field(default_factory=list, description="调光开关产品（兼容性字段）")
+    lightSwitches: List[ProductDetail] = Field(default_factory=list, description="灯开关产品（兼容性字段）")
+
 class PriceDistributionMetadata(BaseModel):
     """价格分布分析元数据"""
     filtered_asins_count: int = Field(..., description="过滤后的ASIN数量")
@@ -92,9 +147,8 @@ class PriceDistributionMetadata(BaseModel):
     categories_processed: List[str] = Field(..., description="处理的分类列表")
 
 class PriceDistributionResponse(BaseModel):
-    """价格分布API响应模型"""
+    """价格分布API响应模型 - 按产品类型的价格分布"""
     priceDistribution: List[CategoryPriceData] = Field(..., description="按分类的价格分布数据")
-    brandPriceDistribution: List[CategoryBrandDistribution] = Field(..., description="按分类的品牌价格分布")
     segmentNames: List[str] = Field(..., description="分类名称列表（兼容性字段）")
     segmentColors: List[str] = Field(..., description="分类颜色列表（兼容性字段）")
     metadata: PriceDistributionMetadata = Field(..., description="分析元数据")
@@ -128,6 +182,68 @@ class PriceDistributionResponse(BaseModel):
                         }
                     }
                 ],
+                "segmentNames": ["Light Switches", "Dimmer Switches"],
+                "segmentColors": ["#FF6B6B", "#4ECDC4"],
+                "metadata": {
+                    "filtered_asins_count": 1250,
+                    "calculation_timestamp": "2024-01-15T10:30:00Z",
+                    "timeframe_used": "year",
+                    "data_source": "product_wide_table",
+                    "categories_processed": ["Light Switches", "Dimmer Switches"]
+                }
+            }
+        }
+
+class PriceVsRevenueResponse(BaseModel):
+    """价格收入散点图API响应模型"""
+    topProducts: TopProductsData = Field(..., description="Top产品数据（用于散点图）")
+    segmentNames: List[str] = Field(..., description="分类名称列表（兼容性字段）")
+    segmentColors: List[str] = Field(..., description="分类颜色列表（兼容性字段）")
+    metadata: PriceDistributionMetadata = Field(..., description="分析元数据")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "topProducts": {
+                    "segments": {
+                        "Light Switches": [
+                            {
+                                "id": "B01ABCD123",
+                                "name": "Leviton Switch",
+                                "brand": "Leviton",
+                                "price": 25.99,
+                                "unitPrice": 25.99,
+                                "revenue": 50000.0,
+                                "volume": 1923,
+                                "url": "https://amazon.com/dp/B01ABCD123"
+                            }
+                        ]
+                    },
+                    "dimmerSwitches": [],
+                    "lightSwitches": []
+                },
+                "segmentNames": ["Light Switches", "Dimmer Switches"],
+                "segmentColors": ["#FF6B6B", "#4ECDC4"],
+                "metadata": {
+                    "filtered_asins_count": 1250,
+                    "calculation_timestamp": "2024-01-15T10:30:00Z",
+                    "timeframe_used": "year",
+                    "data_source": "product_wide_table",
+                    "categories_processed": ["Light Switches", "Dimmer Switches"]
+                }
+            }
+        }
+
+class BrandPriceDistributionResponse(BaseModel):
+    """品牌价格分布API响应模型"""
+    brandPriceDistribution: List[CategoryBrandDistribution] = Field(..., description="按分类的品牌价格分布")
+    segmentNames: List[str] = Field(..., description="分类名称列表（兼容性字段）")
+    segmentColors: List[str] = Field(..., description="分类颜色列表（兼容性字段）")
+    metadata: PriceDistributionMetadata = Field(..., description="分析元数据")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
                 "brandPriceDistribution": [
                     {
                         "category": "Light Switches",

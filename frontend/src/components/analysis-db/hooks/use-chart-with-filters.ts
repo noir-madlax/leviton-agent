@@ -202,6 +202,39 @@ export function usePricingAnalysisFilters(
 
 
 /**
+ * 预设的图表 Hook - 价格收入散点图
+ */
+export function usePriceVsRevenueFilters(
+  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
+  projectId?: string,
+  options?: UseChartWithFiltersOptions
+) {
+  return useChartWithFilters(
+    CHART_NAMES.PRICE_VS_REVENUE,
+    refreshDataFn,
+    projectId,
+    options
+  )
+}
+
+/**
+ * 预设的图表 Hook - 品牌价格分布
+ */
+export function useBrandPriceDistributionFilters(
+  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
+  projectId?: string,
+  options?: UseChartWithFiltersOptions
+) {
+  return useChartWithFilters(
+    CHART_NAMES.BRAND_PRICE_DISTRIBUTION,
+    refreshDataFn,
+    projectId,
+    options
+  )
+}
+
+
+/**
  * 预设的图表 Hook - 销售趋势分析
  */
 export function useSalesTrendFilters(

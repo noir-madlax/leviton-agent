@@ -44,7 +44,22 @@ export function useChartSections(tabKey: string, projectId: string) {
   // Helper function to check if a chart should be shown
   const shouldShowChart = (chartId: string): boolean => {
     const section = chartSections.find(s => s.chart_id === chartId)
-    return section ? section.is_active : false
+    
+    // If configuration is found, use it
+    if (section) {
+      return section.is_active
+    }
+    
+    // If no configuration found, default to true for pricing analysis charts
+    const pricingAnalysisCharts = [
+      'price-distribution-overview',
+      'price-vs-revenue', 
+      'price-distribution-by-type',
+      'price-distribution-by-brands'
+    ]
+    
+    // Default to true for pricing analysis charts, false for others
+    return pricingAnalysisCharts.includes(chartId)
   }
 
   return {

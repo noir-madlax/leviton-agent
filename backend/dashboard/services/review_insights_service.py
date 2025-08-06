@@ -276,7 +276,9 @@ class ReviewInsightsService(BaseDashboardService):
                     'type': get_category_type(agg['aspect_type']),
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
-                    'totalMentions': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
+                    'positiveReviews': agg['positive_mentions'],
+                    'negativeReviews': agg['negative_mentions'],
                     'negativeRate': negative_rate,
                     # New field for frontend mapping
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
@@ -306,7 +308,9 @@ class ReviewInsightsService(BaseDashboardService):
                     'satisfactionLevel': satisfaction_level,
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
-                    'totalMentions': agg['total_mentions'],
+                    'totalReviews': agg['total_mentions'],
+                    'positiveReviews': agg['positive_mentions'],
+                    'negativeReviews': agg['negative_mentions'],
                     'positiveRate': positive_rate,
                     # New field for frontend mapping
                     'relatedDetailTexts': [self._capitalize_words(dt) for dt in list(agg['details'])]
@@ -365,6 +369,8 @@ class ReviewInsightsService(BaseDashboardService):
                     'productAttribute': ', '.join([self._capitalize_words(pg) for pg in list(agg['parent_groups'])]),
                     'gapLevel': gap_level,
                     'mentionCount': agg['total_mentions'],
+                    'positiveCount': agg['positive_mentions'],
+                    'negativeCount': agg['negative_mentions'],
                     # Enhanced fields for frontend optimization
                     'categoryDefinition': agg['category_definition'],
                     'productCount': len(agg['products']),
