@@ -38,7 +38,7 @@ export function FilterRenderer({
   onFiltersReady
 }: FilterRendererProps) {
   // 🆕 从 context 获取统一过滤器数据
-  const { getChartConfig, isLoading: contextLoading } = useUnifiedFilter()
+  const { getChartConfig, isLoading: contextLoading, extendFieldsVersion } = useUnifiedFilter()
   const chartConfig = getChartConfig(chartName)
 
   // 🔧 调试：输出图表配置信息
@@ -117,6 +117,14 @@ export function FilterRenderer({
       setPendingFilters(newPendingFilters)
     }
   }, [chartFilters, chartName, currentFilters])
+
+  // 🆕 监听 extend-fields 版本变化，触发重渲染
+  useEffect(() => {
+    if (extendFieldsVersion > 0) {
+      console.log(`🔄 [FILTER-RENDERER] ExtendFields version changed for ${chartName}, triggering rerender:`, extendFieldsVersion)
+      setExtendFieldsKey(prev => prev + 1)
+    }
+  }, [extendFieldsVersion, chartName])
 
   // 🆕 检测过滤器是否就绪
   useEffect(() => {

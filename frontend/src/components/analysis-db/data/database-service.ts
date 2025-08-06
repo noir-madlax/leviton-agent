@@ -305,10 +305,10 @@ export class DatabaseService {
 
 
   // 🔑 Get TAM Market Share data - 自动从过滤器状态管理器获取过滤器
-  async getTAMMarketShareData(projectId: string): Promise<TAMMarketShareResponse> {
+  async getTAMMarketShareData(projectId: string, chartName: string = CHART_NAMES.MARKET_SHARE_ANALYSIS): Promise<TAMMarketShareResponse> {
     try {
       // 🆕 从过滤器状态管理器获取过滤器数据
-      const filters = this.getFiltersFromState(CHART_NAMES.MARKET_SHARE_ANALYSIS)
+      const filters = this.getFiltersFromState(chartName)
 
       console.log(`🔍 [DATABASE-SERVICE] Getting TAM data with filters from state manager:`, filters)
 

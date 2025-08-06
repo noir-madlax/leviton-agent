@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Slider } from '@/components/ui/slider'
 import { useCommonT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
-import { useExtendFieldsData } from './hooks/useExtendFieldsData'
+import { useExtendFieldsData, registerExtendFieldsRerenderCallback } from './hooks/useExtendFieldsData'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context'
 
 export function ExtendFieldsFilter({
@@ -32,9 +32,23 @@ export function ExtendFieldsFilter({
   const { fieldDefinitions, projectData, loading: fieldsLoading, error } = useExtendFieldsData(projectId)
 
   // 🆕 获取配置
-  const { getChartConfig } = useUnifiedFilter()
+  const { getChartConfig, triggerExtendFieldsRerender } = useUnifiedFilter()
   const chartConfig = getChartConfig(chartName)
   const extendFieldsConfig = chartConfig?.filters?.extend_fields
+
+  // 🆕 注册重渲染回调
+  useEffect(() => {
+    console.log(`🔄 [EXTEND-FIELDS] Registering rerender callback for chart: ${chartName}`)
+    const unregister = registerExtendFieldsRerenderCallback(() => {
+      console.log(`🔄 [EXTEND-FIELDS] Received rerender signal for chart: ${chartName}, triggering context rerender`)
+      triggerExtendFieldsRerender()
+    })
+
+    return () => {
+      console.log(`🔄 [EXTEND-FIELDS] Unregistering rerender callback for chart: ${chartName}`)
+      unregister()
+    }
+  }, [triggerExtendFieldsRerender, chartName])
 
   // 🆕 根据配置过滤要显示的字段
   const visibleFields = useMemo(() => {

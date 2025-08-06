@@ -1,6 +1,6 @@
 "use client"
 
-import React, { createContext, useContext, ReactNode } from 'react'
+import React, { createContext, useContext, ReactNode, useState, useCallback } from 'react'
 import { UnifiedFilterData, ChartFilterConfiguration } from '../types/filters'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 
@@ -12,6 +12,9 @@ interface UnifiedFilterContextType {
   refreshData: () => Promise<void>
   // 🆕 便捷方法：获取特定图表的配置
   getChartConfig: (chartName: string) => ChartFilterConfiguration | null
+  // 🆕 extend-fields 重渲染管理
+  extendFieldsVersion: number
+  triggerExtendFieldsRerender: () => void
 }
 
 // 创建Context
@@ -28,12 +31,23 @@ export function UnifiedFilterProvider({ children, projectId }: UnifiedFilterProv
   // 🆕 使用新的 hook 获取数据
   const { filterData, isLoading, error, refreshData, getChartConfig } = useUnifiedFilterData(projectId)
 
+  // 🆕 extend-fields 重渲染版本管理
+  const [extendFieldsVersion, setExtendFieldsVersion] = useState(0)
+
+  // 🆕 触发 extend-fields 重渲染的方法
+  const triggerExtendFieldsRerender = useCallback(() => {
+    setExtendFieldsVersion(prev => prev + 1)
+    console.log('🔄 [UNIFIED-FILTER-CONTEXT] Triggered extend-fields rerender, new version:', extendFieldsVersion + 1)
+  }, [extendFieldsVersion])
+
   const contextValue: UnifiedFilterContextType = {
     filterData,
     isLoading,
     error,
     refreshData,
-    getChartConfig
+    getChartConfig,
+    extendFieldsVersion,
+    triggerExtendFieldsRerender
   }
 
   return (

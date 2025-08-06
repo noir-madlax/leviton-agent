@@ -23,11 +23,40 @@ const extendFieldsCache = new Map<string, {
 // 全局加载状态跟踪，防止同一项目的并发请求
 const loadingPromises = new Map<string, Promise<{ fieldDefinitions: ExtendFieldDefinition[], projectData: ProjectData | null }>>()
 
+// 🆕 全局重渲染通知回调存储
+const rerenderCallbacks = new Set<() => void>()
+
 interface UseExtendFieldsDataReturn {
   fieldDefinitions: ExtendFieldDefinition[]
   projectData: ProjectData | null
   loading: boolean
   error: string | null
+}
+
+// 🆕 注册重渲染回调
+export function registerExtendFieldsRerenderCallback(callback: () => void): () => void {
+  rerenderCallbacks.add(callback)
+  return () => {
+    rerenderCallbacks.delete(callback)
+  }
+}
+
+// 🆕 通知所有注册的组件重渲染
+function notifyExtendFieldsRerender() {
+  console.log('🔄 [EXTEND-FIELDS-HOOK] Notifying all components to rerender, callbacks count:', rerenderCallbacks.size)
+  rerenderCallbacks.forEach(callback => {
+    try {
+      callback()
+    } catch (error) {
+      console.error('🚨 [EXTEND-FIELDS-HOOK] Error in rerender callback:', error)
+    }
+  })
+}
+
+// 🆕 手动触发重渲染（用于测试或手动调用）
+export function triggerExtendFieldsRerender() {
+  console.log('🔄 [EXTEND-FIELDS-HOOK] Manual trigger for extend fields rerender')
+  notifyExtendFieldsRerender()
 }
 
 export function useExtendFieldsData(projectId: string): UseExtendFieldsDataReturn {
@@ -131,6 +160,10 @@ export function useExtendFieldsData(projectId: string): UseExtendFieldsDataRetur
           setProjectData(projectData)
 
           console.log('🔧 [EXTEND-FIELDS-HOOK] Loaded from API:', fieldDefinitions.map((f: ExtendFieldDefinition) => f.field_name))
+
+          // 🆕 通知所有组件重渲染
+          notifyExtendFieldsRerender()
+
           return { fieldDefinitions, projectData }
         } catch (error) {
           console.error('🔧 [EXTEND-FIELDS-HOOK] Error loading data:', error)
@@ -224,6 +257,10 @@ export function preloadExtendFields(projectId: string): Promise<void> {
         })
 
         console.log(`Preloaded extend fields for project ${projectId}: ${fieldDefinitions.length} fields`)
+
+        // 🆕 通知所有组件重渲染
+        notifyExtendFieldsRerender()
+
         resolve()
       } catch (error) {
         console.error(`Failed to preload extend fields for project ${projectId}:`, error)

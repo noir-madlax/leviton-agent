@@ -279,7 +279,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     initialData: initialTamMarketShare,
     refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
-      return await databaseService.getTAMMarketShareData(projectId)
+      return await databaseService.getTAMMarketShareData(projectId, CHART_NAMES.MARKET_SHARE_ANALYSIS)
     }
   })
 
@@ -292,6 +292,35 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
   } = useChartWithFilters(
     CHART_NAMES.MARKET_SHARE_ANALYSIS,
     refreshTamData,
+    projectId,
+    { initialFilters: initialFilters || undefined }
+  )
+
+  // 畅销品牌图表数据状态管理 - 使用通用的hook
+  const {
+    data: bestSellingBrandsData,
+    loading: bestSellingBrandsLoading,
+    error: bestSellingBrandsError,
+    refreshData: refreshBestSellingBrandsData
+  } = useChartDataRefresh({
+    chartId: 'best-selling-brands',
+    projectId: projectId || '',
+    initialData: initialTamMarketShare,
+    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      return await databaseService.getTAMMarketShareData(projectId, CHART_NAMES.BEST_SELLING_BRANDS)
+    }
+  })
+
+  // 畅销品牌过滤器状态管理
+  const {
+    filters: bestSellingBrandsFilters,
+    filtersReady: bestSellingBrandsFiltersReady,
+    handleFiltersReady: handleBestSellingBrandsFiltersReady,
+    handleFiltersChange: handleBestSellingBrandsFiltersChange
+  } = useChartWithFilters(
+    CHART_NAMES.BEST_SELLING_BRANDS,
+    refreshBestSellingBrandsData,
     projectId,
     { initialFilters: initialFilters || undefined }
   )
@@ -569,6 +598,191 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
         </div>
 
      
+      </div>
+      )}
+
+      {/* Best Selling Brands Chart */}
+      {shouldShowChart('market-share-analysis') && (
+      <div className="mt-10">
+        <div data-chart-id="best-selling-brands">
+          <Card className="p-6">
+            <div className="mb-4">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4">
+                📊 Best Selling Brands by Category
+              </h3>
+
+              {/* 过滤器组件 */}
+              <FilterRenderer
+                projectId={projectId || ''}
+                chartName="best-selling-brands"
+                currentFilters={bestSellingBrandsFilters}
+                onChange={handleBestSellingBrandsFiltersChange}
+                onFiltersReady={handleBestSellingBrandsFiltersReady}
+                disabled={bestSellingBrandsLoading}
+                className="mb-6"
+              />
+
+              {/* 指标类型选择器 */}
+              <MetricTypeSelector onChange={setMetricType} value={metricType} />
+            </div>
+
+            {/* 图表内容区域 */}
+            <div className="p-6 bg-gray-50 rounded-lg border">
+              {bestSellingBrandsLoading ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                  </div>
+                </div>
+              ) : !bestSellingBrandsFiltersReady ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                  </div>
+                </div>
+              ) : bestSellingBrandsError ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
+                    <p className="text-sm text-red-600 mb-3">数据加载失败: {bestSellingBrandsError}</p>
+                    <button
+                      onClick={() => refreshBestSellingBrandsData(bestSellingBrandsFilters)}
+                      className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+                    >
+                      重新加载
+                    </button>
+                  </div>
+                </div>
+              ) : (
+                // 使用与 Top 10 Brand Revenue by Category 完全相同的渲染逻辑
+                bestSellingBrandsData && bestSellingBrandsData.market_share_by_category.length > 0 ? (
+                  (() => {
+                    // 构建与 Top 10 Brand Revenue by Category 相同的数据结构
+                    const categoryNames = bestSellingBrandsData.market_share_by_category.map(cat => cat.category)
+                    const categoryColors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C"]
+
+                    // 构建 brandCategoryRevenue 数据结构
+                    const brandCategoryRevenue: any[] = []
+                    const allBrands = new Set<string>()
+
+                    // 收集所有品牌
+                    bestSellingBrandsData.market_share_by_category.forEach(categoryData => {
+                      categoryData.brand_shares.forEach(brand => {
+                        allBrands.add(brand.brand)
+                      })
+                    })
+
+                    // 为每个品牌构建数据
+                    allBrands.forEach(brandName => {
+                      const brandData: any = {
+                        brand: brandName,
+                        categories: {}
+                      }
+
+                      categoryNames.forEach(category => {
+                        const categoryData = bestSellingBrandsData.market_share_by_category.find(cat => cat.category === category)
+                        const brandInfo = categoryData?.brand_shares.find(brand => brand.brand === brandName)
+
+                        brandData.categories[category] = {
+                          revenue: brandInfo?.revenue || 0,
+                          volume: brandInfo?.volume || 0,
+                          product_count: brandInfo?.product_count || 0
+                        }
+                      })
+
+                      brandCategoryRevenue.push(brandData)
+                    })
+
+                    // 构建 grouped bar chart 数据 - 与原图表完全相同的逻辑
+                    const chartData = brandCategoryRevenue
+                      .map(item => {
+                        const brandData: { name: string; [key: string]: number | string } = { name: item.brand }
+
+                        // 为每个category添加数据
+                        categoryNames.forEach(category => {
+                          const categoryData = item.categories[category] || { revenue: 0, volume: 0 }
+                          const value = metricType === "revenue" ? categoryData.revenue : categoryData.volume
+                          brandData[category] = value
+                        })
+
+                        return brandData
+                      })
+                      .filter(item => {
+                        // 过滤掉所有category值都为0的品牌
+                        const hasData = categoryNames.some(category => {
+                          const value = item[category] as number
+                          return value > 0
+                        })
+                        return hasData
+                      })
+                      .sort((a, b) => {
+                        // 按总收入/总量排序
+                        const aTotal = categoryNames.reduce((sum, category) => sum + (a[category] as number), 0)
+                        const bTotal = categoryNames.reduce((sum, category) => sum + (b[category] as number), 0)
+                        return bTotal - aTotal
+                      })
+                      .slice(0, 10) // 限制为前10个品牌
+
+                    // 确保颜色数组匹配categories数量
+                    const colors = categoryColors.slice(0, categoryNames.length)
+                    const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
+
+                    const handleBarClick = (data: unknown) => {
+                      if (data && typeof data === 'object' && 'activeLabel' in data) {
+                        const chartData = data as { activeLabel: string }
+                        const brand = chartData.activeLabel
+
+                        // 合并现有筛选条件和当前点击的品牌
+                        const newFilters = {
+                          ...initialFilters,
+                          brands: [brand],
+                        }
+
+                        openPanel({
+                          projectId: projectId || '',
+                          filters: newFilters,
+                          title: `${brand} Products`,
+                          subtitle: `All products from ${brand} matching current filters`,
+                          showFilters: { brand: false, category: true, priceRange: true, packSize: true }
+                        })
+                      }
+                    }
+
+                    return (
+                      <div className="bg-gray-50 p-4 rounded-lg relative">
+                        <div className="h-[400px]">
+                          <BarChart
+                            data={chartData}
+                            index="name"
+                            categories={categoryNames}
+                            colors={colors}
+                            yAxisLabel={yAxisLabel}
+                            metricType={metricType}
+                            onBarClick={handleBarClick}
+                          />
+                        </div>
+                        {/* Loading overlay */}
+                        {bestSellingBrandsLoading && (
+                          <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
+                            <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+                              <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                              <span className="text-gray-700 font-medium">Loading products...</span>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    )
+                  })()
+                ) : (
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <p className="text-center text-gray-500">No best selling brands data available</p>
+                  </div>
+                )
+              )}
+            </div>
+          </Card>
+        </div>
       </div>
       )}
 

@@ -46,8 +46,9 @@ import React, { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
-import { useYourChartFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
-import { useYourDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
+import { useChartWithFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
+import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
+import { CHART_NAMES } from "@/components/analysis-db/constants"
 
 interface YourChartProps {
   data: any // 定义你的数据类型
@@ -62,7 +63,15 @@ export function YourChart({ data: initialData, projectId, initialFilters }: Your
     loading: dataLoading,
     error: dataError,
     refreshData
-  } = useYourDataRefresh(projectId || '', initialData)
+  } = useChartDataRefresh({
+    chartId: 'your-new-chart',
+    projectId: projectId || '',
+    initialData,
+    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+      return await databaseService.getYourChartData(projectId)
+    }
+  })
 
   // 过滤器状态管理
   const {
@@ -70,7 +79,8 @@ export function YourChart({ data: initialData, projectId, initialFilters }: Your
     filtersReady,
     handleFiltersReady,
     handleFiltersChange
-  } = useYourChartFilters(
+  } = useChartWithFilters(
+    CHART_NAMES.YOUR_NEW_CHART,
     refreshData,
     projectId,
     { initialFilters: initialFilters || undefined }
@@ -154,51 +164,56 @@ export function YourChart({ data: initialData, projectId, initialFilters }: Your
 
 ### 3. 配置过滤器
 
-#### 3.1 创建专用的过滤器 Hook
-**文件：** `frontend/src/components/analysis-db/hooks/use-chart-with-filters.ts`
+#### 3.1 ~~创建专用的过滤器 Hook~~ (已废弃)
+**🚫 不再需要创建专用的过滤器 Hook！**
+
+现在直接使用通用的 `useChartWithFilters` Hook，传入图表名称常量即可：
 
 ```typescript
-/**
- * 预设的图表 Hook - 你的新图表
- */
-export function useYourChartFilters(
-  refreshDataFn: (filters: ProjectFilters) => Promise<any>,
-  projectId?: string,
-  options?: UseChartWithFiltersOptions
-) {
-  return useChartWithFilters(
-    CHART_NAMES.YOUR_NEW_CHART,
-    refreshDataFn,
-    projectId,
-    options
-  )
-}
+// ✅ 新的方式：直接使用通用 Hook
+import { useChartWithFilters } from '@/components/analysis-db/hooks/use-chart-with-filters'
+import { CHART_NAMES } from '@/components/analysis-db/constants'
+
+const {
+  filters,
+  filtersReady,
+  handleFiltersReady,
+  handleFiltersChange
+} = useChartWithFilters(
+  CHART_NAMES.YOUR_NEW_CHART,  // 使用常量确保一致性
+  refreshData,
+  projectId,
+  { initialFilters: initialFilters || undefined }
+)
 ```
 
-#### 3.2 创建数据刷新 Hook
-**文件：** `frontend/src/components/analysis-db/hooks/use-chart-data-refresh.ts`
+#### 3.2 ~~创建数据刷新 Hook~~ (已废弃)
+**🚫 不再需要创建专用的数据刷新 Hook！**
+
+现在直接使用通用的 `useChartDataRefresh` Hook：
 
 ```typescript
-// Your Chart 专用的数据刷新hook
-export function useYourDataRefresh(projectId: string, initialData?: any) {
-  return useChartDataRefresh({
-    chartId: 'your-new-chart',
-    projectId,
-    initialData,
-    refreshFunction: async (projectId: string, filters: ProjectFilters) => {
-      const { databaseService } = await import('@/components/analysis-db/data/database-service')
-      
-      // 🆕 调用你的数据获取方法
-      return await databaseService.getYourChartData(
-        projectId,
-        filters.categories.length > 0 ? filters.categories : undefined,
-        filters.brands?.length ? filters.brands : undefined,
-        filters.segments?.length ? filters.segments : undefined,
-        filters.extend_fields
-      )
-    }
-  })
-}
+// ✅ 新的方式：直接使用通用 Hook
+import { useChartDataRefresh } from '@/components/analysis-db/hooks/use-chart-data-refresh'
+
+const {
+  data: chartData,
+  loading: dataLoading,
+  error: dataError,
+  refreshData
+} = useChartDataRefresh({
+  chartId: 'your-new-chart',
+  projectId: projectId || '',
+  initialData,
+  refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+    const { databaseService } = await import('@/components/analysis-db/data/database-service')
+
+    // 🆕 调用你的数据获取方法
+    // 注意：如果你的方法需要过滤器参数，请传入 filters 参数
+    // 如果像 getTAMMarketShareData 一样自动从状态管理器获取过滤器，则不需要传入
+    return await databaseService.getYourChartData(projectId)
+  }
+})
 ```
 
 ### 4. 集成数据获取
@@ -210,12 +225,12 @@ export function useYourDataRefresh(projectId: string, initialData?: any) {
 class DatabaseService {
   // ... 其他方法
 
-  async getYourChartData(projectId: string): Promise<TAMMarketShareResponse> {
+  async getYourChartData(projectId: string): Promise<YourChartDataResponse> {
     try {
       // 🆕 从过滤器状态管理器获取过滤器数据
-      const filters = this.getFiltersFromState(CHART_NAMES.MARKET_SHARE_ANALYSIS)
+      const filters = this.getFiltersFromState(CHART_NAMES.YOUR_NEW_CHART)
 
-      console.log(`🔍 [DATABASE-SERVICE] Getting TAM data with filters from state manager:`, filters)
+      console.log(`🔍 [DATABASE-SERVICE] Getting your chart data with filters from state manager:`, filters)
 
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
 
@@ -224,9 +239,9 @@ class DatabaseService {
         ...filters  // 🎯 直接展开 getFiltersFromState 的结果
       }
 
-      console.log('🔍 Calling TAM Market Share API:', requestBody)
+      console.log('🔍 Calling Your Chart API:', requestBody)
 
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/tam-market-share`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/your-module/your-chart`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -235,15 +250,15 @@ class DatabaseService {
       })
 
       if (!response.ok) {
-        throw new Error(`TAM Market Share API call failed: ${response.status}`)
+        throw new Error(`Your Chart API call failed: ${response.status}`)
       }
 
-      const result: TAMMarketShareResponse = await response.json()
-      console.log('📊 TAM Market Share API response:', result)
-      
+      const result: YourChartDataResponse = await response.json()
+      console.log('📊 Your Chart API response:', result)
+
       return result
     } catch (error) {
-      console.error('Error fetching TAM Market Share data:', error)
+      console.error('Error fetching your chart data:', error)
       throw error
     }
   }
@@ -274,13 +289,14 @@ import { YourChart } from "./your-module/your-chart"
 
 确保你的图表名称 `'your-new-chart'` 在相关逻辑中被正确处理。
 
+
 ---
 
 ## 🎯 关键注意事项
 
 ### 1. **命名规范**
 - 图表名称使用 kebab-case：`'your-new-chart'`
-- Hook 名称使用 camelCase：`useYourChartFilters`
+- 常量名称使用 UPPER_SNAKE_CASE：`YOUR_NEW_CHART`
 - 组件名称使用 PascalCase：`YourChart`
 
 ### 2. **状态管理模式**
@@ -290,8 +306,9 @@ import { YourChart } from "./your-module/your-chart"
 
 ### 3. **过滤器集成**
 - 使用 `FilterRenderer` 组件
-- 通过 `useChartWithFilters` Hook 管理状态
+- 直接使用通用的 `useChartWithFilters` Hook，传入图表名称常量
 - 支持全局过滤器同步
+- **不再需要创建专用的过滤器 Hook**
 
 ### 4. **数据流**
 ```
@@ -314,5 +331,42 @@ your-module/
 - `frontend/src/components/analysis-db/market-analysis/brand-analysis.tsx`
 - `frontend/src/components/analysis-db/hooks/use-chart-with-filters.ts`
 - `frontend/src/components/analysis-db/hooks/use-chart-data-refresh.ts`
+
+## 🚀 重要更新说明
+
+**📢 2024年重构更新：**
+- **不再需要创建专用的过滤器 Hook**（如 `useYourChartFilters`）
+- **不再需要创建专用的数据刷新 Hook**（如 `useYourDataRefresh`）
+- 直接使用通用的 `useChartWithFilters` 和 `useChartDataRefresh`
+- 使用 `CHART_NAMES` 常量确保图表名称的一致性
+
+这样的设计让代码更加简洁、统一，减少了重复代码，提高了可维护性。
+
+## ⚡ 简化后的核心步骤
+
+现在创建新图表只需要 **3个核心步骤**：
+
+1. **添加图表名称常量**
+   ```typescript
+   // 在 constants/chart-names.ts 中添加
+   YOUR_NEW_CHART: 'your-new-chart'
+   ```
+
+2. **创建图表组件**
+   ```typescript
+   // 直接使用通用 Hook，无需创建专用 Hook
+   const { data, loading, error, refreshData } = useChartDataRefresh({...})
+   const { filters, filtersReady, handleFiltersReady, handleFiltersChange } = useChartWithFilters(
+     CHART_NAMES.YOUR_NEW_CHART, refreshData, projectId, options
+   )
+   ```
+
+3. **添加数据服务方法**
+   ```typescript
+   // 在 database-service.ts 中添加数据获取方法
+   async getYourChartData(projectId: string) { ... }
+   ```
+
+就这么简单！🎉
 
 按照这个指南，你就可以成功创建一个新的图表组件了！

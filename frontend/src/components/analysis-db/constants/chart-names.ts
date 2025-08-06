@@ -11,6 +11,7 @@ export const CHART_NAMES = {
   // 市场分析相关
   BRAND_ANALYSIS: 'brand-analysis',
   MARKET_SHARE_ANALYSIS: 'market-share-analysis',
+  BEST_SELLING_BRANDS: 'best-selling-brands',
   SALES_TREND_ANALYSIS: 'sales-trend-analysis',
   COMPETITOR_ANALYSIS: 'competitor-analysis',
   
@@ -41,6 +42,7 @@ export const CHART_GROUPS = {
   MARKET_ANALYSIS: [
     CHART_NAMES.BRAND_ANALYSIS,
     CHART_NAMES.MARKET_SHARE_ANALYSIS,
+    CHART_NAMES.BEST_SELLING_BRANDS,
     CHART_NAMES.SALES_TREND_ANALYSIS,
     CHART_NAMES.COMPETITOR_ANALYSIS
   ],
@@ -64,6 +66,7 @@ export const CHART_DISPLAY_NAMES: Record<ChartName, string> = {
   [CHART_NAMES.PROJECT]: '项目过滤器',
   [CHART_NAMES.BRAND_ANALYSIS]: '品牌分析',
   [CHART_NAMES.MARKET_SHARE_ANALYSIS]: '市场份额分析',
+  [CHART_NAMES.BEST_SELLING_BRANDS]: '畅销品牌分析',
   [CHART_NAMES.SALES_TREND_ANALYSIS]: '销售趋势分析',
   [CHART_NAMES.COMPETITOR_ANALYSIS]: '竞争对手分析',
   [CHART_NAMES.MARKET_INSIGHTS]: '市场洞察',
@@ -81,6 +84,7 @@ export const CHART_DESCRIPTIONS: Record<ChartName, string> = {
   [CHART_NAMES.PROJECT]: '项目级别的全局过滤器设置',
   [CHART_NAMES.BRAND_ANALYSIS]: '分析不同品牌的市场表现和竞争情况',
   [CHART_NAMES.MARKET_SHARE_ANALYSIS]: '分析各品牌在不同类别中的市场份额',
+  [CHART_NAMES.BEST_SELLING_BRANDS]: '分析各类别中的畅销品牌排名和收入表现',
   [CHART_NAMES.SALES_TREND_ANALYSIS]: '分析销售趋势和时间序列数据',
   [CHART_NAMES.COMPETITOR_ANALYSIS]: '分析竞争对手的市场策略和表现',
   [CHART_NAMES.MARKET_INSIGHTS]: '深度市场洞察和趋势分析',
