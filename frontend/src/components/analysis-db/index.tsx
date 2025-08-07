@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
+import { PricingAnalysis } from "@/components/analysis-db/pricing-analysis"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
 import { ReviewInsights } from "@/components/analysis-db/review-insights/review-insights"
 import { CompetitorAnalysis } from "@/components/analysis-db/competitor-analysis/competitor-analysis"
@@ -1189,6 +1190,23 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                         )}
                       </TabsContent>
                       
+                      <TabsContent value="pricing-analysis">
+                        {data.pricingAnalysis ? (
+                          <PricingAnalysis
+                            projectId={selectedProjectId || undefined}
+                            initialFilters={currentFilters}
+                          />
+                        ) : loadingStates.pricingAnalysis ? (
+                          <div className="flex items-center justify-center py-8">
+                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+                            <span className="ml-2">Loading Pricing Analysis Data...</span>
+                          </div>
+                        ) : (
+                          <div className="text-center py-8 text-gray-500">
+                            Click to load Pricing Analysis data
+                          </div>
+                        )}
+                      </TabsContent>
                        
                       
                        
