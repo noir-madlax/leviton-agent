@@ -126,17 +126,26 @@ export function FilterRenderer({
     }
   }, [extendFieldsVersion, chartName])
 
-  // 🆕 检测过滤器是否就绪
+  // 🆕 检测过滤器是否就绪 - 简化版本
   useEffect(() => {
     const checkFiltersReady = () => {
-      // 检查条件：
+      // 简化的检查条件：
       // 1. context 数据已加载
       // 2. 图表配置已获取
-      // 3. 扩展字段已初始化（如果有的话）
+      // 3. 🔧 简化扩展字段检查：如果有图表配置中的默认值或状态管理器中的值，就认为已就绪
       const isContextReady = !contextLoading
       const hasChartConfig = !!chartConfig
-      const hasExtendFields = visibleFilters?.extend_fields ?
-        (chartFilters?.filters.extend_fields && Object.keys(chartFilters.filters.extend_fields).length > 0) :
+      
+      // 🔧 简化的扩展字段检查逻辑
+      const hasExtendFields = visibleFilters?.extend_fields ? 
+        (
+          // 方案1：状态管理器中已有扩展字段值
+          (chartFilters?.filters.extend_fields && Object.keys(chartFilters.filters.extend_fields).length > 0) ||
+          // 方案2：图表配置中有默认的扩展字段值（避免竞态条件）
+          (chartConfig?.filters.extend_fields?.values && Object.keys(chartConfig.filters.extend_fields.values).length > 0) ||
+          // 方案3：如果以上都没有，但图表配置存在，也认为就绪（让数据加载流程继续）
+          !!chartConfig
+        ) : 
         true // 如果不需要扩展字段，则认为已就绪
 
       const isReady = Boolean(isContextReady && hasChartConfig && hasExtendFields)
@@ -145,6 +154,8 @@ export function FilterRenderer({
         isContextReady,
         hasChartConfig,
         hasExtendFields,
+        chartConfigExtendFields: chartConfig?.filters.extend_fields?.values,
+        chartFiltersExtendFields: chartFilters?.filters.extend_fields,
         isReady,
         previousState: filtersReady
       })

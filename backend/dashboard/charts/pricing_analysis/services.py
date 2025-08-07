@@ -13,6 +13,7 @@ from .models import (
     PriceDistributionRequest, PriceDistributionResponse, PriceDistributionMetadata,
     PriceVsRevenueRequest, PriceVsRevenueResponse,
     BrandPriceDistributionRequest, BrandPriceDistributionResponse,
+    PriceDistributionOverviewRequest, PriceDistributionOverviewResponse, PriceDistributionOverviewData,
     CategoryPriceData, CategoryBrandDistribution, BrandPriceData, PriceStatistics,
     TopProductsData, ProductDetail
 )
@@ -418,3 +419,99 @@ class BrandPriceDistributionService(BasePricingService):
         """生成颜色列表"""
         base_colors = ['#FF6B6B', '#4ECDC4', '#45B7D1', '#96CEB4', '#FFEAA7', '#DDA0DD', '#FFA07A', '#98D8C8']
         return (base_colors * ((count // len(base_colors)) + 1))[:count]
+
+# ==================== 价格分布概览服务 ====================
+
+class PriceDistributionOverviewService(BasePricingService):
+    """价格分布概览服务 - 生成统计表格数据，不使用过滤器"""
+    
+    def get_overview_data(self, request: PriceDistributionOverviewRequest) -> PriceDistributionOverviewResponse:
+        """获取价格分布概览数据
+        
+        Args:
+            request: 价格分布概览请求
+            
+        Returns:
+            PriceDistributionOverviewResponse: 概览表格数据
+        """
+        try:
+            logger.info(f"📊 Starting Price Distribution Overview analysis for project {request.project_id}")
+            
+            # Step 1: 获取项目的所有ASIN（不应用过滤器）
+            # 创建一个不带过滤器的请求来获取所有产品
+            from ..base_models import FiltersModel
+            base_request = type('BaseRequest', (), {
+                'project_id': request.project_id,
+                'filters': FiltersModel(),  # 空过滤器
+                'timeframe': request.timeframe
+            })()
+            
+            all_asins = get_filtered_asins(self.supabase, base_request)
+            
+            if not all_asins:
+                logger.warning(f"No ASINs found for project {request.project_id}")
+                return self._get_empty_response(request)
+            
+            logger.info(f"📊 Found {len(all_asins)} total ASINs for project")
+            
+            # Step 2: 获取产品价格和分类数据
+            products_data = self._get_product_pricing_data(all_asins)
+            if not products_data:
+                return self._get_empty_response(request)
+            
+            # Step 3: 按分类分组并计算概览统计
+            overview_data = self._calculate_overview_statistics(products_data)
+            
+            # Step 4: 生成元数据
+            segment_names = [item.segment for item in overview_data]
+            metadata = self._generate_metadata(len(all_asins), segment_names)
+            
+            return PriceDistributionOverviewResponse(
+                overview_data=overview_data,
+                metadata=metadata
+            )
+            
+        except Exception as e:
+            logger.error(f"Error in PriceDistributionOverviewService: {e}", exc_info=True)
+            return self._get_empty_response(request)
+
+    def _calculate_overview_statistics(self, products_data: List[Dict[str, Any]]) -> List[PriceDistributionOverviewData]:
+        """计算概览统计数据"""
+        category_groups = defaultdict(list)
+        
+        # 按分类分组产品
+        for product in products_data:
+            category = product.get('category', 'Unknown')
+            if category:
+                category_groups[category].append(product)
+        
+        overview_data = []
+        for category, products in category_groups.items():
+            # 使用unit_price_calculated作为主要价格
+            unit_prices = [float(p['unit_price_calculated']) for p in products if p.get('unit_price_calculated')]
+            
+            if unit_prices:
+                # 计算统计信息
+                unit_prices_array = np.array(unit_prices)
+                
+                overview_item = PriceDistributionOverviewData(
+                    segment=category,
+                    products=len(products),
+                    min_price=float(np.min(unit_prices_array)),
+                    median_price=float(np.median(unit_prices_array)),
+                    max_price=float(np.max(unit_prices_array)),
+                    average_price=float(np.mean(unit_prices_array))
+                )
+                overview_data.append(overview_item)
+        
+        # 按产品数量降序排序
+        overview_data.sort(key=lambda x: x.products, reverse=True)
+        
+        return overview_data
+
+    def _get_empty_response(self, request: PriceDistributionOverviewRequest) -> PriceDistributionOverviewResponse:
+        """返回空响应"""
+        return PriceDistributionOverviewResponse(
+            overview_data=[],
+            metadata=self._generate_metadata(0, [])
+        )

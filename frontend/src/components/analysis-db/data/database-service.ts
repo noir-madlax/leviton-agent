@@ -588,7 +588,7 @@ export class DatabaseService {
     }
   }
 
-  // 💰 Get Price Distribution data with filters
+  // 💰 Get Price Distribution data with filters (旧方法，保持兼容性)
   async getPriceDistributionData(projectId: string, filters?: ProjectFilters): Promise<any> {
     try {
       // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
@@ -605,7 +605,7 @@ export class DatabaseService {
 
       console.log('🔍 Calling Price Distribution API:', requestBody)
 
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution`, {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-by-type`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -623,6 +623,117 @@ export class DatabaseService {
       return result
     } catch (error) {
       console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Price Distribution Overview data - 独立组件专用方法
+  async getPriceDistributionOverviewData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_DISTRIBUTION_OVERVIEW)
+      
+      console.log(`🔍 [DATABASE-SERVICE] Getting price overview data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-overview`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Overview API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Overview API response:', result)
+      
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Overview data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Price Distribution by Type data - 独立组件专用方法
+  async getPriceDistributionByTypeData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
+      
+      console.log(`🔍 [DATABASE-SERVICE] Getting price distribution data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters  // 🎯 直接展开过滤器
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-by-type`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Distribution API response:', result)
+      
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Brand Price Distribution data - 独立组件专用方法
+  async getBrandPriceDistributionData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.BRAND_PRICE_DISTRIBUTION)
+      
+      console.log(`🔍 [DATABASE-SERVICE] Getting brand price distribution data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/brand-price-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Brand Price Distribution API response:', result)
+      
+      return result
+    } catch (error) {
+      console.error('Error fetching Brand Price Distribution data:', error)
       throw error
     }
   }
