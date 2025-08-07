@@ -14,6 +14,7 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
 import { SegmentSalesTrendChart } from '@/components/analysis-db/market-analysis/segment-sales-trend-chart'
+import { PackageSalesTrendChart } from '@/components/analysis-db/market-analysis/package-sales-trend-chart'
 // 导入新的过滤器组件
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
 import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
@@ -915,11 +916,21 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
       </div>
       )}
 
+      {/* Package Sales Trend Chart - New Addition */}
+      {shouldShowChart('market-share-analysis') && (
+      <div className="mt-15" data-chart-id="package-sales-trend">
+        <PackageSalesTrendChart
+          projectId={projectId}
+          initialFilters={initialFilters}
+        />
+      </div>
+      )}
+
       {/* Package Preference Analysis - New Addition */}
       {shouldShowChart('package-preference') && (
       <div className="mt-15" data-chart-id="package-preference">
         {packagePreference ? (
-          <PackagePreferenceAnalysis 
+          <PackagePreferenceAnalysis
             data={packagePreference}
             productLists={productLists}
             projectId={projectId}

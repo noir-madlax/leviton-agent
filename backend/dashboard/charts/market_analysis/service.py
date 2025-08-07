@@ -638,8 +638,7 @@ class PackageTypeDistributionService:
             # Step 2: Get package type data from project_extend_data
             package_type_assignments = self._get_package_type_assignments(
                 request.project_id, 
-                filtered_asins, 
-                request.filters
+                filtered_asins
             )
             
             if not package_type_assignments:
@@ -685,8 +684,7 @@ class PackageTypeDistributionService:
     def _get_package_type_assignments(
         self, 
         project_id: str, 
-        asins: List[str], 
-        filters
+        asins: List[str]
     ) -> Dict[str, str]:
         """Get package type assignments mapping.
         
@@ -707,21 +705,6 @@ class PackageTypeDistributionService:
                 .select('asins, extend')\
                 .eq('project_id', project_id)\
                 .in_('asins', asins)
-            
-            # 应用extend fields过滤（如果有的话）
-            if filters and filters.extend_fields:
-                for field_name, field_value in filters.extend_fields.items():
-                    if field_value is not None:
-                        # 处理布尔值转换
-                        if isinstance(field_value, bool):
-                            field_value = str(field_value).lower()
-                        elif field_value == 'true':
-                            field_value = 'true'
-                        elif field_value == 'false':
-                            field_value = 'false'
-                        
-                        extend_data_query = extend_data_query.eq(f'extend->>{field_name}', field_value)
-                        logger.info(f"Applied extend field filter: {field_name} = {field_value}")
             
             extend_result = extend_data_query.execute()
             

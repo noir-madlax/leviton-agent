@@ -560,7 +560,7 @@ export class DatabaseService {
 
       const requestBody = {
         project_id: projectId,
-        metric_type: 'products',
+        metric_type: 'revenue',
         ...filters  // 🎯 直接展开 getFiltersFromState 的结果
       }
 
