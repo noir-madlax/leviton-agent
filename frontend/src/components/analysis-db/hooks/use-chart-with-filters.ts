@@ -10,7 +10,7 @@ import type { ProjectFilters } from '../types/filters'
 interface UseChartWithFiltersOptions {
   // 是否在过滤器就绪时自动加载数据
   autoLoadOnReady?: boolean
-  // 是否启用全局同步监听
+  // 是否启用全局同步监听（默认: true，所有图表都会接收项目级过滤器同步）
   enableGlobalSync?: boolean
   // 初始过滤器数据
   initialFilters?: ProjectFilters

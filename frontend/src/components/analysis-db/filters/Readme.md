@@ -240,13 +240,18 @@ interface ExtendFieldDefinition {
 ```typescript
 // 项目级过滤器特殊处理
 if (isProjectFilter) {
-  // 同步到所有其他图表
+  // 🆕 自动同步到所有已注册的图表（约定优于配置）
   filterStateManager.syncProjectFiltersToAllCharts(chartState)
 
   // 触发全局刷新信号
   triggerGlobalRefresh()
 }
 ```
+
+**🔄 自动同步机制：**
+- 所有使用了 `useChartWithFilters` Hook 的图表都会自动接收项目级过滤器同步
+- 无需在代码中硬编码图表列表，新增图表自动支持同步
+- 可通过 `enableGlobalSync: false` 参数选择性退出同步
 
 #### 7.2 全局同步事件
 **事件类型：** `GLOBAL_SYNC`

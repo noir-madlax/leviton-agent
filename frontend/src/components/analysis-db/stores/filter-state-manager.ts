@@ -215,18 +215,17 @@ class FilterStateManager implements IFilterStateManager {
    * 🆕 项目级过滤器同步到所有图表
    */
   syncProjectFiltersToAllCharts(projectFilters: ChartFilterState): void {
-    // 目前只有一个非 project 的图表需要同步
-    const targetCharts = [CHART_NAMES.MARKET_SHARE_ANALYSIS]
+    // 🔄 获取所有已注册的图表（除了 project 本身）
+    const allRegisteredCharts = Object.keys(this.state).filter(chartName => chartName !== CHART_NAMES.PROJECT)
 
     console.log('🌍 [FILTER-STATE-MANAGER] Syncing project filters to all charts:', {
       projectFilters,
-      targetCharts
+      allRegisteredCharts,
+      totalCharts: allRegisteredCharts.length
     })
 
     // 直接覆盖所有目标图表的过滤器数据
-    targetCharts.forEach(chartName => {
-      const oldState = this.state[chartName] || null
-
+    allRegisteredCharts.forEach(chartName => {
       this.state[chartName] = {
         ...projectFilters,  // 🎯 直接覆盖，不合并
         metadata: {
@@ -240,7 +239,7 @@ class FilterStateManager implements IFilterStateManager {
     })
 
     // 触发全局同步事件
-    this.notifyGlobalSync(projectFilters, targetCharts)
+    this.notifyGlobalSync(projectFilters, allRegisteredCharts)
   }
 
   /**
