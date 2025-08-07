@@ -13,6 +13,7 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
 import { MarketInsights } from './market-insights'
 import { PackagePreferenceAnalysis } from './package-preference-analysis'
+import { SegmentSalesTrendChart } from '@/components/analysis-db/market-analysis/segment-sales-trend-chart'
 // 导入新的过滤器组件
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
 import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
@@ -884,11 +885,21 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
         </div>
       </div>
 
+      {/* Segment Sales Trend Chart - New Addition */}
+      {shouldShowChart('market-share-analysis') && (
+      <div className="mt-15" data-chart-id="segment-analysis">
+        <SegmentSalesTrendChart
+          projectId={projectId}
+          initialFilters={initialFilters}
+        />
+      </div>
+      )}
+
       {/* Market Insights - New Addition */}
       {shouldShowChart('market-insights') && (
       <div className="mt-15" data-chart-id="market-insights">
         {marketInsights ? (
-          <MarketInsights 
+          <MarketInsights
             data={marketInsights}
             productLists={productLists}
             projectId={projectId}
