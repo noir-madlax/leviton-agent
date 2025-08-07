@@ -3,10 +3,11 @@
 import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
-import { useCommonT } from '@/i18n/hooks'
+import { useCommonT, useProjectT, useFiltersT, useT } from '@/i18n/hooks'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
 import { useExtendFieldsData, registerExtendFieldsRerenderCallback } from './hooks/useExtendFieldsData'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context'
+import { CHART_FILTER_CONFIGS } from '../../configs/chart-filter-data'
 
 export function ExtendFieldsFilter({
   onChange,
@@ -21,11 +22,18 @@ export function ExtendFieldsFilter({
 
   // 国际化hooks
   const commonT = useCommonT()
+  const projectT = useProjectT()
+  const filtersT = useFiltersT()
+  const t = useT()
 
-  // 翻译字段显示名称 - 暂时不支持国际化，直接显示原始名称
+  // 翻译字段显示名称
   const translateFieldName = (displayName: string) => {
-    // 直接返回原始显示名称，不进行国际化处理
-    return displayName
+    switch (displayName) {
+      case 'Smart Capability':
+        return projectT('smartCapability')
+      default:
+        return displayName
+    }
   }
 
   // 使用新的 hook 获取 extend fields 数据，确保只调用一次接口
@@ -55,7 +63,35 @@ export function ExtendFieldsFilter({
     if (!fieldDefinitions.length) return []
 
     // 获取配置中允许显示的字段名列表
-    const allowedFieldNames = extendFieldsConfig?.options as string[] || []
+    let allowedFieldNames: string[] = []
+
+    if (extendFieldsConfig?.options) {
+      // 如果统一过滤器有配置，使用它
+      allowedFieldNames = extendFieldsConfig.options as string[] || []
+      console.log('🔧 [EXTEND-FIELDS] Using unified filter config:', allowedFieldNames)
+    } else {
+      // 如果没有，使用本地配置作为fallback
+      console.log('🔧 [EXTEND-FIELDS] No config from unified filter, using local config for:', chartName)
+
+      const localConfig = CHART_FILTER_CONFIGS[chartName]
+      if (localConfig && localConfig.visible_filters.extend_fields) {
+        const localAllowedFields = localConfig.visible_filters.extend_fields
+        if (Array.isArray(localAllowedFields)) {
+          allowedFieldNames = localAllowedFields
+          console.log('🔧 [EXTEND-FIELDS] Found local config:', allowedFieldNames)
+        } else {
+          console.warn('🔧 [EXTEND-FIELDS] Local extend_fields is not an array:', typeof localAllowedFields, localAllowedFields)
+        }
+      } else {
+        console.warn('🔧 [EXTEND-FIELDS] No local config found for:', chartName)
+      }
+    }
+
+    // 如果仍然没有配置或不是数组，返回空数组
+    if (!Array.isArray(allowedFieldNames)) {
+      console.warn('🔧 [EXTEND-FIELDS] allowedFieldNames is not an array:', typeof allowedFieldNames, allowedFieldNames)
+      return []
+    }
 
     if (allowedFieldNames.length === 0) {
       // 如果没有配置，则不显示任何字段
@@ -218,8 +254,8 @@ export function ExtendFieldsFilter({
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   selectCurrentValue.length > 0 
-                    ? `已选择 ${selectCurrentValue.length} 项` 
-                    : "选择选项"
+                    ? t('filters.selectedItems', { count: selectCurrentValue.length })
+                    : filtersT('selectOption')
                 } />
               </SelectTrigger>
               <SelectContent>

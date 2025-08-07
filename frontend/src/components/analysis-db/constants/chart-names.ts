@@ -20,10 +20,13 @@ export const CHART_NAMES = {
   MARKET_INSIGHTS: 'market-insights',
 
   // 其他分析
-  PRICE_ANALYSIS: 'price-analysis',
+  PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
+  PRICE_VS_REVENUE: 'price-vs-revenue', // 散点图
+  BRAND_PRICE_DISTRIBUTION: 'price-distribution-by-brands', // 品牌价格分布
+  SEGMENT_ANALYSIS: 'segment-analysis',
   CATEGORY_ANALYSIS: 'category-analysis',
   COMPETITOR_ANALYSIS: 'competitor-analysis',
-  
+
   // 预留扩展
   CUSTOM_ANALYSIS_1: 'custom-analysis-1',
   CUSTOM_ANALYSIS_2: 'custom-analysis-2',
@@ -56,6 +59,8 @@ export const CHART_GROUPS = {
   // 其他分析组
   OTHER_ANALYSIS: [
     CHART_NAMES.PRICE_ANALYSIS,
+    CHART_NAMES.PRICE_VS_REVENUE,
+    CHART_NAMES.BRAND_PRICE_DISTRIBUTION,
     CHART_NAMES.SEGMENT_ANALYSIS,
     CHART_NAMES.CATEGORY_ANALYSIS
   ]
@@ -72,6 +77,8 @@ export const CHART_DISPLAY_NAMES: Record<ChartName, string> = {
   [CHART_NAMES.MARKET_INSIGHTS]: '市场洞察',
   [CHART_NAMES.PACKAGE_PREFERENCE]: '包装偏好分析',
   [CHART_NAMES.PRICE_ANALYSIS]: '价格分析',
+  [CHART_NAMES.PRICE_VS_REVENUE]: '价格收入分布',
+  [CHART_NAMES.BRAND_PRICE_DISTRIBUTION]: '品牌价格分布',
   [CHART_NAMES.SEGMENT_ANALYSIS]: '细分分析',
   [CHART_NAMES.CATEGORY_ANALYSIS]: '分类分析',
   [CHART_NAMES.CUSTOM_ANALYSIS_1]: '自定义分析1',
@@ -90,6 +97,8 @@ export const CHART_DESCRIPTIONS: Record<ChartName, string> = {
   [CHART_NAMES.MARKET_INSIGHTS]: '深度市场洞察和趋势分析',
   [CHART_NAMES.PACKAGE_PREFERENCE]: '分析消费者对不同包装类型的偏好',
   [CHART_NAMES.PRICE_ANALYSIS]: '价格分布和定价策略分析',
+  [CHART_NAMES.PRICE_VS_REVENUE]: '分析畅销产品的价格与收入关系',
+  [CHART_NAMES.BRAND_PRICE_DISTRIBUTION]: '分析各品牌在不同类别中的价格分布',
   [CHART_NAMES.SEGMENT_ANALYSIS]: '市场细分和目标客户分析',
   [CHART_NAMES.CATEGORY_ANALYSIS]: '产品类别表现和趋势分析',
   [CHART_NAMES.CUSTOM_ANALYSIS_1]: '自定义分析图表1',

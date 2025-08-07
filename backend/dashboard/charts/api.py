@@ -26,6 +26,17 @@ from .market_analysis.models import (
 )
 from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService, PackageTypeDistributionService
 
+from .pricing_analysis.models import (
+    PriceDistributionRequest, PriceDistributionResponse,
+    PriceVsRevenueRequest, PriceVsRevenueResponse,
+    BrandPriceDistributionRequest, BrandPriceDistributionResponse
+)
+from .pricing_analysis.services import (
+    PriceDistributionService,
+    PriceVsRevenueService,
+    BrandPriceDistributionService
+)
+
 logger = logging.getLogger(__name__)
 router = APIRouter()
 
@@ -709,4 +720,137 @@ async def get_package_type_distribution(request: PackageTypeDistributionRequest)
 
     except Exception as e:
         logger.error(f"System error in Package Type Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-distribution", response_model=PriceDistributionResponse)
+async def get_price_distribution(request: PriceDistributionRequest):
+    """Get price distribution analysis data by product category.
+    
+    This endpoint provides violin chart data for price distributions across product categories,
+    supporting both SKU and unit price analysis with comprehensive statistics.
+    
+    Args:
+        request: Price distribution request with project_id, filters, and timeframe
+        
+    Returns:
+        PriceDistributionResponse: Price distribution data by category with statistics
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"💰 Starting Price Distribution analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceDistributionService(supabase)
+        
+        # Get price distribution data
+        response = service.get_price_distribution_data(request)
+        
+        logger.info(f"Price Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.priceDistribution)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-vs-revenue", response_model=PriceVsRevenueResponse)
+async def get_price_vs_revenue(request: PriceVsRevenueRequest):
+    """Get price vs revenue scatter chart data.
+    
+    This endpoint provides scatter plot data showing the relationship between product prices
+    and revenue, with products grouped by category. Used for identifying price-revenue patterns
+    and top-performing products.
+    
+    Args:
+        request: Price vs revenue request with project_id, filters, and timeframe
+        
+    Returns:
+        PriceVsRevenueResponse: Scatter plot data with top products by category
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"📈 Starting Price vs Revenue analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceVsRevenueService(supabase)
+        
+        # Get price vs revenue data
+        response = service.get_price_vs_revenue_data(request)
+        
+        logger.info(f"Price vs Revenue analysis completed for project {request.project_id}: "
+                   f"{len(response.topProducts.segments)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price vs Revenue analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price vs Revenue analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/brand-price-distribution", response_model=BrandPriceDistributionResponse)
+async def get_brand_price_distribution(request: BrandPriceDistributionRequest):
+    """Get brand price distribution analysis data.
+    
+    This endpoint provides violin chart data for price distributions by brand within each
+    product category. Useful for understanding brand positioning and price competitiveness.
+    
+    Args:
+        request: Brand price distribution request with project_id, filters, and timeframe
+        
+    Returns:
+        BrandPriceDistributionResponse: Brand price distribution data by category
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"🏷️ Starting Brand Price Distribution analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = BrandPriceDistributionService(supabase)
+        
+        # Get brand price distribution data
+        response = service.get_brand_price_distribution_data(request)
+        
+        logger.info(f"Brand Price Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.brandPriceDistribution)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Brand Price Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Brand Price Distribution analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

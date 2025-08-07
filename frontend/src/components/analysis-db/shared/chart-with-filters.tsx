@@ -9,18 +9,7 @@ import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
-
-interface ChartFilterConfig {
-  visible_filters: Record<string, boolean>
-  default_values: Record<string, string[] | Record<string, string>>
-  extend_fields: Array<{
-    field_name: string
-    display_name: string
-    field_type: string
-    filter_options: Record<string, string[] | string | boolean>
-  }>
-  chart_type: string
-}
+import { getChartFilterConfig, ChartFilterConfig } from '../configs/chart-filter-data'
 
 // 全局 filter-config 缓存
 interface FilterConfigCacheState {
@@ -118,25 +107,70 @@ export function ChartWithFilters({
         setChartFilterConfig(result.config)
         console.log('🔧 [CHART-FILTER] Loaded and cached chart filter configuration:', chartId, result.config)
       } catch (error) {
-        console.error('Error loading chart filter config:', error)
+        console.error('Error loading chart filter config from API:', error)
+        console.log('🔧 [CHART-FILTER] Falling back to local configuration for:', chartId)
         
-        // 错误时的默认配置
-        const defaultConfig: ChartFilterConfig = {
-          visible_filters: {},
-          default_values: {},
-          extend_fields: [],
-          chart_type: chartId
+        try {
+          // 使用本地配置作为fallback
+          console.log('🔧 [CHART-FILTER] Attempting to load local config for:', { projectId, chartId })
+          const localConfig = await getChartFilterConfig(projectId, chartId)
+          
+          if (localConfig) {
+            const successCacheState: FilterConfigCacheState = {
+              data: localConfig,
+              loading: false,
+              error: null,
+              lastUpdated: Date.now()
+            }
+            filterConfigCacheStore.set(cacheKey, successCacheState)
+            
+            setChartFilterConfig(localConfig)
+            console.log('🔧 [CHART-FILTER] Successfully loaded local chart filter configuration:', chartId, localConfig)
+          } else {
+            // 如果本地配置也没有，才使用默认配置
+            const defaultConfig: ChartFilterConfig = {
+              chart_id: chartId,
+              chart_type: chartId,
+              project_id: projectId || '',
+              visible_filters: {},
+              default_values: {},
+              extend_fields: []
+            }
+            
+            const errorCacheState: FilterConfigCacheState = {
+              data: defaultConfig,
+              loading: false,
+              error: 'No configuration found for chart: ' + chartId,
+              lastUpdated: Date.now()
+            }
+            filterConfigCacheStore.set(cacheKey, errorCacheState)
+            
+            setChartFilterConfig(defaultConfig)
+            console.warn('🔧 [CHART-FILTER] No configuration found, using default for:', chartId)
+          }
+        } catch (localError) {
+          console.error('Error loading local chart filter config:', localError)
+          
+          // 完全失败时的默认配置
+          const defaultConfig: ChartFilterConfig = {
+            chart_id: chartId,
+            chart_type: chartId,
+            project_id: projectId || '',
+            visible_filters: {},
+            default_values: {},
+            extend_fields: []
+          }
+          
+          const errorCacheState: FilterConfigCacheState = {
+            data: defaultConfig,
+            loading: false,
+            error: error instanceof Error ? error.message : 'Failed to load chart filter config',
+            lastUpdated: Date.now()
+          }
+          filterConfigCacheStore.set(cacheKey, errorCacheState)
+          
+          setChartFilterConfig(defaultConfig)
         }
-        
-        const errorCacheState: FilterConfigCacheState = {
-          data: defaultConfig,
-          loading: false,
-          error: error instanceof Error ? error.message : 'Failed to load chart filter config',
-          lastUpdated: Date.now()
-        }
-        filterConfigCacheStore.set(cacheKey, errorCacheState)
-        
-        setChartFilterConfig(defaultConfig)
       } finally {
         setConfigLoading(false)
       }
@@ -173,7 +207,7 @@ export function ChartWithFilters({
         
         // 如果还没有设置默认值，且是boolean类型字段
         if (!defaultExtendFields[fieldName] && fieldDef.field_type === 'boolean') {
-          const preloadedOptions = filterOptions.extend_fields?.[fieldName]
+          const preloadedOptions = (filterOptions as any).extend_fields?.[fieldName]
           if (preloadedOptions && preloadedOptions.length > 0) {
             // 使用第一个预载选项作为默认值
             defaultExtendFields[fieldName] = preloadedOptions[0]
@@ -254,7 +288,7 @@ export function ChartWithFilters({
     const filters = []
 
     // Brand筛选器
-    if (chartFilterConfig.visible_filters.brands && filterOptions.brands?.length > 0) {
+    if (chartFilterConfig.visible_filters.brands && (filterOptions as any).brands?.length > 0) {
       const currentValue = finalFilters.brands?.[0] || ''
       const brandsDefault = chartFilterConfig.default_values.brands as string[]
       const defaultValue = Array.isArray(brandsDefault) ? (brandsDefault[0] || '') : (String(brandsDefault || ''))
@@ -268,7 +302,7 @@ export function ChartWithFilters({
             <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.brands.map((brand) => (
+              {(filterOptions as any).brands?.map((brand: string) => (
                 <SelectItem key={brand} value={brand}>
                   {brand}
                 </SelectItem>
@@ -280,7 +314,7 @@ export function ChartWithFilters({
     }
 
     // Segments筛选器
-    if (chartFilterConfig.visible_filters.segments && filterOptions.segments?.length > 0) {
+    if (chartFilterConfig.visible_filters.segments && (filterOptions as any).segments?.length > 0) {
       const currentValue = finalFilters.segments?.[0] || ''
       const segmentsDefault = chartFilterConfig.default_values.segments as string[]
       const defaultValue = Array.isArray(segmentsDefault) ? (segmentsDefault[0] || '') : (String(segmentsDefault || ''))
@@ -294,7 +328,7 @@ export function ChartWithFilters({
               <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.segments.map((segment) => (
+              {(filterOptions as any).segments?.map((segment: string) => (
                 <SelectItem key={segment} value={segment}>
                   {segment}
                 </SelectItem>
@@ -338,7 +372,7 @@ export function ChartWithFilters({
         const displayName = fieldDef.display_name
         
         // 检查该字段是否有可用的数据选项 - 关键修复！
-        const preloadedOptions = filterOptions?.extend_fields?.[fieldName]
+        const preloadedOptions = (filterOptions as any)?.extend_fields?.[fieldName]
         let hasValidOptions = false
         
         if (fieldDef.field_type === 'boolean') {

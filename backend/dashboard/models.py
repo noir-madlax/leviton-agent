@@ -277,7 +277,7 @@ class AllUseCase(BaseModel):
     useCase: str
     productAttribute: str
     satisfactionRate: float
-    totalReviews: int
+    mentionCount: int
     positiveCount: int
     negativeCount: int
     # Enhanced fields for frontend optimization
@@ -291,7 +291,7 @@ class UnderservedUseCase(BaseModel):
     useCase: str
     productAttribute: str
     gapLevel: float
-    totalReviews: int
+    mentionCount: int
     positiveCount: int
     negativeCount: int
     # Enhanced fields for frontend optimization
@@ -306,7 +306,7 @@ class ReviewInsightsResponse(BaseModel):
     customerLikes: List[CustomerLike]
     allUseCases: List[AllUseCase]
     underservedUseCases: List[UnderservedUseCase]
-    totalUseReviews: int = Field(description="Total reviews across all use cases")
+    totalUseMentions: int = Field(description="Total mentions across all use cases")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 

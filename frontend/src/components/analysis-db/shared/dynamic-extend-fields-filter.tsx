@@ -158,8 +158,8 @@ export function DynamicExtendFieldsFilter({
         )
         
         // 获取可用选项列表，优先使用统一数据源
-        const selectStableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
-        let availableSelectOptions = selectStableOptions.map(optionName => {
+        const selectStableOptions = (unifiedFilterData as any)?.extend_fields?.[field.field_name] || []
+        let availableSelectOptions = selectStableOptions.map((optionName: string) => {
           // 尝试从projectData获取count信息（如果可用）
           const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
             (item: any) => item.name === optionName
@@ -190,7 +190,7 @@ export function DynamicExtendFieldsFilter({
               {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
-              {availableSelectOptions.map((item) => {
+              {availableSelectOptions.map((item: any) => {
                 const isSelected = selectCurrentValue.includes(item.name)
                 return (
                   <div key={item.name} className="flex items-center gap-2">
@@ -277,10 +277,10 @@ export function DynamicExtendFieldsFilter({
         )
         
         // 获取所有可用选项（从统一数据源中获取，不受当前筛选条件影响）
-        const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
+        const stableOptions = (unifiedFilterData as any)?.extend_fields?.[field.field_name] || []
         
         // 构建可用选项列表，尝试包含count信息
-        let availableOptions = stableOptions.map(optionName => {
+        let availableOptions = stableOptions.map((optionName: string) => {
           // 尝试从projectData获取count信息（如果可用）
           const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
             (item: any) => item.name === optionName
@@ -303,7 +303,7 @@ export function DynamicExtendFieldsFilter({
               {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
-              {availableOptions.map((item) => {
+              {availableOptions.map((item: any) => {
                 const isSelected = booleanSelectValues.includes(item.name)
                 return (
                   <div key={item.name} className="flex items-center gap-2">

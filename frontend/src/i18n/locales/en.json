@@ -46,7 +46,7 @@
     "billing": "Billing"
   },
   "project": {
-    "createProject": "Create Project",
+    "amazonCategory": "Amazon Category",
     "createNewProject": "Create New Project",
     "projectName": "Project Name",
     "description": "Description",
@@ -96,22 +96,15 @@
     "categoryAnalysisDescription": "Your project analysis is based on Amazon product category. We compare brand performance, competitive analysis, and user-preferred product features across products of different brands within Selected Category. This comprehensive approach ensures you get complete market insights for strategic decision making.",
     "dataSelectionDescription": "Input which product category and number of products to include in your project",
     "createProject": "Create Project",
-    "brands": "Brands",
-    "totalBrands": "Total Brands",
     "dataSources": "Data Sources",
-    "amazonCategory": "Amazon Category",
     "selectedCategory": "Selected Category:",
     "projectCreated": "Project Created",
     "retry": "Retry",
     "failedLoadData": "Failed to load product data. Please try again.",
-    "createNewProject": "Create New Project",
     "projectScopeAndFilters": "Project Scope & Filters",
     "filtersApplyToWholeProject": "Filters will apply to the whole project",
     "projectDataScope": "Project Data Scope",
-    "products": "Products",
-    "brands": "Brands",
     "filters": "Filters",
-    "amazonCategory": "Amazon Category",
     "smartCapability": "Smart Capability",
     "nonSmart": "Non-Smart",
     "smart": "Smart",
@@ -148,7 +141,53 @@
     "clickToExpand": "Click to expand",
     "downloadChart": "Download Chart",
     "shareChart": "Share Chart",
-    "salesAnalyticsChat": "Sales Analytics Chat"
+    "salesAnalyticsChat": "Sales Analytics Chat",
+    
+    "pricingAnalysis": "Pricing Analysis",
+    "priceDistributionBySegment": "Price Distribution by Segment",
+    "priceDistributionByProductType": "Price Distribution by Product Type",
+    "priceVsRevenueDistribution": "Price vs Revenue Distribution of Top Selling 20 Products",
+    "brandPriceDistribution": "Brand Price Distribution",
+    
+    
+    "segment": "Segment",
+    "min": "Min",
+    "median": "Median",
+    "max": "Max",
+    "average": "Average",
+    "mean": "Mean",
+    
+
+    "priceType": "Price type",
+    "fullPackPrice": "Full Pack Price",
+    "unitPrice": "Unit Price",
+    "priceUSD": "Price (USD)",
+    "price": "Price",
+    "priceRange": "Price range",
+    
+
+    "loadingPricingData": "Loading pricing analysis data...",
+    "loadingScatterData": "Loading scatter chart data...",
+    "loadingBrandPriceData": "Loading brand price distribution data...",
+    "loadingProducts": "Loading products...",
+    
+
+    "errorLoadingData": "Error loading data",
+    "errorLoadingScatterChart": "Error loading scatter chart",
+    "errorLoadingBrandPrice": "Error loading brand price distribution",
+    
+ 
+    "noPriceDistributionData": "Price distribution data is not available.",
+    "waitingForValidData": "Waiting for valid product data...",
+    "noScatterData": "No scatter chart data available",
+    "noBrandPriceData": "No brand price distribution data available",
+    "noPricingDataAvailable": "No pricing data available",
+    "waitingForBrandData": "Waiting for valid brand data...",
+    
+  
+    "brand": "Brand",
+    "totalInBrand": "Total in brand",
+    "productsText": "products"
   },
   "filters": {
     "applyFilters": "Apply Filters",
@@ -162,7 +201,9 @@
     "reset": "Reset",
     "brand": "Brand",
     "segment": "Segment",
-    "category": "Category"
+    "category": "Category",
+    "selectedItems": "Selected {{count}} items",
+    "selectOption": "Select option"
   },
   "scraping": {
     "dataScraping": "Data Scraping",
