@@ -431,35 +431,15 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
       <div className="space-y-4">
         <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 mb-6">
             <BarChart3 className="w-5 h-5" />
             Total addressable market (TAM) and Market Share
           </h3>
         </div>
       </div>
 
-      {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
-      {shouldShowChart('market-share-analysis') && (
-      <div className="mt-5">
- 
-        {/* 第一层：包装整个Market Share section - 使用新的过滤器组件 */}
-        <div data-chart-id="market-share-analysis">
-          <Card className="p-6">
-            <div className="mb-4">
-              
-              {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
-              <FilterRenderer
-                projectId={projectId || ''}
-                chartName="market-share-analysis"
-                currentFilters={tamFilters}
-                onChange={handleFiltersChange}
-                onFiltersReady={handleFiltersReady}
-                disabled={tamDataLoading}
-                className="mb-6"
-              />
-            </div>
-          {/* 第二层：单一的Summary区域 */}
-          <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+    {/* 第二层：单一的Summary区域 */} 
+    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
             {tamDataLoading ? (
               <div className="flex items-center gap-2">
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
@@ -498,8 +478,31 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
              <p className="text-sm pt-0 text-blue-700 mt-3">
              Approximated by the total Revenue of all products in the selected categories and time period.
             </p>
-          </div>
-          <div className="p-6 bg-gray-50 mb-15 rounded-lg border">
+          </div>  
+
+
+      {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
+      {shouldShowChart('market-share-analysis') && (
+      <div className="mt-5">
+ 
+        {/* 第一层：包装整个Market Share section - 使用新的过滤器组件 */}
+        <div data-chart-id="market-share-analysis">
+          <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm" >
+            <div className="mb-0 bg-gray-50">
+              
+              {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
+              <FilterRenderer
+                projectId={projectId || ''}
+                chartName="market-share-analysis"
+                currentFilters={tamFilters}
+                onChange={handleFiltersChange}
+                onFiltersReady={handleFiltersReady}
+                disabled={tamDataLoading}
+                className="mb-6"
+              />
+            </div>
+          
+          <div className="p-6 bg-gray-50 mb-6 ">
           {/* 第三层：多个饼图区域 */}
           {tamDataLoading ? (
             <div className="flex items-center justify-center py-20">
@@ -532,7 +535,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
             categoryPieData.length > 0 ? (
               <div className="space-y-8">
                 {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
-                  <div key={categoryData.category} className="bg-gray-50 p-6 mb-0 rounded-lg">
+                  <div key={categoryData.category} className="bg-gray-50 p-6 ">
                     <h4 className="text-lg font-medium mb-0 text-center">
                       📊 {categoryData.category} - Market Share by Brand
                     </h4>
@@ -620,16 +623,16 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
         <div>
       <div className="space-y-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between mt-6">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
             Top 10 Brand Revenue by Category
           </h3>
         </div>
       </div>
-      <div className="mt-10">
+      <div className="mt-6 bg-gray-50 ">
         <div data-chart-id="best-selling-brands">
-          <Card className="p-6">
+          <Card className="p-6 bg-gray-50  border shadow-sm rounded-xl">
             <div className="mb-4">
 
               {/* 过滤器组件 */}
@@ -648,7 +651,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
             </div>
 
             {/* 图表内容区域 */}
-            <div className="p-6 bg-gray-50 rounded-lg border">
+            <div className="p-3 bg-gray-50 mt-[-3px]">
               {bestSellingBrandsLoading ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
@@ -771,7 +774,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                     }
 
                     return (
-                      <div className="bg-gray-50 p-4 rounded-lg relative">
+                      <div className="bg-gray-50 p-0 rounded-lg relative">
                         <div className="h-[400px]">
                           <BarChart
                             data={chartData}
@@ -810,7 +813,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
       {/* 🆕 Brand Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
-        <div className="mt-15">
+        <div className="mt-6">
           <BrandSalesTrendChart
             projectId={projectId}
             initialFilters={initialFilters}
@@ -821,7 +824,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
       {/* Segment Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
-      <div className="mt-15" data-chart-id="segment-analysis">
+      <div className="mt-6" data-chart-id="segment-analysis">
         <SegmentSalesTrendChart
           projectId={projectId}
           initialFilters={initialFilters}
@@ -831,7 +834,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
       {/* Package Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
-      <div className="mt-15" data-chart-id="package-sales-trend">
+      <div className="mt-6" data-chart-id="package-sales-trend">
         <PackageSalesTrendChart
           projectId={projectId}
           initialFilters={initialFilters}

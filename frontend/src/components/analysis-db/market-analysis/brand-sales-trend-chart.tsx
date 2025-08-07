@@ -55,7 +55,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
   )
 
   return (
-    <section className="mb-10">
+    <section className="mb-6">
 
       <div className="space-y-4">
         <div className="flex items-center justify-between">
@@ -66,10 +66,22 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
         </div>
       </div>
 
-      <div className="mt-5">
+      {/* Summary Information - moved to below title */}
+      {chartData && mounted && !dataLoading && !dataError && (
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
+          <p className="text-sm text-blue-700">
+            <strong>Brand Sales Trend Analysis:</strong> Showing monthly sales trends for top 10 brands by revenue.
+            {chartData.overall_summary?.date_range && (
+              <> Data covers {chartData.overall_summary.date_range.start} to {chartData.overall_summary.date_range.end}.</>
+            )}
+          </p>
+        </div>
+      )}
+
+      <div className="mt-6">
         <div data-chart-id="brand-sales-trend">
-          <Card className="p-6">
-            <div className="mb-4">
+          <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
+            <div className="mb-0">
               
               {/* 过滤器组件 */}
               <FilterRenderer
@@ -84,7 +96,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
             </div>
 
             {/* 图表内容区域 */}
-            <div className="p-6 bg-gray-50 rounded-lg border">
+            <div className="p-0 ">
               {dataLoading ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
@@ -115,30 +127,14 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
                 // 图表渲染逻辑
                 chartData && mounted ? (
                   <div className="space-y-6">
-                    {/* 汇总信息 */}
-                    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-                      <p className="text-sm text-blue-700">
-                        <strong>Brand Sales Trend Analysis:</strong> Showing monthly sales trends for top 10 brands by revenue.
-                        {chartData.overall_summary?.date_range && (
-                          <> Data covers {chartData.overall_summary.date_range.start} to {chartData.overall_summary.date_range.end}.</>
-                        )}
-                      </p>
-                    </div>
-
                     {/* 按类别显示趋势图 */}
                     {chartData.categories_data && Object.keys(chartData.categories_data).length > 0 ? (
                       <div className="space-y-8">
                         {Object.entries(chartData.categories_data).map(([category, categoryData]) => (
-                          <div key={category} className="bg-white p-6 rounded-lg border">
+                          <div key={category} className=" p-0 ">
                             <h4 className="text-lg font-semibold mb-4 text-center">
                               📈 {category} - Sales Trend of Top 10 Brands
                             </h4>
-
-                            {/* 类别汇总信息 */}
-                            <SalesTrendSummary
-                              data={categoryData}
-                              metricType="revenue"
-                            />
 
                             {/* 类别趋势图 */}
                             <SalesTrendChart

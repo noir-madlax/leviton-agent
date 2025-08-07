@@ -39,7 +39,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
     chartId: 'segment-sales-trend',
     projectId: projectId || '',
     initialData,
-    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+    refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       return await databaseService.getTopSegmentsByRevenueData(projectId)
     }
@@ -83,7 +83,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
   // 为每个segment生成不同的颜色
   const chartColors = processedChartData.map((_, index) => getChartColor(index))
 
-  const handleBarClick = (data: any) => {
+  const handleBarClick = (data: { activeLabel?: string }) => {
     if (data?.activeLabel) {
       // 查找原始segment名称
       const clickedDisplayName = data.activeLabel
@@ -106,21 +106,23 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
   }
 
   return (
-    <section className="mb-10">
+    <section className="mb-6">
 
        <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Sales Trend of Top 10 brands
+            Top 10 Segments by Revenue
           </h3>
         </div>
       </div>
 
-      <div className="mt-5">
+     
+
+      <div className="mt-6">
         <div data-chart-id="segment-sales-trend">
 
-          <Card className="p-6">
+          <Card className="p-6 rounded-xl border shadow-sm" >
             <div className="mb-4">
 
               {/* 过滤器组件 */}
@@ -131,12 +133,12 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 onChange={handleFiltersChange}
                 onFiltersReady={handleFiltersReady}
                 disabled={dataLoading}
-                className="mb-6"
+                className="mb-3"
               />
             </div>
 
             {/* 图表内容区域 */}
-            <div className="p-6 bg-gray-50 rounded-lg border">
+            <div className="p-3 bg-gray-50 ">
               {dataLoading ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
@@ -167,22 +169,12 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 // 图表渲染逻辑
                 chartData && mounted ? (
                   <div className="space-y-6">
-                    {/* 汇总信息 */}
-                    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-                      <p className="text-sm text-blue-700">
-                        <strong>Segment Sales Trend Analysis:</strong> Showing top 10 segments by revenue.
-                        {chartData.metadata && (
-                          <> Data includes {chartData.metadata.returned_segments} segments from {chartData.metadata.total_segments} total segments.</>
-                        )}
-                      </p>
-                    </div>
-
                     {/* 指标类型选择器 */}
                     <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
                     {/* 图表显示 */}
                     {processedChartData.length > 0 ? (
-                      <div className="bg-white p-6 rounded-lg border">
+                      <div className="bg-gray-50 p-0 ">
                         <div className="bg-gray-50 p-4 relative">
                           <div className="h-[600px] w-full">
                             <GroupedBarChart

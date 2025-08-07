@@ -39,7 +39,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
     chartId: 'package-sales-trend',
     projectId: projectId || '',
     initialData,
-    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+    refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       return await databaseService.getPackageTypeDistributionData(projectId)
     }
@@ -60,21 +60,9 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
 
   const { openPanel, loading: panelLoading } = useProductPanel()
 
-  // 构建chart数据 - 使用 overall_distribution
-  const processedChartData = chartData?.data?.overall_distribution ? chartData.data.overall_distribution.map((packageType, index) => ({
-    name: packageType.package_type || 'Unknown Package',
-    originalName: packageType.package_type || 'Unknown Package',
-    [metricType]: metricType === "revenue" ? packageType.revenue : packageType.product_count,
-    revenue: packageType.revenue || 0,
-    product_count: packageType.product_count || 0,
-    percentage: packageType.percentage || 0,
-    fill: getChartColor(index)
-  })) : []
+  // Chart data processing is handled within individual chart components
 
-  // 为每个package type生成不同的颜色
-  const chartColors = processedChartData.map((_, index) => getChartColor(index))
-
-  const handlePieClick = (data: any) => {
+  const handlePieClick = (data: { originalName?: string }) => {
     if (data?.originalName) {
       const packageTypeName = data.originalName
       openPanel({
@@ -92,20 +80,32 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
   }
 
   return (
-    <section className="mb-10">
+    <section className="mb-6">
 
       <div className="space-y-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Package Type Distribution by Revenue
+            Market Share by Sales Unit
           </h3>
         </div>
       </div>
 
-      <div className="mt-5">
+      {/* Summary Information - moved to below title */}
+      {chartData && mounted && !dataLoading && !dataError && (
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
+          <p className="text-sm text-blue-700">
+            <strong>Package Type Sales Trend Analysis:</strong> Showing package type distribution.
+            {chartData.metadata && (
+              <> Data includes {chartData.data.overall_distribution.length} package types from {chartData.metadata.total_package_types} total types.</>
+            )}
+          </p>
+        </div>
+      )}
+
+      <div className="mt-6">
         <div data-chart-id="package-sales-trend">
-          <Card className="p-6">
+          <Card className="p-6 rounded-xl border shadow-sm">
             <div className="mb-4">
               
               {/* 过滤器组件 */}
@@ -121,7 +121,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
             </div>
 
             {/* 图表内容区域 */}
-            <div className="p-6 bg-gray-50 rounded-lg border">
+            <div className="p-3 bg-gray-50 ">
               {dataLoading ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
@@ -152,16 +152,6 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                 // 图表渲染逻辑
                 chartData && mounted ? (
                   <div className="space-y-6">
-                    {/* 汇总信息 */}
-                    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-                      <p className="text-sm text-blue-700">
-                        <strong>Package Type Sales Trend Analysis:</strong> Showing package type distribution.
-                        {chartData.metadata && (
-                          <> Data includes {chartData.data.overall_distribution.length} package types from {chartData.metadata.total_package_types} total types.</>
-                        )}
-                      </p>
-                    </div>
-
                     {/* 指标类型选择器 */}
                     <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
@@ -169,21 +159,11 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                     {chartData.data.distribution_by_category && chartData.data.distribution_by_category.length > 0 ? (
                       <div className="space-y-8">
                         {chartData.data.distribution_by_category.map((categoryData) => (
-                          <div key={categoryData.category} className="bg-white p-6 rounded-lg border">
+                          <div key={categoryData.category} className="bg-gray-50 p-0 mt-6">
                             <h4 className="text-lg font-semibold mb-4 text-center">
                               📦 {categoryData.category} - Package Type Distribution
                             </h4>
 
-                            {/* 类别汇总信息 */}
-                            <div className="bg-gray-50 p-3 mb-4 rounded">
-                              <p className="text-sm text-gray-700">
-                                Total {metricType === "revenue" ? "Revenue" : "Products"}: {
-                                  metricType === "revenue" 
-                                    ? `$${categoryData.total_revenue.toLocaleString()}` 
-                                    : categoryData.total_products.toLocaleString()
-                                }
-                              </p>
-                            </div>
 
                             {/* 类别饼图 */}
                             <div className="bg-gray-50 p-4 relative">

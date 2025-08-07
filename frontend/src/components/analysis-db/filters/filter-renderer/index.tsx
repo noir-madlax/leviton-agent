@@ -258,11 +258,39 @@ export function FilterRenderer({
 
   return (
     <div className={`space-y-4 ${className}`}>
-      {/* 过滤器标题 */}
-      <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
+      {/* 过滤器标题和操作按钮 */}
+      <div className="flex justify-between items-center ">
+        <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
+        <div className="flex items-center gap-2">
+          <Button 
+            variant="outline" 
+            size="sm" 
+            onClick={handleReset}
+            disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
+            className="flex items-center gap-2"
+          >
+            <RotateCcw className="w-4 h-4" />
+            {filtersT('reset')}
+          </Button>
+          <Button 
+            size="sm" 
+            onClick={handleApplyFilters}
+            disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters} // 🆕 使用 context 的 loading 状态
+          >
+            {applyingFilters ? (
+              <>
+                <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                {commonT('loading')}
+              </>
+            ) : (
+              filtersT('applyFilters')
+            )}
+          </Button>
+        </div>
+      </div>
       
       {/* 第一行：基础过滤器控件 */}
-      <div className="flex items-center gap-4 flex-wrap">
+      <div className="flex items-center gap-4 flex-wrap ">
         {/* Category Filter */}
         {visibleFilters?.categories && (
           <CategoryFilter
@@ -298,7 +326,7 @@ export function FilterRenderer({
 
       {/* 第二行：扩展字段过滤器（单独占用一行） */}
       {visibleFilters?.extend_fields && (
-        <div className="w-full">
+        <div className="w-full pb-6 border-b">
           <ExtendFieldsFilter
             key={extendFieldsKey} // 🔧 添加 key 属性，当 reset 时强制重新渲染
             chartName={chartName} // 🆕 传递 chartName
@@ -314,34 +342,6 @@ export function FilterRenderer({
           />
         </div>
       )}
-
-      {/* 操作按钮 */}
-      <div className="flex justify-between items-center pt-2 border-t">
-        <Button 
-          variant="outline" 
-          size="sm" 
-          onClick={handleReset}
-          disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
-          className="flex items-center gap-2"
-        >
-          <RotateCcw className="w-4 h-4" />
-          {filtersT('reset')}
-        </Button>
-        <Button 
-          size="sm" 
-          onClick={handleApplyFilters}
-          disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters} // 🆕 使用 context 的 loading 状态
-        >
-          {applyingFilters ? (
-            <>
-              <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-              {commonT('loading')}
-            </>
-          ) : (
-            filtersT('applyFilters')
-          )}
-        </Button>
-      </div>
     </div>
   )
 }
