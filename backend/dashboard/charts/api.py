@@ -29,12 +29,14 @@ from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenue
 from .pricing_analysis.models import (
     PriceDistributionRequest, PriceDistributionResponse,
     PriceVsRevenueRequest, PriceVsRevenueResponse,
-    BrandPriceDistributionRequest, BrandPriceDistributionResponse
+    BrandPriceDistributionRequest, BrandPriceDistributionResponse,
+    PriceDistributionOverviewRequest, PriceDistributionOverviewResponse
 )
 from .pricing_analysis.services import (
     PriceDistributionService,
     PriceVsRevenueService,
-    BrandPriceDistributionService
+    BrandPriceDistributionService,
+    PriceDistributionOverviewService
 )
 
 logger = logging.getLogger(__name__)
@@ -723,11 +725,11 @@ async def get_package_type_distribution(request: PackageTypeDistributionRequest)
         raise HTTPException(status_code=500, detail="Internal server error")
 
 
-@router.post("/pricing-analysis/price-distribution", response_model=PriceDistributionResponse)
-async def get_price_distribution(request: PriceDistributionRequest):
-    """Get price distribution analysis data by product category.
+@router.post("/pricing-analysis/price-distribution-by-type", response_model=PriceDistributionResponse)
+async def get_price_distribution_by_type(request: PriceDistributionRequest):
+    """Get price distribution analysis data by product type.
     
-    This endpoint provides violin chart data for price distributions across product categories,
+    This endpoint provides violin chart data for price distributions across product types,
     supporting both SKU and unit price analysis with comprehensive statistics.
     
     Args:
@@ -853,4 +855,49 @@ async def get_brand_price_distribution(request: BrandPriceDistributionRequest):
 
     except Exception as e:
         logger.error(f"System error in Brand Price Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-distribution-overview", response_model=PriceDistributionOverviewResponse)
+async def get_price_distribution_overview(request: PriceDistributionOverviewRequest):
+    """Get price distribution overview table data.
+    
+    This endpoint provides overview statistics for price distributions across all product 
+    categories without applying filters. Used for the overview table showing segment 
+    summaries with product counts, min/median/max/average prices.
+    
+    Args:
+        request: Price distribution overview request with project_id and timeframe
+        
+    Returns:
+        PriceDistributionOverviewResponse: Overview table data with statistics
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"📊 Starting Price Distribution Overview analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceDistributionOverviewService(supabase)
+        
+        # Get overview data
+        response = service.get_overview_data(request)
+        
+        logger.info(f"Price Distribution Overview analysis completed for project {request.project_id}: "
+                   f"{len(response.overview_data)} segments with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price Distribution Overview analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price Distribution Overview analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

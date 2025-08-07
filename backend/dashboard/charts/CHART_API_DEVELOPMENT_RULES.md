@@ -78,12 +78,19 @@ class BaseRequestModel(BaseModel):
     filters: Optional[FiltersModel] = Field(default=None, description="过滤条件对象")
     date_range: Optional[DateRangeModel] = Field(default=None, description="时间范围对象")
 
+class BaseMetadata(BaseModel):
+    """基础元数据模型，用于提供分析过程的附加上下文信息"""
+    filtered_asins_count: int = Field(..., description="经过滤后参与计算的ASIN数量")
+    calculation_timestamp: str = Field(..., description="计算时间戳")
+    # 可以添加更多通用元数据字段，如 time_period_used
+
 class BaseResponseModel(BaseModel, Generic[T]):
     """Dashboard charts 基础响应模型 - 所有图表响应必须继承"""
     status: str = Field(default="success", description="响应状态：success/error")
     message: Optional[str] = Field(default=None, description="响应消息")
     timestamp: str = Field(default_factory=lambda: datetime.now().isoformat(), description="响应时间戳")
     data: T = Field(..., description="响应数据")
+    metadata: Optional[BaseMetadata] = Field(default=None, description="分析元数据")
 
     class Config:
         json_schema_extra = {
@@ -91,7 +98,11 @@ class BaseResponseModel(BaseModel, Generic[T]):
                 "status": "success",
                 "message": None,
                 "timestamp": "2024-01-15T10:30:00Z",
-                "data": "具体的数据内容"
+                "data": "具体的数据内容",
+                "metadata": {
+                    "filtered_asins_count": 1250,
+                    "calculation_timestamp": "2024-01-15T10:30:00Z"
+                }
             }
         }
 ```
@@ -102,13 +113,13 @@ class BaseResponseModel(BaseModel, Generic[T]):
 
 ```python
 # charts/{chartName}/models.py
-from ..base_models import BaseRequestModel
+from ..base_models import BaseRequestModel, TimeframeModel # 引入TimeframeModel
 
 class {ChartName}Request(BaseRequestModel):
     """图表请求模型 - 继承基础请求模型"""
 
-    # 如果需要额外字段，在这里添加
-    # additional_param: Optional[str] = Field(default=None, description="额外参数")
+    # 如果需要时间范围，可以直接使用TimeframeModel，而不是DateRangeModel
+    timeframe: Optional[TimeframeModel] = Field(default=None, description="时间范围（例如 'month', 'year'）")
 
     class Config:
         json_schema_extra = {
@@ -120,9 +131,8 @@ class {ChartName}Request(BaseRequestModel):
                     "segments": ["Premium"],
                     "extend_fields": {"smart_capability": "Smart"}
                 },
-                "date_range": {  # 如果图表需要时间范围
-                    "start_date": "2024-01-01",
-                    "end_date": "2024-06-30"
+                "timeframe": { # 使用 timeframe
+                    "period": "year"
                 }
             }
         }
@@ -134,7 +144,7 @@ class {ChartName}Request(BaseRequestModel):
 
 ```python
 # charts/{chartName}/models.py
-from ..base_models import BaseResponseModel
+from ..base_models import BaseResponseModel, BaseMetadata
 from typing import List
 
 class {ChartName}Data(BaseModel):
@@ -144,8 +154,14 @@ class {ChartName}Data(BaseModel):
     value: float = Field(..., description="数据值")
     # 其他字段...
 
+class {ChartName}Metadata(BaseMetadata):
+    """图表特定元数据 - 继承基础元数据并可扩展"""
+    total_categories: int = Field(..., description="分析的总类别数")
+    # 可添加更多特定元数据...
+
 class {ChartName}Response(BaseResponseModel[List[{ChartName}Data]]):
     """图表响应模型 - 继承基础响应模型，指定数据类型"""
+    metadata: {ChartName}Metadata # 覆盖为特定的元数据模型
 
     class Config:
         json_schema_extra = {
@@ -159,7 +175,12 @@ class {ChartName}Response(BaseResponseModel[List[{ChartName}Data]]):
                         "name": "示例数据",
                         "value": 123.45
                     }
-                ]
+                ],
+                "metadata": {
+                    "filtered_asins_count": 1250,
+                    "calculation_timestamp": "2024-01-15T10:30:00Z",
+                    "total_categories": 5
+                }
             }
         }
 ```
@@ -171,120 +192,136 @@ class {ChartName}Response(BaseResponseModel[List[{ChartName}Data]]):
 ```python
 # 返回数组数据
 class ProductListResponse(BaseResponseModel[List[ProductData]]):
-    pass
+    metadata: ProductListMetadata # 特定元数据
 
 # 返回单个对象
 class SummaryResponse(BaseResponseModel[SummaryData]):
-    pass
+    metadata: SummaryMetadata # 特定元数据
 
 # 返回字典数据
 class MetricsResponse(BaseResponseModel[Dict[str, Any]]):
-    pass
+    metadata: MetricsMetadata # 特定元数据
 
 # 返回嵌套结构
 class ComplexResponse(BaseResponseModel[Dict[str, List[ProductData]]]):
-    pass
+    metadata: ComplexMetadata # 特定元数据
 ```
 
 ### 4. 服务类规范
 
-#### 4.1 继承结构和模型处理
+#### 4.1 核心职责与数据源
+
+- **数据源**: 服务类应主要从 `product_wide_table` 视图获取数据。该视图整合了多个源表，提供了丰富的字段（如不同时间范围的收入和销量），是分析的基础。
+- **过滤逻辑**: **必须** 使用 `dashboard.charts.filters.asin_filter_service.get_filtered_asins` 公共函数来处理 `FiltersModel`。这确保了所有图表使用统一、可维护的过滤逻辑。
+- **时间范围处理**: **推荐** 使用 `dashboard.utils.TimeframeFieldMapper` 工具类来处理 `TimeframeModel`。该工具类根据传入的时间段（如 'month', 'year'）动态返回正确的数据库字段名（如 `past_month_revenue`, `past_year_revenue`），避免在服务类中硬编码字段名。
+
+#### 4.2 继承结构和模型处理
 
 ```python
 # charts/{chartName}/services.py
 from typing import List, Dict, Any, Optional
-from datetime import datetime
 import logging
-
-from dashboard.services.base_service import BaseDashboardService
-from core.models.filters import ProjectFilters
-from ..base_models import FiltersModel, DateRangeModel
+from ..base_models import FiltersModel, TimeframeModel
+from .models import {ChartName}Request, {ChartName}Response, {ChartName}Data, {ChartName}Metadata
+from dashboard.charts.filters.asin_filter_service import get_filtered_asins
+from dashboard.utils import TimeframeFieldMapper
+# 假设有一个Supabase的客户端实例获取方法
+from core.database.connection import get_supabase_client
 
 logger = logging.getLogger(__name__)
 
-class {ChartName}Service(BaseDashboardService):
+class {ChartName}Service:
     """图表服务类
-
     负责：
-    1. 接收并处理继承的请求模型
-    2. 数据查询和处理
-    3. 业务逻辑计算
-    4. 返回符合响应模型的数据
+    1. 接收请求模型
+    2. 使用统一服务过滤ASINs
+    3. 查询数据
+    4. 业务逻辑计算
+    5. 返回符合响应模型的数据
     """
 
-    def __init__(self, project_id: str, filters: Optional[FiltersModel] = None,
-                 date_range: Optional[DateRangeModel] = None):
-        """初始化服务
+    def __init__(self, supabase_client):
+        self.supabase = supabase_client
 
+    def get_chart_data(self, request: {ChartName}Request) -> {ChartName}Response:
+        """获取图表数据 - 主入口方法
+        
         Args:
-            project_id: 项目ID
-            filters: 筛选条件对象（来自BaseRequestModel）
-            date_range: 时间范围对象（来自BaseRequestModel，可选）
-        """
-        super().__init__(project_id)
-
-        # 处理筛选器对象
-        if filters:
-            # 将 FiltersModel 转换为 ProjectFilters 所需的字典格式
-            filters_dict = {
-                "categories": filters.categories,
-                "brands": filters.brands,
-                "segments": filters.segments,
-                "extend_fields": filters.extend_fields
-            }
-            project_filters = ProjectFilters.from_dict(filters_dict)
-            self.set_project_filters(project_filters)
-
-        # 处理时间范围对象
-        self.date_range = None
-        if date_range:
-            self.date_range = {
-                "start_date": date_range.start_date,
-                "end_date": date_range.end_date
-            }
-
-        logger.info(f"{self.__class__.__name__} initialized for project {project_id}")
-
-    def get_data(self) -> List[Dict[str, Any]]:
-        """获取图表数据 - 必须实现
-
+            request: 图表的请求模型实例
+        
         Returns:
-            List[Dict]: 符合响应模型 data 字段要求的数据
-
-        Note:
-            返回的数据结构必须与 {ChartName}Response 中定义的 data 类型匹配
+            符合响应模型的完整对象，包含data和metadata
         """
         try:
-            # 1. 数据查询
-            raw_data = self._query_data()
+            # 1. 使用统一服务过滤ASINs
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            if not filtered_asins:
+                return self._get_empty_response()
 
-            # 2. 数据处理和计算
-            processed_data = self._process_data(raw_data)
+            # 2. 从宽表查询数据
+            product_data = self._query_product_data(filtered_asins, request.timeframe)
+            if not product_data:
+                return self._get_empty_response()
+            
+            # 3. 数据处理和计算
+            processed_data = self._process_data(product_data)
 
-            # 3. 返回渲染就绪的数据
-            return processed_data
+            # 4. 生成元数据
+            metadata = self._generate_metadata(
+                filtered_asins_count=len(filtered_asins),
+                # ... 其他元数据参数
+            )
+            
+            # 5. 返回完整的响应对象
+            return {ChartName}Response(data=processed_data, metadata=metadata)
 
         except Exception as e:
-            logger.error(f"Error in {self.__class__.__name__}: {e}")
-            return []  # 返回空数组，符合响应模型要求
+            logger.error(f"Error in {self.__class__.__name__}: {e}", exc_info=True)
+            return self._get_empty_response(error_message=str(e))
 
-    def _query_data(self) -> List[Dict[str, Any]]:
-        """查询原始数据"""
-        # 实现具体的数据查询逻辑
+    def _query_product_data(self, asins: List[str], timeframe: Optional[TimeframeModel]) -> List[Dict[str, Any]]:
+        """使用TimeframeFieldMapper查询原始数据"""
+        revenue_field, volume_field = TimeframeFieldMapper.get_fields(timeframe)
+        select_fields = f'platform_id, brand, category, {revenue_field}, {volume_field}'
+        
+        query = self.supabase.table('product_wide_table').select(select_fields).in_('platform_id', asins)
+        result = query.execute()
+        return result.data or []
+
+    def _process_data(self, raw_data: List[Dict[str, Any]]) -> List[{ChartName}Data]:
+        """处理数据，返回符合响应模型中 `data` 字段的格式"""
+        # 实现数据处理逻辑...
         pass
 
-    def _process_data(self, raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """处理数据，返回符合响应模型的格式"""
-        # 实现数据处理逻辑，确保返回的字段与 {ChartName}Data 模型匹配
-        pass
+    def _generate_metadata(self, filtered_asins_count: int, **kwargs) -> {ChartName}Metadata:
+        """生成分析的元数据"""
+        return {ChartName}Metadata(
+            filtered_asins_count=filtered_asins_count,
+            calculation_timestamp=datetime.now(timezone.utc).isoformat(),
+            # ... 填充其他特定元数据
+        )
+
+    def _get_empty_response(self, error_message: Optional[str] = None) -> {ChartName}Response:
+        """返回一个空的、但结构完整的响应对象"""
+        empty_metadata = {ChartName}Metadata(
+            filtered_asins_count=0,
+            calculation_timestamp=datetime.now(timezone.utc).isoformat(),
+            # ... 填充默认元数据
+        )
+        return {ChartName}Response(
+            data=[], 
+            metadata=empty_metadata,
+            status="error" if error_message else "success",
+            message=error_message or "No data found after filtering."
+        )
 ```
 
-#### 4.2 数据处理原则
+#### 4.3 数据处理原则
 
-- **后端完成所有计算**: 满意度分数、排序、颜色编码等
-- **返回渲染就绪数据**: 前端直接使用，无需额外处理
-- **统一错误处理**: 返回空数组而不是抛出异常
-- **日志记录**: 记录关键操作和错误信息
+- **后端完成所有计算**: 满意度分数、排序、颜色编码等。
+- **返回渲染就绪数据**: 前端直接使用，无需额外处理。
+- **统一错误处理**: 在 `get_chart_data` 的 `try-except` 块中捕获异常，并调用 `_get_empty_response` 返回一个结构完整的空响应，而不是在API层抛出HTTPException。
+- **日志记录**: 记录关键操作和错误信息。
 
 ### 5. API 接口规范
 
@@ -294,6 +331,7 @@ class {ChartName}Service(BaseDashboardService):
 # charts/api.py
 from fastapi import APIRouter, HTTPException
 import logging
+from core.database.connection import get_supabase_client
 
 # 导入继承的模型
 from .{chartName}.models import {ChartName}Request, {ChartName}Response
@@ -307,48 +345,26 @@ async def get_{chart_name}(request: {ChartName}Request):
     """获取{图表名称}数据
 
     Args:
-        request: 图表请求（继承自BaseRequestModel），包含：
-                - project_id: 项目ID
-                - filters: FiltersModel对象
-                - date_range: DateRangeModel对象（可选）
+        request: 图表请求（继承自BaseRequestModel），包含project_id, filters, timeframe等
 
     Returns:
-        {ChartName}Response: 继承自BaseResponseModel的响应，包含：
-                           - status: 响应状态
-                           - message: 响应消息
-                           - timestamp: 时间戳
-                           - data: 图表数据
+        {ChartName}Response: 继承自BaseResponseModel的响应，包含data和metadata
 
     Raises:
-        HTTPException: 当请求处理失败时
+        HTTPException: 当发生意外的系统错误时
     """
     try:
-        # 创建服务实例，传入继承模型的字段
-        service = {ChartName}Service(
-            project_id=request.project_id,
-            filters=request.filters,        # FiltersModel对象
-            date_range=request.date_range   # DateRangeModel对象（如果需要）
-        )
-
-        # 获取数据
-        chart_data = service.get_data()
-
-        # 创建响应对象（自动包含status, message, timestamp）
-        response = {ChartName}Response(data=chart_data)
-
-        logger.info(f"{图表名称} analysis completed for project {request.project_id}: {len(response.data)} items analyzed")
-
+        supabase_client = get_supabase_client()
+        service = {ChartName}Service(supabase_client)
+        response = service.get_chart_data(request)
+        
+        logger.info(f"{图表名称} analysis completed for project {request.project_id}")
         return response
 
     except Exception as e:
-        logger.error(f"Error in {图表名称} analysis: {e}")
-        # 返回错误响应（仍然符合BaseResponseModel格式）
-        error_response = {ChartName}Response(
-            status="error",
-            message=str(e),
-            data=[]  # 空数据
-        )
-        raise HTTPException(status_code=500, detail=error_response.dict())
+        logger.error(f"System error in {图表名称} analysis: {e}", exc_info=True)
+        # 兜底的系统级错误
+        raise HTTPException(status_code=500, detail="An unexpected internal server error occurred.")
 ```
 
 #### 5.2 模型验证和错误处理
@@ -358,35 +374,23 @@ async def get_{chart_name}(request: {ChartName}Request):
 @router.post("/{category}/{chart-name}", response_model={ChartName}Response)
 async def get_{chart_name}(request: {ChartName}Request):
     try:
-        # 1. 请求模型自动验证（Pydantic）
-        # request.project_id, request.filters, request.date_range 已经过验证
-
-        # 2. 业务逻辑验证
-        if not request.project_id:
-            raise ValueError("Project ID is required")
-
-        # 3. 创建服务并处理
-        service = {ChartName}Service(
-            project_id=request.project_id,
-            filters=request.filters,
-            date_range=request.date_range
-        )
-
-        chart_data = service.get_data()
-
-        # 4. 响应模型自动构建（包含基础字段）
-        response = {ChartName}Response(data=chart_data)
-
+        # 1. 请求模型自动验证（由FastAPI处理）
+        
+        # 2. 服务层处理业务逻辑和预期内的错误（如无数据）
+        supabase_client = get_supabase_client()
+        service = {ChartName}Service(supabase_client)
+        response = service.get_chart_data(request)
+        
         return response
 
     except ValueError as e:
-        # 业务逻辑错误
+        # 捕获服务层中可能主动抛出的逻辑验证错误
         logger.error(f"Validation error in {图表名称}: {e}")
         raise HTTPException(status_code=400, detail=str(e))
 
     except Exception as e:
-        # 系统错误
-        logger.error(f"System error in {图表名称}: {e}")
+        # 捕获意外的系统错误
+        logger.error(f"System error in {图表名称}: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
 ```
 

@@ -63,6 +63,20 @@ class BrandPriceDistributionRequest(BaseRequestModel):
             }
         }
 
+class PriceDistributionOverviewRequest(BaseRequestModel):
+    """价格分布概览请求模型 - 不使用过滤器，显示项目整体概览"""
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "filters": None,  # Overview不使用过滤器
+                "timeframe": {
+                    "period": "year"
+                }
+            }
+        }
+
 # ==================== 响应模型 ====================
 
 class PriceStatistics(BaseModel):
@@ -145,6 +159,27 @@ class PriceDistributionMetadata(BaseModel):
     timeframe_used: str = Field(..., description="使用的时间维度")
     data_source: str = Field(default="product_wide_table", description="数据来源表")
     categories_processed: List[str] = Field(..., description="处理的分类列表")
+
+class PriceDistributionOverviewData(BaseModel):
+    """价格分布概览单行数据"""
+    segment: str = Field(..., description="分类名称")
+    products: int = Field(..., description="产品数量")
+    min_price: float = Field(..., description="最小价格")
+    median_price: float = Field(..., description="中位数价格")  
+    max_price: float = Field(..., description="最大价格")
+    average_price: float = Field(..., description="平均价格")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "segment": "Light Switches + Smart",
+                "products": 37,
+                "min_price": 11.99,
+                "median_price": 23.91,
+                "max_price": 74.95,
+                "average_price": 31.33
+            }
+        }
 
 class PriceDistributionResponse(BaseModel):
     """价格分布API响应模型 - 按产品类型的价格分布"""
@@ -264,6 +299,42 @@ class BrandPriceDistributionResponse(BaseModel):
                     "timeframe_used": "year",
                     "data_source": "product_wide_table",
                     "categories_processed": ["Light Switches", "Dimmer Switches"]
+                }
+            }
+        }
+
+class PriceDistributionOverviewResponse(BaseModel):
+    """价格分布概览API响应模型"""
+    overview_data: List[PriceDistributionOverviewData] = Field(..., description="概览表格数据")
+    metadata: PriceDistributionMetadata = Field(..., description="分析元数据")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "overview_data": [
+                    {
+                        "segment": "Light Switches + Smart",
+                        "products": 37,
+                        "min_price": 11.99,
+                        "median_price": 23.91,
+                        "max_price": 74.95,
+                        "average_price": 31.33
+                    },
+                    {
+                        "segment": "Dimmer Switches + Smart",
+                        "products": 24,
+                        "min_price": 14.97,
+                        "median_price": 31.49,
+                        "max_price": 189.90,
+                        "average_price": 42.91
+                    }
+                ],
+                "metadata": {
+                    "filtered_asins_count": 152,
+                    "calculation_timestamp": "2024-01-15T10:30:00Z",
+                    "timeframe_used": "year",
+                    "data_source": "product_wide_table",
+                    "categories_processed": ["Light Switches + Smart", "Dimmer Switches + Smart"]
                 }
             }
         }
