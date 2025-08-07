@@ -11,8 +11,6 @@ import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 // 导入需要集成的组件
-import { MarketInsights } from './market-insights'
-import { PackagePreferenceAnalysis } from './package-preference-analysis'
 import { SegmentSalesTrendChart } from '@/components/analysis-db/market-analysis/segment-sales-trend-chart'
 import { PackageSalesTrendChart } from '@/components/analysis-db/market-analysis/package-sales-trend-chart'
 // 导入新的过滤器组件
@@ -28,6 +26,7 @@ import { CHART_NAMES } from '@/components/analysis-db/constants'
 
 // 🆕 导入新的品牌销售趋势图表组件
 import { BrandSalesTrendChart } from './brand-sales-trend-chart'
+import { BarChart3 } from "lucide-react"
 
 interface BrandAnalysisProps {
   data: {
@@ -429,6 +428,16 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
 
+
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            Total addressable market (TAM) and Market Share
+          </h3>
+        </div>
+      </div>
+
       {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
       {shouldShowChart('market-share-analysis') && (
       <div className="mt-5">
@@ -437,9 +446,6 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
         <div data-chart-id="market-share-analysis">
           <Card className="p-6">
             <div className="mb-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Total addressable market (TAM) and Market Share by brands
-              </h3>
               
               {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
               <FilterRenderer
@@ -606,15 +612,25 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
       </div>
       )}
 
+
+      
+
       {/* Best Selling Brands Chart */}
       {shouldShowChart('market-share-analysis') && (
+
+        <div>
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            Top 10 Brand Revenue by Category
+          </h3>
+        </div>
+      </div>
       <div className="mt-10">
         <div data-chart-id="best-selling-brands">
           <Card className="p-6">
             <div className="mb-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                📊 Best Selling Brands by Category
-              </h3>
 
               {/* 过滤器组件 */}
               <FilterRenderer
@@ -788,49 +804,9 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
             </div>
           </Card>
         </div>
-      </div>
+      </div></div>
       )}
-
-      {shouldShowChart('brand-analysis') && (
-      <div className="mt-0">
-      <div data-chart-id="brand-analysis">
-      <ChartWithFilters
-        chartId="brand-analysis"
-        projectId={projectId || ''}
-        title="Top 10 Brand Revenue by Category"
-        projectFilters={initialFilters}
-      >
-        <Card className="p-6 bg-gray-50">
-          <MetricTypeSelector onChange={setMetricType} value={metricType} />
-          
-          {/* Single grouped bar chart */}
-          <div className="bg-gray-50 p-4 rounded-lg relative">
-            <div className="h-[400px]">
-              <BarChart
-                data={chartData}
-                index="name"
-                categories={categoryNames}
-                colors={colors}
-                yAxisLabel={yAxisLabel}
-                metricType={metricType}
-                onBarClick={(data) => handleBarClick(data)}
-              />
-            </div>
-            {/* Loading overlay */}
-            {loading && (
-              <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
-                <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                  <span className="text-gray-700 font-medium">Loading products...</span>
-                </div>
-              </div>
-            )}
-          </div>
-        </Card>
-      </ChartWithFilters>
-      </div>
-      </div>
-      )}
+      
 
       {/* 🆕 Brand Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
@@ -842,49 +818,6 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
         </div>
       )}
 
-      {/* Sales Trend Charts - By Category */}
-      <div className="mt-15">
-        <div data-chart-id="sales-trend-analysis">
-          <ChartWithFilters
-            chartId="sales-trend-analysis"
-            chartType="area"
-            projectId={projectId || ''}
-            title="Sales Trend of Top 10 brands"
-            projectFilters={initialFilters}
-          >
-            {/* Summary for all categories */}
-            <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
-              <p className="text-sm text-blue-700">
-                <strong>Sales Trend Analysis:</strong> Showing top 10 brands by revenue for each category. 
-                Data aggregated yearly and ranked by total revenue.
-              </p>
-            </div>
-            
-            {categoryNames.length > 0 ? (
-              <div className="space-y-8">
-                {categoryNames.map((category) => (
-                  <SalesTrendByCategoryComponent
-                    key={category}
-                    category={category}
-                    projectId={projectId || ''}
-                    initialFilters={initialFilters}
-                    metricType={metricType}
-                    onAreaClick={handleSalesTrendClick}
-                    salesTrendData={salesTrend}
-                    loading={!salesTrend}
-                  />
-                ))}
-              </div>
-            ) : (
-              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-                <p className="text-sm text-yellow-700">
-                  <strong>Sales Trend of Top 10 brands</strong> - No categories available...
-                </p>
-              </div>
-            )}
-          </ChartWithFilters>
-        </div>
-      </div>
 
       {/* Segment Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
@@ -896,26 +829,6 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
       </div>
       )}
 
-      {/* Market Insights - New Addition */}
-      {shouldShowChart('market-insights') && (
-      <div className="mt-15" data-chart-id="market-insights">
-        {marketInsights ? (
-          <MarketInsights
-            data={marketInsights}
-            productLists={productLists}
-            projectId={projectId}
-            initialFilters={initialFilters}
-          />
-        ) : (
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
-            <p className="text-sm text-yellow-700">
-              <strong>Top 10 Segments by Revenue</strong> - Loading market insights data...
-            </p>
-          </div>
-        )}
-      </div>
-      )}
-
       {/* Package Sales Trend Chart - New Addition */}
       {shouldShowChart('market-share-analysis') && (
       <div className="mt-15" data-chart-id="package-sales-trend">
@@ -923,29 +836,6 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
           projectId={projectId}
           initialFilters={initialFilters}
         />
-      </div>
-      )}
-
-      {/* Package Preference Analysis - New Addition */}
-      {shouldShowChart('package-preference') && (
-      <div className="mt-15" data-chart-id="package-preference">
-        {packagePreference ? (
-          <PackagePreferenceAnalysis
-            data={packagePreference}
-            productLists={productLists}
-            projectId={projectId}
-            categoryFilters={initialFilters?.categories}
-            brandFilters={initialFilters?.brands}
-            segmentFilters={initialFilters?.segments}
-            extendFields={initialFilters?.extend_fields}
-          />
-        ) : (
-          <div className="bg-gray-50  p-4">
-            <p className="text-sm text-yellow-700">
-              <strong>Package Type Distribution by Revenue</strong> - Loading package preference data...
-            </p>
-          </div>
-        )}
       </div>
       )}
 

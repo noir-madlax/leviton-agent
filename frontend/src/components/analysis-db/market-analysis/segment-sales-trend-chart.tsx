@@ -12,6 +12,7 @@ import { GroupedBarChart } from "@/components/analysis-db/charts/grouped-bar-cha
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
+import { BarChart3 } from "lucide-react"
 
 interface SegmentSalesTrendChartProps {
   data?: TopSegmentsByRevenueResponse
@@ -106,11 +107,18 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
 
   return (
     <section className="mb-10">
+
+       <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            Sales Trend of Top 10 brands
+          </h3>
+        </div>
+      </div>
+
       <div className="mt-5">
         <div data-chart-id="segment-sales-trend">
-                <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-        Top 10 Segments by Revenue
-      </h2>
 
           <Card className="p-6">
             <div className="mb-4">

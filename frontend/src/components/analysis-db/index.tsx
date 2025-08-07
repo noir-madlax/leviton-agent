@@ -3,10 +3,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
-import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
-import { PricingAnalysis } from "@/components/analysis-db/pricing-analysis"
-import { MarketInsights } from "@/components/analysis-db/market-analysis/market-insights"
-import { PackagePreferenceAnalysis } from "@/components/analysis-db/market-analysis/package-preference-analysis"
 import { ReviewInsights } from "@/components/analysis-db/review-insights/review-insights"
 import { CompetitorAnalysis } from "@/components/analysis-db/competitor-analysis/competitor-analysis"
 import { ProductPanelProvider } from './contexts/product-panel-context'
@@ -1193,77 +1189,9 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                         )}
                       </TabsContent>
                       
-                      <TabsContent value="product-analysis">
-                        <ProductAnalysis />
-                      </TabsContent>
+                       
                       
-                      <TabsContent value="pricing-analysis">
-                        {data.pricingAnalysis ? (
-                          <PricingAnalysis 
-                            data={{
-                              ...data.pricingAnalysis,
-                              // 传递productAnalysis数据给散点图使用
-                              topProducts: data.productAnalysis?.topProducts,
-                              segmentSummary: data.productAnalysis?.segmentSummary,
-                              segmentNames: data.productAnalysis?.segmentNames
-                            }}
-                            projectId={selectedProjectId || undefined}
-                            initialFilters={currentFilters}
-                          />
-                        ) : (loadingStates.pricingAnalysis || loadingStates.productAnalysis) ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Pricing Analysis...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Pricing Analysis data
-                          </div>
-                        )}
-                      </TabsContent>
-                      
-                      <TabsContent value="market-insights">
-                        {data.marketInsights ? (
-                          <MarketInsights 
-                            data={data.marketInsights}
-                            productLists={productLists}
-                            projectId={selectedProjectId || undefined}
-                            initialFilters={currentFilters}
-                          />
-                        ) : loadingStates.marketInsights ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Market Insights...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Market Insights data
-                          </div>
-                        )}
-                      </TabsContent>
-                      
-                      <TabsContent value="package-preference">
-                        {data.packagePreference ? (
-                          <PackagePreferenceAnalysis 
-                            data={data.packagePreference}
-                            productLists={productLists}
-                            projectId={selectedProjectId || undefined}
-                            categoryFilters={currentFilters.categories}
-                            brandFilters={currentFilters.brands || []}
-                            segmentFilters={currentFilters.segments || []}
-                            extendFields={currentFilters.extend_fields || {}}
-                          />
-                        ) : loadingStates.packagePreference ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Package Preference...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Package Preference data
-                          </div>
-                        )}
-                      </TabsContent>
+                       
                     </Tabs>
                   </TabsContent>
 

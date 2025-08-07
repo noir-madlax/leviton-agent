@@ -9,6 +9,7 @@ import { CHART_NAMES } from "@/components/analysis-db/constants"
 import { ProjectFilters } from "../types/filters"
 import { BrandSalesTrendResponse } from "../data/database-service"
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
+import { BarChart3 } from "lucide-react"
 
 interface BrandSalesTrendChartProps {
   data?: BrandSalesTrendResponse
@@ -55,17 +56,20 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-        Sales Trend of Top 10 brands
-      </h2>
+
+      <div className="space-y-4">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            Sales Trend of Top 10 brands
+          </h3>
+        </div>
+      </div>
 
       <div className="mt-5">
         <div data-chart-id="brand-sales-trend">
           <Card className="p-6">
             <div className="mb-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Monthly Sales Trend of Top 10 Brands
-              </h3>
               
               {/* 过滤器组件 */}
               <FilterRenderer
