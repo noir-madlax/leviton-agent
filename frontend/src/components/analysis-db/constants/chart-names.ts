@@ -23,7 +23,6 @@ export const CHART_NAMES = {
   PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
   PRICE_VS_REVENUE: 'price-vs-revenue', // 散点图
   BRAND_PRICE_DISTRIBUTION: 'price-distribution-by-brands', // 品牌价格分布
-  SEGMENT_ANALYSIS: 'segment-analysis',
   CATEGORY_ANALYSIS: 'category-analysis',
   COMPETITOR_ANALYSIS: 'competitor-analysis',
 
