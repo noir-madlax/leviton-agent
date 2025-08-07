@@ -56,7 +56,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
   return (
     <section className="mb-10">
       <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
-        📈 Brand Sales Trend Analysis
+        Sales Trend of Top 10 brands
       </h2>
 
       <div className="mt-5">

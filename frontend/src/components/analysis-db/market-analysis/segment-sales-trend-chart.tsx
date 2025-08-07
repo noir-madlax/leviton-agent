@@ -47,6 +47,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
   // 过滤器状态管理
   const {
     filters,
+    filtersReady,
     handleFiltersReady,
     handleFiltersChange
   } = useChartWithFilters(
@@ -107,12 +108,13 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
     <section className="mb-10">
       <div className="mt-5">
         <div data-chart-id="segment-sales-trend">
+                <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">
+        Top 10 Segments by Revenue
+      </h2>
+
           <Card className="p-6">
             <div className="mb-4">
-              <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                Monthly Sales Trend of Top 10 Segments
-              </h3>
-              
+
               {/* 过滤器组件 */}
               <FilterRenderer
                 projectId={projectId || ''}
@@ -125,13 +127,27 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
               />
             </div>
 
-            <div className="space-y-6">
-              {/* 错误状态 */}
-              {dataError ? (
-                <div className="bg-red-50 border-l-4 border-red-400 p-4">
-                  <div className="flex flex-col space-y-3">
+            {/* 图表内容区域 */}
+            <div className="p-6 bg-gray-50 rounded-lg border">
+              {dataLoading ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                  </div>
+                </div>
+              ) : !filtersReady ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
+                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                    <p className="text-sm text-gray-600">正在初始化过滤器...</p>
+                  </div>
+                </div>
+              ) : dataError ? (
+                <div className="flex items-center justify-center py-20">
+                  <div className="text-center">
                     <p className="text-sm text-red-600 mb-3">数据加载失败: {dataError}</p>
-                    <button 
+                    <button
                       onClick={() => refreshData(filters)}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                     >
