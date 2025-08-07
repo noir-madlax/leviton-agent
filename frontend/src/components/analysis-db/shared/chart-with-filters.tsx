@@ -9,7 +9,34 @@ import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
-import { getChartFilterConfig, ChartFilterConfig } from '../configs/chart-filter-data'
+// 定义 ChartFilterConfig 类型
+interface ChartFilterConfig {
+  chart_id: string
+  chart_type: string
+  project_id: string
+  visible_filters: {
+    brands?: boolean
+    segments?: boolean
+    categories?: boolean
+    time_period?: boolean
+    extend_fields?: boolean
+  }
+  default_values: {
+    brands?: string | string[]
+    segments?: string | string[]
+    categories?: string | string[]
+    extend_fields?: Record<string, string>
+  }
+  extend_fields?: Array<{
+    field_name: string
+    display_name: string
+    field_type: 'select' | 'boolean'
+    filter_options?: {
+      values?: string[]
+      default?: string
+    }
+  }>
+}
 
 // 全局 filter-config 缓存
 interface FilterConfigCacheState {
@@ -57,7 +84,6 @@ export function ChartWithFilters({
   // 加载chart专用筛选器配置 - 使用缓存机制
   useEffect(() => {
     const loadChartFilterConfig = async () => {
-      return
       if (!projectId || !chartId) return
 
       const cacheKey = `${projectId}-${chartId}`
@@ -110,67 +136,26 @@ export function ChartWithFilters({
         console.error('Error loading chart filter config from API:', error)
         console.log('🔧 [CHART-FILTER] Falling back to local configuration for:', chartId)
         
-        try {
-          // 使用本地配置作为fallback
-          console.log('🔧 [CHART-FILTER] Attempting to load local config for:', { projectId, chartId })
-          const localConfig = await getChartFilterConfig(projectId, chartId)
-          
-          if (localConfig) {
-            const successCacheState: FilterConfigCacheState = {
-              data: localConfig,
-              loading: false,
-              error: null,
-              lastUpdated: Date.now()
-            }
-            filterConfigCacheStore.set(cacheKey, successCacheState)
-            
-            setChartFilterConfig(localConfig)
-            console.log('🔧 [CHART-FILTER] Successfully loaded local chart filter configuration:', chartId, localConfig)
-          } else {
-            // 如果本地配置也没有，才使用默认配置
-            const defaultConfig: ChartFilterConfig = {
-              chart_id: chartId,
-              chart_type: chartId,
-              project_id: projectId || '',
-              visible_filters: {},
-              default_values: {},
-              extend_fields: []
-            }
-            
-            const errorCacheState: FilterConfigCacheState = {
-              data: defaultConfig,
-              loading: false,
-              error: 'No configuration found for chart: ' + chartId,
-              lastUpdated: Date.now()
-            }
-            filterConfigCacheStore.set(cacheKey, errorCacheState)
-            
-            setChartFilterConfig(defaultConfig)
-            console.warn('🔧 [CHART-FILTER] No configuration found, using default for:', chartId)
-          }
-        } catch (localError) {
-          console.error('Error loading local chart filter config:', localError)
-          
-          // 完全失败时的默认配置
-          const defaultConfig: ChartFilterConfig = {
-            chart_id: chartId,
-            chart_type: chartId,
-            project_id: projectId || '',
-            visible_filters: {},
-            default_values: {},
-            extend_fields: []
-          }
-          
-          const errorCacheState: FilterConfigCacheState = {
-            data: defaultConfig,
-            loading: false,
-            error: error instanceof Error ? error.message : 'Failed to load chart filter config',
-            lastUpdated: Date.now()
-          }
-          filterConfigCacheStore.set(cacheKey, errorCacheState)
-          
-          setChartFilterConfig(defaultConfig)
+        // 使用默认配置作为fallback
+        console.log('🔧 [CHART-FILTER] Using default configuration for:', chartId)
+        const defaultConfig: ChartFilterConfig = {
+          chart_id: chartId,
+          chart_type: chartId,
+          project_id: projectId || '',
+          visible_filters: {},
+          default_values: {},
+          extend_fields: []
         }
+
+        const errorCacheState: FilterConfigCacheState = {
+          data: defaultConfig,
+          loading: false,
+          error: error instanceof Error ? error.message : 'Failed to load chart filter config',
+          lastUpdated: Date.now()
+        }
+        filterConfigCacheStore.set(cacheKey, errorCacheState)
+
+        setChartFilterConfig(defaultConfig)
       } finally {
         setConfigLoading(false)
       }
@@ -202,7 +187,7 @@ export function ChartWithFilters({
 
     // 处理预载数据中boolean字段的默认值 (如Smart Capability)
     if (chartFilterConfig.extend_fields) {
-      chartFilterConfig.extend_fields.forEach((fieldDef) => {
+      chartFilterConfig.extend_fields.forEach((fieldDef: any) => {
         const fieldName = fieldDef.field_name
         
         // 如果还没有设置默认值，且是boolean类型字段
