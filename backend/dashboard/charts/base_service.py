@@ -8,7 +8,7 @@ import logging
 from typing import List
 from datetime import datetime
 
-from dashboard.models import MonthlySalesRecord
+from dashboard.models import MonthlySalesRecord, MonthlySalesAggregate
 from dashboard.utils.timeframe_mapper import TimeframeFieldMapper
 
 logger = logging.getLogger(__name__)
@@ -80,6 +80,65 @@ class ChartsBaseService:
 
         except Exception as e:
             logger.error(f"Error querying monthly sales with timeframe: {e}")
+            return []
+
+    def query_monthly_sales_aggregate_with_timeframe(self, asins: List[str], timeframe) -> List[MonthlySalesAggregate]:
+        """按 ASIN 聚合的 timeframe 月度销售汇总。
+
+        直接在数据库侧聚合 sum(total_units_sold), sum(total_revenue)，减少传输与内存聚合开销。
+
+        Returns: List[MonthlySalesAggregate]
+        """
+        try:
+            if not asins:
+                return []
+
+            start_date, end_date = TimeframeFieldMapper.get_date_range(timeframe)
+
+            # 规范化月份边界
+            start_month = datetime.strptime(start_date, '%Y-%m-%d').replace(day=1).date().isoformat() if start_date else None
+            end_month = datetime.strptime(end_date, '%Y-%m-%d').replace(day=1).date().isoformat() if end_date else None
+
+            # 安全拼接 IN 列表（转义单引号）
+            def esc(val: str) -> str:
+                return val.replace("'", "''")
+            asin_list_sql = ",".join([f"'{esc(a)}'" for a in asins])
+
+            where_clauses = ["platform_source = 'amazon'", f"platform_id IN ({asin_list_sql})"]
+            if start_month:
+                where_clauses.append(f"year_month >= '{start_month}'")
+            if end_month:
+                where_clauses.append(f"year_month <= '{end_month}'")
+            where_sql = " AND ".join(where_clauses)
+
+            sql = f"""
+                SELECT
+                  platform_id,
+                  COALESCE(SUM(total_units_sold), 0) AS total_units_sold,
+                  COALESCE(SUM(total_revenue), 0) AS total_revenue
+                FROM product_sales_history_monthly
+                WHERE {where_sql}
+                GROUP BY platform_id
+            """.strip()
+
+            # 通过通用 RPC 执行 SQL
+            response = self.supabase.rpc('execute_safe_query', {'query_text': sql}).execute()
+
+            rows = getattr(response, 'data', None) or []
+            payloads = []
+            for row in rows:
+                payload = row.get('result') if isinstance(row, dict) and 'result' in row else row
+                if payload and payload.get('platform_id'):
+                    payloads.append(payload)
+
+            aggregates: List[MonthlySalesAggregate] = [
+                MonthlySalesAggregate(**payload) for payload in payloads
+            ]
+
+            logger.info(f"Monthly aggregate data via SQL: {len(aggregates)} ASINs aggregated")
+            return aggregates
+        except Exception as e:
+            logger.error(f"Error aggregating monthly sales with timeframe (SQL): {e}")
             return []
 
 

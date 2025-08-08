@@ -92,33 +92,14 @@ class TAMMarketShareService(ChartsBaseService):
         """Aggregate product data from product_sales_history_monthly within timeframe.
         
         Steps:
-          1) Query monthly sales records with timeframe (reusing ChartsBaseService)
-          2) Aggregate per ASIN: sum total_revenue and total_units_sold
-          3) Join brand/category from product_wide_table
-          4) Return normalized product_data list with keys: platform_id, brand, category, revenue, volume
+          1) Query monthly sales aggregates with timeframe (reusing ChartsBaseService)
+          2) Join brand/category from product_wide_table
+          3) Return normalized product_data list with keys: platform_id, brand, category, revenue, volume
         """
         try:
-            # 1) Query monthly records
-            monthly_records = self.query_monthly_sales_with_timeframe(asins, timeframe)
-            if not monthly_records:
-                return []
-
-            # 2) Aggregate per ASIN
-            asin_to_agg: Dict[str, Dict[str, float]] = {}
-            for rec in monthly_records:
-                asin = rec.platform_id
-                if asin not in asin_to_agg:
-                    asin_to_agg[asin] = {'revenue': 0.0, 'volume': 0}
-                # Prefer total_revenue if present, otherwise fallback to average_price * total_units_sold
-                revenue_add = 0.0
-                if getattr(rec, 'total_revenue', None) is not None:
-                    revenue_add = float(rec.total_revenue or 0)
-                else:
-                    revenue_add = float((rec.average_price or 0) * (rec.total_units_sold or 0))
-                asin_to_agg[asin]['revenue'] += revenue_add
-                asin_to_agg[asin]['volume'] += int(rec.total_units_sold or 0)
-
-            if not asin_to_agg:
+            # 1) Query monthly aggregates (already summed by ASIN)
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
                 return []
 
             # 3) Join brand/category from wide table
@@ -126,7 +107,7 @@ class TAMMarketShareService(ChartsBaseService):
                 self.supabase
                 .table('product_wide_table')
                 .select('platform_id, brand, category')
-                .in_('platform_id', list(asin_to_agg.keys()))
+                .in_('platform_id', [a.platform_id for a in aggregates])
                 .eq('source', 'amazon')
                 .not_.is_('brand', 'null')
                 .not_.is_('category', 'null')
@@ -141,16 +122,17 @@ class TAMMarketShareService(ChartsBaseService):
 
             # 4) Build normalized product_data
             product_data: List[Dict[str, Any]] = []
-            for asin, agg in asin_to_agg.items():
+            for agg in aggregates:
+                asin = agg.platform_id
                 mapping = brand_category_map.get(asin)
                 if not mapping:
                     continue
                 product_data.append({
-                    'platform_id': asin,
+                    'platform_id': agg.platform_id,
                     'brand': mapping['brand'],
                     'category': mapping['category'],
-                    'revenue': float(agg['revenue']),
-                    'volume': int(agg['volume'])
+                    'revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
+                    'volume': int(getattr(agg, 'total_units_sold', 0) or 0)
                 })
 
             logger.info(f"📈 Aggregated {len(product_data)} products from monthly sales table")
@@ -280,12 +262,12 @@ class TAMMarketShareService(ChartsBaseService):
         )
 
 
-class TopSegmentsByRevenueService:
+class TopSegmentsByRevenueService(ChartsBaseService):
     """Service for Top 10 Segments by Revenue analysis."""
 
     def __init__(self, supabase_client):
         """Initialize the service with Supabase client."""
-        self.supabase = supabase_client
+        super().__init__(supabase_client)
     
     def get_top_segments_data(self, request: TopSegmentsByRevenueRequest) -> TopSegmentsByRevenueResponse:
         """Get Top Segments data with filtering.
@@ -308,8 +290,8 @@ class TopSegmentsByRevenueService:
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: Get product data from wide table with timeframe support
-            product_data = self._get_product_data_from_wide_table(filtered_asins, request.timeframe)
+            # Step 2: Aggregate product data from monthly sales table with timeframe support
+            product_data = self._get_product_data_from_monthly_table(filtered_asins, request.timeframe)
             
             if not product_data:
                 logger.warning(f"No product data found for filtered ASINs")
@@ -355,56 +337,59 @@ class TopSegmentsByRevenueService:
             logger.error(f"❌ Error in Top Segments analysis: {e}", exc_info=True)
             return self._get_empty_response(request.metric_type)
 
-    def _get_product_data_from_wide_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
-        """Get product data from product_wide_table.
+    def _get_product_data_from_monthly_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """Aggregate product data from product_sales_history_monthly within timeframe.
         
-        Args:
-            asins: List of ASINs to query
-            timeframe: Optional TimeframeModel to determine which fields to query
-            
-        Returns:
-            List of product data dictionaries
+        Returns product_data with keys: platform_id, brand, category, revenue, volume, price
+        where price is derived as revenue/volume for the timeframe (fallback 0 when volume=0).
         """
         try:
-            # 使用工具类获取字段名
-            revenue_field, volume_field = TimeframeFieldMapper.get_fields(timeframe)
-            
-            # Build select fields
-            select_fields = f'platform_id, brand, category, {revenue_field}, {volume_field}, price_usd'
-            
-            logger.info(f"📊 Querying fields: {select_fields}")
-            
-            # Query product_wide_table for required fields
-            query = self.supabase.table('product_wide_table').select(select_fields).in_('platform_id', asins)
-            result = query.execute()
-            
-            if not result.data:
-                logger.warning("No data found in product_wide_table")
+            # 1) Query monthly aggregates (already summed by ASIN)
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
                 return []
-            
-            # Filter out products with missing essential data and normalize field names
-            valid_products = []
-            for product in result.data:
-                if (product.get('brand') and 
-                    product.get('category') and 
-                    product.get(revenue_field) is not None):
-                    
-                    # Normalize field names for consistent processing
-                    normalized_product = {
-                        'platform_id': product.get('platform_id'),
-                        'brand': product.get('brand'),
-                        'category': product.get('category'),
-                        'revenue': float(product.get(revenue_field, 0) or 0),
-                        'volume': int(product.get(volume_field, 0) or 0),
-                        'price': float(product.get('price_usd', 0) or 0)
-                    }
-                    valid_products.append(normalized_product)
-            
-            logger.info(f"📈 Retrieved {len(valid_products)} valid products from wide table using {revenue_field}")
-            return valid_products
-            
+
+            # 3) Join brand/category from wide table
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, brand, category')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+                .not_.is_('brand', 'null')
+                .not_.is_('category', 'null')
+            )
+            wide_result = wide_query.execute()
+            brand_category_map: Dict[str, Dict[str, str]] = {}
+            for row in (wide_result.data or []):
+                brand_category_map[row['platform_id']] = {
+                    'brand': row.get('brand'),
+                    'category': row.get('category')
+                }
+
+            # 4) Build normalized product_data (derive price)
+            product_data: List[Dict[str, Any]] = []
+            for agg in aggregates:
+                asin = agg.platform_id
+                mapping = brand_category_map.get(asin)
+                if not mapping:
+                    continue
+                revenue = float(getattr(agg, 'total_revenue', 0.0) or 0.0)
+                volume = int(getattr(agg, 'total_units_sold', 0) or 0)
+                price = (revenue / volume) if volume > 0 else 0.0
+                product_data.append({
+                    'platform_id': agg.platform_id,
+                    'brand': mapping['brand'],
+                    'category': mapping['category'],
+                    'revenue': revenue,
+                    'volume': volume,
+                    'price': price
+                })
+
+            logger.info(f"📈 Aggregated {len(product_data)} products from monthly sales table for Top Segments")
+            return product_data
         except Exception as e:
-            logger.error(f"Error querying product_wide_table: {e}")
+            logger.error(f"Error aggregating Top Segments data from monthly table: {e}")
             return []
 
     def _get_segment_assignments(self, project_id: str, asins: List[str]) -> Dict[str, str]:

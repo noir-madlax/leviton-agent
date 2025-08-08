@@ -84,6 +84,16 @@ class MonthlySalesRecord:
     updated_at: Optional[datetime] = None
     total_revenue: Optional[float] = None
 
+
+@dataclass
+class MonthlySalesAggregate:
+    """按 ASIN 聚合的月度销售汇总。
+    包含 timeframe 内对 product_sales_history_monthly 的 sum(total_units_sold) 与 sum(total_revenue)。
+    """
+    platform_id: str
+    total_units_sold: int
+    total_revenue: float
+
 class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.
     
