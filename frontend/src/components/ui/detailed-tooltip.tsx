@@ -96,6 +96,14 @@ export function DetailedTooltip({ content, children, className = '' }: DetailedT
               <span className="font-medium text-gray-900">{content.totalReviews}</span>
             </div>
             <div className="flex justify-between items-center">
+              <span className="text-green-700">Positive Mentions:</span>
+              <span className="font-medium text-green-800">{content.positiveReviews}</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-red-700">Negative Mentions:</span>
+              <span className="font-medium text-red-800">{content.negativeReviews}</span>
+            </div>
+            <div className="flex justify-between items-center">
               <span className="text-blue-700">Satisfaction Rate:</span>
               <span className="font-medium text-blue-800">{content.satisfactionRate}%</span>
             </div>

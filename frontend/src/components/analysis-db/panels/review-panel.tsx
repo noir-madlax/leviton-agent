@@ -257,12 +257,12 @@ export function ReviewPanel({
               {showFilters?.causeAnalysis && (
                 <Select value={causeAnalysisFilter} onValueChange={setCauseAnalysisFilter}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Cause Analysis" />
+                    <SelectValue placeholder="Sentiments / Aspects" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="all">All Causes</SelectItem>
-                    <SelectItem value="positive">Positive Causes</SelectItem>
-                    <SelectItem value="negative">Negative Causes</SelectItem>
+                    <SelectItem value="all">All Sentiments</SelectItem>
+                    <SelectItem value="positive">Positive Aspects</SelectItem>
+                    <SelectItem value="negative">Negative Aspects</SelectItem>
                     {loadingCategories ? (
                       <SelectItem value="loading" disabled>Loading categories...</SelectItem>
                     ) : (
