@@ -17,7 +17,7 @@ from .models import (
     AllReviewDataResponse, ReviewData,
     DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
     CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
-    CompetitorMatrixViewResponse, CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData,
+    CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData,
     ChatConfigResponse
 )
 from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse, BrandSalesTrendRequest, BrandSalesTrendResponse
@@ -34,6 +34,9 @@ from .services.chat_config_service import ChatConfigService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
 from .charts.competitorAnalysis.service import CompetitorAnalysisChartService
+from .charts.competitorAnalysis.models import (
+    CompetitorMatrixViewResponse as ChartsCompetitorMatrixViewResponse,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -930,7 +933,7 @@ async def get_package_preference(
     return response
 
 
-@router.post("/review-insights", response_model=ReviewInsightsResponse)
+@router.post("/review-insights")
 async def get_review_insights_data(request: ReviewInsightsRequest):
     """Get review insights data for a specific project using ReviewAnalysisChartService directly.
 
@@ -991,14 +994,19 @@ async def get_review_insights_data(request: ReviewInsightsRequest):
             max_underserved_use_cases=request.max_underserved_use_cases
         )
 
-        response = ReviewInsightsResponse(
+        # Return raw snake_case structure expected by frontend DatabaseService mapper
+        result = {
             **raw_data,
-            project_id=request.project_id,
-            filtered_asin_count=len(service.project_asins)
-        )
+            "project_id": request.project_id,
+            "filtered_asin_count": len(service.project_asins),
+        }
 
-        logger.info(f"Review insights API returned data for project {request.project_id} - {len(raw_data.get('pain_points', []))} pain points, {len(raw_data.get('customer_likes', []))} likes")
-        return response
+        logger.info(
+            f"Review insights API returned data for project {request.project_id} - "
+            f"{len(raw_data.get('pain_points', []))} pain points, "
+            f"{len(raw_data.get('customer_likes', []))} likes"
+        )
+        return result
 
     except Exception as e:
         logger.error(f"Error in review insights API: {e}", exc_info=True)
@@ -1062,7 +1070,7 @@ async def get_final_category_assignments(project_id: str):
         ) from e
 
 
-@router.post("/competitor-analysis/matrix-view", response_model=CompetitorMatrixViewResponse)
+@router.post("/competitor-analysis/matrix-view", response_model=ChartsCompetitorMatrixViewResponse)
 @log_request_response
 async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
     """Get competitor analysis matrix view data.
@@ -1100,7 +1108,7 @@ async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
         )
         
         # Convert service data to proper response model format (with data wrapper)
-        response = CompetitorMatrixViewResponse(data=matrix_data)
+        response = ChartsCompetitorMatrixViewResponse(data=matrix_data)
         
         logger.info(f"Competitor matrix view API returned data for {len(matrix_data['aspect_categories'])} categories")
         return response
