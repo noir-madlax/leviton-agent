@@ -114,10 +114,13 @@ export function IntegratedLayout({
     activeChartId,
     dynamicCharts,
     allCards,
+    chatConfig,
+    configLoading,
+    configError,
     setChartContainerState,
     addDynamicChart,
     selectChart
-  } = useChartManagement()
+  } = useChartManagement({ projectId })
 
   // 设置默认选中市场分析chart card
   useEffect(() => {
@@ -309,6 +312,7 @@ export function IntegratedLayout({
               activeChartId={activeChartId}
               onChartSelect={handleChartSelect}
               onAddDynamicChart={handleAddDynamicChart}
+              chatConfig={chatConfig || undefined}
             />
           </div>
         </div>

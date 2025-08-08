@@ -59,6 +59,6 @@ export const languageConfig = {
   },
   zh: {
     label: '中文',
-    flag: '����'
+    flag: '🇨🇳'
   }
 } as const; 

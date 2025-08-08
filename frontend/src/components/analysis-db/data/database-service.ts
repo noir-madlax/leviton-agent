@@ -1,5 +1,168 @@
 import { supabase } from '@/lib/supabase'
-import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS } from '../types/filters'
+import { ExtendFieldDefinition, ProjectFilters, DEFAULT_FILTERS, FilterDefaultsResponse } from '../types/filters'
+import { filterStateManager } from '../stores'
+import type { ChartFilterState } from '../stores'
+import { CHART_NAMES } from '../constants'
+
+// TAM Market Share API 相关接口
+export interface TAMData {
+  total_market_revenue: number
+  total_market_volume: number
+  total_products: number
+  currency: string
+}
+
+export interface BrandShareData {
+  brand: string
+  revenue: number
+  volume: number
+  product_count: number
+  market_share_percentage: number
+  rank: number
+}
+
+export interface CategoryMarketShare {
+  category: string
+  total_revenue: number
+  total_volume: number
+  total_products: number
+  brand_shares: BrandShareData[]
+}
+
+export interface TAMMarketShareMetadata {
+  filtered_asins_count: number
+  total_categories: number
+  total_brands: number
+  calculation_timestamp: string
+}
+
+export interface TAMMarketShareResponse {
+  tam_data: TAMData
+  market_share_by_category: CategoryMarketShare[]
+  metadata: TAMMarketShareMetadata
+}
+
+// Brand Sales Trend API 相关接口
+export interface BrandMetrics {
+  revenue: number
+  volume: number
+}
+
+export interface BrandSalesTrendDataPoint {
+  month: string
+  [brandName: string]: string | BrandMetrics  // 动态品牌字段
+}
+
+export interface CategorySalesTrendSummary {
+  total_brands: number
+  date_range: {
+    start: string
+    end: string
+  }
+  total_revenue: number
+  total_volume: number
+  timeframe_period: string
+}
+
+export interface CategorySalesTrendData {
+  trend_data: BrandSalesTrendDataPoint[]
+  brands: string[]
+  summary: CategorySalesTrendSummary
+}
+
+export interface OverallSummary {
+  total_categories: number
+  all_brands: string[]
+  total_revenue: number
+  total_volume: number
+  date_range: {
+    start: string
+    end: string
+  }
+  timeframe_period: string
+}
+
+export interface BrandSalesTrendMetadata {
+  filtered_asins_count: number
+  calculation_timestamp: string
+  timeframe_used: string
+  data_source: string
+  categories_processed: string[]
+}
+
+export interface BrandSalesTrendResponse {
+  categories_data: {
+    [categoryName: string]: CategorySalesTrendData
+  }
+  overall_summary: OverallSummary
+  metadata: BrandSalesTrendMetadata
+}
+
+// Top Segments by Revenue API 相关接口
+export interface SegmentRevenueData {
+  segment: string
+  revenue: number
+  volume: number
+  products: number
+  market_share_percentage: number
+  rank: number
+  avg_price: number
+  top_brand: string
+}
+
+export interface TopSegmentsData {
+  segments: SegmentRevenueData[]
+  total_market_revenue: number
+  total_market_volume: number
+  total_products: number
+  currency: string
+}
+
+export interface TopSegmentsMetadata {
+  filtered_asins_count: number
+  total_segments: number
+  returned_segments: number
+  metric_type: string
+  calculation_timestamp: string
+}
+
+export interface TopSegmentsByRevenueResponse {
+  data: TopSegmentsData
+  metadata: TopSegmentsMetadata
+}
+
+// Package Type Distribution API 相关接口
+export interface PackageTypeData {
+  package_type: string
+  revenue: number
+  product_count: number
+  percentage: number
+  rank: number
+}
+
+export interface CategoryPackageDistribution {
+  category: string
+  total_revenue: number
+  total_products: number
+  package_types: PackageTypeData[]
+}
+
+export interface PackageTypeDistributionData {
+  overall_distribution: PackageTypeData[]
+  distribution_by_category: CategoryPackageDistribution[]
+  metric_type: string
+}
+
+export interface PackageTypeDistributionMetadata {
+  filtered_asins_count: number
+  total_package_types: number
+  calculation_timestamp: string
+}
+
+export interface PackageTypeDistributionResponse {
+  data: PackageTypeDistributionData
+  metadata: PackageTypeDistributionMetadata
+}
 
 export interface ProductData {
   platform_id: string
@@ -189,7 +352,480 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 }
 
 export class DatabaseService {
-  
+
+  // 🆕 从过滤器状态管理器获取过滤器参数 - 直接返回 API 需要的结构
+  private getFiltersFromState(chartName: string): {
+    filters: {
+      categories: string[]
+      brands: string[]
+      segments: string[]
+      extend_fields: Record<string, any>
+    }
+    timeframe: { period: string }
+  } {
+    const chartState = filterStateManager.getChartFilters(chartName)
+
+    if (!chartState) {
+      console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using empty defaults`)
+      return {
+        filters: {
+          categories: [],
+          brands: [],
+          segments: [],
+          extend_fields: {}
+        },
+          timeframe: { period: 'year' } // 🔧 设置默认时间周期
+      }
+    }
+
+    const result = {
+      filters: {
+        categories: chartState.filters.categories || [],
+        brands: chartState.filters.brands || [],
+        segments: chartState.filters.segments || [],
+        extend_fields: chartState.filters.extend_fields || {}
+      },
+      timeframe: { period: chartState.timeframe?.period || 'year' } // 🔧 设置默认时间周期
+    }
+
+    console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)
+    return result
+  }
+
+  // 🆕 将 ProjectFilters 转换为 ChartFilterState 格式
+  private convertProjectFiltersToChartState(filters: ProjectFilters): ChartFilterState {
+    return {
+      filters: {
+        categories: filters.categories || [],
+        brands: filters.brands || [],
+        segments: filters.segments || [],
+        extend_fields: filters.extend_fields || {}
+      },
+      timeframe: {
+        period: filters.time_period || 'year'
+      },
+      metadata: {
+        lastUpdated: Date.now(),
+        appliedAt: Date.now()
+      }
+    }
+  }
+
+  // 🆕 同步 ProjectFilters 到过滤器状态管理器
+  syncProjectFiltersToState(chartName: string, filters: ProjectFilters): void {
+    const chartState = this.convertProjectFiltersToChartState(filters)
+    filterStateManager.updateChartFilters(chartName, chartState)
+    console.log(`🔄 [DATABASE-SERVICE] Synced ProjectFilters to state for ${chartName}`)
+  }
+
+  // 🆕 使用过滤器状态管理器获取项目概览数据
+  async getProjectOverviewWithFilters(projectId: string, chartName: string = 'project') {
+    const filters = this.getFiltersFromState(chartName)
+
+    console.log(`🔍 [DATABASE-SERVICE] Getting project overview for ${chartName} with filters:`, filters)
+
+    // 调用现有的 getProjectOverview 方法，使用正确的参数顺序
+    return this.getProjectOverview(
+      projectId,
+      filters.filters.categories,
+      filters.filters.brands,
+      filters.filters.segments,
+      filters.filters.extend_fields
+    )
+  }
+
+
+
+  // 🔑 Get TAM Market Share data - 自动从过滤器状态管理器获取过滤器
+  async getTAMMarketShareData(projectId: string, chartName: string = CHART_NAMES.MARKET_SHARE_ANALYSIS): Promise<TAMMarketShareResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(chartName)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting TAM data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling TAM Market Share API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/tam-market-share`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`TAM Market Share API call failed: ${response.status}`)
+      }
+
+      const result: TAMMarketShareResponse = await response.json()
+      console.log('📊 TAM Market Share API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching TAM Market Share data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Brand Sales Trend data - 自动从过滤器状态管理器获取过滤器
+  async getBrandSalesTrendData(projectId: string): Promise<BrandSalesTrendResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.SALES_TREND_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Brand Sales Trend data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        aggregation: 'monthly',
+        limit: 10,
+        metric_type: 'revenue',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Brand Sales Trend API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/market-analysis/brand-sales-trend`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Sales Trend API call failed: ${response}`)
+      }
+
+      const result: BrandSalesTrendResponse = await response.json()
+      console.log('📊 Brand Sales Trend API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Brand Sales Trend data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Top Segments by Revenue data - 自动从过滤器状态管理器获取过滤器
+  async getTopSegmentsByRevenueData(projectId: string): Promise<TopSegmentsByRevenueResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.SEGMENT_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Top Segments by Revenue data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        limit: 10,
+        metric_type: 'revenue',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Top Segments by Revenue API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/top-segments-by-revenue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Top Segments by Revenue API call failed: ${response.status}`)
+      }
+
+      const result: TopSegmentsByRevenueResponse = await response.json()
+      console.log('📊 Top Segments by Revenue API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Top Segments by Revenue data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Package Type Distribution data - 自动从过滤器状态管理器获取过滤器
+  async getPackageTypeDistributionData(projectId: string): Promise<PackageTypeDistributionResponse> {
+    try {
+      // 🆕 从过滤器状态管理器获取过滤器数据
+      const filters = this.getFiltersFromState(CHART_NAMES.PACKAGE_PREFERENCE)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Package Type Distribution data with filters from state manager:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        metric_type: 'revenue',
+        ...filters  // 🎯 直接展开 getFiltersFromState 的结果
+      }
+
+      console.log('🔍 Calling Package Type Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/market-analysis/package-type-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Package Type Distribution API call failed: ${response.status}`)
+      }
+
+      const result: PackageTypeDistributionResponse = await response.json()
+      console.log('📊 Package Type Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Package Type Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 💰 Get Price Distribution data with filters (旧方法，保持兼容性)
+  async getPriceDistributionData(projectId: string, filters?: ProjectFilters): Promise<any> {
+    try {
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Price Distribution data with filters:`, filtersToUse)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filtersToUse  // 🎯 直接展开过滤器结果
+      }
+
+      console.log('🔍 Calling Price Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-by-type`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Price Distribution Overview data - 独立组件专用方法
+  async getPriceDistributionOverviewData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_DISTRIBUTION_OVERVIEW)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting price overview data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-overview`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Overview API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Overview API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Overview data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Price Distribution by Type data - 独立组件专用方法
+  async getPriceDistributionByTypeData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.PRICE_ANALYSIS)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting price distribution data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters  // 🎯 直接展开过滤器
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-distribution-by-type`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Price Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🆕 Get Brand Price Distribution data - 独立组件专用方法
+  async getBrandPriceDistributionData(projectId: string): Promise<any> {
+    try {
+      // 🆕 从状态管理器获取过滤器
+      const filters = this.getFiltersFromState(CHART_NAMES.BRAND_PRICE_DISTRIBUTION)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting brand price distribution data with filters:`, filters)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filters
+      }
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/brand-price-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Price Distribution API call failed: ${response.status}`)
+      }
+
+      const result = await response.json()
+      console.log('📊 Brand Price Distribution API response:', result)
+
+      return result
+    } catch (error) {
+      console.error('Error fetching Brand Price Distribution data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Price vs Revenue scatter chart data with independent filtering
+  async getPriceVsRevenueData(projectId: string, filters?: ProjectFilters): Promise<any> {
+    try {
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.PRICE_VS_REVENUE)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Price vs Revenue data with filters:`, filtersToUse)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filtersToUse  // 直接展开过滤器结果
+      }
+
+      console.log('🔍 Calling Price vs Revenue API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/price-vs-revenue`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Price vs Revenue API call failed: ${response.status}`)
+      }
+
+      const data = await response.json()
+      console.log('✅ Price vs Revenue API response received:', data)
+
+      return data
+    } catch (error) {
+      console.error('Error fetching Price vs Revenue data:', error)
+      throw error
+    }
+  }
+
+  // 🔑 Get Brand Price Distribution data with independent filtering
+  async getBrandPriceDistributionData(projectId: string, filters?: ProjectFilters): Promise<any> {
+    try {
+      // 如果提供了filters参数，使用它；否则从过滤器状态管理器获取过滤器数据
+      const filtersToUse = filters ? this.convertProjectFiltersToChartState(filters) : this.getFiltersFromState(CHART_NAMES.BRAND_PRICE_DISTRIBUTION)
+
+      console.log(`🔍 [DATABASE-SERVICE] Getting Brand Price Distribution data with filters:`, filtersToUse)
+
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+      const requestBody = {
+        project_id: projectId,
+        ...filtersToUse  // 直接展开过滤器结果
+      }
+
+      console.log('🔍 Calling Brand Price Distribution API:', requestBody)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/brand-price-distribution`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+      })
+
+      if (!response.ok) {
+        throw new Error(`Brand Price Distribution API call failed: ${response.status}`)
+      }
+
+      const data = await response.json()
+      console.log('✅ Brand Price Distribution API response received:', data)
+
+      return data
+    } catch (error) {
+      console.error('Error fetching Brand Price Distribution data:', error)
+      throw error
+    }
+  }
+
   // 🔑 Get brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string, categoryFilters?: string[], packagingTypeFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, any>): Promise<{
     brandCategoryRevenue: BrandCategoryData[]
@@ -1414,6 +2050,37 @@ export class DatabaseService {
     }
   }
 
+  /**
+   * 🆕 获取项目过滤器默认配置（新版API）
+   */
+  async getProjectFilterDefaultsNew(projectId: string): Promise<FilterDefaultsResponse> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+
+    try {
+      console.log('🔍 [FILTER-DEFAULTS] Fetching filter defaults for project:', projectId)
+
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-defaults`, {
+        method: 'GET',
+        headers: {
+          'accept': 'application/json',
+        },
+      })
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const data: FilterDefaultsResponse = await response.json()
+
+      console.log('🔍 [FILTER-DEFAULTS] Raw API response:', data)
+
+      return data
+    } catch (error) {
+      console.error('🚨 [FILTER-DEFAULTS] Error fetching filter defaults:', error)
+      throw error
+    }
+  }
+
   // 🆕 Get cause categories from review insights for filter options
   async getCauseCategories(
     projectId: string,
@@ -1434,7 +2101,7 @@ export class DatabaseService {
   }>> {
     try {
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-      
+
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/review-insights`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -1524,7 +2191,7 @@ export class DatabaseService {
   }> {
     try {
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-      
+
       const requestBody: any = {
         project_id: projectId,
         category_id: categoryId,

@@ -11,13 +11,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { User, Settings, LogOut, CreditCard } from "lucide-react"
+import { User, Settings, LogOut, CreditCard, Globe } from "lucide-react"
 import { useAuth } from "@/contexts/auth-context"
 import { useNavT } from "@/i18n/hooks"
+import { useTranslation } from 'react-i18next'
 
 export function UserMenu() {
   const { user, signOut } = useAuth()
   const [isClient, setIsClient] = useState(false)
+  const { i18n } = useTranslation()
   
   // 总是调用hooks，但在客户端渲染前返回fallback
   const navTRaw = useNavT()
@@ -33,6 +35,17 @@ export function UserMenu() {
     } catch (error) {
       console.error('Logout error:', error)
     }
+  }
+
+  const handleLanguageSwitch = () => {
+    const currentLang = i18n.language
+    const newLang = currentLang === 'zh' ? 'en' : 'zh'
+    i18n.changeLanguage(newLang)
+  }
+
+  const getCurrentLanguageDisplay = () => {
+    const currentLang = i18n.language
+    return currentLang === 'zh' ? '中文 → English' : 'English → 中文'
   }
 
   // Get user display information
@@ -67,6 +80,10 @@ export function UserMenu() {
         <DropdownMenuItem>
           <CreditCard className="mr-2 h-4 w-4" />
           <span>{t('billing')}</span>
+        </DropdownMenuItem>
+        <DropdownMenuItem onClick={handleLanguageSwitch}>
+          <Globe className="mr-2 h-4 w-4" />
+          <span>{isClient ? getCurrentLanguageDisplay() : 'Language'}</span>
         </DropdownMenuItem>
         <DropdownMenuItem>
           <Settings className="mr-2 h-4 w-4" />

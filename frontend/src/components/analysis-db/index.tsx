@@ -2,22 +2,20 @@
 
 import { useState, useEffect, useCallback, useRef } from 'react'
 import { Tabs, TabsContent } from '@/components/ui/tabs'
+import { PricingAnalysis } from "@/components/analysis-db/pricing-analysis"
 import { BrandAnalysis } from "@/components/analysis-db/market-analysis/brand-analysis"
-import { ProductAnalysis } from "@/components/analysis-db/market-analysis/product-analysis"
-import { PricingAnalysis } from "@/components/analysis-db/market-analysis/pricing-analysis"
-import { MarketInsights } from "@/components/analysis-db/market-analysis/market-insights"
-import { PackagePreferenceAnalysis } from "@/components/analysis-db/market-analysis/package-preference-analysis"
 import { ReviewInsights } from "@/components/analysis-db/review-insights/review-insights"
 import { CompetitorAnalysis } from "@/components/analysis-db/competitor-analysis/competitor-analysis"
 import { ProductPanelProvider } from './contexts/product-panel-context'
 import { ReviewPanelProvider } from './contexts/review-panel-context'
 import { ProductPanel } from "@/components/analysis-db/panels/product-panel"
 import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
-import { databaseService, type ProductAnalysisData } from '@/components/analysis-db/data/database-service'
+import { databaseService, type ProductAnalysisData, type TAMMarketShareResponse } from '@/components/analysis-db/data/database-service'
 import { PageDivider } from '@/components/ui/page-divider'
 import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
 import { ProjectFilterWrapper } from '@/components/integrated-dashboard/components/project-filter-wrapper'
 import { SALES_TREND_DATE_RANGE } from "@/app/chat/charts/sales_trend/services/sales-trend-api";
+import { useUnifiedFilter } from './contexts/unified-filter-context'
 
 interface DashboardData {
   brandAnalysis: {
@@ -32,6 +30,7 @@ interface DashboardData {
     categoryNames: string[]
     categoryColors: string[]
   }
+  tamMarketShare?: TAMMarketShareResponse
   productAnalysis: {
     priceVsRevenue: ProductAnalysisData['priceVsRevenue']
     topProducts: {
@@ -252,7 +251,9 @@ interface DashboardData {
   }
 }
 
-// 获取品牌分析数据的async函数
+// 🚫 移除 fetchTAMMarketShareData 函数，TAM 数据现在由 brand-analysis.tsx 组件自己管理
+
+// 获取品牌分析数据的async函数 (保留用于其他图表)
 async function fetchBrandAnalysisData(projectId?: string, categoryFilters?: string[], brandFilters?: string[], segmentFilters?: string[], extendFields?: Record<string, unknown>) {
   try {
     if (!projectId) {
@@ -653,7 +654,10 @@ interface AnalysisDbContainerProps {
   activeTab?: string;
 }
 
-export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
+// 内部组件：读取Context数据并渲染内容
+function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
+  // 🆕 读取统一过滤器数据
+  const { filterData: unifiedFilterData, isLoading: filterDataLoading } = useUnifiedFilter()
   const [data, setData] = useState<Partial<DashboardData>>({})
   const [loading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -666,6 +670,7 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   // 为每个数据部分单独管理加载状态
   const [loadingStates, setLoadingStates] = useState({
     brandAnalysis: false,
+    tamMarketShare: false,
     productAnalysis: false,
     pricingAnalysis: false,
     marketInsights: false,
@@ -702,6 +707,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
         case 'brandAnalysis':
           result.brandAnalysis = await fetchBrandAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
+        // 🚫 移除 tamMarketShare case，让 brand-analysis.tsx 组件自己管理
+        // case 'tamMarketShare':
+        //   result.tamMarketShare = await fetchTAMMarketShareData(projectId)
+        //   break
         case 'productAnalysis':
           result.productAnalysis = await fetchProductAnalysisData(projectId, categoryFilters, brandFilters, segmentFilters, extendFields)
           break
@@ -825,20 +834,16 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
   useEffect(() => {
     const initializeDashboard = async (projectId: string) => {
       setSelectedProjectId(projectId);
-      
-      try {
-        console.log(`Fetching filter defaults for project: ${projectId}`);
-        const defaultFilters = await databaseService.getProjectFilterDefaults(projectId);
-        
-        // Use provided filters from props if they exist, otherwise use fetched defaults, otherwise use hardcoded defaults.
-        const resolvedInitialFilters = filters || defaultFilters || DEFAULT_FILTERS;
-        
-        console.log('Resolved initial filters:', resolvedInitialFilters);
-        setCurrentFilters(resolvedInitialFilters);
-      } catch (e) {
-        console.error("Failed to fetch project filter defaults, using base filters.", e);
-        setCurrentFilters(filters || DEFAULT_FILTERS);
-      }
+
+      // 优化：不再重复调用filter defaults API，使用UnifiedFilterProvider提供的数据
+      console.log(`Initializing dashboard for project: ${projectId} (using UnifiedFilterProvider data)`);
+
+      // Use provided filters from props, otherwise use hardcoded defaults
+      // UnifiedFilterProvider will handle the actual API calls
+      const resolvedInitialFilters = filters || DEFAULT_FILTERS;
+
+      console.log('Resolved initial filters:', resolvedInitialFilters);
+      setCurrentFilters(resolvedInitialFilters);
     };
 
     if (initialProjectId) {
@@ -865,6 +870,8 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       // Reload all data with the new filters
       const forceReload = true;
       loadSpecificData('brandAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      // 🚫 移除 tamMarketShare 的加载，让 brand-analysis.tsx 组件自己管理
+      // loadSpecificData('tamMarketShare', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('marketInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('packagePreference', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
@@ -1113,8 +1120,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
 
                       <TabsContent value="brand-analysis">
                         {data.brandAnalysis ? (
-                          <BrandAnalysis 
-                            data={data.brandAnalysis} 
+                          <BrandAnalysis
+                            data={data.brandAnalysis}
+                            tamMarketShare={undefined}
                             productLists={productLists}
                             projectId={selectedProjectId || undefined}
                             initialFilters={currentFilters}
@@ -1125,36 +1133,25 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Brand Analysis...</span>
+                            <span className="ml-2">Loading Market Analysis Data...</span>
                           </div>
                         ) : (
                           <div className="text-center py-8 text-gray-500">
-                            Click to load Brand Analysis data
+                            Click to load Market Analysis data
                           </div>
                         )}
                       </TabsContent>
                       
-                      <TabsContent value="product-analysis">
-                        <ProductAnalysis />
-                      </TabsContent>
-                      
                       <TabsContent value="pricing-analysis">
                         {data.pricingAnalysis ? (
-                          <PricingAnalysis 
-                            data={{
-                              ...data.pricingAnalysis,
-                              // 传递productAnalysis数据给散点图使用
-                              topProducts: data.productAnalysis?.topProducts,
-                              segmentSummary: data.productAnalysis?.segmentSummary,
-                              segmentNames: data.productAnalysis?.segmentNames
-                            }}
+                          <PricingAnalysis
                             projectId={selectedProjectId || undefined}
                             initialFilters={currentFilters}
                           />
-                        ) : (loadingStates.pricingAnalysis || loadingStates.productAnalysis) ? (
+                        ) : loadingStates.pricingAnalysis ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Pricing Analysis...</span>
+                            <span className="ml-2">Loading Pricing Analysis Data...</span>
                           </div>
                         ) : (
                           <div className="text-center py-8 text-gray-500">
@@ -1162,49 +1159,9 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
                           </div>
                         )}
                       </TabsContent>
+                       
                       
-                      <TabsContent value="market-insights">
-                        {data.marketInsights ? (
-                          <MarketInsights 
-                            data={data.marketInsights}
-                            productLists={productLists}
-                            projectId={selectedProjectId || undefined}
-                            initialFilters={currentFilters}
-                          />
-                        ) : loadingStates.marketInsights ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Market Insights...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Market Insights data
-                          </div>
-                        )}
-                      </TabsContent>
-                      
-                      <TabsContent value="package-preference">
-                        {data.packagePreference ? (
-                          <PackagePreferenceAnalysis 
-                            data={data.packagePreference}
-                            productLists={productLists}
-                            projectId={selectedProjectId || undefined}
-                            categoryFilters={currentFilters.categories}
-                            brandFilters={currentFilters.brands || []}
-                            segmentFilters={currentFilters.segments || []}
-                            extendFields={currentFilters.extend_fields || {}}
-                          />
-                        ) : loadingStates.packagePreference ? (
-                          <div className="flex items-center justify-center py-8">
-                            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Package Preference...</span>
-                          </div>
-                        ) : (
-                          <div className="text-center py-8 text-gray-500">
-                            Click to load Package Preference data
-                          </div>
-                        )}
-                      </TabsContent>
+                       
                     </Tabs>
                   </TabsContent>
 
@@ -1242,4 +1199,10 @@ export function AnalysisDbContainer({ selectedProjectId: initialProjectId, filte
       </ReviewPanelProvider>
     </ProductPanelProvider>
   )
-} 
+}
+
+// 🆕 主要导出组件：用Provider包装
+export function AnalysisDbContainer(props: AnalysisDbContainerProps) {
+  // 🆕 移除重复的 UnifiedFilterProvider，直接使用上层的 Provider
+  return <AnalysisDbContent {...props} />
+}

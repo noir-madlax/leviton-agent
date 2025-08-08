@@ -16,7 +16,27 @@ from .reviewAnalysis.models import (
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
 from .filters.models import AsinFilterRequest, AsinFilterResponse
-from dashboard.services.base_service import BaseDashboardService
+from .filters.asin_filter_service import get_filtered_asins as filter_asins
+
+from .market_analysis.models import (
+    TAMMarketShareRequest, TAMMarketShareResponse,
+    TopSegmentsByRevenueRequest, TopSegmentsByRevenueResponse,
+    PackageTypeDistributionRequest, PackageTypeDistributionResponse
+)
+from .market_analysis.service import TAMMarketShareService, TopSegmentsByRevenueService, PackageTypeDistributionService
+
+from .pricing_analysis.models import (
+    PriceDistributionRequest, PriceDistributionResponse,
+    PriceVsRevenueRequest, PriceVsRevenueResponse,
+    BrandPriceDistributionRequest, BrandPriceDistributionResponse,
+    PriceDistributionOverviewRequest, PriceDistributionOverviewResponse
+)
+from .pricing_analysis.services import (
+    PriceDistributionService,
+    PriceVsRevenueService,
+    BrandPriceDistributionService,
+    PriceDistributionOverviewService
+)
 
 logger = logging.getLogger(__name__)
 router = APIRouter()
@@ -355,15 +375,13 @@ async def get_filtered_asins(request: AsinFilterRequest):
         HTTPException: 当请求处理失败时
     """
     try:
-        # 创建临时服务实例来使用execute_filtered_query方法
-        class TempFilterService(BaseDashboardService):
-            def get_data(self):
-                return []
+        from core.database.connection import get_supabase_client
 
-        service = TempFilterService(project_id=request.project_id)
+        # 获取Supabase客户端
+        supabase_client = get_supabase_client()
 
-        # 使用链式过滤器获取ASIN列表
-        filtered_asins = service.execute_filtered_query(request)
+        # 使用公共的ASIN过滤服务
+        filtered_asins = filter_asins(supabase_client, request)
 
         # 创建响应对象
         response = AsinFilterResponse(data=filtered_asins)
@@ -378,4 +396,472 @@ async def get_filtered_asins(request: AsinFilterRequest):
 
     except Exception as e:
         logger.error(f"System error in ASIN filtering: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/tam-market-share", response_model=TAMMarketShareResponse)
+async def get_tam_market_share(request: TAMMarketShareRequest):
+    """Get Total Addressable Market (TAM) and Market Share analysis.
+
+    This endpoint calculates the total addressable market and detailed market share
+    analysis by category and brand. All calculations are performed on the backend
+    using filtered product data.
+
+    **Example Request:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "segments": ["Premium", "Standard"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        },
+        "timeframe": {
+            "period": "year"
+        }
+    }
+    ```
+    
+    **Timeframe Options:**
+    - `"month"`: Use past_month_revenue for analysis (过去1个月收入)
+    - `"6months"`: Use past_6_month_revenue for analysis (过去6个月收入)
+    - `"year"`: Use past_year_revenue and past_year_volume for analysis (过去1年收入和销量)
+
+    **Example Response:**
+    ```json
+    {
+        "tam_data": {
+            "total_market_revenue": 15000000.50,
+            "total_market_volume": 25000,
+            "total_products": 1250,
+            "currency": "USD"
+        },
+        "market_share_by_category": [
+            {
+                "category": "Dimmer Switches",
+                "total_revenue": 8000000.25,
+                "total_volume": 12000,
+                "total_products": 600,
+                "brand_shares": [
+                    {
+                        "brand": "Leviton",
+                        "revenue": 3200000.10,
+                        "volume": 4800,
+                        "product_count": 240,
+                        "market_share_percentage": 40.0,
+                        "rank": 1
+                    }
+                ]
+            }
+        ],
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "total_categories": 2,
+            "total_brands": 15,
+            "calculation_timestamp": "2024-01-15T10:30:00Z"
+        }
+    }
+    ```
+
+    Args:
+        request: TAM Market Share request with project_id and filters
+
+    Returns:
+        TAMMarketShareResponse: Complete TAM and market share analysis
+
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = TAMMarketShareService(supabase_client)
+
+        # Get TAM and market share data
+        response = service.get_tam_market_share_data(request)
+
+        logger.info(f"TAM Market Share analysis completed for project {request.project_id}: "
+                   f"${response.tam_data.total_market_revenue:,.2f} TAM with "
+                   f"{len(response.market_share_by_category)} categories")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in TAM Market Share analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in TAM Market Share analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/top-segments-by-revenue", response_model=TopSegmentsByRevenueResponse)
+async def get_top_segments_by_revenue(request: TopSegmentsByRevenueRequest):
+    """获取按收入排名的 Top Segments 数据.
+
+    这个端点专门为 "Top 10 Segments by Revenue" 图表提供数据，
+    在后端完成所有数据处理和排序逻辑，简化前端实现。
+
+    **示例请求:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "segments": ["Premium", "Standard"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "limit": 10,
+        "metric_type": "revenue"
+    }
+    ```
+    
+    **参数说明:**
+    - `limit`: 返回的 segment 数量限制 (1-50，默认 10)
+    - `metric_type`: 排序指标类型
+      - `"revenue"`: 按收入排序 (默认)
+      - `"volume"`: 按销量排序
+      - `"products"`: 按产品数量排序
+    - `timeframe.period`: 时间周期
+      - `"month"`: 过去1个月数据
+      - `"6months"`: 过去6个月数据
+      - `"year"`: 过去1年数据 (默认)
+
+    **示例响应:**
+    ```json
+    {
+        "data": {
+            "segments": [
+                {
+                    "segment": "Premium Smart Dimmer",
+                    "revenue": 2500000.50,
+                    "volume": 15000,
+                    "products": 120,
+                    "market_share_percentage": 35.2,
+                    "rank": 1,
+                    "avg_price": 166.67,
+                    "top_brand": "Leviton"
+                }
+            ],
+            "total_market_revenue": 7100000.00,
+            "total_market_volume": 45000,
+            "total_products": 350,
+            "currency": "USD"
+        },
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "total_segments": 25,
+            "returned_segments": 10,
+            "metric_type": "revenue",
+            "calculation_timestamp": "2024-01-15T10:30:00Z"
+        }
+    }
+    ```
+
+    Args:
+        request: Top Segments 请求参数
+
+    Returns:
+        TopSegmentsByRevenueResponse: 完整的 Top Segments 分析数据
+
+    Raises:
+        HTTPException: 参数验证或系统错误的响应
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = TopSegmentsByRevenueService(supabase_client)
+
+        # Get Top Segments data
+        response = service.get_top_segments_data(request)
+
+        logger.info(f"Top Segments analysis completed for project {request.project_id}: "
+                   f"returned {response.metadata.returned_segments}/{response.metadata.total_segments} segments, "
+                   f"sorted by {response.metadata.metric_type}")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Top Segments analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Top Segments analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/market-analysis/package-type-distribution", response_model=PackageTypeDistributionResponse)
+async def get_package_type_distribution(request: PackageTypeDistributionRequest):
+    """Get Package Type Distribution analysis.
+
+    This endpoint calculates package type distribution analysis with support for 
+    both revenue and product count metrics. All calculations are performed on 
+    the backend using filtered product data.
+
+    **Example Request:**
+    ```json
+    {
+        "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+        "filters": {
+            "categories": ["Dimmer Switches", "Light Switches"],
+            "brands": ["Leviton", "Lutron"],
+            "extend_fields": {
+                "smart_capability": "Smart"
+            }
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "metric_type": "revenue"
+    }
+    ```
+
+    **Metric Types:**
+    - `"revenue"`: Analyze by revenue distribution
+    - `"products"`: Analyze by product count distribution
+
+    **Example Response:**
+    ```json
+    {
+        "data": {
+            "overall_distribution": [
+                {
+                    "package_type": "Single",
+                    "revenue": 5000000.0,
+                    "product_count": 1200,
+                    "percentage": 65.5,
+                    "rank": 1
+                }
+            ],
+            "distribution_by_category": [
+                {
+                    "category": "Dimmer Switches",
+                    "total_revenue": 3000000.0,
+                    "total_products": 800,
+                    "package_types": [...]
+                }
+            ],
+            "metric_type": "revenue"
+        },
+        "metadata": {
+            "filtered_asins_count": 2500,
+            "total_package_types": 4,
+            "calculation_timestamp": "2024-01-01T00:00:00Z"
+        }
+    }
+    ```
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        # Initialize service with Supabase client
+        supabase_client = get_supabase_client()
+        service = PackageTypeDistributionService(supabase_client)
+
+        # Get package type distribution data
+        response = service.get_package_type_distribution_data(request)
+
+        logger.info(f"Package Type Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.data.overall_distribution)} package types with "
+                   f"{response.data.total_products} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Package Type Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Package Type Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-distribution-by-type", response_model=PriceDistributionResponse)
+async def get_price_distribution_by_type(request: PriceDistributionRequest):
+    """Get price distribution analysis data by product type.
+    
+    This endpoint provides violin chart data for price distributions across product types,
+    supporting both SKU and unit price analysis with comprehensive statistics.
+    
+    Args:
+        request: Price distribution request with project_id, filters, and timeframe
+        
+    Returns:
+        PriceDistributionResponse: Price distribution data by category with statistics
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"💰 Starting Price Distribution analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceDistributionService(supabase)
+        
+        # Get price distribution data
+        response = service.get_price_distribution_data(request)
+        
+        logger.info(f"Price Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.priceDistribution)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-vs-revenue", response_model=PriceVsRevenueResponse)
+async def get_price_vs_revenue(request: PriceVsRevenueRequest):
+    """Get price vs revenue scatter chart data.
+    
+    This endpoint provides scatter plot data showing the relationship between product prices
+    and revenue, with products grouped by category. Used for identifying price-revenue patterns
+    and top-performing products.
+    
+    Args:
+        request: Price vs revenue request with project_id, filters, and timeframe
+        
+    Returns:
+        PriceVsRevenueResponse: Scatter plot data with top products by category
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"📈 Starting Price vs Revenue analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceVsRevenueService(supabase)
+        
+        # Get price vs revenue data
+        response = service.get_price_vs_revenue_data(request)
+        
+        logger.info(f"Price vs Revenue analysis completed for project {request.project_id}: "
+                   f"{len(response.topProducts.segments)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price vs Revenue analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price vs Revenue analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/brand-price-distribution", response_model=BrandPriceDistributionResponse)
+async def get_brand_price_distribution(request: BrandPriceDistributionRequest):
+    """Get brand price distribution analysis data.
+    
+    This endpoint provides violin chart data for price distributions by brand within each
+    product category. Useful for understanding brand positioning and price competitiveness.
+    
+    Args:
+        request: Brand price distribution request with project_id, filters, and timeframe
+        
+    Returns:
+        BrandPriceDistributionResponse: Brand price distribution data by category
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"🏷️ Starting Brand Price Distribution analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = BrandPriceDistributionService(supabase)
+        
+        # Get brand price distribution data
+        response = service.get_brand_price_distribution_data(request)
+        
+        logger.info(f"Brand Price Distribution analysis completed for project {request.project_id}: "
+                   f"{len(response.brandPriceDistribution)} categories with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Brand Price Distribution analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Brand Price Distribution analysis: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/pricing-analysis/price-distribution-overview", response_model=PriceDistributionOverviewResponse)
+async def get_price_distribution_overview(request: PriceDistributionOverviewRequest):
+    """Get price distribution overview table data.
+    
+    This endpoint provides overview statistics for price distributions across all product 
+    categories without applying filters. Used for the overview table showing segment 
+    summaries with product counts, min/median/max/average prices.
+    
+    Args:
+        request: Price distribution overview request with project_id and timeframe
+        
+    Returns:
+        PriceDistributionOverviewResponse: Overview table data with statistics
+        
+    Raises:
+        HTTPException: Error response for validation or system errors
+    """
+    try:
+        logger.info(f"📊 Starting Price Distribution Overview analysis for project {request.project_id}")
+        
+        # Import supabase client
+        from core.database.connection import get_supabase_client
+        supabase = get_supabase_client()
+        
+        # Initialize service
+        service = PriceDistributionOverviewService(supabase)
+        
+        # Get overview data
+        response = service.get_overview_data(request)
+        
+        logger.info(f"Price Distribution Overview analysis completed for project {request.project_id}: "
+                   f"{len(response.overview_data)} segments with "
+                   f"{response.metadata.filtered_asins_count} total products")
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Price Distribution Overview analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Price Distribution Overview analysis: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

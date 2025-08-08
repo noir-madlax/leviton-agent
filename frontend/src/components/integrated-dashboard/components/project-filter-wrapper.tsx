@@ -1,15 +1,28 @@
 "use client"
 
-import { UniversalFilterComponent } from '@/components/analysis-db/shared/universal-filter-component'
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Filter, Database, Users, Loader2 } from "lucide-react"
+import { FilterRenderer } from '@/components/analysis-db/filters'
 import { ProjectFilters } from '@/components/analysis-db/types/filters'
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
 import { useCommonT, useProjectT } from '@/i18n/hooks'
+
+// 🆕 定义项目数据接口
+interface ProjectData {
+  stats?: {
+    total_products: number
+    total_brands: number
+    total_reviews: number
+    segment_count: number
+  }
+  // 可以根据需要添加其他字段
+}
 
 interface ProjectFilterWrapperProps {
   projectId: string
   onFiltersChange: (filters: ProjectFilters) => void
   initialFilters: ProjectFilters
-  preloadedData?: any
+  preloadedData?: ProjectData // 🆕 使用具体类型而不是 any
   isDataLoading?: boolean
 }
 
@@ -51,15 +64,63 @@ export function ProjectFilterWrapper({
   }
 
   return (
-    <UniversalFilterComponent
-      level="project"
-      projectId={projectId}
-      currentFilters={initialFilters}
-      availableOptions={filterOptions}
-      onFiltersChange={onFiltersChange}
-      projectData={preloadedData}
-      loading={cacheLoading || isDataLoading}
-      useCachedData={false} // 我们已经从缓存获取了数据，所以不需要组件内部再次使用缓存
-    />
+    <Card className="border-gray-200">
+      <CardHeader className="pb-2">
+        <CardTitle className="text-lg flex items-center gap-2">
+          <Filter className="w-5 h-5" />
+          {projectT('projectScopeAndFilters')}
+        </CardTitle>
+        <div className="text-sm text-gray-600">
+          {projectT('filtersApplyToWholeProject')}
+        </div>
+      </CardHeader>
+      
+      <CardContent className="p-4 pt-0 space-y-4">
+        {/* Project Data Preview - 保留原有的项目数据展示 */}
+        {preloadedData?.stats && (
+          <div className="mb-4">
+            <div className="mb-2">
+              <h3 className="text-sm font-medium text-gray-700">{projectT('projectDataScope')}：</h3>
+            </div>
+            <div className="grid grid-cols-4 gap-3 mb-3">
+              <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
+                <Database className="w-4 h-4 text-blue-500" />
+                <div>
+                  <p className="text-lg font-bold text-blue-900">{preloadedData.stats.total_products.toLocaleString()}</p>
+                  <p className="text-xs text-blue-600">{projectT('products')}</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 p-2 bg-green-50 rounded">
+                <Users className="w-4 h-4 text-green-500" />
+                <div>
+                  <p className="text-lg font-bold text-green-900">{preloadedData.stats.total_brands}</p>
+                  <p className="text-xs text-green-600">{projectT('brands')}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Loading state for project data */}
+        {(cacheLoading || isDataLoading) && !preloadedData?.stats && (
+          <div className="mb-4">
+            <div className="flex items-center justify-center py-4">
+              <Loader2 className="w-4 h-4 animate-spin text-blue-500 mr-2" />
+              <span className="text-sm text-gray-600">{projectT('loadingProjectData')}</span>
+            </div>
+          </div>
+        )}
+
+        {/* 🆕 简化后的 FilterRenderer 组件 - 只需要最少参数 */}
+        <FilterRenderer
+          projectId={projectId}
+          chartName="project" // 项目级别的过滤器
+          currentFilters={initialFilters}
+          onChange={onFiltersChange}
+          disabled={cacheLoading || isDataLoading}
+        />
+      </CardContent>
+    </Card>
   )
 } 

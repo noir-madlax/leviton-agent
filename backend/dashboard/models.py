@@ -259,7 +259,7 @@ class ReviewCountMixin(BaseModel):
 class PainPoint(ReviewCountMixin):
     """Pain point data model with standardized review count fields."""
     category_name: str = Field(description="Pain point category name")
-    example_details: str = Field(description="Example details from reviews") 
+    example_details: str = Field(description="Example details from reviews")
     satisfaction_rate: float = Field(description="Satisfaction rate (100 - negative_rate)")
     impacted_products: int = Field(description="Number of products impacted")
     type: Literal["Physical", "Performance", "Usability"] = Field(description="Pain point type")
@@ -274,29 +274,41 @@ class CustomerLike(ReviewCountMixin):
     positive_rate: Optional[float] = Field(default=0, description="Percentage of positive reviews")
 
 
-class AllUseCase(ReviewCountMixin):
-    """All use case data model with standardized review count fields."""
-    use_case: str = Field(description="Use case description")
-    product_attribute: str = Field(description="Product attribute")
-    satisfaction_rate: float = Field(description="Satisfaction rate")
-    product_count: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
+class AllUseCase(BaseModel):
+    """All use case data model with enhanced fields."""
+    useCase: str
+    productAttribute: str
+    satisfactionRate: float
+    mentionCount: int
+    positiveCount: int
+    negativeCount: int
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
-
-class UnderservedUseCase(ReviewCountMixin):
-    """Underserved use case data model with standardized review count fields."""
-    use_case: str = Field(description="Use case description")
-    product_attribute: str = Field(description="Product attribute")
-    satisfaction_rate: float = Field(description="Satisfaction rate")
-    product_count: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
-
+class UnderservedUseCase(BaseModel):
+    """Underserved use case data model with enhanced fields."""
+    useCase: str
+    productAttribute: str
+    gapLevel: float
+    mentionCount: int
+    positiveCount: int
+    negativeCount: int
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
 class ReviewInsightsResponse(BaseModel):
-    """Response model for review insights API."""
-    pain_points: List[PainPoint] = Field(description="List of pain points")
-    customer_likes: List[CustomerLike] = Field(description="List of customer likes")
-    all_use_cases: List[AllUseCase] = Field(description="List of all use cases")
-    underserved_use_cases: List[UnderservedUseCase] = Field(description="List of underserved use cases")
-    total_use_reviews: int = Field(description="Total reviews across all use cases")
+    """Review insights response model."""
+    painPoints: List[PainPoint]
+    customerLikes: List[CustomerLike]
+    allUseCases: List[AllUseCase]
+    underservedUseCases: List[UnderservedUseCase]
+    totalUseMentions: int = Field(description="Total mentions across all use cases")
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
@@ -395,4 +407,45 @@ class CompetitorMatrixViewResponse(BaseModel):
     product_aspect_data: List[ProductAspectData] = Field(description="Aspect data for each product")
     selected_asins: List[str] = Field(description="List of ASINs that were requested")
     aspect_type: str = Field(description="Aspect type that was filtered")
-    total_categories: int = Field(description="Total number of categories returned") 
+    total_categories: int = Field(description="Total number of categories returned")
+
+
+# ==================== Chat Config 模型 ====================
+
+class ChatMessage(BaseModel):
+    """Chat message configuration model."""
+    message_order: int = Field(description="Message display order")
+    message_type: str = Field(description="Message type: 'opening' | 'chart_cards' | 'closing'")
+    message_content: str = Field(description="Message content")
+
+
+class ChartCardConfig(BaseModel):
+    """Chart card configuration model."""
+    card_order: int = Field(description="Card display order")
+    card_id: str = Field(description="Unique card ID")
+    card_config: Dict[str, Any] = Field(description="Card configuration JSON object")
+
+
+class ChartItemConfig(BaseModel):
+    """Chart item configuration model."""
+    chart_order: int = Field(description="Chart display order within parent card")
+    chart_name: str = Field(description="Chart display name")
+    chart_id: str = Field(description="Unique chart ID")
+    chart_component: Optional[str] = Field(default=None, description="Corresponding component name")
+
+
+class ChartSectionConfig(BaseModel):
+    """Chart section configuration model for controlling chart visibility within components."""
+    chart_order: int = Field(description="Chart section display order within parent card")
+    chart_id: str = Field(description="Unique chart section ID matching data-chart-id")
+    chart_name: str = Field(description="Chart section display name")
+    is_active: bool = Field(description="Whether this chart section should be displayed")
+
+
+class ChatConfigResponse(BaseModel):
+    """Response model for chat configuration API."""
+    chat_messages: List[ChatMessage] = Field(description="List of chat messages in order")
+    chart_cards: List[ChartCardConfig] = Field(description="List of chart cards in order")
+    chart_items: Dict[str, List[ChartItemConfig]] = Field(description="Chart items grouped by parent card ID")
+    chart_sections: Dict[str, List[ChartSectionConfig]] = Field(description="Chart sections grouped by parent card ID for controlling visibility")
+    project_id: Optional[str] = Field(description="Project ID if project-specific config")

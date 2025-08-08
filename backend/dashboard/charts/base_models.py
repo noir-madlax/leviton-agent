@@ -1,6 +1,6 @@
 """Base models for dashboard charts."""
 
-from typing import Dict, Any, Optional, Generic, TypeVar, List
+from typing import Dict, Any, Optional, Generic, TypeVar, List, Literal
 from pydantic import BaseModel, Field
 from datetime import datetime
 
@@ -24,8 +24,23 @@ class FiltersModel(BaseModel):
             }
         }
 
+class TimeframeModel(BaseModel):
+    """时间维度模型 - 用于指定分析的时间范围"""
+    period: Literal["month", "6months", "year"] = Field(
+        default="year", 
+        description="时间周期选择：month(过去1个月), 6months(过去6个月), year(过去1年)"
+    )
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "period": "year"
+            }
+        }
+
+# 为了向后兼容，保留原有的DateRangeModel
 class DateRangeModel(BaseModel):
-    """时间范围模型"""
+    """时间范围模型（已废弃，请使用TimeframeModel）"""
     start_date: str = Field(..., description="开始日期，格式：YYYY-MM-DD")
     end_date: str = Field(..., description="结束日期，格式：YYYY-MM-DD")
 
@@ -42,7 +57,9 @@ class BaseRequestModel(BaseModel):
     project_id: str = Field(..., description="项目ID，用于ASIN过滤")
     filters: Optional[FiltersModel] = Field(default=None, description="过滤条件对象")
     selected_asins: Optional[List[str]] = Field(default=None, description="指定要分析的ASIN列表，如果提供则优先使用此列表而不是filters")
-    date_range: Optional[DateRangeModel] = Field(default=None, description="时间范围对象")
+    timeframe: Optional[TimeframeModel] = Field(default=None, description="时间维度对象，指定分析的时间范围")
+    # 保留date_range以向后兼容，但推荐使用timeframe
+    date_range: Optional[DateRangeModel] = Field(default=None, description="时间范围对象（已废弃，推荐使用timeframe）")
 
 class BaseResponseModel(BaseModel, Generic[T]):
     """Dashboard charts 基础响应模型"""
