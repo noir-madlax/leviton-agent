@@ -329,10 +329,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                             negativeReviews: cellData.negativeReviews,
                             totalReviews: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
-                            additionalInfo: [
-                              `Product: ${productName}`,
-                              `Total reviews analyzed: ${cellData.reviews}`
-                            ]
+                            additionalInfo: []
                           }}
                         >
                           <div
@@ -346,7 +343,7 @@ export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameM
                             }}
                             tabIndex={0}
                             role="button"
-                            aria-label={`View reviews for ${row.dimension} - ${productName}: ${cellData.reviews} reviews, ${cellData.satisfactionRate}% satisfaction`}
+                            aria-label={`View mentions for ${row.dimension} - ${productName}: ${cellData.reviews} mentions, ${cellData.satisfactionRate}% satisfaction`}
                           >
                             <div className="text-lg font-bold">
                               {cellData.reviews}

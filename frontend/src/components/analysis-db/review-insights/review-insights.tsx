@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 
 import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
@@ -84,8 +84,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   })
   
   const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
+  // Local derived review mapping is no longer used; keep UI lean
   const [filteredData, setFilteredData] = useState<{
     reviewInsights: typeof data.reviewInsights
     allReviewData: typeof data.allReviewData
@@ -94,69 +93,104 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   // Use data from the main dashboard container instead of making duplicate API calls
 
   // Transform dashboard data to chart format
-  const transformPainPointsData = (rawData: any[]): CategoryFeedback[] => {
+  type PainPointRaw = {
+    category: string
+    type: 'Physical' | 'Performance' | 'Usability'
+    totalReviews?: number
+    frequency?: number
+    satisfactionRate?: number
+    negativeRate?: number
+    positiveReviews?: number
+    negativeReviews?: number
+    categoryDefinition?: string
+    impactedProducts?: number
+    categoryId?: number
+  }
+  const transformPainPointsData = (rawData: PainPointRaw[]): CategoryFeedback[] => {
     console.log('🔍 [DEBUG-PAIN-POINTS] Raw data received:', rawData)
     const transformed = rawData.map(item => ({
-      category: item.category, // Use frontend field name
+      category: String(item.category),
       categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
-      totalReviews: item.totalReviews || item.frequency, // Use frontend field name with fallback
-      satisfactionRate: item.satisfactionRate || (100 - (item.negativeRate || 0)), // Calculate from negative rate
-      negativeRate: item.negativeRate || 0, // Use frontend field name
-      positiveReviews: item.positiveReviews || 0, // Use frontend field name
-      negativeReviews: item.negativeReviews || 0, // Use frontend field name
+      totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+      satisfactionRate: Number(item.satisfactionRate ?? (100 - (item.negativeRate ?? 0))),
+      negativeRate: Number(item.negativeRate ?? 0),
+      positiveReviews: Number(item.positiveReviews ?? 0),
+      negativeReviews: Number(item.negativeReviews ?? 0),
 
-      topNegativeAspects: [item.category], // Use frontend field name
+      topNegativeAspects: [String(item.category)],
       topPositiveAspects: [],
-      topNegativeReasons: [`${item.negativeRate || 0}% negative sentiment`], // Use frontend field name
+      topNegativeReasons: [],
       topPositiveReasons: [],
-      categoryDefinition: item.categoryDefinition, // Use frontend field name
-      impactedProducts: item.impactedProducts || 1, // Use frontend field name
-      categoryId: item.categoryId // Use frontend field name
+      categoryDefinition: item.categoryDefinition,
+      impactedProducts: Number(item.impactedProducts ?? 1),
+      categoryId: item.categoryId
     }))
     console.log('🔍 [DEBUG-PAIN-POINTS] Transformed data:', transformed)
     console.log('🔍 [DEBUG-PAIN-POINTS] Data length:', transformed.length)
     return transformed
   }
 
-  const transformDelightsData = (rawData: any[]): CategoryFeedback[] => {
+  type DelightRaw = {
+    category: string
+    type?: 'Physical' | 'Performance' | 'Usability'
+    totalReviews?: number
+    frequency?: number
+    positiveRate?: number
+    positiveReviews?: number
+    negativeReviews?: number
+    categoryDefinition?: string
+    impactedProducts?: number
+    categoryId?: number
+  }
+  const transformDelightsData = (rawData: DelightRaw[]): CategoryFeedback[] => {
     console.log('🔍 [DEBUG-DELIGHTS] Raw data received:', rawData)
     const transformed = rawData.map(item => ({
-      category: item.category, // Use frontend field name
-      categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
-      totalReviews: item.totalReviews || item.frequency, // Use frontend field name with fallback
-      satisfactionRate: item.positiveRate || 70, // Use frontend field name with fallback
-      negativeRate: 100 - (item.positiveRate || 70), // Calculate from positive rate
-      positiveReviews: item.positiveReviews || 0, // Use frontend field name
-      negativeReviews: item.negativeReviews || 0, // Use frontend field name
+      category: String(item.category),
+      categoryType: ((item.type ?? 'Performance') === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+      totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+      satisfactionRate: Number(item.positiveRate ?? 70),
+      negativeRate: 100 - Number(item.positiveRate ?? 70),
+      positiveReviews: Number(item.positiveReviews ?? 0),
+      negativeReviews: Number(item.negativeReviews ?? 0),
 
       topNegativeAspects: [],
-      topPositiveAspects: [item.category], // Use frontend field name
+      topPositiveAspects: [String(item.category)],
       topNegativeReasons: [],
-      topPositiveReasons: [`${item.positiveRate || 70}% positive sentiment`], // Use frontend field name
-      categoryDefinition: item.categoryDefinition, // Use frontend field name
-      impactedProducts: item.impactedProducts || 1, // Use frontend field name
-      categoryId: item.categoryId // Use frontend field name
+      topPositiveReasons: [],
+      categoryDefinition: item.categoryDefinition,
+      impactedProducts: Number(item.impactedProducts ?? 1),
+      categoryId: item.categoryId
     }))
     console.log('🔍 [DEBUG-DELIGHTS] Transformed data:', transformed)
     console.log('🔍 [DEBUG-DELIGHTS] Data length:', transformed.length)
     return transformed
   }
 
-  const transformUseCaseData = (rawData: any[]): UseCaseFeedback[] => {
+  type UseCaseRaw = {
+    useCase: string
+    totalReviews?: number
+    positiveReviews?: number
+    negativeReviews?: number
+    satisfactionRate?: number
+    categoryDefinition?: string
+    productCount?: number
+    categoryId?: number
+  }
+  const transformUseCaseData = (rawData: UseCaseRaw[]): UseCaseFeedback[] => {
     console.log('🔍 [DEBUG-USE-CASE] Raw data received:', rawData)
     const transformed = rawData.map(item => ({
-      useCase: item.useCase, // Use frontend field name
-      totalReviews: item.totalReviews || 0, // Use frontend field name
-      positiveReviews: item.positiveReviews || 0, // Use frontend field name
-      negativeReviews: item.negativeReviews || 0, // Use frontend field name
-      satisfactionRate: item.satisfactionRate || 0, // Use frontend field name
+      useCase: String(item.useCase),
+      totalReviews: Number(item.totalReviews ?? 0),
+      positiveReviews: Number(item.positiveReviews ?? 0),
+      negativeReviews: Number(item.negativeReviews ?? 0),
+      satisfactionRate: Number(item.satisfactionRate ?? 0),
       categoryType: 'Performance' as const,
-      topSatisfactionReasons: (item.satisfactionRate || 0) > 50 ? [`${item.satisfactionRate || 0}% satisfaction`] : [],
-      topGapReasons: (item.satisfactionRate || 0) <= 50 ? [`${item.satisfactionRate || 0}% satisfaction`] : [],
-      relatedCategories: [item.useCase], // Use frontend field name
-      categoryDefinition: item.categoryDefinition, // Use frontend field name
-      productCount: item.productCount || 1, // Use frontend field name
-      categoryId: item.categoryId // Use frontend field name
+      topSatisfactionReasons: [],
+      topGapReasons: [],
+      relatedCategories: [String(item.useCase)],
+      categoryDefinition: item.categoryDefinition,
+      productCount: Number(item.productCount ?? 1),
+      categoryId: item.categoryId
     }))
     console.log('🔍 [DEBUG-USE-CASE] Transformed data:', transformed)
     console.log('🔍 [DEBUG-USE-CASE] Data length:', transformed.length)
@@ -171,7 +205,6 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   const handleFilterChange = async (filters: ProjectFilters) => {
     if (!projectId) return
 
-    setIsLoading(true)
     try {
       const [reviewInsights, allReviewData] = await Promise.all([
         databaseService.getReviewInsightsDataByProject(
@@ -199,129 +232,13 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       // No need to fetch duplicate data
     } catch (error) {
       console.error('Error fetching filtered data:', error)
-    } finally {
-      setIsLoading(false)
     }
   }
 
   // Data is already loaded from the main dashboard container
   // No need to fetch duplicate data on initialization
 
-  useEffect(() => {
-    // Create the structure that charts expect using database data
-    // 需要将数据结构转换为图表组件期待的格式
-    const reviewDataForCharts = {
-      reviewsByCategory: {} as Record<string, unknown[]>
-    }
-    
-    // 如果有allReviewData，需要正确映射到类别名称
-    if (filteredData.allReviewData) {
-      // 首先直接使用allReviewData的现有映射
-      reviewDataForCharts.reviewsByCategory = { ...filteredData.allReviewData }
-      
-      // 为痛点数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.painPoints.forEach(painPoint => {
-        const aspectName = painPoint.aspect
-        if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
-            painPoint.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
-                  relatedReviews.push(review)
-                } else if (review.category && review.category.toLowerCase() === aspectName.toLowerCase()) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
-          }
-        }
-      })
-      
-      // 为亮点数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.customerLikes.forEach(like => {
-        const featureName = like.feature
-        if (!reviewDataForCharts.reviewsByCategory[featureName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
-            like.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
-          }
-        }
-      })
-      
-      // 为Use Case数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.allUseCases.forEach(useCaseItem => {
-        const useCaseName = useCaseItem.useCase
-        
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-          }
-        }
-      })
-      
-
-    }
-    
-    setReviewData(reviewDataForCharts)
-  }, [filteredData])
+  // Removed unused review mapping effect
   
   // 注释掉旧的痛点数据转换方法，现在使用新的 API 数据源
   // const transformPainPointsData = (): { topNegativeCategories: CategoryFeedback[] } => {

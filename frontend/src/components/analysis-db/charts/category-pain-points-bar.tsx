@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query'
@@ -16,33 +16,27 @@ interface CategoryPainPointsBarProps {
     categories?: string[]
     brands?: string[]
     segments?: string[]
-    extend_fields?: Record<string, any>
+    extend_fields?: Record<string, unknown>
     asins?: string[]
   } // Required: filter parameters
 }
 
-const CustomTooltip = ({ active, payload, label }: any) => {
+type TooltipEntry = { payload: CategoryFeedback; dataKey: string }
+const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: TooltipEntry[]; label?: string }) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload
     return (
       <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg max-w-xs">
         <p className="font-semibold text-gray-800">{label}</p>
-        <p className="text-sm text-gray-600">Type: {data.categoryType}</p>
         <p className="text-sm text-gray-600">Total Reviews: {data.totalReviews}</p>
+        <p className="text-sm text-green-700">Positive Mentions: {data.positiveReviews}</p>
+        <p className="text-sm text-red-700">Negative Mentions: {data.negativeReviews}</p>
         <p className="text-sm text-blue-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
           <p className="text-xs text-gray-500">Top Pain Details:</p>
           {data.topNegativeAspects && data.topNegativeAspects.slice(0, 3).map((aspect: string, index: number) => (
             <p key={index} className="text-xs text-gray-600">• {aspect}</p>
           ))}
-          {data.topNegativeReasons && data.topNegativeReasons.length > 0 && (
-            <div className="mt-2">
-              <p className="text-xs text-gray-500">Top Pain Reasons:</p>
-              {data.topNegativeReasons.slice(0, 3).map((reason: string, index: number) => (
-                <p key={index} className="text-xs text-red-600">• {reason}</p>
-              ))}
-            </div>
-          )}
         </div>
       </div>
     )
@@ -50,26 +44,19 @@ const CustomTooltip = ({ active, payload, label }: any) => {
   return null
 }
 
-export function CategoryPainPointsBar({ data, productType = 'dimmer', onProductTypeChange, projectId, filters }: CategoryPainPointsBarProps) {
-  const [selectedProductType, setSelectedProductType] = useState<ProductType>(productType)
+export function CategoryPainPointsBar({ data, productType = 'dimmer', projectId, filters }: CategoryPainPointsBarProps) {
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
 
   // 同步外部的productType变化
-  useEffect(() => {
-    setSelectedProductType(productType)
-  }, [productType])
+  useEffect(() => {}, [productType])
 
   // 数据已经按负面评价数排序，直接使用前10个
   const filteredData = data.slice(0, 10)
 
-  const handleProductTypeChange = (value: ProductType) => {
-    setSelectedProductType(value)
-    if (onProductTypeChange) {
-      onProductTypeChange(value)
-    }
-  }
+  // Note: product type changes are handled by parent if needed
 
-  const handleBarClick = async (data: any) => {
+  type ChartDatum = CategoryFeedback & { categoryId?: number; category?: string }
+  const handleBarClick = async (data: ChartDatum) => {
     if (data && data.categoryId && data.category && projectId) {
       // Use the new API to get review details
       await handleCategoryClick(

@@ -64,25 +64,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* Top满意原因 */}
-        {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
-          <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
-            {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
-              <p key={index} className="text-xs text-green-600">• {reason}</p>
-            ))}
-          </div>
-        )}
-
-        {/* Gap原因 */}
-        {data.topGapReasons && data.topGapReasons.length > 0 && (
-          <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Gap Reasons:</p>
-            {data.topGapReasons.slice(0, 3).map((reason: string, index: number) => (
-              <p key={index} className="text-xs text-red-600">• {reason}</p>
-            ))}
-          </div>
-        )}
+        {/* 去除基于比例生成的 reasons 展示，避免误导信息 */}
       </div>
     );
   }

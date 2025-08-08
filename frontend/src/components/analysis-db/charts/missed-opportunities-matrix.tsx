@@ -236,15 +236,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
     return 'bg-red-100 text-red-800'
   }
 
-  const getHeaderColor = (productAsin: string) => {
-    // Simple color scheme for differentiation
-    const productName = asinToProductNameMap?.[productAsin] || productAsin
-    if (productName.toLowerCase().includes('leviton')) {
-      return 'bg-slate-100 text-slate-800' // Very light greyish blue for Leviton
-    } else {
-      return 'bg-amber-50 text-amber-800' // Light greyish yellow for other brands
-    }
-  }
+  // Note: header color differentiation not used currently
 
   return (
     <div className="relative">
@@ -311,6 +303,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
                             negativeReviews: cellData.negativeReviews,
                             totalReviews: cellData.reviews,
                             satisfactionRate: cellData.satisfactionRate,
+                            additionalInfo: []
                           }}
                         >
                           <div
@@ -324,7 +317,7 @@ export function MissedOpportunitiesMatrix({ matrixViewData, projectId, asinToPro
                             }}
                             tabIndex={0}
                             role="button"
-                            aria-label={`View reviews for ${row.useCase} - ${productName}: ${cellData.reviews} reviews, ${cellData.satisfactionRate}% satisfaction`}
+                            aria-label={`View mentions for ${row.useCase} - ${productName}: ${cellData.reviews} mentions, ${cellData.satisfactionRate}% satisfaction`}
                           >
                             <div className="text-lg font-bold">
                               {cellData.reviews}
