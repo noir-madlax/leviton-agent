@@ -12,7 +12,7 @@ interface UseCaseSentimentMatrixProps {
     categories?: string[]
     brands?: string[]
     segments?: string[]
-    extend_fields?: Record<string, any>
+    extend_fields?: Record<string, unknown>
     asins?: string[]
   } // Required: filter parameters
 }
@@ -148,9 +148,9 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveReviews')}
               >
-                <Tooltip content="Number of positive mentions for this use case">
+                <Tooltip content="Number of positive mentioned aspects for this use case">
                   <div className="flex items-center justify-center gap-1">
-                    Positive Mentions
+                    Positive Mentioned Aspects
                     <span className="text-xs">{getSortIcon('positiveReviews')}</span>
                   </div>
                 </Tooltip>
@@ -159,9 +159,9 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('negativeReviews')}
               >
-                <Tooltip content="Number of negative mentions for this use case">
+                <Tooltip content="Number of negative mentioned aspects for this use case">
                   <div className="flex items-center justify-center gap-1">
-                    Negative Mentions
+                    Negative Mentioned Aspects
                     <span className="text-xs">{getSortIcon('negativeReviews')}</span>
                   </div>
                 </Tooltip>
@@ -170,7 +170,7 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveShare')}
               >
-                <Tooltip content="Positive Mentions / Total Mentions">
+                <Tooltip content="Positive mentioned aspects / Total mentioned aspects">
                   <div className="flex items-center justify-center gap-1">
                   Satisfaction Rate (%)
                     <span className="text-xs">{getSortIcon('positiveShare')}</span>

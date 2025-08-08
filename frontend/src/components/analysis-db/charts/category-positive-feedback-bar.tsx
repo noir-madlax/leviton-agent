@@ -28,9 +28,9 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
     return (
       <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg max-w-xs">
         <p className="font-semibold text-gray-800">{label}</p>
-        <p className="text-sm text-gray-600">Total Reviews: {data.totalReviews}</p>
-        <p className="text-sm text-green-700">Positive Mentions: {data.positiveReviews}</p>
-        <p className="text-sm text-red-700">Negative Mentions: {data.negativeReviews}</p>
+        <p className="text-sm text-gray-600">Total reviews: {data.totalReviews}</p>
+        <p className="text-sm text-green-700">Positive mentioned aspects: {data.positiveReviews}</p>
+        <p className="text-sm text-red-700">Negative mentioned aspects: {data.negativeReviews}</p>
         <p className="text-sm text-blue-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
           <p className="text-xs text-gray-500">Top Strength Details:</p>
