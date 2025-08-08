@@ -380,7 +380,7 @@ class BrandSalesTrendService(ChartsBaseService):
             if not asin_mapping:
                 return self._get_empty_response(request)
             
-            # Step 3: 查询月度销售数据 (暂时使用固定时间范围，后续支持timeframe)
+            # Step 3: 查询月度销售数据 
             monthly_sales_data = self.query_monthly_sales_with_timeframe(filtered_asins, request.timeframe)
             if not monthly_sales_data:
                 return self._get_empty_response(request)
