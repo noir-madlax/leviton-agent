@@ -48,7 +48,7 @@ class ChartsBaseService:
                 query = (
                     self.supabase
                     .table('product_sales_history_monthly')
-                    .select('platform_id, year_month, total_units_sold, average_price')
+                    .select('platform_id, year_month, total_units_sold, average_price, total_revenue')
                     .in_('platform_id', asins)
                     .eq('platform_source', 'amazon')
                 )

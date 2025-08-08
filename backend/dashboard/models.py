@@ -69,7 +69,7 @@ class CompetitorSummaryRequest(BaseModel):
 @dataclass
 class MonthlySalesRecord:
     """月度销售记录模型（Pydantic Dataclass），用于自动类型转换与校验。
-    说明：不继承 BaseModel，避免手动逐字段 row.get；构造时使用 **row 自动转换。
+    说明：product_sales_history_monthly表。
     """
     platform_id: str
     year_month: date
