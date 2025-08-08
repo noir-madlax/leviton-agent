@@ -14,7 +14,22 @@ class ScrapingResultProcessor:
     """
     
     def __init__(self):
-        pass
+        # 数据来源：'rainforest' | 'unwrangle' | 'unknown'
+        self._provider: str = 'unknown'
+
+    def _detect_provider(self, data: Dict[str, Any]) -> str:
+        """根据顶层结构与典型字段判断数据来源。"""
+        try:
+            if isinstance(data, dict):
+                if 'request_parameters' in data and 'category_results' in data:
+                    return 'unwrangle'
+                if 'search_results' in data or 'bestsellers_results' in data:
+                    return 'rainforest'
+            elif isinstance(data, list):
+                return 'rainforest'
+        except Exception:
+            pass
+        return 'unknown'
     
     async def process_scraping_result(self, json_file_path: str) -> Tuple[Dict[str, Any], List[Dict[str, Any]]]:
         """
@@ -37,6 +52,9 @@ class ScrapingResultProcessor:
                 logger.warning(f"JSON文件为空: {json_file_path}")
                 return {}, []
             
+            # 记录数据来源
+            self._provider = self._detect_provider(data)
+
             # 提取请求信息
             request_data = await self._extract_request_data(data, json_file_path)
             
@@ -148,7 +166,7 @@ class ScrapingResultProcessor:
                 logger.warning(f"无法确定请求类型，使用默认值 'category'")
                 request_data['request_type'] = 'category'
             
-            logger.info(f"提取请求数据: 类型={request_data['request_type']}, 产品数={products_count}, 类别ID={request_data.get('category_id')}")
+            logger.info(f"提取请求数据: 类型={request_data['request_type']}, 产品数={products_count}, 类别ID={request_data.get('category_id')}, provider={self._provider}")
             
         except Exception as e:
             logger.error(f"提取请求数据时出错: {e}")
@@ -232,7 +250,7 @@ class ScrapingResultProcessor:
             
             # 提取基本信息，映射到数据库字段名
             product = {
-                'source': 'amazon_api',  # 数据库字段：source
+                'source': 'amazon',  # 数据库字段：source
                 'platform_id': asin,     # 数据库字段：platform_id (存储ASIN)
                 'title': self._safe_strip(raw_product.get('title', '')),
                 'brand': self._safe_strip(raw_product.get('brand', '')),
@@ -253,8 +271,65 @@ class ScrapingResultProcessor:
                 'category_id': self._extract_category_id(raw_product),  # 🔥 新增：与category对应的最下级类别ID
                 'categories_flat': self._extract_categories_flat_as_text(raw_product),  # 数据库字段：categories_flat (text)
                 'category_hierarchy': self._extract_categories_original(raw_product),  # 🔥 新增：保存完整的原始categories数据
-                'extract_date': datetime.now().strftime('%Y-%m-%d')  # 数据库字段：extract_date
+                'extract_date': datetime.now().strftime('%Y-%m-%d'),  # 数据库字段：extract_date
+                'data_provider': self._provider
             }
+
+            # 针对 Unwrangle：提供更准确的主图与额外信息
+            if self._provider == 'unwrangle':
+                try:
+                    buybox = raw_product.get('buybox_winner') or {}
+                    delivery = buybox.get('delivery') or {}
+
+                    # 主图优先 main_image.link -> images[0].link
+                    main_image_link = ''
+                    if isinstance(raw_product.get('main_image'), dict):
+                        main_image_link = self._safe_strip(raw_product['main_image'].get('link', ''))
+                    if main_image_link:
+                        product['image_url'] = main_image_link
+                    elif isinstance(raw_product.get('images'), list) and raw_product['images']:
+                        first = raw_product['images'][0]
+                        if isinstance(first, dict) and first.get('link'):
+                            product['image_url'] = self._safe_strip(first['link'])
+
+                    # 额外列（表已存在，不存在时 supabase 会忽略）
+                    product.update({
+                        'parent_asin': self._safe_strip(raw_product.get('parent_asin')),
+                        'variant_asins_flat': self._safe_strip(raw_product.get('variant_asins_flat')),
+                        'search_alias_title': self._safe_strip((raw_product.get('search_alias') or {}).get('title')),
+                        'search_alias_value': self._safe_strip((raw_product.get('search_alias') or {}).get('value')),
+                        'keywords': self._safe_strip(raw_product.get('keywords')),
+                        'keywords_list_json': raw_product.get('keywords_list'),
+                        'proposition_65_warning': self._safe_strip(raw_product.get('proposition_65_warning')),
+                        'has_size_guide': self._safe_strip(raw_product.get('has_size_guide')),
+                        'buybox_json': buybox or None,
+                        'sold_by_amazon': self._safe_strip(buybox.get('is_sold_by_amazon')),
+                        'fba': self._safe_strip(buybox.get('is_fulfilled_by_amazon')),
+                        'sold_by_third_party': self._safe_strip(buybox.get('is_sold_by_third_party')),
+                        'shipping_raw': self._safe_strip((buybox.get('shipping') or {}).get('raw')),
+                        'delivery_json': delivery or None,
+                        'images_json': raw_product.get('images'),
+                        'images_count': raw_product.get('images_count') if isinstance(raw_product.get('images_count'), int) else None,
+                        'images_flat': self._safe_strip(raw_product.get('images_flat')),
+                        'videos_json': raw_product.get('videos_additional'),
+                        'videos_count': raw_product.get('videos_count') if isinstance(raw_product.get('videos_count'), int) else None,
+                        'a_plus_content_json': raw_product.get('a_plus_content'),
+                        'sub_title_text': self._safe_strip((raw_product.get('sub_title') or {}).get('text')),
+                        'sub_title_link': self._safe_strip((raw_product.get('sub_title') or {}).get('link')),
+                        'marketplace_id': self._safe_strip(raw_product.get('marketplace_id')),
+                        'specifications_json': raw_product.get('specifications'),
+                        'specifications_flat': self._safe_strip(raw_product.get('specifications_flat')),
+                        'main_image_url': main_image_link,
+                        'rating_breakdown_json': raw_product.get('rating_breakdown'),
+                        'variants_json': raw_product.get('variants'),
+                        'raw_product_json': raw_product
+                    })
+
+                    # 若 features 为空，回退使用 specifications_flat
+                    if not product.get('features') and product.get('specifications_flat'):
+                        product['features'] = product['specifications_flat']
+                except Exception:
+                    pass
             
             # 🔥 启用层级类目信息提取
             hierarchy_data = self._extract_category_hierarchy(raw_product)
@@ -285,6 +360,15 @@ class ScrapingResultProcessor:
     def _extract_availability(self, product: Dict[str, Any]) -> str:
         """提取可用性信息"""
         try:
+            # Unwrangle buybox 路径优先
+            if isinstance(product.get('buybox_winner'), dict):
+                bb = product['buybox_winner']
+                delivery = bb.get('delivery') or {}
+                for k in ['availability_status', 'raw']:
+                    val = delivery.get(k) or bb.get(k)
+                    if isinstance(val, str) and val.strip():
+                        return val.strip()
+
             availability = product.get('availability', '')
             
             # 如果是字典类型，提取raw字段
@@ -305,6 +389,13 @@ class ScrapingResultProcessor:
     def _extract_price(self, product: Dict[str, Any]) -> Optional[float]:
         """提取价格信息"""
         try:
+            # 优先：Unwrangle buybox
+            if isinstance(product.get('buybox_winner'), dict):
+                bb = product['buybox_winner']
+                price = bb.get('price') or {}
+                if isinstance(price, dict) and isinstance(price.get('value'), (int, float)):
+                    return float(price['value'])
+
             # 首先尝试从price字段获取
             if 'price' in product:
                 price_value = product['price']
@@ -361,6 +452,26 @@ class ScrapingResultProcessor:
                         if rating_match:
                             return float(rating_match.group(1))
             
+            # 尝试从 rating_breakdown 推导
+            rb = product.get('rating_breakdown')
+            if isinstance(rb, dict) and rb:
+                total = 0
+                weighted = 0.0
+                mapping = {
+                    'one_star': 1,
+                    'two_star': 2,
+                    'three_star': 3,
+                    'four_star': 4,
+                    'five_star': 5
+                }
+                for k, star in mapping.items():
+                    item = rb.get(k)
+                    if isinstance(item, dict) and isinstance(item.get('count'), int):
+                        cnt = int(item['count'])
+                        total += cnt
+                        weighted += star * cnt
+                if total > 0:
+                    return weighted / float(total)
             return None
         except:
             return None
@@ -381,6 +492,15 @@ class ScrapingResultProcessor:
                         if review_match:
                             return int(review_match.group(1))
             
+            # 汇总 rating_breakdown 作为备选
+            rb = product.get('rating_breakdown')
+            if isinstance(rb, dict) and rb:
+                total = 0
+                for v in rb.values():
+                    if isinstance(v, dict) and isinstance(v.get('count'), int):
+                        total += int(v['count'])
+                if total > 0:
+                    return total
             return None
         except:
             return None
@@ -510,6 +630,13 @@ class ScrapingResultProcessor:
     def _extract_list_price(self, product: Dict[str, Any]) -> Optional[float]:
         """提取标价/原价信息"""
         try:
+            # 优先：Unwrangle buybox.list_price
+            if isinstance(product.get('buybox_winner'), dict):
+                bb = product['buybox_winner']
+                lp = bb.get('list_price') or {}
+                if isinstance(lp, dict) and isinstance(lp.get('value'), (int, float)):
+                    return float(lp['value'])
+
             # 从prices数组中查找原价 (is_rrp: true)
             if 'prices' in product and isinstance(product['prices'], list):
                 for price_obj in product['prices']:
