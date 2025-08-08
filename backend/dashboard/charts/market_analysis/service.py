@@ -609,12 +609,12 @@ class TopSegmentsByRevenueService(ChartsBaseService):
         )
 
 
-class PackageTypeDistributionService:
+class PackageTypeDistributionService(ChartsBaseService):
     """Service for Package Type Distribution analysis."""
 
     def __init__(self, supabase_client):
         """Initialize the service with Supabase client."""
-        self.supabase = supabase_client
+        super().__init__(supabase_client)
     
     def get_package_type_distribution_data(
         self, 
@@ -739,55 +739,53 @@ class PackageTypeDistributionService:
             return {}
 
     def _get_product_data_from_wide_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
-        """Get product data from product_wide_table.
-        
-        Args:
-            asins: List of ASINs to query
-            timeframe: Optional TimeframeModel to determine which fields to query
-            
-        Returns:
-            List of product data dictionaries
+        """Get aggregated product data using monthly sales table, joined with wide table brand/category.
+
+        Returns product_data with keys: platform_id, brand, category, revenue, volume
         """
         try:
-            # 使用工具类获取字段名
-            revenue_field, volume_field = TimeframeFieldMapper.get_fields(timeframe)
-            
-            # Build select fields
-            select_fields = f'platform_id, brand, category, {revenue_field}, {volume_field}'
-            
-            logger.info(f"📊 Querying fields: {select_fields}")
-            
-            # Query product_wide_table for required fields
-            query = self.supabase.table('product_wide_table').select(select_fields).in_('platform_id', asins)
-            
-            result = query.execute()
-            
-            if not result.data:
-                logger.warning("No data found in product_wide_table")
+            # 1) Query monthly aggregates by ASIN and timeframe
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
                 return []
-            
-            # Filter out products with missing essential data and normalize field names
-            valid_products = []
-            for product in result.data:
-                if (product.get('brand') and 
-                    product.get('category') and 
-                    product.get(revenue_field) is not None):
-                    
-                    # Normalize field names for consistent processing
-                    normalized_product = {
-                        'platform_id': product.get('platform_id'),
-                        'brand': product.get('brand'),
-                        'category': product.get('category'),
-                        'revenue': float(product.get(revenue_field, 0) or 0),
-                        'volume': int(product.get(volume_field, 0) or 0)
-                    }
-                    valid_products.append(normalized_product)
-            
-            logger.info(f"📈 Retrieved {len(valid_products)} valid products from wide table using {revenue_field}")
-            return valid_products
-            
+
+            # 2) Join brand/category from wide table
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, brand, category')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+                .not_.is_('brand', 'null')
+                .not_.is_('category', 'null')
+            )
+            wide_result = wide_query.execute()
+
+            brand_category_map: Dict[str, Dict[str, str]] = {}
+            for row in (wide_result.data or []):
+                brand_category_map[row['platform_id']] = {
+                    'brand': row.get('brand'),
+                    'category': row.get('category')
+                }
+
+            # 3) Build normalized product_data
+            product_data: List[Dict[str, Any]] = []
+            for agg in aggregates:
+                mapping = brand_category_map.get(agg.platform_id)
+                if not mapping:
+                    continue
+                product_data.append({
+                    'platform_id': agg.platform_id,
+                    'brand': mapping['brand'],
+                    'category': mapping['category'],
+                    'revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
+                    'volume': int(getattr(agg, 'total_units_sold', 0) or 0)
+                })
+
+            logger.info(f"📈 Retrieved {len(product_data)} aggregated products using monthly sales table")
+            return product_data
         except Exception as e:
-            logger.error(f"Error querying product_wide_table: {e}")
+            logger.error(f"Error aggregating package type product data: {e}")
             return []
 
     def _calculate_package_distributions(
