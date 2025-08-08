@@ -2,6 +2,8 @@
 
 from typing import List, Optional, Dict, Any, Literal, Union
 from pydantic import BaseModel, Field
+from pydantic.dataclasses import dataclass
+from datetime import date, datetime
 from core.models.filters import ProjectFilters
 
 
@@ -63,6 +65,24 @@ class CompetitorSummaryRequest(BaseModel):
 
 
 # ==================== 响应模型 ====================
+
+@dataclass
+class MonthlySalesRecord:
+    """月度销售记录模型（Pydantic Dataclass），用于自动类型转换与校验。
+    说明：不继承 BaseModel，避免手动逐字段 row.get；构造时使用 **row 自动转换。
+    """
+    platform_id: str
+    year_month: date
+    total_units_sold: int
+    average_price: float
+    # 其余字段可选，便于后续扩展时无需修改构造代码
+    id: Optional[int] = None
+    platform_source: Optional[str] = None
+    api_source: Optional[str] = None
+    days_in_month: Optional[int] = None
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+    total_revenue: Optional[float] = None
 
 class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.

@@ -6,9 +6,10 @@ from datetime import datetime, date
 from collections import defaultdict
 
 from dashboard.services.base_service import BaseDashboardService
+from dashboard.models import MonthlySalesRecord
+from dashboard.charts.base_service import ChartsBaseService
 from core.models.filters import ProjectFilters
 from dashboard.charts.filters.asin_filter_service import get_filtered_asins
-from dashboard.utils.timeframe_mapper import TimeframeFieldMapper
 from .models import (
     BrandSalesTrendRequest, BrandSalesTrendResponse, BrandSalesTrendMetadata, 
     CategorySalesTrendData, CategorySalesTrendSummary, OverallSummary
@@ -338,7 +339,7 @@ class SalesTrendService(BaseDashboardService):
 
 # ==================== 新版本Service（支持timeframe） ====================
 
-class BrandSalesTrendService:
+class BrandSalesTrendService(ChartsBaseService):
     """品牌销售趋势分析服务 - 支持timeframe模式
     
     新版本服务，使用timeframe替代date_range，
@@ -351,7 +352,7 @@ class BrandSalesTrendService:
         Args:
             supabase_client: Supabase客户端实例
         """
-        self.supabase = supabase_client
+        super().__init__(supabase_client)
     
     def get_brand_sales_trend_data(self, request: BrandSalesTrendRequest) -> BrandSalesTrendResponse:
         """获取品牌销售趋势数据
@@ -380,7 +381,7 @@ class BrandSalesTrendService:
                 return self._get_empty_response(request)
             
             # Step 3: 查询月度销售数据 (暂时使用固定时间范围，后续支持timeframe)
-            monthly_sales_data = self._query_monthly_sales_with_timeframe(filtered_asins, request.timeframe)
+            monthly_sales_data = self.query_monthly_sales_with_timeframe(filtered_asins, request.timeframe)
             if not monthly_sales_data:
                 return self._get_empty_response(request)
             
@@ -426,65 +427,8 @@ class BrandSalesTrendService:
             logger.error(f"Error getting ASIN-brand-category mapping: {e}")
             return {}
     
-    def _query_monthly_sales_with_timeframe(self, asins: List[str], timeframe) -> List[Dict[str, Any]]:
-        """基于timeframe查询月度销售数据
-        
-        注意：目前仍使用固定时间范围查询，
-        后续将根据timeframe计算实际的开始/结束时间
-        """
-        try:
-            # TODO: 后续实现 - 根据timeframe计算实际时间范围
-            # start_date, end_date = TimeframeFieldMapper.get_date_range(timeframe)
-            
-            # 暂时使用固定范围（与原接口保持一致）
-            start_date = '2024-08-01'
-            end_date = '2025-06-30'
-            
-            all_sales_data = []
-            page = 0
-            page_size = 1000
-
-            while True:
-                range_from = page * page_size
-                range_to = range_from + page_size - 1
-                
-                # 构建基础查询
-                query = (self.supabase.table('product_sales_history_monthly')
-                        .select('platform_id, year_month, total_units_sold, average_price')
-                        .in_('platform_id', asins)
-                        .eq('platform_source', 'amazon'))
-                
-                # 应用时间范围过滤
-                if start_date:
-                    start_month = datetime.strptime(start_date, '%Y-%m-%d').replace(day=1).date()
-                    query = query.gte('year_month', start_month.isoformat())
-                
-                if end_date:
-                    end_month = datetime.strptime(end_date, '%Y-%m-%d').replace(day=1).date()
-                    query = query.lte('year_month', end_month.isoformat())
-                
-                # 排序和分页
-                query = query.order('year_month', desc=False).range(range_from, range_to)
-                result = query.execute()
-
-                if not result.data:
-                    break
-
-                all_sales_data.extend(result.data)
-
-                if len(result.data) < page_size:
-                    break
-                
-                page += 1
-
-            logger.info(f"Monthly sales data: {len(all_sales_data)} records found")
-            return all_sales_data
-            
-        except Exception as e:
-            logger.error(f"Error querying monthly sales with timeframe: {e}")
-            return []
     
-    def _aggregate_by_category_brand_month(self, sales_data: List[Dict[str, Any]], asin_mapping: Dict[str, Dict[str, str]]) -> Dict[str, Dict[str, Dict[str, Dict[str, float]]]]:
+    def _aggregate_by_category_brand_month(self, sales_data: List["MonthlySalesRecord"], asin_mapping: Dict[str, Dict[str, str]]) -> Dict[str, Dict[str, Dict[str, Dict[str, float]]]]:
         """按category、品牌和月份聚合销售数据
         
         Args:
@@ -498,7 +442,7 @@ class BrandSalesTrendService:
         category_brand_month_data = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: {"revenue": 0.0, "volume": 0})))
         
         for record in sales_data:
-            asin = record['platform_id']
+            asin = record.platform_id
             mapping = asin_mapping.get(asin)
             
             if not mapping:
@@ -508,15 +452,15 @@ class BrandSalesTrendService:
             category = mapping['category']
             
             # 提取月份（转换为YYYY-MM格式）
-            year_month_str = record['year_month']
-            if isinstance(year_month_str, str):
-                month = year_month_str[:7]  # "2024-01-01" -> "2024-01"
+            year_month_val = record.year_month
+            if isinstance(year_month_val, str):
+                month = year_month_val[:7]
             else:
-                month = year_month_str.strftime('%Y-%m')
+                month = year_month_val.strftime('%Y-%m')
             
             # 计算指标
-            volume = record.get('total_units_sold', 0) or 0
-            price = record.get('average_price', 0) or 0
+            volume = getattr(record, 'total_units_sold', 0) or 0
+            price = getattr(record, 'average_price', 0) or 0
             revenue = volume * price
             
             # 聚合到category+品牌+月份

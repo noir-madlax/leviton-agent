@@ -340,6 +340,8 @@ class BaseDashboardService(ABC):
         query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query
 
+    
+
 
     
     def _get_base_product_table(self):
