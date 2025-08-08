@@ -11,6 +11,7 @@ import { databaseService } from "@/components/analysis-db/data/database-service"
 
 import { CategoryFeedback, ProductType, UseCaseFeedback } from "@/components/analysis-db/types/analysis"
 import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
+import { useChartsT } from '@/i18n/hooks'
 
 interface ReviewInsightsProps {
   data: {
@@ -72,6 +73,7 @@ interface ReviewInsightsProps {
 }
 
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
+  const chartsT = useChartsT()
   // Debug logging for incoming data
   console.log('🔍 [DEBUG-REVIEW-INSIGHTS] Incoming data:', {
     hasReviewInsights: !!data.reviewInsights,
@@ -265,22 +267,18 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
-        <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">
-          📊 Customer Reviews
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">📊 {chartsT('customerReviews')}</h2>
        
         
         <ChartWithFilters
           chartId="customer-pain-points"
           chartType="bar"
           projectId={projectId || ''}
-          title="Top 10 Customer Pain Points"
+          title={chartsT('top10CustomerPainPoints')}
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >
-           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-           Bars are sorted by descending negative reviews left to right, calculated from the latest 40 reviews per product in selected categories.
-            </div>
+           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">{chartsT('barsSortedByNegative')}</div>
             <CategoryPainPointsBar
               data={transformPainPointsData(filteredData.reviewInsights?.painPoints || [])}
               productType={selectedProductType}
@@ -295,18 +293,15 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="customer-delights">
         
         
-        <ChartWithFilters
+            <ChartWithFilters
           chartId="customer-delights"
           chartType="bar"
           projectId={projectId || ''}
-          title="Top 10 Customer Delights"
+          title={chartsT('top10CustomerDelights')}
           projectFilters={initialFilters}
           onFilterChange={handleFilterChange}
         >
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Bars are sorted by descending positive reviews left to right, calculated from the ~50 most recent reviews per product in selected categories.
-
-            </div>
+            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">{chartsT('barsSortedByPositive')}</div>
             <CategoryPositiveFeedbackBar
               data={transformDelightsData(filteredData.reviewInsights?.customerLikes || [])}
               productType={selectedProductType}
@@ -319,9 +314,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
       {/* Use Case Sentiment Analysis */}
       <section data-chart-id="use-case-sentiment">
-        <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
+        <ChartHeader title={chartsT('useCaseSentimentAnalysis')} icon={BarChart3} />
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-        Calculated from the latest 40 reviews per product in selected categories.
+        {chartsT('calculatedFromLatestReviews')}
 
 
             </div>

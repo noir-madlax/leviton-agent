@@ -91,7 +91,7 @@ export function PriceDistributionByTypeChart({
   return (
     <section className="mb-10">
       <h3 className="text-xl font-bold text-gray-800 border-l-4 border-green-500 pl-4 mb-6">
-        📊 Price Distribution by Product Type
+        📊 {chartsT('priceDistributionByProductType')}
       </h3>
 
       <div className="mb-8" data-chart-id={CHART_NAMES.PRICE_ANALYSIS}>

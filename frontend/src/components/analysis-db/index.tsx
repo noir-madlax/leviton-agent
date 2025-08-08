@@ -16,6 +16,7 @@ import { ProjectFilters, DEFAULT_FILTERS } from './types/filters'
 import { ProjectFilterWrapper } from '@/components/integrated-dashboard/components/project-filter-wrapper'
 import { SALES_TREND_DATE_RANGE } from "@/app/chat/charts/sales_trend/services/sales-trend-api";
 import { useUnifiedFilter } from './contexts/unified-filter-context'
+import { useChartsT } from '@/i18n/hooks'
 
 interface DashboardData {
   brandAnalysis: {
@@ -656,6 +657,7 @@ interface AnalysisDbContainerProps {
 
 // 内部组件：读取Context数据并渲染内容
 function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activeTab: externalActiveTab }: AnalysisDbContainerProps) {
+  const chartsT = useChartsT()
   // 🆕 读取统一过滤器数据
   const { filterData: unifiedFilterData, isLoading: filterDataLoading } = useUnifiedFilter()
   const [data, setData] = useState<Partial<DashboardData>>({})
@@ -877,10 +879,14 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
       loadSpecificData('salesTrend', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('pricingAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
       loadSpecificData('productAnalysis', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
-      loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      // 仅当当前子Tab在“客户评论”时才加载评论洞察，避免无意义的后端调用
+      if (currentActiveTab === 'review-insights') {
+        loadSpecificData('reviewInsights', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+        loadSpecificData('allReviewData', selectedProjectId, categoryFilters, brandFilters, segmentFilters, extendFields, forceReload);
+      }
 
     }
-  }, [selectedProjectId, currentFilters, loadSpecificData]);
+  }, [selectedProjectId, currentFilters, currentActiveTab, loadSpecificData]);
 
 
   // 监听外部传入的activeTab变化
@@ -1133,11 +1139,11 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                         ) : loadingStates.brandAnalysis ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Market Analysis Data...</span>
+                            <span className="ml-2">{chartsT('loadingMarketAnalysisData')}</span>
                           </div>
                         ) : (
                           <div className="text-center py-8 text-gray-500">
-                            Click to load Market Analysis data
+                            {chartsT('clickToLoadMarketAnalysisData')}
                           </div>
                         )}
                       </TabsContent>
@@ -1151,11 +1157,11 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                         ) : loadingStates.pricingAnalysis ? (
                           <div className="flex items-center justify-center py-8">
                             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                            <span className="ml-2">Loading Pricing Analysis Data...</span>
+                            <span className="ml-2">{chartsT('loadingPricingAnalysisData')}</span>
                           </div>
                         ) : (
                           <div className="text-center py-8 text-gray-500">
-                            Click to load Pricing Analysis data
+                            {chartsT('clickToLoadPricingAnalysisData')}
                           </div>
                         )}
                       </TabsContent>
@@ -1176,12 +1182,12 @@ function AnalysisDbContent({ selectedProjectId: initialProjectId, filters, activ
                       <div className="flex items-center justify-center py-8">
                         <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                         <span className="ml-2">
-                          Loading Review Insights{loadingStates.allReviewData ? ' and Review Data' : ''}...
+                          {chartsT('loadingReviewInsightsData')}{loadingStates.allReviewData ? ` ${chartsT('andReviewData')}` : ''}...
                         </span>
                       </div>
                     ) : (
                       <div className="text-center py-8 text-gray-500">
-                        Click to load Review Insights data
+                        {chartsT('clickToLoadReviewInsightsData')}
                       </div>
                     )}
                   </TabsContent>

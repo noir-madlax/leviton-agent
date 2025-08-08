@@ -133,8 +133,10 @@
     "customerSatisfaction": "Customer Satisfaction"
   },
   "charts": {
+    "marketAnalysis": "Market Analysis",
     "revenue": "Revenue",
     "volume": "Volume",
+    "with": "with",
     "noDataAvailable": "No data available",
     "loadingChart": "Loading chart data...",
     "chartError": "Error loading chart",
@@ -187,7 +189,63 @@
   
     "brand": "Brand",
     "totalInBrand": "Total in brand",
-    "productsText": "products"
+    "productsText": "products",
+
+    "marketShare": "Market Share",
+    "totalNumberOfProducts": "Total number of products",
+    "marketShareByBrand": "Market Share by Brand",
+    "totalAddressableMarketAndMarketShare": "Total addressable market (TAM) and Market Share",
+    "updatingTAMData": "Updating TAM data...",
+    "dataLoadFailed": "Data load failed",
+    "totalAddressableMarketShort": "Total addressable market (TAM):",
+    "approximatedByTotalRevenue": "Approximated by the total Revenue of all products in the selected categories and time period.",
+    "noTamMarketShareData": "No TAM market share data available",
+    "top10BestSellingBrands": "Top 10 Best-Selling Brands",
+
+    "loadingMarketAnalysisData": "Loading Market Analysis Data...",
+    "noMarketAnalysisData": "No market analysis data available",
+    "clickToLoadMarketAnalysisData": "Click to load Market Analysis data",
+    "loadingPricingAnalysisData": "Loading Pricing Analysis Data...",
+    "clickToLoadPricingAnalysisData": "Click to load Pricing Analysis data",
+    "loadingReviewInsightsData": "Loading Review Insights",
+    "andReviewData": "and Review Data",
+    "clickToLoadReviewInsightsData": "Click to load Review Insights data",
+
+    "customerReviews": "Customer Reviews",
+    "top10CustomerPainPoints": "Top 10 Customer Pain Points",
+    "barsSortedByNegative": "Bars are sorted by descending negative reviews left to right, calculated from the latest 40 reviews per product in selected categories.",
+    "top10CustomerDelights": "Top 10 Customer Delights",
+    "barsSortedByPositive": "Bars are sorted by descending positive reviews left to right, calculated from the ~50 most recent reviews per product in selected categories.",
+    "useCaseSentimentAnalysis": "Use Case Sentiment Analysis",
+    "calculatedFromLatestReviews": "Calculated from the latest 40 reviews per product in selected categories.",
+
+    "customerSatisfactionOverview": "Customer satisfaction overview",
+    "calculatedFromLatest200Reviews": "Calculated from the latest 200 reviews per product.",
+    "productComparisonByKeyDimensions": "Product Comparison by Key Dimensions",
+    "matrixLegendExplanation": "The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions): Green (75%+ satisfaction), Yellow (50-74%), Orange (25-49%), Red (<25%), Gray (no reviews).",
+    "productComparisonByMainUseCases": "Product Comparison by Main Use Cases",
+    "applyingProductSelection": "Applying Product Selection",
+    "loadingNewAnalysisData": "Loading new analysis data for selected products. All charts and data will be updated together.",
+    "showProductSelection": "Show Product Selection",
+    "hideProductSelection": "Hide Product Selection",
+    "noBestSellingBrandsData": "No best selling brands data available",
+    "salesTrendOfTopBrands": "{{category}} - Sales Trend of Top 10 Brands",
+    "loadingSalesTrendForCategory": "Loading sales trend data for {{category}}...",
+    "noSalesTrendDataForCategory": "No sales trend data available for {{category}}",
+
+    "salesTrendTop10Brands": "Sales Trend of Top 10 brands",
+    "salesTrendTopBrandsSuffix": "Sales Trend of Top 10 Brands",
+    "salesTrendAnalysis": "Sales Trend Analysis:",
+    "dataCoversRange": "Data covers {{start}} to {{end}}.",
+
+    "top10SegmentsByRevenue": "Top 10 Segments by Revenue",
+    "sortedByRevenueOrVolume": "Sorted by: Revenue or Volume:",
+    "revenueDefinition": "Revenue: Total annual sales value in dollars",
+    "volumeDefinition": "Volume: Total annual number of SKUs sold",
+
+    "marketShareBySalesUnit": "Market Share by Sales Unit",
+    "packageTypeSalesTrendAnalysis": "Package Type Sales Trend Analysis:",
+    "packageTypeDistribution": "Package Type Distribution"
   },
   "filters": {
     "applyFilters": "Apply Filters",

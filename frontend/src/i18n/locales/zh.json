@@ -133,8 +133,10 @@
     "customerSatisfaction": "客户满意度"
   },
   "charts": {
+    "marketAnalysis": "市场分析",
     "revenue": "收入",
     "volume": "销量",
+    "with": "共",
     "noDataAvailable": "暂无数据",
     "loadingChart": "图表加载中...",
     "chartError": "图表加载失败",
@@ -181,7 +183,63 @@
     
     "brand": "品牌",
     "totalInBrand": "品牌总计",
-    "productsText": "产品"
+    "productsText": "产品",
+
+    "marketShare": "市场份额",
+    "totalNumberOfProducts": "产品总数",
+    "marketShareByBrand": "品牌市场份额",
+    "totalAddressableMarketAndMarketShare": "可服务总市场（TAM）与市场份额",
+    "updatingTAMData": "正在更新TAM数据...",
+    "dataLoadFailed": "数据加载失败",
+    "totalAddressableMarketShort": "可服务总市场（TAM）：",
+    "approximatedByTotalRevenue": "基于所选类别与时间段全部产品的总收入近似计算。",
+    "noTamMarketShareData": "暂无 TAM 市场份额数据",
+    "top10BestSellingBrands": "前10畅销品牌",
+
+    "loadingMarketAnalysisData": "正在加载市场分析数据...",
+    "noMarketAnalysisData": "暂无市场分析数据",
+    "clickToLoadMarketAnalysisData": "点击加载市场分析数据",
+    "loadingPricingAnalysisData": "正在加载价格分析数据...",
+    "clickToLoadPricingAnalysisData": "点击加载价格分析数据",
+    "loadingReviewInsightsData": "正在加载评论洞察",
+    "andReviewData": "与评论数据",
+    "clickToLoadReviewInsightsData": "点击加载评论洞察数据",
+
+    "customerReviews": "客户评论",
+    "top10CustomerPainPoints": "客户痛点 Top 10",
+    "barsSortedByNegative": "柱状条按负面评论从左到右降序排序，基于所选类别每个产品最近40条评论计算。",
+    "top10CustomerDelights": "客户正面反馈 Top 10",
+    "barsSortedByPositive": "柱状条按正面评论从左到右降序排序，基于所选类别每个产品最近约50条评论计算。",
+    "useCaseSentimentAnalysis": "使用场景满意度分析",
+    "calculatedFromLatestReviews": "基于所选类别每个产品最近40条评论计算。",
+
+    "customerSatisfactionOverview": "客户满意度概览",
+    "calculatedFromLatest200Reviews": "基于每个产品最近200条评论计算。",
+    "productComparisonByKeyDimensions": "关键维度产品对比",
+    "matrixLegendExplanation": "数字代表总评论数，颜色表示满意度（正面提及/总提及）：绿色（≥75%）、黄色（50-74%）、橙色（25-49%）、红色（<25%）、灰色（无评论）。",
+    "productComparisonByMainUseCases": "主要使用场景产品对比",
+    "applyingProductSelection": "正在应用产品选择",
+    "loadingNewAnalysisData": "正在为所选产品加载新的分析数据，所有图表和数据将一并更新。",
+    "showProductSelection": "显示产品选择",
+    "hideProductSelection": "隐藏产品选择",
+    "noBestSellingBrandsData": "暂无畅销品牌数据",
+    "salesTrendOfTopBrands": "{{category}} - 前10品牌销售趋势",
+    "loadingSalesTrendForCategory": "正在加载 {{category}} 的销售趋势数据...",
+    "noSalesTrendDataForCategory": "{{category}} 暂无销售趋势数据",
+
+    "salesTrendTop10Brands": "前10品牌销售趋势",
+    "salesTrendTopBrandsSuffix": "前10品牌销售趋势",
+    "salesTrendAnalysis": "销售趋势分析：",
+    "dataCoversRange": "数据覆盖 {{start}} 至 {{end}}。",
+
+    "top10SegmentsByRevenue": "按收入排名的前10个细分",
+    "sortedByRevenueOrVolume": "排序依据：收入 或 销量：",
+    "revenueDefinition": "收入：年度销售额（美元）",
+    "volumeDefinition": "销量：年度售出的SKU数量",
+
+    "marketShareBySalesUnit": "按销售单位的市场份额",
+    "packageTypeSalesTrendAnalysis": "包装类型销售趋势分析：",
+    "packageTypeDistribution": "包装类型分布"
   },
   "filters": {
     "applyFilters": "应用筛选",

@@ -45,17 +45,17 @@ export function PricingAnalysis({ projectId, initialFilters }: PricingAnalysisPr
         />
       )}
 
-      {/* 🆕 Price vs Revenue Distribution - 独立组件 */}
-      {shouldShowChart('price-vs-revenue') && (
-        <PriceVsRevenueChart
+      {/* 🆕 Brand Price Distribution - 独立组件 */}
+      {shouldShowChart('price-distribution-by-brands') && (
+        <BrandPriceDistributionChart
           projectId={projectId}
           initialFilters={initialFilters}
         />
       )}
 
-      {/* 🆕 Brand Price Distribution - 独立组件 */}
-      {shouldShowChart('price-distribution-by-brands') && (
-        <BrandPriceDistributionChart
+      {/* 🆕 Price vs Revenue Distribution - 独立组件 (放到页面最后) */}
+      {shouldShowChart('price-vs-revenue') && (
+        <PriceVsRevenueChart
           projectId={projectId}
           initialFilters={initialFilters}
         />

@@ -54,7 +54,8 @@ export class ChatConfigService {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
 
-      const config: ChatConfig = await response.json()
+      const rawConfig: ChatConfig = await response.json()
+      const config = this.normalizeConfig(rawConfig)
       
       // Cache the result with language-specific key
       this.setCachedConfig(cacheKey, config)
@@ -97,6 +98,43 @@ export class ChatConfigService {
   }
 
   /**
+   * Normalize chart ids coming from backend to match actual DOM data-chart-id
+   * This prevents anchor scroll failures when legacy ids are returned.
+   */
+  private normalizeConfig(config: ChatConfig): ChatConfig {
+    const LEGACY_ID_MAP: Record<string, string> = {
+      // brand-analysis tab
+      'brand-analysis': 'best-selling-brands',
+      'market-insights': 'segment-analysis',
+      'package-preference': 'package-sales-trend'
+    }
+
+    // Deep clone and normalize chart_items
+    const normalizedItems: ChatConfig['chart_items'] = {}
+    for (const [cardId, items] of Object.entries(config.chart_items || {})) {
+      normalizedItems[cardId] = items.map((it) => ({
+        ...it,
+        chart_id: LEGACY_ID_MAP[it.chart_id] ?? it.chart_id
+      }))
+    }
+
+    // Normalize chart_sections as well
+    const normalizedSections: ChatConfig['chart_sections'] = {}
+    for (const [tabKey, sections] of Object.entries(config.chart_sections || {})) {
+      normalizedSections[tabKey] = sections.map((sec) => ({
+        ...sec,
+        chart_id: LEGACY_ID_MAP[sec.chart_id] ?? sec.chart_id
+      }))
+    }
+
+    return {
+      ...config,
+      chart_items: normalizedItems,
+      chart_sections: normalizedSections
+    }
+  }
+
+  /**
    * Clear cache for a specific project or all projects
    */
   clearCache(projectId?: string): void {
@@ -120,7 +158,7 @@ export class ChatConfigService {
   private getFallbackConfig(projectId: string): ChatConfig {
     console.warn('⚠️ Using fallback chat configuration due to API error')
     
-    return {
+    const fallback: ChatConfig = {
       chat_messages: [],
       chart_cards: [
         {
@@ -171,10 +209,10 @@ export class ChatConfigService {
       chart_items: {
         'brand-analysis': [
           { chart_order: 1, chart_name: 'Total addressable market (TAM) and Market Share', chart_id: 'market-share-analysis' },
-          { chart_order: 2, chart_name: 'Top 10 Best-Selling Brands', chart_id: 'brand-analysis' },
+          { chart_order: 2, chart_name: 'Top 10 Best-Selling Brands', chart_id: 'best-selling-brands' },
           { chart_order: 3, chart_name: 'Sales Trend of Top 10 Brands', chart_id: 'sales-trend-analysis' },
-          { chart_order: 4, chart_name: 'Top 10 Product Segments by Revenue/Volume', chart_id: 'market-insights' },
-          { chart_order: 5, chart_name: 'Market Share by Sales Unit', chart_id: 'package-preference' }
+          { chart_order: 4, chart_name: 'Top 10 Product Segments by Revenue/Volume', chart_id: 'segment-analysis' },
+          { chart_order: 5, chart_name: 'Market Share by Sales Unit', chart_id: 'package-sales-trend' }
         ],
         'pricing-analysis': [
           { chart_order: 1, chart_name: 'Price Distribution Overview', chart_id: 'price-distribution-overview' },
@@ -196,15 +234,16 @@ export class ChatConfigService {
       chart_sections: {
         'brand-analysis': [
           { chart_order: 1, chart_id: 'market-share-analysis', chart_name: 'Market Share Analysis', is_active: true },
-          { chart_order: 2, chart_id: 'brand-analysis', chart_name: 'Sales Trend Analysis', is_active: true },
-          { chart_order: 3, chart_id: 'market-insights', chart_name: 'Market Insights', is_active: true },
-          { chart_order: 4, chart_id: 'package-preference', chart_name: 'Package Preference', is_active: true }
+          { chart_order: 2, chart_id: 'best-selling-brands', chart_name: 'Best Selling Brands', is_active: true },
+          { chart_order: 3, chart_id: 'sales-trend-analysis', chart_name: 'Sales Trend Analysis', is_active: true },
+          { chart_order: 4, chart_id: 'segment-analysis', chart_name: 'Market Insights', is_active: true },
+          { chart_order: 5, chart_id: 'package-sales-trend', chart_name: 'Package Preference', is_active: true }
         ],
         'pricing-analysis': [
           { chart_order: 1, chart_id: 'price-distribution-overview', chart_name: 'Price Distribution Overview', is_active: true },
-          { chart_order: 2, chart_id: 'price-vs-revenue', chart_name: 'Price vs Revenue Analysis', is_active: true },
-          { chart_order: 3, chart_id: 'price-distribution-by-type', chart_name: 'Price Distribution by Type', is_active: true },
-          { chart_order: 4, chart_id: 'price-distribution-by-brands', chart_name: 'Price Distribution by Brands', is_active: true }
+          { chart_order: 2, chart_id: 'price-distribution-by-type', chart_name: 'Price Distribution by Type', is_active: true },
+          { chart_order: 3, chart_id: 'price-distribution-by-brands', chart_name: 'Price Distribution by Brands', is_active: true },
+          { chart_order: 4, chart_id: 'price-vs-revenue', chart_name: 'Price vs Revenue Analysis', is_active: true }
         ],
         'competitor-analysis': [
           { chart_order: 1, chart_id: 'customer-satisfaction-overview', chart_name: 'Customer Satisfaction Overview', is_active: true },
@@ -214,6 +253,9 @@ export class ChatConfigService {
       },
       project_id: projectId
     }
+
+    // Ensure fallback is normalized too
+    return this.normalizeConfig(fallback)
   }
 
   /**

@@ -309,10 +309,13 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 
   const requestBody: any = {
     project_id: projectId,
+    // Always send a truthy filters object with required keys to satisfy backend validation
     filters: {
-      ...(options.categoryFilters && options.categoryFilters.length > 0 && { categories: options.categoryFilters }),
-      ...(options.segmentFilters && options.segmentFilters.length > 0 && { segments: options.segmentFilters }),
-      ...(options.extendFields && Object.keys(options.extendFields).length > 0 && { extend_fields: options.extendFields })
+      categories: options.categoryFilters || [],
+      brands: [],
+      segments: options.segmentFilters || [],
+      extend_fields: options.extendFields || {},
+      asins: options.selectedAsins || []
     }
   }
 
@@ -325,12 +328,8 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
   }
 
   // Add special parameters
-  if (options.selectedAsins) {
-    requestBody.selected_asins = options.selectedAsins
-  } else {
-    // Always include selected_asins field, even if it's null/undefined
-    requestBody.selected_asins = null
-  }
+  // Always include selected_asins field, even if it's empty array
+  requestBody.selected_asins = options.selectedAsins || []
   if (options.metricType) {
     requestBody.metric_type = options.metricType
   }
@@ -712,41 +711,7 @@ export class DatabaseService {
   }
 
   // 🆕 Get Brand Price Distribution data - 独立组件专用方法
-  async getBrandPriceDistributionData(projectId: string): Promise<any> {
-    try {
-      // 🆕 从状态管理器获取过滤器
-      const filters = this.getFiltersFromState(CHART_NAMES.BRAND_PRICE_DISTRIBUTION)
-
-      console.log(`🔍 [DATABASE-SERVICE] Getting brand price distribution data with filters:`, filters)
-
-      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-
-      const requestBody = {
-        project_id: projectId,
-        ...filters
-      }
-
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/pricing-analysis/brand-price-distribution`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody)
-      })
-
-      if (!response.ok) {
-        throw new Error(`Brand Price Distribution API call failed: ${response.status}`)
-      }
-
-      const result = await response.json()
-      console.log('📊 Brand Price Distribution API response:', result)
-
-      return result
-    } catch (error) {
-      console.error('Error fetching Brand Price Distribution data:', error)
-      throw error
-    }
-  }
+  // (removed duplicate simple version; use the typed version below)
 
   // 🔑 Get Price vs Revenue scatter chart data with independent filtering
   async getPriceVsRevenueData(projectId: string, filters?: ProjectFilters): Promise<any> {

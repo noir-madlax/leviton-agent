@@ -6,7 +6,6 @@ import { BarChart } from "@/components/analysis-db/charts/bar-chart"
 import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
-import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
@@ -27,6 +26,7 @@ import { CHART_NAMES } from '@/components/analysis-db/constants'
 // 🆕 导入新的品牌销售趋势图表组件
 import { BrandSalesTrendChart } from './brand-sales-trend-chart'
 import { BarChart3 } from "lucide-react"
+import { useChartsT } from '@/i18n/hooks'
 
 interface BrandAnalysisProps {
   data: {
@@ -174,6 +174,7 @@ interface SalesTrendByCategoryProps {
   error?: string | null
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 function SalesTrendByCategoryComponent({ 
   category, 
   projectId, 
@@ -263,8 +264,9 @@ function SalesTrendByCategoryComponent({
   )
 }
 
-export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, productLists, projectId, initialFilters, marketInsights, packagePreference, salesTrend }: BrandAnalysisProps) {
+export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMarketShare, projectId, initialFilters }: BrandAnalysisProps) {
   const [metricType, setMetricType] = useState<MetricType>("revenue")
+  const chartsT = useChartsT()
 
   const { openPanel, loading } = useProductPanel()
 
@@ -281,7 +283,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     chartId: 'tam-market-share',
     projectId: projectId || '',
     initialData: initialTamMarketShare,
-    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+    refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       return await databaseService.getTAMMarketShareData(projectId, CHART_NAMES.MARKET_SHARE_ANALYSIS)
     }
@@ -310,7 +312,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
     chartId: 'best-selling-brands',
     projectId: projectId || '',
     initialData: initialTamMarketShare,
-    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+    refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       return await databaseService.getTAMMarketShareData(projectId, CHART_NAMES.BEST_SELLING_BRANDS)
     }
@@ -332,87 +334,50 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
   // 获取category信息
   const categoryNames = initialData.categoryNames || []
-  const categoryColors = initialData.categoryColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
+  // const categoryColors = initialData.categoryColors || ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4"]
 
   // 如果没有数据，显示空状态
   if (!categoryNames.length || !initialData.brandCategoryRevenue.length) {
     return (
       <section className="mb-10">
-        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
+        <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 {chartsT('marketAnalysis')}</h2>
         <Card className="p-6 bg-gray-50">
           {loading ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-2">Loading market analysis data...</span>
+              <span className="ml-2">{chartsT('loadingMarketAnalysisData')}</span>
             </div>
           ) : (
-            <p className="text-gray-500 text-center">No market analysis data available</p>
+            <p className="text-gray-500 text-center">{chartsT('noMarketAnalysisData')}</p>
           )}
         </Card>
       </section>
     )
   }
 
-  // 构建grouped bar chart数据 - 限制为Top 10品牌
-  const chartData = initialData.brandCategoryRevenue
-    .map(item => {
-      const brandData: { name: string; [key: string]: number | string } = { name: item.brand }
-      
-      // 为每个category添加数据
-      categoryNames.forEach(category => {
-        const categoryData = item.categories[category] || { revenue: 0, volume: 0 }
-        const value = metricType === "revenue" ? categoryData.revenue : categoryData.volume
-        brandData[category] = value
-      })
-      
-      return brandData
-    })
-    .filter(item => {
-      // 过滤掉所有category值都为0的品牌
-      const hasData = categoryNames.some(category => {
-        const value = item[category] as number
-        return value > 0
-      })
-      return hasData
-    })
-    .sort((a, b) => {
-      // 按总收入/总量排序
-      const aTotal = categoryNames.reduce((sum, category) => sum + (a[category] as number), 0)
-      const bTotal = categoryNames.reduce((sum, category) => sum + (b[category] as number), 0)
-      return bTotal - aTotal
-    })
-    .slice(0, 10) // 🔧 FIX: 限制Bar Chart只显示前10个品牌
+  // 构建grouped bar chart数据 - 限制为Top 10品牌（逻辑已移动到下方的渲染函数内）
 
   // 确保颜色数组匹配categories数量
-  const colors = categoryColors.slice(0, categoryNames.length)
+  // const colors = categoryColors.slice(0, categoryNames.length)
 
-  const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : "Volume"
+  // const yAxisLabel = metricType === "revenue" ? `${chartsT('revenue')} ($)` : chartsT('volume')
 
-  const handleBarClick = (data: unknown) => {
-    if (data && typeof data === 'object' && 'activeLabel' in data) {
-      const chartData = data as { activeLabel: string }
-      const brand = chartData.activeLabel
-      
-      // 合并现有筛选条件和当前点击的品牌
-      const newFilters = {
-        ...initialFilters,
-        brands: [brand],
-      }
+  // const handleBarClick = (data: unknown) => {
+  //   if (data && typeof data === 'object' && 'activeLabel' in data) {
+  //     const chartData = data as { activeLabel: string }
+  //     const brand = chartData.activeLabel
+  //     const newFilters = { ...initialFilters, brands: [brand] }
+  //     openPanel({
+  //       projectId: projectId || '',
+  //       filters: newFilters,
+  //       title: `${brand} Products`,
+  //       subtitle: `All products from ${brand} matching current filters`,
+  //       showFilters: { brand: false, category: true, priceRange: true, packSize: true }
+  //     })
+  //   }
+  // }
 
-      openPanel({
-        projectId: projectId || '',
-        filters: newFilters,
-        title: `${brand} Products`,
-        subtitle: `All products from ${brand} matching current filters`,
-        showFilters: { brand: false, category: true, priceRange: true, packSize: true }
-      })
-    }
-  }
-
-  const handleSalesTrendClick = (data: unknown) => {
-    // TODO: 实现销售趋势图点击处理逻辑
-    console.log('Sales trend area clicked:', data)
-  }
+  // const handleSalesTrendClick = (data: unknown) => {}
 
   // 使用新的TAM数据
   const useTAMData = tamMarketShare && tamMarketShare.tam_data;
@@ -426,41 +391,40 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
   return (
     <section className="mb-10">
-      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 Market Analysis</h2>
+      <h2 className="text-2xl font-bold text-gray-800 border-l-4 border-blue-500 pl-4 mb-6">🏢 {chartsT('marketAnalysis')}</h2>
 
-
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 mb-6">
-            <BarChart3 className="w-5 h-5" />
-            Total addressable market (TAM) and Market Share
-          </h3>
+      {/* 包装标题与内容用于正确锚点定位到标题区域 */}
+      <div data-chart-id="market-share-analysis">
+        <div className="space-y-4">
+          <div className="flex items-center justify-between">
+            <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 mb-6">
+              <BarChart3 className="w-5 h-5" />
+              {chartsT('totalAddressableMarketAndMarketShare')}
+            </h3>
+          </div>
         </div>
-      </div>
 
-    {/* 第二层：单一的Summary区域 */}
-    <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
+        {/* 第二层：单一的Summary区域 */}
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6">
             {tamDataLoading ? (
               <div className="flex items-center gap-2">
                 <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-                <p className="text-sm text-blue-700">正在更新TAM数据...</p>
+                <p className="text-sm text-blue-700">{chartsT('updatingTAMData')}</p>
               </div>
             ) : tamDataError ? (
               <div className="flex items-center gap-2">
-                <p className="text-sm text-red-700">
-                  <strong>数据加载失败: </strong>{tamDataError}
-                </p>
+                <p className="text-sm text-red-700">{chartsT('errorLoadingData')}: {tamDataError}</p>
                 <button
                   onClick={() => refreshTamData(tamFilters)}
                   className="text-xs text-blue-600 hover:text-blue-800 underline"
                 >
-                  重试
+                  {chartsT('retry')}
                 </button>
               </div>
             ) : (
               <p className="text-sm text-blue-700">
-                <strong>Total addressable market (TAM): </strong>
-                ${totalMarketRevenue.toLocaleString()} with {totalMarketProducts} products
+                <strong>{chartsT('totalAddressableMarketShort')} </strong>
+                ${totalMarketRevenue.toLocaleString()} {chartsT('with')} {totalMarketProducts} {chartsT('productsText')}
               </p>
             )}
            
@@ -470,169 +434,153 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
               <div className="mt-0 pt-0 ">
                 {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
                   <p key={categoryData.category} className="text-sm text-blue-600 mt-1">
-                    <strong>{categoryData.category}:</strong> ${categoryData.total_revenue.toLocaleString()} with {categoryData.total_products} products
+                    <strong>{categoryData.category}:</strong> ${categoryData.total_revenue.toLocaleString()} {chartsT('with')} {categoryData.total_products} {chartsT('productsText')}
                   </p>
                 ))}
               </div>
             )}
-             <p className="text-sm pt-0 text-blue-700 mt-3">
-             Approximated by the total Revenue of all products in the selected categories and time period.
-            </p>
+             <p className="text-sm pt-0 text-blue-700 mt-3">{chartsT('approximatedByTotalRevenue')}</p>
           </div>
 
 
-      {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
-      {shouldShowChart('market-share-analysis') && (
-      <div className="mt-5">
-
-        {/* 第一层：包装整个Market Share section - 使用新的过滤器组件 */}
-        <div data-chart-id="market-share-analysis">
-          <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm" >
-            <div className="mb-0 bg-gray-50">
-
-              {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
-              <FilterRenderer
-                projectId={projectId || ''}
-                chartName="market-share-analysis"
-                currentFilters={tamFilters}
-                onChange={handleFiltersChange}
-                onFiltersReady={handleFiltersReady}
-                disabled={tamDataLoading}
-                className="mb-6"
-              />
-            </div>
-
-          <div className="p-6 bg-gray-50 mb-6 ">
-          {/* 第三层：多个饼图区域 */}
-          {tamDataLoading ? (
-            <div className="flex items-center justify-center py-20">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                <p className="text-sm text-gray-600">正在更新图表数据...</p>
+        {/* Market Share Pie Charts - 按照正确的三层结构重新组织 */}
+        {shouldShowChart('market-share-analysis') && (
+          <div className="mt-5">
+            {/* 第一层：包装整个Market Share section - 使用新的过滤器组件 */}
+            <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
+              <div className="mb-0 bg-gray-50">
+                {/* 🆕 简化后的过滤器组件 - 使用统一 Hook */}
+                <FilterRenderer
+                  projectId={projectId || ''}
+                  chartName="market-share-analysis"
+                  currentFilters={tamFilters}
+                  onChange={handleFiltersChange}
+                  onFiltersReady={handleFiltersReady}
+                  disabled={tamDataLoading}
+                  className="mb-6"
+                />
               </div>
-            </div>
-          ) : !filtersReady ? (
-            <div className="flex items-center justify-center py-20">
-              <div className="text-center">
-                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                <p className="text-sm text-gray-600">正在更新图表数据...</p>
-              </div>
-            </div>
-          ) : tamDataError ? (
-            <div className="flex items-center justify-center py-20">
-              <div className="text-center">
-                <p className="text-sm text-red-600 mb-3">图表数据加载失败: {tamDataError}</p>
-                <button
-                  onClick={() => refreshTamData(tamFilters)}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
-                >
-                  重新加载
-                </button>
-              </div>
-            </div>
-          ) : (
-            // TAM数据渲染
-            categoryPieData.length > 0 ? (
-              <div className="space-y-8">
-                {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
-                  <div key={categoryData.category} className="bg-gray-50 p-6 ">
-                    <h4 className="text-lg font-medium mb-0 text-center">
-                      📊 {categoryData.category} - Market Share by Brand
-                    </h4>
-                    <div className="h-[600px]">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie
-                            data={categoryData.brand_shares.map((brand) => ({
-                              brand: brand.brand,
-                              revenue: brand.revenue,
-                              product_count: brand.product_count,
-                              market_share_percentage: brand.market_share_percentage,
-                              name: brand.brand // 为Legend组件添加name字段
-                            }))}
-                            cx="50%"
-                            cy="50%"
-                            labelLine={false}
-                            label={({ market_share_percentage }: { market_share_percentage: number }) =>
-                              market_share_percentage >= 5 ? `${market_share_percentage.toFixed(1)}%` : null
-                            }
-                            outerRadius={160}
-                            fill="#8884d8"
-                            dataKey="revenue"
-                          >
-                            {categoryData.brand_shares.map((_, brandIndex: number) => (
-                              <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
-                            ))}
-                          </Pie>
-                          <Tooltip content={(props) => {
-                            if (props.active && props.payload && props.payload.length) {
-                              const data = props.payload[0].payload as {
-                                brand: string;
-                                revenue: number;
-                                market_share_percentage: number;
-                                product_count: number;
-                              }
-                              return (
-                                <div className="bg-gray-50 p-3">
-                                  <p className="font-medium">{`Brand: ${data.brand}`}</p>
-                                  <p className="text-blue-600">{`Revenue: $${data.revenue.toLocaleString()}`}</p>
-                                  <p className="text-green-600">{`Total number of products: ${data.product_count}`}</p>
-                                  <p className="text-gray-600">{`Market Share: ${data.market_share_percentage.toFixed(1)}%`}</p>
-                                </div>
-                              )
-                            }
-                            return null
-                          }} />
-                          <Legend
-                            verticalAlign="bottom"
-                            height={250}
-                            wrapperStyle={{
-                              paddingTop: 20,
-                              maxHeight: 200,
-                            }}
-                            formatter={(value) => {
-                              const item = categoryData.brand_shares.find((d: {brand: string, market_share_percentage: number}) => d.brand === value)
-                              return `${value} (${item?.market_share_percentage.toFixed(1) || '0.0'}%)`
-                            }}
-                          />
-                        </PieChart>
-                      </ResponsiveContainer>
+
+              <div className="p-6 bg-gray-50 mb-6">
+                {/* 第三层：多个饼图区域 */}
+                {tamDataLoading ? (
+                  <div className="flex items-center justify-center py-20">
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                      <p className="text-sm text-gray-600">正在更新图表数据...</p>
                     </div>
                   </div>
-                ))}
+                ) : !filtersReady ? (
+                  <div className="flex items-center justify-center py-20">
+                    <div className="text-center">
+                      <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
+                      <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    </div>
+                  </div>
+                ) : tamDataError ? (
+                  <div className="flex items-center justify-center py-20">
+                    <div className="text-center">
+                      <p className="text-sm text-red-600 mb-3">图表数据加载失败: {tamDataError}</p>
+                      <button
+                        onClick={() => refreshTamData(tamFilters)}
+                        className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
+                      >
+                        重新加载
+                      </button>
+                    </div>
+                  </div>
+                ) : categoryPieData.length > 0 ? (
+                  <div className="space-y-8">
+                    {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
+                      <div key={categoryData.category} className="bg-gray-50 p-6">
+                <h4 className="text-lg font-medium mb-0 text-center">
+                  📊 {categoryData.category} - {chartsT('marketShareByBrand')}
+                </h4>
+                        <div className="h-[600px]">
+                          <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                              <Pie
+                                data={categoryData.brand_shares.map((brand) => ({
+                                  brand: brand.brand,
+                                  revenue: brand.revenue,
+                                  product_count: brand.product_count,
+                                  market_share_percentage: brand.market_share_percentage,
+                                  name: brand.brand
+                                }))}
+                                cx="50%"
+                                cy="50%"
+                                labelLine={false}
+                                label={({ market_share_percentage }: { market_share_percentage: number }) =>
+                                  market_share_percentage >= 5 ? `${market_share_percentage.toFixed(1)}%` : null
+                                }
+                                outerRadius={160}
+                                fill="#8884d8"
+                                dataKey="revenue"
+                              >
+                                {categoryData.brand_shares.map((_, brandIndex: number) => (
+                                  <Cell key={`cell-${brandIndex}`} fill={pieColors[brandIndex % pieColors.length]} />
+                                ))}
+                              </Pie>
+                              <Tooltip content={(props) => {
+                                if (props.active && props.payload && props.payload.length) {
+                                  const data = props.payload[0].payload as {
+                                    brand: string;
+                                    revenue: number;
+                                    market_share_percentage: number;
+                                    product_count: number;
+                                  }
+                                  return (
+                                    <div className="bg-gray-50 p-3">
+                                      <p className="font-medium">{`${chartsT('brand')}: ${data.brand}`}</p>
+                                      <p className="text-blue-600">{`${chartsT('revenue')}: $${data.revenue.toLocaleString()}`}</p>
+                                      <p className="text-green-600">{`${chartsT('totalProducts')}: ${data.product_count}`}</p>
+                                      <p className="text-gray-600">{`${chartsT('marketShare')}: ${data.market_share_percentage.toFixed(1)}%`}</p>
+                                    </div>
+                                  )
+                                }
+                                return null
+                              }} />
+                              <Legend
+                                verticalAlign="bottom"
+                                height={250}
+                                wrapperStyle={{ paddingTop: 20, maxHeight: 200 }}
+                                formatter={(value) => {
+                                  const item = categoryData.brand_shares.find((d: {brand: string, market_share_percentage: number}) => d.brand === value)
+                                  return `${value} (${item?.market_share_percentage.toFixed(1) || '0.0'}%)`
+                                }}
+                              />
+                            </PieChart>
+                          </ResponsiveContainer>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <p className="text-center text-gray-500">No TAM market share data available</p>
+                  </div>
+                )}
               </div>
-            ) : (
-              <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-center text-gray-500">No TAM market share data available</p>
-              </div>
-            )
-          )}
+            </Card>
           </div>
-          </Card>
-        </div>
-
-
+        )}
       </div>
-      )}
 
 
 
 
       {/* Best Selling Brands Chart */}
       {shouldShowChart('market-share-analysis') && (
-
-        <div>
-      <div className="space-y-4">
-        <div className="flex items-center justify-between mt-6">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-            <BarChart3 className="w-5 h-5" />
-            Top 10 Best-Selling Brands
-          </h3>
-        </div>
-      </div>
-      <div className="mt-6 bg-gray-50 ">
-        <div data-chart-id="best-selling-brands">
-          <Card className="p-6 bg-gray-50  border shadow-sm rounded-xl">
+        <div className="mt-6" data-chart-id="best-selling-brands">
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+                <BarChart3 className="w-5 h-5" />
+                Top 10 Best-Selling Brands
+              </h3>
+            </div>
+          </div>
+          <Card className="p-6 bg-gray-50 border shadow-sm rounded-xl mt-6">
             <div className="mb-4">
 
               {/* 过滤器组件 */}
@@ -682,16 +630,17 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 // 使用与 Top 10 Brand Revenue by Category 完全相同的渲染逻辑
                 bestSellingBrandsData && bestSellingBrandsData.market_share_by_category.length > 0 ? (
                   (() => {
+                    const safeData = bestSellingBrandsData as NonNullable<typeof bestSellingBrandsData>
                     // 构建与 Top 10 Brand Revenue by Category 相同的数据结构
-                    const categoryNames = bestSellingBrandsData.market_share_by_category.map(cat => cat.category)
+                    const categoryNames = safeData.market_share_by_category.map(cat => cat.category)
                     const categoryColors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#F7B731", "#A55EEA", "#26de81", "#FD79A8", "#2ECC71", "#E74C3C"]
 
                     // 构建 brandCategoryRevenue 数据结构
-                    const brandCategoryRevenue: any[] = []
-                    const allBrands = new Set<string>()
+                    const brandCategoryRevenue: Array<{ brand: string; categories: Record<string, { revenue: number; volume: number; product_count: number }> }> = []
+                    const allBrands: Set<string> = new Set<string>()
 
                     // 收集所有品牌
-                    bestSellingBrandsData.market_share_by_category.forEach(categoryData => {
+                    safeData.market_share_by_category.forEach(categoryData => {
                       categoryData.brand_shares.forEach(brand => {
                         allBrands.add(brand.brand)
                       })
@@ -699,13 +648,13 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
 
                     // 为每个品牌构建数据
                     allBrands.forEach(brandName => {
-                      const brandData: any = {
+                    const brandData: { brand: string; categories: Record<string, { revenue: number; volume: number; product_count: number }> } = {
                         brand: brandName,
                         categories: {}
                       }
 
                       categoryNames.forEach(category => {
-                        const categoryData = bestSellingBrandsData.market_share_by_category.find(cat => cat.category === category)
+                        const categoryData = safeData.market_share_by_category.find(cat => cat.category === category)
                         const brandInfo = categoryData?.brand_shares.find(brand => brand.brand === brandName)
 
                         brandData.categories[category] = {
@@ -807,13 +756,12 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
             </div>
           </Card>
         </div>
-      </div></div>
       )}
 
 
-      {/* 🆕 Brand Sales Trend Chart - New Addition */}
+      {/* 🆕 Brand Sales Trend Chart - New Addition (添加锚点) */}
       {shouldShowChart('market-share-analysis') && (
-        <div className="mt-6">
+        <div className="mt-6" data-chart-id="sales-trend-analysis">
           <BrandSalesTrendChart
             projectId={projectId}
             initialFilters={initialFilters}

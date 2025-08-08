@@ -1,3 +1,4 @@
+import { useChartsT } from '@/i18n/hooks'
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 
@@ -9,32 +10,33 @@ interface MetricTypeSelectorProps {
 }
 
 export function MetricTypeSelector({ onChange, value = "revenue" }: MetricTypeSelectorProps) {
+  const chartsT = useChartsT()
   return (
     <div className="flex items-center space-x-4 mb-0">
       <Label htmlFor="metric-type" className="text-lg font-semibold text-gray-800">
-      Sorted by: <span className="font-bold">Revenue</span> or <span className="font-bold">Volume</span>:
+      {chartsT('sortedByRevenueOrVolume')} 
       </Label>
       <Select value={value} onValueChange={onChange}>
         <SelectTrigger id="metric-type" className="w-[180px] text-base">
-          {value === "revenue" ? "Revenue" : "Volume"}
+          {value === "revenue" ? chartsT('revenue') : chartsT('volume')}
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="revenue" className="text-base">
-            <span className="font-semibold">Revenue</span>
+            <span className="font-semibold">{chartsT('revenue')}</span>
           </SelectItem>
           <SelectItem value="volume" className="text-base">
-            <span className="font-semibold">Volume</span>
+            <span className="font-semibold">{chartsT('volume')}</span>
           </SelectItem>
         </SelectContent>
       </Select>
       <div className="text-sm text-gray-600 ml-4">
         <div className="flex items-center space-x-1">
-          <span className="font-semibold">Revenue:</span>
-          <span>Total annual sales value in dollars</span>
+          <span className="font-semibold">{chartsT('revenue')}:</span>
+          <span>{chartsT('revenueDefinition')}</span>
         </div>
         <div className="flex items-center space-x-1 mt-1">
-          <span className="font-semibold">Volume:</span>
-          <span>Total annual number of SKUs sold</span>
+          <span className="font-semibold">{chartsT('volume')}:</span>
+          <span>{chartsT('volumeDefinition')}</span>
         </div>
       </div>
     </div>

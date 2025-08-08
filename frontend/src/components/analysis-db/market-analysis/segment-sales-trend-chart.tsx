@@ -13,6 +13,7 @@ import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/sh
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { BarChart3 } from "lucide-react"
+import { useChartsT } from '@/i18n/hooks'
 
 interface SegmentSalesTrendChartProps {
   data?: TopSegmentsByRevenueResponse
@@ -21,6 +22,7 @@ interface SegmentSalesTrendChartProps {
 }
 
 export function SegmentSalesTrendChart({ data: initialData, projectId, initialFilters }: SegmentSalesTrendChartProps) {
+  const chartsT = useChartsT()
   // 客户端挂载状态
   const [mounted, setMounted] = useState(false)
   const [metricType, setMetricType] = useState<MetricType>("revenue")
@@ -112,7 +114,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Top 10 Segments by Revenue
+            {chartsT('top10SegmentsByRevenue')}
           </h3>
         </div>
       </div>
@@ -192,7 +194,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                             <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
                               <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
                                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                                <span className="text-gray-700 font-medium">Loading products...</span>
+                                 <span className="text-gray-700 font-medium">{chartsT('loadingProducts')}</span>
                               </div>
                             </div>
                           )}

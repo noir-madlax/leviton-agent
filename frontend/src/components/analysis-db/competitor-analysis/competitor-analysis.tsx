@@ -15,6 +15,7 @@ import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-fil
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { supabase } from "@/lib/supabase"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
+import { useChartsT } from '@/i18n/hooks'
 
 
 
@@ -50,6 +51,7 @@ const DEFAULT_COMPETITOR_ASINS = [
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
   // Get chart sections configuration for conditional rendering
   const { shouldShowChart } = useChartSections('competitor-analysis', projectId || '')
+  const chartsT = useChartsT()
 
   const [selectedAsins, setSelectedAsins] = useState<string[]>([]);
   const [matrixViewData, setMatrixViewData] = useState<any>(null);
@@ -236,7 +238,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
             className="flex items-center gap-2"
           >
             <Filter className="w-4 h-4" />
-            {showAsinSelector ? 'Hide' : 'Show'} Product Selection
+            {showAsinSelector ? chartsT('hideProductSelection') : chartsT('showProductSelection')}
           </Button>
         </div>
         
@@ -253,10 +255,8 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       {applyLoading ? (
         <div className="flex flex-col justify-center items-center h-96 bg-white rounded-lg border">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mb-4"></div>
-          <h3 className="text-lg font-medium text-gray-900 mb-2">Applying Product Selection</h3>
-          <p className="text-sm text-gray-600 text-center max-w-md">
-            Loading new analysis data for selected products. All charts and data will be updated together.
-          </p>
+          <h3 className="text-lg font-medium text-gray-900 mb-2">{chartsT('applyingProductSelection')}</h3>
+          <p className="text-sm text-gray-600 text-center max-w-md">{chartsT('loadingNewAnalysisData')}</p>
         </div>
       ) : (
         <>
@@ -270,15 +270,13 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       {/* Customer Satisfaction Overview - New Implementation */}
       {shouldShowChart('customer-satisfaction-overview') && (
       <section data-chart-id="customer-satisfaction-overview">
-        <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">
-          📊 Competitive Analysis
-        </h2>
+        <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">📊 {chartsT('competitorAnalysis')}</h2>
         <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 pb-5">
           <BarChart3 className="w-5 h-5" />
-          Customer satisfaction overview
+          {chartsT('customerSatisfactionOverview')}
         </h3>
         <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          Calculated from the latest 200 reviews per product.
+          {chartsT('calculatedFromLatest200Reviews')}
         </div>
 
         <CustomerSatisfactionChart
@@ -305,18 +303,11 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         <ChartWithFilters
           chartId="product-comparison-dimensions"
           projectId={projectId || ''}
-          title="Product Comparison by Key Dimensions"
+          title={chartsT('productComparisonByKeyDimensions')}
           projectFilters={initialFilters}
           chartType="matrix"
         >
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
-            <span className="bg-green-100 text-green-800 px-1 rounded">Green (75%+ satisfaction)</span>, 
-            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (50-74%)</span>, 
-            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (25-49%)</span>, 
-            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;25%)</span>, 
-            <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
-          </div>
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">{chartsT('matrixLegendExplanation')}</div>
 
           <CompetitorMatrix
             matrixViewData={matrixViewData}
@@ -334,7 +325,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
         <ChartWithFilters
           chartId="product-comparison-use-cases"
           projectId={projectId || ''}
-          title="Product Comparison by Main Use Cases"
+          title={chartsT('productComparisonByMainUseCases')}
           projectFilters={initialFilters}
           chartType="matrix"
         >

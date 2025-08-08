@@ -13,6 +13,7 @@ import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/sh
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { BarChart3 } from "lucide-react"
+import { useChartsT } from '@/i18n/hooks'
 
 interface PackageSalesTrendChartProps {
   data?: PackageTypeDistributionResponse
@@ -21,6 +22,7 @@ interface PackageSalesTrendChartProps {
 }
 
 export function PackageSalesTrendChart({ data: initialData, projectId, initialFilters }: PackageSalesTrendChartProps) {
+  const chartsT = useChartsT()
   // 客户端挂载状态
   const [mounted, setMounted] = useState(false)
   const [metricType, setMetricType] = useState<MetricType>("revenue")
@@ -86,7 +88,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Market Share by Sales Unit
+            {chartsT('marketShareBySalesUnit')}
           </h3>
         </div>
       </div>
@@ -95,9 +97,9 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
       {chartData && mounted && !dataLoading && !dataError && (
         <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
           <p className="text-sm text-blue-700">
-            <strong>Package Type Sales Trend Analysis:</strong> Showing package type distribution.
+            <strong>{chartsT('packageTypeSalesTrendAnalysis')}</strong> Showing package type distribution.
             {chartData.metadata && (
-              <> Data includes {chartData.data.overall_distribution.length} package types from {chartData.metadata.total_package_types} total types.</>
+              <> {chartsT('dataCoversRange')}</>
             )}
           </p>
         </div>
@@ -161,7 +163,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                         {chartData.data.distribution_by_category.map((categoryData) => (
                           <div key={categoryData.category} className="bg-gray-50 p-0 mt-6">
                             <h4 className="text-lg font-semibold mb-4 text-center">
-                              📦 {categoryData.category} - Package Type Distribution
+                              📦 {categoryData.category} - {chartsT('packageTypeDistribution')}
                             </h4>
 
 
@@ -209,7 +211,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                                 <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
                                   <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
                                     <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                                    <span className="text-gray-700 font-medium">Loading products...</span>
+                                     <span className="text-gray-700 font-medium">{chartsT('loadingProducts')}</span>
                                   </div>
                                 </div>
                               )}

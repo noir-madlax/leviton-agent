@@ -59,7 +59,7 @@ export function BrandPriceDistributionChart({
   return (
     <section className="mb-10">
       <h3 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-6">
-        🏷️ Brand Price Distribution
+        🏷️ {chartsT('brandPriceDistribution')}
       </h3>
 
       <div className="mb-8" data-chart-id={CHART_NAMES.BRAND_PRICE_DISTRIBUTION}>

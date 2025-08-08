@@ -10,6 +10,7 @@ import { ProjectFilters } from "../types/filters"
 import { BrandSalesTrendResponse } from "../data/database-service"
 import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
 import { BarChart3 } from "lucide-react"
+import { useChartsT } from '@/i18n/hooks'
 
 interface BrandSalesTrendChartProps {
   data?: BrandSalesTrendResponse
@@ -18,6 +19,7 @@ interface BrandSalesTrendChartProps {
 }
 
 export function BrandSalesTrendChart({ data: initialData, projectId, initialFilters }: BrandSalesTrendChartProps) {
+  const chartsT = useChartsT()
   // 客户端挂载状态
   const [mounted, setMounted] = useState(false)
 
@@ -61,7 +63,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Sales Trend of Top 10 brands
+            {chartsT('salesTrendTop10Brands')}
           </h3>
         </div>
       </div>
@@ -70,10 +72,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
       {chartData && mounted && !dataLoading && !dataError && (
         <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
           <p className="text-sm text-blue-700">
-            <strong>Sales Trend Analysis:</strong> Showing top 10 brands by revenue for each category and aggregated yearly rank by total revenue.
-            {chartData.overall_summary?.date_range && (
-              <> Data covers {chartData.overall_summary.date_range.start} to {chartData.overall_summary.date_range.end}.</>
-            )}
+            <strong>{chartsT('salesTrendAnalysis')}</strong> Showing top 10 brands by revenue for each category and aggregated yearly rank by total revenue.
           </p>
         </div>
       )}
@@ -133,7 +132,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
                         {Object.entries(chartData.categories_data).map(([category, categoryData]) => (
                           <div key={category} className=" p-0 ">
                             <h4 className="text-lg font-semibold mb-4 text-center">
-                              📈 {category} - Sales Trend of Top 10 Brands
+                              📈 {category} - {chartsT('salesTrendTopBrandsSuffix')}
                             </h4>
 
                             {/* 类别趋势图 */}
