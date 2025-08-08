@@ -626,7 +626,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
         <div className="flex items-center justify-between mt-6">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            Top 10 Brand Revenue by Category
+            Top 10 Best-Selling Brands
           </h3>
         </div>
       </div>

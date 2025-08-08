@@ -70,7 +70,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
       {chartData && mounted && !dataLoading && !dataError && (
         <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
           <p className="text-sm text-blue-700">
-            <strong>Brand Sales Trend Analysis:</strong> Showing monthly sales trends for top 10 brands by revenue.
+            <strong>Sales Trend Analysis:</strong> Showing top 10 brands by revenue for each category and aggregated yearly rank by total revenue.
             {chartData.overall_summary?.date_range && (
               <> Data covers {chartData.overall_summary.date_range.start} to {chartData.overall_summary.date_range.end}.</>
             )}
