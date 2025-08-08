@@ -56,6 +56,10 @@ class ReviewInsightsRequest(DashboardRequest):
 
 
 
+class CompetitorSummaryRequest(BaseModel):
+    """Competitor analysis summary request model."""
+    project_id: str = Field(..., description="Project ID for filtering")
+    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
 
 
 # ==================== 响应模型 ====================
@@ -245,34 +249,37 @@ class PackagePreferenceResponse(BaseModel):
 
 # ==================== Review Insights Models ====================
 
-class ReviewCountMixin(BaseModel):
-    """Shared mixin for standardized review count fields across all review-related models."""
-    total_reviews: int = Field(description="Total number of reviews across all sentiments")
-    positive_reviews: int = Field(description="Number of positive reviews")
-    negative_reviews: int = Field(description="Number of negative reviews")
-    # Optional enhanced fields for frontend optimization
-    category_definition: Optional[str] = Field(default="", description="Category definition for tooltips")
-    related_detail_texts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
-    category_id: Optional[int] = Field(default=None, description="Category ID for review panel integration")
+class PainPoint(BaseModel):
+    """Pain point data model with enhanced fields."""
+    aspect: str
+    category: str
+    severity: float
+    frequency: int
+    impactedProducts: int
+    type: Literal["Physical", "Performance", "Usability"]
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative reviews")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
-
-class PainPoint(ReviewCountMixin):
-    """Pain point data model with standardized review count fields."""
-    category_name: str = Field(description="Pain point category name")
-    example_details: str = Field(description="Example details from reviews")
-    satisfaction_rate: float = Field(description="Satisfaction rate (100 - negative_rate)")
-    impacted_products: int = Field(description="Number of products impacted")
-    type: Literal["Physical", "Performance", "Usability"] = Field(description="Pain point type")
-    negative_rate: Optional[float] = Field(default=0, description="Percentage of negative reviews")
-
-
-class CustomerLike(ReviewCountMixin):
-    """Customer like data model with standardized review count fields."""
-    category_name: str = Field(description="Liked feature category name")
-    example_details: str = Field(description="Example details from reviews")
-    satisfaction_level: Literal["High", "Medium", "Low"] = Field(description="Satisfaction level")
-    positive_rate: Optional[float] = Field(default=0, description="Percentage of positive reviews")
-
+class CustomerLike(BaseModel):
+    """Customer like data model with enhanced fields."""
+    feature: str
+    category: str
+    frequency: int
+    satisfactionLevel: Literal["High", "Medium", "Low"]
+    # Enhanced fields for frontend optimization
+    categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive reviews")
+    # New field for frontend mapping
+    relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
 class AllUseCase(BaseModel):
     """All use case data model with enhanced fields."""
@@ -315,46 +322,58 @@ class ReviewInsightsResponse(BaseModel):
 
 # ==================== Competitor Analysis Models ====================
 
-class CompetitorMatrixData(ReviewCountMixin):
-    """Competitor matrix data model with standardized review count fields."""
-    product: str = Field(description="Product identifier")
-    category: str = Field(description="Category name")
-    category_type: Literal["Physical", "Performance"] = Field(description="Category type")
-    satisfaction_rate: float = Field(description="Satisfaction rate")
-
+class CompetitorMatrixData(BaseModel):
+    """Competitor matrix data model."""
+    product: str
+    category: str
+    categoryType: Literal["Physical", "Performance"]
+    mentions: int
+    satisfactionRate: float
+    positiveCount: int
+    negativeCount: int
+    totalReviews: int
 
 class UseCaseMatrixData(BaseModel):
     """Use case matrix data model."""
-    product: str = Field(description="Product identifier")
-    use_case: str = Field(description="Use case description")
-    satisfaction_rate: float = Field(description="Satisfaction rate")
-    gap_level: float = Field(description="Gap level")
-
+    product: str
+    useCase: str
+    mentions: int
+    satisfactionRate: float
+    gapLevel: float
 
 class UseCaseData(BaseModel):
     """Use case data container."""
-    target_products: List[str] = Field(description="List of target products")
-    matrix_data: List[UseCaseMatrixData] = Field(description="Matrix data for use cases")
+    targetProducts: List[str]
+    matrixData: List[UseCaseMatrixData]
 
-
-
+class CompetitorAnalysisResponse(BaseModel):
+    """Response model for competitor analysis API."""
+    targetProducts: List[str]
+    matrixData: List[CompetitorMatrixData]
+    productTotalReviews: Dict[str, int]
+    useCaseData: UseCaseData
+    reviewContent: Optional[Dict[str, List[Dict[str, Any]]]] = Field(
+        default=None,
+        description="Review content for matrix cell clicks, keyed by 'product_asin_category_name'"
+    )
+    project_id: str = Field(description="Project ID used for filtering")
+    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
 
 
 # ==================== All Review Data Models ====================
 
 class ReviewData(BaseModel):
     """Individual review data model."""
-    id: str = Field(description="Review ID")
-    product_id: str = Field(description="Product ID")
-    text: str = Field(description="Review text")
-    sentiment: Literal["positive", "negative", "neutral"] = Field(description="Review sentiment")
-    category: str = Field(description="Review category")
-    aspect: str = Field(description="Review aspect")
-    rating: int = Field(description="Review rating")
-    verified: bool = Field(description="Whether review is verified")
-    date: str = Field(description="Review date")
-    brand: str = Field(description="Product brand")
-
+    id: str
+    productId: str
+    text: str
+    sentiment: Literal["positive", "negative", "neutral"]
+    category: str
+    aspect: str
+    rating: int
+    verified: bool
+    date: str
+    brand: str
 
 class AllReviewDataResponse(BaseModel):
     """Response model for all review data API."""
@@ -364,13 +383,25 @@ class AllReviewDataResponse(BaseModel):
     total_aspects: int = Field(description="Total number of aspects")
     total_reviews: int = Field(description="Total number of reviews") 
 
+# ==================== Competitor Analysis Summary Models ====================
+
+class CompetitorSummaryProduct(BaseModel):
+    """Individual competitor product summary model."""
+    asin: str = Field(description="Product ASIN")
+    product_title: str = Field(description="Product title")
+    rating: Optional[float] = Field(description="Product rating")
+    brand: Optional[str] = Field(description="Product brand")
+    product_url: Optional[str] = Field(description="Product URL")
+    list_price: Optional[float] = Field(description="List price in USD")
+    unique_reviews_count: int = Field(description="Number of unique reviews from review_aspect_data_view")
+    additional_metrics: Optional[Dict[str, Any]] = Field(default=None, description="Additional metrics including sentiment distribution and category counts")
 
 
-
-
-
-
-
+class CompetitorSummaryResponse(BaseModel):
+    """Response model for competitor analysis summary API."""
+    products: List[CompetitorSummaryProduct] = Field(description="List of competitor products with summary data")
+    total_products: int = Field(description="Total number of products returned")
+    selected_asins: List[str] = Field(description="List of ASINs that were requested")
 
 
 # ==================== Competitor Analysis Matrix View Models ====================

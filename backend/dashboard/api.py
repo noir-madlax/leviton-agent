@@ -30,7 +30,6 @@ from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
 
 from .services.project_overview_service import ProjectOverviewService
-from .services.competitor_summary_service import CompetitorSummaryService
 from .services.chat_config_service import ChatConfigService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
 from .charts.api import router as charts_router
