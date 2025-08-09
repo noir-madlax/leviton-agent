@@ -58,17 +58,19 @@ export function BrandPriceDistributionChart({
 
   return (
     <section className="mb-10">
-      <h3 className="text-xl font-bold text-gray-800 border-l-4 border-orange-500 pl-4 mb-6">
-        🏷️ {chartsT('brandPriceDistribution')}
-      </h3>
-
+      {/* External title */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            {chartsT('brandPriceDistribution')}
+          </h3>
+        </div>
+      </div>
       <div className="mb-8" data-chart-id={CHART_NAMES.BRAND_PRICE_DISTRIBUTION}>
-        <Card className="p-6 bg-gray-50">
+        <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-              {chartsT('brandPriceDistribution')}
-            </h3>
+            {/* inner title removed to avoid duplication */}
             
             <FilterRenderer
               chartName={CHART_NAMES.BRAND_PRICE_DISTRIBUTION}
@@ -91,21 +93,21 @@ export function BrandPriceDistributionChart({
           {dataLoading ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-2">正在加载品牌价格分布数据...</span>
+              <span className="ml-2">{chartsT('loadingBrandPriceData')}</span>
             </div>
           ) : !filtersReady ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-2">正在初始化过滤器...</span>
+              <span className="ml-2">{chartsT('initializingFilters')}</span>
             </div>
           ) : dataError ? (
             <div className="text-red-600 text-center py-8">
-              数据加载失败: {dataError}
+              {chartsT('dataLoadFailed')}: {dataError}
               <button 
                 onClick={() => refreshData(filters)}
                 className="block mx-auto mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
               >
-                重新加载
+                {chartsT('retry')}
               </button>
             </div>
           ) : dataToUse?.brandPriceDistribution ? (

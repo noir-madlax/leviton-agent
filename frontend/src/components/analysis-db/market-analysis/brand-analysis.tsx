@@ -397,7 +397,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
       <div data-chart-id="market-share-analysis">
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 mb-6">
+              <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 mb-6">
               <BarChart3 className="w-5 h-5" />
               {chartsT('totalAddressableMarketAndMarketShare')}
             </h3>
@@ -467,14 +467,14 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                   <div className="flex items-center justify-center py-20">
                     <div className="text-center">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                      <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                      <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                     </div>
                   </div>
                 ) : !filtersReady ? (
                   <div className="flex items-center justify-center py-20">
                     <div className="text-center">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                      <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                      <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                     </div>
                   </div>
                 ) : tamDataError ? (
@@ -532,8 +532,8 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                                   return (
                                     <div className="bg-gray-50 p-3">
                                       <p className="font-medium">{`${chartsT('brand')}: ${data.brand}`}</p>
-                                      <p className="text-blue-600">{`${chartsT('revenue')}: $${data.revenue.toLocaleString()}`}</p>
-                                      <p className="text-green-600">{`${chartsT('totalProducts')}: ${data.product_count}`}</p>
+                                      <p className="text-blue-600">{chartsT('revenue')}: ${data.revenue.toLocaleString()}</p>
+                                      <p className="text-green-600">{chartsT('totalNumberOfProducts')}: {data.product_count}</p>
                                       <p className="text-gray-600">{`${chartsT('marketShare')}: ${data.market_share_percentage.toFixed(1)}%`}</p>
                                     </div>
                                   )
@@ -576,7 +576,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
             <div className="flex items-center justify-between">
               <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
                 <BarChart3 className="w-5 h-5" />
-                Top 10 Best-Selling Brands
+                {chartsT('top10BestSellingBrands')}
               </h3>
             </div>
           </div>
@@ -604,14 +604,14 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                   </div>
                 </div>
               ) : !bestSellingBrandsFiltersReady ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                   </div>
                 </div>
               ) : bestSellingBrandsError ? (
@@ -740,7 +740,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                           <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
                             <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
                               <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                              <span className="text-gray-700 font-medium">Loading products...</span>
+                              <span className="text-gray-700 font-medium">{chartsT('loadingProducts')}</span>
                             </div>
                           </div>
                         )}

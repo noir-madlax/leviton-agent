@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from 'react'
+import { useChartsT } from '@/i18n/hooks'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query'
@@ -23,17 +24,18 @@ interface CategoryPositiveFeedbackBarProps {
 
 type TooltipEntry = { payload: CategoryFeedback; dataKey: string }
 const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: TooltipEntry[]; label?: string }) => {
+  const chartsT = useChartsT()
   if (active && payload && payload.length) {
     const data = payload[0].payload
     return (
       <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg max-w-xs">
         <p className="font-semibold text-gray-800">{label}</p>
-        <p className="text-sm text-gray-600">Total reviews: {data.totalReviews}</p>
-        <p className="text-sm text-green-700">Positive mentioned aspects: {data.positiveReviews}</p>
-        <p className="text-sm text-red-700">Negative mentioned aspects: {data.negativeReviews}</p>
-        <p className="text-sm text-blue-600">Satisfaction Rate: {Math.round(data.satisfactionRate)}%</p>
+        <p className="text-sm text-gray-600">{chartsT('totalReviews')}: {data.totalReviews}</p>
+        <p className="text-sm text-green-700">{chartsT('positiveMentionedAspects')}: {data.positiveReviews}</p>
+        <p className="text-sm text-red-700">{chartsT('negativeMentionedAspects')}: {data.negativeReviews}</p>
+        <p className="text-sm text-blue-600">{chartsT('satisfactionRate')}: {Math.round(data.satisfactionRate)}%</p>
         <div className="mt-2">
-          <p className="text-xs text-gray-500">Top Strength Details:</p>
+          <p className="text-xs text-gray-500">{chartsT('topStrengthDetails')}:</p>
           {data.topPositiveAspects && data.topPositiveAspects.slice(0, 3).map((aspect: string, index: number) => (
             <p key={index} className="text-xs text-gray-600">• {aspect}</p>
           ))}
@@ -46,6 +48,7 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
 
 export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', projectId, filters }: CategoryPositiveFeedbackBarProps) {
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
+  const chartsT = useChartsT()
 
   // 同步外部的productType变化
   useEffect(() => {}, [productType])
@@ -75,21 +78,12 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', proj
         <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
           <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
             <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-            <span className="text-gray-700 font-medium">Loading review details...</span>
+            <span className="text-gray-700 font-medium">{chartsT('loadingReviewDetails')}</span>
           </div>
         </div>
       )}
-      <Card className="w-full">
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-      
-        
-        </CardTitle>
-        <CardDescription>
-          Bars are sorted by positive reviews from left to right in descending order
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+      <Card className="w-full rounded-xl border shadow-sm">
+        <CardContent>
         <UnifiedStackedBarChart
           data={filteredData}
           xAxisDataKey="category"
@@ -102,9 +96,8 @@ export function CategoryPositiveFeedbackBar({ data, productType = 'dimmer', proj
           bottomBarType="positive" // 正面bar在底部
           colorConfig={getColorConfig('delights')}
         />
-        
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
     </div>
   )
 } 

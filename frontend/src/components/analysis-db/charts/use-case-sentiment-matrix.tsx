@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from "react"
 import { Tooltip } from "@/components/ui/tooltip"
+import { useChartsT } from '@/i18n/hooks'
 import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
 import { useReviewPanelQuery } from "@/components/analysis-db/hooks/use-review-panel-query"
 
@@ -21,6 +22,7 @@ type SortField = 'totalReviews' | 'positiveReviews' | 'negativeReviews' | 'posit
 type SortDirection = 'asc' | 'desc'
 
 export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSentimentMatrixProps) {
+  const chartsT = useChartsT()
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   const [sortField, setSortField] = useState<SortField>('totalReviews')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
@@ -108,7 +110,7 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
   if (!data || data.length === 0) {
     return (
       <div className="p-8 text-center">
-        <p className="text-gray-500">No use case data available.</p>
+        <p className="text-gray-500">{chartsT('noUseCaseDataAvailable')}</p>
       </div>
     )
   }
@@ -129,17 +131,17 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
           <thead>
             <tr className="bg-gray-50 ">
               <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[230px]">
-                <Tooltip content="The specific use case or scenario mentioned in customer reviews">
-                  <div>Use case</div>
+                <Tooltip content={chartsT('useCaseTooltip')}>
+                  <div>{chartsT('useCase')}</div>
                 </Tooltip>
               </th>
               <th 
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('totalReviews')}
               >
-                <Tooltip content="Total number of reviews for this use case">
+                <Tooltip content={chartsT('totalReviewsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Total Reviews
+                    {chartsT('totalReviews')}
                     <span className="text-xs">{getSortIcon('totalReviews')}</span>
                   </div>
                 </Tooltip>
@@ -148,9 +150,9 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveReviews')}
               >
-                <Tooltip content="Number of positive mentioned aspects for this use case">
+                <Tooltip content={chartsT('positiveAspectsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Positive Mentioned Aspects
+                    {chartsT('positiveMentionedAspectsHeader')}
                     <span className="text-xs">{getSortIcon('positiveReviews')}</span>
                   </div>
                 </Tooltip>
@@ -159,9 +161,9 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('negativeReviews')}
               >
-                <Tooltip content="Number of negative mentioned aspects for this use case">
+                <Tooltip content={chartsT('negativeAspectsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Negative Mentioned Aspects
+                    {chartsT('negativeMentionedAspectsHeader')}
                     <span className="text-xs">{getSortIcon('negativeReviews')}</span>
                   </div>
                 </Tooltip>
@@ -170,9 +172,9 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveShare')}
               >
-                <Tooltip content="Positive mentioned aspects / Total mentioned aspects">
+                <Tooltip content={chartsT('positiveShareTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                  Satisfaction Rate (%)
+                  {chartsT('satisfactionRateHeader')}
                     <span className="text-xs">{getSortIcon('positiveShare')}</span>
                   </div>
                 </Tooltip>

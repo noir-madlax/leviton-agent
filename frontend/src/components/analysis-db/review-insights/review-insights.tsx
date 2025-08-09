@@ -315,12 +315,12 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       {/* Use Case Sentiment Analysis */}
       <section data-chart-id="use-case-sentiment">
         <ChartHeader title={chartsT('useCaseSentimentAnalysis')} icon={BarChart3} />
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6 mt-6">
         {chartsT('calculatedFromLatestReviews')}
 
 
             </div>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
+        <div className="bg-white rounded-xl shadow-sm border p-6 mt-6">
             <UseCaseSentimentMatrix
               data={transformUseCaseData(filteredData.reviewInsights?.allUseCases || [])}
               projectId={projectId}

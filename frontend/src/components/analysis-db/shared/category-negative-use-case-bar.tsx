@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useChartsT } from '@/i18n/hooks'
 import { Badge } from '@/components/ui/badge';
 import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/analysis';
 import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
@@ -27,6 +28,7 @@ interface CategoryNegativeUseCaseBarProps {
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
+  const chartsT = useChartsT()
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
@@ -36,11 +38,11 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 基本统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="text-sm text-gray-600">{chartsT('totalReviews')}:</p>
             <p className="font-semibold">{data.totalReviews}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-600">Satisfaction Rate:</p>
+            <p className="text-sm text-gray-600">{chartsT('satisfactionRate')}:</p>
             <div className="flex items-center gap-2">
               <p className="font-semibold">{Math.round(data.satisfactionRate)}%</p>
               <Badge 
@@ -59,7 +61,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 统计信息 */}
         <div className="grid grid-cols-1 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="text-sm text-gray-600">{chartsT('totalReviews')}:</p>
             <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>
@@ -67,7 +69,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* Gap原因 */}
         {data.topGapReasons && data.topGapReasons.length > 0 && (
           <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Gap Reasons:</p>
+            <p className="text-xs text-gray-500">{chartsT('topGapReasons')}:</p>
             {data.topGapReasons.slice(0, 3).map((reason: string, index: number) => (
               <p key={index} className="text-xs text-red-600">• {reason}</p>
             ))}
@@ -77,7 +79,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* Top满意原因 */}
         {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
           <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
+            <p className="text-xs text-gray-500">{chartsT('topSatisfactionReasons')}:</p>
             {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
               <p key={index} className="text-xs text-green-600">• {reason}</p>
             ))}

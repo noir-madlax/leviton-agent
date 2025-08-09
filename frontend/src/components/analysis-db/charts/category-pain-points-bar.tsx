@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from 'react'
+import { useChartsT } from '@/i18n/hooks'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query'
@@ -46,6 +47,7 @@ const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?:
 
 export function CategoryPainPointsBar({ data, productType = 'dimmer', projectId, filters }: CategoryPainPointsBarProps) {
   const { handleCategoryClick, isLoading } = useReviewPanelQuery()
+  const chartsT = useChartsT()
 
   // 同步外部的productType变化
   useEffect(() => {}, [productType])
@@ -75,22 +77,12 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', projectId,
         <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
           <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
             <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-            <span className="text-gray-700 font-medium">Loading review details...</span>
+            <span className="text-gray-700 font-medium">{chartsT('loadingReviewDetails')}</span>
           </div>
         </div>
       )}
-      <Card className="w-full">
-      
-      <CardHeader>
-        <CardTitle className="flex items-center justify-between">
-       
-         
-        </CardTitle>
-        <CardDescription>
-          Bars are sorted by negative reviews from left to right in descending order
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
+      <Card className="w-full rounded-xl border shadow-sm">
+        <CardContent>
         <UnifiedStackedBarChart
           data={filteredData}
           xAxisDataKey="category"
@@ -103,9 +95,8 @@ export function CategoryPainPointsBar({ data, productType = 'dimmer', projectId,
           bottomBarType="negative" // 负面bar在底部
           colorConfig={getColorConfig('painPoints')}
         />
-        
-      </CardContent>
-    </Card>
+        </CardContent>
+      </Card>
     </div>
   )
 } 

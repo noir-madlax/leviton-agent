@@ -8,7 +8,7 @@ import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-da
 import { CHART_NAMES } from "@/components/analysis-db/constants"
 import { ProjectFilters } from "../types/filters"
 import { BrandSalesTrendResponse } from "../data/database-service"
-import { SalesTrendChart, SalesTrendSummary } from '@/app/chat/charts/sales_trend'
+import { SalesTrendChart } from '@/app/chat/charts/sales_trend'
 import { BarChart3 } from "lucide-react"
 import { useChartsT } from '@/i18n/hooks'
 
@@ -37,7 +37,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
     chartId: 'brand-sales-trend',
     projectId: projectId || '',
     initialData,
-    refreshFunction: async (projectId: string, _filters: ProjectFilters) => {
+     refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
       return await databaseService.getBrandSalesTrendData(projectId)
     }
@@ -72,7 +72,7 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
       {chartData && mounted && !dataLoading && !dataError && (
         <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
           <p className="text-sm text-blue-700">
-            <strong>{chartsT('salesTrendAnalysis')}</strong> Showing top 10 brands by revenue for each category and aggregated yearly rank by total revenue.
+            <strong>{chartsT('salesTrendAnalysis')}</strong> {chartsT('showingTop10BrandsByRevenue')}
           </p>
         </div>
       )}
@@ -100,25 +100,25 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                   </div>
                 </div>
               ) : !filtersReady ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在初始化过滤器...</p>
+                    <p className="text-sm text-gray-600">{chartsT('initializingFilters')}</p>
                   </div>
                 </div>
               ) : dataError ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
-                    <p className="text-sm text-red-600 mb-3">数据加载失败: {dataError}</p>
+                    <p className="text-sm text-red-600 mb-3">{chartsT('dataLoadFailed')}: {dataError}</p>
                     <button 
                       onClick={() => refreshData(filters)}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                     >
-                      重新加载
+                      {chartsT('retry')}
                     </button>
                   </div>
                 </div>
@@ -155,15 +155,13 @@ export function BrandSalesTrendChart({ data: initialData, projectId, initialFilt
                       </div>
                     ) : (
                       <div className="bg-gray-100 p-4 rounded">
-                        <p className="text-sm text-gray-600 text-center">
-                          No category data available
-                        </p>
+                        <p className="text-sm text-gray-600 text-center">{chartsT('noDataAvailable')}</p>
                       </div>
                     )}
                   </div>
                 ) : (
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <p className="text-center text-gray-500">No sales trend data available</p>
+                    <p className="text-center text-gray-500">{chartsT('noSalesTrendDataForCategory')}</p>
                   </div>
                 )
               )}

@@ -329,14 +329,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
           projectFilters={initialFilters}
           chartType="matrix"
         >
-          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">
-          The number represents total reviews. Color indicates satisfaction rate (positive mentions / total mentions):
-            <span className="bg-green-100 text-green-800 px-1 rounded">Green (75%+ satisfaction)</span>, 
-            <span className="bg-yellow-100 text-yellow-800 px-1 rounded">Yellow (50-74%)</span>, 
-            <span className="bg-orange-100 text-orange-800 px-1 rounded">Orange (25-49%)</span>, 
-            <span className="bg-red-100 text-red-800 px-1 rounded">Red (&lt;25%)</span>, 
-            <span className="bg-gray-100 text-gray-400 px-1 rounded">Gray (no reviews)</span>.
-          </div>
+          <div className="bg-purple-50 border-l-4 border-purple-600 p-4 mb-6">{chartsT('matrixLegendExplanation')}</div>
 
           <MissedOpportunitiesMatrix
             matrixViewData={useCaseMatrixViewData}

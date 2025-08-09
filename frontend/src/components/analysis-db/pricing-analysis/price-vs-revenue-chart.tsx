@@ -213,17 +213,19 @@ export function PriceVsRevenueChart({
 
   return (
     <section className="mb-10">
-      <h3 className="text-xl font-bold text-gray-800 border-l-4 border-purple-500 pl-4 mb-6">
-        💹 {chartsT('priceVsRevenueDistribution')}
-      </h3>
-
+      {/* External title */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            {chartsT('priceVsRevenueDistribution')}
+          </h3>
+        </div>
+      </div>
       <div className="mb-8" data-chart-id={CHART_NAMES.PRICE_VS_REVENUE}>
-        <Card className="p-6 bg-gray-50">
+        <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-              {chartsT('priceVsRevenueDistribution')}
-            </h3>
+            {/* inner title removed to avoid duplication */}
             
             <FilterRenderer
               chartName={CHART_NAMES.PRICE_VS_REVENUE}
@@ -244,7 +246,7 @@ export function PriceVsRevenueChart({
           ) : !filtersReady ? (
             <div className="flex items-center justify-center py-8">
               <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-              <span className="ml-2">正在初始化过滤器...</span>
+              <span className="ml-2">{chartsT('initializingFilters')}</span>
             </div>
           ) : dataError ? (
             <div className="text-red-600 text-center py-8">
@@ -253,25 +255,25 @@ export function PriceVsRevenueChart({
                 onClick={() => refreshData(filters)}
                 className="block mx-auto mt-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
               >
-                重新加载
+                {chartsT('retry')}
               </button>
             </div>
           ) : hasScatterData ? (
             <div className="h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
-                <ScatterChart data={getPriceVsRevenueData()}>
+                <ScatterChart data={getPriceVsRevenueData()} margin={{ top: 5, right: 20, bottom: 30, left: 50 }}>
                   <CartesianGrid strokeDasharray="3,3" />
                   <XAxis 
                     type="number" 
                     dataKey="x" 
                     name="Price"
-                    label={{ value: chartsT('priceUSD'), position: 'insideBottom', offset: -5 }}
+                    label={{ value: chartsT('priceUSD'), position: 'bottom', offset: 10 }}
                   />
                   <YAxis 
                     type="number" 
                     dataKey="y" 
                     name="Revenue"
-                    label={{ value: chartsT('revenue'), angle: -90, position: 'insideLeft' }}
+                    label={{ value: chartsT('revenue'), angle: -90, position: 'left', offset: 30 }}
                   />
                   <Tooltip 
                     cursor={{ strokeDasharray: '3,3' }}
@@ -291,7 +293,7 @@ export function PriceVsRevenueChart({
                       return null
                     }}
                   />
-                  <Legend />
+                  <Legend verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 20 }} />
                   {getBrandDataForScatterChart().map((brandData, index) => (
                     <Scatter
                       key={brandData.brand}

@@ -150,7 +150,11 @@ export interface CategoryPackageDistribution {
 export interface PackageTypeDistributionData {
   overall_distribution: PackageTypeData[]
   distribution_by_category: CategoryPackageDistribution[]
+  total_market_revenue?: number
+  total_market_volume?: number
+  total_products?: number
   metric_type: string
+  currency?: string
 }
 
 export interface PackageTypeDistributionMetadata {
@@ -558,7 +562,7 @@ export class DatabaseService {
   }
 
   // 🔑 Get Package Type Distribution data - 自动从过滤器状态管理器获取过滤器
-  async getPackageTypeDistributionData(projectId: string): Promise<PackageTypeDistributionResponse> {
+  async getPackageTypeDistributionData(projectId: string, metricType: 'revenue' | 'products' = 'revenue'): Promise<PackageTypeDistributionResponse> {
     try {
       // 🆕 从过滤器状态管理器获取过滤器数据
       const filters = this.getFiltersFromState(CHART_NAMES.PACKAGE_PREFERENCE)
@@ -569,7 +573,7 @@ export class DatabaseService {
 
       const requestBody = {
         project_id: projectId,
-        metric_type: 'revenue',
+        metric_type: metricType,
         ...filters  // 🎯 直接展开 getFiltersFromState 的结果
       }
 

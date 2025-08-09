@@ -2,6 +2,8 @@
 
 import React, { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
+import { Label } from "@/components/ui/label"
+import { Select, SelectContent, SelectItem, SelectTrigger } from "@/components/ui/select"
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
 import { useChartWithFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
 import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
@@ -9,11 +11,13 @@ import { CHART_NAMES } from "@/components/analysis-db/constants"
 import { ProjectFilters } from "../types/filters"
 import { PackageTypeDistributionResponse } from "../data/database-service"
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip, Legend } from 'recharts'
-import { MetricTypeSelector, type MetricType } from "@/components/analysis-db/shared/metric-type-selector"
+// Local metric type for this chart (revenue | products)
 import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
 import { BarChart3 } from "lucide-react"
 import { useChartsT } from '@/i18n/hooks'
+
+type PackageMetricType = 'revenue' | 'products'
 
 interface PackageSalesTrendChartProps {
   data?: PackageTypeDistributionResponse
@@ -25,7 +29,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
   const chartsT = useChartsT()
   // 客户端挂载状态
   const [mounted, setMounted] = useState(false)
-  const [metricType, setMetricType] = useState<MetricType>("revenue")
+  const [metricType, setMetricType] = useState<PackageMetricType>("revenue")
 
   useEffect(() => {
     setMounted(true)
@@ -43,7 +47,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
     initialData,
     refreshFunction: async (projectId: string) => {
       const { databaseService } = await import('@/components/analysis-db/data/database-service')
-      return await databaseService.getPackageTypeDistributionData(projectId)
+      return await databaseService.getPackageTypeDistributionData(projectId, metricType)
     }
   })
 
@@ -88,19 +92,39 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
             <BarChart3 className="w-5 h-5" />
-            {chartsT('marketShareBySalesUnit')}
+            {chartsT('packageTypeDistributionByRevenue')}
           </h3>
         </div>
       </div>
 
-      {/* Summary Information - moved to below title */}
+      {/* Summary: Display Metric selector + TAM copy */}
       {chartData && mounted && !dataLoading && !dataError && (
-        <div className="bg-blue-50 border-l-4 border-blue-400 p-3 mb-6 mt-6">
-          <p className="text-sm text-blue-700">
-            <strong>{chartsT('packageTypeSalesTrendAnalysis')}</strong> Showing package type distribution.
-            {chartData.metadata && (
-              <> {chartsT('dataCoversRange')}</>
-            )}
+        <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 mt-6 rounded-sm">
+          <div className="flex items-center gap-3 mb-2">
+            <Label htmlFor="display-metric" className="text-sm font-medium text-blue-800">
+              {chartsT('displayMetric')}:
+            </Label>
+            <Select value={metricType} onValueChange={(v)=> setMetricType(v as PackageMetricType)}>
+              <SelectTrigger id="display-metric" className="w-[180px] text-sm">
+                {metricType === 'revenue' ? chartsT('revenue') : chartsT('productsText')}
+              </SelectTrigger>
+              <SelectContent>
+                <SelectItem value="revenue" className="text-sm">
+                  <span className="font-semibold">{chartsT('revenue')}</span>
+                </SelectItem>
+                <SelectItem value="products" className="text-sm">
+                  <span className="font-semibold">{chartsT('productsText')}</span>
+                </SelectItem>
+              </SelectContent>
+            </Select>
+          </div>
+          <p className="text-sm text-blue-800">
+            <strong>{chartsT('totalAddressableMarketShort')}</strong>
+            {` $${(chartData.data?.total_market_revenue || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} `}
+            {chartsT('with')} {(chartData.data?.total_products || 0).toLocaleString()} {chartsT('productsText')}
+          </p>
+          <p className="text-xs text-blue-700 mt-1">
+            {chartsT('approximatedByTotalRevenue')}
           </p>
         </div>
       )}
@@ -128,25 +152,25 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                   </div>
                 </div>
               ) : !filtersReady ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在初始化过滤器...</p>
+                    <p className="text-sm text-gray-600">{chartsT('initializingFilters')}</p>
                   </div>
                 </div>
               ) : dataError ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
-                    <p className="text-sm text-red-600 mb-3">数据加载失败: {dataError}</p>
+                    <p className="text-sm text-red-600 mb-3">{chartsT('dataLoadFailed')}: {dataError}</p>
                     <button 
                       onClick={() => refreshData(filters)}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                     >
-                      重新加载
+                      {chartsT('retry')}
                     </button>
                   </div>
                 </div>
@@ -154,8 +178,8 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                 // 图表渲染逻辑
                 chartData && mounted ? (
                   <div className="space-y-6">
-                    {/* 指标类型选择器 */}
-                    <MetricTypeSelector onChange={setMetricType} value={metricType} />
+                    {/* 指标类型选择器（已在上方摘要区提供 Display Metric 选择，此处保留以便一致性/交互） */}
+                    {/* <MetricTypeSelector onChange={setMetricType} value={metricType} /> */}
 
                     {/* 按类别显示饼图 */}
                     {chartData.data.distribution_by_category && chartData.data.distribution_by_category.length > 0 ? (
@@ -163,7 +187,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                         {chartData.data.distribution_by_category.map((categoryData) => (
                           <div key={categoryData.category} className="bg-gray-50 p-0 mt-6">
                             <h4 className="text-lg font-semibold mb-4 text-center">
-                              📦 {categoryData.category} - {chartsT('packageTypeDistribution')}
+                              📦 {categoryData.category} - {metricType === 'revenue' ? chartsT('salesUnitDistributionByRevenue') : chartsT('packageTypeDistribution')}
                             </h4>
 
 
@@ -176,7 +200,7 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                                       data={categoryData.package_types.map((packageType, index) => ({
                                         name: packageType.package_type,
                                         originalName: packageType.package_type,
-                                        value: metricType === "revenue" ? packageType.revenue : packageType.product_count,
+                                         value: metricType === "revenue" ? packageType.revenue : packageType.product_count,
                                         percentage: packageType.percentage,
                                         fill: getChartColor(index)
                                       }))}
@@ -221,15 +245,13 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                       </div>
                     ) : (
                       <div className="bg-gray-100 p-4 rounded">
-                        <p className="text-sm text-gray-600 text-center">
-                          No package type data available
-                        </p>
+                        <p className="text-sm text-gray-600 text-center">{chartsT('noDataAvailable')}</p>
                       </div>
                     )}
                   </div>
                 ) : (
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <p className="text-center text-gray-500">No package type sales trend data available</p>
+                    <p className="text-center text-gray-500">{chartsT('noDataAvailable')}</p>
                   </div>
                 )
               )}

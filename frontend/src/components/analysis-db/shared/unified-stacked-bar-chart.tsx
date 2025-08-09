@@ -2,47 +2,23 @@
 
 import React from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { useChartsT } from '@/i18n/hooks'
 import { ColorConfig, getColorConfig } from './chart-colors';
 
 interface UnifiedStackedBarChartProps {
-  data: Array<{
-    displayName?: string;
-    [key: string]: any;
-  }>;
+  data: Array<{ displayName?: string; [key: string]: number | string | undefined }>;
   xAxisDataKey: string;
   positiveDataKey: string;
   negativeDataKey: string;
-  onBarClick?: (data: any, index: number) => void;
-  CustomTooltip?: React.ComponentType<any>;
+  onBarClick?: (data: Record<string, unknown>, index: number) => void;
+  CustomTooltip?: React.ComponentType<{ active?: boolean; payload?: Array<{ dataKey: string; payload: Record<string, number | string> }>; label?: string }>;
   maxLabelLength?: number; // 新增：最大标签长度
   showFromBottom?: boolean; // 新增：是否从下往上显示
   bottomBarType?: 'positive' | 'negative'; // 新增：确定哪个bar在底部
   colorConfig?: ColorConfig; // 新增：颜色配置
 }
 
-const defaultTooltip = ({ active, payload, label }: {active?: boolean, payload?: any[], label?: string}) => {
-  if (active && payload && payload.length) {
-    const data = payload[0].payload;
-    return (
-      <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg min-w-[300px]">
-        <p className="font-semibold text-gray-900 mb-2">{label}</p>
-        <div className="grid grid-cols-2 gap-2 mb-3">
-          <div>
-            <p className="text-sm text-green-600 font-semibold">
-              Positive: {data[payload.find((p: any) => p.dataKey.includes('positive') || p.dataKey.includes('Positive'))?.dataKey] || 0}
-            </p>
-          </div>
-          <div>
-            <p className="text-sm text-red-600 font-semibold">
-              Negative: {data[payload.find((p: any) => p.dataKey.includes('negative') || p.dataKey.includes('Negative'))?.dataKey] || 0}
-            </p>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  return null;
-};
+// Remove defaultTooltip to avoid using hooks outside component scope
 
 export function UnifiedStackedBarChart({
   data,
@@ -50,12 +26,13 @@ export function UnifiedStackedBarChart({
   positiveDataKey,
   negativeDataKey,
   onBarClick,
-  CustomTooltip = defaultTooltip,
+  CustomTooltip,
   maxLabelLength = 20, // 默认最大长度20字符
   showFromBottom = true, // 默认从下往上显示
   bottomBarType = 'negative', // 默认负面bar在底部
   colorConfig
 }: UnifiedStackedBarChartProps) {
+  const chartsT = useChartsT()
   
   // Debug logging
   console.log('🔍 [DEBUG-BAR-CHART] UnifiedStackedBarChart props:', {
@@ -70,7 +47,7 @@ export function UnifiedStackedBarChart({
     hasNegativeKey: data?.length > 0 ? data[0].hasOwnProperty(negativeDataKey) : false
   })
   
-  const handleBarClick = (data: any, index: number) => {
+  const handleBarClick = (data: Record<string, unknown>, index: number) => {
     if (onBarClick) {
       // In Recharts Bar onClick, the data parameter should be the original data object
       onBarClick(data, index);
@@ -193,7 +170,7 @@ export function UnifiedStackedBarChart({
           />
           <YAxis
             label={{ 
-              value: 'Number of reviews', 
+              value: chartsT('numberOfReviews'), 
               angle: -90, 
               position: 'insideLeft',
               offset: 20, // 增加偏移量让标签更往下
@@ -205,7 +182,7 @@ export function UnifiedStackedBarChart({
             axisLine={false}
             tickLine={false}
           />
-          <Tooltip content={<CustomTooltip />} />
+          <Tooltip content={CustomTooltip ? <CustomTooltip /> : undefined} />
           <Legend 
             verticalAlign="top"
             height={36}

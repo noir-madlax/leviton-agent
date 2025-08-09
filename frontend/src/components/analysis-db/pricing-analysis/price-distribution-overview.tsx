@@ -8,8 +8,8 @@ import { useChartWithFilters } from "@/components/analysis-db/hooks/use-chart-wi
 import { useChartDataRefresh } from "@/components/analysis-db/hooks/use-chart-data-refresh"
 import { CHART_NAMES } from "@/components/analysis-db/constants"
 import { PriceTypeSelector, type PriceType } from "@/components/analysis-db/shared/price-type-selector"
-import { MultiSegmentViolinChart } from "@/components/analysis-db/charts/multi-segment-violin-chart"
-import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
+// import { MultiSegmentViolinChart } from "@/components/analysis-db/charts/multi-segment-violin-chart"
+// import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useChartsT } from "@/i18n/hooks"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
@@ -107,32 +107,36 @@ export function PriceDistributionOverview({
   }, [chartData])
 
   // 生成小提琴图数据
-  const violinSegments = useMemo(() => {
-    return allCategories.map((category: { 
-      category: string; 
-      unitPrices: number[]; 
-      skuPrices: number[]; 
-      productCount?: number; 
-      stats?: { unit?: PriceStats; sku?: PriceStats } 
-    }, index: number) => ({
-      name: category.category,
-      prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
-      color: getChartColor(index),
-      productCount: category.productCount,
-      stats: priceType === 'unit' ? category.stats?.unit : category.stats?.sku
-    }))
-  }, [allCategories, priceType])
+  // const violinSegments = useMemo(() => {
+  //   return allCategories.map((category: { 
+  //     category: string; 
+  //     unitPrices: number[]; 
+  //     skuPrices: number[]; 
+  //     productCount?: number; 
+  //     stats?: { unit?: PriceStats; sku?: PriceStats } 
+  //   }, index: number) => ({
+  //     name: category.category,
+  //     prices: priceType === 'unit' ? category.unitPrices : category.skuPrices,
+  //     color: getChartColor(index),
+  //     productCount: category.productCount,
+  //     stats: priceType === 'unit' ? category.stats?.unit : category.stats?.sku
+  //   }))
+  // }, [allCategories, priceType])
 
   return (
     <section className="mb-10">
+      {/* External title */}
+      <div className="mb-6">
+        <div className="flex items-center justify-between">
+          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5" />
+            {chartsT('priceDistributionBySegment')}
+          </h3>
+        </div>
+      </div>
       <div className="mb-8" data-chart-id="price-distribution-overview">
-        <Card className="p-6 bg-gray-50">
+        <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
           <div className="mb-4">
-            <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-              <BarChart3 className="w-5 h-5 mr-2 text-gray-600" />
-              {chartsT('priceDistributionBySegment')}
-            </h3>
-            
             {/* 🆕 独立过滤器组件 */}
             <FilterRenderer
               projectId={projectId || ''}
@@ -158,25 +162,25 @@ export function PriceDistributionOverview({
               <div className="flex items-center justify-center py-20">
                 <div className="text-center">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                  <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                  <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                 </div>
               </div>
             ) : !filtersReady ? (
               <div className="flex items-center justify-center py-20">
                 <div className="text-center">
                   <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                  <p className="text-sm text-gray-600">正在初始化过滤器...</p>
+                  <p className="text-sm text-gray-600">{chartsT('initializingFilters')}</p>
                 </div>
               </div>
             ) : dataError ? (
               <div className="flex items-center justify-center py-20">
                 <div className="text-center">
-                  <p className="text-sm text-red-600 mb-3">数据加载失败: {dataError}</p>
+                  <p className="text-sm text-red-600 mb-3">{chartsT('dataLoadFailed')}: {dataError}</p>
                   <button 
                     onClick={() => refreshData(filters)}
                     className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                   >
-                    重新加载
+                    {chartsT('retry')}
                   </button>
                 </div>
               </div>
@@ -189,32 +193,32 @@ export function PriceDistributionOverview({
                       <table className="w-full">
                         <thead>
                           <tr className="border-b">
-                            <th className="text-left pb-2">Segment</th>
-                            <th className="text-right pb-2">Products</th>
-                            <th className="text-right pb-2">Min Price</th>
-                            <th className="text-right pb-2">Median Price</th>
-                            <th className="text-right pb-2">Max Price</th>
-                            <th className="text-right pb-2">Average Price</th>
+                            <th className="text-left pb-2">{chartsT('segment')}</th>
+                            <th className="text-right pb-2">{chartsT('productsText')}</th>
+                            <th className="text-right pb-2">{chartsT('min')} {chartsT('price')}</th>
+                            <th className="text-right pb-2">{chartsT('median')} {chartsT('price')}</th>
+                            <th className="text-right pb-2">{chartsT('max')} {chartsT('price')}</th>
+                            <th className="text-right pb-2">{chartsT('average')} {chartsT('price')}</th>
                           </tr>
                         </thead>
                         <tbody>
-                          {allCategories.map((category, index) => {
-                            const stats = priceType === 'unit' ? category.stats.unit : category.stats.sku
+                          {allCategories.map((category: { category: string; productCount?: number; stats: { unit?: PriceStats; sku?: PriceStats } }, index: number) => {
+                            const stats = priceType === 'unit' ? category.stats?.unit : category.stats?.sku
                             return (
                               <tr key={index} className="border-b hover:bg-gray-50">
                                 <td className="py-2 font-medium">{category.category}</td>
                                 <td className="text-right py-2">{category.productCount}</td>
                                 <td className="text-right py-2">
-                                  <span className="text-green-600 font-medium">${stats.min?.toFixed(2) || 'N/A'}</span>
+                                  <span className="text-green-600 font-medium">${stats?.min?.toFixed(2) || 'N/A'}</span>
                                 </td>
                                 <td className="text-right py-2">
-                                  <span className="text-blue-600 font-medium">${stats.median?.toFixed(2) || 'N/A'}</span>
+                                  <span className="text-blue-600 font-medium">${stats?.median?.toFixed(2) || 'N/A'}</span>
                                 </td>
                                 <td className="text-right py-2">
-                                  <span className="text-red-600 font-medium">${stats.max?.toFixed(2) || 'N/A'}</span>
+                                  <span className="text-red-600 font-medium">${stats?.max?.toFixed(2) || 'N/A'}</span>
                                 </td>
                                 <td className="text-right py-2">
-                                  <span className="text-purple-600 font-medium">${stats.mean?.toFixed(2) || 'N/A'}</span>
+                                  <span className="text-purple-600 font-medium">${stats?.mean?.toFixed(2) || 'N/A'}</span>
                                 </td>
                               </tr>
                             )

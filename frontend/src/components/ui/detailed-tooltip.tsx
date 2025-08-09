@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useRef, useEffect, ReactNode } from 'react';
+import { useChartsT } from '@/i18n/hooks'
 
 interface DetailedTooltipContent {
   title: string;
@@ -20,6 +21,7 @@ interface DetailedTooltipProps {
 }
 
 export function DetailedTooltip({ content, children, className = '' }: DetailedTooltipProps) {
+  const chartsT = useChartsT()
   const [isVisible, setIsVisible] = useState(false);
   const [position, setPosition] = useState({ top: 0, left: 0 });
   const triggerRef = useRef<HTMLDivElement>(null);
@@ -85,26 +87,26 @@ export function DetailedTooltip({ content, children, className = '' }: DetailedT
           {/* Type (if provided) */}
           {content.type && (
             <div className="text-gray-600 mb-2">
-              <span className="font-medium">Type:</span> {content.type}
+              <span className="font-medium">{chartsT('typeLabel')}:</span> {content.type}
             </div>
           )}
           
           {/* Statistics */}
           <div className="space-y-1 mb-3">
             <div className="flex justify-between items-center">
-              <span className="text-gray-700">Total Reviews:</span>
+              <span className="text-gray-700">{chartsT('totalReviews')}:</span>
               <span className="font-medium text-gray-900">{content.totalReviews}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-green-700">Positive mentioned aspects:</span>
+              <span className="text-green-700">{chartsT('positiveMentionedAspects')}:</span>
               <span className="font-medium text-green-800">{content.positiveReviews}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-red-700">Negative mentioned aspects:</span>
+              <span className="text-red-700">{chartsT('negativeMentionedAspects')}:</span>
               <span className="font-medium text-red-800">{content.negativeReviews}</span>
             </div>
             <div className="flex justify-between items-center">
-              <span className="text-blue-700">Satisfaction Rate:</span>
+              <span className="text-blue-700">{chartsT('satisfactionRate')}:</span>
               <span className="font-medium text-blue-800">{content.satisfactionRate}%</span>
             </div>
           </div>
