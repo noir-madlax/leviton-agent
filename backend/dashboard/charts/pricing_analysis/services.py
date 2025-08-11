@@ -9,6 +9,7 @@ from collections import defaultdict
 from dashboard.services.base_service import BaseDashboardService
 from core.models.filters import ProjectFilters
 from dashboard.charts.filters.asin_filter_service import get_filtered_asins
+from dashboard.charts.base_service import ChartsBaseService
 from .models import (
     PriceDistributionRequest, PriceDistributionResponse, PriceDistributionMetadata,
     PriceVsRevenueRequest, PriceVsRevenueResponse,
@@ -205,7 +206,7 @@ class PriceDistributionService(BasePricingService):
 
 # ==================== 价格收入散点图服务 ====================
 
-class PriceVsRevenueService(BasePricingService):
+class PriceVsRevenueService(BasePricingService, ChartsBaseService):
     """价格收入散点图分析服务"""
     
     def get_price_vs_revenue_data(self, request: PriceVsRevenueRequest) -> PriceVsRevenueResponse:
@@ -229,8 +230,8 @@ class PriceVsRevenueService(BasePricingService):
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: 获取产品数据（包含收入信息）
-            products_data = self._get_product_pricing_data(filtered_asins)
+            # Step 2: 获取产品数据（包含收入信息，改为基于月度明细聚合）
+            products_data = self._get_product_pricing_data_with_aggregates(filtered_asins, request.timeframe)
             if not products_data:
                 return self._get_empty_response(request)
             
@@ -254,6 +255,60 @@ class PriceVsRevenueService(BasePricingService):
         except Exception as e:
             logger.error(f"Error in PriceVsRevenueService: {e}", exc_info=True)
             return self._get_empty_response(request)
+
+    def _get_product_pricing_data_with_aggregates(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """获取产品价格、分类数据，并基于月度明细聚合得到收入与销量。
+        
+        返回的字段与现有下游一致：
+        - platform_id, title, brand, price_usd, unit_price_calculated, category, product_url
+        - past_year_revenue: 聚合的 total_revenue
+        - past_year_volume: 聚合的 total_units_sold
+        """
+        try:
+            # 1) 聚合月度销售（每个 ASIN 一行）
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
+                return []
+
+            # 2) 取 wide 表的基础信息
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, title, brand, price_usd, unit_price_calculated, category, product_url')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+            )
+            wide_result = wide_query.execute()
+            if not wide_result.data:
+                return []
+
+            # 3) 合并
+            agg_map = {a.platform_id: a for a in aggregates}
+            products: List[Dict[str, Any]] = []
+            for row in wide_result.data:
+                asin = row.get('platform_id')
+                agg = agg_map.get(asin)
+                if not agg:
+                    continue
+                price_usd_val = row.get('price_usd')
+                unit_price_val = row.get('unit_price_calculated')
+                products.append({
+                    'platform_id': asin,
+                    'title': row.get('title'),
+                    'brand': row.get('brand'),
+                    'price_usd': float(price_usd_val) if price_usd_val is not None else 0.0,
+                    'unit_price_calculated': float(unit_price_val) if unit_price_val is not None else 0.0,
+                    'category': row.get('category'),
+                    'product_url': row.get('product_url'),
+                    'past_year_revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
+                    'past_year_volume': int(getattr(agg, 'total_units_sold', 0) or 0),
+                })
+
+            logger.info(f"📊 Retrieved {len(products)} products with aggregated revenue/volume from monthly sales")
+            return products
+        except Exception as e:
+            logger.error(f"Error fetching product data with monthly aggregates: {e}")
+            return []
 
     def _generate_top_products_data(self, products_data: List[Dict[str, Any]], limit_per_category: int = 20) -> TopProductsData:
         """生成Top产品数据"""
