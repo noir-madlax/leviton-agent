@@ -192,13 +192,26 @@ class PriceDistributionService(BasePricingService):
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: 获取产品价格和分类数据
-            products_data = self._get_product_pricing_data(filtered_asins)
+            # Step 2: 获取产品价格和分类数据（可选扩展字段）
+            extend_field_names: Optional[List[str]] = None
+            try:
+                if getattr(request, 'filters', None) and getattr(request.filters, 'extend_fields', None):
+                    if isinstance(request.filters.extend_fields, dict) and request.filters.extend_fields:
+                        seen = set()
+                        extend_field_names = [f for f in request.filters.extend_fields.keys() if not (f in seen or seen.add(f))]
+            except Exception:
+                extend_field_names = None
+
+            products_data = self._get_product_pricing_data(
+                filtered_asins,
+                extend_fields=extend_field_names,
+                project_id=request.project_id,
+            )
             if not products_data:
                 return self._get_empty_response(request)
             
-            # Step 3: 按分类分组并计算价格分布
-            category_price_data = self._calculate_category_price_distributions(products_data)
+            # Step 3: 按分类（以及可选扩展字段）分组并计算价格分布
+            category_price_data = self._calculate_category_price_distributions(products_data, extend_field_names)
             
             # Step 4: 生成分类名称和颜色
             segment_names = [cat.category for cat in category_price_data]
@@ -218,36 +231,47 @@ class PriceDistributionService(BasePricingService):
             logger.error(f"Error in PriceDistributionService: {e}", exc_info=True)
             return self._get_empty_response(request)
 
-    def _calculate_category_price_distributions(self, products_data: List[Dict[str, Any]]) -> List[CategoryPriceData]:
-        """按分类计算价格分布"""
-        category_groups = defaultdict(list)
-        
-        # 按分类分组产品
+    def _calculate_category_price_distributions(
+        self,
+        products_data: List[Dict[str, Any]],
+        extend_field_names: Optional[List[str]] = None,
+    ) -> List[CategoryPriceData]:
+        """按分类（以及可选扩展字段）计算价格分布。"""
+        # 构建分组键：无扩展字段时仅用 category；有扩展字段时用 category + 扩展字段值组合
+        groups = defaultdict(list)
+
         for product in products_data:
-            category = product.get('category', 'Unknown')
-            if category:
-                category_groups[category].append(product)
-        
-        category_price_data = []
-        for category, products in category_groups.items():
+            base_category = product.get('category', 'Unknown') or 'Unknown'
+            if not extend_field_names:
+                label = base_category
+            else:
+                values: List[str] = []
+                for f in extend_field_names:
+                    v = product.get(f)
+                    values.append(str(v) if v not in (None, '') else 'Unknown')
+                label = f"{base_category} + " + " + ".join(values) if values else base_category
+
+            groups[label].append(product)
+
+        category_price_data: List[CategoryPriceData] = []
+        for label, products in groups.items():
             sku_prices = [float(p['price_usd']) for p in products if p.get('price_usd')]
             unit_prices = [float(p['unit_price_calculated']) for p in products if p.get('unit_price_calculated')]
-            
-            # 计算统计信息
+
             stats = {
                 'sku': self._calculate_price_statistics(sku_prices),
-                'unit': self._calculate_price_statistics(unit_prices)
+                'unit': self._calculate_price_statistics(unit_prices),
             }
-            
+
             category_data = CategoryPriceData(
-                category=category,
+                category=label,
                 skuPrices=sku_prices,
                 unitPrices=unit_prices,
                 productCount=len(products),
-                stats=stats
+                stats=stats,
             )
             category_price_data.append(category_data)
-        
+
         return category_price_data
 
     def _get_empty_response(self, request: PriceDistributionRequest) -> PriceDistributionResponse:
@@ -461,13 +485,26 @@ class BrandPriceDistributionService(BasePricingService):
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: 获取产品价格和分类数据
-            products_data = self._get_product_pricing_data(filtered_asins)
+            # Step 2: 获取产品价格和分类数据（可选扩展字段）
+            extend_field_names: Optional[List[str]] = None
+            try:
+                if getattr(request, 'filters', None) and getattr(request.filters, 'extend_fields', None):
+                    if isinstance(request.filters.extend_fields, dict) and request.filters.extend_fields:
+                        seen = set()
+                        extend_field_names = [f for f in request.filters.extend_fields.keys() if not (f in seen or seen.add(f))]
+            except Exception:
+                extend_field_names = None
+
+            products_data = self._get_product_pricing_data(
+                filtered_asins,
+                extend_fields=extend_field_names,
+                project_id=request.project_id,
+            )
             if not products_data:
                 return self._get_empty_response(request)
             
-            # Step 3: 计算品牌价格分布
-            brand_price_distributions = self._calculate_brand_price_distributions(products_data)
+            # Step 3: 计算品牌价格分布（按 category + 扩展字段组合）
+            brand_price_distributions = self._calculate_brand_price_distributions(products_data, extend_field_names)
             
             # Step 4: 生成分类名称和颜色
             segment_names = [cat.category for cat in brand_price_distributions]
@@ -487,38 +524,49 @@ class BrandPriceDistributionService(BasePricingService):
             logger.error(f"Error in BrandPriceDistributionService: {e}", exc_info=True)
             return self._get_empty_response(request)
 
-    def _calculate_brand_price_distributions(self, products_data: List[Dict[str, Any]]) -> List[CategoryBrandDistribution]:
-        """计算品牌价格分布"""
+    def _calculate_brand_price_distributions(
+        self,
+        products_data: List[Dict[str, Any]],
+        extend_field_names: Optional[List[str]] = None,
+    ) -> List[CategoryBrandDistribution]:
+        """计算品牌价格分布（支持 category + 扩展字段组合）。"""
         category_groups = defaultdict(lambda: defaultdict(list))
-        
-        # 按分类和品牌分组产品
+
+        # 按分类（或组合标签）和品牌分组产品
         for product in products_data:
-            category = product.get('category', 'Unknown')
-            brand = product.get('brand', 'Unknown')
-            if category and brand:
-                category_groups[category][brand].append(product)
-        
-        brand_distributions = []
-        for category, brand_groups in category_groups.items():
-            brands_data = []
-            
+            base_category = product.get('category', 'Unknown') or 'Unknown'
+            brand = product.get('brand', 'Unknown') or 'Unknown'
+
+            if not extend_field_names:
+                label = base_category
+            else:
+                values: List[str] = []
+                for f in extend_field_names:
+                    v = product.get(f)
+                    values.append(str(v) if v not in (None, '') else 'Unknown')
+                label = f"{base_category} + " + " + ".join(values) if values else base_category
+
+            category_groups[label][brand].append(product)
+
+        brand_distributions: List[CategoryBrandDistribution] = []
+        for label, brand_groups in category_groups.items():
+            brands_data: List[BrandPriceData] = []
+
             for brand, products in brand_groups.items():
                 sku_prices = [float(p['price_usd']) for p in products if p.get('price_usd')]
                 unit_prices = [float(p['unit_price_calculated']) for p in products if p.get('unit_price_calculated')]
-                
-                brand_data = BrandPriceData(
+
+                brands_data.append(BrandPriceData(
                     name=brand,
                     skuPrices=sku_prices,
-                    unitPrices=unit_prices
-                )
-                brands_data.append(brand_data)
-            
-            category_brand_dist = CategoryBrandDistribution(
-                category=category,
-                brands=brands_data
-            )
-            brand_distributions.append(category_brand_dist)
-        
+                    unitPrices=unit_prices,
+                ))
+
+            brand_distributions.append(CategoryBrandDistribution(
+                category=label,
+                brands=brands_data,
+            ))
+
         return brand_distributions
 
     def _get_empty_response(self, request: BrandPriceDistributionRequest) -> BrandPriceDistributionResponse:
