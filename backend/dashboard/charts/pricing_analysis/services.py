@@ -34,51 +34,111 @@ class BasePricingService:
         """
         self.supabase = supabase_client
     
-    def _get_product_pricing_data(self, asins: List[str]) -> List[Dict[str, Any]]:
-        """获取产品价格和分类数据
-        
+    def _get_product_pricing_data(
+        self,
+        asins: List[str],
+        extend_fields: Optional[List[str]] = None,
+        project_id: Optional[str] = None,
+    ) -> List[Dict[str, Any]]:
+        """获取产品价格和分类数据，可选携带扩展字段列。
+
         Args:
-            asins: ASIN列表
-            
+            asins: ASIN 列表
+            extend_fields: 需要一并返回的扩展字段名称列表（来自 project_extend_data.extend JSONB）。
+
         Returns:
-            List of product data with pricing and category information
+            包含基础定价/分类字段及可选扩展字段的产品数据列表。
         """
+        if not asins:
+            return []
+
         try:
-            all_products_data = []
-            page = 0
-            page_size = 1000
+            # 1) 安全拼接 IN 列表
+            def _escape_literal(value: str) -> str:
+                # 基础转义单引号，避免 SQL 注入；平台 ID 只允许作为字面量使用
+                return value.replace("'", "''")
 
-            while True:
-                range_from = page * page_size
-                range_to = range_from + page_size - 1
-                
-                # 构建基础查询
-                query = (self.supabase.table('product_wide_table')
-                        .select('platform_id, title, brand, price_usd, unit_price_calculated, category, past_year_revenue, past_year_volume, product_url')
-                        .in_('platform_id', asins)
-                        .eq('source', 'amazon')
-                        .not_.is_('price_usd', 'null')
-                        .not_.is_('unit_price_calculated', 'null')
-                        .range(range_from, range_to))
+            asin_literals = ", ".join([f"'{_escape_literal(a)}'" for a in asins])
 
-                response = query.execute()
-                
-                if not response.data:
-                    break
-                
-                all_products_data.extend(response.data)
-                
-                # 检查是否还有更多数据
-                if len(response.data) < page_size:
-                    break
-                
-                page += 1
+            # 2) 选择列（基础列）
+            base_columns = [
+                "p.platform_id",
+                "p.title",
+                "p.brand",
+                "p.price_usd",
+                "p.unit_price_calculated",
+                "p.category",
+                "p.past_year_revenue",
+                "p.past_year_volume",
+                "p.product_url",
+            ]
 
-            logger.info(f"📊 Retrieved {len(all_products_data)} product records with pricing data")
-            return all_products_data
+            # 3) 扩展字段列
+            join_clause = ""
+            extend_selects: List[str] = []
+
+            safe_field_names: List[str] = []
+            if extend_fields:
+                # 仅允许字母、数字、下划线的字段名，避免 SQL 注入
+                import re
+                for f in extend_fields:
+                    if not isinstance(f, str):
+                        continue
+                    if re.fullmatch(r"[A-Za-z0-9_]+", f):
+                        safe_field_names.append(f)
+                    else:
+                        logger.warning(f"Skip unsafe extend field name: {f}")
+
+                if safe_field_names:
+                    # 如果提供了 project_id，则在 JOIN 条件中加入项目约束
+                    if project_id:
+                        pid_literal = _escape_literal(str(project_id))
+                        join_clause = f"\nLEFT JOIN project_extend_data ped ON ped.asins = p.platform_id AND ped.project_id = '{pid_literal}'"
+                    else:
+                        join_clause = "\nLEFT JOIN project_extend_data ped ON ped.asins = p.platform_id"
+                    for f in safe_field_names:
+                        extend_selects.append(f"ped.extend->>'{f}' AS {f}")
+
+            # 4) 组装 SQL（单条语句）
+            select_list = ",\n  ".join(base_columns + extend_selects)
+            sql = f"""
+SELECT
+  {select_list}
+FROM product_wide_table p
+{join_clause}
+WHERE p.source = 'amazon'
+  AND p.platform_id IN ({asin_literals})
+  AND p.price_usd IS NOT NULL
+  AND p.unit_price_calculated IS NOT NULL
+            """.strip()
+
+            # 打印最终执行的 SQL（用于排查 Unknown/N/A 分组问题）
+            try:
+                logger.info(f"📝 _get_product_pricing_data SQL = {sql}")
+            except Exception:
+                pass
+
+            # 5) 通过安全 RPC 执行
+            result = self.supabase.rpc('execute_safe_query', {'query_text': sql}).execute()
+
+            if not result or not getattr(result, 'data', None):
+                return []
+
+            # 6) 解析 RPC 返回结构 {"result": {col: value, ...}}
+            rows: List[Dict[str, Any]] = []
+            for row in result.data:
+                if 'result' in row and isinstance(row['result'], dict):
+                    rows.append(row['result'])
+                else:
+                    # 兼容可能的平铺返回
+                    if isinstance(row, dict):
+                        rows.append(row)
+
+            logger.info(f"📊 Retrieved {len(rows)} product records with pricing data (via SQL)")
+            return rows
             
         except Exception as e:
-            logger.error(f"Error fetching product pricing data: {e}", exc_info=True)
+            logger.error(f"Error fetching product pricing data with extend fields: {e}", exc_info=True)
             return []
 
     def _calculate_price_statistics(self, prices: List[float]) -> PriceStatistics:
@@ -492,16 +552,8 @@ class PriceDistributionOverviewService(BasePricingService):
         try:
             logger.info(f"📊 Starting Price Distribution Overview analysis for project {request.project_id}")
             
-            # Step 1: 获取项目的所有ASIN（不应用过滤器）
-            # 创建一个不带过滤器的请求来获取所有产品
-            from ..base_models import FiltersModel
-            base_request = type('BaseRequest', (), {
-                'project_id': request.project_id,
-                'filters': FiltersModel(),  # 空过滤器
-                'timeframe': request.timeframe
-            })()
-            
-            all_asins = get_filtered_asins(self.supabase, base_request)
+            # Step 1: 获取项目的所有ASIN
+            all_asins = get_filtered_asins(self.supabase, request)
             
             if not all_asins:
                 logger.warning(f"No ASINs found for project {request.project_id}")
@@ -509,13 +561,29 @@ class PriceDistributionOverviewService(BasePricingService):
             
             logger.info(f"📊 Found {len(all_asins)} total ASINs for project")
             
-            # Step 2: 获取产品价格和分类数据
-            products_data = self._get_product_pricing_data(all_asins)
+            # Step 2: 获取产品价格和分类数据（可选扩展字段）
+            extend_field_names: Optional[List[str]] = None
+            try:
+                # 如果请求里带了扩展字段键，则将键名作为需要返回的列
+                if getattr(request, 'filters', None) and getattr(request.filters, 'extend_fields', None):
+                    if isinstance(request.filters.extend_fields, dict) and request.filters.extend_fields:
+                        extend_field_names = list(request.filters.extend_fields.keys())
+                        # 去重并保持顺序
+                        seen = set()
+                        extend_field_names = [f for f in extend_field_names if not (f in seen or seen.add(f))]
+            except Exception:
+                extend_field_names = None
+
+            products_data = self._get_product_pricing_data(
+                all_asins,
+                extend_fields=extend_field_names,
+                project_id=request.project_id,
+            )
             if not products_data:
                 return self._get_empty_response(request)
             
-            # Step 3: 按分类分组并计算概览统计
-            overview_data = self._calculate_overview_statistics(products_data)
+            # Step 3: 按分类（以及可选扩展字段）分组并计算概览统计
+            overview_data = self._calculate_overview_statistics(products_data, extend_field_names)
             
             # Step 4: 生成元数据
             segment_names = [item.segment for item in overview_data]
@@ -530,27 +598,60 @@ class PriceDistributionOverviewService(BasePricingService):
             logger.error(f"Error in PriceDistributionOverviewService: {e}", exc_info=True)
             return self._get_empty_response(request)
 
-    def _calculate_overview_statistics(self, products_data: List[Dict[str, Any]]) -> List[PriceDistributionOverviewData]:
-        """计算概览统计数据"""
-        category_groups = defaultdict(list)
-        
-        # 按分类分组产品
+    def _calculate_overview_statistics(self, products_data: List[Dict[str, Any]], extend_field_names: Optional[List[str]] = None) -> List[PriceDistributionOverviewData]:
+        """计算概览统计数据，支持 category + 扩展字段组合分组。"""
+        # 若未指定扩展字段，保持按分类分组的现有逻辑
+        if not extend_field_names:
+            category_groups = defaultdict(list)
+            for product in products_data:
+                category = product.get('category', 'Unknown')
+                if category:
+                    category_groups[category].append(product)
+
+            overview_data: List[PriceDistributionOverviewData] = []
+            for category, products in category_groups.items():
+                unit_prices = [float(p['unit_price_calculated']) for p in products if p.get('unit_price_calculated')]
+                if unit_prices:
+                    unit_prices_array = np.array(unit_prices)
+                    overview_item = PriceDistributionOverviewData(
+                        segment=category,
+                        products=len(products),
+                        min_price=float(np.min(unit_prices_array)),
+                        median_price=float(np.median(unit_prices_array)),
+                        max_price=float(np.max(unit_prices_array)),
+                        average_price=float(np.mean(unit_prices_array))
+                    )
+                    overview_data.append(overview_item)
+
+            overview_data.sort(key=lambda x: x.products, reverse=True)
+            return overview_data
+
+        # 按 category + 扩展字段值组合进行分组
+        combo_groups = defaultdict(list)
         for product in products_data:
-            category = product.get('category', 'Unknown')
-            if category:
-                category_groups[category].append(product)
-        
-        overview_data = []
-        for category, products in category_groups.items():
-            # 使用unit_price_calculated作为主要价格
+            category = product.get('category', 'Unknown') or 'Unknown'
+            # 组装扩展字段值序列
+            values: List[str] = []
+            for field_name in extend_field_names:
+                val = product.get(field_name)
+                # 将 None/空字符串标准化为 'Unknown'
+                values.append(str(val) if val not in (None, '') else 'Unknown')
+
+            # 组合标签：单字段用 "Category + Value"；多字段用 "Category + v1 + v2 + ..."
+            if len(values) == 1:
+                label = f"{category} + {values[0]}"
+            else:
+                label = f"{category} + " + " + ".join(values)
+
+            combo_groups[label].append(product)
+
+        overview_data: List[PriceDistributionOverviewData] = []
+        for label, products in combo_groups.items():
             unit_prices = [float(p['unit_price_calculated']) for p in products if p.get('unit_price_calculated')]
-            
             if unit_prices:
-                # 计算统计信息
                 unit_prices_array = np.array(unit_prices)
-                
                 overview_item = PriceDistributionOverviewData(
-                    segment=category,
+                    segment=label,
                     products=len(products),
                     min_price=float(np.min(unit_prices_array)),
                     median_price=float(np.median(unit_prices_array)),
@@ -559,9 +660,7 @@ class PriceDistributionOverviewService(BasePricingService):
                 )
                 overview_data.append(overview_item)
         
-        # 按产品数量降序排序
         overview_data.sort(key=lambda x: x.products, reverse=True)
-        
         return overview_data
 
     def _get_empty_response(self, request: PriceDistributionOverviewRequest) -> PriceDistributionOverviewResponse:
