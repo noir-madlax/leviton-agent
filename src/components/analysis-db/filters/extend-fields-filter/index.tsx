@@ -227,7 +227,7 @@ export function ExtendFieldsFilter({
               }}
               disabled={disabled || loading || internalLoading}
             >
-              <SelectTrigger className="w-48 h-8">
+                <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   multiSelectValues.length > 0 
                     ? `已选择 ${multiSelectValues.length} 项`

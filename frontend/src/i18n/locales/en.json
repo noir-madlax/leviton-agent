@@ -17,7 +17,16 @@
     "showFilters": "Show filters",
     "timePeriod": "Time Period",
     "pastYear": "Past Year",
-    "viewProjectDataScope": "View Project Data Scope"
+    "viewProjectDataScope": "View Project Data Scope",
+    "selectTimePeriod": "Select time period",
+    "timeframes": {
+      "month": "Past 1 month",
+      "3months": "Past 3 months",
+      "6months": "Past 6 months",
+      "year": "Past 1 year",
+      "2years": "Past 2 years",
+      "all": "All time"
+    }
   },
   "auth": {
     "login": "Login",

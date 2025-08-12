@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useProjectT } from '@/i18n/hooks'
+import { useProjectT, useFiltersT, useT } from '@/i18n/hooks'
 import { CategoryFilterProps } from '../common/types'
 import { useUnifiedFilter } from '@/components/analysis-db/contexts/unified-filter-context'
 
@@ -15,6 +15,8 @@ export function CategoryFilter({
   className = ""
 }: CategoryFilterProps) {
   const projectT = useProjectT()
+  const filtersT = useFiltersT()
+  const t = useT()
   const [selectKey, setSelectKey] = useState(0)
   
   // 🆕 从 context 获取统一过滤器数据
@@ -88,8 +90,8 @@ export function CategoryFilter({
         <SelectTrigger className="w-64 h-8">
           <SelectValue placeholder={
             value.length > 0 
-              ? `已选择 ${value.length} 个分类` 
-              : "选择分类"
+              ? t('filters.selectedItems', { count: value.length })
+              : filtersT('selectOption')
           } />
         </SelectTrigger>
         <SelectContent>

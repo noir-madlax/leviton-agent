@@ -17,7 +17,16 @@
     "showFilters": "显示筛选器",
     "timePeriod": "时间周期",
     "pastYear": "过去一年",
-    "viewProjectDataScope": "查看项目数据范围"
+    "viewProjectDataScope": "查看项目数据范围",
+    "selectTimePeriod": "选择时间范围",
+    "timeframes": {
+      "month": "最近1个月",
+      "3months": "最近3个月",
+      "6months": "最近6个月",
+      "year": "最近1年",
+      "2years": "最近2年",
+      "all": "全部时间"
+    }
   },
   "auth": {
     "login": "登录",

@@ -63,15 +63,8 @@ export function TimeframeFilter({
 
   // 时间范围选项的显示标签映射
   const getTimeframeLabel = (period: string): string => {
-    const labelMap: Record<string, string> = {
-      'month': '最近1个月',
-      '3months': '最近3个月',
-      '6months': '最近6个月',
-      'year': '最近1年',
-      '2years': '最近2年',
-      'all': '全部时间'
-    }
-    return labelMap[period] || period
+    const translated = commonT(`timeframes.${period}`)
+    return translated || period
   }
 
   // 🔧 只显示后端提供的选项，不提供前端默认选项
@@ -79,14 +72,14 @@ export function TimeframeFilter({
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <span className="text-sm text-gray-600">时间范围:</span>
+      <span className="text-sm text-gray-600">{commonT('timePeriod')}:</span>
       <Select
         value={value || defaultValue}
         onValueChange={handleTimeframeSelect}
         disabled={disabled || loading}
       >
         <SelectTrigger className="w-40 h-8">
-          <SelectValue placeholder="选择时间范围" />
+          <SelectValue placeholder={commonT('selectTimePeriod')} />
         </SelectTrigger>
         <SelectContent>
           {displayOptions.map((period) => (

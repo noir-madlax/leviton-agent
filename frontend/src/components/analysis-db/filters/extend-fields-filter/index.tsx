@@ -294,11 +294,11 @@ export function ExtendFieldsFilter({
               onValueChange={handleMultiSelectChange}
               disabled={disabled || loading || fieldsLoading}
             >
-              <SelectTrigger className="w-48 h-8">
+                <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   multiSelectValues.length > 0 
-                    ? `已选择 ${multiSelectValues.length} 项`
-                    : "选择选项"
+                    ? t('filters.selectedItems', { count: multiSelectValues.length })
+                    : filtersT('selectOption')
                 } />
               </SelectTrigger>
               <SelectContent>
@@ -354,11 +354,11 @@ export function ExtendFieldsFilter({
               onValueChange={handleBooleanChange}
               disabled={disabled || loading || fieldsLoading}
             >
-              <SelectTrigger className="w-48 h-8">
+                <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   booleanSelectValues.length > 0 
-                    ? `已选择 ${booleanSelectValues.length} 项` 
-                    : "选择选项"
+                    ? t('filters.selectedItems', { count: booleanSelectValues.length }) 
+                    : filtersT('selectOption')
                 } />
               </SelectTrigger>
               <SelectContent>
