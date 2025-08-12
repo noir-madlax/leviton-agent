@@ -8,6 +8,9 @@ import {
   ChartFilterConfiguration,
   FilterConfig
 } from '../types/filters'
+import { filterStateManager } from '../stores'
+import type { ChartFilterState } from '../stores'
+import { CHART_NAMES } from '../constants'
 
 // 全局缓存存储
 const unifiedFilterCacheStore = new Map<string, UnifiedFilterCacheState>()
@@ -168,6 +171,39 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
           tam_config: unifiedData.charts['market-share-analysis'],
           project_id: projectId
         })
+
+        // 🆕 将 Project 过滤器写入全局状态（GlobalFilterState）
+        const projectChartConfig: ChartFilterConfiguration | undefined = unifiedData.charts[CHART_NAMES.PROJECT]
+        if (projectChartConfig) {
+          const categoriesValues = projectChartConfig.filters.categories?.values
+          const brandsValues = projectChartConfig.filters.brands?.values
+          const segmentsValues = projectChartConfig.filters.product_segments?.values
+          const timePeriodValues = projectChartConfig.filters.time_period?.values
+          const extendFieldsValues = projectChartConfig.filters.extend_fields?.values
+
+          const toStringArray = (v: unknown): string[] => Array.isArray(v) ? (v.filter((x): x is string => typeof x === 'string')) : []
+          const toPeriodString = (v: unknown): string => {
+            if (typeof v === 'string') return v
+            if (Array.isArray(v) && v.length > 0 && typeof v[0] === 'string') return v[0]
+            return ''
+          }
+
+          const chartState: Partial<ChartFilterState> = {
+            filters: {
+              categories: toStringArray(categoriesValues as unknown),
+              brands: toStringArray(brandsValues as unknown),
+              segments: toStringArray(segmentsValues as unknown),
+              extend_fields: (extendFieldsValues && typeof extendFieldsValues === 'object') ? (extendFieldsValues as Record<string, unknown>) : {}
+            },
+            timeframe: { period: toPeriodString(timePeriodValues as unknown) },
+            metadata: { syncedFromProject: true, syncTimestamp: Date.now() }
+          }
+
+          filterStateManager.updateChartFilters(CHART_NAMES.PROJECT, chartState)
+          console.log('🌍 [UNIFIED-FILTER] Project filters seeded into GlobalFilterState:', chartState)
+        } else {
+          console.log('ℹ️ [UNIFIED-FILTER] No project chart config found in unified filter data')
+        }
 
         const successState: UnifiedFilterCacheState = {
           data: unifiedData,

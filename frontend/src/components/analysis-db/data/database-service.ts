@@ -367,31 +367,75 @@ export class DatabaseService {
     timeframe: { period: string }
   } {
     const chartState = filterStateManager.getChartFilters(chartName)
+    const projectState = filterStateManager.getChartFilters(CHART_NAMES.PROJECT)
 
+    console.log("projectState", projectState)
+
+    // 如果当前图表没有任何状态，尝试完全使用 Project 的过滤器
     if (!chartState) {
+      if (projectState) {
+        const fromProject = {
+          filters: {
+            categories: projectState.filters.categories || [],
+            brands: projectState.filters.brands || [],
+            segments: projectState.filters.segments || [],
+            extend_fields: projectState.filters.extend_fields || {}
+          },
+          timeframe: { period: projectState.timeframe?.period || 'year' }
+        }
+        console.log(`🔍 [DATABASE-SERVICE] No state for ${chartName}, fallback to PROJECT filters:`, fromProject)
+        return fromProject
+      }
+
       console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using empty defaults`)
       return {
-        filters: {
-          categories: [],
-          brands: [],
-          segments: [],
-          extend_fields: {}
-        },
-          timeframe: { period: 'year' } // 🔧 设置默认时间周期
+        filters: { categories: [], brands: [], segments: [], extend_fields: {} },
+        timeframe: { period: 'year' }
       }
     }
 
+    // 合并规则：优先使用当前图表的值；若为空/未设置，则回退到 Project
+    const mergedCategories = (chartState.filters.categories && chartState.filters.categories.length > 0)
+      ? chartState.filters.categories
+      : (projectState?.filters.categories || [])
+
+    const mergedBrands = (chartState.filters.brands && chartState.filters.brands.length > 0)
+      ? chartState.filters.brands
+      : (projectState?.filters.brands || [])
+
+    const mergedSegments = (chartState.filters.segments && chartState.filters.segments.length > 0)
+      ? chartState.filters.segments
+      : (projectState?.filters.segments || [])
+
+    // 扩展字段：逐字段名检查，图表未设置或为空则回退到 Project 对应字段
+    const chartExtendFields: Record<string, unknown> = chartState.filters.extend_fields || {}
+    const projectExtendFields: Record<string, unknown> = projectState?.filters.extend_fields || {}
+    const mergedExtendFields: Record<string, unknown> = { ...chartExtendFields }
+
+    Object.keys(projectExtendFields).forEach((fieldName) => {
+      const chartValue = chartExtendFields[fieldName]
+      const projectValue = projectExtendFields[fieldName]
+
+      const isEmptyArray = Array.isArray(chartValue) && chartValue.length === 0
+      const isEmptyString = typeof chartValue === 'string' && chartValue.trim() === ''
+      const isUnset = chartValue === undefined || chartValue === null
+
+      if (isUnset || isEmptyArray || isEmptyString) {
+        mergedExtendFields[fieldName] = projectValue
+      }
+    })
+
     const result = {
       filters: {
-        categories: chartState.filters.categories || [],
-        brands: chartState.filters.brands || [],
-        segments: chartState.filters.segments || [],
-        extend_fields: chartState.filters.extend_fields || {}
+        categories: mergedCategories,
+        brands: mergedBrands,
+        segments: mergedSegments,
+        extend_fields: mergedExtendFields
       },
-      timeframe: { period: chartState.timeframe?.period || 'year' } // 🔧 设置默认时间周期
+      timeframe: { period: chartState.timeframe?.period || projectState?.timeframe?.period || 'year' }
     }
 
-    console.log(`🔍 [DATABASE-SERVICE] Retrieved filters for ${chartName}:`, result)
+    console.log(`🔍 [DATABASE-SERVICE] Retrieved merged filters for ${chartName}:`, result)
     return result
   }
 
