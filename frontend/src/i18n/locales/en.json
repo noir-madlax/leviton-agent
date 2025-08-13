@@ -249,9 +249,9 @@
     "dataCoversRange": "Data covers {{start}} to {{end}}.",
 
     "top10SegmentsByRevenue": "Top 10 Segments by Revenue",
-    "sortedByRevenueOrVolume": "Sorted by: Revenue or Volume:",
-    "revenueDefinition": "Revenue: Total annual sales value in dollars",
-    "volumeDefinition": "Volume: Total annual number of SKUs sold",
+    "sortedByRevenueOrVolume": "Sorted by",
+    "revenueDefinition": "Total annual sales value in dollars",
+    "volumeDefinition": "Total annual number of SKUs sold",
 
     "marketShareBySalesUnit": "Market Share by Sales Unit",
     "packageTypeDistributionByRevenue": "Package Type Distribution by Revenue",

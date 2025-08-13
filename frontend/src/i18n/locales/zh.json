@@ -243,9 +243,9 @@
     "dataCoversRange": "数据覆盖 {{start}} 至 {{end}}。",
 
     "top10SegmentsByRevenue": "按收入排名的前10个细分",
-    "sortedByRevenueOrVolume": "排序依据：收入 或 销量：",
-    "revenueDefinition": "收入：年度销售额（美元）",
-    "volumeDefinition": "销量：年度售出的SKU数量",
+    "sortedByRevenueOrVolume": "排序依据：",
+    "revenueDefinition": "年度销售额（美元）",
+    "volumeDefinition": "年度售出的SKU数量",
 
     "marketShareBySalesUnit": "按销售单位的市场份额",
     "packageTypeDistributionByRevenue": "按收入的包装类型分布",
