@@ -76,9 +76,16 @@ class ScrapingRequestRepository:
             
             # 🔥 修复：只有当status不为None时才更新status字段
             if status is not None:
-                update_data["status"] = status
+                # 数据库约束仅允许: pending, scraping, completed, failed, processing_reviews, imported
+                # 统一将历史/外部调用使用的 "processing" 映射为允许的 "scraping"，避免 23514 约束错误
+                normalized_status = "scraping" if status == "processing" else status
+                update_data["status"] = normalized_status
                 
             if additional_data:
+                # 兼容：上层可能传入 reviews_transformed（无此列），改写为 reviews_scraped，避免 PGRST204
+                if "reviews_transformed" in additional_data and "reviews_scraped" not in additional_data:
+                    additional_data = dict(additional_data)
+                    additional_data["reviews_scraped"] = additional_data.pop("reviews_transformed")
                 update_data.update(additional_data)
             
             result = self.client.table('scraping_requests').update(update_data).eq('id', request_id).execute()
