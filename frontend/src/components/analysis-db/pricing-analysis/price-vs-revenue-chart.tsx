@@ -98,96 +98,60 @@ export function PriceVsRevenueChart({
     { initialFilters: initialFilters || undefined }
   )
 
-  // 散点图数据处理函数
-  const getPriceVsRevenueData = (): ScatterPlotProduct[] => {
-    const allProducts: ScatterPlotProduct[] = []
-    const dataToUse = chartData
-    
-    if (!dataToUse?.topProducts) {
-      return []
-    }
-    
-    const topProductsData = dataToUse.topProducts
-    const segmentNamesData = dataToUse.segmentNames
-    
-    // 收集segments中的产品
-    if (topProductsData.segments && segmentNamesData) {
-      segmentNamesData.forEach((segment: string) => {
-        const products = topProductsData.segments[segment] || []
-        products.forEach((product: ProductData) => {
-          allProducts.push({
-            id: product.id || '',
-            name: product.name || '',
-            brand: product.brand || '',
-            price: product.price || 0,
-            unitPrice: product.unitPrice || product.price || 0,
-            revenue: product.revenue || 0,
-            volume: product.volume || 0,
-            url: product.url || '',
-            segment: segment,
-            x: product.price || 0,
-            y: product.revenue || 0
-          })
-        })
-      })
-    }
-    
-    // 收集dimmerSwitches中的产品
-    if (topProductsData.dimmerSwitches) {
-      topProductsData.dimmerSwitches.forEach((product: ProductData) => {
-        allProducts.push({
-          id: product.id || '',
-          name: product.name || '',
-          brand: product.brand || '',
-          price: product.price || 0,
-          unitPrice: product.unitPrice || product.price || 0,
-          revenue: product.revenue || 0,
-          volume: product.volume || 0,
-          url: product.url || '',
-          segment: 'Dimmer Switches',
-          x: product.price || 0,
-          y: product.revenue || 0
-        })
-      })
-    }
-    
-    // 收集lightSwitches中的产品
-    if (topProductsData.lightSwitches) {
-      topProductsData.lightSwitches.forEach((product: ProductData) => {
-        allProducts.push({
-          id: product.id || '',
-          name: product.name || '',
-          brand: product.brand || '',
-          price: product.price || 0,
-          unitPrice: product.unitPrice || product.price || 0,
-          revenue: product.revenue || 0,
-          volume: product.volume || 0,
-          url: product.url || '',
-          segment: 'Light Switches',
-          x: product.price || 0,
-          y: product.revenue || 0
-        })
-      })
-    }
-    
-    return allProducts
-  }
+  // 原按品牌分组的汇总已移除，改为按分类分多个图
 
-  const getBrandDataForScatterChart = () => {
-    const scatterData = getPriceVsRevenueData()
-    const brandData: Record<string, ScatterPlotProduct[]> = {}
-    
-    scatterData.forEach(item => {
-      if (!brandData[item.brand]) {
-        brandData[item.brand] = []
-      }
-      brandData[item.brand].push(item)
+  // 按 category 分组的数据（每个 category 渲染一个散点图）
+  const getCategoryScatterData = (): { category: string; products: ScatterPlotProduct[] }[] => {
+    const dataToUse = chartData
+    if (!dataToUse?.topProducts) return []
+
+    const result: { category: string; products: ScatterPlotProduct[] }[] = []
+
+    const mapProduct = (product: ProductData, segment: string): ScatterPlotProduct => ({
+      id: product.id || '',
+      name: product.name || '',
+      brand: product.brand || '',
+      price: product.price || 0,
+      unitPrice: product.unitPrice || product.price || 0,
+      revenue: product.revenue || 0,
+      volume: product.volume || 0,
+      url: product.url || '',
+      segment: segment,
+      x: product.price || 0,
+      y: product.revenue || 0
     })
-    
-    return Object.entries(brandData).map(([brand, products]) => ({
-      brand,
-      products
-    }))
+
+    // 优先使用 segments
+    const segments = dataToUse.topProducts.segments
+    if (segments && Object.keys(segments).length > 0) {
+      const names = (dataToUse.segmentNames && dataToUse.segmentNames.length > 0)
+        ? dataToUse.segmentNames
+        : Object.keys(segments)
+      names.forEach((segment: string) => {
+        const products = (segments[segment] || []).map((p: ProductData) => mapProduct(p, segment))
+        if (products.length > 0) {
+          result.push({ category: segment, products })
+        }
+      })
+      return result
+    }
+
+    // 兼容旧字段
+    const { dimmerSwitches, lightSwitches } = dataToUse.topProducts
+    if (dimmerSwitches && dimmerSwitches.length > 0) {
+      result.push({
+        category: 'Dimmer Switches',
+        products: dimmerSwitches.map((p: ProductData) => mapProduct(p, 'Dimmer Switches'))
+      })
+    }
+    if (lightSwitches && lightSwitches.length > 0) {
+      result.push({
+        category: 'Light Switches',
+        products: lightSwitches.map((p: ProductData) => mapProduct(p, 'Light Switches'))
+      })
+    }
+
+    return result
   }
 
   // 散点图点击事件处理器
@@ -259,53 +223,66 @@ export function PriceVsRevenueChart({
               </button>
             </div>
           ) : hasScatterData ? (
-            <div className="h-[400px]">
-              <ResponsiveContainer width="100%" height="100%">
-                <ScatterChart data={getPriceVsRevenueData()} margin={{ top: 5, right: 20, bottom: 30, left: 50 }}>
-                  <CartesianGrid strokeDasharray="3,3" />
-                  <XAxis 
-                    type="number" 
-                    dataKey="x" 
-                    name="Price"
-                    label={{ value: chartsT('priceUSD'), position: 'bottom', offset: 10 }}
-                  />
-                  <YAxis 
-                    type="number" 
-                    dataKey="y" 
-                    name="Revenue"
-                    label={{ value: chartsT('revenue'), angle: -90, position: 'left', offset: 30 }}
-                  />
-                  <Tooltip 
-                    cursor={{ strokeDasharray: '3,3' }}
-                    content={({ active, payload }) => {
-                      if (active && payload && payload.length) {
-                        const data = payload[0].payload
-                        return (
-                          <div className="bg-white p-3 border rounded shadow">
-                            <p className="font-medium">{data.name}</p>
-                            <p className="text-sm text-gray-600">{chartsT('brand')}: {data.brand}</p>
-                            <p className="text-sm text-gray-600">{chartsT('segment')}: {data.segment}</p>
-                            <p className="text-sm text-gray-600">{chartsT('price')}: ${data.price}</p>
-                            <p className="text-sm text-gray-600">{chartsT('revenue')}: ${data.revenue.toLocaleString()}</p>
-                          </div>
-                        )
-                      }
-                      return null
-                    }}
-                  />
-                  <Legend verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 20 }} />
-                  {getBrandDataForScatterChart().map((brandData, index) => (
-                    <Scatter
-                      key={brandData.brand}
-                      name={brandData.brand}
-                      data={brandData.products}
-                      fill={getChartColor(index)}
-                      onClick={handleScatterClick}
-                      style={{ cursor: 'pointer' }}
-                    />
-                  ))}
-                </ScatterChart>
-              </ResponsiveContainer>
+            <div>
+              {getCategoryScatterData().map((catData) => (
+                <div key={catData.category} className="h-[400px] mb-8">
+                  <div className="text-sm font-semibold text-gray-700 mb-2">{catData.category}</div>
+                  <ResponsiveContainer width="100%" height="100%">
+                    <ScatterChart data={catData.products} margin={{ top: 5, right: 20, bottom: 30, left: 50 }}>
+                      <CartesianGrid strokeDasharray="3,3" />
+                      <XAxis 
+                        type="number" 
+                        dataKey="x" 
+                        name="Price"
+                        label={{ value: chartsT('priceUSD'), position: 'bottom', offset: 10 }}
+                      />
+                      <YAxis 
+                        type="number" 
+                        dataKey="y" 
+                        name="Revenue"
+                        label={{ value: chartsT('revenue'), angle: -90, position: 'left', offset: 30 }}
+                      />
+                      <Tooltip 
+                        cursor={{ strokeDasharray: '3,3' }}
+                        content={({ active, payload }) => {
+                          if (active && payload && payload.length) {
+                            const data = payload[0].payload
+                            return (
+                              <div className="bg-white p-3 border rounded shadow">
+                                <p className="font-medium">{data.name}</p>
+                                <p className="text-sm text-gray-600">{chartsT('brand')}: {data.brand}</p>
+                                <p className="text-sm text-gray-600">{chartsT('segment')}: {data.segment}</p>
+                                <p className="text-sm text-gray-600">{chartsT('price')}: ${data.price}</p>
+                                <p className="text-sm text-gray-600">{chartsT('revenue')}: ${data.revenue.toLocaleString()}</p>
+                              </div>
+                            )
+                          }
+                          return null
+                        }}
+                      />
+                      <Legend verticalAlign="top" align="center" wrapperStyle={{ paddingBottom: 20 }} />
+                      {(() => {
+                        const brandGroups: Record<string, typeof catData.products> = {}
+                        catData.products.forEach(p => {
+                          if (!brandGroups[p.brand]) brandGroups[p.brand] = []
+                          brandGroups[p.brand].push(p)
+                        })
+                        const series = Object.entries(brandGroups)
+                        return series.map(([brand, products], bIndex) => (
+                          <Scatter
+                            key={brand}
+                            name={brand}
+                            data={products}
+                            fill={getChartColor(bIndex)}
+                            onClick={handleScatterClick}
+                            style={{ cursor: 'pointer' }}
+                          />
+                        ))
+                      })()}
+                    </ScatterChart>
+                  </ResponsiveContainer>
+                </div>
+              ))}
             </div>
           ) : (
             <div className="text-gray-500 text-center py-8">
