@@ -116,22 +116,68 @@ export function ExtendFieldsFilter({
   // 初始化默认值 - 基于可见字段，分离到独立的 useEffect 避免循环依赖
   useEffect(() => {
     if (visibleFields.length > 0 && Object.keys(currentValues).length === 0) {
-      console.log('🔧 [EXTEND-FIELDS] Initializing default selections for visible fields (all options selected)')
+      // 从统一过滤器配置中读取 extend_fields 默认值
+      const configValues = extendFieldsConfig?.values
+
+      type ArrayObjectConfig = Array<{ fieldName?: string; default?: unknown }>
+
+      const configMap: Record<string, unknown> = {}
+
+      if (configValues && typeof configValues === 'object') {
+        if (Array.isArray(configValues)) {
+          // 支持数组对象格式：[{ fieldName, default }]
+          ;(configValues as ArrayObjectConfig).forEach((item) => {
+            if (!item) return
+            const key = item.fieldName
+            const value = item.default
+            if (typeof key === 'string' && key.length > 0) {
+              configMap[key] = value
+            }
+          })
+        } else {
+          // 支持对象映射格式：{ field_name: [...] }
+          Object.assign(configMap, configValues as Record<string, unknown>)
+        }
+      }
+
       const defaultSelections: Record<string, ExtendFieldValue> = {}
 
       visibleFields.forEach(field => {
-        if (field.field_type === 'select' || field.field_type === 'multi_select' || field.field_type === 'boolean') {
-          // 获取所有可用选项
-          const availableOptions = getAvailableOptions(field)
-          if (availableOptions.length > 0) {
-            defaultSelections[field.field_name] = availableOptions.map(option => option.name)
+        const rawDefault = configMap[field.field_name]
+
+        if (rawDefault !== undefined) {
+          if (field.field_type === 'range') {
+            // 范围类型期望 [min, max]
+            const min = field.filter_options.min ?? 0
+            const max = field.filter_options.max ?? 100
+            if (Array.isArray(rawDefault) && rawDefault.length === 2) {
+              const [dMin, dMax] = rawDefault
+              const parsed: number[] = [Number(dMin), Number(dMax)]
+              defaultSelections[field.field_name] = parsed
+            } else {
+              defaultSelections[field.field_name] = [min, max]
+            }
+          } else {
+            // 其余类型统一转为字符串数组
+            if (Array.isArray(rawDefault)) {
+              defaultSelections[field.field_name] = rawDefault.map(v => String(v))
+            } else if (rawDefault === null || rawDefault === '') {
+              // 跳过空值
+            } else {
+              defaultSelections[field.field_name] = [String(rawDefault)]
+            }
           }
         } else if (field.field_type === 'range') {
-          // 对于范围类型，使用最大范围
-          const min = field.filter_options.min || 0
-          const max = field.filter_options.max || 100
+          // 未配置时，范围类型仍默认使用最大范围
+          const min = field.filter_options.min ?? 0
+          const max = field.filter_options.max ?? 100
           defaultSelections[field.field_name] = [min, max]
         }
+      })
+
+      console.log('🔧 [EXTEND-FIELDS] Initializing default selections from config:', {
+        fromConfig: extendFieldsConfig?.values,
+        resolved: defaultSelections
       })
 
       if (Object.keys(defaultSelections).length > 0) {
@@ -139,7 +185,7 @@ export function ExtendFieldsFilter({
         onChange(defaultSelections)
       }
     }
-  }, [visibleFields, projectData]) // 依赖 visibleFields 和 projectData
+  }, [visibleFields, projectData, extendFieldsConfig?.values, currentValues, onChange]) // 依赖 visibleFields、projectData、配置值
 
   // 获取字段的可用选项
   const getAvailableOptions = (field: ExtendFieldDefinition) => {
@@ -149,7 +195,7 @@ export function ExtendFieldsFilter({
     if (field.filter_options.options) {
       availableOptions = Object.keys(field.filter_options.options).map(option => {
         const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
-          (item: any) => item.name === option
+          (item: { name: string; count?: number }) => item.name === option
         )
 
         return {
@@ -162,7 +208,7 @@ export function ExtendFieldsFilter({
     // 如果定义中没有选项，fallback到projectData
     if (availableOptions.length === 0) {
       const projectDataOptions = projectData?.distributions?.extend_fields?.[field.field_name] || []
-      availableOptions = projectDataOptions.map((item: any) => ({
+      availableOptions = projectDataOptions.map((item: { name: string; count?: number }) => ({
         name: item.name,
         count: item.count || 0
       }))
