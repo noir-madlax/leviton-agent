@@ -376,7 +376,11 @@ class PriceVsRevenueService(BasePricingService, ChartsBaseService):
 
             # 使用 RPC 以支持自定义 JOIN（保持与 _get_product_pricing_data 的方式一致）
             asin_list = [a.platform_id for a in aggregates]
-            asin_literals = ", ".join([f"'{s.replace("'", "''")}'" for s in asin_list])
+            # 转义单引号，避免 SQL 注入与语法错误
+            def _escape_literal(value: str) -> str:
+                return str(value).replace("'", "''")
+
+            asin_literals = ", ".join([f"'{_escape_literal(s)}'" for s in asin_list])
 
             base_cols = [
                 'p.platform_id', 'p.title', 'p.brand', 'p.price_usd', 'p.unit_price_calculated', 'p.category', 'p.product_url'
