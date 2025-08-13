@@ -136,7 +136,7 @@ export function PriceDistributionOverview({
       </div>
       <div className="mb-8" data-chart-id="price-distribution-overview">
         <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
-          <div className="mb-4">
+          <div className="mb-0">
             {/* 🆕 独立过滤器组件 */}
             <FilterRenderer
               projectId={projectId || ''}
@@ -145,7 +145,7 @@ export function PriceDistributionOverview({
               onChange={handleFiltersChange}
               onFiltersReady={handleFiltersReady}
               disabled={dataLoading}
-              className="mb-6"
+              className="mb-4"
             />
           </div>
 

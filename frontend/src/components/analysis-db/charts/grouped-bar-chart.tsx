@@ -122,8 +122,8 @@ export function GroupedBarChart({
         barCategoryGap="10%"  // 柱状图组间距：10%
         margin={{
           top: 20,              // 顶部边距：20px
-          right: 20,            // 右侧边距：20px  
-          left: 20,             // 左侧边距：20px
+          right: 0,            // 右侧边距：20px  
+          left: 15,             // 左侧边距：20px
           bottom: bottomMargin, // 底部边距：动态计算
         }}
       >
@@ -153,6 +153,7 @@ export function GroupedBarChart({
           label={{
             value: yAxisLabel,               // Y轴标题文本
             angle: -90,                      // 旋转角度：-90度（垂直）
+            offset: -5,
             position: "insideLeft",          // 位置：左侧内部
             style: { 
               textAnchor: 'middle',          // 垂直居中
@@ -161,8 +162,8 @@ export function GroupedBarChart({
             }
           }}
           tickFormatter={formatValue}        // 刻度值格式化函数
-          tick={{ fontSize: 14 }}           // 刻度标签字体大小
-          width={90}                        // Y轴宽度：固定90px防止重叠
+          tick={{ fontSize: 12 }}           // 刻度标签字体大小
+          width={80}                        // Y轴宽度：固定90px防止重叠
         />
         
         {/* 悬浮提示框 */}

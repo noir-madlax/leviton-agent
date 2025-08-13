@@ -22,7 +22,7 @@ export function PriceTypeSelector({ onChange, defaultValue = "unit" }: PriceType
   }
 
   return (
-    <div className="flex items-center space-x-4 mb-5">
+    <div className="flex items-center space-x-4 mb-3">
       <Label htmlFor="price-type" className="text-lg font-semibold text-gray-800">
          <span className="font-bold">{chartsT('priceType')}</span> :
       </Label>

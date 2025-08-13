@@ -457,11 +457,11 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                   onChange={handleFiltersChange}
                   onFiltersReady={handleFiltersReady}
                   disabled={tamDataLoading}
-                  className="mb-6"
+                  className="mb-0"
                 />
               </div>
 
-              <div className="p-6 bg-gray-50 mb-6">
+              <div className="p-3 bg-gray-50 mb-3">
                 {/* 第三层：多个饼图区域 */}
                 {tamDataLoading ? (
                   <div className="flex items-center justify-center py-20">
@@ -492,7 +492,7 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 ) : categoryPieData.length > 0 ? (
                   <div className="space-y-8">
                     {(categoryPieData as Array<{category: string, total_revenue: number, total_products: number, brand_shares: Array<{brand: string, revenue: number, product_count: number, market_share_percentage: number}>}>).map((categoryData) => (
-                      <div key={categoryData.category} className="bg-gray-50 p-6">
+                      <div key={categoryData.category} className="bg-gray-50 p-2 mb-0">
                 <h4 className="text-lg font-medium mb-0 text-center">
                   📊 {categoryData.category} - {chartsT('marketShareByBrand')}
                 </h4>
@@ -591,10 +591,10 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 onChange={handleBestSellingBrandsFiltersChange}
                 onFiltersReady={handleBestSellingBrandsFiltersReady}
                 disabled={bestSellingBrandsLoading}
-                className="mb-6"
+                className="mb-3" /* FILTER_SECTION_MARGIN: reduce vertical space under filters; adjust here */
               />
 
-              {/* 指标类型选择器 */}
+              {/* 指标类型选择器位置确认：在过滤器下方、图表上方 */}
               <MetricTypeSelector onChange={setMetricType} value={metricType} />
             </div>
 
