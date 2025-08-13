@@ -115,7 +115,7 @@ export function BrandPriceDistributionChart({
               {dataToUse.brandPriceDistribution.map((categoryData: { category: string; brands: { name: string; skuPrices: number[]; unitPrices: number[] }[] }) => {
                 return (
                   <div key={categoryData.category}>
-                    <h4 className="text-lg font-medium mb-4">{categoryData.category}</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-center"> {categoryData.category}</h4>
                     <div className="h-[320px]">
                       <BrandViolinChart
                         brands={categoryData.brands}

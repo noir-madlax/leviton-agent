@@ -97,33 +97,15 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
         </div>
       </div>
 
-      {/* Summary: Display Metric selector + TAM copy */}
+      {/* Summary: only TAM copy, selector moved below filters per design */}
       {chartData && mounted && !dataLoading && !dataError && (
         <div className="bg-blue-50 border-l-4 border-blue-400 p-4 mb-6 mt-6 rounded-sm">
-          <div className="flex items-center gap-3 mb-2">
-            <Label htmlFor="display-metric" className="text-sm font-medium text-blue-800">
-              {chartsT('displayMetric')}:
-            </Label>
-            <Select value={metricType} onValueChange={(v)=> setMetricType(v as PackageMetricType)}>
-              <SelectTrigger id="display-metric" className="w-[180px] text-sm">
-                {metricType === 'revenue' ? chartsT('revenue') : chartsT('productsText')}
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="revenue" className="text-sm">
-                  <span className="font-semibold">{chartsT('revenue')}</span>
-                </SelectItem>
-                <SelectItem value="products" className="text-sm">
-                  <span className="font-semibold">{chartsT('productsText')}</span>
-                </SelectItem>
-              </SelectContent>
-            </Select>
-          </div>
-          <p className="text-sm text-blue-800">
+          <p className="text-sm text-blue-700">
             <strong>{chartsT('totalAddressableMarketShort')}</strong>
             {` $${(chartData.data?.total_market_revenue || 0).toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })} `}
             {chartsT('with')} {(chartData.data?.total_products || 0).toLocaleString()} {chartsT('productsText')}
           </p>
-          <p className="text-xs text-blue-700 mt-1">
+          <p className="text-sm text-blue-700 mt-1">
             {chartsT('approximatedByTotalRevenue')}
           </p>
         </div>
@@ -142,8 +124,27 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                 onChange={handleFiltersChange}
                 onFiltersReady={handleFiltersReady}
                 disabled={dataLoading}
-                className="mb-6"
+                className="mb-3" /* FILTER_SECTION_MARGIN: reduce vertical space under filters; adjust here */
               />
+              {/* Display Metric selector moved here: under chart filters and above chart */}
+              <div className="flex items-center gap-3 mb-3">
+                <Label htmlFor="display-metric" className="text-sm font-medium text-gray-800">
+                  {chartsT('displayMetric')}:
+                </Label>
+                <Select value={metricType} onValueChange={(v)=> setMetricType(v as PackageMetricType)}>
+                  <SelectTrigger id="display-metric" className="w-[180px] text-sm">
+                    {metricType === 'revenue' ? chartsT('revenue') : chartsT('productsText')}
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="revenue" className="text-sm">
+                      <span className="font-semibold">{chartsT('revenue')}</span>
+                    </SelectItem>
+                    <SelectItem value="products" className="text-sm">
+                      <span className="font-semibold">{chartsT('productsText')}</span>
+                    </SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
             </div>
 
             {/* 图表内容区域 */}
@@ -185,8 +186,8 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                     {chartData.data.distribution_by_category && chartData.data.distribution_by_category.length > 0 ? (
                       <div className="space-y-8">
                         {chartData.data.distribution_by_category.map((categoryData) => (
-                          <div key={categoryData.category} className="bg-gray-50 p-0 mt-6">
-                            <h4 className="text-lg font-semibold mb-4 text-center">
+                          <div key={categoryData.category} className="bg-gray-50 p-0 mt-0">
+                            <h4 className="text-lg font-semibold mb-2 text-center">
                               📦 {categoryData.category} - {metricType === 'revenue' ? chartsT('salesUnitDistributionByRevenue') : chartsT('packageTypeDistribution')}
                             </h4>
 

@@ -257,7 +257,7 @@ export function FilterRenderer({
   )
 
   return (
-    <div className={`space-y-4 ${className}`}>
+    <div className={`space-y-2 ${className}`}> {/* FILTER_STACK_GAP: reduce vertical gap between filter blocks */}
       {/* 过滤器标题和操作按钮 */}
       <div className="flex justify-between items-center ">
         <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
@@ -290,7 +290,7 @@ export function FilterRenderer({
       </div>
       
       {/* 第一行：基础过滤器控件 */}
-      <div className="flex items-center gap-4 flex-wrap ">
+      <div className="flex items-center gap-2 flex-wrap "> {/* FILTER_ROW_GAP: tighten inline filter controls spacing */}
         {/* Category Filter */}
         {visibleFilters?.categories && (
           <CategoryFilter
@@ -326,7 +326,7 @@ export function FilterRenderer({
 
       {/* 第二行：扩展字段过滤器（单独占用一行） */}
       {visibleFilters?.extend_fields && (
-        <div className="w-full pb-6 border-b">
+        <div className="w-full pb-2 border-b"> {/* FILTER_EXTEND_PADDING: reduce bottom padding inside extend fields */}
           <ExtendFieldsFilter
             key={extendFieldsKey} // 🔧 添加 key 属性，当 reset 时强制重新渲染
             chartName={chartName} // 🆕 传递 chartName

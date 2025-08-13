@@ -224,8 +224,11 @@ export function PriceVsRevenueChart({
           ) : hasScatterData ? (
             <div>
               {getCategoryScatterData().map((catData) => (
-                <div key={catData.title} className="h-[400px] mb-8">
-                  <div className="text-sm font-semibold text-gray-700 mb-2">{catData.title}</div>
+                <div key={catData.title} className="h-[520px] pb-14">
+                  {/* Category title aligned as chart title */}
+                  <h4 className="text-lg font-semibold mb-0 text-center">
+                     {catData.title}
+                  </h4>
                   <ResponsiveContainer width="100%" height="100%">
                     <ScatterChart data={catData.products} margin={{ top: 5, right: 20, bottom: 30, left: 50 }}>
                       <CartesianGrid strokeDasharray="3,3" />

@@ -120,7 +120,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 onChange={handleFiltersChange}
                 onFiltersReady={handleFiltersReady}
                 disabled={dataLoading}
-                className="mb-3"
+                className="mb-0"
               />
             </div>
 
@@ -174,13 +174,12 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                           }))
                           const chartColors = processedChartData.map((_, index) => getChartColor(index))
                           return (
-                            <div key={`${cat.category}-${catIdx}`} className="bg-gray-50 p-0 ">
-                              <div className="bg-gray-50 p-4 relative">
-                                {/* 类目标题放在图表左上角 */}
-                                <div className="absolute left-4 top-3 z-10">
-                                  <span className="text-sm text-gray-600">Category:</span>
-                                  <span className="ml-2 text-sm font-semibold text-gray-800">{cat.category}</span>
-                                </div>
+                            <div key={`${cat.category}-${catIdx}`} className="bg-gray-50 p-0 mt-4 ">
+                              <div className="bg-gray-50 p-4">
+                                {/* Category title aligned with other charts */}
+                                <h4 className="text-lg font-semibold mb-4 text-center">
+                                  📊 {cat.category} - {metricType === 'revenue' ? 'Top Segments by Revenue' : metricType === 'volume' ? 'Top Segments by Volume' : 'Top Segments by Products'}
+                                </h4>
                                 <div className="h-[600px] w-full">
                                   <GroupedBarChart
                                     data={processedChartData}

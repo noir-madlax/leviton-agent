@@ -101,7 +101,7 @@ export function PriceDistributionByTypeChart({
       </div>
       <div className="mb-8" data-chart-id={CHART_NAMES.PRICE_ANALYSIS}>
         <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
-          <div className="mb-4">
+          <div className="mb-0">
             {/* 内部标题移除，避免双标题 */}
             
             {/* 🆕 独立过滤器组件 */}
@@ -112,7 +112,7 @@ export function PriceDistributionByTypeChart({
               onChange={handleFiltersChange}
               onFiltersReady={handleFiltersReady}
               disabled={dataLoading}
-              className="mb-6"
+              className="mb-4"
             />
           </div>
           
