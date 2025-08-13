@@ -542,28 +542,39 @@ async def get_top_segments_by_revenue(request: TopSegmentsByRevenueRequest):
     ```json
     {
         "data": {
-            "segments": [
+            "total_market_revenue": 15250000.5,
+            "total_market_volume": 45210,
+            "total_products": 1320,
+            "currency": "USD",
+            "top_segments_by_category": [
                 {
-                    "segment": "Premium Smart Dimmer",
-                    "revenue": 2500000.50,
-                    "volume": 15000,
-                    "products": 120,
-                    "market_share_percentage": 35.2,
-                    "rank": 1,
-                    "avg_price": 166.67,
-                    "top_brand": "Leviton"
+                    "category": "Dimmer Switches",
+                    "total_revenue": 8350000.2,
+                    "total_volume": 24680,
+                    "total_products": 640,
+                    "segments": [
+                        {
+                            "segment": "Premium Smart Dimmer",
+                            "revenue": 3200000.1,
+                            "volume": 8400,
+                            "products": 128,
+                            "market_share_percentage": 38.33,
+                            "rank": 1,
+                            "avg_price": 380.95,
+                            "top_brand": "Leviton"
+                        }
+                    ]
                 }
-            ],
-            "total_market_revenue": 7100000.00,
-            "total_market_volume": 45000,
-            "total_products": 350,
-            "currency": "USD"
+            ]
         },
         "metadata": {
             "filtered_asins_count": 1250,
-            "total_segments": 25,
-            "returned_segments": 10,
+            "total_categories": 2,
+            "total_segments": 24,
+            "returned_segments": 4,
             "metric_type": "revenue",
+            "timeframe_used": "year",
+            "limit_per_category": 2,
             "calculation_timestamp": "2024-01-15T10:30:00Z"
         }
     }

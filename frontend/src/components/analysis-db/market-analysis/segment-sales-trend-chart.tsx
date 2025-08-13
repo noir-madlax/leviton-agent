@@ -71,34 +71,19 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
     return words.slice(0, mid).join(' ') + '\n' + words.slice(mid).join(' ')
   }
 
-  // 构建chart数据
-  const processedChartData = chartData?.data?.segments ? chartData.data.segments.map((segment, index) => ({
-    name: wrapLongText(segment.segment || 'Unknown Segment'),
-    originalName: segment.segment || 'Unknown Segment',
-    [metricType]: segment[metricType] || 0,
-    revenue: segment.revenue || 0,
-    volume: segment.volume || 0,
-    products: segment.products || 0,
-    fill: getChartColor(index)
-  })) : []
-
-  // 为每个segment生成不同的颜色
-  const chartColors = processedChartData.map((_, index) => getChartColor(index))
+  // 将后端 top_segments_by_category 映射为多个图表，每个类目一张
+  const categoriesData = chartData?.data?.top_segments_by_category || []
 
   const handleBarClick = (data: { activeLabel?: string }) => {
-    if (data?.activeLabel) {
-      // 查找原始segment名称
-      const clickedDisplayName = data.activeLabel
-      const matchedItem = processedChartData.find(item => item.name === clickedDisplayName)
-      const segmentName = matchedItem?.originalName || clickedDisplayName
-      openPanel({
-        projectId: projectId || '',
-        filters: { segments: [segmentName] },
-        title: `${segmentName} Products`,
-        subtitle: `All products in ${segmentName}`,
-        showFilters: { brand: true, category: true, priceRange: true, packSize: true }
-      })
-    }
+    if (!data?.activeLabel) return
+    const segmentName = data.activeLabel
+    openPanel({
+      projectId: projectId || '',
+      filters: { segments: [segmentName] },
+      title: `${segmentName} Products`,
+      subtitle: `All products in ${segmentName}`,
+      showFilters: { brand: true, category: true, priceRange: true, packSize: true }
+    })
   }
 
   const yAxisLabel = metricType === "revenue" ? "Revenue ($)" : metricType === "volume" ? "Volume" : "Products"
@@ -174,31 +159,52 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                     {/* 指标类型选择器 */}
                     <MetricTypeSelector onChange={setMetricType} value={metricType} />
 
-                    {/* 图表显示 */}
-                    {processedChartData.length > 0 ? (
-                      <div className="bg-gray-50 p-0 ">
-                        <div className="bg-gray-50 p-4 relative">
-                          <div className="h-[600px] w-full">
-                            <GroupedBarChart
-                              data={processedChartData}
-                              index="name"
-                              categories={[metricType]}
-                              colors={chartColors}
-                              yAxisLabel={yAxisLabel}
-                              metricType={metricType}
-                              onBarClick={handleBarClick}
-                            />
-                          </div>
-                          {/* Loading overlay */}
-                          {panelLoading && (
-                            <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
-                              <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
-                                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
-                                 <span className="text-gray-700 font-medium">{chartsT('loadingProducts')}</span>
+                    {/* 图表显示（每个类目一张图） */}
+                    {categoriesData.length > 0 ? (
+                      <div className="space-y-8">
+                        {categoriesData.map((cat, catIdx) => {
+                          const processedChartData = (cat.segments || []).map((segment, index) => ({
+                            name: wrapLongText(segment.segment || 'Unknown Segment'),
+                            originalName: segment.segment || 'Unknown Segment',
+                            [metricType]: (segment as any)[metricType] || 0,
+                            revenue: segment.revenue || 0,
+                            volume: segment.volume || 0,
+                            products: segment.products || 0,
+                            fill: getChartColor(index)
+                          }))
+                          const chartColors = processedChartData.map((_, index) => getChartColor(index))
+                          return (
+                            <div key={`${cat.category}-${catIdx}`} className="bg-gray-50 p-0 ">
+                              <div className="bg-gray-50 p-4 relative">
+                                {/* 类目标题放在图表左上角 */}
+                                <div className="absolute left-4 top-3 z-10">
+                                  <span className="text-sm text-gray-600">Category:</span>
+                                  <span className="ml-2 text-sm font-semibold text-gray-800">{cat.category}</span>
+                                </div>
+                                <div className="h-[600px] w-full">
+                                  <GroupedBarChart
+                                    data={processedChartData}
+                                    index="name"
+                                    categories={[metricType]}
+                                    colors={chartColors}
+                                    yAxisLabel={yAxisLabel}
+                                    metricType={metricType}
+                                    onBarClick={handleBarClick}
+                                  />
+                                </div>
+                                {/* Loading overlay */}
+                                {panelLoading && (
+                                  <div className="absolute inset-0 bg-white/70 flex items-center justify-center z-10 rounded-lg">
+                                    <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+                                      <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                                      <span className="text-gray-700 font-medium">{chartsT('loadingProducts')}</span>
+                                    </div>
+                                  </div>
+                                )}
                               </div>
                             </div>
-                          )}
-                        </div>
+                          )
+                        })}
                       </div>
                     ) : (
                       <div className="bg-gray-100 p-4 rounded">

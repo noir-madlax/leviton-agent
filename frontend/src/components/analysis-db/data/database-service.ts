@@ -110,8 +110,16 @@ export interface SegmentRevenueData {
   top_brand: string
 }
 
-export interface TopSegmentsData {
+export interface CategoryTopSegments {
+  category: string
+  total_revenue: number
+  total_volume: number
+  total_products: number
   segments: SegmentRevenueData[]
+}
+
+export interface TopSegmentsData {
+  top_segments_by_category: CategoryTopSegments[]
   total_market_revenue: number
   total_market_volume: number
   total_products: number
@@ -120,9 +128,12 @@ export interface TopSegmentsData {
 
 export interface TopSegmentsMetadata {
   filtered_asins_count: number
+  total_categories: number
   total_segments: number
   returned_segments: number
   metric_type: string
+  timeframe_used: string
+  limit_per_category: number
   calculation_timestamp: string
 }
 

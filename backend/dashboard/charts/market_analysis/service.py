@@ -21,6 +21,7 @@ from .models import (
     TopSegmentsByRevenueData,
     TopSegmentsByRevenueMetadata,
     SegmentRevenueData,
+    CategoryTopSegments,
     PackageTypeDistributionRequest,
     PackageTypeDistributionResponse,
     PackageTypeDistributionData,
@@ -286,7 +287,7 @@ class TopSegmentsByRevenueService(ChartsBaseService):
             
             if not filtered_asins:
                 logger.warning(f"No ASINs found after filtering for project {request.project_id}")
-                return self._get_empty_response(request.metric_type)
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
@@ -295,47 +296,44 @@ class TopSegmentsByRevenueService(ChartsBaseService):
             
             if not product_data:
                 logger.warning(f"No product data found for filtered ASINs")
-                return self._get_empty_response(request.metric_type)
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
             
             # Step 3: Get segment assignments
             segment_assignments = self._get_segment_assignments(request.project_id, filtered_asins)
             
             if not segment_assignments:
                 logger.warning(f"No segment assignments found for project {request.project_id}")
-                return self._get_empty_response(request.metric_type)
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
             
-            # Step 4: Aggregate data by segments
-            segment_data = self._aggregate_by_segments(product_data, segment_assignments)
-            
-            # Step 5: Rank and limit segments
-            top_segments = self._rank_and_limit_segments(
-                segment_data, 
-                request.metric_type, 
+            # Step 4: Aggregate data by category and segments
+            category_segment_data = self._aggregate_by_category_and_segments(
+                product_data, segment_assignments
+            )
+
+            # Step 5: Build per-category top segments and overall totals
+            response_data = self._build_category_top_segments_response(
+                category_segment_data,
+                request.metric_type,
                 request.limit
             )
-            
-            # Step 6: Calculate market shares and format response
-            segments_with_share = self._calculate_market_shares(top_segments, segment_data)
-            response_data = self._format_response_data(segments_with_share, segment_data)
-            
-            # Step 7: Generate metadata
-            metadata = self._generate_metadata(
+
+            # Step 6: Generate metadata
+            metadata = self._generate_category_segments_metadata(
                 filtered_asins_count=len(filtered_asins),
-                segment_data=segment_data,
-                returned_count=len(segments_with_share),
-                metric_type=request.metric_type
+                category_segment_data=category_segment_data,
+                metric_type=request.metric_type,
+                timeframe=request.timeframe,
+                limit_per_category=request.limit,
+                returned=response_data.top_segments_by_category
             )
             
             logger.info(f"✅ Top Segments analysis completed successfully")
             
-            return TopSegmentsByRevenueResponse(
-                data=response_data,
-                metadata=metadata
-            )
+            return TopSegmentsByRevenueResponse(data=response_data, metadata=metadata)
             
         except Exception as e:
             logger.error(f"❌ Error in Top Segments analysis: {e}", exc_info=True)
-            return self._get_empty_response(request.metric_type)
+            return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
 
     def _get_product_data_from_monthly_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
         """Aggregate product data from product_sales_history_monthly within timeframe.
@@ -452,148 +450,178 @@ class TopSegmentsByRevenueService(ChartsBaseService):
             logger.error(f"Error getting segment assignments: {e}")
             return {}
 
-    def _aggregate_by_segments(self, products: List[Dict], segment_assignments: Dict[str, str]) -> Dict[str, Dict]:
-        """Aggregate data by segments.
-        
-        Args:
-            products: List of product data
-            segment_assignments: Dict mapping platform_id to segment_name
-            
-        Returns:
-            Dict with segment aggregated data
+    def _aggregate_by_category_and_segments(
+        self,
+        products: List[Dict[str, Any]],
+        segment_assignments: Dict[str, str]
+    ) -> Dict[str, Dict[str, Dict[str, Any]]]:
+        """按类别与细分市场双层聚合产品数据。
+
+        返回结构：
+        {
+          category: {
+            segment: {
+              revenue: float,
+              volume: int,
+              products: int,
+              total_price: float,    # 用于计算平均价格（按ASIN均值）
+              brand_revenue: { brand: float }
+            }
+          }
+        }
         """
-        segment_data = defaultdict(lambda: {
-            'revenue': 0.0,
-            'volume': 0,
-            'products': 0,
-            'brands': defaultdict(int),
-            'total_price': 0.0
-        })
-        
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]] = defaultdict(
+            lambda: defaultdict(lambda: {
+                'revenue': 0.0,
+                'volume': 0,
+                'products': 0,
+                'total_price': 0.0,
+                'brand_revenue': defaultdict(float)
+            })
+        )
+
         for product in products:
             platform_id = product['platform_id']
-            segment = segment_assignments.get(platform_id)
-            
-            if not segment:
-                continue  # 跳过没有 segment 分配的产品
-            
-            segment_data[segment]['revenue'] += product['revenue']
-            segment_data[segment]['volume'] += product['volume']
-            segment_data[segment]['products'] += 1
-            segment_data[segment]['total_price'] += product['price']
-            segment_data[segment]['brands'][product['brand']] += 1
-        
-        return dict(segment_data)
+            segment_name = segment_assignments.get(platform_id)
+            if not segment_name:
+                continue
+            category = product.get('category', 'Unknown')
 
-    def _rank_and_limit_segments(self, segment_data: Dict, metric_type: str, limit: int) -> List[Dict]:
-        """Rank and limit segment quantity.
-        
-        Args:
-            segment_data: Aggregated segment data
-            metric_type: Metric to sort by
-            limit: Maximum number of segments to return
-            
-        Returns:
-            List of top segments
-        """
-        segments = []
-        
-        for segment_name, data in segment_data.items():
-            # 计算平均价格和主要品牌
-            avg_price = data['total_price'] / data['products'] if data['products'] > 0 else 0
-            top_brand = max(data['brands'].items(), key=lambda x: x[1])[0] if data['brands'] else 'N/A'
-            
-            segments.append({
-                'segment': segment_name,
-                'revenue': data['revenue'],
-                'volume': data['volume'],
-                'products': data['products'],
-                'avg_price': avg_price,
-                'top_brand': top_brand
-            })
-        
-        # 按指定指标排序
-        segments.sort(key=lambda x: x[metric_type], reverse=True)
-        
-        # 限制数量
-        return segments[:limit]
+            entry = category_segment_data[category][segment_name]
+            entry['revenue'] += float(product.get('revenue', 0) or 0)
+            entry['volume'] += int(product.get('volume', 0) or 0)
+            entry['products'] += 1
+            entry['total_price'] += float(product.get('price', 0) or 0)
 
-    def _calculate_market_shares(self, top_segments: List[Dict], all_segment_data: Dict) -> List[SegmentRevenueData]:
-        """Calculate market shares for top segments.
-        
-        Args:
-            top_segments: List of top segments
-            all_segment_data: All segment data for calculating total market
-            
-        Returns:
-            List of SegmentRevenueData with market shares
-        """
-        total_market_revenue = sum(data['revenue'] for data in all_segment_data.values())
-        
-        segments_with_share = []
-        for rank, segment in enumerate(top_segments, 1):
-            market_share = (segment['revenue'] / total_market_revenue * 100) if total_market_revenue > 0 else 0
-            
-            segments_with_share.append(SegmentRevenueData(
-                segment=segment['segment'],
-                revenue=segment['revenue'],
-                volume=segment['volume'],
-                products=segment['products'],
-                market_share_percentage=round(market_share, 2),
-                rank=rank,
-                avg_price=round(segment['avg_price'], 2),
-                top_brand=segment['top_brand']
+            brand = product.get('brand', 'Unknown')
+            entry['brand_revenue'][brand] += float(product.get('revenue', 0) or 0)
+
+        return category_segment_data
+
+    def _build_category_top_segments_response(
+        self,
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]],
+        metric_type: str,
+        limit: int
+    ) -> TopSegmentsByRevenueData:
+        """根据每个类别内的排序与截断构建响应数据。"""
+
+        # 计算全局汇总
+        total_market_revenue = 0.0
+        total_market_volume = 0
+        total_products = 0
+
+        top_segments_by_category: List[CategoryTopSegments] = []
+
+        for category, segments in category_segment_data.items():
+            # 类目总计
+            category_total_revenue = sum(v['revenue'] for v in segments.values())
+            category_total_volume = sum(v['volume'] for v in segments.values())
+            category_total_products = sum(v['products'] for v in segments.values())
+
+            total_market_revenue += category_total_revenue
+            total_market_volume += category_total_volume
+            total_products += category_total_products
+
+            # 计算每个 segment 的排序依据
+            sortable = []
+            for seg_name, data in segments.items():
+                avg_price = data['total_price'] / data['products'] if data['products'] > 0 else 0.0
+                # 按品牌收入最高者作为 top_brand
+                top_brand = 'N/A'
+                if data['brand_revenue']:
+                    top_brand = max(data['brand_revenue'].items(), key=lambda x: x[1])[0]
+
+                sortable.append({
+                    'segment': seg_name,
+                    'revenue': data['revenue'],
+                    'volume': data['volume'],
+                    'products': data['products'],
+                    'avg_price': avg_price,
+                    'top_brand': top_brand
+                })
+
+            # 排序
+            key_name = 'revenue' if metric_type == 'revenue' else ('volume' if metric_type == 'volume' else 'products')
+            sortable.sort(key=lambda x: x[key_name], reverse=True)
+
+            # 截断并映射为模型，计算份额与排名
+            limited = []
+            for rank, seg in enumerate(sortable[:limit], start=1):
+                share_pct = (seg['revenue'] / category_total_revenue * 100) if category_total_revenue > 0 else 0.0
+                limited.append(SegmentRevenueData(
+                    segment=seg['segment'],
+                    revenue=seg['revenue'],
+                    volume=seg['volume'],
+                    products=seg['products'],
+                    market_share_percentage=round(share_pct, 2),
+                    rank=rank,
+                    avg_price=round(seg['avg_price'], 2),
+                    top_brand=seg['top_brand']
+                ))
+
+            top_segments_by_category.append(CategoryTopSegments(
+                category=category,
+                total_revenue=category_total_revenue,
+                total_volume=category_total_volume,
+                total_products=category_total_products,
+                segments=limited
             ))
-        
-        return segments_with_share
 
-    def _format_response_data(self, segments_with_share: List[SegmentRevenueData], all_segment_data: Dict) -> TopSegmentsByRevenueData:
-        """Format the response data.
-        
-        Args:
-            segments_with_share: Segments with calculated market shares
-            all_segment_data: All segment data for totals
-            
-        Returns:
-            TopSegmentsByRevenueData
-        """
-        total_market_revenue = sum(data['revenue'] for data in all_segment_data.values())
-        total_market_volume = sum(data['volume'] for data in all_segment_data.values())
-        total_products = sum(data['products'] for data in all_segment_data.values())
-        
+        # 类目按总收入降序
+        top_segments_by_category.sort(key=lambda c: c.total_revenue, reverse=True)
+
         return TopSegmentsByRevenueData(
-            segments=segments_with_share,
+            top_segments_by_category=top_segments_by_category,
             total_market_revenue=total_market_revenue,
             total_market_volume=total_market_volume,
             total_products=total_products,
             currency="USD"
         )
 
-    def _generate_metadata(self, filtered_asins_count: int, segment_data: Dict, returned_count: int, metric_type: str) -> TopSegmentsByRevenueMetadata:
-        """Generate metadata for the analysis.
-        
-        Args:
-            filtered_asins_count: Number of ASINs after filtering
-            segment_data: All segment data
-            returned_count: Number of segments returned
-            metric_type: Metric type used for sorting
-            
-        Returns:
-            TopSegmentsByRevenueMetadata
-        """
+    # 旧的全局 Top-N 份额计算逻辑已被按类别分组的实现取代
+
+    # 旧的扁平化响应格式方法已被 _build_category_top_segments_response 取代
+
+    def _generate_category_segments_metadata(
+        self,
+        filtered_asins_count: int,
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]],
+        metric_type: str,
+        timeframe,
+        limit_per_category: int,
+        returned: List[CategoryTopSegments]
+    ) -> TopSegmentsByRevenueMetadata:
+        """生成按类别分组的元数据。"""
+        total_categories = len(category_segment_data)
+        # 去重后的 segment 总数
+        all_segments = set()
+        for segments in category_segment_data.values():
+            all_segments.update(segments.keys())
+        total_segments = len(all_segments)
+
+        returned_segments = sum(len(c.segments) for c in returned)
+
+        timeframe_used = 'year'
+        if timeframe and getattr(timeframe, 'period', None):
+            timeframe_used = timeframe.period
+
         return TopSegmentsByRevenueMetadata(
             filtered_asins_count=filtered_asins_count,
-            total_segments=len(segment_data),
-            returned_segments=returned_count,
+            total_categories=total_categories,
+            total_segments=total_segments,
+            returned_segments=returned_segments,
             metric_type=metric_type,
+            timeframe_used=timeframe_used,
+            limit_per_category=limit_per_category,
             calculation_timestamp=datetime.now(timezone.utc).isoformat()
         )
     
-    def _get_empty_response(self, metric_type: str) -> TopSegmentsByRevenueResponse:
+    def _get_empty_response(self, metric_type: str, timeframe=None, limit_per_category: int = 0) -> TopSegmentsByRevenueResponse:
         """Return empty response when no data is available."""
         return TopSegmentsByRevenueResponse(
             data=TopSegmentsByRevenueData(
-                segments=[],
+                top_segments_by_category=[],
                 total_market_revenue=0.0,
                 total_market_volume=0,
                 total_products=0,
@@ -601,9 +629,12 @@ class TopSegmentsByRevenueService(ChartsBaseService):
             ),
             metadata=TopSegmentsByRevenueMetadata(
                 filtered_asins_count=0,
+                total_categories=0,
                 total_segments=0,
                 returned_segments=0,
                 metric_type=metric_type,
+                timeframe_used=(timeframe.period if timeframe and getattr(timeframe, 'period', None) else 'year'),
+                limit_per_category=limit_per_category,
                 calculation_timestamp=datetime.now(timezone.utc).isoformat()
             )
         )

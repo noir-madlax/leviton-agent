@@ -121,10 +121,20 @@ class SegmentRevenueData(BaseModel):
     top_brand: str = Field(..., description="主要品牌")
 
 
+class CategoryTopSegments(BaseModel):
+    """Top segments grouped under a specific category."""
+    
+    category: str = Field(..., description="类别名称")
+    total_revenue: float = Field(..., description="该类别总收入")
+    total_volume: int = Field(..., description="该类别总销量")
+    total_products: int = Field(..., description="该类别产品总数")
+    segments: List[SegmentRevenueData] = Field(..., description="该类别下的 Top-N segments")
+
+
 class TopSegmentsByRevenueData(BaseModel):
     """Top Segments 主数据模型."""
     
-    segments: List[SegmentRevenueData] = Field(..., description="排序后的 segment 列表")
+    top_segments_by_category: List[CategoryTopSegments] = Field(..., description="按类别分组后的 Top-N segment 列表")
     total_market_revenue: float = Field(..., description="总市场收入")
     total_market_volume: int = Field(..., description="总市场销量")
     total_products: int = Field(..., description="总产品数量")
@@ -135,9 +145,12 @@ class TopSegmentsByRevenueMetadata(BaseModel):
     """Top Segments 元数据模型."""
     
     filtered_asins_count: int = Field(..., description="过滤后的 ASIN 数量")
-    total_segments: int = Field(..., description="总 segment 数量")
-    returned_segments: int = Field(..., description="返回的 segment 数量")
+    total_categories: int = Field(..., description="总类别数量")
+    total_segments: int = Field(..., description="所有类别下去重后的 segment 总数")
+    returned_segments: int = Field(..., description="返回的 segment 条目数量（所有类别合计）")
     metric_type: str = Field(..., description="排序指标类型")
+    timeframe_used: str = Field(..., description="使用的时间范围")
+    limit_per_category: int = Field(..., description="每个类别返回的 segment 上限")
     calculation_timestamp: str = Field(..., description="计算时间戳")
 
 
