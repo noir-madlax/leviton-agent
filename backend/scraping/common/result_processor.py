@@ -275,61 +275,65 @@ class ScrapingResultProcessor:
                 'data_provider': self._provider
             }
 
-            # 针对 Unwrangle：提供更准确的主图与额外信息
-            if self._provider == 'unwrangle':
-                try:
-                    buybox = raw_product.get('buybox_winner') or {}
-                    delivery = buybox.get('delivery') or {}
+            # 统一保存扩展字段（原 Unwrangle 扩展，对所有来源生效；缺失→None）
+            try:
+                buybox = self._as_dict(raw_product.get('buybox_winner'))
+                delivery = self._as_dict(buybox.get('delivery'))
 
-                    # 主图优先 main_image.link -> images[0].link
-                    main_image_link = ''
-                    if isinstance(raw_product.get('main_image'), dict):
-                        main_image_link = self._safe_strip(raw_product['main_image'].get('link', ''))
-                    if main_image_link:
-                        product['image_url'] = main_image_link
-                    elif isinstance(raw_product.get('images'), list) and raw_product['images']:
-                        first = raw_product['images'][0]
+                # 主图优先 main_image.link -> images[0].link
+                main_image_link = ''
+                main_image_obj = self._as_dict(raw_product.get('main_image'))
+                if main_image_obj:
+                    main_image_link = self._safe_strip(main_image_obj.get('link', ''))
+                if main_image_link:
+                    product['image_url'] = main_image_link
+                elif isinstance(raw_product.get('images'), list):
+                    images_list = raw_product.get('images') or []
+                    if len(images_list) > 0:
+                        first = images_list[0]
                         if isinstance(first, dict) and first.get('link'):
                             product['image_url'] = self._safe_strip(first['link'])
 
-                    # 额外列（表已存在，不存在时 supabase 会忽略）
-                    product.update({
-                        'parent_asin': self._safe_strip(raw_product.get('parent_asin')),
-                        'variant_asins_flat': self._safe_strip(raw_product.get('variant_asins_flat')),
-                        'search_alias_title': self._safe_strip((raw_product.get('search_alias') or {}).get('title')),
-                        'search_alias_value': self._safe_strip((raw_product.get('search_alias') or {}).get('value')),
-                        'keywords': self._safe_strip(raw_product.get('keywords')),
-                        'keywords_list_json': raw_product.get('keywords_list'),
-                        'proposition_65_warning': self._safe_strip(raw_product.get('proposition_65_warning')),
-                        'has_size_guide': self._safe_strip(raw_product.get('has_size_guide')),
-                        'buybox_json': buybox or None,
-                        'sold_by_amazon': self._safe_strip(buybox.get('is_sold_by_amazon')),
-                        'fba': self._safe_strip(buybox.get('is_fulfilled_by_amazon')),
-                        'sold_by_third_party': self._safe_strip(buybox.get('is_sold_by_third_party')),
-                        'shipping_raw': self._safe_strip((buybox.get('shipping') or {}).get('raw')),
-                        'delivery_json': delivery or None,
-                        'images_json': raw_product.get('images'),
-                        'images_count': raw_product.get('images_count') if isinstance(raw_product.get('images_count'), int) else None,
-                        'images_flat': self._safe_strip(raw_product.get('images_flat')),
-                        'videos_json': raw_product.get('videos_additional'),
-                        'videos_count': raw_product.get('videos_count') if isinstance(raw_product.get('videos_count'), int) else None,
-                        'a_plus_content_json': raw_product.get('a_plus_content'),
-                        'sub_title_text': self._safe_strip((raw_product.get('sub_title') or {}).get('text')),
-                        'sub_title_link': self._safe_strip((raw_product.get('sub_title') or {}).get('link')),
-                        'marketplace_id': self._safe_strip(raw_product.get('marketplace_id')),
-                        'specifications_json': raw_product.get('specifications'),
-                        'specifications_flat': self._safe_strip(raw_product.get('specifications_flat')),
-                        'main_image_url': main_image_link,
-                        'rating_breakdown_json': raw_product.get('rating_breakdown'),
-                        'variants_json': raw_product.get('variants'),
-                        'raw_product_json': raw_product
-                    })
+                # 额外列（存在即写；空/缺失→None）
+                product.update({
+                    'parent_asin': self._opt_text(raw_product.get('parent_asin')),
+                    'variant_asins_flat': self._opt_text(raw_product.get('variant_asins_flat')),
+                    'search_alias_title': self._opt_text(self._as_dict(raw_product.get('search_alias')).get('title')),
+                    'search_alias_value': self._opt_text(self._as_dict(raw_product.get('search_alias')).get('value')),
+                    'keywords': self._opt_text(raw_product.get('keywords')),
+                    'keywords_list_json': raw_product.get('keywords_list'),
+                    'proposition_65_warning': self._opt_text(raw_product.get('proposition_65_warning')),
+                    'has_size_guide': self._opt_text(raw_product.get('has_size_guide')),
+                    'buybox_json': buybox or None,
+                    'sold_by_amazon': self._opt_text(buybox.get('is_sold_by_amazon')),
+                    'fba': self._opt_text(buybox.get('is_fulfilled_by_amazon')),
+                    'sold_by_third_party': self._opt_text(buybox.get('is_sold_by_third_party')),
+                    'shipping_raw': self._opt_text(self._as_dict(buybox.get('shipping')).get('raw')),
+                    'delivery_json': delivery or None,
+                    'images_json': raw_product.get('images'),
+                    'images_count': raw_product.get('images_count') if isinstance(raw_product.get('images_count'), int) else None,
+                    'images_flat': self._opt_text(raw_product.get('images_flat')),
+                    'videos_json': raw_product.get('videos_additional'),
+                    'videos_count': raw_product.get('videos_count') if isinstance(raw_product.get('videos_count'), int) else None,
+                    'a_plus_content_json': raw_product.get('a_plus_content'),
+                    'sub_title_text': self._opt_text((raw_product.get('sub_title') or {}).get('text')),
+                    'sub_title_link': self._opt_text((raw_product.get('sub_title') or {}).get('link')),
+                    'marketplace_id': self._opt_text(raw_product.get('marketplace_id')),
+                    'specifications_json': raw_product.get('specifications'),
+                    'specifications_flat': self._opt_text(raw_product.get('specifications_flat')),
+                    'main_image_url': self._opt_text(main_image_link),
+                    'rating_breakdown_json': raw_product.get('rating_breakdown'),
+                    'variants_json': raw_product.get('variants'),
+                    'raw_product_json': raw_product
+                })
 
-                    # 若 features 为空，回退使用 specifications_flat
-                    if not product.get('features') and product.get('specifications_flat'):
-                        product['features'] = product['specifications_flat']
-                except Exception:
-                    pass
+                # 若 features 为空，回退使用 specifications_flat
+                if not product.get('features') and product.get('specifications_flat'):
+                    product['features'] = product['specifications_flat']
+            except Exception as e:
+                asin_dbg = product.get('platform_id')
+                provider_dbg = product.get('data_provider')
+                logger.exception(f"扩展字段保存失败，asin={asin_dbg}, provider={provider_dbg}: {e}")
             
             # 🔥 启用层级类目信息提取
             hierarchy_data = self._extract_category_hierarchy(raw_product)
@@ -356,6 +360,23 @@ class ScrapingResultProcessor:
             cleaned = str(value).strip()
             cleaned = re.sub(r'[^\x20-\x7E]', '', cleaned)
             return cleaned
+
+    def _opt_text(self, value: Any) -> Optional[str]:
+        """
+        将任意值标准化为可选文本：
+        - 清理不可见字符与首尾空白；
+        - 清理后为空串则返回None（让DB存NULL）；
+        - 否则返回清理后的字符串。
+        """
+        try:
+            cleaned = self._safe_strip(value)
+            return cleaned if cleaned != '' else None
+        except Exception:
+            return None
+
+    def _as_dict(self, value: Any) -> Dict[str, Any]:
+        """若为dict则返回原值，否则返回空dict，避免对非dict调用.get引发异常。"""
+        return value if isinstance(value, dict) else {}
     
     def _extract_availability(self, product: Dict[str, Any]) -> str:
         """提取可用性信息"""
