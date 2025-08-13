@@ -122,3 +122,81 @@ class ReviewsByCategoryData(BaseModel):
 
 class ReviewsByCategoryResponse(BaseResponseModel[ReviewsByCategoryData]):
     """Response model for reviews by category API.""" 
+
+
+# ==================== Customer Pain Points (Review Insights) ====================
+
+class CustomerPainPointsRequest(BaseRequestModel):
+    """Request model for customer pain points (review insights) endpoint.
+    
+    Inherits common filtering fields from BaseRequestModel and adds a limit for top categories.
+    """
+    limit: int = Field(default=15, ge=1, le=100, description="Maximum number of pain points to return")
+    
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "filters": {
+                    "categories": [
+                        "Light Switches",
+                        "Dimmer Switches"
+                    ],
+                    "extend_fields": {
+                        "smart_capability": ["Smart"]
+                    }
+                },
+                "timeframe": {
+                    "period": "year"
+                },
+                "limit": 15
+            }
+        }
+
+
+class CustomerPainPointItem(BaseModel):
+    """Single pain point item with metrics and metadata."""
+    category_id: int = Field(description="Aspect category ID")
+    category_name: str = Field(description="Aspect category name")
+    category_definition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    type: Literal["Physical", "Performance"] = Field(description="Mapped aspect type for display")
+    total_reviews: int = Field(description="Total unique reviews across all sentiments")
+    positive_reviews: int = Field(description="Number of positive reviews")
+    negative_reviews: int = Field(description="Number of negative reviews")
+    negative_rate: float = Field(description="Percentage of negative reviews (0-100)")
+    satisfaction_rate: float = Field(description="Satisfaction rate derived as 100 - negative_rate")
+    impacted_products: int = Field(description="Estimated number of impacted products")
+    related_detail_texts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
+
+
+class CustomerPainPointsData(BaseModel):
+    """Response data model for customer pain points endpoint."""
+    pain_points: List[CustomerPainPointItem] = Field(description="Top customer pain points")
+    project_id: str = Field(description="Project ID used for filtering")
+    filtered_asins_count: int = Field(description="Number of ASINs considered after filters")
+    total_categories: int = Field(description="Total categories scanned before limiting")
+
+
+class CustomerPainPointsResponse(BaseResponseModel[CustomerPainPointsData]):
+    """Response wrapper for customer pain points endpoint."""
+
+
+# ==================== Grouped by Product Category ====================
+
+class CustomerPainPointsGroup(BaseModel):
+    """Grouped pain points by product category (e.g., Dimmer Switches / Light Switches)."""
+    product_category: str = Field(description="Product category label used for filtering")
+    pain_points: List[CustomerPainPointItem] = Field(description="Top customer pain points under this product category")
+    filtered_asins_count: int = Field(description="Number of ASINs considered after filters for this product category")
+    total_categories: int = Field(description="Total aspect categories scanned for this product category before limiting")
+
+
+class CustomerPainPointsGroupedData(BaseModel):
+    """Response data with groups keyed by selected product categories."""
+    project_id: str = Field(description="Project ID used for filtering")
+    selected_categories: List[str] = Field(description="Selected product categories from request")
+    groups: List[CustomerPainPointsGroup] = Field(description="Grouped pain points by product category")
+
+
+class CustomerPainPointsGroupedResponse(BaseResponseModel[CustomerPainPointsGroupedData]):
+    """Response wrapper for grouped customer pain points endpoint."""
