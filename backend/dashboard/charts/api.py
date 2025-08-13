@@ -764,8 +764,8 @@ async def get_price_vs_revenue(request: PriceVsRevenueRequest):
         response = service.get_price_vs_revenue_data(request)
         
         logger.info(f"Price vs Revenue analysis completed for project {request.project_id}: "
-                   f"{len(response.topProducts.segments)} categories with "
-                   f"{response.metadata.filtered_asins_count} total products")
+                   f"{len(response.segments)} segments with "
+                   f"{response.meta.filtered_asins_count} total products")
 
         return response
 

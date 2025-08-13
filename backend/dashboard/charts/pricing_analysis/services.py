@@ -2,7 +2,7 @@
 
 import logging
 import numpy as np
-from typing import List, Dict, Any, Optional
+from typing import List, Dict, Any, Optional, Tuple
 from datetime import datetime
 from collections import defaultdict
 
@@ -16,7 +16,7 @@ from .models import (
     BrandPriceDistributionRequest, BrandPriceDistributionResponse,
     PriceDistributionOverviewRequest, PriceDistributionOverviewResponse, PriceDistributionOverviewData,
     CategoryPriceData, CategoryBrandDistribution, BrandPriceData, PriceStatistics,
-    TopProductsData, ProductDetail
+    SegmentScatterData, ProductPoint
 )
 
 logger = logging.getLogger(__name__)
@@ -314,33 +314,41 @@ class PriceVsRevenueService(BasePricingService, ChartsBaseService):
             
             logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
             
-            # Step 2: 获取产品数据（包含收入信息，改为基于月度明细聚合）
-            products_data = self._get_product_pricing_data_with_aggregates(filtered_asins, request.timeframe)
+            # Step 2: 获取产品数据（包含收入信息，基于月度明细聚合），并携带扩展字段
+            extend_field_names: Optional[List[str]] = None
+            try:
+                if getattr(request, 'filters', None) and getattr(request.filters, 'extend_fields', None):
+                    if isinstance(request.filters.extend_fields, dict) and request.filters.extend_fields:
+                        seen = set()
+                        extend_field_names = [f for f in request.filters.extend_fields.keys() if not (f in seen or seen.add(f))]
+            except Exception:
+                extend_field_names = None
+
+            products_data = self._get_product_pricing_data_with_aggregates(
+                filtered_asins,
+                request.timeframe,
+                extend_fields=extend_field_names,
+                project_id=request.project_id,
+            )
             if not products_data:
                 return self._get_empty_response(request)
             
-            # Step 3: 生成Top产品数据（用于散点图）
-            top_products_data = self._generate_top_products_data(products_data)
-            
-            # Step 4: 生成分类名称和颜色
-            segment_names = list(top_products_data.segments.keys())
-            segment_colors = self._generate_colors(len(segment_names))
-            
-            # Step 5: 生成元数据
-            metadata = self._generate_metadata(len(filtered_asins), segment_names)
-            
+            # Step 3: 生成分组散点数据（按 category + 扩展字段组合）
+            segments_data, segment_labels = self._generate_segment_scatter_data(products_data, extend_field_names)
+
+            # Step 4: 生成元数据
+            metadata = self._generate_metadata(len(filtered_asins), segment_labels)
+
             return PriceVsRevenueResponse(
-                topProducts=top_products_data,
-                segmentNames=segment_names,
-                segmentColors=segment_colors,
-                metadata=metadata
+                segments=segments_data,
+                meta=metadata,
             )
             
         except Exception as e:
             logger.error(f"Error in PriceVsRevenueService: {e}", exc_info=True)
             return self._get_empty_response(request)
 
-    def _get_product_pricing_data_with_aggregates(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+    def _get_product_pricing_data_with_aggregates(self, asins: List[str], timeframe=None, extend_fields: Optional[List[str]] = None, project_id: Optional[str] = None) -> List[Dict[str, Any]]:
         """获取产品价格、分类数据，并基于月度明细聚合得到收入与销量。
         
         返回的字段与现有下游一致：
@@ -354,22 +362,61 @@ class PriceVsRevenueService(BasePricingService, ChartsBaseService):
             if not aggregates:
                 return []
 
-            # 2) 取 wide 表的基础信息
-            wide_query = (
-                self.supabase
-                .table('product_wide_table')
-                .select('platform_id, title, brand, price_usd, unit_price_calculated, category, product_url')
-                .in_('platform_id', [a.platform_id for a in aggregates])
-                .eq('source', 'amazon')
-            )
-            wide_result = wide_query.execute()
+            # 2) 取 wide 表的基础信息，并可选 JOIN project_extend_data 以读取扩展字段
+            extend_selects: List[str] = []
+            join_clause = ''
+            safe_field_names: List[str] = []
+            if extend_fields:
+                import re
+                for f in extend_fields:
+                    if isinstance(f, str) and re.fullmatch(r"[A-Za-z0-9_]+", f):
+                        safe_field_names.append(f)
+                if safe_field_names:
+                    extend_selects = [f"ped.extend->>'{f}' as {f}" for f in safe_field_names]
+
+            # 使用 RPC 以支持自定义 JOIN（保持与 _get_product_pricing_data 的方式一致）
+            asin_list = [a.platform_id for a in aggregates]
+            asin_literals = ", ".join([f"'{s.replace("'", "''")}'" for s in asin_list])
+
+            base_cols = [
+                'p.platform_id', 'p.title', 'p.brand', 'p.price_usd', 'p.unit_price_calculated', 'p.category', 'p.product_url'
+            ]
+            select_list = ",\n  ".join(base_cols + extend_selects)
+            if safe_field_names:
+                if project_id:
+                    pid_literal = str(project_id).replace("'", "''")
+                    join_clause = f"\nLEFT JOIN project_extend_data ped ON ped.asins = p.platform_id AND ped.project_id = '{pid_literal}'"
+                else:
+                    join_clause = "\nLEFT JOIN project_extend_data ped ON ped.asins = p.platform_id"
+            sql = f"""
+SELECT
+  {select_list}
+FROM product_wide_table p
+{join_clause}
+WHERE p.source = 'amazon'
+  AND p.platform_id IN ({asin_literals})
+""".strip()
+
+            try:
+                logger.info(f"📝 _get_product_pricing_data_with_aggregates wide SQL = {sql}")
+            except Exception:
+                pass
+
+            wide_result = self.supabase.rpc('execute_safe_query', {'query_text': sql}).execute()
             if not wide_result.data:
                 return []
 
             # 3) 合并
             agg_map = {a.platform_id: a for a in aggregates}
             products: List[Dict[str, Any]] = []
-            for row in wide_result.data:
+            rows: List[Dict[str, Any]] = []
+            for r in wide_result.data:
+                if 'result' in r and isinstance(r['result'], dict):
+                    rows.append(r['result'])
+                elif isinstance(r, dict):
+                    rows.append(r)
+
+            for row in rows:
                 asin = row.get('platform_id')
                 agg = agg_map.get(asin)
                 if not agg:
@@ -386,6 +433,7 @@ class PriceVsRevenueService(BasePricingService, ChartsBaseService):
                     'product_url': row.get('product_url'),
                     'past_year_revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
                     'past_year_volume': int(getattr(agg, 'total_units_sold', 0) or 0),
+                    **({f: row.get(f) for f in safe_field_names} if safe_field_names else {}),
                 })
 
             logger.info(f"📊 Retrieved {len(products)} products with aggregated revenue/volume from monthly sales")
@@ -394,64 +442,77 @@ class PriceVsRevenueService(BasePricingService, ChartsBaseService):
             logger.error(f"Error fetching product data with monthly aggregates: {e}")
             return []
 
-    def _generate_top_products_data(self, products_data: List[Dict[str, Any]], limit_per_category: int = 20) -> TopProductsData:
-        """生成Top产品数据"""
-        category_groups = defaultdict(list)
-        
-        # 按分类分组并过滤有收入数据的产品
+    def _generate_segment_scatter_data(self, products_data: List[Dict[str, Any]], extend_field_names: Optional[List[str]] = None, limit_per_segment: int = 50) -> Tuple[List[SegmentScatterData], List[str]]:
+        """按 category + 扩展字段组合生成散点分组数据，并返回分组标签列表。"""
+        groups = defaultdict(list)
+
         for product in products_data:
-            category = product.get('category', 'Unknown')
-            revenue = product.get('past_year_revenue')
-            
-            if category and revenue and float(revenue) > 0:
-                category_groups[category].append(product)
-        
-        # 为每个分类选取Top产品
-        segments = {}
-        dimmer_switches = []
-        light_switches = []
-        
-        for category, products in category_groups.items():
-            # 按收入排序，取Top产品
+            base_category = product.get('category', 'Unknown') or 'Unknown'
+            if not extend_field_names:
+                label = base_category
+                extend_map: Dict[str, Any] = {}
+            else:
+                values: List[str] = []
+                extend_map = {}
+                for f in extend_field_names:
+                    v = product.get(f)
+                    extend_map[f] = v if v not in (None, '') else 'Unknown'
+                    values.append(str(extend_map[f]))
+                label = f"{base_category} + " + " + ".join(values) if values else base_category
+
+            groups[(label, base_category, tuple(sorted(extend_map.items())) if extend_map else tuple())].append(product)
+
+        segments: List[SegmentScatterData] = []
+        labels: List[str] = []
+        for (label, base_category, extend_items), products in groups.items():
+            # 排序并截取点位
             sorted_products = sorted(products, key=lambda x: float(x.get('past_year_revenue', 0)), reverse=True)
-            top_products = sorted_products[:limit_per_category]
-            
-            # 转换为ProductDetail对象
-            product_details = []
-            for product in top_products:
-                detail = ProductDetail(
-                    id=product['platform_id'],
-                    name=product.get('title', 'Unknown'),
-                    brand=product.get('brand', 'Unknown'),
-                    price=float(product.get('price_usd', 0)),
-                    unitPrice=float(product.get('unit_price_calculated', 0)),
-                    revenue=float(product.get('past_year_revenue', 0)),
-                    volume=float(product.get('past_year_volume', 0)),
-                    url=product.get('product_url', '')
-                )
-                product_details.append(detail)
-            
-            segments[category] = product_details
-            
-            # 兼容性字段
-            if 'dimmer' in category.lower():
-                dimmer_switches.extend(product_details)
-            elif 'switch' in category.lower():
-                light_switches.extend(product_details)
-        
-        return TopProductsData(
-            segments=segments,
-            dimmerSwitches=dimmer_switches,
-            lightSwitches=light_switches
-        )
+            top_products = sorted_products[:limit_per_segment]
+
+            sku_prices = [float(p.get('price_usd', 0)) for p in products if p.get('price_usd') is not None]
+            unit_prices = [float(p.get('unit_price_calculated', 0)) for p in products if p.get('unit_price_calculated') is not None]
+
+            price_stats = {
+                'sku': self._calculate_price_statistics(sku_prices),
+                'unit': self._calculate_price_statistics(unit_prices),
+            }
+
+            points: List[ProductPoint] = []
+            for p in top_products:
+                points.append(ProductPoint(
+                    id=p['platform_id'],
+                    name=p.get('title', 'Unknown'),
+                    brand=p.get('brand', 'Unknown'),
+                    price_sku=float(p.get('price_usd', 0) or 0),
+                    price_unit=float(p.get('unit_price_calculated', 0) or 0),
+                    revenue=float(p.get('past_year_revenue', 0) or 0),
+                    volume=float(p.get('past_year_volume', 0) or 0),
+                    url=p.get('product_url', ''),
+                ))
+
+            segment = SegmentScatterData(
+                key=label,
+                category=base_category,
+                extend_values=dict(extend_items),
+                total_products=len(products),
+                total_revenue=float(sum(float(x.get('past_year_revenue', 0) or 0) for x in products)),
+                total_volume=int(sum(int(x.get('past_year_volume', 0) or 0) for x in products)),
+                price_stats=price_stats,
+                points=points,
+            )
+            segments.append(segment)
+            labels.append(label)
+
+        # 可按总收入排序分组，便于前端默认展示
+        segments.sort(key=lambda s: s.total_revenue, reverse=True)
+        labels = [s.key for s in segments]
+        return segments, labels
 
     def _get_empty_response(self, request: PriceVsRevenueRequest) -> PriceVsRevenueResponse:
         """返回空响应"""
         return PriceVsRevenueResponse(
-            topProducts=TopProductsData(segments={}, dimmerSwitches=[], lightSwitches=[]),
-            segmentNames=[],
-            segmentColors=[],
-            metadata=self._generate_metadata(0, [])
+            segments=[],
+            meta=self._generate_metadata(0, [])
         )
 
     def _generate_colors(self, count: int) -> List[str]:

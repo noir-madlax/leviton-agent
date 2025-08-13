@@ -12,17 +12,47 @@ import { getChartColor } from "@/components/analysis-db/shared/chart-colors"
 import { useChartsT } from "@/i18n/hooks"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 
-// 定义产品数据类型
-interface ProductData {
-  id?: string
-  name?: string
-  brand?: string
-  price?: number
-  unitPrice?: number
-  revenue?: number
-  volume?: number
-  url?: string
-  [key: string]: unknown
+// 新接口类型定义（与后端保持一致的最小必要字段）
+interface ApiPriceStatistics {
+  min: number
+  q1: number
+  median: number
+  mean: number
+  q3: number
+  max: number
+}
+
+interface ApiProductPoint {
+  id: string
+  name: string
+  brand: string
+  price_sku: number
+  price_unit: number
+  revenue: number
+  volume: number
+  url: string
+}
+
+interface ApiSegment {
+  key: string
+  category: string
+  extend_values: Record<string, unknown>
+  total_products: number
+  total_revenue: number
+  total_volume: number
+  price_stats: { sku: ApiPriceStatistics; unit: ApiPriceStatistics }
+  points: ApiProductPoint[]
+}
+
+interface PriceVsRevenueApiResponse {
+  segments: ApiSegment[]
+  meta: {
+    filtered_asins_count: number
+    calculation_timestamp: string
+    timeframe_used: string
+    data_source: string
+    categories_processed: string[]
+  }
 }
 
 // 定义散点图数据类型
@@ -98,59 +128,32 @@ export function PriceVsRevenueChart({
     { initialFilters: initialFilters || undefined }
   )
 
-  // 原按品牌分组的汇总已移除，改为按分类分多个图
+  // 根据新接口：segments 有多少对象就渲染多少图表
+  const getCategoryScatterData = (): { title: string; products: ScatterPlotProduct[] }[] => {
+    const dataToUse = chartData as PriceVsRevenueApiResponse | undefined
+    const segments = dataToUse?.segments
+    if (!Array.isArray(segments) || segments.length === 0) return []
 
-  // 按 category 分组的数据（每个 category 渲染一个散点图）
-  const getCategoryScatterData = (): { category: string; products: ScatterPlotProduct[] }[] => {
-    const dataToUse = chartData
-    if (!dataToUse?.topProducts) return []
-
-    const result: { category: string; products: ScatterPlotProduct[] }[] = []
-
-    const mapProduct = (product: ProductData, segment: string): ScatterPlotProduct => ({
-      id: product.id || '',
-      name: product.name || '',
-      brand: product.brand || '',
-      price: product.price || 0,
-      unitPrice: product.unitPrice || product.price || 0,
-      revenue: product.revenue || 0,
-      volume: product.volume || 0,
-      url: product.url || '',
-      segment: segment,
-      x: product.price || 0,
-      y: product.revenue || 0
+    const result: { title: string; products: ScatterPlotProduct[] }[] = []
+    segments.forEach((seg: ApiSegment) => {
+      const label: string = seg.key || 'Unknown'
+      const points: ApiProductPoint[] = Array.isArray(seg.points) ? seg.points : []
+      const products: ScatterPlotProduct[] = points.map((p: ApiProductPoint) => ({
+        id: p.id || '',
+        name: p.name || '',
+        brand: p.brand || '',
+        // 默认用单位价作为横轴价格，没有则回退到 SKU 价
+        price: (typeof p.price_unit === 'number' ? p.price_unit : (p.price_sku || 0)) || 0,
+        unitPrice: (typeof p.price_unit === 'number' ? p.price_unit : (p.price_sku || 0)) || 0,
+        revenue: p.revenue || 0,
+        volume: p.volume || 0,
+        url: p.url || '',
+        segment: label,
+        x: (typeof p.price_unit === 'number' ? p.price_unit : (p.price_sku || 0)) || 0,
+        y: p.revenue || 0,
+      }))
+      result.push({ title: label, products })
     })
-
-    // 优先使用 segments
-    const segments = dataToUse.topProducts.segments
-    if (segments && Object.keys(segments).length > 0) {
-      const names = (dataToUse.segmentNames && dataToUse.segmentNames.length > 0)
-        ? dataToUse.segmentNames
-        : Object.keys(segments)
-      names.forEach((segment: string) => {
-        const products = (segments[segment] || []).map((p: ProductData) => mapProduct(p, segment))
-        if (products.length > 0) {
-          result.push({ category: segment, products })
-        }
-      })
-      return result
-    }
-
-    // 兼容旧字段
-    const { dimmerSwitches, lightSwitches } = dataToUse.topProducts
-    if (dimmerSwitches && dimmerSwitches.length > 0) {
-      result.push({
-        category: 'Dimmer Switches',
-        products: dimmerSwitches.map((p: ProductData) => mapProduct(p, 'Dimmer Switches'))
-      })
-    }
-    if (lightSwitches && lightSwitches.length > 0) {
-      result.push({
-        category: 'Light Switches',
-        products: lightSwitches.map((p: ProductData) => mapProduct(p, 'Light Switches'))
-      })
-    }
-
     return result
   }
 
@@ -168,12 +171,8 @@ export function PriceVsRevenueChart({
     }
   }
 
-  const dataToUse = chartData
-  const hasScatterData = dataToUse?.topProducts && (
-    (dataToUse.topProducts.segments && dataToUse.segmentNames) ||
-    dataToUse.topProducts.dimmerSwitches ||
-    dataToUse.topProducts.lightSwitches
-  )
+  const dataToUse = chartData as PriceVsRevenueApiResponse | undefined
+  const hasScatterData = Array.isArray(dataToUse?.segments) && dataToUse!.segments.length > 0
 
   return (
     <section className="mb-10">
@@ -225,8 +224,8 @@ export function PriceVsRevenueChart({
           ) : hasScatterData ? (
             <div>
               {getCategoryScatterData().map((catData) => (
-                <div key={catData.category} className="h-[400px] mb-8">
-                  <div className="text-sm font-semibold text-gray-700 mb-2">{catData.category}</div>
+                <div key={catData.title} className="h-[400px] mb-8">
+                  <div className="text-sm font-semibold text-gray-700 mb-2">{catData.title}</div>
                   <ResponsiveContainer width="100%" height="100%">
                     <ScatterChart data={catData.products} margin={{ top: 5, right: 20, bottom: 30, left: 50 }}>
                       <CartesianGrid strokeDasharray="3,3" />
