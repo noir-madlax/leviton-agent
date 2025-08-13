@@ -146,7 +146,8 @@ export function MultiSegmentViolinChart({
   }, [validSegments])
   
   const { margin, chartWidth, chartHeight, maxViolinHalfWidth, segmentPositions } = useMemo(() => {
-    const margin = { top: 30, right: 20, bottom: 40, left: 60 };
+    // Increase bottom margin to allow longer rotated x-axis labels
+    const margin = { top: 30, right: 20, bottom: 80, left: 60 };
     const chartWidth = dimensions.width > 0 ? dimensions.width - margin.left - margin.right : 0;
     const chartHeight = dimensions.height > 0 ? dimensions.height - margin.top - margin.bottom : 0;
     const maxViolinHalfWidth = chartWidth / (validSegments.length * 3);
@@ -410,21 +411,29 @@ export function MultiSegmentViolinChart({
             </g>
           )}
 
-          {/* X-axis labels */}
+          {/* X-axis labels - allow longer names and rotate slightly */}
           {validSegments.map((segment, index) => (
-            <text key={segment.name} x={segmentPositions[index]} y={margin.top + chartHeight + 25} textAnchor="middle" fontSize="12" fill="#64748b">
-              {segment.name.length > 15 ? `${segment.name.substring(0, 12)}...` : segment.name}
+            <text 
+              key={segment.name}
+              x={segmentPositions[index]} 
+              y={margin.top + chartHeight + 25} 
+              textAnchor="middle" 
+              fontSize="12" 
+              fill="#64748b"
+              transform={`rotate(0, ${segmentPositions[index]}, ${margin.top + chartHeight + 25})`}
+            >
+              {segment.name.length > 26 ? `${segment.name.substring(0, 24)}...` : segment.name}
             </text>
           ))}
 
-          {/* Legend */}
+          {/* Legend - widen container and allow longer names */}
           <g transform={`translate(${margin.left + 620}, ${margin.top - 35})`}>
-            <rect x="0" y="0" width="160" height="65" fill="white" fillOpacity="0.9" stroke="#e5e7eb" strokeWidth="1" rx="4"/>
+            <rect x="0" y="0" width="240" height="65" fill="white" fillOpacity="0.9" stroke="#e5e7eb" strokeWidth="1" rx="4"/>
             {validSegments.slice(0, 2).map((segment, index) => (
               <g key={segment.name}>
                 <rect x="10" y={10 + index * 20} width="15" height="15" fill={segment.color} fillOpacity="0.7" />
                 <text x="30" y={22 + index * 20} fontSize="11" fill="#374151">
-                  {segment.name.length > 12 ? `${segment.name.substring(0, 9)}...` : segment.name}
+                  {segment.name.length > 26 ? `${segment.name.substring(0, 24)}...` : segment.name}
                 </text>
               </g>
             ))}
