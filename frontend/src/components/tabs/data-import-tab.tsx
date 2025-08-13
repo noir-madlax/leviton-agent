@@ -262,17 +262,22 @@ export function DataImportTab() {
     setCurrentBatchId(null);
 
     try {
+      // 先尝试解析为ASIN列表
+      const raw = url.trim().toUpperCase();
+      const asinMatches = raw.match(/[A-Z0-9]{10}/g) || [];
+      const asinList = Array.from(new Set(asinMatches));
+
       // 🔥 修改：使用异步启动方式
-      const response = await fetch(`${backendUrl}/api/scraping/process-url`, {
+      const isAsinMode = asinList.length >= 1;
+      const endpoint = isAsinMode ? `${backendUrl}/api/scraping/import-asins` : `${backendUrl}/api/scraping/process-url`;
+      const payload = isAsinMode
+        ? { asins: asinList }
+        : { url: url.trim(), max_products: maxProducts === '' ? 5 : maxProducts, max_reviews: maxReviews === '' ? 15 : maxReviews };
+
+      const response = await fetch(endpoint, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          url: url.trim(),
-          max_products: maxProducts === '' ? 5 : maxProducts,
-          max_reviews: maxReviews === '' ? 15 : maxReviews,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
 
       if (!response.ok) {

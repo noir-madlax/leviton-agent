@@ -300,6 +300,69 @@ async def process_amazon_url(request: dict):
         logger.error(f"处理爬虫请求时出错: {e}", exc_info=True)
         return {"task_id": "error", "status": "failed", "error": f"处理请求失败: {str(e)}"}
 
+@app.post("/api/scraping/import-asins")
+async def import_asins(request: dict):
+    """
+    Import products by a list of ASINs (async). Supports either raw_input or asins[] in body.
+    Optionally supports expand_category for single-ASIN expansion to top 100 of its category.
+    """
+    if not SCRAPING_AVAILABLE:
+        return {"task_id": "error", "status": "failed", "error": "爬虫模块不可用"}
+
+    try:
+        raw_input = (request.get("raw_input") or "").upper()
+        asins = request.get("asins") or []
+        expand_category = bool(request.get("expand_category", False))
+        scrape_reviews = bool(request.get("scrape_reviews", True))
+        review_coverage_months = int(request.get("review_coverage_months", 6))
+        max_reviews = int(request.get("max_reviews", 30))
+
+        # Parse ASINs if raw_input provided
+        if raw_input and not asins:
+            import re
+            asins = re.findall(r"[A-Z0-9]{10}", raw_input.upper())
+
+        # Normalize & dedupe
+        normalized = []
+        seen = set()
+        for a in asins:
+            if not a:
+                continue
+            token = str(a).strip().upper()
+            if len(token) >= 8 and len(token) <= 12 and token not in seen:
+                seen.add(token)
+                normalized.append(token)
+
+        if not normalized:
+            return {"task_id": "error", "status": "failed", "error": "未检测到有效的ASIN"}
+        if len(normalized) > 500:
+            return {"task_id": "error", "status": "failed", "error": "ASIN数量超过500限制"}
+
+        orchestrator = ScrapingOrchestrator()
+        task_id = await orchestrator.create_async_task_for_asins(
+            normalized,
+            expand_category=expand_category and len(normalized) == 1,
+            scrape_reviews=scrape_reviews,
+            review_coverage_months=review_coverage_months,
+            max_reviews=max_reviews,
+        )
+        if not task_id:
+            return {"task_id": "error", "status": "failed", "error": "创建任务失败", "overall_status": "failed"}
+
+        return {
+            "task_id": str(task_id),
+            "batch_id": task_id,
+            "status": "started",
+            "overall_status": "running",
+            "message": "ASIN列表导入任务已启动，正在后台执行",
+            "mode": "asin_list",
+            "products_phase": {"status": "running"},
+            "reviews_phase": {"status": "pending"}
+        }
+    except Exception as e:
+        logger.error(f"处理ASIN导入请求时出错: {e}", exc_info=True)
+        return {"task_id": "error", "status": "failed", "error": f"处理请求失败: {str(e)}"}
+
 @app.post("/api/scraping/products-only")
 async def scrape_products_only(request: dict):
     """

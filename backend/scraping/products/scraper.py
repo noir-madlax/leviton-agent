@@ -148,6 +148,86 @@ class ProductScraper:
                 "message": str(e),
                 "products_scraped": 0
             }
+
+    async def scrape_by_asins(self, asins: List[str], concurrency: int = 8, max_retries: int = 3) -> Dict[str, Any]:
+        """按 ASIN 列表抓取产品详情并保存为与导入器兼容的 JSON 文件。
+
+        Returns:
+            Dict[str, Any]: { status, file_path, products_scraped, products }
+        """
+        try:
+            if not asins:
+                return {"status": "error", "message": "ASIN list is empty", "products_scraped": 0}
+
+            # 规范化并去重
+            normalized = []
+            seen = set()
+            for a in asins:
+                if not a:
+                    continue
+                token = str(a).strip().upper()
+                if len(token) >= 8 and len(token) <= 12 and token not in seen:
+                    seen.add(token)
+                    normalized.append(token)
+
+            if not normalized:
+                return {"status": "error", "message": "No valid ASIN tokens found", "products_scraped": 0}
+
+            # 并发抓详情
+            sem = asyncio.Semaphore(max(1, concurrency))
+            results: List[Dict[str, Any]] = []
+
+            async def fetch_one(asin: str):
+                retries = 0
+                while retries <= max_retries:
+                    try:
+                        async with sem:
+                            details = await asyncio.to_thread(get_product_details_rainforest, asin)
+                        if details and "product" in details:
+                            results.append(details["product"])
+                            return
+                        raise RuntimeError("empty response")
+                    except Exception:
+                        retries += 1
+                        await asyncio.sleep(min(5, 1 + retries))
+
+            await asyncio.gather(*(fetch_one(a) for a in normalized))
+
+            # 落盘
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            import hashlib
+            key = hashlib.sha1("_".join(normalized).encode()).hexdigest()[:12]
+            filename = f"amazon_asins_{key}_{timestamp}.json"
+            filepath = os.path.join(self.amazon_dir, filename)
+
+            combined_data = {
+                "scraping_summary": {
+                    "type": "asin_list",
+                    "total_products": len(results),
+                    "requested_asins": len(normalized)
+                },
+                # Provide minimal metadata keys so category importer has a consistent structure
+                "request_info": {},
+                "request_parameters": {},
+                "request_metadata": {},
+                "category_information": {},
+                # 与导入器兼容
+                "category_results": results
+            }
+
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(combined_data, f, indent=4, ensure_ascii=False)
+
+            return {
+                "status": "success",
+                "file_path": filepath,
+                "products_scraped": len(results),
+                "products": results
+            }
+
+        except Exception as e:
+            logger.error(f"按ASIN列表爬取商品失败: {e}")
+            return {"status": "error", "message": str(e), "products_scraped": 0}
     
     async def _discover_category_info(self, params: Dict) -> Dict:
         """

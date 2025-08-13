@@ -52,6 +52,189 @@ class ScrapingOrchestrator:
         self.supabase_client = get_supabase_service_client()
         self.request_repository = ScrapingRequestRepository(self.supabase_client)
     
+    async def create_async_task_for_asins(
+        self,
+        asins: list[str],
+        expand_category: bool = False,
+        scrape_reviews: bool = True,
+        review_coverage_months: int = 6,
+        max_reviews: int = 30,
+    ) -> Optional[int]:
+        """创建按ASIN列表导入的异步任务。
+
+        - 若 expand_category=True 且仅1个ASIN：先查详情取 category_id，再走现有类目路径；否则仅逐ASIN抓详情。
+        """
+        try:
+            if not asins:
+                return None
+            # 记录请求
+            # ⚠️ request_type 受表约束，不能用自定义值。沿用 'search'（与现有URL任务一致），
+            # 并在 request_metadata 中标记模式为 asin_list，避免约束冲突。
+            request_data = {
+                'request_type': 'search',
+                'amazon_domain': 'amazon.com',
+                'products_scraped': 0,
+                'request_metadata': {
+                    'mode': 'asin_list',
+                    'expand_category': bool(expand_category),
+                    'asin_count': len(asins),
+                    'scrape_reviews': scrape_reviews,
+                    'review_coverage_months': review_coverage_months,
+                    'max_reviews': max_reviews,
+                },
+                'status': 'pending',
+                'workflow_stage': 'pending'
+            }
+            request_id = await self.request_repository.create_scraping_request(request_data)
+            if not request_id:
+                return None
+
+            async def run():
+                try:
+                    await self.request_repository.update_request_status(
+                        request_id, 'processing', additional_data={'workflow_stage': 'product_scraping'}
+                    )
+
+                    json_file_path = None
+                    scrape_result = None
+
+                    if expand_category and len(asins) == 1:
+                        # 单ASIN扩展：先获取详情得category_id，再走类目流（与现有一致）
+                        asin = asins[0]
+                        details = await asyncio.to_thread(self.product_scraper.get_product_details_rainforest, asin) if hasattr(self.product_scraper, 'get_product_details_rainforest') else None
+                        # 兜底：直接调用 scraper 的内部API
+                        if not details:
+                            from .common.amazon_api import get_product_details_rainforest
+                            details = await asyncio.to_thread(get_product_details_rainforest, asin)
+                        category_id = None
+                        try:
+                            cats = (details or {}).get('product', {}).get('categories') or []
+                            if cats:
+                                category_id = cats[-1].get('category_id')
+                        except Exception:
+                            category_id = None
+                        if category_id:
+                            # 复用 category 路径
+                            url = f"https://www.amazon.com/b?node={category_id}"
+                            scrape_result = await self.product_scraper.scrape_from_url(url, max_products=100)
+                            json_file_path = scrape_result.get('file_path')
+                        else:
+                            # 回退：仅抓该ASIN
+                            scrape_result = await self.product_scraper.scrape_by_asins([asin])
+                            json_file_path = scrape_result.get('file_path')
+                    else:
+                        # 仅按ASIN列表抓详情
+                        scrape_result = await self.product_scraper.scrape_by_asins(asins)
+                        json_file_path = scrape_result.get('file_path')
+
+                    if scrape_result.get('status') not in ['success', 'skipped'] or not json_file_path:
+                        await self.request_repository.update_request_status(
+                            request_id, 'failed', additional_data={'workflow_stage': 'failed', 'error_message': '产品爬取失败'}
+                        )
+                        return
+
+                    await self.request_repository.update_request_status(
+                        request_id, None, additional_data={'workflow_stage': 'product_importing', 'products_scraped': scrape_result.get('products_scraped', 0)}
+                    )
+
+                    import_result = await self.product_importer.import_products(json_file_path, request_id)
+                    if import_result.get('status') != 'success' or not import_result.get('batch_id'):
+                        await self.request_repository.update_request_status(
+                            request_id, 'failed', additional_data={'workflow_stage': 'failed', 'error_message': '产品导入失败'}
+                        )
+                        return
+
+                    batch_id = import_result.get('batch_id')
+                    # 统一走同一套后续流程
+                    await self._run_post_product_pipeline(
+                        request_id=request_id,
+                        batch_id=batch_id,
+                        json_file_path=json_file_path,
+                        products_scraped=scrape_result.get('products_scraped', 0),
+                        scrape_reviews=scrape_reviews,
+                        review_coverage_months=review_coverage_months,
+                        max_reviews=max_reviews
+                    )
+                except Exception as e:
+                    await self.request_repository.update_request_status(
+                        request_id, 'failed', additional_data={'workflow_stage': 'failed', 'error_message': str(e)}
+                    )
+
+            asyncio.create_task(run())
+            return request_id
+        except Exception:
+            return None
+
+    async def _run_post_product_pipeline(self, request_id: int, batch_id: int, json_file_path: Optional[str],
+                                         products_scraped: int,
+                                         scrape_reviews: bool, review_coverage_months: int, max_reviews: int) -> None:
+        """统一的产品导入后的后续流程：类别导入 -> 转换 -> 质量分析 -> 评论(可选) -> 完成。
+
+        由 URL 流程与 ASIN 流程共同调用，避免重复实现。
+        """
+        # 更新产品数量并进入转换阶段
+        await self.request_repository.update_request_status(
+            request_id, None,
+            additional_data={
+                'workflow_stage': 'transforming',
+                'products_scraped': products_scraped
+            }
+        )
+
+        # 类别导入（如果有JSON文件路径）
+        if json_file_path:
+            try:
+                await self._import_categories_from_json(json_file_path)
+            except Exception:
+                # 类别导入失败不阻塞
+                pass
+
+        # 产品数据转换
+        transform_result = await self._transform_batch_data(batch_id, request_id)
+        if not transform_result.get('success'):
+            await self.request_repository.update_request_status(
+                request_id, 'failed', additional_data={'workflow_stage': 'failed', 'error_message': '数据转换失败'}
+            )
+            return
+
+        # 可选：数据质量分析（如果有原始文件）
+        if json_file_path:
+            try:
+                await self._analyze_data_quality({}, json_file_path, {"batch_id": batch_id})
+            except Exception:
+                pass
+
+        # 评论流程（可选）
+        if scrape_reviews:
+            await self.request_repository.update_request_status(
+                request_id, None, additional_data={'workflow_stage': 'review_scraping'}
+            )
+            review_scrape_result = await self.review_scraper.scrape_for_batch(
+                batch_id, review_coverage_months, max_reviews=max_reviews
+            )
+            if review_scrape_result.get('status') in ['success', 'partial_success']:
+                await self.request_repository.update_request_status(
+                    request_id, None, additional_data={'workflow_stage': 'review_importing'}
+                )
+                review_import_result = await self.review_importer.import_batch_reviews(batch_id)
+                if review_import_result.get('status') == 'success':
+                    await self.request_repository.update_request_status(
+                        request_id, None, additional_data={'workflow_stage': 'review_transformation'}
+                    )
+                    review_transformation_result = await self._transform_review_data(batch_id, request_id)
+                    if review_transformation_result.get('success'):
+                        await self.request_repository.update_request_status(
+                            request_id, None,
+                            additional_data={'reviews_transformed': review_transformation_result.get('processed_count', 0)}
+                        )
+                await self._update_review_status_in_db(request_id, review_scrape_result, review_import_result)
+            else:
+                await self._update_review_status_in_db(request_id, review_scrape_result, {"status": "not_attempted"})
+
+        # 完成
+        await self.request_repository.update_request_status(
+            request_id, 'completed', additional_data={'workflow_stage': 'completed', 'products_transformed': transform_result.get('processed_count', 0)}
+        )
     async def process_url(self, url: str, max_products: int = 100, 
                          scrape_reviews: bool = True, 
                          review_coverage_months: int = 6, max_reviews: int = 30,
@@ -742,108 +925,15 @@ class ScrapingOrchestrator:
                 )
                 return
             
-            # 更新产品数量信息（🔥 移除无效字段）
-            products_scraped = product_scrape_result.get("products_scraped", 0)
-            await self.request_repository.update_request_status(
-                request_id, None,
-                additional_data={
-                    'workflow_stage': 'transforming',
-                    'products_scraped': products_scraped
-                }
-            )
-            
-            # Phase 3: 数据转换
-            batch_id = product_import_result.get("batch_id")
-            if batch_id:
-                transform_result = await self._transform_batch_data(batch_id, request_id)
-                
-                if not transform_result.get("success", False):
-                    await self.request_repository.update_request_status(
-                        request_id, 'failed',
-                        additional_data={
-                            'workflow_stage': 'failed',
-                            'error_message': '数据转换失败'
-                        }
-                    )
-                    return
-                
-                # 🔥 修复：转换时间为整数类型，避免数据类型错误
-                duration_seconds = transform_result.get("duration_seconds", 0)
-                if isinstance(duration_seconds, float):
-                    duration_seconds = int(round(duration_seconds))
-                
-                await self.request_repository.update_request_status(
-                    request_id, None,
-                    additional_data={
-                        'workflow_stage': 'review_scraping' if scrape_reviews else 'completed',
-                        'products_transformed': transform_result.get("processed_count", 0),
-                        'transformation_duration_seconds': duration_seconds
-                    }
-                )
-            
-            # Phase 4: 爬取评论（如果需要）
-            if scrape_reviews:
-                await self.request_repository.update_request_status(
-                    request_id, None,
-                    additional_data={'workflow_stage': 'review_scraping'}
-                )
-                
-                review_scrape_result = await self.review_scraper.scrape_for_batch(
-                    product_import_result.get("batch_id"), 
-                    review_coverage_months,
-                    max_reviews=max_reviews
-                )
-                
-                if review_scrape_result.get("status") in ["success", "partial_success"]:
-                    # Phase 5: 导入评论数据
-                    await self.request_repository.update_request_status(
-                        request_id, None,
-                        additional_data={'workflow_stage': 'review_importing'}
-                    )
-                    
-                    review_import_result = await self.review_importer.import_batch_reviews(
-                        product_import_result.get("batch_id")
-                    )
-                    
-                    # Phase 6: 转换评论数据
-                    if review_import_result.get("status") == "success":
-                        await self.request_repository.update_request_status(
-                            request_id, None,
-                            additional_data={'workflow_stage': 'review_transformation'}
-                        )
-                        
-                        review_transformation_result = await self._transform_review_data(
-                            product_import_result.get("batch_id"), request_id
-                        )
-                        
-                        # 🔥 新增：在数据库中保存评论转换的数量和耗时
-                        if review_transformation_result.get("success"):
-                            await self.request_repository.update_request_status(
-                                request_id, None,
-                                additional_data={
-                                    'reviews_transformed': review_transformation_result.get('processed_count', 0),
-                                    # 暂时注释掉这个字段更新，避免数据库字段不存在的错误
-                                    # 'review_transformation_duration_seconds': int(review_transformation_result.get('duration_seconds', 0))
-                                }
-                            )
-                        
-                        logger.info(f"✅ 评论转换完成: {review_transformation_result}")
-                    
-                    # 更新评论统计（🔥 移除无效字段）
-                    reviews_scraped = review_scrape_result.get("total_reviews_scraped", 0)
-                    await self.request_repository.update_request_status(
-                        request_id, None,
-                        additional_data={
-                            'workflow_stage': 'review_transformation' if review_import_result.get("status") == "success" else 'review_importing',
-                            'reviews_scraped': reviews_scraped,
-                            'review_status': 'completed' if review_scrape_result.get("status") == "success" else 'partial'
-                        }
-                    )
-            
-            # 🔥 最终状态更新：只有在这里才更新主状态为 'completed'
-            await self.request_repository.update_request_status(
-                request_id, 'completed',
-                additional_data={'workflow_stage': 'completed'}
+            # 统一走后续管线，避免重复实现
+            await self._run_post_product_pipeline(
+                request_id=request_id,
+                batch_id=product_import_result.get("batch_id"),
+                json_file_path=json_file_path,
+                products_scraped=product_scrape_result.get("products_scraped", 0),
+                scrape_reviews=scrape_reviews,
+                review_coverage_months=review_coverage_months,
+                max_reviews=max_reviews
             )
             
             logger.info(f"后台爬取任务 {request_id} 执行完成")
@@ -968,10 +1058,23 @@ class ScrapingOrchestrator:
                     "status": "success",
                     "processed_count": request_data.get('products_transformed', 0)
                 }
+                # 读取 review 元数据（可能包含 files_processed 等详细信息）
+                review_metadata = request_data.get('review_metadata', {}) or {}
+                files_processed = 0
+                try:
+                    files_processed = int(review_metadata.get('files_processed', 0) or 0)
+                except Exception:
+                    files_processed = 0
+
+                # 评论转换数量的兜底策略：优先 reviews_transformed；其次用 reviews_scraped 作为展示值
+                reviews_transformed = request_data.get('reviews_transformed')
+                if not isinstance(reviews_transformed, int):
+                    reviews_transformed = request_data.get('reviews_scraped', 0) or 0
+
                 status["reviews_phase"] = {
                     "scraping": {"status": "success", "reviews_scraped": request_data.get('reviews_scraped', 0)},
-                    "importing": {"status": "success", "message": "评论处理完成", "reviews_imported": request_data.get('reviews_scraped', 0)},
-                    "transformation": {"status": "success", "message": "评论转换完成", "processed_count": request_data.get('reviews_transformed', 0)}
+                    "importing": {"status": "success", "message": "评论处理完成", "reviews_imported": request_data.get('reviews_scraped', 0), "files_processed": files_processed},
+                    "transformation": {"status": "success", "message": "评论转换完成", "processed_count": reviews_transformed}
                 }
                 status["overall_status"] = "completed"
 
