@@ -8,6 +8,8 @@ from typing import Dict, List, Any, Optional
 
 from ..reviewCore import ReviewAnalysisBaseService, ReviewProcessingUtils
 from ..reviewCore.constants import ReviewAnalysisConfig
+from ..filters.asin_filter_service import get_filtered_asins as filter_asins
+from ..base_models import BaseRequestModel
 
 logger = logging.getLogger(__name__)
 
@@ -308,8 +310,12 @@ class ReviewAnalysisChartService(ReviewAnalysisBaseService):
         try:
             logger.info(f"Getting reviews for project {self.project_id}, category {category_id}")
             
-            # Get filtered ASINs based on project filters
-            filtered_asins = self._get_asins_to_analyze()
+            request_model = BaseRequestModel(
+                project_id=self.project_id,
+                filters=self.original_filters or {}
+            )
+            filtered_asins = filter_asins(self.supabase, request_model)
+            logger.info(f"Filtered ASINs via get_filtered_asins: {len(filtered_asins)} ASINs")
             if not filtered_asins:
                 return self._get_empty_reviews_response(category_id)
             

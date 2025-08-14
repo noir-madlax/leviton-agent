@@ -368,7 +368,8 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 export class DatabaseService {
 
   // 🆕 从过滤器状态管理器获取过滤器参数 - 直接返回 API 需要的结构
-  private getFiltersFromState(chartName: string): {
+  // 改为 public，供图表组件获取“最终合并后的 filters”用于点击明细传参
+  getFiltersFromState(chartName: string): {
     filters: {
       categories: string[]
       brands: string[]

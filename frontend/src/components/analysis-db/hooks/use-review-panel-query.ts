@@ -20,7 +20,14 @@ export interface UseReviewPanelQueryReturn {
       verified?: boolean
       brand?: boolean
     },
-    aspectTypes?: string[]
+    aspectTypes?: string[],
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, unknown>
+      asins?: string[]
+    }
   ) => Promise<void>
   
   // 图表点击处理器
@@ -33,9 +40,10 @@ export interface UseReviewPanelQueryReturn {
       categories?: string[]
       brands?: string[]
       segments?: string[]
-      extend_fields?: Record<string, any>
+      extend_fields?: Record<string, unknown>
       asins?: string[]
-    }
+    },
+    productCategory?: string
   ) => Promise<void>
   
   // Loading状态
@@ -77,9 +85,17 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       verified?: boolean
       brand?: boolean
     },
-    aspectTypes?: string[]
+    aspectTypes?: string[],
+    filters?: {
+      categories?: string[]
+      brands?: string[]
+      segments?: string[]
+      extend_fields?: Record<string, unknown>
+      asins?: string[]
+    }
   ) => {
     try {
+      console.log('filters', filters)
       setIsLoading(true)
       // 获取第一页数据
       const result = await databaseService.getReviewsByCategory(
@@ -92,7 +108,7 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
           sortOrder: 'desc',
           aspectTypes: aspectTypes // 传递aspectTypes参数
         },
-        {} // 传递过滤器参数
+        filters || {} // 传递过滤器参数（来自调用方）
       )
 
       // 从API返回结果的顶层获取category name (参考图1的实现方式)
@@ -148,9 +164,10 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       categories?: string[]
       brands?: string[]
       segments?: string[]
-      extend_fields?: Record<string, any>
+      extend_fields?: Record<string, unknown>
       asins?: string[]
-    }
+    },
+    productCategory?: string
   ) => {
     // Generate title and subtitle based on aspect types
     const aspectTypeNames = aspectTypes.map(type => {
@@ -165,6 +182,14 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
     const title = `${categoryName} - ${aspectTypeNames}`
     const subtitle = `Customer reviews related to "${categoryName}" ${aspectTypeNames.toLowerCase()}`
 
+    // 基于当前传入的 filters 生成最终 filters，并用当前图表分组的 product_category 覆盖 categories
+    const finalFilters = {
+      ...(filters || {})
+    }
+    if (productCategory) {
+      finalFilters.categories = [productCategory]
+    }
+
     await openPanelWithCategoryId(
       projectId,
       categoryId,
@@ -172,7 +197,8 @@ export function useReviewPanelQuery(): UseReviewPanelQueryReturn {
       title,
       subtitle,
       undefined, // showFilters 使用默认值
-      aspectTypes // 传递aspectTypes
+      aspectTypes, // 传递aspectTypes
+      finalFilters // 传递最终filters（覆盖为当前分组的 product_category）
     )
   }, [openPanelWithCategoryId])
 

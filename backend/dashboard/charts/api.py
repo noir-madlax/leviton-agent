@@ -261,7 +261,7 @@ async def get_reviews_by_category(request: ReviewsByCategoryRequest):
         
         service = ReviewAnalysisChartService(
             project_id=request.project_id,
-            filters=request.filters.dict() if request.filters else {},
+            filters=request.filters,
             selected_asins=request.selected_asins,
             date_range=request.date_range.dict() if request.date_range else None
         )

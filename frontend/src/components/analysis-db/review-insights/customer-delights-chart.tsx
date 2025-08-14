@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useMemo, useState, useCallback } from "react"
+import React, { useEffect, useMemo, useState, useCallback, useRef } from "react"
 import { Card } from "@/components/ui/card"
 import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
 import { useChartWithFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
@@ -55,11 +55,22 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
     { initialFilters }
   )
 
+  type RequestFilters = {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, unknown>
+    asins?: string[]
+  }
+  const lastFiltersRef = useRef<RequestFilters | undefined>(undefined)
+
   const loadData = useCallback(async () => {
     if (!projectId) return
     setLoading(true)
     setError(null)
     try {
+      // 使用 DatabaseService 的最终合并过滤器，确保与实际请求一致
+      lastFiltersRef.current = databaseService.getFiltersFromState(CHART_NAMES.CUSTOMER_DELIGHTS).filters
       const data = await databaseService.getCustomerDelightsGrouped(projectId)
       setGrouped(data)
     } catch (e) {
@@ -209,7 +220,14 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
                       onBarClick={(data) => {
                         const payload = data as unknown as { name?: string; _categoryId?: number }
                         if (payload?._categoryId && projectId) {
-                          handleCategoryClick(projectId, payload._categoryId, payload.name || '', ['phy','perf'], filters)
+                          handleCategoryClick(
+                            projectId,
+                            payload._categoryId,
+                            payload.name || '',
+                            ['phy','perf'],
+                            lastFiltersRef.current,
+                            group.title // 当前图表分组的 product_category
+                          )
                         }
                       }}
                     />
