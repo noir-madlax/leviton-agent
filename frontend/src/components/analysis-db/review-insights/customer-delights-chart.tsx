@@ -97,6 +97,11 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
       </div>
 
       <div className="mt-6">
+
+          {/* Info banner about sorting and calculation rule */}
+          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6 text-sm text-blue-900">
+            Bars are sorted by descending positive reviews left to right, calculated from the ~50 most recent reviews per product in selected categories.
+          </div>
         <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
           <FilterRenderer
             projectId={projectId}
@@ -107,6 +112,7 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
             disabled={loading}
             className="mb-6"
           />
+
 
           {loading ? (
             <div className="flex items-center justify-center py-20">

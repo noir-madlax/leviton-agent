@@ -98,6 +98,10 @@ export function CustomerPainPointsChart({ projectId, initialFilters }: CustomerP
         </div>
       </div>
 
+                  {/* 信息提示：与原页面一致的说明文案 */}
+                  <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
+            {chartsT('barsSortedByNegative')}
+          </div>
       <div className="mt-6">
         <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
           <FilterRenderer
@@ -110,10 +114,7 @@ export function CustomerPainPointsChart({ projectId, initialFilters }: CustomerP
             className="mb-6"
           />
 
-          {/* 信息提示：与原页面一致的说明文案 */}
-          <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            {chartsT('barsSortedByNegative')}
-          </div>
+
 
           {loading ? (
             <div className="flex items-center justify-center py-20">
