@@ -200,3 +200,66 @@ class CustomerPainPointsGroupedData(BaseModel):
 
 class CustomerPainPointsGroupedResponse(BaseResponseModel[CustomerPainPointsGroupedData]):
     """Response wrapper for grouped customer pain points endpoint."""
+
+
+# ==================== Customer Delights (Review Insights) ====================
+
+class CustomerDelightsRequest(BaseRequestModel):
+    """Request model for customer delights (review insights) endpoint."""
+    limit: int = Field(default=10, ge=1, le=100, description="Maximum number of customer delights to return")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "filters": {
+                    "categories": [
+                        "Light Switches",
+                        "Dimmer Switches"
+                    ],
+                    "extend_fields": {
+                        "smart_capability": [
+                            "Smart"
+                        ]
+                    }
+                },
+                "limit": 15,
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "timeframe": {
+                    "period": "year"
+                }
+            }
+        }
+
+
+class CustomerDelightItem(BaseModel):
+    """Single customer delight item with metrics and metadata."""
+    category_id: int = Field(description="Aspect category ID")
+    category_name: str = Field(description="Aspect category name")
+    category_definition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    type: Literal["Physical", "Performance"] = Field(description="Mapped aspect type for display")
+    total_reviews: int = Field(description="Total unique reviews across all sentiments")
+    positive_reviews: int = Field(description="Number of positive reviews")
+    negative_reviews: int = Field(description="Number of negative reviews")
+    positive_rate: float = Field(description="Percentage of positive reviews (0-100)")
+    satisfaction_level: Literal["High", "Medium", "Low"] = Field(description="Satisfaction level derived from positive_rate")
+    impacted_products: int = Field(description="Estimated number of impacted products")
+    related_detail_texts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
+
+
+class CustomerDelightsGroup(BaseModel):
+    """Grouped customer delights by product category (e.g., Dimmer Switches / Light Switches)."""
+    product_category: str = Field(description="Product category label used for filtering")
+    customer_likes: List[CustomerDelightItem] = Field(description="Top customer delights under this product category")
+    filtered_asins_count: int = Field(description="Number of ASINs considered after filters for this product category")
+    total_categories: int = Field(description="Total aspect categories scanned for this product category before limiting")
+
+
+class CustomerDelightsGroupedData(BaseModel):
+    """Response data with groups keyed by selected product categories."""
+    project_id: str = Field(description="Project ID used for filtering")
+    selected_categories: List[str] = Field(description="Selected product categories from request")
+    groups: List[CustomerDelightsGroup] = Field(description="Grouped customer delights by product category")
+
+
+class CustomerDelightsGroupedResponse(BaseResponseModel[CustomerDelightsGroupedData]):
+    """Response wrapper for grouped customer delights endpoint."""

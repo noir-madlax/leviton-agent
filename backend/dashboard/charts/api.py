@@ -13,7 +13,8 @@ from .competitorAnalysis.service import CompetitorAnalysisChartService
 from .reviewAnalysis.models import (
     ReviewsByCategoryRequest, ReviewsByCategoryResponse,
     CustomerPainPointsRequest, CustomerPainPointsResponse, CustomerPainPointsData, CustomerPainPointItem,
-    CustomerPainPointsGroupedResponse, CustomerPainPointsGroupedData, CustomerPainPointsGroup
+    CustomerPainPointsGroupedResponse, CustomerPainPointsGroupedData, CustomerPainPointsGroup,
+    CustomerDelightsRequest, CustomerDelightsGroupedResponse, CustomerDelightsGroupedData, CustomerDelightsGroup, CustomerDelightItem
 )
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
@@ -990,4 +991,118 @@ async def get_customer_pain_points(request: CustomerPainPointsRequest):
 
     except Exception as e:
         logger.error(f"System error in customer pain points: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/review-insights/customer-delights", response_model=CustomerDelightsGroupedResponse)
+async def get_customer_delights(request: CustomerDelightsRequest):
+    """Get Customer Delights (Top categories by positive reviews under phy/perf), grouped by product category.
+
+    Applies unified ASIN filtering via chain filter, then for each selected product category
+    queries top categories with aspect_type='phy_perf' sorted by positive_reviews.
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        supabase_client = get_supabase_client()
+
+        # Determine selected product categories from request filters (single or multiple)
+        selected_categories = []
+        if request.filters and request.filters.categories:
+            selected_categories = request.filters.categories
+
+        groups: list[CustomerDelightsGroup] = []
+
+        for product_category in selected_categories:
+            sub_filters = request.filters.copy() if request.filters else None
+            if sub_filters:
+                sub_filters.categories = [product_category]
+
+            sub_request = CustomerDelightsRequest(
+                project_id=request.project_id,
+                filters=sub_filters,
+                selected_asins=request.selected_asins,
+                timeframe=request.timeframe,
+                date_range=request.date_range,
+                limit=request.limit
+            )
+
+            # 1) 过滤ASIN
+            filtered_asins = filter_asins(supabase_client, sub_request)
+
+            # 2) 初始化服务（优先selected_asins -> 这里传入filtered_asins）
+            service = ReviewAnalysisChartService(
+                project_id=sub_request.project_id,
+                filters=sub_request.filters.dict() if sub_request.filters else {},
+                selected_asins=filtered_asins or None,
+                date_range=sub_request.date_range.dict() if sub_request.date_range else None
+            )
+
+            # 3) 查询该产品类别下的正向分类
+            top_data = await service.get_top_categories({
+                'aspect_type': 'phy_perf',
+                'sortBy': 'positive_reviews',
+                'sortDirection': 'desc',
+                'maxCategories': max(1, min(sub_request.limit, 100))
+            })
+
+            categories = top_data.get('categories', [])
+
+            # 4) 映射结果
+            items = []
+            for cat in categories:
+                total_reviews = cat.get('total_reviews', 0) or 0
+                positive_reviews = cat.get('positive_reviews', 0) or 0
+                negative_reviews = cat.get('negative_reviews', 0) or 0
+                positive_rate = (positive_reviews / total_reviews * 100.0) if total_reviews > 0 else 0.0
+
+                # satisfaction_level: >=70 High, >=40 Medium, else Low
+                if positive_rate >= 70:
+                    satisfaction_level = 'High'
+                elif positive_rate >= 40:
+                    satisfaction_level = 'Medium'
+                else:
+                    satisfaction_level = 'Low'
+
+                aspect_type = cat.get('aspect_type', 'perf')
+                display_type = 'Physical' if aspect_type == 'phy' else ('Performance' if aspect_type == 'perf' else 'Performance')
+
+                item = CustomerDelightItem(
+                    category_id=cat.get('category_id') or cat.get('category_pk'),
+                    category_name=cat.get('category_name', ''),
+                    category_definition=cat.get('definition', ''),
+                    type=display_type,
+                    total_reviews=total_reviews,
+                    positive_reviews=positive_reviews,
+                    negative_reviews=negative_reviews,
+                    positive_rate=positive_rate,
+                    satisfaction_level=satisfaction_level,
+                    impacted_products=max(1, int((cat.get('total_mentions', 0) or 0) > 0)),
+                    related_detail_texts=None
+                )
+                items.append(item)
+
+            group = CustomerDelightsGroup(
+                product_category=product_category,
+                customer_likes=items[: sub_request.limit],
+                filtered_asins_count=len(filtered_asins),
+                total_categories=top_data.get('total_categories', len(categories))
+            )
+            groups.append(group)
+
+        grouped_data = CustomerDelightsGroupedData(
+            project_id=request.project_id,
+            selected_categories=selected_categories,
+            groups=groups
+        )
+
+        response = CustomerDelightsGroupedResponse(data=grouped_data)
+        logger.info(f"Customer Delights (grouped) returned {sum(len(g.customer_likes) for g in groups)} items across {len(groups)} product categories for project {request.project_id}")
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in customer delights: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.error(f"System error in customer delights: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")
