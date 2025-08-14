@@ -13,6 +13,7 @@ import { usePermissions } from '@/hooks/use-permissions';
 import { useAuth } from '@/contexts/auth-context';
 import { usePostHog } from 'posthog-js/react';
 import { useScrapingT } from '@/i18n/hooks';
+import { DatabaseService } from '@/components/analysis-db/data/database-service'
 
 interface ScrapingResult {
   task_id?: string;
@@ -87,6 +88,7 @@ export function DataImportTab() {
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
   const [isClient, setIsClient] = useState(false);
+  const [enableSalesHistory, setEnableSalesHistory] = useState<boolean>(false);
   
   const { permissions } = usePermissions();
   const { user } = useAuth();
@@ -190,6 +192,38 @@ export function DataImportTab() {
                 user_id: user?.id,
                 user_email: user?.email,
               });
+
+              // 🔄 If enabled, trigger sales history scraping for the latest project
+              if (enableSalesHistory) {
+                try {
+                  const dbSvc = new DatabaseService();
+                  const projects = await dbSvc.getProjects(user?.id);
+                  const sorted = (projects || []).sort((a: any, b: any) => new Date(b.updated_at).getTime() - new Date(a.updated_at).getTime());
+                  const latestProjectId = sorted.length > 0 ? sorted[0].id : null;
+
+                  if (latestProjectId) {
+                    const params = new URLSearchParams({
+                      platform_source: 'amazon',
+                      api_source: 'jungle_scout',
+                    });
+                    console.log('🔄 Scraping sales history for project:', latestProjectId);
+                    const resp = await fetch(`${backendUrl}/api/v1/sales-history/scrape/project/${latestProjectId}?${params.toString()}`, {
+                      method: 'POST',
+                      headers: { 'Content-Type': 'application/json' },
+                    });
+                    const scrapeData = await resp.json().catch(() => ({}));
+                    if (!(resp.ok || resp.status === 207)) {
+                      console.warn('❌ Sales history scrape failed:', scrapeData?.message || resp.status);
+                    } else {
+                      console.log('✅ Sales history scraping summary:', scrapeData?.scraping_summary);
+                    }
+                  } else {
+                    console.warn('⚠️  No project found to run sales history scraping');
+                  }
+                } catch (e) {
+                  console.error('❌ Failed to run sales history scraping:', e);
+                }
+              }
             } else {
               posthog.capture('data_import_failed', {
                 url: url.trim(),
@@ -500,6 +534,19 @@ export function DataImportTab() {
                 <p className="text-sm text-muted-foreground">
                   {t('maxReviewsPerProduct')}
                 </p>
+              </div>
+              {/* 🔄 新增：是否同时导入销售历史 */}
+              <div className="col-span-2 flex items-center gap-3 pt-2">
+                <input
+                  id="enableSalesHistory"
+                  type="checkbox"
+                  className="h-4 w-4"
+                  checked={enableSalesHistory}
+                  onChange={(e) => setEnableSalesHistory(e.target.checked)}
+                />
+                <Label htmlFor="enableSalesHistory" className="cursor-pointer">
+                  Import Sales History (Jungle Scout) after data import
+                </Label>
               </div>
             </div>
           </CardContent>
