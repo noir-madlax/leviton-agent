@@ -14,7 +14,8 @@ from .reviewAnalysis.models import (
     ReviewsByCategoryRequest, ReviewsByCategoryResponse,
     CustomerPainPointsRequest, CustomerPainPointsResponse, CustomerPainPointsData, CustomerPainPointItem,
     CustomerPainPointsGroupedResponse, CustomerPainPointsGroupedData, CustomerPainPointsGroup,
-    CustomerDelightsRequest, CustomerDelightsGroupedResponse, CustomerDelightsGroupedData, CustomerDelightsGroup, CustomerDelightItem
+    CustomerDelightsRequest, CustomerDelightsGroupedResponse, CustomerDelightsGroupedData, CustomerDelightsGroup, CustomerDelightItem,
+    UseCaseSentimentRequest, UseCaseSentimentGroupedResponse, UseCaseSentimentGroupedData, UseCaseSentimentGroup, UseCaseSentimentItem
 )
 from .reviewAnalysis.service import ReviewAnalysisChartService
 
@@ -1105,4 +1106,109 @@ async def get_customer_delights(request: CustomerDelightsRequest):
         raise HTTPException(status_code=400, detail=str(e))
     except Exception as e:
         logger.error(f"System error in customer delights: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.post("/review-insights/use-case-sentiment", response_model=UseCaseSentimentGroupedResponse)
+async def get_use_case_sentiment(request: UseCaseSentimentRequest):
+    """Get Use Case Sentiment (Top use cases under 'use' aspect), grouped by product category.
+
+    For each selected product category, applies ASIN filtering then queries top categories with
+    aspect_type='use' sorted by total_reviews.
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        supabase_client = get_supabase_client()
+
+        selected_categories = []
+        if request.filters and request.filters.categories:
+            selected_categories = request.filters.categories
+
+        groups: list[UseCaseSentimentGroup] = []
+
+        for product_category in selected_categories:
+            sub_filters = request.filters.copy() if request.filters else None
+            if sub_filters:
+                sub_filters.categories = [product_category]
+
+            sub_request = UseCaseSentimentRequest(
+                project_id=request.project_id,
+                filters=sub_filters,
+                selected_asins=request.selected_asins,
+                timeframe=request.timeframe,
+                date_range=request.date_range,
+                limit=request.limit
+            )
+
+            # 1) Filter ASINs for this product category
+            filtered_asins = filter_asins(supabase_client, sub_request)
+
+            # 2) Initialize service prioritizing selected_asins
+            service = ReviewAnalysisChartService(
+                project_id=sub_request.project_id,
+                filters=sub_request.filters.dict() if sub_request.filters else {},
+                selected_asins=filtered_asins or None,
+                date_range=sub_request.date_range.dict() if sub_request.date_range else None
+            )
+
+            # 3) Query top 'use' categories sorted by total_reviews
+            top_data = await service.get_top_categories({
+                'aspect_type': 'use',
+                'sortBy': 'total_reviews',
+                'sortDirection': 'desc',
+                'maxCategories': max(1, min(sub_request.limit, 100))
+            })
+
+            categories = top_data.get('categories', [])
+
+            items = []
+            total_use_reviews = 0
+            for cat in categories:
+                total_reviews = cat.get('total_reviews', 0) or 0
+                positive_reviews = cat.get('positive_reviews', 0) or 0
+                negative_reviews = cat.get('negative_reviews', 0) or 0
+                total_use_reviews += total_reviews
+
+                denom = positive_reviews + negative_reviews
+                satisfaction_rate = (positive_reviews / denom * 100.0) if denom > 0 else 50.0
+
+                item = UseCaseSentimentItem(
+                    category_id=cat.get('category_id') or cat.get('category_pk'),
+                    use_case=cat.get('category_name', ''),
+                    product_attribute='USE',
+                    total_reviews=total_reviews,
+                    positive_reviews=positive_reviews,
+                    negative_reviews=negative_reviews,
+                    satisfaction_rate=satisfaction_rate,
+                    product_count=max(1, int((cat.get('total_mentions', 0) or 0) > 0)),
+                    category_definition=cat.get('definition', ''),
+                    related_detail_texts=None
+                )
+                items.append(item)
+
+            group = UseCaseSentimentGroup(
+                product_category=product_category,
+                all_use_cases=items[: sub_request.limit],
+                filtered_asins_count=len(filtered_asins),
+                total_use_reviews=total_use_reviews,
+                total_categories=top_data.get('total_categories', len(categories))
+            )
+            groups.append(group)
+
+        grouped_data = UseCaseSentimentGroupedData(
+            project_id=request.project_id,
+            selected_categories=selected_categories,
+            groups=groups
+        )
+
+        response = UseCaseSentimentGroupedResponse(data=grouped_data)
+        logger.info(f"Use Case Sentiment (grouped) returned {sum(len(g.all_use_cases) for g in groups)} items across {len(groups)} product categories for project {request.project_id}")
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in use case sentiment: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.error(f"System error in use case sentiment: {e}", exc_info=True)
         raise HTTPException(status_code=500, detail="Internal server error")

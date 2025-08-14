@@ -263,3 +263,66 @@ class CustomerDelightsGroupedData(BaseModel):
 
 class CustomerDelightsGroupedResponse(BaseResponseModel[CustomerDelightsGroupedData]):
     """Response wrapper for grouped customer delights endpoint."""
+
+
+# ==================== Use Case Sentiment (all_use_cases) ====================
+
+class UseCaseSentimentRequest(BaseRequestModel):
+    """Request model for use case sentiment (review insights) endpoint."""
+    limit: int = Field(default=15, ge=1, le=100, description="Maximum number of use cases to return")
+
+    class Config:
+        json_schema_extra = {
+            "example": {
+                "filters": {
+                    "categories": [
+                        "Light Switches",
+                        "Dimmer Switches"
+                    ],
+                    "extend_fields": {
+                        "smart_capability": [
+                            "Smart"
+                        ]
+                    }
+                },
+                "limit": 15,
+                "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+                "timeframe": {
+                    "period": "year"
+                }
+            }
+        }
+
+
+class UseCaseSentimentItem(BaseModel):
+    """Single use case item with sentiment metrics."""
+    category_id: int = Field(description="Use case category ID")
+    use_case: str = Field(description="Use case name")
+    product_attribute: str = Field(default="USE", description="Product attribute for this use case")
+    total_reviews: int = Field(description="Total unique reviews for this use case")
+    positive_reviews: int = Field(description="Number of positive reviews")
+    negative_reviews: int = Field(description="Number of negative reviews")
+    satisfaction_rate: float = Field(description="Positive reviews / (pos+neg) * 100; fallback to 50 when denominator is 0")
+    product_count: int = Field(description="Estimated number of products mentioning this use case")
+    category_definition: Optional[str] = Field(default="", description="Category definition for tooltips")
+    related_detail_texts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
+
+
+class UseCaseSentimentGroup(BaseModel):
+    """Grouped use case sentiment by product category."""
+    product_category: str = Field(description="Product category label used for filtering")
+    all_use_cases: List[UseCaseSentimentItem] = Field(description="Top use cases under this product category")
+    filtered_asins_count: int = Field(description="Number of ASINs considered after filters for this product category")
+    total_use_reviews: int = Field(description="Sum of total_reviews across use cases for this product category")
+    total_categories: int = Field(description="Total use case categories scanned for this product category before limiting")
+
+
+class UseCaseSentimentGroupedData(BaseModel):
+    """Response data with groups keyed by selected product categories."""
+    project_id: str = Field(description="Project ID used for filtering")
+    selected_categories: List[str] = Field(description="Selected product categories from request")
+    groups: List[UseCaseSentimentGroup] = Field(description="Grouped use case sentiment by product category")
+
+
+class UseCaseSentimentGroupedResponse(BaseResponseModel[UseCaseSentimentGroupedData]):
+    """Response wrapper for grouped use case sentiment endpoint."""
