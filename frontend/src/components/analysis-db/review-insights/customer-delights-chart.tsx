@@ -8,6 +8,7 @@ import { CHART_NAMES } from "@/components/analysis-db/constants"
 import type { ProjectFilters } from "../types/filters"
 import { databaseService } from "../data/database-service"
 import { UnifiedStackedBarChart } from "../shared/unified-stacked-bar-chart"
+import { useReviewPanelQuery } from "../hooks/use-review-panel-query"
 import { useChartsT } from "@/i18n/hooks"
 
 interface CustomerDelightsChartProps {
@@ -31,6 +32,7 @@ type DelightItem = {
 
 export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDelightsChartProps) {
   const chartsT = useChartsT()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [grouped, setGrouped] = useState<{
@@ -75,13 +77,14 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
   }, [projectId, filtersReady, loadData])
 
   const perGroupData = useMemo(() => {
-    if (!grouped) return [] as Array<{ title: string; rows: Array<{ name: string; positive: number; negative: number }> }>
+    if (!grouped) return [] as Array<{ title: string; rows: Array<{ name: string; positive: number; negative: number; _categoryId?: number }> }>
     return grouped.groups.map(g => ({
       title: g.product_category,
       rows: g.customer_likes.map(p => ({
         name: p.category_name,
         positive: p.positive_reviews,
-        negative: p.negative_reviews
+        negative: p.negative_reviews,
+        _categoryId: p.category_id as unknown as number
       }))
     }))
   }, [grouped])
@@ -135,13 +138,29 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
               {perGroupData.map((group, idx) => (
                 <div key={`${group.title}-${idx}`}>
                   <h4 className="text-md font-semibold mb-4">{group.title}</h4>
-                  <UnifiedStackedBarChart
-                    data={group.rows}
-                    xAxisDataKey="name"
-                    positiveDataKey="positive"
-                    negativeDataKey="negative"
-                    bottomBarType="positive" 
-                  />
+                  <div className="relative">
+                    {isLoading && (
+                      <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+                        <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+                          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+                          <span className="text-gray-700 font-medium">Loading review details...</span>
+                        </div>
+                      </div>
+                    )}
+                    <UnifiedStackedBarChart
+                      data={group.rows}
+                      xAxisDataKey="name"
+                      positiveDataKey="positive"
+                      negativeDataKey="negative"
+                      bottomBarType="positive"
+                      onBarClick={(data) => {
+                        const payload = data as unknown as { name?: string; _categoryId?: number }
+                        if (payload?._categoryId && projectId) {
+                          handleCategoryClick(projectId, payload._categoryId, payload.name || '', ['phy','perf'], filters)
+                        }
+                      }}
+                    />
+                  </div>
                 </div>
               ))}
             </div>
