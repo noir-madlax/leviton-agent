@@ -283,7 +283,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
 
             </div>
-        <div className="bg-white rounded-xl shadow-sm border p-6 mt-6">
+        <div className="bg-gray-50 rounded-xl shadow-sm border p-6 mt-6">
             <UseCaseSentimentGrouped
               projectId={projectId || ''}
               initialFilters={initialFilters}

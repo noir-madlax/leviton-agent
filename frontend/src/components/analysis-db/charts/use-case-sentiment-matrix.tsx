@@ -147,7 +147,7 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveReviews')}
               >
                 <Tooltip content={chartsT('positiveAspectsTooltip')}>
@@ -158,7 +158,7 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('negativeReviews')}
               >
                 <Tooltip content={chartsT('negativeAspectsTooltip')}>
@@ -169,7 +169,7 @@ export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSent
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveShare')}
               >
                 <Tooltip content={chartsT('positiveShareTooltip')}>

@@ -99,7 +99,7 @@ export function UseCaseSentimentGrouped({ projectId, initialFilters }: UseCaseSe
       </div>
 
       <div className="mt-6">
-        <Card className="p-6 bg-gray-50 rounded-xl border shadow-sm">
+        <Card className="p-3 bg-gray-50 ">
           <FilterRenderer
             projectId={projectId}
             chartName={CHART_NAMES.USE_CASE_SENTIMENT}
