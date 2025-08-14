@@ -19,10 +19,17 @@ export const CHART_NAMES = {
   // 洞察分析相关
   MARKET_INSIGHTS: 'market-insights',
 
-  // 其他分析
+  // 评论分析
+  CUSTOMER_PAIN_POINTS: 'customer-pain-points',
+  CUSTOMER_DELIGHTS: 'customer-delights',
+  USE_CASE_SENTIMENT: 'use-case-sentiment',
+
+  // 价格分析
   PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
   PRICE_DISTRIBUTION_OVERVIEW: 'price-distribution-overview', // 🆕 价格分布概览
   PRICE_VS_REVENUE: 'price-vs-revenue', // 散点图
+
+  // 其他分析
   BRAND_PRICE_DISTRIBUTION: 'price-distribution-by-brands', // 品牌价格分布
   CATEGORY_ANALYSIS: 'category-analysis',
   COMPETITOR_ANALYSIS: 'competitor-analysis',
@@ -53,7 +60,10 @@ export const CHART_GROUPS = {
   // 洞察分析组
   INSIGHTS: [
     CHART_NAMES.MARKET_INSIGHTS,
-    CHART_NAMES.PACKAGE_PREFERENCE
+    CHART_NAMES.PACKAGE_PREFERENCE,
+    CHART_NAMES.CUSTOMER_PAIN_POINTS,
+    CHART_NAMES.CUSTOMER_DELIGHTS,
+    CHART_NAMES.USE_CASE_SENTIMENT
   ],
   
   // 其他分析组
@@ -76,6 +86,9 @@ export const CHART_DISPLAY_NAMES: Record<ChartName, string> = {
   [CHART_NAMES.SALES_TREND_ANALYSIS]: '销售趋势分析',
   [CHART_NAMES.COMPETITOR_ANALYSIS]: '竞争对手分析',
   [CHART_NAMES.MARKET_INSIGHTS]: '市场洞察',
+  [CHART_NAMES.CUSTOMER_PAIN_POINTS]: '客户痛点',
+  [CHART_NAMES.CUSTOMER_DELIGHTS]: '客户喜爱',
+  [CHART_NAMES.USE_CASE_SENTIMENT]: '用例情绪',
   [CHART_NAMES.PACKAGE_PREFERENCE]: '包装偏好分析',
   [CHART_NAMES.PRICE_ANALYSIS]: '价格分析',
   [CHART_NAMES.PRICE_DISTRIBUTION_OVERVIEW]: '价格分布概览',
@@ -97,6 +110,9 @@ export const CHART_DESCRIPTIONS: Record<ChartName, string> = {
   [CHART_NAMES.SALES_TREND_ANALYSIS]: '分析销售趋势和时间序列数据',
   [CHART_NAMES.COMPETITOR_ANALYSIS]: '分析竞争对手的市场策略和表现',
   [CHART_NAMES.MARKET_INSIGHTS]: '深度市场洞察和趋势分析',
+  [CHART_NAMES.CUSTOMER_PAIN_POINTS]: '按产品类别分组的客户痛点',
+  [CHART_NAMES.CUSTOMER_DELIGHTS]: '按产品类别分组的客户喜爱点',
+  [CHART_NAMES.USE_CASE_SENTIMENT]: '按产品类别分组的用例情绪分析',
   [CHART_NAMES.PACKAGE_PREFERENCE]: '分析消费者对不同包装类型的偏好',
   [CHART_NAMES.PRICE_ANALYSIS]: '价格分布和定价策略分析',
   [CHART_NAMES.PRICE_DISTRIBUTION_OVERVIEW]: '按细分市场分析价格分布概览',

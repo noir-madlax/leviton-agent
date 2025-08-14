@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 
-import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
+// import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
+import { CustomerPainPointsChart } from "@/components/analysis-db/review-insights/customer-pain-points-chart"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
 import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { BarChart3 } from "lucide-react"
@@ -95,42 +96,42 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   // Use data from the main dashboard container instead of making duplicate API calls
 
   // Transform dashboard data to chart format
-  type PainPointRaw = {
-    category: string
-    type: 'Physical' | 'Performance' | 'Usability'
-    totalReviews?: number
-    frequency?: number
-    satisfactionRate?: number
-    negativeRate?: number
-    positiveReviews?: number
-    negativeReviews?: number
-    categoryDefinition?: string
-    impactedProducts?: number
-    categoryId?: number
-  }
-  const transformPainPointsData = (rawData: PainPointRaw[]): CategoryFeedback[] => {
-    console.log('🔍 [DEBUG-PAIN-POINTS] Raw data received:', rawData)
-    const transformed = rawData.map(item => ({
-      category: String(item.category),
-      categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
-      totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
-      satisfactionRate: Number(item.satisfactionRate ?? (100 - (item.negativeRate ?? 0))),
-      negativeRate: Number(item.negativeRate ?? 0),
-      positiveReviews: Number(item.positiveReviews ?? 0),
-      negativeReviews: Number(item.negativeReviews ?? 0),
-
-      topNegativeAspects: [String(item.category)],
-      topPositiveAspects: [],
-      topNegativeReasons: [],
-      topPositiveReasons: [],
-      categoryDefinition: item.categoryDefinition,
-      impactedProducts: Number(item.impactedProducts ?? 1),
-      categoryId: item.categoryId
-    }))
-    console.log('🔍 [DEBUG-PAIN-POINTS] Transformed data:', transformed)
-    console.log('🔍 [DEBUG-PAIN-POINTS] Data length:', transformed.length)
-    return transformed
-  }
+  // type PainPointRaw = {
+  //   category: string
+  //   type: 'Physical' | 'Performance' | 'Usability'
+  //   totalReviews?: number
+  //   frequency?: number
+  //   satisfactionRate?: number
+  //   negativeRate?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   categoryDefinition?: string
+  //   impactedProducts?: number
+  //   categoryId?: number
+  // }
+  // const transformPainPointsData = (rawData: PainPointRaw[]): CategoryFeedback[] => {
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     category: String(item.category),
+  //     categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+  //     totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+  //     satisfactionRate: Number(item.satisfactionRate ?? (100 - (item.negativeRate ?? 0))),
+  //     negativeRate: Number(item.negativeRate ?? 0),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //
+  //     topNegativeAspects: [String(item.category)],
+  //     topPositiveAspects: [],
+  //     topNegativeReasons: [],
+  //     topPositiveReasons: [],
+  //     categoryDefinition: item.categoryDefinition,
+  //     impactedProducts: Number(item.impactedProducts ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Data length:', transformed.length)
+  //   return transformed
+  // }
 
   type DelightRaw = {
     category: string
@@ -270,23 +271,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
         <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">📊 {chartsT('customerReviews')}</h2>
        
         
-        <ChartWithFilters
-          chartId="customer-pain-points"
-          chartType="bar"
-          projectId={projectId || ''}
-          title={chartsT('top10CustomerPainPoints')}
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">{chartsT('barsSortedByNegative')}</div>
-            <CategoryPainPointsBar
-              data={transformPainPointsData(filteredData.reviewInsights?.painPoints || [])}
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              projectId={projectId}
-              filters={initialFilters}
-            />
-        </ChartWithFilters>
+        <CustomerPainPointsChart projectId={projectId || ''} initialFilters={initialFilters} />
       </section>
 
             {/* 分类正面反馈分析 */}

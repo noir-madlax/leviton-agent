@@ -1204,6 +1204,50 @@ export class DatabaseService {
     }
   }
 
+  // 🆕 Get Customer Pain Points (grouped by product category)
+  async getCustomerPainPointsGrouped(projectId: string): Promise<{
+    project_id: string
+    selected_categories: string[]
+    groups: Array<{
+      product_category: string
+      filtered_asins_count: number
+      total_categories: number
+      pain_points: Array<{
+        category_id: number
+        category_name: string
+        category_definition?: string
+        type: 'Physical' | 'Performance'
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
+        negative_rate: number
+        satisfaction_rate: number
+        impacted_products: number
+        related_detail_texts?: string[] | null
+      }>
+    }>
+  }> {
+    try {
+      const { filters } = this.getFiltersFromState(CHART_NAMES.CUSTOMER_PAIN_POINTS)
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const requestBody = {
+        project_id: projectId,
+        filters,
+        limit: 15,
+      }
+      const res = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-insights/customer-pain-points`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      })
+      if (!res.ok) throw new Error(`Pain Points API failed: ${res.status}`)
+      return await res.json().then((r) => r.data || r)
+    } catch (e) {
+      console.error('Error fetching Customer Pain Points (grouped):', e)
+      throw e
+    }
+  }
+
   // 🔑 Get competitor matrix view data via new API
   async getCompetitorMatrixViewData(
     projectId: string,
