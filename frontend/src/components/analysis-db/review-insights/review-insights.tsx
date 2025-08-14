@@ -4,13 +4,14 @@ import { useState } from "react"
 
 // import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CustomerPainPointsChart } from "@/components/analysis-db/review-insights/customer-pain-points-chart"
-import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
-import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
+// import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
+import { CustomerDelightsChart } from "@/components/analysis-db/review-insights/customer-delights-chart"
+import { ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
 import { BarChart3 } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
-import { databaseService } from "@/components/analysis-db/data/database-service"
+// import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { CategoryFeedback, ProductType, UseCaseFeedback } from "@/components/analysis-db/types/analysis"
+import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
 import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
 import { useChartsT } from '@/i18n/hooks'
 
@@ -86,9 +87,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
     sampleUseCase: data.reviewInsights?.allUseCases?.[0]
   })
   
-  const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
+  // const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   // Local derived review mapping is no longer used; keep UI lean
-  const [filteredData, setFilteredData] = useState<{
+  const [filteredData] = useState<{
     reviewInsights: typeof data.reviewInsights
     allReviewData: typeof data.allReviewData
   }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
@@ -133,41 +134,41 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   //   return transformed
   // }
 
-  type DelightRaw = {
-    category: string
-    type?: 'Physical' | 'Performance' | 'Usability'
-    totalReviews?: number
-    frequency?: number
-    positiveRate?: number
-    positiveReviews?: number
-    negativeReviews?: number
-    categoryDefinition?: string
-    impactedProducts?: number
-    categoryId?: number
-  }
-  const transformDelightsData = (rawData: DelightRaw[]): CategoryFeedback[] => {
-    console.log('🔍 [DEBUG-DELIGHTS] Raw data received:', rawData)
-    const transformed = rawData.map(item => ({
-      category: String(item.category),
-      categoryType: ((item.type ?? 'Performance') === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
-      totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
-      satisfactionRate: Number(item.positiveRate ?? 70),
-      negativeRate: 100 - Number(item.positiveRate ?? 70),
-      positiveReviews: Number(item.positiveReviews ?? 0),
-      negativeReviews: Number(item.negativeReviews ?? 0),
-
-      topNegativeAspects: [],
-      topPositiveAspects: [String(item.category)],
-      topNegativeReasons: [],
-      topPositiveReasons: [],
-      categoryDefinition: item.categoryDefinition,
-      impactedProducts: Number(item.impactedProducts ?? 1),
-      categoryId: item.categoryId
-    }))
-    console.log('🔍 [DEBUG-DELIGHTS] Transformed data:', transformed)
-    console.log('🔍 [DEBUG-DELIGHTS] Data length:', transformed.length)
-    return transformed
-  }
+  // type DelightRaw = {
+  //   category: string
+  //   type?: 'Physical' | 'Performance' | 'Usability'
+  //   totalReviews?: number
+  //   frequency?: number
+  //   positiveRate?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   categoryDefinition?: string
+  //   impactedProducts?: number
+  //   categoryId?: number
+  // }
+  // const transformDelightsData = (rawData: DelightRaw[]): CategoryFeedback[] => {
+  //   console.log('🔍 [DEBUG-DELIGHTS] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     category: String(item.category),
+  //     categoryType: ((item.type ?? 'Performance') === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+  //     totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+  //     satisfactionRate: Number(item.positiveRate ?? 70),
+  //     negativeRate: 100 - Number(item.positiveRate ?? 70),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //
+  //     topNegativeAspects: [],
+  //     topPositiveAspects: [String(item.category)],
+  //     topNegativeReasons: [],
+  //     topPositiveReasons: [],
+  //     categoryDefinition: item.categoryDefinition,
+  //     impactedProducts: Number(item.impactedProducts ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-DELIGHTS] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-DELIGHTS] Data length:', transformed.length)
+  //   return transformed
+  // }
 
   type UseCaseRaw = {
     useCase: string
@@ -205,38 +206,30 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
 
   // 处理过滤器变化
-  const handleFilterChange = async (filters: ProjectFilters) => {
-    if (!projectId) return
-
-    try {
-      const [reviewInsights, allReviewData] = await Promise.all([
-        databaseService.getReviewInsightsDataByProject(
-          projectId,
-          filters.categories,
-          filters.brands,
-          filters.segments,
-          filters.extend_fields
-        ),
-        databaseService.getAllReviewDataByProject(
-          projectId,
-          filters.categories,
-          filters.brands,
-          filters.segments,
-          filters.extend_fields
-        )
-      ])
-
-      setFilteredData({
-        reviewInsights,
-        allReviewData
-      })
-
-      // Data is already loaded from the main dashboard container
-      // No need to fetch duplicate data
-    } catch (error) {
-      console.error('Error fetching filtered data:', error)
-    }
-  }
+  // const handleFilterChange = async (filters: ProjectFilters) => {
+  //   if (!projectId) return
+  //   try {
+  //     const [reviewInsights, allReviewData] = await Promise.all([
+  //       databaseService.getReviewInsightsDataByProject(
+  //         projectId,
+  //         filters.categories,
+  //         filters.brands,
+  //         filters.segments,
+  //         filters.extend_fields
+  //       ),
+  //       databaseService.getAllReviewDataByProject(
+  //         projectId,
+  //         filters.categories,
+  //         filters.brands,
+  //         filters.segments,
+  //         filters.extend_fields
+  //       )
+  //     ])
+  //     setFilteredData({ reviewInsights, allReviewData })
+  //   } catch (error) {
+  //     console.error('Error fetching filtered data:', error)
+  //   }
+  // }
 
   // Data is already loaded from the main dashboard container
   // No need to fetch duplicate data on initialization
@@ -259,9 +252,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   // const categoryPositiveFeedback = transformPositiveFeedbackData() // 注释掉旧的数据转换
   // const useCases = transformUseCaseData() // Commented out as it's not used currently
 
-  const handleProductTypeChange = (productType: ProductType) => {
-    setSelectedProductType(productType)
-  }
+  // const handleProductTypeChange = (productType: ProductType) => {
+  //   setSelectedProductType(productType)
+  // }
 
   return (
     <div className="space-y-10">
@@ -278,23 +271,7 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
       <section data-chart-id="customer-delights">
         
         
-            <ChartWithFilters
-          chartId="customer-delights"
-          chartType="bar"
-          projectId={projectId || ''}
-          title={chartsT('top10CustomerDelights')}
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">{chartsT('barsSortedByPositive')}</div>
-            <CategoryPositiveFeedbackBar
-              data={transformDelightsData(filteredData.reviewInsights?.customerLikes || [])}
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              projectId={projectId}
-              filters={initialFilters}
-            />
-        </ChartWithFilters>
+            <CustomerDelightsChart projectId={projectId || ''} initialFilters={initialFilters} />
       </section>
 
       {/* Use Case Sentiment Analysis */}
