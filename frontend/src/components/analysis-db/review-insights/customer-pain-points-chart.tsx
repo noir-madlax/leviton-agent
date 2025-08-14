@@ -78,19 +78,68 @@ export function CustomerPainPointsChart({ projectId, initialFilters }: CustomerP
   }, [projectId, filtersReady, loadData])
 
   // 扁平化分组为图表数据（按各产品类别TopN拼接）
+  type RowDatum = {
+    name: string
+    positive: number
+    negative: number
+    _categoryId: number
+    _type: "Physical" | "Performance"
+    _total: number
+    _satisfaction: number
+    _negativeRate: number
+    _details?: string // serialize to string to satisfy index signature
+    _definition?: string
+  }
+
   const perGroupData = useMemo(() => {
-    if (!grouped) return [] as Array<{ title: string; rows: Array<{ name: string; positive: number; negative: number }> }>
+    if (!grouped) return [] as Array<{ title: string; rows: Array<RowDatum> }>
     return grouped.groups.map(g => ({
       title: g.product_category,
       rows: g.pain_points.map(p => ({
         name: p.category_name,
         positive: p.positive_reviews,
         negative: p.negative_reviews,
-        // 用于点击打开面板
-        _categoryId: p.category_id as unknown as number
+        _categoryId: p.category_id as unknown as number,
+        _type: p.type,
+        _total: p.total_reviews,
+        _satisfaction: p.satisfaction_rate,
+        _negativeRate: p.negative_rate,
+        _details: Array.isArray(p.related_detail_texts) ? p.related_detail_texts[0] : undefined,
+        _definition: p.category_definition
       }))
     }))
   }, [grouped])
+
+  // 自定义 Tooltip 组件
+  const PainPointsTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ dataKey: string; payload: Record<string, string | number> }> }) => {
+    if (!active || !payload || payload.length === 0) return null
+    const row = payload[0].payload as unknown as RowDatum
+    const satisfaction = Math.round(row._satisfaction)
+    const negativeRate = Math.round(row._negativeRate)
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-2.5 max-w-[300px] border border-gray-200">
+        <div className="text-gray-900 font-bold text-sm mb-1">{row.name}</div>
+        <div className="text-xs text-gray-700 space-y-1 mb-2 leading-snug">
+          <div><span className="font-semibold">Type:</span> {row._type}</div>
+          <div className="text-green-600 font-semibold">Positive Mentions: {row.positive.toLocaleString()}</div>
+          <div className="text-red-600 font-semibold">Negative Mentions: {row.negative.toLocaleString()}</div>
+          <div className="text-blue-600 font-semibold">Total Mentions: {row._total.toLocaleString()}</div>
+          <div className="text-gray-800">Satisfaction Rate: {satisfaction}%</div>
+        </div>
+        <div className="text-xs text-gray-900 font-semibold mb-1">Top Pain Details:</div>
+        <ul className="list-disc pl-4 text-xs text-gray-800 mb-2 leading-snug">
+          <li>{row.name}</li>
+        </ul>
+        <div className="text-xs text-gray-900 font-semibold mb-1">Top Pain Reasons:</div>
+        <div className="text-xs text-red-600 space-y-1 leading-snug">
+          <div>• {negativeRate}% negative sentiment</div>
+          {(row._definition || row._details) && (
+            <div>• Context: {row._definition || row._details}</div>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section className="mb-6">
@@ -156,6 +205,7 @@ export function CustomerPainPointsChart({ projectId, initialFilters }: CustomerP
                       positiveDataKey="positive"
                       negativeDataKey="negative"
                       bottomBarType="negative"
+                      CustomTooltip={PainPointsTooltip}
                       onBarClick={(data) => {
                         const payload = data as unknown as { name?: string; _categoryId?: number }
                         if (payload?._categoryId && projectId) {

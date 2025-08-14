@@ -76,18 +76,70 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
     }
   }, [projectId, filtersReady, loadData])
 
+  type RowDatum = {
+    name: string
+    positive: number
+    negative: number
+    _categoryId: number
+    _type: "Physical" | "Performance"
+    _total: number
+    _positiveRate: number
+    _details?: string
+    _definition?: string
+    _satisfactionLevel?: string
+  }
+
   const perGroupData = useMemo(() => {
-    if (!grouped) return [] as Array<{ title: string; rows: Array<{ name: string; positive: number; negative: number; _categoryId?: number }> }>
+    if (!grouped) return [] as Array<{ title: string; rows: Array<RowDatum> }>
     return grouped.groups.map(g => ({
       title: g.product_category,
       rows: g.customer_likes.map(p => ({
         name: p.category_name,
         positive: p.positive_reviews,
         negative: p.negative_reviews,
-        _categoryId: p.category_id as unknown as number
+        _categoryId: p.category_id as unknown as number,
+        _type: p.type,
+        _total: p.total_reviews,
+        _positiveRate: p.positive_rate,
+        _details: undefined,
+        _definition: p.category_definition,
+        _satisfactionLevel: p.satisfaction_level
       }))
     }))
   }, [grouped])
+
+  // 自定义 Tooltip（紧凑样式，参考示例）
+  const StrengthTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ dataKey: string; payload: Record<string, string | number> }> }) => {
+    if (!active || !payload || payload.length === 0) return null
+    const row = payload[0].payload as unknown as RowDatum
+    const satisfaction = Math.round(row._positiveRate || (row._total > 0 ? (row.positive / row._total) * 100 : 0))
+    return (
+      <div className="bg-white rounded-lg shadow-lg p-2.5 max-w-[300px] border border-gray-200">
+        <div className="text-gray-900 font-bold text-sm mb-1">{row.name}</div>
+        <div className="text-xs text-gray-700 space-y-1 mb-2 leading-snug">
+          <div><span className="font-semibold">Type:</span> {row._type}</div>
+          <div className="text-green-600 font-semibold">Positive Mentions: {row.positive.toLocaleString()}</div>
+          <div className="text-red-600 font-semibold">Negative Mentions: {row.negative.toLocaleString()}</div>
+          <div className="text-blue-600 font-semibold">Total Mentions: {row._total.toLocaleString()}</div>
+          <div className="text-gray-800">Satisfaction Rate: {satisfaction}%</div>
+        </div>
+        <div className="text-xs text-gray-900 font-semibold mb-1">Top Strength Details:</div>
+        <ul className="list-disc pl-4 text-xs text-gray-800 mb-2 leading-snug">
+          <li>{row.name}</li>
+        </ul>
+        <div className="text-xs text-gray-900 font-semibold mb-1">Top Strength Reasons:</div>
+        <div className="text-xs text-green-700 space-y-1 leading-snug">
+          <div>• {satisfaction}% positive sentiment</div>
+          {row._satisfactionLevel && (
+            <div>• {row._satisfactionLevel.toLowerCase()} satisfaction level</div>
+          )}
+          {(row._definition || row._details) && (
+            <div>• Context: {row._definition || row._details}</div>
+          )}
+        </div>
+      </div>
+    )
+  }
 
   return (
     <section className="mb-6">
@@ -153,6 +205,7 @@ export function CustomerDelightsChart({ projectId, initialFilters }: CustomerDel
                       positiveDataKey="positive"
                       negativeDataKey="negative"
                       bottomBarType="positive"
+                      CustomTooltip={StrengthTooltip}
                       onBarClick={(data) => {
                         const payload = data as unknown as { name?: string; _categoryId?: number }
                         if (payload?._categoryId && projectId) {

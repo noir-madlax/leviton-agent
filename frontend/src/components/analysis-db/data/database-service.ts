@@ -1233,7 +1233,7 @@ export class DatabaseService {
       const requestBody = {
         project_id: projectId,
         filters,
-        limit: 15,
+        limit: 10,
       }
       const res = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-insights/customer-pain-points`, {
         method: 'POST',
@@ -1321,7 +1321,7 @@ export class DatabaseService {
       const requestBody = {
         project_id: projectId,
         filters,
-        limit: 15,
+        limit: 10,
       }
       const res = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-insights/use-case-sentiment`, {
         method: 'POST',
