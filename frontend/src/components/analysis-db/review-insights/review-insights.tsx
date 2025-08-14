@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+// import { useState } from "react"
 
 // import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
 import { CustomerPainPointsChart } from "@/components/analysis-db/review-insights/customer-pain-points-chart"
@@ -11,8 +11,9 @@ import { BarChart3 } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 // import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
-import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
+// import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
+// import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
+import { UseCaseSentimentGrouped } from "@/components/analysis-db/review-insights/use-case-sentiment-grouped"
 import { useChartsT } from '@/i18n/hooks'
 
 interface ReviewInsightsProps {
@@ -89,10 +90,10 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   
   // const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
   // Local derived review mapping is no longer used; keep UI lean
-  const [filteredData] = useState<{
-    reviewInsights: typeof data.reviewInsights
-    allReviewData: typeof data.allReviewData
-  }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
+  // const [filteredData] = useState<{
+  //   reviewInsights: typeof data.reviewInsights
+  //   allReviewData: typeof data.allReviewData
+  // }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
 
   // Use data from the main dashboard container instead of making duplicate API calls
 
@@ -170,36 +171,36 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
   //   return transformed
   // }
 
-  type UseCaseRaw = {
-    useCase: string
-    totalReviews?: number
-    positiveReviews?: number
-    negativeReviews?: number
-    satisfactionRate?: number
-    categoryDefinition?: string
-    productCount?: number
-    categoryId?: number
-  }
-  const transformUseCaseData = (rawData: UseCaseRaw[]): UseCaseFeedback[] => {
-    console.log('🔍 [DEBUG-USE-CASE] Raw data received:', rawData)
-    const transformed = rawData.map(item => ({
-      useCase: String(item.useCase),
-      totalReviews: Number(item.totalReviews ?? 0),
-      positiveReviews: Number(item.positiveReviews ?? 0),
-      negativeReviews: Number(item.negativeReviews ?? 0),
-      satisfactionRate: Number(item.satisfactionRate ?? 0),
-      categoryType: 'Performance' as const,
-      topSatisfactionReasons: [],
-      topGapReasons: [],
-      relatedCategories: [String(item.useCase)],
-      categoryDefinition: item.categoryDefinition,
-      productCount: Number(item.productCount ?? 1),
-      categoryId: item.categoryId
-    }))
-    console.log('🔍 [DEBUG-USE-CASE] Transformed data:', transformed)
-    console.log('🔍 [DEBUG-USE-CASE] Data length:', transformed.length)
-    return transformed
-  }
+  // type UseCaseRaw = {
+  //   useCase: string
+  //   totalReviews?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   satisfactionRate?: number
+  //   categoryDefinition?: string
+  //   productCount?: number
+  //   categoryId?: number
+  // }
+  // const transformUseCaseData = (rawData: UseCaseRaw[]): UseCaseFeedback[] => {
+  //   console.log('🔍 [DEBUG-USE-CASE] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     useCase: String(item.useCase),
+  //     totalReviews: Number(item.totalReviews ?? 0),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //     satisfactionRate: Number(item.satisfactionRate ?? 0),
+  //     categoryType: 'Performance' as const,
+  //     topSatisfactionReasons: [],
+  //     topGapReasons: [],
+  //     relatedCategories: [String(item.useCase)],
+  //     categoryDefinition: item.categoryDefinition,
+  //     productCount: Number(item.productCount ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-USE-CASE] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-USE-CASE] Data length:', transformed.length)
+  //   return transformed
+  // }
 
 
 
@@ -283,10 +284,9 @@ export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsigh
 
             </div>
         <div className="bg-white rounded-xl shadow-sm border p-6 mt-6">
-            <UseCaseSentimentMatrix
-              data={transformUseCaseData(filteredData.reviewInsights?.allUseCases || [])}
-              projectId={projectId}
-              filters={initialFilters}
+            <UseCaseSentimentGrouped
+              projectId={projectId || ''}
+              initialFilters={initialFilters}
             />
         </div>
       </section>

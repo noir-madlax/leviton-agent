@@ -1292,6 +1292,50 @@ export class DatabaseService {
     }
   }
 
+  // 🆕 Get Use Case Sentiment (grouped by product category)
+  async getUseCaseSentimentGrouped(projectId: string): Promise<{
+    project_id: string
+    selected_categories: string[]
+    groups: Array<{
+      product_category: string
+      filtered_asins_count: number
+      total_use_reviews: number
+      total_categories: number
+      all_use_cases: Array<{
+        category_id: number
+        use_case: string
+        product_attribute: string
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
+        satisfaction_rate: number
+        product_count: number
+        category_definition?: string
+        related_detail_texts?: string[] | null
+      }>
+    }>
+  }> {
+    try {
+      const { filters } = this.getFiltersFromState(CHART_NAMES.USE_CASE_SENTIMENT)
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const requestBody = {
+        project_id: projectId,
+        filters,
+        limit: 15,
+      }
+      const res = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/review-insights/use-case-sentiment`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      })
+      if (!res.ok) throw new Error(`Use Case Sentiment API failed: ${res.status}`)
+      return await res.json().then((r) => r.data || r)
+    } catch (e) {
+      console.error('Error fetching Use Case Sentiment (grouped):', e)
+      throw e
+    }
+  }
+
   // 🔑 Get competitor matrix view data via new API
   async getCompetitorMatrixViewData(
     projectId: string,
