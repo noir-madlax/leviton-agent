@@ -90,15 +90,8 @@ export function UseCaseSentimentGrouped({ projectId, initialFilters }: UseCaseSe
 
   return (
     <section className="mb-6">
-      <div className="space-y-4">
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2">
-            {chartsT('useCaseSentimentAnalysis')}
-          </h3>
-        </div>
-      </div>
 
-      <div className="mt-6">
+      <div className="mt-3">
         <Card className="p-0 bg-gray-50 shadow-none border-none">
           <FilterRenderer
             projectId={projectId}
