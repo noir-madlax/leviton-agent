@@ -1398,6 +1398,151 @@ class ProjectService:
         except Exception as e:
             logger.error(f"Error getting data confirmation data by category ID: {str(e)}")
             return self._get_empty_data_structure()
+
+    async def get_data_confirmation_data_by_asins(self, asins: List[str]) -> Dict[str, Any]:
+        """
+        Get data confirmation preview by explicit ASIN list.
+        Parsing/normalization matches Data Import and project creation logic.
+        """
+        try:
+            if not asins:
+                return self._get_empty_data_structure()
+
+            # Normalize & dedupe
+            normalized: List[str] = []
+            seen = set()
+            for a in asins:
+                if not a:
+                    continue
+                token = str(a).strip().upper()
+                if 8 <= len(token) <= 12 and token not in seen:
+                    seen.add(token)
+                    normalized.append(token)
+
+            if not normalized:
+                return self._get_empty_data_structure()
+
+            # Fetch products
+            result = self.supabase.table('product_wide_table').select(
+                'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
+            ).in_('platform_id', normalized).neq('category', None).neq('brand', None).execute()
+
+            filtered_data = result.data or []
+
+            # Convert and clean numeric fields
+            for row in filtered_data:
+                if row.get('monthly_sales_volume'):
+                    try:
+                        row['monthly_sales_volume'] = int(float(row['monthly_sales_volume']))
+                    except (ValueError, TypeError):
+                        row['monthly_sales_volume'] = 0
+                if row.get('reviews_count'):
+                    try:
+                        row['reviews_count'] = int(float(row['reviews_count']))
+                    except (ValueError, TypeError):
+                        row['reviews_count'] = 0
+                if row.get('estimated_revenue'):
+                    try:
+                        row['estimated_revenue'] = float(row['estimated_revenue'])
+                    except (ValueError, TypeError):
+                        row['estimated_revenue'] = 0.0
+                if row.get('price_usd'):
+                    try:
+                        row['price_usd'] = float(row['price_usd'])
+                    except (ValueError, TypeError):
+                        row['price_usd'] = 0.0
+
+            # Sort by sales volume for top preview
+            sorted_products = sorted(
+                [row for row in filtered_data if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0],
+                key=lambda x: x['monthly_sales_volume'] or 0,
+                reverse=True
+            )
+
+            # Available options from this set
+            available_categories = sorted(list(set(row['category'] for row in filtered_data if row.get('category'))))
+            available_sources = sorted(list(set(row['source'] for row in filtered_data if row.get('source'))))
+            available_brands = sorted(list(set(row['brand'] for row in filtered_data if row.get('brand'))))
+
+            # Calculate statistics
+            total_products = len(filtered_data)
+            total_brands = len(set(row['brand'] for row in filtered_data if row.get('brand')))
+
+            product_asins = [str(row['platform_id']) for row in filtered_data if row.get('platform_id')]
+            actual_review_count = 0
+            if product_asins:
+                review_count_result = self.supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .in_('product_id', product_asins)\
+                    .execute()
+                actual_review_count = review_count_result.count or 0
+
+            total_reviews = actual_review_count
+
+            review_estimates = await self._calculate_review_analysis_estimate(product_asins)
+
+            sales_volumes = [row.get('monthly_sales_volume', 0) for row in filtered_data if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
+            avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0
+
+            # Source statistics
+            source_stats = []
+            for source in available_sources:
+                count = len([row for row in filtered_data if row.get('source') == source])
+                if count > 0:
+                    source_stats.append({
+                        'name': source,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+
+            # Category statistics
+            category_stats = []
+            for category in available_categories:
+                count = len([row for row in filtered_data if row.get('category') == category])
+                if count > 0:
+                    category_stats.append({
+                        'name': category,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+
+            # Brand statistics (top 10)
+            brand_counts = {}
+            for row in filtered_data:
+                brand = row.get('brand')
+                if brand:
+                    brand_counts[brand] = brand_counts.get(brand, 0) + 1
+
+            brand_stats = []
+            for brand, count in sorted(brand_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
+                brand_stats.append({
+                    'name': brand,
+                    'count': count,
+                    'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                })
+
+            top_products = sorted_products[:min(50, len(filtered_data))]
+
+            return {
+                'availableCategories': available_categories,
+                'availableSources': available_sources,
+                'availableBrands': available_brands,
+                'stats': {
+                    'totalProducts': total_products,
+                    'totalBrands': total_brands,
+                    'totalReviews': total_reviews,
+                    'avgMonthlySales': avg_monthly_sales,
+                    'sources': source_stats,
+                    'categories': category_stats,
+                    'brands': brand_stats,
+                    'estimatedReviewsToAnalyze': review_estimates['estimated_reviews_to_analyze'],
+                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction']
+                },
+                'topProducts': top_products
+            }
+        except Exception as e:
+            logger.error(f"Error getting data confirmation by ASINs: {e}")
+            return self._get_empty_data_structure()
     
     def _get_empty_data_structure(self):
         """Return empty data structure for error cases."""

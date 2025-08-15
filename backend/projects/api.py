@@ -83,6 +83,28 @@ async def get_data_confirmation_by_category_id(
         raise HTTPException(status_code=500, detail=str(e))
 
 
+@router.post("/data-confirmation-by-asins", tags=["Projects"])
+async def get_data_confirmation_by_asins(
+    body: Dict[str, Any],
+    service: ProjectService = Depends(get_project_service)
+):
+    """
+    Get data confirmation data for Step2 by explicit ASIN list.
+    Body example: { "product_asins": ["B0...", "B0..."] }
+    """
+    try:
+        asins = body.get('product_asins') or []
+        if not isinstance(asins, list):
+            raise HTTPException(status_code=400, detail="product_asins must be a list")
+        result = await service.get_data_confirmation_data_by_asins(asins)
+        return result
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"Error in get_data_confirmation_by_asins API: {str(e)}")
+        raise HTTPException(status_code=500, detail=str(e))
+
+
 @router.post("/create", response_model=ProjectCreateResponse)
 async def create_project(
     request: ProjectCreateRequest,

@@ -874,7 +874,10 @@ export function DataConfirmationTab({
 
   // 手动筛选数据
   const handleFilterData = async () => {
-    if (!selectedCategoryId) {
+    // 若有 ASIN list，则按 ASIN 直接预览；否则要求先选类别
+    const asinList = Array.from(new Set((asinInput.trim().toUpperCase().match(/[A-Z0-9]{10}/g) || [])))
+    const useAsinMode = asinList.length > 0
+    if (!useAsinMode && !selectedCategoryId) {
       alert('Please select a category first');
       return;
     }
@@ -886,26 +889,24 @@ export function DataConfirmationTab({
     setShowAllBrands(false);
     
     try {
-      // 构建查询参数
-      const params = new URLSearchParams();
-      
-      // Use category_id instead of category names
-      if (selectedCategoryId) {
-        params.append('category_id', selectedCategoryId);
-      }
-      if (filters.sources.length > 0) {
-        filters.sources.forEach(src => params.append('sources', src));
-      }
-      if (filters.brands.length > 0) {
-        filters.brands.forEach(brand => params.append('brands', brand));
-      }
-      if (filters.topSalesCount) {
-        params.append('top_sales_count', filters.topSalesCount.toString());
-      }
-      
-      // 使用新的category-based API进行筛选查询
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation-by-category?${params.toString()}`);
+      let response: Response
+      if (useAsinMode) {
+        // 按 ASIN 预览，不受 topSalesCount 影响（展示真实 ASIN 集）
+        response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation-by-asins`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ product_asins: asinList })
+        })
+      } else {
+        // 构建查询参数（按类别）
+        const params = new URLSearchParams();
+        if (selectedCategoryId) params.append('category_id', selectedCategoryId);
+        if (filters.sources.length > 0) filters.sources.forEach(src => params.append('sources', src));
+        if (filters.brands.length > 0) filters.brands.forEach(brand => params.append('brands', brand));
+        if (filters.topSalesCount) params.append('top_sales_count', filters.topSalesCount.toString());
+        response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation-by-category?${params.toString()}`)
+      }
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
