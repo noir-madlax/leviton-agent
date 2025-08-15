@@ -12,6 +12,10 @@ class ProjectFilters(BaseModel):
     brands: List[str]
     top_sales_count: Optional[int] = None
     category_id: Optional[str] = None
+    # 🆕 Optional: allow creating project by explicit ASIN list
+    product_asins: Optional[List[str]] = None
+    # 🆕 Optional: raw input text for backend parsing (kept for future use)
+    raw_asin_input: Optional[str] = None
 
 
 class ProjectCreateRequest(BaseModel):
