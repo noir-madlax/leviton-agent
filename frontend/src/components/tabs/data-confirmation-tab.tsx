@@ -9,6 +9,7 @@ import { useProjectT, useFiltersT } from '@/i18n/hooks';
 
 import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
+import { Textarea } from '@/components/ui/textarea';
 
 import { CheckCircle, Database, Users, MessageSquare, Filter, Eye, Check, RefreshCw, Clock, AlertCircle, Loader2, Lightbulb } from 'lucide-react';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
@@ -557,6 +558,8 @@ export function DataConfirmationTab({
   const [showAllCategories, setShowAllCategories] = useState(false); // 控制Categories展开状态
   const [showAllBrands, setShowAllBrands] = useState(false); // 控制Brands展开状态
   const [categoryInput, setCategoryInput] = useState<string>(''); // 新增：类别URL或node ID输入
+  // 🆕 ASIN list 输入
+  const [asinInput, setAsinInput] = useState<string>('');
   
   // URL分析相关状态
   const [urlAnalyzing, setUrlAnalyzing] = useState(false);
@@ -1053,7 +1056,11 @@ export function DataConfirmationTab({
             brands: filters.brands,
             top_sales_count: filters.topSalesCount,
             // 🔥 关键修复：同时传递category_id，确保与Apply Filter逻辑一致
-            category_id: selectedCategoryId
+            category_id: selectedCategoryId,
+            // 🆕 若用户输入了 ASIN list，则优先使用
+            ...(asinInput.trim()
+              ? { product_asins: Array.from(new Set((asinInput.trim().toUpperCase().match(/[A-Z0-9]{10}/g) || []))) }
+              : {})
           }
         })
       });
@@ -1406,6 +1413,19 @@ export function DataConfirmationTab({
 
               {/* 数据来源筛选和销量排名筛选 - 合并在一列 */}
               <div className="space-y-4">
+                {/* 🆕 ASIN List（可选） */}
+                <div>
+                  <Label className="text-sm font-medium">ASIN List (optional)</Label>
+                  <Textarea
+                    className="mt-2 h-28"
+                    placeholder="Paste ASINs separated by comma/newline/tab/space"
+                    value={asinInput}
+                    onChange={(e) => setAsinInput(e.target.value)}
+                  />
+                  <p className="text-xs text-muted-foreground mt-1">
+                    Detected {Array.from(new Set((asinInput.trim().toUpperCase().match(/[A-Z0-9]{10}/g) || []))).length} ASINs
+                  </p>
+                </div>
                 {/* 数据来源筛选 */}
                 
                 {/* 销量排名筛选 */}

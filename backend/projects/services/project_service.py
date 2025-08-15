@@ -1,6 +1,7 @@
 """Project business logic service."""
 
 import logging
+import re
 import hashlib
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
@@ -661,6 +662,34 @@ class ProjectService:
         to ensure consistency between preview and saved project.
         """
         try:
+            # 🆕 优先使用前端传入的显式 ASIN 列表（与 Data Import 解析一致）
+            if hasattr(filters, 'product_asins') and filters.product_asins:
+                normalized: List[str] = []
+                seen = set()
+                for a in filters.product_asins:
+                    if not a:
+                        continue
+                    token = str(a).strip().upper()
+                    # 容忍 8-12 长度，主用 10；去重
+                    if 8 <= len(token) <= 12 and token not in seen:
+                        seen.add(token)
+                        normalized.append(token)
+                return normalized
+
+            # 🆕 可选：如果传了原始文本，后端自行解析（与 Data Import 一致）
+            if hasattr(filters, 'raw_asin_input') and filters.raw_asin_input:
+                raw_upper = str(filters.raw_asin_input).upper()
+                matches = re.findall(r"[A-Z0-9]{10}", raw_upper)
+                normalized: List[str] = []
+                seen = set()
+                for m in matches:
+                    token = m.strip().upper()
+                    if 8 <= len(token) <= 12 and token not in seen:
+                        seen.add(token)
+                        normalized.append(token)
+                if normalized:
+                    return normalized
+
             # 🔥 关键修复：使用与get_data_confirmation_data_by_category_id()完全相同的逻辑
             # 如果有category_id，优先使用category_id过滤逻辑
             if hasattr(filters, 'category_id') and filters.category_id:
