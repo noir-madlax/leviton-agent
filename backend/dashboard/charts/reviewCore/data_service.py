@@ -93,6 +93,7 @@ class ReviewDataService:
                 query = query.order('review_id', desc=(sort_order == 'desc'))
             
             # Get all data (no pagination at this level since we need to deduplicate)
+            logger.info(f"get_reviews_by_category method Executing query: {query}")
             result = query.execute()     
             if not result.data:
                 if category_id is not None:
@@ -452,6 +453,7 @@ class ReviewDataService:
             query = f"SELECT category_pk, category_name, category_definition, aspect_type, COUNT(DISTINCT (product_id, review_id)) as total_reviews, COUNT(DISTINCT CASE WHEN sentiment = '+' THEN (product_id, review_id) END) as positive_reviews, COUNT(DISTINCT CASE WHEN sentiment = '-' THEN (product_id, review_id) END) as negative_reviews, COUNT(*) as total_mentions, COUNT(CASE WHEN sentiment = '+' THEN 1 END) as positive_mentions, COUNT(CASE WHEN sentiment = '-' THEN 1 END) as negative_mentions FROM {ReviewAnalysisConfig.REVIEW_ASPECT_DATA_VIEW} WHERE project_id = '{project_id}' AND product_id IN ('{asins_str}') AND aspect_type IN ('{aspect_types_str}') GROUP BY category_pk, category_name, category_definition, aspect_type ORDER BY {sort_by} {sort_direction} LIMIT {limit}"
             
             # Execute query using the safe query RPC function
+            logger.info(f"get_categories method Executing query: {query}")
             result = self.supabase.rpc('execute_safe_query', {
                 'query_text': query
             }).execute()
