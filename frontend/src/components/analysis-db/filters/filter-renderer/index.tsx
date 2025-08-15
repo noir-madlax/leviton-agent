@@ -20,7 +20,7 @@ interface FilterRendererProps {
   chartName: string  // 图表名称，用于从 context 获取配置
   currentFilters: ProjectFilters  // 当前过滤器值
   onChange: (filters: ProjectFilters) => void  // 变化回调
-  
+
   // 🌟 可选参数
   disabled?: boolean
   className?: string
@@ -56,9 +56,10 @@ export function FilterRenderer({
     brands: chartConfig?.filters.brands?.isVisible === true,
     segments: chartConfig?.filters.product_segments?.isVisible === true,
     timeframe: chartConfig?.filters.time_period?.isVisible === true,
-    // 🔧 修复：如果没有配置 extend_fields，默认显示为 true
-    extend_fields: chartConfig?.filters.extend_fields?.isVisible !== false
+    // 🔧 修复：如果没有配置 extend_fields，默认不显示（仅当 isVisible === true 时显示）
+    extend_fields: chartConfig?.filters.extend_fields?.isVisible === true
   }
+
 
   // 🔧 调试：输出可见性配置
   console.log('🔧 [FILTER-RENDERER] Visible filters:', visibleFilters)
@@ -131,13 +132,14 @@ export function FilterRenderer({
     const checkFiltersReady = () => {
       // 简化的检查条件：
       // 1. context 数据已加载
-      // 2. 图表配置已获取
-      // 3. 🔧 简化扩展字段检查：如果有图表配置中的默认值或状态管理器中的值，就认为已就绪
+      // 2. 图表配置可能不存在（无配置也应视为就绪）
+      // 3. 如果需要扩展字段且有值或默认值，则就绪；否则在无配置或不需要扩展字段时也就绪
       const isContextReady = !contextLoading
       const hasChartConfig = !!chartConfig
-      
+      const noConfig = !chartConfig
+
       // 🔧 简化的扩展字段检查逻辑
-      const hasExtendFields = visibleFilters?.extend_fields ? 
+      const hasExtendFields = visibleFilters?.extend_fields ?
         (
           // 方案1：状态管理器中已有扩展字段值
           (chartFilters?.filters.extend_fields && Object.keys(chartFilters.filters.extend_fields).length > 0) ||
@@ -145,14 +147,16 @@ export function FilterRenderer({
           (chartConfig?.filters.extend_fields?.values && Object.keys(chartConfig.filters.extend_fields.values).length > 0) ||
           // 方案3：如果以上都没有，但图表配置存在，也认为就绪（让数据加载流程继续）
           !!chartConfig
-        ) : 
+        ) :
         true // 如果不需要扩展字段，则认为已就绪
 
-      const isReady = Boolean(isContextReady && hasChartConfig && hasExtendFields)
+      // 无配置时，只要 context 加载完成即就绪；有配置时遵循扩展字段的就绪规则
+      const isReady = Boolean(isContextReady && (noConfig || hasExtendFields))
 
       console.log(`🔍 [FILTER-RENDERER] Checking filters ready for ${chartName}:`, {
         isContextReady,
         hasChartConfig,
+        noConfig,
         hasExtendFields,
         chartConfigExtendFields: chartConfig?.filters.extend_fields?.values,
         chartFiltersExtendFields: chartFilters?.filters.extend_fields,
@@ -262,9 +266,9 @@ export function FilterRenderer({
       <div className="flex justify-between items-center ">
         <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
         <div className="flex items-center gap-2">
-          <Button 
-            variant="outline" 
-            size="sm" 
+          <Button
+            variant="outline"
+            size="sm"
             onClick={handleReset}
             disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
             className="flex items-center gap-2"
@@ -272,8 +276,8 @@ export function FilterRenderer({
             <RotateCcw className="w-4 h-4" />
             {filtersT('reset')}
           </Button>
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             onClick={handleApplyFilters}
             disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters} // 🆕 使用 context 的 loading 状态
           >
@@ -288,7 +292,7 @@ export function FilterRenderer({
           </Button>
         </div>
       </div>
-      
+
       {/* 第一行：基础过滤器控件 */}
       <div className="flex items-center gap-2 flex-wrap "> {/* FILTER_ROW_GAP: tighten inline filter controls spacing */}
         {/* Category Filter */}
