@@ -119,6 +119,7 @@ export interface ChartFilterConfiguration {
   chartName: string
   filters: {
     categories?: FilterConfig
+    asins?: FilterConfig
     brands?: FilterConfig
     product_segments?: FilterConfig
     time_period?: FilterConfig

@@ -19,22 +19,22 @@ export const CHART_NAMES = {
   // 洞察分析相关
   MARKET_INSIGHTS: 'market-insights',
 
+ // 价格分析
+  PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
+  PRICE_DISTRIBUTION_OVERVIEW: 'price-distribution-overview', // 🆕 价格分布概览
+  PRICE_VS_REVENUE: 'price-vs-revenue', // 散点图
+  BRAND_PRICE_DISTRIBUTION: 'price-distribution-by-brands', // 品牌价格分布
+
   // 评论分析
   CUSTOMER_PAIN_POINTS: 'customer-pain-points',
   CUSTOMER_DELIGHTS: 'customer-delights',
   USE_CASE_SENTIMENT: 'use-case-sentiment',
 
-  // 价格分析
-  PRICE_ANALYSIS: 'price-distribution-by-type', // 修正：与图表data-chart-id匹配
-  PRICE_DISTRIBUTION_OVERVIEW: 'price-distribution-overview', // 🆕 价格分布概览
-  PRICE_VS_REVENUE: 'price-vs-revenue', // 散点图
-
-  // 其他分析
-  BRAND_PRICE_DISTRIBUTION: 'price-distribution-by-brands', // 品牌价格分布
-  CATEGORY_ANALYSIS: 'category-analysis',
+  // 竞争分析
   COMPETITOR_ANALYSIS: 'competitor-analysis',
 
   // 预留扩展
+  CATEGORY_ANALYSIS: 'category-analysis',
   CUSTOM_ANALYSIS_1: 'custom-analysis-1',
   CUSTOM_ANALYSIS_2: 'custom-analysis-2',
   CUSTOM_ANALYSIS_3: 'custom-analysis-3'

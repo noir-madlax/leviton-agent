@@ -10,6 +10,8 @@ export interface ChartFilterState {
     segments?: string[]
     extend_fields?: Record<string, any>
   }
+  // 🆕 选中的ASIN（与 filters 平级，供 asin-filter 使用）
+  selected_asins?: string[]
   timeframe?: {
     period?: string
   }
@@ -85,6 +87,7 @@ export const DEFAULT_CHART_FILTER_STATE: ChartFilterState = {
     segments: [],
     extend_fields: {}
   },
+  selected_asins: [],
   timeframe: {
     period: "" // 🔧 移除硬编码默认值，完全依赖后端
   },

@@ -42,6 +42,8 @@ class FilterStateManager implements IFilterStateManager {
         ...currentState.filters,
         ...filters.filters
       },
+      // 🆕 顶层字段：selected_asins 需要合并
+      selected_asins: (filters.selected_asins !== undefined ? filters.selected_asins : currentState.selected_asins) as string[] | undefined,
       timeframe: {
         ...currentState.timeframe,
         ...filters.timeframe
@@ -157,7 +159,12 @@ class FilterStateManager implements IFilterStateManager {
   updateSpecificFilter(chartName: string, filterPath: string, value: any): void {
     const pathParts = filterPath.split('.')
     
-    if (pathParts.length === 2 && pathParts[0] === 'filters') {
+    if (pathParts.length === 1 && pathParts[0] === 'selected_asins') {
+      // 🆕 更新与 filters 平级的 selected_asins
+      this.updateChartFilters(chartName, {
+        selected_asins: value
+      })
+    } else if (pathParts.length === 2 && pathParts[0] === 'filters') {
       // 更新 filters 下的字段
       const filterName = pathParts[1]
       this.updateChartFilters(chartName, {

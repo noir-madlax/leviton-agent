@@ -1,21 +1,20 @@
 "use client"
 
 import { useState, useEffect, useMemo } from "react"
-import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { ExternalLink, Filter, BarChart, BarChart3 } from "lucide-react"
+import { Filter } from "lucide-react"
 import { CompetitorMatrix } from "@/components/analysis-db/charts/competitor-matrix"
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 // import CustomerSentimentScatter from "@/components/analysis-db/charts/customer-sentiment-scatter"
 import { CompetitorAsinSelector } from "./competitor-asin-selector"
-import { CustomerSatisfactionChart } from "@/app/chat/charts/customer_satisfaction"
-import { Tooltip } from "@/components/ui/tooltip"
+
 import { databaseService } from "@/components/analysis-db/data/database-service"
 import { ChartWithFilters } from "@/components/analysis-db/shared/chart-with-filters"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { supabase } from "@/lib/supabase"
 import { useChartSections } from "@/components/integrated-dashboard/hooks/use-chart-sections"
 import { useChartsT } from '@/i18n/hooks'
+import { CustomerSatisfactionOverview } from "@/components/analysis-db/competitor-analysis/customer-satisfaction-overview"
 
 
 
@@ -270,29 +269,9 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
       {/* Customer Satisfaction Overview - New Implementation */}
       {shouldShowChart('customer-satisfaction-overview') && (
       <section data-chart-id="customer-satisfaction-overview">
-        <h2 className="text-xl font-bold text-gray-800 pl-0 mb-4">📊 {chartsT('competitorAnalysis')}</h2>
-        <h3 className="text-lg font-semibold text-gray-800 flex items-center gap-2 pb-5">
-          <BarChart3 className="w-5 h-5" />
-          {chartsT('customerSatisfactionOverview')}
-        </h3>
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-          {chartsT('calculatedFromLatest200Reviews')}
-        </div>
-
-        <CustomerSatisfactionChart
+        <CustomerSatisfactionOverview
           projectId={projectId || ''}
-          filters={{
-            categories: initialFilters?.categories || [],
-            brands: initialFilters?.brands || [],
-            segments: initialFilters?.segments || [],
-            extend_fields: initialFilters?.extend_fields || {}
-          }}
-          onProductClick={(product) => {
-            // Handle product click - open Amazon link
-            if (product.product_url) {
-              window.open(product.product_url, '_blank', 'noopener,noreferrer')
-            }
-          }}
+          initialFilters={initialFilters}
         />
       </section>
       )}

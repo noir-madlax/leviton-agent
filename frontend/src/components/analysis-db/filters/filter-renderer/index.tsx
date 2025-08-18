@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button"
 import { RotateCcw, Loader2 } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
+import { AsinFilter } from '../asin-filter'
+
 import { TimeframeFilter } from '../timeframe-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
 import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
@@ -53,6 +55,7 @@ export function FilterRenderer({
   // 🆕 从图表配置中提取可见性配置
   const visibleFilters = {
     categories: chartConfig?.filters.categories?.isVisible === true,
+    asins: chartConfig?.filters.asins?.isVisible === true,
     brands: chartConfig?.filters.brands?.isVisible === true,
     segments: chartConfig?.filters.product_segments?.isVisible === true,
     timeframe: chartConfig?.filters.time_period?.isVisible === true,
@@ -78,7 +81,8 @@ export function FilterRenderer({
     updateCategories,
     updateExtendFields,
     updateTimeframe,
-    resetFilters
+    resetFilters,
+    updateFilter
   } = useChartFilters(chartName)
 
   const [pendingFilters, setPendingFilters] = useState<ProjectFilters>(currentFilters)
@@ -107,17 +111,21 @@ export function FilterRenderer({
     if (chartFilters && (!currentFilters.time_period && !currentFilters.categories.length)) {
       const newPendingFilters: ProjectFilters = {
         categories: chartFilters.filters.categories || [],
-        asins: [],
+        asins: (chartFilters as any).filters?.asins || [],
         brands: chartFilters.filters.brands || [],
         segments: chartFilters.filters.segments || [],
         extend_fields: chartFilters.filters.extend_fields || {},
         time_period: chartFilters.timeframe?.period || "" // 🔧 不设置前端默认值
       }
 
-      console.log(`🔄 [FILTER-RENDERER] Syncing chart filters to pending filters for ${chartName}:`, newPendingFilters)
-      setPendingFilters(newPendingFilters)
+      // 避免无差异更新导致的重复渲染
+      const isSame = JSON.stringify(newPendingFilters) === JSON.stringify(pendingFilters)
+      if (!isSame) {
+        console.log(`🔄 [FILTER-RENDERER] Syncing chart filters to pending filters for ${chartName}:`, newPendingFilters)
+        setPendingFilters(newPendingFilters)
+      }
     }
-  }, [chartFilters, chartName, currentFilters])
+  }, [chartFilters, chartName, currentFilters, pendingFilters])
 
   // 🆕 监听 extend-fields 版本变化，触发重渲染
   useEffect(() => {
@@ -189,6 +197,8 @@ export function FilterRenderer({
         segments: pendingFilters.segments || [],
         extend_fields: pendingFilters.extend_fields || {}
       },
+      // 🆕 将 ASIN 选择存入 selected_asins（与 filters 平级）
+      selected_asins: (chartFilters?.selected_asins as string[] | undefined) || [],
       timeframe: {
         period: pendingFilters.time_period || ''
       },
@@ -306,6 +316,20 @@ export function FilterRenderer({
             }}
             chartName={chartName} // 🆕 使用 chartName
             disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
+            loading={contextLoading}
+          />
+        )}
+
+        {/* ASIN Filter */}
+        {visibleFilters?.asins && (
+          <AsinFilter
+            value={(chartFilters?.selected_asins as string[] | undefined) || []}
+            onChange={(asins) => {
+              // 将 asin 选择保存到与 filters 平级的 selected_asins
+              updateFilter('selected_asins', asins)
+            }}
+            chartName={chartName}
+            disabled={disabled || contextLoading}
             loading={contextLoading}
           />
         )}

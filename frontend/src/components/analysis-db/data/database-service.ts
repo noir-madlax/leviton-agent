@@ -367,17 +367,9 @@ async function callDashboardAPI(endpoint: string, projectId: string, options: {
 
 export class DatabaseService {
 
-  // 🆕 从过滤器状态管理器获取过滤器参数 - 直接返回 API 需要的结构
+  // 🆕 从过滤器状态管理器获取过滤器参数 - 返回 ChartFilterState，便于扩展
   // 改为 public，供图表组件获取“最终合并后的 filters”用于点击明细传参
-  getFiltersFromState(chartName: string): {
-    filters: {
-      categories: string[]
-      brands: string[]
-      segments: string[]
-      extend_fields: Record<string, any>
-    }
-    timeframe: { period: string }
-  } {
+  getFiltersFromState(chartName: string): ChartFilterState {
     const chartState = filterStateManager.getChartFilters(chartName)
     const projectState = filterStateManager.getChartFilters(CHART_NAMES.PROJECT)
 
@@ -386,24 +378,29 @@ export class DatabaseService {
     // 如果当前图表没有任何状态，尝试完全使用 Project 的过滤器
     if (!chartState) {
       if (projectState) {
-        const fromProject = {
+        const fromProject: ChartFilterState = {
           filters: {
             categories: projectState.filters.categories || [],
             brands: projectState.filters.brands || [],
             segments: projectState.filters.segments || [],
             extend_fields: projectState.filters.extend_fields || {}
           },
-          timeframe: { period: projectState.timeframe?.period || 'year' }
+          selected_asins: (projectState as any).selected_asins || [],
+          timeframe: { period: projectState.timeframe?.period || 'year' },
+          metadata: { ...projectState.metadata }
         }
         console.log(`🔍 [DATABASE-SERVICE] No state for ${chartName}, fallback to PROJECT filters:`, fromProject)
         return fromProject
       }
 
       console.log(`🔍 [DATABASE-SERVICE] No filter state found for ${chartName}, using empty defaults`)
-      return {
+      const emptyState: ChartFilterState = {
         filters: { categories: [], brands: [], segments: [], extend_fields: {} },
-        timeframe: { period: 'year' }
+        selected_asins: [],
+        timeframe: { period: 'year' },
+        metadata: { lastUpdated: Date.now() }
       }
+      return emptyState
     }
 
     // 合并规则：优先使用当前图表的值；若为空/未设置，则回退到 Project
@@ -437,14 +434,16 @@ export class DatabaseService {
       }
     })
 
-    const result = {
+    const result: ChartFilterState = {
       filters: {
         categories: mergedCategories,
         brands: mergedBrands,
         segments: mergedSegments,
         extend_fields: mergedExtendFields
       },
-      timeframe: { period: chartState.timeframe?.period || projectState?.timeframe?.period || 'year' }
+      selected_asins: (chartState as any).selected_asins ?? (projectState as any)?.selected_asins ?? [],
+      timeframe: { period: chartState.timeframe?.period || projectState?.timeframe?.period || 'year' },
+      metadata: { ...chartState.metadata }
     }
 
     console.log(`🔍 [DATABASE-SERVICE] Retrieved merged filters for ${chartName}:`, result)
@@ -901,7 +900,7 @@ export class DatabaseService {
         segmentFilters,
         extendFields
       })
-      
+
       // If backend returns enhanced format, use it directly
       if (result.segmentNames && result.segmentColors && result.segmentSummary) {
         return {
@@ -912,11 +911,11 @@ export class DatabaseService {
           segmentColors: result.segmentColors || []
         }
       }
-      
+
       // Fallback: Convert legacy format to expected format
       const segments: Record<string, any[]> = {}
       const segmentNames: string[] = []
-      
+
       // Extract segments from topProducts
       result.topProducts?.forEach((category: any) => {
         if (category.category && category.products) {
@@ -926,7 +925,7 @@ export class DatabaseService {
           }
         }
       })
-      
+
       // Generate segment summary from available data
       const segmentSummary: Record<string, any> = {}
       Object.keys(segments).forEach(segment => {
@@ -939,7 +938,7 @@ export class DatabaseService {
           topBrand: products.length > 0 ? products[0].brand || 'N/A' : 'N/A'
         }
       })
-      
+
       return {
         priceVsRevenue: result.priceVsRevenue || [],
         topProducts: {
@@ -1293,6 +1292,32 @@ export class DatabaseService {
     }
   }
 
+  // 🆕 Get Customer Satisfaction Overview (competitor summary) using unified filters
+  async getCustomerSatisfactionOverview(projectId: string): Promise<any> {
+    try {
+      const { filters, selected_asins } = this.getFiltersFromState(CHART_NAMES.COMPETITOR_ANALYSIS)
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+      const requestBody: Record<string, any> = {
+        project_id: projectId,
+        filters,
+        // 🆕 若用户通过 asin-filter 选择了 ASIN，则传给后端
+        selected_asins: Array.isArray(selected_asins) ? selected_asins : []
+      }
+
+      const res = await fetch(`${API_BASE_URL}/api/v1/dashboard/charts/competitor-analysis/summary`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      })
+      if (!res.ok) throw new Error(`Customer Satisfaction Overview API failed: ${res.status}`)
+      return await res.json().then((r) => r.data || r)
+    } catch (e) {
+      console.error('Error fetching Customer Satisfaction Overview:', e)
+      throw e
+    }
+  }
+
+
   // 🆕 Get Use Case Sentiment (grouped by product category)
   async getUseCaseSentimentGrouped(projectId: string): Promise<{
     project_id: string
@@ -1488,10 +1513,10 @@ export class DatabaseService {
 
   // 🔑 Get reviews for a specific matrix cell (product-category combination)
   async getCompetitorCellReviews(
-    projectId: string, 
-    productAsin: string, 
-    categoryName: string, 
-    limit: number = 50, 
+    projectId: string,
+    productAsin: string,
+    categoryName: string,
+    limit: number = 50,
     offset: number = 0
   ): Promise<{
     reviews: Array<{
@@ -1514,11 +1539,11 @@ export class DatabaseService {
   }> {
     try {
       const response = await fetch(`/api/dashboard/competitor-analysis/${projectId}/cell-reviews?product_asin=${encodeURIComponent(productAsin)}&category_name=${encodeURIComponent(categoryName)}&limit=${limit}&offset=${offset}`)
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
-      
+
       const result = await response.json()
       return result
     } catch (error) {
@@ -1840,15 +1865,15 @@ export class DatabaseService {
     try {
       // First try to use backend API
       const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-      
+
       // Build URL with user UID parameter if provided
       let url = `${API_BASE_URL}/api/v1/projects/`
       if (userUid) {
         url += `?user_uid=${encodeURIComponent(userUid)}`
       }
-      
+
       console.log('🔍 [PROJECTS API] Fetching projects with user UID:', userUid)
-      
+
       const response = await fetch(url, {
         method: 'GET',
         headers: {
@@ -1864,7 +1889,7 @@ export class DatabaseService {
       return data || []
     } catch (error) {
       console.warn('Backend API not available, falling back to direct Supabase access:', error)
-      
+
       // Fallback to direct Supabase access
       try {
         const { data, error: supabaseError } = await supabase
@@ -1929,7 +1954,7 @@ export class DatabaseService {
       return data
     } catch (error) {
       console.warn('Backend API not available, falling back to direct Supabase access:', error)
-      
+
       // Fallback to direct Supabase access
       try {
         const { data, error: supabaseError } = await supabase
@@ -2029,14 +2054,14 @@ export class DatabaseService {
   // 🔑 Get project segments
   async getProjectSegments(projectId: string): Promise<string[]> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/project-segments?project_id=${projectId}`)
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
-      
+
       const result = await response.json()
       return result.segments || []
     } catch (error) {
@@ -2125,7 +2150,7 @@ export class DatabaseService {
         let analysisReviewCount = 0
         if (aspectsData && aspectsData.length > 0) {
           const aspectPks = aspectsData.map(item => item.aspect_pk)
-          
+
           // Get unique review_ids from aspect_occurrences
           const { data: occurrencesData } = await supabase
             .from('review_analysis_aspect_occurrences')
@@ -2151,14 +2176,14 @@ export class DatabaseService {
   // 🔑 Get project extend fields
   async getProjectExtendFields(projectId: string): Promise<ExtendFieldDefinition[]> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
+
     try {
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/extend-fields`)
-      
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`)
       }
-      
+
       const result = await response.json()
       return result.extend_fields || []
     } catch (error) {
@@ -2170,33 +2195,33 @@ export class DatabaseService {
   // 🔑 Get project filter defaults
   async getProjectFilterDefaults(projectId: string): Promise<ProjectFilters> {
     const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
-    
+
     try {
       console.log(`🔍 [DatabaseService] Fetching filter defaults for project: ${projectId}`)
-      
+
       const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-defaults`)
-      
+
       if (!response.ok) {
         console.warn(`⚠️ [DatabaseService] Failed to fetch filter defaults: HTTP ${response.status}`)
         return DEFAULT_FILTERS
       }
-      
+
       const result = await response.json()
       let filters = result.filters || DEFAULT_FILTERS
-      
+
       // 🔧 Set default values for Smart Capability: select both Non-Smart and Smart by default
       if (!filters.extend_fields) {
         filters.extend_fields = {}
       }
-      
+
       if (!filters.extend_fields.smart_capability) {
         filters.extend_fields.smart_capability = ['Non-Smart', 'Smart']
         console.log(`🔧 [DatabaseService] Set Smart Capability default values: ['Non-Smart', 'Smart']`)
       }
-      
+
       console.log(`✅ [DatabaseService] Retrieved filter defaults:`, filters)
       return filters
-      
+
     } catch (error) {
       console.error('❌ [DatabaseService] Error fetching project filter defaults:', error)
       // 🔧 Also set Smart Capability defaults in error fallback
@@ -2395,4 +2420,4 @@ export class DatabaseService {
   }
 }
 
-export const databaseService = new DatabaseService() 
+export const databaseService = new DatabaseService()

@@ -65,6 +65,9 @@ function transformFilterDefaults(apiResponse: FilterDefaultsResponse): UnifiedFi
         case 'categories':
           config.filters.categories = filterConfig
           break
+        case 'asins':
+          config.filters.asins = filterConfig
+          break
         case 'brands':
           config.filters.brands = filterConfig
           break
