@@ -126,22 +126,16 @@ export function PackageSalesTrendChart({ data: initialData, projectId, initialFi
                 disabled={dataLoading}
                 className="mb-3" /* FILTER_SECTION_MARGIN: reduce vertical space under filters; adjust here */
               />
-              {/* Display Metric selector moved here: under chart filters and above chart */}
+              {/* Display Metric selector: compact style consistent with chart filters */}
               <div className="flex items-center gap-3 mb-3">
-                <Label htmlFor="display-metric" className="text-sm font-medium text-gray-800">
-                  {chartsT('displayMetric')}:
-                </Label>
+                <span className="text-sm text-gray-600">{chartsT('displayMetric')}:</span>
                 <Select value={metricType} onValueChange={(v)=> setMetricType(v as PackageMetricType)}>
-                  <SelectTrigger id="display-metric" className="w-[180px] text-sm">
+                  <SelectTrigger id="display-metric" className="w-40 h-8 text-sm">
                     {metricType === 'revenue' ? chartsT('revenue') : chartsT('productsText')}
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="revenue" className="text-sm">
-                      <span className="font-semibold">{chartsT('revenue')}</span>
-                    </SelectItem>
-                    <SelectItem value="products" className="text-sm">
-                      <span className="font-semibold">{chartsT('productsText')}</span>
-                    </SelectItem>
+                    <SelectItem value="revenue" className="text-sm">{chartsT('revenue')}</SelectItem>
+                    <SelectItem value="products" className="text-sm">{chartsT('productsText')}</SelectItem>
                   </SelectContent>
                 </Select>
               </div>

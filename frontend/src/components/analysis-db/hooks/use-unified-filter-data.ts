@@ -175,7 +175,7 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
           project_id: projectId
         })
 
-        // 🆕 将 Project 过滤器写入全局状态（GlobalFilterState）
+        // 🆕 将 Project 过滤器写入全局状态（GlobalFilterState）——在首次进入 loading 状态前就先置空结构，避免头部等待
         const projectChartConfig: ChartFilterConfiguration | undefined = unifiedData.charts[CHART_NAMES.PROJECT]
         if (projectChartConfig) {
           const categoriesValues = projectChartConfig.filters.categories?.values
@@ -206,6 +206,12 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
           console.log('🌍 [UNIFIED-FILTER] Project filters seeded into GlobalFilterState:', chartState)
         } else {
           console.log('ℹ️ [UNIFIED-FILTER] No project chart config found in unified filter data')
+          // 即便后端此时无配置，也推送一个空的项目级结构，确保头部能渲染“0 filters”并保持稳定
+          filterStateManager.updateChartFilters(CHART_NAMES.PROJECT, {
+            filters: { categories: [], brands: [], segments: [], extend_fields: {} },
+            timeframe: { period: '' },
+            metadata: { syncedFromProject: true, syncTimestamp: Date.now() }
+          })
         }
 
         const successState: UnifiedFilterCacheState = {

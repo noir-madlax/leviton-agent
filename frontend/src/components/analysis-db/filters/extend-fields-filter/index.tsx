@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { useCommonT, useProjectT, useFiltersT, useT } from '@/i18n/hooks'
+import { Check } from 'lucide-react'
 import { ExtendFieldDefinition, ExtendFieldsFilterProps, ExtendFieldValue } from './types'
 import { useExtendFieldsData, registerExtendFieldsRerenderCallback } from './hooks/useExtendFieldsData'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context'
@@ -283,7 +284,7 @@ export function ExtendFieldsFilter({
               <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   selectCurrentValue.length > 0 
-                    ? t('filters.selectedItems', { count: selectCurrentValue.length })
+                    ? (selectCurrentValue.length === 1 ? String(selectCurrentValue[0]) : t('filters.selectedItems', { count: selectCurrentValue.length }))
                     : filtersT('selectOption')
                 } />
               </SelectTrigger>
@@ -297,7 +298,7 @@ export function ExtendFieldsFilter({
                   return (
                     <SelectItem key={item.name} value={item.name}>
                       <div className="flex items-center gap-2">
-                        {isSelected && <span className="text-green-600">✅</span>}
+                        {isSelected && <Check className="h-4 w-4 text-green-600" />}
                         {displayLabel}
                       </div>
                     </SelectItem>
@@ -343,7 +344,7 @@ export function ExtendFieldsFilter({
                 <SelectTrigger className="w-48 h-8">
                 <SelectValue placeholder={
                   multiSelectValues.length > 0 
-                    ? t('filters.selectedItems', { count: multiSelectValues.length })
+                    ? (multiSelectValues.length === 1 ? String(multiSelectValues[0]) : t('filters.selectedItems', { count: multiSelectValues.length }))
                     : filtersT('selectOption')
                 } />
               </SelectTrigger>

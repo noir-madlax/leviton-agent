@@ -156,10 +156,10 @@
     "salesAnalyticsChat": "Sales Analytics Chat",
     
     "pricingAnalysis": "Pricing Analysis",
-    "priceDistributionBySegment": "Price Distribution by Segment",
+    "priceDistributionBySegment": "Price Distribution Overview",
     "priceDistributionByProductType": "Price Distribution by Product Type",
     "priceVsRevenueDistribution": "Price vs Revenue Distribution of Top Selling 20 Products",
-    "brandPriceDistribution": "Brand Price Distribution",
+    "brandPriceDistribution": "Price distribution by Brands",
     
     
     "segment": "Segment",
@@ -255,7 +255,7 @@
 
     "marketShareBySalesUnit": "Market Share by Sales Unit",
     "packageTypeDistributionByRevenue": "Package Type Distribution by Revenue",
-    "displayMetric": "Display Metric",
+    "displayMetric": "Sorted by",
     "products": "Products",
     "salesUnitDistributionByRevenue": "Sales Unit Distribution by Revenue",
     "packageTypeSalesTrendAnalysis": "Package Type Sales Trend Analysis:",

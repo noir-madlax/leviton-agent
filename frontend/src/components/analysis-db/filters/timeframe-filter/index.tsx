@@ -83,11 +83,8 @@ export function TimeframeFilter({
         </SelectTrigger>
         <SelectContent>
           {displayOptions.map((period) => (
-            <SelectItem key={period} value={period}>
-              <div className="flex items-center gap-2">
-                {value === period && <span className="text-green-600">✅</span>}
-                {getTimeframeLabel(period)}
-              </div>
+            <SelectItem key={period} value={period} className="text-sm">
+              {getTimeframeLabel(period)}
             </SelectItem>
           ))}
         </SelectContent>

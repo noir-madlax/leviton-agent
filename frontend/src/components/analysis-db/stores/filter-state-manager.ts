@@ -63,6 +63,8 @@ class FilterStateManager implements IFilterStateManager {
       changes: filters
     })
 
+    // 不进行本地持久化，保持会话级内存状态即可
+
     // 触发订阅者
     this.notifySubscribers({
       type: 'FILTER_UPDATE',
@@ -247,6 +249,8 @@ class FilterStateManager implements IFilterStateManager {
 
     // 触发全局同步事件
     this.notifyGlobalSync(projectFilters, allRegisteredCharts)
+
+    // 不进行本地持久化
   }
 
   /**

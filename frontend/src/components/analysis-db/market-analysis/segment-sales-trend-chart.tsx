@@ -122,6 +122,10 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 disabled={dataLoading}
                 className="mb-0"
               />
+              {/* Keep Sorted by aligned under filters, left-aligned with Time Period */}
+              <div className="mt-2">
+                <MetricTypeSelector onChange={setMetricType} value={metricType} />
+              </div>
             </div>
 
             {/* 图表内容区域 */}
@@ -156,8 +160,7 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 // 图表渲染逻辑
                 chartData && mounted ? (
                   <div className="space-y-6">
-                    {/* 指标类型选择器 */}
-                    <MetricTypeSelector onChange={setMetricType} value={metricType} />
+                    {/* 指标类型选择器已上移至过滤器区域 */}
 
                     {/* 图表显示（每个类目一张图） */}
                     {categoriesData.length > 0 ? (

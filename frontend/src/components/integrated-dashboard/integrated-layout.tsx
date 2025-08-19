@@ -1,10 +1,11 @@
 "use client"
 
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './styles.css'
 import { ArrowLeft, Filter, MessageSquare, ChevronRight, Loader2 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
+import { Tooltip } from '@/components/ui/tooltip'
 import Link from 'next/link'
 import { ChartContainer } from './chart/chart-container'
 import { ChatWithNavigation } from './chat-with-navigation'
@@ -15,6 +16,8 @@ import { ProjectFilters, DEFAULT_FILTERS } from '@/components/analysis-db/types/
 import { useFilterCache } from '@/components/analysis-db/hooks/use-filter-cache'
 import { ChartData } from './shared/types'
 import { useCommonT, useProjectT } from '@/i18n/hooks'
+import { CHART_NAMES } from '@/components/analysis-db/constants'
+import { filterStateManager } from '@/components/analysis-db/stores'
 
 // 使用现有的Project接口
 interface Project {
@@ -115,8 +118,6 @@ export function IntegratedLayout({
     dynamicCharts,
     allCards,
     chatConfig,
-    configLoading,
-    configError,
     setChartContainerState,
     addDynamicChart,
     selectChart
@@ -184,58 +185,66 @@ export function IntegratedLayout({
     return <Filter className="h-3.5 w-3.5" />
   }
 
-  // 渲染具体的过滤器badges
-  const renderFilterBadges = () => {
-    const badges = [];
+  // 为 ProjectFilterWrapper 组装符合类型的预加载数据
+  const projectDataForFilter = projectOverviewData?.stats
+    ? { stats: projectOverviewData.stats }
+    : undefined
 
-    // Time Period filter (always show, including default)
-    badges.push(
-      <Badge hidden={true} key="time-period" variant="secondary" className="text-xs flex items-center gap-1">
-        ⏰ {commonT('timePeriod')}: {commonT('pastYear')}
-      </Badge>
-    );
-  /*
-    // Category filters
-    filters.categories.forEach(category => {
-      badges.push(
-        <Badge key={`category-${category}`} variant="secondary" className="text-xs flex items-center gap-1">
-          📁Category: {category}
+  // 渲染“已应用 N 个 filters”的黑色小Badge，hover 展示明细，点击唤起过滤器
+  const renderFilterSummaryBadge = () => {
+    const projectChartState = filterStateManager.getChartFilters(CHART_NAMES.PROJECT)
+    const effectiveFilters = {
+      categories: (filters?.categories?.length ? filters.categories : projectChartState?.filters.categories) || [],
+      brands: (filters?.brands?.length ? filters.brands : projectChartState?.filters.brands) || [],
+      segments: (filters?.segments?.length ? filters.segments : projectChartState?.filters.segments) || [],
+      extend_fields: Object.keys(filters?.extend_fields || {}).length
+        ? filters.extend_fields
+        : (projectChartState?.filters.extend_fields || {}),
+      time_period: filters?.time_period || projectChartState?.timeframe?.period || ''
+    }
+
+    const total = (
+      (effectiveFilters.categories?.length || 0) +
+      (effectiveFilters.brands?.length || 0) +
+      (effectiveFilters.segments?.length || 0) +
+      (effectiveFilters.time_period ? 1 : 0) +
+      Object.values(effectiveFilters.extend_fields || {}).reduce((acc, v) => acc + (Array.isArray(v) ? v.length : (v ? 1 : 0)), 0)
+    )
+
+    if (!total) return null
+
+    const details: string[] = []
+    if (effectiveFilters.categories?.length) details.push(`${effectiveFilters.categories.join(', ')}`)
+    if (effectiveFilters.brands?.length) details.push(`${effectiveFilters.brands.join(', ')}`)
+    if (effectiveFilters.segments?.length) details.push(`${effectiveFilters.segments.join(', ')}`)
+    if (effectiveFilters.time_period) details.push(`${effectiveFilters.time_period}`)
+    if (effectiveFilters.extend_fields && Object.keys(effectiveFilters.extend_fields).length) {
+      Object.values(effectiveFilters.extend_fields).forEach((v) => {
+        const val = Array.isArray(v) ? v.join(', ') : String(v)
+        if (val) details.push(`${val}`)
+      })
+    }
+
+    const countLabel = `${total} ${total === 1 ? 'filter' : 'filters'}`
+    const summary = `Applied: ${countLabel} — ${details.join(' | ')}`
+
+    const handleClick = () => onToggleFilter?.()
+
+    return (
+      <Tooltip content={summary}>
+        <Badge
+          variant="destructive"
+          onClick={handleClick}
+          title={summary}
+          aria-label={`Open project filters. ${summary}`}
+          className="ml-1 h-5 px-1.5 rounded-full text-[10px] bg-black text-white border-transparent shadow-sm cursor-pointer align-middle"
+          role="button"
+        >
+          Applied: {countLabel}
         </Badge>
-      );
-    });
-
-    // Brand filters
-    filters.brands.forEach(brand => {
-      badges.push(
-        <Badge key={`brand-${brand}`} variant="secondary" className="text-xs flex items-center gap-1">
-          🏢 Brand: {brand}
-        </Badge>
-      );
-    });
-
-    // Segment filters
-    filters.segments.forEach(segment => {
-      badges.push(
-        <Badge key={`segment-${segment}`} variant="secondary" className="text-xs flex items-center gap-1">
-          🎯 Product Segment: {segment}
-        </Badge>
-      );
-    });
-
-    // Extend field filters
-    Object.entries(filters.extend_fields).forEach(([fieldName, value]) => {
-      if (value !== undefined && value !== null && value !== '') {
-        const displayName = fieldName.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-        badges.push(
-          <Badge key={`extend-${fieldName}`} variant="secondary" className="text-xs flex items-center gap-1">
-            ⚙️ {displayName}: {typeof value === 'boolean' ? (value ? 'Yes' : 'No') : String(value)}
-          </Badge>
-        );
-      }
-    });
-*/
-    return badges;
-  };
+      </Tooltip>
+    )
+  }
 
   return (
     <div className="integrated-dashboard h-screen bg-gray-50/50 flex flex-col">
@@ -267,9 +276,9 @@ export function IntegratedLayout({
                     {getFilterButtonText()}
                   </button>
                 )}
-                {/* Applied filters display */}
-                <div className="flex items-center gap-1 flex-wrap">
-                  {renderFilterBadges()}
+                {/* Applied filters summary badge - 更靠近按钮（左/下微调） */}
+                <div className="flex items-center gap-1 whitespace-nowrap overflow-hidden -ml-1 translate-y-[3px]">
+                  {renderFilterSummaryBadge()}
                 </div>
               </div>
             </div>
@@ -291,7 +300,7 @@ export function IntegratedLayout({
                 projectId={projectId}
                 onFiltersChange={onFiltersChange}
                 initialFilters={filters}
-                preloadedData={projectOverviewData}
+                preloadedData={projectDataForFilter}
                 isDataLoading={overviewLoading || false}
               />
             </div>

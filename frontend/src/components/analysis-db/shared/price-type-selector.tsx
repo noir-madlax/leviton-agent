@@ -22,21 +22,15 @@ export function PriceTypeSelector({ onChange, defaultValue = "unit" }: PriceType
   }
 
   return (
-    <div className="flex items-center space-x-4 mb-3">
-      <Label htmlFor="price-type" className="text-lg font-semibold text-gray-800">
-         <span className="font-bold">{chartsT('priceType')}</span> :
-      </Label>
+    <div className="flex items-center gap-3 mb-2">
+      <span className="text-sm text-gray-600">{chartsT('priceType')} :</span>
       <Select value={value} onValueChange={handleValueChange}>
-        <SelectTrigger id="price-type" className="w-[180px] text-base">
+        <SelectTrigger id="price-type" className="w-40 h-8 text-sm">
           {value === "sku" ? chartsT('fullPackPrice') : chartsT('unitPrice')}
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="sku" className="text-base">
-            <span className="font-semibold">{chartsT('fullPackPrice')}</span>
-          </SelectItem>
-          <SelectItem value="unit" className="text-base">
-            <span className="font-semibold">{chartsT('unitPrice')}</span>
-          </SelectItem>
+          <SelectItem value="sku" className="text-sm">{chartsT('fullPackPrice')}</SelectItem>
+          <SelectItem value="unit" className="text-sm">{chartsT('unitPrice')}</SelectItem>
         </SelectContent>
       </Select>
     </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Check } from 'lucide-react'
 import { useProjectT, useFiltersT, useT } from '@/i18n/hooks'
 import { CategoryFilterProps } from '../common/types'
 import { useUnifiedFilter } from '@/components/analysis-db/contexts/unified-filter-context'
@@ -90,7 +91,7 @@ export function CategoryFilter({
         <SelectTrigger className="w-64 h-8">
           <SelectValue placeholder={
             value.length > 0 
-              ? t('filters.selectedItems', { count: value.length })
+              ? (value.length === 1 ? String(value[0]) : t('filters.selectedItems', { count: value.length }))
               : filtersT('selectOption')
           } />
         </SelectTrigger>
@@ -104,7 +105,7 @@ export function CategoryFilter({
             return (
               <SelectItem key={category} value={category}>
                 <div className="flex items-center gap-2">
-                  {isSelected && <span className="text-green-600">✅</span>}
+                  {isSelected && <Check className="h-4 w-4 text-green-600" />}
                   {displayLabel}
                 </div>
               </SelectItem>

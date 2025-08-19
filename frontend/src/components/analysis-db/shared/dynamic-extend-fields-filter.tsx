@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { Checkbox } from '@/components/ui/checkbox'
+import { Check } from 'lucide-react'
 import { ExtendFieldDefinition } from '../types/filters'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
 import { useCommonT, useProjectT } from '@/i18n/hooks'
@@ -248,7 +249,11 @@ export function DynamicExtendFieldsFilter({
               }}
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
+                <SelectValue placeholder={
+                  multiSelectValues.length > 0 
+                    ? (multiSelectValues.length === 1 ? String(multiSelectValues[0]) : `${multiSelectValues.length} selected`)
+                    : 'Select'
+                } />
               </SelectTrigger>
               <SelectContent>
                 {field.filter_options.options && Object.keys(field.filter_options.options)
@@ -257,7 +262,7 @@ export function DynamicExtendFieldsFilter({
                     return (
                       <SelectItem key={option} value={option} disabled={isSelected}>
                         <div className="flex items-center gap-2">
-                          {isSelected && <span className="text-green-600">✅</span>}
+                          {isSelected && <Check className="h-4 w-4 text-green-600" />}
                           {option}
                         </div>
                       </SelectItem>

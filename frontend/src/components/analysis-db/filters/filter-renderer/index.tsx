@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
-import { RotateCcw, Loader2 } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
 import { AsinFilter } from '../asin-filter'
 
 import { TimeframeFilter } from '../timeframe-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
-import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
+import { useCommonT, useFiltersT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
 import { useChartFilters } from '../../hooks/use-filter-state-manager' // 🆕 使用过滤器状态管理器
 import { filterStateManager } from '../../stores' // 🆕 导入状态管理器
@@ -97,7 +97,6 @@ export function FilterRenderer({
 
   // 国际化hooks
   const commonT = useCommonT()
-  const projectT = useProjectT()
   const filtersT = useFiltersT()
 
   // 🔄 同步 currentFilters 的变化到 pendingFilters（优先级最高）
@@ -337,27 +336,44 @@ export function FilterRenderer({
         )}
 
 
-        {/* Timeframe Filter */}
-        {visibleFilters?.timeframe && (
-          <TimeframeFilter
-            value={pendingFilters.time_period || ""}
-            onChange={(period) => {
-              setPendingFilters(prev => ({ ...prev, time_period: period }))
-              // 🆕 同时更新状态管理器
-              updateTimeframe({ period })
-            }}
-            chartName={chartName}
-            disabled={disabled || contextLoading}
-            loading={contextLoading}
-          />
-        )}
+          {/* Timeframe Filter */}
+          {visibleFilters?.timeframe && (
+            <TimeframeFilter
+              value={pendingFilters.time_period || ""}
+              onChange={(period) => {
+                setPendingFilters(prev => ({ ...prev, time_period: period }))
+                // 🆕 同时更新状态管理器
+                updateTimeframe({ period })
+              }}
+              chartName={chartName}
+              disabled={disabled || contextLoading}
+              loading={contextLoading}
+            />
+          )}
 
-        {/* 其他基础过滤器组件将在后续添加 */}
+          {/* 其他基础过滤器组件将在后续添加 */}
+        </div>
+        <div className="ml-auto"> {/* Right: Apply button */}
+          <Button
+            size="sm"
+            onClick={handleApplyFilters}
+            disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters}
+          >
+            {applyingFilters ? (
+              <>
+                <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                {commonT('loading')}
+              </>
+            ) : (
+              filtersT('applyFilters')
+            )}
+          </Button>
+        </div>
       </div>
 
       {/* 第二行：扩展字段过滤器（单独占用一行） */}
       {visibleFilters?.extend_fields && (
-        <div className="w-full pb-2 border-b"> {/* FILTER_EXTEND_PADDING: reduce bottom padding inside extend fields */}
+        <div className="w-full pt-1"> {/* compact spacing */}
           <ExtendFieldsFilter
             key={extendFieldsKey} // 🔧 添加 key 属性，当 reset 时强制重新渲染
             chartName={chartName} // 🆕 传递 chartName
