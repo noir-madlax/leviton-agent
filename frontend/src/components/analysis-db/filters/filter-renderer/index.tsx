@@ -108,10 +108,17 @@ export function FilterRenderer({
 
   // 🔄 同步状态管理器的变化到 pendingFilters（仅在没有 currentFilters 时使用）
   useEffect(() => {
-    if (chartFilters && (!currentFilters.time_period && !currentFilters.categories.length)) {
+    if (
+      chartFilters &&
+      !currentFilters.time_period &&
+      (!currentFilters.categories || currentFilters.categories.length === 0) &&
+      (!currentFilters.asins || currentFilters.asins.length === 0) &&
+      (!currentFilters.brands || currentFilters.brands.length === 0) &&
+      (!currentFilters.segments || currentFilters.segments.length === 0)
+    ) {
       const newPendingFilters: ProjectFilters = {
         categories: chartFilters.filters.categories || [],
-        asins: (chartFilters as any).filters?.asins || [],
+        asins: (chartFilters as any).selected_asins || [],
         brands: chartFilters.filters.brands || [],
         segments: chartFilters.filters.segments || [],
         extend_fields: chartFilters.filters.extend_fields || {},
@@ -198,7 +205,7 @@ export function FilterRenderer({
         extend_fields: pendingFilters.extend_fields || {}
       },
       // 🆕 将 ASIN 选择存入 selected_asins（与 filters 平级）
-      selected_asins: (chartFilters?.selected_asins as string[] | undefined) || [],
+      selected_asins: (pendingFilters.asins as string[] | undefined) || [],
       timeframe: {
         period: pendingFilters.time_period || ''
       },
@@ -242,28 +249,37 @@ export function FilterRenderer({
 
   // 重置过滤器
   const handleReset = () => {
-    // 🆕 使用状态管理器的重置方法
+    // 先重置状态管理器
     resetFilters()
 
-    // 重置本地状态
+    // 从图表配置读取默认 ASIN（filter_values）
+    const defaultAsins: string[] = Array.isArray(chartConfig?.filters?.asins?.values)
+      ? (chartConfig!.filters!.asins!.values as string[])
+      : []
+
+    // 重置本地 pendingFilters，ASIN 回到默认值，其它保持清空策略（与原逻辑一致）
     const resetFiltersData = {
       categories: [],
-      asins: [],
+      asins: defaultAsins,
       brands: [],
       segments: [],
       extend_fields: {},
-      time_period: "" // 🔧 重置时不设置默认值
+      time_period: "" // 🔧 重置时不设置前端默认值
     }
     setPendingFilters(resetFiltersData)
 
+    // 同步默认 ASIN 到状态管理器（selected_asins 与 filters 平级）
+    updateFilter('selected_asins', defaultAsins)
+
     // 🔧 强制重置 ExtendFieldsFilter 组件
     setExtendFieldsKey(prev => prev + 1)
-    console.log('🔧 [FILTER-RENDERER] Reset triggered, new extend fields key:', extendFieldsKey + 1)
+    console.log('🔧 [FILTER-RENDERER] Reset triggered (ASIN restored to defaults), new key:', extendFieldsKey + 1)
   }
 
   // 检查是否有待处理的变化
   const hasPendingChanges = (
     JSON.stringify(pendingFilters.categories) !== JSON.stringify(currentFilters.categories) ||
+    JSON.stringify(pendingFilters.asins) !== JSON.stringify(currentFilters.asins) ||
     JSON.stringify(pendingFilters.brands) !== JSON.stringify(currentFilters.brands) ||
     JSON.stringify(pendingFilters.segments) !== JSON.stringify(currentFilters.segments) ||
     JSON.stringify(pendingFilters.extend_fields) !== JSON.stringify(currentFilters.extend_fields) ||
@@ -320,19 +336,6 @@ export function FilterRenderer({
           />
         )}
 
-        {/* ASIN Filter */}
-        {visibleFilters?.asins && (
-          <AsinFilter
-            value={(chartFilters?.selected_asins as string[] | undefined) || []}
-            onChange={(asins) => {
-              // 将 asin 选择保存到与 filters 平级的 selected_asins
-              updateFilter('selected_asins', asins)
-            }}
-            chartName={chartName}
-            disabled={disabled || contextLoading}
-            loading={contextLoading}
-          />
-        )}
 
         {/* Timeframe Filter */}
         {visibleFilters?.timeframe && (
@@ -370,6 +373,22 @@ export function FilterRenderer({
           />
         </div>
       )}
+
+      {/* ASIN Filter */}
+      {visibleFilters?.asins && (
+        <AsinFilter
+          value={pendingFilters.asins}
+          onChange={(asins) => {
+            // 与其他组件一致：先写入 pendingFilters，再同步状态管理器
+            setPendingFilters(prev => ({ ...prev, asins }))
+            updateFilter('selected_asins', asins)
+          }}
+          chartName={chartName}
+          disabled={disabled || contextLoading}
+          loading={contextLoading}
+        />
+      )}
+
     </div>
   )
 }
