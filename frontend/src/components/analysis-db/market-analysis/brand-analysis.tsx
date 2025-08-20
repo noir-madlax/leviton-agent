@@ -190,11 +190,11 @@ function SalesTrendByCategoryComponent({
     return (
       <div className="bg-gray-50 p-6 rounded-lg">
         <h4 className="text-lg font-medium mb-4 text-center">
-          📈 {category} - Sales Trend of Top 10 Brands
+          📈 {category} - {chartsT('salesTrendTopBrandsSuffix')}
         </h4>
         <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4">
           <p className="text-sm text-yellow-700">
-            Loading sales trend data for {category}...
+            {chartsT('loadingSalesTrendForCategory').replace('{{category}}', category)}
           </p>
         </div>
       </div>
@@ -205,11 +205,11 @@ function SalesTrendByCategoryComponent({
     return (
       <div className="bg-gray-50 p-6 rounded-lg">
         <h4 className="text-lg font-medium mb-4 text-center">
-          📈 {category} - Sales Trend of Top 10 Brands
+          📈 {category} - {chartsT('salesTrendTopBrandsSuffix')}
         </h4>
         <div className="bg-red-50 border-l-4 border-red-400 p-4">
           <p className="text-sm text-red-700">
-            Error loading sales trend data for {category}: {error}
+            {chartsT('errorLoadingData')}: {chartsT('loadingSalesTrendForCategory').replace('{{category}}', category)} {error}
           </p>
         </div>
       </div>
@@ -223,11 +223,11 @@ function SalesTrendByCategoryComponent({
     return (
       <div className="bg-gray-50 p-6 rounded-lg">
         <h4 className="text-lg font-medium mb-4 text-center">
-          📈 {category} - Sales Trend of Top 10 Brands
+          📈 {category} - {chartsT('salesTrendTopBrandsSuffix')}
         </h4>
         <div className="bg-gray-100 p-4 rounded">
           <p className="text-sm text-gray-600 text-center">
-            No sales trend data available for {category}
+            {chartsT('noSalesTrendDataForCategory').replace('{{category}}', category)}
           </p>
         </div>
       </div>
@@ -236,9 +236,7 @@ function SalesTrendByCategoryComponent({
 
   return (
     <div className="bg-gray-50 p-6 rounded-lg">
-      <h4 className="text-lg font-medium mb-4 text-center">
-        📈 {category} - Sales Trend of Top 10 Brands
-      </h4>
+      <h4 className="text-lg font-medium mb-4 text-center">📈 {category} - {chartsT('salesTrendTopBrandsSuffix')}</h4>
       
       {/* Sales Trend Summary */}
       <SalesTrendSummary 
@@ -480,12 +478,12 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
                 ) : tamDataError ? (
                   <div className="flex items-center justify-center py-20">
                     <div className="text-center">
-                      <p className="text-sm text-red-600 mb-3">图表数据加载失败: {tamDataError}</p>
+                      <p className="text-sm text-red-600 mb-3">{chartsT('errorLoadingData')}: {tamDataError}</p>
                       <button
                         onClick={() => refreshTamData(tamFilters)}
                         className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                       >
-                        重新加载
+                        {chartsT('retry')}
                       </button>
                     </div>
                   </div>
@@ -617,12 +615,12 @@ export function BrandAnalysis({ data: initialData, tamMarketShare: initialTamMar
               ) : bestSellingBrandsError ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
-                    <p className="text-sm text-red-600 mb-3">数据加载失败: {bestSellingBrandsError}</p>
+                    <p className="text-sm text-red-600 mb-3">{chartsT('dataLoadFailed')}: {bestSellingBrandsError}</p>
                     <button
                       onClick={() => refreshBestSellingBrandsData(bestSellingBrandsFilters)}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                     >
-                      重新加载
+                      {chartsT('retry')}
                     </button>
                   </div>
                 </div>

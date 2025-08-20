@@ -134,25 +134,25 @@ export function SegmentSalesTrendChart({ data: initialData, projectId, initialFi
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在更新图表数据...</p>
+                    <p className="text-sm text-gray-600">{chartsT('updatingChartData')}</p>
                   </div>
                 </div>
               ) : !filtersReady ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-3"></div>
-                    <p className="text-sm text-gray-600">正在初始化过滤器...</p>
+                    <p className="text-sm text-gray-600">{chartsT('initializingFilters')}</p>
                   </div>
                 </div>
               ) : dataError ? (
                 <div className="flex items-center justify-center py-20">
                   <div className="text-center">
-                    <p className="text-sm text-red-600 mb-3">数据加载失败: {dataError}</p>
+                    <p className="text-sm text-red-600 mb-3">{chartsT('dataLoadFailed')}: {dataError}</p>
                     <button
                       onClick={() => refreshData(filters)}
                       className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm"
                     >
-                      重新加载
+                      {chartsT('retry')}
                     </button>
                   </div>
                 </div>

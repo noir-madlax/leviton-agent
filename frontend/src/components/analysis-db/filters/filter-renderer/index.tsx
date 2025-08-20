@@ -290,33 +290,7 @@ export function FilterRenderer({
     <div className={`space-y-2 ${className}`}> {/* FILTER_STACK_GAP: reduce vertical gap between filter blocks */}
       {/* 过滤器标题和操作按钮 */}
       <div className="flex justify-between items-center ">
-        <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
-        <div className="flex items-center gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleReset}
-            disabled={disabled || contextLoading} // 🆕 使用 context 的 loading 状态
-            className="flex items-center gap-2"
-          >
-            <RotateCcw className="w-4 h-4" />
-            {filtersT('reset')}
-          </Button>
-          <Button
-            size="sm"
-            onClick={handleApplyFilters}
-            disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters} // 🆕 使用 context 的 loading 状态
-          >
-            {applyingFilters ? (
-              <>
-                <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                {commonT('loading')}
-              </>
-            ) : (
-              filtersT('applyFilters')
-            )}
-          </Button>
-        </div>
+     
 
       {/* 第一行：基础过滤器控件 */}
       <div className="flex items-center gap-2 flex-wrap "> {/* FILTER_ROW_GAP: tighten inline filter controls spacing */}
