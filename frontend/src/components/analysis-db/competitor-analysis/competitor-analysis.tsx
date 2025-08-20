@@ -78,10 +78,10 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
     setLoading(true);
 
     try {
-      // 并行获取两种矩阵数据
+      // 并行获取两种矩阵数据（selected_asins 与 filters 由数据库服务内部从过滤器状态获取）
       const [matrixResponse, useCaseMatrixResponse] = await Promise.all([
-        databaseService.getCompetitorMatrixViewData(projectId, asins, 'phy_perf'),
-        databaseService.getCompetitorMatrixViewData(projectId, asins, 'use')
+        databaseService.getCompetitorMatrixViewData(projectId, 'phy_perf'),
+        databaseService.getCompetitorMatrixViewData(projectId, 'use')
       ]);
 
       console.log('🔍 [DEBUG-COMPETITOR] Physical/Performance matrix response:', matrixResponse);
@@ -229,7 +229,7 @@ export function CompetitorAnalysis({ projectId, data, initialFilters }: Competit
   return (
     <div className="space-y-10 max-w-7xl mx-auto px-4">
       {/* ASIN Selection */}
-      <section  >
+      <section className="hidden">
         <div className="hidden md:block mb-4">
           <Button
             variant="outline"

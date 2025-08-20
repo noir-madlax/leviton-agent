@@ -1362,10 +1362,9 @@ export class DatabaseService {
     }
   }
 
-  // 🔑 Get competitor matrix view data via new API
+  // 🔑 Get competitor matrix view data via new API - use filter state (COMPETITOR_ANALYSIS)
   async getCompetitorMatrixViewData(
     projectId: string,
-    selectedAsins: string[],
     aspectType: 'phy_perf' | 'use' = 'phy_perf'
   ): Promise<{
     status: string
@@ -1392,9 +1391,13 @@ export class DatabaseService {
     }
   }> {
     try {
+      const { filters, selected_asins } = this.getFiltersFromState(CHART_NAMES.COMPETITOR_ANALYSIS)
+
       const requestBody = {
         project_id: projectId,
-        selected_asins: selectedAsins,
+        filters,
+        // 若用户通过 asin-filter 选择了 ASIN，则传给后端
+        selected_asins: Array.isArray(selected_asins) ? selected_asins : [],
         aspect_type: aspectType,
         filter: {
           top_n: 10
