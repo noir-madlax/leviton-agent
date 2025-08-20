@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
-import { Loader2 } from "lucide-react"
+import { Loader2, RotateCcw } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
 import { AsinFilter } from '../asin-filter'
 
 import { TimeframeFilter } from '../timeframe-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
-import { useCommonT, useFiltersT } from '@/i18n/hooks'
+import { useCommonT, useFiltersT, useProjectT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
 import { useChartFilters } from '../../hooks/use-filter-state-manager' // 🆕 使用过滤器状态管理器
 import { filterStateManager } from '../../stores' // 🆕 导入状态管理器
@@ -98,6 +98,7 @@ export function FilterRenderer({
   // 国际化hooks
   const commonT = useCommonT()
   const filtersT = useFiltersT()
+  const projectT = useProjectT()
 
   // 🔄 同步 currentFilters 的变化到 pendingFilters（优先级最高）
   useEffect(() => {
@@ -316,7 +317,6 @@ export function FilterRenderer({
             )}
           </Button>
         </div>
-      </div>
 
       {/* 第一行：基础过滤器控件 */}
       <div className="flex items-center gap-2 flex-wrap "> {/* FILTER_ROW_GAP: tighten inline filter controls spacing */}
