@@ -4,17 +4,17 @@ import { BarChart3, ExternalLink } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Tooltip } from "@/components/ui/tooltip"
-import { FilterRenderer } from "@/components/analysis-db/filters/filter-renderer"
 import { useChartWithFilters } from "@/components/analysis-db/hooks/use-chart-with-filters"
 import { CHART_NAMES } from "@/components/analysis-db/constants"
 import type { ProjectFilters } from "@/components/analysis-db/types/filters"
 import { useChartsT } from "@/i18n/hooks"
 import { databaseService } from "@/components/analysis-db/data/database-service"
-import { useCallback, useEffect, useMemo, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 
 interface CustomerSatisfactionOverviewProps {
   projectId: string
   initialFilters?: ProjectFilters
+  refreshKey?: number
 }
 
 type ProductItem = {
@@ -27,7 +27,7 @@ type ProductItem = {
   product_url?: string
 }
 
-export function CustomerSatisfactionOverview({ projectId, initialFilters }: CustomerSatisfactionOverviewProps) {
+export function CustomerSatisfactionOverview({ projectId, initialFilters, refreshKey }: CustomerSatisfactionOverviewProps) {
   const chartsT = useChartsT()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -53,12 +53,18 @@ export function CustomerSatisfactionOverview({ projectId, initialFilters }: Cust
   }, [projectId])
 
   // 使用统一的过滤器管理，并在 filters 就绪或变化时拉数
-  const { filters, handleFiltersReady, handleFiltersChange } = useChartWithFilters(
+  const { filters } = useChartWithFilters(
     CHART_NAMES.COMPETITOR_ANALYSIS,
     async () => { await loadData() },
     projectId,
     { initialFilters }
   )
+
+  // 父组件刷新信号：当 refreshKey 变化时，触发一次加载
+  useEffect(() => {
+    if (!projectId) return
+    loadData()
+  }, [refreshKey])
 
   useEffect(() => {
     // 当 filtersReady 变为 true 时，useChartWithFilters 会调用 loadData
@@ -80,15 +86,7 @@ export function CustomerSatisfactionOverview({ projectId, initialFilters }: Cust
         {chartsT('calculatedFromLatest200Reviews')}
       </div>
 
-      {/* 过滤器渲染器 - 接入项目统一过滤器系统 */}
-      <FilterRenderer
-        projectId={projectId}
-        chartName={CHART_NAMES.COMPETITOR_ANALYSIS}
-        currentFilters={filters}
-        onChange={handleFiltersChange}
-        onFiltersReady={handleFiltersReady}
-        className="mb-6"
-      />
+
 
       {loading ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
