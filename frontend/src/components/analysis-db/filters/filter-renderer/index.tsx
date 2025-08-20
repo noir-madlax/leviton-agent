@@ -2,14 +2,14 @@
 
 import { useState, useEffect } from 'react'
 import { Button } from "@/components/ui/button"
-import { Loader2, RotateCcw } from "lucide-react"
+import { Loader2 } from "lucide-react"
 import { ProjectFilters } from '../../types/filters'
 import { CategoryFilter } from '../category-filter'
 import { AsinFilter } from '../asin-filter'
 
 import { TimeframeFilter } from '../timeframe-filter'
 import { ExtendFieldsFilter } from '../extend-fields-filter'
-import { useCommonT, useFiltersT, useProjectT } from '@/i18n/hooks'
+import { useCommonT, useFiltersT } from '@/i18n/hooks'
 import { useUnifiedFilter } from '../../contexts/unified-filter-context' // 🆕 从 context 获取数据
 import { useChartFilters } from '../../hooks/use-filter-state-manager' // 🆕 使用过滤器状态管理器
 import { filterStateManager } from '../../stores' // 🆕 导入状态管理器
@@ -63,6 +63,15 @@ export function FilterRenderer({
     extend_fields: chartConfig?.filters.extend_fields?.isVisible === true
   }
 
+	  // 当没有任何一个过滤器可见时，隐藏 Apply 按钮
+	  const anyVisibleFilter = (
+	    visibleFilters.categories ||
+	    visibleFilters.timeframe ||
+	    visibleFilters.extend_fields ||
+	    visibleFilters.asins
+	  )
+
+
 
   // 🔧 调试：输出可见性配置
   console.log('🔧 [FILTER-RENDERER] Visible filters:', visibleFilters)
@@ -98,7 +107,7 @@ export function FilterRenderer({
   // 国际化hooks
   const commonT = useCommonT()
   const filtersT = useFiltersT()
-  const projectT = useProjectT()
+
 
   // 🔄 同步 currentFilters 的变化到 pendingFilters（优先级最高）
   useEffect(() => {
@@ -290,7 +299,7 @@ export function FilterRenderer({
     <div className={`space-y-2 ${className}`}> {/* FILTER_STACK_GAP: reduce vertical gap between filter blocks */}
       {/* 过滤器标题和操作按钮 */}
       <div className="flex justify-between items-center ">
-     
+
 
       {/* 第一行：基础过滤器控件 */}
       <div className="flex items-center gap-2 flex-wrap "> {/* FILTER_ROW_GAP: tighten inline filter controls spacing */}
@@ -327,22 +336,24 @@ export function FilterRenderer({
 
           {/* 其他基础过滤器组件将在后续添加 */}
         </div>
-        <div className="ml-auto"> {/* Right: Apply button */}
-          <Button
-            size="sm"
-            onClick={handleApplyFilters}
-            disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters}
-          >
-            {applyingFilters ? (
-              <>
-                <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                {commonT('loading')}
-              </>
-            ) : (
-              filtersT('applyFilters')
-            )}
-          </Button>
-        </div>
+        {anyVisibleFilter && (
+          <div className="ml-auto"> {/* Right: Apply button */}
+            <Button
+              size="sm"
+              onClick={handleApplyFilters}
+              disabled={!hasPendingChanges || disabled || contextLoading || applyingFilters}
+            >
+              {applyingFilters ? (
+                <>
+                  <Loader2 className="w-3 h-3 mr-1 animate-spin" />
+                  {commonT('loading')}
+                </>
+              ) : (
+                filtersT('applyFilters')
+              )}
+            </Button>
+          </div>
+        )}
       </div>
 
       {/* 第二行：扩展字段过滤器（单独占用一行） */}

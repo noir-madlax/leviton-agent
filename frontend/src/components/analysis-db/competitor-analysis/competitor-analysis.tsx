@@ -33,16 +33,6 @@ interface CompetitorAnalysisProps {
   }
 }
 
-// 若没有初始 ASIN 列表时的兜底默认值
-const DEFAULT_COMPETITOR_ASINS = [
-  'B00NG0ELL0',
-  'B0BVKZLT3B',
-  'B0BVKYKKRK',
-  'B0BSHKS26L',
-  'B085D8M2MR',
-  'B01EZV35QU'
-]
-
 export function CompetitorAnalysis({ projectId, data, initialFilters }: CompetitorAnalysisProps) {
   // Get chart sections configuration for conditional rendering
   const { shouldShowChart } = useChartSections('competitor-analysis', projectId || '')

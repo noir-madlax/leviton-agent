@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from 'react'
 import { databaseService } from '@/components/analysis-db/data/database-service'
-import { 
-  UnifiedFilterData, 
-  UnifiedFilterCacheState, 
-  FilterDefaultsResponse, 
+import {
+  UnifiedFilterData,
+  UnifiedFilterCacheState,
+  FilterDefaultsResponse,
   FilterDefaultItem,
   ChartFilterConfiguration,
   FilterConfig
@@ -31,7 +31,7 @@ interface UnifiedFilterDataReturn {
  */
 function transformFilterDefaults(apiResponse: FilterDefaultsResponse): UnifiedFilterData {
   const charts: Record<string, ChartFilterConfiguration> = {}
-  
+
   // 按chartName分组
   const groupedByChart = apiResponse.reduce((acc, item) => {
     if (!acc[item.chartName]) {
@@ -40,27 +40,27 @@ function transformFilterDefaults(apiResponse: FilterDefaultsResponse): UnifiedFi
     acc[item.chartName].push(item)
     return acc
   }, {} as Record<string, FilterDefaultItem[]>)
-  
+
   // 转换为ChartFilterConfiguration结构
   Object.entries(groupedByChart).forEach(([chartName, items]) => {
     const config: ChartFilterConfiguration = {
       chartName,
       filters: {}
     }
-    
+
     items.forEach(item => {
       const filterConfig: FilterConfig = {
         values: item.filterValues,
         options: item.options || item.filterValues, // 🆕 优先使用options，回退到filterValues
         isVisible: item.isVisible === true
       }
-      
+
       console.log(`🔧 [TRANSFORM] Processing filter: ${item.chartName}.${item.filterName}`, {
         values: item.filterValues,
         options: item.options,
         isVisible: item.isVisible
       })
-      
+
       switch (item.filterName) {
         case 'categories':
           config.filters.categories = filterConfig
@@ -82,12 +82,12 @@ function transformFilterDefaults(apiResponse: FilterDefaultsResponse): UnifiedFi
           break
       }
     })
-    
+
     charts[chartName] = config
   })
-  
+
   console.log('🔧 [TRANSFORM] Transformed filter data by charts:', charts)
-  
+
   return { charts }
 }
 
@@ -98,7 +98,7 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
     if (cached) {
       return cached
     }
-    
+
     return {
       data: null,
       loading: true,
@@ -214,6 +214,100 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
           })
         }
 
+        // 🆕 注入所有图表中“隐藏但需要生效”的默认值到全局过滤器状态（保持幂等，不覆盖已有用户选择）
+        try {
+          const charts = unifiedData.charts
+          const toStringArray = (v: unknown): string[] => Array.isArray(v) ? (v.filter((x): x is string => typeof x === 'string')) : []
+          const toPeriodString = (v: unknown): string => {
+            if (typeof v === 'string') return v
+            if (Array.isArray(v) && v.length > 0 && typeof v[0] === 'string') return v[0]
+            return ''
+          }
+          const isEmptyArray = (v: unknown) => Array.isArray(v) && v.length === 0
+          const isEmptyString = (v: unknown) => typeof v === 'string' && v.trim() === ''
+          const hasNonEmptyArray = (v?: unknown[]) => Array.isArray(v) && v.length > 0
+
+          Object.entries(charts).forEach(([chartName, cfg]) => {
+            const current = filterStateManager.getChartFilters(chartName)
+            const currentFilters = current?.filters || {}
+            const pending: Partial<ChartFilterState> = { filters: {} }
+
+            // categories（不可见且当前为空时注入默认值）
+            if (cfg.filters.categories?.isVisible === false) {
+              const defaults = toStringArray(cfg.filters.categories.values as unknown)
+              if (defaults.length > 0 && !hasNonEmptyArray(currentFilters.categories)) {
+                pending.filters!.categories = defaults
+              }
+            }
+
+            // brands（不可见且当前为空时注入默认值）
+            if (cfg.filters.brands?.isVisible === false) {
+              const defaults = toStringArray(cfg.filters.brands.values as unknown)
+              if (defaults.length > 0 && !hasNonEmptyArray(currentFilters.brands)) {
+                pending.filters!.brands = defaults
+              }
+            }
+
+            // product_segments → segments（不可见且当前为空时注入默认值）
+            if (cfg.filters.product_segments?.isVisible === false) {
+              const defaults = toStringArray(cfg.filters.product_segments.values as unknown)
+              if (defaults.length > 0 && !hasNonEmptyArray(currentFilters.segments)) {
+                pending.filters!.segments = defaults
+              }
+            }
+
+            // asins → selected_asins（不可见且当前为空时注入默认值）
+            if (cfg.filters.asins?.isVisible === false) {
+              const defaults = toStringArray(cfg.filters.asins.values as unknown)
+              if (defaults.length > 0 && !hasNonEmptyArray((current as any)?.selected_asins)) {
+                pending.selected_asins = defaults
+              }
+            }
+
+            // time_period → timeframe.period（不可见且当前为空时注入默认值）
+            if (cfg.filters.time_period?.isVisible === false) {
+              const period = toPeriodString(cfg.filters.time_period.values as unknown)
+              const currentPeriod = current?.timeframe?.period
+              if (period && (currentPeriod === undefined || currentPeriod === null || isEmptyString(currentPeriod))) {
+                pending.timeframe = { ...(current?.timeframe || {}), period }
+              }
+            }
+
+            // extend_fields（不可见时按字段注入：仅为缺失或空值的字段赋默认值，避免覆盖已有值）
+            if (cfg.filters.extend_fields?.isVisible === false) {
+              const defaults = cfg.filters.extend_fields.values
+              if (defaults && typeof defaults === 'object' && !Array.isArray(defaults)) {
+                const curObj = (currentFilters.extend_fields as Record<string, unknown> | undefined) || {}
+                const merged: Record<string, unknown> = { ...curObj }
+                let changed = false
+                Object.entries(defaults as Record<string, unknown>).forEach(([k, v]) => {
+                  const cv = curObj[k]
+                  const emptyCur = cv === undefined || cv === null || isEmptyString(cv) || isEmptyArray(cv)
+                  if (emptyCur && v !== undefined) {
+                    merged[k] = v
+                    changed = true
+                  }
+                })
+                if (changed) {
+                  pending.filters!.extend_fields = merged
+                }
+              }
+            }
+
+            const hasFiltersUpdate = pending.selected_asins !== undefined
+              || (pending.timeframe && typeof pending.timeframe.period === 'string')
+              || (pending.filters && Object.keys(pending.filters).length > 0)
+
+            if (hasFiltersUpdate) {
+              filterStateManager.updateChartFilters(chartName, pending)
+              console.log(`🧩 [UNIFIED-FILTER] Seeded hidden defaults into state for ${chartName}:`, pending)
+            }
+          })
+        } catch (e) {
+          console.warn('⚠️ [UNIFIED-FILTER] Failed to seed hidden defaults into state:', e)
+        }
+
+
         const successState: UnifiedFilterCacheState = {
           data: unifiedData,
           loading: false,
@@ -262,7 +356,7 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
     if (projectId) {
       await loadFilterData(projectId, true)
     }
-    // 只依赖projectId，不依赖loadFilterData避免死循环  
+    // 只依赖projectId，不依赖loadFilterData避免死循环
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [projectId])
 
@@ -273,4 +367,4 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
     refreshData,
     getChartConfig
   }
-} 
+}
