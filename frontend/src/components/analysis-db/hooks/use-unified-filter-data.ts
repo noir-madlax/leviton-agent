@@ -273,14 +273,31 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
               }
             }
 
-            // extend_fields（不可见时按字段注入：仅为缺失或空值的字段赋默认值，避免覆盖已有值）
-            if (cfg.filters.extend_fields?.isVisible === false) {
-              const defaults = cfg.filters.extend_fields.values
-              if (defaults && typeof defaults === 'object' && !Array.isArray(defaults)) {
+            // extend_fields（无论是否可见：仅为缺失或空值的字段赋默认值，避免覆盖已有值）
+            if (cfg.filters.extend_fields?.values) {
+              const rawDefaults = cfg.filters.extend_fields.values as unknown
+              // 兼容两种格式：
+              // 1) 对象映射：{ field_name: value }
+              // 2) 数组对象：[{ fieldName: string; default: any }]  例如：[{"default": ["Smart"], "fieldName": "smart_capability"}]
+              let defaultsObj: Record<string, unknown> = {}
+              if (Array.isArray(rawDefaults)) {
+                ;(rawDefaults as Array<any>).forEach((item) => {
+                  if (!item) return
+                  const key = item.fieldName
+                  const value = item.default
+                  if (typeof key === 'string' && key.length > 0) {
+                    defaultsObj[key] = value
+                  }
+                })
+              } else if (rawDefaults && typeof rawDefaults === 'object') {
+                defaultsObj = rawDefaults as Record<string, unknown>
+              }
+
+              if (defaultsObj && Object.keys(defaultsObj).length > 0) {
                 const curObj = (currentFilters.extend_fields as Record<string, unknown> | undefined) || {}
                 const merged: Record<string, unknown> = { ...curObj }
                 let changed = false
-                Object.entries(defaults as Record<string, unknown>).forEach(([k, v]) => {
+                Object.entries(defaultsObj).forEach(([k, v]) => {
                   const cv = curObj[k]
                   const emptyCur = cv === undefined || cv === null || isEmptyString(cv) || isEmptyArray(cv)
                   if (emptyCur && v !== undefined) {
@@ -294,14 +311,10 @@ export function useUnifiedFilterData(projectId: string): UnifiedFilterDataReturn
               }
             }
 
-            const hasFiltersUpdate = pending.selected_asins !== undefined
-              || (pending.timeframe && typeof pending.timeframe.period === 'string')
-              || (pending.filters && Object.keys(pending.filters).length > 0)
 
-            if (hasFiltersUpdate) {
-              filterStateManager.updateChartFilters(chartName, pending)
-              console.log(`🧩 [UNIFIED-FILTER] Seeded hidden defaults into state for ${chartName}:`, pending)
-            }
+            filterStateManager.updateChartFilters(chartName, pending)
+            console.log(`🧩 [UNIFIED-FILTER] Seeded hidden defaults into state for ${chartName}:`, pending)
+
           })
         } catch (e) {
           console.warn('⚠️ [UNIFIED-FILTER] Failed to seed hidden defaults into state:', e)
