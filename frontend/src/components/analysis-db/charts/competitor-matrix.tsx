@@ -1,265 +1,363 @@
 "use client"
 
-import { useMemo } from "react"
+import { useMemo, useState } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
 import { Tooltip } from "@/components/ui/tooltip"
 import { DetailedTooltip } from "@/components/ui/detailed-tooltip"
 // allReviewData now passed as prop instead of imported
 
-interface MatrixData {
-  product: string;
-  category: string;
-  categoryType: 'Physical' | 'Performance';
-  mentions: number;
-  satisfactionRate: number;
-  positiveCount: number;
-  negativeCount: number;
-  totalReviews: number;
+// 新的数据结构接口
+interface MatrixViewData {
+  status: string
+  message?: string
+  timestamp: string
+  data: {
+    aspect_categories: Array<{
+      category_id: number
+      category_name: string
+      definition: string
+    }>
+    product_aspect_data: Array<{
+      asin: string
+      aspect_data: Array<{
+        category_id: number  // Standardized field name
+        total_reviews: number
+        positive_reviews: number
+        negative_reviews: number
+      }>
+    }>
+    selected_asins: string[]
+    aspect_type: string
+    total_categories: number
+  }
 }
 
 interface CompetitorMatrixProps {
-  data: MatrixData[];
-  targetProducts: string[];
-  allReviewData?: Record<string, Array<{
-    id: string
-    productId: string
-    text: string
-    sentiment: 'positive' | 'negative' | 'neutral'
-    category: string
-    aspect: string
-    rating: number
-    verified: boolean
-    date: string
-    brand: string
-  }>>
-  reviewContent?: Record<string, Array<{
-    id: string
-    productId: string
-    text: string
-    sentiment: 'positive' | 'negative' | 'neutral'
-    category: string
-    aspect: string
-    rating: number
-    verified: boolean
-    date: string
-    brand: string
-  }>>
+  matrixViewData: MatrixViewData | null;
+  projectId: string;
   asinToProductNameMap?: Record<string, string>;
   asinToFullProductNameMap?: Record<string, string>;
 }
 
-export function CompetitorMatrix({ data, targetProducts, allReviewData, reviewContent, asinToProductNameMap, asinToFullProductNameMap }: CompetitorMatrixProps) {
+export function CompetitorMatrix({ matrixViewData, projectId, asinToProductNameMap, asinToFullProductNameMap }: CompetitorMatrixProps) {
   const { openPanel } = useReviewPanel()
-  
-  const handleCellClick = (category: string, productAsin: string, cellData: MatrixData | null) => {
-    if (!cellData || cellData.mentions === 0) return
-    
-    // Try to get reviews from the new materialized view review content first
-    const reviewKey = `${productAsin}_${category}`
-    let reviewsToShow: Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }> = []
-    
-    if (reviewContent && reviewContent[reviewKey]) {
-      // Use the new materialized view review content
-      reviewsToShow = reviewContent[reviewKey]
-      console.log(`Using materialized view reviews for ${reviewKey}: ${reviewsToShow.length} reviews`)
-    } else if (allReviewData && allReviewData[category]) {
-      // Fallback to the old allReviewData method
-      const categoryReviews = allReviewData[category] || []
-      if (categoryReviews.length > 0) {
-        // Filter reviews by specific product using ASIN directly
-        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-        reviewsToShow = productReviews.length > 0 ? productReviews : categoryReviews
-        console.log(`Using fallback allReviewData for ${category}: ${reviewsToShow.length} reviews`)
+  const [cellClickLoading, setCellClickLoading] = useState(false)
+
+  // 从新数据结构中提取产品列表
+  const orderedProducts = useMemo(() => {
+    if (!matrixViewData?.data?.selected_asins) return []
+    return matrixViewData.data.selected_asins
+  }, [matrixViewData])
+
+  // 从新数据结构中构建矩阵数据
+  const matrixData = useMemo(() => {
+    if (!matrixViewData?.data) return []
+
+    const { aspect_categories, product_aspect_data } = matrixViewData.data
+
+    // 为每个产品创建矩阵行
+    const matrix = aspect_categories.map(category => {
+      const row = {
+        dimension: category.category_name,
+        categoryId: category.category_id,
+        definition: category.definition,
+        cells: {} as Record<string, {
+          // 数据字段 - standardized
+          reviews: number
+          satisfactionRate: number
+          positiveReviews: number
+          negativeReviews: number
+          // 坐标信息，用于后续查询评论明细
+          productAsin: string
+          categoryId: number
+          categoryName: string
+        } | null>
       }
-    }
+
+      // 为每个产品填充数据
+      product_aspect_data.forEach(productData => {
+        const productAsin = productData.asin
+        const aspectData = productData?.aspect_data.find(a => a.category_id === category.category_id)
+        
+        if (aspectData) {
+          // Use standardized field names
+          const totalReviews = aspectData.total_reviews || 0
+          const positive = aspectData.positive_reviews || 0
+          const negative = aspectData.negative_reviews || 0
+          
+          // Calculate satisfaction rate based on total reviews
+          const satisfactionRate = totalReviews > 0 ? (positive / totalReviews) * 100 : 0
+
+          row.cells[productAsin] = {
+            // 数据字段 - standardized
+            reviews: totalReviews,
+            satisfactionRate: Math.round(satisfactionRate * 10) / 10,
+            positiveReviews: positive,
+            negativeReviews: negative,
+            // 坐标信息，用于后续查询评论明细
+            productAsin: productAsin,
+            categoryId: category.category_id,
+            categoryName: category.category_name
+          }
+        } else {
+          row.cells[productAsin] = null
+        }
+      })
+
+      return row
+    })
+
+    return matrix
+  }, [matrixViewData, orderedProducts])
+
+  // 🆕 工具函数：将后端sentiment格式映射到frontend格式
+  const mapSentiment = (backendSentiment: string): 'positive' | 'negative' | 'neutral' => {
+    if (backendSentiment === '+') return 'positive'
+    if (backendSentiment === '-') return 'negative'
+    return 'neutral'
+  }
+
+  // 🆕 工具函数：基于aspects计算总体sentiment
+  const calculateOverallSentiment = (aspects: Array<{ sentiment: string }>): 'positive' | 'negative' | 'neutral' => {
+    if (!aspects.length) return 'neutral'
+    const positiveCount = aspects.filter(a => a.sentiment === '+').length
+    const negativeCount = aspects.filter(a => a.sentiment === '-').length
     
-    if (reviewsToShow.length === 0) {
-      console.warn(`No review data found for ${productAsin}-${category}`)
-      return
-    }
-    
-    const productName = asinToProductNameMap?.[productAsin] || productAsin
-    
-    openPanel(
-      reviewsToShow, 
-      `${category} Reviews`, 
-      `${productName} • ${cellData.mentions} reviews • ${cellData.satisfactionRate}% satisfaction`,
-      { sentiment: true, brand: true, rating: true, verified: true }
+    if (positiveCount > negativeCount) return 'positive'
+    if (negativeCount > positiveCount) return 'negative'
+    return 'neutral'
+  }
+
+  // Debug logging for matrix data
+  console.log('🔍 [DEBUG-MATRIX] CompetitorMatrix props:', {
+    hasMatrixViewData: !!matrixViewData,
+    status: matrixViewData?.status,
+    aspectCategoriesCount: matrixViewData?.data?.aspect_categories?.length,
+    productAspectDataCount: matrixViewData?.data?.product_aspect_data?.length,
+    orderedProductsLength: orderedProducts.length,
+    matrixDataLength: matrixData.length,
+    sampleMatrixRow: matrixData[0]
+  })
+  
+  // Debug logging for raw data structure
+  if (matrixViewData?.data) {
+    console.log('🔍 [DEBUG-MATRIX-RAW] Aspect categories:', matrixViewData.data.aspect_categories?.slice(0, 3))
+    console.log('🔍 [DEBUG-MATRIX-RAW] Product aspect data sample:', matrixViewData.data.product_aspect_data?.slice(0, 2))
+    console.log('🔍 [DEBUG-MATRIX-RAW] First product aspect_data structure:', matrixViewData.data.product_aspect_data?.[0]?.aspect_data?.slice(0, 3))
+  }
+
+  // 如果没有数据，显示加载状态
+  if (!matrixViewData) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="text-gray-500">Loading matrix data...</div>
+      </div>
     )
   }
 
-  const orderedProducts = useMemo(() => {
-    // Keep original order from targetProducts
-    return targetProducts
-  }, [targetProducts])
+  const handleCellClick = async (cellData: {
+    reviews: number
+    satisfactionRate: number
+    positiveReviews: number
+    negativeReviews: number
+    productAsin: string
+    categoryId: number
+    categoryName: string
+  }) => {
+    if (cellData.reviews === 0) return
 
-  const matrixData = useMemo(() => {
-    // Get categories in the order they appear in the data (already ranked by backend)
-    const categoryOrder: string[] = []
-    const seenCategories = new Set<string>()
-    
-    // Preserve the order from the first product (categories are ranked by average mention ratio)
-    const firstProduct = orderedProducts[0]
-    data.filter(item => item.product === firstProduct).forEach(item => {
-      if (!seenCategories.has(item.category)) {
-        categoryOrder.push(item.category)
-        seenCategories.add(item.category)
-      }
-    })
-    
-    // Add any remaining categories that might not be in the first product
-    data.forEach(item => {
-      if (!seenCategories.has(item.category)) {
-        categoryOrder.push(item.category)
-        seenCategories.add(item.category)
-      }
-    })
-    
-    // Create matrix structure preserving the ranked order
-    const matrix = categoryOrder.map(category => {
-      const row = { category, categoryType: '', cells: {} as Record<string, MatrixData | null> }
-      
-      // Find category type
-      const categoryData = data.find(item => item.category === category)
-      row.categoryType = categoryData?.categoryType || 'Physical'
-      
-      // Fill cells for each product in the new order
-      orderedProducts.forEach(product => {
-        const cellData = data.find(item => item.product === product && item.category === category)
-        row.cells[product] = cellData || null
-      })
-      
-      return row
-    })
-    
-    return matrix
-  }, [data, orderedProducts])
+    const productName = asinToProductNameMap?.[cellData.productAsin] || cellData.productAsin
 
-  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, mentions: number) => {
-    // If no mentions at all, show gray
-    if (mentions === 0) return 'bg-gray-100 text-gray-400'
-    
-    // If mentions but no detailed reviews, show light blue
-    if (totalReviews === 0) return 'bg-blue-50 text-blue-700'
-    
-    // If we have detailed reviews, use satisfaction-based colors
-    if (satisfactionRate >= 85) return 'bg-green-100 text-green-800'
-    else if (satisfactionRate >= 70) return 'bg-yellow-100 text-yellow-800'
-    else if (satisfactionRate >= 60) return 'bg-orange-100 text-orange-800'
-    else return 'bg-red-100 text-red-800'
-  }
+    try {
+      setCellClickLoading(true)
+      console.log(`Fetching reviews for category ${cellData.categoryName} (ID: ${cellData.categoryId}) and product ${cellData.productAsin}`)
 
-  const getHeaderColor = (productAsin: string) => {
-    // Simple color scheme for differentiation
-    const productName = asinToProductNameMap?.[productAsin] || productAsin
-    if (productName.toLowerCase().includes('leviton')) {
-      return 'bg-slate-100 text-slate-800' // Very light greyish blue for Leviton
-    } else {
-      return 'bg-amber-50 text-amber-800' // Light greyish yellow for other brands
+      // 导入 databaseService
+      const { databaseService } = await import('@/components/analysis-db/data/database-service')
+
+      // 调用新的评论获取 API
+      const reviewsResponse = await databaseService.getCompetitorReviews(
+        projectId,
+        cellData.categoryId,
+        cellData.productAsin,
+        100, // limit
+        0,   // offset
+        'review_id', // sort_by
+        'desc' // sort_order
+      )
+
+      // 转换数据格式以适配 ReviewPanel
+      const reviewsToShow = reviewsResponse.data.reviews.map(review => ({
+        id: review.review_id,
+        productId: cellData.productAsin,
+        text: review.review_text,
+        sentiment: calculateOverallSentiment(review.aspects),
+        category: cellData.categoryName,
+        aspect: review.aspects.map(a => a.aspect_description).join(', '),
+        rating: review.rating,
+        verified: review.verified,
+        date: review.review_date,
+        brand: productName, // 使用产品名称作为品牌
+        // 🆕 新增：完整的aspects信息
+        aspects: review.aspects.map(aspect => ({
+          description: aspect.aspect_description,
+          sentiment: mapSentiment(aspect.sentiment),
+          aspect_type: aspect.aspect_type
+        }))
+      }))
+
+      console.log(`Found ${reviewsToShow.length} reviews`)
+
+      openPanel(
+        reviewsToShow,
+        `${cellData.categoryName} Reviews`,
+        `${productName} • ${cellData.reviews} reviews • ${cellData.satisfactionRate}% satisfaction`,
+        { 
+          showFilters: { 
+            causeAnalysis: true, 
+            aspectType: true, 
+            rating: true, 
+            verified: true, 
+            brand: false 
+          } 
+        }
+      )
+    } catch (error) {
+      console.error('Error fetching reviews:', error)
+
+      // 如果出错，显示错误信息
+      openPanel(
+        [],
+        `${cellData.categoryName} Reviews`,
+        `${productName} • Error loading reviews`,
+        { 
+          showFilters: { 
+            causeAnalysis: true, 
+            aspectType: true, 
+            rating: true, 
+            verified: true, 
+            brand: false 
+          } 
+        }
+      )
+    } finally {
+      setCellClickLoading(false)
     }
   }
 
+  const getSatisfactionColor = (satisfactionRate: number, totalReviews: number, reviews: number) => {
+    // If no reviews at all, show gray
+    if (totalReviews === 0) return 'bg-gray-100 text-gray-400'
+    
+    // If reviews but no detailed reviews, show light blue
+    if (reviews === 0) return 'bg-blue-50 text-blue-700'
+    
+    // If we have detailed reviews, use satisfaction-based colors
+    if (satisfactionRate >= 75) return 'bg-green-100 text-green-800'
+    else if (satisfactionRate >= 50) return 'bg-yellow-100 text-yellow-800'
+    else if (satisfactionRate >= 25) return 'bg-orange-100 text-orange-800'
+    else return 'bg-red-100 text-red-800'
+  }
+
+
+
   return (
-    <div className="overflow-x-auto">
-      <div className="min-w-full">
-        <table className="w-full border-collapse border border-gray-300">
-          <thead>
-            <tr className="bg-gray-50">
-              <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[250px]">
-                Dimensions
-              </th>
-              {orderedProducts.map(productAsin => {
-                const productName = asinToProductNameMap?.[productAsin] || productAsin
-                const fullProductName = asinToFullProductNameMap?.[productAsin] || productName
-                return (
-                  <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] ${getHeaderColor(productAsin)}`}>
-                    <Tooltip content={fullProductName}>
-                      <div className="text-sm">{productName}</div>
-                    </Tooltip>
-                  </th>
-                )
-              })}
-            </tr>
-          </thead>
-          <tbody>
-            {matrixData.map((row) => (
-              <tr key={row.category}>
-                <td className="border border-gray-300 p-3 bg-gray-50 font-medium text-gray-900">
-                  <div className="flex flex-col">
-                    <span className="text-sm">{row.category}</span>
-                    <span className="text-xs text-gray-500 mt-1">
-                      {row.categoryType}
-                    </span>
-                  </div>
-                </td>
+    <div className="relative">
+      {cellClickLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+        <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+          <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+          <span className="text-gray-700 font-medium">Loading review details...</span>
+        </div>
+      </div>
+      )}
+      <div className="overflow-x-auto">
+        <div className="min-w-full">
+          <table className="w-full border-collapse border border-gray-300">
+            <thead>
+              <tr className="bg-gray-50">
+                <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[250px]">
+                  Dimensions
+                </th>
                 {orderedProducts.map(productAsin => {
-                  const cellData = row.cells[productAsin]
-                  
-                  // Show N/A only if no data exists or no mentions at all
-                  if (!cellData || cellData.mentions === 0) {
-                    return (
-                      <td key={productAsin} className="border border-gray-300 p-3 text-center">
-                        <div className="bg-gray-100 text-gray-400 py-2 px-3 rounded text-sm">
-                          N/A
-                        </div>
-                      </td>
-                    )
-                  }
-                  
                   const productName = asinToProductNameMap?.[productAsin] || productAsin
-                  
+                  const fullProductName = asinToFullProductNameMap?.[productAsin] || productName
                   return (
-                    <td key={productAsin} className="border border-gray-300 p-3 text-center">
-                      <DetailedTooltip
-                        content={{
-                          title: row.category,
-                          type: row.categoryType,
-                          positiveCount: cellData.positiveCount,
-                          negativeCount: cellData.negativeCount,
-                          totalMentions: cellData.mentions,
-                          satisfactionRate: cellData.satisfactionRate,
-                          additionalInfo: [
-                            `Product: ${productName}`,
-                            `Total reviews analyzed: ${cellData.totalReviews}`
-                          ]
-                        }}
-                      >
-                        <div 
-                          className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.totalReviews, cellData.mentions)} cursor-pointer`}
-                          onClick={() => handleCellClick(row.category, productAsin, cellData)}
-                          onKeyDown={(e) => {
-                            if (e.key === 'Enter' || e.key === ' ') {
-                              e.preventDefault()
-                              handleCellClick(row.category, productAsin, cellData)
-                            }
-                          }}
-                          tabIndex={0}
-                          role="button"
-                          aria-label={`View reviews for ${row.category} - ${productName}: ${cellData.mentions} mentions, ${cellData.satisfactionRate}% satisfaction`}
-                        >
-                          <div className="text-lg font-bold">
-                            {cellData.mentions}
-                          </div>
-                        </div>
-                      </DetailedTooltip>
-                    </td>
+                    <th key={productAsin} className={`border border-gray-300 p-3 text-center font-semibold min-w-[140px] `}>
+                      <Tooltip content={fullProductName}>
+                        <div className="text-sm">{productName}</div>
+                      </Tooltip>
+                    </th>
                   )
                 })}
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {matrixData.map((row) => (
+                <tr key={row.categoryId}>
+                  <td className="border border-gray-300 p-3 bg-gray-50 font-medium text-gray-900">
+                    <div className="flex flex-col">
+                      <span className="text-sm">{row.dimension}</span>
+                      <span className="text-xs text-gray-500 mt-1">
+                        Physical/Performance
+                      </span>
+                    </div>
+                  </td>
+                  {orderedProducts.map(productAsin => {
+                    const cellData = row.cells[productAsin]
+                    
+                    // Show N/A only if no data exists or no reviews at all
+                    if (!cellData || cellData.reviews === 0) {
+                      return (
+                        <td key={productAsin} className="border border-gray-300 p-3 text-center">
+                          <div className="bg-gray-100 text-gray-400 py-2 px-3 rounded text-sm">
+                            N/A
+                          </div>
+                        </td>
+                      )
+                    }
+                    
+                    const productName = asinToProductNameMap?.[productAsin] || productAsin
+                    
+                    return (
+                      <td key={productAsin} className="border border-gray-300 p-3 text-center">
+                        <DetailedTooltip
+                          content={{
+                            title: row.dimension,
+                            type: 'Physical/Performance',
+                            positiveReviews: cellData.positiveReviews,
+                            negativeReviews: cellData.negativeReviews,
+                            totalReviews: cellData.reviews,
+                            satisfactionRate: cellData.satisfactionRate,
+                            additionalInfo: []
+                          }}
+                        >
+                          <div
+                            className={`matrix-cell py-2 px-3 rounded text-sm font-semibold ${getSatisfactionColor(cellData.satisfactionRate, cellData.reviews, cellData.reviews)} cursor-pointer`}
+                            onClick={() => handleCellClick(cellData)}
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter' || e.key === ' ') {
+                                e.preventDefault()
+                                handleCellClick(cellData)
+                              }
+                            }}
+                            tabIndex={0}
+                            role="button"
+                            aria-label={`View mentions for ${row.dimension} - ${productName}: ${cellData.reviews} mentions, ${cellData.satisfactionRate}% satisfaction`}
+                          >
+                            <div className="text-lg font-bold">
+                              {cellData.reviews}
+                            </div>
+                          </div>
+                        </DetailedTooltip>
+                      </td>
+                    )
+                  })}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
   )

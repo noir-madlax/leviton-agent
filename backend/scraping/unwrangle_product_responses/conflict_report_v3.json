@@ -1,0 +1,151 @@
+{
+  "total_conflicts": 206,
+  "columns_merged": 50,
+  "semantic_matches": 50,
+  "conflict_details": [
+    {
+      "column": "batteri_includ",
+      "conflict_count": 6,
+      "conflict_asins": [
+        "B000UECHCA",
+        "B0B9ZJ2LPR",
+        "B003J63662",
+        "B002RL9JAW",
+        "B09XFBRVYX",
+        "B00D49VGFM"
+      ]
+    },
+    {
+      "column": "conductor",
+      "conflict_count": 4,
+      "conflict_asins": [
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B0CSPV6WJY",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "contactmateri",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0CX1J73YB",
+        "B000UECHCA",
+        "B09XFBRVYX"
+      ]
+    },
+    {
+      "column": "materi",
+      "conflict_count": 20,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B000UECHCA",
+        "B09T6J7M8Y",
+        "B0CJF83GTS",
+        "B07J4G6C6C",
+        "B0CSW2L7RC",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B002RL9JAW",
+        "B0BY7CMNDH",
+        "B0CSD3KPX3",
+        "B000BQT7EI",
+        "B09XFBRVYX",
+        "B0C4BBZMN6",
+        "B08J7WKV6W",
+        "B00D49VGFM"
+      ]
+    },
+    {
+      "column": "no_of_wire",
+      "conflict_count": 12,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B003J63662",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07DGD2PVF",
+        "B01AV6QBYG",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "numberofcablestrand",
+      "conflict_count": 40,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B000UECHCA",
+        "B09T6J7M8Y",
+        "B07T6LQSM2",
+        "B0B9ZJ2LPR",
+        "B0D1RKT3JK",
+        "B0C1H1B4P4",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B003J63662",
+        "B0CSW2L7RC",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B08V4L3H2H",
+        "B002RL9JAW",
+        "B088RC5ZT3",
+        "B0C6F4LL7W",
+        "B0BY7CMNDH",
+        "B0CSD3KPX3",
+        "B000BQT7EI",
+        "B07DGD2PVF",
+        "B07H9DN8SP",
+        "B09XFBRVYX",
+        "B0C4BBZMN6",
+        "B00NV7VP9Y",
+        "B01ANZRXDI",
+        "B0CBB4JFKY",
+        "B01AV6QBYG",
+        "B08J7WKV6W",
+        "B00D49VGFM",
+        "B0C4P4Z73C",
+        "B0154H7BLE",
+        "B0D1H6K1X1",
+        "B0C7MLQB5L",
+        "B01BEEL8GK",
+        "B004ZQ5P64"
+      ]
+    },
+    {
+      "column": "size",
+      "conflict_count": 10,
+      "conflict_asins": [
+        "B000UECHCA",
+        "B07T6LQSM2",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B088RC5ZT3",
+        "B0CSD3KPX3",
+        "B07DGD2PVF",
+        "B01ANZRXDI",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "voltag",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C4P4Z73C"
+      ]
+    }
+  ]
+}

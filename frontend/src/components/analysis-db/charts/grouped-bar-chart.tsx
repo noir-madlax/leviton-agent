@@ -5,15 +5,24 @@ import { useMemo } from "react"
 import { getChartColors } from "../shared/chart-colors"
 
 // 定义组件的属性接口
+type ChartDatum = {
+  name: string
+  originalName?: string
+  revenue?: number
+  volume?: number
+  products?: number
+  [key: string]: string | number | undefined
+}
+
 interface GroupedBarChartProps {
-  data: any[]  // 图表数据数组
+  data: ChartDatum[]  // 图表数据数组
   index: string  // 用作X轴的数据字段名
   categories: string[]  // 分类数组
   colors?: string[]  // 自定义颜色数组，可选
   yAxisLabel?: string  // Y轴标签，可选
   xAxisLabel?: string  // X轴标签，可选
-  metricType?: "revenue" | "volume"  // 指标类型：收入或数量
-  onBarClick?: (data: any) => void  // 柱状图点击回调函数，可选
+  metricType?: "revenue" | "volume" | "products"  // 指标类型：收入/数量/产品数
+  onBarClick?: (data: { activeLabel?: string } & Record<string, unknown>) => void  // 柱状图点击回调函数，可选
 }
 
 export function GroupedBarChart({
@@ -82,9 +91,9 @@ export function GroupedBarChart({
   }
 
   // 自定义X轴标签组件：支持换行和旋转
-  const CustomTick = (props: any) => {
+  const CustomTick = (props: { x?: number; y?: number; payload?: { value?: string } }) => {
     const { x, y, payload } = props
-    const lines = payload.value.split('\n')  // 按换行符分割文本
+    const lines = String(payload?.value ?? '').split('\n')  // 按换行符分割文本
     
     return (
       <g transform={`translate(${x},${y})`}>
@@ -113,11 +122,10 @@ export function GroupedBarChart({
         barCategoryGap="10%"  // 柱状图组间距：10%
         margin={{
           top: 20,              // 顶部边距：20px
-          right: 20,            // 右侧边距：20px  
-          left: 20,             // 左侧边距：20px
+          right: 0,            // 右侧边距：20px  
+          left: 15,             // 左侧边距：20px
           bottom: bottomMargin, // 底部边距：动态计算
         }}
-        onClick={onBarClick}    // 点击事件处理
       >
         {/* 网格线：虚线样式 */}
         <CartesianGrid strokeDasharray="3 3" />
@@ -145,6 +153,7 @@ export function GroupedBarChart({
           label={{
             value: yAxisLabel,               // Y轴标题文本
             angle: -90,                      // 旋转角度：-90度（垂直）
+            offset: -5,
             position: "insideLeft",          // 位置：左侧内部
             style: { 
               textAnchor: 'middle',          // 垂直居中
@@ -153,8 +162,8 @@ export function GroupedBarChart({
             }
           }}
           tickFormatter={formatValue}        // 刻度值格式化函数
-          tick={{ fontSize: 14 }}           // 刻度标签字体大小
-          width={90}                        // Y轴宽度：固定90px防止重叠
+          tick={{ fontSize: 12 }}           // 刻度标签字体大小
+          width={80}                        // Y轴宽度：固定90px防止重叠
         />
         
         {/* 悬浮提示框 */}
@@ -212,7 +221,7 @@ export function GroupedBarChart({
           layout="horizontal"        // 布局：水平
           align="center"             // 对齐：居中
           payload={data.map((item, index) => ({
-            value: item.name.replace('\n', ' '),  // 图例文本：去掉换行符
+            value: String(item.name).replace(/\n/g, ' '),  // 图例文本：去掉换行符
             type: 'rect',                         // 图标类型
             color: colors[index % colors.length], // 颜色
             id: item.name                         // 唯一标识
@@ -224,6 +233,16 @@ export function GroupedBarChart({
           dataKey={dataKey}          // 数据字段
           maxBarSize={80}            // 最大柱宽：80px
           style={{ cursor: 'pointer' }}  // 鼠标样式：指针
+          onClick={(barData) => {
+            if (!onBarClick) return
+            // 从柱子数据中提取原始名称
+            const payload = (barData && typeof barData === 'object' && 'payload' in barData)
+              ? (barData as { payload?: ChartDatum }).payload
+              : undefined
+            const name = payload?.originalName || payload?.name
+            const cleaned = typeof name === 'string' ? name.replace(/\n/g, ' ') : undefined
+            onBarClick({ activeLabel: cleaned })
+          }}
         >
           {/* 为每个柱子设置颜色 */}
           {data.map((entry, entryIndex) => (

@@ -6,7 +6,14 @@ from datetime import datetime, date
 from collections import defaultdict
 
 from dashboard.services.base_service import BaseDashboardService
+from dashboard.models import MonthlySalesRecord
+from dashboard.charts.base_service import ChartsBaseService
 from core.models.filters import ProjectFilters
+from dashboard.charts.filters.asin_filter_service import get_filtered_asins
+from .models import (
+    BrandSalesTrendRequest, BrandSalesTrendResponse, BrandSalesTrendMetadata, 
+    CategorySalesTrendData, CategorySalesTrendSummary, OverallSummary
+)
 
 logger = logging.getLogger(__name__)
 
@@ -327,4 +334,308 @@ class SalesTrendService(BaseDashboardService):
                 "total_revenue": 0.0,
                 "total_volume": 0
             }
-        } 
+        }
+
+
+# ==================== 新版本Service（支持timeframe） ====================
+
+class BrandSalesTrendService(ChartsBaseService):
+    """品牌销售趋势分析服务 - 支持timeframe模式
+    
+    新版本服务，使用timeframe替代date_range，
+    未来将支持基于timeframe的实际时间范围查询
+    """
+    
+    def __init__(self, supabase_client):
+        """初始化服务
+        
+        Args:
+            supabase_client: Supabase客户端实例
+        """
+        super().__init__(supabase_client)
+    
+    def get_brand_sales_trend_data(self, request: BrandSalesTrendRequest) -> BrandSalesTrendResponse:
+        """获取品牌销售趋势数据
+        
+        Args:
+            request: 品牌销售趋势请求
+            
+        Returns:
+            BrandSalesTrendResponse: 完整的趋势分析数据
+        """
+        try:
+            logger.info(f"🏢 Starting Brand Sales Trend analysis for project {request.project_id}")
+            
+            # Step 1: 获取过滤后的ASIN列表
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            
+            if not filtered_asins:
+                logger.warning(f"No ASINs found after filtering for project {request.project_id}")
+                return self._get_empty_response(request)
+            
+            logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
+            
+            # Step 2: 获取ASIN到品牌和category的映射
+            asin_mapping = self._get_asin_brand_category_mapping(filtered_asins)
+            if not asin_mapping:
+                return self._get_empty_response(request)
+            
+            # Step 3: 查询月度销售数据 
+            monthly_sales_data = self.query_monthly_sales_with_timeframe(filtered_asins, request.timeframe)
+            if not monthly_sales_data:
+                return self._get_empty_response(request)
+            
+            # Step 4: 按category、品牌和月份聚合数据
+            category_brand_month_data = self._aggregate_by_category_brand_month(monthly_sales_data, asin_mapping)
+            
+            # Step 5: 格式化响应数据
+            return self._format_response(category_brand_month_data, request)
+            
+        except Exception as e:
+            logger.error(f"Error in BrandSalesTrendService.get_brand_sales_trend_data(): {e}", exc_info=True)
+            return self._get_empty_response(request)
+    
+    def _get_asin_brand_category_mapping(self, asins: List[str]) -> Dict[str, Dict[str, str]]:
+        """获取ASIN到品牌和category的映射"""
+        try:
+            # 查询产品品牌和category信息
+            query = (self.supabase.table('product_wide_table')
+                    .select('platform_id, brand, category')
+                    .in_('platform_id', asins)
+                    .eq('source', 'amazon')
+                    .not_.is_('brand', 'null')
+                    .not_.is_('category', 'null'))
+            
+            result = query.execute()
+            
+            asin_mapping = {}
+            if result.data:
+                for item in result.data:
+                    asin = item['platform_id']
+                    brand = item.get('brand')
+                    category = item.get('category')
+                    if brand and brand.strip() and category and category.strip():
+                        asin_mapping[asin] = {
+                            'brand': brand.strip(),
+                            'category': category.strip()
+                        }
+            
+            logger.info(f"ASIN-Brand-Category mapping: {len(asin_mapping)} products have valid data")
+            return asin_mapping
+            
+        except Exception as e:
+            logger.error(f"Error getting ASIN-brand-category mapping: {e}")
+            return {}
+    
+    
+    def _aggregate_by_category_brand_month(self, sales_data: List["MonthlySalesRecord"], asin_mapping: Dict[str, Dict[str, str]]) -> Dict[str, Dict[str, Dict[str, Dict[str, float]]]]:
+        """按category、品牌和月份聚合销售数据
+        
+        Args:
+            sales_data: 月度销售原始数据
+            asin_mapping: ASIN到品牌和category的映射
+            
+        Returns:
+            Dict[category][brand][month] = {"revenue": float, "volume": int}
+        """
+        # 初始化聚合数据结构
+        category_brand_month_data = defaultdict(lambda: defaultdict(lambda: defaultdict(lambda: {"revenue": 0.0, "volume": 0})))
+        
+        for record in sales_data:
+            asin = record.platform_id
+            mapping = asin_mapping.get(asin)
+            
+            if not mapping:
+                continue  # 跳过没有品牌或category信息的产品
+            
+            brand = mapping['brand']
+            category = mapping['category']
+            
+            # 提取月份（转换为YYYY-MM格式）
+            year_month_val = record.year_month
+            if isinstance(year_month_val, str):
+                month = year_month_val[:7]
+            else:
+                month = year_month_val.strftime('%Y-%m')
+            
+            # 计算指标
+            volume = getattr(record, 'total_units_sold', 0) or 0
+            price = getattr(record, 'average_price', 0) or 0
+            revenue = volume * price
+            
+            # 聚合到category+品牌+月份
+            category_brand_month_data[category][brand][month]["revenue"] += revenue
+            category_brand_month_data[category][brand][month]["volume"] += volume
+        
+        # 转换为普通dict并保留整数类型的volume
+        result = {}
+        for category, brand_data in category_brand_month_data.items():
+            result[category] = {}
+            for brand, months in brand_data.items():
+                result[category][brand] = {}
+                for month, metrics in months.items():
+                    result[category][brand][month] = {
+                        "revenue": float(metrics["revenue"]),
+                        "volume": int(metrics["volume"])
+                    }
+        
+        logger.info(f"Aggregated data: {len(result)} categories, {sum(len(brands) for brands in result.values())} brands total")
+        return result
+    
+    def _get_top_brands_by_category(self, category_brand_month_data: Dict[str, Dict[str, Dict[str, Dict[str, float]]]], metric_type: str, limit: int = 10) -> Dict[str, List[str]]:
+        """获取每个category的Top N品牌（按指定指标排序）
+        
+        Args:
+            category_brand_month_data: 按category分组的品牌月度聚合数据
+            metric_type: 排序指标类型（revenue或volume）
+            limit: 每个category返回的品牌数量限制
+            
+        Returns:
+            Dict[category] = List[top_brand_names]
+        """
+        top_brands_by_category = {}
+        
+        for category, brand_month_data in category_brand_month_data.items():
+            # 计算每个品牌的总指标值
+            brand_totals = []
+            for brand, months in brand_month_data.items():
+                if metric_type == "revenue":
+                    total_value = sum(metrics["revenue"] for metrics in months.values())
+                else:  # volume
+                    total_value = sum(metrics["volume"] for metrics in months.values())
+                brand_totals.append((brand, total_value))
+            
+            # 按总指标值降序排序，取前N个
+            brand_totals.sort(key=lambda x: x[1], reverse=True)
+            top_brands = [brand for brand, _ in brand_totals[:limit]]
+            
+            top_brands_by_category[category] = top_brands
+            logger.info(f"Top {limit} brands in {category} by {metric_type}: {top_brands}")
+        
+        return top_brands_by_category
+    
+    def _format_response(self, category_brand_month_data: Dict[str, Dict[str, Dict[str, Dict[str, float]]]], request: BrandSalesTrendRequest) -> BrandSalesTrendResponse:
+        """格式化响应数据为多category API格式
+        
+        Args:
+            category_brand_month_data: 按category分组的品牌月度聚合数据
+            request: 原始请求对象
+            
+        Returns:
+            格式化的多category响应数据
+        """
+        # 获取每个category的Top品牌
+        top_brands_by_category = self._get_top_brands_by_category(category_brand_month_data, request.metric_type, request.limit)
+        
+        # 收集所有月份并排序
+        all_months = set()
+        for category_data in category_brand_month_data.values():
+            for brand_data in category_data.values():
+                all_months.update(brand_data.keys())
+        sorted_months = sorted(list(all_months))
+        
+        # 构建categories_data
+        categories_data = {}
+        overall_revenue = 0.0
+        overall_volume = 0
+        all_brands_set = set()
+        
+        for category, brand_month_data in category_brand_month_data.items():
+            top_brands = top_brands_by_category.get(category, [])
+            
+            # 构建该category的trend_data
+            trend_data = []
+            for month in sorted_months:
+                month_data = {"month": month}
+                
+                # 添加每个top品牌的数据
+                for brand in top_brands:
+                    if brand in brand_month_data and month in brand_month_data[brand]:
+                        month_data[brand] = brand_month_data[brand][month]
+                    else:
+                        # 如果该品牌在该月没有数据，设为0
+                        month_data[brand] = {"revenue": 0.0, "volume": 0}
+                
+                trend_data.append(month_data)
+            
+            # 计算该category的汇总统计
+            category_revenue = sum(
+                sum(metrics["revenue"] for metrics in months.values())
+                for months in brand_month_data.values()
+            )
+            category_volume = sum(
+                sum(metrics["volume"] for metrics in months.values())
+                for months in brand_month_data.values()
+            )
+            
+            # 构建该category的数据
+            categories_data[category] = CategorySalesTrendData(
+                trend_data=trend_data,
+                brands=top_brands,
+                summary=CategorySalesTrendSummary(
+                    total_brands=len(top_brands),
+                    date_range={
+                        "start": sorted_months[0] if sorted_months else "",
+                        "end": sorted_months[-1] if sorted_months else ""
+                    },
+                    total_revenue=float(category_revenue),
+                    total_volume=int(category_volume),
+                    timeframe_period=request.timeframe.period if request.timeframe else "year"
+                )
+            )
+            
+            # 累加到全局统计
+            overall_revenue += category_revenue
+            overall_volume += category_volume
+            all_brands_set.update(top_brands)
+        
+        # 构建overall_summary
+        overall_summary = OverallSummary(
+            total_categories=len(categories_data),
+            all_brands=sorted(list(all_brands_set)),
+            total_revenue=float(overall_revenue),
+            total_volume=int(overall_volume),
+            date_range={
+                "start": sorted_months[0] if sorted_months else "",
+                "end": sorted_months[-1] if sorted_months else ""
+            },
+            timeframe_period=request.timeframe.period if request.timeframe else "year"
+        )
+        
+        # 构建metadata
+        metadata = BrandSalesTrendMetadata(
+            filtered_asins_count=sum(len(brand_data) for category_data in category_brand_month_data.values() for brand_data in category_data.values()),
+            calculation_timestamp=datetime.now().isoformat(),
+            timeframe_used=request.timeframe.period if request.timeframe else "year",
+            categories_processed=list(categories_data.keys())
+        )
+        
+        # 构建最终响应
+        response = BrandSalesTrendResponse(
+            categories_data=categories_data,
+            overall_summary=overall_summary,
+            metadata=metadata
+        )
+        
+        logger.info(f"Response formatted: {len(categories_data)} categories, {len(all_brands_set)} unique brands, {len(sorted_months)} months")
+        return response
+    
+    def _get_empty_response(self, request: BrandSalesTrendRequest) -> BrandSalesTrendResponse:
+        """返回空响应数据"""
+        return BrandSalesTrendResponse(
+            categories_data={},
+            overall_summary=OverallSummary(
+                total_categories=0,
+                all_brands=[],
+                total_revenue=0.0,
+                total_volume=0,
+                date_range={"start": "", "end": ""},
+                timeframe_period=request.timeframe.period if request.timeframe else "year"
+            ),
+            metadata=BrandSalesTrendMetadata(
+                filtered_asins_count=0,
+                calculation_timestamp=datetime.now().isoformat(),
+                timeframe_used=request.timeframe.period if request.timeframe else "year",
+                categories_processed=[]
+            )
+        ) 

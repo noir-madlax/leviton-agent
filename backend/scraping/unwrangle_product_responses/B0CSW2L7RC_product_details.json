@@ -1,0 +1,502 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0CSW2L7RC",
+  "result_count": 1,
+  "detail": {
+    "name": "22 Gauge Electrical Wire 8 Conductor, 22AWG 50FT Thermostat Wire PVC Stranded, 22/8 Low Voltage LED Cable, Flexible Extension Power Cord, Tinned Copper Cable Hookup Wire",
+    "brand": "YAMAWIROU",
+    "url": "https://www.amazon.com/product/dp/B0CSW2L7RC",
+    "asin": "B0CSW2L7RC",
+    "deal_badge": null,
+    "listing_id": "B0CSW2L7RC",
+    "price": 21.23,
+    "price_reduced": 20.0,
+    "price_per_unit": 0.67,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.6,
+    "total_ratings": 136,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35. Order within 10 hrs 40 mins"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "18AWG-3C",
+        "asin": "B0B8YBN3KF",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0B8YBN3KF"
+      },
+      "style_name": {
+        "name": "50FT/15M",
+        "in_stock": true,
+        "asin": "B0CSW2L7RC",
+        "url": "https://www.amazon.com/dp/B0CSW2L7RC",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61rzAUC+7wL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61rzAUC+7wL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/415DkWQzgmL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51lVuZI+efL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41ub0AMAIoL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31qVZmGbc-L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31MHvqAEpnL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41XlJAvsucL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41NDPOGwLGL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/415DkWQzgmL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "YAMAWIROU"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "8"
+      },
+      {
+        "name": "Voltage",
+        "value": "300Volts"
+      }
+    ],
+    "features": [
+      "✔SPECIFICATION- 22AWG 8 Conductor 50Ft. Maximum voltage: 300V. Maximum current: 5A",
+      "✔HIGH QUALITY- It has the characteristics of flame retardant, high conductivity, low resistance and excellent corrosion resistance. Any bending, easy to connect and cut",
+      "✔WIDE RANGE OF USES- low-voltage cable extension cords are very suitable for LED 3528 5050 monochromatic light strips, electronic appliances and equipment, transformers, led lights, led splitter connections, etc",
+      "✔EASY TO SOLDER- high purity, oxygen-free, tinned copper, high temperature resistance, operating temperature rating of 80 ℃. Provide you with a stable connection immediately after welding",
+      "✔What You Get -15M/50ft 22 gauge 8 conductor LED strip extension cable, quality is guaranteed for one year, if you have any questions about this product, please contact us, our team will provide the greatest support"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "2x2x2inches;4.8ounces"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January20,2024"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "YAMAWIROU"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0CSW2L7RC"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "China"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#165,195inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#816inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.64.6outof5stars136ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 165195
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 816
+      }
+    ],
+    "seller_name": "SHINYFLASH",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1L0E7QB0ZSWNU&asin=B0CSW2L7RC&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "18AWG-3C",
+          "in_stock": true,
+          "asin": "B0B8YBN3KF",
+          "url": "https://www.amazon.com/dp/B0B8YBN3KF",
+          "selected": true
+        },
+        {
+          "name": "18AWG-4C",
+          "in_stock": true,
+          "asin": "B0D4TSDV2G",
+          "url": "https://www.amazon.com/dp/B0D4TSDV2G",
+          "selected": true
+        },
+        {
+          "name": "18AWG-5C",
+          "in_stock": true,
+          "asin": "B0BVPVBNPB",
+          "url": "https://www.amazon.com/dp/B0BVPVBNPB",
+          "selected": true
+        },
+        {
+          "name": "18AWG-8C",
+          "in_stock": true,
+          "asin": "B0CSVYD16N",
+          "url": "https://www.amazon.com/dp/B0CSVYD16N",
+          "selected": true
+        },
+        {
+          "name": "18AWG-8C-8Color",
+          "in_stock": true,
+          "asin": "B0D3WNF6QX",
+          "url": "https://www.amazon.com/dp/B0D3WNF6QX",
+          "selected": true
+        },
+        {
+          "name": "20AWG-3C",
+          "in_stock": true,
+          "asin": "B0B8Y9PZJ7",
+          "url": "https://www.amazon.com/dp/B0B8Y9PZJ7",
+          "selected": true
+        },
+        {
+          "name": "20AWG-4C",
+          "in_stock": true,
+          "asin": "B0D4TVMHK6",
+          "url": "https://www.amazon.com/dp/B0D4TVMHK6",
+          "selected": true
+        },
+        {
+          "name": "20AWG-5C",
+          "in_stock": true,
+          "asin": "B0D4TDC5XL",
+          "url": "https://www.amazon.com/dp/B0D4TDC5XL",
+          "selected": true
+        },
+        {
+          "name": "20AWG-8C",
+          "in_stock": true,
+          "asin": "B0CSVZK26F",
+          "url": "https://www.amazon.com/dp/B0CSVZK26F",
+          "selected": true
+        },
+        {
+          "name": "22AWG-3C",
+          "in_stock": true,
+          "asin": "B09ZYBZQ31",
+          "url": "https://www.amazon.com/dp/B09ZYBZQ31",
+          "selected": true
+        },
+        {
+          "name": "22AWG-4C",
+          "in_stock": true,
+          "asin": "B0B9S5DVV8",
+          "url": "https://www.amazon.com/dp/B0B9S5DVV8",
+          "selected": true
+        },
+        {
+          "name": "22AWG-5C",
+          "in_stock": true,
+          "asin": "B0D4TZ821S",
+          "url": "https://www.amazon.com/dp/B0D4TZ821S",
+          "selected": true
+        },
+        {
+          "name": "22AWG-8C",
+          "in_stock": true,
+          "asin": "B0CSW2L7RC",
+          "url": "https://www.amazon.com/dp/B0CSW2L7RC",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "25FT/7.5M",
+          "in_stock": true,
+          "asin": "B0D3WNF6QX",
+          "url": "https://www.amazon.com/dp/B0D3WNF6QX",
+          "selected": true
+        },
+        {
+          "name": "32.8FT/10M",
+          "in_stock": true,
+          "asin": "B0CSVZLKZR",
+          "url": "https://www.amazon.com/dp/B0CSVZLKZR",
+          "selected": true
+        },
+        {
+          "name": "50FT/15M",
+          "in_stock": true,
+          "asin": "B0CSW2L7RC",
+          "url": "https://www.amazon.com/dp/B0CSW2L7RC",
+          "selected": true
+        },
+        {
+          "name": "100FT/30M",
+          "in_stock": true,
+          "asin": "B0CSVZV1LB",
+          "url": "https://www.amazon.com/dp/B0CSVZV1LB",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "77%",
+      "4 star": "14%",
+      "3 star": "4%",
+      "2 star": "1%",
+      "1 star": "4%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "P. Kay",
+        "review_title": "Not bad",
+        "rating": 5,
+        "review_text": "Exactly as described can’t complain\nRead more",
+        "date": "2025-07-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 22AWG-8C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Craig Cottrell",
+        "review_title": "Good Wire",
+        "rating": 5,
+        "review_text": "Good Wire\nRead more",
+        "date": "2025-03-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 22AWG-5C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "R. Hernandez",
+        "review_title": "Perfect to wire chase lights",
+        "rating": 5,
+        "review_text": "16ga - 2 wireI used this to wire some rear chase lights on my 4Runner. The thickness was perfect because it fit snuggly into the windshield channel.\nRead more",
+        "date": "2024-12-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "sergio sánchez",
+        "review_title": "es muy resistente",
+        "rating": 4,
+        "review_text": "durabilidades esta genial\nRead more",
+        "date": "2023-05-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 20AWG-3C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Alternative uses",
+        "rating": 5,
+        "review_text": "Great wire for wiring model railroad switches\nRead more",
+        "date": "2024-12-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 20AWG-8C",
+          "Style: 100FT/30M"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/81KNL8hAVOL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "david m",
+        "review_title": "Just what I needed",
+        "rating": 5,
+        "review_text": "I needed a 5 wire electric cord to extend my gate opening extension and this is just what I needed to extend my line underground (in pvc) to the second gate opener. I would buy again\nRead more",
+        "date": "2023-12-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-5C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sandy",
+        "review_title": "Just what we needed",
+        "rating": 5,
+        "review_text": "Perfect!! Right size, quality & price!!\nRead more",
+        "date": "2024-03-21",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 18AWG-5C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jaafar Alsalaet",
+        "review_title": "easy to solder",
+        "rating": 5,
+        "review_text": "arrived earlier than expected. wire tested and found as described, easily solderable and flexible\nRead more",
+        "date": "2023-10-24",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 22AWG-4C",
+          "Style: 50FT/15M"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "wire"
+    ],
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Rapid Welding",
+        "Temperature Tolerance Range: -30℃~80℃",
+        "22 Gauge 8 Conductor Electrical Wire"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4430fc9-db81-4c04-981d-a4267f2d5886.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "1.2536"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/b4430fc9-db81-4c04-981d-a4267f2d5886.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "1.2536"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a0fbed31-891b-4cb7-8bf5-41882f152630.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "Rapid Welding"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a0fbed31-891b-4cb7-8bf5-41882f152630.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "Rapid Welding"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c317057f-d8f7-47fc-93b1-402f83b825d4.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "1.5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c317057f-d8f7-47fc-93b1-402f83b825d4.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "1.5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5e22d03b-24bb-454a-95ef-ebb3be425459.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "1.563"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5e22d03b-24bb-454a-95ef-ebb3be425459.__CR0,0,300,300_PT0_SX300_V1___.jpg",
+          "alt": "1.563"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a72bf517-4c71-45ed-bfb1-8146b090e5ae.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "1.2356"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a72bf517-4c71-45ed-bfb1-8146b090e5ae.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "1.2356"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f4b2f22e-7167-4419-804d-cce52080b4e1.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/f4b2f22e-7167-4419-804d-cce52080b4e1.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.5"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dc344ef6-96ce-410b-a960-f7ea5f9f9b97.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.23"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dc344ef6-96ce-410b-a960-f7ea5f9f9b97.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.23"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8ddd4bd6-522e-4c96-804b-d5a1d527f0ba.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.32"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8ddd4bd6-522e-4c96-804b-d5a1d527f0ba.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "1.32"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cd923a66-87bd-4eb6-8299-fdd791a69229.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "5.6"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/cd923a66-87bd-4eb6-8299-fdd791a69229.__CR0,0,220,220_PT0_SX220_V1___.jpg",
+          "alt": "5.6"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 32.0
+}

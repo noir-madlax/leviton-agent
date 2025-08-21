@@ -4,8 +4,10 @@ import { useState, useEffect } from 'react'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
 import { Slider } from '@/components/ui/slider'
 import { Checkbox } from '@/components/ui/checkbox'
+import { Check } from 'lucide-react'
 import { ExtendFieldDefinition } from '../types/filters'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
+import { useCommonT, useProjectT } from '@/i18n/hooks'
 
 interface DynamicExtendFieldsFilterProps {
   projectId: string
@@ -45,6 +47,20 @@ export function DynamicExtendFieldsFilter({
   const [fieldDefinitions, setFieldDefinitions] = useState<ExtendFieldDefinition[]>([])
   const [loading, setLoading] = useState(false)
   const [selectKeys, setSelectKeys] = useState<Record<string, number>>({})
+
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  
+  // 翻译字段显示名称
+  const translateFieldName = (displayName: string) => {
+    switch (displayName) {
+      case 'Smart Capability':
+        return projectT('smartCapability')
+      default:
+        return displayName
+    }
+  }
 
   // 使用统一筛选器数据源获取原始extend_fields选项（不受当前筛选条件影响）
   const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
@@ -143,8 +159,8 @@ export function DynamicExtendFieldsFilter({
         )
         
         // 获取可用选项列表，优先使用统一数据源
-        const selectStableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
-        let availableSelectOptions = selectStableOptions.map(optionName => {
+        const selectStableOptions = (unifiedFilterData as any)?.extend_fields?.[field.field_name] || []
+        let availableSelectOptions = selectStableOptions.map((optionName: string) => {
           // 尝试从projectData获取count信息（如果可用）
           const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
             (item: any) => item.name === optionName
@@ -172,10 +188,10 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex flex-col gap-2">
             <label className="text-sm text-gray-600">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
-              {availableSelectOptions.map((item) => {
+              {availableSelectOptions.map((item: any) => {
                 const isSelected = selectCurrentValue.includes(item.name)
                 return (
                   <div key={item.name} className="flex items-center gap-2">
@@ -214,7 +230,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex items-center gap-2">
             <label className="text-sm text-gray-600 min-w-fit">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <Select
               key={selectKeys[field.field_name] || 0}
@@ -233,7 +249,11 @@ export function DynamicExtendFieldsFilter({
               }}
             >
               <SelectTrigger className="w-48 h-8">
-                <SelectValue placeholder="Select" />
+                <SelectValue placeholder={
+                  multiSelectValues.length > 0 
+                    ? (multiSelectValues.length === 1 ? String(multiSelectValues[0]) : `${multiSelectValues.length} selected`)
+                    : 'Select'
+                } />
               </SelectTrigger>
               <SelectContent>
                 {field.filter_options.options && Object.keys(field.filter_options.options)
@@ -242,7 +262,7 @@ export function DynamicExtendFieldsFilter({
                     return (
                       <SelectItem key={option} value={option} disabled={isSelected}>
                         <div className="flex items-center gap-2">
-                          {isSelected && <span className="text-green-600">✅</span>}
+                          {isSelected && <Check className="h-4 w-4 text-green-600" />}
                           {option}
                         </div>
                       </SelectItem>
@@ -262,10 +282,10 @@ export function DynamicExtendFieldsFilter({
         )
         
         // 获取所有可用选项（从统一数据源中获取，不受当前筛选条件影响）
-        const stableOptions = unifiedFilterData?.extend_fields?.[field.field_name] || []
+        const stableOptions = (unifiedFilterData as any)?.extend_fields?.[field.field_name] || []
         
         // 构建可用选项列表，尝试包含count信息
-        let availableOptions = stableOptions.map(optionName => {
+        let availableOptions = stableOptions.map((optionName: string) => {
           // 尝试从projectData获取count信息（如果可用）
           const countInfo = projectData?.distributions?.extend_fields?.[field.field_name]?.find(
             (item: any) => item.name === optionName
@@ -285,10 +305,10 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex flex-col gap-2">
             <label className="text-sm text-gray-600">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-4 flex-wrap">
-              {availableOptions.map((item) => {
+              {availableOptions.map((item: any) => {
                 const isSelected = booleanSelectValues.includes(item.name)
                 return (
                   <div key={item.name} className="flex items-center gap-2">
@@ -325,7 +345,7 @@ export function DynamicExtendFieldsFilter({
         return (
           <div key={field.field_name} className="flex items-center gap-2">
             <label className="text-sm text-gray-600 min-w-fit">
-              {field.display_name}:
+              {translateFieldName(field.display_name)}:
             </label>
             <div className="flex items-center gap-2 w-48">
               <Slider
@@ -354,7 +374,7 @@ export function DynamicExtendFieldsFilter({
   if (loading) {
     return (
       <div className={`text-sm text-gray-500 ${className}`}>
-        Loading extend fields...
+        {commonT('loading')}
       </div>
     )
   }

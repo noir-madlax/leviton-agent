@@ -177,7 +177,7 @@ export function BarChart({
           label={{
             value: yAxisLabel,
             angle: -90,
-            offset: -10,
+            offset: -15,
             position: 'insideLeft',
             style: { textAnchor: 'middle', fontSize: '12px', fill: '#666' }
           }}

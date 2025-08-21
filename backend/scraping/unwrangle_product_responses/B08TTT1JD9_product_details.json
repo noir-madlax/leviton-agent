@@ -1,0 +1,172 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B08TTT1JD9",
+  "result_count": 1,
+  "detail": {
+    "name": "Fence Wire Tightener Wire Tensioner for Fence -Pack of 20,silver",
+    "brand": "Mingya",
+    "url": "https://www.amazon.com/product/dp/B08TTT1JD9",
+    "asin": "B08TTT1JD9",
+    "deal_badge": null,
+    "listing_id": "B08TTT1JD9",
+    "price": null,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": null,
+    "currency_symbol": null,
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.5,
+    "total_ratings": 13,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": null,
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": null,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Patio, Lawn & Garden",
+        "url": "https://www.amazon.com/Patio-Lawn-Garden/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Farm & Ranch",
+        "url": "https://www.amazon.com/farm-ranch/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Structures & Hardware",
+        "url": "https://www.amazon.com/Agricultural-Structures-Hardware/b/ref=dp_bc_3"
+      },
+      {
+        "name": "Agricultural Fencing",
+        "url": "https://www.amazon.com/Agricultural-Fencing/b/ref=dp_bc_4"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/81ObPcyXI4L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/81ObPcyXI4L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Q7Le31HlL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41sQCy6jC7S._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41fG3q6DpfL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41HnV+QyEqS._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41HBeEgvoRL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41nOfSfOhQL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41BpDhW94FS._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Q7Le31HlL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [],
+    "features": [],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "ProductDimensions",
+        "value": "11x9.8x5.5inches;7.8Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "MY-015"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "January23,2021"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Mingya"
+      },
+      {
+        "name": "ASIN",
+        "value": "B08TTT1JD9"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#810,565inPatio,Lawn&Garden(SeeTop100inPatio,Lawn&Garden)#2,824inAgriculturalFencing"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.54.5outof5stars13ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Patio, Lawn & Garden",
+        "url": "https://www.amazon.com/gp/bestsellers/lawn-garden/ref=pd_zg_ts_lawn-garden",
+        "rank": 810565
+      },
+      {
+        "name": "Agricultural Fencing",
+        "url": "https://www.amazon.com/gp/bestsellers/lawn-garden/5743835011/ref=pd_zg_hrsr_lawn-garden",
+        "rank": 2824
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "78%",
+      "4 star": "12%",
+      "1 star": "10%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "JameyScott",
+        "review_title": "Great tensioner",
+        "rating": 4,
+        "review_text": "As good or better than what you buy at the Ag supply or Coop.Tensioner on the left is this one, right one came from Coop. Will definitely buy again.\nRead more",
+        "date": "2022-12-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71jgzfIN1OL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jordan",
+        "review_title": "False advertising",
+        "rating": 1,
+        "review_text": "False advertising. Sell as packs of 20 but there are only 10 in a pack\nRead more",
+        "date": "2022-05-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sylvia",
+        "review_title": "Tighten Barb wire fencing easier at a reasonable cost",
+        "rating": 5,
+        "review_text": "We have used these fence tighteners for many years and always have been happy with them. The price was the best we have found, along with quick shipping.\nRead more",
+        "date": "2022-03-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": false
+  },
+  "credits_used": 1,
+  "remaining_credits": 26.0
+}

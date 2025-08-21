@@ -1,0 +1,349 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B00D49VGFM",
+  "result_count": 1,
+  "detail": {
+    "name": "Cerro 112-3872J 500-Feet 10-Gauge Stranded THHN, White",
+    "brand": "Cerrowire",
+    "url": "https://www.amazon.com/product/dp/B00D49VGFM",
+    "asin": "B00D49VGFM",
+    "deal_badge": null,
+    "listing_id": "B00D49VGFM",
+    "price": 154,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (4) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B00D49VGFM/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.5,
+    "total_ratings": 29,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Friday, August 8. Details",
+      "Or fastest delivery Monday, August 4. Order within 2 hrs 44 mins. Details"
+    ],
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "color_name": {
+        "name": "White",
+        "in_stock": true,
+        "asin": "B00D49VGFM",
+        "url": "https://www.amazon.com/dp/B00D49VGFM",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61vqSkklBOL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/51Gn8Dt1b8L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61vqSkklBOL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "White"
+      },
+      {
+        "name": "Brand",
+        "value": "Cerrowire"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "1"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      }
+    ],
+    "features": [
+      "For indoor use",
+      "30-amp rating",
+      "600-volt capacity",
+      "The jacket is made of clear nylon (polyamide)",
+      "Color coded, heat and moisture resistant PVC insulation"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "White"
+      },
+      {
+        "name": "Brand",
+        "value": "Cerrowire"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "1"
+      },
+      {
+        "name": "Gauge",
+        "value": "10.0"
+      },
+      {
+        "name": "Voltage",
+        "value": "600 Volts"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "MARMON HOME IMPROVEMENT PROD"
+      },
+      {
+        "name": "Global Trade Identification Number",
+        "value": "10048243983824, 00048243983827"
+      },
+      {
+        "name": "UPC",
+        "value": "048243983827"
+      },
+      {
+        "name": "Part Number",
+        "value": "112-3872J"
+      },
+      {
+        "name": "Item Weight",
+        "value": "19.03 pounds"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "6.5 x 6.5 x 6.9 inches"
+      },
+      {
+        "name": "Item model number",
+        "value": "112-3872J"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Included Components",
+        "value": "Wire"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B00D49VGFM"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.5  4.5 out of 5 stars    \n    29 ratings   \n\n\n 4.5 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#135,202 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #689 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "May 28, 2013"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 135202
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 689
+      }
+    ],
+    "seller_name": "GG Cable",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=ALXU3U5J9SQ2T&asin=B00D49VGFM&ref_=dp_merchant_link",
+    "variants": {
+      "color_name": [
+        {
+          "name": "Black",
+          "in_stock": true,
+          "asin": "B00D49VGCA",
+          "url": "https://www.amazon.com/dp/B00D49VGCA",
+          "selected": true
+        },
+        {
+          "name": "Green",
+          "in_stock": true,
+          "asin": "B00D49VZ8U",
+          "url": "https://www.amazon.com/dp/B00D49VZ8U",
+          "selected": true
+        },
+        {
+          "name": "White",
+          "in_stock": true,
+          "asin": "B00D49VGFM",
+          "url": "https://www.amazon.com/dp/B00D49VGFM",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "71%",
+      "4 star": "21%",
+      "2 star": "8%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "Just-peachy1",
+        "review_title": "Great packaging and shipping",
+        "rating": 5,
+        "review_text": "Packaging was superior no way through transportation for the spool to become damage.  Excellent\nRead more",
+        "date": "2025-04-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Black"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Glenn",
+        "review_title": "Awesome",
+        "rating": 5,
+        "review_text": "Really liked this package on time and well packaged and delivered in excellent condition!\nRead more",
+        "date": "2021-04-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Green"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Johendrik",
+        "review_title": "Excelente producto era lo descrito",
+        "rating": 5,
+        "review_text": "Todo bien\nRead more",
+        "date": "2021-06-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: White"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jake",
+        "review_title": "YOU COST ME MONEY!!!",
+        "rating": 4,
+        "review_text": "I'm going to:1. Let you know that this is not a good way to deliver your product.2. Chastise you for wasting one hour, (That's $35.00), of my time,3. Tell you how to prevent this in the future.The above pics are of the spool that 500 FEET of #10 wire was wrapped around. If you know anything about wire, you know that the structural integrity of the spool is CRITICAL.Not gonna dwell... after I say: Thanks! 2 stars.Because I believe in trying to fix something I complain about, I offer the following:Put one piece of wood approx 6 inches square in the box. (1/2\" OSB will be fine).Put the spool in the box.Put one more piece of wood on top of the spool.Seal the box.There you have it.Not gonna give more than 2 stars because YOU COST ME $35.00!!\nRead more",
+        "date": "2021-10-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Black"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71KPzdjgaJL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71FY0IYKFML._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Oliver Tate",
+        "review_title": "Not 500ft!!!",
+        "rating": 2,
+        "review_text": "500ft is exactly enough wire to do the project I'm working on, so I very carefully measured out the lengths of wire I needed. I carefully marked the lengths in a parking lot and used a vise to hold one end of the wire, stretching each piece tight. When I got to the last piece it was 3' 7\" short. This is obviously not a problem for most people, but you shouldn't short the customer.\nRead more",
+        "date": "2025-01-24",
+        "location": "United States",
+        "verified_purchase": false,
+        "variant_info": [
+          "Color: Black"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71cdhu4cgzL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "NPP",
+        "review_title": "Cheaper on Amazon than Home Depot",
+        "rating": 4,
+        "review_text": "Good quality\nRead more",
+        "date": "2023-08-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Black"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/014f379794a44a58be1ab992881123b7?ref=dp_vse_rvc_0"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "From the manufacturer"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/dba550a1-ed02-494c-a597-561a6788272a._SR970,300_.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/dba550a1-ed02-494c-a597-561a6788272a._SR970,300_.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 61.0
+}

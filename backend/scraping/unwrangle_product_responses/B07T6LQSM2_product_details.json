@@ -1,0 +1,562 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B07T6LQSM2",
+  "result_count": 1,
+  "detail": {
+    "name": "THE CIMPLE CO Thermostat Wire 18/4, 200 FT, Solid Copper, 18 Gauge, 4 Conductor, Residential, Commercial and Industrial Rated, 60 Meter, Brown",
+    "brand": "THE CIMPLE CO",
+    "url": "https://www.amazon.com/product/dp/B07T6LQSM2",
+    "asin": "B07T6LQSM2",
+    "deal_badge": null,
+    "listing_id": "B07T6LQSM2",
+    "price": 116.99,
+    "price_reduced": 89.0,
+    "price_per_unit": 0.45,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B07T6LQSM2/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.8,
+    "total_ratings": 2788,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5",
+      "Or Prime members get FREE delivery Saturday, August 2. Order within 3 hrs 12 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "10 Feet (3 Meter)",
+        "asin": "B07SZ4VLGK",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B07SZ4VLGK"
+      },
+      "style_name": {
+        "name": "18/4 Brown",
+        "in_stock": true,
+        "asin": "B07T6LQSM2",
+        "url": "https://www.amazon.com/dp/B07T6LQSM2",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71+Qi3JgVLL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71+Qi3JgVLL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/412hIEiSUGL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41rWNnyC96L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41lNxLtQr7L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/418xTwCVNBL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41suIZMLuXL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51tpWdxpIAL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31sd7TEs-fL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/412hIEiSUGL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Brown"
+      },
+      {
+        "name": "Brand",
+        "value": "THECIMPLECO"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "18.0"
+      }
+    ],
+    "features": [
+      "Includes: 200 feet (60 meters) of CL2/R CMR rated brown thermostat wire 18/4.",
+      "Works With: This multipurpose cable is primarily used with thermostat installations, HVAC equipment, security alarm systems, door chimes, and bell installations.",
+      "Solid Construction: Thermostat cable is made from pure copper and features bare solid 18-gauge copper conductors with a sunlight-resistant outer jacket.",
+      "Rated for: Residential, commercial, and industrial applications.",
+      "Made to Last: UL listed and solid construction."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "ProductDimensions",
+        "value": "2400x0.36x0.36inches;5.4Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "CMP-WIRE-THRM-BRN-18_4-200F"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "June12,2019"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "THECIMPLECO"
+      },
+      {
+        "name": "ASIN",
+        "value": "B07T6LQSM2"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#90,443inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#469inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.84.8outof5stars2,788ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 90443
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 469
+      }
+    ],
+    "seller_name": "THE CIMPLE CO",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LYGL3VCPC7H8&asin=B07T6LQSM2&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "10 Feet (3 Meter)",
+          "in_stock": true,
+          "asin": "B07SZ4VLGK",
+          "url": "https://www.amazon.com/dp/B07SZ4VLGK",
+          "selected": true
+        },
+        {
+          "name": "25 Feet (7.5 Meter)",
+          "in_stock": true,
+          "asin": "B07SZ5D3SH",
+          "url": "https://www.amazon.com/dp/B07SZ5D3SH",
+          "selected": true
+        },
+        {
+          "name": "50 Feet (15 Meter)",
+          "in_stock": true,
+          "asin": "B07T5HSL7X",
+          "url": "https://www.amazon.com/dp/B07T5HSL7X",
+          "selected": true
+        },
+        {
+          "name": "75 Feet (23 Meter)",
+          "in_stock": true,
+          "asin": "B07T187KBN",
+          "url": "https://www.amazon.com/dp/B07T187KBN",
+          "selected": true
+        },
+        {
+          "name": "100 Feet (30 Meter)",
+          "in_stock": true,
+          "asin": "B07T18JSB3",
+          "url": "https://www.amazon.com/dp/B07T18JSB3",
+          "selected": true
+        },
+        {
+          "name": "150 Feet (45 Meter)",
+          "in_stock": true,
+          "asin": "B07SZ4LP2J",
+          "url": "https://www.amazon.com/dp/B07SZ4LP2J",
+          "selected": true
+        },
+        {
+          "name": "200 Feet (60 Meter)",
+          "in_stock": true,
+          "asin": "B07T6LQSM2",
+          "url": "https://www.amazon.com/dp/B07T6LQSM2",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "18/2 Brown",
+          "in_stock": true,
+          "asin": "B07T4FK55R",
+          "url": "https://www.amazon.com/dp/B07T4FK55R",
+          "selected": true
+        },
+        {
+          "name": "18/3 Brown",
+          "in_stock": true,
+          "asin": "B07T17X6T7",
+          "url": "https://www.amazon.com/dp/B07T17X6T7",
+          "selected": true
+        },
+        {
+          "name": "18/4 Brown",
+          "in_stock": true,
+          "asin": "B07T6LQSM2",
+          "url": "https://www.amazon.com/dp/B07T6LQSM2",
+          "selected": true
+        },
+        {
+          "name": "18/5 Brown",
+          "in_stock": true,
+          "asin": "B07T3BDG9S",
+          "url": "https://www.amazon.com/dp/B07T3BDG9S",
+          "selected": true
+        },
+        {
+          "name": "18/6 Brown",
+          "in_stock": true,
+          "asin": "B07T3BB2C6",
+          "url": "https://www.amazon.com/dp/B07T3BB2C6",
+          "selected": true
+        },
+        {
+          "name": "18/7 Brown",
+          "in_stock": true,
+          "asin": "B07T28SJSZ",
+          "url": "https://www.amazon.com/dp/B07T28SJSZ",
+          "selected": true
+        },
+        {
+          "name": "18/8 Brown",
+          "in_stock": true,
+          "asin": "B07SZ4VLGH",
+          "url": "https://www.amazon.com/dp/B07SZ4VLGH",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "84%",
+      "4 star": "12%",
+      "3 star": "3%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the thermostat wire works perfectly for smart thermostat installations and appreciate its heavy-duty copper construction with thick insulation. The wire comes with eight conductors in the correct colors and is easy to install, with one customer noting it's ideal for Nest thermostat use. Customers consider it good value for money.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of installation",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Insulation",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Color coded wires",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Length",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "TVS - Colorado",
+        "review_title": "Good T-Stat wire",
+        "rating": 5,
+        "review_text": "25 feet was plenty to go the distance I needed to go.  Wire is not very flexible as it's solid (not stranded).  Stripped well, looks good, but it is all hidden in the wall.  Worked according to plan.\nRead more",
+        "date": "2025-04-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25 Feet (7.5 Meter)",
+          "Style: 18/8 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Tiger094",
+        "review_title": "Looks high quality",
+        "rating": 5,
+        "review_text": "The last time I purchased thermostat wire, I bought the low priced one and regretted it. The wire broke easily. A few bends and it would start to break. Can't believe they can sell crap, but they do. This wire has a high CMR rating, what ever that means and much better than the generic stuff.  I noticed a difference when handling the wire, noticeably heavier. Looks like what you would expect. Worth the extra money in my opinion. Just changing a thermostat and breaking the wires in the process, wondering is there enough extra length to do what should be a simple job or do you have to spend the day running new wire. Get the good stuff!!\nRead more",
+        "date": "2023-04-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/6 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amanda Hicks",
+        "review_title": "Perfect",
+        "rating": 5,
+        "review_text": "Just as described.  Works perfectly with my Alexa thermostat.\nRead more",
+        "date": "2025-01-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10 Feet (3 Meter)",
+          "Style: 18/2 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "ScotBrite Detailing",
+        "review_title": "Works as described",
+        "rating": 4,
+        "review_text": "Works as described\nRead more",
+        "date": "2024-09-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 75 Feet (23 Meter)",
+          "Style: 18/8 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Bushmasterlover",
+        "review_title": "Good quality wire",
+        "rating": 5,
+        "review_text": "I need to string another wire to add another thermostat. This was perfect easy work with good copper wire\nRead more",
+        "date": "2024-10-24",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/2 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "AndrewMF",
+        "review_title": "It's good",
+        "rating": 5,
+        "review_text": "Can't mess this one up\nRead more",
+        "date": "2025-06-13",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/5 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Babbbs",
+        "review_title": "Works for irrigation wire",
+        "rating": 5,
+        "review_text": "I bought this because I upgraded to a smart irrigation control. It turns out that the original wires for each of the zones did not reach the area where they needed to plug in. I had to \"splice\" each wire to its respective color (by twisting with a cap) and then run to the new irrigation control. It worked. I was grateful to be able to buy a small quantity of wire that had the variety of colors I needed.\nRead more",
+        "date": "2023-08-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 10 Feet (3 Meter)",
+          "Style: 18/8 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hans",
+        "review_title": "Perfect for upgrading your Furnace for a smart Thermostat",
+        "rating": 5,
+        "review_text": "I got this to replace my current 18/5 (18 gauge, 5 strands) wire from my thermostat to my basement.  The new thermostat needed the additional wire for the \"C-wire\" to properly power the thermostat because it's a smart thermostat.  Before you start make sure you need 6 strands, some may need more or less.  You may not need a new wire.The install was pretty simple but could be wildly different for you depending on how it's wired.  For me, I just cute the old wire at the thermostat, taped the new wire to it overlapping about 6 inches and then went to the basement to pull the old wire bringing the new one through.  Since all the holes mine went through were good size it went through no problem.  Since it's such a small wire (compared to electrical), hopefully yours is, too.You'll need some basic wire cutters and trimmers.  If you've never done this before it's pretty easy but you should probably watch a YouTube video and practice on an end of the wire you can cut off.  Don't want to expose any of the copper wire and cause a short.  The wires are all the same regardless of color, that's for your benefit to differentiate them at the thermostat and furnace ends.  Make sure you're very meticulous about this.  Be sure to power down your furnace before starting there.  Check YouTube for guides.In the process I blew a fuse on my furnace and got the blinking light, 5 times.  I'm not sure what I did that caused that (probably use error this project was a first for me), but the fuse was near the wire inputs.  Was cheap and easy to replace but essential to getting my furnace running again.\nRead more",
+        "date": "2020-01-16",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/6 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Marcus",
+        "review_title": "Quality product",
+        "rating": 5,
+        "review_text": "Used with nest thermostat E.\nRead more",
+        "date": "2023-08-19",
+        "location": "Australia",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25 Feet (7.5 Meter)",
+          "Style: 18/4 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "JMACK",
+        "review_title": "Works Well",
+        "rating": 5,
+        "review_text": "Worked fine / does what it is intended for.\nRead more",
+        "date": "2025-07-04",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25 Feet (7.5 Meter)",
+          "Style: 18/8 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "WadeR",
+        "review_title": "As Described and Arrived Quickly",
+        "rating": 5,
+        "review_text": "Item was as described. Arrived quickly.\nRead more",
+        "date": "2025-02-05",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/6 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hans Gruber",
+        "review_title": "Quality wire - very pleased",
+        "rating": 5,
+        "review_text": "I haven't used solid core wire before and this was a delight to use.  Sturdy and well made.  I am very happy with the outcome.\nRead more",
+        "date": "2020-08-06",
+        "location": "Australia",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50 Feet (15 Meter)",
+          "Style: 18/4 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "James",
+        "review_title": "Worked as required",
+        "rating": 5,
+        "review_text": "Worked as required\nRead more",
+        "date": "2025-02-06",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 25 Feet (7.5 Meter)",
+          "Style: 18/7 Brown"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "Large Wind to prevent kinks, breaks, and twists"
+    ],
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dc59311b-c71f-45e7-9277-3cbcd727b923.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "The Cimple Co Header"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dc59311b-c71f-45e7-9277-3cbcd727b923.__CR0,0,970,300_PT0_SX970_V1___.jpg",
+          "alt": "The Cimple Co Header"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d4c16d07-27c1-4690-93d4-02b2f7622b56.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Thermostat Wire 18 Gauge"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/d4c16d07-27c1-4690-93d4-02b2f7622b56.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Thermostat Wire 18 Gauge"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dfce8bfa-6f0d-4a64-ae89-0cc69d9ec0e9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Specs and Dimensions"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/dfce8bfa-6f0d-4a64-ae89-0cc69d9ec0e9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Specs and Dimensions"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4702ecca-4fa5-4038-8ca0-d111c172dfd8.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Reliable Products"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/4702ecca-4fa5-4038-8ca0-d111c172dfd8.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "Reliable Products"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1a14cdec-4892-415d-8d66-64109918fcfc.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "The Cimple Co"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/1a14cdec-4892-415d-8d66-64109918fcfc.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "The Cimple Co"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 47.0
+}

@@ -1,0 +1,471 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B01MDKIL5N",
+  "result_count": 1,
+  "detail": {
+    "name": "YXQ 30AWG Wire Wrapping Wire PVC Coated Tin Plated Copper Wire Cable 305M White Coated Wire for DIY PCB Soldering",
+    "brand": "YXQ",
+    "url": "https://www.amazon.com/product/dp/B01MDKIL5N",
+    "asin": "B01MDKIL5N",
+    "deal_badge": null,
+    "listing_id": "B01MDKIL5N",
+    "price": 7.99,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "One-time purchase:",
+        "offer_description": "7.99 7.99FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:AmazonSold by:WLG Electrical",
+        "price": 7.99,
+        "seller": "WLG Electrical"
+      },
+      {
+        "offer_type": "Subscribe & Save",
+        "offer_description": "7.99 7.99 7.99 per Count( 7.99 7.99/ Count) 7.59 with 5 percent savings 7.59 7.59 per Count( 7.59 7.59/ Count)First delivery on Aug 8FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships fromAmazonSold byWLG Electrical",
+        "price": 7.99
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      },
+      {
+        "offer_type": "2 weeks"
+      },
+      {
+        "offer_type": "3 weeks"
+      },
+      {
+        "offer_type": "1 month"
+      },
+      {
+        "offer_type": "5 weeks"
+      },
+      {
+        "offer_type": "6 weeks"
+      },
+      {
+        "offer_type": "7 weeks"
+      },
+      {
+        "offer_type": "2 months"
+      },
+      {
+        "offer_type": "3 months (Most common)"
+      },
+      {
+        "offer_type": "4 months"
+      },
+      {
+        "offer_type": "5 months"
+      },
+      {
+        "offer_type": "6 months"
+      }
+    ],
+    "other_sellers": {},
+    "rating": 4.4,
+    "total_ratings": 116,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 4 hrs 41 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "color_name": {
+        "name": "White",
+        "in_stock": true,
+        "asin": "B01MDKIL5N",
+        "url": "https://www.amazon.com/dp/B01MDKIL5N",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61C53iCyFvL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41zWQMzbZ6L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41X4FrR7vjL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41g-izdTjoL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61C53iCyFvL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "White"
+      },
+      {
+        "name": "Brand",
+        "value": "YXQ"
+      },
+      {
+        "name": "Material",
+        "value": "Tin-platedCopper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "1"
+      },
+      {
+        "name": "No.ofwires",
+        "value": "1"
+      }
+    ],
+    "features": [
+      "Wire Model: 30AWG",
+      "Cable Length(Approx.) : 305M / 1000Ft",
+      "Wire Size : 0.5 x 0.25mm / 0.019\" x 0.009\"(OD*Wire Dia.);",
+      "Tin Coated Material: Insulation PVC",
+      "Weight : 153g;Package : 1 x Wrapping Wire"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "White"
+      },
+      {
+        "name": "Brand",
+        "value": "YXQ"
+      },
+      {
+        "name": "Material",
+        "value": "Tin-plated Copper"
+      },
+      {
+        "name": "Number of Cable Strands",
+        "value": "1"
+      },
+      {
+        "name": "No. of wires",
+        "value": "1"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "YXQ"
+      },
+      {
+        "name": "UPC",
+        "value": "611553144952"
+      },
+      {
+        "name": "Part Number",
+        "value": "LMT0519001"
+      },
+      {
+        "name": "Item Weight",
+        "value": "5.3 ounces"
+      },
+      {
+        "name": "Package Dimensions",
+        "value": "4.84 x 3.43 x 1.5 inches"
+      },
+      {
+        "name": "Item model number",
+        "value": "DGDQ00073"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      },
+      {
+        "name": "Size",
+        "value": "1000 Feet"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B01MDKIL5N"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.4  4.4 out of 5 stars    \n    116 ratings   \n\n\n 4.4 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#184,050 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #927 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "October 11, 2016"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 184050
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 927
+      }
+    ],
+    "seller_name": "WLG Electrical",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1TBO7AH1TIA3O&asin=B01MDKIL5N&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "color_name": [
+        {
+          "name": "8 colors",
+          "in_stock": true,
+          "asin": "B01MED56BI",
+          "url": "https://www.amazon.com/dp/B01MED56BI",
+          "selected": true
+        },
+        {
+          "name": "Black",
+          "in_stock": true,
+          "asin": "B01F3H0ZGS",
+          "url": "https://www.amazon.com/dp/B01F3H0ZGS",
+          "selected": true
+        },
+        {
+          "name": "Blue",
+          "in_stock": true,
+          "asin": "B015L1HVQS",
+          "url": "https://www.amazon.com/dp/B015L1HVQS",
+          "selected": true
+        },
+        {
+          "name": "Green",
+          "in_stock": true,
+          "asin": "B01MDKIJFP",
+          "url": "https://www.amazon.com/dp/B01MDKIJFP",
+          "selected": true
+        },
+        {
+          "name": "Orange",
+          "in_stock": true,
+          "asin": "B01F58UBCI",
+          "url": "https://www.amazon.com/dp/B01F58UBCI",
+          "selected": true
+        },
+        {
+          "name": "Red",
+          "in_stock": true,
+          "asin": "B01M6V1CYG",
+          "url": "https://www.amazon.com/dp/B01M6V1CYG",
+          "selected": true
+        },
+        {
+          "name": "White",
+          "in_stock": true,
+          "asin": "B01MDKIL5N",
+          "url": "https://www.amazon.com/dp/B01MDKIL5N",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "70%",
+      "4 star": "16%",
+      "3 star": "4%",
+      "2 star": "5%",
+      "1 star": "5%"
+    },
+    "reviews_summary": "Customers find the wire works well for soldering and wrapping, with one mentioning it can take a beating. They appreciate its durability, with one customer noting the shell won't break off during soldering. Customers consider it good value for money, with one describing it as an inexpensive substitute for 30awg enamelled magnet wire.",
+    "review_aspects": [
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Durability",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Michael Malski",
+        "review_title": "Worked for my needs",
+        "rating": 5,
+        "review_text": "Worked well. Only used like 3 inches so far.\nRead more",
+        "date": "2025-05-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Brad",
+        "review_title": "Great wire, just what I wanted",
+        "rating": 5,
+        "review_text": "The media could not be loaded.\n                \n\n\n\nUsed this to secure a rubber screen to my catio last week. We've had several storm since then and this wire hasn't move at all and it's held the screen in place perfectly. It feel like it would be too flimsy, but it stays in place. Easy to cut\nRead more",
+        "date": "2025-04-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Black"
+        ],
+        "review_imgs": [],
+        "review_videos": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/9884aa76-e22f-4c39-95aa-df82b3223a7d/embedded.cc.default.jobtemplate.hls.m3u8"
+        ]
+      },
+      {
+        "reviewer_name": "M. Von Behren",
+        "review_title": "Good quality",
+        "rating": 5,
+        "review_text": "I have purchased several colors and am very happy with this wire.  I will probably get one more spool (green) before I call it good.I have done many 'green wire' jobs before, some on production devices, some on prototypes.  I am very particular about the wire I use.  When soldering dozens of wires, I don't want any frustrations along the way.  This wire works for me quite well.  It strips cleanly and solders easily and doesn't break when pulled (usually accidentally).  The only caution I would give is that the insulation does tend to shrink when heated so solder connections should be made quickly.  This is not anything to do with this particular wire.  We use similar wire where I work which cost 3x as much that does the same thing.At first I was concerned that the spools really weren't 1000 ft as advertised, so I used a spool calculator and determined that it was at least possible to get over 1000 ft on the spool, given the wire size and spool dimensions.  I did notice that my orange spool wasn't as full as the others and didn't seem as tightly wound as the black and white spools.  I am guessing there is probably 800-1000 ft on a spool.However, depending on what you plan to do with this wire, I wouldn't be too seriously concerned about how much is on the spool.  I have seen the same wire go for $30-$60 a spool.  Quite frankly, one spool is likely to last me a lifetime and at <$10 that seems like a good deal to me.If your looking for this kind of hookup wire, I would certainly recommend you give this a try.\nRead more",
+        "date": "2020-07-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/81epPpSITrL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81w1DHh3t-L._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hobo",
+        "review_title": "It's wire.  Very thin wire.",
+        "rating": 5,
+        "review_text": "Works great for wire wrapping, but I found it great for use in lighting models.\nRead more",
+        "date": "2025-02-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Red"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Allen Edmond",
+        "review_title": "It shrinks a little bit but still under control",
+        "rating": 5,
+        "review_text": "Although it shrinks a little bit while soldering, still not bad, not at all. The most important, the shell won't break off while soldering if the wire is not straight but bent over. So this PVC wire is not as perfect as true Kynar like the Jonard Tools, but good enough at much less cost.\nRead more",
+        "date": "2024-03-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dr Tszap",
+        "review_title": "As advertised...",
+        "rating": 5,
+        "review_text": "Comparable to much more expensive wire wrap wire and is even an inexpensive substitute for 30awg enamelled magnet wire for winding coils for crystal radio projects. (Insignificant difference in insulation thickness is more than offset by ease in stripping and soldering ends...)\nRead more",
+        "date": "2024-02-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Orange"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "sohiʙi cojxona",
+        "review_title": "Do not use solvents!",
+        "rating": 1,
+        "review_text": "The insulation is soluble in PCB-cleaning solutions.  Use at your own risk!\nRead more",
+        "date": "2023-03-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Red"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "EDW",
+        "review_title": "Specs Are Way Off",
+        "rating": 2,
+        "review_text": "Copper diameter is 0.2mm, not 0.25mm, which is consistent with AWG 32 rather than AWG 30.  Insulation diameter is 0.66mm, not 0.5mm.  The wire is non-magnetic and silver looking, which is good at least.  The bobbin it's wound on is approx. 29mm diameter x 31mm length, with winding outer diameter of approx. 68mm.  Stripping both ends and hooking the whole shebang up to my inductance meter gives 49mH at 96 ohms ESR.  Plugging all of this into sophisticated inductance calculator software gives a total wire length of around 190 meters, which is far short of the advertised 300 meters.  The insulation itself seems like soft vinyl, not the hard Kynar PVDF I'm used to finding on standard wire wrap wire, I'm pretty sure it would char rather than melt like Kynar with an applied soldering iron.  Avoid if you're looking for the real deal.\nRead more",
+        "date": "2025-01-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Green"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 41.0
+}

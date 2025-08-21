@@ -167,15 +167,44 @@ class AmazonProductRepository:
             threshold_time = datetime.now() - timedelta(hours=hours_threshold)
             threshold_iso = threshold_time.isoformat()
             
-            # 查询最近的批次 - 按created_at降序排列
-            # 注意：这里假设amazon_products表有created_at字段
-            # 如果没有，可能需要从scraping_requests表关联查询
-            
-            result = self.client.table('amazon_products')\
-                .select("batch_id, created_at")\
-                .gte('created_at', threshold_iso)\
-                .order('created_at', desc=True)\
-                .execute()
+            # 如果提供了category_metadata，需要从scraping_requests表中获取符合条件的batch_id
+            if category_metadata and category_metadata.get('category_id'):
+                category_id = category_metadata.get('category_id')
+                logger.info(f"添加category_id过滤条件: {category_id}")
+                
+                # 首先从scraping_requests表中查找符合category_id的批次
+                category_batches_result = self.client.table('scraping_requests')\
+                    .select("id")\
+                    .eq('category_id', category_id)\
+                    .gte('created_at', threshold_iso)\
+                    .execute()
+                
+                if not category_batches_result.data:
+                    logger.info(f"数据库中未找到category_id={category_id}在{hours_threshold}小时内的爬取请求")
+                    return {
+                        "has_recent_products": False,
+                        "reason": f"no_recent_requests_for_category_{category_id}",
+                        "threshold_hours": hours_threshold
+                    }
+                
+                # 获取符合条件的batch_id列表
+                valid_batch_ids = [batch['id'] for batch in category_batches_result.data]
+                logger.info(f"找到符合category_id={category_id}的批次: {valid_batch_ids}")
+                
+                # 查询这些批次下的产品
+                result = self.client.table('amazon_products')\
+                    .select("batch_id, created_at")\
+                    .in_('batch_id', valid_batch_ids)\
+                    .gte('created_at', threshold_iso)\
+                    .order('created_at', desc=True)\
+                    .execute()
+            else:
+                # 如果没有category_metadata，查询所有最近的批次
+                result = self.client.table('amazon_products')\
+                    .select("batch_id, created_at")\
+                    .gte('created_at', threshold_iso)\
+                    .order('created_at', desc=True)\
+                    .execute()
             
             if not result.data:
                 return {

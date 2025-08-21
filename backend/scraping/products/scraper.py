@@ -71,13 +71,33 @@ class ProductScraper:
                 )
                 
                 if skip_action["should_skip"]:
-                    logger.info(f"⏩ 跳过商品爬取: {skip_action['reason']}")
+                    # 详细的跳过原因日志
+                    skip_type = skip_action.get("skip_type", "unknown")
+                    existing_count = skip_action.get("existing_products_count", 0)
+                    
+                    if skip_type == "local_file":
+                        logger.info(f"🔄 智能跳过商品爬取 - 本地文件已存在: 发现 {existing_count} 个产品 (≥{max_products} 目标), 文件: {skip_action.get('existing_file_path', 'N/A')}")
+                    elif skip_type == "database":
+                        batch_id = skip_action.get("batch_id", "N/A")
+                        logger.info(f"🔄 智能跳过商品爬取 - 数据库已有数据: 批次 {batch_id} 包含 {existing_count} 个产品 (≥{max_products} 目标), 时间: 24小时内")
+                    else:
+                        logger.info(f"🔄 智能跳过商品爬取: {skip_action['reason']}")
+                    
+                    logger.info(f"💡 节省API调用成本，如需强制重新爬取请使用 force_scrape=True")
                     
                     # Return skip result with additional info for potential force import/transformation
                     result = {
                         "status": "skipped",
                         "reason": skip_action["reason"],
-                        "products_scraped": skip_action.get("existing_products_count", 0),
+                        "skip_type": skip_type,
+                        "skip_details": {
+                            "existing_products_count": existing_count,
+                            "target_products": max_products,
+                            "data_source": "Local File" if skip_type == "local_file" else "Database",
+                            "file_path": skip_action.get("existing_file_path"),
+                            "batch_id": skip_action.get("batch_id")
+                        },
+                        "products_scraped": existing_count,
                         "file_path": skip_action.get("existing_file_path"),
                         "existing_file_path": skip_action.get("existing_file_path"),  # Explicit field for force import
                         "category_info": category_info,
@@ -128,6 +148,86 @@ class ProductScraper:
                 "message": str(e),
                 "products_scraped": 0
             }
+
+    async def scrape_by_asins(self, asins: List[str], concurrency: int = 8, max_retries: int = 3) -> Dict[str, Any]:
+        """按 ASIN 列表抓取产品详情并保存为与导入器兼容的 JSON 文件。
+
+        Returns:
+            Dict[str, Any]: { status, file_path, products_scraped, products }
+        """
+        try:
+            if not asins:
+                return {"status": "error", "message": "ASIN list is empty", "products_scraped": 0}
+
+            # 规范化并去重
+            normalized = []
+            seen = set()
+            for a in asins:
+                if not a:
+                    continue
+                token = str(a).strip().upper()
+                if len(token) >= 8 and len(token) <= 12 and token not in seen:
+                    seen.add(token)
+                    normalized.append(token)
+
+            if not normalized:
+                return {"status": "error", "message": "No valid ASIN tokens found", "products_scraped": 0}
+
+            # 并发抓详情
+            sem = asyncio.Semaphore(max(1, concurrency))
+            results: List[Dict[str, Any]] = []
+
+            async def fetch_one(asin: str):
+                retries = 0
+                while retries <= max_retries:
+                    try:
+                        async with sem:
+                            details = await asyncio.to_thread(get_product_details_rainforest, asin)
+                        if details and "product" in details:
+                            results.append(details["product"])
+                            return
+                        raise RuntimeError("empty response")
+                    except Exception:
+                        retries += 1
+                        await asyncio.sleep(min(5, 1 + retries))
+
+            await asyncio.gather(*(fetch_one(a) for a in normalized))
+
+            # 落盘
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            import hashlib
+            key = hashlib.sha1("_".join(normalized).encode()).hexdigest()[:12]
+            filename = f"amazon_asins_{key}_{timestamp}.json"
+            filepath = os.path.join(self.amazon_dir, filename)
+
+            combined_data = {
+                "scraping_summary": {
+                    "type": "asin_list",
+                    "total_products": len(results),
+                    "requested_asins": len(normalized)
+                },
+                # Provide minimal metadata keys so category importer has a consistent structure
+                "request_info": {},
+                "request_parameters": {},
+                "request_metadata": {},
+                "category_information": {},
+                # 与导入器兼容
+                "category_results": results
+            }
+
+            with open(filepath, "w", encoding="utf-8") as f:
+                json.dump(combined_data, f, indent=4, ensure_ascii=False)
+
+            return {
+                "status": "success",
+                "file_path": filepath,
+                "products_scraped": len(results),
+                "products": results
+            }
+
+        except Exception as e:
+            logger.error(f"按ASIN列表爬取商品失败: {e}")
+            return {"status": "error", "message": str(e), "products_scraped": 0}
     
     async def _discover_category_info(self, params: Dict) -> Dict:
         """
@@ -598,6 +698,7 @@ class ProductScraper:
                                 logger.info(f"找到现有产品文件: {file_path.name}, {len(existing_products)} 个产品 ({unique_count} 个唯一)")
                                 return {
                                     "should_skip": True,
+                                    "skip_type": "local_file",
                                     "reason": f"sufficient_local_unique_products ({unique_count} unique >= {max_products})",
                                     "existing_products_count": unique_count,
                                     "existing_file_path": str(file_path),
@@ -639,6 +740,7 @@ class ProductScraper:
                 
                 return {
                     "should_skip": True,
+                    "skip_type": "database",
                     "reason": f"recent_db_batch ({recent_check.get('reason')})",
                     "existing_products_count": recent_check.get("product_count", 0),
                     "batch_id": recent_check.get("batch_id"),

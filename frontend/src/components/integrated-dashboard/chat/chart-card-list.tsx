@@ -2,99 +2,16 @@
 
 import { useState } from 'react'
 import { ChartCard } from './chart-card'
-import { UnifiedChartCard } from '../shared/types'
+import { UnifiedChartCard, ChartItemConfig } from '../shared/types'
 
 interface ChartCardListProps {
   cards: UnifiedChartCard[]
   activeChartId: string | null
   onCardClick: (chartId: string) => void
+  chartItems?: Record<string, ChartItemConfig[]> // New prop for dynamic chart items
 }
 
-// 定义每个图表类别下的具体图表
-const CHART_DETAILS = {
-  'brand-analysis': {
-    title: 'Market Analysis',
-    charts: [
-      {
-        name: 'Total addressable market (TAM) and Market Share',
-        id: 'market-share-analysis'
-      },
-      {
-        name: 'Top 10 Best-Selling Brands',
-        id: 'brand-analysis'
-      },
-      {
-        name: 'Sales Trend of Top 10 Brands',
-        id: 'sales-trend-analysis'
-      },
-      {
-        name: 'Top 10 Product Segments by Revenue/Volume',
-        id: 'market-insights'
-      },
-      {
-        name: 'Market Share by Sales Unit',
-        id: 'package-preference'
-      }
-    ]
-  },
-  'pricing-analysis': {
-    title: 'Pricing Analysis',
-    charts: [
-      {
-        name: 'Price Distribution Overview',
-        id: 'price-distribution-overview'
-      },
-      {
-        name: 'Price Distribution by Product Type',
-        id: 'price-distribution-by-type'
-      },
-      {
-        name: 'Price distribution by Brands',
-        id: 'price-distribution-by-brands'
-      },
-      {
-        name: 'Price vs. Revenue Distribution of Top Selling 20 Products',
-        id: 'price-vs-revenue'
-      }
-    ]
-  },
-  'review-insights': {
-    title: 'Customer Insights',
-    charts: [
-      {
-        name: 'Top 10 Customer Pain Points',
-        id: 'customer-pain-points'
-      },
-      {
-        name: 'Top 10 Customer Delights',
-        id: 'customer-delights'
-      },
-      {
-        name: 'Use Case Sentiment Analysis',
-        id: 'use-case-sentiment'
-      }
-    ]
-  },
-  'competitor-analysis': {
-    title: 'Competitive Product Analysis',
-    charts: [
-      {
-        name: 'Customer Satisfaction Overview',
-        id: 'customer-satisfaction-overview'
-      },
-      {
-        name: 'Product Comparison by Key Dimensions',
-        id: 'product-comparison-dimensions'
-      },
-      {
-        name: 'Product Comparison by Main Use Cases',
-        id: 'product-comparison-use-cases'
-      }
-    ]
-  }
-}
-
-export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardListProps) {
+export function ChartCardList({ cards, activeChartId, onCardClick, chartItems }: ChartCardListProps) {
   const [navigatingToChart, setNavigatingToChart] = useState<string | null>(null)
   
   // 滚动到指定图表的函数
@@ -105,10 +22,12 @@ export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardLi
     // 找到包含该图表的卡片
     let targetCardId = null
     
-    for (const [cardId, details] of Object.entries(CHART_DETAILS)) {
-      if (details.charts.some(chart => chart.id === chartId)) {
-        targetCardId = cardId
-        break
+    if (chartItems) {
+      for (const [cardId, charts] of Object.entries(chartItems)) {
+        if (charts.some(chart => chart.chart_id === chartId)) {
+          targetCardId = cardId
+          break
+        }
       }
     }
     
@@ -190,24 +109,24 @@ export function ChartCardList({ cards, activeChartId, onCardClick }: ChartCardLi
             onClick={() => onCardClick(card.id)}
           />
           
-          {/* 图表名称列表 - 只对预设卡片显示，且只对有详细信息的卡片显示 */}
-          {card.type === 'preset' && card.id in CHART_DETAILS && (
+          {/* 图表名称列表 - 只对预设卡片显示，且只对有chart items配置的卡片显示 */}
+          {card.type === 'preset' && chartItems && chartItems[card.id] && (
             <div className="ml-4 border-l-2 border-gray-200 pl-3">
               <ul className="space-y-1">
-                {CHART_DETAILS[card.id as keyof typeof CHART_DETAILS].charts.map((chart) => (
-                  <li key={chart.id}>
+                {chartItems[card.id].map((chart) => (
+                  <li key={chart.chart_id}>
                     <button
-                      onClick={() => scrollToChart(chart.id)}
-                      disabled={navigatingToChart === chart.id}
+                      onClick={() => scrollToChart(chart.chart_id)}
+                      disabled={navigatingToChart === chart.chart_id}
                       className={`chart-navigation-item ${
-                        navigatingToChart === chart.id ? 'navigating' : ''
+                        navigatingToChart === chart.chart_id ? 'navigating' : ''
                       }`}
                     >
-                      <span className={`chart-navigation-bullet ${navigatingToChart === chart.id ? 'spinning' : ''}`}>
-                        {navigatingToChart === chart.id ? '⟳' : '•'}
+                      <span className={`chart-navigation-bullet ${navigatingToChart === chart.chart_id ? 'spinning' : ''}`}>
+                        {navigatingToChart === chart.chart_id ? '⟳' : '•'}
                       </span>
                       <span className="leading-relaxed flex-1">
-                        {chart.name}
+                        {chart.chart_name}
                        
                       </span>
                     </button>

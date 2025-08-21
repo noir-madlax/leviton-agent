@@ -1,0 +1,367 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B09XFBRVYX",
+  "result_count": 1,
+  "detail": {
+    "name": "LUG2-14ADQ2 Southwire Mechanical Lug, 2PK",
+    "brand": "Southwire",
+    "url": "https://www.amazon.com/product/dp/B09XFBRVYX",
+    "asin": "B09XFBRVYX",
+    "deal_badge": null,
+    "listing_id": "B09XFBRVYX",
+    "price": 4.5,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {},
+    "rating": 4.7,
+    "total_ratings": 106,
+    "past_month_sales": "50+ boughtin past month",
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or fastest delivery Monday, August 4. Order within 10 hrs 44 mins"
+    ],
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61rUTRC3ksL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41nsYg5CRNL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61rUTRC3ksL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Grey"
+      },
+      {
+        "name": "ConnectorType",
+        "value": "Crimp"
+      },
+      {
+        "name": "ContactMaterial",
+        "value": "Copper"
+      },
+      {
+        "name": "InsulationMaterial",
+        "value": "Non-Insulated"
+      },
+      {
+        "name": "Terminal",
+        "value": "ScrewTerminal"
+      }
+    ],
+    "features": [
+      "Southwire dual-rated mechanical lugs are used to terminate conductors in power and grounding applications",
+      "Wire Range: # 14 SOL/STR - # 2 STR",
+      "Single 1/4 in. hole mount",
+      "Dual-rated for use with Al and Cu conductors",
+      "Rated 600V / 90C"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "Grey"
+      },
+      {
+        "name": "Connector Type",
+        "value": "Crimp"
+      },
+      {
+        "name": "Contact Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Insulation Material",
+        "value": "Non-Insulated"
+      },
+      {
+        "name": "Terminal",
+        "value": "Screw Terminal"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Brand",
+        "value": "Southwire"
+      },
+      {
+        "name": "Specification Met",
+        "value": "CSA, UL"
+      },
+      {
+        "name": "Temperature Rating",
+        "value": "90C"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "0.52\"L x 2.78\"W x 5.12\"H"
+      },
+      {
+        "name": "Maximum Voltage",
+        "value": "600 Volts"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Southwire"
+      },
+      {
+        "name": "UPC",
+        "value": "032886791796"
+      },
+      {
+        "name": "Part Number",
+        "value": "65180440"
+      },
+      {
+        "name": "Item Weight",
+        "value": "0.634 ounces"
+      },
+      {
+        "name": "Country of Origin",
+        "value": "India"
+      },
+      {
+        "name": "Item model number",
+        "value": "65180440"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Included s",
+        "value": "Component"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B09XFBRVYX"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.7  4.7 out of 5 stars    \n    106 ratings   \n\n\n 4.7 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#95,134 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #503 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "April 7, 2022"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 95134
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 503
+      }
+    ],
+    "seller_name": null,
+    "seller_url": null,
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "85%",
+      "4 star": "9%",
+      "3 star": "3%",
+      "2 star": "3%"
+    },
+    "reviews_summary": "Customers find the mechanical lug works as advertised and appreciate its build quality, with one customer noting it's easy to grind and bend without breaking. They also find it easy to use.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Build quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "SPRADIO",
+        "review_title": "Came in handy.",
+        "rating": 5,
+        "review_text": "Simple device, good quality, works as expected. You will need a screw to attach these. Most bus bars have a 1/4-28 thread and you will need a screw to attach this. I boughet 1/2in long screws and had to cut them even shorter so they wouldn't bottom out in the bus bar. This product worked well in my new sub panel installation.\nRead more",
+        "date": "2024-11-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Paul",
+        "review_title": "Solid, firm wire hold.",
+        "rating": 5,
+        "review_text": "Hold well, easy to use, excellent conductors.\nRead more",
+        "date": "2024-12-20",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Xillixio",
+        "review_title": "As described",
+        "rating": 5,
+        "review_text": "No issues, machined well\nRead more",
+        "date": "2024-10-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dan J. Williams",
+        "review_title": "Good product.",
+        "rating": 5,
+        "review_text": "Good product. I would recommend this product\nRead more",
+        "date": "2024-09-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "hyramj",
+        "review_title": "Works very well with 3awg.",
+        "rating": 5,
+        "review_text": "The bolts from my Siemens neutral bar had no heads, so the existing bolts were not able to secure this Lug.  I had to find a different bolt as there are none supplied with this Lug.  IT fit 3 gauge stranded copper with a little room to spare.  2 awg would likely fit.  It would not be able to fit a 2/0.\nRead more",
+        "date": "2024-04-10",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Francisco Figueroa",
+        "review_title": "GOOD PRODUCT",
+        "rating": 4,
+        "review_text": "Worked as advertised.\nRead more",
+        "date": "2024-08-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "john",
+        "review_title": "Quick and easy",
+        "rating": 5,
+        "review_text": "Exactly what needed\nRead more",
+        "date": "2024-09-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "C.Bruno",
+        "review_title": "Grounded metal building",
+        "rating": 5,
+        "review_text": "I ran a #4 ground wire from the subpanel to the UFER clamp, then to two of these lugs: one on the metal base plate of my metal building and one on a metal post.\nRead more",
+        "date": "2024-07-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Shiprec",
+        "review_title": "does the job",
+        "rating": 5,
+        "review_text": "Does the job quick and easy\nRead more",
+        "date": "2025-06-09",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Craig Y.",
+        "review_title": "As described",
+        "rating": 5,
+        "review_text": "Lug is as described.\nRead more",
+        "date": "2024-04-11",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Mr. Nobody",
+        "review_title": "Cheap Did the job",
+        "rating": 4,
+        "review_text": "Cheap Did the job. No Burrs. Nice product.\nRead more",
+        "date": "2023-12-07",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 66.0
+}

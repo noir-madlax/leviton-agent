@@ -9,18 +9,20 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Filter, RotateCcw, X, Database, Users, Loader2 } from "lucide-react"
 import { ProjectFilters, FilterOptions } from '../types/filters'
 import { DynamicExtendFieldsFilter } from './dynamic-extend-fields-filter'
+import { CategoryFilter } from '../filters'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
+import { useCommonT, useProjectT, useFiltersT } from '@/i18n/hooks'
 
 // 新增：过滤器配置接口
 interface FilterConfig {
   visible_filters: Record<string, boolean>
-  default_values: Record<string, any>
+  default_values: Record<string, string[] | Record<string, string>>
   extend_fields: Array<{
     field_name: string
     display_name: string
     field_type: string
-    filter_options: Record<string, any>
+    filter_options: Record<string, string[] | string | boolean>
   }>
 }
 
@@ -74,6 +76,11 @@ export function UniversalFilterComponent({
   // 新增：过滤器配置状态
   const [filterConfig, setFilterConfig] = useState<FilterConfig | null>(null)
   const [configLoading, setConfigLoading] = useState(false)
+  
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
+  const filtersT = useFiltersT()
 
   // 使用统一数据源，优先使用统一filter数据，fallback到原有逻辑
   const { filterData: unifiedFilterData, isLoading: unifiedLoading } = useUnifiedFilterData(projectId)
@@ -87,23 +94,40 @@ export function UniversalFilterComponent({
     ? (unifiedLoading || cacheLoading) 
     : loading
 
-  // 新增：加载过滤器配置
+  // 新增：加载过滤器配置（优化：使用统一数据源，避免重复请求）
   useEffect(() => {
     const loadFilterConfig = async () => {
       if (!projectId) return
+
+      // 优先使用统一过滤器数据源，如果可用的话
+      if (unifiedFilterData) {
+        console.log('🔧 [UNIVERSAL-FILTER] Using unified filter data instead of separate config API')
+        setFilterConfig({
+          visible_filters: {
+            'categories': true,
+            'brands': true,
+            'Time Period': true,
+            'segments': true
+          },
+          default_values: {},
+          extend_fields: []
+        })
+        setConfigLoading(false)
+        return
+      }
 
       setConfigLoading(true)
       try {
         const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
         const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/filter-config`)
-        
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`)
         }
-        
+
         const result = await response.json()
         setFilterConfig(result.config)
-        
+
         console.log('🔧 [UNIVERSAL-FILTER] Loaded filter configuration:', result.config)
       } catch (error) {
         console.error('Error loading filter config:', error)
@@ -124,7 +148,7 @@ export function UniversalFilterComponent({
     }
 
     loadFilterConfig()
-  }, [projectId])
+  }, [projectId, unifiedFilterData])
 
   // 同步外部传入的筛选器变化
   useEffect(() => {
@@ -156,7 +180,7 @@ export function UniversalFilterComponent({
     setPendingFilters(prev => {
       const newExtendFields = { ...prev.extend_fields }
       const currentArray = Array.isArray(newExtendFields[fieldName]) ? newExtendFields[fieldName] : []
-      const updatedArray = currentArray.filter((i: any) => i !== item)
+      const updatedArray = currentArray.filter((i: string) => i !== item)
       
       if (updatedArray.length === 0) {
         delete newExtendFields[fieldName]
@@ -234,48 +258,23 @@ export function UniversalFilterComponent({
         className="text-xs flex items-center gap-1 mr-2 mb-2"
       >
         🔧 {displayName}: {displayValue}
-       
+        <X 
+          className="w-3 h-3 cursor-pointer hover:text-red-500 pointer-events-auto ml-1" 
+          onClick={(e) => {
+            e.stopPropagation()
+            e.preventDefault()
+            onRemove()
+          }}
+        />
       </Badge>
     )
   }
 
-  const handleCategorySelect = (category: string) => {
-    if (category === 'all') {
-      setPendingFilters(prev => ({ ...prev, categories: [] }))
-    } else if (!pendingFilters.categories.includes(category)) {
-      setPendingFilters(prev => ({ 
-        ...prev, 
-        categories: [...prev.categories, category] 
-      }))
-    }
-  }
 
-  const handleBrandSelect = (brand: string) => {
-    if (brand === 'all') {
-      setPendingFilters(prev => ({ ...prev, brands: [] }))
-    } else if (!pendingFilters.brands.includes(brand)) {
-      setPendingFilters(prev => ({ 
-        ...prev, 
-        brands: [...prev.brands, brand] 
-      }))
-    }
-  }
 
-  const handleCategoryToggle = (category: string, checked: boolean) => {
-    if (checked) {
-      if (!pendingFilters.categories.includes(category)) {
-        setPendingFilters(prev => ({ 
-          ...prev, 
-          categories: [...prev.categories, category] 
-        }))
-      }
-    } else {
-      setPendingFilters(prev => ({
-        ...prev,
-        categories: prev.categories.filter(c => c !== category)
-      }))
-    }
-  }
+
+
+  // Category filter logic moved to CategoryFilter component
 
   const handleBrandToggle = (brand: string, checked: boolean) => {
     if (checked) {
@@ -305,12 +304,7 @@ export function UniversalFilterComponent({
     setSelectKeys(prev => ({ ...prev, segment: prev.segment + 1 }))
   }
 
-  const handleRemoveCategory = (category: string) => {
-    setPendingFilters(prev => ({
-      ...prev,
-      categories: prev.categories.filter(c => c !== category)
-    }))
-  }
+  // Category removal logic moved to CategoryFilter component
 
   const handleRemoveBrand = (brand: string) => {
     setPendingFilters(prev => ({
@@ -330,7 +324,7 @@ export function UniversalFilterComponent({
     setApplyingFilters(true)
     
     // 模拟短暂延迟，让用户看到loading效果
-    await new Promise(resolve => setTimeout(resolve, 300))
+    await new Promise(resolve => setTimeout(resolve, 10))
     
     onFiltersChange(pendingFilters)
     
@@ -353,7 +347,7 @@ export function UniversalFilterComponent({
       brands: [],  // 改：packaging_types -> brands
       segments: [],
       extend_fields: {},
-      time_period: "30 days"
+      time_period: "" // 🔧 不设置前端默认值
     }
     setPendingFilters(resetFilters)
     setSelectKeys(prev => ({
@@ -373,7 +367,7 @@ export function UniversalFilterComponent({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter configuration...</span>
+          <span className="text-gray-500">{commonT('loading')}</span>
         </div>
       </div>
     )
@@ -385,7 +379,7 @@ export function UniversalFilterComponent({
       <div className="p-4 text-center">
         <div className="flex items-center justify-center gap-2">
           <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-          <span className="text-gray-500">Loading filter option2s...</span>
+          <span className="text-gray-500">{projectT('loadingFilterOptions')}</span>
         </div>
       </div>
     )
@@ -398,7 +392,7 @@ export function UniversalFilterComponent({
       <CardHeader className="pb-2">
         <CardTitle className="text-lg flex items-center gap-2">
           <Filter className="w-5 h-5" />
-          {level === 'project' ? 'Project Scope & Filters' : 'Chart Filters'}
+          {level === 'project' ? projectT('projectScopeAndFilters') : projectT('chartFilters')}
           {level === 'chart' && chartId && (
             <Badge variant="outline" className="ml-2 text-xs">
               {chartId}
@@ -407,11 +401,10 @@ export function UniversalFilterComponent({
         </CardTitle>
         <div className="text-sm text-gray-600">
           {level === 'project' 
-            ? 'Filters will apply to the whole project' 
+            ? projectT('filtersApplyToWholeProject')
             : (
               <span>
-                📌 indicates filters inherited from project level. 
-                Chart-specific filters will be applied in addition to project filters.
+                {projectT('chartFiltersDescription')}
               </span>
             )
           }
@@ -423,14 +416,14 @@ export function UniversalFilterComponent({
         {level === 'project' && projectData?.stats && (
           <div className="mb-4">
             <div className="mb-2">
-              <h3 className="text-sm font-medium text-gray-700">Project Data Scope：</h3>
+              <h3 className="text-sm font-medium text-gray-700">{projectT('projectDataScope')}：</h3>
             </div>
             <div className="grid grid-cols-4 gap-3 mb-3">
               <div className="flex items-center gap-2 p-2 bg-blue-50 rounded">
                 <Database className="w-4 h-4 text-blue-500" />
                 <div>
                   <p className="text-lg font-bold text-blue-900">{projectData.stats.total_products.toLocaleString()}</p>
-                  <p className="text-xs text-blue-600">Products</p>
+                  <p className="text-xs text-blue-600">{projectT('products')}</p>
                 </div>
               </div>
 
@@ -438,7 +431,7 @@ export function UniversalFilterComponent({
                 <Users className="w-4 h-4 text-green-500" />
                 <div>
                   <p className="text-lg font-bold text-green-900">{projectData.stats.total_brands}</p>
-                  <p className="text-xs text-green-600">Brands</p>
+                  <p className="text-xs text-green-600">{projectT('brands')}</p>
                 </div>
               </div>
           {/* 暂时隐藏，project data scope 中的review数据 和 segment数据
@@ -467,86 +460,40 @@ export function UniversalFilterComponent({
           <div className="mb-4">
             <div className="flex items-center justify-center py-4">
               <Loader2 className="w-4 h-4 animate-spin text-blue-500 mr-2" />
-              <span className="text-sm text-gray-600">Loading project data...</span>
+              <span className="text-sm text-gray-600">{projectT('loadingProjectData')}</span>
             </div>
           </div>
         )}
-  <h3 className="text-sm font-medium text-gray-700">Filters：</h3>
+  <h3 className="text-sm font-medium text-gray-700">{projectT('filters')}：</h3>
         {/* 筛选器控件 */}
         <div className="flex items-center gap-4 flex-wrap">
       
-          {/* Category Filter */}
+          {/* Category Filter - 使用新的独立组件 */}
           {filterConfig?.visible_filters?.categories && (
-            <div className="flex flex-col gap-2">
-              <span className="text-sm text-gray-600">Amazon Category:</span>
-              <div className="flex items-center gap-4 flex-wrap">
-                {finalAvailableOptions.hierarchical_categories && 
-                 finalAvailableOptions.hierarchical_categories.length > 0 && 
-                 finalAvailableOptions.hierarchical_categories.some(group => group.children.length > 0) ? (
-                  // 显示层次结构的复选框
-                  finalAvailableOptions.hierarchical_categories.map((parentGroup) =>
-                    parentGroup.children.map((child) => {
-                      const isSelected = pendingFilters.categories.includes(child.category)
-                      return (
-                        <div key={child.category} className="flex items-center gap-2">
-                          <Checkbox
-                            checked={isSelected}
-                            onCheckedChange={(checked) => handleCategoryToggle(child.category, checked as boolean)}
-                            disabled={finalLoading || configLoading}
-                          />
-                          <label className="text-sm cursor-pointer">
-                            {child.category} ({child.count} products)
-                          </label>
-                        </div>
-                      )
-                    })
-                  ).flat()
-                ) : (
-                  // Fallback: 显示扁平分类结构的复选框
-                  finalAvailableOptions.categories.map(category => {
-                    // 从projectData中查找对应的计数信息
-                    const distributionData = projectData?.distributions?.categories?.find(
-                      (item: { name: string; count: number; percentage: number }) => item.name === category
-                    )
-                    
-                    const displayLabel = distributionData 
-                      ? `${category} (${distributionData.count} products)`
-                      : category
-                    
-                    const isSelected = pendingFilters.categories.includes(category)
-                    
-                    return (
-                      <div key={category} className="flex items-center gap-2">
-                        <Checkbox
-                          checked={isSelected}
-                          onCheckedChange={(checked) => handleCategoryToggle(category, checked as boolean)}
-                          disabled={finalLoading || configLoading}
-                        />
-                        <label className="text-sm cursor-pointer">
-                          {displayLabel}
-                        </label>
-                      </div>
-                    )
-                  })
-                )}
-              </div>
-            </div>
+            <CategoryFilter
+              value={pendingFilters.categories}
+              onChange={(categories) => setPendingFilters(prev => ({ ...prev, categories }))}
+              availableOptions={finalAvailableOptions}
+              projectData={projectData}
+              disabled={finalLoading || configLoading}
+              loading={finalLoading || configLoading}
+            />
           )}
 
           {/* Brand Filter */}
           {filterConfig?.visible_filters?.brands && (
             <div className="flex flex-col gap-2">
-              <span className="text-sm text-gray-600">Brand:</span>
+              <span className="text-sm text-gray-600">{filtersT('brand')}:</span>
               <div className="flex items-center gap-4 flex-wrap">
                 {finalAvailableOptions?.brands && finalAvailableOptions.brands.length > 0 ? (
                   finalAvailableOptions.brands.map((brandName) => {
                     const isSelected = pendingFilters.brands.includes(brandName)
                     // 尝试从projectData获取计数信息（如果有的话）
                     const distributionData = projectData?.distributions?.brands?.find(
-                      (item: any) => item.name === brandName
+                      (item: { name: string; count: number; percentage: number }) => item.name === brandName
                     )
                     const displayLabel = distributionData 
-                      ? `${brandName} (${distributionData.count} products)`
+                      ? `${brandName} (${distributionData.count} ${projectT('products')})`
                       : brandName
                     
                     return (
@@ -571,7 +518,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${brand} (${distributionData.count} products)`
+                      ? `${brand} (${distributionData.count} ${projectT('products')})`
                       : brand
                     
                     const isSelected = pendingFilters.brands.includes(brand)
@@ -599,7 +546,7 @@ export function UniversalFilterComponent({
           {/* Segments Filter */}
           {filterConfig?.visible_filters?.segments && (
             <div className="flex items-center gap-2">
-              <span className="text-sm text-gray-600">Product Segment:</span>
+              <span className="text-sm text-gray-600">{projectT('segments')}:</span>
               <Select 
                 key={selectKeys.segment}
                 onValueChange={handleSegmentSelect}
@@ -617,7 +564,7 @@ export function UniversalFilterComponent({
                     )
                     
                     const displayLabel = distributionData 
-                      ? `${segment} (${distributionData.count} products)`
+                      ? `${segment} (${distributionData.count} ${projectT('products')})`
                       : segment
                     
                     const isSelected = pendingFilters.segments.includes(segment)
@@ -659,10 +606,8 @@ export function UniversalFilterComponent({
         {hasActiveFilters && (
           <div className="pt-2 border-t border-gray-100">
             <div className="flex items-center gap-2 flex-wrap">
-              <span className="text-xs text-gray-600">Applied filters:</span>
-              {pendingFilters.categories.map(category => 
-                renderFilterBadge('categories', category, () => handleRemoveCategory(category))
-              )}
+              <span className="text-xs text-gray-600">{projectT('appliedFilters')}:</span>
+              {/* Category badges moved to CategoryFilter component */}
               {pendingFilters.brands.map(brand => 
                 renderFilterBadge('brands', brand, () => handleRemoveBrand(brand))
               )}
@@ -710,7 +655,7 @@ export function UniversalFilterComponent({
             className="flex items-center gap-2"
           >
             <RotateCcw className="w-4 h-4" />
-            Reset
+            {filtersT('reset')}
           </Button>
           <Button 
             size="sm" 
@@ -720,10 +665,10 @@ export function UniversalFilterComponent({
             {applyingFilters ? (
               <>
                 <Loader2 className="w-3 h-3 mr-1 animate-spin" />
-                Applying...
+                {commonT('loading')}
               </>
             ) : (
-              'Apply Filters'
+              filtersT('applyFilters')
             )}
           </Button>
         </div>

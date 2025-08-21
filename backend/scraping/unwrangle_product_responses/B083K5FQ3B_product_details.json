@@ -1,0 +1,557 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B083K5FQ3B",
+  "result_count": 1,
+  "detail": {
+    "name": "Southwire 9044SW8808 Range Power Cord; 4-Foot; 1/4-Inch Flanged Terminals; Flat Plug; Compatible With Most Standard Free Standing Electrical Ranges With A 4 Conductor Wall Outlet; 125/250-Volt; 50-Amp",
+    "brand": "Southwire",
+    "url": "https://www.amazon.com/product/dp/B083K5FQ3B",
+    "asin": "B083K5FQ3B",
+    "deal_badge": null,
+    "listing_id": "B083K5FQ3B",
+    "price": 28.4,
+    "price_reduced": 26.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "Buy new:",
+        "offer_description": "26.90 26.90 6.73 per feet( 6.73 6.73/ feet)FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:Amazon.comSold by:Amazon.com",
+        "price": 26.9,
+        "seller": "Amazon.com"
+      },
+      {
+        "offer_type": "Save with Used - Like New",
+        "offer_description": "22.74 22.74 5.69 per feet( 5.69 5.69/ feet)FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:AmazonSold by:Amazon Resale",
+        "price": 22.74,
+        "seller": "Amazon Resale"
+      }
+    ],
+    "other_sellers": {
+      "text": "New & Used (3) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B002RL9JAW/ref=dp_olp_ALL_mbc?ie=UTF8&condition=ALL"
+    },
+    "rating": 4.7,
+    "total_ratings": 840,
+    "past_month_sales": "50+ boughtin past month",
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 10 hrs 40 mins. Join Prime"
+    ],
+    "delivery_zipcode": "20815",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "4'",
+        "asin": "B002RL9JAW",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B002RL9JAW"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Plugs",
+        "url": "https://www.amazon.com/Plugs/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/81lI8yeBE2L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41z6ps11FFL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41ZI4jmHTbL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31pKmxmflkL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/31dR+hzmHWL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41vhTd9rX1L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41LnvjaFLWL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/81lI8yeBE2L._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black/Yellow"
+      },
+      {
+        "name": "Brand",
+        "value": "Southwire"
+      },
+      {
+        "name": "ConnectorGender",
+        "value": "Female-to-Male"
+      },
+      {
+        "name": "Voltage",
+        "value": "250Volts"
+      },
+      {
+        "name": "InputCurrent",
+        "value": "15Amps"
+      }
+    ],
+    "features": [
+      "HEAVY DUTY 50-Amp range appliance power supply cord with ¬º-inch flanged terminals",
+      "ERGONOMIC; 4 pronged; flat plug lays flat against the wall so that range can be pushed back against the wall",
+      "125/250-Volt SRDT Cord with (2) 6-Gauge and (2) 8-Gauge copper conductors",
+      "UL Listed power supply cord kit with flanged spade terminals for quick connections"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Manufacturer",
+        "value": "Coleman Cable"
+      },
+      {
+        "name": "Part Number",
+        "value": "9044SW8808"
+      },
+      {
+        "name": "Item Weight",
+        "value": "2.05 pounds"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "12 x 2 x 10 inches"
+      },
+      {
+        "name": "Country of Origin",
+        "value": "China"
+      },
+      {
+        "name": "Item model number",
+        "value": "9044SW8808"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "Yes"
+      },
+      {
+        "name": "Size",
+        "value": "4'"
+      },
+      {
+        "name": "Color",
+        "value": "Black/Yellow"
+      },
+      {
+        "name": "Style",
+        "value": "4 Wire"
+      },
+      {
+        "name": "Finish",
+        "value": "Brushed"
+      },
+      {
+        "name": "Material",
+        "value": "Blend"
+      },
+      {
+        "name": "Pattern",
+        "value": "Power Cord"
+      },
+      {
+        "name": "Shape",
+        "value": "Rectangular"
+      },
+      {
+        "name": "Power Source",
+        "value": "ac"
+      },
+      {
+        "name": "Voltage",
+        "value": "250 Volts"
+      },
+      {
+        "name": "Wattage",
+        "value": "12500.00"
+      },
+      {
+        "name": "Amperage Capacity",
+        "value": "50 Amps"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Number Of Pieces",
+        "value": "1"
+      },
+      {
+        "name": "Extension Length",
+        "value": "4'"
+      },
+      {
+        "name": "Plug Format",
+        "value": "4 PIN"
+      },
+      {
+        "name": "Switch Style",
+        "value": "(Old)"
+      },
+      {
+        "name": "Included Components",
+        "value": "Cord"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B002RL9JAW"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.7  4.7 out of 5 stars    \n    840 ratings   \n\n\n 4.7 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#89,527 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #197 in Electric Plugs"
+      },
+      {
+        "name": "Date First Available",
+        "value": "February 17, 2007"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 89527
+      },
+      {
+        "name": "Electric Plugs",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/6396120011/ref=pd_zg_hrsr_hi",
+        "rank": 197
+      }
+    ],
+    "seller_name": "Amazon Resale",
+    "seller_url": "https://www.amazon.comhttps://www.amazon.com/b?node=10158976011",
+    "variants": {
+      "size_name": [
+        {
+          "name": "4'",
+          "in_stock": true,
+          "asin": "B002RL9JAW",
+          "url": "https://www.amazon.com/dp/B002RL9JAW",
+          "selected": true
+        },
+        {
+          "name": "4' (Pack of 6)",
+          "in_stock": true,
+          "asin": "B0F67QTRCV",
+          "url": "https://www.amazon.com/dp/B0F67QTRCV",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "85%",
+      "4 star": "9%",
+      "3 star": "3%",
+      "2 star": "1%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the power cord works well, with one mentioning it flawlessly works with level 2 chargers, and they appreciate its high-quality build and good value. The cord fits perfectly with stove terminal posts, and one customer notes it's long enough to get behind the stove. Installation experiences are mixed, with some finding it easy to connect while others report difficulties.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Build quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Fit",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Cord size",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of installation",
+        "sentiment": "mixed"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "SK",
+        "review_title": "Works well for Tesla Wall Connector",
+        "rating": 5,
+        "review_text": "I clipped the ends off and used it fine with a Tesla Wall Connector. Be sure to twist the strands well before putting them in the terminals - they're finer than the kind of wire you'd hardwire with, so they'll tend to fan out under the screw and slip out to the sides. Otherwise, follow Tesla's instructions, including looping the cable and securing it with a zip tie. Be sure to use a 3/4 cable gland for strain relief and SET YOUR CHARGER TO 40 AMPS MAX! This cable is rated 50 amps, but for continuous loads like charging a car, code requires an 80% derate for safety due to heat build up... the default setting on Tesla chargers is 48 amps. Adding a 14-50 whip to a hardwired charger isn't code compliant anyway, but you'd be a fool not to abide by the 80% rule.\nRead more",
+        "date": "2023-12-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "J. Wu",
+        "review_title": "Great cable for cheap.  de-rate 20% for continuous use.",
+        "rating": 5,
+        "review_text": "Great cable for cheap.For those idiot DIY Telsa owners , don't charge it at 50 amps,  you need to de-rate it by 20% to 40 amps for continuous use.  That applies to all electrical wiring, socket, plugs etc.\nRead more",
+        "date": "2025-04-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Robert Johnson",
+        "review_title": "Perfect fit for an EV recharge project",
+        "rating": 5,
+        "review_text": "I was looking to convert a hardwired Juicebox EV charger to a plug-in charger with a NEMA 14-50 plug.  This product fit my needs perfectly.  The two hot conductors are 6 awg and capable of carrying 50 amps.  The plug is sturdy and fits easily into the 14-50 receptacle.  My EV charger reconfiguration project was a success.\nRead more",
+        "date": "2023-06-17",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jeff",
+        "review_title": "Used this to connect my Tesla Wall charger",
+        "rating": 5,
+        "review_text": "Your can use this to install a Tesla Wall charger without having to hard wire it directly. Plenty of YouTube videos to document the steps. I've had this installed for over 6 months without issue. BUT you MUST lower your amps to 40a . Don't charge on max or you'll burn it out after a few months.\nRead more",
+        "date": "2025-02-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/61z+CBAEA1L._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Nice quality, wish the conductor ends were a little smaller.",
+        "rating": 5,
+        "review_text": "Bought this pigtail for my blink hq100 charger. Worked fine, but the length of wire after the cladding was an inch too long and I had to do some bending to make it all fit. Also the ends are a little too wide, so I had to crimp them down a little. Sorta pain. Also you’ll want to pick up a 1” romex connector since a spare doesn’t come with this it the blink charging station. You’ll also find that the charger doesn’t have separate ground and neutral leads, so you’ll have to tie them together since this is 4-wire. Maybe rethink what plug and receptacle you want if you only really need 3 wire!\nRead more",
+        "date": "2021-06-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "EastAL",
+        "review_title": "Works well, could stand a little improvement",
+        "rating": 4,
+        "review_text": "Worked well to install on my new range, and the 4' length was perfect - not too much slack to bind up under the appliance.  My one suggestion would be to strip a bit more of the black outer insulation off since for ranges with 4 terminals you need a bit more flex to bend the 4 conductors (especially the ground) to fit the 3 main terminals and the chassis ground.\nRead more",
+        "date": "2019-03-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "John W. Ostergren, Jr.",
+        "review_title": "Std dryer cable",
+        "rating": 5,
+        "review_text": "Uses #6 copper wire. 3#6 conductors and ground appears to be #8.\nRead more",
+        "date": "2024-11-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "JR",
+        "review_title": "EV Charger conversion",
+        "rating": 5,
+        "review_text": "I  used this to convert my free hard wired Tesla Wall Connector to a plug in EVSE into a NEMA 14-50R reciprocal.  I used a 3/4 cable gland for strain relief and SET THE TESLA WALL CONNECTOR TO 40 AMPS MAX!  Be aware that a 14-50 whip to a hardwired charger may not be code compliant.\nRead more",
+        "date": "2024-03-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hazard",
+        "review_title": "Heavy duty",
+        "rating": 5,
+        "review_text": "Bought this to use with my Tesla wall charger (to avoid having to hardwire the charger). Used various online resources and tutorials, combined with the directions that came with the wall charger. Been working well with no issues for about 6 months now.\nRead more",
+        "date": "2020-12-11",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Yang Chun Lun",
+        "review_title": "works",
+        "rating": 5,
+        "review_text": "works great replacement for my stove\nRead more",
+        "date": "2021-07-13",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "dbmemphis",
+        "review_title": "Good stuff",
+        "rating": 5,
+        "review_text": "Perfect. Isntall was a piece if cake and cheaper than big box stores. Good stuff\nRead more",
+        "date": "2020-12-04",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Harvey Hovelkamp",
+        "review_title": "As discribed.",
+        "rating": 5,
+        "review_text": "It was the right length for my project of wiring in a 50 amp rv generator power supply.\nRead more",
+        "date": "2020-09-20",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Scott B.",
+        "review_title": "All good",
+        "rating": 5,
+        "review_text": "Fast shipping, works well.\nRead more",
+        "date": "2021-05-31",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 4'",
+          "Pattern Name: Power Cord"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/07804985d972472fb8a6140b5cb33024?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/8e7d2bbc46734b2ca107d7c7dca428e2?ref=dp_vse_rvc_1",
+      "https://www.amazon.com/vdp/61182e2594e741b68bda1da23883cf2d?ref=dp_vse_rvc_2"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Manufacturer’s warranty can be requested from customer service.Click hereto make a request to customer service.",
+      "product_warranty_link": "https://www.amazon.com/gp/help/customer/display.html/ref=help_search_1-1?nodeId=201596310"
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "From the manufacturer",
+        "Southwire Tools and Equipment: Built For Durability. Built For Reliability. Built For Work.",
+        "Southwire Tools & Equipment provides a comprehensive line of top-quality hand tools, meters, testers, lighting, extension cords, temporary power solutions and contractor equipment. Built for durability. Built for reliability. Built for work."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/3087a573-c1f9-44d1-a0c8-aaaac4bb1ed3.__CR0,0,2021,625_PT0_SX970_V1___.jpg",
+          "alt": "Southwire "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/3087a573-c1f9-44d1-a0c8-aaaac4bb1ed3.__CR0,0,2021,625_PT0_SX970_V1___.jpg",
+          "alt": "Southwire "
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/63231927-3f58-4a5c-a143-f57fdb2d360c._CR0,0,625,625_PT0_SX300__.jpg",
+          "alt": "SOUTHWIRE"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/63231927-3f58-4a5c-a143-f57fdb2d360c._CR0,0,625,625_PT0_SX300__.jpg",
+          "alt": "SOUTHWIRE"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/6ec04008-f75e-4c12-a533-3490bc6a91ee._CR0,0,2021,625_PT0_SX970__.jpg",
+          "alt": "tools"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/6ec04008-f75e-4c12-a533-3490bc6a91ee._CR0,0,2021,625_PT0_SX970__.jpg",
+          "alt": "tools"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/a8b65639-689e-45b9-a34d-5ec8ba09cb3f._CR0,0,2021,625_PT0_SX970__.jpg",
+          "alt": "kline"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media/vc/a8b65639-689e-45b9-a34d-5ec8ba09cb3f._CR0,0,2021,625_PT0_SX970__.jpg",
+          "alt": "kline"
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 24.0
+}

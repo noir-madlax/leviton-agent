@@ -1,0 +1,190 @@
+2025-07-31 13:38:58,259 - INFO - Starting product details extraction...
+2025-07-31 13:38:58,259 - INFO - Found 48 product files to process
+2025-07-31 13:38:58,259 - INFO - Processing 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 13:38:58,267 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0B19HVHHZ_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,267 - INFO - Processing 2/48: B0CN9FNFZC_product_details.json
+2025-07-31 13:38:58,270 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CN9FNFZC_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,271 - INFO - Processing 3/48: B0CX1J73YB_product_details.json
+2025-07-31 13:38:58,274 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CX1J73YB_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,274 - INFO - Processing 4/48: B000UECHCA_product_details.json
+2025-07-31 13:38:58,275 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B000UECHCA_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,275 - INFO - Processing 5/48: B09T6J7M8Y_product_details.json
+2025-07-31 13:38:58,277 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B09T6J7M8Y_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,278 - INFO - Processing 6/48: B0080404VS_product_details.json
+2025-07-31 13:38:58,279 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0080404VS_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,279 - INFO - Processing 7/48: B0CJF83GTS_product_details.json
+2025-07-31 13:38:58,282 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CJF83GTS_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,282 - INFO - Processing 8/48: B07T6LQSM2_product_details.json
+2025-07-31 13:38:58,284 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B07T6LQSM2_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,284 - INFO - Processing 9/48: B0B9ZJ2LPR_product_details.json
+2025-07-31 13:38:58,285 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0B9ZJ2LPR_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,285 - INFO - Processing 10/48: B0D1RKT3JK_product_details.json
+2025-07-31 13:38:58,286 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0D1RKT3JK_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,286 - INFO - Processing 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 13:38:58,288 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C1H1B4P4_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,288 - INFO - Processing 12/48: B0CPPWBGT8_product_details.json
+2025-07-31 13:38:58,291 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CPPWBGT8_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,291 - INFO - Processing 13/48: B07P6GYHVP_product_details.json
+2025-07-31 13:38:58,293 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B07P6GYHVP_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,293 - INFO - Processing 14/48: B003J63662_product_details.json
+2025-07-31 13:38:58,295 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B003J63662_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,295 - INFO - Processing 15/48: B0CSW2L7RC_product_details.json
+2025-07-31 13:38:58,297 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CSW2L7RC_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,297 - INFO - Processing 16/48: B01MDKIL5N_product_details.json
+2025-07-31 13:38:58,299 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B01MDKIL5N_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,299 - INFO - Processing 17/48: B0C4GXNNBD_product_details.json
+2025-07-31 13:38:58,300 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C4GXNNBD_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,300 - INFO - Processing 18/48: B07CWPTHYH_product_details.json
+2025-07-31 13:38:58,302 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B07CWPTHYH_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,302 - INFO - Processing 19/48: B0B3H27JG2_product_details.json
+2025-07-31 13:38:58,311 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0B3H27JG2_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,312 - INFO - Processing 20/48: B08R7ZT3C7_product_details.json
+2025-07-31 13:38:58,318 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B08R7ZT3C7_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,318 - INFO - Processing 21/48: B08V4L3H2H_product_details.json
+2025-07-31 13:38:58,321 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B08V4L3H2H_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,321 - INFO - Processing 22/48: B083K5FQ3B_product_details.json
+2025-07-31 13:38:58,329 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B083K5FQ3B_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,330 - INFO - Processing 23/48: B088RC5ZT3_product_details.json
+2025-07-31 13:38:58,340 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B088RC5ZT3_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,340 - INFO - Processing 24/48: B0C6F4LL7W_product_details.json
+2025-07-31 13:38:58,345 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C6F4LL7W_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,347 - INFO - Processing 25/48: B0BY7CMNDH_product_details.json
+2025-07-31 13:38:58,351 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0BY7CMNDH_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,352 - INFO - Processing 26/48: B0CSD3KPX3_product_details.json
+2025-07-31 13:38:58,360 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CSD3KPX3_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,361 - INFO - Processing 27/48: B000BQT7EI_product_details.json
+2025-07-31 13:38:58,364 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B000BQT7EI_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,364 - INFO - Processing 28/48: B07DGD2PVF_product_details.json
+2025-07-31 13:38:58,368 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B07DGD2PVF_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,368 - INFO - Processing 29/48: B0CSPV6WJY_product_details.json
+2025-07-31 13:38:58,372 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CSPV6WJY_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,373 - INFO - Processing 30/48: B07H9F7WWZ_product_details.json
+2025-07-31 13:38:58,375 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B07H9F7WWZ_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,375 - INFO - Processing 31/48: B09XFBRVYX_product_details.json
+2025-07-31 13:38:58,378 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B09XFBRVYX_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,379 - INFO - Processing 32/48: B0C4BBZMN6_product_details.json
+2025-07-31 13:38:58,386 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C4BBZMN6_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,387 - INFO - Processing 33/48: B00DIRTYSG_product_details.json
+2025-07-31 13:38:58,390 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B00DIRTYSG_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,391 - INFO - Processing 34/48: B00NV7VP9Y_product_details.json
+2025-07-31 13:38:58,394 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B00NV7VP9Y_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,396 - INFO - Processing 35/48: B01ANZRXDI_product_details.json
+2025-07-31 13:38:58,405 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B01ANZRXDI_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,406 - INFO - Processing 36/48: B0CBB4JFKY_product_details.json
+2025-07-31 13:38:58,413 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0CBB4JFKY_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,413 - INFO - Processing 37/48: B01AV6QBYG_product_details.json
+2025-07-31 13:38:58,416 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B01AV6QBYG_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,416 - INFO - Processing 38/48: B08J7WKV6W_product_details.json
+2025-07-31 13:38:58,418 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B08J7WKV6W_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,418 - INFO - Processing 39/48: B00D49VGFM_product_details.json
+2025-07-31 13:38:58,419 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B00D49VGFM_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,419 - INFO - Processing 40/48: B0C4P4Z73C_product_details.json
+2025-07-31 13:38:58,420 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C4P4Z73C_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,420 - INFO - Processing 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 13:38:58,421 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0BZ42TFK2_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,421 - INFO - Processing 42/48: B08TTT1JD9_product_details.json
+2025-07-31 13:38:58,422 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B08TTT1JD9_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,422 - INFO - Processing 43/48: B0154H7BLE_product_details.json
+2025-07-31 13:38:58,423 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0154H7BLE_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,423 - INFO - Processing 44/48: B0D1H6K1X1_product_details.json
+2025-07-31 13:38:58,424 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0D1H6K1X1_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,424 - INFO - Processing 45/48: B014U90BAA_product_details.json
+2025-07-31 13:38:58,425 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B014U90BAA_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,425 - INFO - Processing 46/48: B0C7MLQB5L_product_details.json
+2025-07-31 13:38:58,428 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B0C7MLQB5L_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,428 - INFO - Processing 47/48: B01BEEL8GK_product_details.json
+2025-07-31 13:38:58,429 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B01BEEL8GK_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,429 - INFO - Processing 48/48: B004ZQ5P64_product_details.json
+2025-07-31 13:38:58,430 - ERROR - Error processing /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/B004ZQ5P64_product_details.json: dictionary changed size during iteration
+2025-07-31 13:38:58,430 - ERROR - No valid product data found!
+2025-07-31 13:39:11,964 - INFO - Starting product details extraction...
+2025-07-31 13:39:11,964 - INFO - Found 48 product files to process
+2025-07-31 13:39:11,964 - INFO - Processing 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 13:39:11,968 - INFO - Processing 2/48: B0CN9FNFZC_product_details.json
+2025-07-31 13:39:11,971 - INFO - Processing 3/48: B0CX1J73YB_product_details.json
+2025-07-31 13:39:11,973 - INFO - Processing 4/48: B000UECHCA_product_details.json
+2025-07-31 13:39:11,974 - INFO - Processing 5/48: B09T6J7M8Y_product_details.json
+2025-07-31 13:39:11,975 - INFO - Processing 6/48: B0080404VS_product_details.json
+2025-07-31 13:39:11,976 - INFO - Processing 7/48: B0CJF83GTS_product_details.json
+2025-07-31 13:39:11,978 - INFO - Processing 8/48: B07T6LQSM2_product_details.json
+2025-07-31 13:39:11,979 - INFO - Processing 9/48: B0B9ZJ2LPR_product_details.json
+2025-07-31 13:39:11,980 - INFO - Processing 10/48: B0D1RKT3JK_product_details.json
+2025-07-31 13:39:11,981 - INFO - Processing 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 13:39:11,982 - INFO - Processing 12/48: B0CPPWBGT8_product_details.json
+2025-07-31 13:39:11,984 - INFO - Processing 13/48: B07P6GYHVP_product_details.json
+2025-07-31 13:39:11,985 - INFO - Processing 14/48: B003J63662_product_details.json
+2025-07-31 13:39:11,987 - INFO - Processing 15/48: B0CSW2L7RC_product_details.json
+2025-07-31 13:39:11,988 - INFO - Processing 16/48: B01MDKIL5N_product_details.json
+2025-07-31 13:39:11,989 - INFO - Processing 17/48: B0C4GXNNBD_product_details.json
+2025-07-31 13:39:11,990 - INFO - Processing 18/48: B07CWPTHYH_product_details.json
+2025-07-31 13:39:11,992 - INFO - Processing 19/48: B0B3H27JG2_product_details.json
+2025-07-31 13:39:11,993 - INFO - Processing 20/48: B08R7ZT3C7_product_details.json
+2025-07-31 13:39:11,994 - INFO - Processing 21/48: B08V4L3H2H_product_details.json
+2025-07-31 13:39:11,995 - INFO - Processing 22/48: B083K5FQ3B_product_details.json
+2025-07-31 13:39:11,996 - INFO - Processing 23/48: B088RC5ZT3_product_details.json
+2025-07-31 13:39:11,998 - INFO - Processing 24/48: B0C6F4LL7W_product_details.json
+2025-07-31 13:39:12,000 - INFO - Processing 25/48: B0BY7CMNDH_product_details.json
+2025-07-31 13:39:12,001 - INFO - Processing 26/48: B0CSD3KPX3_product_details.json
+2025-07-31 13:39:12,002 - INFO - Processing 27/48: B000BQT7EI_product_details.json
+2025-07-31 13:39:12,003 - INFO - Processing 28/48: B07DGD2PVF_product_details.json
+2025-07-31 13:39:12,004 - INFO - Processing 29/48: B0CSPV6WJY_product_details.json
+2025-07-31 13:39:12,005 - INFO - Processing 30/48: B07H9F7WWZ_product_details.json
+2025-07-31 13:39:12,006 - INFO - Processing 31/48: B09XFBRVYX_product_details.json
+2025-07-31 13:39:12,007 - INFO - Processing 32/48: B0C4BBZMN6_product_details.json
+2025-07-31 13:39:12,009 - INFO - Processing 33/48: B00DIRTYSG_product_details.json
+2025-07-31 13:39:12,010 - INFO - Processing 34/48: B00NV7VP9Y_product_details.json
+2025-07-31 13:39:12,010 - INFO - Processing 35/48: B01ANZRXDI_product_details.json
+2025-07-31 13:39:12,012 - INFO - Processing 36/48: B0CBB4JFKY_product_details.json
+2025-07-31 13:39:12,014 - INFO - Processing 37/48: B01AV6QBYG_product_details.json
+2025-07-31 13:39:12,015 - INFO - Processing 38/48: B08J7WKV6W_product_details.json
+2025-07-31 13:39:12,016 - INFO - Processing 39/48: B00D49VGFM_product_details.json
+2025-07-31 13:39:12,017 - INFO - Processing 40/48: B0C4P4Z73C_product_details.json
+2025-07-31 13:39:12,019 - INFO - Processing 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 13:39:12,020 - INFO - Processing 42/48: B08TTT1JD9_product_details.json
+2025-07-31 13:39:12,020 - INFO - Processing 43/48: B0154H7BLE_product_details.json
+2025-07-31 13:39:12,021 - INFO - Processing 44/48: B0D1H6K1X1_product_details.json
+2025-07-31 13:39:12,022 - INFO - Processing 45/48: B014U90BAA_product_details.json
+2025-07-31 13:39:12,023 - INFO - Processing 46/48: B0C7MLQB5L_product_details.json
+2025-07-31 13:39:12,025 - INFO - Processing 47/48: B01BEEL8GK_product_details.json
+2025-07-31 13:39:12,026 - INFO - Processing 48/48: B004ZQ5P64_product_details.json
+2025-07-31 13:39:12,054 - INFO - Extraction complete! Processed 48 products
+2025-07-31 13:39:12,054 - INFO - Output saved to: /Users/maoc/Desktop/3PO/leviton-agent/backend/scraping/unwrangle_product_responses/extracted_product_details.csv
+2025-07-31 13:39:12,054 - INFO - Total columns: 172
+2025-07-31 13:49:51,764 - INFO - Starting product details extraction...
+2025-07-31 13:49:51,765 - INFO - Discovering schema from sample files...
+2025-07-31 13:49:51,804 - INFO - Discovered 71 unique columns in schema
+2025-07-31 13:49:51,804 - INFO - Extracting data from all files...
+2025-07-31 13:49:51,804 - INFO - Processing 48 files...
+2025-07-31 13:49:51,804 - INFO - Processing file 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 13:49:51,814 - INFO - Processing file 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 13:49:51,829 - INFO - Processing file 21/48: B08V4L3H2H_product_details.json
+2025-07-31 13:49:51,839 - INFO - Processing file 31/48: B09XFBRVYX_product_details.json
+2025-07-31 13:49:51,849 - INFO - Processing file 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 13:49:51,862 - INFO - Generating reports...
+2025-07-31 13:49:51,873 - INFO - Main CSV saved to: ./extracted_product_details.csv
+2025-07-31 13:49:51,888 - INFO - Conflict report saved to: ./conflict_report.json
+2025-07-31 13:49:51,888 - INFO - Extraction statistics saved to: ./extraction_statistics.json
+2025-07-31 13:49:51,888 - INFO - Schema mapping saved to: ./schema_mapping.json
+2025-07-31 13:49:51,888 - INFO - Extraction completed successfully!
+2025-07-31 13:49:51,888 - INFO - Processed 48 files
+2025-07-31 13:49:51,888 - INFO - Found 39 conflicts
+2025-07-31 13:49:51,888 - INFO - Generated 203 columns
+2025-07-31 13:50:53,368 - INFO - Starting product details extraction...
+2025-07-31 13:50:53,368 - INFO - Discovering schema from sample files...
+2025-07-31 13:50:53,390 - INFO - Discovered 71 unique columns in schema
+2025-07-31 13:50:53,390 - INFO - Extracting data from all files...
+2025-07-31 13:50:53,390 - INFO - Processing 48 files...
+2025-07-31 13:50:53,390 - INFO - Processing file 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 13:50:53,402 - INFO - Processing file 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 13:50:53,414 - INFO - Processing file 21/48: B08V4L3H2H_product_details.json
+2025-07-31 13:50:53,423 - INFO - Processing file 31/48: B09XFBRVYX_product_details.json
+2025-07-31 13:50:53,433 - INFO - Processing file 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 13:50:53,443 - INFO - Generating reports...
+2025-07-31 13:50:53,452 - INFO - Main CSV saved to: ./extracted_product_details.csv
+2025-07-31 13:50:53,467 - INFO - Conflict report saved to: ./conflict_report.json
+2025-07-31 13:50:53,468 - INFO - Extraction statistics saved to: ./extraction_statistics.json
+2025-07-31 13:50:53,468 - INFO - Schema mapping saved to: ./schema_mapping.json
+2025-07-31 13:50:53,468 - INFO - Extraction completed successfully!
+2025-07-31 13:50:53,468 - INFO - Processed 48 files
+2025-07-31 13:50:53,468 - INFO - Found 69 conflicts
+2025-07-31 13:50:53,469 - INFO - Generated 203 columns

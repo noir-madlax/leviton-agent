@@ -2,6 +2,8 @@
 
 from typing import List, Optional, Dict, Any, Literal, Union
 from pydantic import BaseModel, Field
+from pydantic.dataclasses import dataclass
+from datetime import date, datetime
 from core.models.filters import ProjectFilters
 
 
@@ -47,7 +49,50 @@ class CompetitorAnalysisRequest(DashboardRequest):
     selected_asins: Optional[List[str]] = Field(default=None, description="选中的ASIN列表")
 
 
+class ReviewInsightsRequest(DashboardRequest):
+    """Review insights request model with configurable limits."""
+    max_pain_points: Optional[int] = Field(default=15, description="Maximum number of pain points to return")
+    max_customer_likes: Optional[int] = Field(default=10, description="Maximum number of customer likes to return")
+    max_use_cases: Optional[int] = Field(default=15, description="Maximum number of use cases to return")
+    max_underserved_use_cases: Optional[int] = Field(default=10, description="Maximum number of underserved use cases to return")
+
+
+
+class CompetitorSummaryRequest(BaseModel):
+    """Competitor analysis summary request model."""
+    project_id: str = Field(..., description="Project ID for filtering")
+    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
+
+
 # ==================== 响应模型 ====================
+
+@dataclass
+class MonthlySalesRecord:
+    """月度销售记录模型（Pydantic Dataclass），用于自动类型转换与校验。
+    说明：product_sales_history_monthly表。
+    """
+    platform_id: str
+    year_month: date
+    total_units_sold: int
+    average_price: float
+    # 其余字段可选，便于后续扩展时无需修改构造代码
+    id: Optional[int] = None
+    platform_source: Optional[str] = None
+    api_source: Optional[str] = None
+    days_in_month: Optional[int] = None
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
+    total_revenue: Optional[float] = None
+
+
+@dataclass
+class MonthlySalesAggregate:
+    """按 ASIN 聚合的月度销售汇总。
+    包含 timeframe 内对 product_sales_history_monthly 的 sum(total_units_sold) 与 sum(total_revenue)。
+    """
+    platform_id: str
+    total_units_sold: int
+    total_revenue: float
 
 class BrandCategoryData(BaseModel):
     """Brand category revenue/volume data model.
@@ -244,8 +289,10 @@ class PainPoint(BaseModel):
     type: Literal["Physical", "Performance", "Usability"]
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
-    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
-    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative mentions")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    negativeRate: Optional[float] = Field(default=0, description="Percentage of negative reviews")
     # New field for frontend mapping
     relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
@@ -257,8 +304,10 @@ class CustomerLike(BaseModel):
     satisfactionLevel: Literal["High", "Medium", "Low"]
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
-    totalMentions: Optional[int] = Field(default=0, description="Total mentions across all sentiments")
-    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive mentions")
+    totalReviews: Optional[int] = Field(default=0, description="Total reviews across all sentiments")
+    positiveReviews: Optional[int] = Field(default=0, description="Number of positive reviews")
+    negativeReviews: Optional[int] = Field(default=0, description="Number of negative reviews")
+    positiveRate: Optional[float] = Field(default=0, description="Percentage of positive reviews")
     # New field for frontend mapping
     relatedDetailTexts: Optional[List[str]] = Field(default=None, description="Related detail texts for mapping")
 
@@ -282,6 +331,8 @@ class UnderservedUseCase(BaseModel):
     productAttribute: str
     gapLevel: float
     mentionCount: int
+    positiveCount: int
+    negativeCount: int
     # Enhanced fields for frontend optimization
     categoryDefinition: Optional[str] = Field(default="", description="Category definition for tooltips")
     productCount: Optional[int] = Field(default=0, description="Number of products mentioning this use case")
@@ -332,7 +383,7 @@ class CompetitorAnalysisResponse(BaseModel):
     productTotalReviews: Dict[str, int]
     useCaseData: UseCaseData
     reviewContent: Optional[Dict[str, List[Dict[str, Any]]]] = Field(
-        default=None, 
+        default=None,
         description="Review content for matrix cell clicks, keyed by 'product_asin_category_name'"
     )
     project_id: str = Field(description="Project ID used for filtering")
@@ -361,3 +412,101 @@ class AllReviewDataResponse(BaseModel):
     filtered_asin_count: int = Field(description="Number of ASINs in project filter")
     total_aspects: int = Field(description="Total number of aspects")
     total_reviews: int = Field(description="Total number of reviews") 
+
+# ==================== Competitor Analysis Summary Models ====================
+
+class CompetitorSummaryProduct(BaseModel):
+    """Individual competitor product summary model."""
+    asin: str = Field(description="Product ASIN")
+    product_title: str = Field(description="Product title")
+    rating: Optional[float] = Field(description="Product rating")
+    brand: Optional[str] = Field(description="Product brand")
+    product_url: Optional[str] = Field(description="Product URL")
+    list_price: Optional[float] = Field(description="List price in USD")
+    unique_reviews_count: int = Field(description="Number of unique reviews from review_aspect_data_view")
+    additional_metrics: Optional[Dict[str, Any]] = Field(default=None, description="Additional metrics including sentiment distribution and category counts")
+
+
+class CompetitorSummaryResponse(BaseModel):
+    """Response model for competitor analysis summary API."""
+    products: List[CompetitorSummaryProduct] = Field(description="List of competitor products with summary data")
+    total_products: int = Field(description="Total number of products returned")
+    selected_asins: List[str] = Field(description="List of ASINs that were requested")
+
+
+# ==================== Competitor Analysis Matrix View Models ====================
+
+class CompetitorMatrixViewFilter(BaseModel):
+    """Filter for matrix view endpoint."""
+    top_n: int = Field(description="Number of top aspect categories to include")
+
+
+class CompetitorMatrixViewRequest(BaseModel):
+    """Request model for competitor analysis matrix view API."""
+    project_id: str = Field(..., description="Project ID for filtering")
+    selected_asins: List[str] = Field(..., description="List of ASINs to analyze")
+    aspect_type: Literal["phy_perf", "use"] = Field(..., description="Aspect type filter")
+    filter: CompetitorMatrixViewFilter = Field(..., description="Filter configuration")
+
+
+class AspectCategoryInfo(BaseModel):
+    """Information about an aspect category."""
+    category_id: int = Field(description="Category ID")
+    category_name: str = Field(description="Category name")
+    definition: str = Field(description="Category definition")
+
+
+class ProductAspectData(BaseModel):
+    """Aspect data for a specific product."""
+    asin: str = Field(description="Product ASIN")
+    aspect_data: List[Dict[str, Any]] = Field(description="List of aspect data for this product")
+
+
+class CompetitorMatrixViewResponse(BaseModel):
+    """Response model for competitor analysis matrix view API."""
+    aspect_categories: List[AspectCategoryInfo] = Field(description="List of aspect categories sorted by total mentions")
+    product_aspect_data: List[ProductAspectData] = Field(description="Aspect data for each product")
+    selected_asins: List[str] = Field(description="List of ASINs that were requested")
+    aspect_type: str = Field(description="Aspect type that was filtered")
+    total_categories: int = Field(description="Total number of categories returned")
+
+
+# ==================== Chat Config 模型 ====================
+
+class ChatMessage(BaseModel):
+    """Chat message configuration model."""
+    message_order: int = Field(description="Message display order")
+    message_type: str = Field(description="Message type: 'opening' | 'chart_cards' | 'closing'")
+    message_content: str = Field(description="Message content")
+
+
+class ChartCardConfig(BaseModel):
+    """Chart card configuration model."""
+    card_order: int = Field(description="Card display order")
+    card_id: str = Field(description="Unique card ID")
+    card_config: Dict[str, Any] = Field(description="Card configuration JSON object")
+
+
+class ChartItemConfig(BaseModel):
+    """Chart item configuration model."""
+    chart_order: int = Field(description="Chart display order within parent card")
+    chart_name: str = Field(description="Chart display name")
+    chart_id: str = Field(description="Unique chart ID")
+    chart_component: Optional[str] = Field(default=None, description="Corresponding component name")
+
+
+class ChartSectionConfig(BaseModel):
+    """Chart section configuration model for controlling chart visibility within components."""
+    chart_order: int = Field(description="Chart section display order within parent card")
+    chart_id: str = Field(description="Unique chart section ID matching data-chart-id")
+    chart_name: str = Field(description="Chart section display name")
+    is_active: bool = Field(description="Whether this chart section should be displayed")
+
+
+class ChatConfigResponse(BaseModel):
+    """Response model for chat configuration API."""
+    chat_messages: List[ChatMessage] = Field(description="List of chat messages in order")
+    chart_cards: List[ChartCardConfig] = Field(description="List of chart cards in order")
+    chart_items: Dict[str, List[ChartItemConfig]] = Field(description="Chart items grouped by parent card ID")
+    chart_sections: Dict[str, List[ChartSectionConfig]] = Field(description="Chart sections grouped by parent card ID for controlling visibility")
+    project_id: Optional[str] = Field(description="Project ID if project-specific config")

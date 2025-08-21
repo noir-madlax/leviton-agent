@@ -2,33 +2,29 @@
 
 import { useState, useMemo } from "react"
 import { Tooltip } from "@/components/ui/tooltip"
+import { useChartsT } from '@/i18n/hooks'
 import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
-import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
+import { useReviewPanelQuery } from "@/components/analysis-db/hooks/use-review-panel-query"
 
 interface UseCaseSentimentMatrixProps {
   data: UseCaseFeedback[]
-  reviewData?: {
-    reviewsByCategory?: Record<string, Array<{
-      id: string
-      productId: string
-      text: string
-      sentiment: 'positive' | 'negative' | 'neutral'
-      category: string
-      aspect: string
-      rating: number
-      verified: boolean
-      date: string
-      brand: string
-    }>>
-  }
+  projectId?: string // Required: for getting review details
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, unknown>
+    asins?: string[]
+  } // Required: filter parameters
 }
 
-type SortField = 'totalMentions' | 'positiveCount' | 'negativeCount' | 'positiveShare'
+type SortField = 'totalReviews' | 'positiveReviews' | 'negativeReviews' | 'positiveShare'
 type SortDirection = 'asc' | 'desc'
 
-export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMatrixProps) {
-  const { openPanel } = useReviewPanel()
-  const [sortField, setSortField] = useState<SortField>('totalMentions')
+export function UseCaseSentimentMatrix({ data, projectId, filters }: UseCaseSentimentMatrixProps) {
+  const chartsT = useChartsT()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
+  const [sortField, setSortField] = useState<SortField>('totalReviews')
   const [sortDirection, setSortDirection] = useState<SortDirection>('desc')
 
   // 处理排序
@@ -47,32 +43,32 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
 
     const dataWithPositiveShare = data.map(item => ({
       ...item,
-      positiveShare: item.totalMentions > 0 ? (item.positiveCount / item.totalMentions) * 100 : 0
+      positiveShare: item.totalReviews > 0 ? (item.positiveReviews / item.totalReviews) * 100 : 0
     }))
 
     return [...dataWithPositiveShare].sort((a, b) => {
       let aValue: number, bValue: number
 
       switch (sortField) {
-        case 'totalMentions':
-          aValue = a.totalMentions
-          bValue = b.totalMentions
+        case 'totalReviews':
+          aValue = a.totalReviews
+          bValue = b.totalReviews
           break
-        case 'positiveCount':
-          aValue = a.positiveCount
-          bValue = b.positiveCount
+        case 'positiveReviews':
+          aValue = a.positiveReviews
+          bValue = b.positiveReviews
           break
-        case 'negativeCount':
-          aValue = a.negativeCount
-          bValue = b.negativeCount
+        case 'negativeReviews':
+          aValue = a.negativeReviews
+          bValue = b.negativeReviews
           break
         case 'positiveShare':
           aValue = a.positiveShare
           bValue = b.positiveShare
           break
         default:
-          aValue = a.totalMentions
-          bValue = b.totalMentions
+          aValue = a.totalReviews
+          bValue = b.totalReviews
       }
 
       if (sortDirection === 'asc') {
@@ -84,17 +80,16 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
   }, [data, sortField, sortDirection])
 
   // 处理行点击
-  const handleRowClick = (useCase: string) => {
-    if (reviewData?.reviewsByCategory) {
-      const reviews = reviewData.reviewsByCategory[useCase] || []
-      if (reviews.length > 0) {
-        openPanel(
-          reviews,
-          `${useCase} - Customer Reviews`,
-          `Reviews related to "${useCase}" use case`,
-          { sentiment: true, brand: true, rating: true, verified: true }
-        )
-      }
+  const handleRowClick = async (useCase: string, categoryId?: number) => {
+    if (categoryId && projectId) {
+      // Use the new API to get review details
+      await handleCategoryClick(
+        projectId,
+        categoryId,
+        useCase,
+        ['use'], // use cases use usability aspects
+        filters
+      )
     }
   }
 
@@ -106,71 +101,80 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
 
   // 获取满意度颜色
   const getSatisfactionColor = (satisfactionRate: number) => {
-    if (satisfactionRate >= 85) return 'bg-green-100 text-green-800'
-    if (satisfactionRate >= 70) return 'bg-yellow-100 text-yellow-800'
-    if (satisfactionRate >= 60) return 'bg-orange-100 text-orange-800'
+    if (satisfactionRate >= 75) return 'bg-green-100 text-green-800'
+    if (satisfactionRate >= 50) return 'bg-yellow-100 text-yellow-800'
+    if (satisfactionRate >= 25) return 'bg-orange-100 text-orange-800'
     return 'bg-red-100 text-red-800'
   }
 
   if (!data || data.length === 0) {
     return (
       <div className="p-8 text-center">
-        <p className="text-gray-500">No use case data available.</p>
+        <p className="text-gray-500">{chartsT('noUseCaseDataAvailable')}</p>
       </div>
     )
   }
 
   return (
-    <div className="overflow-x-auto">
+    <div className="relative">
+      {isLoading && (
+        <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-10 rounded-lg">
+          <div className="flex items-center gap-3 bg-white px-4 py-3 rounded-lg shadow-lg border">
+            <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-blue-600"></div>
+            <span className="text-gray-700 font-medium">Loading review details...</span>
+          </div>
+        </div>
+      )}
+      <div className="overflow-x-auto">
       <div className="min-w-full ">
         <table className="w-full ">
           <thead>
             <tr className="bg-gray-50 ">
               <th className="border border-gray-300 p-3 text-left font-semibold text-gray-900 min-w-[230px]">
-                <Tooltip content="The specific use case or scenario mentioned in customer reviews">
-                  <div>Use case</div>
+                <Tooltip content={chartsT('useCaseTooltip')}>
+                  <div>{chartsT('useCase')}</div>
                 </Tooltip>
               </th>
               <th 
                 className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('totalMentions')}
+                onClick={() => handleSort('totalReviews')}
               >
-                <Tooltip content="Total number of reviews that mention this use case">
+                <Tooltip content={chartsT('totalReviewsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Total Mentions
-                    <span className="text-xs">{getSortIcon('totalMentions')}</span>
+                    {chartsT('totalReviews')}
+                    <span className="text-xs">{getSortIcon('totalReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('positiveCount')}
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
+                onClick={() => handleSort('positiveReviews')}
               >
-                <Tooltip content="Number of reviews that mention this use case with positive sentiment">
+                <Tooltip content={chartsT('positiveAspectsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Positive Mentions
-                    <span className="text-xs">{getSortIcon('positiveCount')}</span>
+                    {chartsT('positiveMentionedAspectsHeader')}
+                    <span className="text-xs">{getSortIcon('positiveReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
-                onClick={() => handleSort('negativeCount')}
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
+                onClick={() => handleSort('negativeReviews')}
               >
-                <Tooltip content="Number of reviews that mention this use case with negative sentiment">
+                <Tooltip content={chartsT('negativeAspectsTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                    Negative Mentions
-                    <span className="text-xs">{getSortIcon('negativeCount')}</span>
+                    {chartsT('negativeMentionedAspectsHeader')}
+                    <span className="text-xs">{getSortIcon('negativeReviews')}</span>
                   </div>
                 </Tooltip>
               </th>
               <th 
-                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[150px] cursor-pointer hover:bg-gray-100"
+                className="border border-gray-300 p-3 text-center font-semibold text-gray-900 min-w-[135px] cursor-pointer hover:bg-gray-100"
                 onClick={() => handleSort('positiveShare')}
               >
-                <Tooltip content="Positive Mentions / Total Mentions">
+                <Tooltip content={chartsT('positiveShareTooltip')}>
                   <div className="flex items-center justify-center gap-1">
-                  Satisfaction Rate (%)
+                  {chartsT('satisfactionRateHeader')}
                     <span className="text-xs">{getSortIcon('positiveShare')}</span>
                   </div>
                 </Tooltip>
@@ -179,7 +183,7 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
           </thead>
           <tbody>
             {sortedData.map((row, index) => {
-              const positiveShare = row.totalMentions > 0 ? (row.positiveCount / row.totalMentions) * 100 : 0
+              const positiveShare = row.totalReviews > 0 ? (row.positiveReviews / row.totalReviews) * 100 : 0
               
               return (
                 <tr key={index} className="hover:bg-gray-50">
@@ -189,67 +193,67 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
                       <div className="text-lg font-bold text-blue-600">
-                        {row.totalMentions}
+                        {row.totalReviews}
                       </div>
                     </div>
                   </td>
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
                       <div className="text-lg font-bold text-green-600">
-                        {row.positiveCount}
+                        {row.positiveReviews || 0}
                       </div>
                     </div>
                   </td>
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className="py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:bg-gray-100"
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
                       <div className="text-lg font-bold text-red-600">
-                        {row.negativeCount}
+                        {row.negativeReviews || 0}
                       </div>
                     </div>
                   </td>
                   <td className="border border-gray-300 p-3 text-center">
                     <div 
                       className={`py-2 px-3 rounded text-sm font-semibold cursor-pointer hover:opacity-80 ${getSatisfactionColor(positiveShare)}`}
-                      onClick={() => handleRowClick(row.useCase)}
+                      onClick={() => handleRowClick(row.useCase, row.categoryId)}
                       role="button"
                       tabIndex={0}
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          handleRowClick(row.useCase)
+                          handleRowClick(row.useCase, row.categoryId)
                         }
                       }}
                     >
@@ -264,6 +268,7 @@ export function UseCaseSentimentMatrix({ data, reviewData }: UseCaseSentimentMat
           </tbody>
         </table>
       </div>
+    </div>
     </div>
   )
 } 

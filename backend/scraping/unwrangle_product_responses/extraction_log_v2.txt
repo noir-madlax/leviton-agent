@@ -1,0 +1,17 @@
+2025-07-31 13:56:48,419 - INFO - Starting improved product details extraction...
+2025-07-31 13:56:48,419 - INFO - Extracting data from all files...
+2025-07-31 13:56:48,419 - INFO - Processing 48 files...
+2025-07-31 13:56:48,419 - INFO - Processing file 1/48: B0B19HVHHZ_product_details.json
+2025-07-31 13:56:48,471 - INFO - Processing file 11/48: B0C1H1B4P4_product_details.json
+2025-07-31 13:56:48,520 - INFO - Processing file 21/48: B08V4L3H2H_product_details.json
+2025-07-31 13:56:48,569 - INFO - Processing file 31/48: B09XFBRVYX_product_details.json
+2025-07-31 13:56:48,615 - INFO - Processing file 41/48: B0BZ42TFK2_product_details.json
+2025-07-31 13:56:48,657 - INFO - Generating reports...
+2025-07-31 13:56:48,667 - INFO - Main CSV saved to: ./extracted_product_details_v2.csv
+2025-07-31 13:56:48,680 - INFO - Conflict report saved to: ./conflict_report_v2.json
+2025-07-31 13:56:48,680 - INFO - Extraction statistics saved to: ./extraction_statistics_v2.json
+2025-07-31 13:56:48,680 - INFO - Schema mapping saved to: ./schema_mapping_v2.json
+2025-07-31 13:56:48,680 - INFO - Extraction completed successfully!
+2025-07-31 13:56:48,680 - INFO - Processed 48 files
+2025-07-31 13:56:48,680 - INFO - Found 103 conflicts
+2025-07-31 13:56:48,680 - INFO - Generated 147 columns

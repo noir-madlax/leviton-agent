@@ -108,7 +108,11 @@ export function PostHogAppProvider({ children }: { children: React.ReactNode }) 
   }
 
   if (!mounted) {
-    return null;
+    return (
+      <div suppressHydrationWarning>
+        {children}
+      </div>
+    );
   }
 
   return (

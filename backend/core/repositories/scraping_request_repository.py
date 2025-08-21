@@ -58,22 +58,34 @@ class ScrapingRequestRepository:
                 
             return None
     
-    async def update_request_status(self, request_id: int, status: str, 
-                                   additional_data: Optional[Dict[str, Any]] = None) -> bool:
+    async def update_request_status(self, request_id: int, status: Optional[str], 
+                                      additional_data: Optional[Dict[str, Any]] = None) -> bool:
         """
         更新爬取请求状态
         
         Args:
             request_id: 请求ID
-            status: 新状态
+            status: 新状态（可以为None，表示不更新状态字段）
             additional_data: 额外更新的数据
             
         Returns:
             bool: 更新成功返回True，失败返回False
         """
         try:
-            update_data = {"status": status, "updated_at": "NOW()"}
+            update_data = {"updated_at": "NOW()"}
+            
+            # 🔥 修复：只有当status不为None时才更新status字段
+            if status is not None:
+                # 数据库约束仅允许: pending, scraping, completed, failed, processing_reviews, imported
+                # 统一将历史/外部调用使用的 "processing" 映射为允许的 "scraping"，避免 23514 约束错误
+                normalized_status = "scraping" if status == "processing" else status
+                update_data["status"] = normalized_status
+                
             if additional_data:
+                # 兼容：上层可能传入 reviews_transformed（无此列），改写为 reviews_scraped，避免 PGRST204
+                if "reviews_transformed" in additional_data and "reviews_scraped" not in additional_data:
+                    additional_data = dict(additional_data)
+                    additional_data["reviews_scraped"] = additional_data.pop("reviews_transformed")
                 update_data.update(additional_data)
             
             result = self.client.table('scraping_requests').update(update_data).eq('id', request_id).execute()

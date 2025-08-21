@@ -1,0 +1,543 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0CPPWBGT8",
+  "result_count": 1,
+  "detail": {
+    "name": "22 Gauge Wire 2 Conductor Electrical Wire, 22 AWG Wire Stranded PVC Cord, 12V Low Voltage/Oxygen-Free Tinned Copper/Flexible 22/2 Cable for Automotive Marine LED Strips Lamps Lighting (30FT/ 9M)",
+    "brand": "Oududianzi",
+    "url": "https://www.amazon.com/product/dp/B0CPPWBGT8",
+    "asin": "B0CPPWBGT8",
+    "deal_badge": null,
+    "listing_id": "B0CPPWBGT8",
+    "price": 9.99,
+    "price_reduced": 9.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "Prime Member Price",
+        "offer_description": "9.49 9.49Ships from:AmazonSold by:Yongshun",
+        "price": 9.49,
+        "seller": "Yongshun",
+        "description": "Prime Member Price"
+      },
+      {
+        "offer_type": "Regular Price",
+        "offer_description": "9.99 9.99FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:AmazonSold by:Yongshun",
+        "price": 9.99,
+        "seller": "Yongshun"
+      }
+    ],
+    "other_sellers": {},
+    "rating": 4.8,
+    "total_ratings": 435,
+    "past_month_sales": "200+ boughtin past month",
+    "is_prime": true,
+    "shipping_info": null,
+    "delivery_zipcode": "20146",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size_name": {
+        "name": "30FT",
+        "asin": "B0CPPWBGT8",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0CPPWBGT8"
+      },
+      "style_name": {
+        "name": "2C-22AWG",
+        "in_stock": true,
+        "asin": "B0CPPWBGT8",
+        "url": "https://www.amazon.com/dp/B0CPPWBGT8",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/717vznv5LjL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/717vznv5LjL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51M41XlgthL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41fV9f29+sL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51tF2US2SsL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41vzIf54R2L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51iPkkQMjNL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51ygt5bDhRL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51M41XlgthL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "2C-22AWG"
+      },
+      {
+        "name": "Brand",
+        "value": "Oududianzi"
+      },
+      {
+        "name": "Material",
+        "value": "TinnedCopper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "22"
+      }
+    ],
+    "features": [
+      "【𝐇𝐈𝐆𝐇𝐋𝐘 𝐂𝐎𝐍𝐃𝐔𝐂𝐓𝐈𝐕𝐄】: 2 Conductor 22 gauge wire uses high-purity oxygen free tinned copper material, outside diameter of the jacket is 2.5mm* 4.2mm, and 17 strands of 0.16mm tinned copper wire is inside each circuit, which has better conductivity, lower resistance, and corrosion resistance than CCA (copper clad aluminium) and pure copper materials, for a long service life.",
+      "【𝐏𝐑𝐎𝐃𝐔𝐂𝐓 𝐒𝐏𝐄𝐂𝐈𝐅𝐈𝐂𝐀𝐓𝐈𝐎𝐍】: 30FT, 2 Core wire: Black Red; Jacket color: Black; Flame retardant: V-1; Waterproof level: IP68. Max Voltage: 300V ( DC5V 12V 24V to 300V), Max Current: 3A; Temperature Range: -40℃/-40°F to 105℃/ 221°F.",
+      "【𝐃𝐔𝐑𝐀𝐁𝐋𝐄 𝐚𝐧𝐝 𝐋𝐎𝐍𝐆-𝐋𝐀𝐒𝐓𝐈𝐍𝐆】: The dual sheath of 22/2 wires is made with PVC insulation, which ensures it can work stably from -40℉ to 221℉, excellent chemical and UV resistant, come with 11 packs of heat-shrinkable tubes and 4 packs of cable ties. These tubes can protect wires and cables from damage caused by wear and tear, abrasion, and moisture.",
+      "【𝐄𝐀𝐒𝐘 𝐓𝐎 𝐔𝐒𝐄】: 2 Conductor electrical wire is lightweight, thin, soft can be bent arbitrarily, and is easy to strip, weld, crimp terminals, connect, cut, and wrap around necessary components enough to fit into tight spaces.Waterproof, dust and dirt resistant,withstanding prolonged sun exposure, rated for direct burial.",
+      "【𝐖𝐈𝐃𝐄𝐋𝐘 𝐔𝐒𝐄𝐃】: Suitable for low voltage outdoor，lighting systems，automotive applications，household circuit systems and other daily environments，such as low voltage wire, speaker wire, LED light power cord, indoor light cable, automotive wire, landscape light wire, lamp wire, LED light wire, marine wire, electronic product internal cable, and so on."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "5.79x5.79x1.5inches;3.84ounces"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "December7,2023"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Yongshun"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0CPPWBGT8"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#5,428inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#17inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.84.8outof5stars435ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 5428
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 17
+      }
+    ],
+    "seller_name": "Yongshun",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A6SU4NU2FARSD&asin=B0CPPWBGT8&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size_name": [
+        {
+          "name": "30FT",
+          "in_stock": true,
+          "asin": "B0CPPWBGT8",
+          "url": "https://www.amazon.com/dp/B0CPPWBGT8",
+          "selected": true
+        },
+        {
+          "name": "50FT",
+          "in_stock": true,
+          "asin": "B0CPPVRFJ4",
+          "url": "https://www.amazon.com/dp/B0CPPVRFJ4",
+          "selected": true
+        },
+        {
+          "name": "100FT",
+          "in_stock": true,
+          "asin": "B0DBYB7MVK",
+          "url": "https://www.amazon.com/dp/B0DBYB7MVK",
+          "selected": true
+        },
+        {
+          "name": "200FT",
+          "in_stock": true,
+          "asin": "B0DGGL9FZH",
+          "url": "https://www.amazon.com/dp/B0DGGL9FZH",
+          "selected": true
+        },
+        {
+          "name": "300FT",
+          "in_stock": true,
+          "asin": "B0D6V75YSD",
+          "url": "https://www.amazon.com/dp/B0D6V75YSD",
+          "selected": true
+        }
+      ],
+      "style_name": [
+        {
+          "name": "2C-12AWG",
+          "in_stock": true,
+          "asin": "B0CPPTDMPQ",
+          "url": "https://www.amazon.com/dp/B0CPPTDMPQ",
+          "selected": true
+        },
+        {
+          "name": "2C-14AWG",
+          "in_stock": true,
+          "asin": "B0CPPSN4B4",
+          "url": "https://www.amazon.com/dp/B0CPPSN4B4",
+          "selected": true
+        },
+        {
+          "name": "2C-16AWG",
+          "in_stock": true,
+          "asin": "B0CPPVY4BN",
+          "url": "https://www.amazon.com/dp/B0CPPVY4BN",
+          "selected": true
+        },
+        {
+          "name": "2C-18AWG",
+          "in_stock": true,
+          "asin": "B0CPPXG5BK",
+          "url": "https://www.amazon.com/dp/B0CPPXG5BK",
+          "selected": true
+        },
+        {
+          "name": "2C-20AWG",
+          "in_stock": true,
+          "asin": "B0CPQ8FSG8",
+          "url": "https://www.amazon.com/dp/B0CPQ8FSG8",
+          "selected": true
+        },
+        {
+          "name": "2C-22AWG",
+          "in_stock": true,
+          "asin": "B0CPPWBGT8",
+          "url": "https://www.amazon.com/dp/B0CPPWBGT8",
+          "selected": true
+        },
+        {
+          "name": "3C-16AWG",
+          "in_stock": true,
+          "asin": "B0CYGYS54S",
+          "url": "https://www.amazon.com/dp/B0CYGYS54S",
+          "selected": true
+        },
+        {
+          "name": "3C-18AWG",
+          "in_stock": true,
+          "asin": "B0CYGY5XN3",
+          "url": "https://www.amazon.com/dp/B0CYGY5XN3",
+          "selected": true
+        },
+        {
+          "name": "4C-16AWG",
+          "in_stock": true,
+          "asin": "B0CYGWM43X",
+          "url": "https://www.amazon.com/dp/B0CYGWM43X",
+          "selected": true
+        },
+        {
+          "name": "4C-18AWG",
+          "in_stock": true,
+          "asin": "B0CYGYZWM7",
+          "url": "https://www.amazon.com/dp/B0CYGYZWM7",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "85%",
+      "4 star": "11%",
+      "3 star": "3%",
+      "1 star": "1%"
+    },
+    "reviews_summary": "Customers find the wire well-made with a protective jacket and appreciate its functionality, particularly for running off-road lights. The wire is easy to work with and offers good value for the price. Customers praise its flexibility, with one noting it's soft enough to bend, and they like its appearance, with one mentioning it provides a clean professional look.",
+    "review_aspects": [
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of installation",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Flexibility",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Appearance",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Unknown Dude",
+        "review_title": "Its perfect!!!",
+        "rating": 5,
+        "review_text": "Very nice wire and lots of it. Its exactly as described and pretty great quality. I used it for wiring my scan gauge in my car and it was super easy to work with. 10/10 can recommend!\nRead more",
+        "date": "2025-07-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 30FT",
+          "Style: 2C-18AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Capt. Steve",
+        "review_title": "Good stuff!",
+        "rating": 5,
+        "review_text": "Very good quality. Tinned copper and well protected from quality jacket. Most people don't know that some wire manufacturers of  jacketed products use a powder of some sort to allow inner wire to move easily beneath outer sheathing. When you open up to get your two wires you'll see this powder. This is a good thing and an extra step in manufacturering wire. The wire then becomes more flexible. I've made a second purchase from this company.\nRead more",
+        "date": "2025-05-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50FT",
+          "Style: 2C-22AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "pythan",
+        "review_title": "I was surprised at the quality of the cable.",
+        "rating": 5,
+        "review_text": "Nice and fairly flexible, great jacket.  I was surprised at the quality of the cable.  Another reviewer had suggested it was straight up aluminum wire, however, it solders just fine.  That in itself means it is not aluminum.  When you cut the end, it show the copper at the end of the strands.\nRead more",
+        "date": "2025-05-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 30FT",
+          "Style: 4C-16AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ben",
+        "review_title": "Awesome",
+        "rating": 5,
+        "review_text": "This is really nice wire and you can’t beat the price. Tick insulation and tinned copper strand.\nRead more",
+        "date": "2025-07-18",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50FT",
+          "Style: 2C-12AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "cpldutch",
+        "review_title": "As Advertised",
+        "rating": 4,
+        "review_text": "Good wire\nRead more",
+        "date": "2025-05-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Josh",
+        "review_title": "Works well",
+        "rating": 5,
+        "review_text": "This was second time buying this product as I went through my first roll.  Wire was great for running things on my sxs.  Ran several extra to just have it done already.\nRead more",
+        "date": "2025-06-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 100FT",
+          "Style: 2C-18AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Silas Baker",
+        "review_title": "Great Deal, Great",
+        "rating": 5,
+        "review_text": "Surprisingly quality wire!!I was a little skeptical when I saw the price, but this is really nice wire.  I used it to wire 12v lights in my cargo trailer and it worked perfectly. It has very durable insulation, is flexible and easy to fish.\nRead more",
+        "date": "2025-02-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 50FT",
+          "Style: 2C-18AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Eric Linden",
+        "review_title": "High quality wire",
+        "rating": 5,
+        "review_text": "Use this wire to make the long runs for the solar panels on my boat. Worked very well.\nRead more",
+        "date": "2025-05-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Size: 30FT",
+          "Style: 2C-16AWG"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/0caa4f6419054310bff81f29711e839e?ref=dp_vse_rvc_0",
+      "https://www.amazon.com/vdp/0ade81dd260a472381de62bf482e6838?ref=dp_vse_rvc_1",
+      "https://www.amazon.com/vdp/0ce1c61f97dc4095b9c37f2110912ad3?ref=dp_vse_rvc_2",
+      "https://www.amazon.com/vdp/0faa6ba31cb640cea022a7cbd7f869d6?ref=dp_vse_rvc_3"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "30FT Electrical Wire"
+    ],
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "2 electeical wire are widely used for led strips, landscape lighting wire, speaker system wires.",
+        "2 electeical wire are widely used for led strips, landscape lighting wire, speaker system wires.",
+        "Various Wire Gauge Sizes (22/20/18/16/14/12AWG) and Length Options(30/50/100FT).",
+        "20 Gauge Wire 30FT",
+        "18 Gauge Wire 30FT",
+        "16 Gauge Wire 30FT",
+        "18 Gauge Wire 30FT",
+        "16 Gauge Wire 30FT"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/94943823-6c3d-4a0e-ae18-883a917538d0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18/2 wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/94943823-6c3d-4a0e-ae18-883a917538d0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18/2 wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c6109227-736a-4e85-8264-9ec6a306ccfe.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "2 wire cable automotive wiring"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/c6109227-736a-4e85-8264-9ec6a306ccfe.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "2 wire cable automotive wiring"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/281a5b6d-3f1f-4eb0-82b3-cea0858da56c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "automotive wiring"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/281a5b6d-3f1f-4eb0-82b3-cea0858da56c.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "automotive wiring"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e5272eff-a94a-48e3-8a3d-e65ec96f3bc8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "2 core wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e5272eff-a94a-48e3-8a3d-e65ec96f3bc8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "2 core wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/84e7576a-753c-49f1-a034-e7394a8171c3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18awg wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/60558cc8-1066-440e-b60e-8e94fc7be0a3.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "18/2 low voltage wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/aede04ea-d0cd-4431-ab2c-48700d578f4f.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "thermostat wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5d2a7562-c4b8-450b-9f44-fcccfbc341e8.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "Direct Burial"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a423857b-cf00-4253-87a9-ba56dec52456.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "lamp wiring"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e659df97-bf9b-4415-9155-9655e089a160.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "2 conductor electrical wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ebac4dd1-a809-4c03-8555-3d187967ce6a.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "low voltage wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/214d5ca5-b894-4095-828f-ca24ced11fe0.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "led wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/905ea9e9-0f30-44c5-bdc3-f89dea853a4f.__CR0,0,1464,600_PT0_SX1464_V1___.jpg",
+          "alt": "electric cable"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51dSqCnAR2L.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51bCjPrBrPL.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51GjGArHfJL.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51F2otO5EeL.__AC_SR200,225___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/I/51UBixVXx4L.__AC_SR200,225___.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 46.0
+}

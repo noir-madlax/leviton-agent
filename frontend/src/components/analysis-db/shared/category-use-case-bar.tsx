@@ -7,6 +7,7 @@ import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/ana
 import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart';
+import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query';
 
 interface CategoryUseCaseBarProps {
   data: UseCaseFeedback[];
@@ -14,9 +15,14 @@ interface CategoryUseCaseBarProps {
   description?: string;
   productType?: ProductType;
   onProductTypeChange?: (productType: ProductType) => void;
-  reviewData?: {
-    reviewsByCategory?: Record<string, any[]>
-  }
+  projectId?: string // Required: for getting review details
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // Required: filter parameters
   totalUseMentions?: number;
 }
 
@@ -30,8 +36,8 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 基本统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.totalMentions}</p>
+            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
           <div>
             <p className="text-sm text-gray-600">Satisfaction Rate:</p>
@@ -50,35 +56,15 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* 正负面统计 */}
-        <div className="grid grid-cols-2 gap-2 mb-3">
+        {/* 统计信息 */}
+        <div className="grid grid-cols-1 gap-2 mb-3">
           <div>
-            <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
-          </div>
-          <div>
-            <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
+            <p className="text-sm text-gray-600">Total Reviews:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>
 
-        {/* Top满意原因 */}
-        {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
-          <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
-            {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
-              <p key={index} className="text-xs text-green-600">• {reason}</p>
-            ))}
-          </div>
-        )}
-
-        {/* Gap原因 */}
-        {data.topGapReasons && data.topGapReasons.length > 0 && (
-          <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Gap Reasons:</p>
-            {data.topGapReasons.slice(0, 3).map((reason: string, index: number) => (
-              <p key={index} className="text-xs text-red-600">• {reason}</p>
-            ))}
-          </div>
-        )}
+        {/* 去除基于比例生成的 reasons 展示，避免误导信息 */}
       </div>
     );
   }
@@ -88,13 +74,15 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 export default function CategoryUseCaseBar({ 
   data, 
   title = "Top 10 most mentioned positive use cases",
-  description = "Bars are sorted by positive mentions from left to right in descending order",
+  description = "Bars are sorted by positive reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
-  reviewData,
+  projectId,
+  filters,
   totalUseMentions
 }: CategoryUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   
   // 添加数据安全检查，防止预渲染时 data 为 undefined
   if (!data || !Array.isArray(data) || data.length === 0) {
@@ -109,7 +97,7 @@ export default function CategoryUseCaseBar({
   
   // 按正面提及数排序，并取前10个
   const sortedData = [...data]
-    .sort((a, b) => b.positiveCount - a.positiveCount)
+    .sort((a, b) => b.positiveReviews - a.positiveReviews)
     .slice(0, 10);
   
   const chartData = sortedData.map(item => ({
@@ -120,24 +108,16 @@ export default function CategoryUseCaseBar({
       item.useCase
   }));
 
-  const handleBarClick = (data: any, index: number) => {
-    if (data && data.displayName && reviewData?.reviewsByCategory) {
-      // Find the full use case name from the display name
-      const displayName = data.displayName
-      const useCaseItem = chartData.find(item => item.displayName === displayName)
-      
-      if (useCaseItem) {
-        const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
-        
-        if (reviews.length > 0) {
-          openPanel(
-            reviews,
-            `${useCaseItem.useCase} - Customer Reviews`,
-            `Reviews related to "${useCaseItem.useCase}" use case`,
-            { sentiment: true, brand: true, rating: true, verified: true }
-          )
-        }
-      }
+  const handleBarClick = async (data: any) => {
+    if (data && data.categoryId && data.useCase && projectId) {
+      // Use the new API to get review details for use cases
+      await handleCategoryClick(
+        projectId,
+        data.categoryId,
+        data.useCase,
+        ['use'], // use cases use 'use' aspect type
+        filters
+      )
     }
   }
 
@@ -162,8 +142,8 @@ export default function CategoryUseCaseBar({
         <UnifiedStackedBarChart
           data={chartData}
           xAxisDataKey="displayName"
-          positiveDataKey="positiveCount"
-          negativeDataKey="negativeCount"
+          positiveDataKey="positiveReviews"
+          negativeDataKey="negativeReviews"
           onBarClick={handleBarClick}
           CustomTooltip={CustomTooltip}
         />
@@ -175,7 +155,7 @@ export default function CategoryUseCaseBar({
             {sortedData.slice(0, 4).map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg font-bold text-green-600">
-                  {item.positiveCount}
+                  {item.positiveReviews}
                 </div>
                 <div className="text-sm text-gray-600 truncate" title={item.useCase}>
                   {item.useCase}
@@ -204,13 +184,13 @@ export default function CategoryUseCaseBar({
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Positive</p>
               <p className="text-lg font-semibold text-green-600">
-                {data.reduce((sum, item) => sum + item.positiveCount, 0)}
+                {data.reduce((sum, item) => sum + item.positiveReviews, 0)}
               </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Negative</p>
               <p className="text-lg font-semibold text-red-600">
-                {data.reduce((sum, item) => sum + item.negativeCount, 0)}
+                {data.reduce((sum, item) => sum + item.negativeReviews, 0)}
               </p>
             </div>
           </div>

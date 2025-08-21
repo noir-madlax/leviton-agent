@@ -3,39 +3,45 @@
 import logging
 import json
 from typing import List, Optional, Dict, Any
-from fastapi import APIRouter, HTTPException, Query, Depends
+from fastapi import APIRouter, HTTPException, Query
 
-from core.models.filters import ProjectFilters, FilterOptions
+from core.models.filters import ProjectFilters
 from core.database.connection import get_supabase_client
 from dashboard.services.filter_service import FilterService
 from .models import (
     BrandAnalysisResponse, BrandCategoryData,
-    ProductAnalysisResponse, CategoryProducts, ProductInfo, TopProductsData, SegmentSummary,
-    PricingAnalysisResponse, PriceDistribution, BrandPriceDistribution, PriceStats, PriceStatsGroup, BrandPrices,
-    MarketInsightsResponse, SegmentRevenue, SegmentData,
+    ProductAnalysisResponse, ProductInfo, TopProductsData, SegmentSummary,
+    PricingAnalysisResponse, PriceDistribution, BrandPriceDistribution, MarketInsightsResponse, SegmentRevenue, SegmentData,
     PackagePreferenceResponse, SameProductComparison, PackageDistributionItem,
-    ReviewInsightsResponse,
-    CompetitorAnalysisResponse,
+    ReviewInsightsResponse, ReviewInsightsRequest,
     AllReviewDataResponse, ReviewData,
-    DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest
+    DashboardRequest, PackagePreferenceRequest, CompetitorAnalysisRequest,
+    CompetitorSummaryResponse, CompetitorSummaryProduct, CompetitorSummaryRequest,
+    CompetitorMatrixViewRequest, AspectCategoryInfo, ProductAspectData,
+    ChatConfigResponse
 )
-from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse
-from .charts.sales_trend.services import SalesTrendService
+from .charts.sales_trend.models import SalesTrendRequest, SalesTrendResponse, BrandSalesTrendRequest, BrandSalesTrendResponse
+from .charts.sales_trend.services import SalesTrendService, BrandSalesTrendService
 from .decorators import with_dashboard_service, log_request_response
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
 from .services.pricing_analysis_service import PricingAnalysisService
 from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
-from .services.review_insights_service import ReviewInsightsService
-from .services.competitor_analysis_service import CompetitorAnalysisService
-from .services.all_review_data_service import AllReviewDataService
+
 from .services.project_overview_service import ProjectOverviewService
+from .services.chat_config_service import ChatConfigService
 from review_analysis.services.db_review_analysis import DatabaseReviewAnalysisService
+from .charts.api import router as charts_router
+from .charts.competitorAnalysis.service import CompetitorAnalysisChartService
+from .charts.competitorAnalysis.models import (
+    CompetitorMatrixViewResponse as ChartsCompetitorMatrixViewResponse,
+)
 
 logger = logging.getLogger(__name__)
 
 router = APIRouter()
+router.include_router(charts_router, prefix="/charts")
 
 # 公共的 filter 处理函数
 def parse_filters(
@@ -97,6 +103,237 @@ def apply_filters_to_service(service, filters: Dict[str, Any]):
             segments=filters['segments'],
             extend_fields=filters['extend_fields']
         )
+
+
+def format_review_insights_data(phy_perf_negative_data: Dict[str, Any], phy_perf_positive_data: Dict[str, Any],
+                               use_data: Dict[str, Any], max_pain_points: int = 15, max_customer_likes: int = 10,
+                               max_use_cases: int = 15, max_underserved_use_cases: int = 10) -> Dict[str, Any]:
+    """Format ReviewAnalysis data into review insights format.
+
+    Args:
+        phy_perf_negative_data: Physical/performance categories data sorted by negative reviews for pain points
+        phy_perf_positive_data: Physical/performance categories data sorted by positive reviews for customer likes
+        use_data: Use case categories data from ReviewAnalysis
+        max_pain_points: Maximum number of pain points to return (default: 15)
+        max_customer_likes: Maximum number of customer likes to return (default: 10)
+        max_use_cases: Maximum number of use cases to return (default: 15)
+        max_underserved_use_cases: Maximum number of underserved use cases to return (default: 10)
+
+    Returns:
+        Dict containing pain_points, customer_likes, all_use_cases, underserved_use_cases, and totals
+    """
+    # Constants for data processing (moved from ReviewInsightsServiceV2)
+    phy_perf_negative_categories = phy_perf_negative_data.get('categories', [])
+    phy_perf_positive_categories = phy_perf_positive_data.get('categories', [])
+    use_categories = use_data.get('categories', [])
+
+    # Generate pain points from physical/performance categories (sorted by negative reviews)
+    pain_points = []
+    for cat in phy_perf_negative_categories:
+        negative_reviews = cat.get('negative_reviews', 0)
+        total_reviews = cat.get('total_reviews', 0)
+
+        if negative_reviews > 0:
+            negative_rate = (negative_reviews / total_reviews) * 100
+
+            # Map aspect type to display type
+            aspect_type = cat.get('aspect_type', 'phy')
+            display_type = map_aspect_type_to_display(aspect_type)
+
+            # Get category_id with fallback to category_pk
+            category_id = cat.get('category_id') or cat.get('category_pk')
+
+            pain_point = {
+                'category_name': capitalize_words(cat['category_name']),
+                'example_details': get_example_details_for_category(cat),
+                'satisfaction_rate': 100 - negative_rate,  # Convert to satisfaction rate
+                'impacted_products': count_impacted_products(cat),
+                'type': display_type,
+                'total_reviews': total_reviews,
+                'positive_reviews': cat.get('positive_reviews', 0),
+                'negative_reviews': negative_reviews,
+                'negative_rate': negative_rate,
+                'category_definition': cat.get('definition', ''),
+                'related_detail_texts': get_related_detail_texts(cat),
+                'category_id': category_id  # Add category_id for review panel
+            }
+            pain_points.append(pain_point)
+
+    # Take top max_pain_points (already sorted by negative reviews from database)
+    pain_points = pain_points[:max_pain_points]
+
+    # Generate customer likes from physical/performance categories (sorted by positive reviews)
+    customer_likes = []
+    for cat in phy_perf_positive_categories:
+        positive_reviews = cat.get('positive_reviews', 0)
+        total_reviews = cat.get('total_reviews', 0)
+
+        if positive_reviews > 0:
+            positive_rate = (positive_reviews / total_reviews) * 100
+
+            if positive_rate >= 40:
+                if positive_rate >= 70:
+                    satisfaction_level = 'High'
+                elif positive_rate >= 40:
+                    satisfaction_level = 'Medium'
+                else:
+                    satisfaction_level = 'Low'
+
+                # Get category_id with fallback to category_pk
+                category_id = cat.get('category_id') or cat.get('category_pk')
+
+                customer_like = {
+                    'category_name': capitalize_words(cat['category_name']),
+                    'example_details': get_example_details_for_category(cat),
+                    'satisfaction_level': satisfaction_level,
+                    'total_reviews': total_reviews,
+                    'positive_reviews': positive_reviews,
+                    'negative_reviews': cat.get('negative_reviews', 0),
+                    'positive_rate': positive_rate,
+                    'category_definition': cat.get('definition', ''),
+                    'related_detail_texts': get_related_detail_texts(cat),
+                    'category_id': category_id  # Add category_id for review panel
+                }
+                customer_likes.append(customer_like)
+
+    # Take top max_customer_likes (already sorted by positive reviews from database)
+    customer_likes = customer_likes[:max_customer_likes]
+
+    # Generate all use cases from use case categories
+    all_use_cases = []
+    for cat in use_categories:
+        total_reviews = cat.get('total_reviews', 0)
+
+        if total_reviews > 0:
+            positive_reviews = cat.get('positive_reviews', 0)
+            negative_reviews = cat.get('negative_reviews', 0)
+
+            total_sentiment_reviews = positive_reviews + negative_reviews
+            if total_sentiment_reviews > 0:
+                satisfaction_rate = (positive_reviews / total_sentiment_reviews) * 100
+            else:
+                satisfaction_rate = 50.0
+
+            # Get category_id with fallback to category_pk
+            category_id = cat.get('category_id') or cat.get('category_pk')
+
+            use_case = {
+                'use_case': capitalize_words(cat['category_name']),
+                'product_attribute': get_product_attributes_for_category(cat),
+                'satisfaction_rate': satisfaction_rate,
+                'total_reviews': total_reviews,
+                'positive_reviews': positive_reviews,
+                'negative_reviews': negative_reviews,
+                'category_definition': cat.get('definition', ''),
+                'product_count': count_impacted_products(cat),
+                'related_detail_texts': get_related_detail_texts(cat),
+                'category_id': category_id  # Add category_id for review panel
+            }
+            all_use_cases.append(use_case)
+
+    # Sort by total reviews and take top max_use_cases
+    all_use_cases.sort(key=lambda x: x['total_reviews'], reverse=True)
+    all_use_cases = all_use_cases[:max_use_cases]
+
+    # Generate underserved use cases from use case categories
+    underserved_use_cases = []
+    for cat in use_categories:
+        total_reviews = cat.get('total_reviews', 0)
+        product_count = count_impacted_products(cat)
+
+        if (product_count > 0):
+
+            # Calculate satisfaction rate for underserved use cases
+            total_sentiment_reviews = cat.get('positive_reviews', 0) + cat.get('negative_reviews', 0)
+            if total_sentiment_reviews > 0:
+                satisfaction_rate = (cat.get('positive_reviews', 0) / total_sentiment_reviews) * 100
+            else:
+                satisfaction_rate = 50.0
+
+            underserved_use_case = {
+                'use_case': capitalize_words(cat['category_name']),
+                'product_attribute': get_product_attributes_for_category(cat),
+                'satisfaction_rate': satisfaction_rate,
+                'total_reviews': total_reviews,
+                'positive_reviews': cat.get('positive_reviews', 0),
+                'negative_reviews': cat.get('negative_reviews', 0),
+                'category_definition': cat.get('definition', ''),
+                'product_count': product_count,
+                'related_detail_texts': get_related_detail_texts(cat)
+            }
+            underserved_use_cases.append(underserved_use_case)
+
+    # Sort by satisfaction rate (ascending) and take top max_underserved_use_cases
+    underserved_use_cases.sort(key=lambda x: x['satisfaction_rate'], reverse=False)
+    underserved_use_cases = underserved_use_cases[:max_underserved_use_cases]
+
+    # Calculate total use case reviews
+    total_use_reviews = sum(cat.get('total_reviews', 0) for cat in use_categories)
+
+    return {
+        'pain_points': pain_points,
+        'customer_likes': customer_likes,
+        'all_use_cases': all_use_cases,
+        'underserved_use_cases': underserved_use_cases,
+        'total_use_reviews': total_use_reviews
+    }
+
+
+def map_aspect_type_to_display(aspect_type: str) -> str:
+    """Map database aspect type to display type."""
+    type_map = {
+        'phy': 'Physical',
+        'perf': 'Performance',
+        'use': 'Usability'
+    }
+    return type_map.get(aspect_type, 'Physical')
+
+
+def capitalize_words(text: str) -> str:
+    """Capitalize words in text for display."""
+    if not text:
+        return ""
+
+    import re
+    words = re.split(r'[\s_-]+', text.strip())
+    capitalized_words = []
+
+    for word in words:
+        if word:
+            word_lower = word.lower()
+            if word_lower in ['and', 'or', 'of', 'in', 'on', 'at', 'to', 'for', 'with']:
+                capitalized_words.append(word_lower)
+            else:
+                capitalized_words.append(word.capitalize())
+
+    return ' '.join(capitalized_words)
+
+
+def get_example_details_for_category(category: Dict[str, Any]) -> str:
+    """Get example details for a category (simplified version)."""
+    # For now, return a simplified version based on category name
+    # In a full implementation, this would query the database for actual examples
+    category_name = category.get('category_name', '')
+    return f"Various {category_name.lower()} related examples"
+
+
+def get_product_attributes_for_category(category: Dict[str, Any]) -> str:
+    """Get product attributes for a use case category (simplified version)."""
+    # For use cases, typically return "USE" as the product attribute
+    return "USE"
+
+
+def get_related_detail_texts(category: Dict[str, Any]) -> List[str]:
+    """Get related detail texts for a category (simplified version)."""
+    # For now, return empty list - this would be populated from database queries
+    return []
+
+
+def count_impacted_products(category: Dict[str, Any]) -> int:
+    """Count the number of products impacted by this category (simplified version)."""
+    # For now, return a reasonable default
+    # In a full implementation, this would query the database
+    return 1
 
 # 筛选器相关端点
 @router.get("/projects/{project_id}/filter-options")
@@ -184,9 +421,7 @@ def get_chart_service_class(chart_type: str):
         'pricing-analysis': PricingAnalysisService,
         'market-insights': MarketInsightsService,
         'package-preference': PackagePreferenceService,
-        'review-insights': ReviewInsightsService,
-        'competitor-analysis': CompetitorAnalysisService,
-        'all-review-data': AllReviewDataService
+        'project-overview': ProjectOverviewService
     }
     
     if chart_type not in service_map:
@@ -350,8 +585,101 @@ async def get_sales_trend(request: SalesTrendRequest):
     except Exception as e:
         logger.error(f"Unexpected error in sales trend analysis: {e}", exc_info=True)
         raise HTTPException(
-            status_code=500, 
+            status_code=500,
             detail=f"Internal server error during sales trend analysis: {str(e)}"
+        )
+
+
+@router.post("/market-analysis/brand-sales-trend", response_model=BrandSalesTrendResponse)
+async def get_brand_sales_trend(request: BrandSalesTrendRequest):
+    """获取品牌销售趋势数据 - 新版本支持timeframe
+
+    新版本的品牌销售趋势分析，使用timeframe替代date_range，
+    提供Top N品牌的月度销售趋势数据，支持revenue和volume双指标展示。
+
+    **Timeframe Options:**
+    - `"month"`: 使用过去1个月的数据进行分析
+    - `"6months"`: 使用过去6个月的数据进行分析
+    - `"year"`: 使用过去1年的数据进行分析（默认）
+
+    **请求格式：**
+    ```json
+    {
+        "project_id": "项目ID",
+        "filters": {
+            "categories": ["Light Switches","Dimmer Switches"],
+            "brands": [],
+            "segments": [],
+            "extend_fields": {"smart_capability": "Smart"}
+        },
+        "timeframe": {
+            "period": "year"
+        },
+        "limit": 10,
+        "metric_type": "revenue",
+        "aggregation": "monthly"
+    }
+    ```
+
+    **返回格式：**
+    ```json
+    {
+        "trend_data": [
+            {
+                "month": "2024-01",
+                "Leviton": {"revenue": 850000, "volume": 12000},
+                "Lutron": {"revenue": 720000, "volume": 9000}
+            }
+        ],
+        "brands": ["Leviton", "Lutron", "GE"],
+        "summary": {
+            "total_brands": 3,
+            "date_range": {"start": "2024-01", "end": "2024-06"},
+            "total_revenue": 15230000,
+            "total_volume": 89400,
+            "timeframe_period": "year"
+        },
+        "metadata": {
+            "filtered_asins_count": 1250,
+            "calculation_timestamp": "2024-01-15T10:30:00Z",
+            "timeframe_used": "year",
+            "data_source": "product_sales_history_monthly"
+        }
+    }
+    ```
+    """
+    try:
+        from core.database.connection import get_supabase_client
+
+        logger.info(f"Brand Sales Trend analysis request for project {request.project_id}")
+
+        # 获取Supabase客户端
+        supabase_client = get_supabase_client()
+
+        # 创建服务实例
+        service = BrandSalesTrendService(supabase_client)
+
+        # 获取分析数据
+        response = service.get_brand_sales_trend_data(request)
+
+        logger.info(
+            f"Brand Sales Trend analysis completed for project {request.project_id}: "
+            f"{response.overall_summary.total_categories} categories, "
+            f"{len(response.overall_summary.all_brands)} unique brands, "
+            f"timeframe: {request.timeframe.period if request.timeframe else 'default'}"
+        )
+
+        return response
+
+    except ValueError as e:
+        logger.error(f"Validation error in Brand Sales Trend analysis: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+
+    except Exception as e:
+        logger.error(f"System error in Brand Sales Trend analysis: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Internal server error during Brand Sales Trend analysis: {str(e)}"
         )
 
 
@@ -605,14 +933,9 @@ async def get_package_preference(
     return response
 
 
-@router.post("/review-insights", response_model=ReviewInsightsResponse)
-@with_dashboard_service(ReviewInsightsService)
-@log_request_response
-async def get_review_insights_data(
-    service: ReviewInsightsService,
-    request: DashboardRequest
-):
-    """Get review insights data for a specific project.
+@router.post("/review-insights")
+async def get_review_insights_data(request: ReviewInsightsRequest):
+    """Get review insights data for a specific project using ReviewAnalysisChartService directly.
 
     POST请求，使用JSON格式传递过滤条件：
     {
@@ -625,18 +948,69 @@ async def get_review_insights_data(
         }
     }
 
-    Enhanced version: Returns complete review insights with segment support.
+    Direct implementation using ReviewAnalysisChartService for maximum efficiency.
     """
-    raw_data = service.get_data()
+    from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
 
-    response = ReviewInsightsResponse(
-        **raw_data,
-        project_id=request.project_id,
-        filtered_asin_count=len(service.project_asins)
-    )
+    try:
+        # Initialize the ReviewAnalysisChartService directly
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters
+        )
 
-    logger.info(f"Review insights API returned data for project {request.project_id}")
-    return response
+        # Get phy_perf data sorted by negative reviews for pain points
+        phy_perf_negative_data = await service.get_top_categories({
+            'aspect_type': 'phy_perf',
+            'sortBy': 'negative_reviews',
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+
+        # Get phy_perf data sorted by positive reviews for customer likes
+        phy_perf_positive_data = await service.get_top_categories({
+            'aspect_type': 'phy_perf',
+            'sortBy': 'positive_reviews',
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+
+        # Get use case data
+        use_data = await service.get_top_categories({
+            'aspect_type': 'use',
+            'sortBy': 'total_reviews',
+            'sortDirection': 'desc',
+            'maxCategories': 50
+        })
+
+        # Format the data into review insights format
+        raw_data = format_review_insights_data(
+            phy_perf_negative_data,
+            phy_perf_positive_data,
+            use_data,
+            max_pain_points=request.max_pain_points,
+            max_customer_likes=request.max_customer_likes,
+            max_use_cases=request.max_use_cases,
+            max_underserved_use_cases=request.max_underserved_use_cases
+        )
+
+        # Return raw snake_case structure expected by frontend DatabaseService mapper
+        result = {
+            **raw_data,
+            "project_id": request.project_id,
+            "filtered_asin_count": len(service.project_asins),
+        }
+
+        logger.info(
+            f"Review insights API returned data for project {request.project_id} - "
+            f"{len(raw_data.get('pain_points', []))} pain points, "
+            f"{len(raw_data.get('customer_likes', []))} likes"
+        )
+        return result
+
+    except Exception as e:
+        logger.error(f"Error in review insights API: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error")
 
 
 @router.get("/review-analysis/{project_id}/final-category-assignments")
@@ -696,94 +1070,58 @@ async def get_final_category_assignments(project_id: str):
         ) from e
 
 
-@router.post("/competitor-analysis", response_model=CompetitorAnalysisResponse)
-@with_dashboard_service(CompetitorAnalysisService)
+@router.post("/competitor-analysis/matrix-view", response_model=ChartsCompetitorMatrixViewResponse)
 @log_request_response
-async def get_competitor_analysis(
-    service: CompetitorAnalysisService,
-    request: CompetitorAnalysisRequest
-):
-    """Get competitor analysis data for a specific project.
-
-    POST请求，使用JSON格式传递过滤条件：
-    {
-        "project_id": "string",
-        "filters": {
-            "categories": ["category1", "category2"],
-            "brands": ["brand1", "brand2"],
-            "segments": ["segment1", "segment2"],
-            "extend_fields": {"field_name": "value"}
-        },
-        "selected_asins": ["ASIN1", "ASIN2"]  // 可选: 要分析的ASIN列表
-    }
-
-    Enhanced version: Returns complete competitor analysis with segment support.
-    Uses materialized view for improved performance and review content.
-    """
-    # Use the new materialized view method for enhanced performance
-    raw_data = service.get_data_with_materialized_view(include_review_content=True)
-
-    response = CompetitorAnalysisResponse(
-        targetProducts=raw_data.get('targetProducts', []),
-        matrixData=raw_data.get('matrixData', []),
-        productTotalReviews=raw_data.get('productTotalReviews', {}),
-        useCaseData=raw_data.get('useCaseData', {'targetProducts': [], 'matrixData': []}),
-        reviewContent=raw_data.get('reviewContent', {}),  # Include review content for cell clicks
-        project_id=request.project_id,
-        filtered_asin_count=len(service.project_asins)
-    )
-
-    logger.info(f"Competitor analysis API returned data for project {request.project_id} using materialized view")
-    return response
-
-
-@router.get("/competitor-analysis/{project_id}/cell-reviews")
-@log_request_response
-async def get_competitor_cell_reviews(
-    project_id: str,
-    product_asin: str = Query(..., description="Product ASIN"),
-    category_name: str = Query(..., description="Category name"),
-    limit: int = Query(50, description="Maximum number of reviews to return"),
-    offset: int = Query(0, description="Offset for pagination")
-):
-    """Get reviews for a specific matrix cell (product-category combination).
+async def get_competitor_matrix_view(request: CompetitorMatrixViewRequest):
+    """Get competitor analysis matrix view data.
     
-    GET请求，用于获取矩阵单元格的详细评论数据：
-    /competitor-analysis/{project_id}/cell-reviews?product_asin=B00NG0ELL0&category_name=Installation Process&limit=50&offset=0
+    POST请求，获取选中ASINs的矩阵视图数据：
+    {
+        "project_id": "project-uuid",
+        "selected_asins": ["ASIN1", "ASIN2", "ASIN3"],
+        "aspect_type": "phy_perf",
+        "filter": {
+            "top_n": 10
+        }
+    }
     
     Returns:
-        List of review objects for the specified cell
+        Matrix view data with top aspect categories and product-category statistics
     """
     try:
-        # Create service instance for the project
-        service = CompetitorAnalysisService(project_id)
+        logger.info(f"Competitor matrix view request for ASINs: {request.selected_asins}, aspect_type: {request.aspect_type}")
         
-        # Get reviews for the specific cell
-        reviews = service.get_reviews_for_cell(product_asin, category_name, limit, offset)
-        
-        logger.info(f"Cell reviews API returned {len(reviews)} reviews for {product_asin}-{category_name}")
-        return {
-            "reviews": reviews,
-            "product_asin": product_asin,
-            "category_name": category_name,
-            "total_returned": len(reviews),
-            "limit": limit,
-            "offset": offset
+        # Use the CompetitorAnalysisChartService for matrix view data
+        service = CompetitorAnalysisChartService(
+            project_id=request.project_id,
+            selected_asins=request.selected_asins
+        )
+
+        # Convert filter options to the expected format
+        options = {
+            'top_n': request.filter.top_n if request.filter else 10
         }
+
+        matrix_data = await service.get_matrix_view_data(
+            aspect_type=request.aspect_type,
+            options=options
+        )
+        
+        # Convert service data to proper response model format (with data wrapper)
+        response = ChartsCompetitorMatrixViewResponse(data=matrix_data)
+        
+        logger.info(f"Competitor matrix view API returned data for {len(matrix_data['aspect_categories'])} categories")
+        return response
         
     except Exception as e:
-        logger.error(f"Error getting cell reviews for {project_id}: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to get cell reviews: {str(e)}")
+        logger.error(f"Error in competitor matrix view API: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail=f"Failed to get competitor matrix view: {str(e)}")
 
 
 @router.post("/all-review-data", response_model=AllReviewDataResponse)
-@with_dashboard_service(AllReviewDataService)
 @log_request_response
-async def get_all_review_data(
-    service: AllReviewDataService,
-    request: DashboardRequest
-):
-    """Get all review data for a specific project.
+async def get_all_review_data(request: DashboardRequest):
+    """Get all review data for a specific project using enhanced ReviewDataService.
 
     POST请求，使用JSON格式传递过滤条件：
     {
@@ -796,25 +1134,86 @@ async def get_all_review_data(
         }
     }
 
-    Enhanced version: Returns complete review data with segment support.
+    Enhanced version: Uses ReviewDataService for efficient single-query data retrieval.
     """
-    raw_data = service.get_data()
+    try:
+        # Initialize ReviewDataService with project filters
+        from dashboard.charts.reviewCore.data_service import ReviewDataService
+        from core.models.filters import ProjectFilters
 
-    # Convert grouped review data to ReviewData objects
-    converted_data = {}
-    for aspect, reviews in raw_data['data'].items():
-        converted_data[aspect] = [ReviewData(**review) for review in reviews]
+        # Parse filters
+        project_filters = ProjectFilters.from_dict(request.filters) if request.filters else ProjectFilters()
 
-    response = AllReviewDataResponse(
-        data=converted_data,
-        project_id=request.project_id,
-        filtered_asin_count=len(service.project_asins),
-        total_aspects=raw_data.get('total_aspects', 0),
-        total_reviews=raw_data.get('total_reviews', 0)
-    )
+        # Use ReviewAnalysisChartService to get all review data directly
+        from dashboard.charts.reviewAnalysis.service import ReviewAnalysisChartService
+        service = ReviewAnalysisChartService(
+            project_id=request.project_id,
+            filters=request.filters
+        )
 
-    logger.info(f"All review data API returned {len(raw_data['data'])} aspects with {response.total_reviews} reviews for project {request.project_id}")
-    return response
+        # Get filtered ASINs first to check if we have any data
+        filtered_asins = service._get_asins_to_analyze()
+
+        if not filtered_asins:
+            logger.warning(f"No ASINs found for project {request.project_id}")
+            return AllReviewDataResponse(
+                data={},
+                project_id=request.project_id,
+                filtered_asin_count=0,
+                total_aspects=0,
+                total_reviews=0
+            )
+
+        # Use the service's review data service to get grouped reviews
+        raw_data = await service.review_data_service.get_reviews_by_category(
+            project_id=request.project_id,
+            asins=filtered_asins,
+            category_id=None,  # Get all categories
+            group_by='detail_text'  # Group by detail_text for Review Insights mapping
+        )
+
+        # Convert grouped review data to ReviewData objects
+        converted_data = {}
+        if 'grouped_reviews' in raw_data:
+            for detail_text, reviews in raw_data['grouped_reviews'].items():
+                # Transform review data to match ReviewData model fields
+                transformed_reviews = []
+                for review in reviews:
+                    transformed_review = {
+                        'id': review.get('review_id', ''),
+                        'product_id': review.get('productId', review.get('product_id', '')),
+                        'text': review.get('review_text', ''),
+                        'sentiment': review.get('sentiment', 'neutral'),
+                        'category': review.get('category_name', ''),
+                        'aspect': review.get('aspect_description', ''),
+                        'rating': review.get('rating', 0),
+                        'verified': review.get('verified', False),
+                        'date': review.get('review_date', ''),
+                        'brand': review.get('brand', '')
+                    }
+                    transformed_reviews.append(ReviewData(**transformed_review))
+                converted_data[detail_text] = transformed_reviews
+
+        response = AllReviewDataResponse(
+            data=converted_data,
+            project_id=request.project_id,
+            filtered_asin_count=len(filtered_asins),
+            total_aspects=len(converted_data),
+            total_reviews=raw_data.get('total_count', 0)
+        )
+
+        logger.info(f"All review data API returned {len(converted_data)} aspects with {response.total_reviews} reviews for project {request.project_id}")
+        return response
+
+    except Exception as e:
+        logger.error(f"Error in get_all_review_data for project {request.project_id}: {e}", exc_info=True)
+        return AllReviewDataResponse(
+            data={},
+            project_id=request.project_id,
+            filtered_asin_count=0,
+            total_aspects=0,
+            total_reviews=0
+        )
 
 
 @router.post("/project-overview")
@@ -897,193 +1296,137 @@ async def get_available_asins(
 async def get_project_filter_defaults(project_id: str):
     """获取项目的默认筛选器配置
     
-    从 project_filter_defaults 表中读取项目级别的筛选器配置，
-    并转换为前端可以直接使用的 ProjectFilters 格式。
+    从 project_filter_defaults 表中读取项目的筛选器配置，
+    返回包含 chartName, filterName, filterValues, isVisible, options 字段的全量数据列表。
     """
     try:
         supabase = get_supabase_client()
         
-        # 查询项目级筛选器配置
-        response = supabase.table('project_filter_defaults').select('*').eq(
-            'project_id', project_id
-        ).eq('level', 'project').execute()
+        # 查询项目筛选器配置，只需要用 project_id 查询
+        response = supabase.table('project_filter_defaults').select(
+            'chart_name, filter_name, filter_values, is_visible, options'
+        ).eq('project_id', project_id).execute()
         
-        # 构建 ProjectFilters 对象
-        filters = ProjectFilters.empty()
+        logger.info(f"Retrieved filter defaults for project {project_id}: {len(response.data)} records")
         
+        # 转换字段名为驼峰命名格式
+        result = []
         for record in response.data:
-            filter_name = record['filter_name']
-            filter_values = record['filter_values']
-            
-            if filter_name == 'categories':
-                filters.categories = filter_values or []
-            elif filter_name == 'brands':
-                filters.brands = filter_values or []
-            elif filter_name == 'segments':
-                filters.segments = filter_values or []
-            elif filter_name == 'extend_fields':
-                filters.extend_fields = filter_values or {}
+            result.append({
+                'chartName': record['chart_name'],
+                'filterName': record['filter_name'],
+                'filterValues': record['filter_values'],
+                'isVisible': record['is_visible'],
+                'options': record['options']
+            })
         
-        logger.info(f"Retrieved filter defaults for project {project_id}: {filters.to_dict()}")
-        
-        return {
-            "filters": filters.to_dict(),
-            "project_id": project_id
-        }
+        return result
         
     except Exception as e:
         logger.error(f"Error getting project filter defaults: {e}", exc_info=True)
-        # 返回空的筛选器配置而不是抛出异常，保证系统可用性
-        return {
-            "filters": ProjectFilters.empty().to_dict(),
-            "project_id": project_id
-        }
+        # 返回空列表而不是抛出异常，保证系统可用性
+        return []
 
 
-@router.get("/projects/{project_id}/filter-config")
-async def get_project_filter_config(project_id: str):
-    """获取项目的完整过滤器配置
+@router.get("/projects/{project_id}/extend-fields")
+async def get_project_extend_fields(project_id: str):
+    """获取项目的扩展字段配置
     
-    整合 project_filter_defaults 和 project_extend_fields，
-    返回哪些过滤器应该显示以及它们的默认值。
+    从 project_extend_fields 表中读取项目的扩展字段配置，
+    返回包含 fieldName, fieldDescription, fieldType, filterOptions, displayName, isActive, sortOrder 字段的数据列表，按 sortOrder 排序。
     """
     try:
         supabase = get_supabase_client()
         
-        # 查询基础过滤器配置
-        filter_defaults_response = supabase.table('project_filter_defaults').select('*').eq(
-            'project_id', project_id
-        ).eq('level', 'project').execute()
+        # 查询项目扩展字段配置，按 sort_order 排序
+        response = supabase.table('project_extend_fields').select(
+            'field_name, field_description, field_type, filter_options, display_name, is_active, sort_order'
+        ).eq('project_id', project_id).order('sort_order').execute()
         
-        # 查询扩展字段配置
-        extend_fields_response = supabase.table('project_extend_fields').select('*').eq(
-            'project_id', project_id
-        ).eq('is_active', True).order('sort_order').execute()
+        logger.info(f"Retrieved extend fields for project {project_id}: {len(response.data)} records")
         
-        # 构建配置对象
-        config = {
-            "visible_filters": {},
-            "default_values": {},
-            "extend_fields": extend_fields_response.data or []
-        }
+        # 转换字段名为驼峰命名格式
+        result = []
+        for record in response.data:
+            result.append({
+                'fieldName': record['field_name'],
+                'fieldDescription': record['field_description'],
+                'fieldType': record['field_type'],
+                'filterOptions': record['filter_options'],
+                'displayName': record['display_name'],
+                'isActive': record['is_active'],
+                'sortOrder': record['sort_order']
+            })
         
-        # 处理基础过滤器配置
-        for record in filter_defaults_response.data:
-            filter_name = record['filter_name']
-            filter_values = record['filter_values']
-            
-            # 标记为可见
-            config["visible_filters"][filter_name] = True
-            
-            # 设置默认值
-            if filter_values and len(filter_values) > 0:
-                config["default_values"][filter_name] = filter_values
-            else:
-                config["default_values"][filter_name] = []
-        
-        logger.info(f"Retrieved filter config for project {project_id}: visible={list(config['visible_filters'].keys())}, extend_fields={len(config['extend_fields'])}")
-        
-        return {
-            "config": config,
-            "project_id": project_id
-        }
-        
+        return result
+
     except Exception as e:
-        logger.error(f"Error getting project filter config: {e}", exc_info=True)
-        # 返回空配置保证系统可用性
-        return {
-            "config": {
-                "visible_filters": {},
-                "default_values": {},
-                "extend_fields": []
-            },
-            "project_id": project_id
-        }
+        logger.error(f"Error getting project extend fields: {e}", exc_info=True)
+        # 返回空列表而不是抛出异常，保证系统可用性
+        return []
 
 
-@router.get("/projects/{project_id}/charts/{chart_type}/filter-config")
-async def get_chart_filter_config(project_id: str, chart_type: str):
-    """获取特定图表的筛选器配置
+@router.get("/projects/{project_id}/chat-config", response_model=ChatConfigResponse)
+@log_request_response
+async def get_chat_config(
+    project_id: str,
+    lang: str = Query(default="en", description="Language code: en or zh")
+):
+    """Get chat configuration for a specific project.
+
+    Returns the complete chat configuration including:
+    - Chart cards (preset cards that appear in chat navigation)
+    - Chart items (specific charts available for each card)
+    - Chat messages (future feature for templating chat messages)
     
-    从 project_filter_defaults 表中获取 level='chart' 且 chart_type 匹配的筛选器配置。
+    Implements priority logic: project-specific config > default config
     
-    Args:
-        project_id: 项目ID
-        chart_type: 图表类型，如 'market-share-analysis', 'brand-analysis' 等
+    GET /api/v1/dashboard/projects/{project_id}/chat-config
     
-    Returns:
-        图表专属的筛选器配置，只包含该图表需要显示的筛选器
+    Response format:
+    {
+        "chat_messages": [],
+        "chart_cards": [
+            {
+                "card_order": 1,
+                "card_id": "brand-analysis",
+                "card_config": {
+                    "title": "Market Analysis",
+                    "description": "Market share and brand positioning analysis",
+                    "icon": "Building",
+                    "tabKey": "market-analysis",
+                    "aiIntroduction": "Market Analysis"
+                }
+            }
+        ],
+        "chart_items": {
+            "brand-analysis": [
+                {
+                    "chart_order": 1,
+                    "chart_name": "Total addressable market (TAM) and Market Share",
+                    "chart_id": "market-share-analysis",
+                    "chart_component": null
+                }
+            ]
+        },
+        "project_id": "project-uuid"
+    }
     """
     try:
-        supabase = get_supabase_client()
+        logger.info(f"Chat config request for project: {project_id}")
         
-        # 查询该chart的筛选器配置
-        chart_filters_response = supabase.table('project_filter_defaults').select('*').eq(
-            'project_id', project_id
-        ).eq('level', 'chart').eq('chart_name', chart_type).execute()
+        # Create service instance
+        service = ChatConfigService(project_id)
         
-        # 构建配置对象
-        config = {
-            "visible_filters": {},
-            "default_values": {},
-            "extend_fields": [],
-            "chart_type": chart_type
-        }
+        # Get complete chat configuration
+        config = service.get_chat_config(lang=lang)
         
-        # 收集该chart需要的extend字段名称
-        required_extend_fields = set()
-        
-        # 处理chart级筛选器配置
-        for record in chart_filters_response.data:
-            filter_name = record['filter_name']
-            filter_values = record['filter_values']
-            
-            # 标记为可见
-            config["visible_filters"][filter_name] = True
-            
-            # 设置默认值
-            if filter_values and len(filter_values) > 0:
-                if filter_name == 'extend_fields':
-                    # extend_fields是对象格式，解析其中的字段名
-                    config["default_values"][filter_name] = filter_values
-                    # 从filter_values中提取需要的字段名
-                    if isinstance(filter_values, dict):
-                        required_extend_fields.update(filter_values.keys())
-                else:
-                    # 其他是数组格式
-                    config["default_values"][filter_name] = filter_values if isinstance(filter_values, list) else [filter_values]
-            else:
-                config["default_values"][filter_name] = {} if filter_name == 'extend_fields' else []
-        
-        # 查询扩展字段配置，并根据required_extend_fields过滤
-        if required_extend_fields:
-            extend_fields_response = supabase.table('project_extend_fields').select('*').eq(
-                'project_id', project_id
-            ).eq('is_active', True).in_('field_name', list(required_extend_fields)).order('sort_order').execute()
-            
-            config["extend_fields"] = extend_fields_response.data or []
-        else:
-            # 如果没有extend_fields配置，返回空数组
-            config["extend_fields"] = []
-        
-        logger.info(f"Retrieved chart filter config for project {project_id}, chart {chart_type}: visible={list(config['visible_filters'].keys())}")
-        
-        return {
-            "config": config,
-            "project_id": project_id,
-            "chart_type": chart_type
-        }
-        
+        logger.info(f"Chat config API returned {len(config.chart_cards)} cards with {sum(len(items) for items in config.chart_items.values())} total items for project {project_id}")
+        return config
+
     except Exception as e:
-        logger.error(f"Error getting chart filter config for project {project_id}, chart {chart_type}: {e}", exc_info=True)
-        # 返回空配置保证系统可用性
-        return {
-            "config": {
-                "visible_filters": {},
-                "default_values": {},
-                "extend_fields": [],
-                "chart_type": chart_type
-            },
-            "project_id": project_id,
-            "chart_type": chart_type
-        } 
+        logger.error(f"Error getting chat config for project {project_id}: {e}", exc_info=True)
+        raise HTTPException(
+            status_code=500,
+            detail=f"Failed to get chat configuration: {str(e)}"
+        )

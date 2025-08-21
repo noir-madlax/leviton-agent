@@ -1,0 +1,297 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B004ZQ5P64",
+  "result_count": 1,
+  "detail": {
+    "name": "Jake's Wire Tighteners 1/4in 20ct 1/4",
+    "brand": "Db Agriscape K An K",
+    "url": "https://www.amazon.com/product/dp/B004ZQ5P64",
+    "asin": "B004ZQ5P64",
+    "deal_badge": null,
+    "listing_id": "B004ZQ5P64",
+    "price": 32.53,
+    "price_reduced": 29.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (7) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B004ZQ5P64/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.6,
+    "total_ratings": 356,
+    "past_month_sales": "50+ boughtin past month",
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Saturday, August 2. Order within 44 mins. Details"
+    ],
+    "delivery_zipcode": "07094",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Patio, Lawn & Garden",
+        "url": "https://www.amazon.com/Patio-Lawn-Garden/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Farm & Ranch",
+        "url": "https://www.amazon.com/farm-ranch/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Structures & Hardware",
+        "url": "https://www.amazon.com/Agricultural-Structures-Hardware/b/ref=dp_bc_3"
+      },
+      {
+        "name": "Agricultural Fencing",
+        "url": "https://www.amazon.com/Agricultural-Fencing/b/ref=dp_bc_4"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/41Bdv3GE2pL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/31QpuM5X4sL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Bdv3GE2pL._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [],
+    "features": [
+      "Simple Application, just insert and wind",
+      "Less cost than a crimp sleeve and tool and is Re-usable",
+      "Quick and easy to use",
+      "Standard works on up 12 gauge wire",
+      "Requires handle to install (KFS49)"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Manufacturer",
+        "value": "DB AGRISCAPE K AN K"
+      },
+      {
+        "name": "Part Number",
+        "value": "11572"
+      },
+      {
+        "name": "Item Weight",
+        "value": "2.35 pounds"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "8 x 7 x 2 inches"
+      },
+      {
+        "name": "Item model number",
+        "value": "11572"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      },
+      {
+        "name": "Style",
+        "value": "Basic"
+      },
+      {
+        "name": "Material",
+        "value": "copper"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Usage",
+        "value": "Digestive Health"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "ASIN",
+        "value": "B004ZQ5P64"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.6  4.6 out of 5 stars    \n    356 ratings   \n\n\n 4.6 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#74,025 in Patio, Lawn & Garden (See Top 100 in Patio, Lawn & Garden) #285 in Agricultural Fencing"
+      },
+      {
+        "name": "Date First Available",
+        "value": "July 25, 2014"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Patio, Lawn & Garden",
+        "url": "https://www.amazon.com/gp/bestsellers/lawn-garden/ref=pd_zg_ts_lawn-garden",
+        "rank": 74025
+      },
+      {
+        "name": "Agricultural Fencing",
+        "url": "https://www.amazon.com/gp/bestsellers/lawn-garden/5743835011/ref=pd_zg_hrsr_lawn-garden",
+        "rank": 285
+      }
+    ],
+    "seller_name": "Duncan's Family Farm Store",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A23PDHNR6JPV59&asin=B004ZQ5P64&ref_=dp_merchant_link",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "81%",
+      "4 star": "9%",
+      "3 star": "3%",
+      "2 star": "1%",
+      "1 star": "6%"
+    },
+    "reviews_summary": "Customers find the wire tighteners functional and heavy-duty, with one mentioning they work great for sagging fence wire. The tool is easy to use, particularly for quick fixes, and one customer notes it makes the chore much easier. They appreciate its effectiveness for barbed wire fencing and consider it a time-saver, with one noting it's faster than traditional wire stretchers. While some customers consider it a great value, others find it pricey.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Fence tightening",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of use",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Ease of tightening",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Time saver",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "mixed"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "D John M",
+        "review_title": "Make wire tughtening easy",
+        "rating": 5,
+        "review_text": "Jake's fencing wire tighteners are excellent. Easy enough to use with the hable twisting tool. The fact that they can be unwiund and re-used is a bonus.\nRead more",
+        "date": "2025-07-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Amazon Customer",
+        "review_title": "Jakes Clips",
+        "rating": 5,
+        "review_text": "This the only way I'll ever fix a wire fence again. Saves so much time and they are reusable.\nRead more",
+        "date": "2025-06-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Hooahtown",
+        "review_title": "These Actually Work",
+        "rating": 5,
+        "review_text": "These work great for sagging fence wire. Recommend getting the tool to put these on - makes the chore much easier.\nRead more",
+        "date": "2025-05-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "erick ray",
+        "review_title": "Fence tightening",
+        "rating": 5,
+        "review_text": "Works great\nRead more",
+        "date": "2025-04-05",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "spgibbs54",
+        "review_title": "Good product.",
+        "rating": 4,
+        "review_text": "It works in heavy bob wire.Enough said.\nRead more",
+        "date": "2024-08-31",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Farm Mom",
+        "review_title": "Must have for mending/tightening fences.",
+        "rating": 5,
+        "review_text": "This tool makes tightening barb ware a breeze.  We have tried so many other methods, and this is so much better! Very good quality and tightens very nicely. Will definitely buy more in the future.\nRead more",
+        "date": "2025-01-25",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Donnie",
+        "review_title": "worked well as advertised",
+        "rating": 5,
+        "review_text": "easy and quick works great\nRead more",
+        "date": "2024-08-31",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Raider",
+        "review_title": "Solid product",
+        "rating": 5,
+        "review_text": "I wasn't sure what to expect, but these were heavy-duty and with the right tool, and a little practice, easy to use.  Took a very slack fence and made it rigid in no time!  Very happy with it.\nRead more",
+        "date": "2024-03-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 63.0
+}

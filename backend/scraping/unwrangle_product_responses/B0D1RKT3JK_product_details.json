@@ -1,0 +1,134 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0D1RKT3JK",
+  "result_count": 1,
+  "detail": {
+    "name": "Wirenco 8/2 NM-B, Non-Metallic, Sheathed Cable, Residential Indoor Wire, Used for Wiring Swiches, Outlets and Other Loads with Dry Applications (120Ft Cut)",
+    "brand": "wirenco",
+    "url": "https://www.amazon.com/product/dp/B0D1RKT3JK",
+    "asin": "B0D1RKT3JK",
+    "deal_badge": null,
+    "listing_id": "B0D1RKT3JK",
+    "price": 280,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0D1RKT3JK/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": null,
+    "total_ratings": null,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Sunday, August 3. Order within 23 hrs 42 mins. Details"
+    ],
+    "delivery_zipcode": "60601",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/41PmC+faluL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41PmC+faluL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21-94SnMx6L._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/214adetXLuL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21SFieXeKwL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/21-94SnMx6L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "wirenco"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "19"
+      },
+      {
+        "name": "Voltage",
+        "value": "600Volts"
+      }
+    ],
+    "features": [
+      "#8 AWG Residential Wiring for Outlets, Switches and other Loads",
+      "Copper (CU) conductors",
+      "Indoor Use in Exposed and Concealed Applications. For dry locations up to 90 degreesC or 194 degreesF",
+      "600-Volt Maximum with an Allowable Ampacity of 40 Amps",
+      "Used for Wiring Swiches, Outlets and other Loads with Dry Applications - Color of Wire May not be the Same as the Picture Shown."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Itemmodelnumber",
+        "value": "37011-#"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "December28,2020"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "wirenco"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0D1RKT3JK"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [],
+    "seller_name": "DE Supply Corp.",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A3LZLP6ULNJFN7&asin=B0D1RKT3JK&ref_=dp_merchant_link",
+    "variants": {},
+    "rating_distribution": {},
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 48.0
+}

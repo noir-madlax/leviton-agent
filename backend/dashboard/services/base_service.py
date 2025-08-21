@@ -8,6 +8,7 @@ from supabase import Client
 from core.database.connection import get_supabase_client
 from core.models.filters import ProjectFilters
 from dashboard.services.filter_service import FilterService
+from dashboard.charts.base_models import BaseRequestModel
 
 logger = logging.getLogger(__name__)
 
@@ -338,6 +339,10 @@ class BaseDashboardService(ABC):
         query = self._apply_segments_filter(query)
         query = self._apply_extend_fields_filter(query)  # 新增：应用扩展字段筛选
         return query
+
+    
+
+
     
     def _get_base_product_table(self):
         """Get base product table reference."""

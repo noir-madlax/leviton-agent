@@ -31,14 +31,8 @@ def with_dashboard_service(service_class: Type[BaseDashboardService]):
         # 这样FastAPI在解析路由时不会看到service参数
         async def endpoint_handler(request: request_type) -> Any:
             try:
-                # 特殊处理 CompetitorAnalysisService，它需要额外的参数
-                from .models import CompetitorAnalysisRequest
-                if hasattr(request, 'selected_asins') and isinstance(request, CompetitorAnalysisRequest):
-                    # CompetitorAnalysisService 需要在初始化时传入 selected_asins
-                    service = service_class(request.project_id, selected_asins=request.selected_asins)
-                else:
-                    # 普通服务只需要 project_id
-                    service = service_class(request.project_id)
+                # 普通服务只需要 project_id
+                service = service_class(request.project_id)
 
                 # 应用过滤器
                 filters = request.get_project_filters()

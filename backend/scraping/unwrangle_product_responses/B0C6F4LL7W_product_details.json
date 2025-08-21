@@ -1,0 +1,499 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0C6F4LL7W",
+  "result_count": 1,
+  "detail": {
+    "name": "MECCANIXITY 18 Gauge Wire Silicone Wire 18AWG Electrical Wire Stranded Wire High Temperature Hookup Wire Tinned Copper Wire Black 15m/49.2ft for Car Model Manipulator Electric Appliances",
+    "brand": "MECCANIXITY",
+    "url": "https://www.amazon.com/product/dp/B0C6F4LL7W",
+    "asin": "B0C6F4LL7W",
+    "deal_badge": null,
+    "listing_id": "B0C6F4LL7W",
+    "price": 14.49,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0C6F4LL7W/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.6,
+    "total_ratings": 14,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Saturday, August 2. Order within 8 hrs 41 mins. Join Prime"
+    ],
+    "delivery_zipcode": "22734",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "size": {
+        "name": "18AWG,49.2ftx0.09 inch",
+        "asin": "B0C6F4LL7W",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0C6F4LL7W"
+      },
+      "color": {
+        "name": "Black",
+        "asin": "B0C6F4LL7W",
+        "in_stock": true,
+        "url": "https://www.amazon.com/dp/B0C6F4LL7W"
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71K6B3Jw70L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71K6B3Jw70L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41YVAKIwIQL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61A7X7-djRL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41USlcqSgPL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51mMDoSRjfL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41oWZcQfwWL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/412phJqMJOL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41blQsL1+0L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41YVAKIwIQL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "MECCANIXITY"
+      },
+      {
+        "name": "Material",
+        "value": "Silicone"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Voltage",
+        "value": "600Volts"
+      }
+    ],
+    "features": [
+      "The flexible silicone wires are widely used in high-temperature electronics or line environment lighting, model wiring harnesses, electrical appliances, equipment internal connecting wires, household appliances, large transformers and lamps, instrumentation, motor lead wires, electrical wiring, and other connecting wires.",
+      "Package Content: 1 x Electrical Silicone Wire; Length: 15m/49.2ft; Outer Diameter: 2.3mm/0.09 inch; Style: 1 Core of Multi-Strand Wiring; Insulating Material: Silicone; Conductor Material: Tinned Copper; Rated Voltage: 600V; High Temperature Resistance: 200°C/392℉",
+      "The wire is made of silicone insulation and tinned copper core, which has great wear resistance, corrosion resistance, flame retardant performance. Strong electrical conductivity, durable stability.",
+      "Select the equipment and power supply connected with the appropriate silicone wire, easy to peel and cut.",
+      "The silicone wire can withstand a certain amount of bending and stretching but need to avoid excessive bending to affect the electrical conductivity and electrical performance of the wire."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "5.51x4.02x1.85inches;6.53ounces"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "May26,2023"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "MECCANIXITY"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0C6F4LL7W"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "China"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#275,666inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#1,330inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.64.6outof5stars14ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 275666
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 1330
+      }
+    ],
+    "seller_name": "MECCANIXITY",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1NR50YASSZD11&asin=B0C6F4LL7W&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {
+      "size": [
+        {
+          "name": "10AWG,10ftx0.22 inch",
+          "in_stock": true,
+          "asin": "B0C6F4PHN5",
+          "url": "https://www.amazon.com/dp/B0C6F4PHN5"
+        },
+        {
+          "name": "12AWG,24.6ftx0.18 inch",
+          "in_stock": true,
+          "asin": "B0C6F4KT67",
+          "url": "https://www.amazon.com/dp/B0C6F4KT67"
+        },
+        {
+          "name": "14AWG,24.6ftx0.14 inch",
+          "in_stock": false,
+          "asin": "B0C6F3NLHY",
+          "url": "https://www.amazon.com/dp/B0C6F3NLHY"
+        },
+        {
+          "name": "14AWG,40ftx0.14 inch",
+          "in_stock": true,
+          "asin": "B0C6F3RDHC",
+          "url": "https://www.amazon.com/dp/B0C6F3RDHC"
+        },
+        {
+          "name": "14AWG,49.2ftx0.14 inch",
+          "in_stock": false,
+          "asin": "B0C6FB9W2W",
+          "url": "https://www.amazon.com/dp/B0C6FB9W2W"
+        },
+        {
+          "name": "16AWG,24.6ftx0.12 inch",
+          "in_stock": true,
+          "asin": "B0C6F7M5C2",
+          "url": "https://www.amazon.com/dp/B0C6F7M5C2"
+        },
+        {
+          "name": "16AWG,49.2ftx0.12 inch",
+          "in_stock": false,
+          "asin": "B0C6F4THP5",
+          "url": "https://www.amazon.com/dp/B0C6F4THP5"
+        },
+        {
+          "name": "18AWG,49.2ftx0.09 inch",
+          "in_stock": false,
+          "asin": "B0C6F4LL7W",
+          "url": "https://www.amazon.com/dp/B0C6F4LL7W"
+        },
+        {
+          "name": "18AWG,98.4ftx0.09 inch",
+          "in_stock": true,
+          "asin": "B0C6F6DQRF",
+          "url": "https://www.amazon.com/dp/B0C6F6DQRF"
+        },
+        {
+          "name": "20AWG,49.2ftx0.07 inch",
+          "in_stock": true,
+          "asin": "B0C6F8XX41",
+          "url": "https://www.amazon.com/dp/B0C6F8XX41"
+        },
+        {
+          "name": "22AWG,246ftx0.07 inch",
+          "in_stock": true,
+          "asin": "B0C6F41JRT",
+          "url": "https://www.amazon.com/dp/B0C6F41JRT"
+        },
+        {
+          "name": "22AWG,49.2ftx0.07 inch",
+          "in_stock": true,
+          "asin": "B0C6F5795B",
+          "url": "https://www.amazon.com/dp/B0C6F5795B"
+        },
+        {
+          "name": "22AWG,98.4ftx0.07 inch",
+          "in_stock": false,
+          "asin": "B0C6F49JCQ",
+          "url": "https://www.amazon.com/dp/B0C6F49JCQ"
+        },
+        {
+          "name": "24AWG,246ftx0.06 inch",
+          "in_stock": true,
+          "asin": "B0C6F3K2JY",
+          "url": "https://www.amazon.com/dp/B0C6F3K2JY"
+        },
+        {
+          "name": "24AWG,49.2ftx0.06 inch",
+          "in_stock": true,
+          "asin": "B0C6F5QKZG",
+          "url": "https://www.amazon.com/dp/B0C6F5QKZG"
+        },
+        {
+          "name": "24AWG,98.4ftx0.06 inch",
+          "in_stock": true,
+          "asin": "B0C6F7N7ZQ",
+          "url": "https://www.amazon.com/dp/B0C6F7N7ZQ"
+        },
+        {
+          "name": "26AWG,49.2ftx0.06 inch",
+          "in_stock": true,
+          "asin": "B0C6F4MGBM",
+          "url": "https://www.amazon.com/dp/B0C6F4MGBM"
+        },
+        {
+          "name": "26AWG,98.4ftx0.06 inch",
+          "in_stock": true,
+          "asin": "B0C6F2R3N5",
+          "url": "https://www.amazon.com/dp/B0C6F2R3N5"
+        },
+        {
+          "name": "28AWG,20ftx0.05 inch",
+          "in_stock": true,
+          "asin": "B0C6F4KGBL",
+          "url": "https://www.amazon.com/dp/B0C6F4KGBL"
+        },
+        {
+          "name": "28AWG,49.2ftx0.05 inch",
+          "in_stock": true,
+          "asin": "B0C6F6WSB1",
+          "url": "https://www.amazon.com/dp/B0C6F6WSB1"
+        },
+        {
+          "name": "30AWG,246ftx0.03 inch",
+          "in_stock": true,
+          "asin": "B0C6F8XVX1",
+          "url": "https://www.amazon.com/dp/B0C6F8XVX1"
+        },
+        {
+          "name": "30AWG,49.2ftx0.03 inch",
+          "in_stock": true,
+          "asin": "B0C6F5GKKQ",
+          "url": "https://www.amazon.com/dp/B0C6F5GKKQ"
+        },
+        {
+          "name": "30AWG,98.4ftx0.03 inch",
+          "in_stock": true,
+          "asin": "B0C6F93VX5",
+          "url": "https://www.amazon.com/dp/B0C6F93VX5"
+        }
+      ],
+      "color": [
+        {
+          "name": "Black",
+          "in_stock": false,
+          "asin": "B0C6F4LL7W",
+          "url": "https://www.amazon.com/dp/B0C6F4LL7W",
+          "price": null,
+          "price_per_unit": null
+        },
+        {
+          "name": "Orange",
+          "in_stock": true,
+          "asin": "B0C6F33T8W",
+          "url": "https://www.amazon.com/dp/B0C6F33T8W",
+          "price": null,
+          "price_per_unit": null
+        },
+        {
+          "name": "Red",
+          "in_stock": false,
+          "asin": "",
+          "url": "https://www.amazon.com/dp/B0C6F4KCDF",
+          "price": null,
+          "price_per_unit": null
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "77%",
+      "4 star": "10%",
+      "3 star": "13%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "Riva M.",
+        "review_title": "Good wire",
+        "rating": 5,
+        "review_text": "Good copper wire, it is a fine strand wire so it’s very flexible\nRead more",
+        "date": "2024-10-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Orange",
+          "Size: 14AWG,24.6ftx0.14 inch"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Gary Avrett",
+        "review_title": "Very good!",
+        "rating": 5,
+        "review_text": "Very good quality with a flexible “rubber” insulation!\nRead more",
+        "date": "2024-03-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Black",
+          "Size: 18AWG,49.2ftx0.09 inch"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Zlatko",
+        "review_title": "Works",
+        "rating": 5,
+        "review_text": "Works, good length.\nRead more",
+        "date": "2023-11-26",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Color: Red",
+          "Size: 20AWG,49.2ftx0.07 inch"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Sylvain",
+        "review_title": "Correct",
+        "rating": 5,
+        "review_text": "Correct\nRead more",
+        "date": "2024-09-09",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "Silicone Wires Advantages:",
+        "Silicone insulation and tinned copper coreGreat wear resistanceCorrosion resistanceFlame retardant performanceStrong electrical conductivity",
+        "How to use it?",
+        "Select the equipment and power supply connected with the appropriate silicone wire, easy to peel and cut.",
+        "The silicone wire can withstand a certain amount of bending and stretching but need to avoid excessive bending to affect the electrical conductivity and electrical performance of the wire."
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ef149126-0a22-4f96-9c67-853f5a8d48fb.__CR0,0,600,180_PT0_SX600_V1___.jpg",
+          "alt": "Logo"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/ef149126-0a22-4f96-9c67-853f5a8d48fb.__CR0,0,600,180_PT0_SX600_V1___.jpg",
+          "alt": "Logo"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/24f6c40a-b04c-4fe5-b4b0-a1e24f3dd6a9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "d"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/24f6c40a-b04c-4fe5-b4b0-a1e24f3dd6a9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "d"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/da108411-7db7-4445-81c4-9e6667b31f9c.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "silicone wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/da108411-7db7-4445-81c4-9e6667b31f9c.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "silicone wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5b1a8410-6f8e-4b07-a033-2271c46a4666.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5b1a8410-6f8e-4b07-a033-2271c46a4666.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "wire"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de8ec020-4600-4d03-929c-50ad4749fb7c.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "t"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de8ec020-4600-4d03-929c-50ad4749fb7c.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+          "alt": "t"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/bbba8e00-ed58-483c-a68c-35809d837bf2.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/18f03fdd-d85d-48b9-8511-f85fface0c96.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/03c1ba1e-c68f-4533-911a-0f0f3070c3f3.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/01e0d164-b24a-400a-999d-50caaa82bbf2.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8d5228b7-7d09-4a26-a1a5-a950f68b666d.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e9bb1e2e-cd02-4a02-bb98-107d85590faf.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/959085e3-0bce-4254-9271-7d32d68522e3.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2a76d673-1abb-4d22-a1e6-29502c463e11.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2849c9d5-90d2-4564-8f65-ffbbe1fb3737.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de755499-6c36-44f4-8449-92bd8da8e0f1.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/fc130f53-78ee-4969-8f00-77ffb8ef9142.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/98d1f3c5-415c-4def-8a46-a4bb3ad77861.__CR0,0,150,300_PT0_SX150_V1___.jpg",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 35.0
+}

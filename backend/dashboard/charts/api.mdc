@@ -1,0 +1,383 @@
+---
+alwaysApply: false
+---
+# Dashboard Charts API 开发规范 (.cursorrules)
+
+## 🎯 总体原则
+
+你是一个专业的 Dashboard Charts API 开发助手。严格遵循以下规范，确保团队开发的所有图表接口保持一致性、可维护性和高质量。
+
+## 🏗️ 后端架构规范
+
+### 1. 目录结构 - 严格遵循
+
+```
+backend/dashboard/charts/
+├── base_models.py                    # 基础模型（禁止修改）
+├── api.py                           # 路由注册（统一管理）
+└── {chart_name}/                    # 图表模块目录（camelCase命名）
+    ├── __init__.py                  # 标准导出格式
+    ├── models.py                    # 数据模型
+    ├── services.py                  # 业务逻辑
+    ├── README.md                    # 详细文档（必需）
+    └── tests/                       # 测试文件（必需）
+        ├── __init__.py
+        ├── test_models.py
+        ├── test_services.py
+        └── test_api.py
+```
+
+**重要**: 
+- 绝不创建重复目录（如 competitive/ 和 customerSatisfaction/ 都包含相同功能）
+- 目录名使用 camelCase: `customerSatisfaction`, `salesTrend`, `marketShare`
+- 每个图表必须有独立的 tests/ 目录
+
+### 2. 命名规范 - 强制执行
+
+- **目录名**: camelCase (`customerSatisfaction`, `salesTrend`)
+- **文件名**: kebab-case (`customer-satisfaction.py`) 或 snake_case (`models.py`)
+- **类名**: PascalCase (`CustomerSatisfactionService`)
+- **API路径**: kebab-case (`/competitive/customer-satisfaction`)
+- **变量/函数**: snake_case (`get_customer_data`)
+
+### 3. 基础模型继承 - 必须遵循
+
+#### 请求模型继承
+```python
+from ..base_models import BaseRequestModel
+
+class {ChartName}Request(BaseRequestModel):
+    """图表请求模型 - 必须继承 BaseRequestModel"""
+    # 可添加额外字段，但不能删除基础字段
+    # additional_param: Optional[str] = Field(default=None)
+```
+
+#### 响应模型继承
+```python
+from ..base_models import BaseResponseModel
+
+class {ChartName}Data(BaseModel):
+    """图表数据模型 - 定义具体数据结构"""
+    # 定义字段...
+
+class {ChartName}Response(BaseResponseModel[List[{ChartName}Data]]):
+    """图表响应模型 - 必须继承 BaseResponseModel，指定泛型类型"""
+```
+
+**禁止**: 
+- 修改 base_models.py
+- 不继承基础模型
+- 删除基础模型的必需字段
+
+## 🔧 服务类规范
+
+### 1. 必须继承 BaseDashboardService
+
+```python
+from dashboard.services.base_service import BaseDashboardService
+from ..base_models import FiltersModel, DateRangeModel
+
+class {ChartName}Service(BaseDashboardService):
+    def __init__(self, project_id: str, filters: Optional[FiltersModel] = None,
+                 date_range: Optional[DateRangeModel] = None):
+        super().__init__(project_id)
+        
+        # 标准化处理 FiltersModel
+        if filters:
+            filters_dict = {
+                "categories": filters.categories,
+                "brands": filters.brands,
+                "segments": filters.segments,
+                "extend_fields": filters.extend_fields
+            }
+            project_filters = ProjectFilters.from_dict(filters_dict)
+            self.set_project_filters(project_filters)
+```
+
+### 2. 必须实现的方法
+
+```python
+def get_data(self) -> List[Dict[str, Any]]:
+    """获取图表数据 - 必须实现
+    
+    Returns:
+        List[Dict]: 符合响应模型的数据结构
+        空数据时返回 [], 不抛出异常
+    """
+```
+
+### 3. 数据库查询规范
+
+- **使用分页**: 大数据量查询必须使用 `.range()` 分页
+- **防止 N+1 查询**: 使用 JOIN 或批量查询
+- **索引友好**: 查询条件优先使用有索引的字段
+- **连接池**: 复用 `self.supabase` 连接
+
+```python
+# 正确的分页示例
+while True:
+    range_from = page * page_size
+    range_to = range_from + page_size - 1
+    query = query.range(range_from, range_to)
+    result = query.execute()
+    if not result.data or len(result.data) < page_size:
+        break
+    page += 1
+```
+
+## 📡 API 接口规范
+
+### 1. 路由定义标准
+
+```python
+@router.post("/{category}/{chart-name}", response_model={ChartName}Response)
+async def get_{chart_name}(request: {ChartName}Request):
+    """获取{图表名称}数据 - 必须有文档
+    
+    Args:
+        request: 继承自BaseRequestModel的请求对象
+        
+    Returns:
+        {ChartName}Response: 继承自BaseResponseModel的响应对象
+        
+    Raises:
+        HTTPException: 统一的错误响应格式
+    """
+```
+
+### 2. 错误处理 - 统一标准
+
+```python
+try:
+    service = {ChartName}Service(
+        project_id=request.project_id,
+        filters=request.filters,
+        date_range=request.date_range
+    )
+    data = service.get_data()
+    response = {ChartName}Response(data=data)
+    
+    logger.info(f"{图表名称} analysis completed for project {request.project_id}: {len(response.data)} items")
+    return response
+    
+except ValueError as e:
+    logger.error(f"Validation error in {图表名称}: {e}")
+    raise HTTPException(status_code=400, detail=str(e))
+    
+except Exception as e:
+    logger.error(f"System error in {图表名称}: {e}", exc_info=True)
+    raise HTTPException(status_code=500, detail="Internal server error")
+```
+
+## 📝 代码质量规范
+
+### 1. 日志记录 - 标准格式
+
+```python
+import logging
+logger = logging.getLogger(__name__)
+
+# 初始化日志
+logger.info(f"{self.__class__.__name__} initialized for project {project_id}")
+
+# 成功操作日志
+logger.info(f"Retrieved {len(result.data)} records")
+
+# 警告日志
+logger.warning("No data found for selected filters")
+
+# 错误日志 - 包含堆栈信息
+logger.error(f"Error in {method_name}: {e}", exc_info=True)
+```
+
+### 2. 注释规范
+
+- **类和方法**: 必须有文档字符串
+- **复杂逻辑**: 用注释解释业务逻辑
+- **数据库查询**: 注释查询目的和表关系
+- **算法步骤**: 用编号说明计算步骤
+
+```python
+class CustomerSatisfactionService(BaseDashboardService):
+    """客户满意度分析服务
+    
+    提供竞争对手产品的客户满意度对比分析，基于评论数据和评分
+    数据来源：product_wide_table + review_analysis_aspects
+    """
+    
+    def _calculate_satisfaction_score(self, asin: str) -> float:
+        """计算产品满意度分数
+        
+        计算逻辑：
+        1. 获取产品评分 (1-5星)
+        2. 转换为百分制分数: (rating - 1) / 4 * 100
+        3. 保留一位小数
+        """
+```
+
+### 3. 类型注解 - 强制要求
+
+- 所有函数参数和返回值必须有类型注解
+- 使用 `Optional` 标记可选参数
+- 复杂类型使用 `typing` 模块
+
+```python
+from typing import List, Dict, Any, Optional
+
+def get_data(self) -> List[Dict[str, Any]]:
+def _process_data(self, raw_data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+```
+
+## 🧪 测试规范
+
+### 1. 必须的测试文件
+
+每个图表模块必须包含：
+
+```
+tests/
+├── __init__.py
+├── test_models.py      # Pydantic模型测试
+├── test_services.py    # 业务逻辑测试
+└── test_api.py         # API端点测试
+```
+
+### 2. 测试覆盖率要求
+
+- **服务类**: 覆盖率 > 80%
+- **API端点**: 主要路径测试
+- **错误场景**: 至少测试 3 种错误情况
+- **边界情况**: 空数据、无效输入等
+
+### 3. 测试数据管理
+
+```python
+# 使用固定的测试数据
+TEST_PROJECT_ID = "d2c02b80-4c82-44cc-8093-56708a7883f7"
+TEST_ASINS = [
+        'B00NG0ELL0',  # Leviton DSL06 - Mid-tier brand representative
+        'B0BVKZLT3B',  # Leviton D215S - Mid-tier brand representative
+        'B0BVKYKKRK',  # Leviton D26HD - Mid-tier brand representative
+        'B0BSHKS26L',  # Lutron Caseta Diva - Mid-tier brand representative
+        'B085D8M2MR',  # Lutron Diva - Mid-tier brand representative
+        'B01EZV35QU',  # TP Link Switch
+    ]
+
+# 模拟数据库响应
+@pytest.fixture
+def mock_supabase_response():
+    return Mock(data=[...])
+```
+
+## 📚 文档规范
+
+### 1. README.md 标准格式
+
+每个图表模块必须包含详细的 README.md：
+
+```markdown
+# {图表名称} API 文档
+
+## 概述
+简要描述图表功能和用途
+
+## API 接口
+### 请求格式
+### 响应格式
+### 错误码
+
+## 数据来源
+列出依赖的数据表和字段
+
+## 业务逻辑
+详细说明计算方法和算法
+
+## 使用示例
+包含 curl 和前端调用示例
+
+```
+
+### 2. API 文档要求
+
+- 所有接口必须有完整的 OpenAPI 注释
+- 请求/响应示例必须真实可用
+- 错误码和错误信息必须明确
+- 业务逻辑解释必须清晰
+
+## 🔒 安全规范
+
+### 1. 输入验证
+
+- 所有用户输入必须通过 Pydantic 模型验证
+- SQL 查询使用参数化，防止注入
+- ASIN 格式验证：`^[A-Z0-9]{10}$`
+- 时间格式验证：`YYYY-MM-DD`
+
+### 2. 数据边界
+
+```python
+# 项目ASIN边界检查 - 必须执行
+query = self._apply_asin_filter(query)
+
+
+## 🔄 版本控制规范
+
+### 1. Git Commit 格式
+
+```
+feat(charts): add customer satisfaction analysis API
+fix(charts): resolve pagination issue in sales trend
+docs(charts): update API documentation
+test(charts): add unit tests for competitive analysis
+refactor(charts): optimize database query performance
+```
+
+### 2. 分支策略
+
+- **Feature 分支**: `feature/charts-{chart-name}`
+- **Bug 修复**: `fix/charts-{issue-description}`
+- **重构**: `refactor/charts-{component-name}`
+
+### 3. 代码审查
+
+每个 PR 必须：
+- [ ] 通过集成测试
+- [ ] API 文档完整
+
+
+## 🚫 严格禁止
+
+1. **修改基础模型**: 不得修改 `base_models.py`
+2. **重复目录**: 不得创建功能重复的目录
+3. **硬编码**: 禁止硬编码 ASIN、项目ID等
+4. **无测试代码**: 不得提交没有测试的代码
+5. **未处理异常**: 不得让异常传播到用户
+6. **直接数据库操作**: 必须通过 Supabase 客户端
+7. **跳过过滤器**: 不得绕过项目ASIN边界检查
+
+## ✅ 开发检查清单
+
+### 开发前
+- [ ] 确认图表需求和数据来源
+- [ ] 设计 API 接口和数据结构
+- [ ] 创建标准目录结构
+
+### 开发中
+- [ ] 继承基础模型
+- [ ] 实现业务逻辑服务
+- [ ] 添加路由和错误处理
+
+### 开发后
+- [ ] API 文档完整
+- [ ] 集成测试通过
+
+## 🎯 质量标准
+
+- **代码可读性**: 注释清晰，逻辑结构明确
+- **性能指标**: 响应时间符合要求
+- **文档完整性**: README + API 文档
+- **错误处理**: 优雅降级，有意义的错误信息
+- **安全性**: 输入验证，边界检查
+- **可维护性**: 遵循 SOLID 原则，低耦合高内聚
+
+---

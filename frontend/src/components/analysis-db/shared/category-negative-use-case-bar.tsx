@@ -2,10 +2,12 @@
 
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { useChartsT } from '@/i18n/hooks'
 import { Badge } from '@/components/ui/badge';
 import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/analysis';
 import { getSatisfactionColor, getSatisfactionLevel } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
+import { useReviewPanelQuery } from '@/components/analysis-db/hooks/use-review-panel-query';
 import { UnifiedStackedBarChart } from '@/components/analysis-db/shared/unified-stacked-bar-chart';
 
 interface CategoryNegativeUseCaseBarProps {
@@ -14,13 +16,19 @@ interface CategoryNegativeUseCaseBarProps {
   description?: string;
   productType?: ProductType;
   onProductTypeChange?: (productType: ProductType) => void;
-  reviewData?: {
-    reviewsByCategory?: Record<string, any[]>
-  }
+  projectId?: string // Required: for getting review details
+  filters?: {
+    categories?: string[]
+    brands?: string[]
+    segments?: string[]
+    extend_fields?: Record<string, any>
+    asins?: string[]
+  } // Required: filter parameters
   totalUseMentions?: number;
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
+  const chartsT = useChartsT()
   if (active && payload && payload.length) {
     const data = payload[0].payload;
     return (
@@ -30,11 +38,11 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* 基本统计信息 */}
         <div className="grid grid-cols-2 gap-2 mb-3">
           <div>
-            <p className="text-sm text-gray-600">Total Mentions:</p>
-            <p className="font-semibold">{data.totalMentions}</p>
+            <p className="text-sm text-gray-600">{chartsT('totalReviews')}:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
           <div>
-            <p className="text-sm text-gray-600">Satisfaction Rate:</p>
+            <p className="text-sm text-gray-600">{chartsT('satisfactionRate')}:</p>
             <div className="flex items-center gap-2">
               <p className="font-semibold">{Math.round(data.satisfactionRate)}%</p>
               <Badge 
@@ -50,20 +58,18 @@ const CustomTooltip = ({ active, payload, label }: any) => {
           </div>
         </div>
 
-        {/* 正负面统计 */}
-        <div className="grid grid-cols-2 gap-2 mb-3">
+        {/* 统计信息 */}
+        <div className="grid grid-cols-1 gap-2 mb-3">
           <div>
-            <p className="text-sm text-green-600 font-semibold">Positive Mentions: {data.positiveCount}</p>
-          </div>
-          <div>
-            <p className="text-sm text-red-600 font-semibold">Negative Mentions: {data.negativeCount}</p>
+            <p className="text-sm text-gray-600">{chartsT('totalReviews')}:</p>
+            <p className="font-semibold">{data.totalReviews}</p>
           </div>
         </div>
 
         {/* Gap原因 */}
         {data.topGapReasons && data.topGapReasons.length > 0 && (
           <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Gap Reasons:</p>
+            <p className="text-xs text-gray-500">{chartsT('topGapReasons')}:</p>
             {data.topGapReasons.slice(0, 3).map((reason: string, index: number) => (
               <p key={index} className="text-xs text-red-600">• {reason}</p>
             ))}
@@ -73,7 +79,7 @@ const CustomTooltip = ({ active, payload, label }: any) => {
         {/* Top满意原因 */}
         {data.topSatisfactionReasons && data.topSatisfactionReasons.length > 0 && (
           <div className="mt-2">
-            <p className="text-xs text-gray-500">Top Satisfaction Reasons:</p>
+            <p className="text-xs text-gray-500">{chartsT('topSatisfactionReasons')}:</p>
             {data.topSatisfactionReasons.slice(0, 3).map((reason: string, index: number) => (
               <p key={index} className="text-xs text-green-600">• {reason}</p>
             ))}
@@ -87,13 +93,15 @@ const CustomTooltip = ({ active, payload, label }: any) => {
 
 export default function CategoryNegativeUseCaseBar({ 
   data, 
-  description = "Bars are sorted by negative mentions from left to right in descending order",
+  description = "Bars are sorted by negative reviews from left to right in descending order",
   productType = 'dimmer',
   onProductTypeChange,
-  reviewData,
+  projectId,
+  filters,
   totalUseMentions
 }: CategoryNegativeUseCaseBarProps) {
   const { openPanel } = useReviewPanel()
+  const { handleCategoryClick, isLoading } = useReviewPanelQuery()
   
   // 添加数据安全检查，防止预渲染时 data 为 undefined
   if (!data || !Array.isArray(data) || data.length === 0) {
@@ -108,7 +116,7 @@ export default function CategoryNegativeUseCaseBar({
   
   // 按负面提及数排序，并取前10个
   const sortedData = [...data]
-    .sort((a, b) => b.negativeCount - a.negativeCount)
+    .sort((a, b) => b.negativeReviews - a.negativeReviews)
     .slice(0, 10);
   
   const chartData = sortedData.map(item => ({
@@ -119,23 +127,21 @@ export default function CategoryNegativeUseCaseBar({
       item.useCase
   }));
 
-  const handleBarClick = (data: any, index: number) => {
-    if (data && data.displayName && reviewData?.reviewsByCategory) {
+  const handleBarClick = async (data: any) => {
+    if (data && data.displayName) {
       // Find the full use case name from the display name
       const displayName = data.displayName
       const useCaseItem = chartData.find(item => item.displayName === displayName)
       
-      if (useCaseItem) {
-        const reviews = reviewData.reviewsByCategory[useCaseItem.useCase] || []
-        
-        if (reviews.length > 0) {
-          openPanel(
-            reviews,
-            `${useCaseItem.useCase} - Customer Reviews`,
-            `Reviews related to "${useCaseItem.useCase}" use case`,
-            { sentiment: true, brand: true, rating: true, verified: true }
-          )
-        }
+      if (useCaseItem && useCaseItem.categoryId && projectId) {
+        // Use the new API to get review details for use cases
+        await handleCategoryClick(
+          projectId,
+          useCaseItem.categoryId,
+          useCaseItem.useCase,
+          ['use'], // use cases use 'use' aspect type
+          filters
+        )
       }
     }
   }
@@ -161,8 +167,8 @@ export default function CategoryNegativeUseCaseBar({
         <UnifiedStackedBarChart
           data={chartData}
           xAxisDataKey="displayName"
-          positiveDataKey="positiveCount"
-          negativeDataKey="negativeCount"
+          positiveDataKey="positiveReviews"
+          negativeDataKey="negativeReviews"
           onBarClick={handleBarClick}
           CustomTooltip={CustomTooltip}
         />
@@ -174,7 +180,7 @@ export default function CategoryNegativeUseCaseBar({
             {sortedData.slice(0, 4).map((item, index) => (
               <div key={index} className="text-center">
                 <div className="text-lg font-bold text-red-600">
-                  {item.negativeCount}
+                  {item.negativeReviews}
                 </div>
                 <div className="text-sm text-gray-600 truncate" title={item.useCase}>
                   {item.useCase}
@@ -203,13 +209,13 @@ export default function CategoryNegativeUseCaseBar({
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Positive</p>
               <p className="text-lg font-semibold text-green-600">
-                {data.reduce((sum, item) => sum + item.positiveCount, 0)}
+                {data.reduce((sum, item) => sum + item.positiveReviews, 0)}
               </p>
             </div>
             <div className="text-center">
               <p className="text-sm text-gray-600">Total Negative</p>
               <p className="text-lg font-semibold text-red-600">
-                {data.reduce((sum, item) => sum + item.negativeCount, 0)}
+                {data.reduce((sum, item) => sum + item.negativeReviews, 0)}
               </p>
             </div>
           </div>

@@ -1,0 +1,372 @@
+{
+  "important_columns": {
+    "HIGH_PRIORITY": [
+      "materi",
+      "no_of_wire",
+      "voltag",
+      "conductor",
+      "size",
+      "brand",
+      "price"
+    ],
+    "MEDIUM_PRIORITY": [
+      "color",
+      "certification",
+      "temperature",
+      "length",
+      "package_weight",
+      "best_seller_rank"
+    ],
+    "LOW_PRIORITY": [
+      "batteri_includ",
+      "custom_review",
+      "date_first_avail",
+      "is_discontinu_by_manufactur"
+    ]
+  },
+  "missing_analysis": {
+    "HIGH_PRIORITY": {
+      "materi": {
+        "missing_count": "2",
+        "total_count": 48,
+        "missing_percentage": 4.166666666666666
+      },
+      "no_of_wire": {
+        "missing_count": "34",
+        "total_count": 48,
+        "missing_percentage": 70.83333333333334
+      },
+      "voltag": {
+        "missing_count": "17",
+        "total_count": 48,
+        "missing_percentage": 35.41666666666667
+      },
+      "size": {
+        "missing_count": "14",
+        "total_count": 48,
+        "missing_percentage": 29.166666666666668
+      },
+      "brand": {
+        "missing_count": "0",
+        "total_count": 48,
+        "missing_percentage": 0.0
+      },
+      "price": {
+        "missing_count": "4",
+        "total_count": 48,
+        "missing_percentage": 8.333333333333332
+      }
+    },
+    "MEDIUM_PRIORITY": {
+      "color": {
+        "missing_count": "4",
+        "total_count": 48,
+        "missing_percentage": 8.333333333333332
+      },
+      "certification": {
+        "missing_count": "27",
+        "total_count": 48,
+        "missing_percentage": 56.25
+      },
+      "length": {
+        "missing_count": "8",
+        "total_count": 48,
+        "missing_percentage": 16.666666666666664
+      },
+      "best_seller_rank": {
+        "missing_count": "1",
+        "total_count": 48,
+        "missing_percentage": 2.083333333333333
+      }
+    },
+    "LOW_PRIORITY": {
+      "batteri_includ": {
+        "missing_count": "37",
+        "total_count": 48,
+        "missing_percentage": 77.08333333333334
+      },
+      "custom_review": {
+        "missing_count": "1",
+        "total_count": 48,
+        "missing_percentage": 2.083333333333333
+      },
+      "date_first_avail": {
+        "missing_count": "1",
+        "total_count": 48,
+        "missing_percentage": 2.083333333333333
+      },
+      "is_discontinu_by_manufactur": {
+        "missing_count": "32",
+        "total_count": 48,
+        "missing_percentage": 66.66666666666666
+      }
+    }
+  },
+  "asins_with_missing": {
+    "B0CX1J73YB": [
+      "no_of_wire",
+      "size"
+    ],
+    "B000UECHCA": [
+      "no_of_wire"
+    ],
+    "B09T6J7M8Y": [
+      "no_of_wire"
+    ],
+    "B0080404VS": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B0CJF83GTS": [
+      "no_of_wire",
+      "size"
+    ],
+    "B07T6LQSM2": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B0B9ZJ2LPR": [
+      "no_of_wire",
+      "voltag",
+      "size"
+    ],
+    "B0D1RKT3JK": [
+      "no_of_wire",
+      "size"
+    ],
+    "B0C1H1B4P4": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B0CSW2L7RC": [
+      "no_of_wire"
+    ],
+    "B01MDKIL5N": [
+      "voltag"
+    ],
+    "B07CWPTHYH": [
+      "no_of_wire"
+    ],
+    "B0B3H27JG2": [
+      "no_of_wire"
+    ],
+    "B08R7ZT3C7": [
+      "no_of_wire",
+      "voltag",
+      "size"
+    ],
+    "B08V4L3H2H": [
+      "no_of_wire",
+      "voltag",
+      "size"
+    ],
+    "B002RL9JAW": [
+      "no_of_wire"
+    ],
+    "B088RC5ZT3": [
+      "no_of_wire",
+      "price"
+    ],
+    "B0C6F4LL7W": [
+      "no_of_wire"
+    ],
+    "B0BY7CMNDH": [
+      "no_of_wire"
+    ],
+    "B0CSD3KPX3": [
+      "no_of_wire"
+    ],
+    "B000BQT7EI": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B07DGD2PVF": [
+      "voltag",
+      "price"
+    ],
+    "B0CSPV6WJY": [
+      "no_of_wire",
+      "size"
+    ],
+    "B07H9DN8SP": [
+      "size"
+    ],
+    "B09XFBRVYX": [
+      "no_of_wire",
+      "size"
+    ],
+    "B0C4BBZMN6": [
+      "no_of_wire"
+    ],
+    "B00DIRTYSG": [
+      "materi",
+      "no_of_wire",
+      "voltag"
+    ],
+    "B00NV7VP9Y": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B01ANZRXDI": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B0CBB4JFKY": [
+      "no_of_wire"
+    ],
+    "B01AV6QBYG": [
+      "voltag",
+      "price"
+    ],
+    "B00D49VGFM": [
+      "no_of_wire",
+      "size"
+    ],
+    "B0BZ42TFK2": [
+      "no_of_wire",
+      "size"
+    ],
+    "B08TTT1JD9": [
+      "materi",
+      "no_of_wire",
+      "voltag",
+      "price"
+    ],
+    "B0154H7BLE": [
+      "no_of_wire",
+      "size"
+    ],
+    "B0D1H6K1X1": [
+      "no_of_wire",
+      "size"
+    ],
+    "B014U90BAA": [
+      "no_of_wire",
+      "voltag"
+    ],
+    "B01BEEL8GK": [
+      "voltag"
+    ],
+    "B004ZQ5P64": [
+      "no_of_wire",
+      "voltag",
+      "size"
+    ]
+  },
+  "inspection_candidates": [
+    {
+      "asin": "B08TTT1JD9",
+      "missing_cols": [
+        "materi",
+        "no_of_wire",
+        "voltag",
+        "price"
+      ],
+      "missing_count": 4,
+      "name": "Fence Wire Tightener Wire Tensioner for Fence -Pack of 20,silver",
+      "brand": "Mingya"
+    },
+    {
+      "asin": "B0B9ZJ2LPR",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag",
+        "size"
+      ],
+      "missing_count": 3,
+      "name": "EZ Guard Single Stud Electrical Wire Protector 5 PK",
+      "brand": "EZElectricalSystemSolutions,LLC"
+    },
+    {
+      "asin": "B08R7ZT3C7",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag",
+        "size"
+      ],
+      "missing_count": 3,
+      "name": "Wirenco 8/2 Metal Clad (MC) Cable with Ground, Aluminum Armored, Stranded Copper Conductor (25Ft Cut)",
+      "brand": "wirenco"
+    },
+    {
+      "asin": "B08V4L3H2H",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag",
+        "size"
+      ],
+      "missing_count": 3,
+      "name": "Wirenco 12/2 NM-B, Non-Metallic, Sheathed Cable, Residential Indoor Wire, Equivalent to (100Ft Cut)",
+      "brand": "wirenco"
+    },
+    {
+      "asin": "B00DIRTYSG",
+      "missing_cols": [
+        "materi",
+        "no_of_wire",
+        "voltag"
+      ],
+      "missing_count": 3,
+      "name": "AMERICAN POWER PULL CORP Pp7008 Fence and Wire Grip",
+      "brand": "American Power Pull"
+    },
+    {
+      "asin": "B004ZQ5P64",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag",
+        "size"
+      ],
+      "missing_count": 3,
+      "name": "Jake's Wire Tighteners 1/4in 20ct 1/4",
+      "brand": "Db Agriscape K An K"
+    },
+    {
+      "asin": "B0CX1J73YB",
+      "missing_cols": [
+        "no_of_wire",
+        "size"
+      ],
+      "missing_count": 2,
+      "name": "40PCS Waterproof Outdoor Wire Electrical Connectors,Sealant Twist Nuts Caps Cable Terminal Connector Gel for Landscape Light, Building Application, Wet Location Installation, 22AWG-14AWG, Small Size",
+      "brand": "Gibbab"
+    },
+    {
+      "asin": "B0080404VS",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag"
+      ],
+      "missing_count": 2,
+      "name": "3M Performance Plus Wire Connector R/Y+JUG, Red/Yellow, Flexible Steel Spring Connectors, Copper, CSA Certified, UL Listed, Jug of 500, 22-8 AWG",
+      "brand": "3M"
+    },
+    {
+      "asin": "B0CJF83GTS",
+      "missing_cols": [
+        "no_of_wire",
+        "size"
+      ],
+      "missing_count": 2,
+      "name": "Electric 10/3 SOOW Bulk Cable-10 Gauge 3 Conductor-Rated for 600V, 30A -Water & Oil Resistant Cable for Industrial & Residential Use-Ideal for Generators,Circuits,Data Centers(150 Foot)",
+      "brand": "energeaster"
+    },
+    {
+      "asin": "B07T6LQSM2",
+      "missing_cols": [
+        "no_of_wire",
+        "voltag"
+      ],
+      "missing_count": 2,
+      "name": "THE CIMPLE CO Thermostat Wire 18/4, 200 FT, Solid Copper, 18 Gauge, 4 Conductor, Residential, Commercial and Industrial Rated, 60 Meter, Brown",
+      "brand": "THECIMPLECO"
+    }
+  ],
+  "missing_col_counts": {
+    "no_of_wire": 34,
+    "size": 14,
+    "voltag": 17,
+    "price": 4,
+    "materi": 2
+  }
+}

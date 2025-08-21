@@ -1,0 +1,89 @@
+{
+  "total_conflicts": 49,
+  "columns_merged": 50,
+  "semantic_matches": 50,
+  "conflict_details": [
+    {
+      "column": "color",
+      "conflict_count": 13,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B000UECHCA",
+        "B0080404VS",
+        "B0B9ZJ2LPR",
+        "B0CPPWBGT8",
+        "B07CWPTHYH",
+        "B088RC5ZT3",
+        "B0C4BBZMN6",
+        "B01ANZRXDI",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "conductor",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "materi",
+      "conflict_count": 5,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0B9ZJ2LPR",
+        "B003J63662",
+        "B01MDKIL5N",
+        "B000BQT7EI"
+      ]
+    },
+    {
+      "column": "no_of_wire",
+      "conflict_count": 12,
+      "conflict_asins": [
+        "B0CX1J73YB",
+        "B000UECHCA",
+        "B0CJF83GTS",
+        "B0CPPWBGT8",
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B0B3H27JG2",
+        "B0C6F4LL7W",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "size",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B0B3H27JG2"
+      ]
+    },
+    {
+      "column": "termin",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B09XFBRVYX"
+      ]
+    },
+    {
+      "column": "voltag",
+      "conflict_count": 5,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0B3H27JG2",
+        "B002RL9JAW",
+        "B08J7WKV6W",
+        "B0C4P4Z73C"
+      ]
+    }
+  ]
+}

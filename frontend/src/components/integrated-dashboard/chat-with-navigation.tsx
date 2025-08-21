@@ -6,7 +6,8 @@ import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import { ChartCardList } from './chat/chart-card-list'
-import { UnifiedChartCard, ChartData } from './shared/types'
+import ChatTemplate from './chat/chat-template'
+import { UnifiedChartCard, ChartData, ChatConfig } from './shared/types'
 import { useChart } from '@/contexts/chart-context'
 import { config } from '@/lib/config'
 import { usePermissions } from '@/hooks/use-permissions'
@@ -34,6 +35,7 @@ interface ChatWithNavigationProps {
   activeChartId: string | null
   onChartSelect: (chartId: string) => void
   onAddDynamicChart: (chart: ChartData) => void
+  chatConfig?: ChatConfig // New prop for configuration
 }
 
 export function ChatWithNavigation({ 
@@ -41,7 +43,8 @@ export function ChatWithNavigation({
   chartCards,
   activeChartId,
   onChartSelect,
-  onAddDynamicChart
+  onAddDynamicChart,
+  chatConfig
 }: ChatWithNavigationProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -355,39 +358,14 @@ export function ChatWithNavigation({
             </div>
           )}
           
-          {/* AI Introduction with Chart Cards */}
-          <div className="space-y-3">
-            <div className="flex items-start gap-2">
-              <Avatar className="h-6 w-2 mt-0.5">
-               
-              </Avatar>
-              <div className="flex-1">
-                <div className="p-3  mb-3">
-                  <div className="ai-text">
-                  The data is ready for further analysis.<br/>
-                  Based on your questions, these charts present the key information:
-                  </div>
-                </div>
-                <ChartCardList 
-                  cards={chartCards}
-                  activeChartId={activeChartId}
-                  onCardClick={onChartSelect}
-                />
-              </div>
-            </div>
-          </div>
-          
-          {/* Additional AI Introduction */}
-          <div className="flex items-start gap-2">
-            <Avatar className="h-6 w-2 mt-0.5">
-           
-            </Avatar>
-            <div className="p-3">
-              <div className="ai-text">
-              Let me know if you&apos;d like to explore anything further.
-              </div>
-            </div>
-          </div>
+          {/* Chat Template with Messages and Chart Cards */}
+          <ChatTemplate 
+            chatMessages={chatConfig?.chat_messages || []}
+            chartCards={chartCards}
+            activeChartId={activeChartId}
+            onCardClick={onChartSelect}
+            chartItems={chatConfig?.chart_items}
+          />
           
           {/* Chat Messages */}
           {messages.slice(1).map((message) => (
@@ -395,9 +373,7 @@ export function ChatWithNavigation({
               <div className={`flex ${message.isUser ? 'justify-end' : 'justify-start'}`}>
                 {!message.isUser && (
                   <Avatar className="h-6 w-6 mr-2 mt-0.5">
-                    <AvatarFallback className="text-xs bg-gradient-to-br from-blue-500 via-purple-500 to-indigo-600 text-white font-semibold border-2 border-white shadow-lg">
-                      Xe
-                    </AvatarFallback>
+                 
                   </Avatar>
                 )}
                 <div className={`max-w-[85%] p-3 rounded-lg ${

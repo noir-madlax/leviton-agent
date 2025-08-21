@@ -11,36 +11,69 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
-import { Review } from '@/components/analysis-db/types/analysis'
+import { Review, CauseCategory } from '@/components/analysis-db/types/analysis'
+import { databaseService } from '@/components/analysis-db/data/database-service'
 
 interface ReviewPanelProps {
   showFilters?: {
-    sentiment?: boolean
-    brand?: boolean
+    causeAnalysis?: boolean
+    aspectType?: boolean
     rating?: boolean
     verified?: boolean
+    brand?: boolean
   }
 }
 
 export function ReviewPanel({ 
-  showFilters = { sentiment: true, brand: true, rating: true, verified: true }
+  showFilters = { causeAnalysis: true, aspectType: true, rating: true, verified: true, brand: false }
 }: ReviewPanelProps) {
-  const { isOpen, reviews, title, subtitle, closePanel } = useReviewPanel()
+  const { isOpen, reviews, title, subtitle, projectId, closePanel } = useReviewPanel()
   
   const [filteredReviews, setFilteredReviews] = useState<Review[]>([])
   const [searchTerm, setSearchTerm] = useState('')
-  const [sentimentFilter, setSentimentFilter] = useState<string>('all')
-  const [brandFilter, setBrandFilter] = useState<string>('all')
+  // 🔄 Replace sentiment with cause analysis filter
+  const [causeAnalysisFilter, setCauseAnalysisFilter] = useState<string>('all')
+  // 🆕 New aspect type filter
+  const [aspectTypeFilter, setAspectTypeFilter] = useState<string>('all')
   const [ratingFilter, setRatingFilter] = useState<string>('all')
   const [verifiedFilter, setVerifiedFilter] = useState<string>('all')
+  // 🔄 Keep brand filter logic but hide UI
+  const [brandFilter, setBrandFilter] = useState<string>('all')
+  
+  // 🆕 Cause categories state
+  const [availableCauseCategories, setAvailableCauseCategories] = useState<CauseCategory[]>([])
+  const [loadingCategories, setLoadingCategories] = useState(false)
   
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1)
   const itemsPerPage = 10
   
-  // Brand filter search state
+  // Brand filter search state (keep for compatibility)
   const [brandSearchOpen, setBrandSearchOpen] = useState(false)
   const [brandSearchTerm, setBrandSearchTerm] = useState('')
+
+  // 🆕 Fetch cause categories when panel opens
+  React.useEffect(() => {
+    const fetchCauseCategories = async () => {
+      if (projectId && isOpen) {
+        setLoadingCategories(true)
+        try {
+          const categories = await databaseService.getCauseCategories(projectId, {
+            type: 'all',
+            limit: 20
+          })
+          setAvailableCauseCategories(categories)
+        } catch (error) {
+          console.error('Failed to fetch cause categories:', error)
+          setAvailableCauseCategories([])
+        } finally {
+          setLoadingCategories(false)
+        }
+      }
+    }
+    
+    fetchCauseCategories()
+  }, [projectId, isOpen])
 
   // Apply filters
   React.useEffect(() => {
@@ -59,12 +92,34 @@ export function ReviewPanel({
       })
     }
 
-    // Sentiment filter
-    if (sentimentFilter !== 'all') {
-      filtered = filtered.filter(review => review.sentiment === sentimentFilter)
+    // 🔄 Cause Analysis filter (replacing sentiment filter)
+    if (causeAnalysisFilter !== 'all') {
+      if (causeAnalysisFilter === 'positive') {
+        filtered = filtered.filter(review => review.sentiment === 'positive')
+      } else if (causeAnalysisFilter === 'negative') {
+        filtered = filtered.filter(review => review.sentiment === 'negative')
+      }
+      // Note: For specific category filtering, the reviews are already pre-filtered by category
+      // when passed to the panel, so we don't need additional category filtering here
     }
 
-    // Brand filter
+    // 🆕 Aspect Type filter
+    if (aspectTypeFilter !== 'all') {
+      filtered = filtered.filter(review => {
+        if (!review.aspects || review.aspects.length === 0) return false
+        
+        return review.aspects.some(aspect => {
+          if (aspectTypeFilter === 'phy_perf') {
+            return aspect.aspect_type === 'phy' || aspect.aspect_type === 'perf'
+          } else if (aspectTypeFilter === 'use') {
+            return aspect.aspect_type === 'use'
+          }
+          return false
+        })
+      })
+    }
+
+    // 🔄 Brand filter (keep logic but will be hidden)
     if (brandFilter !== 'all') {
       filtered = filtered.filter(review => {
         const brand = review.brand || ''
@@ -96,7 +151,7 @@ export function ReviewPanel({
 
     setFilteredReviews(filtered)
     setCurrentPage(1) // Reset to first page when filters change
-  }, [reviews, searchTerm, sentimentFilter, brandFilter, ratingFilter, verifiedFilter])
+  }, [reviews, searchTerm, causeAnalysisFilter, aspectTypeFilter, brandFilter, ratingFilter, verifiedFilter])
 
   // Get unique values for filters
   const uniqueBrands = React.useMemo(() => {
@@ -135,9 +190,19 @@ export function ReviewPanel({
     }
   }
 
+  // 🆕 工具函数：获取aspect badge的颜色
+  const getAspectBadgeColor = (sentiment: string): string => {
+    switch (sentiment) {
+      case 'positive': return 'bg-green-100 text-green-800 border-green-200'
+      case 'negative': return 'bg-red-100 text-red-800 border-red-200'
+      default: return 'bg-yellow-100 text-yellow-800 border-yellow-200'
+    }
+  }
+
   const clearFilters = () => {
     setSearchTerm('')
-    setSentimentFilter('all')
+    setCauseAnalysisFilter('all')
+    setAspectTypeFilter('all')
     setBrandFilter('all')
     setRatingFilter('all')
     setVerifiedFilter('all')
@@ -188,17 +253,39 @@ export function ReviewPanel({
                 />
               </div>
 
-              {/* Sentiment Filter */}
-              {showFilters?.sentiment && (
-                <Select value={sentimentFilter} onValueChange={setSentimentFilter}>
+              {/* 🆕 Cause Analysis Filter */}
+              {showFilters?.causeAnalysis && (
+                <Select value={causeAnalysisFilter} onValueChange={setCauseAnalysisFilter}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Sentiment" />
+                    <SelectValue placeholder="Sentiments / Aspects" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Sentiments</SelectItem>
-                    <SelectItem value="positive">Positive</SelectItem>
-                    <SelectItem value="negative">Negative</SelectItem>
-                    <SelectItem value="neutral">Neutral</SelectItem>
+                    <SelectItem value="positive">Positive Aspects</SelectItem>
+                    <SelectItem value="negative">Negative Aspects</SelectItem>
+                    {loadingCategories ? (
+                      <SelectItem value="loading" disabled>Loading categories...</SelectItem>
+                    ) : (
+                      availableCauseCategories.map((cause) => (
+                        <SelectItem key={cause.category_id} value={cause.category_id.toString()}>
+                          {cause.category_name} ({cause.total_reviews})
+                        </SelectItem>
+                      ))
+                    )}
+                  </SelectContent>
+                </Select>
+              )}
+
+              {/* 🆕 Aspect Type Filter - Hidden but logic preserved */}
+              {false && showFilters?.aspectType && (
+                <Select value={aspectTypeFilter} onValueChange={setAspectTypeFilter}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Aspect Type" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Aspects</SelectItem>
+                    <SelectItem value="phy_perf">Physical & Performance</SelectItem>
+                    <SelectItem value="use">Use Cases</SelectItem>
                   </SelectContent>
                 </Select>
               )}
@@ -280,9 +367,16 @@ export function ReviewPanel({
               
               {/* Filter summary */}
               <div className="flex gap-2">
-                {sentimentFilter !== 'all' && (
-                  <Badge variant="outline" className={getSentimentBadgeColor(sentimentFilter)}>
-                    {sentimentFilter}
+                {causeAnalysisFilter !== 'all' && (
+                  <Badge variant="outline" className={getSentimentBadgeColor(causeAnalysisFilter)}>
+                    {causeAnalysisFilter === 'positive' ? 'Positive' : 
+                     causeAnalysisFilter === 'negative' ? 'Negative' : 
+                     availableCauseCategories.find(c => c.category_id.toString() === causeAnalysisFilter)?.category_name || causeAnalysisFilter}
+                  </Badge>
+                )}
+                {false && aspectTypeFilter !== 'all' && (
+                  <Badge variant="outline">
+                    {aspectTypeFilter === 'phy_perf' ? 'Physical & Performance' : 'Use Cases'}
                   </Badge>
                 )}
                 {brandFilter !== 'all' && (
@@ -337,12 +431,12 @@ export function ReviewPanel({
                               </div>
                             )}
                             
-                            {/* Sentiment Badge */}
+                            {/* Sentiment Badge
                             <Badge variant="outline" className={getSentimentBadgeColor(review.sentiment)}>
                               {review.sentiment}
                             </Badge>
                             
-                            {/* Brand */}
+                            {/* Brand *
                             {review.brand && (
                               <Badge variant="outline" className="bg-blue-50 text-blue-700">
                                 {review.brand}
@@ -363,6 +457,24 @@ export function ReviewPanel({
                       <p className="text-gray-700 leading-relaxed">
                         {review.text || 'No content available'}
                       </p>
+                      
+                      {/* 🆕 新增：显示aspects列表 */}
+                      {review.aspects && review.aspects.length > 0 && (
+                        <div className="mt-3 pt-3 border-t border-gray-100">
+                          <div className="text-sm text-gray-600 mb-2">Mentioned aspects:</div>
+                          <div className="flex flex-wrap gap-2">
+                            {review.aspects.map((aspect, index) => (
+                              <Badge 
+                                key={index} 
+                                variant="outline" 
+                                className={getAspectBadgeColor(aspect.sentiment)}
+                              >
+                                {aspect.description}
+                              </Badge>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </CardContent>
                   </Card>
                 ))}

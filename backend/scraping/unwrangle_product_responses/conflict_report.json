@@ -1,0 +1,133 @@
+{
+  "total_conflicts": 69,
+  "conflict_details": [
+    {
+      "column": "Brand",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "Color",
+      "conflict_count": 5,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B000UECHCA",
+        "B0B9ZJ2LPR",
+        "B0C4P4Z73C",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "Gauge",
+      "conflict_count": 10,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B000UECHCA",
+        "B0CJF83GTS",
+        "B0CPPWBGT8",
+        "B0C4GXNNBD",
+        "B0B3H27JG2",
+        "B0C6F4LL7W",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY"
+      ]
+    },
+    {
+      "column": "Material",
+      "conflict_count": 5,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0B9ZJ2LPR",
+        "B003J63662",
+        "B01MDKIL5N",
+        "B000BQT7EI"
+      ]
+    },
+    {
+      "column": "Terminal",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B09XFBRVYX"
+      ]
+    },
+    {
+      "column": "Voltage",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B083K5FQ3B",
+        "B0C4P4Z73C"
+      ]
+    },
+    {
+      "column": "certification",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "color",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0BZ42TFK2"
+      ]
+    },
+    {
+      "column": "conductor",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "gauge",
+      "conflict_count": 2,
+      "conflict_asins": [
+        "B0CX1J73YB",
+        "B0CPPWBGT8"
+      ]
+    },
+    {
+      "column": "length",
+      "conflict_count": 2,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07CWPTHYH"
+      ]
+    },
+    {
+      "column": "material",
+      "conflict_count": 8,
+      "conflict_asins": [
+        "B07P6GYHVP",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B0C6F4LL7W",
+        "B0CSPV6WJY",
+        "B0CBB4JFKY",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "variant_size",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07P6GYHVP",
+        "B0B3H27JG2"
+      ]
+    },
+    {
+      "column": "voltage",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B08J7WKV6W"
+      ]
+    }
+  ]
+}

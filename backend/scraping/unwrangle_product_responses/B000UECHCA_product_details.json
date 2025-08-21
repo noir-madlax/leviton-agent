@@ -1,0 +1,440 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B000UECHCA",
+  "result_count": 1,
+  "detail": {
+    "name": "Gardner Bender AML-200 2PK 6AWG 1/4\" HD Lug, 1/4-Inch, No Color",
+    "brand": "Gardner Bender",
+    "url": "https://www.amazon.com/product/dp/B000UECHCA",
+    "asin": "B000UECHCA",
+    "deal_badge": null,
+    "listing_id": "B000UECHCA",
+    "price": 9.26,
+    "price_reduced": 4.0,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (12) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B000UECHCA/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.6,
+    "total_ratings": 19,
+    "past_month_sales": null,
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Thursday, August 7. Order within 18 hrs 43 mins. Details"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {
+      "style_name": {
+        "name": "6 AWG ¼ inch. Stud",
+        "in_stock": true,
+        "asin": "B000UECHCA",
+        "url": "https://www.amazon.com/dp/B000UECHCA",
+        "selected": true
+      }
+    },
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61F-7bt2J0L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/41xWeJPmtLL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/61F-7bt2J0L._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "NoColor"
+      },
+      {
+        "name": "Gauge",
+        "value": "6.0"
+      },
+      {
+        "name": "ConnectorType",
+        "value": "Twist"
+      },
+      {
+        "name": "ContactMaterial",
+        "value": "Copper"
+      },
+      {
+        "name": "InsulationMaterial",
+        "value": "Non-Insulated"
+      }
+    ],
+    "features": [
+      "The Product Is Good To Use",
+      "The Product Is Highly Durable",
+      "Manufactured In China",
+      "From The Brand Name: Gardner Bender"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "Color",
+        "value": "No Color"
+      },
+      {
+        "name": "Gauge",
+        "value": "6.0"
+      },
+      {
+        "name": "Connector Type",
+        "value": "Twist"
+      },
+      {
+        "name": "Contact Material",
+        "value": "Copper"
+      },
+      {
+        "name": "Insulation Material",
+        "value": "Non-Insulated"
+      },
+      {
+        "name": "Stud Size",
+        "value": "1/4"
+      },
+      {
+        "name": "Material",
+        "value": "Steel"
+      },
+      {
+        "name": "Brand",
+        "value": "Gardner Bender"
+      },
+      {
+        "name": "Specification Met",
+        "value": "UL"
+      },
+      {
+        "name": "Temperature Rating",
+        "value": "221 degree celsius"
+      },
+      {
+        "name": "Product Dimensions",
+        "value": "4\"L x 1.63\"W x 0.5\"H"
+      },
+      {
+        "name": "Global Trade Identification Number",
+        "value": "00032076052874"
+      },
+      {
+        "name": "Unit Count",
+        "value": "1.0 Count"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "Gardner Bender"
+      },
+      {
+        "name": "UPC",
+        "value": "032076052874"
+      },
+      {
+        "name": "Part Number",
+        "value": "AML-200"
+      },
+      {
+        "name": "Item Weight",
+        "value": "0.48 ounces"
+      },
+      {
+        "name": "Item model number",
+        "value": "AML-200"
+      },
+      {
+        "name": "Is Discontinued By Manufacturer",
+        "value": "No"
+      },
+      {
+        "name": "Size",
+        "value": "1/4-Inch"
+      },
+      {
+        "name": "Style",
+        "value": "6 AWG  inch. Stud"
+      },
+      {
+        "name": "Voltage",
+        "value": "120 Volts"
+      },
+      {
+        "name": "Item Package Quantity",
+        "value": "1"
+      },
+      {
+        "name": "Measurement System",
+        "value": "Inch"
+      },
+      {
+        "name": "Included Components",
+        "value": "Rough Electrical^wire-terminals"
+      },
+      {
+        "name": "Batteries Included?",
+        "value": "No"
+      },
+      {
+        "name": "Batteries Required?",
+        "value": "No"
+      },
+      {
+        "name": "Description",
+        "value": "Warranty"
+      },
+      {
+        "name": "ASIN",
+        "value": "B000UECHCA"
+      },
+      {
+        "name": "Customer Reviews",
+        "value": "4.6  4.6 out of 5 stars    \n    19 ratings   \n\n\n 4.6 out of 5 stars"
+      },
+      {
+        "name": "Best Sellers Rank",
+        "value": "#636,922 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement) #4,234 in Electrical Wire"
+      },
+      {
+        "name": "Date First Available",
+        "value": "September 9, 2006"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 636922
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 4234
+      }
+    ],
+    "seller_name": "MaxWarehouse",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=A1T1R9Q3ML5YGI&asin=B000UECHCA&ref_=dp_merchant_link",
+    "variants": {
+      "style_name": [
+        {
+          "name": "1/0 AWG ⅜ inch. Stud",
+          "in_stock": true,
+          "asin": "B002YENDSG",
+          "url": "https://www.amazon.com/dp/B002YENDSG",
+          "selected": true
+        },
+        {
+          "name": "2 AWG ⅜ inch. Stud",
+          "in_stock": true,
+          "asin": "B002YEJLMS",
+          "url": "https://www.amazon.com/dp/B002YEJLMS",
+          "selected": true
+        },
+        {
+          "name": "2/0 AWG ⅜ inch. Stud",
+          "in_stock": true,
+          "asin": "B000H5R088",
+          "url": "https://www.amazon.com/dp/B000H5R088",
+          "selected": true
+        },
+        {
+          "name": "2 AWG 5/16 inch. Stud",
+          "in_stock": true,
+          "asin": "B0044USPFE",
+          "url": "https://www.amazon.com/dp/B0044USPFE",
+          "selected": true
+        },
+        {
+          "name": "4 AWG ⅜ inch. Stud",
+          "in_stock": true,
+          "asin": "B000BVZAYO",
+          "url": "https://www.amazon.com/dp/B000BVZAYO",
+          "selected": true
+        },
+        {
+          "name": "4 AWG 5/16 inch. Stud",
+          "in_stock": true,
+          "asin": "B002PNJ7RC",
+          "url": "https://www.amazon.com/dp/B002PNJ7RC",
+          "selected": true
+        },
+        {
+          "name": "6 AWG ¼ inch. Stud",
+          "in_stock": true,
+          "asin": "B000UECHCA",
+          "url": "https://www.amazon.com/dp/B000UECHCA",
+          "selected": true
+        },
+        {
+          "name": "6 AWG ⅜ inch. Stud",
+          "in_stock": true,
+          "asin": "B002YENDLI",
+          "url": "https://www.amazon.com/dp/B002YENDLI",
+          "selected": true
+        },
+        {
+          "name": "6 AWG 5/16 inch. Stud",
+          "in_stock": true,
+          "asin": "B000UELKC8",
+          "url": "https://www.amazon.com/dp/B000UELKC8",
+          "selected": true
+        }
+      ]
+    },
+    "rating_distribution": {
+      "5 star": "78%",
+      "4 star": "14%",
+      "2 star": "8%"
+    },
+    "reviews_summary": null,
+    "review_aspects": [],
+    "top_reviews": [
+      {
+        "reviewer_name": "alevans51",
+        "review_title": "SOLID.  GOES IN WELL WITYH HAMMER CRIMPER TOOL",
+        "rating": 5,
+        "review_text": "Fit.  Tinned with solder to ensure long life.  No corrosion.  Never buy bare copper terminals!  These are #1 grade.\nRead more",
+        "date": "2024-08-19",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 4 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Kevin Fisher",
+        "review_title": "Solid product",
+        "rating": 5,
+        "review_text": "I’ve used more expensive connectors in the past and there’s no difference. I’ll buy this brand from now on\nRead more",
+        "date": "2024-05-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 2/0 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Macgyver in PA",
+        "review_title": "Works as expected",
+        "rating": 4,
+        "review_text": "Worked great for my purposes, which was to add lugs onto grounding wires for electrical installation. They did what I expected they would do based on the description\nRead more",
+        "date": "2014-07-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 6 AWG ¼ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Thomas J. McGuire",
+        "review_title": "High Quality",
+        "rating": 5,
+        "review_text": "As I designed my 30 meter antenna I promised myself that there would not be any compromise components. After buying the best transmission line there was no way I was going to connect it to the base coil with flimsy aluminum lugs. The Gardner Bender AML-202 lugs filled the bill with pure copper, ease of soldering and robust construction.\nRead more",
+        "date": "2015-12-04",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 6 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "#1 Honest review",
+        "review_title": "Great connectors",
+        "rating": 5,
+        "review_text": "Exactly as described. I am using these with my solar battery backups with no problems at all.\nRead more",
+        "date": "2015-12-09",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 1/0 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Josh Stallings",
+        "review_title": "Five Stars",
+        "rating": 5,
+        "review_text": "No issues so far!\nRead more",
+        "date": "2015-12-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 6 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Jacob R. Tuft",
+        "review_title": "Not for welding wire",
+        "rating": 2,
+        "review_text": "This is for 4awg THHN wire which is significantly smaller than fine stranded welding wire.  It would be good to put this in the description.\nRead more",
+        "date": "2014-05-06",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 4 AWG 5/16 inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "robert s gregan",
+        "review_title": "marine grade",
+        "rating": 5,
+        "review_text": "well made and durable\nRead more",
+        "date": "2016-01-22",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [
+          "Style: 2/0 AWG ⅜ inch. Stud"
+        ],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": "Amazon.com Voluntary 30-Day Return Guarantee:You can return many items you have purchased within 30 days following delivery of the item to you. Our Voluntary 30-Day Return Guarantee does not affect your legal right of withdrawal in any way. You can find out more about the exceptions and conditionshere.",
+      "return_policy_link": "https://www.amazon.com/gp/help/customer/display.html/ref=orc_hp_s_retpol?ie=UTF8&nodeId=201819200",
+      "product_warranty": "Product Warranty:For warranty information about this product, pleaseclick here",
+      "product_warranty_link": "https://www.amazon.com/gp/feature.html/ref=dp_warranty_request_3P?docId=1002406021"
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 57.0
+}

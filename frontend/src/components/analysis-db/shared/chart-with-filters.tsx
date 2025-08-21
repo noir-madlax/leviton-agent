@@ -9,17 +9,33 @@ import { UniversalFilterComponent } from './universal-filter-component'
 import { useFilterState } from '../hooks/use-filter-state'
 import { useFilterCache } from '../hooks/use-filter-cache'
 import { useUnifiedFilterData } from '../hooks/use-unified-filter-data'
-
+// 定义 ChartFilterConfig 类型
 interface ChartFilterConfig {
-  visible_filters: Record<string, boolean>
-  default_values: Record<string, string[] | Record<string, string>>
-  extend_fields: Array<{
+  chart_id: string
+  chart_type: string
+  project_id: string
+  visible_filters: {
+    brands?: boolean
+    segments?: boolean
+    categories?: boolean
+    time_period?: boolean
+    extend_fields?: boolean
+  }
+  default_values: {
+    brands?: string | string[]
+    segments?: string | string[]
+    categories?: string | string[]
+    extend_fields?: Record<string, string>
+  }
+  extend_fields?: Array<{
     field_name: string
     display_name: string
-    field_type: string
-    filter_options: Record<string, string[] | string | boolean>
+    field_type: 'select' | 'boolean'
+    filter_options?: {
+      values?: string[]
+      default?: string
+    }
   }>
-  chart_type: string
 }
 
 // 全局 filter-config 缓存
@@ -100,7 +116,7 @@ export function ChartWithFilters({
         const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/projects/${projectId}/charts/${chartId}/filter-config`)
         
         if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`)
+          // throw new Error(`HTTP error! status: ${response.status}`)
         }
         
         const result = await response.json()
@@ -117,16 +133,20 @@ export function ChartWithFilters({
         setChartFilterConfig(result.config)
         console.log('🔧 [CHART-FILTER] Loaded and cached chart filter configuration:', chartId, result.config)
       } catch (error) {
-        console.error('Error loading chart filter config:', error)
+        console.error('Error loading chart filter config from API:', error)
+        console.log('🔧 [CHART-FILTER] Falling back to local configuration for:', chartId)
         
-        // 错误时的默认配置
+        // 使用默认配置作为fallback
+        console.log('🔧 [CHART-FILTER] Using default configuration for:', chartId)
         const defaultConfig: ChartFilterConfig = {
+          chart_id: chartId,
+          chart_type: chartId,
+          project_id: projectId || '',
           visible_filters: {},
           default_values: {},
-          extend_fields: [],
-          chart_type: chartId
+          extend_fields: []
         }
-        
+
         const errorCacheState: FilterConfigCacheState = {
           data: defaultConfig,
           loading: false,
@@ -134,7 +154,7 @@ export function ChartWithFilters({
           lastUpdated: Date.now()
         }
         filterConfigCacheStore.set(cacheKey, errorCacheState)
-        
+
         setChartFilterConfig(defaultConfig)
       } finally {
         setConfigLoading(false)
@@ -167,12 +187,12 @@ export function ChartWithFilters({
 
     // 处理预载数据中boolean字段的默认值 (如Smart Capability)
     if (chartFilterConfig.extend_fields) {
-      chartFilterConfig.extend_fields.forEach((fieldDef) => {
+      chartFilterConfig.extend_fields.forEach((fieldDef: any) => {
         const fieldName = fieldDef.field_name
         
         // 如果还没有设置默认值，且是boolean类型字段
         if (!defaultExtendFields[fieldName] && fieldDef.field_type === 'boolean') {
-          const preloadedOptions = filterOptions.extend_fields?.[fieldName]
+          const preloadedOptions = (filterOptions as any).extend_fields?.[fieldName]
           if (preloadedOptions && preloadedOptions.length > 0) {
             // 使用第一个预载选项作为默认值
             defaultExtendFields[fieldName] = preloadedOptions[0]
@@ -253,7 +273,7 @@ export function ChartWithFilters({
     const filters = []
 
     // Brand筛选器
-    if (chartFilterConfig.visible_filters.brands && filterOptions.brands?.length > 0) {
+    if (chartFilterConfig.visible_filters.brands && (filterOptions as any).brands?.length > 0) {
       const currentValue = finalFilters.brands?.[0] || ''
       const brandsDefault = chartFilterConfig.default_values.brands as string[]
       const defaultValue = Array.isArray(brandsDefault) ? (brandsDefault[0] || '') : (String(brandsDefault || ''))
@@ -267,7 +287,7 @@ export function ChartWithFilters({
             <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.brands.map((brand) => (
+              {(filterOptions as any).brands?.map((brand: string) => (
                 <SelectItem key={brand} value={brand}>
                   {brand}
                 </SelectItem>
@@ -279,7 +299,7 @@ export function ChartWithFilters({
     }
 
     // Segments筛选器
-    if (chartFilterConfig.visible_filters.segments && filterOptions.segments?.length > 0) {
+    if (chartFilterConfig.visible_filters.segments && (filterOptions as any).segments?.length > 0) {
       const currentValue = finalFilters.segments?.[0] || ''
       const segmentsDefault = chartFilterConfig.default_values.segments as string[]
       const defaultValue = Array.isArray(segmentsDefault) ? (segmentsDefault[0] || '') : (String(segmentsDefault || ''))
@@ -293,7 +313,7 @@ export function ChartWithFilters({
               <SelectValue placeholder="Select" />
             </SelectTrigger>
             <SelectContent>
-              {filterOptions.segments.map((segment) => (
+              {(filterOptions as any).segments?.map((segment: string) => (
                 <SelectItem key={segment} value={segment}>
                   {segment}
                 </SelectItem>
@@ -337,7 +357,7 @@ export function ChartWithFilters({
         const displayName = fieldDef.display_name
         
         // 检查该字段是否有可用的数据选项 - 关键修复！
-        const preloadedOptions = filterOptions?.extend_fields?.[fieldName]
+        const preloadedOptions = (filterOptions as any)?.extend_fields?.[fieldName]
         let hasValidOptions = false
         
         if (fieldDef.field_type === 'boolean') {

@@ -1,7 +1,8 @@
 "use client"
 
-import { useState, useCallback } from 'react'
-import { UnifiedChartCard, ChartData, ChartContainerState } from '../shared/types'
+import { useState, useCallback, useEffect } from 'react'
+import { UnifiedChartCard, ChartData, ChartContainerState, ChatConfig, ChartCardConfig } from '../shared/types'
+import { chatConfigService } from '@/lib/services/chat-config-service'
 import { 
   TrendingUp, 
   PieChart, 
@@ -12,54 +13,70 @@ import {
   Zap
 } from 'lucide-react'
 
-export function useChartManagement() {
+// Icon mapping for dynamic configuration
+const ICON_MAP: Record<string, any> = {
+  'Building': Building,
+  'Target': Target,
+  'MessageCircle': MessageCircle,
+  'Zap': Zap,
+  'TrendingUp': TrendingUp,
+  'PieChart': PieChart,
+  'Package': Package
+}
+
+interface UseChartManagementProps {
+  projectId?: string
+}
+
+export function useChartManagement(props?: UseChartManagementProps) {
   const [chartContainerState, setChartContainerState] = useState<ChartContainerState>('default')
   const [activeChartId, setActiveChartId] = useState<string | null>(null)
   const [dynamicCharts, setDynamicCharts] = useState<ChartData[]>([])
   
-  // 预设图表卡片 - 补充完整的7个图表
-  const presetCards: UnifiedChartCard[] = [
-    {
-      id: 'brand-analysis',
-      type: 'preset',
-      title: 'Market Analysis',
-      description: 'Market share and brand positioning analysis',
-      icon: Building,
-      tabKey: 'market-analysis',
-      isActive: false,
-      aiIntroduction: 'Market Analysis'
-    },
-    {
-      id: 'pricing-analysis',
-      type: 'preset',
-      title: 'Pricing Analysis',
-      description: 'Competitive pricing and distribution analysis',
-      icon: Target,
-      tabKey: 'pricing-analysis',
-      isActive: false,
-      aiIntroduction: 'Pricing Analysis'
-    },
-    {
-      id: 'review-insights',
-      type: 'preset',
-      title: 'Customer Reviews',
-      description: 'Pain points and satisfaction analysis',
-      icon: MessageCircle,
-      tabKey: 'review-insights',
-      isActive: false,
-      aiIntroduction: 'Customer Insights'
-    },
-    {
-      id: 'competitor-analysis',
-      type: 'preset',
-      title: 'Competitive Analysis',
-      description: 'Market positioning and competitive landscape',
-      icon: Zap,
-      tabKey: 'competitor-analysis',
-      isActive: false,
-      aiIntroduction: 'Competitive Product Analysis'
+  // New state for configuration management
+  const [chatConfig, setChatConfig] = useState<ChatConfig | null>(null)
+  const [configLoading, setConfigLoading] = useState(false)
+  const [configError, setConfigError] = useState<string | null>(null)
+
+  // Load configuration when projectId changes
+  useEffect(() => {
+    if (props?.projectId) {
+      loadChatConfig(props.projectId)
     }
-  ]
+  }, [props?.projectId])
+
+  const loadChatConfig = async (projectId: string) => {
+    try {
+      setConfigLoading(true)
+      setConfigError(null)
+      
+      const config = await chatConfigService.getChatConfig(projectId)
+      setChatConfig(config)
+      console.log(`🔧 Chat config loaded for project ${projectId}:`, config)
+      
+    } catch (error) {
+      console.error('Failed to load chat config:', error)
+      setConfigError(error instanceof Error ? error.message : 'Unknown error')
+      
+      // Set fallback config
+      setChatConfig(await chatConfigService.getChatConfig(projectId))
+    } finally {
+      setConfigLoading(false)
+    }
+  }
+
+  // Convert configuration to UnifiedChartCard format
+  const presetCards: UnifiedChartCard[] = chatConfig ? 
+    chatConfig.chart_cards.map((cardConfig: ChartCardConfig) => ({
+      id: cardConfig.card_id,
+      type: 'preset' as const,
+      title: cardConfig.card_config.title,
+      description: cardConfig.card_config.description,
+      icon: ICON_MAP[cardConfig.card_config.icon] || Building,
+      tabKey: cardConfig.card_config.tabKey,
+      isActive: false,
+      aiIntroduction: cardConfig.card_config.aiIntroduction
+    })) : []
 
   // 动态图表卡片
   const dynamicCards: UnifiedChartCard[] = dynamicCharts.map(chart => ({
@@ -115,10 +132,16 @@ export function useChartManagement() {
     dynamicCharts,
     allCards,
     
+    // 配置相关状态
+    chatConfig,
+    configLoading,
+    configError,
+    
     // 操作
     setChartContainerState,
     addDynamicChart,
     selectChart,
-    clearDynamicCharts
+    clearDynamicCharts,
+    loadChatConfig
   }
 } 

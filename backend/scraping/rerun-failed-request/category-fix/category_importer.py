@@ -56,12 +56,15 @@ class CategoryImporter:
                 logger.info("没有新的类别需要插入")
                 return 0
             
-            # 批量插入
-            result = self.supabase.table('amazon_categories').insert(new_categories).execute()
+            # 批量插入（使用upsert避免重复键冲突）
+            result = self.supabase.table('amazon_categories').upsert(
+                new_categories, 
+                on_conflict='category_id'
+            ).execute()
             
             if result.data:
                 inserted_count = len(result.data)
-                logger.info(f"成功插入 {inserted_count} 个类别")
+                logger.info(f"成功处理 {inserted_count} 个类别（新增或更新）")
                 return inserted_count
             else:
                 logger.error("插入类别失败")
@@ -72,14 +75,18 @@ class CategoryImporter:
             return 0
     
     def deduplicate_categories(self, categories: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-        """去重类别数据"""
-        seen = set()
-        unique_categories = []
+        """
+        去重类别数据，并确保 `categories` 字段的数据优先。
+        """
+        # 使用字典来去重，后来的会覆盖先来的
+        # `categories` 数组中的数据是在 `category_information` 之后添加到列表中的，
+        # 因此，不反转列表，就可以让 `categories` 的数据覆盖 `category_information` 的数据。
+        unique_categories_dict = {
+            cat['category_id']: cat 
+            for cat in categories  # 移除 reversed()
+            if cat.get('category_id')
+        }
         
-        for category in categories:
-            category_id = category['category_id']
-            if category_id not in seen:
-                seen.add(category_id)
-                unique_categories.append(category)
-        
-        return unique_categories 
+        unique_list = list(unique_categories_dict.values())
+        logger.debug(f"去重完成: {len(categories)} -> {len(unique_list)}")
+        return unique_list 

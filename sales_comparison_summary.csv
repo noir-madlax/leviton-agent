@@ -1,0 +1,7 @@
+metric,value
+units_accuracy,0.7496308587713462
+revenue_accuracy,0.7481915326933374
+price_accuracy,1.0076698714140557
+units_correlation,0.9431914806495626
+revenue_correlation,0.9363541282618566
+price_correlation,0.7212480064137019

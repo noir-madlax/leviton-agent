@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowLeft, CheckCircle } from "lucide-react"
 import Link from "next/link"
 import { ProtectedRoute } from "@/components/auth/protected-route"
+import { useCommonT, useProjectT } from "@/i18n/hooks"
 
 // Import the same components used in data-confirmation-tab.tsx
 const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
@@ -284,6 +285,10 @@ function ProjectProgressDisplay({ projectId, onAnalysisReady }: {
 export default function ProjectProgressPage() {
   const params = useParams()
   const projectId = params.id as string
+  
+  // 国际化hooks
+  const commonT = useCommonT()
+  const projectT = useProjectT()
 
   const handleAnalysisReady = (projectId: string) => {
     // This will be handled by the component itself
@@ -300,14 +305,14 @@ export default function ProjectProgressPage() {
                 <Link href="/">
                   <Button variant="ghost" size="sm">
                     <ArrowLeft className="h-4 w-4 mr-2" />
-                    Back to Home
+                    {commonT('backToHome')}
                   </Button>
                 </Link>
                 
                 <div className="flex flex-col">
-                  <h1 className="text-xl font-semibold">Project Progress</h1>
+                  <h1 className="text-xl font-semibold">{projectT('progressStatus')}</h1>
                   <p className="text-sm text-muted-foreground">
-                    Monitoring research project creation and analysis
+                    {projectT('monitoringResearchProject')}
                   </p>
                 </div>
               </div>

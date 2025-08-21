@@ -1,0 +1,331 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0BY7CMNDH",
+  "result_count": 1,
+  "detail": {
+    "name": "50 FEET 6/3 Type NM-B Copper. #6 AWG, 3 Conductor with Ground. Insulated Jacket Black.",
+    "brand": "ARIZONA ELECTRICAL SOLUTIONS",
+    "url": "https://www.amazon.com/product/dp/B0BY7CMNDH",
+    "asin": "B0BY7CMNDH",
+    "deal_badge": null,
+    "listing_id": "B0BY7CMNDH",
+    "price": 225,
+    "price_reduced": null,
+    "price_per_unit": null,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [],
+    "other_sellers": {
+      "text": "New (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0BY7CMNDH/ref=dp_olp_NEW_mbc?ie=UTF8&condition=NEW"
+    },
+    "rating": 4.7,
+    "total_ratings": 114,
+    "past_month_sales": "100+ boughtin past month",
+    "is_prime": false,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 6 hrs 56 mins. Join Prime"
+    ],
+    "delivery_zipcode": null,
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/61J47-4om+L._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/61J47-4om+L._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51zADZXj+ZL._SX342_SY445_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51Tv9zTPdHL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41EhZ4N6U-L._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Olw5IISeL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/419wFEJqxKL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51zADZXj+ZL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Black"
+      },
+      {
+        "name": "Brand",
+        "value": "ARIZONAELECTRICALSOLUTIONS"
+      },
+      {
+        "name": "Material",
+        "value": "PolyvinylChloride"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "7"
+      },
+      {
+        "name": "Gauge",
+        "value": "6.00"
+      }
+    ],
+    "features": [
+      "50 Feet of 6/3 Nonmetallic-Sheathed Cable. 600 Volt. Copper Conductors. Color-Coded Jacket. (Conductor Construction) ASTM B-3 and B-8 Federal Specification A-A-59544 National Electrical Code, NFPA 70 REACH/RoHS Compliant",
+      "NM-B cable is manufactured as 2, 3, or 4 conductor cable, with a bare ground wire. Copper conductors are annealed (soft)copper. Stranded conductors are compressed stranded. Conductor insulation is 90°C-rated polyvinyl chloride (PVC), nylon jacketed.",
+      "ASTM B-3 and B-8",
+      "50 Feet of 6/3 NM-B",
+      "National Electrical Code, NFPA 70",
+      "REACH/RoHS Compliant"
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "PackageDimensions",
+        "value": "12.52x12.44x5.47inches;17.92Pounds"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "March12,2023"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "ArizonaElectricalSolutions"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0BY7CMNDH"
+      },
+      {
+        "name": "CountryofOrigin",
+        "value": "USA"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#74,234inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#390inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.74.7outof5stars114ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 74234
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 390
+      }
+    ],
+    "seller_name": "Arizona Electrical Solutions LLC",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AHWBO74VUEVGD&asin=B0BY7CMNDH&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "88%",
+      "4 star": "6%",
+      "3 star": "3%",
+      "1 star": "3%"
+    },
+    "reviews_summary": "Customers find the electrical wire to be of high quality, with one noting its strong jacket, and they appreciate its functionality, with one mentioning it conducted electricity perfectly. They also consider it good value for money.",
+    "review_aspects": [
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "positive"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "KICKSTAND!",
+        "review_title": "Great quality for the money.",
+        "rating": 5,
+        "review_text": "Great quality wire! Nice price. Works great, hopefully stays that way for years.\nRead more",
+        "date": "2025-05-17",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dale Spradling",
+        "review_title": "Great Wire",
+        "rating": 5,
+        "review_text": "Perfect wire for the job.  Did exactly what it's supposed to do, and a great value too.\nRead more",
+        "date": "2025-05-08",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "alejandro",
+        "review_title": "Works great",
+        "rating": 5,
+        "review_text": "Workes great for a project i had\nRead more",
+        "date": "2025-06-27",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Review",
+        "review_title": "Very high quality and cheaper than the big box store",
+        "rating": 5,
+        "review_text": "This wire is excellent quality and on par, if not a bit better than the stuff at the big box stores and its slightly less expensive to boot.  This wire is chunky and really hard to move around bends but the jacket enclosing the wire is strong and took a lot of abuse from me as I was trying to get this around tight corners.  In terms of performance this cable remains within tolerances under a full load in terms of wire temp and the voltage drop over 50ft was also within tolerances.\nRead more",
+        "date": "2024-06-03",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "John K White",
+        "review_title": "Nice cable, very stiff.",
+        "rating": 5,
+        "review_text": "Nice cable, very stiff.  Cable lube is strongly recommended for pull through conduit, but with this it was easy to pull through multiple 90 degree bends.\nRead more",
+        "date": "2025-07-11",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "MasterTacoChief",
+        "review_title": "Legit copper wire",
+        "rating": 5,
+        "review_text": "This is the real stuff, heavy pure copper wire.  Heavy and hard to bend, but that's how it's supposed to be.\nRead more",
+        "date": "2024-12-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Peter Barna",
+        "review_title": "Great deal",
+        "rating": 5,
+        "review_text": "Much cheaper then box stores\nRead more",
+        "date": "2025-01-02",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Kris",
+        "review_title": "High quality product",
+        "rating": 5,
+        "review_text": "Worked great!\nRead more",
+        "date": "2024-10-25",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Dominic",
+        "review_title": "Good cable as described",
+        "rating": 5,
+        "review_text": "No complaints shipped fast, and good quality cable\nRead more",
+        "date": "2024-12-22",
+        "location": "Canada",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "whats_in_box": [
+      "BLACK/WHITE/RED #6 THHN CU WITH #10 BARE GROUND"
+    ],
+    "from_the_manufacturer": {
+      "text_content": [
+        "Product Description",
+        "High Quaility NM-B Cable at lower Prices than the Big Box Stores.",
+        "Are you ready to elevate your electrical projects to the next level? Look no further! We proudly present our 6/3 NM-B Cable, now available in a convenient 50-foot length. This is the perfect choice for homeowners, electricians, and contractors looking for reliable, efficient, and top-quality!"
+      ],
+      "images": [
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de027e4a-62b7-46bb-8977-7486ac4e6863.__CR0,288,1282,396_PT0_SX970_V1___.png",
+          "alt": "6/3 NM-B CABLE"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/de027e4a-62b7-46bb-8977-7486ac4e6863.__CR0,288,1282,396_PT0_SX970_V1___.png",
+          "alt": "6/3 NM-B CABLE"
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/3e841e30-7e4b-45d4-acee-171aa22b6fd6.__CR321,0,641,1282_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e6a9daae-2696-401b-8bab-1bc39e4a82ff.__CR321,0,641,1282_PT0_SX150_V1___.png",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/6ae5be17-4890-47cd-83f5-8b88151bddd3.__CR321,0,641,1282_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/2075d3c6-0d78-49c1-aed3-009d9f8c4b14.__CR321,0,641,1282_PT0_SX150_V1___.png",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/8828ee49-4462-4493-be26-f20293cbf8f8.__CR321,0,641,1282_PT0_SX150_V1___.jpg",
+          "alt": ""
+        },
+        {
+          "src": "https://m.media-amazon.com/images/S/aplus-media-library-service-media/256705e1-a04b-4244-9cf7-02a17275c329.__CR321,0,641,1282_PT0_SX150_V1___.png",
+          "alt": ""
+        }
+      ]
+    },
+    "small_business": true,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 39.0
+}

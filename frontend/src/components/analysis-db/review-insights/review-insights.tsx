@@ -1,16 +1,20 @@
 "use client"
 
-import { useState, useEffect } from "react"
+// import { useState } from "react"
 
-import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
-import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
-import { ChartWithFilters, ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
-import { BarChart3, Target } from "lucide-react"
+// import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-pain-points-bar"
+import { CustomerPainPointsChart } from "@/components/analysis-db/review-insights/customer-pain-points-chart"
+// import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
+import { CustomerDelightsChart } from "@/components/analysis-db/review-insights/customer-delights-chart"
+import { ChartHeader } from "@/components/analysis-db/shared/chart-with-filters"
+import { BarChart3 } from "lucide-react"
 import { ProjectFilters } from "@/components/analysis-db/types/filters"
-import { databaseService } from "@/components/analysis-db/data/database-service"
+// import { databaseService } from "@/components/analysis-db/data/database-service"
 
-import { CategoryFeedback, ProductType } from "@/components/analysis-db/types/analysis"
-import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
+// import { UseCaseFeedback } from "@/components/analysis-db/types/analysis"
+// import { UseCaseSentimentMatrix } from "@/components/analysis-db/charts/use-case-sentiment-matrix"
+import { UseCaseSentimentGrouped } from "@/components/analysis-db/review-insights/use-case-sentiment-grouped"
+import { useChartsT } from '@/i18n/hooks'
 
 interface ReviewInsightsProps {
   data: {
@@ -23,7 +27,9 @@ interface ReviewInsightsProps {
         impactedProducts: number
         type: 'Physical' | 'Performance' | 'Usability'
         categoryDefinition?: string
-        totalMentions?: number
+        totalReviews?: number
+        positiveReviews?: number
+        negativeReviews?: number
         negativeRate?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
@@ -33,7 +39,9 @@ interface ReviewInsightsProps {
         frequency: number
         satisfactionLevel: 'High' | 'Medium' | 'Low'
         categoryDefinition?: string
-        totalMentions?: number
+        totalReviews?: number
+        positiveReviews?: number
+        negativeReviews?: number
         positiveRate?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
@@ -41,23 +49,14 @@ interface ReviewInsightsProps {
         useCase: string
         productAttribute: string
         satisfactionRate: number
-        mentionCount: number
-        positiveCount: number
-        negativeCount: number
+        totalReviews?: number
+        positiveReviews: number
+        negativeReviews: number
         categoryDefinition?: string
         productCount?: number
         relatedDetailTexts?: string[] // Added for new mapping logic
       }>
-      underservedUseCases: Array<{
-        useCase: string
-        productAttribute: string
-        gapLevel: number
-        mentionCount: number
-        categoryDefinition?: string
-        productCount?: number
-        relatedDetailTexts?: string[] // Added for new mapping logic
-      }>
-      totalUseMentions: number
+
     }
     allReviewData: Record<string, Array<{
       id: string
@@ -77,428 +76,218 @@ interface ReviewInsightsProps {
 }
 
 export function ReviewInsights({ data, projectId, initialFilters }: ReviewInsightsProps) {
-  const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
-  const [reviewData, setReviewData] = useState<{ reviewsByCategory?: Record<string, unknown[]> } | null>(null)
-  const [isLoading, setIsLoading] = useState(false)
-  const [filteredData, setFilteredData] = useState<{
-    reviewInsights: typeof data.reviewInsights
-    allReviewData: typeof data.allReviewData
-  }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
-
-  // 处理过滤器变化
-  const handleFilterChange = async (filters: ProjectFilters) => {
-    if (!projectId) return
-    
-    setIsLoading(true)
-    try {
-      const [reviewInsights, allReviewData] = await Promise.all([
-        databaseService.getReviewInsightsDataByProject(
-          projectId,
-          filters.categories,
-          filters.brands,
-          filters.segments,
-          filters.extend_fields
-        ),
-        databaseService.getAllReviewDataByProject(
-          projectId,
-          filters.categories,
-          filters.brands,
-          filters.segments,
-          filters.extend_fields
-        )
-      ])
-      
-      setFilteredData({
-        reviewInsights,
-        allReviewData
-      })
-    } catch (error) {
-      console.error('Error fetching filtered data:', error)
-    } finally {
-      setIsLoading(false)
-    }
-  }
+  const chartsT = useChartsT()
+  // Debug logging for incoming data
+  console.log('🔍 [DEBUG-REVIEW-INSIGHTS] Incoming data:', {
+    hasReviewInsights: !!data.reviewInsights,
+    painPointsLength: data.reviewInsights?.painPoints?.length,
+    customerLikesLength: data.reviewInsights?.customerLikes?.length,
+    allUseCasesLength: data.reviewInsights?.allUseCases?.length,
+    samplePainPoint: data.reviewInsights?.painPoints?.[0],
+    sampleCustomerLike: data.reviewInsights?.customerLikes?.[0],
+    sampleUseCase: data.reviewInsights?.allUseCases?.[0]
+  })
   
-  useEffect(() => {
-    // Create the structure that charts expect using database data
-    // 需要将数据结构转换为图表组件期待的格式
-    const reviewDataForCharts = {
-      reviewsByCategory: {} as Record<string, unknown[]>
-    }
-    
-    // 如果有allReviewData，需要正确映射到类别名称
-    if (filteredData.allReviewData) {
-      // 首先直接使用allReviewData的现有映射
-      reviewDataForCharts.reviewsByCategory = { ...filteredData.allReviewData }
-      
-      // 为痛点数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.painPoints.forEach(painPoint => {
-        const aspectName = painPoint.aspect
-        if (!reviewDataForCharts.reviewsByCategory[aspectName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (painPoint.relatedDetailTexts && Array.isArray(painPoint.relatedDetailTexts)) {
-            painPoint.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && review.aspect.toLowerCase() === aspectName.toLowerCase()) {
-                  relatedReviews.push(review)
-                } else if (review.category && review.category.toLowerCase() === aspectName.toLowerCase()) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[aspectName] = relatedReviews
-          }
-        }
-      })
-      
-      // 为亮点数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.customerLikes.forEach(like => {
-        const featureName = like.feature
-        if (!reviewDataForCharts.reviewsByCategory[featureName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (like.relatedDetailTexts && Array.isArray(like.relatedDetailTexts)) {
-            like.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && review.aspect.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                } else if (review.category && review.category.toLowerCase() === featureName.toLowerCase()) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[featureName] = relatedReviews
-          }
-        }
-      })
-      
-      // 为Use Case数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.allUseCases.forEach(useCaseItem => {
-        const useCaseName = useCaseItem.useCase
-        
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-          }
-        }
-      })
-      
-      // 为underservedUseCases数据建立基于relatedDetailTexts的映射关系
-      filteredData.reviewInsights.underservedUseCases.forEach(useCaseItem => {
-        const useCaseName = useCaseItem.useCase
-        
-        if (!reviewDataForCharts.reviewsByCategory[useCaseName]) {
-          const relatedReviews: unknown[] = []
-          
-          // 使用新的relatedDetailTexts字段进行映射
-          if (useCaseItem.relatedDetailTexts && Array.isArray(useCaseItem.relatedDetailTexts)) {
-            useCaseItem.relatedDetailTexts.forEach(detailText => {
-              const reviews = filteredData.allReviewData[detailText] || []
-              relatedReviews.push(...reviews)
-            })
-          } else {
-            // fallback: 如果没有relatedDetailTexts，使用原有逻辑
-            Object.entries(filteredData.allReviewData).forEach(([, reviews]) => {
-              reviews.forEach(review => {
-                if (review.aspect && useCaseName.toLowerCase().includes(review.aspect.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (review.category && useCaseName.toLowerCase().includes(review.category.toLowerCase())) {
-                  relatedReviews.push(review)
-                } else if (useCaseItem.productAttribute && 
-                           (review.aspect?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()) ||
-                            review.category?.toLowerCase().includes(useCaseItem.productAttribute.toLowerCase()))) {
-                  relatedReviews.push(review)
-                }
-              })
-            })
-          }
-          
-          if (relatedReviews.length > 0) {
-            reviewDataForCharts.reviewsByCategory[useCaseName] = relatedReviews
-          }
-        }
-      })
-    }
-    
-    setReviewData(reviewDataForCharts)
-  }, [filteredData])
-  
-  // 将数据库数据转换为图表所需的格式，利用新的增强字段
-  const transformPainPointsData = (): { topNegativeCategories: CategoryFeedback[] } => {
-    const painPoints = filteredData.reviewInsights.painPoints
-    
-    // 转换为CategoryFeedback格式，使用实际的情感分析数据
-    const categoryFeedbacks: CategoryFeedback[] = painPoints
-      .sort((a, b) => b.frequency - a.frequency)
-      .slice(0, 15) // 取前15个
-      .map(item => {
-        // 使用新字段提供更精确的数据
-        const totalMentions = item.totalMentions || item.frequency
-        const negativeRate = item.negativeRate || item.severity
-        const positiveRate = 100 - negativeRate
-        const negativeCount = Math.floor(totalMentions * negativeRate / 100)
-        const positiveCount = totalMentions - negativeCount
-        
-        return {
-          category: item.aspect,
-          categoryType: item.type === 'Physical' ? 'Physical' : 'Performance',
-          mentions: totalMentions,
-          satisfactionRate: positiveRate,
-          negativeRate: negativeRate,
-          positiveCount: positiveCount,
-          negativeCount: negativeCount,
-          totalReviews: totalMentions,
-          averageRating: Math.max(1, 5 - (negativeRate / 20)), // 基于负面率计算平均评分
-          topNegativeAspects: [item.aspect],
-          topPositiveAspects: [],
-          topNegativeReasons: [
-            `${Math.round(negativeRate)}% negative sentiment`,
-            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-          ],
-          topPositiveReasons: [],
-          // Enhanced tooltip information
-          categoryDefinition: item.categoryDefinition,
-          impactedProducts: item.impactedProducts
-        }
-      })
-    
-    return {
-      topNegativeCategories: categoryFeedbacks
-    }
-  }
+  // const [selectedProductType, setSelectedProductType] = useState<ProductType>('dimmer')
+  // Local derived review mapping is no longer used; keep UI lean
+  // const [filteredData] = useState<{
+  //   reviewInsights: typeof data.reviewInsights
+  //   allReviewData: typeof data.allReviewData
+  // }>({ reviewInsights: data.reviewInsights, allReviewData: data.allReviewData })
 
-  const transformPositiveFeedbackData = (): { topPositiveCategories: CategoryFeedback[] } => {
-    const customerLikes = filteredData.reviewInsights.customerLikes
-    
-    // 转换为CategoryFeedback格式，使用实际的情感分析数据
-    const categoryFeedbacks: CategoryFeedback[] = customerLikes
-      .sort((a, b) => b.frequency - a.frequency)
-      .slice(0, 15) // 取前15个
-      .map(item => {
-        // 使用新字段提供更精确的数据
-        const totalMentions = item.totalMentions || item.frequency
-        const positiveRate = item.positiveRate || (item.satisfactionLevel === 'High' ? 90 : 
-                                                   item.satisfactionLevel === 'Medium' ? 70 : 50)
-        const negativeRate = 100 - positiveRate
-        const positiveCount = Math.floor(totalMentions * positiveRate / 100)
-        const negativeCount = totalMentions - positiveCount
-        
-        return {
-          category: item.feature,
-          categoryType: item.category === 'physical' ? 'Physical' : 'Performance',
-          mentions: totalMentions,
-          satisfactionRate: positiveRate,
-          negativeRate: negativeRate,
-          positiveCount: positiveCount,
-          negativeCount: negativeCount,
-          totalReviews: totalMentions,
-          averageRating: 3 + (positiveRate / 50), // 基于正面率计算评分
-          topNegativeAspects: [],
-          topPositiveAspects: [item.feature],
-          topNegativeReasons: [],
-          topPositiveReasons: [
-            `${Math.round(positiveRate)}% positive sentiment`,
-            `${item.satisfactionLevel} satisfaction level`,
-            ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-          ],
-          // Enhanced tooltip information
-          categoryDefinition: item.categoryDefinition
-        }
-      })
-    
-    return {
-      topPositiveCategories: categoryFeedbacks
-    }
-  }
+  // Use data from the main dashboard container instead of making duplicate API calls
 
-  // const transformUseCaseData = (): UseCaseFeedback[] => {
-  //   // 使用新的allUseCases数据而不是underservedUseCases
-  //   return filteredData.reviewInsights.allUseCases
-  //     .sort((a, b) => b.mentionCount - a.mentionCount)
-  //     .slice(0, 15) // 取前15个
-  //     .map(item => {
-  //       return {
-  //         useCase: item.useCase,
-  //         totalMentions: item.mentionCount,
-  //         positiveCount: item.positiveCount,
-  //         negativeCount: item.negativeCount,
-  //         satisfactionRate: item.satisfactionRate,
-  //         categoryType: 'Performance', // 默认为Performance
-  //         topSatisfactionReasons: item.satisfactionRate > 50 ? [
-  //           `Good coverage for ${item.useCase}`,
-  //           `${item.positiveCount} positive mentions`,
-  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-  //         ] : [],
-  //         topGapReasons: item.satisfactionRate <= 50 ? [
-  //           `${item.negativeCount} negative mentions`,
-  //           `${item.satisfactionRate.toFixed(1)}% satisfaction rate`,
-  //           ...(item.productCount ? [`Mentioned in ${item.productCount} products`] : []),
-  //           ...(item.categoryDefinition ? [`Context: ${item.categoryDefinition}`] : [])
-  //         ] : [],
-  //         relatedCategories: [item.productAttribute],
-  //         // Enhanced information
-  //         categoryDefinition: item.categoryDefinition,
-  //         productCount: item.productCount
-  //       }
-  //     })
+  // Transform dashboard data to chart format
+  // type PainPointRaw = {
+  //   category: string
+  //   type: 'Physical' | 'Performance' | 'Usability'
+  //   totalReviews?: number
+  //   frequency?: number
+  //   satisfactionRate?: number
+  //   negativeRate?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   categoryDefinition?: string
+  //   impactedProducts?: number
+  //   categoryId?: number
+  // }
+  // const transformPainPointsData = (rawData: PainPointRaw[]): CategoryFeedback[] => {
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     category: String(item.category),
+  //     categoryType: (item.type === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+  //     totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+  //     satisfactionRate: Number(item.satisfactionRate ?? (100 - (item.negativeRate ?? 0))),
+  //     negativeRate: Number(item.negativeRate ?? 0),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //
+  //     topNegativeAspects: [String(item.category)],
+  //     topPositiveAspects: [],
+  //     topNegativeReasons: [],
+  //     topPositiveReasons: [],
+  //     categoryDefinition: item.categoryDefinition,
+  //     impactedProducts: Number(item.impactedProducts ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-PAIN-POINTS] Data length:', transformed.length)
+  //   return transformed
   // }
 
-  const categoryPainPoints = transformPainPointsData()
-  const categoryPositiveFeedback = transformPositiveFeedbackData()
+  // type DelightRaw = {
+  //   category: string
+  //   type?: 'Physical' | 'Performance' | 'Usability'
+  //   totalReviews?: number
+  //   frequency?: number
+  //   positiveRate?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   categoryDefinition?: string
+  //   impactedProducts?: number
+  //   categoryId?: number
+  // }
+  // const transformDelightsData = (rawData: DelightRaw[]): CategoryFeedback[] => {
+  //   console.log('🔍 [DEBUG-DELIGHTS] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     category: String(item.category),
+  //     categoryType: ((item.type ?? 'Performance') === 'Physical' ? 'Physical' : 'Performance') as 'Physical' | 'Performance',
+  //     totalReviews: Number(item.totalReviews ?? item.frequency ?? 0),
+  //     satisfactionRate: Number(item.positiveRate ?? 70),
+  //     negativeRate: 100 - Number(item.positiveRate ?? 70),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //
+  //     topNegativeAspects: [],
+  //     topPositiveAspects: [String(item.category)],
+  //     topNegativeReasons: [],
+  //     topPositiveReasons: [],
+  //     categoryDefinition: item.categoryDefinition,
+  //     impactedProducts: Number(item.impactedProducts ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-DELIGHTS] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-DELIGHTS] Data length:', transformed.length)
+  //   return transformed
+  // }
+
+  // type UseCaseRaw = {
+  //   useCase: string
+  //   totalReviews?: number
+  //   positiveReviews?: number
+  //   negativeReviews?: number
+  //   satisfactionRate?: number
+  //   categoryDefinition?: string
+  //   productCount?: number
+  //   categoryId?: number
+  // }
+  // const transformUseCaseData = (rawData: UseCaseRaw[]): UseCaseFeedback[] => {
+  //   console.log('🔍 [DEBUG-USE-CASE] Raw data received:', rawData)
+  //   const transformed = rawData.map(item => ({
+  //     useCase: String(item.useCase),
+  //     totalReviews: Number(item.totalReviews ?? 0),
+  //     positiveReviews: Number(item.positiveReviews ?? 0),
+  //     negativeReviews: Number(item.negativeReviews ?? 0),
+  //     satisfactionRate: Number(item.satisfactionRate ?? 0),
+  //     categoryType: 'Performance' as const,
+  //     topSatisfactionReasons: [],
+  //     topGapReasons: [],
+  //     relatedCategories: [String(item.useCase)],
+  //     categoryDefinition: item.categoryDefinition,
+  //     productCount: Number(item.productCount ?? 1),
+  //     categoryId: item.categoryId
+  //   }))
+  //   console.log('🔍 [DEBUG-USE-CASE] Transformed data:', transformed)
+  //   console.log('🔍 [DEBUG-USE-CASE] Data length:', transformed.length)
+  //   return transformed
+  // }
+
+
+
+
+
+  // 处理过滤器变化
+  // const handleFilterChange = async (filters: ProjectFilters) => {
+  //   if (!projectId) return
+  //   try {
+  //     const [reviewInsights, allReviewData] = await Promise.all([
+  //       databaseService.getReviewInsightsDataByProject(
+  //         projectId,
+  //         filters.categories,
+  //         filters.brands,
+  //         filters.segments,
+  //         filters.extend_fields
+  //       ),
+  //       databaseService.getAllReviewDataByProject(
+  //         projectId,
+  //         filters.categories,
+  //         filters.brands,
+  //         filters.segments,
+  //         filters.extend_fields
+  //       )
+  //     ])
+  //     setFilteredData({ reviewInsights, allReviewData })
+  //   } catch (error) {
+  //     console.error('Error fetching filtered data:', error)
+  //   }
+  // }
+
+  // Data is already loaded from the main dashboard container
+  // No need to fetch duplicate data on initialization
+
+  // Removed unused review mapping effect
+  
+  // 注释掉旧的痛点数据转换方法，现在使用新的 API 数据源
+  // const transformPainPointsData = (): { topNegativeCategories: CategoryFeedback[] } => {
+  //   // 旧的转换逻辑已被新的 fetchPainPointsData 方法替代
+  // }
+
+  // 注释掉旧的正面反馈数据转换方法，现在使用新的 API 数据源
+  // const transformPositiveFeedbackData = (): { topPositiveCategories: CategoryFeedback[] } => {
+  //   // 旧的转换逻辑已被新的 fetchDelightsData 方法替代
+  // }
+
+
+
+  // const categoryPainPoints = transformPainPointsData() // 注释掉旧的数据转换
+  // const categoryPositiveFeedback = transformPositiveFeedbackData() // 注释掉旧的数据转换
   // const useCases = transformUseCaseData() // Commented out as it's not used currently
 
-  const handleProductTypeChange = (productType: ProductType) => {
-    setSelectedProductType(productType)
-  }
+  // const handleProductTypeChange = (productType: ProductType) => {
+  //   setSelectedProductType(productType)
+  // }
 
   return (
     <div className="space-y-10">
 
       {/* 分类痛点分析 */}
       <section data-chart-id="customer-pain-points">
-        <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">
-          📊 Customer Pain Points
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-800 pl-0 mb-6">📊 {chartsT('customerReviews')}</h2>
        
         
-        <ChartWithFilters
-          chartId="customer-pain-points"
-          chartType="bar"
-          projectId={projectId || ''}
-          title="Top 10 Customer Pain Points"
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-           <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-           Bars are sorted by descending negative mentions left to right, calculated from the latest 40 reviews per product in selected categories.
-            </div>
-          {isLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">正在更新数据...</div>
-            </div>
-          ) : (
-            <CategoryPainPointsBar 
-              data={categoryPainPoints.topNegativeCategories} 
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
-            />
-          )}
-        </ChartWithFilters>
+        <CustomerPainPointsChart projectId={projectId || ''} initialFilters={initialFilters} />
       </section>
 
             {/* 分类正面反馈分析 */}
       <section data-chart-id="customer-delights">
         
         
-        <ChartWithFilters
-          chartId="customer-delights"
-          chartType="bar"
-          projectId={projectId || ''}
-          title="Top 10 Customer Delights"
-          projectFilters={initialFilters}
-          onFilterChange={handleFilterChange}
-        >
-            <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-            Bars are sorted by descending positive mentions left to right, calculated from the ~50 most recent reviews per product in selected categories.
-
-            </div>
-          {isLoading ? (
-            <div className="flex items-center justify-center p-8">
-              <div className="text-gray-500">Loading...</div>
-            </div>
-          ) : (
-            <CategoryPositiveFeedbackBar 
-              data={categoryPositiveFeedback.topPositiveCategories} 
-              productType={selectedProductType}
-              onProductTypeChange={handleProductTypeChange}
-              reviewData={reviewData || undefined}
-            />
-          )}
-        </ChartWithFilters>
+            <CustomerDelightsChart projectId={projectId || ''} initialFilters={initialFilters} />
       </section>
 
       {/* Use Case Sentiment Analysis */}
       <section data-chart-id="use-case-sentiment">
-        <ChartHeader title=" Use Case Sentiment Analysis" icon={BarChart3} />
-        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6">
-        Calculated from the ～50 most recent reviews per product in selected categories.
+        <ChartHeader title={chartsT('useCaseSentimentAnalysis')} icon={BarChart3} />
+        <div className="bg-blue-50 border-l-4 border-blue-600 p-4 mb-6 mt-6">
+        {chartsT('calculatedFromLatestReviews')}
+
 
             </div>
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mt-6">
-          <UseCaseSentimentMatrix 
-            data={filteredData.reviewInsights.allUseCases.map(item => ({
-              useCase: item.useCase,
-              totalMentions: item.mentionCount,
-              positiveCount: item.positiveCount,
-              negativeCount: item.negativeCount,
-              satisfactionRate: item.satisfactionRate,
-              categoryType: 'Performance' as const,
-              topSatisfactionReasons: [],
-              topGapReasons: [],
-              relatedCategories: [item.productAttribute],
-              categoryDefinition: item.categoryDefinition,
-              productCount: item.productCount
-            }))} 
-            reviewData={reviewData as { reviewsByCategory?: Record<string, Array<{
-              id: string
-              productId: string
-              text: string
-              sentiment: 'positive' | 'negative' | 'neutral'
-              category: string
-              aspect: string
-              rating: number
-              verified: boolean
-              date: string
-              brand: string
-            }>> }}
-          />
+        <div className="bg-gray-50 rounded-xl shadow-sm border p-6 mt-6">
+            <UseCaseSentimentGrouped
+              projectId={projectId || ''}
+              initialFilters={initialFilters}
+            />
         </div>
       </section>
 

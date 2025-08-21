@@ -1,0 +1,869 @@
+{
+  "competitor_summary": {
+    "request": {
+      "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+      "selected_asins": [
+        "B00NG0ELL0",
+        "B0BVKZLT3B",
+        "B0BVKYKKRK",
+        "B0BSHKS26L",
+        "B085D8M2MR",
+        "B01EZV35QU"
+      ]
+    },
+    "response": {
+      "success": true,
+      "status_code": 200,
+      "data": {
+        "status": "success",
+        "message": null,
+        "timestamp": "2025-07-25T17:47:31.858626",
+        "data": {
+          "products": [
+            {
+              "asin": "B00NG0ELL0",
+              "product_title": "Leviton Decora Slide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, DSL06-1LZ, White with Ivory and Light Almond Faceplates 1 Pack Dimmer",
+              "rating": 5.0,
+              "brand": "Leviton",
+              "product_url": "https://www.amazon.com/Leviton-DSL06-1LZ-Universal-300-Watt-Incandescent/dp/B00NG0ELL0",
+              "list_price": null,
+              "unique_reviews_count": 45,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 64,
+                  "negative": 35,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Bathroom Lighting Integration": 4,
+                  "Physical Installation Process": 15,
+                  "Color and Surface Finish": 5,
+                  "Electrical Capacity": 1,
+                  "Multi Light and Bulb Compatibility": 5,
+                  "Kitchen Lighting Applications": 2,
+                  "Visual Design and Aesthetics": 5,
+                  "Light Output Quality": 7,
+                  "Product Lifespan and Durability": 3,
+                  "Core Device Functionality": 3,
+                  "Construction Materials and Build Quality": 5,
+                  "Control Responsiveness and Operation Feel": 2,
+                  "Electrical Performance and Stability": 2,
+                  "System Response Speed": 8,
+                  "Multiple Light Coordination": 1,
+                  "Light Dimming Control": 9,
+                  "Decorative and Accent Lighting": 2,
+                  "Switch Control Mechanisms": 3,
+                  "Physical Defects and Condition": 1,
+                  "Mechanical Durability and Reliability": 2,
+                  "Safety Performance": 1,
+                  "Electrical Circuit Operation": 1,
+                  "LED Lighting Control": 4,
+                  "Three Way Switch Configuration": 1,
+                  "Wire Connection Hardware": 2,
+                  "Hardware and Electrical Compatibility": 1,
+                  "Operational Sound Characteristics": 2,
+                  "Ambiance and Mood Lighting": 1,
+                  "Advanced Programming Features": 1
+                }
+              }
+            },
+            {
+              "asin": "B0BVKZLT3B",
+              "product_title": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+              "rating": 5.0,
+              "brand": "Leviton",
+              "product_url": "https://www.amazon.com/Leviton-D215S-1RW-Required-Assistant-Wire-Free/dp/B0BVKZLT3B",
+              "list_price": 39.0,
+              "unique_reviews_count": 23,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 76,
+                  "negative": 17,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Smart Home System Integration": 12,
+                  "Three Way Switch Configuration": 1,
+                  "Smart Connectivity Features": 1,
+                  "Core Device Functionality": 9,
+                  "Bathroom Lighting Integration": 1,
+                  "Device Reliability and Consistency": 9,
+                  "Setup Process": 10,
+                  "Smart Home Platform Integration": 13,
+                  "Construction Materials and Build Quality": 2,
+                  "Remote Mobile Control": 1,
+                  "Multiple Light Coordination": 1,
+                  "Advanced Programming Features": 7,
+                  "Dimensions": 3,
+                  "Electrical Wiring Requirements": 3,
+                  "Electrical Installation Scenarios": 1,
+                  "Visual Design and Aesthetics": 1,
+                  "Physical Installation Process": 3,
+                  "Voice Control Integration": 3,
+                  "Ambiance and Mood Lighting": 1,
+                  "Product Lifespan and Durability": 4,
+                  "Mechanical Durability and Reliability": 1,
+                  "Construction and Renovation Integration": 1,
+                  "Safety Performance": 1,
+                  "User Interface Learning": 1,
+                  "Backup Operation": 1,
+                  "Device Configuration and Customization": 1,
+                  "Accessibility Features": 1
+                }
+              }
+            },
+            {
+              "asin": "B0BVKYKKRK",
+              "product_title": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-1RW, White",
+              "rating": 5.0,
+              "brand": "Leviton",
+              "product_url": "https://www.amazon.com/dp/B0BVKYKKRK?th=1&psc=1",
+              "list_price": null,
+              "unique_reviews_count": 23,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 58,
+                  "negative": 5,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Device Reliability and Consistency": 1,
+                  "Smart Home System Integration": 8,
+                  "Physical Installation Process": 10,
+                  "Control Responsiveness and Operation Feel": 1,
+                  "Light Dimming Control": 4,
+                  "Construction Materials and Build Quality": 4,
+                  "Visual Design and Aesthetics": 1,
+                  "Accessibility Features": 1,
+                  "Core Device Functionality": 3,
+                  "Network Connection Stability": 2,
+                  "Device Configuration and Customization": 4,
+                  "Physical Button and Interface Response": 1,
+                  "Dimensions": 1,
+                  "LED Lighting Control": 1,
+                  "Voice Control Integration": 4,
+                  "Light Output Quality": 1,
+                  "Electrical Wiring Requirements": 3,
+                  "Construction and Renovation Integration": 2,
+                  "Wire Connection Hardware": 1,
+                  "Electrical Wiring Alternatives": 1,
+                  "Color and Surface Finish": 2,
+                  "Switch Hardware Replacement": 1,
+                  "Room Specific Applications": 1,
+                  "Smart Home Platform Integration": 3,
+                  "Outdoor Area Lighting": 1,
+                  "Ambiance and Mood Lighting": 1
+                }
+              }
+            },
+            {
+              "asin": "B0BSHKS26L",
+              "product_title": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White White 1 Pack Diva Smart Dimmer Switch w/Wallplate",
+              "rating": 5.0,
+              "brand": "Lutron",
+              "product_url": "https://www.amazon.com/Lutron-Wallplate-Lighting-Required-DVRFW-6L-WH/dp/B0BSHKS26L",
+              "list_price": null,
+              "unique_reviews_count": 27,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 123,
+                  "negative": 17,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Smart Home System Integration": 8,
+                  "Smart Home Platform Integration": 7,
+                  "Device Reliability and Consistency": 6,
+                  "Hardware and Electrical Compatibility": 9,
+                  "LED Visual Indicators": 6,
+                  "Advanced Programming Features": 4,
+                  "Physical Installation Process": 11,
+                  "Remote Mobile Control": 5,
+                  "Visual Design and Feedback": 2,
+                  "Structural Design Configuration": 3,
+                  "Control Responsiveness and Operation Feel": 2,
+                  "Light Dimming Control": 10,
+                  "Switch Hardware Replacement": 3,
+                  "Visual Design and Aesthetics": 9,
+                  "LED Lighting Control": 2,
+                  "Switch Control Mechanisms": 11,
+                  "Package Contents and Included Accessories": 1,
+                  "Installation Mounting Hardware": 2,
+                  "Ambiance and Mood Lighting": 3,
+                  "Large Scale Installation Projects": 1,
+                  "Device Configuration and Customization": 1,
+                  "Multiple Light Coordination": 1,
+                  "Core Device Functionality": 2,
+                  "Network Connection Stability": 3,
+                  "Three Way Switch Configuration": 8,
+                  "Electrical Wiring Requirements": 2,
+                  "Product Lifespan and Durability": 2,
+                  "Wireless Range and Remote Operation": 1,
+                  "Physical Button and Interface Response": 4,
+                  "Mechanical Durability and Reliability": 1,
+                  "Room Specific Applications": 2,
+                  "Cover Plates and Faceplates": 5,
+                  "Wire Connection Hardware": 1,
+                  "Memory Retention and Settings": 1,
+                  "Dimensions": 1
+                }
+              }
+            },
+            {
+              "asin": "B085D8M2MR",
+              "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, DVCL-153P-WH, White (2-Pack) White 2 Pack Diva Dimmer",
+              "rating": 5.0,
+              "brand": "Lutron",
+              "product_url": "https://www.amazon.com/Lutron-DVCL-153P-2-WH-Incandescent-Single-Pole-DVCL-153P-WH/dp/B085D8M2MR",
+              "list_price": null,
+              "unique_reviews_count": 27,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 44,
+                  "negative": 29,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Construction and Renovation Integration": 2,
+                  "Visual Design and Aesthetics": 5,
+                  "Physical Installation Process": 7,
+                  "Device Reliability and Consistency": 1,
+                  "Light Dimming Control": 6,
+                  "LED Lighting Control": 6,
+                  "Construction Materials and Build Quality": 4,
+                  "Electrical Performance and Stability": 2,
+                  "Electrical Installation Scenarios": 3,
+                  "Electrical Circuit Operation": 1,
+                  "Switch Control Mechanisms": 3,
+                  "Hardware and Electrical Compatibility": 3,
+                  "Device Configuration and Customization": 1,
+                  "Multi Light and Bulb Compatibility": 1,
+                  "Installation Mounting Hardware": 4,
+                  "Product Lifespan and Durability": 1,
+                  "Physical Design and Durability": 2,
+                  "Control Responsiveness and Operation Feel": 4,
+                  "Core Device Functionality": 7,
+                  "Operating Sound Level": 2,
+                  "Electrical Wiring Requirements": 1,
+                  "Switch Hardware Replacement": 2,
+                  "Three Way Switch Configuration": 1,
+                  "Physical Button and Interface Response": 1,
+                  "Dimensions": 2,
+                  "Room Specific Applications": 1
+                }
+              }
+            },
+            {
+              "asin": "B01EZV35QU",
+              "product_title": "Kasa Smart Light Switch HS200, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required , White, HS200 White Single Pole",
+              "rating": 5.0,
+              "brand": "Kasa Smart",
+              "product_url": "https://www.amazon.com/Switch-HS200-Neutral-Certified-Required/dp/B01EZV35QU",
+              "list_price": 12.98,
+              "unique_reviews_count": 45,
+              "additional_metrics": {
+                "sentiment_distribution": {
+                  "positive": 56,
+                  "negative": 41,
+                  "neutral": 0
+                },
+                "category_counts": {
+                  "Core Device Functionality": 16,
+                  "Physical Installation Process": 11,
+                  "Outdoor Area Lighting": 11,
+                  "Product Lifespan and Durability": 11,
+                  "Smart Home System Integration": 8,
+                  "System Recovery and Failure Handling": 2,
+                  "Fan Control Applications": 3,
+                  "Operational Sound Characteristics": 1,
+                  "Remote Mobile Control": 2,
+                  "Visual Design and Aesthetics": 5,
+                  "Dimensions": 4,
+                  "Advanced Integration Features": 1,
+                  "Network Connection Stability": 6,
+                  "Control Responsiveness and Operation Feel": 1,
+                  "Bedroom Lighting Management": 1,
+                  "Voice Control Integration": 6,
+                  "LED Visual Indicators": 2,
+                  "Smart Home Platform Integration": 2,
+                  "Wire Connection Hardware": 1,
+                  "Device Reliability and Consistency": 1,
+                  "Large Scale Installation Projects": 1,
+                  "Bathroom Lighting Integration": 1
+                }
+              }
+            }
+          ],
+          "total_products": 6,
+          "selected_asins": [
+            "B00NG0ELL0",
+            "B0BVKZLT3B",
+            "B0BVKYKKRK",
+            "B0BSHKS26L",
+            "B085D8M2MR",
+            "B01EZV35QU"
+          ]
+        }
+      }
+    }
+  },
+  "competitor_matrix_view": {
+    "request": {
+      "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+      "selected_asins": [
+        "B00NG0ELL0",
+        "B0BVKZLT3B",
+        "B0BVKYKKRK"
+      ],
+      "aspect_type": "phy_perf",
+      "filter": {
+        "sort_by": "mentions",
+        "sort_direction": "desc",
+        "max_categories": 5,
+        "min_mentions": 3
+      }
+    },
+    "response": {
+      "success": true,
+      "status_code": 200,
+      "data": {
+        "status": "success",
+        "message": null,
+        "timestamp": "2025-07-25T17:47:32.151492",
+        "data": {
+          "aspect_categories": [
+            {
+              "category_id": 12499,
+              "category_name": "Physical Installation Process",
+              "definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting"
+            },
+            {
+              "category_id": 12498,
+              "category_name": "Smart Home System Integration",
+              "definition": "Ability to connect and work with smart home systems, voice assistants, and wireless networks, e.g. WiFi connection, Alexa linking, hub requirements, Google Assistant compatibility, voice assistant integration, Lutron system pairing, app control"
+            },
+            {
+              "category_id": 12515,
+              "category_name": "Core Device Functionality",
+              "definition": "Basic operational performance and primary feature execution of the product, including switching operations and intended function delivery, e.g. turning on/off, working as described, general working condition, switching capability, complete failure"
+            },
+            {
+              "category_id": 12513,
+              "category_name": "Light Dimming Control",
+              "definition": "How the device manages dimming functionality, brightness levels, and dimming transitions, e.g. dimming compatibility, brightness adjustment precision, fade speed control, non-linear dimming curves, maintaining low settings, brightness transition patterns"
+            },
+            {
+              "category_id": 12455,
+              "category_name": "Construction Materials and Build Quality",
+              "definition": "Physical materials, build composition, structural integrity, and overall manufacturing quality of device components, e.g. plastic construction, polycarbonate materials, solidly built, thin and brittle plastic, construction quality, good quality material used in construction, quality hardware"
+            }
+          ],
+          "product_aspect_data": [
+            {
+              "asin": "B00NG0ELL0",
+              "aspect_data": [
+                {
+                  "category_pk": 12499,
+                  "mentions": 15,
+                  "reviews": 15,
+                  "sentiment_counts": {
+                    "positive": 14,
+                    "negative": 1,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12515,
+                  "mentions": 3,
+                  "reviews": 3,
+                  "sentiment_counts": {
+                    "positive": 3,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12455,
+                  "mentions": 5,
+                  "reviews": 5,
+                  "sentiment_counts": {
+                    "positive": 5,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12513,
+                  "mentions": 9,
+                  "reviews": 8,
+                  "sentiment_counts": {
+                    "positive": 7,
+                    "negative": 2,
+                    "neutral": 0
+                  }
+                }
+              ]
+            },
+            {
+              "asin": "B0BVKYKKRK",
+              "aspect_data": [
+                {
+                  "category_pk": 12498,
+                  "mentions": 8,
+                  "reviews": 8,
+                  "sentiment_counts": {
+                    "positive": 6,
+                    "negative": 2,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12499,
+                  "mentions": 10,
+                  "reviews": 9,
+                  "sentiment_counts": {
+                    "positive": 10,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12513,
+                  "mentions": 4,
+                  "reviews": 3,
+                  "sentiment_counts": {
+                    "positive": 4,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12455,
+                  "mentions": 4,
+                  "reviews": 4,
+                  "sentiment_counts": {
+                    "positive": 4,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12515,
+                  "mentions": 3,
+                  "reviews": 3,
+                  "sentiment_counts": {
+                    "positive": 3,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                }
+              ]
+            },
+            {
+              "asin": "B0BVKZLT3B",
+              "aspect_data": [
+                {
+                  "category_pk": 12498,
+                  "mentions": 12,
+                  "reviews": 11,
+                  "sentiment_counts": {
+                    "positive": 12,
+                    "negative": 0,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12515,
+                  "mentions": 9,
+                  "reviews": 9,
+                  "sentiment_counts": {
+                    "positive": 6,
+                    "negative": 3,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12455,
+                  "mentions": 2,
+                  "reviews": 2,
+                  "sentiment_counts": {
+                    "positive": 0,
+                    "negative": 2,
+                    "neutral": 0
+                  }
+                },
+                {
+                  "category_pk": 12499,
+                  "mentions": 3,
+                  "reviews": 2,
+                  "sentiment_counts": {
+                    "positive": 2,
+                    "negative": 1,
+                    "neutral": 0
+                  }
+                }
+              ]
+            }
+          ],
+          "selected_asins": [
+            "B00NG0ELL0",
+            "B0BVKZLT3B",
+            "B0BVKYKKRK"
+          ],
+          "aspect_type": "phy_perf",
+          "total_categories": 5
+        }
+      }
+    }
+  },
+  "review_retrieval": {
+    "request": {
+      "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+      "category_id": 12499,
+      "product_id": "B00NG0ELL0",
+      "limit": 5,
+      "offset": 0,
+      "sort_by": "date",
+      "sort_order": "desc"
+    },
+    "response": {
+      "success": true,
+      "status_code": 200,
+      "data": {
+        "status": "success",
+        "message": null,
+        "timestamp": "2025-07-25T17:47:32.364144",
+        "data": {
+          "reviews": [
+            {
+              "review_id": "1256445769",
+              "review_title": "Easy",
+              "review_text": "Install was simple and the dimmer works perfectly",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on September 10, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "1044738842",
+              "review_title": "Easy to Install & Supports Many Bulbs - Leviton Slide Dimmer for LED, Halogen & Incandescent Bulbs",
+              "review_text": "My previous dimmer would cause the LED bulbs in my 3 island lights to flicker. Standard dimmers all seem to be support for only 150 watts. This dimmer switch handles up to 300 watts and now my island lights never flicker when at the highest setting. The switch also comes with both white and almond color replaceable buttons so you can buy one dimmer to suite different color switches & plates in your home.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on October 25, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "918397679",
+              "review_title": "Works great. Install was easy.",
+              "review_text": "For someone who never changed a light switch, I found the setup very easy, using the directions and video. This is the second generation. The first one lasted about 6 years.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on October 15, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "194528609",
+              "review_title": "Perfect for 3-way application",
+              "review_text": "Easy to install, not as wide as some dimmers I've used. Replaced one switch in a 3-way application used for under cabinet kitchen LED lights.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on November 7, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "981860666",
+              "review_title": "Very Useful",
+              "review_text": "We have installed many of these dimmer switches - they are fabulous. Great when one of us needs to get up early and needs a light on -- they are quiet and can be dimmed down so as not to wake the other. Easy to install. Good value for the cost.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on May 29, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            }
+          ],
+          "total_reviews": 15,
+          "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+          "category_id": 12499,
+          "product_id": "B00NG0ELL0",
+          "category_info": {
+            "category_pk": 12499,
+            "name": "Physical Installation Process",
+            "definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+            "aspect_type": "perf",
+            "stage": "final"
+          },
+          "pagination": {
+            "limit": 5,
+            "offset": 0,
+            "has_more": true
+          }
+        }
+      }
+    }
+  },
+  "review_retrieval_valid_category": {
+    "request": {
+      "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+      "category_id": 12499,
+      "product_id": "B00NG0ELL0",
+      "limit": 10,
+      "offset": 0,
+      "sort_by": "date",
+      "sort_order": "desc"
+    },
+    "response": {
+      "success": true,
+      "status_code": 200,
+      "data": {
+        "status": "success",
+        "message": null,
+        "timestamp": "2025-07-25T17:47:32.593252",
+        "data": {
+          "reviews": [
+            {
+              "review_id": "1256445769",
+              "review_title": "Easy",
+              "review_text": "Install was simple and the dimmer works perfectly",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on September 10, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "1044738842",
+              "review_title": "Easy to Install & Supports Many Bulbs - Leviton Slide Dimmer for LED, Halogen & Incandescent Bulbs",
+              "review_text": "My previous dimmer would cause the LED bulbs in my 3 island lights to flicker. Standard dimmers all seem to be support for only 150 watts. This dimmer switch handles up to 300 watts and now my island lights never flicker when at the highest setting. The switch also comes with both white and almond color replaceable buttons so you can buy one dimmer to suite different color switches & plates in your home.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on October 25, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "918397679",
+              "review_title": "Works great. Install was easy.",
+              "review_text": "For someone who never changed a light switch, I found the setup very easy, using the directions and video. This is the second generation. The first one lasted about 6 years.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on October 15, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "194528609",
+              "review_title": "Perfect for 3-way application",
+              "review_text": "Easy to install, not as wide as some dimmers I've used. Replaced one switch in a 3-way application used for under cabinet kitchen LED lights.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on November 7, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "981860666",
+              "review_title": "Very Useful",
+              "review_text": "We have installed many of these dimmer switches - they are fabulous. Great when one of us needs to get up early and needs a light on -- they are quiet and can be dimmed down so as not to wake the other. Easy to install. Good value for the cost.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on May 29, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "335264644",
+              "review_title": "Good switch for retrofitting standard light switch",
+              "review_text": "Works as advertised. The programming was easy to set the minimum dimming point. Would buy again.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on March 28, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "1098383603",
+              "review_title": "Good purchase",
+              "review_text": "Worked as advertised, only took 15 minutes to install. Happy with purchase. It appears to be good quality.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on June 8, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Took 15 minutes to install",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "2121709763",
+              "review_title": "Wish The Almond & Ivory Were NOT Included",
+              "review_text": "Dimmer works fine once you figure out the wiring. It\u2019s not a \u201cjust connect them like they were connected to the old switch\u201d situation. It would also be nice if it only came with the white toggle and slide. Not a fan of paying for the almond and ivory \u201coptions\u201d I don\u2019t need or want, only to toss them in the trash.",
+              "rating": 3,
+              "verified": true,
+              "review_date": "Reviewed in the United States on June 7, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Not a simple wire-for-wire replacement",
+                  "sentiment": "-",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "877784477",
+              "review_title": "Perfect for my needs",
+              "review_text": "These dimmer switches worked perfectly for my needs. Easy installation, no flickering, and very responsive dimming ability.",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on June 11, 2025",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            },
+            {
+              "review_id": "1831262211",
+              "review_title": "Easy install",
+              "review_text": "Like the brand",
+              "rating": 5,
+              "verified": true,
+              "review_date": "Reviewed in the United States on July 25, 2024",
+              "aspects": [
+                {
+                  "aspect_description": "Installation: Easy installation",
+                  "sentiment": "+",
+                  "aspect_type": "perf"
+                }
+              ],
+              "category_name": "Physical Installation Process",
+              "category_definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+              "aspect_type": "perf"
+            }
+          ],
+          "total_reviews": 15,
+          "project_id": "d2c02b80-4c82-44cc-8093-56708a7883f7",
+          "category_id": 12499,
+          "product_id": "B00NG0ELL0",
+          "category_info": {
+            "category_pk": 12499,
+            "name": "Physical Installation Process",
+            "definition": "Ease and compatibility of physical mounting and electrical installation processes, e.g. fitting requirements, installation complexity, setup procedures, wire arrangement, wall box fitting",
+            "aspect_type": "perf",
+            "stage": "final"
+          },
+          "pagination": {
+            "limit": 10,
+            "offset": 0,
+            "has_more": true
+          }
+        }
+      }
+    }
+  }
+}

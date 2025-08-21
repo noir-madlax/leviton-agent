@@ -1,0 +1,1036 @@
+"""Market Analysis service for TAM and Market Share calculations."""
+
+import logging
+from typing import List, Dict, Any
+from datetime import datetime, timezone
+from collections import defaultdict
+
+from dashboard.charts.filters.asin_filter_service import get_filtered_asins
+from dashboard.charts.base_models import BaseRequestModel
+from dashboard.utils import TimeframeFieldMapper
+from dashboard.charts.base_service import ChartsBaseService
+from .models import (
+    TAMMarketShareRequest,
+    TAMMarketShareResponse,
+    TAMData,
+    CategoryMarketShare,
+    BrandShareData,
+    TAMMarketShareMetadata,
+    TopSegmentsByRevenueRequest,
+    TopSegmentsByRevenueResponse,
+    TopSegmentsByRevenueData,
+    TopSegmentsByRevenueMetadata,
+    SegmentRevenueData,
+    CategoryTopSegments,
+    PackageTypeDistributionRequest,
+    PackageTypeDistributionResponse,
+    PackageTypeDistributionData,
+    PackageTypeDistributionMetadata,
+    PackageTypeData,
+    CategoryPackageDistribution
+)
+
+logger = logging.getLogger(__name__)
+
+
+class TAMMarketShareService(ChartsBaseService):
+    """Service for Total Addressable Market and Market Share analysis."""
+
+    def __init__(self, supabase_client):
+        """Initialize the service with Supabase client."""
+        super().__init__(supabase_client)
+    
+    def get_tam_market_share_data(self, request: TAMMarketShareRequest) -> TAMMarketShareResponse:
+        """Get TAM and Market Share data with filtering.
+        
+        Args:
+            request: TAM Market Share request with project_id, filters, and timeframe
+            
+        Returns:
+            TAMMarketShareResponse: Complete TAM and market share analysis
+        """
+        try:
+            logger.info(f"🏢 Starting TAM Market Share analysis for project {request.project_id}")
+            
+            # Step 1: Use public get_filtered_asins method
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            
+            if not filtered_asins:
+                logger.warning(f"No ASINs found after filtering for project {request.project_id}")
+                return self._get_empty_response()
+            
+            logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
+            
+            # Step 2: Aggregate product data from monthly sales table with timeframe support
+            product_data = self._get_product_data_from_monthly_table(filtered_asins, request.timeframe)
+            
+            if not product_data:
+                logger.warning(f"No product data found for filtered ASINs")
+                return self._get_empty_response()
+            
+            # Step 3: Process data and calculate market shares
+            tam_data, category_market_shares = self._calculate_market_shares(product_data)
+            
+            # Step 4: Generate metadata
+            metadata = self._generate_metadata(
+                filtered_asins_count=len(filtered_asins),
+                product_data=product_data
+            )
+            
+            logger.info(f"✅ TAM Market Share analysis completed successfully")
+            
+            return TAMMarketShareResponse(
+                tam_data=tam_data,
+                market_share_by_category=category_market_shares,
+                metadata=metadata
+            )
+            
+        except Exception as e:
+            logger.error(f"❌ Error in TAM Market Share analysis: {e}", exc_info=True)
+            return self._get_empty_response()
+
+    def _get_product_data_from_monthly_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """Aggregate product data from product_sales_history_monthly within timeframe.
+        
+        Steps:
+          1) Query monthly sales aggregates with timeframe (reusing ChartsBaseService)
+          2) Join brand/category from product_wide_table
+          3) Return normalized product_data list with keys: platform_id, brand, category, revenue, volume
+        """
+        try:
+            # 1) Query monthly aggregates (already summed by ASIN)
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
+                return []
+
+            # 3) Join brand/category from wide table
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, brand, category')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+                .not_.is_('brand', 'null')
+                .not_.is_('category', 'null')
+            )
+            wide_result = wide_query.execute()
+            brand_category_map: Dict[str, Dict[str, str]] = {}
+            for row in (wide_result.data or []):
+                brand_category_map[row['platform_id']] = {
+                    'brand': row.get('brand'),
+                    'category': row.get('category')
+                }
+
+            # 4) Build normalized product_data
+            product_data: List[Dict[str, Any]] = []
+            for agg in aggregates:
+                asin = agg.platform_id
+                mapping = brand_category_map.get(asin)
+                if not mapping:
+                    continue
+                product_data.append({
+                    'platform_id': agg.platform_id,
+                    'brand': mapping['brand'],
+                    'category': mapping['category'],
+                    'revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
+                    'volume': int(getattr(agg, 'total_units_sold', 0) or 0)
+                })
+
+            logger.info(f"📈 Aggregated {len(product_data)} products from monthly sales table")
+            return product_data
+        except Exception as e:
+            logger.error(f"Error aggregating from product_sales_history_monthly: {e}")
+            return []
+    
+    def _calculate_market_shares(self, product_data: List[Dict[str, Any]]) -> tuple[TAMData, List[CategoryMarketShare]]:
+        """Calculate TAM and market shares by category.
+        
+        Args:
+            product_data: List of product data from wide table
+            
+        Returns:
+            Tuple of (TAMData, List[CategoryMarketShare])
+        """
+        # Group data by category and brand
+        category_brand_data = defaultdict(lambda: defaultdict(lambda: {
+            'revenue': 0.0,
+            'volume': 0,
+            'product_count': 0
+        }))
+        
+        total_revenue = 0.0
+        total_volume = 0
+        total_products = 0
+        
+        for product in product_data:
+            category = product.get('category', 'Unknown')
+            brand = product.get('brand', 'Unknown')
+            revenue = float(product.get('revenue', 0) or 0)
+            volume = int(product.get('volume', 0) or 0)
+            
+            # Aggregate by category and brand
+            category_brand_data[category][brand]['revenue'] += revenue
+            category_brand_data[category][brand]['volume'] += volume
+            category_brand_data[category][brand]['product_count'] += 1
+            
+            # Aggregate totals
+            total_revenue += revenue
+            total_volume += volume
+            total_products += 1
+        
+        # Create TAM data
+        tam_data = TAMData(
+            total_market_revenue=total_revenue,
+            total_market_volume=total_volume,
+            total_products=total_products,
+            currency="USD"
+        )
+        
+        # Create category market shares
+        category_market_shares = []
+        
+        for category, brand_data in category_brand_data.items():
+            # Calculate category totals
+            category_revenue = sum(data['revenue'] for data in brand_data.values())
+            category_volume = sum(data['volume'] for data in brand_data.values())
+            category_products = sum(data['product_count'] for data in brand_data.values())
+            
+            # Create brand shares for this category
+            brand_shares = []
+            for rank, (brand, data) in enumerate(
+                sorted(brand_data.items(), key=lambda x: x[1]['revenue'], reverse=True), 1
+            ):
+                market_share_pct = (data['revenue'] / category_revenue * 100) if category_revenue > 0 else 0
+                
+                brand_shares.append(BrandShareData(
+                    brand=brand,
+                    revenue=data['revenue'],
+                    volume=data['volume'],
+                    product_count=data['product_count'],
+                    market_share_percentage=round(market_share_pct, 2),
+                    rank=rank
+                ))
+            
+            category_market_shares.append(CategoryMarketShare(
+                category=category,
+                total_revenue=category_revenue,
+                total_volume=category_volume,
+                total_products=category_products,
+                brand_shares=brand_shares
+            ))
+        
+        # Sort categories by revenue (descending)
+        category_market_shares.sort(key=lambda x: x.total_revenue, reverse=True)
+        
+        return tam_data, category_market_shares
+    
+    def _generate_metadata(self, filtered_asins_count: int, product_data: List[Dict[str, Any]]) -> TAMMarketShareMetadata:
+        """Generate metadata for the analysis.
+        
+        Args:
+            filtered_asins_count: Number of ASINs after filtering
+            product_data: Product data used in analysis
+            
+        Returns:
+            TAMMarketShareMetadata
+        """
+        categories = set(p.get('category') for p in product_data if p.get('category'))
+        brands = set(p.get('brand') for p in product_data if p.get('brand'))
+        
+        return TAMMarketShareMetadata(
+            filtered_asins_count=filtered_asins_count,
+            total_categories=len(categories),
+            total_brands=len(brands),
+            calculation_timestamp=datetime.now(timezone.utc).isoformat()
+        )
+    
+    def _get_empty_response(self) -> TAMMarketShareResponse:
+        """Return empty response when no data is available."""
+        return TAMMarketShareResponse(
+            tam_data=TAMData(
+                total_market_revenue=0.0,
+                total_market_volume=0,
+                total_products=0,
+                currency="USD"
+            ),
+            market_share_by_category=[],
+            metadata=TAMMarketShareMetadata(
+                filtered_asins_count=0,
+                total_categories=0,
+                total_brands=0,
+                calculation_timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        )
+
+
+class TopSegmentsByRevenueService(ChartsBaseService):
+    """Service for Top 10 Segments by Revenue analysis."""
+
+    def __init__(self, supabase_client):
+        """Initialize the service with Supabase client."""
+        super().__init__(supabase_client)
+    
+    def get_top_segments_data(self, request: TopSegmentsByRevenueRequest) -> TopSegmentsByRevenueResponse:
+        """Get Top Segments data with filtering.
+        
+        Args:
+            request: Top Segments request with project_id, filters, and parameters
+            
+        Returns:
+            TopSegmentsByRevenueResponse: Complete Top Segments analysis
+        """
+        try:
+            logger.info(f"🏆 Starting Top Segments analysis for project {request.project_id}")
+            
+            # Step 1: Use public get_filtered_asins method
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            
+            if not filtered_asins:
+                logger.warning(f"No ASINs found after filtering for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
+            
+            logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
+            
+            # Step 2: Aggregate product data from monthly sales table with timeframe support
+            product_data = self._get_product_data_from_monthly_table(filtered_asins, request.timeframe)
+            
+            if not product_data:
+                logger.warning(f"No product data found for filtered ASINs")
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
+            
+            # Step 3: Get segment assignments
+            segment_assignments = self._get_segment_assignments(request.project_id, filtered_asins)
+            
+            if not segment_assignments:
+                logger.warning(f"No segment assignments found for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
+            
+            # Step 4: Aggregate data by category and segments
+            category_segment_data = self._aggregate_by_category_and_segments(
+                product_data, segment_assignments
+            )
+
+            # Step 5: Build per-category top segments and overall totals
+            response_data = self._build_category_top_segments_response(
+                category_segment_data,
+                request.metric_type,
+                request.limit
+            )
+
+            # Step 6: Generate metadata
+            metadata = self._generate_category_segments_metadata(
+                filtered_asins_count=len(filtered_asins),
+                category_segment_data=category_segment_data,
+                metric_type=request.metric_type,
+                timeframe=request.timeframe,
+                limit_per_category=request.limit,
+                returned=response_data.top_segments_by_category
+            )
+            
+            logger.info(f"✅ Top Segments analysis completed successfully")
+            
+            return TopSegmentsByRevenueResponse(data=response_data, metadata=metadata)
+            
+        except Exception as e:
+            logger.error(f"❌ Error in Top Segments analysis: {e}", exc_info=True)
+            return self._get_empty_response(request.metric_type, request.timeframe, request.limit)
+
+    def _get_product_data_from_monthly_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """Aggregate product data from product_sales_history_monthly within timeframe.
+        
+        Returns product_data with keys: platform_id, brand, category, revenue, volume, price
+        where price is derived as revenue/volume for the timeframe (fallback 0 when volume=0).
+        """
+        try:
+            # 1) Query monthly aggregates (already summed by ASIN)
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
+                return []
+
+            # 3) Join brand/category from wide table
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, brand, category')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+                .not_.is_('brand', 'null')
+                .not_.is_('category', 'null')
+            )
+            wide_result = wide_query.execute()
+            brand_category_map: Dict[str, Dict[str, str]] = {}
+            for row in (wide_result.data or []):
+                brand_category_map[row['platform_id']] = {
+                    'brand': row.get('brand'),
+                    'category': row.get('category')
+                }
+
+            # 4) Build normalized product_data (derive price)
+            product_data: List[Dict[str, Any]] = []
+            for agg in aggregates:
+                asin = agg.platform_id
+                mapping = brand_category_map.get(asin)
+                if not mapping:
+                    continue
+                revenue = float(getattr(agg, 'total_revenue', 0.0) or 0.0)
+                volume = int(getattr(agg, 'total_units_sold', 0) or 0)
+                price = (revenue / volume) if volume > 0 else 0.0
+                product_data.append({
+                    'platform_id': agg.platform_id,
+                    'brand': mapping['brand'],
+                    'category': mapping['category'],
+                    'revenue': revenue,
+                    'volume': volume,
+                    'price': price
+                })
+
+            logger.info(f"📈 Aggregated {len(product_data)} products from monthly sales table for Top Segments")
+            return product_data
+        except Exception as e:
+            logger.error(f"Error aggregating Top Segments data from monthly table: {e}")
+            return []
+
+    def _get_segment_assignments(self, project_id: str, asins: List[str]) -> Dict[str, str]:
+        """Get segment assignments mapping.
+        
+        Args:
+            project_id: Project ID
+            asins: List of ASINs to get segment assignments for
+            
+        Returns:
+            Dict mapping platform_id to segment_name
+        """
+        try:
+            if not asins:
+                return {}
+                
+            # 查询这些ASINs在product_wide_table中的记录，获取wide_table_id
+            wide_table_result = self.supabase.table('product_wide_table')\
+                .select('id, platform_id')\
+                .in_('platform_id', asins)\
+                .execute()
+            
+            if not wide_table_result.data:
+                logger.warning(f"No product_wide_table records found for project ASINs")
+                return {}
+            
+            # 建立platform_id到wide_table_id的映射
+            platform_to_wide_id = {item['platform_id']: item['id'] for item in wide_table_result.data}
+            wide_table_ids = list(platform_to_wide_id.values())
+            
+            # 方案1: 直接使用项目ID查询
+            assignments_result = self.supabase.table('product_segment_assignments')\
+                .select('product_id, segment_name')\
+                .eq('project_id', project_id)\
+                .in_('product_id', wide_table_ids)\
+                .neq('segment_name', None)\
+                .neq('segment_name', 'OUT_OF_SCOPE')\
+                .execute()
+            
+            if not assignments_result.data:
+                # 方案2: 尝试使用哈希ID方案作为回退
+                logger.info(f"No direct segment assignments found, trying hashed project IDs")
+                # 这里可以添加哈希ID查询逻辑，暂时简化
+                logger.warning(f"No segment assignments found for project {project_id}")
+                return {}
+            
+            # 建立wide_table_id到segment的映射
+            wide_id_to_segment = {item['product_id']: item['segment_name'] for item in assignments_result.data}
+            
+            # 转换为platform_id到segment的映射
+            platform_to_segment = {}
+            for platform_id, wide_id in platform_to_wide_id.items():
+                if wide_id in wide_id_to_segment:
+                    platform_to_segment[platform_id] = wide_id_to_segment[wide_id]
+            
+            logger.info(f"📋 Successfully mapped {len(platform_to_segment)} products to segments")
+            return platform_to_segment
+                
+        except Exception as e:
+            logger.error(f"Error getting segment assignments: {e}")
+            return {}
+
+    def _aggregate_by_category_and_segments(
+        self,
+        products: List[Dict[str, Any]],
+        segment_assignments: Dict[str, str]
+    ) -> Dict[str, Dict[str, Dict[str, Any]]]:
+        """按类别与细分市场双层聚合产品数据。
+
+        返回结构：
+        {
+          category: {
+            segment: {
+              revenue: float,
+              volume: int,
+              products: int,
+              total_price: float,    # 用于计算平均价格（按ASIN均值）
+              brand_revenue: { brand: float }
+            }
+          }
+        }
+        """
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]] = defaultdict(
+            lambda: defaultdict(lambda: {
+                'revenue': 0.0,
+                'volume': 0,
+                'products': 0,
+                'total_price': 0.0,
+                'brand_revenue': defaultdict(float)
+            })
+        )
+
+        for product in products:
+            platform_id = product['platform_id']
+            segment_name = segment_assignments.get(platform_id)
+            if not segment_name:
+                continue
+            category = product.get('category', 'Unknown')
+
+            entry = category_segment_data[category][segment_name]
+            entry['revenue'] += float(product.get('revenue', 0) or 0)
+            entry['volume'] += int(product.get('volume', 0) or 0)
+            entry['products'] += 1
+            entry['total_price'] += float(product.get('price', 0) or 0)
+
+            brand = product.get('brand', 'Unknown')
+            entry['brand_revenue'][brand] += float(product.get('revenue', 0) or 0)
+
+        return category_segment_data
+
+    def _build_category_top_segments_response(
+        self,
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]],
+        metric_type: str,
+        limit: int
+    ) -> TopSegmentsByRevenueData:
+        """根据每个类别内的排序与截断构建响应数据。"""
+
+        # 计算全局汇总
+        total_market_revenue = 0.0
+        total_market_volume = 0
+        total_products = 0
+
+        top_segments_by_category: List[CategoryTopSegments] = []
+
+        for category, segments in category_segment_data.items():
+            # 类目总计
+            category_total_revenue = sum(v['revenue'] for v in segments.values())
+            category_total_volume = sum(v['volume'] for v in segments.values())
+            category_total_products = sum(v['products'] for v in segments.values())
+
+            total_market_revenue += category_total_revenue
+            total_market_volume += category_total_volume
+            total_products += category_total_products
+
+            # 计算每个 segment 的排序依据
+            sortable = []
+            for seg_name, data in segments.items():
+                avg_price = data['total_price'] / data['products'] if data['products'] > 0 else 0.0
+                # 按品牌收入最高者作为 top_brand
+                top_brand = 'N/A'
+                if data['brand_revenue']:
+                    top_brand = max(data['brand_revenue'].items(), key=lambda x: x[1])[0]
+
+                sortable.append({
+                    'segment': seg_name,
+                    'revenue': data['revenue'],
+                    'volume': data['volume'],
+                    'products': data['products'],
+                    'avg_price': avg_price,
+                    'top_brand': top_brand
+                })
+
+            # 排序
+            key_name = 'revenue' if metric_type == 'revenue' else ('volume' if metric_type == 'volume' else 'products')
+            sortable.sort(key=lambda x: x[key_name], reverse=True)
+
+            # 截断并映射为模型，计算份额与排名
+            limited = []
+            for rank, seg in enumerate(sortable[:limit], start=1):
+                share_pct = (seg['revenue'] / category_total_revenue * 100) if category_total_revenue > 0 else 0.0
+                limited.append(SegmentRevenueData(
+                    segment=seg['segment'],
+                    revenue=seg['revenue'],
+                    volume=seg['volume'],
+                    products=seg['products'],
+                    market_share_percentage=round(share_pct, 2),
+                    rank=rank,
+                    avg_price=round(seg['avg_price'], 2),
+                    top_brand=seg['top_brand']
+                ))
+
+            top_segments_by_category.append(CategoryTopSegments(
+                category=category,
+                total_revenue=category_total_revenue,
+                total_volume=category_total_volume,
+                total_products=category_total_products,
+                segments=limited
+            ))
+
+        # 类目按总收入降序
+        top_segments_by_category.sort(key=lambda c: c.total_revenue, reverse=True)
+
+        return TopSegmentsByRevenueData(
+            top_segments_by_category=top_segments_by_category,
+            total_market_revenue=total_market_revenue,
+            total_market_volume=total_market_volume,
+            total_products=total_products,
+            currency="USD"
+        )
+
+    # 旧的全局 Top-N 份额计算逻辑已被按类别分组的实现取代
+
+    # 旧的扁平化响应格式方法已被 _build_category_top_segments_response 取代
+
+    def _generate_category_segments_metadata(
+        self,
+        filtered_asins_count: int,
+        category_segment_data: Dict[str, Dict[str, Dict[str, Any]]],
+        metric_type: str,
+        timeframe,
+        limit_per_category: int,
+        returned: List[CategoryTopSegments]
+    ) -> TopSegmentsByRevenueMetadata:
+        """生成按类别分组的元数据。"""
+        total_categories = len(category_segment_data)
+        # 去重后的 segment 总数
+        all_segments = set()
+        for segments in category_segment_data.values():
+            all_segments.update(segments.keys())
+        total_segments = len(all_segments)
+
+        returned_segments = sum(len(c.segments) for c in returned)
+
+        timeframe_used = 'year'
+        if timeframe and getattr(timeframe, 'period', None):
+            timeframe_used = timeframe.period
+
+        return TopSegmentsByRevenueMetadata(
+            filtered_asins_count=filtered_asins_count,
+            total_categories=total_categories,
+            total_segments=total_segments,
+            returned_segments=returned_segments,
+            metric_type=metric_type,
+            timeframe_used=timeframe_used,
+            limit_per_category=limit_per_category,
+            calculation_timestamp=datetime.now(timezone.utc).isoformat()
+        )
+    
+    def _get_empty_response(self, metric_type: str, timeframe=None, limit_per_category: int = 0) -> TopSegmentsByRevenueResponse:
+        """Return empty response when no data is available."""
+        return TopSegmentsByRevenueResponse(
+            data=TopSegmentsByRevenueData(
+                top_segments_by_category=[],
+                total_market_revenue=0.0,
+                total_market_volume=0,
+                total_products=0,
+                currency="USD"
+            ),
+            metadata=TopSegmentsByRevenueMetadata(
+                filtered_asins_count=0,
+                total_categories=0,
+                total_segments=0,
+                returned_segments=0,
+                metric_type=metric_type,
+                timeframe_used=(timeframe.period if timeframe and getattr(timeframe, 'period', None) else 'year'),
+                limit_per_category=limit_per_category,
+                calculation_timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        )
+
+
+class PackageTypeDistributionService(ChartsBaseService):
+    """Service for Package Type Distribution analysis."""
+
+    def __init__(self, supabase_client):
+        """Initialize the service with Supabase client."""
+        super().__init__(supabase_client)
+    
+    def get_package_type_distribution_data(
+        self, 
+        request: PackageTypeDistributionRequest
+    ) -> PackageTypeDistributionResponse:
+        """Get Package Type Distribution data with filtering.
+        
+        Args:
+            request: Package Type Distribution request with project_id, filters, and parameters
+            
+        Returns:
+            PackageTypeDistributionResponse: Complete Package Type Distribution analysis
+        """
+        try:
+            logger.info(f"📦 Starting Package Type Distribution analysis for project {request.project_id}")
+            
+            # Step 1: Use public get_filtered_asins method
+            filtered_asins = get_filtered_asins(self.supabase, request)
+            
+            if not filtered_asins:
+                logger.warning(f"No ASINs found after filtering for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            logger.info(f"📊 Found {len(filtered_asins)} ASINs after filtering")
+            
+            # Step 2: Get package type data from project_extend_data
+            package_type_assignments = self._get_package_type_assignments(
+                request.project_id, 
+                filtered_asins
+            )
+            
+            if not package_type_assignments:
+                logger.warning(f"No package type data found for project {request.project_id}")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            # Step 3: Get product data from wide table with timeframe support
+            product_data = self._get_product_data_from_wide_table(
+                list(package_type_assignments.keys()), 
+                request.timeframe
+            )
+            
+            if not product_data:
+                logger.warning(f"No product data found for filtered ASINs")
+                return self._get_empty_response(request.metric_type, request.timeframe)
+            
+            # Step 4: Calculate package type distributions
+            distribution_data = self._calculate_package_distributions(
+                product_data, 
+                package_type_assignments, 
+                request.metric_type
+            )
+            
+            # Step 5: Generate metadata
+            metadata = self._generate_metadata(
+                filtered_asins_count=len(filtered_asins),
+                distribution_data=distribution_data,
+                metric_type=request.metric_type,
+                timeframe=request.timeframe
+            )
+            
+            logger.info(f"✅ Package Type Distribution analysis completed successfully")
+            
+            return PackageTypeDistributionResponse(
+                data=distribution_data,
+                metadata=metadata
+            )
+            
+        except Exception as e:
+            logger.error(f"❌ Error in Package Type Distribution analysis: {e}", exc_info=True)
+            return self._get_empty_response(request.metric_type, request.timeframe)
+
+    def _get_package_type_assignments(
+        self, 
+        project_id: str, 
+        asins: List[str]
+    ) -> Dict[str, str]:
+        """Get package type assignments mapping.
+        
+        Args:
+            project_id: Project ID
+            asins: List of ASINs to get package type assignments for
+            filters: Additional filters
+            
+        Returns:
+            Dict mapping platform_id to package_type
+        """
+        try:
+            if not asins:
+                return {}
+                
+            # 从project_extend_data表获取package_type数据
+            extend_data_query = self.supabase.table('project_extend_data')\
+                .select('asins, extend')\
+                .eq('project_id', project_id)\
+                .in_('asins', asins)
+            
+            extend_result = extend_data_query.execute()
+            
+            if not extend_result.data:
+                logger.warning(f"No extend data found for project {project_id}")
+                return {}
+            
+            # 提取package_type映射
+            package_assignments = {}
+            for row in extend_result.data:
+                asin = row.get('asins')
+                extend = row.get('extend', {})
+                package_type = extend.get('package_type')
+                
+                if package_type and asin:
+                    # 将Multiple-X格式统一为Multiple
+                    if package_type.startswith('Multiple-'):
+                        package_type = 'Multiple'
+                    
+                    package_assignments[asin] = package_type
+            
+            logger.info(f"📋 Successfully mapped {len(package_assignments)} products to package types")
+            return package_assignments
+                
+        except Exception as e:
+            logger.error(f"Error getting package type assignments: {e}")
+            return {}
+
+    def _get_product_data_from_wide_table(self, asins: List[str], timeframe=None) -> List[Dict[str, Any]]:
+        """Get aggregated product data using monthly sales table, joined with wide table brand/category.
+
+        Returns product_data with keys: platform_id, brand, category, revenue, volume
+        """
+        try:
+            # 1) Query monthly aggregates by ASIN and timeframe
+            aggregates = self.query_monthly_sales_aggregate_with_timeframe(asins, timeframe)
+            if not aggregates:
+                return []
+
+            # 2) Join brand/category from wide table
+            wide_query = (
+                self.supabase
+                .table('product_wide_table')
+                .select('platform_id, brand, category')
+                .in_('platform_id', [a.platform_id for a in aggregates])
+                .eq('source', 'amazon')
+                .not_.is_('brand', 'null')
+                .not_.is_('category', 'null')
+            )
+            wide_result = wide_query.execute()
+
+            brand_category_map: Dict[str, Dict[str, str]] = {}
+            for row in (wide_result.data or []):
+                brand_category_map[row['platform_id']] = {
+                    'brand': row.get('brand'),
+                    'category': row.get('category')
+                }
+
+            # 3) Build normalized product_data
+            product_data: List[Dict[str, Any]] = []
+            for agg in aggregates:
+                mapping = brand_category_map.get(agg.platform_id)
+                if not mapping:
+                    continue
+                product_data.append({
+                    'platform_id': agg.platform_id,
+                    'brand': mapping['brand'],
+                    'category': mapping['category'],
+                    'revenue': float(getattr(agg, 'total_revenue', 0.0) or 0.0),
+                    'volume': int(getattr(agg, 'total_units_sold', 0) or 0)
+                })
+
+            logger.info(f"📈 Retrieved {len(product_data)} aggregated products using monthly sales table")
+            return product_data
+        except Exception as e:
+            logger.error(f"Error aggregating package type product data: {e}")
+            return []
+
+    def _calculate_package_distributions(
+        self,
+        product_data: List[Dict],
+        package_assignments: Dict[str, str],
+        metric_type: str
+    ) -> PackageTypeDistributionData:
+        """Calculate package type distributions.
+        
+        Args:
+            product_data: List of product data from wide table
+            package_assignments: Dict mapping platform_id to package_type
+            metric_type: Metric type for calculations ('revenue' or 'products')
+            
+        Returns:
+            PackageTypeDistributionData
+        """
+        from collections import defaultdict
+        
+        # Aggregate data by package type and category
+        package_category_data = defaultdict(lambda: defaultdict(lambda: {
+            'revenue': 0.0,
+            'volume': 0,
+            'product_count': 0
+        }))
+        
+        # Overall aggregation
+        overall_package_data = defaultdict(lambda: {
+            'revenue': 0.0,
+            'volume': 0,
+            'product_count': 0
+        })
+        
+        total_revenue = 0.0
+        total_volume = 0
+        total_products = 0
+        
+        for product in product_data:
+            platform_id = product['platform_id']
+            package_type = package_assignments.get(platform_id)
+            
+            if not package_type:
+                continue  # Skip products without package type assignment
+            
+            category = product.get('category', 'Unknown')
+            revenue = float(product.get('revenue', 0) or 0)
+            volume = int(product.get('volume', 0) or 0)
+            
+            # Aggregate by package type and category
+            package_category_data[category][package_type]['revenue'] += revenue
+            package_category_data[category][package_type]['volume'] += volume
+            package_category_data[category][package_type]['product_count'] += 1
+            
+            # Aggregate overall
+            overall_package_data[package_type]['revenue'] += revenue
+            overall_package_data[package_type]['volume'] += volume
+            overall_package_data[package_type]['product_count'] += 1
+            
+            # Total aggregation
+            total_revenue += revenue
+            total_volume += volume
+            total_products += 1
+        
+        # Calculate overall distribution
+        overall_distribution = self._format_package_type_data(
+            overall_package_data, metric_type
+        )
+        
+        # Calculate distribution by category
+        distribution_by_category = []
+        for category, package_types in package_category_data.items():
+            category_total_revenue = sum(data['revenue'] for data in package_types.values())
+            category_total_volume = sum(data['volume'] for data in package_types.values())
+            category_total_products = sum(data['product_count'] for data in package_types.values())
+            
+            package_types_formatted = self._format_package_type_data(
+                package_types, metric_type
+            )
+            
+            distribution_by_category.append(CategoryPackageDistribution(
+                category=category,
+                total_revenue=category_total_revenue,
+                total_volume=category_total_volume,
+                total_products=category_total_products,
+                package_types=package_types_formatted
+            ))
+        
+        # Sort categories by total revenue (descending)
+        distribution_by_category.sort(key=lambda x: x.total_revenue, reverse=True)
+        
+        return PackageTypeDistributionData(
+            overall_distribution=overall_distribution,
+            distribution_by_category=distribution_by_category,
+            total_market_revenue=total_revenue,
+            total_market_volume=total_volume,
+            total_products=total_products,
+            metric_type=metric_type,
+            currency="USD"
+        )
+
+    def _format_package_type_data(
+        self, 
+        package_data: Dict[str, Dict], 
+        metric_type: str
+    ) -> List[PackageTypeData]:
+        """Format package type data with percentages and ranking.
+        
+        Args:
+            package_data: Dict of package type data
+            metric_type: Metric type for calculations
+            
+        Returns:
+            List of formatted PackageTypeData
+        """
+        if not package_data:
+            return []
+        
+        # Calculate total for percentage calculation
+        if metric_type == "products":
+            total_metric_value = sum(data['product_count'] for data in package_data.values())
+        else:  # revenue
+            total_metric_value = sum(data['revenue'] for data in package_data.values())
+        
+        # Create formatted data
+        formatted_data = []
+        for package_type, data in package_data.items():
+            if metric_type == "products":
+                percentage = (data['product_count'] / total_metric_value * 100) if total_metric_value > 0 else 0
+            else:  # revenue
+                percentage = (data['revenue'] / total_metric_value * 100) if total_metric_value > 0 else 0
+            
+            formatted_data.append({
+                'package_type': package_type,
+                'revenue': data['revenue'],
+                'volume': data['volume'],
+                'product_count': data['product_count'],
+                'percentage': round(percentage, 2),
+                'sort_value': data['product_count'] if metric_type == "products" else data['revenue']
+            })
+        
+        # Sort by metric type and assign ranks
+        formatted_data.sort(key=lambda x: x['sort_value'], reverse=True)
+        
+        result = []
+        for rank, item in enumerate(formatted_data, 1):
+            result.append(PackageTypeData(
+                package_type=item['package_type'],
+                revenue=item['revenue'],
+                volume=item['volume'],
+                product_count=item['product_count'],
+                percentage=item['percentage'],
+                rank=rank
+            ))
+        
+        return result
+
+    def _generate_metadata(
+        self, 
+        filtered_asins_count: int, 
+        distribution_data: PackageTypeDistributionData,
+        metric_type: str,
+        timeframe
+    ) -> PackageTypeDistributionMetadata:
+        """Generate metadata for the analysis.
+        
+        Args:
+            filtered_asins_count: Number of ASINs after filtering
+            distribution_data: Package distribution data
+            metric_type: Metric type used
+            timeframe: Timeframe used
+            
+        Returns:
+            PackageTypeDistributionMetadata
+        """
+        timeframe_used = "year"  # default
+        if timeframe and timeframe.period:
+            timeframe_used = timeframe.period
+        
+        return PackageTypeDistributionMetadata(
+            filtered_asins_count=filtered_asins_count,
+            total_categories=len(distribution_data.distribution_by_category),
+            total_package_types=len(distribution_data.overall_distribution),
+            metric_type=metric_type,
+            timeframe_used=timeframe_used,
+            calculation_timestamp=datetime.now(timezone.utc).isoformat()
+        )
+    
+    def _get_empty_response(
+        self, 
+        metric_type: str, 
+        timeframe=None
+    ) -> PackageTypeDistributionResponse:
+        """Return empty response when no data is available."""
+        timeframe_used = "year"  # default
+        if timeframe and timeframe.period:
+            timeframe_used = timeframe.period
+            
+        return PackageTypeDistributionResponse(
+            data=PackageTypeDistributionData(
+                overall_distribution=[],
+                distribution_by_category=[],
+                total_market_revenue=0.0,
+                total_market_volume=0,
+                total_products=0,
+                metric_type=metric_type,
+                currency="USD"
+            ),
+            metadata=PackageTypeDistributionMetadata(
+                filtered_asins_count=0,
+                total_categories=0,
+                total_package_types=0,
+                metric_type=metric_type,
+                timeframe_used=timeframe_used,
+                calculation_timestamp=datetime.now(timezone.utc).isoformat()
+            )
+        )

@@ -1,0 +1,179 @@
+{
+  "total_conflicts": 103,
+  "conflict_details": [
+    {
+      "column": "certification",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "color",
+      "conflict_count": 16,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B000UECHCA",
+        "B0080404VS",
+        "B07T6LQSM2",
+        "B0B9ZJ2LPR",
+        "B0CPPWBGT8",
+        "B07CWPTHYH",
+        "B088RC5ZT3",
+        "B0CSD3KPX3",
+        "B0C4BBZMN6",
+        "B01ANZRXDI",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0BZ42TFK2",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "conductor",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "conductor_count",
+      "conflict_count": 9,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CPPWBGT8",
+        "B003J63662",
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B0CSPV6WJY",
+        "B0C4P4Z73C",
+        "B0C7MLQB5L",
+        "B01BEEL8GK"
+      ]
+    },
+    {
+      "column": "dimensions",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B014U90BAA"
+      ]
+    },
+    {
+      "column": "gauge",
+      "conflict_count": 25,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B0CX1J73YB",
+        "B000UECHCA",
+        "B09T6J7M8Y",
+        "B0080404VS",
+        "B0CJF83GTS",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B003J63662",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08V4L3H2H",
+        "B088RC5ZT3",
+        "B0C6F4LL7W",
+        "B000BQT7EI",
+        "B07DGD2PVF",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY",
+        "B01AV6QBYG",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "length",
+      "conflict_count": 2,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07CWPTHYH"
+      ]
+    },
+    {
+      "column": "material",
+      "conflict_count": 30,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CN9FNFZC",
+        "B09T6J7M8Y",
+        "B0CJF83GTS",
+        "B07T6LQSM2",
+        "B0B9ZJ2LPR",
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B003J63662",
+        "B0CSW2L7RC",
+        "B01MDKIL5N",
+        "B0C4GXNNBD",
+        "B07CWPTHYH",
+        "B0B3H27JG2",
+        "B08R7ZT3C7",
+        "B002RL9JAW",
+        "B088RC5ZT3",
+        "B0C6F4LL7W",
+        "B0BY7CMNDH",
+        "B0CSD3KPX3",
+        "B000BQT7EI",
+        "B0CSPV6WJY",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY",
+        "B08J7WKV6W",
+        "B00D49VGFM",
+        "B0C4P4Z73C",
+        "B0BZ42TFK2",
+        "B0154H7BLE",
+        "B0C7MLQB5L"
+      ]
+    },
+    {
+      "column": "package_weight",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B01MDKIL5N"
+      ]
+    },
+    {
+      "column": "termin",
+      "conflict_count": 1,
+      "conflict_asins": [
+        "B09XFBRVYX"
+      ]
+    },
+    {
+      "column": "variant_size",
+      "conflict_count": 3,
+      "conflict_asins": [
+        "B0CPPWBGT8",
+        "B07J4G6C6C",
+        "B0B3H27JG2"
+      ]
+    },
+    {
+      "column": "voltage",
+      "conflict_count": 12,
+      "conflict_asins": [
+        "B0B19HVHHZ",
+        "B0CSW2L7RC",
+        "B0C4GXNNBD",
+        "B002RL9JAW",
+        "B0C6F4LL7W",
+        "B07H9DN8SP",
+        "B09XFBRVYX",
+        "B0C4BBZMN6",
+        "B0CBB4JFKY",
+        "B08J7WKV6W",
+        "B0C4P4Z73C",
+        "B0C7MLQB5L"
+      ]
+    }
+  ]
+}

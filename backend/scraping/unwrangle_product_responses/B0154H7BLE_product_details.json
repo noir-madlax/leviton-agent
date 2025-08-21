@@ -1,0 +1,306 @@
+{
+  "success": true,
+  "platform": "amazon_detail",
+  "url": "https://www.amazon.com/product/dp/B0154H7BLE",
+  "result_count": 1,
+  "detail": {
+    "name": "RGBSIGHT 40FT 18 Gauge RGBW LED Strip Extension Cable 18AWG 5pin 5 Color Stand Electrical Flexible Wire Extension Cord for RGBW RGBWW LED Ribbon Lamp Tape Lighting (40 Feet per Spool)",
+    "brand": "Intotal",
+    "url": "https://www.amazon.com/product/dp/B0154H7BLE",
+    "asin": "B0154H7BLE",
+    "deal_badge": null,
+    "listing_id": "B0154H7BLE",
+    "price": 23.99,
+    "price_reduced": null,
+    "price_per_unit": 0.6,
+    "currency": "USD",
+    "currency_symbol": "$",
+    "buying_offers": [
+      {
+        "offer_type": "Buy new:",
+        "offer_description": "23.99 23.99 0.60 per feet( 0.60 0.60/ feet)FREE deliveryTuesday, August 5on orders shipped by Amazon over  35Ships from:AmazonSold by:RGBSIGHT INC",
+        "price": 23.99,
+        "seller": "RGBSIGHT INC"
+      },
+      {
+        "offer_type": "Save with Used - Like New",
+        "offer_description": "19.90 19.90 0.50 per feet( 0.50 0.50/ feet)FREE deliveryThursday, August 7on orders shipped by Amazon over  35Ships from:AmazonSold by:Amazon Resale",
+        "price": 19.9,
+        "seller": "Amazon Resale"
+      }
+    ],
+    "other_sellers": {
+      "text": "New & Used (2) from",
+      "link": "https://www.amazon.com/gp/offer-listing/B0154H7BLE/ref=dp_olp_ALL_mbc?ie=UTF8&condition=ALL"
+    },
+    "rating": 4.6,
+    "total_ratings": 258,
+    "past_month_sales": null,
+    "is_prime": true,
+    "shipping_info": [
+      "FREE delivery Tuesday, August 5 on orders shipped by Amazon over $35",
+      "Or Prime members get FREE delivery Tomorrow, August 1. Order within 6 hrs 59 mins. Join Prime"
+    ],
+    "delivery_zipcode": "01970",
+    "addon_offers": [],
+    "pay_later_offers": [],
+    "max_quantity": 5,
+    "variant": {},
+    "categories": [
+      {
+        "name": "Tools & Home Improvement",
+        "url": "https://www.amazon.com/Tools-and-Home-Improvement/b/ref=dp_bc_1"
+      },
+      {
+        "name": "Electrical",
+        "url": "https://www.amazon.com/electrical/b/ref=dp_bc_2"
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/Electrical-Wire/b/ref=dp_bc_3"
+      }
+    ],
+    "main_image": "https://m.media-amazon.com/images/I/71mtLewDnvL._AC_SL1500.jpg",
+    "images": [
+      "https://m.media-amazon.com/images/I/71mtLewDnvL._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51xtOrgcGJL._SY445_SX342_QL70_FMwebp_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/41Ehr81SwpL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51wg891v0jL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg",
+      "https://m.media-amazon.com/images/I/51xtOrgcGJL._SX38_SY50_CR,0,0,38,50_._AC_SL1500.jpg"
+    ],
+    "labelled_images": [],
+    "overview": [
+      {
+        "name": "Color",
+        "value": "Red,White,Blue,Black,Green"
+      },
+      {
+        "name": "Brand",
+        "value": "Intotal"
+      },
+      {
+        "name": "Material",
+        "value": "Copper"
+      },
+      {
+        "name": "NumberofCableStrands",
+        "value": "MultiStrand"
+      },
+      {
+        "name": "Gauge",
+        "value": "18.0"
+      }
+    ],
+    "features": [
+      "High purity oxygen-free copper with tin-plated, specification features high conductivity, low resistance and soft, can be bent arbitrarily.",
+      "Max Voltage: 300V, Max Current: 3.5A-4A, Color: 4 Color optimum working temperature from -20 ℃ to 80 ℃.",
+      "Connection extension for led light strip, electronic appliance and equipment, transformer, lamps and motor lead wire connection, led splitter connection etc.",
+      "Easy to use: Cut to whatever lengths you need. Use the wire stripper to strip partial external plastic of the extension cable, then access it to your device."
+    ],
+    "top_brand_snapshot": [],
+    "details_table": [
+      {
+        "name": "IsDiscontinuedByManufacturer",
+        "value": "No"
+      },
+      {
+        "name": "PackageDimensions",
+        "value": "3.66x3.58x2.68inches;1.19Pounds"
+      },
+      {
+        "name": "Itemmodelnumber",
+        "value": "RGBSIGHT-1030"
+      },
+      {
+        "name": "DateFirstAvailable",
+        "value": "September9,2015"
+      },
+      {
+        "name": "Manufacturer",
+        "value": "RGBSIGHTINC"
+      },
+      {
+        "name": "ASIN",
+        "value": "B0154H7BLE"
+      },
+      {
+        "name": "BestSellersRank",
+        "value": "#140,185inTools&HomeImprovement(SeeTop100inTools&HomeImprovement)#713inElectricalWire"
+      },
+      {
+        "name": "CustomerReviews",
+        "value": "4.64.6outof5stars258ratings"
+      }
+    ],
+    "technical_details": [],
+    "bestseller_ranks": [
+      {
+        "name": "See Top 100 in Tools & Home Improvement",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/ref=pd_zg_ts_hi",
+        "rank": 140185
+      },
+      {
+        "name": "Electrical Wire",
+        "url": "https://www.amazon.com/gp/bestsellers/hi/495310/ref=pd_zg_hrsr_hi",
+        "rank": 713
+      }
+    ],
+    "seller_name": "RGBSIGHT INC",
+    "seller_url": "https://www.amazon.com/gp/help/seller/at-a-glance.html/ref=dp_merchant_link?ie=UTF8&seller=AGHA0KSISZ8QZ&asin=B0154H7BLE&ref_=dp_merchant_link&isAmazonFulfilled=1",
+    "variants": {},
+    "rating_distribution": {
+      "5 star": "77%",
+      "4 star": "14%",
+      "3 star": "4%",
+      "2 star": "3%",
+      "1 star": "2%"
+    },
+    "reviews_summary": "Customers find the extension cable works well, with one mentioning it's great for long-distance LED needs. The wire is easy to solder, and customers appreciate its high quality and good value. They like the color, with one noting the bright insulation, and another mentioning it's better for providing power over longer distances. The wire quality receives mixed feedback, with one customer noting the gauge might be too small.",
+    "review_aspects": [
+      {
+        "name": "Functionality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Soldering ease",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Quality",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Color",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Power level",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Value for money",
+        "sentiment": "positive"
+      },
+      {
+        "name": "Wire quality",
+        "sentiment": "mixed"
+      }
+    ],
+    "top_reviews": [
+      {
+        "reviewer_name": "Science Man",
+        "review_title": "Good product,",
+        "rating": 5,
+        "review_text": "The V+ G R B W order matches the V+ G R B W order of most LED light strips.Heavier gauge wire is better for higher current when running lots of LED's to reduce voltage drop and avoid dimmer LED's at the end of the cable run.  Lighter gauge wire (22 AWG) is less expensive than this 18 AWG wire but may have too much voltage drop.  The 22 AWG wire is easier to solder to the LED light strips.  This 18 AWG cable is better for providing power over longer distances.  Connect this to the shorter, 22 AWG leads soldered to the strips.I used this cable and supplemented it with an additional 12 AWG cable for V+ (black) since the black wire must supply the combined currents of the GRBW wires.  I used a junction box at each LED strip to make the connections.  (See image.)\nRead more",
+        "date": "2016-08-17",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [
+          "https://m.media-amazon.com/images/I/71rNWEramDL._SY88.jpg"
+        ],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Engineer at work",
+        "review_title": "Yes it is copper wire which worked well.",
+        "rating": 5,
+        "review_text": "This wire worked well and has reasonably flexible insulation. There have been questions about if this is copper or aluminum.I don't have a chemistry lab to find out. But what it looks like under a microscope is copper wire which is tinned down its entire length. There is a copper colored core in each strand of wire with a silver colored covering. This wire is easily soldered which is indicating to me that it is tinned... This wire worked well for my use which was to drive Nema 17 stepper motors in a 3D printer.\nRead more",
+        "date": "2017-09-15",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Ostrander",
+        "review_title": "Excellent, high quality wiring.",
+        "rating": 5,
+        "review_text": "This is 18 gauge wire, and as such, it is excellent for running long distances without any loss of brightness. Best used for running LED strips in parallel.\nRead more",
+        "date": "2017-07-14",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Marcos Cervantes",
+        "review_title": "This wire works great for LED strips",
+        "rating": 4,
+        "review_text": "I tried using 18 gauge solid wire because I could get it locally and I realized why you don't use solid wire for led strips. The solid wire is too stiff and won't flex or bend like the stranded wire. So I have bought and continued to rebuy this wire. It flexes and solders well to the strips. Highly recommended.\nRead more",
+        "date": "2021-04-17",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Batman",
+        "review_title": "Great quality for Arduino and other projects",
+        "rating": 5,
+        "review_text": "I bought this for some Arduino projects I work on for Halloween, basically to connect ultrasound sensors and other devices that have 4-5 connections. I found this extremely high quality and it also looks very good for your projects with the wire colors. Thanks again!\nRead more",
+        "date": "2020-01-12",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "DIY GAL",
+        "review_title": "GOOD PRODUCT",
+        "rating": 5,
+        "review_text": "Worked for running my led lights to where I wanted\nRead more",
+        "date": "2021-03-28",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Vaidotas",
+        "review_title": "Good",
+        "rating": 5,
+        "review_text": "Good\nRead more",
+        "date": "2023-09-07",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      },
+      {
+        "reviewer_name": "Zach F",
+        "review_title": "and for something simple like this, that's what it needs to be for ...",
+        "rating": 5,
+        "review_text": "It's what the description says it is, and for something simple like this, that's what it needs to be for 5 stars. 18 AWG is a great conductor cross section for longer runs to LED strips. The spool is sturdy. The insulation is brightly colored and pulls apart easily and cleanly.\nRead more",
+        "date": "2018-06-25",
+        "location": "United States",
+        "verified_purchase": true,
+        "variant_info": [],
+        "review_imgs": [],
+        "review_videos": []
+      }
+    ],
+    "policy_badges": [],
+    "product_videos": [
+      "https://www.amazon.com/vdp/ec68cc9dcc25453995154527d57e07b1?ref=dp_vse_rvc_0"
+    ],
+    "product_guides": [],
+    "warranty_and_support": {
+      "return_policy": null,
+      "return_policy_link": null,
+      "product_warranty": null,
+      "product_warranty_link": null
+    },
+    "from_the_manufacturer": {},
+    "small_business": false,
+    "in_stock": true
+  },
+  "credits_used": 1,
+  "remaining_credits": 65.0
+}

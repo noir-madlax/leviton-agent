@@ -11,6 +11,8 @@ import { DatabaseService } from "@/components/analysis-db/data/database-service"
 import { Sidebar } from "@/components/layout/sidebar"
 import { useAuth } from "@/contexts/auth-context"
 import { usePermissions } from "@/hooks/use-permissions"
+import { useProjectT, useCommonT } from "@/i18n/hooks"
+import { chatConfigService } from "@/lib/services/chat-config-service"
 
 // Updated Project interface with overall_status
 interface Project {
@@ -32,12 +34,21 @@ export default function HomePage() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [mounted, setMounted] = useState(false)
+  const [isClient, setIsClient] = useState(false)
   const { isAuthenticated, user } = useAuth()
   const { permissions } = usePermissions()
+  
+  // 总是调用hooks，但在客户端渲染前返回fallback
+  const projectTRaw = useProjectT()
+  const commonTRaw = useCommonT()
+  
+  const t = (key: string) => isClient ? projectTRaw(key) : key
+  const commonT = (key: string) => isClient ? commonTRaw(key) : key
 
   // 确保组件已挂载
   useEffect(() => {
     setMounted(true)
+    setIsClient(true)
   }, [])
 
   // Get the most recent project as Current Project
@@ -73,6 +84,20 @@ export default function HomePage() {
         
         setProjects(sortedProjects)
         setError(null)
+
+        // 预载所有项目的 chart configs，提升后续访问速度
+        if (sortedProjects.length > 0) {
+          console.log('🚀 [HOMEPAGE] Preloading chart configs for', sortedProjects.length, 'projects...')
+          const projectIds = sortedProjects.map(p => p.id)
+          // 异步预载，不阻塞页面渲染
+          chatConfigService.preloadConfigurations(projectIds)
+            .then(stats => {
+              console.log('✅ [HOMEPAGE] Chart config preload completed:', stats)
+            })
+            .catch(error => {
+              console.warn('📋 [HOMEPAGE] Chart config preload failed:', error)
+            })
+        }
       } catch (err) {
         console.error('Failed to load projects:', err)
         setError(`Failed to load projects: ${err instanceof Error ? err.message : 'Unknown error'}`)
@@ -91,7 +116,7 @@ export default function HomePage() {
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
-            <p className="text-gray-600">Loading...</p>
+            <p className="text-gray-600">{commonT('loading')}</p>
           </div>
         </div>
       </div>
@@ -104,7 +129,7 @@ export default function HomePage() {
         <div className="flex-1 flex items-center justify-center">
           <div className="text-center">
             <Loader2 className="w-8 h-8 animate-spin mx-auto mb-4 text-blue-600" />
-            <p className="text-gray-600">Loading projects...</p>
+            <p className="text-gray-600">{t('processingData')}</p>
           </div>
         </div>
       </div>
@@ -135,7 +160,7 @@ export default function HomePage() {
                   title={!permissions?.can_create_project ? "Currently in internal testing" : ""}
                 >
                   <Plus className="w-4 h-4 mr-2" />
-                  Create Project
+                  {t('createProject')}
                 </Button>
               </Link>
               
@@ -147,7 +172,7 @@ export default function HomePage() {
                   title={!permissions?.can_import_data ? "Currently in internal testing" : ""}
                 >
                   <Upload className="w-4 h-4 mr-2" />
-                  Import Data
+                  {t('dataScraping')}
                 </Button>
               </Link>
             </div>
@@ -204,7 +229,7 @@ export default function HomePage() {
             {mostRecentProject && (
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <h2 className="text-xl font-semibold text-gray-900">Current Project</h2>
+                  <h2 className="text-xl font-semibold text-gray-900">{t('projectOverview')}</h2>
                 </div>
                 <ProjectCard project={mostRecentProject} featured={true} />
               </div>
@@ -214,14 +239,14 @@ export default function HomePage() {
             {projects.length === 0 && (
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <h3 className="text-lg font-medium text-gray-900 mb-2">No projects yet</h3>
+                  <h3 className="text-lg font-medium text-gray-900 mb-2">{t('createNewProject')}</h3>
                   <p className="text-gray-600 mb-4">
-                    Create your first project to get started with data analysis.
+                    {t('selectProjectScope')}
                   </p>
                   <Link href="/onboarding">
                     <Button>
                       <Plus className="w-4 h-4 mr-2" />
-                      Create First Project
+                      {t('createProject')}
                     </Button>
                   </Link>
                 </CardContent>

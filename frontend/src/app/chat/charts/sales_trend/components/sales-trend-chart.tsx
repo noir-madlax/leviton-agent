@@ -73,7 +73,7 @@ export function SalesTrendChart({
   const CustomTooltip = ({ active, payload, label }: { active?: boolean; payload?: { color: string; dataKey: string; value: number }[]; label?: string }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-lg">
+        <div className="bg-gray-50 p-4  shadow-lg">
           <p className="font-medium text-gray-800 mb-2">{label}</p>
           {payload
             .sort((a, b) => a.value - b.value)

@@ -1,6 +1,7 @@
 """Project business logic service."""
 
 import logging
+import re
 import hashlib
 from typing import List, Dict, Optional, Any
 from datetime import datetime, timezone
@@ -71,6 +72,11 @@ class ProjectService:
         try:
             # 1. Extract ASINs based on filters
             filtered_asins = await self._extract_asins_from_filters(request.filters)
+
+            # Abort if no products are found or if all are filtered out
+            if not filtered_asins:
+                logger.warning("Project creation aborted: No products found for the selected criteria or all were filtered out due to no sales data.")
+                raise ValueError("No products found for the selected criteria. Project creation cannot continue.")
             
             # 2. Calculate statistics
             stats = await self._calculate_project_stats(filtered_asins, request.filters)
@@ -132,10 +138,13 @@ class ProjectService:
                     logger.error(f"Error creating user project access: {e}")
                     # Continue with project creation even if access creation fails
             
-            # 6. Broadcast initial project creation status
+            # 6. Initialize project_extend_data for all ASINs
+            await self._initialize_project_extend_data(created_project["id"], filtered_asins)
+            
+            # 7. Broadcast initial project creation status
             await self._broadcast_progress_update(created_project["id"])
             
-            # 7. Schedule segmentation processing as a background task
+            # 8. Schedule segmentation processing as a background task
             if filtered_asins and request.filters.categories:
                 background_tasks.add_task(
                     self._process_project_segmentation,
@@ -144,7 +153,7 @@ class ProjectService:
                     category=request.filters.categories[0]
                 )
             
-            # 8. Return response immediately
+            # 9. Return response immediately
             return ProjectCreateResponse(
                 id=created_project["id"],
                 project_name=created_project["project_name"],
@@ -161,6 +170,38 @@ class ProjectService:
         except Exception as e:
             logger.error(f"Error creating project: {e}")
             raise
+    
+    async def _initialize_project_extend_data(self, project_id: str, filtered_asins: List[str]) -> None:
+        """Initialize project_extend_data table with empty records for all project ASINs"""
+        try:
+            logger.info(f"Initializing project_extend_data for project {project_id} with {len(filtered_asins)} ASINs")
+            
+            # Prepare upsert data for all ASINs with empty extend field
+            upsert_data = []
+            for asin in filtered_asins:
+                upsert_data.append({
+                    'project_id': project_id,
+                    'asins': asin,
+                    'extend': {},  # Initialize with empty JSONB object
+                    'computed_at': datetime.utcnow().isoformat()
+                })
+            
+            # Batch upsert to avoid conflicts if records already exist
+            if upsert_data:
+                result = self.supabase.table('project_extend_data').upsert(
+                    upsert_data,
+                    on_conflict='project_id,asins'  # Avoid duplicates
+                ).execute()
+                
+                if result.data:
+                    logger.info(f"Successfully initialized {len(result.data)} project_extend_data records for project {project_id}")
+                else:
+                    logger.warning(f"No data returned from project_extend_data initialization for project {project_id}")
+                    
+        except Exception as e:
+            logger.error(f"Error initializing project_extend_data for project {project_id}: {e}")
+            # Don't raise - this is not critical enough to fail project creation
+            logger.warning("Continuing with project creation despite extend_data initialization failure")
     
     async def _process_project_segmentation(self, project_id: str, product_ids: List[str], category: str):
         """处理项目的产品细分（异步）"""
@@ -621,6 +662,34 @@ class ProjectService:
         to ensure consistency between preview and saved project.
         """
         try:
+            # 🆕 优先使用前端传入的显式 ASIN 列表（与 Data Import 解析一致）
+            if hasattr(filters, 'product_asins') and filters.product_asins:
+                normalized: List[str] = []
+                seen = set()
+                for a in filters.product_asins:
+                    if not a:
+                        continue
+                    token = str(a).strip().upper()
+                    # 容忍 8-12 长度，主用 10；去重
+                    if 8 <= len(token) <= 12 and token not in seen:
+                        seen.add(token)
+                        normalized.append(token)
+                return normalized
+
+            # 🆕 可选：如果传了原始文本，后端自行解析（与 Data Import 一致）
+            if hasattr(filters, 'raw_asin_input') and filters.raw_asin_input:
+                raw_upper = str(filters.raw_asin_input).upper()
+                matches = re.findall(r"[A-Z0-9]{10}", raw_upper)
+                normalized: List[str] = []
+                seen = set()
+                for m in matches:
+                    token = m.strip().upper()
+                    if 8 <= len(token) <= 12 and token not in seen:
+                        seen.add(token)
+                        normalized.append(token)
+                if normalized:
+                    return normalized
+
             # 🔥 关键修复：使用与get_data_confirmation_data_by_category_id()完全相同的逻辑
             # 如果有category_id，优先使用category_id过滤逻辑
             if hasattr(filters, 'category_id') and filters.category_id:
@@ -639,7 +708,7 @@ class ProjectService:
             category_id = filters.category_id
             
             # 策略1：使用统一的多层级category ID查询
-            query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
+            query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
             query = query.neq('category', None).neq('brand', None)
             
             # Apply multi-level category filter
@@ -661,7 +730,7 @@ class ProjectService:
             # 策略2：通过category_id获取名称，然后用名称查询category字段
             category_name = await self._get_category_name(category_id)
             if category_name:
-                query = self.supabase.table('product_wide_table').select('platform_id, past_year_volume')
+                query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
                 query = query.neq('category', None).neq('brand', None)
                 query = query.eq('category', category_name)
                 
@@ -1328,6 +1397,151 @@ class ProjectService:
             
         except Exception as e:
             logger.error(f"Error getting data confirmation data by category ID: {str(e)}")
+            return self._get_empty_data_structure()
+
+    async def get_data_confirmation_data_by_asins(self, asins: List[str]) -> Dict[str, Any]:
+        """
+        Get data confirmation preview by explicit ASIN list.
+        Parsing/normalization matches Data Import and project creation logic.
+        """
+        try:
+            if not asins:
+                return self._get_empty_data_structure()
+
+            # Normalize & dedupe
+            normalized: List[str] = []
+            seen = set()
+            for a in asins:
+                if not a:
+                    continue
+                token = str(a).strip().upper()
+                if 8 <= len(token) <= 12 and token not in seen:
+                    seen.add(token)
+                    normalized.append(token)
+
+            if not normalized:
+                return self._get_empty_data_structure()
+
+            # Fetch products
+            result = self.supabase.table('product_wide_table').select(
+                'category, source, brand, platform_id, title, price_usd, monthly_sales_volume, estimated_revenue, reviews_count'
+            ).in_('platform_id', normalized).neq('category', None).neq('brand', None).execute()
+
+            filtered_data = result.data or []
+
+            # Convert and clean numeric fields
+            for row in filtered_data:
+                if row.get('monthly_sales_volume'):
+                    try:
+                        row['monthly_sales_volume'] = int(float(row['monthly_sales_volume']))
+                    except (ValueError, TypeError):
+                        row['monthly_sales_volume'] = 0
+                if row.get('reviews_count'):
+                    try:
+                        row['reviews_count'] = int(float(row['reviews_count']))
+                    except (ValueError, TypeError):
+                        row['reviews_count'] = 0
+                if row.get('estimated_revenue'):
+                    try:
+                        row['estimated_revenue'] = float(row['estimated_revenue'])
+                    except (ValueError, TypeError):
+                        row['estimated_revenue'] = 0.0
+                if row.get('price_usd'):
+                    try:
+                        row['price_usd'] = float(row['price_usd'])
+                    except (ValueError, TypeError):
+                        row['price_usd'] = 0.0
+
+            # Sort by sales volume for top preview
+            sorted_products = sorted(
+                [row for row in filtered_data if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0],
+                key=lambda x: x['monthly_sales_volume'] or 0,
+                reverse=True
+            )
+
+            # Available options from this set
+            available_categories = sorted(list(set(row['category'] for row in filtered_data if row.get('category'))))
+            available_sources = sorted(list(set(row['source'] for row in filtered_data if row.get('source'))))
+            available_brands = sorted(list(set(row['brand'] for row in filtered_data if row.get('brand'))))
+
+            # Calculate statistics
+            total_products = len(filtered_data)
+            total_brands = len(set(row['brand'] for row in filtered_data if row.get('brand')))
+
+            product_asins = [str(row['platform_id']) for row in filtered_data if row.get('platform_id')]
+            actual_review_count = 0
+            if product_asins:
+                review_count_result = self.supabase.table('product_reviews')\
+                    .select('review_id', count='exact')\
+                    .in_('product_id', product_asins)\
+                    .execute()
+                actual_review_count = review_count_result.count or 0
+
+            total_reviews = actual_review_count
+
+            review_estimates = await self._calculate_review_analysis_estimate(product_asins)
+
+            sales_volumes = [row.get('monthly_sales_volume', 0) for row in filtered_data if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0]
+            avg_monthly_sales = sum(sales_volumes) / len(sales_volumes) if sales_volumes else 0
+
+            # Source statistics
+            source_stats = []
+            for source in available_sources:
+                count = len([row for row in filtered_data if row.get('source') == source])
+                if count > 0:
+                    source_stats.append({
+                        'name': source,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+
+            # Category statistics
+            category_stats = []
+            for category in available_categories:
+                count = len([row for row in filtered_data if row.get('category') == category])
+                if count > 0:
+                    category_stats.append({
+                        'name': category,
+                        'count': count,
+                        'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                    })
+
+            # Brand statistics (top 10)
+            brand_counts = {}
+            for row in filtered_data:
+                brand = row.get('brand')
+                if brand:
+                    brand_counts[brand] = brand_counts.get(brand, 0) + 1
+
+            brand_stats = []
+            for brand, count in sorted(brand_counts.items(), key=lambda x: x[1], reverse=True)[:10]:
+                brand_stats.append({
+                    'name': brand,
+                    'count': count,
+                    'percentage': round((count / total_products) * 100) if total_products > 0 else 0
+                })
+
+            top_products = sorted_products[:min(50, len(filtered_data))]
+
+            return {
+                'availableCategories': available_categories,
+                'availableSources': available_sources,
+                'availableBrands': available_brands,
+                'stats': {
+                    'totalProducts': total_products,
+                    'totalBrands': total_brands,
+                    'totalReviews': total_reviews,
+                    'avgMonthlySales': avg_monthly_sales,
+                    'sources': source_stats,
+                    'categories': category_stats,
+                    'brands': brand_stats,
+                    'estimatedReviewsToAnalyze': review_estimates['estimated_reviews_to_analyze'],
+                    'estimatedLlmCalls': review_estimates['estimated_llm_calls_extraction']
+                },
+                'topProducts': top_products
+            }
+        except Exception as e:
+            logger.error(f"Error getting data confirmation by ASINs: {e}")
             return self._get_empty_data_structure()
     
     def _get_empty_data_structure(self):

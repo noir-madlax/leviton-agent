@@ -4,6 +4,7 @@ import React, { useState, useRef, useLayoutEffect, useMemo } from 'react'
 import { PriceType } from '../shared/price-type-selector'
 import { getChartColor } from '../shared/chart-colors'
 import { useProductPanelQuery } from '@/components/analysis-db/hooks/use-product-panel-query'
+import { useChartsT } from '@/i18n/hooks'
 
 interface BrandViolinChartProps {
   brands: {
@@ -14,13 +15,6 @@ interface BrandViolinChartProps {
   priceType: PriceType
   category: string
   projectId: string
-  // 新增：筛选模式配置
-  filterMode?: 'category' | 'extend_fields'
-  // 新增：扩展字段配置
-  extendFieldsConfig?: {
-    field: string  // 例如 'smart_capability'
-    value: string  // 例如 'Smart' 或 'Non-Smart'
-  }
 }
 
 interface HoverState {
@@ -127,12 +121,11 @@ export function BrandViolinChart({
   brands,
   priceType,
   category,
-  projectId,
-  filterMode = 'category',
-  extendFieldsConfig
+  projectId
 }: BrandViolinChartProps) {
+  const chartsT = useChartsT()
   // 使用新的产品浮窗查询Hook
-  const { handleBrandViolinClick, handleMultipleFiltersClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
+  const { handleBrandViolinClick, loading: panelLoading, error: panelError } = useProductPanelQuery()
   const [hoverState, setHoverState] = useState<HoverState>({
     x: 0,
     y: 0,
@@ -371,36 +364,14 @@ export function BrandViolinChart({
         if (svgX >= brandX - maxViolinHalfWidth && svgX <= brandX + maxViolinHalfWidth) {
           const brandName = violinData[i].name
 
-          // 根据筛选模式选择不同的处理方式
-          if (filterMode === 'extend_fields' && extendFieldsConfig) {
-            // 拆分组合的 category 名称，提取基础类别
-            const categoryParts = category.split(' + ')
-            const baseCategory = categoryParts.length > 0 ? categoryParts[0].trim() : category
-            
-            // 使用扩展字段筛选
-            await handleMultipleFiltersClick(
-              projectId,
-              {
-                brands: [brandName],
-                categories: [baseCategory],
-                extend_fields: {
-                  [extendFieldsConfig.field]: extendFieldsConfig.value
-                }
-              },
-              `${brandName} ${extendFieldsConfig.value} Products`,
-              `${brandName} products with ${extendFieldsConfig.value} capability`,
-              { brand: false, category: true, priceRange: true, packSize: true }
-            )
-          } else {
-            // 使用传统的 category + brand 筛选
-            await handleBrandViolinClick(
-              projectId,
-              brandName,
-              category,
-              `${brandName} Products`,
-              `${brandName} products in ${category}`
-            )
-          }
+          // 使用标准的 category + brand 筛选
+          await handleBrandViolinClick(
+            projectId,
+            brandName,
+            category,
+            `${brandName} Products`,
+            `${brandName} products in ${category}`
+          )
           break
         }
       }
@@ -411,8 +382,8 @@ export function BrandViolinChart({
     return (
       <div className="h-full flex items-center justify-center">
         <div className="text-center text-gray-500">
-          <div className="text-lg font-medium">No pricing data available</div>
-          <div className="text-sm">Waiting for valid brand data...</div>
+          <div className="text-lg font-medium">{chartsT('noPricingDataAvailable')}</div>
+          <div className="text-sm">{chartsT('waitingForBrandData')}</div>
         </div>
       </div>
     )
@@ -431,7 +402,7 @@ export function BrandViolinChart({
         <div className="absolute inset-0 bg-white/50 flex items-center justify-center z-20">
           <div className="flex items-center gap-2 bg-white px-4 py-2 rounded-lg shadow-md">
             <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600"></div>
-            <span className="text-sm text-gray-600">Loading products...</span>
+            <span className="text-sm text-gray-600">{chartsT('loadingProducts')}</span>
           </div>
         </div>
       )}
@@ -488,7 +459,7 @@ export function BrandViolinChart({
 
           {/* Y-axis title */}
           <text x={15} y={margin.top + chartHeight / 2} textAnchor="middle" fontSize="14" fill="#64748b" transform={`rotate(-90, 15, ${margin.top + chartHeight / 2})`}>
-            Price (USD)
+            {chartsT('priceUSD')}
           </text>
 
           {/* X-axis */}
@@ -570,9 +541,9 @@ export function BrandViolinChart({
           <g transform={`translate(${margin.left + 620}, ${margin.top - 35})`}>
             <rect x="0" y="0" width="120" height="55" fill="white" fillOpacity="0.9" stroke="#e5e7eb" strokeWidth="1" rx="4" />
             <line x1="10" y1="20" x2="25" y2="20" stroke="#7c3aed" strokeWidth="3" strokeDasharray="8,4" />
-            <text x="30" y="23" fontSize="11" fill="#374151">Median</text>
+            <text x="30" y="23" fontSize="11" fill="#374151">{chartsT('median')}</text>
             <line x1="10" y1="35" x2="25" y2="35" stroke="#059669" strokeWidth="2" strokeDasharray="4,4" />
-            <text x="30" y="38" fontSize="11" fill="#374151">Mean</text>
+            <text x="30" y="38" fontSize="11" fill="#374151">{chartsT('mean')}</text>
           </g>
         </svg>
         
@@ -588,13 +559,13 @@ export function BrandViolinChart({
             }}
           >
             <div className="text-sm font-medium text-gray-800">{hoverState.brand}</div>
-            <div className="text-xs text-gray-600 mt-1">Price: ${hoverState.price.toFixed(2)}</div>
+            <div className="text-xs text-gray-600 mt-1">{chartsT('price')}: ${hoverState.price.toFixed(2)}</div>
             <div className="mt-1 text-xs">
               <div className="font-medium text-blue-600">
-                Price range ${hoverState.priceRange.min.toFixed(2)} - ${hoverState.priceRange.max.toFixed(2)}: {hoverState.priceRangeProductCount} products
+                {chartsT('priceRange')} ${hoverState.priceRange.min.toFixed(2)} - ${hoverState.priceRange.max.toFixed(2)}: {hoverState.priceRangeProductCount} {chartsT('productsText')}
               </div>
               <div className="text-gray-500">
-                Total in brand: {hoverState.products} products
+                {chartsT('totalInBrand')}: {hoverState.products} {chartsT('productsText')}
               </div>
             </div>
           </div>
